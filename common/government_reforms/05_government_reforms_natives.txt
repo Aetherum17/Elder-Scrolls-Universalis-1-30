@@ -1,0 +1,31 @@
+native_basic_reform = {
+	basic_reform = yes
+	native_mechanic = yes
+	allow_migration = yes
+	valid_for_new_country = yes
+	allow_convert = yes
+	republican_name = yes
+	royal_marriage = no
+	fixed_rank = 1
+	modifiers = {
+		stability_cost_modifier = -0.10
+		land_maintenance_modifier = -0.10
+		diplomatic_reputation = 1
+		global_manpower_modifier = 0.10
+		possible_mercenaries = 0.10
+		
+		embracement_cost = 0.35
+        global_institution_spread = -0.35
+		technology_cost = 0.35
+		idea_cost = 0.35
+		advisor_cost = 0.35
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		government_abilities = {
+			tribal_federation_mechanic
+		}
+	}
+}

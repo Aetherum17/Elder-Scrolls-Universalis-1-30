@@ -1,0 +1,432 @@
+# Triggered modifiers are here.
+# these are checked for each countries once/month and then applied.
+#
+# Effects are fully scriptable here.
+
+#######################################################################
+# Discovery of the Akaviri trade route.
+#######################################################################
+
+east_akaviri_trade_route = {
+	potential = {
+		num_of_ports = 1
+		NOT = {
+			capital_scope = {
+				continent = Akavir
+			}
+		}
+	}
+
+	trigger = {
+		has_discovered = 702
+		num_of_ports = 5
+		has_idea = quest_for_the_new_world
+		any_active_trade_node = {
+			has_merchant = ROOT
+			OR = {
+				province_id = 702
+				province_id = 611
+				province_id = 743
+				province_id = 583
+				province_id = 468
+			}
+		}
+	}
+
+	trade_efficiency = 0.10
+}
+
+#######################################################################
+# Chimeri and the Red Mountain.
+#######################################################################
+
+catholic_rome = {
+	potential = {
+		has_discovered = 1062
+		religion = chimer_pantheon
+		NOT = { tag = RED }
+	}
+
+	trigger = {	
+		NOT = { overlord_of = RED }
+		owns_or_vassal_of = 1062		
+	}
+
+	papal_influence = -10
+	diplomatic_reputation = -1
+	#icon = 9
+}
+
+papal_subjugation = {
+	potential = {
+		has_discovered = 1062
+		religion = chimer_pantheon
+		NOT = { tag = RED }
+	}
+
+	trigger = {	
+		overlord_of = RED
+	}
+
+	diplomatic_reputation = -2.5
+	#icon = 9
+}
+
+#######################################################################
+# Crusader
+#######################################################################
+
+crusader = {
+	potential = {
+		religion = chimer_pantheon
+		crusade_target = {
+			exists = yes
+		}
+		
+	}
+
+	trigger = {
+		
+		crusade_target = {
+			war_with = ROOT
+			any_province = {
+				controlled_by = root
+			}
+		}  
+		land_maintenance = 1.0
+	}
+
+	global_manpower_modifier = 0.35
+	global_tax_modifier = 0.10
+	land_morale = 0.10
+	prestige = 1
+	papal_influence = 1
+	devotion = 0.25
+	#icon = 9
+}
+
+#######################################################################
+# Excommunication
+#######################################################################
+
+excommunication = {
+	potential = {
+		religion = chimer_pantheon
+	}
+
+	trigger = {
+		is_excommunicated = yes
+	}
+
+	prestige = -2.5
+	tolerance_own = -3.5
+	devotion = -5
+	papal_influence = -10
+	#icon = 10
+}
+
+#######################################################################
+# China modifiers
+#######################################################################
+
+the_mandate_of_heaven = {
+	potential = {
+		has_reform = celestial_empire
+		NOT = { has_dlc = "Mandate of Heaven" }
+	}
+	
+	trigger = {	
+		stability = 0
+		legitimacy = 60
+		num_of_cities = 20
+	}
+
+	stability_cost_modifier = -0.10
+	global_unrest = -1
+}
+
+the_mandate_of_heaven_lost = {
+	potential = {
+		has_reform = celestial_empire
+		NOT = { has_dlc = "Mandate of Heaven" }
+	}
+
+	trigger = {
+		OR = {
+			NOT = { stability = 0 }
+			NOT = { legitimacy = 60 }
+			NOT = { num_of_cities = 20 }	
+		}
+	}
+
+	discipline = -0.1
+	stability_cost_modifier = 1.0
+	global_unrest = 10
+}
+
+#######################################################################
+# The Pentarchy
+#######################################################################
+
+the_pentarchy = {
+	potential = {
+		religion = dragon_cult
+		OR = {
+			has_discovered = 1572
+			has_discovered = 750
+			has_discovered = 1325
+			has_discovered = 1288
+			has_discovered = 724
+		}
+	}
+
+	trigger = { 
+		owns = 1572
+		owns = 750
+		owns = 1325
+		owns = 1288
+		owns = 724
+		1572 = { religion = dragon_cult }
+		750 = { religion = dragon_cult }
+		1325 = { religion = dragon_cult }
+		1288 = { religion = dragon_cult}
+		724 = { religion = dragon_cult }
+	}
+	
+	missionaries = 1
+	global_missionary_strength = 0.025
+}
+
+#######################################################################
+# Religion modifiers
+#######################################################################
+
+1_holy_city = { potential = { has_discovered = 263 religion = altmeri_pantheon } trigger = { owns = 263 } prestige = 0.5 missionaries = 1 }
+2_holy_city = { potential = { has_discovered = 1280 religion = snow_elves_pantheon } trigger = { owns = 1280 } prestige = 0.5 missionaries = 1 }
+3_holy_city = { potential = { has_discovered = 1275 religion = nordic_pantheon } trigger = { owns = 1275 } prestige = 0.5 missionaries = 1 }
+4_holy_city = { potential = { has_discovered = 834 religion = bosmer_pantheon } trigger = { owns = 834 } prestige = 0.5 missionaries = 1 }
+5_holy_city = { potential = { has_discovered = 1206 religion = eight_divines } trigger = { owns = 1206 } prestige = 0.5 missionaries = 1 }
+6_holy_city = { potential = { has_discovered = 1206 religion = nine_divines } trigger = { owns = 1206 } prestige = 0.5 missionaries = 1 }
+7_holy_city = { potential = { has_discovered = 1394 religion = twelve_divines } trigger = { owns = 1394 } prestige = 0.5 missionaries = 1 }
+8_holy_city = { potential = { has_discovered = 942 religion = khajiiti_pantheon } trigger = { owns = 942 } prestige = 0.5 missionaries = 1 }
+9_holy_city = { potential = { has_discovered = 355 religion = yokudan_pantheon } trigger = { owns = 355 } prestige = 0.5 missionaries = 1 }
+10_holy_city = { potential = { has_discovered = 1478 religion = redguard_pantheon } trigger = { owns = 1478 } prestige = 0.5 missionaries = 1 }
+11_holy_city = { potential = { has_discovered = 1406 religion = malacath_cult } trigger = { owns = 1406 } prestige = 0.5 missionaries = 1 }
+12_holy_city = { potential = { has_discovered = 1085 religion = kothri_pantheon } trigger = { owns = 1085 } prestige = 0.5 missionaries = 1 }
+13_holy_city = { potential = { has_discovered = 1043 religion = chimer_pantheon } trigger = { owns = 1043 } prestige = 0.5 missionaries = 1 }
+14_holy_city = { potential = { has_discovered = 1002 religion = tribunal_pantheon } trigger = { owns = 1002 } prestige = 0.5 missionaries = 1 }
+15_holy_city = { potential = { has_discovered = 985 religion = reclamations_pantheon } trigger = { owns = 985 } prestige = 0.5 missionaries = 1 }
+16_holy_city = { potential = { has_discovered = 323 religion = sload_faith } trigger = { owns = 323 } prestige = 0.5 missionaries = 1 }
+17_holy_city = { potential = { has_discovered = 224 religion = serpant_king } trigger = { owns = 224 } prestige = 0.5 missionaries = 1 }
+18_holy_city = { potential = { has_discovered = 1572 religion = dragon_cult } trigger = { owns = 1572 } prestige = 0.5 missionaries = 1 }
+19_holy_city = { potential = { has_discovered = 1132 religion = marukhism } trigger = { owns = 1132 } prestige = 0.5 missionaries = 1 }
+20_holy_city = { potential = { has_discovered = 1087 religion = hist } trigger = { owns = 1087 } prestige = 0.5 missionaries = 1 }
+21_holy_city = { potential = { has_discovered = 970 religion = reason_and_logic_cult } trigger = { owns = 970 } prestige = 0.5 missionaries = 1 }
+22_holy_city = { potential = { has_discovered = 1296 religion = old_gods_cult } trigger = { owns = 1296 } prestige = 0.5 missionaries = 1 }
+23_holy_city = { potential = { has_discovered = 700 religion = tsaesci_pantheon } trigger = { owns = 700 } prestige = 0.5 missionaries = 1 }
+24_holy_city = { potential = { has_discovered = 575 religion = tang_mo_pantheon } trigger = { owns = 575 } prestige = 0.5 missionaries = 1 }
+25_holy_city = { potential = { has_discovered = 493 religion = kamal_pantheon } trigger = { owns = 493 } prestige = 0.5 missionaries = 1 }
+26_holy_city = { potential = { has_discovered = 448 religion = dremora_pantheon } trigger = { owns = 448 } prestige = 0.5 missionaries = 1 }
+27_holy_city = { potential = { has_discovered = 1150 religion = molog_bal_cult } trigger = { owns = 1150 } prestige = 0.5 missionaries = 1 }
+28_holy_city = { potential = { has_discovered = 1199 religion = meridia_cult } trigger = { owns = 1199 } prestige = 0.5 missionaries = 1 }
+29_holy_city = { potential = { has_discovered = 1233 religion = mehrunes_dagon_cult } trigger = { owns = 1233 } prestige = 0.5 missionaries = 1 }
+30_holy_city = { potential = { has_discovered = 1465 religion = hermeus_mora_cult } trigger = { owns = 1465 } prestige = 0.5 missionaries = 1 }
+31_holy_city = { potential = { has_discovered = 631 religion = po_tun_pantheon } trigger = { owns = 631 } prestige = 0.5 missionaries = 1 }
+
+######################################
+# Italian - Submission to Emperor
+######################################
+
+submission_to_emperor = {
+	potential = {
+		always = no
+	}
+
+	trigger = {
+		is_emperor = no
+		capital_scope = {
+			is_part_of_hre = yes
+		}
+	}
+
+	global_unrest = 3
+	stability_cost_modifier = 0.1
+	prestige = -1
+}
+
+#######################################################################
+
+classical_age_modifier = {
+	potential = {
+		current_age = classical_age
+	}
+
+	trigger = {
+		current_age = classical_age
+	}
+
+    possible_mercenaries = 0.50	
+	merc_maintenance_modifier = -0.50
+	
+	colonist_placement_chance = -0.15
+}
+
+late_classical_age_modifier = {
+	potential = {
+		current_age = late_classical_age
+	}
+
+	trigger = {
+		current_age = late_classical_age
+	}
+	
+    possible_mercenaries = 0.40
+	merc_maintenance_modifier = -0.40
+	
+	colonist_placement_chance = -0.10
+}
+
+age_of_migrations_modifier = {
+	potential = {
+		current_age = age_of_migrations
+	}
+
+	trigger = {
+		current_age = age_of_migrations
+	}
+
+    possible_mercenaries = 0.30
+	merc_maintenance_modifier = -0.30
+	
+	colonist_placement_chance = -0.05
+}
+
+dark_age_modifier = {
+	potential = {
+		current_age = dark_age
+	}
+
+	trigger = {
+		current_age = dark_age
+	}
+
+    possible_mercenaries = 0.20
+	merc_maintenance_modifier = -0.20
+	
+	yearly_corruption = 0.05
+}
+
+feudal_age_modifier = {
+	potential = {
+		current_age = feudal_age
+	}
+
+	trigger = {
+		current_age = feudal_age
+	}
+
+    possible_mercenaries = 0.10
+	merc_maintenance_modifier = -0.10
+	
+	yearly_corruption = 0.10
+}
+
+high_middle_ages_modifier = {
+	potential = {
+		current_age = high_middle_ages
+	}
+
+	trigger = {
+		current_age = high_middle_ages
+	}
+	
+	num_accepted_cultures = 1
+	years_of_nationalism = 5
+	
+    land_maintenance_modifier = 0.10
+    naval_maintenance_modifier = 0.10
+	
+	yearly_corruption = 0.15
+}
+
+late_middle_ages_modifier = {
+	potential = {
+		current_age = late_middle_ages
+	}
+
+	trigger = {
+		current_age = late_middle_ages
+	}
+	
+    num_accepted_cultures = 2
+	years_of_nationalism = 10
+	
+    land_maintenance_modifier = 0.20
+    naval_maintenance_modifier = 0.20
+	
+	yearly_corruption = 0.20
+}
+
+industrial_age_modifier = {
+	potential = {
+		current_age = industrial_age
+	}
+
+	trigger = {
+		current_age = industrial_age
+	}
+	
+
+	num_accepted_cultures = 3
+	years_of_nationalism = 15
+	
+    land_maintenance_modifier = 0.30
+    naval_maintenance_modifier = 0.30
+	
+	yearly_corruption = 0.25
+	
+	diplomatic_upkeep = 1
+	free_leader_pool = 1   
+}
+
+great_war_age_modifier = {
+	potential = {
+		current_age = great_war_age
+	}
+
+	trigger = {
+		current_age = great_war_age
+	}
+	
+	num_accepted_cultures = 4
+	years_of_nationalism = 20
+	
+    land_maintenance_modifier = 0.40
+    naval_maintenance_modifier = 0.40
+	
+	yearly_corruption = 0.30
+
+	diplomatic_upkeep = 2
+	free_leader_pool = 2
+}
+
+information_age_modifier = {
+	potential = {
+		current_age = information_age
+	}
+
+	trigger = {
+		current_age = information_age
+	}
+	
+	num_accepted_cultures = 5
+	years_of_nationalism = 25
+	
+    land_maintenance_modifier = 0.50
+    naval_maintenance_modifier = 0.50
+	
+	yearly_corruption = 0.35
+
+	diplomatic_upkeep = 3
+	free_leader_pool = 3
+}

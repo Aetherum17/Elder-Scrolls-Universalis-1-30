@@ -1,0 +1,176 @@
+namespace = es_orcish_flavour 
+
+country_event = {
+	id = es_orcish_flavour.1
+	title = es_orcish_flavour.1.t
+	desc = es_orcish_flavour.1.d
+	picture = FLAVOUR_ORCS_FURY_eventPicture
+	
+	trigger = {
+	culture_group = orsimer_cg
+	NOT = { has_country_modifier = orcish_fury }
+	NOT = { has_country_modifier = orcish_fury_timer }
+	}
+	
+	mean_time_to_happen = {
+		months = 300
+	}
+	
+	option = {
+		name = "es_orcish_flavour.1.a"
+		ai_chance = { factor = 100 }
+		add_country_modifier = {
+		name = "orcish_fury"
+		duration = 3650
+	    }
+		add_country_modifier = {
+		name = "orcish_fury_timer"
+		duration = 9125
+		hidden = yes
+	    }
+		every_neighbor_country = {
+		limit = {
+		ai = no
+		NOT = { culture_group = orsimer_cg }
+		}
+		country_event = { id = es_orcish_flavour.5 days = 31 tooltip = es_orcish_flavour.5.a.tt }
+		}
+	}
+}
+
+country_event = {
+	id = es_orcish_flavour.2
+	title = es_orcish_flavour.2.t
+	desc = es_orcish_flavour.2.d
+	picture = FLAVOUR_ORCS_ARMY_eventPicture
+	
+	trigger = {
+		is_at_war = yes
+		culture_group = orsimer_cg
+		NOT = { is_monarch_leader = yes }
+		NOT = { has_country_flag = orcish_ruler_to_general_flag }
+	}
+	
+	mean_time_to_happen = {
+		months = 500
+	}
+	
+	option = {
+		name = "es_orcish_flavour.2.a"
+		ai_chance = { factor = 50 }
+		define_ruler_to_general = {
+			fire = 5
+			shock = 5
+			manuever = 5
+			siege = 5
+		}
+		set_country_flag = orcish_ruler_to_general_flag
+	}
+	option = {
+	    ai_chance = { factor = 50 }
+		name = "es_orcish_flavour.2.b"
+		add_prestige = -10
+	}
+}
+
+country_event = {
+	id = es_orcish_flavour.3
+	title = es_orcish_flavour.3.t
+	desc = es_orcish_flavour.3.d
+	picture = FLAVOUR_ORCS_BATTLE_LOST_eventPicture
+	
+	trigger = {
+		is_at_war = yes
+		has_country_flag = orcish_ruler_to_general_flag
+	}
+	
+	mean_time_to_happen = {
+		months = 180
+	}
+	
+	immediate = {
+		clr_country_flag = orcish_ruler_to_general_flag
+	}
+	
+	option = {
+		name = "es_orcish_flavour.3.a"
+		ai_chance = { factor = 50 }
+		if = { limit = { government = monarchy }
+		random_owned_province = { 
+			spawn_rebels = {
+				type = pretender_rebels
+				size = 10
+				win = yes
+				unrest = 25
+			}
+		}
+		}
+		else = {
+		random_owned_province = { 
+			spawn_rebels = {
+				type = noble_rebels
+				size = 10
+				win = yes
+				unrest = 25
+			}
+		}
+		}
+		add_prestige = -25
+		add_years_of_income = -2.5
+	}
+	option = {
+		name = "es_orcish_flavour.3.b"
+		ai_chance = { factor = 50 }
+		kill_heir = yes
+		add_stability = -1
+		define_ruler = {
+		    name = "(Regency Council)"
+			ADM = 0
+			DIP = 0
+			MIL = 0
+			fixed = yes
+			regency = yes
+		}
+	}
+}
+
+country_event = {
+	id = es_orcish_flavour.4
+	title = es_orcish_flavour.4.t
+	desc = es_orcish_flavour.4.d
+	picture = FLAVOUR_ORCS_VICTORY_eventPicture
+	
+	trigger = {
+		is_at_war = yes
+		has_country_flag = orcish_ruler_to_general_flag
+	}
+	
+	mean_time_to_happen = {
+		months = 180
+	}
+	
+	immediate = {
+		clr_country_flag = orcish_ruler_to_general_flag
+	}
+	
+	option = {
+		name = "es_orcish_flavour.4.a"
+		ai_chance = { factor = 100 }
+		add_prestige = 10
+		add_years_of_income = 2.5
+	}
+}
+
+country_event = {
+	id = es_orcish_flavour.5
+	title = es_orcish_flavour.1.t
+	desc = es_orcish_flavour.1.d
+	picture = FLAVOUR_ORCS_FURY_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "es_orcish_flavour.1.a"
+		ai_chance = { factor = 100 }
+	}
+}

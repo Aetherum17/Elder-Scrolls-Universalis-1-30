@@ -1,0 +1,292 @@
+country_decisions = {
+
+	advancement_of_true_religion_act_1 = {
+		potential = {
+			NOT = { has_country_modifier = the_advancement_of_true_religion_act }
+		}
+		allow = {
+			adm_tech = 10
+		}
+		effect = {
+			add_country_modifier = {
+				name = "the_advancement_of_true_religion_act"
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { full_idea_group = religious_ideas  }
+				NOT = { government = theocracy }
+			}
+		}
+	}
+	
+	blasphemy_act_1 = {
+		potential = {
+			NOT = { has_country_modifier = the_blasphemy_act }
+			OR = {
+				current_age = age_of_reformation
+				current_age = age_of_absolutism
+				current_age = age_of_revolutions
+			}
+		}
+		allow = {
+			OR = {
+				current_age = age_of_reformation
+				current_age = age_of_absolutism
+				current_age = age_of_revolutions
+			}
+		}
+		effect = {	
+			add_country_modifier = {
+				name = "the_blasphemy_act"
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	declaration_of_indulgence_1 = {
+		potential = {
+			NOT = { has_country_modifier = the_declaration_of_indulgence_1 }
+		}
+		allow = {
+			NOT = { has_country_modifier = the_declaration_of_indulgence_1 }
+			adm_tech = 20
+		}
+		effect = {	
+			add_country_modifier = {
+				name = "the_declaration_of_indulgence_1"
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = { 
+				NOT = { stability = 2 }
+				factor = 0
+			}
+		}
+	}
+
+	act_of_uniformity_1 = {
+		potential = {
+			NOT = { has_country_modifier = the_act_of_uniformity }
+		}
+		allow = {
+			adm_tech = 30
+		}
+		effect = {	
+			add_country_modifier = {
+				name = "the_act_of_uniformity"
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { full_idea_group = religious_ideas  }
+				NOT = { government = theocracy }
+			}
+		}
+	}
+	
+ 	suffragan_bishop_act_1 = {
+ 		potential = {
+ 			NOT = { has_country_modifier = the_suffragan_bishop_act_1 }
+ 		}
+ 		allow = {
+ 			adm_tech = 40
+ 		}
+ 		effect = {	
+ 			add_country_modifier = {
+ 				name = "the_suffragan_bishop_act_1"
+ 				duration = -1
+ 			}
+ 		}
+ 		ai_will_do = {
+ 			factor = 0
+ 		}
+ 	}
+	
+	sunday_school_1 = {
+		potential = {
+			NOT = { has_country_modifier = sunday_schools }
+		}
+		allow = {
+			adm_tech = 50
+			stability = 3
+		}
+		effect = {	
+			add_country_modifier = {
+				name = "sunday_schools"
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	monastic_education_1 = {
+		potential = {
+			NOT = { has_country_modifier = monastic_education_system }
+		}
+		allow = {
+			adm_tech = 60
+		}
+		effect = {	
+			add_country_modifier = {
+				name = "monastic_education_system"
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				NOT = { treasury = 100 }
+				factor = 0
+			}
+		}
+	}
+	
+	regulate_the_monastaries_1 = {
+		potential = {
+			NOT = { has_country_modifier = regulated_monasteries }
+		}
+		allow = {
+			adm_tech = 70
+		}
+		effect = {	
+			add_country_modifier = {
+				name = "regulated_monasteries"
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	acceptance_of_religious_sects_1 = {
+		potential = {
+			NOT = { has_country_modifier = religious_sect_tolerance_1 }
+		}
+		allow = {
+		    adm_tech = 80
+			stability = 3
+		}
+		effect = {	
+			add_country_modifier = {
+				name = "religious_sect_tolerance_1"
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = { 
+				NOT = { any_owned_province = { has_owner_religion = no } }
+				factor = 0
+			}
+		}
+	}
+	
+	conversion_of_convenience_1 = {
+		potential = {
+			is_lesser_in_union = no
+			NOT = { ruler_religion = ROOT }
+			OR = {
+				has_regency = no
+				AND = {
+					NOT = { ruler_religion = ROOT }
+					has_heir = yes
+					NOT = { heir_religion = ROOT }
+				}
+			}
+			OR = {
+				ai = no
+				has_idea_group = religious_ideas
+			}
+		}
+		allow = {
+			stability = 1
+			capital_scope = {
+				has_owner_religion = yes
+			}
+		}
+		effect = {
+			add_stability = -1
+			add_legitimacy = 10
+			set_ruler_religion = ROOT
+			if = {
+				limit = {
+					has_heir = yes
+					NOT = { heir_religion = ROOT }
+				}
+				set_heir_religion = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	keep_the_feriae_1 = {
+		potential = {
+			NOT = { has_country_modifier = gods_pleased }
+		}
+		allow = {
+			adm_power = 50
+			years_of_income = 0.15
+		}
+		effect = {
+			add_adm_power = -100
+			add_years_of_income = -0.25
+			add_country_modifier = {
+				name = "gods_pleased"
+				duration = 3650
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				religious_unity = 0.9
+			}
+			modifier = {
+				factor = 0
+				NOT = { num_of_missionaries = 1 }
+			}
+		}
+	}
+	
+	hellenism_reform_1 = {
+		potential = {
+			NOT = { has_country_modifier = reformed_clergy }
+		}
+		allow = {
+			adm_tech = 10
+			adm_power = 100
+			calc_true_if = {
+				all_owned_province = { religion = ROOT }
+				amount = 100
+			}
+		}
+		effect = {
+			add_adm_power = -100
+			add_country_modifier = {
+				name = "reformed_clergy"
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+}

@@ -1,0 +1,520 @@
+namespace = es_0_scenario
+
+country_event = {
+	id = es_0_scenario.1
+	title = es_0_scenario.1.t
+	desc = es_0_scenario.1.d
+	picture = ES_01_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_0_scenario.1_flag }
+		is_year = 20
+		NOT = { is_year = 65 }
+    }
+
+	mean_time_to_happen = {
+		days = 8030	
+	}
+	
+	immediate = {
+	    set_country_flag = es_0_scenario.1_flag
+	}
+
+	option = {
+		name = "es_0_scenario.1.a"
+		ai_chance = { factor = 100 }
+		add_prestige = 5
+		add_country_modifier = {
+		name = "00_far_legend"
+		duration = 9125
+		}
+	}
+}
+
+country_event = {
+	id = es_0_scenario.2
+	title = es_0_scenario.2.t
+	desc = es_0_scenario.2.d
+	picture = ES_02_eventPicture	
+	
+	trigger = {
+	    NOT = { has_country_flag = es_0_scenario.2_flag }
+		is_year = 68
+		NOT = { is_year = 109 }
+		capital_scope = { continent = Tamriel }
+    }
+
+	mean_time_to_happen = {
+		days = 7300	
+	}
+	
+	immediate = {
+	    set_country_flag = es_0_scenario.2_flag
+	}
+
+	option = {
+		name = "es_0_scenario.2.a"
+		ai_chance = { factor = 100 }
+		random_owned_province = {
+		limit = {
+		is_capital = no
+		}
+		add_devastation = 100
+		}
+	}
+}
+
+country_event = {
+	id = es_0_scenario.3
+	title = es_0_scenario.3.t
+	desc = es_0_scenario.3.d
+	picture = ES_03_eventPicture	
+	
+	trigger = {
+	    NOT = { has_country_flag = es_0_scenario.3_flag }
+		is_year = 200
+		NOT = { is_year = 242 }
+		capital_scope = { continent = Tamriel }
+    }
+
+	mean_time_to_happen = {
+		days = 7665	
+	}
+	
+	immediate = {
+	    set_country_flag = es_0_scenario.3_flag
+	}
+
+	option = {
+		name = "es_0_scenario.3.a"
+		ai_chance = { factor = 100 }
+		add_prestige = 5
+		add_country_modifier = {
+		name = "00_tamrilian_tractates"
+		duration = 9125
+		}
+	}
+}
+
+country_event = {
+	id = es_0_scenario.4
+	title = es_0_scenario.4.t
+	desc = es_0_scenario.4.d
+	picture = ES_SIEGE_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_0_scenario.4_flag }
+	    ai = no
+	    NOT = { is_year = 266 }
+		1206 = {
+		NOT = { owned_by = CA3 }
+		NOT = { owned_by = CA4 }
+		NOT = { owned_by = CA5 }
+		NOT = { owned_by = CA6 }
+		NOT = { owned_by = CB7 }
+		NOT = { owned_by = CB8 }
+		NOT = { owned_by = AYL }
+		}
+    }
+
+	mean_time_to_happen = {
+		days = 31	
+	}
+	
+	immediate = {
+	    set_country_flag = es_0_scenario.4_flag
+	}
+
+	option = {
+		name = "es_0_scenario.4.a"
+		ai_chance = { factor = 100 }
+		set_global_flag = fall_of_white_tower_flag
+	}
+}
+
+country_event = {
+	id = es_0_scenario.5
+	title = es_0_scenario.5.t
+	desc = es_0_scenario.5.d
+	picture = ES_CITY_eventPicture
+	
+	trigger = {
+	   NOT = { has_country_flag = es_0_scenario.5_flag }
+	   is_year = 246
+	   owns = 1369
+	   NOT = { is_year = 369 }
+	   1369 = {
+	   NOT = { culture = nord }
+	   }
+    }
+
+	mean_time_to_happen = {
+		days = 22265	
+	}
+	
+	immediate = {
+	    set_country_flag = es_0_scenario.5_flag
+	}
+
+	option = {
+		name = "es_0_scenario.5.a"
+		ai_chance = { factor = 50 }
+        1369 = {
+		change_culture = nord
+		add_base_tax = 5
+		add_base_production = 5
+		add_base_manpower = 5
+		}
+		if = {
+		limit = {
+		NOT = { culture_group = northern_cg }
+		}
+		add_prestige = -10
+		}
+	}
+	option = {
+		name = "es_0_scenario.5.b"
+		ai_chance = { factor = 50 }
+		add_prestige = 10
+	}
+}
+
+country_event = {
+	id = es_0_scenario.6
+	title = es_0_scenario.6.t
+	desc = es_0_scenario.6.d
+	picture = ES_ALESSIA_eventPicture	
+	
+	trigger = {
+	   NOT = { has_country_flag = es_0_scenario.6_flag }
+	   is_year = 266
+	   NOT = { is_year = 308 }
+    }
+
+	mean_time_to_happen = {
+		days = 7665
+	}
+	
+	immediate = {
+	    set_country_flag = es_0_scenario.6_flag
+	}
+
+	option = {
+		name = "es_0_scenario.6.a"
+		ai_chance = { factor = 100 }
+		if = {
+		limit = {
+		owns = 1206
+		}
+		add_country_modifier = {
+		    name = "amulet_of_kings"
+			duration = -1
+	    }
+		}
+        if = {
+		limit = {
+		has_ruler = Alessia
+		}
+		kill_ruler = yes
+		}
+		if = {
+		limit = {
+		religion_group = polytheistic_group
+		}
+		add_stability = 1
+		}
+		if = {
+		limit = {
+		religion_group = daedric_group_1
+		}
+		add_stability = -1
+		}
+	}
+}
+
+country_event = {
+	id = es_0_scenario.7
+	title = es_0_scenario.7.t
+	desc = es_0_scenario.7.d
+	picture = ES_04_eventPicture
+	
+	trigger = {
+	   NOT = { has_country_flag = es_0_scenario.7_flag }
+	   is_year = 420
+	   NOT = { is_year = 478 }
+	   capital_scope = { continent = Tamriel }
+    }
+
+	mean_time_to_happen = {
+		days = 9125
+	}
+	
+	immediate = {
+	    set_country_flag = es_0_scenario.7_flag
+	}
+
+	option = {
+		name = "es_0_scenario.7.a"
+		ai_chance = { factor = 50 }
+        add_years_of_income = -0.25
+		add_prestige = 10
+		set_country_flag = rislav_is_born_flag
+	}
+	
+	option = {
+		name = "es_0_scenario.7.b"
+		ai_chance = { factor = 50 }
+		set_country_flag = rislav_is_born_flag
+        add_prestige = -5
+	}
+}
+
+country_event = {
+	id = es_0_scenario.8
+	title = es_0_scenario.8.t
+	desc = es_0_scenario.8.d
+	picture = ES_05_eventPicture	
+	
+	trigger = {
+	   NOT = { has_country_flag = es_0_scenario.8_flag }
+	   is_year = 420
+	   NOT = { is_year = 478 }
+	   has_country_flag = rislav_is_born_flag
+	   capital_scope = { continent = Tamriel }
+    }
+
+	mean_time_to_happen = {
+		days = 3650
+	}
+	
+	immediate = {
+	    set_country_flag = es_0_scenario.8_flag
+	}
+
+	option = {
+		name = "es_0_scenario.8.a"
+		ai_chance = { factor = 50 }
+        add_years_of_income = -0.25
+		add_prestige = 5
+	}
+	
+	option = {
+		name = "es_0_scenario.8.b"
+		ai_chance = { factor = 50 }
+        add_prestige = -10
+	}
+}
+
+country_event = {
+	id = es_0_scenario.9
+	title = es_0_scenario.9.t
+	desc = es_0_scenario.9.d
+	picture = ES_06_eventPicture	
+	
+	trigger = {
+	   NOT = { has_country_flag = es_0_scenario.9_flag }
+	   religion = eight_divines
+	   owns = 1206
+	   owns = 1002
+	   owns = 1369
+	   owns = 271
+	   owns = 820
+	   owns = 1075
+	   owns = 922
+	   owns = 1342
+	   owns = 1275
+	   owns = 1482
+    }
+
+	mean_time_to_happen = {
+		days = 365
+	}
+	
+	immediate = {
+	    set_country_flag = es_0_scenario.9_flag
+	}
+
+	option = {
+		name = "es_0_scenario.9.a"
+		ai_chance = { factor = 50 }
+		change_religion = nine_divines
+        every_province = {
+		limit = {
+		religion = eight_divines
+		}
+		change_religion = nine_divines
+		}
+		set_global_flag = nine_divines_flag
+	}
+	
+	option = {
+		name = "es_0_scenario.9.b"
+		ai_chance = { factor = 50 }
+        add_prestige = 50
+		set_global_flag = nine_divines_flag
+	}
+}
+
+country_event = {
+	id = es_0_scenario.10
+	title = es_0_scenario.10.t
+	desc = es_0_scenario.10.d
+	picture = ES_06_eventPicture	
+	
+	trigger = {
+	   NOT = { has_country_flag = es_0_scenario.10_flag }
+	   religion = eight_divines
+	   has_global_flag = nine_divines_flag
+    }
+
+	mean_time_to_happen = {
+		days = 365
+	}
+	
+	immediate = {
+	    set_country_flag = es_0_scenario.10_flag
+	}
+
+	option = {
+		name = "es_0_scenario.9.a"
+		ai_chance = { factor = 50 }
+		change_religion = nine_divines
+        every_province = {
+		limit = {
+		religion = eight_divines
+		}
+		change_religion = nine_divines
+		}
+	}
+	
+	option = {
+		name = "es_0_scenario.9.b"
+		ai_chance = { factor = 50 }
+        add_prestige = 10
+	}
+}
+
+country_event = {
+	id = es_0_scenario.11
+	title = es_0_scenario.11.t
+	desc = es_0_scenario.11.d
+	picture = ES_07_eventPicture	
+	
+	trigger = {
+	   NOT = { has_country_flag = es_0_scenario.11_flag }
+	   owns = 357
+	   owns = 335
+	   owns = 224
+	   owns = 426
+	   owns = 479
+	   owns = 724
+	   owns = 646
+	   owns = 561
+	   owns = 750
+	   owns = 271
+	   owns = 820
+	   owns = 922
+	   owns = 1075
+	   owns = 1120
+	   owns = 1206
+	   owns = 1161
+	   owns = 1002
+	   owns = 1043
+	   owns = 1275
+	   owns = 1342
+	   owns = 1510
+	   owns = 1369
+    }
+
+	mean_time_to_happen = {
+		days = 365
+	}
+	
+	immediate = {
+	    set_country_flag = es_0_scenario.11_flag
+	}
+
+	option = {
+		name = "es_0_scenario.11.a"
+		ai_chance = { factor = 100 }
+        add_prestige = 100
+		add_stability = 3
+		add_years_of_income = 5.0
+	}
+}
+
+country_event = {
+	id = es_0_scenario.12
+	title = es_0_scenario.12.t
+	desc = es_0_scenario.12.d
+	picture = ES_08_eventPicture	
+	
+	trigger = {
+	   NOT = { has_country_flag = es_0_scenario.12_flag }
+	   has_country_flag = arrow_in_the_knee_flag
+	   is_free_or_tributary_trigger = no
+    }
+
+	mean_time_to_happen = {
+		days = 365
+	}
+	
+	immediate = {
+	    set_country_flag = es_0_scenario.12_flag
+	}
+
+	option = {
+		name = "es_0_scenario.12.a"
+		ai_chance = { factor = 50 }
+        add_prestige = -25
+	}
+	
+	option = {
+		name = "es_0_scenario.12.b"
+		ai_chance = { factor = 50 }
+		if = {
+		limit = {
+		NOT = { is_subject_of_type = personal_union }
+		}
+        kill_ruler = yes
+		}
+		if = {
+		limit = {
+		is_subject_of_type = personal_union
+		}
+        add_prestige = -25
+		}
+	}
+}
+
+country_event = {
+	id = es_0_scenario.13
+	title = es_0_scenario.13.t
+	desc = es_0_scenario.13.d
+	picture = ES_VOLCANIC_SMOKE_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_0_scenario.13_flag }
+		is_year = 660
+		NOT = { is_year = 700 }
+		has_global_flag = es_16_eruption_flag
+    }
+
+	mean_time_to_happen = {
+		days = 365
+	}
+	
+	immediate = {
+	    set_country_flag = es_0_scenario.13_flag
+	}
+
+	option = {
+		name = "es_0_scenario.13.a"
+		ai_chance = { factor = 100 }
+		add_stability = -1
+		add_country_modifier = {
+		name = "00_year_without_sun"
+		duration = 3650
+		}
+	}
+}

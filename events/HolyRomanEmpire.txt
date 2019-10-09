@@ -1,0 +1,182 @@
+namespace = hre_event
+
+# Privilegia triggers for Emperor...
+country_event = {
+	id = 9073
+	title = "EVTNAME9073"
+	desc = "EVTDESC9073"
+	picture = HRE_eventPicture
+	
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA9073"
+	}
+}
+
+# ...and for member states
+country_event = {
+	id = 9074
+	title = "EVTNAME9074"
+	desc = "EVTDESC9074"
+	picture = HRE_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA9074"
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				will_back_next_reform = no
+			}			
+			
+		}
+		emperor = {
+			vassalize = ROOT
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB9074"
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				will_back_next_reform = yes
+			}			
+			
+		}
+		every_owned_province = {
+			limit = {
+				is_part_of_hre = yes
+			}
+			add_claim = emperor
+		}
+		every_owned_province = {
+			set_in_empire = no
+		}
+		emperor = {
+			add_opinion = { who = ROOT modifier = opinion_left_empire }
+		}
+		add_opinion = { who = emperor modifier = opinion_united_empire }
+		elector = no
+	
+	}
+}
+
+# Renovatio triggers for Emperor...
+country_event = {
+	id = 9075
+	title = "EVTNAME9075"
+	desc = "EVTDESC9075"
+	picture = HRE_eventPicture
+
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA9075"
+		change_tag = TAM
+		add_country_modifier = {
+			name = "rome_reborn"
+			duration = -1
+		}
+		every_province = {
+			limit = {
+				is_part_of_hre = yes
+				OR = {
+					owned_by = ROOT
+					owner = { is_neighbor_of = ROOT }
+				}
+				NOT = { is_core = ROOT }
+			}
+			add_core = emperor
+		}
+		every_country = {
+			limit = {
+				is_part_of_hre = yes
+				is_emperor = no
+				num_of_cities = 1
+			}
+			country_event = { id = 9076 }
+		}
+		dismantle_hre = yes
+		if = { limit = { NOT = { government_rank = 10 } } set_government_rank = 10 }
+		add_adm_power = 250
+	}
+}
+
+# ...and for member states
+country_event = {
+	id = 9076
+	title = "EVTNAME9076"
+	desc = "EVTDESC9076"
+	picture = HRE_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA9076"
+		TAM = {
+			inherit = ROOT
+		}
+	}
+}
+
+# On Action: Emperor from same dynasty
+country_event = {
+	id = 900
+	title = "EVTNAME900"
+	desc = "EVTDESC900_01"
+	picture = KING_SICK_IN_BED_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		is_emperor = yes
+	}
+	
+	option = {
+		name = "EVTOPTA900"
+		add_imperial_influence = 10
+		if = {
+			limit = { has_dlc = "Common Sense" }
+			random_country = {
+				limit = {
+					has_reform = free_city 
+					is_at_war = no
+				}
+				country_event = {
+					id = free_cities.6
+					tooltip = free_cities.6.tt1
+				}						
+			}			
+		}
+	}
+}
+
+# On Action: Emperor NOT coming to the defense of a HRE member
+country_event = {
+	id = 909
+	title = "EVTNAME909"
+	desc = "EVTDESC909"
+	picture = HRE_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		is_emperor = yes
+	}
+	
+	immediate = {
+		hidden_effect = { add_imperial_influence = -10 }		#not scaled!
+	}
+	
+	option = {
+		name = "EVTOPTA909"
+		tooltip = { add_imperial_influence = -10 }		#not scaled!
+	}
+}

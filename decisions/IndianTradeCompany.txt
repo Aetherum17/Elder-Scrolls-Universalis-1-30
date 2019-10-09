@@ -1,0 +1,80 @@
+country_decisions = {
+	indian_trade_company = {
+
+		potential = {
+			NOT = { has_country_flag = trade_company }
+			NOT = {
+				capital_scope = {
+					continent = Akavir
+				}
+			}
+			Akavir = {
+					has_discovered = ROOT
+			}
+			num_of_ports = 5
+		}
+
+		allow = {
+			has_institution = global_trade
+			any_owned_province = {
+					continent = Akavir
+					has_port = yes
+			    }
+		}
+
+		effect = {
+			set_country_flag = trade_company
+			add_treasury = 250
+			add_country_modifier = {
+				name = "india_trade_co"
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	expel_foreign_traders = {
+		potential = {
+			any_owned_province = {
+				has_province_modifier = trade_company_factory
+			}
+		}
+
+		allow = {
+			has_institution = global_trade
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			stability = 2
+		}
+
+		effect = {
+			every_owned_province = {
+				limit = { has_province_modifier = trade_company_factory }
+				remove_province_modifier = trade_company_factory
+			}
+			every_known_country = {
+				limit = {
+					has_institution = global_trade
+					provinces_on_capital_continent_of = ROOT
+					ROOT = {
+						NOT = { provinces_on_capital_continent_of = PREV }
+					}
+				}
+				add_casus_belli = {
+					target = ROOT
+					type = cb_trade_war_triggered
+					months = 60
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = opinion_expelled_traders
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

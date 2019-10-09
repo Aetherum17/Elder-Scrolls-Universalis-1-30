@@ -1,0 +1,198 @@
+country_decisions = {
+
+	construct_tel_mora_canal = {
+		major = yes
+		potential = {
+			OR = {
+				ai = no
+				AND = {
+					treasury = 15000
+					owns_or_vassal_of = 1037
+				}
+			}
+			has_discovered = 1037
+			1037 = {
+				NOT = { has_great_project = tel_mora_canal }
+				NOT = { has_construction = canal }
+			}
+		}
+		provinces_to_highlight = {
+			province_id = 1037
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { owner = { vassal_of = ROOT } }
+			}
+		}
+		allow = {
+			owns_or_vassal_of = 1037
+			is_subject = no			
+			treasury = 15000
+		}
+		effect = {
+			add_treasury = -15000
+			1037 = {
+				add_great_project = tel_mora_canal
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	cancel_tel_mora_canal = {
+		major = yes
+		potential = {
+			ai = no
+			owns_or_vassal_of = 1037
+			is_subject = no
+			1037 = {
+				has_construction = canal
+			}
+		}
+		allow = {
+			1037 = {
+				has_construction = canal
+			}
+		}
+		effect = {
+		    add_treasury = 5000
+			1037 = {
+				cancel_construction = yes
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	construct_mi_kin_canal = {
+		major = yes
+		potential = {
+			OR = {
+				ai = no
+				AND = {
+					treasury = 15000
+					owns_or_vassal_of = 619
+				}
+			}
+			has_discovered = 619
+			619 = {
+				NOT = { has_great_project = tel_mora_canal }
+				NOT = { has_construction = canal }
+			}
+		}
+		provinces_to_highlight = {
+			province_id = 619
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { owner = { vassal_of = ROOT } }
+			}
+		}
+		allow = {
+			owns_or_vassal_of = 619
+			is_subject = no			
+			treasury = 15000
+		}
+		effect = {
+			add_treasury = -15000
+			619 = {
+				add_great_project = tel_mora_canal
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	cancel_mi_kin_canal = {
+		major = yes
+		potential = {
+			ai = no
+			owns_or_vassal_of = 619
+			is_subject = no
+			619 = {
+				has_construction = canal
+			}
+		}
+		allow = {
+			619 = {
+				has_construction = canal
+			}
+		}
+		effect = {
+		    add_treasury = 5000
+			619 = {
+				cancel_construction = yes
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	construct_nosh_shek_canal = {
+		major = yes
+		potential = {
+			OR = {
+				ai = no
+				AND = {
+					treasury = 15000
+					owns_or_vassal_of = 639
+				}
+			}
+			has_discovered = 639
+			639 = {
+				NOT = { has_great_project = tel_mora_canal }
+				NOT = { has_construction = canal }
+			}
+		}
+		provinces_to_highlight = {
+			province_id = 639
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { owner = { vassal_of = ROOT } }
+			}
+		}
+		allow = {
+			owns_or_vassal_of = 639
+			is_subject = no			
+			treasury = 15000
+		}
+		effect = {
+			add_treasury = -15000
+			639 = {
+				add_great_project = tel_mora_canal
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	cancel_nosh_shek_canal = {
+		major = yes
+		potential = {
+			ai = no
+			owns_or_vassal_of = 639
+			is_subject = no
+			639 = {
+				has_construction = canal
+			}
+		}
+		allow = {
+			639 = {
+				has_construction = canal
+			}
+		}
+		effect = {
+		    add_treasury = 5000
+			639 = {
+				cancel_construction = yes
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+}

@@ -1,0 +1,318 @@
+namespace = es_collapse
+
+country_event = {
+	id = es_collapse.22
+	title = es_collapse.22.t
+	desc = es_collapse.22.d
+	picture = ES_PROVINCE_COLLAPSE_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	    add_country_modifier = {
+			name = "vassal_autonomy"
+			duration = 9125
+		}
+	}
+	
+	option = {
+		name = es_collapse.2.a
+		ai_chance = { factor = 75 }
+		hidden_effect = {
+		
+		if = {
+		limit = {
+		NOT = { capital_scope = { region = hgh_rock_lr } }
+		}
+		every_core_province = {
+			limit = {
+				region = hgh_rock_lr
+			}
+			remove_core = ROOT
+		}
+		}
+		
+		if = {
+		limit = {
+		high_1_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = BA1 }
+		NOT = { exists = BE1 }
+		NOT = { capital_scope = { area = high_1_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = high_1_la
+		}
+		add_core = BA1
+		}
+		create_vassal = BA1
+		}
+		
+		if = {
+		limit = {
+		high_2_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = BA2 }
+		NOT = { exists = BE2 }
+		NOT = { capital_scope = { area = high_2_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = high_2_la
+		}
+		add_core = BA2
+		}
+		create_vassal = BA2
+		}
+		
+		if = {
+		limit = {
+		high_3_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = BA3 }
+		NOT = { exists = BE3 }
+		NOT = { capital_scope = { area = high_3_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = high_3_la
+		}
+		add_core = BA3
+		}
+		create_vassal = BA3
+		}
+		
+		if = {
+		limit = {
+		high_4_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = BA4 }
+		NOT = { exists = BE4 }
+		NOT = { capital_scope = { area = high_4_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = high_4_la
+		}
+		add_core = BA4
+		}
+		create_vassal = BA4
+		}
+		
+		if = {
+		limit = {
+		high_5_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = BA5 }
+		NOT = { capital_scope = { area = high_5_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = high_5_la
+		}
+		add_core = BA5
+		}
+		create_vassal = BA5
+		}
+		
+		if = {
+		limit = {
+		high_6_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = BA6 }
+		NOT = { capital_scope = { area = high_6_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = high_6_la
+		}
+		add_core = BA6
+		}
+		create_vassal = BA6
+		}
+		
+		if = {
+		limit = {
+		high_7_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = BA7 }
+		NOT = { capital_scope = { area = high_7_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = high_7_la
+		}
+		add_core = BA7
+		}
+		create_vassal = BA7
+		}
+		
+		if = {
+		limit = {
+		high_8_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = BA8 }
+		NOT = { capital_scope = { area = high_8_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = high_8_la
+		}
+		add_core = BA8
+		}
+		create_vassal = BA8
+		}
+		
+		if = {
+		limit = {
+		high_9_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = BA9 }
+		NOT = { capital_scope = { area = high_9_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = high_9_la
+		}
+		add_core = BA9
+		}
+		create_vassal = BA9
+		}
+		
+		if = {
+		limit = {
+		high_10_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = BB0 }
+		NOT = { capital_scope = { area = high_10_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = high_10_la
+		}
+		add_core = BB0
+		}
+		create_vassal = BB0
+		}
+		
+		if = {
+		limit = {
+		high_11_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = BB1 }
+		NOT = { capital_scope = { area = high_11_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = high_11_la
+		}
+		add_core = BB0
+		}
+		create_vassal = BB1
+		}
+		
+		if = {
+		limit = {
+		high_12_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = BB2 }
+		NOT = { capital_scope = { area = high_12_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = high_12_la
+		}
+		add_core = BB2
+		}
+		create_vassal = BB2
+		}
+		
+		if = {
+		limit = {
+		high_13_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = BB3 }
+		NOT = { capital_scope = { area = high_13_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = high_13_la
+		}
+		add_core = BB3
+		}
+		create_vassal = BB3
+		}
+		
+	    }
+	}
+	
+	option = {
+		name = es_collapse.2.b
+		ai_chance = { factor = 15 }
+		
+		if = {
+		limit = {
+		NOT = { capital_scope = { region = hgh_rock_lr } }
+		}
+		every_core_province = {
+			limit = {
+				region = hgh_rock_lr
+			}
+			remove_core = ROOT
+		}
+		}
+		
+	}
+	
+	option = {
+		name = es_collapse.2.c
+		ai_chance = { factor = 10 }
+		
+		trigger = {
+		NOT = { capital_scope = { region = hgh_rock_lr } }
+		NOT = { exists = HIG }
+		}
+		
+		every_core_province = {
+			limit = {
+				region = hgh_rock_lr
+			}
+			remove_core = ROOT
+		}
+		
+		every_owned_province = {
+		limit = {
+		region = hgh_rock_lr
+		}
+		add_core = HIG
+		}
+		
+		release = HIG
+		
+		if = {
+		limit = {
+		government = monarchy
+		}
+		create_union = HIG
+	    }
+		else = {
+		create_alliance = HIG
+		add_opinion = { who = ROOT modifier = es_friendly_nation }
+		add_opinion = { who = HIG modifier = es_friendly_nation }
+		}
+	}
+}

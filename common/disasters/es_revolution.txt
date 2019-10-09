@@ -1,0 +1,170 @@
+es_revolution = {
+	potential = {
+		always = yes
+	}
+
+	can_start = {
+		OR = {
+		AND = {
+		government = monarchy
+		NOT = { legitimacy = 25 }
+		}
+		AND = {
+		government = republic
+		NOT = { republican_tradition = 25 }
+		}
+		AND = {
+		government = theocracy
+		has_dlc = "Common Sense"
+		NOT = { devotion = 25 }
+		}
+		AND = {
+		is_nomad = yes
+		has_dlc = "The Cossacks"
+		NOT = { horde_unity = 25 }
+		}
+		AND = {
+		is_nomad = yes
+		NOT = { has_dlc = "The Cossacks" }
+		NOT = { legitimacy = 25 }
+		}
+		AND = {
+		is_emperor_of_china = yes
+		NOT = { meritocracy = 25 }
+		}
+		}
+		is_lesser_in_union = no
+		is_free_or_tributary_trigger = yes
+	}
+	
+	
+	can_stop = {
+	    OR = {
+		AND = {
+		ai = no
+		is_at_war = no
+		OR = {
+		    legitimacy = 95
+			republican_tradition = 95
+			devotion = 95
+			horde_unity = 95
+			meritocracy = 95
+		}
+		}
+		AND = {
+		ai = yes
+		is_at_war = no
+		OR = {
+		    legitimacy = 50
+			republican_tradition = 50
+			devotion = 50
+			horde_unity = 50
+			meritocracy = 50
+		}
+		}
+		}
+	}
+		
+	progress = {
+	    modifier = {
+		factor = 1
+		OR = {
+		AND = {
+		government = monarchy
+		NOT = { legitimacy = 95 }
+		}
+		AND = {
+		government = republic
+		NOT = { republican_tradition = 95 }
+		}
+		AND = {
+		government = theocracy
+		has_dlc = "Common Sense"
+		NOT = { devotion = 95 }
+		}
+		AND = {
+		government = theocracy
+		NOT = { has_dlc = "Common Sense" }
+		NOT = { legitimacy = 95 }
+		}
+		AND = {
+		is_nomad = yes
+		has_dlc = "The Cossacks"
+		NOT = { horde_unity = 95 }
+		}
+		AND = {
+		is_nomad = yes
+		NOT = { has_dlc = "The Cossacks" }
+		NOT = { legitimacy = 95 }
+		}
+		AND = {
+		is_emperor_of_china = yes
+		NOT = { meritocracy = 95 }
+		}
+		}
+		}
+		modifier = {
+			factor = 1
+			revolt_percentage = 0.10
+		}	
+		modifier = {
+			factor = 1
+			overextension_percentage = 0.10
+		}
+        modifier = {
+			factor = 1
+			is_at_war = yes
+		}		
+		modifier = {
+			factor = 1
+			NOT = { stability = 0 }
+		}
+        modifier = {
+			factor = 1
+			war_exhaustion = 5
+		} 	
+	}
+	
+	can_end = {
+	    OR = {
+		AND = {
+		ai = no
+		is_at_war = no
+		OR = {
+		    legitimacy = 95
+			republican_tradition = 95
+			devotion = 95
+			horde_unity = 95
+			meritocracy = 95
+		}
+		}
+		AND = {
+		ai = yes
+		is_at_war = no
+		OR = {
+		    legitimacy = 50
+			republican_tradition = 50
+			devotion = 50
+			horde_unity = 50
+			meritocracy = 50
+		}
+		}
+		is_lesser_in_union = yes
+		is_free_or_tributary_trigger = no
+		}
+	}
+
+	modifier = {
+	    stability_cost_modifier = 1.0
+		global_unrest = 10
+	}	
+	
+	
+	on_start = ge_revolution.1
+	on_end = ge_revolution.27
+	
+	on_monthly = {
+		events = {
+		}
+	}
+}

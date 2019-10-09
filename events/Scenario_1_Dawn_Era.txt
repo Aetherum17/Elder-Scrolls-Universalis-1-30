@@ -1,0 +1,245 @@
+namespace = es_1_scenario
+
+country_event = {
+	id = es_1_scenario.1
+	title = es_1_scenario.1.t
+	desc = es_1_scenario.1.d
+	picture = ES_THRONEROOM_1_eventPicture	
+	
+	trigger = {
+	    NOT = { has_country_flag = es_1_scenario.1_flag }
+		NOT = { is_year = 65 }
+		OR = {
+		culture_group = high_elves_cg
+		culture_group = snow_elves_cg
+		}
+		OR = {
+		owns = 271
+		owns = 1206
+		owns = 1510
+		owns = 1379
+		owns = 1313
+		}
+    }
+
+	mean_time_to_happen = {
+		days = 11680		
+	}
+	
+	immediate = {
+	    set_country_flag = es_1_scenario.1_flag
+	}
+
+	option = {
+		name = "es_1_scenario.1.a"
+		ai_chance = { factor = 33 }
+		add_country_modifier = {
+		name = "01_focus_on_war"
+		duration = 9125
+		}
+		if = {
+		limit = {
+		owns = 271
+		}
+		every_province = {
+		limit = {
+		region = central_syrodiil_lr
+		}
+		add_core = ROOT
+		}
+		if = {
+		limit = {
+		exists = CB8
+		NOT = { alliance_with = CB8 }
+		NOT = { overlord_of = CB8 }
+		}
+		declare_war_with_cb = {
+			who = CB8
+			casus_belli = cb_es_scenario
+		}
+		}
+		}
+		if = {
+		limit = {
+		owns = 1379
+		}
+		every_province = {
+		limit = {
+		region = hammerfell_lr
+		}
+		add_claim = ROOT
+		}
+		if = {
+		limit = {
+		exists = HB3
+		NOT = { alliance_with = HB3 }
+		NOT = { overlord_of = HB3 }
+		}
+		declare_war_with_cb = {
+			who = HB3
+			casus_belli = cb_es_scenario
+		}
+		}
+		}
+		if = {
+		limit = {
+		owns = 1313
+		}
+		every_province = {
+		limit = {
+		culture = nord
+		}
+		add_claim = ROOT
+		}
+		if = {
+		limit = {
+		exists = NA3
+		NOT = { alliance_with = NA3 }
+		NOT = { overlord_of = NA3 }
+		}
+		declare_war_with_cb = {
+			who = NA3
+			casus_belli = cb_es_scenario
+		}
+		}
+		}
+	}
+	option = {
+		name = "es_1_scenario.1.b"	
+		ai_chance = { factor = 33 }
+		add_country_modifier = {
+		name = "01_focus_on_trade"
+		duration = 9125
+		}
+	}	
+	option = {
+		name = "es_1_scenario.1.c"
+		ai_chance = { factor = 33 }
+		add_country_modifier = {
+		name = "01_focus_on_internal_sphere"
+		duration = 9125
+		}
+	}
+	option = {
+		name = "es_1_scenario.1.e"
+		ai_chance = { factor = 0 }
+		add_prestige = 5
+	}
+}
+
+country_event = {
+	id = es_1_scenario.2
+	title = es_1_scenario.2.t
+	desc = es_1_scenario.2.d
+	picture = ES_WAR_IS_NEAR_eventPicture	
+	
+	trigger = {
+	    NOT = { has_country_flag = es_1_scenario.2_flag }
+		culture_group = snow_elves_cg
+		owns = 952
+		NOT = { is_year = 109 }
+    }
+
+	mean_time_to_happen = {
+		days = 11680		
+	}
+	
+	immediate = {
+	    set_country_flag = es_1_scenario.2_flag
+	}
+
+	option = {
+		name = "es_1_scenario.2.a"
+		ai_chance = { factor = 33 }
+		add_trust = {
+        who = NB0
+        value = 50
+        mutual = yes
+        }
+	}
+	option = {
+		name = "es_1_scenario.2.b"
+		ai_chance = { factor = 33 }
+		create_alliance = MA5
+		add_prestige = -25
+		add_opinion = { who = ROOT modifier = es_friendly_nation }
+		add_opinion = { who = MA5 modifier = es_friendly_nation }
+	}
+	option = {
+		name = "es_1_scenario.2.b"
+		ai_chance = { factor = 33 }
+		create_alliance = MB9
+		add_prestige = -25
+		add_opinion = { who = ROOT modifier = es_friendly_nation }
+		add_opinion = { who = MB9 modifier = es_friendly_nation }
+	}
+	option = {
+		name = "es_1_scenario.1.c"
+		ai_chance = { factor = 0 }
+		add_prestige = 5
+	}
+}
+
+country_event = {
+	id = es_1_scenario.3
+	title = es_1_scenario.3.t
+	desc = es_1_scenario.3.d
+    picture = ES_ELDENROOT_eventPicture	
+	
+	trigger = {
+	    NOT = { has_country_flag = es_1_scenario.3_flag }
+		culture_group = bosmer_cg
+		owns = 820
+		NOT = { is_year = 68 }
+    }
+
+	mean_time_to_happen = {
+		days = 11680		
+	}
+	
+	immediate = {
+	    set_country_flag = es_1_scenario.3_flag
+	}
+
+	option = {
+		name = "es_1_scenario.3.a"
+		ai_chance = { factor = 50 }
+		add_prestige = -50
+		define_ruler = {
+        name = "Eplear"
+        dynasty = "Camoran"
+        adm = 1
+        dip = 3
+        mil = 7
+        age = 35
+        claim = 100
+		fixed = yes
+        }
+		define_heir = {
+        dynasty = "Camoran"
+        age = 1
+        adm = 2
+        dip = 3
+        mil = 2
+        claim = 100   
+        }
+		define_consort = {
+        culture = bosmer
+        adm = 7
+        dip = 3
+        mil = 1
+        female = yes
+        }
+	}
+	option = {
+		name = "es_1_scenario.3.b"
+		ai_chance = { factor = 50 }
+		add_stability = -3
+		add_prestige = 25
+		add_country_modifier = {
+		name = "01_camoran_unrest"
+		duration = 3650
+		}
+	}
+	
+}

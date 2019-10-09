@@ -1,0 +1,725 @@
+namespace = es_23_scenario
+
+country_event = {
+	id = es_23_scenario.1
+	title = es_23_scenario.1.t
+	desc = es_23_scenario.1.d
+	picture = ES_AKAVIRI_CITY_1_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_23_scenario.1_flag }
+		is_year = 1045
+		NOT = { is_year = 1100 }
+		culture_group = po_tun_cg
+		owns = 636
+    }
+
+	mean_time_to_happen = {
+		days = 10000
+	}
+	
+	immediate = {
+	    set_country_flag = es_23_scenario.1_flag
+	}
+
+	option = {
+		name = "es_23_scenario.1.a"
+		ai_chance = { factor = 25 }
+		add_country_modifier = {
+		name = "23_grand_armada"
+		duration = 9125
+		}
+		add_stability = -1
+		
+		if = {
+		limit = {
+		exists = TA1
+		NOT = { alliance_with = TA1 }
+		NOT = { overlord_of = TA1 }
+		}
+		declare_war_with_cb = {
+			who = TA1
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = TA2
+		NOT = { alliance_with = TA2 }
+		NOT = { overlord_of = TA2 }
+		}
+		declare_war_with_cb = {
+			who = TA2
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = TB0
+		NOT = { alliance_with = TB0 }
+		NOT = { overlord_of = TB0 }
+		}
+		declare_war_with_cb = {
+			who = TB0
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = TB2
+		NOT = { alliance_with = TB2 }
+		NOT = { overlord_of = TB2 }
+		}
+		declare_war_with_cb = {
+			who = TB2
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = TSA
+		NOT = { alliance_with = TSA }
+		NOT = { overlord_of = TSA }
+		}
+		declare_war_with_cb = {
+			who = TSA
+			casus_belli = cb_es_scenario
+		}
+		}
+	}
+	
+	option = {
+		name = "es_23_scenario.1.b"
+		ai_chance = { factor = 25 }
+		add_country_modifier = {
+		name = "23_grand_army"
+		duration = 9125
+		}
+		add_stability = -1
+		
+		if = {
+		limit = {
+		exists = TA6
+		NOT = { alliance_with = TA6 }
+		NOT = { overlord_of = TA6 }
+		}
+		declare_war_with_cb = {
+			who = TA6
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = TA8
+		NOT = { alliance_with = TA8 }
+		NOT = { overlord_of = TA8 }
+		}
+		declare_war_with_cb = {
+			who = TA8
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = TB0
+		NOT = { alliance_with = TB0 }
+		NOT = { overlord_of = TB0 }
+		}
+		declare_war_with_cb = {
+			who = TB0
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = TB2
+		NOT = { alliance_with = TB2 }
+		NOT = { overlord_of = TB2 }
+		}
+		declare_war_with_cb = {
+			who = TB2
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = TSA
+		NOT = { alliance_with = TSA }
+		NOT = { overlord_of = TSA }
+		}
+		declare_war_with_cb = {
+			who = TSA
+			casus_belli = cb_es_scenario
+		}
+		}
+	}
+	
+	option = {
+		name = "es_23_scenario.1.c"
+		ai_chance = { factor = 25 }
+		add_country_modifier = {
+		name = "23_akaviri_trade_union"
+		duration = 9125
+		}
+		add_prestige = 25
+	}
+	
+	option = {
+		name = "es_23_scenario.1.e"
+		ai_chance = { factor = 25 }
+	    add_stability = 1
+	}
+	
+}
+
+country_event = {
+	id = es_23_scenario.2
+	title = es_23_scenario.2.t
+	desc = es_23_scenario.2.d
+	picture = ES_AKAVIRI_CITY_2_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_23_scenario.2_flag }
+		is_year = 1045
+		NOT = { is_year = 1100 }
+		culture_group = tsaesci_cg
+		owns = 724
+    }
+
+	mean_time_to_happen = {
+		days = 10000
+	}
+	
+	immediate = {
+	    set_country_flag = es_23_scenario.2_flag
+	}
+
+	option = {
+		name = "es_23_scenario.2.a"
+		ai_chance = { factor = 50 }
+		
+		if = {
+		limit = {
+		exists = TRA
+		NOT = { alliance_with = TRA }
+		NOT = { overlord_of = TRA }
+		}
+		declare_war_with_cb = {
+			who = TRA
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = UPP
+		NOT = { alliance_with = UPP }
+		NOT = { overlord_of = UPP }
+		}
+		declare_war_with_cb = {
+			who = UPP
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = OA6
+		NOT = { alliance_with = OA6 }
+		NOT = { overlord_of = OA6 }
+		}
+		declare_war_with_cb = {
+			who = OA6
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = UA3
+		NOT = { alliance_with = UA3 }
+		NOT = { overlord_of = UA3 }
+		}
+		declare_war_with_cb = {
+			who = UA3
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+	}
+	
+	option = {
+		name = "es_23_scenario.2.b"
+		ai_chance = { factor = 50 }
+		add_country_modifier = {
+		name = "23_collapse_of_society"
+		duration = 9125
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_23_scenario.3
+	title = es_23_scenario.3.t
+	desc = es_23_scenario.3.d
+	picture = ES_AKAVIRI_PALACE_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_23_scenario.3_flag }
+		is_year = 1045
+		NOT = { is_year = 1100 }
+		culture_group = po_tun_cg
+		owns = 646
+    }
+
+	mean_time_to_happen = {
+		days = 10000
+	}
+	
+	immediate = {
+	    set_country_flag = es_23_scenario.3_flag
+	}
+
+	option = {
+		name = "es_23_scenario.3.a"
+		ai_chance = { factor = 50 }
+		kill_ruler = yes
+		kill_heir = yes
+		add_stability = -1
+		add_prestige = -35
+		add_legitimacy = -35
+		add_republican_tradition = -25
+		add_devotion = -35
+		add_horde_unity = -35
+		add_meritocracy = -25
+	}
+	
+	option = {
+		name = "es_23_scenario.3.b"
+		ai_chance = { factor = 50 }
+		add_country_modifier = {
+		name = "23_internal_conflicts"
+		duration = 9125
+		}
+		if = { limit = { government = monarchy }
+		random_owned_province = { 
+			spawn_rebels = {
+				type = pretender_rebels
+				size = 5
+				win = yes
+				unrest = 25
+			}
+		}
+		random_owned_province = { 
+			spawn_rebels = {
+				type = pretender_rebels
+				size = 5
+				win = yes
+				unrest = 25
+			}
+		}
+		random_owned_province = { 
+			spawn_rebels = {
+				type = pretender_rebels
+				size = 5
+				win = yes
+				unrest = 25
+			}
+		}
+		}
+		else = {
+		random_owned_province = { 
+			spawn_rebels = {
+				type = noble_rebels
+				size = 5
+				win = yes
+				unrest = 25
+			}
+		}
+		random_owned_province = { 
+			spawn_rebels = {
+				type = noble_rebels
+				size = 5
+				win = yes
+				unrest = 25
+			}
+		}
+		random_owned_province = { 
+			spawn_rebels = {
+				type = noble_rebels
+				size = 5
+				win = yes
+				unrest = 25
+			}
+		}
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_23_scenario.4
+	title = es_23_scenario.4.t
+	desc = es_23_scenario.4.d
+	picture = ES_RELIGIOUS_HERECY_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_23_scenario.4_flag }
+		is_year = 1045
+		NOT = { is_year = 1100 }
+		culture_group = transpandomaic_cg
+		owns = 750
+    }
+
+	mean_time_to_happen = {
+		days = 10000
+	}
+	
+	immediate = {
+	    set_country_flag = es_23_scenario.4_flag
+	}
+
+	option = {
+		name = "es_23_scenario.4.a"
+		ai_chance = { factor = 50 }
+		add_country_modifier = {
+		name = "23_crisis_of_faith"
+		duration = 9125
+		}
+		if = { limit = { religion = dragon_cult }
+		random_owned_province = {
+		limit = { religion = dragon_cult }
+		change_religion = old_gods_cult
+		}
+		random_owned_province = {
+		limit = { religion = dragon_cult }
+		change_religion = old_gods_cult
+		}
+		random_owned_province = {
+		limit = { religion = dragon_cult }
+		change_religion = old_gods_cult
+		}
+		random_owned_province = {
+		limit = { religion = dragon_cult }
+		change_religion = old_gods_cult
+		}
+		random_owned_province = {
+		limit = { religion = dragon_cult }
+		change_religion = old_gods_cult
+		}
+		}
+		else = {
+		random_owned_province = {
+		limit = { NOT = { religion = dragon_cult } }
+		change_religion = dragon_cult
+		}
+		random_owned_province = {
+		limit = { NOT = { religion = dragon_cult } }
+		change_religion = dragon_cult
+		}
+		random_owned_province = {
+		limit = { NOT = { religion = dragon_cult } }
+		change_religion = dragon_cult
+		}
+		random_owned_province = {
+		limit = { NOT = { religion = dragon_cult } }
+		change_religion = dragon_cult
+		}
+		random_owned_province = {
+		limit = { NOT = { religion = dragon_cult } }
+		change_religion = dragon_cult
+		}
+		}
+	}
+	
+	option = {
+		name = "es_23_scenario.4.b"
+		ai_chance = { factor = 50 }
+		random_owned_province = { 
+			spawn_rebels = {
+				type = heretic_rebels
+				size = 5
+				win = yes
+				unrest = 25
+			}
+		}
+		random_owned_province = { 
+			spawn_rebels = {
+				type = heretic_rebels
+				size = 5
+				win = yes
+				unrest = 25
+			}
+		}
+		random_owned_province = { 
+			spawn_rebels = {
+				type = heretic_rebels
+				size = 5
+				win = yes
+				unrest = 25
+			}
+		}
+		random_owned_province = { 
+			spawn_rebels = {
+				type = heretic_rebels
+				size = 5
+				win = yes
+				unrest = 25
+			}
+		}
+		random_owned_province = { 
+			spawn_rebels = {
+				type = heretic_rebels
+				size = 5
+				win = yes
+				unrest = 25
+			}
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_23_scenario.5
+	title = es_23_scenario.5.t
+	desc = es_23_scenario.5.d
+	picture = ES_TROPICAL_AKAVIRI_CITY_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_23_scenario.5_flag }
+		is_year = 1045
+		NOT = { is_year = 1100 }
+		culture_group = tangmo_cg
+		owns = 561
+    }
+
+	mean_time_to_happen = {
+		days = 10000
+	}
+	
+	immediate = {
+	    set_country_flag = es_23_scenario.5_flag
+	}
+
+	option = {
+		name = "es_23_scenario.5.a"
+		ai_chance = { factor = 25 }
+		every_province = {
+		limit = {
+		region = thousand_lr
+		}
+		add_core = ROOT
+		}
+		add_country_modifier = {
+		name = "19_offensive_strategy"
+		duration = 9125
+		}
+		
+		if = {
+		limit = {
+		exists = UPP
+		NOT = { alliance_with = UPP }
+		NOT = { overlord_of = UPP }
+		}
+		declare_war_with_cb = {
+			who = UPP
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = POT
+		NOT = { alliance_with = POT }
+		NOT = { overlord_of = POT }
+		}
+		declare_war_with_cb = {
+			who = POT
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = UA3
+		NOT = { alliance_with = UA3 }
+		NOT = { overlord_of = UA3 }
+		}
+		declare_war_with_cb = {
+			who = UA3
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = UA1
+		NOT = { alliance_with = UA1 }
+		NOT = { overlord_of = UA1 }
+		}
+		declare_war_with_cb = {
+			who = UA1
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = OA6
+		NOT = { alliance_with = OA6 }
+		NOT = { overlord_of = OA6 }
+		}
+		declare_war_with_cb = {
+			who = OA6
+			casus_belli = cb_es_scenario
+		}
+		}
+	}
+	
+	option = {
+		name = "es_23_scenario.5.b"
+		ai_chance = { factor = 25 }
+		add_prestige = -10
+		add_country_modifier = {
+		name = "19_integration"
+		duration = 9125
+		}
+	}
+	
+	option = {
+		name = "es_23_scenario.5.c"
+		ai_chance = { factor = 25 }
+		add_prestige = -25
+		add_country_modifier = {
+		name = "19_colonization"
+		duration = 9125
+		}
+	}
+	
+	option = {
+		name = "es_23_scenario.5.e"
+		ai_chance = { factor = 25 }
+		add_prestige = -35
+		add_stability = 1
+		add_country_modifier = {
+		name = "19_decentralization"
+		duration = 9125
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_23_scenario.6
+	title = es_23_scenario.6.t
+	desc = es_23_scenario.6.d
+	picture = ES_ROYAL_COURT_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_23_scenario.6_flag }
+		is_year = 1045
+		NOT = { is_year = 1100 }
+		culture_group = yokudan-redguardian_cg
+		any_owned_province = { region = hammerfell_lr }
+    }
+
+	mean_time_to_happen = {
+		days = 10000
+	}
+	
+	immediate = {
+	    set_country_flag = es_23_scenario.6_flag
+	}
+
+	option = {
+		name = "es_23_scenario.6.a"
+		ai_chance = { factor = 33 }
+		add_country_modifier = {
+		name = "23_the_crowns"
+		duration = -1
+		}
+		if = { limit = { NOT = { religion = yokudan_pantheon } } change_religion = yokudan_pantheon every_owned_province = { limit = { region = hammerfell_lr } change_religion = yokudan_pantheon } }
+		random_owned_province = { limit = { region = hammerfell_lr }
+			spawn_rebels = {
+				type = redguard_pantheon_rebels
+				size = 5
+				win = yes
+				unrest = 25
+			}
+		}
+		every_country = {
+		limit = { has_country_modifier = 23_the_crowns }
+		create_alliance = ROOT
+		add_opinion = {
+        who = ROOT
+        modifier = es_friendly_nation
+        }
+		reverse_add_opinion = {
+        who = ROOT
+        modifier = es_friendly_nation
+        }
+		}
+	}
+	
+	option = {
+		name = "es_23_scenario.6.b"
+		ai_chance = { factor = 33 }
+		add_country_modifier = {
+		name = "23_the_forebears"
+		duration = -1
+		}
+		if = { limit = { NOT = { religion = redguard_pantheon } } change_religion = redguard_pantheon every_owned_province = { limit = { region = hammerfell_lr } change_religion = redguard_pantheon } }
+		random_owned_province = { limit = { region = hammerfell_lr }
+			spawn_rebels = {
+				type = yokudan_pantheon_rebels
+				size = 5
+				win = yes
+				unrest = 25
+			}
+		}
+		every_country = {
+		limit = { has_country_modifier = 23_the_forebears }
+		create_alliance = ROOT
+		add_opinion = {
+        who = ROOT
+        modifier = es_friendly_nation
+        }
+		reverse_add_opinion = {
+        who = ROOT
+        modifier = es_friendly_nation
+        }
+		}
+	}
+	
+	option = {
+		name = "es_23_scenario.6.c"
+		ai_chance = { factor = 33 }
+		add_stability = -1
+		random_owned_province = { limit = { region = hammerfell_lr }
+			spawn_rebels = {
+				type = redguard_pantheon_rebels
+				size = 5
+				win = yes
+				unrest = 25
+			}
+		}
+		random_owned_province = { limit = { region = hammerfell_lr }
+			spawn_rebels = {
+				type = yokudan_pantheon_rebels
+				size = 5
+				win = yes
+				unrest = 25
+			}
+		}
+	}
+	
+}

@@ -1,0 +1,603 @@
+namespace = es_18_scenario
+
+country_event = {
+	id = es_18_scenario.1
+	title = es_18_scenario.1.t
+	desc = es_18_scenario.1.d
+	picture = ES_TRIUMPH_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_18_scenario.1_flag }
+		is_year = 750
+		NOT = { is_year = 810 }
+		culture_group = yokudan-redguardian_cg
+		has_country_flag = frandar_hunding_flag
+    }
+
+	mean_time_to_happen = {
+		days = 10950
+	}
+	
+	immediate = {
+	    set_country_flag = es_18_scenario.1_flag
+	}
+
+	option = {
+		name = "es_18_scenario.1.a"
+		ai_chance = { factor = 100 }
+		add_prestige = 10
+	}
+	
+}
+
+country_event = {
+	id = es_18_scenario.2
+	title = es_18_scenario.2.t
+	desc = es_18_scenario.2.d
+	picture = ES_MILITARY_CAMP_2_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_18_scenario.2_flag }
+		is_year = 750
+		NOT = { is_year = 810 }
+		culture_group = yokudan-redguardian_cg
+		owns = 335
+    }
+
+	mean_time_to_happen = {
+		days = 10950
+	}
+	
+	immediate = {
+	    set_country_flag = es_18_scenario.2_flag
+	}
+
+	option = {
+		name = "es_18_scenario.2.a"
+		ai_chance = { factor = 50 }
+		define_general = {
+		name = "Divad Hunding"
+        shock = 5
+        fire = 5
+        manuever = 5
+        siege = 5
+		}
+		add_prestige = -35
+	}
+	option = {
+		name = "es_18_scenario.2.b"
+		ai_chance = { factor = 50 }
+		add_prestige = 5
+	}
+	
+}
+
+country_event = {
+	id = es_18_scenario.3
+	title = es_18_scenario.3.t
+	desc = es_18_scenario.3.d
+	picture = ES_HALL_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_18_scenario.3_flag }
+		is_year = 750
+		NOT = { is_year = 810 }
+		culture_group = yokudan-redguardian_cg
+		owns = 335
+    }
+
+	mean_time_to_happen = {
+		days = 10950
+	}
+	
+	immediate = {
+	    set_country_flag = es_18_scenario.3_flag
+	}
+
+	option = {
+		name = "es_18_scenario.3.a"
+		ai_chance = { factor = 50 }
+		add_treasury = -500
+		335 = {
+		add_province_modifier = {
+		name = "18_hall_of_virtues"
+		duration = -1
+		}
+		}
+	}
+	option = {
+		name = "es_18_scenario.3.b"
+		ai_chance = { factor = 50 }
+		add_prestige = 15
+	}
+	
+}
+
+country_event = {
+	id = es_18_scenario.4
+	title = es_18_scenario.4.t
+	desc = es_18_scenario.4.d
+	picture = ES_03_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_18_scenario.4_flag }
+		is_year = 750
+		NOT = { is_year = 810 }
+		culture_group = yokudan-redguardian_cg
+		owns = 335
+    }
+
+	mean_time_to_happen = {
+		days = 10950
+		modifier = {
+			factor = 0.01
+			has_global_flag = book_of_circles_flag
+		}
+	}
+	
+	immediate = {
+	    set_country_flag = es_18_scenario.4_flag
+	}
+
+	option = {
+		name = "es_18_scenario.4.a"
+		ai_chance = { factor = 100 }
+		set_global_flag = book_of_circles_flag
+		add_country_modifier = {
+		name = "18_book_of_circles"
+		duration = 36500
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_18_scenario.5
+	title = es_18_scenario.5.t
+	desc = es_18_scenario.5.d
+	picture = ES_REVOLUTION_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_18_scenario.5_flag }
+		is_year = 750
+		NOT = { is_year = 810 }
+		culture_group = yokudan-redguardian_cg
+		owns = 335
+    }
+
+	mean_time_to_happen = {
+		days = 10950
+	}
+	
+	immediate = {
+	    set_country_flag = es_18_scenario.5_flag
+	}
+
+	option = {
+		name = "es_18_scenario.5.a"
+		ai_chance = { factor = 50 }
+        change_government = republic
+		kill_ruler = yes
+		add_stability = -3
+	}
+	option = {
+		name = "es_18_scenario.5.b"
+		ai_chance = { factor = 50 }
+        set_global_flag = tsunami_wave_flag
+		random_owned_province = { 
+			spawn_rebels = {
+				type = revolutionary_rebels
+				size = 5
+				win = yes
+				unrest = 25
+			}
+		}
+	}
+}
+
+country_event = {
+	id = es_18_scenario.6
+	title = es_18_scenario.6.t
+	desc = es_18_scenario.6.d
+	picture = ES_WAVE_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_18_scenario.6_flag }
+	    is_year = 750
+		culture_group = yokudan-redguardian_cg
+    }
+
+	mean_time_to_happen = {
+		days = 91250
+		modifier = {
+			factor = 0.01
+			has_global_flag = tsunami_wave_flag
+		}
+	}
+	
+	immediate = {
+	    set_country_flag = es_18_scenario.6_flag
+	}
+
+	option = {
+		name = "es_18_scenario.6.a"
+		ai_chance = { factor = 100 }
+		set_global_flag = tsunami_wave_flag
+		set_global_flag = redguard_migration_flag
+		add_country_modifier = {
+		name = "17_liberty_desire"
+		duration = 9125
+		}
+		every_owned_province = {
+		    if = { 
+			limit = { base_tax = 4 }
+			add_base_tax = -3
+		    }
+		    if = { 
+			limit = { base_production = 4 }
+			add_base_production = -3
+		    }
+		    if = { 
+			limit = { base_manpower = 4 }
+			add_base_manpower = -3
+		    }
+			add_devastation = 100
+		}
+		every_province = {
+		limit = {
+		OR = {
+		area = hammerfell_7_la
+		area = hammerfell_11_la
+		area = hammerfell_12_la
+		}
+		}
+		add_core = ROOT
+		}
+		
+		if = {
+		limit = {
+		exists = FAL
+		NOT = { alliance_with = FAL }
+		NOT = { overlord_of = FAL }
+		}
+		declare_war_with_cb = {
+			who = FAL
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = ROU
+		NOT = { alliance_with = ROU }
+		NOT = { overlord_of = ROU }
+		}
+		declare_war_with_cb = {
+			who = ROU
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = HA7
+		NOT = { alliance_with = HA7 }
+		NOT = { overlord_of = HA7 }
+		}
+		declare_war_with_cb = {
+			who = HA7
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = HE7
+		NOT = { alliance_with = HE7 }
+		NOT = { overlord_of = HE7 }
+		}
+		declare_war_with_cb = {
+			who = HE7
+			casus_belli = cb_es_scenario
+		}
+		}
+	}
+}
+	
+country_event = {
+	id = es_18_scenario.7
+	title = es_18_scenario.7.t
+	desc = es_18_scenario.7.d
+	picture = ES_SMALL_VILLAGE_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_18_scenario.7_flag }
+		is_year = 750
+		NOT = { is_year = 810 }
+		owns = 1381
+    }
+
+	mean_time_to_happen = {
+		days = 10950
+	}
+	
+	immediate = {
+	    set_country_flag = es_18_scenario.7_flag
+	}
+
+	option = {
+		name = "es_18_scenario.7.a"
+		ai_chance = { factor = 100 }
+		1426 = {
+		change_province_name = "Wayrest"
+		rename_capital = "Wayrest"
+        add_base_tax = 3
+		add_base_production = 3
+		add_base_manpower = 3
+		}
+		set_global_flag = foundation_of_wayres_flag
+	}
+}
+
+country_event = {
+	id = es_18_scenario.8
+	title = es_18_scenario.8.t
+	desc = es_18_scenario.8.d
+	picture = ES_MIGRATION_CAMP_eventPicture
+	
+	trigger = {
+	    NOT = { is_year = 1350 }
+		OR = {
+		tag = HAM
+		has_global_flag = redguard_migration_flag
+		}
+		NOT = { primary_culture = ayleid }
+		NOT = { primary_culture = falmer }
+		NOT = { primary_culture = dwemer }
+		any_owned_province = {
+		region = hammerfell_lr
+		NOT = { culture = redguard }
+		OR = {
+		culture = ayleid
+		culture = falmer
+		culture = dwemer
+		}
+		}
+    }
+
+	mean_time_to_happen = {
+		days = 9125
+	}
+
+	option = {
+		name = "es_18_scenario.8.a"
+		ai_chance = { factor = 100 }
+		random_owned_province = {
+        limit = {
+		region = hammerfell_lr
+		NOT = { culture = redguard }
+		OR = {
+		culture = ayleid
+		culture = falmer
+		culture = dwemer
+		}
+		}
+		change_culture = redguard
+		change_religion = redguard_pantheon
+		add_base_tax = 1
+		add_base_production = 1
+		add_base_manpower = 1
+		}
+	}
+}
+
+country_event = {
+	id = es_18_scenario.9
+	title = es_18_scenario.9.t
+	desc = es_18_scenario.9.d
+	picture = ES_REDGUARDS_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_18_scenario.1_flag }
+		is_year = 750
+		NOT = { is_year = 1350 }
+		OR = {
+		culture_group = yokudan-redguardian_cg
+		AND = {
+		NOT = { culture_group = yokudan-redguardian_cg }
+		has_global_flag = redguard_migration_flag
+		}
+		}
+		any_owned_province = {
+		region = hammerfell_lr
+		}
+    }
+
+	mean_time_to_happen = {
+		days = 3650
+	}
+	
+	immediate = {
+	    set_country_flag = es_18_scenario.9_flag
+	}
+
+	option = {
+		name = "es_18_scenario.9.a"
+		ai_chance = { factor = 100 }
+		add_country_modifier = {
+		name = "18_ra_gada"
+		duration = 36500
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_18_scenario.10
+	title = es_18_scenario.10.t
+	desc = es_18_scenario.10.d
+	picture = ES_HAMMERFELL_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_18_scenario.10_flag }
+		is_year = 750
+		NOT = { is_year = 1350 }
+		culture_group = yokudan-redguardian_cg
+		any_owned_province = {
+		region = hammerfell_lr
+		}
+    }
+
+	mean_time_to_happen = {
+		days = 3650
+	}
+	
+	immediate = {
+	    set_country_flag = es_18_scenario.10_flag
+	}
+
+	option = {
+		name = "es_18_scenario.10.a"
+		ai_chance = { factor = 50 }
+		change_primary_culture = redguard
+		change_religion = redguard_pantheon
+		every_owned_province = {
+		limit = {
+		region = hammerfell_lr
+		}
+		change_religion = redguard_pantheon
+		}
+	}
+	option = {
+		name = "es_18_scenario.10.b"
+		ai_chance = { factor = 50 }
+		every_owned_province = {
+		limit = {
+		region = hammerfell_lr
+		}
+		change_religion = redguard_pantheon
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_18_scenario.11
+	title = es_18_scenario.11.t
+	desc = es_18_scenario.11.d
+	picture = ES_DUEL_OF_ORCS_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_18_scenario.11_flag }
+		is_year = 750
+		NOT = { is_year = 810 }
+		culture_group = orsimer_cg
+		owns = 1391
+    }
+
+	mean_time_to_happen = {
+		days = 10950
+	}
+	
+	immediate = {
+	    set_country_flag = es_18_scenario.11_flag
+	}
+
+	option = {
+		name = "es_18_scenario.11.a"
+		ai_chance = { factor = 50 }
+		random_list = {
+		75 = {
+		kill_ruler = yes
+		kill_heir = yes
+		add_stability = -1
+		define_ruler = {
+        name = "Thulgeg"
+        dynasty = "gro-Igron"
+        adm = 4
+		dip = 6
+		mil = 5
+        age = 30
+        claim = 100
+		fixed = yes
+		}
+		}
+		25 = {
+		add_prestige = 25
+		}
+        }
+	}
+	
+	option = {
+		name = "es_18_scenario.11.b"
+		ai_chance = { factor = 50 }
+		add_prestige = -35
+		if = {
+		limit = {
+		OR = {
+		government = monarchy
+		government = tribal
+		}
+		}
+		if = {
+			limit = {
+				has_states_general_mechanic = yes
+			}
+			change_statists_vs_orangists = 1
+		}
+	    capital_scope = {
+		    spawn_rebels = {
+			type = pretender_rebels
+			size = 5
+			leader = "Thulgeg gro-Igron"
+			}
+			every_neighbor_province = {
+				limit = {
+					owned_by = ROOT
+				}
+				spawn_rebels = {
+					type = pretender_rebels
+					size = 3
+				}
+			}
+		}
+		}
+		else = {
+		capital_scope = {
+		    spawn_rebels = {
+			type = noble_rebels
+			size = 5
+			leader = "Thulgeg gro-Igron"
+			}
+			every_neighbor_province = {
+				limit = {
+					owned_by = ROOT
+				}
+				spawn_rebels = {
+					type = noble_rebels
+					size = 3
+				}
+			}
+		}
+		}
+	}
+	
+	option = {
+		name = "es_18_scenario.11.c"
+		ai_chance = { factor = 50 }
+		add_prestige = -50
+		kill_ruler = yes
+		kill_heir = yes
+		define_ruler = {
+        name = "Thulgeg"
+        dynasty = "gro-Igron"
+        adm = 4
+		dip = 6
+		mil = 5
+        age = 30
+        claim = 100
+		fixed = yes
+		}
+	}
+	
+}

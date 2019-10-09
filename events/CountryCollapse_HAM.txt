@@ -1,0 +1,345 @@
+namespace = es_collapse
+
+country_event = {
+	id = es_collapse.23
+	title = es_collapse.23.t
+	desc = es_collapse.23.d
+	picture = ES_PROVINCE_COLLAPSE_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	    add_country_modifier = {
+			name = "vassal_autonomy"
+			duration = 9125
+		}
+	}
+	
+	option = {
+		name = es_collapse.2.a
+		ai_chance = { factor = 75 }
+		hidden_effect = {
+		
+		if = {
+		limit = {
+		NOT = { capital_scope = { region = hammerfell_lr } }
+		}
+		every_core_province = {
+			limit = {
+				region = hammerfell_lr
+			}
+			remove_core = ROOT
+		}
+		}
+		
+		if = {
+		limit = {
+		hammerfell_1_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = HA1 }
+		NOT = { exists = HE1 }
+		NOT = { capital_scope = { area = hammerfell_1_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = hammerfell_1_la
+		}
+		add_core = HA1
+		}
+		create_vassal = HA1
+		}
+		
+		if = {
+		limit = {
+		hammerfell_2_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = HA2 }
+		NOT = { exists = HE2 }
+		NOT = { capital_scope = { area = hammerfell_2_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = hammerfell_2_la
+		}
+		add_core = HA2
+		}
+		create_vassal = HA2
+		}
+		
+		if = {
+		limit = {
+		hammerfell_3_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = HA3 }
+		NOT = { exists = HE3 }
+		NOT = { capital_scope = { area = hammerfell_3_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = hammerfell_3_la
+		}
+		add_core = HA3
+		}
+		create_vassal = HA3
+		}
+		
+		if = {
+		limit = {
+		hammerfell_4_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = HA4 }
+		NOT = { exists = HE4 }
+		NOT = { capital_scope = { area = hammerfell_4_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = hammerfell_4_la
+		}
+		add_core = HA4
+		}
+		create_vassal = HA4
+		}
+		
+		if = {
+		limit = {
+		hammerfell_5_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = HA5 }
+		NOT = { exists = HE5 }
+		NOT = { capital_scope = { area = hammerfell_5_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = hammerfell_5_la
+		}
+		add_core = HA5
+		}
+		create_vassal = HA5
+		}
+		
+		if = {
+		limit = {
+		hammerfell_6_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = HA6 }
+		NOT = { exists = HE6 }
+		NOT = { capital_scope = { area = hammerfell_6_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = hammerfell_6_la
+		}
+		add_core = HA6
+		}
+		create_vassal = HA6
+		}
+		
+		if = {
+		limit = {
+		hammerfell_7_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = HA7 }
+		NOT = { exists = HE7 }
+		NOT = { capital_scope = { area = hammerfell_7_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = hammerfell_7_la
+		}
+		add_core = HA7
+		}
+		create_vassal = HA7
+		}
+		
+		if = {
+		limit = {
+		hammerfell_8_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = HA8 }
+		NOT = { exists = HE8 }
+		NOT = { capital_scope = { area = hammerfell_8_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = hammerfell_8_la
+		}
+		add_core = HA8
+		}
+		create_vassal = HA8
+		}
+		
+		if = {
+		limit = {
+		hammerfell_9_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = HA9 }
+		NOT = { exists = HE9 }
+		NOT = { capital_scope = { area = hammerfell_9_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = hammerfell_9_la
+		}
+		add_core = HA9
+		}
+		create_vassal = HA9
+		}
+		
+		if = {
+		limit = {
+		hammerfell_10_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = HB0 }
+		NOT = { exists = HF0 }
+		NOT = { capital_scope = { area = hammerfell_10_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = hammerfell_10_la
+		}
+		add_core = HB0
+		}
+		create_vassal = HB0
+		}
+		
+		if = {
+		limit = {
+		hammerfell_11_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = HB1 }
+		NOT = { exists = HF1 }
+		NOT = { capital_scope = { area = hammerfell_11_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = hammerfell_11_la
+		}
+		add_core = HB1
+		}
+		create_vassal = HB1
+		}
+		
+		if = {
+		limit = {
+		hammerfell_12_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = HB2 }
+		NOT = { exists = HF2 }
+		NOT = { capital_scope = { area = hammerfell_12_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = hammerfell_12_la
+		}
+		add_core = HB2
+		}
+		create_vassal = HB2
+		}
+		
+		if = {
+		limit = {
+		hammerfell_13_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = HB3 }
+		NOT = { exists = HF3 }
+		NOT = { capital_scope = { area = hammerfell_13_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = hammerfell_13_la
+		}
+		add_core = HB3
+		}
+		create_vassal = HB3
+		}
+		
+		if = {
+		limit = {
+		hammerfell_14_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = HB4 }
+		NOT = { exists = HF4 }
+		NOT = { capital_scope = { area = hammerfell_14_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = hammerfell_14_la
+		}
+		add_core = HB4
+		}
+		create_vassal = HB4
+		}
+		
+	    }
+	}
+	
+	option = {
+		name = es_collapse.2.b
+		ai_chance = { factor = 15 }
+		
+		if = {
+		limit = {
+		NOT = { capital_scope = { region = hammerfell_lr } }
+		}
+		every_core_province = {
+			limit = {
+				region = hammerfell_lr
+			}
+			remove_core = ROOT
+		}
+		}
+		
+	}
+	
+	option = {
+		name = es_collapse.2.c
+		ai_chance = { factor = 10 }
+		
+		trigger = {
+		NOT = { capital_scope = { region = hammerfell_lr } }
+		NOT = { exists = HAM }
+		}
+		
+		every_core_province = {
+			limit = {
+				region = hammerfell_lr
+			}
+			remove_core = ROOT
+		}
+		
+		every_owned_province = {
+		limit = {
+		region = hammerfell_lr
+		}
+		add_core = HAM
+		}
+		
+		release = HAM
+		
+		if = {
+		limit = {
+		government = monarchy
+		}
+		create_union = HAM
+	    }
+		else = {
+		create_alliance = HAM
+		add_opinion = { who = ROOT modifier = es_friendly_nation }
+		add_opinion = { who = HAM modifier = es_friendly_nation }
+		}
+	}
+}

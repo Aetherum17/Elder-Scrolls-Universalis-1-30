@@ -1,0 +1,215 @@
+# Do not change tags in here without changing every other reference to them.
+# If adding new technology, make sure they are uniquely named.
+
+
+# Groups must be defined BEFORE tables.
+
+#Nation Designer Cost is set to match triggers for starting institutions.
+
+groups = {
+    tamriel_tg = {
+		start_level = 1
+		start_cost_modifier = 0
+		nation_designer_trigger = {
+				capital_scope = {
+					continent = Tamriel
+				}
+				NOT = { culture_group = maorner_cg }
+				NOT = { culture_group = khajiiti_cg }
+				NOT = { culture_group = marsh_cg }
+				NOT = { culture_group = orsimer_cg }
+				NOT = { culture_group = tangmo_cg }
+				NOT = { culture_group = kamal_cg }
+		}
+		nation_designer_cost = {
+		    trigger = {
+			always = yes
+			}
+			value = 0
+		}
+	}
+    atmora_tg = {
+		start_level = 1
+		start_cost_modifier = 0
+		nation_designer_trigger = {
+				capital_scope = {
+					continent = Atmora
+				}
+				NOT = { culture_group = maorner_cg }
+				NOT = { culture_group = khajiiti_cg }
+				NOT = { culture_group = marsh_cg }
+				NOT = { culture_group = orsimer_cg }
+				NOT = { culture_group = tangmo_cg }
+				NOT = { culture_group = kamal_cg }
+			}
+		nation_designer_cost = {
+		    trigger = {
+			always = yes
+			}
+			value = 0
+		}
+	}
+	elsweyr_tg = {
+		start_level = 1
+		start_cost_modifier = 0
+		is_primitive = yes
+		nation_designer_trigger = {
+			culture_group = khajiiti_cg
+		}
+		nation_designer_cost = {
+		    trigger = {
+			always = yes
+			}
+			value = 0
+		}
+	}
+	yokudan_tg = {
+		start_level = 1
+		start_cost_modifier = 0
+		nation_designer_trigger = {
+				capital_scope = {
+					continent = Yokuda
+				}
+				NOT = { culture_group = maorner_cg }
+				NOT = { culture_group = khajiiti_cg }
+				NOT = { culture_group = marsh_cg }
+				NOT = { culture_group = orsimer_cg }
+				NOT = { culture_group = tangmo_cg }
+				NOT = { culture_group = kamal_cg }
+			}
+		nation_designer_cost = {
+		    trigger = {
+			always = yes
+			}
+			value = 0
+		}
+	}
+	thousand_tg = {
+		start_level = 1
+		start_cost_modifier = 0
+		is_primitive = yes
+		nation_designer_trigger = {
+			culture_group = tangmo_cg
+		}
+		nation_designer_cost = {
+		    trigger = {
+			always = yes
+			}
+			value = 0
+		}
+	}
+	orsimer_tg = {
+		start_level = 1
+		start_cost_modifier = 0
+		is_primitive = yes
+		nation_designer_trigger = {
+			culture_group = orsimer_cg
+		}
+		nation_designer_cost = {
+		    trigger = {
+			always = yes
+			}
+			value = 0
+		}
+	}
+	akavir_tg = {
+		start_level = 1
+		start_cost_modifier = 0
+		nation_designer_trigger = {
+			capital_scope = {
+				continent = Akavir
+			}
+			NOT = { culture_group = maorner_cg }
+			NOT = { culture_group = khajiiti_cg }
+			NOT = { culture_group = marsh_cg }
+			NOT = { culture_group = orsimer_cg }
+			NOT = { culture_group = tangmo_cg }
+			NOT = { culture_group = kamal_cg }
+		}
+		nation_designer_cost = {
+		    trigger = {
+			always = yes
+			}
+			value = 0
+		}
+	}
+	pyandonea_tg = {
+		start_level = 1
+		start_cost_modifier = 0
+		is_primitive = yes
+		nation_designer_trigger = {
+			culture_group = maorner_cg
+		}
+		nation_designer_cost = {
+		    trigger = {
+			always = yes
+			}
+			value = 0
+		}
+	}
+	marshan_tg = {
+		start_level = 1
+		start_cost_modifier = 0
+		is_primitive = yes
+		nation_designer_trigger = {
+		    OR = {
+			culture_group = marsh_cg
+			culture_group = kothringi_cg
+			}
+		}
+		nation_designer_cost = {
+		    trigger = {
+			always = yes
+			}
+			value = 0
+		}
+	}
+	kamal_tg = {
+		start_level = 1
+		start_cost_modifier = 0
+		is_primitive = yes
+		nation_designer_trigger = {
+			culture_group = kamal_cg
+		}
+		nation_designer_cost = {
+		    trigger = {
+			always = yes
+			}
+			value = 0
+		}
+	}
+	daedric_tg = {
+		start_level = 1
+		start_cost_modifier = 0
+		is_primitive = yes
+		nation_designer_trigger = {
+			always = no
+		}
+		nation_designer_cost = {
+		    trigger = {
+			always = yes
+			}
+			value = 0
+		}
+	}
+	oceanic_tg = {
+		start_level = 1
+		start_cost_modifier = 0
+		is_primitive = yes
+		nation_designer_trigger = {
+			always = no
+		}
+		nation_designer_cost = {
+		    trigger = {
+			always = yes
+			}
+			value = 0
+		}
+	}
+}
+
+tables = {
+	adm_tech = "technologies/adm.txt"
+	dip_tech = "technologies/dip.txt"
+	mil_tech = "technologies/mil.txt"
+}

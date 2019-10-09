@@ -1,0 +1,58 @@
+caldera_research_hub = {
+	is_blessing = yes
+
+	modifier = {
+		administrative_efficiency = 0.10
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+main_research_hub = {
+	is_blessing = yes
+
+	modifier = {
+		legitimacy = 1.0
+		devotion = 1.0
+		republican_tradition = 0.50
+		horde_unity = 1.0
+		meritocracy = 1.0
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+black_reach_research_hub = {
+	is_blessing = yes
+
+	modifier = {
+		global_manpower_modifier = 0.10
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+aethereal_research_hub = {
+	is_blessing = yes
+
+	modifier = {
+		religious_unity = 0.10
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+western_research_hub = {
+	is_blessing = yes
+
+	modifier = {
+		recover_army_morale_speed = 0.10
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}

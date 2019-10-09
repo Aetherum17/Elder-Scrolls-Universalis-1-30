@@ -1,0 +1,410 @@
+namespace = es_8_scenario
+
+country_event = {
+	id = es_8_scenario.1
+	title = es_8_scenario.1.t
+	desc = es_8_scenario.1.d
+	picture = ES_TRIUMPH_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_8_scenario.1_flag }
+		is_year = 266
+		NOT = { is_year = 308 }
+		culture_group = northern_cg
+		OR = {
+		owns = 1275
+		owns = 1342
+		}
+    }
+
+	mean_time_to_happen = {
+		days = 7665
+	}
+	
+	immediate = {
+	    set_country_flag = es_8_scenario.1_flag
+	}
+
+	option = {
+		name = "es_8_scenario.1.a"
+		ai_chance = { factor = 50 }
+		change_tag = OLD
+		if = {
+			limit = {
+				NOT = { government_rank = 7 }
+			}
+			set_government_rank = 7
+			}
+		if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		if = {
+		limit = {
+		owns = 1342
+		}
+		every_province = {
+		limit = {
+		region = hgh_rock_lr
+		}
+		add_claim = ROOT
+		}
+		}
+		if = {
+		limit = {
+		owns = 1275
+		}
+		every_province = {
+		limit = {
+		region = morrowind_lr
+		}
+		add_claim = ROOT
+		}
+		}
+		add_country_modifier = {
+		name = "08_prepare_for_war"
+		duration = 3650
+		}
+		
+		if = {
+		limit = {
+		exists = DWE
+		NOT = { alliance_with = DWE }
+		NOT = { overlord_of = DWE }
+		}
+		declare_war_with_cb = {
+			who = DWE
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = DIR
+		NOT = { alliance_with = DIR }
+		NOT = { overlord_of = DIR }
+		}
+		declare_war_with_cb = {
+			who = DIR
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = HIG
+		NOT = { alliance_with = HIG }
+		NOT = { overlord_of = HIG }
+		}
+		declare_war_with_cb = {
+			who = HIG
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = BA1
+		NOT = { alliance_with = BA1 }
+		NOT = { overlord_of = BA1 }
+		}
+		declare_war_with_cb = {
+			who = BA1
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = BA3
+		NOT = { alliance_with = BA3 }
+		NOT = { overlord_of = BA3 }
+		}
+		declare_war_with_cb = {
+			who = BA3
+			casus_belli = cb_es_scenario
+		}
+		}
+	}
+	option = {
+		name = "es_8_scenario.1.b"
+		ai_chance = { factor = 50 }
+		add_prestige = -25
+	}
+}
+
+province_event = {
+	id = es_8_scenario.2
+	title = es_8_scenario.2.t
+	desc = es_8_scenario.2.d
+	picture = ES_LABOUR_eventPicture
+	
+	trigger = {
+		is_year = 266
+		NOT = { is_year = 308 }
+		culture = nedic
+		OR = {
+		region = western_syrodiil_lr
+		region = eastern_syrodiil_lr
+		region = central_syrodiil_lr
+		}
+		any_owned_province = {
+		NOT = { culture = ayleid }
+		}
+    }
+
+	mean_time_to_happen = {
+		days = 22995
+	}
+
+	option = {
+		name = "es_8_scenario.2.a"
+		ai_chance = { factor = 50 }
+		random_owned_province = {
+		limit = {
+		NOT = { culture = ayleid }
+		}
+		change_culture = ayleid
+		add_base_tax = 3
+		add_base_production = 3
+		add_base_manpower = 3
+		add_province_modifier = {
+		name = "08_ayleid_lords"
+		duration = 3650
+		}
+		}
+	}
+	option = {
+		name = "es_8_scenario.2.b"
+		ai_chance = { factor = 50 }
+	}
+}
+
+country_event = {
+	id = es_8_scenario.3
+	title = es_8_scenario.3.t
+	desc = es_8_scenario.3.d
+	picture = ES_DWEMES_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_8_scenario.3_flag }
+		is_year = 266
+		NOT = { is_year = 308 }
+		culture_group = dwemer_cg
+		owns = 970
+    }
+
+	mean_time_to_happen = {
+		days = 7665
+	}
+	
+	immediate = {
+	    set_country_flag = es_8_scenario.3_flag
+	}
+
+	option = {
+		name = "es_8_scenario.3.a"
+		ai_chance = { factor = 50 }
+		every_province = {
+		limit = {
+		region = eastern_skyrim_lr
+		}
+		add_claim = ROOT
+		}
+		add_country_modifier = {
+		name = "08_prepare_for_war"
+		duration = 3650
+		}
+		
+		if = {
+		limit = {
+		exists = SKY
+		NOT = { alliance_with = SKY }
+		NOT = { overlord_of = SKY }
+		}
+		declare_war_with_cb = {
+			who = SKY
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = OLD
+		NOT = { alliance_with = OLD }
+		NOT = { overlord_of = OLD }
+		}
+		declare_war_with_cb = {
+			who = OLD
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = NA3
+		NOT = { alliance_with = NA3 }
+		NOT = { overlord_of = NA3 }
+		}
+		declare_war_with_cb = {
+			who = NA3
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = NA9
+		NOT = { alliance_with = NA9 }
+		NOT = { overlord_of = NA9 }
+		}
+		declare_war_with_cb = {
+			who = NA9
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = NB2
+		NOT = { alliance_with = NB2 }
+		NOT = { overlord_of = NB2 }
+		}
+		declare_war_with_cb = {
+			who = NB2
+			casus_belli = cb_es_scenario
+		}
+		}
+	}
+	option = {
+		name = "es_8_scenario.3.b"
+		ai_chance = { factor = 50 }
+		add_prestige = -25
+	}
+}
+
+country_event = {
+	id = es_8_scenario.4
+	title = es_8_scenario.4.t
+	desc = es_8_scenario.4.d
+	picture = ES_BANK_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_8_scenario.4_flag }
+		is_year = 266
+		NOT = { is_year = 308 }
+		culture_group = high_elves_cg
+		owns = 1369
+    }
+
+	mean_time_to_happen = {
+		days = 7665
+	}
+	
+	immediate = {
+	    set_country_flag = es_8_scenario.4_flag
+	}
+
+	option = {
+		name = "es_8_scenario.4.a"
+		ai_chance = { factor = 50 }
+		add_country_modifier = {
+		name = "08_give_autonomy"
+		duration = 9125
+		}
+	}
+	option = {
+		name = "es_8_scenario.4.b"
+		ai_chance = { factor = 50 }
+		add_country_modifier = {
+		name = "08_refuse_autonomy"
+		duration = 9125
+		}
+	}
+}
+
+country_event = {
+	id = es_8_scenario.5
+	title = es_8_scenario.5.t
+	desc = es_8_scenario.5.d
+	picture = ES_REBELLION_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_8_scenario.5_flag }
+		is_year = 266
+		NOT = { is_year = 308 }
+		culture_group = dead_cg
+		owns = 1344
+    }
+
+	mean_time_to_happen = {
+		days = 7665
+	}
+	
+	immediate = {
+	    set_country_flag = es_8_scenario.5_flag
+	}
+
+	option = {
+		name = "es_8_scenario.4.a"
+		ai_chance = { factor = 50 }
+		define_ruler = {
+        name = "Harkon"
+        dynasty = "Volhkihar"
+		culture = vampire
+        adm = 3
+        dip = 5
+        mil = 7
+        age = 40
+        claim = 100
+		fixed = yes
+        }
+		define_heir = {
+        name = "Serana"
+		dynasty = "Volhkihar"
+		culture = vampire
+        age = 14
+        adm = 5
+        dip = 7
+        mil = 3
+        claim = 100 
+        female = yes		
+        }
+		define_consort = {
+		name = "Valerica"
+		dynasty = "Volhkihar"
+		age = 35
+        culture = vampire
+        adm = 7
+        dip = 3
+        mil = 5
+        female = yes
+        }
+	}
+	option = {
+		name = "es_8_scenario.4.b"
+		ai_chance = { factor = 50 }
+		add_stability = -1
+		random_owned_province = { 
+			spawn_rebels = {
+				type = noble_rebels
+				size = 5
+				win = yes
+				unrest = 25
+			}
+		}
+        random_owned_province = { 
+			spawn_rebels = {
+				type = heretic_rebels
+				size = 5
+				win = yes
+				unrest = 25
+			}
+		}
+		random_owned_province = { 
+			spawn_rebels = {
+				type = particularist_rebels
+				size = 5
+				win = yes
+				unrest = 25
+			}
+		}
+	}
+}

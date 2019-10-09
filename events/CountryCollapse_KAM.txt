@@ -1,0 +1,280 @@
+namespace = es_collapse
+
+country_event = {
+	id = es_collapse.7
+	title = es_collapse.7.t
+	desc = es_collapse.7.d
+	picture = ES_PROVINCE_COLLAPSE_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	    add_country_modifier = {
+			name = "vassal_autonomy"
+			duration = 9125
+		}
+	}
+	
+	option = {
+		name = es_collapse.2.a
+		ai_chance = { factor = 75 }
+		hidden_effect = {
+		
+		if = {
+		limit = {
+		NOT = { capital_scope = { region = northern_kamal_lr } }
+		}
+		every_core_province = {
+			limit = {
+				region = northern_kamal_lr
+			}
+			remove_core = ROOT
+		}
+		}
+		
+		if = {
+		limit = {
+		kamal_11_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = KB1 }
+		NOT = { capital_scope = { area = kamal_11_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = kamal_11_la
+		}
+		add_core = KB1
+		}
+		create_vassal = KB1
+		}
+		
+		if = {
+		limit = {
+		kamal_12_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = KB2 }
+		NOT = { capital_scope = { area = kamal_12_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = kamal_12_la
+		}
+		add_core = KB2
+		}
+		create_vassal = KB2
+		}
+		
+		if = {
+		limit = {
+		kamal_13_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = KB3 }
+		NOT = { capital_scope = { area = kamal_13_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = kamal_13_la
+		}
+		add_core = KB3
+		}
+		create_vassal = KB3
+		}
+		
+		if = {
+		limit = {
+		kamal_14_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = KB4 }
+		NOT = { capital_scope = { area = kamal_14_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = kamal_14_la
+		}
+		add_core = KB4
+		}
+		create_vassal = KB4
+		}
+		
+		if = {
+		limit = {
+		kamal_15_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = KB5 }
+		NOT = { capital_scope = { area = kamal_15_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = kamal_15_la
+		}
+		add_core = KB5
+		}
+		create_vassal = KB5
+		}
+		
+		if = {
+		limit = {
+		kamal_16_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = KB6 }
+		NOT = { capital_scope = { area = kamal_16_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = kamal_16_la
+		}
+		add_core = KB6
+		}
+		create_vassal = KB6
+		}
+		
+		if = {
+		limit = {
+		kamal_17_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = KB7 }
+		NOT = { capital_scope = { area = kamal_17_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = kamal_17_la
+		}
+		add_core = KB7
+		}
+		create_vassal = KB7
+		}
+		
+		if = {
+		limit = {
+		kamal_18_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = KB8 }
+		NOT = { capital_scope = { area = kamal_18_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = kamal_18_la
+		}
+		add_core = KB8
+		}
+		create_vassal = KB8
+		}
+		
+		if = {
+		limit = {
+		kamal_19_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = KB9 }
+		NOT = { capital_scope = { area = kamal_19_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = kamal_19_la
+		}
+		add_core = KB9
+		}
+		create_vassal = KB9
+		}
+		
+		if = {
+		limit = {
+		kamal_20_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = KB0 }
+		NOT = { capital_scope = { area = kamal_20_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = kamal_20_la
+		}
+		add_core = KB0
+		}
+		create_vassal = KB0
+		}
+		
+		if = {
+		limit = {
+		kamal_21_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = KB1 }
+		NOT = { capital_scope = { area = kamal_21_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = kamal_21_la
+		}
+		add_core = KB1
+		}
+		create_vassal = KB1
+		}
+		
+	    }
+	}
+	
+	option = {
+		name = es_collapse.2.b
+		ai_chance = { factor = 15 }
+		
+		if = {
+		limit = {
+		NOT = { capital_scope = { region = northern_kamal_lr } }
+		}
+		every_core_province = {
+			limit = {
+				region = northern_kamal_lr
+			}
+			remove_core = ROOT
+		}
+		}
+		
+	}
+	
+	option = {
+		name = es_collapse.2.c
+		ai_chance = { factor = 10 }
+		
+		trigger = {
+		NOT = { capital_scope = { region = northern_kamal_lr } }
+		NOT = { exists = KAM }
+		}
+		
+		every_core_province = {
+			limit = {
+				region = northern_kamal_lr
+			}
+			remove_core = ROOT
+		}
+		
+		every_owned_province = {
+		limit = {
+		region = northern_kamal_lr
+		}
+		add_core = KAM
+		}
+		
+		release = KAM
+		
+		if = {
+		limit = {
+		government = monarchy
+		}
+		create_union = KAM
+	    }
+		else = {
+		create_alliance = KAM
+		add_opinion = { who = ROOT modifier = es_friendly_nation }
+		add_opinion = { who = KAM modifier = es_friendly_nation }
+		}
+	}
+}

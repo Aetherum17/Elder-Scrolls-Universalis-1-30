@@ -1,0 +1,280 @@
+namespace = es_collapse
+
+country_event = {
+	id = es_collapse.17
+	title = es_collapse.17.t
+	desc = es_collapse.17.d
+	picture = ES_PROVINCE_COLLAPSE_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	    add_country_modifier = {
+			name = "vassal_autonomy"
+			duration = 9125
+		}
+	}
+	
+	option = {
+		name = es_collapse.2.a
+		ai_chance = { factor = 75 }
+		hidden_effect = {
+		
+		if = {
+		limit = {
+		NOT = { capital_scope = { region = western_syrodiil_lr } }
+		}
+		every_core_province = {
+			limit = {
+				region = western_syrodiil_lr
+			}
+			remove_core = ROOT
+		}
+		}
+		
+		if = {
+		limit = {
+		cyrodiil_7_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CA7 }
+		NOT = { capital_scope = { area = cyrodiil_7_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = cyrodiil_7_la
+		}
+		add_core = CA7
+		}
+		create_vassal = CA7
+		}
+		
+		if = {
+		limit = {
+		cyrodiil_8_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CA8 }
+		NOT = { capital_scope = { area = cyrodiil_8_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = cyrodiil_8_la
+		}
+		add_core = CA8
+		}
+		create_vassal = CA8
+		}
+		
+		if = {
+		limit = {
+		cyrodiil_9_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CA9 }
+		NOT = { capital_scope = { area = cyrodiil_9_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = cyrodiil_9_la
+		}
+		add_core = CA9
+		}
+		create_vassal = CA9
+		}
+		
+		if = {
+		limit = {
+		cyrodiil_10_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CB0 }
+		NOT = { capital_scope = { area = cyrodiil_10_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = cyrodiil_10_la
+		}
+		add_core = CB0
+		}
+		create_vassal = CB0
+		}
+		
+		if = {
+		limit = {
+		cyrodiil_11_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CB1 }
+		NOT = { capital_scope = { area = cyrodiil_11_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = cyrodiil_11_la
+		}
+		add_core = CB1
+		}
+		create_vassal = CB1
+		}
+		
+		if = {
+		limit = {
+		cyrodiil_12_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CB2 }
+		NOT = { capital_scope = { area = cyrodiil_12_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = cyrodiil_12_la
+		}
+		add_core = CB2
+		}
+		create_vassal = CB2
+		}
+		
+		if = {
+		limit = {
+		cyrodiil_13_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CB3 }
+		NOT = { capital_scope = { area = cyrodiil_13_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = cyrodiil_13_la
+		}
+		add_core = CB3
+		}
+		create_vassal = CB3
+		}
+		
+		if = {
+		limit = {
+		cyrodiil_14_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CB4 }
+		NOT = { capital_scope = { area = cyrodiil_14_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = cyrodiil_14_la
+		}
+		add_core = CB4
+		}
+		create_vassal = CB4
+		}
+		
+		if = {
+		limit = {
+		cyrodiil_15_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CB5 }
+		NOT = { capital_scope = { area = cyrodiil_15_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = cyrodiil_15_la
+		}
+		add_core = CB5
+		}
+		create_vassal = CB5
+		}
+		
+		if = {
+		limit = {
+		cyrodiil_16_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CB6 }
+		NOT = { capital_scope = { area = cyrodiil_16_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = cyrodiil_16_la
+		}
+		add_core = CB6
+		}
+		create_vassal = CB6
+		}
+		
+		if = {
+		limit = {
+		cyrodiil_20_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CC0 }
+		NOT = { capital_scope = { area = cyrodiil_20_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = cyrodiil_20_la
+		}
+		add_core = CC0
+		}
+		create_vassal = CC0
+		}
+		
+	    }
+	}
+	
+	option = {
+		name = es_collapse.2.b
+		ai_chance = { factor = 15 }
+		
+		if = {
+		limit = {
+		NOT = { capital_scope = { region = western_syrodiil_lr } }
+		}
+		every_core_province = {
+			limit = {
+				region = western_syrodiil_lr
+			}
+			remove_core = ROOT
+		}
+		}
+		
+	}
+	
+	option = {
+		name = es_collapse.2.c
+		ai_chance = { factor = 10 }
+		
+		trigger = {
+		NOT = { capital_scope = { region = western_syrodiil_lr } }
+		NOT = { exists = COL }
+		}
+		
+		every_core_province = {
+			limit = {
+				region = western_syrodiil_lr
+			}
+			remove_core = ROOT
+		}
+		
+		every_owned_province = {
+		limit = {
+		region = western_syrodiil_lr
+		}
+		add_core = COL
+		}
+		
+		release = COL
+		
+		if = {
+		limit = {
+		government = monarchy
+		}
+		create_union = COL
+	    }
+		else = {
+		create_alliance = COL
+		add_opinion = { who = ROOT modifier = es_friendly_nation }
+		add_opinion = { who = COL modifier = es_friendly_nation }
+		}
+	}
+}

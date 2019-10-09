@@ -1,0 +1,143 @@
+# Do not change tags in here without changing every other reference to them.
+# Do not change tags in here without changing every other reference to them.
+# If adding new groups or ideas, make sure they are unique.
+
+# ai_will do does not actually determine weighting, but AI will not pick an idea with ai_will_do = 0
+# ROOT = country picking the idea
+# groups set to colonial=yes will be higher prioritized by the AI when spending power
+
+nahuatl_reforms = {
+	trigger = {
+		religion = serpant_king
+	}	
+
+	can_buy_idea = {
+		vassal = 5
+		is_at_war = no
+		NOT = { num_of_rebel_controlled_provinces = 1 }
+		stability = 1
+		NOT = { doom = 50 }
+	}
+	
+	nahuatl_reform_1 = {
+		war_exhaustion = -0.10
+		war_exhaustion_cost = -0.1
+		global_unrest = -1.0
+	}
+	nahuatl_reform_2 = {
+		diplomatic_upkeep = 1
+		diplomatic_reputation = 1
+		improve_relation_modifier = 0.10
+	}
+	nahuatl_reform_3 = {
+		discipline = 0.05
+		land_morale = 0.10
+		recover_army_morale_speed = 0.10
+	}
+	nahuatl_reform_4 = {
+		colonists = 1
+		production_efficiency = 0.10
+		culture_conversion_cost = -0.10
+	}
+	nahuatl_reform_5 = {
+		stability_cost_modifier = -0.10
+		ae_impact = -0.10
+		reduced_liberty_desire = 10
+	}	
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+inti_reforms = {
+	trigger = {
+		religion = kamal_pantheon
+	}	
+
+	can_buy_idea = {
+		is_at_war = no
+		NOT = { num_of_rebel_controlled_provinces = 1 }
+		stability = 1
+		authority = 100
+		num_of_cities = 10
+	}
+	
+	inti_reform_1 = {
+		manpower_recovery_speed = 0.10
+		global_manpower_modifier = 0.10
+		sailors_recovery_speed = 0.10
+	}
+	inti_reform_2 = {
+		colonists = 1
+		production_efficiency = 0.10
+		culture_conversion_cost = -0.10
+	}
+	inti_reform_3 = {
+		legitimacy = 1.0
+		devotion = 1.0
+		republican_tradition = 0.01
+		horde_unity = 1.0
+		meritocracy = 1.0
+	}
+	inti_reform_4 = {
+		land_morale = 0.10
+		discipline = 0.05
+		recover_army_morale_speed = 0.10
+	}
+	inti_reform_5 = {
+		core_creation = -0.10
+		administrative_efficiency = 0.10
+		max_states = 10
+	}	
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+mesoamerican_reforms = {
+	trigger = {
+		religion = tang_mo_pantheon
+	}	
+
+	can_buy_idea = {
+		is_at_war = no
+		NOT = { num_of_rebel_controlled_provinces = 1 }
+		stability = 1
+		num_of_cities = 20
+		NOT = { overextension_percentage = 0.01 }
+	}
+	
+	mesoamerican_reform_1 = {
+		land_maintenance_modifier = -0.10
+		naval_maintenance_modifier = -0.10
+        global_manpower_modifier = 0.10
+	}
+	mesoamerican_reform_2 = {
+		global_unrest = -1.0
+		stability_cost_modifier = -0.10
+		reduced_liberty_desire = 10
+	}
+	mesoamerican_reform_3 = {
+		infantry_power = 0.10
+		cavalry_power = 0.10
+		artillery_power = 0.10
+	}
+	mesoamerican_reform_4 = {
+		colonists = 1
+		production_efficiency = 0.10
+		culture_conversion_cost = -0.10
+	}
+	mesoamerican_reform_5 = {
+		core_creation = -0.10
+		administrative_efficiency = 0.10
+		max_states = 10
+	}	
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+

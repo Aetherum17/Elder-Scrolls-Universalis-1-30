@@ -1,0 +1,266 @@
+namespace = es_collapse
+
+country_event = {
+	id = es_collapse.14
+	title = es_collapse.14.t
+	desc = es_collapse.14.d
+	picture = ES_PROVINCE_COLLAPSE_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	    add_country_modifier = {
+			name = "vassal_autonomy"
+			duration = 9125
+		}
+	}
+	
+	option = {
+		name = es_collapse.2.a
+		ai_chance = { factor = 75 }
+		hidden_effect = {
+		
+		if = {
+		limit = {
+		NOT = { capital_scope = { region = vvardenfell_lr } }
+		}
+		every_core_province = {
+			limit = {
+				region = vvardenfell_lr
+			}
+			remove_core = ROOT
+		}
+		}
+		
+		if = {
+		limit = {
+		morrowind_1_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = MA1 }
+		NOT = { exists = ME1 }
+		NOT = { capital_scope = { area = morrowind_1_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = morrowind_1_la
+		}
+		add_core = MA1
+		}
+		create_vassal = MA1
+		}
+		
+		if = {
+		limit = {
+		morrowind_2_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = MA2 }
+		NOT = { exists = ME2 }
+		NOT = { capital_scope = { area = morrowind_2_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = morrowind_2_la
+		}
+		add_core = MA2
+		}
+		create_vassal = MA2
+		}
+		
+		if = {
+		limit = {
+		morrowind_3_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = MA3 }
+		NOT = { exists = ME3 }
+		NOT = { capital_scope = { area = morrowind_3_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = morrowind_3_la
+		}
+		add_core = MA3
+		}
+		create_vassal = MA3
+		}
+		
+		if = {
+		limit = {
+		morrowind_15_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = MB5 }
+		NOT = { capital_scope = { area = morrowind_15_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = morrowind_15_la
+		}
+		add_core = MB5
+		}
+		create_vassal = MB5
+		}
+		
+		if = {
+		limit = {
+		morrowind_16_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = MB6 }
+		NOT = { capital_scope = { area = morrowind_16_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = morrowind_16_la
+		}
+		add_core = MB6
+		}
+		create_vassal = MB6
+		}
+		
+		if = {
+		limit = {
+		morrowind_17_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = MB7 }
+		NOT = { capital_scope = { area = morrowind_17_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = morrowind_17_la
+		}
+		add_core = MB7
+		}
+		create_vassal = MB7
+		}
+		
+		if = {
+		limit = {
+		morrowind_18_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = MB8 }
+		NOT = { capital_scope = { area = morrowind_18_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = morrowind_18_la
+		}
+		add_core = MB8
+		}
+		create_vassal = MB8
+		}
+		
+		if = {
+		limit = {
+		morrowind_19_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = MB9 }
+		NOT = { capital_scope = { area = morrowind_19_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = morrowind_19_la
+		}
+		add_core = MB9
+		}
+		create_vassal = MB9
+		}
+		
+		if = {
+		limit = {
+		morrowind_20_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = MB0 }
+		NOT = { capital_scope = { area = morrowind_20_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = morrowind_20_la
+		}
+		add_core = MB0
+		}
+		create_vassal = MB0
+		}
+		
+		if = {
+		limit = {
+		morrowind_21_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = MB1 }
+		NOT = { capital_scope = { area = morrowind_21_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = morrowind_21_la
+		}
+		add_core = MB1
+		}
+		create_vassal = MB1
+		}
+		
+	    }
+	}
+	
+	option = {
+		name = es_collapse.2.b
+		ai_chance = { factor = 15 }
+		
+		if = {
+		limit = {
+		NOT = { capital_scope = { region = vvardenfell_lr } }
+		}
+		every_core_province = {
+			limit = {
+				region = vvardenfell_lr
+			}
+			remove_core = ROOT
+		}
+		}
+		
+	}
+	
+	option = {
+		name = es_collapse.2.c
+		ai_chance = { factor = 10 }
+		
+		trigger = {
+		NOT = { capital_scope = { region = vvardenfell_lr } }
+		NOT = { exists = ASH }
+		}
+		
+		every_core_province = {
+			limit = {
+				region = vvardenfell_lr
+			}
+			remove_core = ROOT
+		}
+		
+		every_owned_province = {
+		limit = {
+		region = vvardenfell_lr
+		}
+		add_core = ASH
+		}
+		
+		release = ASH
+		
+		if = {
+		limit = {
+		government = monarchy
+		}
+		create_union = ASH
+	    }
+		else = {
+		create_alliance = ASH
+		add_opinion = { who = ROOT modifier = es_friendly_nation }
+		add_opinion = { who = ASH modifier = es_friendly_nation }
+		}
+	}
+}

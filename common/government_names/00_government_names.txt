@@ -1,0 +1,2035 @@
+#######################################################################
+###### Monarchy
+#######################################################################
+
+federal_monarchy_statists = {
+	rank = {
+		1 = UNITED_PROVINCES
+		2 = UNITED_PROVINCES
+		3 = UNITED_PROVINCES
+		4 = UNITED_PROVINCES
+		5 = FEDERAL_KINGDOM
+		6 = FEDERAL_KINGDOM
+		7 = FEDERAL_KINGDOM
+		8 = FEDERAL_KINGDOM
+		9 = FEDERAL_KINGDOM
+		10 = FEDERAL_EMPIRE
+	}
+
+	ruler_male = {
+		1 = SPEAKER
+		2 = SPEAKER
+		3 = SPEAKER
+		4 = SPEAKER
+		5 = CHANCELOR
+		6 = CHANCELOR
+		7 = CHANCELOR
+		8 = CHANCELOR
+		9 = CHANCELOR
+		10 = PRESIDENT
+	}
+
+	ruler_female = {
+		1 = SPEAKER
+		2 = SPEAKER
+		3 = SPEAKER
+		4 = SPEAKER
+		5 = CHANCELOR
+		6 = CHANCELOR
+		7 = CHANCELOR
+		8 = CHANCELOR
+		9 = CHANCELOR
+		10 = PRESIDENT
+	}
+
+	trigger = {
+		has_reform = dutch_republic
+		is_statists_in_power = yes
+	}
+}
+
+federal_monarchy_monarchists = {
+	rank = {
+		1 = UNITED_PROVINCES
+		2 = UNITED_PROVINCES
+		3 = UNITED_PROVINCES
+		4 = UNITED_PROVINCES
+		5 = FEDERAL_KINGDOM
+		6 = FEDERAL_KINGDOM
+		7 = FEDERAL_KINGDOM
+		8 = FEDERAL_KINGDOM
+		9 = FEDERAL_KINGDOM
+		10 = FEDERAL_EMPIRE
+	}
+
+	ruler_male = {
+		1 = DUKE
+		2 = DUKE
+		3 = DUKE
+		4 = DUKE
+		5 = KING
+		6 = KING
+		7 = KING
+		8 = KING
+		9 = KING
+		10 = EMPEROR
+	}
+
+	ruler_female = {
+		1 = DUCHESS
+		2 = DUCHESS
+		3 = DUCHESS
+		4 = DUCHESS
+		5 = QUEEN
+		6 = QUEEN
+		7 = QUEEN
+		8 = QUEEN
+		9 = QUEEN
+		10 = EMPRESS
+	}
+
+	trigger = {
+		has_reform = dutch_republic
+		is_monarchists_in_power = yes
+	}
+}
+
+maorner_government = {
+	rank = {
+		1 = ALTEPETL
+		2 = ALTEPETL
+		3 = ALTEPETL
+		4 = ALTEPETL
+		5 = ALTEPETL_FEDERATION
+		6 = ALTEPETL_FEDERATION
+		7 = ALTEPETL_FEDERATION
+		8 = ALTEPETL_FEDERATION
+		9 = ALTEPETL_FEDERATION
+		10 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = CUAUHTLAHTOANI
+		2 = CUAUHTLAHTOANI
+		3 = CUAUHTLAHTOANI
+		4 = CUAUHTLAHTOANI
+		5 = TLATOANI
+		6 = TLATOANI
+		7 = TLATOANI
+		8 = TLATOANI
+		9 = TLATOANI
+		10 = HUEHUETLATOANI
+	}
+
+	ruler_female = {
+		1 = CIHUATLAHTOANI
+		2 = CIHUATLAHTOANI
+		3 = CIHUATLAHTOANI
+		4 = CIHUATLAHTOANI
+		5 = CIHUATLAHTOANI
+		6 = CIHUATLAHTOANI
+		7 = CIHUATLAHTOANI
+		8 = CIHUATLAHTOANI
+		9 = CIHUATLAHTOANI
+		10 = CIHUATLAHTOANI
+	}
+	
+	consort_male = {
+		1 = CUAUHTLAHTOANI
+		2 = CUAUHTLAHTOANI
+		3 = CUAUHTLAHTOANI
+		4 = CUAUHTLAHTOANI
+		5 = TLATOANI
+		6 = TLATOANI
+		7 = TLATOANI
+		8 = TLATOANI
+		9 = TLATOANI
+		10 = HUEHUETLATOANI
+	}
+
+	consort_female = {
+		1 = CIHUATLAHTOANI
+		2 = CIHUATLAHTOANI
+		3 = CIHUATLAHTOANI
+		4 = CIHUATLAHTOANI
+		5 = CIHUATLAHTOANI
+		6 = CIHUATLAHTOANI
+		7 = CIHUATLAHTOANI
+		8 = CIHUATLAHTOANI
+		9 = CIHUATLAHTOANI
+		10 = CIHUATLAHTOANI
+	}
+
+	trigger = {
+		government = monarchy
+		culture_group = maorner_cg
+	}
+}
+
+po_tun_bosmer_cyrodiil_government = {
+	rank = {
+		1 = PRINCEDOM
+		2 = PRINCEDOM
+		3 = PRINCEDOM
+		4 = PRINCEDOM
+		5 = KINGDOM
+		6 = KINGDOM
+		7 = KINGDOM
+		8 = KINGDOM
+		9 = KINGDOM
+		10 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = PRINCE
+		2 = PRINCE
+		3 = PRINCE
+		4 = PRINCE
+		5 = KING
+		6 = KING
+		7 = KING
+		8 = KING
+		9 = KING
+		10 = EMPEROR
+	}
+
+	ruler_female = {
+		1 = PRINCESS
+		2 = PRINCESS
+		3 = PRINCESS
+		4 = PRINCESS
+		5 = QUEEN
+		6 = QUEEN
+		7 = QUEEN
+		8 = QUEEN
+		9 = QUEEN
+		10 = EMPRESS
+	}
+	
+	consort_male = {
+        1 = PRINCE
+		2 = PRINCE
+		3 = PRINCE
+		4 = PRINCE
+		5 = KING
+		6 = KING
+		7 = KING
+		8 = KING
+		9 = KING
+		10 = EMPEROR
+	}
+
+	consort_female = {
+		1 = PRINCESS
+		2 = PRINCESS
+		3 = PRINCESS
+		4 = PRINCESS
+		5 = QUEEN
+		6 = QUEEN
+		7 = QUEEN
+		8 = QUEEN
+		9 = QUEEN
+		10 = EMPRESS
+	}
+
+	trigger = {
+		government = monarchy
+		OR = {
+		culture_group = po_tun_cg
+		culture_group = bosmer_cg
+		culture_group = cyrodiil_cg
+		}
+	}
+}
+
+daedra_government = {
+	rank = {
+		1 = PRINCEDOM
+		2 = PRINCEDOM
+		3 = PRINCEDOM
+		4 = PRINCEDOM
+		5 = KHANATE
+		6 = KHANATE
+		7 = KHANATE
+		8 = KHANATE
+		9 = KHANATE
+		10 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = BEILE
+		2 = BEILE
+		3 = BEILE
+		4 = BEILE
+		5 = JUNWANG
+		6 = JUNWANG
+		7 = JUNWANG
+		8 = JUNWANG
+		9 = JUNWANG
+		10 = EMPEROR
+	}
+
+	ruler_female = {
+		1 = GEGE
+		2 = GEGE
+		3 = GEGE
+		4 = GEGE
+		5 = JUNWANG
+		6 = JUNWANG
+		7 = JUNWANG
+		8 = JUNWANG
+		9 = JUNWANG
+		10 = EMPRESS
+	}
+	
+	consort_male = {
+		1 = BEILE
+		2 = BEILE
+		3 = BEILE
+		4 = BEILE
+		5 = JUNWANG
+		6 = JUNWANG
+		7 = JUNWANG
+		8 = JUNWANG
+		9 = JUNWANG
+		10 = EMPEROR
+	}
+
+	consort_female = {
+		1 = GEGE
+		2 = GEGE
+		3 = GEGE
+		4 = GEGE
+		5 = JUNWANG
+		6 = JUNWANG
+		7 = JUNWANG
+		8 = JUNWANG
+		9 = JUNWANG
+		10 = EMPRESS
+	}
+
+	trigger = {
+		government = monarchy
+		culture_group = daedra_cg
+	}
+}
+
+tangmo_government = {
+	rank = {
+		1 = PRINCEDOM
+		2 = PRINCEDOM
+		3 = PRINCEDOM
+		4 = PRINCEDOM
+		5 = KHANATE
+		6 = KHANATE
+		7 = KHANATE
+		8 = KHANATE
+		9 = KHANATE
+		10 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = RANA
+		2 = RANA
+		3 = RANA
+		4 = RANA
+		5 = MAHARANA
+		6 = MAHARANA
+		7 = MAHARANA
+		8 = MAHARANA
+		9 = MAHARANA
+		10 = CHHATRAPATI
+	}
+
+	ruler_female = {
+		1 = RANI
+		2 = RANI
+		3 = RANI
+		4 = RANI
+		5 = MAHARANI
+		6 = MAHARANI
+		7 = MAHARANI
+		8 = MAHARANI
+		9 = MAHARANI
+		10 = CHHATRAPATI
+	}
+	
+	consort_male = {
+		1 = RAJKUMAR
+		2 = RAJKUMAR
+		3 = RAJKUMAR
+		4 = RAJKUMAR
+		5 = RAJKUMAR
+		6 = RAJKUMAR
+		7 = RAJKUMAR
+		8 = RAJKUMAR
+		9 = RAJKUMAR
+		10 = RAJKUMAR
+	}
+
+	consort_female = {
+		1 = RAJKUMARI
+		2 = RAJKUMARI
+		3 = RAJKUMARI
+		4 = RAJKUMARI
+		5 = RAJKUMARI
+		6 = RAJKUMARI
+		7 = RAJKUMARI
+		8 = RAJKUMARI
+		9 = RAJKUMARI
+		10 = RAJKUMARI
+	}
+
+	trigger = {
+		government = monarchy
+		culture_group = tangmo_cg
+	}
+}
+
+imga_government = {
+	rank = {
+		1 = MONG
+		2 = MONG
+		3 = MONG
+		4 = MONG
+		5 = MONG
+		6 = MONG
+		7 = MONG
+		8 = MONG
+		9 = MONG
+		10 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = SAOPHA
+		2 = SAOPHA
+		3 = SAOPHA
+		4 = SAOPHA
+		5 = SAOPHA
+		6 = SAOPHA
+		7 = SAOPHA
+		8 = SAOPHA
+		9 = SAOPHA
+		10 = EMPEROR
+	}
+
+	ruler_female = {
+		1 = SAOPHA
+		2 = SAOPHA
+		3 = SAOPHA
+		4 = SAOPHA
+		5 = SAOPHA
+		6 = SAOPHA
+		7 = SAOPHA
+		8 = SAOPHA
+		9 = SAOPHA
+		10 = EMPRESS
+	}
+	
+	consort_male = {
+		1 = SAOPHA
+		2 = SAOPHA
+		3 = SAOPHA
+		4 = SAOPHA
+		5 = SAOPHA
+		6 = SAOPHA
+		7 = SAOPHA
+		8 = SAOPHA
+		9 = SAOPHA
+		10 = EMPEROR
+	}
+
+	consort_female = {
+		1 = SAOPHA
+		2 = SAOPHA
+		3 = SAOPHA
+		4 = SAOPHA
+		5 = SAOPHA
+		6 = SAOPHA
+		7 = SAOPHA
+		8 = SAOPHA
+		9 = SAOPHA
+		10 = EMPRESS
+	}
+
+	trigger = {
+		government = monarchy
+		culture_group = imga_cg
+	}
+}
+
+northern_government = {
+	rank = {
+		1 = JARLDOM
+		2 = JARLDOM
+		3 = JARLDOM
+		4 = JARLDOM
+		5 = KINGDOM
+		6 = KINGDOM
+		7 = KINGDOM
+		8 = KINGDOM
+		9 = KINGDOM
+		10 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = JARL
+		2 = JARL
+		3 = JARL
+		4 = JARL
+		5 = HIGH_KING
+		6 = HIGH_KING
+		7 = HIGH_KING
+		8 = HIGH_KING
+		9 = HIGH_KING
+		10 = EMPEROR
+	}
+
+	ruler_female = {
+		1 = JARL
+		2 = JARL
+		3 = JARL
+		4 = JARL
+		5 = HIGH_QUEEN
+		6 = HIGH_QUEEN
+		7 = HIGH_QUEEN
+		8 = HIGH_QUEEN
+		9 = HIGH_QUEEN
+		10 = EMPRESS
+	}
+	
+	consort_male = {
+		1 = JARL
+		2 = JARL
+		3 = JARL
+		4 = JARL
+		5 = HIGH_KING
+		6 = HIGH_KING
+		7 = HIGH_KING
+		8 = HIGH_KING
+		9 = HIGH_KING
+		10 = EMPEROR
+	}
+
+	consort_female = {
+		1 = JARL
+		2 = JARL
+		3 = JARL
+		4 = JARL
+		5 = HIGH_QUEEN
+		6 = HIGH_QUEEN
+		7 = HIGH_QUEEN
+		8 = HIGH_QUEEN
+		9 = HIGH_QUEEN
+		10 = EMPRESS
+	}
+
+	trigger = {
+		government = monarchy
+		culture_group = northern_cg
+	}
+}
+
+kamal_government = {
+	rank = {
+		1 = PRINCEDOM
+		2 = PRINCEDOM
+		3 = PRINCEDOM
+		4 = PRINCEDOM
+		5 = KINGDOM
+		6 = KINGDOM
+		7 = KINGDOM
+		8 = KINGDOM
+		9 = KINGDOM
+		10 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = KURAKA
+		2 = KURAKA
+		3 = KURAKA
+		4 = KURAKA
+		5 = APU
+		6 = APU
+		7 = APU
+		8 = APU
+		9 = APU
+		10 = SAPA_INKA
+	}
+
+	ruler_female = {
+		1 = KURAKA
+		2 = KURAKA
+		3 = KURAKA
+		4 = KURAKA
+		5 = APU
+		6 = APU
+		7 = APU
+		8 = APU
+		9 = APU
+		10 = SAPA_INKA
+	}
+	
+	consort_male = {
+		1 = KURAKA
+		2 = KURAKA
+		3 = KURAKA
+		4 = KURAKA
+		5 = APU
+		6 = APU
+		7 = APU
+		8 = APU
+		9 = APU
+		10 = SAPA_INKA
+	}
+
+	consort_female = {
+		1 = KURAKA
+		2 = KURAKA
+		3 = KURAKA
+		4 = KURAKA
+		5 = APU
+		6 = APU
+		7 = APU
+		8 = APU
+		9 = APU
+		10 = SAPA_INKA
+	}
+
+	trigger = {
+		government = monarchy
+		culture_group = kamal_cg
+	}
+}
+
+tsaesci_government = {
+	rank = {
+		1 = DAIMYO
+		2 = DAIMYO
+		3 = DAIMYO
+		4 = DAIMYO
+		5 = KINGDOM
+		6 = KINGDOM
+		7 = KINGDOM
+		8 = KINGDOM
+		9 = KINGDOM
+		10 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = LORD
+		2 = LORD
+		3 = LORD
+		4 = LORD
+		5 = KING
+		6 = KING
+		7 = KING
+		8 = KING
+		9 = KING
+		10 = SHOGUN
+	}
+
+	ruler_female = {
+		1 = LADY
+		2 = LADY
+		3 = LADY
+		4 = LADY
+		5 = QUEEN
+		6 = QUEEN
+		7 = QUEEN
+		8 = QUEEN
+		9 = QUEEN
+		10 = SHOGUNESS
+	}
+	
+	consort_male = {
+		1 = LORD
+		2 = LORD
+		3 = LORD
+		4 = LORD
+		5 = LORD
+		6 = LORD
+		7 = LORD
+		8 = LORD
+		9 = LORD
+		10 = LORD
+	}
+
+	consort_female = {
+		1 = LADY
+		2 = LADY
+		3 = LADY
+		4 = LADY
+		5 = LADY
+		6 = LADY
+		7 = LADY
+		8 = LADY
+		9 = LADY
+		10 = LADY
+	}
+
+	trigger = {
+		government = monarchy
+		culture_group = tsaesci_cg
+	}
+}
+
+dead_high_elves_snow_elves_government = {
+	rank = {
+		1 = GRAND_DUCHY
+		2 = GRAND_DUCHY
+		3 = GRAND_DUCHY
+		4 = GRAND_DUCHY
+		5 = KINGDOM
+		6 = KINGDOM
+		7 = KINGDOM
+		8 = KINGDOM
+		9 = KINGDOM
+		10 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = GRAND_DUKE
+		2 = GRAND_DUKE
+		3 = GRAND_DUKE
+		4 = GRAND_DUKE
+		5 = KING
+		6 = KING
+		7 = KING
+		8 = KING
+		9 = KING
+		10 = EMPEROR
+	}
+
+	ruler_female = {
+		1 = GRAND_DUCHESS
+		2 = GRAND_DUCHESS
+		3 = GRAND_DUCHESS
+		4 = GRAND_DUCHESS
+		5 = QUEEN
+		6 = QUEEN
+		7 = QUEEN
+		8 = QUEEN
+		9 = QUEEN
+		10 = EMPRESS
+	}
+	
+	consort_male = {
+		1 = GRAND_DUKE
+		2 = GRAND_DUKE
+		3 = GRAND_DUKE
+		4 = GRAND_DUKE
+		5 = KING
+		6 = KING
+		7 = KING
+		8 = KING
+		9 = KING
+		10 = EMPEROR
+	}
+
+	consort_female = {
+		1 = GRAND_DUCHESS
+		2 = GRAND_DUCHESS
+		3 = GRAND_DUCHESS
+		4 = GRAND_DUCHESS
+		5 = QUEEN
+		6 = QUEEN
+		7 = QUEEN
+		8 = QUEEN
+		9 = QUEEN
+		10 = EMPRESS
+	}
+
+	trigger = {
+		government = monarchy
+		OR = {
+		culture_group = dead_cg
+		culture_group = high_elves_cg
+		culture_group = snow_elves_cg
+		}
+	}
+}
+
+transpandomaic_government = {
+	rank = {
+		1 = PRINCEDOM
+		2 = PRINCEDOM
+		3 = PRINCEDOM
+		4 = PRINCEDOM
+		5 = KINGDOM
+		6 = KINGDOM
+		7 = KINGDOM
+		8 = KINGDOM
+		9 = KINGDOM
+		10 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = DESPOT
+		2 = DESPOT
+		3 = DESPOT
+		4 = DESPOT
+		5 = AUTOKRATOR
+		6 = AUTOKRATOR
+		7 = AUTOKRATOR
+		8 = AUTOKRATOR
+		9 = AUTOKRATOR
+		10 = BASILEUS
+	}
+
+	ruler_female = {
+		1 = DESPOTISSA
+		2 = DESPOTISSA
+		3 = DESPOTISSA
+		4 = DESPOTISSA
+		5 = AUTOKRATEIRA
+		6 = AUTOKRATEIRA
+		7 = AUTOKRATEIRA
+		8 = AUTOKRATEIRA
+		9 = AUTOKRATEIRA
+		10 = BASILISSA
+	}
+	
+	consort_male = {
+		1 = DESPOT
+		2 = DESPOT
+		3 = DESPOT
+		4 = DESPOT
+		5 = AUTOKRATOR
+		6 = AUTOKRATOR
+		7 = AUTOKRATOR
+		8 = AUTOKRATOR
+		9 = AUTOKRATOR
+		10 = BASILEUS
+	}
+
+	consort_female = {
+		1 = DESPOTISSA
+		2 = DESPOTISSA
+		3 = DESPOTISSA
+		4 = DESPOTISSA
+		5 = AUTOKRATEIRA
+		6 = AUTOKRATEIRA
+		7 = AUTOKRATEIRA
+		8 = AUTOKRATEIRA
+		9 = AUTOKRATEIRA
+		10 = BASILISSA
+	}
+
+	trigger = {
+		government = monarchy
+		culture_group = transpandomaic_cg
+	}
+}
+
+kothringi_government = {
+	rank = {
+		1 = PRINCEDOM
+		2 = PRINCEDOM
+		3 = PRINCEDOM
+		4 = PRINCEDOM
+		5 = KINGDOM
+		6 = KINGDOM
+		7 = KINGDOM
+		8 = KINGDOM
+		9 = KINGDOM
+		10 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = ANDRIANONI
+		2 = ANDRIANONI
+		3 = ANDRIANONI
+		4 = ANDRIANONI
+		5 = GRAND_ANDRIANONI
+		6 = GRAND_ANDRIANONI
+		7 = GRAND_ANDRIANONI
+		8 = GRAND_ANDRIANONI
+		9 = GRAND_ANDRIANONI
+		10 = GREAT_ANDRIANONI
+	}
+
+	ruler_female = {
+		1 = PRINCESS
+		2 = PRINCESS
+		3 = PRINCESS
+		4 = PRINCESS
+		5 = QUEEN
+		6 = QUEEN
+		7 = QUEEN
+		8 = QUEEN
+		9 = QUEEN
+		10 = EMPRESS
+	}
+	
+	consort_male = {
+		1 = ANDRIANONI
+		2 = ANDRIANONI
+		3 = ANDRIANONI
+		4 = ANDRIANONI
+		5 = GRAND_ANDRIANONI
+		6 = GRAND_ANDRIANONI
+		7 = GRAND_ANDRIANONI
+		8 = GRAND_ANDRIANONI
+		9 = GRAND_ANDRIANONI
+		10 = GREAT_ANDRIANONI
+	}
+
+	consort_female = {
+		1 = PRINCESS
+		2 = PRINCESS
+		3 = PRINCESS
+		4 = PRINCESS
+		5 = QUEEN
+		6 = QUEEN
+		7 = QUEEN
+		8 = QUEEN
+		9 = QUEEN
+		10 = EMPRESS
+	}
+
+	trigger = {
+		government = monarchy
+		culture_group = kothringi_cg
+	}
+}
+
+chimeris_dwemer_government = {
+	rank = {
+		1 = LORDSHIP
+		2 = LORDSHIP
+		3 = LORDSHIP
+		4 = LORDSHIP
+		5 = KINGDOM
+		6 = KINGDOM
+		7 = KINGDOM
+		8 = KINGDOM
+		9 = KINGDOM
+		10 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = LORD
+		2 = LORD
+		3 = LORD
+		4 = LORD
+		5 = KING
+		6 = KING
+		7 = KING
+		8 = KING
+		9 = KING
+		10 = EMPEROR
+	}
+
+	ruler_female = {
+		1 = LADY
+		2 = LADY
+		3 = LADY
+		4 = LADY
+		5 = QUEEN
+		6 = QUEEN
+		7 = QUEEN
+		8 = QUEEN
+		9 = QUEEN
+		10 = EMPRESS
+	}
+	
+	consort_male = {
+		1 = LORD
+		2 = LORD
+		3 = LORD
+		4 = LORD
+		5 = KING
+		6 = KING
+		7 = KING
+		8 = KING
+		9 = KING
+		10 = EMPEROR
+	}
+
+	consort_female = {
+	    1 = LADY
+		2 = LADY
+		3 = LADY
+		4 = LADY
+		5 = QUEEN
+		6 = QUEEN
+		7 = QUEEN
+		8 = QUEEN
+		9 = QUEEN
+		10 = EMPRESS
+	}
+
+	trigger = {
+		government = monarchy
+		OR = {
+		culture_group = chimeris_cg
+		culture_group = dwemer_cg
+		}
+	}
+}
+
+half_blood_orsimer_khajiiti_government = {
+	rank = {
+		1 = DUCHY
+		2 = DUCHY
+		3 = DUCHY
+		4 = DUCHY
+		5 = KINGDOM
+		6 = KINGDOM
+		7 = KINGDOM
+		8 = KINGDOM
+		9 = KINGDOM
+		10 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = DUKE
+		2 = DUKE
+		3 = DUKE
+		4 = DUKE
+		5 = KING
+		6 = KING
+		7 = KING
+		8 = KING
+		9 = KING
+		10 = EMPEROR
+	}
+
+	ruler_female = {
+		1 = DUCHESS
+		2 = DUCHESS
+		3 = DUCHESS
+		4 = DUCHESS
+		5 = QUEEN
+		6 = QUEEN
+		7 = QUEEN
+		8 = QUEEN
+		9 = QUEEN
+		10 = EMPRESS
+	}
+	
+	consort_male = {
+		1 = DUKE
+		2 = DUKE
+		3 = DUKE
+		4 = DUKE
+		5 = KING
+		6 = KING
+		7 = KING
+		8 = KING
+		9 = KING
+		10 = EMPEROR
+	}
+
+	consort_female = {
+	    1 = DUCHESS
+		2 = DUCHESS
+		3 = DUCHESS
+		4 = DUCHESS
+		5 = QUEEN
+		6 = QUEEN
+		7 = QUEEN
+		8 = QUEEN
+		9 = QUEEN
+		10 = EMPRESS
+	}
+
+	trigger = {
+		government = monarchy
+		OR = {
+		culture_group = half_blood_cg
+		culture_group = orsimer_cg
+		culture_group = khajiiti_cg
+		}
+	}
+}
+
+marsh_government = {
+	rank = {
+		1 = PRINCEDOM
+		2 = PRINCEDOM
+		3 = PRINCEDOM
+		4 = PRINCEDOM
+		5 = KINGDOM
+		6 = KINGDOM
+		7 = KINGDOM
+		8 = KINGDOM
+		9 = KINGDOM
+		10 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = JAM
+		2 = JAM
+		3 = JAM
+		4 = JAM
+		5 = GRAND_JAM
+		6 = GRAND_JAM
+		7 = GRAND_JAM
+		8 = GRAND_JAM
+		9 = GRAND_JAM
+		10 = GREAT_JAM
+	}
+
+	ruler_female = {
+		1 = JAM_fem
+		2 = JAM_fem
+		3 = JAM_fem
+		4 = JAM_fem
+		5 = GRAND_JAM_fem
+		6 = GRAND_JAM_fem
+		7 = GRAND_JAM_fem
+		8 = GRAND_JAM_fem
+		9 = GRAND_JAM_fem
+		10 = GREAT_JAM_fem
+	}
+	
+	consort_male = {
+		1 = JAM
+		2 = JAM
+		3 = JAM
+		4 = JAM
+		5 = GRAND_JAM
+		6 = GRAND_JAM
+		7 = GRAND_JAM
+		8 = GRAND_JAM
+		9 = GRAND_JAM
+		10 = GREAT_JAM
+	}
+
+	consort_female = {
+		1 = JAM_fem
+		2 = JAM_fem
+		3 = JAM_fem
+		4 = JAM_fem
+		5 = GRAND_JAM_fem
+		6 = GRAND_JAM_fem
+		7 = GRAND_JAM_fem
+		8 = GRAND_JAM_fem
+		9 = GRAND_JAM_fem
+		10 = GREAT_JAM_fem
+	}
+
+	trigger = {
+		government = monarchy
+		culture_group = marsh_cg
+	}
+}
+
+sload_government = {
+	rank = {
+		1 = ARCHDUCHY
+		2 = ARCHDUCHY
+		3 = ARCHDUCHY
+		4 = ARCHDUCHY
+		5 = KINGDOM
+		6 = KINGDOM
+		7 = KINGDOM
+		8 = KINGDOM
+		9 = KINGDOM
+		10 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = ARCHDUKE
+		2 = ARCHDUKE
+		3 = ARCHDUKE
+		4 = ARCHDUKE
+		5 = KING
+		6 = KING
+		7 = KING
+		8 = KING
+		9 = KING
+		10 = EMPEROR
+	}
+
+	ruler_female = {
+		1 = ARCHDUCHESS
+		2 = ARCHDUCHESS
+		3 = ARCHDUCHESS
+		4 = ARCHDUCHESS
+		5 = QUEEN
+		6 = QUEEN
+		7 = QUEEN
+		8 = QUEEN
+		9 = QUEEN
+		10 = EMPRESS
+	}
+	
+	consort_male = {
+		1 = ARCHDUKE
+		2 = ARCHDUKE
+		3 = ARCHDUKE
+		4 = ARCHDUKE
+		5 = KING
+		6 = KING
+		7 = KING
+		8 = KING
+		9 = KING
+		10 = EMPEROR
+	}
+
+	consort_female = {
+		1 = ARCHDUCHESS
+		2 = ARCHDUCHESS
+		3 = ARCHDUCHESS
+		4 = ARCHDUCHESS
+		5 = QUEEN
+		6 = QUEEN
+		7 = QUEEN
+		8 = QUEEN
+		9 = QUEEN
+		10 = EMPRESS
+	}
+
+	trigger = {
+		government = monarchy
+		culture_group = sload_cg
+	}
+}
+
+yokudan-redguardian_government = {
+	rank = {
+		1 = PRINCEDOM
+		2 = PRINCEDOM
+		3 = PRINCEDOM
+		4 = PRINCEDOM
+		5 = KINGDOM
+		6 = KINGDOM
+		7 = KINGDOM
+		8 = KINGDOM
+		9 = KINGDOM
+		10 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = RAS_title
+		2 = RAS_title
+		3 = RAS_title
+		4 = RAS_title
+		5 = NEGUS
+		6 = NEGUS
+		7 = NEGUS
+		8 = NEGUS
+		9 = NEGUS
+		10 = NEGUSA_NEGAST
+	}
+
+	ruler_female = {
+		1 = LE_ELT
+		2 = LE_ELT
+		3 = LE_ELT
+		4 = LE_ELT
+		5 = NIGIST
+		6 = NIGIST
+		7 = NIGIST
+		8 = NIGIST
+		9 = NIGIST
+		10 = NIGISTE_NIGIST
+	}
+	
+	consort_male = {
+		1 = RAS_title
+		2 = RAS_title
+		3 = RAS_title
+		4 = RAS_title
+		5 = NEGUS
+		6 = NEGUS
+		7 = NEGUS
+		8 = NEGUS
+		9 = NEGUS
+		10 = NEGUSA_NEGAST
+	}
+
+	consort_female = {
+		1 = LE_ELT
+		2 = LE_ELT
+		3 = LE_ELT
+		4 = LE_ELT
+		5 = NIGIST
+		6 = NIGIST
+		7 = NIGIST
+		8 = NIGIST
+		9 = NIGIST
+		10 = NIGISTE_NIGIST
+	}
+
+	trigger = {
+		government = monarchy
+		culture_group = yokudan-redguardian_cg
+	}
+}
+
+#######################################################################
+###### Theocracy
+#######################################################################
+
+gov_papal_government = {
+	rank = {
+		1 = HOLY_PRINCIPALITY
+		2 = HOLY_PRINCIPALITY
+		3 = HOLY_PRINCIPALITY
+		4 = HOLY_PRINCIPALITY
+		5 = HOLY_STATE
+		6 = HOLY_STATE
+		7 = HOLY_STATE
+		8 = HOLY_STATE
+		9 = HOLY_STATE
+		10 = HOLY_EMPIRE
+	}
+	
+	ruler_male = {
+		1 = PRIEST
+		2 = PRIEST
+		3 = PRIEST
+		4 = PRIEST
+		5 = HIGH_PRIEST
+		6 = HIGH_PRIEST
+		7 = HIGH_PRIEST
+		8 = HIGH_PRIEST
+		9 = HIGH_PRIEST
+		10 = PARAMOUNT_PRIEST
+	}
+
+	ruler_female = {
+		1 = PRIESTESS
+		2 = PRIESTESS
+		3 = PRIESTESS
+		4 = PRIESTESS
+		5 = HIGH_PRIESTESS
+		6 = HIGH_PRIESTESS
+		7 = HIGH_PRIESTESS
+		8 = HIGH_PRIESTESS
+		9 = HIGH_PRIESTESS
+		10 = PARAMOUNT_PRIESTESS
+	}
+	
+	trigger = {
+		OR = {
+			has_reform = papal_government
+			has_reform = papacy_reform
+		}
+	}
+}
+
+polytheistic_group_government = {
+	rank = {
+		1 = HOLY_PRINCIPALITY
+		2 = HOLY_PRINCIPALITY
+		3 = HOLY_PRINCIPALITY
+		4 = HOLY_PRINCIPALITY
+		5 = HOLY_STATE
+		6 = HOLY_STATE
+		7 = HOLY_STATE
+		8 = HOLY_STATE
+		9 = HOLY_STATE
+		10 = HOLY_EMPIRE
+	}
+
+	ruler_male = {
+		1 = PRIEST
+		2 = PRIEST
+		3 = PRIEST
+		4 = PRIEST
+		5 = HIGH_PRIEST
+		6 = HIGH_PRIEST
+		7 = HIGH_PRIEST
+		8 = HIGH_PRIEST
+		9 = HIGH_PRIEST
+		10 = PARAMOUNT_PRIEST
+	}
+
+	ruler_female = {
+		1 = PRIESTESS
+		2 = PRIESTESS
+		3 = PRIESTESS
+		4 = PRIESTESS
+		5 = HIGH_PRIESTESS
+		6 = HIGH_PRIESTESS
+		7 = HIGH_PRIESTESS
+		8 = HIGH_PRIESTESS
+		9 = HIGH_PRIESTESS
+		10 = PARAMOUNT_PRIESTESS
+	}
+
+	trigger = {
+		government = theocracy
+		OR = {
+		religion_group = polytheistic_group
+		tag = DRA
+		}
+	}
+}
+
+occult_group_government = {
+	rank = {
+		1 = METROPOLIS
+		2 = METROPOLIS
+		3 = METROPOLIS
+		4 = METROPOLIS
+		5 = GREAT_METROPOLIS
+		6 = GREAT_METROPOLIS
+		7 = GREAT_METROPOLIS
+		8 = GREAT_METROPOLIS
+		9 = GREAT_METROPOLIS
+		10 = PATRIARCHATE
+	}
+
+	ruler_male = {
+		1 = BISHOP
+		2 = BISHOP
+		3 = BISHOP
+		4 = BISHOP
+		5 = ARCHBISHOP
+		6 = ARCHBISHOP
+		7 = ARCHBISHOP
+		8 = ARCHBISHOP
+		9 = ARCHBISHOP
+		10 = PATRIARCH
+	}
+
+	ruler_female = {
+		1 = BISHOP_fem
+		2 = BISHOP_fem
+		3 = BISHOP_fem
+		4 = BISHOP_fem
+		5 = ARCHBISHOP_fem
+		6 = ARCHBISHOP_fem
+		7 = ARCHBISHOP_fem
+		8 = ARCHBISHOP_fem
+		9 = ARCHBISHOP_fem
+		10 = MATRIARCH
+	}
+
+	trigger = {
+		government = theocracy
+		religion_group = occult_group
+		NOT = { tag = DRA }
+	}
+}
+
+elemental_group_government = {
+	rank = {
+		1 = HOLY_PRINCIPALITY
+		2 = HOLY_PRINCIPALITY
+		3 = HOLY_PRINCIPALITY
+		4 = HOLY_PRINCIPALITY
+		5 = HOLY_STATE
+		6 = HOLY_STATE
+		7 = HOLY_STATE
+		8 = HOLY_STATE
+		9 = HOLY_STATE
+		10 = HOLY_EMPIRE
+	}
+
+	ruler_male = {
+		1 = ELDER
+		2 = ELDER
+		3 = ELDER
+		4 = ELDER
+		5 = HIGH_ELDER
+		6 = HIGH_ELDER
+		7 = HIGH_ELDER
+		8 = HIGH_ELDER
+		9 = HIGH_ELDER
+		10 = SON_OF_HEAVEN
+	}
+
+	ruler_female = {
+		1 = ELDER_fem
+		2 = ELDER_fem
+		3 = ELDER_fem
+		4 = ELDER_fem
+		5 = HIGH_ELDER_fem
+		6 = HIGH_ELDER_fem
+		7 = HIGH_ELDER_fem
+		8 = HIGH_ELDER_fem
+		9 = HIGH_ELDER_fem
+		10 = DAUGHTER_OF_HEAVEN
+	}
+
+	trigger = {
+		government = theocracy
+		religion_group = elemental_group
+	}
+}
+
+daedric_group_1_government = {
+	rank = {
+		1 = HOLY_PRINCIPALITY
+		2 = HOLY_PRINCIPALITY
+		3 = HOLY_PRINCIPALITY
+		4 = HOLY_PRINCIPALITY
+		5 = HOLY_STATE
+		6 = HOLY_STATE
+		7 = HOLY_STATE
+		8 = HOLY_STATE
+		9 = HOLY_STATE
+		10 = HOLY_EMPIRE
+	}
+
+	ruler_male = {
+		1 = MICHOQ
+		2 = MICHOQ
+		3 = MICHOQ
+		4 = MICHOQ
+		5 = HIGH_PRIEST
+		6 = HIGH_PRIEST
+		7 = HIGH_PRIEST
+		8 = HIGH_PRIEST
+		9 = HIGH_PRIEST
+		10 = WILLAQ_UMU
+	}
+
+	ruler_female = {
+		1 = MICHOQ
+		2 = MICHOQ
+		3 = MICHOQ
+		4 = MICHOQ
+		5 = HIGH_PRIESTESS
+		6 = HIGH_PRIESTESS
+		7 = HIGH_PRIESTESS
+		8 = HIGH_PRIESTESS
+		9 = HIGH_PRIESTESS
+		10 = SARPAY
+	}
+
+	trigger = {
+		government = theocracy
+		religion_group = daedric_group_1
+	}
+}
+
+harmony_group_government = {
+	rank = {
+		1 = HOLY_PRINCIPALITY
+		2 = HOLY_PRINCIPALITY
+		3 = HOLY_PRINCIPALITY
+		4 = HOLY_PRINCIPALITY
+		5 = HOLY_STATE
+		6 = HOLY_STATE
+		7 = HOLY_STATE
+		8 = HOLY_STATE
+		9 = HOLY_STATE
+		10 = HOLY_EMPIRE
+	}
+
+	ruler_male = {
+		1 = LAMA
+		2 = LAMA
+		3 = LAMA
+		4 = LAMA
+		5 = TULKU
+		6 = TULKU
+		7 = TULKU
+		8 = TULKU
+		9 = TULKU
+		10 = GREAT_TULKU
+	}
+
+	ruler_female = {
+		1 = LAMA
+		2 = LAMA
+		3 = LAMA
+		4 = LAMA
+		5 = TULKU
+		6 = TULKU
+		7 = TULKU
+		8 = TULKU
+		9 = TULKU
+		10 = GREAT_TULKU
+	}
+
+	trigger = {
+		government = theocracy
+		religion_group = harmony_group
+	}
+}
+
+#######################################################################
+###### Republique
+#######################################################################
+
+pirate_government = {
+	rank = {
+		1 = PIRATE_REPUBLIC
+		2 = PIRATE_REPUBLIC
+		3 = PIRATE_REPUBLIC
+		4 = PIRATE_REPUBLIC
+		5 = PIRATE_CONFEDERACY
+		6 = PIRATE_CONFEDERACY
+		7 = PIRATE_CONFEDERACY
+		8 = PIRATE_CONFEDERACY
+		9 = PIRATE_CONFEDERACY
+		10 = GRAND_PIRATE_CONFEDERACY
+	}
+
+	ruler_male = {
+		1 = CAPTAIN
+		2 = CAPTAIN
+		3 = CAPTAIN
+		4 = CAPTAIN
+		5 = GRAND_CAPTAIN
+		6 = GRAND_CAPTAIN
+		7 = GRAND_CAPTAIN
+		8 = GRAND_CAPTAIN
+		9 = GRAND_CAPTAIN
+		10 = GRAND_ADMIRAL
+	}
+
+	ruler_female = {
+		1 = CAPTAIN_fem
+		2 = CAPTAIN_fem
+		3 = CAPTAIN_fem
+		4 = CAPTAIN_fem
+		5 = GRAND_CAPTAIN_fem
+		6 = GRAND_CAPTAIN_fem
+		7 = GRAND_CAPTAIN_fem
+		8 = GRAND_CAPTAIN_fem
+		9 = GRAND_CAPTAIN_fem
+		10 = ADMIRAL_fem
+	}
+
+	trigger = {
+		has_reform = pirate_republic_reform
+	}
+}
+
+gov_free_city = {
+	rank = {
+		4 = FREE_CITY
+	}
+
+	ruler_male = {
+		4 = MAYOR
+	}
+
+	ruler_female = {
+		4 = MAYORESS
+	}
+
+	trigger = {
+	    OR = {
+		has_reform = free_city
+		has_reform = imperial_city_legacy
+		}
+	}
+}
+
+gov_colonial_government = {
+	rank = {
+		4 = COLONY
+	}
+	
+	ruler_male = {
+		4 = GOVERNOR
+	}
+	
+	ruler_female = {
+		4 = GOVERNESS
+	}
+	
+	trigger = {
+		OR = {
+			has_reform = colonial_government
+			has_reform = colonial_government_legacy
+		}
+	}
+}
+
+noble_republic = {
+	rank = {
+		1 = PRINCEDOM
+		2 = PRINCEDOM
+		3 = PRINCEDOM
+		4 = PRINCEDOM
+		5 = GRAND_PRINCEDOM
+		6 = GRAND_PRINCEDOM
+		7 = GRAND_PRINCEDOM
+		8 = GRAND_PRINCEDOM
+		9 = GRAND_PRINCEDOM
+		10 = GREAT_PRINCEDOM
+	}
+	
+	ruler_male = {
+		1 = LORD
+		2 = LORD
+		3 = LORD
+		4 = LORD
+		5 = PRINCE
+		6 = PRINCE
+		7 = PRINCE
+		8 = PRINCE
+		9 = PRINCE
+		10 = GREAT_PRINCE
+	}
+	
+	ruler_female = {
+		1 = LADY
+		2 = LADY
+		3 = LADY
+		4 = LADY
+		5 = PRINCESS
+		6 = PRINCESS
+		7 = PRINCESS
+		8 = PRINCESS
+		9 = PRINCESS
+		10 = GREAT_PRINCESS
+	}
+	
+	trigger = {
+		OR = {
+			has_reform = noble_elite_reform
+			has_reform = noble_republic
+		}
+	}
+}
+
+gov_republican_dictatorship = {
+	rank = {
+		1 = DESPOTISM
+		2 = DESPOTISM
+		3 = DESPOTISM
+		4 = DESPOTISM
+		5 = DICTATORSHIP
+		6 = DICTATORSHIP
+		7 = DICTATORSHIP
+		8 = DICTATORSHIP
+		9 = DICTATORSHIP
+		10 = PRESIDENTIAL_DICTATORSHIP
+	}
+	
+	ruler_male = {
+		1 = PROTECTOR
+		2 = PROTECTOR
+		3 = PROTECTOR
+		4 = PROTECTOR
+		5 = LORD_PROTECTOR
+		6 = LORD_PROTECTOR
+		7 = LORD_PROTECTOR
+		8 = LORD_PROTECTOR
+		9 = LORD_PROTECTOR
+		10 = PRESIDENT
+	}
+	
+	ruler_female = {
+		1 = PROTECTOR_fem
+		2 = PROTECTOR_fem
+		3 = PROTECTOR_fem
+		4 = PROTECTOR_fem
+		5 = LADY_PROTECTOR
+		6 = LADY_PROTECTOR
+		7 = LADY_PROTECTOR
+		8 = LADY_PROTECTOR
+		9 = LADY_PROTECTOR
+		10 = PRESIDENT_fem
+	}
+	
+	trigger = {
+		has_reform = presidential_despot_reform
+	}
+}
+
+rep_northern_cg_government = {
+	rank = {
+		1 = SOGN
+		2 = SOGN
+		3 = SOGN
+		4 = SOGN
+		5 = HERRED
+		6 = HERRED
+		7 = HERRED
+		8 = HERRED
+		9 = HERRED
+		10 = BONDEVALDE
+	}
+	
+	ruler_male = {
+		1 = OLDERMAND
+		2 = OLDERMAND
+		3 = OLDERMAND
+		4 = OLDERMAND
+		5 = STORBONDE
+		6 = STORBONDE
+		7 = STORBONDE
+		8 = STORBONDE
+		9 = STORBONDE
+		10 = LANDSBONDE
+	}
+	
+	ruler_female = {
+		1 = OLDERMAND_fem
+		2 = OLDERMAND_fem
+		3 = OLDERMAND_fem
+		4 = OLDERMAND_fem
+		5 = STORBONDE_fem
+		6 = STORBONDE_fem
+		7 = STORBONDE_fem
+		8 = STORBONDE_fem
+		9 = STORBONDE_fem
+		10 = LANDSBONDE_fem
+	}
+	
+	trigger = {
+		government = republic
+		culture_group = northern_cg
+	}
+}
+
+rep_dwemer_cg_government = {
+	rank = {
+		1 = REPUBLIC
+		2 = REPUBLIC
+		3 = REPUBLIC
+		4 = REPUBLIC
+		5 = GRAND_REPUBLIC
+		6 = GRAND_REPUBLIC
+		7 = GRAND_REPUBLIC
+		8 = GRAND_REPUBLIC
+		9 = GRAND_REPUBLIC
+		10 = FEDERAL_REPUBLIC
+	}
+	
+	ruler_male = {
+		1 = SYNDIC
+		2 = SYNDIC
+		3 = SYNDIC
+		4 = SYNDIC
+		5 = GRAND_SYNDIC
+		6 = GRAND_SYNDIC
+		7 = GRAND_SYNDIC
+		8 = GRAND_SYNDIC
+		9 = GRAND_SYNDIC
+		10 = PRESIDENT
+	}
+	
+	ruler_female = {
+		1 = SYNDIC_fem
+		2 = SYNDIC_fem
+		3 = SYNDIC_fem
+		4 = SYNDIC_fem
+		5 = GRAND_SYNDIC_fem
+		6 = GRAND_SYNDIC_fem
+		7 = GRAND_SYNDIC_fem
+		8 = GRAND_SYNDIC_fem
+		9 = GRAND_SYNDIC_fem
+		10 = PRESIDENT_fem
+	}
+	
+	trigger = {
+		government = republic
+		OR = {
+		culture_group = dwemer_cg
+		culture_group = dead_cg
+		}
+	}
+}
+
+rep_high_elves_cg_government = {
+	rank = {
+		1 = REPUBLIC
+		2 = REPUBLIC
+		3 = REPUBLIC
+		4 = REPUBLIC
+		5 = SERENE_REPUBLIC
+		6 = SERENE_REPUBLIC
+		7 = SERENE_REPUBLIC
+		8 = SERENE_REPUBLIC
+		9 = SERENE_REPUBLIC
+		10 = GREAT_REPUBLIC
+	}
+	
+	ruler_male = {
+		1 = DOGE
+		2 = DOGE
+		3 = DOGE
+		4 = DOGE
+		5 = SERENE_DOGE
+		6 = SERENE_DOGE
+		7 = SERENE_DOGE
+		8 = SERENE_DOGE
+		9 = SERENE_DOGE
+		10 = GREAT_DOGE
+	}
+	
+	ruler_female = {
+		1 = DOGARESSA
+		2 = DOGARESSA
+		3 = DOGARESSA
+		4 = DOGARESSA
+		5 = SERENE_DOGARESSA
+		6 = SERENE_DOGARESSA
+		7 = SERENE_DOGARESSA
+		8 = SERENE_DOGARESSA
+		9 = SERENE_DOGARESSA
+		10 = GREAT_DOGARESSA
+	}
+	
+	trigger = {
+		government = republic
+		OR = {
+		culture_group = high_elves_cg
+		culture_group = sload_cg
+		culture_group = snow_elves_cg
+		culture_group = bosmer_cg
+		culture_group = imga_cg
+		culture_group = maorner_cg
+		culture_group = khajiiti_cg
+		}
+	}
+}
+
+rep_tangmo_cg_government = {
+	rank = {
+		1 = REPUBLIC
+		2 = REPUBLIC
+		3 = REPUBLIC
+		4 = REPUBLIC
+		5 = GRAND_REPUBLIC
+		6 = GRAND_REPUBLIC
+		7 = GRAND_REPUBLIC
+		8 = GRAND_REPUBLIC
+		9 = GRAND_REPUBLIC
+		10 = GREAT_REPUBLIC
+	}
+	
+	ruler_male = {
+		1 = SADR
+		2 = SADR
+		3 = SADR
+		4 = SADR
+		5 = PESHWA
+		6 = PESHWA
+		7 = PESHWA
+		8 = PESHWA
+		9 = PESHWA
+		10 = PRATINIDHI
+	}
+	
+	ruler_female = {
+		1 = SADR
+		2 = SADR
+		3 = SADR
+		4 = SADR
+		5 = PESHWA
+		6 = PESHWA
+		7 = PESHWA
+		8 = PESHWA
+		9 = PESHWA
+		10 = PRATINIDHI
+	}
+	
+	trigger = {
+		government = republic
+		OR = {
+		culture_group = tangmo_cg
+		culture_group = kothringi_cg
+		}
+	}
+}
+
+rep_cyrodiil_cg_government = {
+	rank = {
+		1 = REPUBLIC
+		2 = REPUBLIC
+		3 = REPUBLIC
+		4 = REPUBLIC
+		5 = GRAND_REPUBLIC
+		6 = GRAND_REPUBLIC
+		7 = GRAND_REPUBLIC
+		8 = GRAND_REPUBLIC
+		9 = GRAND_REPUBLIC
+		10 = GREAT_REPUBLIC
+	}
+	
+	ruler_male = {
+		1 = GONFALONIERE
+		2 = GONFALONIERE
+		3 = GONFALONIERE
+		4 = GONFALONIERE
+		5 = GRAND_CONSUL
+		6 = GRAND_CONSUL
+		7 = GRAND_CONSUL
+		8 = GRAND_CONSUL
+		9 = GRAND_CONSUL
+		10 = GREAT_CONSUL
+	}
+	
+	ruler_female = {
+		1 = GONFALONIERE_fem
+		2 = GONFALONIERE_fem
+		3 = GONFALONIERE_fem
+		4 = GONFALONIERE_fem
+		5 = GRAND_CONSULESS
+		6 = GRAND_CONSULESS
+		7 = GRAND_CONSULESS
+		8 = GRAND_CONSULESS
+		9 = GRAND_CONSULESS
+		10 = GREAT_CONSULESS
+	}
+	
+	trigger = {
+		government = republic
+		OR = {
+		culture_group = cyrodiil_cg
+		culture_group = half_blood_cg
+		culture_group = orsimer_cg
+		culture_group = transpandomaic_cg
+		culture_group = chimeris_cg
+		culture_group = po_tun_cg
+		}
+	}
+}
+
+rep_tsaesci_cg_government = {
+	rank = {
+		1 = REPUBLIC
+		2 = REPUBLIC
+		3 = REPUBLIC
+		4 = REPUBLIC
+		5 = GRAND_REPUBLIC
+		6 = GRAND_REPUBLIC
+		7 = GRAND_REPUBLIC
+		8 = GRAND_REPUBLIC
+		9 = GRAND_REPUBLIC
+		10 = GREAT_REPUBLIC
+	}
+	
+	ruler_male = {
+		1 = RECTOR
+		2 = RECTOR
+		3 = RECTOR
+		4 = RECTOR
+		5 = GRAND_RECTOR
+		6 = GRAND_RECTOR
+		7 = GRAND_RECTOR
+		8 = GRAND_RECTOR
+		9 = GRAND_RECTOR
+		10 = GREAT_RECTOR
+	}
+	
+	ruler_female = {
+		1 = RECTORA
+		2 = RECTORA
+		3 = RECTORA
+		4 = RECTORA
+		5 = GRAND_RECTORA
+		6 = GRAND_RECTORA
+		7 = GRAND_RECTORA
+		8 = GRAND_RECTORA
+		9 = GRAND_RECTORA
+		10 = GREAT_RECTORA
+	}
+	
+	trigger = {
+		government = republic
+		OR = {
+		culture_group = tsaesci_cg
+		culture_group = kamal_cg
+		culture_group = daedra_cg
+		culture_group = yokudan-redguardian_cg
+		culture_group = marsh_cg
+		}
+	}
+}

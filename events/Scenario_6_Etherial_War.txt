@@ -1,0 +1,316 @@
+namespace = es_6_scenario
+
+country_event = {
+	id = es_6_scenario.1
+	title = es_6_scenario.1.t
+	desc = es_6_scenario.1.d
+	picture = ES_ETHERIAL_ORE_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_6_scenario.1_flag }
+		is_year = 221
+		NOT = { is_year = 242 }
+		ai = no
+    }
+
+	mean_time_to_happen = {
+		days = 31	
+	}
+	
+	immediate = {
+	    set_country_flag = es_6_scenario.1_flag
+	}
+
+	option = {
+		name = "es_6_scenario.1.a"
+		ai_chance = { factor = 100 }
+		set_global_flag = etherial_crisis_flag
+		1314 = {
+		add_province_modifier = {
+		name = "06_etherial_mine"
+		duration = -1
+		}
+		}
+	}
+}
+
+country_event = {
+	id = es_6_scenario.2
+	title = es_6_scenario.2.t
+	desc = es_6_scenario.2.d
+	picture = ES_DWEMERS_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_6_scenario.2_flag }
+		is_year = 221
+		NOT = { is_year = 242 }
+        culture_group = dwemer_cg
+		has_global_flag = etherial_crisis_flag
+    }
+
+	mean_time_to_happen = {
+		days = 1825		
+	}
+	
+	immediate = {
+	    set_country_flag = es_6_scenario.2_flag
+	}
+
+	option = {
+		name = "es_6_scenario.2.a"
+		ai_chance = { factor = 100 }
+		add_stability = -1
+		add_prestige = -25
+		add_country_modifier = {
+		name = "06_etherial_crisis"
+		duration = 7665
+		}
+	}
+}
+
+country_event = {
+	id = es_6_scenario.3
+	title = es_6_scenario.3.t
+	desc = es_6_scenario.3.d
+	picture = ES_BLACK_REACH_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_6_scenario.3_flag }
+		is_year = 221
+		NOT = { is_year = 242 }
+        culture_group = dwemer_cg
+		has_global_flag = etherial_crisis_flag
+		NOT = { owns = 1314 }
+		has_country_modifier = 06_etherial_crisis
+    }
+
+	mean_time_to_happen = {
+		days = 1825		
+	}
+	
+	immediate = {
+	    set_country_flag = es_6_scenario.3_flag
+	}
+
+	option = {
+		name = "es_6_scenario.3.a"
+		ai_chance = { factor = 50 }
+		add_core = 1314
+	}
+	option = {
+		name = "es_6_scenario.3.b"
+		ai_chance = { factor = 50 }
+		add_prestige = -50
+		remove_country_modifier = 06_etherial_crisis
+	}
+}
+
+country_event = {
+	id = es_6_scenario.4
+	title = es_6_scenario.4.t
+	desc = es_6_scenario.4.d
+	picture = ES_LETTER_eventPicture
+	
+	trigger = {
+		is_year = 221
+		NOT = { is_year = 242 }
+        culture_group = dwemer_cg
+		has_global_flag = etherial_crisis_flag
+		NOT = { owns = 1314 }
+		is_core = 1314
+		any_neighbor_country = {
+		is_at_war = no
+		}
+    }
+
+	mean_time_to_happen = {
+		days = 1825		
+	}
+
+	option = {
+		name = "es_6_scenario.4.a"
+		ai_chance = { factor = 50 }
+		random_neighbor_country = {
+		limit = {
+		culture_group = dwemer_cg
+		is_at_war = no
+		}
+		declare_war_with_cb = {
+        who = ROOT
+        casus_belli = cb_es_scenario
+        }
+		}
+	}
+	option = {
+		name = "es_6_scenario.4.b"
+		ai_chance = { factor = 50 }
+		add_prestige = -50
+		remove_core = 1314
+	}
+}
+
+country_event = {
+	id = es_6_scenario.5
+	title = es_6_scenario.5.t
+	desc = es_6_scenario.5.d
+	picture = ES_MOOT_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_6_scenario.5_flag }
+		is_year = 221
+		NOT = { is_year = 242 }
+        culture_group = northern_cg
+		owns = 1275
+		government = monarchy
+		NOT = { has_reform = elective_monarchy }
+    }
+
+	mean_time_to_happen = {
+		days = 3650		
+	}
+	
+	immediate = {
+	    set_country_flag = es_6_scenario.5_flag
+	}
+
+	option = {
+		name = "es_6_scenario.5.a"
+		ai_chance = { factor = 50 }
+		add_government_reform = elective_monarchy
+		add_stability = 1
+	}
+	option = {
+		name = "es_6_scenario.5.b"
+		ai_chance = { factor = 50 }
+		add_stability = -1
+		add_legitimacy = -35
+	}
+}
+
+country_event = {
+	id = es_6_scenario.6
+	title = es_6_scenario.6.t
+	desc = es_6_scenario.6.d
+	picture = ES_GENOCIDE_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_6_scenario.6_flag }
+		is_year = 221
+		NOT = { is_year = 242 }
+        culture_group = northern_cg
+		owns = 1275
+    }
+
+	mean_time_to_happen = {
+		days = 3650		
+	}
+	
+	immediate = {
+	    set_country_flag = es_6_scenario.6_flag
+	}
+
+	option = {
+		name = "es_6_scenario.6.a"
+		add_stability = -1
+		add_prestige = -25
+		add_country_modifier = {
+		name = "06_gradual_massacre"
+		duration = 18250
+		}
+	}
+	option = {
+		name = "es_6_scenario.6.b"
+		ai_chance = { factor = 50 }
+		add_prestige = 25
+	}
+}
+
+country_event = {
+	id = es_6_scenario.7
+	title = es_6_scenario.7.t
+	desc = es_6_scenario.7.d
+	picture = ES_DWEMES_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_6_scenario.7_flag }
+		is_year = 221
+		NOT = { is_year = 242 }
+        culture_group = northern_cg
+		owns = 1275
+    }
+
+	mean_time_to_happen = {
+		days = 3650		
+	}
+	
+	immediate = {
+	    set_country_flag = es_6_scenario.7_flag
+	}
+
+	option = {
+		name = "es_6_scenario.7.a"
+		every_province = {
+		limit = {
+		OR = {
+		region = western_skyrim_lr
+		region = eastern_skyrim_lr
+		}
+		culture = dwemer
+		}
+		add_claim = ROOT
+		}
+		
+		if = {
+		limit = {
+		exists = NA2
+		NOT = { alliance_with = NA2 }
+		NOT = { overlord_of = NA2 }
+		}
+		declare_war_with_cb = {
+			who = NA2
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = NB1
+		NOT = { alliance_with = NB1 }
+		NOT = { overlord_of = NB1 }
+		}
+		declare_war_with_cb = {
+			who = NB1
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = NE2
+		NOT = { alliance_with = NE2 }
+		NOT = { overlord_of = NE2 }
+		}
+		declare_war_with_cb = {
+			who = NE2
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = NF1
+		NOT = { alliance_with = NF1 }
+		NOT = { overlord_of = NF1 }
+		}
+		declare_war_with_cb = {
+			who = NF1
+			casus_belli = cb_es_scenario
+		}
+		}
+	}
+	option = {
+		name = "es_6_scenario.7.b"
+		ai_chance = { factor = 50 }
+		add_prestige = 10
+	}
+}

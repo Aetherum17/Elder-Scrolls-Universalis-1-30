@@ -1,0 +1,41 @@
+owner = MA1
+controller = MA1
+add_core = MA1
+culture = dwemer
+religion = reason_and_logic_cult
+hre = no
+base_tax = 1
+base_production = 1
+trade_goods = unknown
+base_manpower = 1
+capital = "Bralile" 
+is_city = yes
+discovered_by = tamriel_tg discovered_by = elsweyr_tg discovered_by = marshan_tg discovered_by = orsimer_tg
+
+add_permanent_province_modifier = {
+	name = water_trade_modifier
+	duration = -1
+}
+
+189.1.1 = {
+	owner = SKY
+	controller = SKY
+	add_core = SKY
+}
+
+308.1.1 = {
+	owner = OLD
+	controller = OLD
+	add_core = OLD
+}
+
+420.1.1 = {
+	owner = SKY
+	controller = SKY
+	add_core = SKY
+}
+
+750.1.1 = {
+    culture = falmer
+	religion = snow_elves_pantheon
+}

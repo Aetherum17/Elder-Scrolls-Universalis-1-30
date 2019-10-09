@@ -1,0 +1,518 @@
+namespace = es_7_scenario
+
+country_event = {
+	id = es_7_scenario.1
+	title = es_7_scenario.1.t
+	desc = es_7_scenario.1.d
+	picture = ES_ALESSIAN_REVOLT
+	
+	trigger = {
+	    NOT = { has_country_flag = es_7_scenario.1_flag }
+		is_year = 242
+		NOT = { is_year = 266 }
+		NOT = { culture_group = cyrodiil_cg }
+		owns = 1206
+    }
+
+	mean_time_to_happen = {
+		days = 4380	
+	}
+	
+	immediate = {
+	    set_country_flag = es_7_scenario.1_flag
+	}
+
+	option = {
+		name = "es_7_scenario.1.a"
+		ai_chance = { factor = 33 }
+		change_tag = ALE
+		change_religion = eight_divines
+		every_province = {
+		limit = {
+		owned_by = ROOT
+		}
+		change_religion = eight_divines
+		}
+		every_country = {
+		limit = {
+		vassal_of = ROOT
+		}
+		change_religion = eight_divines
+		}
+		define_ruler = {
+        name = "Alessia"
+        dynasty = "Nedic"
+        adm = 5
+        dip = 5
+        mil = 3
+        age = 21
+        claim = 100
+		female = yes
+		fixed = yes
+        }
+		define_consort = {
+		name = "Morihaus"
+        dynasty = "Man-Bull"
+        culture = dremora
+        adm = 3
+        dip = 1
+        mil = 7
+        }
+		define_heir = {
+        name = "Belharza"
+		dynasty = "Man-Bull"
+		culture = dremora
+		adm = 5
+		dip = 3
+		mil = 7  
+        }
+		if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		if = { limit = { NOT = { government_rank = 10 } } set_government_rank = 10 }
+	}
+	option = {
+		name = "es_7_scenario.1.b"
+		ai_chance = { factor = 33 }
+		set_global_flag = alessian_rebellion_flag
+		every_province = {
+		limit = {
+		owned_by = ROOT
+		}
+		change_religion = eight_divines
+		}
+        every_country = {
+		limit = {
+		vassal_of = ROOT
+		}
+		change_religion = eight_divines
+		}
+	}
+	option = {
+		name = "es_7_scenario.1.c"
+		ai_chance = { factor = 33 }
+		set_global_flag = alessian_rebellion_flag
+		add_stability = -1
+		random_owned_province = {
+		limit = { is_capital = no }
+		cede_province = ALE
+		add_core = ALE
+		change_religion = eight_divines
+		}
+		random_owned_province = {
+		limit = { is_capital = no }
+		cede_province = ALE
+		add_core = ALE
+		change_religion = eight_divines
+		}
+		random_owned_province = {
+		limit = { is_capital = no }
+		cede_province = ALE
+		add_core = ALE
+		change_religion = eight_divines
+		}
+		random_owned_province = {
+		limit = { is_capital = no }
+		cede_province = ALE
+		add_core = ALE
+		change_religion = eight_divines
+		}
+		random_owned_province = {
+		limit = { is_capital = no }
+		cede_province = ALE
+		add_core = ALE
+		change_religion = eight_divines
+		}
+		random_owned_province = {
+		limit = { is_capital = no }
+		cede_province = ALE
+		add_core = ALE
+		change_religion = eight_divines
+		}
+		random_owned_province = {
+		limit = { is_capital = no }
+		cede_province = ALE
+		add_core = ALE
+		change_religion = eight_divines
+		}
+		random_owned_province = {
+		limit = { is_capital = no }
+		cede_province = ALE
+		add_core = ALE
+		change_religion = eight_divines
+		}
+		random_owned_province = {
+		limit = { is_capital = no }
+		cede_province = ALE
+		add_core = ALE
+		change_religion = eight_divines
+		}
+		random_owned_province = {
+		limit = { is_capital = no }
+		cede_province = ALE
+		add_core = ALE
+		change_religion = eight_divines
+		}
+		ALE = {
+		define_ruler = {
+        name = "Alessia"
+        dynasty = "Nedic"
+        adm = 5
+        dip = 5
+        mil = 3
+        age = 21
+        claim = 100
+		female = yes
+		fixed = yes
+        }
+		define_consort = {
+		name = "Morihaus"
+        dynasty = "Man-Bull"
+        culture = dremora
+        adm = 3
+        dip = 1
+        mil = 7
+        }
+		define_heir = {
+        name = "Belharza"
+		dynasty = "Man-Bull"
+		culture = dremora
+		adm = 5
+		dip = 3
+		mil = 7  
+        }
+		}
+		
+		if = {
+		limit = {
+		exists = ALE
+		NOT = { alliance_with = ALE }
+		NOT = { overlord_of = ALE }
+		}
+		declare_war_with_cb = {
+			who = ALE
+			casus_belli = cb_es_scenario
+		}
+		}
+	}
+}
+
+country_event = {
+	id = es_7_scenario.2
+	title = es_7_scenario.2.t
+	desc = es_7_scenario.2.d
+	picture = GE_HRE_CRUSADE_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_7_scenario.2_flag }
+	    is_year = 242
+		NOT = { is_year = 266 }
+		has_global_flag = alessian_rebellion_flag
+		culture_group = cyrodiil_cg
+		OR = {
+		ai = no
+		is_vassal = yes
+		}
+    }
+
+	mean_time_to_happen = {
+		days = 31	
+	}
+	
+	immediate = {
+	    set_country_flag = es_7_scenario.2_flag
+	}
+
+	option = {
+		name = "es_7_scenario.2.a"
+		trigger = { 
+		OR = {
+		ai = no
+		NOT = { exists = ALE }
+		}
+		}
+		ai_chance = { factor = 50 }
+		change_tag = ALE
+		change_religion = eight_divines
+		every_province = {
+		limit = {
+		owned_by = ROOT
+		}
+		change_religion = eight_divines
+		}
+		if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		if = { limit = { NOT = { government_rank = 10 } } set_government_rank = 10 }
+	}
+	option = {
+		name = "es_7_scenario.2.a"
+		trigger = { ai = yes }
+		ai_chance = { factor = 50 }
+		every_province = {
+		limit = {
+		owned_by = ROOT
+		}
+		change_religion = eight_divines
+		}
+		ALE = {
+		inherit = ROOT
+		}
+	}
+	option = {
+		name = "es_7_scenario.2.b"
+		ai_chance = { factor = 50 }
+		add_stability = -1
+	}
+}
+
+country_event = {
+	id = es_7_scenario.3
+	title = es_7_scenario.3.t
+	desc = es_7_scenario.3.d
+	picture = ES_MILITARY_CAMP_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_7_scenario.3_flag }
+		is_year = 242
+		NOT = { is_year = 266 }
+		exists = ALE
+		OR = {
+		AND = {
+		culture_group = dwemer_cg
+		owns = 970
+		}
+		AND = {
+		culture_group = bosmer_cg
+		owns = 820
+		}
+		AND = {
+		culture_group = northern_cg
+		owns = 1275
+		}
+		}
+    }
+
+	mean_time_to_happen = {
+		days = 1825	
+	}
+	
+	immediate = {
+	    set_country_flag = es_7_scenario.3_flag
+	}
+
+	option = {
+		name = "es_7_scenario.3.a"
+		ai_chance = { factor = 50 }
+		add_treasury = -500
+		add_manpower = -10
+		ALE = {
+		add_treasury = 500
+		add_manpower = 10
+		}
+	}
+	option = {
+		name = "es_7_scenario.3.b"
+		ai_chance = { factor = 50 }
+		add_prestige = -10
+	}
+}
+
+country_event = {
+	id = es_7_scenario.4
+	title = es_7_scenario.4.t
+	desc = es_7_scenario.4.d
+	picture = ES_THRONEROOM_1_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_7_scenario.4_flag }
+		is_year = 242
+		NOT = { is_year = 266 }
+		exists = ALE
+		culture_group = high_elves_cg
+		owns = 271
+    }
+
+	mean_time_to_happen = {
+		days = 1825	
+	}
+	
+	immediate = {
+	    set_country_flag = es_7_scenario.4_flag
+	}
+
+	option = {
+		name = "es_7_scenario.4.a"
+		ai_chance = { factor = 50 }
+		every_province = {
+		limit = {
+		region = central_syrodiil_lr
+		}
+		add_core = ROOT
+		}
+		
+		if = {
+		limit = {
+		exists = AYL
+		NOT = { alliance_with = AYL }
+		NOT = { overlord_of = AYL }
+		}
+		declare_war_with_cb = {
+			who = AYL
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = HEA
+		NOT = { alliance_with = HEA }
+		NOT = { overlord_of = HEA }
+		}
+		declare_war_with_cb = {
+			who = HEA
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = CB8
+		NOT = { alliance_with = CB8 }
+		NOT = { overlord_of = CB8 }
+		}
+		declare_war_with_cb = {
+			who = CB8
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = CA3
+		NOT = { alliance_with = CA3 }
+		NOT = { overlord_of = CA3 }
+		}
+		declare_war_with_cb = {
+			who = CA3
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = CA6
+		NOT = { alliance_with = CA6 }
+		NOT = { overlord_of = CA6 }
+		}
+		declare_war_with_cb = {
+			who = CA6
+			casus_belli = cb_es_scenario
+		}
+		}
+	}
+	option = {
+		name = "es_7_scenario.4.b"
+		ai_chance = { factor = 50 }
+		add_prestige = -25
+	}
+}
+
+country_event = {
+	id = es_7_scenario.5
+	title = es_7_scenario.5.t
+	desc = es_7_scenario.5.d
+	picture = ES_AEDRIC_TEMPLE_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_7_scenario.5_flag }
+		is_year = 242
+		NOT = { is_year = 266 }
+		culture_group = cyrodiil_cg
+		owns = 1221
+    }
+
+	mean_time_to_happen = {
+		days = 1825	
+	}
+	
+	immediate = {
+	    set_country_flag = es_7_scenario.5_flag
+	}
+
+	option = {
+		name = "es_7_scenario.5.a"
+		ai_chance = { factor = 50 }
+		every_province = {
+		limit = {
+		region = central_syrodiil_lr
+		}
+		add_core = ROOT
+		}
+		add_country_modifier = {
+		name = "07_aedric_blessing"
+		duration = 9125
+		}
+		
+		if = {
+		limit = {
+		exists = AYL
+		NOT = { alliance_with = AYL }
+		NOT = { overlord_of = AYL }
+		}
+		declare_war_with_cb = {
+			who = AYL
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = HEA
+		NOT = { alliance_with = HEA }
+		NOT = { overlord_of = HEA }
+		}
+		declare_war_with_cb = {
+			who = HEA
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = CB8
+		NOT = { alliance_with = CB8 }
+		NOT = { overlord_of = CB8 }
+		}
+		declare_war_with_cb = {
+			who = CB8
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = CA3
+		NOT = { alliance_with = CA3 }
+		NOT = { overlord_of = CA3 }
+		}
+		declare_war_with_cb = {
+			who = CA3
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = CA6
+		NOT = { alliance_with = CA6 }
+		NOT = { overlord_of = CA6 }
+		}
+		declare_war_with_cb = {
+			who = CA6
+			casus_belli = cb_es_scenario
+		}
+		}
+	}
+	option = {
+		name = "es_7_scenario.5.b"
+		ai_chance = { factor = 50 }
+		add_prestige = 10
+	}
+}

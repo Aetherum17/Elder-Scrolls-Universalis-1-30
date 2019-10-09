@@ -1,0 +1,581 @@
+namespace = es_pirates
+
+country_event = {
+	id = es_pirates.1
+	title = es_pirates.1.t
+	desc = es_pirates.1.d
+	picture = ES_PIRATE_CITY_eventPicture
+	
+	trigger = {
+		owns = 1171
+		NOT = { exists = ABE }
+		1171 = {
+		unrest = 10
+		}
+		NOT = { stability = 3 }
+		NOT = { ABE = { is_core = 1171 } }
+    }
+
+	mean_time_to_happen = {
+		days = 9125
+	}
+
+	option = {
+		name = "es_pirates.1.a"
+		ai_chance = { factor = 33 }
+		1171 = {
+		add_core = ABE
+		add_province_modifier = {
+		name = "00_unrest"
+		duration = 9125
+		}
+		}
+	}
+	
+	option = {
+		name = "es_pirates.1.b"
+		ai_chance = { factor = 33 }
+		1171 = {
+		cede_province = ABE
+		add_core = ABE
+		add_claim = ABE
+		}
+		create_vassal = ABE
+	}
+	
+	option = {
+		name = "es_pirates.1.c"
+		ai_chance = { factor = 33 }
+		1171 = {
+		cede_province = ABE
+		add_core = ABE
+		add_claim = ABE
+		}
+		create_alliance = ABE
+		add_prestige = -15
+		add_opinion = { who = ROOT modifier = es_friendly_nation }
+		add_opinion = { who = ABE modifier = es_friendly_nation }
+	}
+}
+
+country_event = {
+	id = es_pirates.2
+	title = es_pirates.1.t
+	desc = es_pirates.1.d
+	picture = ES_PIRATE_CITY_eventPicture
+	
+	trigger = {
+		owns = 1501
+		NOT = { exists = RES }
+		1501 = {
+		unrest = 10
+		}
+		NOT = { stability = 3 }
+		NOT = { RES = { is_core = 1501 } }
+    }
+
+	mean_time_to_happen = {
+		days = 9125
+	}
+
+	option = {
+		name = "es_pirates.1.a"
+		ai_chance = { factor = 33 }
+		1501 = {
+		add_core = RES
+		add_province_modifier = {
+		name = "00_unrest"
+		duration = 9125
+		}
+		}
+	}
+	
+	option = {
+		name = "es_pirates.1.b"
+		ai_chance = { factor = 33 }
+		1501 = {
+		cede_province = RES
+		add_core = RES
+		add_claim = RES
+		}
+		create_vassal = RES
+	}
+	
+	option = {
+		name = "es_pirates.1.c"
+		ai_chance = { factor = 33 }
+		1501 = {
+		cede_province = RES
+		add_core = RES
+		add_claim = RES
+		}
+		create_alliance = RES
+		add_prestige = -15
+		add_opinion = { who = ROOT modifier = es_friendly_nation }
+		add_opinion = { who = RES modifier = es_friendly_nation }
+	}
+}
+
+country_event = {
+	id = es_pirates.3
+	title = es_pirates.1.t
+	desc = es_pirates.1.d
+	picture = ES_PIRATE_CITY_eventPicture
+	
+	trigger = {
+		owns = 1117
+		NOT = { exists = TOP }
+		1117 = {
+		unrest = 10
+		}
+		NOT = { stability = 3 }
+		NOT = { TOP = { is_core = 1117 } }
+    }
+
+	mean_time_to_happen = {
+		days = 9125
+	}
+
+	option = {
+		name = "es_pirates.1.a"
+		ai_chance = { factor = 33 }
+		1117 = {
+		add_core = TOP
+		add_province_modifier = {
+		name = "00_unrest"
+		duration = 9125
+		}
+		}
+	}
+	
+	option = {
+		name = "es_pirates.1.b"
+		ai_chance = { factor = 33 }
+		1117 = {
+		cede_province = TOP
+		add_core = TOP
+		add_claim = TOP
+		}
+		create_vassal = TOP
+	}
+	
+	option = {
+		name = "es_pirates.1.c"
+		ai_chance = { factor = 33 }
+		1117 = {
+		cede_province = TOP
+		add_core = TOP
+		add_claim = TOP
+		}
+		create_alliance = TOP
+		add_prestige = -15
+		add_opinion = { who = ROOT modifier = es_friendly_nation }
+		add_opinion = { who = TOP modifier = es_friendly_nation }
+	}
+}
+
+country_event = {
+	id = es_pirates.4
+	title = es_pirates.1.t
+	desc = es_pirates.1.d
+	picture = ES_PIRATE_CITY_eventPicture
+	
+	trigger = {
+		owns = 1274
+		NOT = { exists = STA }
+		1274 = {
+		unrest = 10
+		}
+		NOT = { stability = 3 }
+		NOT = { STA = { is_core = 1274 } }
+    }
+
+	mean_time_to_happen = {
+		days = 9125
+	}
+
+	option = {
+		name = "es_pirates.1.a"
+		ai_chance = { factor = 33 }
+		1274 = {
+		add_core = STA
+		add_province_modifier = {
+		name = "00_unrest"
+		duration = 9125
+		}
+		}
+	}
+	
+	option = {
+		name = "es_pirates.1.b"
+		ai_chance = { factor = 33 }
+		1274 = {
+		cede_province = STA
+		add_core = STA
+		add_claim = STA
+		}
+		create_vassal = STA
+	}
+	
+	option = {
+		name = "es_pirates.1.c"
+		ai_chance = { factor = 33 }
+		1274 = {
+		cede_province = STA
+		add_core = STA
+		add_claim = STA
+		}
+		create_alliance = STA
+		add_prestige = -15
+		add_opinion = { who = ROOT modifier = es_friendly_nation }
+		add_opinion = { who = STA modifier = es_friendly_nation }
+	}
+}
+
+country_event = {
+	id = es_pirates.5
+	title = es_pirates.1.t
+	desc = es_pirates.1.d
+	picture = ES_PIRATE_CITY_eventPicture
+	
+	trigger = {
+		owns = 1035
+		NOT = { exists = SED }
+		1035 = {
+		unrest = 10
+		}
+		NOT = { stability = 3 }
+		NOT = { SED = { is_core = 1035 } }
+    }
+
+	mean_time_to_happen = {
+		days = 9125
+	}
+
+	option = {
+		name = "es_pirates.1.a"
+		ai_chance = { factor = 33 }
+		1035 = {
+		add_core = SED
+		add_province_modifier = {
+		name = "00_unrest"
+		duration = 9125
+		}
+		}
+	}
+	
+	option = {
+		name = "es_pirates.1.b"
+		ai_chance = { factor = 33 }
+		1035 = {
+		cede_province = SED
+		add_core = SED
+		add_claim = SED
+		}
+		create_vassal = SED
+	}
+	
+	option = {
+		name = "es_pirates.1.c"
+		ai_chance = { factor = 33 }
+		1035 = {
+		cede_province = SED
+		add_core = SED
+		add_claim = SED
+		}
+		create_alliance = SED
+		add_prestige = -15
+		add_opinion = { who = ROOT modifier = es_friendly_nation }
+		add_opinion = { who = SED modifier = es_friendly_nation }
+	}
+}
+
+country_event = {
+	id = es_pirates.6
+	title = es_pirates.1.t
+	desc = es_pirates.1.d
+	picture = ES_PIRATE_CITY_eventPicture
+	
+	trigger = {
+		owns = 416
+		NOT = { exists = KME }
+		416 = {
+		unrest = 10
+		}
+		NOT = { stability = 3 }
+		NOT = { KME = { is_core = 416 } }
+    }
+
+	mean_time_to_happen = {
+		days = 9125
+	}
+
+	option = {
+		name = "es_pirates.1.a"
+		ai_chance = { factor = 33 }
+		416 = {
+		add_core = KME
+		add_province_modifier = {
+		name = "00_unrest"
+		duration = 9125
+		}
+		}
+	}
+	
+	option = {
+		name = "es_pirates.1.b"
+		ai_chance = { factor = 33 }
+		416 = {
+		cede_province = KME
+		add_core = KME
+		add_claim = KME
+		}
+		create_vassal = KME
+	}
+	
+	option = {
+		name = "es_pirates.1.c"
+		ai_chance = { factor = 33 }
+		416 = {
+		cede_province = KME
+		add_core = KME
+		add_claim = KME
+		}
+		create_alliance = KME
+		add_prestige = -15
+		add_opinion = { who = ROOT modifier = es_friendly_nation }
+		add_opinion = { who = KME modifier = es_friendly_nation }
+	}
+}
+
+country_event = {
+	id = es_pirates.7
+	title = es_pirates.1.t
+	desc = es_pirates.1.d
+	picture = ES_PIRATE_CITY_eventPicture
+	
+	trigger = {
+		owns = 1645
+		NOT = { exists = ELZ }
+		1645 = {
+		unrest = 10
+		}
+		NOT = { stability = 3 }
+		NOT = { ELZ = { is_core = 1645 } }
+    }
+
+	mean_time_to_happen = {
+		days = 9125
+	}
+
+	option = {
+		name = "es_pirates.1.a"
+		ai_chance = { factor = 33 }
+		1645 = {
+		add_core = ELZ
+		add_province_modifier = {
+		name = "00_unrest"
+		duration = 9125
+		}
+		}
+	}
+	
+	option = {
+		name = "es_pirates.1.b"
+		ai_chance = { factor = 33 }
+		1645 = {
+		cede_province = ELZ
+		add_core = ELZ
+		add_claim = ELZ
+		}
+		create_vassal = ELZ
+	}
+	
+	option = {
+		name = "es_pirates.1.c"
+		ai_chance = { factor = 33 }
+		1645 = {
+		cede_province = ELZ
+		add_core = ELZ
+		add_claim = ELZ
+		}
+		create_alliance = ELZ
+		add_prestige = -15
+		add_opinion = { who = ROOT modifier = es_friendly_nation }
+		add_opinion = { who = ELZ modifier = es_friendly_nation }
+	}
+}
+
+country_event = {
+	id = es_pirates.8
+	title = es_pirates.1.t
+	desc = es_pirates.1.d
+	picture = ES_PIRATE_CITY_eventPicture
+	
+	trigger = {
+		owns = 1625
+		NOT = { exists = KHE }
+		1625 = {
+		unrest = 10
+		}
+		NOT = { stability = 3 }
+		NOT = { KHE = { is_core = 1625 } }
+    }
+
+	mean_time_to_happen = {
+		days = 9125
+	}
+
+	option = {
+		name = "es_pirates.1.a"
+		ai_chance = { factor = 33 }
+		1625 = {
+		add_core = KHE
+		add_province_modifier = {
+		name = "00_unrest"
+		duration = 9125
+		}
+		}
+	}
+	
+	option = {
+		name = "es_pirates.1.b"
+		ai_chance = { factor = 33 }
+		1625 = {
+		cede_province = KHE
+		add_core = KHE
+		add_claim = KHE
+		}
+		create_vassal = KHE
+	}
+	
+	option = {
+		name = "es_pirates.1.c"
+		ai_chance = { factor = 33 }
+		1625 = {
+		cede_province = KHE
+		add_core = KHE
+		add_claim = KHE
+		}
+		create_alliance = KHE
+		add_prestige = -15
+		add_opinion = { who = ROOT modifier = es_friendly_nation }
+		add_opinion = { who = KHE modifier = es_friendly_nation }
+	}
+}
+	
+country_event = {
+	id = es_pirates.9
+	title = es_pirates.1.t
+	desc = es_pirates.1.d
+	picture = ES_PIRATE_CITY_eventPicture
+	
+	trigger = {
+		owns = 766
+		NOT = { exists = KAA }
+		766 = {
+		unrest = 10
+		}
+		NOT = { stability = 3 }
+		NOT = { KAA = { is_core = 766 } }
+    }
+
+	mean_time_to_happen = {
+		days = 9125
+	}
+
+	option = {
+		name = "es_pirates.1.a"
+		ai_chance = { factor = 33 }
+		766 = {
+		add_core = KAA
+		add_province_modifier = {
+		name = "00_unrest"
+		duration = 9125
+		}
+		}
+	}
+	
+	option = {
+		name = "es_pirates.1.b"
+		ai_chance = { factor = 33 }
+		766 = {
+		cede_province = KAA
+		add_core = KAA
+		add_claim = KAA
+		}
+		create_vassal = KAA
+	}
+	
+	option = {
+		name = "es_pirates.1.c"
+		ai_chance = { factor = 33 }
+		766 = {
+		cede_province = KAA
+		add_core = KAA
+		add_claim = KAA
+		}
+		create_alliance = KAA
+		add_prestige = -15
+		add_opinion = { who = ROOT modifier = es_friendly_nation }
+		add_opinion = { who = KAA modifier = es_friendly_nation }
+	}
+}
+
+country_event = {
+	id = es_pirates.10
+	title = es_pirates.1.t
+	desc = es_pirates.1.d
+	picture = ES_PIRATE_CITY_eventPicture
+	
+	trigger = {
+		owns = 697
+		NOT = { exists = RAL }
+		697 = {
+		unrest = 10
+		}
+		NOT = { stability = 3 }
+		NOT = { RAL = { is_core = 697 } }
+    }
+
+	mean_time_to_happen = {
+		days = 9125
+	}
+
+	option = {
+		name = "es_pirates.1.a"
+		ai_chance = { factor = 33 }
+		697 = {
+		add_core = RAL
+		add_province_modifier = {
+		name = "00_unrest"
+		duration = 9125
+		}
+		}
+	}
+	
+	option = {
+		name = "es_pirates.1.b"
+		ai_chance = { factor = 33 }
+		697 = {
+		cede_province = RAL
+		add_core = RAL
+		add_claim = RAL
+		}
+		create_vassal = RAL
+	}
+	
+	option = {
+		name = "es_pirates.1.c"
+		ai_chance = { factor = 33 }
+		697 = {
+		cede_province = RAL
+		add_core = RAL
+		add_claim = RAL
+		}
+		create_alliance = RAL
+		add_prestige = -15
+		add_opinion = { who = ROOT modifier = es_friendly_nation }
+		add_opinion = { who = RAL modifier = es_friendly_nation }
+	}
+}

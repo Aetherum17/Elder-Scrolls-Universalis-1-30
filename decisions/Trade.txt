@@ -1,0 +1,49 @@
+country_decisions = {
+
+	close_foreign_trade = {
+		potential = {
+			technology_group = akavir_tg
+			num_of_ports = 1
+			any_known_country = {
+				technology_group = tamriel_tg
+				any_active_trade_node = {
+					OR = {
+						region = po_tun_lr
+						region = tsakara_lr
+					}
+					is_strongest_trade_power = PREV
+				}
+			}
+			NOT = { has_country_modifier = condemn_western_influences }
+		}
+		allow = {
+			any_known_country = {
+				technology_group = tamriel_tg
+				any_active_trade_node = {
+					OR = {
+						region = po_tun_lr
+						region = tsakara_lr
+					}
+					is_strongest_trade_power = PREV
+				}
+				NOT = { has_opinion = { who = ROOT value = -100 } }
+			}
+			mil = 3
+		}
+		effect = {
+			add_country_modifier = {
+				name = narrowminded_modifier
+				duration = 3650
+			}
+			add_mercantilism = 5
+			add_country_modifier = {
+				name = "condemn_western_influences"
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+}

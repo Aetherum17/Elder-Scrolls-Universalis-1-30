@@ -1,0 +1,662 @@
+namespace = es_9_scenario
+
+country_event = {
+	id = es_9_scenario.1
+	title = es_9_scenario.1.t
+	desc = es_9_scenario.1.d
+	picture = ES_CITY_IN_FIRE_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_9_scenario.1_flag }
+		is_year = 308
+		NOT = { is_year = 337 }
+		culture_group = tsaesci_cg
+		owns = 724
+    }
+
+	mean_time_to_happen = {
+		days = 5110
+	}
+	
+	immediate = {
+	    set_country_flag = es_9_scenario.1_flag
+	}
+
+	option = {
+		name = "es_9_scenario.1.a"
+		ai_chance = { factor = 33 }
+		trigger = {
+		NOT = { government = monarchy }
+		}
+		change_government = monarchy
+		add_country_modifier = {
+		name = "09_revolution"
+		duration = 3650
+		}
+		add_country_modifier = {
+		name = "09_nobility"
+		duration = 3650
+		}
+		every_province = {
+		limit = {
+		OR = {
+		area = po_tun_3_la
+		area = po_tun_4_la
+		area = po_tun_5_la
+		area = po_tun_6_la
+		}
+		}
+		add_claim = ROOT
+		}
+		
+		if = {
+		limit = {
+		exists = TRA
+		NOT = { alliance_with = TRA }
+		NOT = { overlord_of = TRA }
+		}
+		declare_war_with_cb = {
+			who = TRA
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = OA3
+		NOT = { alliance_with = OA3 }
+		NOT = { overlord_of = OA3 }
+		}
+		declare_war_with_cb = {
+			who = OA3
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = OA4
+		NOT = { alliance_with = OA4 }
+		NOT = { overlord_of = OA4 }
+		}
+		declare_war_with_cb = {
+			who = OA4
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = OA5
+		NOT = { alliance_with = OA5 }
+		NOT = { overlord_of = OA5 }
+		}
+		declare_war_with_cb = {
+			who = OA5
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = OA6
+		NOT = { alliance_with = OA6 }
+		NOT = { overlord_of = OA6 }
+		}
+		declare_war_with_cb = {
+			who = OA6
+			casus_belli = cb_es_scenario
+		}
+		}
+	}
+	option = {
+		name = "es_9_scenario.1.b"
+		ai_chance = { factor = 33 }
+		trigger = {
+		NOT = { government = republic }
+		}
+		change_government = republic
+		add_country_modifier = {
+		name = "09_revolution"
+		duration = 3650
+		}
+		add_country_modifier = {
+		name = "09_merchants"
+		duration = 3650
+		}
+		every_province = {
+		limit = {
+		OR = {
+		area = po_tun_1_la
+		area = po_tun_2_la
+		area = po_tun_3_la
+		area = po_tun_4_la
+		}
+		}
+		add_claim = ROOT
+		}
+		
+		if = {
+		limit = {
+		exists = TRA
+		NOT = { alliance_with = TRA }
+		NOT = { overlord_of = TRA }
+		}
+		declare_war_with_cb = {
+			who = TRA
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = OA3
+		NOT = { alliance_with = OA3 }
+		NOT = { overlord_of = OA3 }
+		}
+		declare_war_with_cb = {
+			who = OA3
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = OA4
+		NOT = { alliance_with = OA4 }
+		NOT = { overlord_of = OA4 }
+		}
+		declare_war_with_cb = {
+			who = OA4
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = OA5
+		NOT = { alliance_with = OA5 }
+		NOT = { overlord_of = OA5 }
+		}
+		declare_war_with_cb = {
+			who = OA5
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = OA6
+		NOT = { alliance_with = OA6 }
+		NOT = { overlord_of = OA6 }
+		}
+		declare_war_with_cb = {
+			who = OA6
+			casus_belli = cb_es_scenario
+		}
+		}
+	}
+	option = {
+		name = "es_9_scenario.1.c"
+		ai_chance = { factor = 33 }
+		trigger = {
+		NOT = { government = theocracy }
+		}
+		change_government = theocracy
+		add_country_modifier = {
+		name = "09_revolution"
+		duration = 3650
+		}
+		add_country_modifier = {
+		name = "09_clergy"
+		duration = 3650
+		}
+		every_province = {
+		limit = {
+		OR = {
+		area = po_tun_1_la
+		area = po_tun_2_la
+		area = po_tun_8_la
+		area = po_tun_10_la
+		}
+		}
+		add_claim = ROOT
+		}
+		
+		if = {
+		limit = {
+		exists = TRA
+		NOT = { alliance_with = TRA }
+		NOT = { overlord_of = TRA }
+		}
+		declare_war_with_cb = {
+			who = TRA
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = OA3
+		NOT = { alliance_with = OA3 }
+		NOT = { overlord_of = OA3 }
+		}
+		declare_war_with_cb = {
+			who = OA3
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = OA4
+		NOT = { alliance_with = OA4 }
+		NOT = { overlord_of = OA4 }
+		}
+		declare_war_with_cb = {
+			who = OA4
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = OA5
+		NOT = { alliance_with = OA5 }
+		NOT = { overlord_of = OA5 }
+		}
+		declare_war_with_cb = {
+			who = OA5
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = OA6
+		NOT = { alliance_with = OA6 }
+		NOT = { overlord_of = OA6 }
+		}
+		declare_war_with_cb = {
+			who = OA6
+			casus_belli = cb_es_scenario
+		}
+		}
+	}
+	option = {
+		name = "es_9_scenario.1.e"
+		ai_chance = { factor = 33 }
+		add_stability = -1
+		add_country_modifier = {
+		name = "09_revolution"
+		duration = 9125
+		}
+		if = {
+		limit = {
+		government = monarchy
+		}
+		every_province = {
+		limit = {
+		OR = {
+		area = po_tun_3_la
+		area = po_tun_4_la
+		area = po_tun_5_la
+		area = po_tun_6_la
+		}
+		}
+		add_claim = ROOT
+		}
+		}
+		if = {
+		limit = {
+		government = republic
+		}
+		every_province = {
+		limit = {
+		OR = {
+		area = po_tun_1_la
+		area = po_tun_2_la
+		area = po_tun_3_la
+		area = po_tun_4_la
+		}
+		}
+		add_claim = ROOT
+		}
+		}
+		if = {
+		limit = {
+		government = theocracy
+		}
+		every_province = {
+		limit = {
+		OR = {
+		area = po_tun_1_la
+		area = po_tun_2_la
+		area = po_tun_8_la
+		area = po_tun_10_la
+		}
+		}
+		add_claim = ROOT
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = TRA
+		NOT = { alliance_with = TRA }
+		NOT = { overlord_of = TRA }
+		}
+		declare_war_with_cb = {
+			who = TRA
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = POT
+		NOT = { alliance_with = POT }
+		NOT = { overlord_of = POT }
+		}
+		declare_war_with_cb = {
+			who = POT
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = OA1
+		NOT = { alliance_with = OA1 }
+		NOT = { overlord_of = OA1 }
+		}
+		declare_war_with_cb = {
+			who = OA1
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = OA6
+		NOT = { alliance_with = OA6 }
+		NOT = { overlord_of = OA6 }
+		}
+		declare_war_with_cb = {
+			who = OA6
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = OA8
+		NOT = { alliance_with = OA8 }
+		NOT = { overlord_of = OA8 }
+		}
+		declare_war_with_cb = {
+			who = OA8
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+	}
+}
+
+country_event = {
+	id = es_9_scenario.2
+	title = es_9_scenario.2.t
+	desc = es_9_scenario.2.d
+	picture = ES_AKAVIR_CITY_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_9_scenario.2_flag }
+		is_year = 308
+		NOT = { is_year = 337 }
+		culture_group = po_tun_cg
+		OR = {
+		overlord_of = OA3
+		overlord_of = OA4
+		overlord_of = OA5
+		overlord_of = OA6
+		AND = {
+		owns = 646
+		any_owned_province = {
+		OR = {
+		area = po_tun_3_la
+		area = po_tun_4_la
+		area = po_tun_5_la
+		area = po_tun_6_la 
+		}
+		}
+		}
+		}
+    }
+
+	mean_time_to_happen = {
+		days = 5110
+	}
+	
+	immediate = {
+	    set_country_flag = es_9_scenario.2_flag
+	}
+
+	option = {
+		name = "es_9_scenario.2.a"
+		ai_chance = { factor = 50 }
+		every_owned_province = {
+		limit = {
+		OR = {
+		area = po_tun_3_la
+		area = po_tun_4_la
+		area = po_tun_5_la
+		area = po_tun_6_la 
+		}
+		}
+		cede_province = TRA
+		add_core = TRA
+		}
+		
+		if = {
+		limit = {
+		OA3 = { ai = yes }
+		overlord_of = OA3
+		}
+		every_province = {
+		limit = {
+		owned_by = OA3
+		}
+		cede_province = TRA
+		add_core = TRA
+		}
+		}
+		
+		if = {
+		limit = {
+		OA4 = { ai = yes }
+		overlord_of = OA4
+		}
+		every_province = {
+		limit = {
+		owned_by = OA4
+		}
+		cede_province = TRA
+		add_core = TRA
+		}
+		}
+		
+		if = {
+		limit = {
+		OA5 = { ai = yes }
+		overlord_of = OA5
+		}
+		every_province = {
+		limit = {
+		owned_by = OA5
+		}
+		cede_province = TRA
+		add_core = TRA
+		}
+		}
+		
+		if = {
+		limit = {
+		OA6 = { ai = yes }
+		overlord_of = OA6
+		}
+		every_province = {
+		limit = {
+		owned_by = OA6
+		}
+		cede_province = TRA
+		add_core = TRA
+		}
+		}
+		
+		create_guarantee = TRA
+		
+		add_country_modifier = {
+		name = "09_transakavir"
+		duration = 9125
+		}
+	}
+	option = {
+		name = "es_9_scenario.2.b"
+		ai_chance = { factor = 50 }
+		every_province = {
+		limit = {
+		OR = {
+		area = po_tun_3_la
+		area = po_tun_4_la
+		area = po_tun_5_la
+		area = po_tun_6_la 
+		}
+		}
+		add_core = TRA
+		}
+	}
+}
+
+country_event = {
+	id = es_9_scenario.3
+	title = es_9_scenario.3.t
+	desc = es_9_scenario.3.d
+	picture = ES_ISLANDS_CITY_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_9_scenario.3_flag }
+		is_year = 308
+		NOT = { is_year = 337 }
+		culture_group = tangmo_cg
+		is_vassal = yes
+    }
+
+	mean_time_to_happen = {
+		days = 5110
+	}
+	
+	immediate = {
+	    set_country_flag = es_9_scenario.3_flag
+	}
+
+	option = {
+		name = "es_9_scenario.3.a"
+		ai_chance = { factor = 50 }
+		add_country_modifier = {
+		name = "09_indepandence"
+		duration = 5475
+		}
+	}
+	
+	option = {
+		name = "es_9_scenario.3.b"
+		ai_chance = { factor = 50 }
+		add_prestige = -10
+	}
+}
+
+country_event = {
+	id = es_9_scenario.4
+	title = es_9_scenario.4.t
+	desc = es_9_scenario.4.d
+	picture = ES_OLD_GLORY_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_9_scenario.4_flag }
+		is_year = 308
+		NOT = { is_year = 337 }
+		culture_group = transpandomaic_cg
+		owns = 750
+    }
+
+	mean_time_to_happen = {
+		days = 5110
+	}
+	
+	immediate = {
+	    set_country_flag = es_9_scenario.4_flag
+	}
+
+	option = {
+		name = "es_9_scenario.4.a"
+		ai_chance = { factor = 50 }
+		every_province = {
+		limit = {
+		OR = {
+		area = thousand_11_la
+		area = thousand_12_la
+		area = thousand_13_la
+		area = thousand_14_la
+		}
+		}
+		add_claim = ROOT
+		}
+	}
+	
+	option = {
+		name = "es_9_scenario.4.b"
+		ai_chance = { factor = 50 }
+		add_prestige = -10
+	}
+}
+
+country_event = {
+	id = es_9_scenario.5
+	title = es_9_scenario.5.t
+	desc = es_9_scenario.5.d
+	picture = ES_TRADE_GOODS_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_9_scenario.5_flag }
+	    is_year = 308
+		NOT = { is_year = 337 }
+	    exists = TRA
+		NOT = { tag = TRA }
+		is_free_or_tributary_trigger = yes
+		capital_scope = { continent = Akavir }
+    }
+
+	mean_time_to_happen = {
+		days = 5110
+	}
+	
+	immediate = {
+	    set_country_flag = es_9_scenario.5_flag
+	}
+
+	option = {
+		name = "es_9_scenario.5.a"
+		ai_chance = { factor = 50 }
+		create_guarantee = TRA
+		add_country_modifier = {
+		name = "09_transakavir"
+		duration = 9125
+		}
+	}
+	
+	option = {
+		name = "es_9_scenario.4.b"
+		ai_chance = { factor = 50 }
+		add_prestige = -25
+	}
+}

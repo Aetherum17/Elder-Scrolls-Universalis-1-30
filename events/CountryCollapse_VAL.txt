@@ -1,0 +1,348 @@
+namespace = es_collapse
+
+country_event = {
+	id = es_collapse.12
+	title = es_collapse.12.t
+	desc = es_collapse.12.d
+	picture = ES_PROVINCE_COLLAPSE_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	    add_country_modifier = {
+			name = "vassal_autonomy"
+			duration = 9125
+		}
+	}
+	
+	option = {
+		name = es_collapse.2.a
+		ai_chance = { factor = 75 }
+		hidden_effect = {
+		
+		if = {
+		limit = {
+		NOT = { capital_scope = { region = valenwood_lr } }
+		}
+		every_core_province = {
+			limit = {
+				region = valenwood_lr
+			}
+			remove_core = ROOT
+		}
+		}
+		
+		if = {
+		limit = {
+		valenwood_1_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = VA1 }
+		NOT = { capital_scope = { area = valenwood_1_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = valenwood_1_la
+		}
+		add_core = VA1
+		}
+		create_vassal = VA1
+		}
+		
+		if = {
+		limit = {
+		valenwood_2_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = VA2 }
+		NOT = { capital_scope = { area = valenwood_2_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = valenwood_2_la
+		}
+		add_core = VA2
+		}
+		create_vassal = VA2
+		}
+		
+		if = {
+		limit = {
+		valenwood_3_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = VA3 }
+		NOT = { capital_scope = { area = valenwood_3_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = valenwood_3_la
+		}
+		add_core = VA3
+		}
+		create_vassal = VA3
+		}
+		
+		if = {
+		limit = {
+		valenwood_4_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = VA4 }
+		NOT = { capital_scope = { area = valenwood_4_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = valenwood_4_la
+		}
+		add_core = VA4
+		}
+		create_vassal = VA4
+		}
+		
+		if = {
+		limit = {
+		valenwood_5_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = VA5 }
+		NOT = { capital_scope = { area = valenwood_5_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = valenwood_5_la
+		}
+		add_core = VA5
+		}
+		create_vassal = VA5
+		}
+		
+		if = {
+		limit = {
+		valenwood_6_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = VA6 }
+		NOT = { capital_scope = { area = valenwood_6_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = valenwood_6_la
+		}
+		add_core = VA6
+		}
+		create_vassal = VA6
+		}
+		
+		if = {
+		limit = {
+		valenwood_7_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = VA7 }
+		NOT = { capital_scope = { area = valenwood_7_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = valenwood_7_la
+		}
+		add_core = VA7
+		}
+		create_vassal = VA7
+		}
+		
+		if = {
+		limit = {
+		valenwood_8_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = VA8 }
+		NOT = { capital_scope = { area = valenwood_8_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = valenwood_8_la
+		}
+		add_core = VA8
+		}
+		create_vassal = VA8
+		}
+		
+		if = {
+		limit = {
+		valenwood_9_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = VA9 }
+		NOT = { capital_scope = { area = valenwood_9_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = valenwood_9_la
+		}
+		add_core = VA9
+		}
+		create_vassal = VA9
+		}
+		
+		if = {
+		limit = {
+		valenwood_10_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = VB0 }
+		NOT = { capital_scope = { area = valenwood_10_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = valenwood_10_la
+		}
+		add_core = VB0
+		}
+		create_vassal = VB0
+		}
+		
+		if = {
+		limit = {
+		valenwood_11_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = VB1 }
+		NOT = { capital_scope = { area = valenwood_11_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = valenwood_11_la
+		}
+		add_core = VB1
+		}
+		create_vassal = VB1
+		}
+		
+		if = {
+		limit = {
+		valenwood_12_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = VB2 }
+		NOT = { capital_scope = { area = valenwood_12_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = valenwood_12_la
+		}
+		add_core = VB2
+		}
+		create_vassal = VB2
+		}
+		
+		if = {
+		limit = {
+		valenwood_13_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = VB3 }
+		NOT = { capital_scope = { area = valenwood_13_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = valenwood_13_la
+		}
+		add_core = VB3
+		}
+		create_vassal = VB3
+		}
+		
+		if = {
+		limit = {
+		valenwood_14_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = VB4 }
+		NOT = { capital_scope = { area = valenwood_14_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = valenwood_14_la
+		}
+		add_core = VB4
+		}
+		create_vassal = VB4
+		}
+		
+		if = {
+		limit = {
+		valenwood_15_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = VB5 }
+		NOT = { capital_scope = { area = valenwood_15_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = valenwood_15_la
+		}
+		add_core = VB5
+		}
+		create_vassal = VB5
+		}
+		
+	    }
+	}
+	
+	option = {
+		name = es_collapse.2.b
+		ai_chance = { factor = 15 }
+		
+		if = {
+		limit = {
+		NOT = { capital_scope = { region = valenwood_lr } }
+		}
+		every_core_province = {
+			limit = {
+				region = valenwood_lr
+			}
+			remove_core = ROOT
+		}
+		}
+		
+	}
+	
+	option = {
+		name = es_collapse.2.c
+		ai_chance = { factor = 10 }
+		
+		trigger = {
+		NOT = { capital_scope = { region = valenwood_lr } }
+		NOT = { exists = VAL }
+		}
+		
+		every_core_province = {
+			limit = {
+				region = valenwood_lr
+			}
+			remove_core = ROOT
+		}
+		
+		every_owned_province = {
+		limit = {
+		region = valenwood_lr
+		}
+		add_core = VAL
+		}
+		
+		release = VAL
+		
+		if = {
+		limit = {
+		government = monarchy
+		}
+		create_union = VAL
+	    }
+		else = {
+		create_alliance = VAL
+		add_opinion = { who = ROOT modifier = es_friendly_nation }
+		add_opinion = { who = VAL modifier = es_friendly_nation }
+	    }
+	}
+}

@@ -1,0 +1,35 @@
+owner = UA3
+controller = UA3
+add_core = UA3
+culture = akaviri
+religion = dragon_cult
+hre = no
+base_tax = 5
+base_production = 5
+trade_goods = glass
+base_manpower = 5
+capital = "Sarcal" 
+is_city = yes
+discovered_by = akavir_tg discovered_by = thousand_tg discovered_by = kamal_tg
+
+center_of_trade = 2
+
+add_permanent_province_modifier = {
+	name = water_trade_modifier
+	duration = -1
+}
+
+fort_15th = yes
+
+337.1.1 = {
+	owner = UPP
+	controller = UPP
+	add_core = UPP
+}
+
+1100.1.1 = {
+	owner = TSA
+	controller = TSA
+	add_core = TSA
+	religion = tsaesci_pantheon
+}

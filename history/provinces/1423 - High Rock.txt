@@ -1,0 +1,42 @@
+owner = BB2
+controller = BB2
+add_core = BB2
+culture = breton
+religion = altmeri_pantheon
+hre = no
+base_tax = 1
+base_production = 1
+trade_goods = unknown
+base_manpower = 1
+capital = "Azura's Crossing" 
+is_city = yes
+discovered_by = tamriel_tg discovered_by = elsweyr_tg discovered_by = marshan_tg discovered_by = orsimer_tg
+
+add_permanent_province_modifier = {
+	name = water_trade_modifier
+	duration = -1
+}
+
+fort_15th = yes
+
+420.1.1 = {
+	owner = DIR
+	controller = DIR
+	add_core = DIR
+}
+
+548.1.1 = {
+    owner = HIG
+	controller = HIG
+	add_core = HIG
+}
+
+609.1.1 = {
+	religion = twelve_divines
+}
+
+1045.1.1 = {
+    owner = WAY
+	controller = WAY
+	add_core = WAY
+}

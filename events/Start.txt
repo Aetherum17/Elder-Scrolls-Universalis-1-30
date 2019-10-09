@@ -1,0 +1,54 @@
+namespace = es_start
+
+country_event = {
+	id = es_start.1
+	title = es_start.1.t
+	desc = es_start.1.d
+	picture = ES_START_eventPicture
+	
+	trigger = {
+	NOT = { has_country_flag = es_start_ai_no_flag }
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	immediate = {
+		set_country_flag = es_start_ai_no_flag
+	}
+	
+	option = {
+		name = es_start.1.a	
+		add_country_modifier = {
+		name = "vassal_autonomy"
+		duration = 9125
+	    }
+	}
+}
+
+country_event = {
+	id = es_start.2
+	title = es_start.2.t
+	desc = es_start.2.d
+	picture = ES_MUSIC_MOD_eventPicture
+	
+	trigger = {
+	always = no
+	NOT = { has_country_flag = es_start_music_ai_no_flag }
+	NOT = { has_country_flag = esu_music_submode_flag }
+	has_country_flag = esu_music_main_flag
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	immediate = {
+		set_country_flag = es_start_music_ai_no_flag
+	}
+	
+	option = {
+		name = es_start.2.a	
+	}
+}

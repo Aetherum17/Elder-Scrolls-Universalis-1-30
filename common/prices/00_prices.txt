@@ -1,0 +1,197 @@
+# base_price = X			base price in $. (default is 1.0 if not specified
+# goldtype = yes/no			This resource works like 'gold' if yes, using prices from mine-value in province instead of supply/demand and baseprice. Also creates gold-inflation
+
+### Food ###############
+
+fish = {
+	base_price = 1.5
+}
+
+grain = {
+	base_price = 2.5
+}
+
+algae = {
+    base_price = 3.0
+}
+
+livestock = {
+	base_price = 3.5
+}
+
+salt = {
+	base_price = 4.5
+}
+
+wine = {
+	base_price = 5
+}
+
+lobsters = {
+    base_price = 5
+}
+
+### Clothes ############
+
+wool = {
+	base_price = 1.5
+}
+
+fur = {
+	base_price = 2.5
+}
+
+dyes = {
+	base_price = 3.5 
+}
+
+silk = {
+	base_price = 4
+}
+
+cloth = {
+	base_price = 5
+}
+
+### Earth Resources ####
+
+iron = {
+	base_price = 2.5
+}
+
+copper = {
+	base_price = 3
+}
+
+manganates = {
+    base_price = 3.5
+}
+
+light_metals = {
+    base_price = 4
+}
+
+coal = {
+	base_price = 5
+}
+
+aluminum = {
+	base_price = 6
+}
+
+gems = {
+	base_price = 7
+}
+
+rare_metals = {
+    base_price = 7
+}
+
+gold = {
+	base_price = 0
+	goldtype = yes
+}
+
+uranium = {
+	base_price = 10
+}
+
+### High Tech ##########
+
+silicates = {
+    base_price = 1.5
+}
+
+glass = {
+	base_price = 5
+}
+
+paper = {
+	base_price = 5
+}
+
+electronics = {
+	base_price = 7.5
+}
+
+cars = {
+	base_price = 10
+}
+
+### Gen Production #####
+
+unknown = {
+	base_price = 0
+}
+
+wood = {
+    base_price = 1.0
+}
+
+wood_coal = {
+    base_price = 1.5
+}
+
+tropical_wood = {
+	base_price = 2.5
+}
+
+naval_supplies = {
+	base_price = 3.5
+}
+
+slaves = {
+	base_price = 7
+}
+
+oil = {
+	base_price = 12
+}
+
+### Lux Production #####
+
+corals = {
+    base_price = 3.5
+}
+
+incense = {
+	base_price = 4.5
+}
+
+ivory = {
+	base_price = 5
+}
+
+chinaware = {
+	base_price = 7
+}
+
+### Plantation #########
+
+cotton = {
+	base_price = 1.5
+}
+
+sugar = {
+	base_price = 5
+}
+
+tea = {
+	base_price = 5
+}
+
+spices = {
+	base_price = 5
+}
+
+coffee = {
+	base_price = 5
+}
+
+tobacco = {
+	base_price = 5
+}
+
+cocoa = {
+	base_price = 5
+}

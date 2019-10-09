@@ -1,0 +1,4051 @@
+#######################################
+# Writing
+#######################################
+writing = {
+	penalty = 0.50
+
+	bonus = {
+		trade_efficiency = 0.05
+	}
+
+	history = {
+		OR = {
+			owner = {
+				NOT = { government = tribal }
+				NOT = { government = native }
+			}
+			AND = {
+				is_year = 200
+				always = yes
+			}
+		}
+	}
+	
+	# no need for events, as its there from the start.
+	
+	can_embrace = {
+		always = yes
+	}
+	
+	embracement_speed = {
+		modifier = {
+			factor = 0.1
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_friendly_coast_border_province_has_embraced_writing
+				any_friendly_coast_border_province = {
+					writing = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 0.1
+			scale = yes
+			
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_neighbor_has_embraced_writing
+				any_neighbor_province = {
+					NOT = { owned_by = ROOT }
+					writing = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = tooltip_nontribal_capital
+				is_capital = yes
+				owner = {
+					NOT = { government = tribal }
+					NOT = { government = native }
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = tooltip_adm_tech10_capital
+				is_capital = yes
+				owner = { 
+					adm_tech = 10
+				}
+			}
+		}
+		modifier = {
+			factor = 5
+			scale = yes
+			potential = {
+				owner = {
+					is_subject = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_overlord_writing
+				OR = {
+					has_port = yes
+					is_capital = yes
+				}
+				owner = {
+					overlord = { has_institution = writing }
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			scale = yes
+			potential = {
+				owner = {
+					has_institution = writing
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_writing_embraced
+				owner = {
+					has_institution = writing
+				}
+			}
+		}
+	}
+	
+	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
+		factor = 24
+		
+		modifier = {
+			factor = 0.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.1
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.3
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.4
+		}
+	}
+}
+
+#######################################
+# Legalism
+#######################################
+legalism = {
+	penalty = 0.50
+
+	bonus = {
+		stability_cost_modifier = -0.10
+	}
+	
+	historical_start_date = 100.1.1
+	historical_start_province = 646
+
+	history = {
+		OR = {
+			AND = {
+				is_year = 100
+				owner = { government_rank = 3 }
+				OR = {
+					development = 12
+					is_capital = yes
+				}
+			}
+			AND = {
+				is_year = 150
+				development = 12
+				owner = {
+					NOT = { government = tribal }
+					NOT = { government = native }
+				}
+			}
+			AND = {
+				is_year = 200
+				owner = {
+					NOT = { government = tribal }
+					NOT = { government = native }
+				}
+			}
+			AND = {
+				is_year = 300
+				always = yes
+			}
+		}
+	}
+	
+	can_start = {
+		is_year = 100
+		
+		is_island = no
+		is_state = yes
+		owner = {
+			is_subject = no
+			NOT = { government = tribal }
+			NOT = { government = native }
+		}
+		OR = {
+			is_capital = yes
+			development = 12
+			province_has_center_of_trade_of_level = 2
+		}
+	}
+	start_chance = 10		#in 100 for when a province can_start
+	
+	
+	on_start = et_institutions.11
+	
+	
+	can_embrace = {
+		always = yes
+	}
+
+	
+	embracement_speed = {
+		modifier = {
+			factor = 0.1
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_friendly_coast_border_province_has_embraced_legalism
+				any_friendly_coast_border_province = {
+					legalism = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 0.1
+			scale = yes
+			
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_neighbor_has_embraced_legalism
+				any_neighbor_province = {
+					NOT = { owned_by = ROOT }
+					legalism = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 1
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = tooltip_capital_empire
+				is_capital = yes
+				owner = { government_rank = 3 }
+			}
+		}
+		modifier = {
+			factor = 0.5
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = tooltip_province_empire_12_development
+				owner = { government_rank = 3 }
+				development = 12
+			}
+		}
+		modifier = {
+			factor = 0.5
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = tooltip_adm_tech14_nontribal_capital
+				is_capital = yes
+				owner = { 
+					adm_tech = 8
+					NOT = { government = tribal }
+					NOT = { government = native }
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = tooltip_adm_tech14_capital
+				is_capital = yes
+				owner = { adm_tech = 14 }
+			}
+		}
+		modifier = {
+			factor = 5
+			scale = yes
+			potential = {
+				owner = {
+					is_subject = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_overlord_legalism
+				OR = {
+					has_port = yes
+					is_capital = yes
+				}
+				owner = {
+					overlord = { has_institution = legalism }
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			scale = yes
+			potential = {
+				owner = {
+					has_institution = legalism
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_legalism_embraced
+				owner = {
+					has_institution = legalism
+				}
+			}
+		}
+	}
+	
+	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
+		factor = 24
+		
+		modifier = {
+			factor = 0.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.1
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.3
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.4
+		}
+	}
+}
+
+#######################################
+# Ancient Imperialism
+#######################################
+ancient_imperialism = {
+	penalty = 0.50
+
+	bonus = {
+		core_creation = -0.10
+	}
+	
+	historical_start_date = 200.1.1
+	historical_start_province = 1206
+
+	history = {
+		OR = {
+			AND = {
+				is_year = 200
+				owner = { government_rank = 3 }
+				OR = {
+					development = 12
+					is_capital = yes
+				}
+			}
+			AND = {
+				is_year = 250
+				OR = {
+					development = 12
+					is_capital = yes
+				}
+				owner = {
+					NOT = { government = tribal }
+					NOT = { government = native }
+				}
+			}
+			AND = {
+				is_year = 300
+				owner = { government_rank = 3 }
+			}
+			AND = {
+				is_year = 390
+				always = yes
+			}
+		}
+	}
+	
+	can_start = {
+		is_year = 200
+		
+		is_island = no
+		is_state = yes
+		is_capital = yes
+		OR = {
+			owner = { government_rank = 3 }
+			AND = {
+				is_year = 225
+				development = 12
+			}
+		}
+	}
+	start_chance = 10		#in 100 for when a province can_start
+	
+	
+	on_start = et_institutions.12
+	
+	
+	can_embrace = {
+		always = yes
+	}
+
+	
+	embracement_speed = {
+		modifier = {
+			factor = 0.1
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_friendly_coast_border_province_has_embraced_ancient_imperialism
+				any_friendly_coast_border_province = {
+					ancient_imperialism = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 0.1
+			scale = yes
+			
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_neighbor_has_embraced_ancient_imperialism
+				any_neighbor_province = {
+					NOT = { owned_by = ROOT }
+					ancient_imperialism = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 0.2
+			scale = yes
+			has_building = glorious_monument
+		}
+		modifier = {
+			factor = 0.5
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = tooltip_adm_tech16_capital
+				is_capital = yes
+				owner = { 
+					adm_tech = 16
+				}
+			}
+		}
+		modifier = {
+			factor = 5
+			scale = yes
+			potential = {
+				owner = {
+					is_subject = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_overlord_ancient_imperialism
+				OR = {
+					has_port = yes
+					is_capital = yes
+				}
+				owner = {
+					overlord = { has_institution = ancient_imperialism }
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			scale = yes
+			potential = {
+				owner = {
+					has_institution = ancient_imperialism
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_ancient_imperialism_embraced
+				owner = {
+					has_institution = ancient_imperialism
+				}
+			}
+		}
+	}
+	
+	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
+		factor = 24
+		
+		modifier = {
+			factor = 0.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.1
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.3
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.4
+		}
+	}
+}
+
+#######################################
+# Caste System
+#######################################
+caste_system = {
+	penalty = 0.50
+
+	bonus = {
+		global_tax_modifier = 0.10
+	}
+	
+	historical_start_date = 300.1.1
+	historical_start_province = 561
+
+	history = {
+		OR = {
+			AND = {
+				is_year = 300
+				development = 12
+				owner = {
+					NOT = { government = tribal }
+					NOT = { government = native }
+				}
+			}
+			AND = {
+				is_year = 400
+				development = 8
+				owner = {
+					NOT = { government = tribal }
+					NOT = { government = native }
+				}
+			}
+			AND = {
+				is_year = 500
+				always = yes
+			}
+		}
+	}
+	
+	can_start = {
+		is_year = 300
+		
+		is_island = no
+		is_state = yes
+		OR = {
+			is_capital = yes
+			development = 15
+		}
+		owner = { 
+			has_institution = legalism 
+			is_subject = no
+			NOT = { government = tribal }
+			NOT = { government = native }
+		}
+	}
+	start_chance = 10		#in 100 for when a province can_start
+	
+	
+	on_start = et_institutions.13
+	
+	
+	can_embrace = {
+		always = yes
+	}
+
+	
+	embracement_speed = {
+		modifier = {
+			factor = 0.1
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_friendly_coast_border_province_has_embraced_caste_system
+				any_friendly_coast_border_province = {
+					caste_system = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 0.1
+			scale = yes
+			
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_neighbor_has_embraced_caste_system
+				any_neighbor_province = {
+					NOT = { owned_by = ROOT }
+					caste_system = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			scale = yes
+			development = 18
+			owner = { 
+				NOT = { government = tribal }
+				NOT = { government = native }
+			}
+		}
+		modifier = {
+			factor = 0.5
+			scale = yes
+			development = 15
+			owner = { 
+				adm_tech = 16 
+				NOT = { government = tribal }
+				NOT = { government = native }
+			}
+		}
+		modifier = {
+			factor = 0.5
+			development = 12
+			owner = { adm_tech = 18 }
+		}
+		modifier = {
+			factor = 5
+			scale = yes
+			potential = {
+				owner = {
+					is_subject = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_overlord_caste_system
+				OR = {
+					has_port = yes
+					is_capital = yes
+				}
+				owner = {
+					overlord = { has_institution = caste_system }
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			scale = yes
+			potential = {
+				owner = {
+					has_institution = caste_system
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_caste_system_embraced
+				owner = {
+					has_institution = caste_system
+				}
+			}
+		}
+	}
+	
+	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
+		factor = 24
+		
+		modifier = {
+			factor = 0.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.1
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.3
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.4
+		}
+	}
+}
+
+#######################################
+# Organized Religion
+#######################################
+organized_religion = {
+	penalty = 0.50
+
+	bonus = {
+		global_missionary_strength = 0.01
+	}
+	
+	historical_start_date = 400.1.1
+	historical_start_province = 1043
+
+	history = {
+		is_year = 400
+	}
+	
+	can_start = {
+		is_year = 400
+		
+		is_island = no
+		is_state = yes
+		development = 9
+	}
+	start_chance = 10		#in 100 for when a province can_start
+	
+	
+	on_start = et_institutions.14
+	
+	
+	can_embrace = {
+		always = yes
+	}
+
+	
+	embracement_speed = {
+		modifier = {
+			factor = 0.1
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_friendly_coast_border_province_has_embraced_organized_religion
+				any_friendly_coast_border_province = {
+					organized_religion = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 0.1
+			scale = yes
+			
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_neighbor_has_embraced_organized_religion
+				any_neighbor_province = {
+					NOT = { owned_by = ROOT }
+					organized_religion = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 5
+			scale = yes
+			is_capital = yes
+			owner = {
+				full_idea_group = early_religious_ideas
+			}
+		}
+		modifier = {
+			factor = 5
+			scale = yes
+			has_building = temple
+		}
+		modifier = {
+			factor = 0.2
+			scale = yes
+			owner = { adm_tech = 36 }
+		}
+		modifier = {
+			factor = 5
+			scale = yes
+			potential = {
+				owner = {
+					is_colonial_nation = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_colonial_overlord_organized_religion
+				OR = {
+					has_port = yes
+					is_capital = yes
+				}
+				owner = {
+					is_colonial_nation = yes
+					overlord = { has_institution = organized_religion }
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			scale = yes
+			potential = {
+				owner = {
+					has_institution = organized_religion
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_organized_religion_embraced
+				owner = {
+					has_institution = organized_religion
+				}
+			}
+		}
+	}
+	
+	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
+		factor = 24
+		
+		modifier = {
+			factor = 0.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.1
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.3
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.4
+		}
+	}
+}
+
+#######################################
+# Serfdom
+#######################################
+serfdom = {
+	penalty = 0.50
+
+	bonus = {
+		production_efficiency = 0.10
+	}
+	
+	historical_start_date = 500.1.1
+	historical_start_province = 1075
+
+	history = {
+		OR = {
+			AND = {
+				is_year = 500
+				owner = {
+					NOT = { government = republic }
+					NOT = { government = tribal }
+					NOT = { government = native }
+				}
+			}
+			AND = {
+				is_year = 800
+				always = yes
+			}
+		}
+	}
+	
+	can_start = {
+		is_year = 500
+		
+		is_island = no
+		is_state = yes
+		development = 15
+		owner = {
+			NOT = { government = republic }
+			NOT = { government = tribal }
+			NOT = { government = native }
+		}
+	}
+	start_chance = 10		#in 100 for when a province can_start
+	
+	
+	on_start = et_institutions.15
+	
+	
+	can_embrace = {
+		always = yes
+	}
+
+	
+	embracement_speed = {
+		modifier = {
+			factor = 0.1
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_friendly_coast_border_province_has_embraced_serfdom
+				any_friendly_coast_border_province = {
+					serfdom = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 0.1
+			scale = yes
+			
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_neighbor_has_embraced_serfdom
+				any_neighbor_province = {
+					NOT = { owned_by = ROOT }
+					serfdom = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 1
+			scale = yes
+			is_capital = yes
+			development = 15
+			owner = {
+				NOT = { government = republic }
+				NOT = { government = tribal }
+				NOT = { government = native }
+			}
+		}
+		modifier = {
+			factor = 1
+			scale = yes
+			development = 12
+			owner = {
+				adm_tech = 25
+			}
+		}
+		modifier = {
+			factor = 5
+			scale = yes
+			potential = {
+				owner = {
+					is_subject = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_overlord_serfdom
+				OR = {
+					has_port = yes
+					is_capital = yes
+				}
+				owner = {
+					overlord = { has_institution = serfdom }
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			scale = yes
+			potential = {
+				owner = {
+					has_institution = serfdom
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_serfdom_embraced
+				owner = {
+					has_institution = serfdom
+				}
+			}
+		}
+	}
+	
+	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
+		factor = 24
+		
+		modifier = {
+			factor = 0.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.1
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.3
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.4
+		}
+	}
+}
+
+#######################################
+# Manorialism
+#######################################
+manorialism = {
+	penalty = 0.50
+
+	bonus = {
+		vassal_forcelimit_bonus = 0.10
+	}
+	
+	historical_start_date = 600.1.1
+	historical_start_province = 1161
+
+	history = {
+		OR = {
+			AND = {
+				is_year = 600
+				owner = {
+					NOT = { government = republic }
+					NOT = { government = tribal }
+					NOT = { government = native }
+				}
+			}
+			AND = {
+				is_year = 900
+				always = yes
+			}
+		}
+	}
+	
+	can_start = {
+		is_year = 600
+		
+		is_island = no
+		is_state = yes
+		development = 15
+		owner = {
+			NOT = { government = republic }
+			NOT = { government = tribal }
+			NOT = { government = native }
+		}
+	}
+	start_chance = 10		#in 100 for when a province can_start
+	
+	
+	on_start = et_institutions.16
+	
+	
+	can_embrace = {
+		always = yes
+	}
+
+	
+	embracement_speed = {
+		modifier = {
+			factor = 0.1
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_friendly_coast_border_province_has_embraced_manorialism
+				any_friendly_coast_border_province = {
+					manorialism = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 0.1
+			scale = yes
+			
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_neighbor_has_embraced_manorialism
+				any_neighbor_province = {
+					NOT = { owned_by = ROOT }
+					manorialism = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 1
+			scale = yes
+			is_capital = yes
+			development = 15
+			owner = {
+				NOT = { government = republic }
+				NOT = { government = tribal }
+				NOT = { government = native }
+			}
+		}
+		modifier = {
+			factor = 1
+			scale = yes
+			development = 12
+			owner = {
+				adm_tech = 28
+			}
+		}
+		modifier = {
+			factor = 5
+			scale = yes
+			potential = {
+				owner = {
+					is_subject = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_overlord_manorialism
+				OR = {
+					has_port = yes
+					is_capital = yes
+				}
+				owner = {
+					overlord = { has_institution = manorialism }
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			scale = yes
+			potential = {
+				owner = {
+					has_institution = manorialism
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_manorialism_embraced
+				owner = {
+					has_institution = manorialism
+				}
+			}
+		}
+	}
+	
+	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
+		factor = 24
+		
+		modifier = {
+			factor = 0.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.1
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.3
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.4
+		}
+	}
+}
+
+#######################################
+# Early Feudalism
+#######################################
+early_feudalism = {
+	penalty = 0.50
+
+	bonus = {
+		vassal_income = 0.10
+	}
+	
+	historical_start_date = 700.1.1
+	historical_start_province = 335
+
+	history = {
+		OR = {
+			AND = {
+				is_year = 700
+				development = 9
+				owner = {
+					NOT = { government = republic }
+					NOT = { government = tribal }
+					NOT = { government = native }
+				}
+			}
+			AND = {
+				is_year = 800
+				always = yes
+			}
+		}
+	}
+	
+	can_start = {
+		is_year = 700
+
+		is_island = no
+		is_state = yes
+		development = 15
+	}
+	start_chance = 10		#in 100 for when a province can_start
+	
+	
+	on_start = et_institutions.17
+	
+	
+	can_embrace = {
+		always = yes
+	}
+
+	
+	embracement_speed = {
+		modifier = {
+			factor = 0.1
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_friendly_coast_border_province_has_embraced_early_feudalism
+				any_friendly_coast_border_province = {
+					early_feudalism = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 0.1
+			scale = yes
+			
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_neighbor_has_embraced_early_feudalism
+				any_neighbor_province = {
+					NOT = { owned_by = ROOT }
+					early_feudalism = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 0.05
+			scale = yes
+			potential = {
+				has_dlc = "The Cossacks"
+				owner = { has_estate = estate_nobles }
+			}
+			custom_trigger_tooltip = {
+				tooltip = FEUDALISM_AND_NOBLES
+				any_neighbor_province = {
+					early_feudalism = 100
+				}
+				owner = {
+					has_estate = estate_nobles
+					estate_loyalty = {
+						estate = estate_nobles
+						loyalty = 40
+					}
+				}
+				has_estate = estate_nobles
+			}
+		}
+		modifier = {
+			factor = 1
+			scale = yes
+			is_capital = yes
+			owner = { vassal = 2 }
+		}
+		modifier = {
+			factor = 1
+			scale = yes
+			is_capital = yes
+			owner = { adm_tech = 34 }
+		}
+		modifier = {
+			factor = 5
+			scale = yes
+			potential = {
+				owner = {
+					is_subject = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_overlord_early_feudalism
+				OR = {
+					has_port = yes
+					is_capital = yes
+				}
+				owner = {
+					overlord = { has_institution = early_feudalism }
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			scale = yes
+			potential = {
+				owner = {
+					has_institution = early_feudalism
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_early_feudalism_embraced
+				owner = {
+					has_institution = early_feudalism
+				}
+			}
+		}
+	}
+	
+	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
+		factor = 24
+		
+		modifier = {
+			factor = 0.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.1
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.3
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.4
+		}
+	}
+}
+
+
+#######################################
+# Crop Rotation
+#######################################
+crop_rotation = {
+	penalty = 0.50
+
+	bonus = {
+		manpower_recovery_speed = 0.10
+	}
+	
+	historical_start_date = 800.1.1
+	historical_start_province = 750
+
+	history = {
+		OR = {
+			AND = {
+				is_year = 800
+				owner = {
+					NOT = { government = tribal }
+					NOT = { government = native }
+				}
+			}
+			AND = {
+				is_year = 850
+				development = 15
+				owner = {
+					NOT = { government = tribal }
+					NOT = { government = native }
+				}
+			}
+			AND = {
+				is_year = 900
+				development = 9
+				owner = {
+					NOT = { government = tribal }
+					NOT = { government = native }
+				}
+			}
+			AND = {
+				is_year = 1000
+				always = yes
+			}
+		}
+	}
+	
+	can_start = {
+		is_year = 800
+		
+		is_island = no
+		is_state = yes
+		development = 15
+		owner = {
+			NOT = { government = tribal }
+			NOT = { government = native }
+		}
+	}
+	start_chance = 10		#in 100 for when a province can_start
+	
+	
+	on_start = et_institutions.18
+	
+	
+	can_embrace = {
+		always = yes
+	}
+
+	
+	embracement_speed = {
+		modifier = {
+			factor = 0.1
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_friendly_coast_border_province_has_embraced_crop_rotation
+				any_friendly_coast_border_province = {
+					crop_rotation = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 0.1
+			scale = yes
+			
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_neighbor_has_embraced_crop_rotation
+				any_neighbor_province = {
+					NOT = { owned_by = ROOT }
+					crop_rotation = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 1
+			scale = yes
+			is_capital = yes
+			owner = { adm_tech = 38 }
+		}
+		modifier = {
+			factor = 5
+			scale = yes
+			potential = {
+				owner = {
+					is_subject = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_overlord_crop_rotation
+				OR = {
+					has_port = yes
+					is_capital = yes
+				}
+				owner = {
+					overlord = { has_institution = crop_rotation }
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			scale = yes
+			potential = {
+				owner = {
+					has_institution = crop_rotation
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_crop_rotation_embraced
+				owner = {
+					has_institution = crop_rotation
+				}
+			}
+		}
+	}
+	
+	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
+		factor = 24
+		
+		modifier = {
+			factor = 0.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.1
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.3
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.4
+		}
+	}
+}
+
+
+#######################################
+# Civil Service
+#######################################
+civil_service = {
+	penalty = 0.50
+
+	bonus = {
+		advisor_cost = -0.10
+	}
+	
+	historical_start_date = 900.1.1
+	historical_start_province = 724
+
+	history = {
+		OR = {
+			is_year = 900
+			AND = {
+				is_year = 1000
+				development = 9
+				owner = {
+					NOT = { government = tribal }
+					NOT = { government = native }
+				}
+			}
+			AND = {
+				is_year = 1100
+				always = yes
+			}
+		}
+	}
+	
+	can_start = {
+		is_year = 900
+		
+		is_island = no
+		is_state = yes
+		development = 15
+		owner = {
+			adm_tech = 29
+			NOT = { government = tribal }
+			NOT = { government = native }
+		}
+	}
+	start_chance = 10		#in 100 for when a province can_start
+	
+	
+	on_start = et_institutions.19
+	
+	
+	can_embrace = {
+		always = yes
+	}
+
+	
+	embracement_speed = {
+		modifier = {
+			factor = 0.1
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_friendly_coast_border_province_has_embraced_civil_service
+				any_friendly_coast_border_province = {
+					civil_service = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 0.1
+			scale = yes
+			
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_neighbor_has_embraced_civil_service
+				any_neighbor_province = {
+					NOT = { owned_by = ROOT }
+					civil_service = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 1
+			scale = yes
+			is_capital = yes
+			development = 15
+			owner = {
+				NOT = { government = tribal }
+				NOT = { government = native }
+			}
+		}
+		modifier = {
+			factor = 1
+			scale = yes
+			development = 12
+			owner = {
+				adm_tech = 40
+			}
+		}
+		modifier = {
+			factor = 5
+			scale = yes
+			potential = {
+				owner = {
+					is_colonial_nation = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_colonial_overlord_civil_service
+				OR = {
+					has_port = yes
+					is_capital = yes
+				}
+				owner = {
+					is_colonial_nation = yes
+					overlord = { has_institution = civil_service }
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			scale = yes
+			potential = {
+				owner = {
+					has_institution = civil_service
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_civil_service_embraced
+				owner = {
+					has_institution = civil_service
+				}
+			}
+		}
+	}
+	
+	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
+		factor = 24
+		
+		modifier = {
+			factor = 0.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.1
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.3
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.4
+		}
+	}
+}
+
+#######################################
+# Manuscripts
+#######################################
+manuscripts = {
+	penalty = 0.50
+
+	bonus = {
+		idea_cost = -0.10
+	}
+	
+	historical_start_date = 1000.1.1
+	historical_start_province = 357
+
+	history = {
+		OR = {
+			AND = {
+				is_year = 1000
+				development = 15
+			}
+			AND = {
+				is_year = 1100
+				development = 12
+				owner = {
+					NOT = { government = tribal }
+					NOT = { government = native }
+				}
+			}
+			AND = {
+				is_year = 1200
+				always = yes
+			}
+		}
+	}
+	
+	can_start = {
+		is_year = 1000
+		
+		is_island = no
+		is_state = yes
+		development = 15
+		owner = {
+			adm_tech = 38
+		}
+	}
+	start_chance = 10		#in 100 for when a province can_start
+	
+	
+	on_start = et_institutions.20
+	
+	
+	can_embrace = {
+		always = yes
+	}
+
+	
+	embracement_speed = {
+		modifier = {
+			factor = 0.1
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_friendly_coast_border_province_has_embraced_manuscripts
+				any_friendly_coast_border_province = {
+					manuscripts = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 0.1
+			scale = yes
+			
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_neighbor_has_embraced_manuscripts
+				any_neighbor_province = {
+					NOT = { owned_by = ROOT }
+					manuscripts = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 1
+			scale = yes
+			has_building = temple
+			development = 15
+		}
+		modifier = {
+			factor = 1
+			scale = yes
+			development = 12
+			owner = {
+				adm_tech = 45
+			}
+		}
+		modifier = {
+			factor = 5
+			scale = yes
+			potential = {
+				owner = {
+					is_colonial_nation = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_colonial_overlord_manuscripts
+				OR = {
+					has_port = yes
+					is_capital = yes
+				}
+				owner = {
+					is_colonial_nation = yes
+					overlord = { has_institution = manuscripts }
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			scale = yes
+			potential = {
+				owner = {
+					has_institution = manuscripts
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_manuscripts_embraced
+				owner = {
+					has_institution = manuscripts
+				}
+			}
+		}
+	}
+	
+	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
+		factor = 24
+		
+		modifier = {
+			factor = 0.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.1
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.3
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.4
+		}
+	}
+}
+
+#######################################
+# Scholasticism
+#######################################
+scholasticism = {
+	penalty = 0.50
+
+	bonus = {
+		tolerance_own = 1
+	}
+	
+	historical_start_date = 1100.1.1
+	historical_start_province = 271
+
+	history = {
+		OR = {
+			AND = {
+				is_year = 1100
+				development = 12
+			}
+			AND = {
+				is_year = 1200
+				owner = {
+					NOT = { government = tribal }
+					NOT = { government = native }
+				}
+			}
+			AND = {
+				is_year = 1300
+				always = yes
+			}
+		}
+	}
+	
+	can_start = {
+		is_year = 1100
+		
+		is_island = no
+		is_state = yes
+		development = 15
+		owner = {
+			adm_tech = 42
+		}
+	}
+	start_chance = 10		#in 100 for when a province can_start
+	
+	
+	on_start = et_institutions.21
+	
+	
+	can_embrace = {
+		always = yes
+	}
+
+	
+	embracement_speed = {
+		modifier = {
+			factor = 0.1
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_friendly_coast_border_province_has_embraced_scholasticism
+				any_friendly_coast_border_province = {
+					scholasticism = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 0.1
+			scale = yes
+			
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_neighbor_has_embraced_scholasticism
+				any_neighbor_province = {
+					NOT = { owned_by = ROOT }
+					scholasticism = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 1
+			scale = yes
+			development = 18
+		}
+		modifier = {
+			factor = 1
+			scale = yes
+			development = 12
+			owner = {
+				adm_tech = 47
+			}
+		}
+		modifier = {
+			factor = 5
+			scale = yes
+			potential = {
+				owner = {
+					is_colonial_nation = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_colonial_overlord_scholasticism
+				OR = {
+					has_port = yes
+					is_capital = yes
+				}
+				owner = {
+					is_colonial_nation = yes
+					overlord = { has_institution = scholasticism }
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			scale = yes
+			potential = {
+				owner = {
+					has_institution = scholasticism
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_scholasticism_embraced
+				owner = {
+					has_institution = scholasticism
+				}
+			}
+		}
+	}
+	
+	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
+		factor = 24
+		
+		modifier = {
+			factor = 0.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.1
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.3
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.4
+		}
+	}
+}
+
+#######################################
+# Guilds
+#######################################
+guilds = {
+	penalty = 0.50
+
+	bonus = {
+		global_trade_goods_size_modifier = 0.10
+	}
+	
+	historical_start_date = 1200.1.1
+	historical_start_province = 1510
+
+	history = {
+		OR = {
+			AND = {
+				is_year = 1200
+				OR = {
+					owner = { government = republic }
+					province_has_center_of_trade_of_level = 2
+				}
+			}
+			AND = {
+				is_year = 1250
+				development = 12
+				owner = {
+					NOT = { government = tribal }
+					NOT = { government = native }
+				}
+			}
+			AND = {
+				is_year = 1300
+				owner = {
+					NOT = { government = tribal }
+					NOT = { government = native }
+				}
+			}
+			AND = {
+				is_year = 1400
+				always = yes
+			}
+		}
+	}
+	
+	can_start = {
+		is_year = 1200
+		
+		is_island = no
+		is_state = yes
+		development = 15
+		owner = {
+			adm_tech = 46
+			NOT = { government = tribal }
+			NOT = { government = native }
+		}
+	}
+	start_chance = 10		#in 100 for when a province can_start
+	
+	
+	on_start = et_institutions.22
+	
+	
+	can_embrace = {
+		always = yes
+	}
+
+	
+	embracement_speed = {
+		modifier = {
+			factor = 0.1
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_friendly_coast_border_province_has_embraced_guilds
+				any_friendly_coast_border_province = {
+					guilds = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 0.1
+			scale = yes
+			
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_neighbor_has_embraced_guilds
+				any_neighbor_province = {
+					NOT = { owned_by = ROOT }
+					guilds = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 5
+			scale = yes
+			is_capital = yes
+			owner = { has_reform = merchants_reform }
+		}
+		modifier = {
+			factor = 0.2
+			scale = yes
+			has_building = marketplace
+		}
+		modifier = {
+			factor = 5
+			scale = yes
+			has_building = dock
+		}
+		modifier = {
+			factor = 1
+			scale = yes
+			development = 12
+			owner = {
+				adm_tech = 49
+			}
+		}
+		modifier = {
+			factor = 5
+			scale = yes
+			potential = {
+				owner = {
+					is_colonial_nation = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_colonial_overlord_guilds
+				OR = {
+					has_port = yes
+					is_capital = yes
+				}
+				owner = {
+					is_colonial_nation = yes
+					overlord = { has_institution = guilds }
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			scale = yes
+			potential = {
+				owner = {
+					has_institution = guilds
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_guilds_embraced
+				owner = {
+					has_institution = guilds
+				}
+			}
+		}
+	}
+	
+	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
+		factor = 24
+		
+		modifier = {
+			factor = 0.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.1
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.3
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.4
+		}
+	}
+}
+
+#######################################
+# Medicine
+#######################################
+medicine = {
+	penalty = 0.50
+
+	bonus = {
+		development_cost = -0.10
+	}
+	
+	historical_start_date = 1300.1.1
+	historical_start_province = 922
+
+	history = {
+		OR = {
+			AND = {
+				is_year = 1300
+				development = 12
+				owner = {
+					NOT = { government = tribal }
+					NOT = { government = native }
+				}
+			}
+			is_year = 1440
+		}
+	}
+	
+	can_start = {
+		is_year = 1300
+		
+		is_island = no
+		is_state = yes
+		development = 15
+	}
+	start_chance = 10		#in 100 for when a province can_start
+	
+	
+	on_start = et_institutions.23
+	
+	
+	can_embrace = {
+		always = yes
+	}
+
+	
+	embracement_speed = {
+		modifier = {
+			factor = 0.1
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_friendly_coast_border_province_has_embraced_medicine
+				any_friendly_coast_border_province = {
+					medicine = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 0.1
+			scale = yes
+			
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_neighbor_has_embraced_medicine
+				any_neighbor_province = {
+					NOT = { owned_by = ROOT }
+					medicine = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 1
+			scale = yes
+			development = 24
+		}
+		modifier = {
+			factor = 0.2
+			scale = yes
+			development = 12
+			province_has_center_of_trade_of_level = 2
+		}
+		modifier = {
+			factor = 0.5
+			scale = yes
+			is_capital = yes
+			owner = {
+				adm_tech = 51
+			}
+		}
+		modifier = {
+			factor = 5
+			scale = yes
+			potential = {
+				owner = {
+					is_colonial_nation = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_colonial_overlord_medicine
+				OR = {
+					has_port = yes
+					is_capital = yes
+				}
+				owner = {
+					is_colonial_nation = yes
+					overlord = { has_institution = medicine }
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			scale = yes
+			potential = {
+				owner = {
+					has_institution = medicine
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_scholasticism_embraced
+				owner = {
+					has_institution = medicine
+				}
+			}
+		}
+	}
+	
+	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
+		factor = 24
+		
+		modifier = {
+			factor = 0.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.1
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.3
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.4
+		}
+	}
+}
+
+#######################################
+# Feudalism.  
+#######################################
+feudalism = {
+	penalty = 0.5
+	bonus = {
+		free_leader_pool = 1
+	}
+	
+	historical_start_date = 1400.1.1
+	historical_start_province = 1319
+
+	history = {
+		is_year = 1400
+		OR = {
+			owner = {
+				NOT = {
+					government = tribal
+					government = native
+				}
+			}
+			is_year = 1700
+		}
+	}
+	
+	can_start = {
+		is_year = 1400
+		
+		is_island = no
+		development = 15 
+	}
+	start_chance = 10		#in 100 for when a province can_start
+	
+	on_start = et_institutions.24
+
+	can_embrace = {
+		always = yes
+	}
+
+	embracement_speed = {
+		modifier = {
+			factor = 0.6
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = FRIENDLY_NEIGHBOR_OR_COAST_PROVINCE_HAS_EMBRACED
+				any_friendly_coast_border_province = {
+					feudalism = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 0.1
+			scale = yes
+			potential = {
+				NOT = {
+					any_friendly_coast_border_province = {
+						feudalism = 100
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = NEIGHBOR_NOT_OWNED_IS_FEUDAL
+				any_neighbor_province = {
+					NOT = { owned_by = ROOT }
+					feudalism = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 0.15
+			scale = yes
+			force_potential = yes	# Hide the this modifier when potential is false
+			potential = {
+				owner = { has_estate = estate_nobles }
+			}
+			custom_trigger_tooltip = {
+				tooltip = FEUDALISM_AND_NOBLES
+				any_neighbor_province = {
+					feudalism = 100
+				}
+				owner = {
+					has_estate = estate_nobles
+					estate_loyalty = {
+						estate = estate_nobles
+						loyalty = 40
+					}
+				}
+				has_estate = estate_nobles
+			}
+		}
+		modifier = {
+			factor = 5
+			scale = yes
+			potential = {
+				owner = {
+					is_colonial_nation = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = PORT_OR_CAPITAL_IN_COLONY_FEUDAL
+				OR = {
+					has_port = yes
+					is_capital = yes
+				}
+				owner = {
+					is_colonial_nation = yes
+					overlord = { has_institution = feudalism }
+				}
+			}
+		}
+		modifier = {
+			factor = 0.1
+			scale = yes
+			potential = {
+				owner = { is_colonial_nation = no }
+			}
+			custom_trigger_tooltip = {
+				tooltip = CAPITAL_IN_OLD_WORLD_FEUDAL
+			
+				is_capital = yes
+				owner = {
+					NOT = { government = tribal }
+					NOT = { government = native }
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			scale = yes
+			potential = {
+				owner = {
+					has_institution = feudalism
+				}
+			}
+			
+			custom_trigger_tooltip = {
+				tooltip = tooltip_feudalism_embraced
+				is_owned_by_trade_company = no
+				owner = {
+					has_institution = feudalism
+				}
+			}
+		}
+	}
+	
+	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
+		factor = 24
+		
+		modifier = {
+			factor = 0.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.1
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.3
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.4
+		}
+	}
+}
+
+#######################################
+# Renaissance
+#######################################
+renaissance = {
+	penalty = 0.5
+
+	bonus = {
+		build_cost = -0.10
+	}
+
+
+	historical_start_date = 1500.1.1
+	historical_start_province = 1369
+
+	history = {
+		is_year = 1500
+	}
+	
+	can_start = {
+		is_year = 1500
+		development = 20
+		is_capital = yes
+		is_island = no
+	}
+	
+	start_chance = 5		#in 100 for when a province can_start
+	
+	on_start = institution_events.2
+	
+	can_embrace = {
+		owner = { has_institution = feudalism }
+	}
+
+	embracement_speed = {
+		modifier = {
+			scale = yes
+			factor = 0.6
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_friendly_coast_border_province_has_embraced_renaissance
+				any_friendly_coast_border_province = {
+					renaissance = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 0.3
+			scale = yes
+			potential = {
+				NOT = {
+					any_friendly_coast_border_province = {
+						renaissance = 100
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_neighbor_has_embraced_renaissance
+				any_neighbor_province = {
+					NOT = { owned_by = ROOT }
+					renaissance = 100
+				}
+			}
+		}
+			
+		modifier = {
+			factor = 5
+			scale = yes
+			potential = {
+				owner = {
+					is_colonial_nation = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_colonial_overlord_renaissance
+				OR = {
+					has_port = yes
+					is_capital = yes
+				}
+				owner = {
+					is_colonial_nation = yes
+					overlord = { has_institution = renaissance }
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			scale = yes
+			potential = {
+				owner = {
+					has_institution = renaissance
+				}
+			}
+			
+			custom_trigger_tooltip = {
+				tooltip = tooltip_renaissance_embraced
+				is_owned_by_trade_company = no
+				owner = {
+					has_institution = renaissance
+				}
+			}
+		}
+	}
+	
+	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
+		factor = 24
+		
+		modifier = {
+			factor = 0.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.1
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.3
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.4
+		}
+	}
+}
+
+#######################################
+# New World
+#######################################
+new_world_i = {
+	penalty = 0.5
+
+	bonus = {
+		global_prov_trade_power_modifier = 0.10
+	}
+
+
+	historical_start_date = 1600.1.1
+	historical_start_province = 479
+
+	history = {
+		OR = {
+			AND = {
+				is_year = 1600
+				owner = { has_idea = quest_for_the_new_world }
+			}
+			is_year = 1800
+		}
+	}
+	
+	can_start = {
+		is_year = 1600
+		has_port = yes
+		is_island = no
+		is_state = yes
+		OR = {
+			has_province_modifier = center_of_trade_modifier
+			development = 12
+			is_capital = yes
+		}
+		is_in_capital_area = yes
+		owner = { 
+			has_idea = quest_for_the_new_world 
+		}
+	}
+	start_chance = 5		#in 100 for when a province can_start
+	
+	on_start = institution_events.3
+	
+	can_embrace = {
+		always = yes
+	}
+	
+	embracement_speed = {
+	
+		modifier = {
+			factor = 1.2
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_friendly_coast_border_province_has_embraced_colonialism
+				any_friendly_coast_border_province = {
+					new_world_i = 100
+				}
+			}
+			
+		}
+		
+		modifier = {
+			factor = 0.5
+			scale = yes
+			potential = {
+				has_port = yes
+				NOT = {
+					any_friendly_coast_border_province = {
+						new_world_i = 100
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_neighbor_port_province_new_world
+				has_port = yes
+				any_neighbor_province = {
+					new_world_i = 100
+				}
+			}
+		}
+		
+		modifier = {
+			factor = 5
+			scale = yes
+			potential = {
+				owner = {
+					is_colonial_nation = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_colonial_overlord_new_world_i
+				OR = {
+					has_port = yes
+					is_capital = yes
+				}
+				owner = {
+					is_colonial_nation = yes
+					overlord = { has_institution = new_world_i }
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			scale = yes
+			potential = {
+				owner = {
+					has_institution = new_world_i
+				}
+			}
+			
+			custom_trigger_tooltip = {
+				tooltip = tooltip_new_world_i_embraced
+				is_owned_by_trade_company = no
+				owner = {
+					has_institution = new_world_i
+				}
+			}
+		}
+	}
+	
+	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
+		factor = 24
+		
+		modifier = {
+			factor = 0.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.1
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.3
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.4
+		}
+	}
+}
+
+#######################################
+# Printing Press
+#######################################
+printing_press = {
+	penalty = 0.5
+
+	bonus = {
+		stability_cost_modifier = -0.10
+	}
+
+	historical_start_date = 1700.1.1
+	historical_start_province = 426
+
+	history = {
+		OR = {
+			AND = {
+				is_year = 1700
+				continent = Tamriel
+				development = 12
+			}
+			AND = {
+				is_year = 1850
+				owner = { NOT = { government = tribal } }
+			}
+		}
+	}
+	
+	can_start = {
+		is_year = 1700
+		is_in_capital_area = yes
+		is_island = no
+		is_state = yes
+		OR = {
+			development = 15
+			is_capital = yes
+			trade_goods = paper
+		}
+
+	}
+	
+	start_chance = 5		#in 100 for when a province can_start
+	
+	on_start = institution_events.4
+	
+	can_embrace = {
+		always = yes
+	}
+	
+	embracement_speed = {
+	
+		modifier = {
+			factor = 0.6
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_friendly_coast_border_province_has_embraced_printing_press
+				any_friendly_coast_border_province = {
+					printing_press = 100
+				}
+			}
+		}
+		
+		modifier = {
+			factor = 0.2
+			scale = yes
+			potential = {
+				NOT = {
+					any_friendly_coast_border_province = {
+						printing_press = 100
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_neighbor_has_embraced_printing_press
+				any_neighbor_province = {
+					NOT = { owned_by = ROOT }
+					printing_press = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 0.1
+			scale = yes
+			force_potential = yes	# Hide the this modifier when potential is false
+			potential = {
+				owner = { has_estate = estate_church }
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_printing_press_clergy
+				any_neighbor_province = {
+					printing_press = 100
+				}
+				owner = {
+					has_estate = estate_church
+					estate_loyalty = {
+						estate = estate_church
+						loyalty = 40
+					}
+				}
+				has_estate = estate_church
+			}
+		}
+		modifier = {
+			factor = 1
+			custom_trigger_tooltip = {
+				tooltip = tooltip_dip_tech15_capital
+				is_capital = yes
+				owner = {
+					dip_tech = 60
+				}
+			}
+		}
+		modifier = {
+			factor = 5
+			scale = yes
+			potential = {
+				owner = {
+					is_colonial_nation = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_colonial_overlord_printing_press
+				OR = {
+					has_port = yes
+					is_capital = yes
+				}
+				owner = {
+					is_colonial_nation = yes
+					overlord = { has_institution = printing_press }
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			scale = yes
+			potential = {
+				owner = {
+					has_institution = printing_press
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_printing_press_embraced
+				is_owned_by_trade_company = no
+				owner = {
+					has_institution = printing_press
+				}
+			}
+		}
+	}
+	
+	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
+		factor = 24
+		
+		modifier = {
+			factor = 0.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.1
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.3
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.4
+		}
+	}
+}
+
+#######################################
+# Global Trade
+#######################################
+global_trade = {
+	penalty = 0.5
+
+	bonus = {
+		merchants = 1
+	}
+
+	historical_start_date = 1800.1.1
+	historical_start_province = 933
+
+	history = {
+		OR = {
+			AND = {
+				is_year = 1800
+				has_port = yes
+				owner = { NOT = { government = tribal } }
+			}
+			AND = {
+				is_year = 1900
+				owner = { NOT = { government = tribal } }
+			}
+		}
+	}
+	
+	can_start = {
+		is_year = 1800
+		is_island = no
+		highest_value_trade_node = yes
+		OR = {
+			province_has_center_of_trade_of_level = 3
+			province_has_center_of_trade_of_level = 2
+			is_capital = yes
+		}
+		owner = {
+			any_active_trade_node = {
+				is_strongest_trade_power = PREV
+				highest_value_trade_node = yes
+			}
+		}
+
+	}
+	
+	start_chance = 25		#in 100 for when a province can_start
+	
+	on_start = institution_events.5
+	
+	can_embrace = {
+		always = yes
+	}
+
+	embracement_speed = {
+	
+		modifier = {
+			factor = 0.4 #Not scaled
+			province_trade_power = 15
+		}
+		modifier = {
+			factor = 0.8 #Not Scaled
+			province_trade_power = 25
+		}
+		modifier = {
+			factor = 1.2 #Not Scaled
+			province_trade_power = 35
+		}
+		modifier = {
+			factor = 1.6 #Not Scaled
+			province_trade_power = 45
+		}
+		modifier = {
+			factor = 0.5
+			scale = yes
+			potential = {
+				province_has_center_of_trade_of_level = 3
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_center_of_trade_spread
+				province_has_center_of_trade_of_level = 3
+			}
+		}
+		modifier = {
+			factor = 0.1
+			scale = yes
+			potential = {
+				province_has_center_of_trade_of_level = 2
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_center_of_trade_spread
+				province_has_center_of_trade_of_level = 2
+			}
+		}
+		modifier = {
+			factor = 0.1
+			scale = yes
+			force_potential = yes	# Hide the this modifier when potential is false
+			potential = {
+				owner = { has_estate = estate_burghers }
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_global_trade_burghers
+				any_neighbor_province = {
+					global_trade = 100
+				}
+				owner = {
+					has_estate = estate_burghers
+					estate_loyalty = {
+						estate = estate_burghers
+						loyalty = 40
+					}
+				}
+				has_estate = estate_burghers
+			}
+		}
+
+		modifier = {
+			factor = 0.25
+			scale = yes
+			potential = {
+				has_port = no
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_neighbor_non_port_province_global_trade
+				has_port = no
+				any_neighbor_province = {
+					global_trade = 100
+					
+				}
+			}
+		}
+		
+		modifier = {
+			factor = 0.5
+			scale = yes
+			potential = {
+				has_port = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_neighbor_port_province_global_trade
+				has_port = yes
+				any_neighbor_province = {
+					global_trade = 100
+					
+				}
+			}
+		}
+		
+		modifier = {
+			factor = 5
+			scale = yes
+			potential = {
+				owner = {
+					is_colonial_nation = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_colonial_overlord_global_trade
+				OR = {
+					has_port = yes
+					is_capital = yes
+				}
+				owner = {
+					is_colonial_nation = yes
+					overlord = { has_institution = global_trade }
+				}
+			}
+		}
+		
+		modifier = {
+			factor = 0.5
+			printing_press = 100
+		}
+		modifier = {
+			factor = 2
+			scale = yes
+			potential = {
+				owner = {
+					has_institution = global_trade
+				}
+			}
+			
+			custom_trigger_tooltip = {
+				tooltip = tooltip_global_trade_embraced
+				is_owned_by_trade_company = no
+				owner = {
+					has_institution = global_trade
+				}
+			}
+		}
+	}
+	
+	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
+		factor = 24
+		
+		modifier = {
+			factor = 0.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.1
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.3
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.4
+		}
+	}
+}
+
+#######################################
+# Manufactories
+#######################################
+manufactories = {
+	penalty = 0.5
+
+	bonus = {
+		global_trade_goods_size_modifier = 0.10
+	}
+
+	historical_start_date = 1900.1.1
+	historical_start_province = 970
+
+	history = {
+		is_year = 1900
+		owner = { NOT = { government = tribal } }
+	}
+	
+	can_start = {
+		is_year = 1900
+		is_in_capital_area = yes
+		is_island = no
+		is_state = yes
+		development = 20
+		printing_press = 100
+		global_trade = 100
+		OR = {
+			has_building = wharf
+			has_building = weapons
+			has_building = textile
+			has_building = plantations
+			has_building = tradecompany
+			has_building = mills
+		}
+	}
+	
+	start_chance = 10		#in 100 for when a province can_start
+	
+	on_start = institution_events.6
+	
+	can_embrace = {
+		always = yes
+	}
+
+	embracement_speed = {
+		modifier = {
+			factor = 0.35
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_friendly_coast_border_province_has_embraced_manufactories
+				any_friendly_coast_border_province = {
+					manufactories = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 0.05
+			scale = yes
+			potential = {
+				NOT = {
+					any_friendly_coast_border_province = {
+						manufactories = 100
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_neighbor_has_embraced_manufactories
+				any_neighbor_province = {
+					NOT = { owned_by = ROOT }
+					manufactories = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 1
+			scale = yes
+			OR = {
+				has_building = wharf
+				has_building = weapons
+				has_building = textile
+				has_building = plantations
+				has_building = tradecompany
+				has_building = farm_estate
+				has_building = mills
+			}
+			any_province = {
+				is_institution_origin = manufactories
+				continent = PREV
+			}
+		}
+		modifier = {
+			factor = 0.25
+			scale = yes
+			OR = {
+				has_building = wharf
+				has_building = weapons
+				has_building = textile
+				has_building = plantations
+				has_building = tradecompany
+				has_building = farm_estate
+				has_building = mills
+			}
+			any_province = {
+				is_institution_origin = manufactories
+				NOT = { continent = PREV }
+			}
+		}
+		modifier = {
+			factor = 5
+			scale = yes
+			potential = {
+				owner = {
+					is_colonial_nation = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_colonial_overlord_manufactories
+				OR = {
+					has_port = yes
+					is_capital = yes
+				}
+				owner = {
+					is_colonial_nation = yes
+					overlord = { has_institution = manufactories }
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			scale = yes
+			potential = {
+				owner = {
+					has_institution = manufactories
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_manufactories_embraced
+				is_owned_by_trade_company = no
+				owner = {
+					has_institution = manufactories
+				}
+			}
+		}
+
+	}
+	
+	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
+		factor = 24
+		
+		modifier = {
+			factor = 0.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.1
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.3
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.4
+		}
+	}
+}
+
+#######################################
+# Enlightenment
+#######################################
+enlightenment = {
+	penalty = 0.5
+
+	bonus = {
+		culture_conversion_cost = -0.10
+	}
+
+	historical_start_date = 2000.1.1
+	historical_start_province = 263
+
+	history = {
+		is_year = 2000
+		owner = { NOT = { government = tribal } }
+	}
+	
+	can_start = {
+		is_year = 2000
+		is_in_capital_area = yes
+		is_island = no
+		is_state = yes
+		printing_press = 100
+		global_trade = 100
+		development = 30
+		OR = {
+			custom_trigger_tooltip = {
+				tooltip = tooltip_has_seat_in_parliament
+				has_seat_in_parliament = yes
+			}
+			has_building = university
+				owner = {
+					ADM = 5
+					MIL = 5
+					DIP = 5
+				}
+		}
+	}
+	
+	start_chance = 10		#in 100 for when a province can_start
+	
+	on_start = institution_events.7
+	
+	can_embrace = {
+		always = yes
+	}
+
+	embracement_speed = {
+		modifier = {
+			factor = 0.1
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_friendly_coast_border_province_has_embraced_enlightenment
+				any_friendly_coast_border_province = {
+					enlightenment = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 0.1
+			scale = yes
+			potential = {
+				NOT = {
+					any_friendly_coast_border_province = {
+						enlightenment = 100
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_neighbor_has_embraced_enlightenment
+				any_neighbor_province = {
+					NOT = { owned_by = ROOT }
+					enlightenment = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 5
+			
+			has_building = university
+			any_province = {
+				is_institution_origin = enlightenment
+				continent = PREV
+			}
+		}
+		modifier = {
+			factor = 1
+			
+			has_building = university
+			any_province = {
+				is_institution_origin = enlightenment
+				NOT = { continent = PREV }
+			}
+		}
+		modifier = {
+			factor = 5
+			potential = {
+				owner = {
+					has_parliament = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_has_seat_in_parliament
+				has_seat_in_parliament = yes
+			}
+			any_province = {
+				is_institution_origin = enlightenment
+				continent = PREV
+			}
+		}
+		modifier = {
+			factor = 0.5
+			potential = {
+				owner = {
+					has_parliament = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_has_seat_in_parliament
+				has_seat_in_parliament = yes
+			}
+			any_province = {
+				is_institution_origin = enlightenment
+				NOT = { continent = PREV }
+			}
+		}
+		modifier = {
+			factor = 1.5
+			custom_trigger_tooltip = {
+				tooltip = tooltip_philosopher_capital
+				is_capital = yes
+				owner = {
+					advisor = philosopher
+					dip_tech = 20
+				}
+			}
+		}
+		modifier = {
+			factor = 3
+			custom_trigger_tooltip = {
+				tooltip = tooltip_scientist_capital
+				is_capital = yes
+				owner = {
+					advisor = natural_scientist
+					dip_tech = 20
+				}
+			}
+		}
+		modifier = {
+			factor = 5
+			custom_trigger_tooltip = {
+				tooltip = tooltip_full_innovativeness
+				is_capital = yes
+				owner = {
+					full_idea_group = innovativeness_ideas
+				}
+			}
+		}
+		modifier = {
+			factor = 5
+			scale = yes
+			potential = {
+				owner = {
+					is_colonial_nation = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_colonial_overlord_enlightenment
+				OR = {
+					has_port = yes
+					is_capital = yes
+				}
+				owner = {
+					is_colonial_nation = yes
+					overlord = { has_institution = enlightenment }
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			scale = yes
+			potential = {
+				owner = {
+					has_institution = enlightenment
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_enlightenment_embraced
+				is_owned_by_trade_company = no
+				owner = {
+					has_institution = enlightenment
+				}
+			}
+		}
+	}
+	
+	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
+		factor = 24
+		
+		modifier = {
+			factor = 0.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.1
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.3
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.4
+		}
+	}
+}
+
+#######################################
+# Imperialism
+#######################################
+imperialism = {
+	penalty = 0.5
+
+	bonus = {
+		core_creation = -0.10
+	}
+	
+	historical_start_date = 2100.1.1
+	historical_start_province = 1206
+
+	history = {
+		is_year = 2100
+	}
+	
+	can_start = {
+		is_year = 2100
+		
+		is_island = no
+		is_capital = yes
+		owner = { 
+			num_of_cities = 50
+		}
+	}
+	
+	start_chance = 10		#in 100 for when a province can_start
+	
+	on_start = et_institutions.1
+	
+	can_embrace = {
+		always = yes
+	}
+
+	embracement_speed = {
+		modifier = {
+			factor = 0.1
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_friendly_coast_border_province_has_embraced_imperialism
+				any_friendly_coast_border_province = {
+					imperialism = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 0.1
+			scale = yes
+			
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_neighbor_has_embraced_imperialism
+				any_neighbor_province = {
+					NOT = { owned_by = ROOT }
+					imperialism = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 5
+			custom_trigger_tooltip = {
+				tooltip = tooltip_full_expansion_and_influence
+				is_capital = yes
+				owner = {
+					full_idea_group = expansion_ideas
+					full_idea_group = influence_ideas
+				}
+			}
+			any_province = {
+				is_institution_origin = enlightenment
+				continent = PREV
+			}
+		}
+		modifier = {
+			factor = 1
+			custom_trigger_tooltip = {
+				tooltip = tooltip_full_expansion_and_influence
+				is_capital = yes
+				owner = {
+					full_idea_group = expansion_ideas
+					full_idea_group = influence_ideas
+				}
+			}
+			any_province = {
+				is_institution_origin = enlightenment
+				NOT = { continent = PREV }
+			}
+		}
+		modifier = {
+			factor = 5
+			potential = {
+				owner = {
+					is_colonial_nation = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_colonial_overlord_imperialism
+				OR = {
+					has_port = yes
+					is_capital = yes
+				}
+				owner = {
+					is_colonial_nation = yes
+					overlord = { has_institution = imperialism }
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			scale = yes
+			potential = {
+				owner = {
+					has_institution = imperialism
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_imperialism_embraced
+				owner = {
+					has_institution = imperialism
+				}
+			}
+		}
+	}
+	
+	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
+		factor = 24
+		
+		modifier = {
+			factor = 0.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.1
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.3
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.4
+		}
+	}
+}
+
+#######################################
+# Industrialization
+#######################################
+industrialization = {
+	penalty = 0.5
+
+	bonus = {
+		global_trade_goods_size_modifier = 0.10
+	}
+	
+	historical_start_date = 2200.1.1
+	historical_start_province = 224
+
+	history = {
+		is_year = 2200
+		development = 12
+	}
+	
+	can_start = {
+		is_year = 2200
+		is_island = no
+		is_state = yes
+		manufactories = 100
+		enlightenment = 100
+		development = 30
+		owner = { has_institution = manufactories }
+		OR = {
+			has_building = wharf
+			has_building = weapons
+			has_building = textile
+		}
+	}
+	
+	start_chance = 10		#in 100 for when a province can_start
+	
+	on_start = et_institutions.2
+	
+	can_embrace = {
+		always = yes
+	}
+
+	embracement_speed = {
+		modifier = {
+			factor = 0.1
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_friendly_coast_border_province_has_embraced_industrialization
+				any_friendly_coast_border_province = {
+					industrialization = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 0.1
+			scale = yes
+			
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_neighbor_has_embraced_industrialization
+				any_neighbor_province = {
+					NOT = { owned_by = ROOT }
+					industrialization = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 5
+			scale = yes
+			OR = {
+				has_building = wharf
+				has_building = weapons
+				has_building = textile
+			}
+		}
+		modifier = {
+			factor = 5
+			scale = yes
+			potential = {
+				owner = {
+					is_colonial_nation = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_colonial_overlord_industrialization
+				OR = {
+					has_port = yes
+					is_capital = yes
+				}
+				owner = {
+					is_colonial_nation = yes
+					overlord = { has_institution = industrialization }
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			scale = yes
+			potential = {
+				owner = {
+					has_institution = industrialization
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_industrialization_embraced
+				owner = {
+					has_institution = industrialization
+				}
+			}
+		}
+	}
+	
+	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
+		factor = 24
+		
+		modifier = {
+			factor = 0.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.1
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.3
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.4
+		}
+	}
+}
+
+#######################################
+# Nationalism
+#######################################
+nationalism_institution = {
+	penalty = 0.5
+
+	bonus = {
+		land_morale = 0.1
+	}
+	
+	historical_start_date = 2300.1.1
+	historical_start_province = 1342
+
+	history = {
+		is_year = 2300
+	}
+	
+	can_start = {
+		is_year = 2300
+		is_island = no
+		is_in_capital_area = yes
+		enlightenment = 100
+		imperialism = 100
+		development = 20
+		owner = { 
+			has_institution = imperialism 
+			any_owned_province = { NOT = { culture = PREV } }
+		}
+	}
+	start_chance = 10		#in 100 for when a province can_start
+	
+	
+	on_start = et_institutions.3
+	
+	
+	can_embrace = {
+		always = yes
+	}
+
+	
+	embracement_speed = {
+		modifier = {
+			factor = 0.1
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_friendly_coast_border_province_has_embraced_nationalism
+				any_friendly_coast_border_province = {
+					nationalism_institution = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 0.1
+			scale = yes
+			
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_neighbor_has_embraced_nationalism
+				any_neighbor_province = {
+					NOT = { owned_by = ROOT }
+					nationalism_institution = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 5
+			scale = yes
+			nationalism = 1
+		}
+		modifier = {
+			factor = 5
+			scale = yes
+			owner = {
+				has_institution = imperialism 
+				is_at_war = yes
+				NOT = { war_score = 0 }
+			}
+		}
+		modifier = {
+			factor = 5
+			scale = yes
+			potential = {
+				owner = {
+					is_colonial_nation = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_overlord_nationalism
+				OR = {
+					has_port = yes
+					is_capital = yes
+				}
+				owner = {
+					overlord = { has_institution = nationalism_institution }
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			scale = yes
+			potential = {
+				owner = {
+					has_institution = nationalism_institution
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_nationalism_embraced
+				owner = {
+					has_institution = nationalism_institution
+				}
+			}
+		}
+	}
+	
+	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
+		factor = 24
+		
+		modifier = {
+			factor = 0.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.1
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.3
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.4
+		}
+	}
+}
+
+#######################################
+# Electrification
+#######################################
+electrification = {
+	penalty = 0.5
+
+	bonus = {
+		development_cost = -0.10
+	}
+	
+	historical_start_date = 2400.1.1
+	historical_start_province = 1206
+
+	history = {
+		is_year = 2400
+		development = 15
+	}
+	
+	can_start = {
+		is_year = 2400
+		is_island = no
+		is_state = yes
+		industrialization = 100
+		development = 30
+		OR = {
+			is_capital = yes
+			has_building = wharf
+			has_building = weapons
+			has_building = textile
+			development = 50
+		}
+		owner = { has_institution = industrialization }
+	}
+	
+	start_chance = 10		#in 100 for when a province can_start
+	
+	on_start = et_institutions.4
+	
+	can_embrace = {
+		always = yes
+	}
+
+	
+	embracement_speed = {
+		modifier = {
+			factor = 0.1
+			scale = yes
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_friendly_coast_border_province_has_embraced_electrification
+				any_friendly_coast_border_province = {
+					electrification = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 0.1
+			scale = yes
+			
+			custom_trigger_tooltip = {
+				tooltip = tooltip_any_neighbor_has_embraced_electrification
+				any_neighbor_province = {
+					NOT = { owned_by = ROOT }
+					electrification = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 1
+			scale = yes
+			development = 40
+			owner = { adm_tech = 82 }
+		}
+		modifier = {
+			factor = 1
+			scale = yes
+			development = 20
+			owner = { adm_tech = 85 }
+		}
+		modifier = {
+			factor = 5
+			scale = yes
+			potential = {
+				owner = {
+					is_colonial_nation = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_colonial_overlord_electrification
+				OR = {
+					has_port = yes
+					is_capital = yes
+				}
+				owner = {
+					is_colonial_nation = yes
+					overlord = { has_institution = electrification }
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			scale = yes
+			potential = {
+				owner = {
+					has_institution = electrification
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_electrification_embraced
+				owner = {
+					has_institution = electrification
+				}
+			}
+		}
+	}
+	
+	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
+		factor = 24
+		
+		modifier = {
+			factor = 0.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.1
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.3
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.4
+		}
+	}
+}

@@ -1,0 +1,15 @@
+pay_papal_influence = {
+	trigger = {
+		religion = chimer_pantheon
+		FROM = { religion = chimer_pantheon }
+		papal_influence = 25
+	}
+	
+	effect = {
+		add_papal_influence = -5
+	}
+	
+	ai_will_do = {
+		factor = 1
+	}	
+}

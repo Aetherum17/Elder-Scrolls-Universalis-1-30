@@ -1,0 +1,915 @@
+namespace = es_22_scenario
+
+country_event = {
+	id = es_22_scenario.1
+	title = es_22_scenario.1.t
+	desc = es_22_scenario.1.d
+	picture = ES_BRIARHEART_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_22_scenario.1_flag }
+		is_year = 990
+		NOT = { is_year = 1045 }
+		culture_group = half_blood_cg
+		owns = 1355
+    }
+
+	mean_time_to_happen = {
+		days = 10000
+	}
+	
+	immediate = {
+	    set_country_flag = es_22_scenario.1_flag
+	}
+
+	option = {
+		name = "es_22_scenario.1.a"
+		ai_chance = { factor = 33 }
+		define_ruler = {
+		name = "Eagle"
+		dynasty = "Red"
+		age = 18
+        adm = 5
+        dip = 5
+        mil = 7
+        claim = 100
+		fixed = yes
+		}
+		define_ruler_to_general = {
+        fire = 5
+        shock = 5
+        manuever = 5
+        siege = 5
+        }
+		add_stability = -1
+		add_prestige = -35
+	}
+	
+	option = {
+		name = "es_22_scenario.1.b"
+		ai_chance = { factor = 33 }
+		define_general = {
+			name = "Red Eagle"
+			shock = 5
+			fire = 5
+			manuever = 5
+			siege = 5
+		}
+		add_prestige = -25
+	}
+	
+	option = {
+		name = "es_22_scenario.1.c"
+		ai_chance = { factor = 33 }
+		add_prestige = 10
+	}
+	
+}
+
+country_event = {
+	id = es_22_scenario.2
+	title = es_22_scenario.2.t
+	desc = es_22_scenario.2.d
+	picture = ES_REACH_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_22_scenario.2_flag }
+		is_year = 990
+		NOT = { is_year = 1045 }
+		culture_group = cyrodiil_cg
+		owns = 1206
+    }
+
+	mean_time_to_happen = {
+		days = 10000
+	}
+	
+	immediate = {
+	    set_country_flag = es_22_scenario.2_flag
+	}
+
+	option = {
+		name = "es_22_scenario.2.a"
+		ai_chance = { factor = 50 }
+		every_province = {
+		limit = {
+		OR = {
+		area = skyrim_6_la
+		area = skyrim_7_la
+		area = skyrim_14_la
+		area = skyrim_19_la
+		}
+		}
+		add_core = ROOT
+		}
+		
+		if = {
+		limit = {
+		exists = REA
+		NOT = { alliance_with = REA }
+		NOT = { overlord_of = REA }
+		}
+		declare_war_with_cb = {
+			who = REA
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = NA7
+		NOT = { alliance_with = NA7 }
+		NOT = { overlord_of = NA7 }
+		}
+		declare_war_with_cb = {
+			who = NA7
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = NB4
+		NOT = { alliance_with = NB4 }
+		NOT = { overlord_of = NB4 }
+		}
+		declare_war_with_cb = {
+			who = NB4
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = NB9
+		NOT = { alliance_with = NB9 }
+		NOT = { overlord_of = NB9 }
+		}
+		declare_war_with_cb = {
+			who = NB9
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = SKY
+		NOT = { alliance_with = SKY }
+		NOT = { overlord_of = SKY }
+		}
+		declare_war_with_cb = {
+			who = SKY
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+	}
+	
+	option = {
+		name = "es_22_scenario.2.b"
+		ai_chance = { factor = 50 }
+		add_prestige = -15
+	}
+	
+}
+
+country_event = {
+	id = es_22_scenario.3
+	title = es_22_scenario.3.t
+	desc = es_22_scenario.3.d
+	picture = ES_HIGH_ROCK_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_22_scenario.3_flag }
+		is_year = 990
+		NOT = { is_year = 1045 }
+		culture_group = cyrodiil_cg
+		owns = 1206
+    }
+
+	mean_time_to_happen = {
+		days = 10000
+	}
+	
+	immediate = {
+	    set_country_flag = es_22_scenario.3_flag
+	}
+
+	option = {
+		name = "es_22_scenario.3.a"
+		ai_chance = { factor = 50 }
+		every_province = {
+		limit = {
+		region = hgh_rock_lr
+		}
+		add_core = ROOT
+		}
+		
+		if = {
+		limit = {
+		exists = HIG
+		NOT = { alliance_with = HIG }
+		NOT = { overlord_of = HIG }
+		}
+		declare_war_with_cb = {
+			who = HIG
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = DIR
+		NOT = { alliance_with = DIR }
+		NOT = { overlord_of = DIR }
+		}
+		declare_war_with_cb = {
+			who = DIR
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = BA1
+		NOT = { alliance_with = BA1 }
+		NOT = { overlord_of = BA1 }
+		}
+		declare_war_with_cb = {
+			who = BA1
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = BE1
+		NOT = { alliance_with = BE1 }
+		NOT = { overlord_of = BE1 }
+		}
+		declare_war_with_cb = {
+			who = BE1
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = ORS
+		NOT = { alliance_with = ORS }
+		NOT = { overlord_of = ORS }
+		}
+		declare_war_with_cb = {
+			who = ORS
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+	}
+	
+	option = {
+		name = "es_22_scenario.3.b"
+		ai_chance = { factor = 50 }
+		add_prestige = -35
+	}
+	
+}
+
+country_event = {
+	id = es_22_scenario.4
+	title = es_22_scenario.4.t
+	desc = es_22_scenario.4.d
+	picture = ES_PIRATES_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_22_scenario.4_flag }
+		is_year = 990
+		NOT = { is_year = 1045 }
+		culture_group = cyrodiil_cg
+		owns = 1206
+    }
+
+	mean_time_to_happen = {
+		days = 10000
+	}
+	
+	immediate = {
+	    set_country_flag = es_22_scenario.4_flag
+	}
+
+	option = {
+		name = "es_22_scenario.4.a"
+		ai_chance = { factor = 50 }
+		
+		add_stability = -1
+		
+		1117 = {
+		add_core = ROOT
+		}
+		
+		if = {
+		limit = {
+		exists = TOP
+		NOT = { alliance_with = TOP }
+		NOT = { overlord_of = TOP }
+		}
+		declare_war_with_cb = {
+			who = TOP
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		add_country_modifier = {
+		name = "22_hunt_on_pirates"
+		duration = 9125
+		}
+		
+	}
+	
+	option = {
+		name = "es_22_scenario.4.b"
+		ai_chance = { factor = 50 }
+		add_prestige = -10
+		
+		add_country_modifier = {
+		name = "22_pirate_heaven"
+		duration = 9125
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_22_scenario.5
+	title = es_22_scenario.5.t
+	desc = es_22_scenario.5.d
+	picture = ES_ASSEMBLY_eventPicture
+	
+	trigger = {
+		is_year = 990
+		NOT = { is_year = 1045 }
+		culture_group = cyrodiil_cg
+		owns = 1206
+    }
+
+	mean_time_to_happen = {
+		days = 5000
+	}
+
+	option = {
+		name = "es_22_scenario.5.a"
+		ai_chance = { factor = 50 }
+		if = { limit = { government = monarchy }
+		random_owned_province = { 
+			spawn_rebels = {
+				type = pretender_rebels
+				size = 5
+				win = yes
+				unrest = 25
+			}
+		}
+		random_owned_province = { 
+			spawn_rebels = {
+				type = pretender_rebels
+				size = 5
+				win = yes
+				unrest = 25
+			}
+		}
+		random_owned_province = { 
+			spawn_rebels = {
+				type = pretender_rebels
+				size = 5
+				win = yes
+				unrest = 25
+			}
+		}
+		}
+		else = {
+		random_owned_province = { 
+			spawn_rebels = {
+				type = noble_rebels
+				size = 5
+				win = yes
+				unrest = 25
+			}
+		}
+		random_owned_province = { 
+			spawn_rebels = {
+				type = noble_rebels
+				size = 5
+				win = yes
+				unrest = 25
+			}
+		}
+		random_owned_province = { 
+			spawn_rebels = {
+				type = noble_rebels
+				size = 5
+				win = yes
+				unrest = 25
+			}
+		}
+		}
+	}
+	
+	option = {
+		name = "es_22_scenario.5.b"
+		ai_chance = { factor = 50 }
+		add_country_modifier = {
+		name = "22_pleased_nobility"
+		duration = 9125
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_22_scenario.6
+	title = es_22_scenario.6.t
+	desc = es_22_scenario.6.d
+	picture = ES_FORT_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_22_scenario.6_flag }
+		is_year = 990
+		NOT = { is_year = 1045 }
+		culture_group = northern_cg
+		owns = 1275
+    }
+
+	mean_time_to_happen = {
+		days = 10000
+	}
+	
+	immediate = {
+	    set_country_flag = es_22_scenario.6_flag
+	}
+
+	option = {
+		name = "es_22_scenario.6.a"
+		ai_chance = { factor = 50 }
+		
+		add_treasury = -500
+		
+		random_owned_province = {
+		limit = {
+		num_free_building_slots = 1
+		any_neighbor_province = {
+		NOT = { owned_by = ROOT }
+		}
+		}
+		add_building = fort_15th
+		}
+		
+		random_owned_province = {
+		limit = {
+		num_free_building_slots = 1
+		any_neighbor_province = {
+		NOT = { owned_by = ROOT }
+		}
+		}
+		add_building = fort_15th
+		}
+		
+		random_owned_province = {
+		limit = {
+		num_free_building_slots = 1
+		any_neighbor_province = {
+		NOT = { owned_by = ROOT }
+		}
+		}
+		add_building = fort_15th
+		}
+		
+		random_owned_province = {
+		limit = {
+		num_free_building_slots = 1
+		any_neighbor_province = {
+		NOT = { owned_by = ROOT }
+		}
+		}
+		add_building = fort_15th
+		}
+		
+		random_owned_province = {
+		limit = {
+		num_free_building_slots = 1
+		any_neighbor_province = {
+		NOT = { owned_by = ROOT }
+		}
+		}
+		add_building = fort_15th
+		}
+		
+	}
+	
+	option = {
+		name = "es_22_scenario.6.b"
+		ai_chance = { factor = 50 }
+		add_prestige = -10
+	}
+	
+}
+
+country_event = {
+	id = es_22_scenario.7
+	title = es_22_scenario.7.t
+	desc = es_22_scenario.7.d
+	picture = ES_ARGONIAN_VILLAGE_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_22_scenario.7_flag }
+		is_year = 990
+		NOT = { is_year = 1045 }
+		culture_group = marsh_cg
+		owns = 1117
+    }
+
+	mean_time_to_happen = {
+		days = 10000
+	}
+	
+	immediate = {
+	    set_country_flag = es_22_scenario.7_flag
+	}
+
+	option = {
+		name = "es_22_scenario.7.a"
+		ai_chance = { factor = 50 }
+		
+		every_province = {
+		limit = {
+		OR = {
+		area = argonia_4_la
+		area = argonia_5_la
+		area = argonia_7_la
+		}
+		}
+		add_core = ROOT
+		}
+		
+		if = {
+		limit = {
+		exists = AA4
+		NOT = { alliance_with = AA4 }
+		NOT = { overlord_of = AA4 }
+		}
+		declare_war_with_cb = {
+			who = AA4
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = AA5
+		NOT = { alliance_with = AA5 }
+		NOT = { overlord_of = AA5 }
+		}
+		declare_war_with_cb = {
+			who = AA5
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = AA7
+		NOT = { alliance_with = AA7 }
+		NOT = { overlord_of = AA7 }
+		}
+		declare_war_with_cb = {
+			who = AA7
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = KOT
+		NOT = { alliance_with = KOT }
+		NOT = { overlord_of = KOT }
+		}
+		declare_war_with_cb = {
+			who = KOT
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = ARG
+		NOT = { alliance_with = ARG }
+		NOT = { overlord_of = ARG }
+		}
+		declare_war_with_cb = {
+			who = ARG
+			casus_belli = cb_es_scenario
+		}
+		}
+	}
+	
+	option = {
+		name = "es_22_scenario.7.b"
+		ai_chance = { factor = 50 }
+		add_prestige = -25
+		add_country_modifier = {
+		name = "01_focus_on_trade"
+		duration = 9125
+		}
+	}
+	
+	option = {
+		name = "es_22_scenario.7.c"
+		ai_chance = { factor = 50 }
+		add_prestige = -10
+	}
+	
+}
+
+country_event = {
+	id = es_22_scenario.8
+	title = es_22_scenario.8.t
+	desc = es_22_scenario.8.d
+	picture = ES_ROYAL_PALACE_1_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_22_scenario.8_flag }
+		is_year = 990
+		NOT = { is_year = 1045 }
+		culture_group = half_blood_cg
+		owns = 1369
+    }
+
+	mean_time_to_happen = {
+		days = 10000
+	}
+	
+	immediate = {
+	    set_country_flag = es_22_scenario.8_flag
+	}
+
+	option = {
+		name = "es_22_scenario.8.a"
+		ai_chance = { factor = 50 }
+		
+		every_owned_province = {
+		limit = {
+		OR = {
+		area = high_9_la
+		area = high_12_la
+		area = high_13_la
+		}
+		}
+		add_core = WAY
+		}
+		create_vassal = WAY
+		WAY = { if = { limit = { NOT = { government_rank = 5 } } set_government_rank = 5 } if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } } }
+		
+		every_owned_province = {
+		limit = {
+		OR = {
+		area = high_6_la
+		area = high_7_la
+		area = high_8_la
+		}
+		}
+		add_core = BA6
+		}
+		create_vassal = BA6
+		BA6 = { if = { limit = { NOT = { government_rank = 5 } } set_government_rank = 5 } if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } } }
+		
+		every_owned_province = {
+		limit = {
+		OR = {
+		area = high_10_la
+		area = high_11_la
+		}
+		}
+		add_core = BB1
+		}
+		create_vassal = BB1
+		BB1 = { if = { limit = { NOT = { government_rank = 5 } } set_government_rank = 5 } if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } } }
+		
+	}
+	
+	option = {
+		name = "es_22_scenario.8.b"
+		ai_chance = { factor = 50 }
+		
+		every_owned_province = {
+		limit = {
+		OR = {
+		area = high_9_la
+		area = high_12_la
+		area = high_13_la
+		}
+		}
+		add_core = WAY
+		add_province_modifier = {
+		name = "22_angry_aristocracy"
+		duration = 9125
+		}
+		}
+		
+		every_owned_province = {
+		limit = {
+		OR = {
+		area = high_6_la
+		area = high_7_la
+		area = high_8_la
+		}
+		}
+		add_core = BA6
+		add_province_modifier = {
+		name = "22_angry_aristocracy"
+		duration = 9125
+		}
+		}
+		
+		every_owned_province = {
+		limit = {
+		OR = {
+		area = high_10_la
+		area = high_11_la
+		}
+		}
+		add_core = BB1
+		add_province_modifier = {
+		name = "22_angry_aristocracy"
+		duration = 9125
+		}
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_22_scenario.9
+	title = es_22_scenario.9.t
+	desc = es_22_scenario.9.d
+	picture = ES_REDGUARD_CITY_1_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_22_scenario.9_flag }
+		is_year = 990
+		NOT = { is_year = 1045 }
+		culture_group = yokudan-redguardian_cg
+		owns = 1510
+    }
+
+	mean_time_to_happen = {
+		days = 10000
+	}
+	
+	immediate = {
+	    set_country_flag = es_22_scenario.9_flag
+	}
+
+	option = {
+		name = "es_22_scenario.9.a"
+		ai_chance = { factor = 50 }
+		
+		every_owned_province = {
+		limit = {
+		OR = {
+		area = hammerfell_1_la
+		area = hammerfell_2_la
+		area = hammerfell_4_la
+		}
+		}
+		add_core = HE1
+		}
+		create_vassal = HE1
+		HE1 = { if = { limit = { NOT = { government_rank = 5 } } set_government_rank = 5 } if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } } }
+		
+		every_owned_province = {
+		limit = {
+		OR = {
+		area = hammerfell_3_la
+		area = hammerfell_5_la
+		area = hammerfell_6_la
+		}
+		}
+		add_core = HE5
+		}
+		create_vassal = HE5
+		HE5 = { if = { limit = { NOT = { government_rank = 5 } } set_government_rank = 5 } if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } } }
+		
+		every_owned_province = {
+		limit = {
+		OR = {
+		area = hammerfell_7_la
+		area = hammerfell_8_la
+		area = hammerfell_14_la
+		}
+		}
+		add_core = HE8
+		}
+		create_vassal = HE8
+		HE8 = { if = { limit = { NOT = { government_rank = 5 } } set_government_rank = 5 } if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } } }
+		
+	}
+	
+	option = {
+		name = "es_22_scenario.9.b"
+		ai_chance = { factor = 50 }
+		
+		every_owned_province = {
+		limit = {
+		OR = {
+		area = hammerfell_1_la
+		area = hammerfell_2_la
+		area = hammerfell_4_la
+		}
+		}
+		add_core = HE1
+		add_province_modifier = {
+		name = "22_angry_aristocracy"
+		duration = 9125
+		}
+		}
+		
+		every_owned_province = {
+		limit = {
+		OR = {
+		area = hammerfell_3_la
+		area = hammerfell_5_la
+		area = hammerfell_6_la
+		}
+		}
+		add_core = HE5
+		add_province_modifier = {
+		name = "22_angry_aristocracy"
+		duration = 9125
+		}
+		}
+		
+		every_owned_province = {
+		limit = {
+		OR = {
+		area = hammerfell_7_la
+		area = hammerfell_8_la
+		area = hammerfell_14_la
+		}
+		}
+		add_core = HE8
+		add_province_modifier = {
+		name = "22_angry_aristocracy"
+		duration = 9125
+		}
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_22_scenario.10
+	title = es_22_scenario.10.t
+	desc = es_22_scenario.10.d
+	picture = ES_DECADENCE_OF_VILLAGE_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_22_scenario.10_flag }
+		is_year = 990
+		NOT = { is_year = 1045 }
+		any_owned_province = {
+		region = eastern_syrodiil_lr
+		}
+    }
+
+	mean_time_to_happen = {
+		days = 10000
+	}
+	
+	immediate = {
+	    set_country_flag = es_22_scenario.10_flag
+	}
+
+	option = {
+		name = "es_22_scenario.10.a"
+		ai_chance = { factor = 50 }
+		add_stability = -1
+		add_years_of_income = -5
+		add_country_modifier = {
+		name = "22_reforms_in_progress"
+		duration = 9125
+		}
+	}
+	
+	option = {
+		name = "es_22_scenario.10.b"
+		ai_chance = { factor = 50 }
+		every_owned_province = {
+		limit = {
+		region = eastern_syrodiil_lr
+		}
+		add_province_modifier = {
+		name = "22_decadence_of_province"
+		duration = 9125
+		}
+		}
+	}
+	
+}

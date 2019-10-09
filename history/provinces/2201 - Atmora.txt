@@ -1,0 +1,25 @@
+owner = DA6
+controller = DA6
+add_core = DA6
+culture = atmoran
+religion = nordic_pantheon
+hre = no
+base_tax = 1
+base_production = 1
+trade_goods = unknown
+base_manpower = 1
+capital = "Asgerd"
+is_city = yes
+discovered_by = atmora_tg
+
+add_permanent_province_modifier = {
+	name = land_trade_modifier
+	duration = -1
+}
+
+109.1.1 = {
+owner = DRA
+controller = DRA
+add_core = DRA
+religion = dragon_cult
+}

@@ -1,0 +1,1006 @@
+##############################
+# Coptic Flavor Events       #
+#                            #
+# Written by Milla Isaksson  #
+# & Mathilda Bjarnehed		 #
+##############################
+
+namespace = coptic_flavor
+
+#Aksum
+country_event = {
+	id = coptic_flavor.1
+	title = coptic_flavor.1.t
+	picture = POPE_PREACHING_eventPicture
+
+	desc = {
+		trigger = { always = yes }
+		desc = "coptic_flavor.1.db"
+	}
+
+	fire_only_once = yes
+
+	trigger = {
+		owns = 970
+		OR = {
+			religion = reason_and_logic_cult
+			uses_blessings = yes
+		}
+		has_dlc = "Rights of Man"
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = coptic_flavor.1.a
+
+		add_prestige = 10
+
+		hidden_effect = {
+			every_known_country = {
+				limit = { religion = reason_and_logic_cult ai = no }
+				country_event = { id = coptic_flavor.2 }
+			}
+		}
+	}
+}
+
+#Aksum (for other copts)
+country_event = {
+	id = coptic_flavor.2
+	title = coptic_flavor.2.t
+	desc = coptic_flavor.2.d
+	picture = POPE_PREACHING_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = coptic_flavor.1.a
+	}
+}
+
+#Alexandria
+# Do not change effects without also updating tooltips in Coptic missions
+country_event = {
+	id = coptic_flavor.3
+	title = coptic_flavor.3.t
+	desc = coptic_flavor.3.d
+	picture = POPE_PREACHING_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		owns = 1044
+		has_country_flag = alexandria_mission_flag
+		OR = {
+			religion = reason_and_logic_cult
+			uses_blessings = yes
+		}
+		has_dlc = "Rights of Man"
+		NOT = { has_global_flag = coptic_alexandria_liberated } #Cancels Mission 
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = coptic_alexandria_liberated
+		}
+	}
+
+	option = {
+		name = coptic_flavor.3.a
+		custom_tooltip = coptic_flavor.3.a.tt
+
+		add_prestige = 10
+
+		every_owned_province = {
+			limit = { has_province_flag = copts_liberated }
+			add_province_modifier = {
+				name = the_faithful_liberated
+				duration = 3650
+			}
+			clr_province_flag = copts_liberated
+		}
+		
+
+		hidden_effect = {
+			every_known_country = {
+				limit = { religion = reason_and_logic_cult ai = no }
+				country_event = { id = coptic_flavor.4 }
+			} 
+		}
+	}
+}
+
+#Alexandria (for other copts)
+country_event = {
+	id = coptic_flavor.4
+	title = coptic_flavor.3.t
+	desc = coptic_flavor.4.d
+	picture = POPE_PREACHING_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = coptic_flavor.3.a
+	}
+}
+
+#Yerevan
+# Do not change effects without also updating tooltips in Coptic missions
+country_event = {
+	id = coptic_flavor.5
+	title = coptic_flavor.5.t
+	picture = POPE_PREACHING_eventPicture
+
+	desc = {
+		trigger = { always = yes }
+		desc = coptic_flavor.5.db
+	}
+
+	fire_only_once = yes
+
+	trigger = {
+		has_country_flag = yerevan_mission_flag
+		owns = 1314
+		OR = {
+			religion = reason_and_logic_cult
+			uses_blessings = yes
+		}
+		has_dlc = "Rights of Man"
+		NOT = { has_global_flag = coptic_yerevan_liberated }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_global_flag = coptic_yerevan_liberated
+		}	
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = coptic_flavor.5.a
+
+		add_prestige = 10
+
+		hidden_effect = {
+			every_known_country = {
+				limit = { religion = reason_and_logic_cult ai = no }
+				country_event = { id = coptic_flavor.6 }
+			}
+		}
+	}
+}
+
+#Yerevan (for other copts)
+country_event = {
+	id = coptic_flavor.6
+	title = coptic_flavor.5.t
+	desc = coptic_flavor.6.d
+	picture = POPE_PREACHING_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = coptic_flavor.6.a
+	}
+}
+
+#Antioch
+# Do not change effects without also updating tooltips in Coptic missions
+country_event = {
+	id = coptic_flavor.7
+	title = coptic_flavor.7.t
+	desc = coptic_flavor.7.d
+	picture = POPE_PREACHING_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		has_country_flag = antioch_mission_flag
+		owns = 1329
+		OR = {
+			religion = reason_and_logic_cult
+			uses_blessings = yes
+		}
+		has_dlc = "Rights of Man"
+		NOT = { has_global_flag = coptic_conquest_of_antioch }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = coptic_flavor.7.a
+
+		add_prestige = 10
+
+		hidden_effect = {
+			set_global_flag = coptic_conquest_of_antioch
+			every_known_country = {
+				limit = { religion = reason_and_logic_cult ai = no }
+				country_event = { id = coptic_flavor.8 }
+			}
+		}
+	}
+}
+
+#Antioch (for other copts)
+country_event = {
+	id = coptic_flavor.8
+	title = coptic_flavor.7.t
+	desc = coptic_flavor.8.d
+	picture = POPE_PREACHING_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = coptic_flavor.7.a
+	}
+}
+
+#Qasr Ibrim
+# Do not change effects without also updating tooltips in Coptic missions
+country_event = {
+	id = coptic_flavor.9
+	title = coptic_flavor.9.t
+	desc = coptic_flavor.9.d
+	picture = POPE_PREACHING_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		has_country_flag = qasr_ibrim_flag
+		owns = 1484
+		1484 = {
+			religion = reason_and_logic_cult
+		}
+		OR = {
+			religion = reason_and_logic_cult
+			uses_blessings = yes
+		}
+		has_dlc = "Rights of Man"
+		NOT = { has_global_flag = coptic_qasr_ibrim_liberated }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = coptic_qasr_ibrim_liberated
+		}
+	}
+
+	option = {
+		name = coptic_flavor.9.a
+		custom_tooltip = coptic_flavor.9.a.tt
+
+		add_prestige = 10
+
+		if = {
+			limit = {
+				any_owned_province = {
+					has_province_flag = copts_liberated
+				}
+			}
+			every_owned_province = {
+				limit = { has_province_flag = copts_liberated }
+				add_province_modifier = {
+					name = the_faithful_liberated
+					duration = 3650
+				}
+				clr_province_flag = copts_liberated
+			}
+		}
+
+		hidden_effect = {
+			every_known_country = {
+				limit = { religion = reason_and_logic_cult ai = no }
+				country_event = { id = coptic_flavor.10 }
+			}
+		}
+	}
+}
+
+#Qasr Ibrim (for other copts)
+country_event = {
+	id = coptic_flavor.10
+	title = coptic_flavor.9.t
+	desc = coptic_flavor.10.d
+	picture = POPE_PREACHING_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = coptic_flavor.9.a
+		custom_tooltip = coptic_flavor.9.a.tt
+	}
+}
+
+#As-Suways: Monastery of st Anthony
+country_event = {
+	id = coptic_flavor.11
+	title = coptic_flavor.11.t
+	desc = coptic_flavor.11.d
+	picture = POPE_PREACHING_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		has_dlc = "Rights of Man"
+		owns = 970
+		religion = reason_and_logic_cult
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = coptic_flavor.11.a
+		custom_tooltip = coptic_flavor.11.a.tt
+
+		add_prestige = 10
+
+		hidden_effect = {
+			every_known_country = {
+				limit = { religion = reason_and_logic_cult ai = no }
+				country_event = { id = coptic_flavor.12 }
+			}
+		}
+	}
+}
+
+#As-Suways: Monastery of st Anthony (for other copts)
+country_event = {
+	id = coptic_flavor.12
+	title = coptic_flavor.11.t
+	desc = coptic_flavor.12.d
+	picture = POPE_PREACHING_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = coptic_flavor.11.a
+		custom_tooltip = coptic_flavor.11.a.tt
+	}
+}
+
+#Sina: Monastery of St Catherine
+country_event = {
+	id = coptic_flavor.13
+	title = coptic_flavor.13.t
+	desc = coptic_flavor.13.d
+
+	picture = {
+		trigger = { has_dlc = "Women in History" }
+		picture = wihgfx_FEMALE_SCHOLAR_eventPicture
+	}
+	picture = {
+		trigger = { NOT = { has_dlc = "Women in History" } }
+		picture = POPE_PREACHING_eventPicture
+	}
+
+	fire_only_once = yes
+
+	trigger = {
+		has_dlc = "Rights of Man"
+		owns = 1044
+		religion = reason_and_logic_cult
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = coptic_flavor.13.a
+		custom_tooltip = coptic_flavor.11.a.tt
+
+		add_prestige = 10
+
+		hidden_effect = {
+			every_known_country = {
+				limit = { religion = reason_and_logic_cult ai = no }
+				country_event = { id = coptic_flavor.14 }
+			}
+		}
+	}
+}
+
+#Sina: Monastery of St Catherine (for other copts)
+country_event = {
+	id = coptic_flavor.14
+	title = coptic_flavor.13.t
+	desc = coptic_flavor.13.d
+	picture = POPE_PREACHING_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = coptic_flavor.14.a
+		custom_tooltip = coptic_flavor.11.a.tt
+	}
+}
+
+#Cairo
+# Do not change effects without also updating tooltips in Coptic missions
+country_event = {
+	id = coptic_flavor.15
+	title = coptic_flavor.15.t
+	desc = coptic_flavor.15.d
+	picture = POPE_PREACHING_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		has_country_flag = cairo_mission_flag
+		has_dlc = "Rights of Man"
+		owns = 1314
+		religion = reason_and_logic_cult
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = coptic_flavor.15.a
+		custom_tooltip = coptic_flavor.15.a.tt
+
+		add_prestige = 10
+
+		every_owned_province = {
+			limit = { has_province_flag = copts_liberated }
+			add_province_modifier = {
+				name = the_faithful_liberated
+				duration = 3650
+			}
+			clr_province_flag = copts_liberated
+		}
+
+		hidden_effect = {
+			every_known_country = {
+				limit = { religion = reason_and_logic_cult ai = no }
+				country_event = { id = coptic_flavor.16 }
+			}
+		}
+	}
+}
+
+#Cairo
+country_event = {
+	id = coptic_flavor.16
+	title = coptic_flavor.15.t
+	desc = coptic_flavor.16.d
+	picture = POPE_PREACHING_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = coptic_flavor.16.a
+		custom_tooltip = coptic_flavor.15.a.tt
+	}
+}
+
+#Monastic school
+country_event = {
+	id = coptic_flavor.20
+	title = coptic_flavor.20.t
+	desc = coptic_flavor.20.d
+	picture = POPE_PREACHING_eventPicture
+
+	trigger = {
+		has_dlc = "Rights of Man"
+		religion = reason_and_logic_cult
+		NOT = { has_country_modifier = administration_monastery_school }
+		NOT = { has_country_modifier = diplomacy_monastery_school }
+	}
+
+	mean_time_to_happen = {
+		months = 600
+	}
+
+	option = {
+		name = coptic_flavor.20.a
+		custom_tooltip = coptic_flavor.20.a.tt
+
+		add_years_of_income = -0.25
+
+		add_country_modifier = {
+			name = administration_monastery_school
+			duration = 5475
+		}
+	}
+
+	option = {
+		name = coptic_flavor.20.b
+		custom_tooltip = coptic_flavor.20.b.tt
+
+		add_years_of_income = -0.25
+
+		add_country_modifier = {
+			name = diplomacy_monastery_school
+			duration = 5475
+		}
+	}
+
+	option = {
+		name = coptic_flavor.20.c
+		#custom_tooltip = coptic_flavor.20.c.tt
+		add_years_of_income = 0.05
+	}
+}
+
+#Pentecost
+country_event = {
+	id = coptic_flavor.28
+	title = coptic_flavor.28.t
+	desc = coptic_flavor.28.d
+	picture = POPE_PREACHING_eventPicture
+
+	trigger = { 
+		has_dlc = "Rights of Man"
+		religion = reason_and_logic_cult
+		is_month = 4
+		NOT = { is_month = 7 }
+		NOT = { has_country_modifier = celebrating_lords_feast }
+	}
+
+	mean_time_to_happen = {
+		months = 600
+	}
+
+	option = {
+		name = coptic_flavor.29.a
+		custom_tooltip = coptic_flavor.28.a.tt
+
+		add_years_of_income = -0.5
+		add_dip_power = -25
+
+		add_country_modifier = {
+			name = celebrating_lords_feast
+			duration = 3650
+		}
+	}
+
+	option = {
+		name = coptic_flavor.29.b
+		custom_tooltip = coptic_flavor.28.b.tt
+	}
+}
+
+#Palm sunday
+country_event = {
+	id = coptic_flavor.29
+	title = coptic_flavor.29.t
+	desc = coptic_flavor.29.d
+	picture = POPE_PREACHING_eventPicture
+
+	trigger = { 
+		has_dlc = "Rights of Man"
+		religion = reason_and_logic_cult
+		is_month = 2
+		NOT = { is_month = 5}
+		NOT = { has_country_modifier = celebrating_lords_feast }
+	}
+
+	mean_time_to_happen = {
+		months = 600
+	}
+
+	option = {
+		name = coptic_flavor.29.a
+		custom_tooltip = coptic_flavor.29.a.tt
+
+		add_years_of_income = -0.5
+		add_dip_power = -25
+
+		add_country_modifier = {
+			name = celebrating_lords_feast
+			duration = 3650
+		}
+	}
+
+	option = {
+		name = coptic_flavor.29.b
+		custom_tooltip = coptic_flavor.29.b.tt
+	}
+}
+
+#Nobleman wants to become a monk / "In Search of the Soul"
+country_event = {
+  id = coptic_flavor.30
+  title = coptic_flavor.30.t
+  desc = coptic_flavor.30.d
+  picture = STREET_SPEECH_eventPicture
+  
+  trigger = {
+	has_dlc = "Rights of Man"
+  	has_regency = no
+  	religion = reason_and_logic_cult
+  	NOT = { has_ruler_modifier = enthusiastic_believer }
+  }
+
+  mean_time_to_happen = {
+  	months = 600
+  }
+
+  option = {
+    name = coptic_flavor.30.a
+    custom_tooltip = coptic_flavor.30.a.tt
+    add_ruler_modifier = {
+		name = "enthusiastic_believer"
+		duration = 3650
+	}
+	ai_chance = {
+		factor = 30
+		modifier = {
+			factor = 0
+			OR = {
+				religious_unity = 0.8
+				num_of_missionaries = 2
+			}
+		}
+	}
+  }
+
+  option = {
+    name = coptic_flavor.30.b
+    custom_tooltip = coptic_flavor.30.b.tt
+	add_meritocracy_effect = yes
+    define_advisor = {
+		type = inquisitor
+		skill = 2
+		discount = yes
+	}
+	ai_chance = {
+		factor = 30
+	}
+  }
+
+  option = {
+    name = coptic_flavor.30.c
+    custom_tooltip = coptic_flavor.30.c.tt
+    add_prestige = 15
+    ai_chance = {
+		factor = 10
+	}
+  }
+}
+
+# The White Monastery
+country_event = {
+	id = coptic_flavor.31
+	title = coptic_flavor.31.t
+	desc = coptic_flavor.31.d
+	picture = PRAYING_eventPicture
+  
+	trigger = {
+		religion = reason_and_logic_cult
+		has_dlc = "Rights of Man"
+		any_owned_province = {
+			province_id = 360
+			religion = reason_and_logic_cult
+		}
+		NOT = {
+			any_owned_province = {
+				OR = {
+					has_province_modifier = "songs_of_the_pious"
+					has_province_modifier = "scripture_studies"
+					has_province_modifier = "monastery_repaired"
+				}
+			}
+		}
+		OR = {
+			NOT = { has_country_flag = a_new_era_happened }
+			had_country_flag = { flag = a_new_era_happened days = 10950 }
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					is_capital = no
+					religion = reason_and_logic_cult
+					NOT = { has_province_modifier = "songs_of_the_pious" }
+					NOT = { has_province_modifier = "scripture_studies" }
+					NOT = { has_province_modifier = "monastery_repaired" }
+				}
+				save_event_target_as = pious_province
+			}
+			set_country_flag = a_new_era_happened
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 600
+	}
+
+	option = {
+	    name = coptic_flavor.31.a
+	    custom_tooltip = coptic_flavor.31.a.tt
+	    
+		if = { 
+			limit = { monthly_income = 10 }
+			add_years_of_income = -0.2
+		}
+		if = {
+			limit = { NOT = { monthly_income = 10 } }
+			add_treasury = -25
+		}
+
+	    360 = {
+			add_province_modifier = {
+				name = "scripture_studies"
+				duration = 3650
+			}
+	  	}
+	  	ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 0
+				NOT = { treasury = 25 }
+			}
+		}
+	}
+
+	option = {
+	    name = coptic_flavor.31.b
+		custom_tooltip = coptic_flavor.31.b.tt
+		add_prestige = -10
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+
+# A New Era (build a new church)
+country_event = {
+  id = coptic_flavor.32
+  title = coptic_flavor.32.t
+  desc = coptic_flavor.32.d
+  picture = CITY_DEVELOPMENT_eventPicture
+  
+	trigger = {
+		has_dlc = "Rights of Man"
+		religion = reason_and_logic_cult
+		any_owned_province = {
+			is_capital = no
+			religion = reason_and_logic_cult
+		}
+		NOT = {
+			any_owned_province = {
+				OR = {
+					has_province_modifier = "songs_of_the_pious"
+					has_province_modifier = "scripture_studies"
+					has_province_modifier = "monastery_repaired"
+				}
+			}
+		}
+		OR = {
+			NOT = { has_country_flag = a_new_era_happened }
+			had_country_flag = { flag = a_new_era_happened days = 10950 }
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					is_capital = no
+					religion = reason_and_logic_cult
+					NOT = { has_province_modifier = "songs_of_the_pious" }
+					NOT = { has_province_modifier = "scripture_studies" }
+					NOT = { has_province_modifier = "monastery_repaired" }
+				}
+				save_event_target_as = pious_province
+			}
+			set_country_flag = a_new_era_happened
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 600
+	}
+
+  option = {
+    name = coptic_flavor.32.a
+    custom_tooltip = coptic_flavor.32.a.tt
+    
+	if = { 
+		limit = { monthly_income = 20 }
+		add_years_of_income = -0.3
+	}
+	if = {
+		limit = { NOT = { monthly_income = 20 } }
+		add_treasury = -35
+	}
+
+    event_target:pious_province = {
+		add_province_modifier = {
+			name = "songs_of_the_pious"
+			duration = 3650
+		}
+  	}
+  	ai_chance = {
+		factor = 90
+		modifier = {
+			factor = 0
+			NOT = { treasury = 35 }
+		}
+	}
+  }
+
+  option = {
+    name = coptic_flavor.32.b
+	add_prestige = -10
+	ai_chance = {
+		factor = 10
+	}
+  }
+}
+
+# The Pilgrims of <some province>
+province_event = {
+	id = coptic_flavor.100
+	title = coptic_flavor.100.t
+	picture = RELIGION_eventPicture
+  
+	trigger = {
+		religion = reason_and_logic_cult
+		owner = {
+			religion = reason_and_logic_cult
+		}
+		NOT = { has_province_modifier = "inspired_workers" }
+		NOT = { has_province_modifier = "inspired_soldiers" }
+	}
+	desc = {
+		trigger = {
+			OR = {
+				has_terrain = desert
+				has_terrain = coastal_desert
+			}
+		}
+		desc = "coptic_flavor.100.da"
+	}
+	desc = {
+		trigger = {
+			NOT = { has_terrain = desert }
+			NOT = { has_terrain = coastal_desert }
+		}
+		desc = "coptic_flavor.100.db"
+	}
+
+	mean_time_to_happen = {
+		months = 600
+	}
+	is_mtth_scaled_to_size = 1
+
+	option = { # talk about the virtues of work
+		name = coptic_flavor.100.a
+		owner = { add_dip_power = 25 }
+		add_province_modifier = {
+			name = "inspired_workers"
+			duration = 5475
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				owner = {
+					is_at_war = yes
+				}
+			}
+		}
+	}
+
+	option = { # talk about war
+		name = coptic_flavor.100.b
+		owner = { add_mil_power = 25 }
+		add_province_modifier = {
+			name = "inspired_soldiers"
+			duration = 5475
+		}
+		ai_chance = {
+			factor = 20
+		}
+	}
+}
+
+# A Sacked Monastery
+country_event = {
+	id = coptic_flavor.101
+	title = coptic_flavor.101.t
+	desc = coptic_flavor.101.d
+	picture = PRAYING_eventPicture
+
+	trigger = {
+		religion = reason_and_logic_cult
+		has_dlc = "Rights of Man"
+		any_owned_province = {
+			religion = reason_and_logic_cult
+		}
+		any_owned_province = {
+			is_capital = no
+			religion = reason_and_logic_cult
+			NOT = { has_province_modifier = "songs_of_the_pious" }
+			NOT = { has_province_modifier = "scripture_studies" }
+			NOT = { has_province_modifier = "monastery_repaired" }
+		}
+		NOT = {
+			any_owned_province = {
+				OR = {
+					has_province_modifier = "songs_of_the_pious"
+					has_province_modifier = "scripture_studies"
+					has_province_modifier = "monastery_repaired"
+				}
+			}
+		}
+		OR = {
+			NOT = { has_country_flag = a_new_era_happened }
+			had_country_flag = { flag = a_new_era_happened days = 10950 }
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					is_capital = no
+					religion = reason_and_logic_cult
+					NOT = { has_province_modifier = "songs_of_the_pious" }
+					NOT = { has_province_modifier = "scripture_studies" }
+					NOT = { has_province_modifier = "monastery_repaired" }
+				}
+				save_event_target_as = scholarly_province
+			}
+			set_country_flag = a_new_era_happened
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 600
+	}
+
+	option = {
+		name = coptic_flavor.101.a
+		custom_tooltip = coptic_flavor.101.a.tt
+		add_years_of_income = -0.15
+
+		event_target:scholarly_province = {
+			add_province_modifier = {
+				name = "monastery_repaired"
+				duration = 3650
+			}
+		}
+
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 0
+				NOT = { treasury = 25 }
+			}
+		}
+	}
+
+	option = {
+		name = coptic_flavor.101.b
+		custom_tooltip = coptic_flavor.101.b.tt
+		add_prestige = -10
+
+		ai_chance = {
+			factor = 10
+		}
+	}
+}

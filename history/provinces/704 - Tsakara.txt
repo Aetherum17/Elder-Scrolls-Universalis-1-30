@@ -1,0 +1,18 @@
+owner = TA6
+controller = TA6
+add_core = TA6
+culture = tsaesci
+religion = tsaesci_pantheon
+hre = no
+base_tax = 1
+base_production = 1
+trade_goods = unknown
+base_manpower = 1
+capital = "Kelnej" 
+is_city = yes
+discovered_by = akavir_tg discovered_by = thousand_tg discovered_by = kamal_tg
+
+add_permanent_province_modifier = {
+	name = water_trade_modifier
+	duration = -1
+}

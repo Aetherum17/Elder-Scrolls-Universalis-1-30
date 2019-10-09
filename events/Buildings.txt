@@ -1,0 +1,323 @@
+namespace = btmb_fixing_area_buildings
+
+province_event = {
+	id = btmb_fixing_area_buildings.1
+	title = "btmb_fixing_area_buildings.1.t" 
+	desc = "btmb_fixing_area_buildings.1.d"
+	picture = PAINTER_ARTIST_eventPicture
+	
+	hidden = yes
+	
+	trigger = {
+		any_owned_province = {
+			OR = {
+				has_building = post_office
+				has_building = glorious_monument
+				has_building = treasury_office
+				has_building = constable
+				has_building = royal_palace
+				has_building = war_college
+				has_building = admiralty
+			}
+		}
+		if = {
+			limit = {
+				any_owned_province = {
+					has_building = post_office
+				}
+			}
+			NOT = { has_building = post_office }
+			NOT = { has_province_modifier = post_office_area_modifier }
+		}
+		if = {
+			limit = {
+				any_owned_province = {
+					has_building = glorious_monument
+				}
+			}
+			NOT = { has_building = glorious_monument }
+			NOT = { has_province_modifier = glorious_monument_area_modifier }
+		}
+		if = {
+			limit = {
+				any_owned_province = {
+					has_building = treasury_office
+				}
+			}
+			NOT = { has_building = treasury_office }
+			NOT = { has_province_modifier = treasury_office_area_modifier }
+		}
+		if = {
+			limit = {
+				any_owned_province = {
+					has_building = constable
+				}
+			}
+			NOT = { has_building = constable }
+			NOT = { has_province_modifier = constable_area_modifier }
+		}
+		if = {
+			limit = {
+				any_owned_province = {
+					has_building = royal_palace
+				}
+			}
+			NOT = { has_building = royal_palace }
+			NOT = { has_province_modifier = royal_palace_area_modifier }
+		}
+		if = {
+			limit = {
+				any_owned_province = {
+					has_building = war_college
+				}
+			}
+			NOT = { has_building = war_college }
+			NOT = { has_province_modifier = war_college_area_modifier }
+		}
+		if = {
+			limit = {
+				any_owned_province = {
+					has_building = admiralty
+				}
+			}
+			NOT = { has_building = admiralty }
+			NOT = { has_province_modifier = admiralty_area_modifier }
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {
+		name = "btmb_fixing_area_buildings.1.a"
+		if = {
+			limit = {
+				any_owned_province = {
+					has_building = post_office
+				}
+				NOT = { has_building = post_office }
+			}
+			add_province_modifier = {
+				name = post_office_area_modifier
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				any_owned_province = {
+					has_building = glorious_monument
+				}
+				NOT = { has_building = glorious_monument }
+			}
+			add_province_modifier = {
+				name = glorious_monument_area_modifier
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				any_owned_province = {
+					has_building = treasury_office
+				}
+				NOT = { has_building = treasury_office }
+			}
+			add_province_modifier = {
+				name = treasury_office_area_modifier
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				any_owned_province = {
+					has_building = constable
+				}
+				NOT = { has_building = constable }
+			}
+			add_province_modifier = {
+				name = constable_area_modifier
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				any_owned_province = {
+					has_building = royal_palace
+				}
+				NOT = { has_building = royal_palace }
+			}
+			add_province_modifier = {
+				name = royal_palace_area_modifier
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				any_owned_province = {
+					has_building = war_college
+				}
+				NOT = { has_building = war_college }
+			}
+			add_province_modifier = {
+				name = war_college_area_modifier
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				any_owned_province = {
+					has_building = admiralty
+				}
+				NOT = { has_building = admiralty }
+			}
+			add_province_modifier = {
+				name = admiralty_area_modifier
+				duration = -1
+			}
+		}
+	}
+}
+
+province_event = {
+	id = btmb_fixing_area_buildings.2
+	title = "btmb_fixing_area_buildings.2.t" 
+	desc = "btmb_fixing_area_buildings.2.d"
+	picture = PAINTER_ARTIST_eventPicture
+	
+	hidden = yes
+	
+	trigger = {
+		any_owned_province = {
+			OR = {
+				AND = {
+					has_province_modifier = post_office_area_modifier
+					NOT = {
+						any_owned_province = { has_building = post_office }
+					}
+				}
+				AND = {
+					has_province_modifier = glorious_monument_area_modifier
+					NOT = { 
+						any_owned_province = { has_building = glorious_monument }
+					}
+				}
+				AND = {
+					has_province_modifier = treasury_office_area_modifier
+					NOT = { 
+						any_owned_province = { has_building = treasury_office }
+					}
+				}
+				AND = {
+					has_province_modifier = constable_area_modifier
+					NOT = {
+						any_owned_province = { has_building = constable }
+					}
+				}
+				AND = {
+					has_province_modifier = royal_palace_area_modifier
+					NOT = {
+						any_owned_province = { has_building = royal_palace }
+					}
+				}
+				AND = {
+					has_province_modifier = war_college_area_modifier
+					NOT = {
+						any_owned_province = { has_building = war_college }
+					}
+				}
+				AND = {
+					has_province_modifier = admiralty_area_modifier
+					NOT = {
+						any_owned_province = { has_building = admiralty }
+					}
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {
+		name = "btmb_fixing_area_buildings.2.a"
+		if = {
+			limit = {
+				any_owned_province = {
+					has_province_modifier = post_office_area_modifier
+					NOT = {
+						any_owned_province = { has_building = post_office }
+					}
+				}
+			}
+			remove_province_modifier = post_office_area_modifier
+		}
+		if = {
+			limit = {
+				any_owned_province = {
+					has_province_modifier = glorious_monument_area_modifier
+					NOT = { 
+						any_owned_province = { has_building = glorious_monument }
+					}
+				}
+			}
+			remove_province_modifier = glorious_monument_area_modifier
+		}
+		if = {
+			limit = {
+				any_owned_province = {
+					has_province_modifier = treasury_office_area_modifier
+					NOT = { 
+						any_owned_province = { has_building = treasury_office }
+					}
+				}
+			}
+			remove_province_modifier = treasury_office_area_modifier
+		}
+		if = {
+			limit = {
+				any_owned_province = {
+					has_province_modifier = constable_area_modifier
+					NOT = {
+						any_owned_province = { has_building = constable }
+					}
+				}
+			}
+			remove_province_modifier = constable_area_modifier
+		}
+		if = {
+			limit = {
+				any_owned_province = {
+					has_province_modifier = royal_palace_area_modifier
+					NOT = {
+						any_owned_province = { has_building = royal_palace }
+					}
+				}
+			}
+			remove_province_modifier = royal_palace_area_modifier
+		}
+		if = {
+			limit = {
+				any_owned_province = {
+					has_province_modifier = war_college_area_modifier
+					NOT = {
+						any_owned_province = { has_building = war_college }
+					}
+				}
+			}
+			remove_province_modifier = war_college_area_modifier
+		}
+		if = {
+			limit = {
+				any_owned_province = {
+					has_province_modifier = admiralty_area_modifier
+					NOT = {
+						any_owned_province = { has_building = admiralty }
+					}
+				}
+			}
+			remove_province_modifier = admiralty_area_modifier
+		}
+	}
+}
+

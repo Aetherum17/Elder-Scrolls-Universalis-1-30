@@ -1,0 +1,222 @@
+namespace = es_collapse
+
+country_event = {
+	id = es_collapse.4
+	title = es_collapse.4.t
+	desc = es_collapse.4.d
+	picture = ES_PROVINCE_COLLAPSE_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = es_collapse.2.a
+		ai_chance = { factor = 75 }
+		hidden_effect = {
+		
+		if = {
+		limit = {
+		NOT = { capital_scope = { region = yokuda_lr } }
+		}
+		every_core_province = {
+			limit = {
+				region = yokuda_lr
+			}
+			remove_core = ROOT
+		}
+		}
+		
+		if = {
+		limit = {
+		yokuda_1_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = THR }
+		NOT = { capital_scope = { area = yokuda_1_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = yokuda_1_la
+		}
+		add_core = THR
+		}
+		create_vassal = THR
+		}
+		
+		if = {
+		limit = {
+		yokuda_2_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = YA2 }
+		NOT = { capital_scope = { area = yokuda_2_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = yokuda_2_la
+		}
+		add_core = YA2
+		}
+		create_vassal = YA2
+		}
+		
+		if = {
+		limit = {
+		yokuda_3_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = YA3 }
+		NOT = { capital_scope = { area = yokuda_3_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = yokuda_3_la
+		}
+		add_core = YA3
+		}
+		create_vassal = YA3
+		}
+		
+		if = {
+		limit = {
+		yokuda_4_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = YA4 }
+		NOT = { capital_scope = { area = yokuda_4_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = yokuda_4_la
+		}
+		add_core = YA4
+		}
+		create_vassal = YA4
+		}
+		
+		if = {
+		limit = {
+		yokuda_5_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = YA5 }
+		NOT = { capital_scope = { area = yokuda_5_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = yokuda_5_la
+		}
+		add_core = YA5
+		}
+		create_vassal = YA5
+		}
+		
+		if = {
+		limit = {
+		yokuda_6_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = YA6 }
+		NOT = { capital_scope = { area = yokuda_6_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = yokuda_6_la
+		}
+		add_core = YA6
+		}
+		create_vassal = YA6
+		}
+		
+		if = {
+		limit = {
+		yokuda_7_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = YA7 }
+		NOT = { capital_scope = { area = yokuda_7_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = yokuda_7_la
+		}
+		add_core = YA7
+		}
+		create_vassal = YA7
+		}
+		
+		if = {
+		limit = {
+		yokuda_8_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = YA8 }
+		NOT = { capital_scope = { area = yokuda_8_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = yokuda_8_la
+		}
+		add_core = YA8
+		}
+		create_vassal = YA8
+		}
+		
+	    }
+	}
+	
+	option = {
+		name = es_collapse.2.b
+		ai_chance = { factor = 15 }
+		
+		if = {
+		limit = {
+		NOT = { capital_scope = { region = yokuda_lr } }
+		}
+		every_core_province = {
+			limit = {
+				region = yokuda_lr
+			}
+			remove_core = ROOT
+		}
+		}
+		
+	}
+	
+	option = {
+		name = es_collapse.2.c
+		ai_chance = { factor = 10 }
+		
+		trigger = {
+		NOT = { capital_scope = { region = yokuda_lr } }
+		NOT = { exists = YOK }
+		}
+		
+		every_core_province = {
+			limit = {
+				region = yokuda_lr
+			}
+			remove_core = ROOT
+		}
+		
+		every_owned_province = {
+		limit = {
+		region = yokuda_lr
+		}
+		add_core = YOK
+		}
+		
+		release = YOK
+		
+		if = {
+		limit = {
+		government = monarchy
+		}
+		create_union = YOK
+	    }
+		else = {
+		create_alliance = YOK
+		add_opinion = { who = ROOT modifier = es_friendly_nation }
+		add_opinion = { who = YOK modifier = es_friendly_nation }
+		}
+	}
+}

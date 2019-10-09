@@ -1,0 +1,29 @@
+owner = BA5
+controller = BA5
+add_core = BA5
+culture = orsimer
+religion = malacath_cult
+hre = no
+base_tax = 3
+base_production = 3
+trade_goods = unknown
+base_manpower = 3
+capital = "Orsinium" 
+is_city = yes
+discovered_by = tamriel_tg discovered_by = elsweyr_tg discovered_by = marshan_tg discovered_by = orsimer_tg
+
+center_of_trade = 1
+
+700.1.1 = {
+    owner = ORS
+	controller = ORS
+	add_core = ORS
+	add_province_modifier = {
+	name = "16_n_orsinium"
+	duration = -1
+	}
+}
+
+990.1.1 = {
+    remove_province_modifier = 16_n_orsinium
+}

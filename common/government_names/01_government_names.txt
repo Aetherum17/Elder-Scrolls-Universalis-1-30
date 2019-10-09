@@ -1,0 +1,148 @@
+gov_steppe_horde = {
+	rank = {
+		1 = HORDE
+		2 = HORDE
+		3 = HORDE
+		4 = HORDE
+		5 = KHANATE
+		6 = KHANATE
+		7 = KHANATE
+		8 = KHANATE
+		9 = KHANATE
+		10 = KHAGANATE
+	}
+	
+	ruler_male = {
+		1 = JINONG
+		2 = JINONG
+		3 = JINONG
+		4 = JINONG
+		5 = KHAN
+		6 = KHAN
+		7 = KHAN
+		8 = KHAN
+		9 = KHAN
+		10 = KHAGAN
+	}
+	
+	ruler_female = {
+		1 = JINONG
+		2 = JINONG
+		3 = JINONG
+		4 = JINONG
+		5 = KHATUN
+	    6 = KHATUN
+		7 = KHATUN
+		8 = KHATUN
+		9 = KHATUN
+		10 = GREAT_KHATUN
+	}
+	
+	consort_male = {
+		1 = BEILE
+		2 = BEILE
+		3 = BEILE
+		4 = BEILE
+		5 = KHAN
+		6 = KHAN
+		7 = KHAN
+		8 = KHAN
+		9 = KHAN
+		10 = KHAGAN
+	}
+
+	consort_female = {
+		1 = GEGE
+		2 = GEGE
+		3 = GEGE
+		4 = GEGE
+		5 = KHANUM
+		6 = KHANUM
+		7 = KHANUM
+		8 = KHANUM
+		9 = KHANUM
+		10 = KHANUM
+	}
+	
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+		4 = HEIR
+		5 = HEIR
+		6 = HEIR
+		7 = HEIR
+		8 = HEIR
+		9 = HEIR
+		10 = KHANZADEH
+	}
+
+	heir_female = {
+		1 = KHANUM
+		2 = KHANUM
+		3 = KHANUM
+		4 = KHANUM
+		5 = KHANUM
+		6 = KHANUM
+		7 = KHANUM
+		8 = KHANUM
+		9 = KHANUM
+		10 = KHANUM
+	}
+	
+	trigger = {
+		OR = {
+			has_reform = steppe_horde
+			has_reform = steppe_horde_legacy
+			has_reform = tribal_federation
+		}
+	}
+}
+
+gov_native_council = {
+	rank = {
+		1 = TRIBE
+		2 = TRIBE
+		3 = TRIBE
+		4 = TRIBE
+		5 = TRIBE
+		6 = TRIBE
+		7 = TRIBE
+		8 = TRIBE
+		9 = TRIBE
+		10 = TRIBE
+	}
+	
+	ruler_male  ={
+		1 = CHIEF
+		2 = CHIEF
+		3 = CHIEF
+		4 = CHIEF
+		5 = CHIEF
+		6 = CHIEF
+		7 = CHIEF
+		8 = CHIEF
+		9 = CHIEF
+		10 = CHIEF
+	}
+	
+	ruler_female = {
+		1 = CHIEFTESS
+		2 = CHIEFTESS
+		3 = CHIEFTESS
+		4 = CHIEFTESS
+		5 = CHIEFTESS
+		6 = CHIEFTESS
+		7 = CHIEFTESS
+		8 = CHIEFTESS
+		9 = CHIEFTESS
+		10 = CHIEFTESS
+	}
+	
+	trigger = {
+		OR = {
+			government = native
+			has_reform = native_basic_reform
+		}
+	}
+}

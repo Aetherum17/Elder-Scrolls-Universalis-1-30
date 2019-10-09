@@ -1,0 +1,269 @@
+namespace = es_collapse
+
+country_event = {
+	id = es_collapse.21
+	title = es_collapse.21.t
+	desc = es_collapse.21.d
+	picture = ES_PROVINCE_COLLAPSE_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	    add_country_modifier = {
+			name = "vassal_autonomy"
+			duration = 9125
+		}
+	}
+	
+	option = {
+		name = es_collapse.2.a
+		ai_chance = { factor = 75 }
+		hidden_effect = {
+		
+		if = {
+		limit = {
+		NOT = { capital_scope = { region = eastern_skyrim_lr } }
+		}
+		every_core_province = {
+			limit = {
+				region = eastern_skyrim_lr
+			}
+			remove_core = ROOT
+		}
+		}
+		
+		if = {
+		limit = {
+		skyrim_1_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = NA1 }
+		NOT = { exists = NE1 }
+		NOT = { capital_scope = { area = skyrim_1_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = skyrim_1_la
+		}
+		add_core = NA1
+		}
+		create_vassal = NA1
+		}
+		
+		if = {
+		limit = {
+		skyrim_2_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = NA2 }
+		NOT = { exists = NE2 }
+		NOT = { capital_scope = { area = skyrim_2_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = skyrim_2_la
+		}
+		add_core = NA2
+		}
+		create_vassal = NA2
+		}
+		
+		if = {
+		limit = {
+		skyrim_3_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = NA3 }
+		NOT = { capital_scope = { area = skyrim_3_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = skyrim_3_la
+		}
+		add_core = NA3
+		}
+		create_vassal = NA3
+		}
+		
+		if = {
+		limit = {
+		skyrim_4_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = NA4 }
+		NOT = { exists = NE4 }
+		NOT = { capital_scope = { area = skyrim_4_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = skyrim_4_la
+		}
+		add_core = NA4
+		}
+		create_vassal = NA4
+		}
+		
+		if = {
+		limit = {
+		skyrim_5_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = NA5 }
+		NOT = { exists = NE5 }
+		NOT = { capital_scope = { area = skyrim_5_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = skyrim_5_la
+		}
+		add_core = NA5
+		}
+		create_vassal = NA5
+		}
+		
+		if = {
+		limit = {
+		skyrim_8_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = NA8 }
+		NOT = { capital_scope = { area = skyrim_8_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = skyrim_8_la
+		}
+		add_core = NA8
+		}
+		create_vassal = NA8
+		}
+		
+		if = {
+		limit = {
+		skyrim_9_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = NA9 }
+		NOT = { capital_scope = { area = skyrim_9_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = skyrim_9_la
+		}
+		add_core = NA9
+		}
+		create_vassal = NA9
+		}
+		
+		if = {
+		limit = {
+		skyrim_10_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = NB0 }
+		NOT = { exists = NF0 }
+		NOT = { capital_scope = { area = skyrim_10_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = skyrim_10_la
+		}
+		add_core = NB0
+		}
+		create_vassal = NB0
+		}
+		
+		if = {
+		limit = {
+		skyrim_11_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = NB1 }
+		NOT = { exists = NF1 }
+		NOT = { capital_scope = { area = skyrim_11_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = skyrim_11_la
+		}
+		add_core = NB1
+		}
+		create_vassal = NB1
+		}
+		
+		if = {
+		limit = {
+		skyrim_12_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = NB2 }
+		NOT = { capital_scope = { area = skyrim_12_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = skyrim_12_la
+		}
+		add_core = NB2
+		}
+		create_vassal = NB2
+		}
+		
+	    }
+	}
+	
+	option = {
+		name = es_collapse.2.b
+		ai_chance = { factor = 15 }
+		
+		if = {
+		limit = {
+		NOT = { capital_scope = { region = eastern_skyrim_lr } }
+		}
+		every_core_province = {
+			limit = {
+				region = eastern_skyrim_lr
+			}
+			remove_core = ROOT
+		}
+		}
+		
+	}
+	
+	option = {
+		name = es_collapse.2.c
+		ai_chance = { factor = 10 }
+		
+		trigger = {
+		NOT = { capital_scope = { region = eastern_skyrim_lr } }
+		NOT = { exists = ESK }
+		}
+		
+		every_core_province = {
+			limit = {
+				region = eastern_skyrim_lr
+			}
+			remove_core = ROOT
+		}
+		
+		every_owned_province = {
+		limit = {
+		region = eastern_skyrim_lr
+		}
+		add_core = ESK
+		}
+		
+		release = ESK
+		
+		if = {
+		limit = {
+		government = monarchy
+		}
+		create_union = ESK
+	    }
+		else = {
+		create_alliance = ESK
+		add_opinion = { who = ROOT modifier = es_friendly_nation }
+		add_opinion = { who = ESK modifier = es_friendly_nation }
+		}
+	}
+}

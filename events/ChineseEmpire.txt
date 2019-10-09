@@ -1,0 +1,24 @@
+namespace = celestial_empire_events
+
+country_event = {
+	id = celestial_empire_events.1
+	title = celestial_empire_events.1.t
+	desc = celestial_empire_events.1.d
+	picture = SUFFERING_CHINESE_VILLAGE_eventPicture
+	
+	is_triggered_only = yes
+	
+	major = yes
+	
+	trigger = {
+		FROM = { is_emperor_of_china = yes }
+	}
+	
+	option = {
+		name = "celestial_empire_events.1.a"
+		add_prestige = 20
+		add_dip_power = 50
+		add_mil_power = 50
+		add_adm_power = 50
+	}
+}

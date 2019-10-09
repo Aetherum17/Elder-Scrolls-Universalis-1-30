@@ -1,0 +1,1066 @@
+namespace = es_21_scenario
+
+country_event = {
+	id = es_21_scenario.1
+	title = es_21_scenario.1.t
+	desc = es_21_scenario.1.d
+	picture = ES_ORSINIUM_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_21_scenario.1_flag }
+		is_year = 939
+		NOT = { is_year = 990 }
+		culture_group = orsimer_cg
+		owns = 1391
+    }
+
+	mean_time_to_happen = {
+		days = 9125
+	}
+	
+	immediate = {
+	    set_country_flag = es_21_scenario.1_flag
+	}
+
+	option = {
+		name = "es_21_scenario.1.a"
+		ai_chance = { factor = 33 }
+		add_years_of_income = -2.5
+		random_owned_province = {
+		limit = {
+		num_free_building_slots = 1
+		}
+		add_building = fort_15th
+		add_province_modifier = {
+		name = "21_walls_of_orsinium"
+		duration = 9125
+		}
+		}
+		random_owned_province = {
+		limit = {
+		num_free_building_slots = 1
+		}
+		add_building = fort_15th
+		add_province_modifier = {
+		name = "21_walls_of_orsinium"
+		duration = 9125
+		}
+		}
+		random_owned_province = {
+		limit = {
+		num_free_building_slots = 1
+		}
+		add_building = fort_15th
+		add_province_modifier = {
+		name = "21_walls_of_orsinium"
+		duration = 9125
+		}
+		}
+		random_owned_province = {
+		limit = {
+		num_free_building_slots = 1
+		}
+		add_building = fort_15th
+		add_province_modifier = {
+		name = "21_walls_of_orsinium"
+		duration = 9125
+		}
+		}
+		random_owned_province = {
+		limit = {
+		num_free_building_slots = 1
+		}
+		add_building = fort_15th
+		add_province_modifier = {
+		name = "21_walls_of_orsinium"
+		duration = 9125
+		}
+		}
+	}
+	
+	option = {
+		name = "es_21_scenario.1.b"
+		ai_chance = { factor = 33 }
+		add_years_of_income = -1.0
+		1391 = {
+		add_province_modifier = {
+		name = "21_walls_of_orsinium"
+		duration = 9125
+		}
+		}
+	}
+	
+	option = {
+		name = "es_21_scenario.1.c"
+		ai_chance = { factor = 33 }
+		add_prestige = 10
+	}
+	
+}
+
+country_event = {
+	id = es_21_scenario.2
+	title = es_21_scenario.2.t
+	desc = es_21_scenario.2.d
+	picture = ES_GAIDEN_SHINJI_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_21_scenario.2_flag }
+		is_year = 939
+		NOT = { is_year = 990 }
+		OR = {
+		primary_culture = redguard
+		has_country_flag = 21_crusade_flag
+		}
+    }
+
+	mean_time_to_happen = {
+		days = 9125
+	}
+	
+	immediate = {
+	    set_country_flag = es_21_scenario.2_flag
+	}
+	
+	option = {
+		name = "es_21_scenario.2.a"
+		ai_chance = { factor = 50 }
+		add_stability = -1
+		if = {
+		limit = {
+		has_country_flag = 21_crusade_flag
+		}
+		add_country_modifier = {
+		name = "21_death_of_the_leader"
+		duration = 3650
+		}
+		}
+	}
+	
+	option = {
+		name = "es_21_scenario.2.b"
+		ai_chance = { factor = 50 }
+		add_prestige = -35
+	}
+	
+}
+
+country_event = {
+	id = es_21_scenario.3
+	title = es_21_scenario.3.t
+	desc = es_21_scenario.3.d
+	picture = ES_BANKORAI_PASS_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_21_scenario.3_flag }
+		is_year = 939
+		NOT = { is_year = 990 }
+		culture_group = half_blood_cg
+		owns = 1369
+    }
+
+	mean_time_to_happen = {
+		days = 9125
+	}
+	
+	immediate = {
+	    set_country_flag = es_21_scenario.3_flag
+	}
+	
+	option = {
+		name = "es_21_scenario.3.a"
+		ai_chance = { factor = 25 }
+		random_list = {
+		75 = {
+		every_province = {
+		limit = {
+		region = hammerfell_lr
+		culture = redguard
+		}
+		add_core = ROOT
+		}
+		add_country_modifier = {
+		name = "11_offence_doctrine"
+		duration = 9125
+		}
+		
+		if = {
+		limit = {
+		exists = HAM
+		NOT = { alliance_with = HAM }
+		NOT = { overlord_of = HAM }
+		}
+		declare_war_with_cb = {
+			who = HAM
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = HB3
+		NOT = { alliance_with = HB3 }
+		NOT = { overlord_of = HB3 }
+		}
+		declare_war_with_cb = {
+			who = HB3
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = HF3
+		NOT = { alliance_with = HF3 }
+		NOT = { overlord_of = HF3 }
+		}
+		declare_war_with_cb = {
+			who = HF3
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = HA1
+		NOT = { alliance_with = HA1 }
+		NOT = { overlord_of = HA1 }
+		}
+		declare_war_with_cb = {
+			who = HA1
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = HE1
+		NOT = { alliance_with = HE1 }
+		NOT = { overlord_of = HE1 }
+		}
+		declare_war_with_cb = {
+			who = HE1
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = HA8
+		NOT = { alliance_with = HA8 }
+		NOT = { overlord_of = HA8 }
+		}
+		declare_war_with_cb = {
+			who = HA8
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = HE8
+		NOT = { alliance_with = HE8 }
+		NOT = { overlord_of = HE8 }
+		}
+		declare_war_with_cb = {
+			who = HE8
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		}
+		50 = {
+		kill_ruler = yes
+		add_stability = -1
+		add_country_modifier = {
+		name = "21_death_of_the_leader"
+		duration = 3650
+		}
+		}
+		}
+	}
+	
+	option = {
+		name = "es_21_scenario.3.b"
+		ai_chance = { factor = 25 }
+		random_list = {
+		50 = {
+		every_province = {
+		limit = {
+		region = hammerfell_lr
+		culture = redguard
+		}
+		add_core = ROOT
+		}
+		add_country_modifier = {
+		name = "11_offence_doctrine"
+		duration = 9125
+		}
+		
+		if = {
+		limit = {
+		exists = HAM
+		NOT = { alliance_with = HAM }
+		NOT = { overlord_of = HAM }
+		}
+		declare_war_with_cb = {
+			who = HAM
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = HB3
+		NOT = { alliance_with = HB3 }
+		NOT = { overlord_of = HB3 }
+		}
+		declare_war_with_cb = {
+			who = HB3
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = HF3
+		NOT = { alliance_with = HF3 }
+		NOT = { overlord_of = HF3 }
+		}
+		declare_war_with_cb = {
+			who = HF3
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = HA1
+		NOT = { alliance_with = HA1 }
+		NOT = { overlord_of = HA1 }
+		}
+		declare_war_with_cb = {
+			who = HA1
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = HE1
+		NOT = { alliance_with = HE1 }
+		NOT = { overlord_of = HE1 }
+		}
+		declare_war_with_cb = {
+			who = HE1
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = HA8
+		NOT = { alliance_with = HA8 }
+		NOT = { overlord_of = HA8 }
+		}
+		declare_war_with_cb = {
+			who = HA8
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = HE8
+		NOT = { alliance_with = HE8 }
+		NOT = { overlord_of = HE8 }
+		}
+		declare_war_with_cb = {
+			who = HE8
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		}
+		25 = {
+		kill_ruler = yes
+		add_stability = -1
+		add_country_modifier = {
+		name = "21_death_of_the_leader"
+		duration = 3650
+		}
+		}
+		}
+	}
+	
+	option = {
+		name = "es_21_scenario.3.c"
+		ai_chance = { factor = 25 }
+		random_list = {
+		25 = {
+		every_province = {
+		limit = {
+		region = hammerfell_lr
+		culture = redguard
+		}
+		add_core = ROOT
+		}
+		add_country_modifier = {
+		name = "11_offence_doctrine"
+		duration = 9125
+		}
+		
+		if = {
+		limit = {
+		exists = HAM
+		NOT = { alliance_with = HAM }
+		NOT = { overlord_of = HAM }
+		}
+		declare_war_with_cb = {
+			who = HAM
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = HB3
+		NOT = { alliance_with = HB3 }
+		NOT = { overlord_of = HB3 }
+		}
+		declare_war_with_cb = {
+			who = HB3
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = HF3
+		NOT = { alliance_with = HF3 }
+		NOT = { overlord_of = HF3 }
+		}
+		declare_war_with_cb = {
+			who = HF3
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = HA1
+		NOT = { alliance_with = HA1 }
+		NOT = { overlord_of = HA1 }
+		}
+		declare_war_with_cb = {
+			who = HA1
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = HE1
+		NOT = { alliance_with = HE1 }
+		NOT = { overlord_of = HE1 }
+		}
+		declare_war_with_cb = {
+			who = HE1
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = HA8
+		NOT = { alliance_with = HA8 }
+		NOT = { overlord_of = HA8 }
+		}
+		declare_war_with_cb = {
+			who = HA8
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = HE8
+		NOT = { alliance_with = HE8 }
+		NOT = { overlord_of = HE8 }
+		}
+		declare_war_with_cb = {
+			who = HE8
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		}
+		}
+	}
+	
+	option = {
+		name = "es_21_scenario.3.d"
+		ai_chance = { factor = 25 }
+		add_prestige = 10
+		
+		random_list = {
+		
+		25 = {
+		if = { limit = { exists = HAM }
+		HAM = {
+		    if = {
+		    limit = {
+		    NOT = { alliance_with = ROOT }
+		    NOT = { overlord_of = ROOT }
+		    }
+		        declare_war_with_cb = {
+			    who = ROOT
+			    casus_belli = cb_es_scenario
+		    }
+		    }
+		}
+		}
+		every_province = {
+		limit = {
+		region = hgh_rock_lr
+		culture = breton
+		}
+		add_core = HAM
+		}
+		}
+		
+		25 = {
+		every_province = {
+		limit = {
+		region = hgh_rock_lr
+		culture = breton
+		}
+		add_core = HAM
+		}
+		}
+		
+		50 = {
+		if = { limit = { exists = HAM }
+		HAM = { add_prestige = 10}
+		}
+		}
+		
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_21_scenario.4
+	title = es_21_scenario.4.t
+	desc = es_21_scenario.4.d
+	picture = ES_ORSINIUM_2_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_21_scenario.4_flag }
+		is_year = 939
+		NOT = { is_year = 990 }
+		NOT = { culture_group = orsimer_cg }
+		NOT = { owns = 1391 }
+		controls = 1391
+    }
+
+	mean_time_to_happen = {
+		days = 9125
+	}
+	
+	immediate = {
+	    set_country_flag = es_21_scenario.4_flag
+	}
+	
+	option = {
+		name = "es_21_scenario.4.a"
+		ai_chance = { factor = 100 }
+		add_prestige = 35
+		1391 = {
+		add_devastation = 100
+		}
+		if = {
+		limit = {
+	    1391 = {
+		has_province_modifier = 16_n_orsinium
+		}
+		}
+		1391 = {
+		remove_province_modifier = 16_n_orsinium
+		}
+		add_treasury = 2500
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_21_scenario.5
+	title = es_21_scenario.5.t
+	desc = es_21_scenario.5.d
+	picture = ES_EVERMORE_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_21_scenario.5_flag }
+		is_year = 939
+		NOT = { is_year = 990 }
+		owns = 1424
+    }
+
+	mean_time_to_happen = {
+		days = 9125
+	}
+	
+	immediate = {
+	    set_country_flag = es_21_scenario.5_flag
+	}
+	
+	option = {
+		name = "es_21_scenario.5.a"
+		ai_chance = { factor = 100 }
+		1424 = {
+		add_base_tax = 2
+		add_base_production = 2
+		add_base_manpower = 2
+	    }
+	}
+	
+}
+
+country_event = {
+	id = es_21_scenario.6
+	title = es_21_scenario.6.t
+	desc = es_21_scenario.6.d
+	picture = ES_BJOULSAE_RIVER_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_21_scenario.6_flag }
+		is_year = 939
+		NOT = { is_year = 990 }
+		any_owned_province = {
+		OR = {
+		region = hgh_rock_lr
+		region = hammerfell_lr
+		}
+		}
+    }
+
+	mean_time_to_happen = {
+		days = 9125
+	}
+	
+	immediate = {
+	    set_country_flag = es_21_scenario.6_flag
+	}
+	
+	option = {
+		name = "es_21_scenario.6.a"
+		ai_chance = { factor = 33 }
+		add_years_of_income = -1.5
+		add_country_modifier = {
+		name = "21_bjoulsae_river"
+		duration = 9125
+		}
+	}
+	
+	option = {
+		name = "es_21_scenario.6.b"
+		ai_chance = { factor = 33 }
+		add_prestige = -10
+	}
+	
+}
+
+country_event = {
+	id = es_21_scenario.7
+	title = es_21_scenario.7.t
+	desc = es_21_scenario.7.d
+	picture = ES_WAYREST_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_21_scenario.7_flag }
+		is_year = 939
+		NOT = { is_year = 990 }
+		owns = 1426
+    }
+
+	mean_time_to_happen = {
+		days = 9125
+	}
+	
+	immediate = {
+	    set_country_flag = es_21_scenario.7_flag
+	}
+	
+	option = {
+		name = "es_21_scenario.7.a"
+		ai_chance = { factor = 100 }
+		add_prestige = 10
+		1426 = {
+		add_base_tax = 2
+		add_base_production = 2
+		add_base_manpower = 2
+	    }
+	}
+	
+}
+
+country_event = {
+	id = es_21_scenario.8
+	title = es_21_scenario.8.t
+	desc = es_21_scenario.8.d
+	picture = ES_CRUSADE_AGAINST_ORCS_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_21_scenario.8_flag }
+		is_year = 939
+		NOT = { is_year = 990 }
+		any_owned_province = {
+		OR = {
+		region = hgh_rock_lr
+		region = hammerfell_lr
+		}
+		}
+    }
+
+	mean_time_to_happen = {
+		days = 9125
+	}
+	
+	immediate = {
+	    set_country_flag = es_21_scenario.8_flag
+	}
+	
+	option = {
+		name = "es_21_scenario.8.a"
+		ai_chance = { factor = 50 }
+		add_country_modifier = {
+		name = "21_crusade_against_orcs"
+		duration = 9125
+		}
+		
+		if = {
+		limit = {
+		exists = BA5
+		NOT = { alliance_with = BA5 }
+		NOT = { overlord_of = BA5 }
+		}
+		declare_war_with_cb = {
+			who = BA8
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = BA8
+		NOT = { alliance_with = BA8 }
+		NOT = { overlord_of = BA8 }
+		}
+		declare_war_with_cb = {
+			who = BA8
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = BB3
+		NOT = { alliance_with = BB3 }
+	    NOT = { overlord_of = BB3 }
+		}
+		declare_war_with_cb = {
+			who = BB3
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = ORS
+		NOT = { alliance_with = ORS }
+		NOT = { overlord_of = ORS }
+		}
+		declare_war_with_cb = {
+			who = ORS
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		every_province = {
+		limit = {
+		OR = {
+		area = high_5_la
+		area = high_8_la
+		area = high_13_la
+		}
+		NOT = { owned_by = ROOT }
+		culture = orsimer
+		}
+		add_claim = ROOT
+		}
+		
+		set_country_flag = 21_crusade_flag
+	}
+	
+	option = {
+		name = "es_21_scenario.8.b"
+		ai_chance = { factor = 50 }
+		add_stability = -1
+	}
+	
+}
+
+country_event = {
+	id = es_21_scenario.9
+	title = es_21_scenario.9.t
+	desc = es_21_scenario.9.d
+	picture = ES_REACHMEN_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_21_scenario.9_flag }
+		is_year = 939
+		NOT = { is_year = 990 }
+		NOT = { tag = REA }
+		any_owned_province = {
+		OR = {
+		area = skyrim_7_la
+		area = skyrim_14_la
+		area = skyrim_19_la
+		}
+		}
+    }
+
+	mean_time_to_happen = {
+		days = 9125
+	}
+	
+	immediate = {
+	    set_country_flag = es_21_scenario.9_flag
+	}
+	
+	option = {
+		name = "es_21_scenario.9.a"
+		ai_chance = { factor = 50 }
+		every_owned_province = {
+		limit = {
+		OR = {
+		area = skyrim_7_la
+		area = skyrim_14_la
+		area = skyrim_19_la
+		}
+		}
+		add_core = REA
+		add_province_modifier = {
+		name = "10_unrest"
+		duration = 9125
+		}
+		}
+		
+		random_owned_province = {
+		limit = {
+		OR = {
+		area = skyrim_7_la
+		area = skyrim_14_la
+		area = skyrim_19_la
+		}
+		}
+		spawn_rebels = {
+				type = nationalist_rebels
+				size = 5
+				win = yes
+				unrest = 25
+			}
+		}
+		
+		random_owned_province = {
+		limit = {
+		OR = {
+		area = skyrim_7_la
+		area = skyrim_14_la
+		area = skyrim_19_la
+		}
+		}
+		spawn_rebels = {
+				type = nationalist_rebels
+				size = 5
+				win = yes
+				unrest = 25
+			}
+		}
+		
+		random_owned_province = {
+		limit = {
+		OR = {
+		area = skyrim_7_la
+		area = skyrim_14_la
+		area = skyrim_19_la
+		}
+		}
+		spawn_rebels = {
+				type = nationalist_rebels
+				size = 5
+				win = yes
+				unrest = 25
+			}
+		}
+	}
+	
+	option = {
+		name = "es_21_scenario.9.b"
+		ai_chance = { factor = 50 }
+		if = {
+		limit = { NOT = { exists = REA } }
+		every_owned_province = {
+		limit = {
+		OR = {
+		area = skyrim_7_la
+		area = skyrim_14_la
+		area = skyrim_19_la
+		}
+		}
+		add_core = REA
+		}
+		create_vassal = REA
+		}
+		else = {
+		every_owned_province = {
+		limit = {
+		OR = {
+		area = skyrim_7_la
+		area = skyrim_14_la
+		area = skyrim_19_la
+		}
+		}
+		add_core = REA
+		cede_province = REA
+		}
+		
+		if = { 
+		limit = { NOT = { is_rival = REA } REA = { NOT = { is_rival = ROOT } is_free_or_tributary_trigger = yes } }
+		create_alliance = REA
+		add_opinion = { who = ROOT modifier = es_friendly_nation }
+		add_opinion = { who = REA modifier = es_friendly_nation }
+		}
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_21_scenario.10
+	title = es_21_scenario.10.t
+	desc = es_21_scenario.10.d
+	picture = ES_RED_BRAMMAN_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_21_scenario.10_flag }
+		is_year = 939
+		NOT = { is_year = 990 }
+		owns = 1117
+		government = republic
+    }
+
+	mean_time_to_happen = {
+		days = 9125
+	}
+	
+	immediate = {
+	    set_country_flag = es_21_scenario.10_flag
+	}
+	
+	option = {
+		name = "es_21_scenario.10.a"
+		ai_chance = { factor = 33 }
+		change_government = monarchy
+		if = {
+		limit = { has_reform = pirate_republic_reform }
+		add_government_reform = pirate_kingdom
+		}
+		define_ruler = {
+        name = "Bramman"
+        dynasty = "Red"
+        age = 18
+        adm = 4
+        dip = 7
+        mil = 5
+        claim = 100
+		fixed = yes
+        }
+		add_stability = -1
+	}
+	
+	option = {
+		name = "es_21_scenario.10.b"
+		ai_chance = { factor = 33 }
+		define_admiral = {
+		name = "Red Bramman"
+        shock = 5
+        fire = 5
+        manuever = 5
+        siege = 5
+        }
+		add_years_of_income = -1.0
+	}
+	
+	option = {
+		name = "es_21_scenario.10.c"
+		ai_chance = { factor = 33 }
+		add_stability = 1
+	}
+	
+}
+
+country_event = {
+	id = es_21_scenario.11
+	title = es_21_scenario.11.t
+	desc = es_21_scenario.11.d
+	picture = ES_EMPRESS_HESTRA_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_21_scenario.11_flag }
+		is_year = 939
+		NOT = { is_year = 990 }
+		owns = 1206
+		has_heir = yes
+    }
+
+	mean_time_to_happen = {
+		days = 9125
+	}
+	
+	immediate = {
+	    set_country_flag = es_21_scenario.11_flag
+	}
+	
+	option = {
+		name = "es_21_scenario.11.a"
+		ai_chance = { factor = 50 }
+	 	define_heir = {
+		name = "Hestra"
+        dynasty = ROOT
+        age = 14
+        adm = 5
+        dip = 5
+        mil = 7
+        claim = 100
+        female = yes
+		}
+		add_prestige = -35
+	}
+	
+	option = {
+		name = "es_21_scenario.11.b"
+		ai_chance = { factor = 50 }
+		random_list ={
+		75 = {
+		kill_heir = yes
+		}
+		25 = {
+		add_stability = 1
+		}
+		}
+	}
+	
+}

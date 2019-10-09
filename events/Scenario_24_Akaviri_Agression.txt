@@ -1,0 +1,411 @@
+namespace = es_24_scenario
+
+country_event = {
+	id = es_24_scenario.1
+	title = es_24_scenario.1.t
+	desc = es_24_scenario.1.d
+	picture = ES_BJOULSAE_RIVER_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_24_scenario.1_flag }
+		is_year = 1100
+		NOT = { is_year = 1152 }
+		OR = {
+		AND = {
+		culture_group = tsaesci_cg
+		owns = 750
+		}
+		AND = {
+		culture_group = transpandomaic_cg
+		owns = 724
+		}
+		}
+    }
+
+	mean_time_to_happen = {
+		days = 9490
+	}
+	
+	immediate = {
+	    set_country_flag = es_24_scenario.1_flag
+	}
+
+	option = {
+		name = "es_24_scenario.1.a"
+		ai_chance = { factor = 33 }
+		
+		every_province = {
+		limit = {
+		OR = {
+		area = high_1_la
+		area = high_2_la
+		area = high_3_la
+		}
+		}
+		add_core = ROOT
+		}
+		
+		if = {
+		limit = {
+		exists = HIG
+		NOT = { alliance_with = HIG }
+		NOT = { overlord_of = HIG }
+		}
+		declare_war_with_cb = {
+			who = HIG
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = DIR
+		NOT = { alliance_with = DIR }
+		NOT = { overlord_of = DIR }
+		}
+		declare_war_with_cb = {
+			who = DIR
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = BA1
+		NOT = { alliance_with = BA1 }
+		NOT = { overlord_of = BA1 }
+		}
+		declare_war_with_cb = {
+			who = BA1
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = BE1
+		NOT = { alliance_with = BE1 }
+		NOT = { overlord_of = BE1 }
+		}
+		declare_war_with_cb = {
+			who = BE1
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = ORS
+		NOT = { alliance_with = ORS }
+		NOT = { overlord_of = ORS }
+		}
+		declare_war_with_cb = {
+			who = ORS
+			casus_belli = cb_es_scenario
+		}
+		}
+	}
+	
+	option = {
+		name = "es_24_scenario.1.b"
+		ai_chance = { factor = 33 }
+		add_prestige = -25
+		add_country_modifier = {
+		name = "24_new_markets"
+		duration = 9125
+		}
+	}
+	
+	option = {
+		name = "es_24_scenario.1.c"
+		ai_chance = { factor = 33 }
+		add_prestige = -10
+		if = { limit = { culture_group = tsaesci_cg }
+		random_province = {
+		limit = {
+		OR = {
+		area = high_1_la
+		area = high_2_la
+		area = high_3_la
+		}
+		}
+		change_culture = tsaesci
+		}
+		}
+		if = { limit = { culture_group = transpandomaic_cg }
+		random_province = {
+		limit = {
+		OR = {
+		area = high_1_la
+		area = high_2_la
+		area = high_3_la
+		}
+		}
+		change_culture = akaviri
+		}
+		}
+	}
+	
+	
+}
+
+country_event = {
+	id = es_24_scenario.2
+	title = es_24_scenario.2.t
+	desc = es_24_scenario.2.d
+	picture = ES_CITY_2_eventPicture
+	
+	trigger = {
+		is_year = 1100
+		NOT = { is_year = 1152 }
+		OR = {
+		culture_group = half_blood_cg
+		culture_group = yokudan-redguardian_cg
+		}
+		OR = {
+		owns = 1369
+		owns = 1510
+		}
+		any_country = {
+		NOT = { tag = ORS tag = BA5 tag = BA8 tag = BB3 tag = HB1 tag = HF1 }
+		is_subject_of = ROOT
+		is_subject_of_type = vassal
+		capital_scope = { OR = { region = hgh_rock_lr region = hammerfell_lr} }
+		}
+    }
+
+	mean_time_to_happen = {
+		days = 2500
+	}
+
+	option = {
+		name = "es_24_scenario.2.a"
+		ai_chance = { factor = 50 }
+		if = {
+		limit = { tag = HIG }
+		change_tag = BE1
+		clr_country_flag = formed_hig_flag
+		if = {
+			limit = {
+				NOT = { government_rank = 5 }
+			}
+			set_government_rank = 5
+		}
+		if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		}
+		if = {
+		limit = { tag = HAM }
+		change_tag = HF3
+		clr_country_flag = formed_ham_flag
+		if = {
+			limit = {
+				NOT = { government_rank = 5 }
+			}
+			set_government_rank = 5
+		}
+		if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		}
+	    random_country = {
+		limit = {
+		NOT = { tag = ORS tag = BA5 tag = BA8 tag = BB3 tag = HB1 tag = HF1 }
+		is_subject_of = ROOT
+		is_subject_of_type = vassal
+		capital_scope = { OR = { region = hgh_rock_lr region = hammerfell_lr} }
+		}
+		grant_independence = yes
+		create_alliance = ROOT
+		add_opinion = {
+        who = ROOT
+        modifier = es_friendly_nation
+        }
+		reverse_add_opinion = {
+        who = ROOT
+        modifier = es_friendly_nation
+        }
+		}
+	}
+	
+	option = {
+		name = "es_24_scenario.2.b"
+		ai_chance = { factor = 50 }
+		random_country = {
+		limit = {
+		NOT = { tag = ORS tag = BA5 tag = BA8 tag = BB3 tag = HB1 tag = HF1 }
+		is_subject_of = ROOT
+		is_subject_of_type = vassal
+		capital_scope = { OR = { region = hgh_rock_lr region = hammerfell_lr} }
+		}
+		add_country_modifier = {
+		name = "24_independence_war"
+		duration = 9125
+		}
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_24_scenario.3
+	title = es_24_scenario.3.t
+	desc = es_24_scenario.3.d
+	picture = ES_STATE_VISIT_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_24_scenario.3_flag }
+		is_year = 1100
+		NOT = { is_year = 1152 }
+		culture_group = half_blood_cg
+		owns = 1426
+		is_free_or_tributary_trigger = no
+    }
+
+	mean_time_to_happen = {
+		days = 2500
+	}
+	
+	immediate = {
+	    set_country_flag = es_24_scenario.3_flag
+	}
+
+	option = {
+		name = "es_24_scenario.3.a"
+		ai_chance = { factor = 50 }
+		add_years_of_income = 2.5
+	    add_country_modifier = {
+		name = "24_independence_war"
+		duration = 9125
+		}
+		define_ruler = {
+        name = "Farangel"
+        dynasty = "Gardner"
+        age = 24
+        adm = 4
+        dip = 5
+        mil = 3
+        claim = 100
+		fixed = yes
+        }
+		add_stability = -1
+		add_prestige = -35
+	}
+	
+	option = {
+		name = "es_24_scenario.3.b"
+		ai_chance = { factor = 50 }
+		add_prestige = 10
+	}
+	
+}
+
+country_event = {
+	id = es_24_scenario.4
+	title = es_24_scenario.4.t
+	desc = es_24_scenario.4.d
+	picture = ES_ASSASIN_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_24_scenario.4_flag }
+		is_year = 1100
+		NOT = { is_year = 1152 }
+		culture_group = high_elves_cg
+    }
+
+	mean_time_to_happen = {
+		days = 9490
+		modifier = {
+			factor = 0.01
+			has_global_flag = es_24_ceyran
+		}
+	}
+	
+	immediate = {
+	    set_country_flag = es_24_scenario.4_flag
+	}
+
+	option = {
+		name = "es_24_scenario.4.a"
+		ai_chance = { factor = 100 }
+		set_global_flag = es_24_ceyran
+		add_prestige = -5
+	}
+	
+}
+
+country_event = {
+	id = es_24_scenario.5
+	title = es_24_scenario.5.t
+	desc = es_24_scenario.5.d
+	picture = ES_IMPERIAL_CITY_1_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_24_scenario.5_flag }
+		is_year = 1100
+		NOT = { is_year = 1152 }
+		culture_group = cyrodiil_cg
+		owns = 1206
+		religion = marukhism
+		NOT = { government = theocracy }
+    }
+
+	mean_time_to_happen = {
+		days = 9490
+	}
+	
+	immediate = {
+	    set_country_flag = es_24_scenario.5_flag
+	}
+
+	option = {
+		name = "es_24_scenario.5.a"
+		ai_chance = { factor = 50 }
+		change_government = theocracy
+		kill_ruler = yes
+		kill_heir = yes
+		define_ruler = {
+        name = "Fervidius"
+        dynasty = "Tharn"
+        age = 28
+        adm = 5
+        dip = 7
+        mil = 3
+        claim = 100
+		fixed = yes
+        }
+		add_stability = -1
+		add_prestige = -35
+	}
+	
+	option = {
+		name = "es_24_scenario.5.b"
+		ai_chance = { factor = 50 }
+		add_country_modifier = {
+		name = "24_unrest_of_clergy"
+		duration = 9125
+		}
+		random_owned_province = { 
+			spawn_rebels = {
+				type = heretic_rebels
+				size = 5
+				win = yes
+				unrest = 25
+			}
+		}
+		random_owned_province = { 
+			spawn_rebels = {
+				type = heretic_rebels
+				size = 5
+				win = yes
+				unrest = 25
+			}
+		}
+		random_owned_province = { 
+			spawn_rebels = {
+				type = heretic_rebels
+				size = 5
+				win = yes
+				unrest = 25
+			}
+		}
+	}
+	
+}

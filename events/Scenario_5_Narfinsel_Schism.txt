@@ -1,0 +1,179 @@
+namespace = es_5_scenario
+
+country_event = {
+	id = es_5_scenario.1
+	title = es_5_scenario.1.t
+	desc = es_5_scenario.1.d
+	picture = ES_SIEGE_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_5_scenario.1_flag }
+	    OR = {
+	    culture_group = high_elves_cg
+		culture_group = cyrodiil_cg
+		}
+		is_year = 189
+		NOT = { is_year = 221 }
+		religion_group = daedric_group_1
+    }
+
+	mean_time_to_happen = {
+		days = 5840		
+	}
+	
+	immediate = {
+	    set_country_flag = es_5_scenario.1_flag
+	}
+
+	option = {
+		name = "es_5_scenario.1.a"
+		ai_chance = { factor = 50 }
+		set_country_flag = country_narfinsel_schism_flag
+		add_prestige = 25
+		add_country_modifier = {
+		name = "05_religious_war"
+		duration = 3650
+		}
+		random_owned_province = {
+		limit = {
+		OR = {
+		religion = molog_bal_cult
+		religion = meridia_cult
+		religion = mehrunes_dagon_cult
+		religion = hermeus_mora_cult
+		}
+		}
+		change_religion = eight_divines
+		spawn_rebels = {
+				type = eight_divines_rebels
+				size = 5
+				win = yes
+				unrest = 25
+			}
+		}
+		random_owned_province = {
+		limit = {
+		OR = {
+		religion = molog_bal_cult
+		religion = meridia_cult
+		religion = mehrunes_dagon_cult
+		religion = hermeus_mora_cult
+		}
+		}
+		change_religion = eight_divines
+		spawn_rebels = {
+				type = eight_divines_rebels
+				size = 5
+				win = yes
+				unrest = 25
+			}
+		}
+		random_owned_province = {
+		limit = {
+		OR = {
+		religion = molog_bal_cult
+		religion = meridia_cult
+		religion = mehrunes_dagon_cult
+		religion = hermeus_mora_cult
+		}
+		}
+		change_religion = eight_divines
+		spawn_rebels = {
+				type = eight_divines_rebels
+				size = 5
+				win = yes
+				unrest = 25
+			}
+		}
+	}
+	option = {
+		name = "es_5_scenario.1.b"
+		ai_chance = { factor = 50 }
+		add_stability = -3
+		change_religion = eight_divines
+	}
+}
+
+country_event = {
+	id = es_5_scenario.2
+	title = es_5_scenario.2.t
+	desc = es_5_scenario.2.d
+	picture = ES_MIGRATION_CAMP_eventPicture
+	
+	trigger = {
+	    culture_group = dwemer_cg
+		is_year = 189
+		NOT = { is_year = 700 }
+    }
+
+	mean_time_to_happen = {
+		days = 9125		
+	}
+	
+	option = {
+		name = "es_5_scenario.2.a"
+		ai_chance = { factor = 50 }
+		random_owned_province = {
+		change_culture = snow_elven
+		add_province_modifier = {
+		name = "05_elven_migration"
+		duration = -1
+		}
+		}
+	}
+	option = {
+		name = "es_5_scenario.2.b"
+		ai_chance = { factor = 50 }
+		set_country_flag = es_5_scenario.2_flag
+	}
+}
+
+country_event = {
+	id = es_5_scenario.3
+	title = es_5_scenario.3.t
+	desc = es_5_scenario.3.d
+	picture = BATTLE_2_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_5_scenario.3_flag }
+	    has_country_flag = country_narfinsel_schism_flag 
+    }
+
+	mean_time_to_happen = {
+		days = 5840		
+	}
+	
+	immediate = {
+	    set_country_flag = es_5_scenario.3_flag
+	}
+
+	option = {
+		name = "es_5_scenario.3.a"
+		ai_chance = { factor = 100 }
+		add_war_exhaustion = 10
+	}
+}
+
+province_event = {
+	id = es_5_scenario.4
+	title = es_5_scenario.4.t
+	desc = es_5_scenario.4.d
+	picture = ES_RELIGION_CONVERSION_eventPicture
+	
+	trigger = {
+	   NOT = { culture = vampire }
+       is_year = 189
+	   NOT = { is_year = 221 }
+	   religion_group = daedric_group_1
+    }
+
+	mean_time_to_happen = {
+		days = 29200
+	}
+
+	option = {
+		name = "es_5_scenario.4.a"
+		ai_chance = { factor = 100 }
+		change_religion = eight_divines
+	}
+}

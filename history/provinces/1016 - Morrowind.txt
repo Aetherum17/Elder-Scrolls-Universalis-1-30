@@ -1,0 +1,43 @@
+owner = MB4
+controller = MB4
+add_core = MB4
+culture = chimer
+religion = chimer_pantheon
+hre = no
+base_tax = 1
+base_production = 1
+trade_goods = unknown
+base_manpower = 1
+capital = "Rinaronea" 
+is_city = yes
+discovered_by = tamriel_tg discovered_by = elsweyr_tg discovered_by = marshan_tg discovered_by = orsimer_tg
+
+add_permanent_province_modifier = {
+	name = water_trade_modifier
+	duration = -1
+}
+
+fort_15th = yes
+
+369.1.1 = {
+	owner = CHI
+	controller = CHI
+	add_core = CHI
+}
+
+420.1.1 = {
+	owner = UNI
+	controller = UNI
+	add_core = UNI
+}
+
+700.1.1 = {
+    owner = IND
+	controller = IND
+	add_core = IND
+}
+
+750.1.1 = {
+    culture = dunmer
+	religion = tribunal_pantheon
+}

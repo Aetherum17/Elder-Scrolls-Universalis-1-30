@@ -1,0 +1,266 @@
+namespace = es_14_scenario
+
+country_event = {
+	id = es_14_scenario.1
+	title = es_14_scenario.1.t
+	desc = es_14_scenario.1.d
+	picture = ES_12RELIGION_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_14_scenario.1_flag }
+		is_year = 548
+		NOT = { is_year = 609 }
+		culture_group = half_blood_cg
+		owns = 1394
+    }
+
+	mean_time_to_happen = {
+		days = 10950
+	}
+	
+	immediate = {
+	    set_country_flag = es_14_scenario.1_flag
+	}
+
+	option = {
+		name = "es_14_scenario.1.a"
+		ai_chance = { factor = 50 }
+		change_religion = twelve_divines
+		every_owned_province = {
+		    limit = {
+			culture = breton
+			NOT = { religion = twelve_divines }
+			}
+			change_religion = twelve_divines
+		}
+		remove_country_modifier = 13_anti-alessian_reforms
+		add_country_modifier = {
+			name = "14_intolerance"
+			duration = 36500
+		}
+	}
+	option = {
+		name = "es_14_scenario.1.b"
+		ai_chance = { factor = 50 }
+		remove_country_modifier = 13_anti-alessian_reforms
+		add_stability = 1
+	}
+}
+
+province_event = {
+	id = es_14_scenario.2
+	title = es_14_scenario.2.t
+	desc = es_14_scenario.2.d
+	picture = ES_RELIGION_CONVERSION_eventPicture
+	
+	trigger = {
+		is_year = 548
+		NOT = { is_year = 609 }
+		culture = breton
+		region = hgh_rock_lr
+    }
+
+	mean_time_to_happen = {
+		days = 33215
+	}
+
+	option = {
+		name = "es_14_scenario.2.a"
+		ai_chance = { factor = 100 }
+		change_religion = twelve_divines
+	}
+}
+
+country_event = {
+	id = es_14_scenario.3
+	title = es_14_scenario.3.t
+	desc = es_14_scenario.3.d
+	picture = ES_TRIUMPH_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_14_scenario.3_flag }
+		is_year = 548
+		NOT = { is_year = 609 }
+		culture_group = half_blood_cg
+		owns = 1369
+    }
+
+	mean_time_to_happen = {
+		days = 31
+	}
+	
+	immediate = {
+	    set_country_flag = es_14_scenario.3_flag
+	}
+
+	option = {
+		name = "es_14_scenario.3.a"
+		ai_chance = { factor = 100 }
+		add_prestige = 25
+		set_global_flag = fall_of_direnii_flag
+	}
+}
+
+country_event = {
+	id = es_14_scenario.4
+	title = es_14_scenario.4.t
+	desc = es_14_scenario.4.d
+	picture = ES_THRONEROOM_3_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_14_scenario.4_flag }
+		is_year = 548
+		NOT = { is_year = 609 }
+		culture_group = half_blood_cg
+		OR = {
+		owns = 1394
+		owns = 1369
+		}
+    }
+	
+	immediate = {
+	    set_country_flag = es_14_scenario.4_flag
+	}
+
+	mean_time_to_happen = {
+		days = 10950
+	}
+
+	option = {
+		name = "es_14_scenario.4.a"
+		ai_chance = { factor = 33 }
+		define_ruler = {
+        name = "Thagore"
+        dynasty = "Daggerfall"
+        adm = 3
+        dip = 3
+        mil = 5
+        age = 21
+        claim = 100
+		fixed = yes
+        }
+	}
+	option = {
+		name = "es_14_scenario.4.b"
+		ai_chance = { factor = 33 }
+		define_ruler = {
+        name = "Farrose"
+        dynasty = "Breton"
+        adm = 5
+        dip = 3
+        mil = 3
+        age = 21
+        claim = 100
+		fixed = yes
+        }
+	}
+	option = {
+		name = "es_14_scenario.4.c"
+		ai_chance = { factor = 33 }
+		change_government = republic
+		add_stability = -1
+	}
+}
+
+country_event = {
+	id = es_14_scenario.5
+	title = es_14_scenario.5.t
+	desc = es_14_scenario.5.d
+	picture = GE_HRE_CRUSADE_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_14_scenario.5_flag }
+		is_year = 548
+		NOT = { is_year = 609 }
+		is_free_or_tributary_trigger = yes
+		capital_scope = {
+		region = central_syrodiil_lr
+		}
+		OR = {
+		exists = ORD
+		exists = HEA
+		exists = ALE
+		exists = CYR
+		exists = TAM
+		}
+    }
+
+	mean_time_to_happen = {
+		days = 10950
+	}
+	
+	immediate = {
+	    set_country_flag = es_14_scenario.5_flag
+	}
+
+	option = {
+		name = "es_14_scenario.1.a"
+		ai_chance = { factor = 50 }
+		if = {
+		limit = {
+		exists = ORD
+		}
+		ORD = {
+		add_casus_belli = {
+        target = ROOT
+        type = cb_restore_personal_union
+        months = 240
+        }
+		}
+		}
+		if = {
+		limit = {
+		exists = HEA
+		}
+		HEA = {
+		add_casus_belli = {
+        target = ROOT
+        type = cb_restore_personal_union
+        months = 240
+        }
+		}
+		}
+		if = {
+		limit = {
+		exists = ALE
+		}
+		ALE = {
+		add_casus_belli = {
+        target = ROOT
+        type = cb_restore_personal_union
+        months = 240
+        }
+		}
+		}
+		if = {
+		limit = {
+		exists = CYR
+		}
+		CYR = {
+		add_casus_belli = {
+        target = ROOT
+        type = cb_restore_personal_union
+        months = 240
+        }
+		}
+		}
+		if = {
+		limit = {
+		exists = TAM
+		}
+		TAM = {
+		add_casus_belli = {
+        target = ROOT
+        type = cb_restore_personal_union
+        months = 240
+        }
+		}
+		}
+	}
+	option = {
+		name = "es_14_scenario.1.b"
+		ai_chance = { factor = 50 }
+		add_years_of_income = -2.5
+		add_prestige = -25
+	}
+}

@@ -1,0 +1,74 @@
+government = monarchy
+government_rank = 10
+mercantilism = 1
+technology_group = tamriel_tg
+religion = eight_divines
+primary_culture = nedic
+capital = 1221
+
+242.1.1 = {
+	monarch = {
+		name = "Alessia"
+		dynasty = "Nedic"
+		culture = nedic
+		birth_date = 221.1.1
+		adm = 5
+		dip = 3
+		mil = 7
+		female = yes
+	}
+}
+
+242.1.1 = {
+	queen = {
+		name = "Morihaus"
+        dynasty = "Man-Bull"
+        culture = dremora
+		birth_date = 218.1.1
+		death_date = 266.1.1
+		adm = 3
+        dip = 1
+        mil = 7
+	}
+}
+
+242.1.1 = {
+	heir = {
+		name = "Belharza"
+		monarch_name = "Belharza I"
+		dynasty = "Man-Bull"
+		culture = dremora
+		birth_date = 242.1.1
+		death_date = 266.1.1
+		claim = 100
+		adm = 5
+		dip = 3
+		mil = 7
+	}
+}
+
+266.1.1 = {
+	monarch = {
+		name = "Belharza"
+		dynasty = "Man-Bull"
+		culture = dremora
+		birth_date = 242.1.1
+		adm = 5
+		dip = 3
+		mil = 7
+	}
+	
+	capital = 1206
+}
+
+312.1.1 = {
+	monarch = {
+		name = "Lysteth"
+		dynasty = "Man-Bull"
+		culture = nedic
+		birth_date = 291.1.1
+		adm = 2
+		dip = 4
+		mil = 3
+	}
+}

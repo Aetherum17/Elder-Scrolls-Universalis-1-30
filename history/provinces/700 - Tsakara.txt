@@ -1,0 +1,22 @@
+owner = TA5
+controller = TA5
+add_core = TA5
+culture = tsaesci
+religion = tsaesci_pantheon
+hre = no
+base_tax = 3
+base_production = 3
+trade_goods = unknown
+base_manpower = 3
+capital = "Ionith" 
+is_city = yes
+discovered_by = akavir_tg discovered_by = thousand_tg discovered_by = kamal_tg
+
+center_of_trade = 1
+
+add_permanent_province_modifier = {
+	name = water_trade_modifier
+	duration = -1
+}
+
+fort_15th = yes

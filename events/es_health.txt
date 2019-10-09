@@ -1,0 +1,1021 @@
+namespace = es_health
+
+country_event = { #kill ruler
+	id = es_health.1
+	
+	title = es_health.1.t
+	desc = es_health.1.d
+	picture = ES_START_eventPicture
+	
+	hidden = yes
+	
+	trigger = { 
+		has_regency = no
+		NOT = { ruler_culture = vampire }
+		NOT = { ruler_culture = soul_shriven }
+		NOT = { ruler_culture = daedra }
+		NOT = { ruler_has_personality = immortal_personality }
+	}
+	
+	mean_time_to_happen = {
+		months = 960
+		###############################################################
+		modifier = {
+			factor = 0.75
+			OR = {
+				ruler_culture = yokudan
+				ruler_culture = redguard
+				ruler_culture = atmoran
+				ruler_culture = glacial
+				ruler_culture = nord
+				ruler_culture = skaal
+				ruler_culture = nedic
+				ruler_culture = imperial
+				ruler_culture = nibenean
+				ruler_culture = colovian
+				ruler_culture = akaviri
+				ruler_culture = islander
+			}
+			ruler_age = 60
+		}
+		modifier = {
+			factor = 0.50
+			OR = {
+				ruler_culture = yokudan
+				ruler_culture = redguard
+				ruler_culture = atmoran
+				ruler_culture = glacial
+				ruler_culture = nord
+				ruler_culture = skaal
+				ruler_culture = nedic
+				ruler_culture = imperial
+				ruler_culture = nibenean
+				ruler_culture = colovian
+				ruler_culture = akaviri
+				ruler_culture = islander
+			}
+			ruler_age = 80
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				ruler_culture = yokudan
+				ruler_culture = redguard
+				ruler_culture = atmoran
+				ruler_culture = glacial
+				ruler_culture = nord
+				ruler_culture = skaal
+				ruler_culture = nedic
+				ruler_culture = imperial
+				ruler_culture = nibenean
+				ruler_culture = colovian
+				ruler_culture = akaviri
+				ruler_culture = islander
+			}
+			ruler_age = 120
+		}
+		modifier = {
+			factor = 0.10
+			OR = {
+				ruler_culture = yokudan
+				ruler_culture = redguard
+				ruler_culture = atmoran
+				ruler_culture = glacial
+				ruler_culture = nord
+				ruler_culture = skaal
+				ruler_culture = nedic
+				ruler_culture = imperial
+				ruler_culture = nibenean
+				ruler_culture = colovian
+				ruler_culture = akaviri
+				ruler_culture = islander
+			}
+			ruler_age = 160
+		}
+		###############################################################
+		modifier = {
+			factor = 1.50
+			OR = {
+				ruler_culture = breton
+				ruler_culture = reachmen
+				ruler_culture = orsimer
+				ruler_culture = wood_orsimer
+				ruler_culture = khajiiti
+				ruler_culture = anequinan
+				ruler_culture = pellitinian
+				ruler_culture = po_tun
+				ruler_culture = imga
+				ruler_culture = argonian
+				ruler_culture = archein
+				ruler_culture = naga
+				ruler_culture = tsaesci
+				ruler_culture = kamal
+				ruler_culture = kothringi
+			}
+		}
+		modifier = {
+			factor = 0.75
+			OR = {
+				ruler_culture = breton
+				ruler_culture = reachmen
+				ruler_culture = orsimer
+				ruler_culture = wood_orsimer
+				ruler_culture = khajiiti
+				ruler_culture = anequinan
+				ruler_culture = pellitinian
+				ruler_culture = po_tun
+				ruler_culture = imga
+				ruler_culture = argonian
+				ruler_culture = archein
+				ruler_culture = naga
+				ruler_culture = tsaesci
+				ruler_culture = kamal
+				ruler_culture = kothringi
+			}
+			ruler_age = 90
+		}
+		modifier = {
+			factor = 0.50
+			OR = {
+				ruler_culture = breton
+				ruler_culture = reachmen
+				ruler_culture = orsimer
+				ruler_culture = wood_orsimer
+				ruler_culture = khajiiti
+				ruler_culture = anequinan
+				ruler_culture = pellitinian
+				ruler_culture = po_tun
+				ruler_culture = imga
+				ruler_culture = argonian
+				ruler_culture = archein
+				ruler_culture = naga
+				ruler_culture = tsaesci
+				ruler_culture = kamal
+				ruler_culture = kothringi
+			}
+			ruler_age = 120
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				ruler_culture = breton
+				ruler_culture = reachmen
+				ruler_culture = orsimer
+				ruler_culture = wood_orsimer
+				ruler_culture = khajiiti
+				ruler_culture = anequinan
+				ruler_culture = pellitinian
+				ruler_culture = po_tun
+				ruler_culture = imga
+				ruler_culture = argonian
+				ruler_culture = archein
+				ruler_culture = naga
+				ruler_culture = tsaesci
+				ruler_culture = kamal
+				ruler_culture = kothringi
+			}
+			ruler_age = 180
+		}
+		modifier = {
+			factor = 0.10
+			OR = {
+				ruler_culture = breton
+				ruler_culture = reachmen
+				ruler_culture = orsimer
+				ruler_culture = wood_orsimer
+				ruler_culture = khajiiti
+				ruler_culture = anequinan
+				ruler_culture = pellitinian
+				ruler_culture = po_tun
+				ruler_culture = imga
+				ruler_culture = argonian
+				ruler_culture = archein
+				ruler_culture = naga
+				ruler_culture = tsaesci
+				ruler_culture = kamal
+				ruler_culture = kothringi
+			}
+			ruler_age = 240
+		}
+		###############################################################
+		modifier = {
+			factor = 2.25
+			OR = {
+			    ruler_culture = maorner
+			    ruler_culture = altmer
+			    ruler_culture = ayleid
+			    ruler_culture = sinistral
+			    ruler_culture = snow_elven
+			    ruler_culture = falmer
+			    ruler_culture = dwemer
+			    ruler_culture = bosmer
+			    ruler_culture = ashlander
+			    ruler_culture = dunmer
+			    ruler_culture = chimer
+			}
+		}
+		modifier = {
+			factor = 0.75
+			OR = {
+				ruler_culture = maorner
+			    ruler_culture = altmer
+			    ruler_culture = ayleid
+			    ruler_culture = sinistral
+			    ruler_culture = snow_elven
+			    ruler_culture = falmer
+			    ruler_culture = dwemer
+			    ruler_culture = bosmer
+			    ruler_culture = ashlander
+			    ruler_culture = dunmer
+			    ruler_culture = chimer
+			}
+			ruler_age = 135
+		}
+		modifier = {
+			factor = 0.50
+			OR = {
+				ruler_culture = maorner
+			    ruler_culture = altmer
+			    ruler_culture = ayleid
+			    ruler_culture = sinistral
+			    ruler_culture = snow_elven
+			    ruler_culture = falmer
+			    ruler_culture = dwemer
+			    ruler_culture = bosmer
+			    ruler_culture = ashlander
+			    ruler_culture = dunmer
+			    ruler_culture = chimer
+			}
+			ruler_age = 180
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				ruler_culture = maorner
+			    ruler_culture = altmer
+			    ruler_culture = ayleid
+			    ruler_culture = sinistral
+			    ruler_culture = snow_elven
+			    ruler_culture = falmer
+			    ruler_culture = dwemer
+			    ruler_culture = bosmer
+			    ruler_culture = ashlander
+			    ruler_culture = dunmer
+			    ruler_culture = chimer
+			}
+			ruler_age = 270
+		}
+		modifier = {
+			factor = 0.10
+			OR = {
+				ruler_culture = maorner
+			    ruler_culture = altmer
+			    ruler_culture = ayleid
+			    ruler_culture = sinistral
+			    ruler_culture = snow_elven
+			    ruler_culture = falmer
+			    ruler_culture = dwemer
+			    ruler_culture = bosmer
+			    ruler_culture = ashlander
+			    ruler_culture = dunmer
+			    ruler_culture = chimer
+			}
+			ruler_age = 360
+		}
+		###############################################################
+		modifier = {
+			factor = 3.37
+			OR = {
+			    ruler_culture = sload
+			    ruler_culture = dremora
+			    ruler_culture = harvester
+			    ruler_culture = scamp
+			}
+		}
+		modifier = {
+			factor = 0.75
+			OR = {
+				ruler_culture = sload
+			    ruler_culture = dremora
+			    ruler_culture = harvester
+			    ruler_culture = scamp
+			}
+			ruler_age = 200
+		}
+		modifier = {
+			factor = 0.50
+			OR = {
+				ruler_culture = sload
+			    ruler_culture = dremora
+			    ruler_culture = harvester
+			    ruler_culture = scamp
+			}
+			ruler_age = 270
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				ruler_culture = sload
+			    ruler_culture = dremora
+			    ruler_culture = harvester
+			    ruler_culture = scamp
+			}
+			ruler_age = 405
+		}
+		modifier = {
+			factor = 0.10
+			OR = {
+				ruler_culture = sload
+			    ruler_culture = dremora
+			    ruler_culture = harvester
+			    ruler_culture = scamp
+			}
+			ruler_age = 540
+		}
+	}
+	
+	option = {
+		name = es_health.1.a
+		kill_ruler = yes
+	}
+}
+
+country_event = { #kill consort
+	id = es_health.2
+	
+	title = es_health.2.t
+	desc = es_health.2.d
+	picture = ES_START_eventPicture
+	
+	trigger = { 
+		has_consort = yes 
+		NOT = { consort_culture = vampire }
+		NOT = { consort_culture = soul_shriven }
+		NOT = { consort_culture = daedra }
+		NOT = { consort_has_personality = immortal_personality }
+	}
+	
+	hidden = yes
+	
+	mean_time_to_happen = {
+		months = 960
+		###############################################################
+		modifier = {
+			factor = 0.75
+			OR = {
+				consort_culture = yokudan
+				consort_culture = redguard
+				consort_culture = atmoran
+				consort_culture = glacial
+				consort_culture = nord
+				consort_culture = skaal
+				consort_culture = nedic
+				consort_culture = imperial
+				consort_culture = nibenean
+				consort_culture = colovian
+				consort_culture = akaviri
+				consort_culture = islander
+			}
+			consort_age = 60
+		}
+		modifier = {
+			factor = 0.50
+			OR = {
+				consort_culture = yokudan
+				consort_culture = redguard
+				consort_culture = atmoran
+				consort_culture = glacial
+				consort_culture = nord
+				consort_culture = skaal
+				consort_culture = nedic
+				consort_culture = imperial
+				consort_culture = nibenean
+				consort_culture = colovian
+				consort_culture = akaviri
+				consort_culture = islander
+			}
+			consort_age = 80
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				consort_culture = yokudan
+				consort_culture = redguard
+				consort_culture = atmoran
+				consort_culture = glacial
+				consort_culture = nord
+				consort_culture = skaal
+				consort_culture = nedic
+				consort_culture = imperial
+				consort_culture = nibenean
+				consort_culture = colovian
+				consort_culture = akaviri
+				consort_culture = islander
+			}
+			consort_age = 120
+		}
+		modifier = {
+			factor = 0.10
+			OR = {
+				consort_culture = yokudan
+				consort_culture = redguard
+				consort_culture = atmoran
+				consort_culture = glacial
+				consort_culture = nord
+				consort_culture = skaal
+				consort_culture = nedic
+				consort_culture = imperial
+				consort_culture = nibenean
+				consort_culture = colovian
+				consort_culture = akaviri
+				consort_culture = islander
+			}
+			consort_age = 160
+		}
+		###############################################################
+		modifier = {
+			factor = 1.50
+			OR = {
+				consort_culture = breton
+				consort_culture = reachmen
+				consort_culture = orsimer
+				consort_culture = wood_orsimer
+				consort_culture = khajiiti
+				consort_culture = anequinan
+				consort_culture = pellitinian
+				consort_culture = po_tun
+				consort_culture = imga
+				consort_culture = argonian
+				consort_culture = archein
+				consort_culture = naga
+				consort_culture = tsaesci
+				consort_culture = kamal
+				consort_culture = kothringi
+			}
+		}
+		modifier = {
+			factor = 0.75
+			OR = {
+				consort_culture = breton
+				consort_culture = reachmen
+				consort_culture = orsimer
+				consort_culture = wood_orsimer
+				consort_culture = khajiiti
+				consort_culture = anequinan
+				consort_culture = pellitinian
+				consort_culture = po_tun
+				consort_culture = imga
+				consort_culture = argonian
+				consort_culture = archein
+				consort_culture = naga
+				consort_culture = tsaesci
+				consort_culture = kamal
+				consort_culture = kothringi
+			}
+			consort_age = 80
+		}
+		modifier = {
+			factor = 0.50
+			OR = {
+				consort_culture = breton
+				consort_culture = reachmen
+				consort_culture = orsimer
+				consort_culture = wood_orsimer
+				consort_culture = khajiiti
+				consort_culture = anequinan
+				consort_culture = pellitinian
+				consort_culture = po_tun
+				consort_culture = imga
+				consort_culture = argonian
+				consort_culture = archein
+				consort_culture = naga
+				consort_culture = tsaesci
+				consort_culture = kamal
+				consort_culture = kothringi
+			}
+			consort_age = 120
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				consort_culture = breton
+				consort_culture = reachmen
+				consort_culture = orsimer
+				consort_culture = wood_orsimer
+				consort_culture = khajiiti
+				consort_culture = anequinan
+				consort_culture = pellitinian
+				consort_culture = po_tun
+				consort_culture = imga
+				consort_culture = argonian
+				consort_culture = archein
+				consort_culture = naga
+				consort_culture = tsaesci
+				consort_culture = kamal
+				consort_culture = kothringi
+			}
+			consort_age = 180
+		}
+		modifier = {
+			factor = 0.10
+			OR = {
+				consort_culture = breton
+				consort_culture = reachmen
+				consort_culture = orsimer
+				consort_culture = wood_orsimer
+				consort_culture = khajiiti
+				consort_culture = anequinan
+				consort_culture = pellitinian
+				consort_culture = po_tun
+				consort_culture = imga
+				consort_culture = argonian
+				consort_culture = archein
+				consort_culture = naga
+				consort_culture = tsaesci
+				consort_culture = kamal
+				consort_culture = kothringi
+			}
+			consort_age = 240
+		}
+		###############################################################
+		modifier = {
+			factor = 2.25
+			OR = {
+			consort_culture = maorner
+			consort_culture = altmer
+			consort_culture = ayleid
+			consort_culture = sinistral
+			consort_culture = snow_elven
+			consort_culture = falmer
+			consort_culture = dwemer
+			consort_culture = bosmer
+			consort_culture = ashlander
+			consort_culture = dunmer
+			consort_culture = chimer
+			}
+		}
+		modifier = {
+			factor = 0.75
+			OR = {
+				consort_culture = maorner
+			    consort_culture = altmer
+			    consort_culture = ayleid
+			    consort_culture = sinistral
+			    consort_culture = snow_elven
+			    consort_culture = falmer
+			    consort_culture = dwemer
+			    consort_culture = bosmer
+			    consort_culture = ashlander
+			    consort_culture = dunmer
+			    consort_culture = chimer
+			}
+			consort_age = 135
+		}
+		modifier = {
+			factor = 0.50
+			OR = {
+				consort_culture = maorner
+			    consort_culture = altmer
+			    consort_culture = ayleid
+			    consort_culture = sinistral
+			    consort_culture = snow_elven
+			    consort_culture = falmer
+			    consort_culture = dwemer
+			    consort_culture = bosmer
+			    consort_culture = ashlander
+			    consort_culture = dunmer
+			    consort_culture = chimer
+			}
+			consort_age = 180
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				consort_culture = maorner
+			    consort_culture = altmer
+			    consort_culture = ayleid
+			    consort_culture = sinistral
+			    consort_culture = snow_elven
+			    consort_culture = falmer
+			    consort_culture = dwemer
+			    consort_culture = bosmer
+			    consort_culture = ashlander
+			    consort_culture = dunmer
+			    consort_culture = chimer
+			}
+			consort_age = 270
+		}
+		modifier = {
+			factor = 0.10
+			OR = {
+				consort_culture = maorner
+			    consort_culture = altmer
+			    consort_culture = ayleid
+			    consort_culture = sinistral
+			    consort_culture = snow_elven
+			    consort_culture = falmer
+			    consort_culture = dwemer
+			    consort_culture = bosmer
+			    consort_culture = ashlander
+			    consort_culture = dunmer
+			    consort_culture = chimer
+			}
+			consort_age = 360
+		}
+		###############################################################
+		modifier = {
+			factor = 3.37
+			OR = {
+			consort_culture = sload
+			consort_culture = dremora
+			consort_culture = harvester
+			consort_culture = scamp
+			}
+		}
+		modifier = {
+			factor = 0.75
+			OR = {
+				consort_culture = sload
+			    consort_culture = dremora
+			    consort_culture = harvester
+			    consort_culture = scamp
+			}
+			consort_age = 200
+		}
+		modifier = {
+			factor = 0.50
+			OR = {
+				consort_culture = sload
+			    consort_culture = dremora
+			    consort_culture = harvester
+			    consort_culture = scamp
+			}
+			consort_age = 270
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				consort_culture = sload
+			    consort_culture = dremora
+			    consort_culture = harvester
+			    consort_culture = scamp
+			}
+			consort_age = 405
+		}
+		modifier = {
+			factor = 0.10
+			OR = {
+				consort_culture = sload
+			    consort_culture = dremora
+			    consort_culture = harvester
+			    consort_culture = scamp
+			}
+			consort_age = 540
+		}
+	}
+	
+	option = {
+		name = es_health.2.a
+		kill_consort = yes
+	}
+}
+
+country_event = { #kill heir
+	id = es_health.3
+	
+	title = es_health.3.t
+	desc = es_health.3.d
+	picture = ES_START_eventPicture
+	
+	hidden = yes
+	
+	trigger = { 
+		has_heir = yes 
+		NOT = { heir_culture = vampire }
+		NOT = { heir_culture = soul_shriven }
+		NOT = { heir_culture = daedra }
+		NOT = { heir_has_personality = immortal_personality }
+	}
+	
+	mean_time_to_happen = {
+		months = 960
+		###############################################################
+		modifier = {
+			factor = 0.75
+			OR = {
+				heir_culture = yokudan
+				heir_culture = redguard
+				heir_culture = atmoran
+				heir_culture = glacial
+				heir_culture = nord
+				heir_culture = skaal
+				heir_culture = nedic
+				heir_culture = imperial
+				heir_culture = nibenean
+				heir_culture = colovian
+				heir_culture = akaviri
+				heir_culture = islander
+			}
+			heir_age = 60
+		}
+		modifier = {
+			factor = 0.50
+			OR = {
+				heir_culture = yokudan
+				heir_culture = redguard
+				heir_culture = atmoran
+				heir_culture = glacial
+				heir_culture = nord
+				heir_culture = skaal
+				heir_culture = nedic
+				heir_culture = imperial
+				heir_culture = nibenean
+				heir_culture = colovian
+				heir_culture = akaviri
+				heir_culture = islander
+			}
+			heir_age = 80
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				heir_culture = yokudan
+				heir_culture = redguard
+				heir_culture = atmoran
+				heir_culture = glacial
+				heir_culture = nord
+				heir_culture = skaal
+				heir_culture = nedic
+				heir_culture = imperial
+				heir_culture = nibenean
+				heir_culture = colovian
+				heir_culture = akaviri
+				heir_culture = islander
+			}
+			heir_age = 120
+		}
+		modifier = {
+			factor = 0.10
+			OR = {
+				heir_culture = yokudan
+				heir_culture = redguard
+				heir_culture = atmoran
+				heir_culture = glacial
+				heir_culture = nord
+				heir_culture = skaal
+				heir_culture = nedic
+				heir_culture = imperial
+				heir_culture = nibenean
+				heir_culture = colovian
+				heir_culture = akaviri
+				heir_culture = islander
+			}
+			heir_age = 160
+		}
+		###############################################################
+		modifier = {
+			factor = 1.50
+			OR = {
+				heir_culture = breton
+				heir_culture = reachmen
+				heir_culture = orsimer
+				heir_culture = wood_orsimer
+				heir_culture = khajiiti
+				heir_culture = anequinan
+				heir_culture = pellitinian
+				heir_culture = po_tun
+				heir_culture = imga
+				heir_culture = argonian
+				heir_culture = archein
+				heir_culture = naga
+				heir_culture = tsaesci
+				heir_culture = kamal
+				heir_culture = kothringi
+			}
+		}
+		modifier = {
+			factor = 0.75
+			OR = {
+				heir_culture = breton
+				heir_culture = reachmen
+				heir_culture = orsimer
+				heir_culture = wood_orsimer
+				heir_culture = khajiiti
+				heir_culture = anequinan
+				heir_culture = pellitinian
+				heir_culture = po_tun
+				heir_culture = imga
+				heir_culture = argonian
+				heir_culture = archein
+				heir_culture = naga
+				heir_culture = tsaesci
+				heir_culture = kamal
+				heir_culture = kothringi
+			}
+			heir_age = 80
+		}
+		modifier = {
+			factor = 0.50
+			OR = {
+				heir_culture = breton
+				heir_culture = reachmen
+				heir_culture = orsimer
+				heir_culture = wood_orsimer
+				heir_culture = khajiiti
+				heir_culture = anequinan
+				heir_culture = pellitinian
+				heir_culture = po_tun
+				heir_culture = imga
+				heir_culture = argonian
+				heir_culture = archein
+				heir_culture = naga
+				heir_culture = tsaesci
+				heir_culture = kamal
+				heir_culture = kothringi
+			}
+			heir_age = 120
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				heir_culture = breton
+				heir_culture = reachmen
+				heir_culture = orsimer
+				heir_culture = wood_orsimer
+				heir_culture = khajiiti
+				heir_culture = anequinan
+				heir_culture = pellitinian
+				heir_culture = po_tun
+				heir_culture = imga
+				heir_culture = argonian
+				heir_culture = archein
+				heir_culture = naga
+				heir_culture = tsaesci
+				heir_culture = kamal
+				heir_culture = kothringi
+			}
+			heir_age = 180
+		}
+		modifier = {
+			factor = 0.10
+			OR = {
+				heir_culture = breton
+				heir_culture = reachmen
+				heir_culture = orsimer
+				heir_culture = wood_orsimer
+				heir_culture = khajiiti
+				heir_culture = anequinan
+				heir_culture = pellitinian
+				heir_culture = po_tun
+				heir_culture = imga
+				heir_culture = argonian
+				heir_culture = archein
+				heir_culture = naga
+				heir_culture = tsaesci
+				heir_culture = kamal
+				heir_culture = kothringi
+			}
+			heir_age = 240
+		}
+		###############################################################
+		modifier = {
+			factor = 2.25
+			OR = {
+			heir_culture = maorner
+			heir_culture = altmer
+			heir_culture = ayleid
+			heir_culture = sinistral
+			heir_culture = snow_elven
+			heir_culture = falmer
+			heir_culture = dwemer
+			heir_culture = bosmer
+			heir_culture = ashlander
+			heir_culture = dunmer
+			heir_culture = chimer
+			}
+		}
+		modifier = {
+			factor = 0.75
+			OR = {
+				heir_culture = maorner
+			    heir_culture = altmer
+			    heir_culture = ayleid
+			    heir_culture = sinistral
+			    heir_culture = snow_elven
+			    heir_culture = falmer
+			    heir_culture = dwemer
+			    heir_culture = bosmer
+			    heir_culture = ashlander
+			    heir_culture = dunmer
+			    heir_culture = chimer
+			}
+			heir_age = 135
+		}
+		modifier = {
+			factor = 0.50
+			OR = {
+				heir_culture = maorner
+			    heir_culture = altmer
+			    heir_culture = ayleid
+			    heir_culture = sinistral
+			    heir_culture = snow_elven
+			    heir_culture = falmer
+			    heir_culture = dwemer
+			    heir_culture = bosmer
+			    heir_culture = ashlander
+			    heir_culture = dunmer
+			    heir_culture = chimer
+			}
+			heir_age = 180
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				heir_culture = maorner
+			    heir_culture = altmer
+			    heir_culture = ayleid
+			    heir_culture = sinistral
+			    heir_culture = snow_elven
+			    heir_culture = falmer
+			    heir_culture = dwemer
+			    heir_culture = bosmer
+			    heir_culture = ashlander
+			    heir_culture = dunmer
+			    heir_culture = chimer
+			}
+			heir_age = 270
+		}
+		modifier = {
+			factor = 0.10
+			OR = {
+				heir_culture = maorner
+			    heir_culture = altmer
+			    heir_culture = ayleid
+			    heir_culture = sinistral
+			    heir_culture = snow_elven
+			    heir_culture = falmer
+			    heir_culture = dwemer
+			    heir_culture = bosmer
+			    heir_culture = ashlander
+			    heir_culture = dunmer
+			    heir_culture = chimer
+			}
+			heir_age = 360
+		}
+		###############################################################
+		modifier = {
+			factor = 3.37
+			OR = {
+			heir_culture = sload
+			heir_culture = dremora
+			heir_culture = harvester
+			heir_culture = scamp
+			}
+		}
+		modifier = {
+			factor = 0.75
+			OR = {
+				heir_culture = sload
+			    heir_culture = dremora
+			    heir_culture = harvester
+			    heir_culture = scamp
+			}
+			heir_age = 200
+		}
+		modifier = {
+			factor = 0.50
+			OR = {
+				heir_culture = sload
+			    heir_culture = dremora
+			    heir_culture = harvester
+			    heir_culture = scamp
+			}
+			heir_age = 270
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				heir_culture = sload
+			    heir_culture = dremora
+			    heir_culture = harvester
+			    heir_culture = scamp
+			}
+			heir_age = 405
+		}
+		modifier = {
+			factor = 0.10
+			OR = {
+				heir_culture = sload
+			    heir_culture = dremora
+			    heir_culture = harvester
+			    heir_culture = scamp
+			}
+			heir_age = 540
+		}
+	}
+	
+	option = {
+		name = es_health.3.a
+		kill_heir = yes
+	}
+}

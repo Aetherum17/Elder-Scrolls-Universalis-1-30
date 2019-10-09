@@ -1,0 +1,2302 @@
+###########################################################
+# Events for countries of the Tengri Shaman Religion
+#
+# written by Henrik Lohmander
+###########################################################
+
+namespace = tengri_events
+
+#Note: most conversion events can target any province and not just Tengri ones.
+
+#Generic Secondary Religion Events:
+
+#Conflicts between Shamans and the Clergy
+country_event = {
+	id = tengri_events.1
+	title = tengri_events.1.t
+	desc = tengri_events.1.d
+	picture = ANGRY_SHAMANS_eventPicture
+	
+	trigger = {
+		religion = dremora_pantheon
+		has_secondary_religion = yes
+		has_dlc = "The Cossacks"
+		NOT = { has_country_modifier = tengri_clergy_conflicts }
+		num_of_cities = 12
+		any_owned_province = {
+			religion = secondary
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 460
+	}
+	
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					religion = secondary
+				}
+				set_province_flag = tengri_vs_clergy
+			}
+			random_owned_province = {
+				limit = {
+					religion = secondary
+					NOT = { has_province_flag = tengri_vs_clergy }
+				}
+				set_province_flag = tengri_vs_clergy
+			}
+			random_owned_province = {
+				limit = {
+					religion = secondary
+					NOT = { has_province_flag = tengri_vs_clergy }
+				}
+				set_country_flag = tengri_vs_clergy
+			}
+			random_owned_province = {
+				limit = {
+					religion = secondary
+					NOT = { has_province_flag = tengri_vs_clergy }
+				}
+				set_province_flag = tengri_vs_clergy
+			}
+			random_owned_province = {
+				limit = {
+					has_owner_religion = yes
+				}
+				set_province_flag = tengri_vs_clergy
+			}
+			random_owned_province = {
+				limit = {
+					has_owner_religion = yes
+					NOT = { has_province_flag = tengri_vs_clergy }
+				}
+				set_country_flag = tengri_vs_clergy
+			}
+			random_owned_province = {
+				limit = {
+					has_owner_religion = yes
+					NOT = { has_province_flag = tengri_vs_clergy }
+				}
+				set_province_flag = tengri_vs_clergy
+			}
+			random_owned_province = {
+				limit = {
+					has_owner_religion = yes
+					NOT = { has_province_flag = tengri_vs_clergy }
+				}
+				set_province_flag = tengri_vs_clergy
+			}
+		}
+	}
+	
+	option = {
+		name = tengri_events.1.a #Support the Shamans
+		every_owned_province = {
+			limit = {
+				has_province_flag = tengri_vs_clergy
+				religion = secondary
+			}
+			add_province_modifier = {
+				name = "tengri_insincere_leadership"
+				duration = 3650
+			}
+			clr_province_flag = tengri_vs_clergy
+		}
+		every_owned_province = {
+			limit = {
+				has_province_flag = tengri_vs_clergy
+				NOT = { religion = secondary }
+			}
+			clr_province_flag = tengri_vs_clergy
+		}
+	}
+	option = {
+		name = tengri_events.1.b #Support X
+		every_owned_province = {
+			limit = {
+				has_province_flag = tengri_vs_clergy
+				has_owner_religion = yes
+			}
+			add_province_modifier = {
+				name = "tengri_abandoning_the_old_ways"
+				duration = 3650
+			}
+			clr_province_flag = tengri_vs_clergy
+		}
+		every_owned_province = {
+			limit = {
+				has_province_flag = tengri_vs_clergy
+				religion = secondary
+			}
+			clr_province_flag = tengri_vs_clergy
+		}
+	}
+	option = {
+		name = tengri_events.1.c #Let them handle this without our intervention.
+		add_country_modifier = {
+			name = "tengri_clergy_conflicts"
+			duration = 3650
+		}
+	}
+}
+
+#Exchange of Ideas
+country_event = {
+	id = tengri_events.2
+	title = tengri_events.2.t
+	desc = tengri_events.2.d
+	picture = SENCRATIC_ALTER_eventPicture
+	
+	trigger = {
+		religion = dremora_pantheon
+		has_secondary_religion = yes
+		has_dlc = "The Cossacks"
+		is_at_war = no
+		any_neighbor_country = {
+			NOT = { religion = dremora_pantheon }
+			religion = secondary
+			has_opinion = { who = ROOT value = 75 }
+		}
+		NOT = { has_ruler_flag = tengri_exchanged_ideas }
+	}
+	
+	mean_time_to_happen = {
+		months = 400
+		modifier = {
+			factor = 0.9
+			full_idea_group = innovativeness_ideas
+		}
+		modifier = {
+			factor = 0.9
+			secondary_religion = po_tun_pantheon
+		}
+	}
+	
+	option = {
+		name = tengri_events.2.a #
+		set_ruler_flag = tengri_exchanged_ideas
+		random_list = {
+			33 = { add_adm_power = 40 }
+			33 = { add_dip_power = 40 }
+			33 = { add_mil_power = 40 }
+		}
+	}
+}
+
+#Warriors loosing touch with heritage
+country_event = {
+	id = tengri_events.3
+	title = tengri_events.3.t
+	desc = tengri_events.3.d
+	picture = FAT_WARRIORS_eventPicture
+	
+	trigger = {
+		religion = dremora_pantheon
+		has_secondary_religion = yes
+		has_dlc = "The Cossacks"
+		NOT = { army_tradition = 25 }
+		NOT = {
+			has_country_modifier = tengri_settled_warriors
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 400
+	}
+	
+	option = {
+		name = tengri_events.3.a #
+		add_country_modifier = {
+			name = "tengri_settled_warriors"
+			duration = 3650
+		}
+	}
+	option = {
+		name = tengri_events.3.b #
+		add_stability = -1
+	}
+}
+
+#Our Brothers in X
+country_event = {
+	id = tengri_events.4
+	title = tengri_events.4.t
+	desc = tengri_events.4.d
+	picture = RELIGIOUS_MIGRANTS_eventPicture
+	
+	trigger = {
+		religion = dremora_pantheon
+		has_secondary_religion = yes
+		has_dlc = "The Cossacks"
+		any_neighbor_country = {
+			religion = secondary
+			NOT = {
+				has_opinion_modifier = {
+					modifier = tengri_closer_ties
+					who = ROOT
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 360
+	}
+	
+	option = {
+		name = tengri_events.4.a #
+		every_neighbor_country = {
+			limit = {
+				religion = secondary
+				NOT = {
+					has_opinion_modifier = {
+						modifier = tengri_closer_ties
+						who = ROOT
+					}
+				}
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = tengri_closer_ties
+			}
+		}
+	}
+}
+
+#Conflicting Ideals
+country_event = {
+	id = tengri_events.5
+	title = tengri_events.5.t
+	desc = tengri_events.5.d
+	picture = ANGRY_SHAMANS_eventPicture
+	
+	trigger = {
+		has_dlc = "The Cossacks"
+		religion = dremora_pantheon
+		has_secondary_religion = yes
+		NOT = {
+			has_country_modifier = tengri_shamans_spurned
+		}
+		any_owned_province = {
+			religion = secondary
+			NOT = { has_province_modifier = tengri_local_plight }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 400
+	}
+	
+	option = {
+		name = tengri_events.5.a #We need the Shamans.
+		random_owned_province = {
+			limit = {
+				religion = secondary
+				NOT = { has_province_modifier = tengri_local_plight }
+			}
+			area = {
+				limit = {
+					owned_by = ROOT
+					NOT = { religion = dremora_pantheon }
+				}
+				add_province_modifier = {
+				name = "tengri_local_plight"
+				duration = 3650
+				}
+			}
+		}
+	}
+	option = {
+		name = tengri_events.5.b #Follow the wishes of the locals.
+		add_country_modifier = {
+			name = "tengri_shamans_spurned"
+			duration = 3650
+		}
+	}
+}
+
+#Religious Migration
+country_event = {
+	id = tengri_events.6
+	title = tengri_events.6.t
+	desc = tengri_events.6.d
+	picture = RELIGIOUS_MIGRANTS_eventPicture
+	
+	trigger = {
+		has_dlc = "The Cossacks"
+		religion = dremora_pantheon
+		has_secondary_religion = yes
+		any_owned_province = {
+			NOT = { has_province_modifier = tengri_religious_influx }
+			OR = {
+				religion = secondary
+				any_neighbor_province = {
+					religion = secondary
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 500
+	}
+	
+	option = {
+		name = tengri_events.6.a #Encourage them to settle among their peers.
+		trigger = {
+			any_owned_province = {
+				religion = secondary
+				NOT = { has_province_modifier = tengri_religious_influx }
+			}
+		}
+		random_owned_province = {
+			limit = {
+				religion = secondary
+				NOT = { has_province_modifier = tengri_religious_influx }
+			}
+			add_base_tax = 1
+		}
+	}
+	option = {
+		name = tengri_events.6.b #Send them out into the provinces.
+		trigger = {
+			any_owned_province = {
+				NOT = { religion = secondary }
+				NOT = { has_province_modifier = tengri_religious_influx }
+				any_neighbor_province = {
+					religion = secondary
+				}
+			}
+		}
+		random_owned_province = {
+			limit = {
+				NOT = { religion = secondary }
+				NOT = { has_province_modifier = tengri_religious_influx }
+				any_neighbor_province = {
+					religion = secondary
+				}
+			}
+			change_to_secondary_religion = yes
+			add_province_modifier = {
+				name = "tengri_religious_influx"
+				duration = 7300
+			}
+		}
+	}
+}
+
+#Conversion of XXXX
+province_event = {
+	id = tengri_events.7
+	title = tengri_events.7.t
+	desc = tengri_events.7.d
+	picture = SENCRATIC_ALTER_eventPicture
+	
+	is_mtth_scaled_to_size = 1
+	
+	trigger = {
+		has_dlc = "The Cossacks"
+		religion = dremora_pantheon
+		owner = {
+			has_secondary_religion = yes
+			religion = dremora_pantheon
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 500
+		modifier = {
+			factor = 0.35
+			has_province_modifier = tengri_influx_of_monks
+		}
+		modifier = {
+			factor = 0.7
+			has_province_modifier = hindufication
+		}
+		modifier = {
+			factor = 0.7
+			NOT = { has_province_modifier = tengri_influx_of_monks }
+			owner = { has_country_modifier = tengri_monks_in_capital }
+		}
+	}
+	
+	option = {
+		name = tengri_events.7.a #Ok.
+		change_to_secondary_religion = yes
+	}
+}
+
+#Religious Unrest
+country_event = {
+	id = tengri_events.8
+	title = tengri_events.8.t
+	desc = tengri_events.8.d
+	picture = ANGRY_SHAMANS_eventPicture
+	
+	trigger = {
+		has_dlc = "The Cossacks"
+		religion = dremora_pantheon
+		has_secondary_religion = yes
+		dominant_religion = secondary
+		OR = {
+			NOT = { has_country_flag = tengri_religion_coup }
+			had_country_flag = { flag = tengri_religion_coup days = 21900 }
+		}
+	}
+	
+	immediate = {
+		set_country_flag = tengri_religion_coup
+	}
+	
+	mean_time_to_happen = {
+		months = 500
+	}
+	
+	option = {
+		name = tengri_events.8.a #Embrace religion X
+		ai_chance = {
+			factor = 90
+		}
+		change_to_secondary_religion = yes
+	}
+	option = {
+		name = tengri_events.8.b #"No."
+		ai_chance = {
+			factor = 10
+		}
+		add_stability = -3
+	}
+}
+
+#Religion and Religion Group Specific
+#Distant religions have fewer and more fictionally based events.
+#Religions with just 1 event only get a positive one and will rely on the ones above for variation.
+
+#Islam as favored religion
+
+#Ibadi
+#Patronize Religious Scholars
+country_event = {
+	id = tengri_events.9
+	title = tengri_events.9.t
+	desc = tengri_events.9.d
+	picture = MIRACLE_MONK_eventPicture
+	
+	trigger = {
+		has_dlc = "The Cossacks"
+		religion = dremora_pantheon
+		has_secondary_religion = yes
+		secondary_religion = nordic_pantheon
+		NOT = { has_country_modifier = tengri_ibadi_scholars }
+	}
+	
+	mean_time_to_happen = {
+		months = 500
+	}
+	
+	option = {
+		name = tengri_events.9.a #We must support this trend.
+		add_adm_power = -50
+		add_country_modifier = {
+			name = "tengri_ibadi_scholars"
+			duration = 7300
+		}
+	}
+	option = {
+		name = tengri_events.9.b #This does not concern the Khan.
+		add_prestige = 10
+	}
+}
+
+#Travelling Sufi
+country_event = {
+	id = tengri_events.10
+	title = tengri_events.10.t
+	desc = tengri_events.10.d
+	picture = MIRACLE_MONK_eventPicture
+	
+	trigger = {
+		has_dlc = "The Cossacks"
+		religion = dremora_pantheon
+		has_secondary_religion = yes
+		num_of_cities = 10
+		secondary_religion = old_gods_cult
+		NOT = {
+			has_country_modifier = tengri_sufi_teacher
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 460
+	}
+	
+	option = {
+		name = tengri_events.10.a #
+		random_owned_province = {
+			limit = {
+				NOT = { religion = secondary }
+			}
+			change_to_secondary_religion = yes
+		}
+		random_owned_province = {
+			limit = {
+				NOT = { religion = secondary }
+			}
+			change_to_secondary_religion = yes
+		}
+		add_country_modifier = {
+			name = "tengri_sufi_teacher"
+			duration = 3650
+		}
+	}
+	option = {
+		name = tengri_events.10.b #Encourage a Sufi to settle in capital.
+		add_prestige = -10
+	}
+}
+
+#Learned Qadi
+country_event = {
+	id = tengri_events.11
+	title = tengri_events.11.t
+	desc = tengri_events.11.d
+	picture = MIRACLE_MONK_eventPicture
+	
+	trigger = {
+		has_dlc = "The Cossacks"
+		religion = dremora_pantheon
+		has_secondary_religion = yes
+		NOT = { has_reform = celestial_empire }
+		secondary_religion = old_gods_cult
+		NOT = { has_country_modifier = tengri_qadi }
+		NOT = { has_country_modifier = tengri_stood_up_for_yassa }
+		OR = {
+			AND = {
+				NOT = { legitimacy_or_horde_unity = 80 }
+				government = monarchy
+			}
+			AND = {
+				NOT = { devotion = 70 }
+				government = theocracy
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 460
+	}
+	
+	option = {
+		name = tengri_events.11.a #Allow him to stay.
+		add_country_modifier = {
+			name = tengri_qadi
+			duration = 3650
+		}
+	}
+	option = {
+		name = tengri_events.11.b #The laws of our ancestors will be enough for us.
+		add_prestige = -10
+		add_legitimacy = 10
+		add_horde_unity = 10
+		add_devotion = 5
+		add_republican_tradition = 5
+	}
+}
+
+#Ruler Questioned by the Ulema
+country_event = {
+	id = tengri_events.12
+	title = tengri_events.12.t
+	desc = tengri_events.12.d
+	picture = CHURCH_ESTATE_2_eventPicture
+	
+	trigger = {
+		has_dlc = "The Cossacks"
+		religion = dremora_pantheon
+		secondary_religion = old_gods_cult
+		num_of_owned_provinces_with = {
+			value = 8
+			religion = secondary
+		}
+		NOT = { has_ruler_modifier = tengri_devout_muslim }
+		NOT = { has_ruler_flag = tengri_muslim_ruler_questioned }
+	}
+	
+	immediate = {
+		set_ruler_flag = tengri_muslim_ruler_questioned
+	}
+	
+	mean_time_to_happen = {
+		months = 600
+		modifier = {
+			factor = 0.75
+			num_of_owned_provinces_with = {
+				value = 18
+				religion = secondary
+			}
+		}
+	}
+	
+	option = {
+		name = tengri_events.12.a #Take steps to remedy the situation.
+		ai_chance = {
+			factor = 10
+		}
+		add_ruler_modifier = {
+			name = "tengri_devout_muslim"
+		}
+	}
+	option = {
+		name = tengri_events.12.b #Our [Root.Religion.GetName] traditions must come first.
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 0
+				dominant_religion = secondary
+			}
+		}
+		add_legitimacy = 10
+		add_horde_unity = 10
+		add_devotion = 5
+		add_republican_tradition = 5
+		custom_tooltip = tengri_events.12.b.tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					religion = secondary
+				}
+				add_province_modifier = {
+					name = "tengri_ruler_questioned"
+					duration = 3650
+				}
+			}
+		}
+	}
+}
+
+#Incident at court
+country_event = {
+	id = tengri_events.13
+	title = tengri_events.13.t
+	desc = tengri_events.13.d
+	picture = ANGRY_SHAMANS_eventPicture
+	
+	trigger = {
+		has_dlc = "The Cossacks"
+		religion = dremora_pantheon
+		secondary_religion = old_gods_cult
+		any_owned_province = {
+			religion_group = elemental_group
+		}
+		NOT = { has_ruler_modifier = tengri_devout_muslim }
+	}
+	
+	mean_time_to_happen = {
+		months = 400
+	}
+	
+	option = {
+		name = tengri_events.13.a #Ok.
+		add_stability = -1
+	}
+}
+
+#Religious Warriors
+
+country_event = {
+	id = tengri_events.14
+	title = tengri_events.14.t
+	desc = tengri_events.14.d
+	picture = ANGRY_SHAMANS_eventPicture
+	
+	trigger = {
+		has_dlc = "The Cossacks"
+		religion = dremora_pantheon
+		secondary_religion = old_gods_cult
+		any_known_country = {
+			war_with = ROOT
+		}
+		NOT = { has_country_modifier = tengri_jihad }
+	}
+	
+	mean_time_to_happen = {
+		months = 360
+	}
+	
+	option = {
+		name = tengri_events.14.a #Ok.
+		add_country_modifier = {
+			name = "tengri_jihad"
+			duration = 3650
+		}
+	}
+}
+
+#Legal Battle in province
+country_event = {
+	id = tengri_events.15
+	title = tengri_events.15.t
+	desc = tengri_events.15.d
+	picture = ANGRY_SHAMANS_eventPicture
+	
+	trigger = {
+		has_dlc = "The Cossacks"
+		religion = dremora_pantheon
+		secondary_religion = old_gods_cult
+		num_of_cities = 5
+	}
+	
+	mean_time_to_happen = {
+		months = 400
+	}
+	
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				set_province_flag = tengri_city_vs_muslims_conflict
+			}
+		}
+	}
+	
+	option = {
+		name = tengri_events.15.a #Appoint a Muslim judge to the case.
+		ai_chance = {
+			factor = 10
+		}
+		random_owned_province = {
+			limit = { has_province_flag = tengri_city_vs_muslims_conflict }
+			area = {
+				limit = { owned_by = ROOT }
+				add_province_modifier = {
+					name = "tengri_growing_cities"
+					duration = 7300
+				}
+				add_unrest = 3
+			}
+			random = {
+				chance = 75
+				spawn_rebels = {
+					type = noble_rebels
+					size = 1
+				}
+			}
+		}
+	}
+	option = {
+		name = tengri_events.15.b #Appoint someone to judge according to our traditions.
+		ai_chance = {
+			factor = 90
+		}
+		random_owned_province = {
+			limit = { has_province_flag = tengri_city_vs_muslims_conflict }
+			area = {
+				limit = { owned_by = ROOT }
+				add_province_modifier = {
+				name = "tengri_strengthened_local_clans"
+				duration = 7300
+				}
+				add_unrest = 3
+			}
+			random = {
+				chance = 75
+				spawn_rebels = {
+					type = anti_tax_rebels
+					size = 1
+				}
+			}
+		}
+	}
+}
+
+#Buddhist Events
+#Vajrayana:
+
+#Influx of Monks
+country_event = {
+	id = tengri_events.20
+	title = tengri_events.20.t
+	desc = tengri_events.20.d
+	picture = MIRACLE_MONK_eventPicture
+	
+	trigger = {
+		has_dlc = "The Cossacks"
+		religion = dremora_pantheon
+		secondary_religion = hist
+		NOT = { has_country_modifier = tengri_monks_in_capital }
+		any_owned_province = {
+			NOT = { religion = hist }
+			NOT = { has_province_modifier = tengri_influx_of_monks }
+			NOT = { is_capital = yes }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 360
+	}
+	
+	option = {
+		name = tengri_events.20.a #Allow them to travel freely.
+		random_owned_province = {
+			limit = {
+				NOT = { religion = hist }
+				NOT = { has_province_modifier = tengri_influx_of_monks }
+				NOT = { is_capital = yes }
+			}
+			area = {
+				limit = { owned_by = ROOT }
+				add_province_modifier = {
+					name = "tengri_influx_of_monks" #increases chances of event 7
+					duration = 3650
+				}
+			}
+		}
+		custom_tooltip = tengri_events.20.a.tt
+	}
+	option = {
+		name = tengri_events.20.b #Confine them to [Root.Capital.GetCapitalName].
+		add_country_modifier = {
+			name = "tengri_monks_in_capital" #increases chances of event 7
+			duration = 3650
+		}
+		custom_tooltip = tengri_events.20.b.tt
+	}
+	option = {
+		name = tengri_events.20.c #Turn these monks away.
+		add_prestige = -5
+		every_neighbor_country = {
+			limit = {
+				religion = hist
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = tengri_turned_away_monks
+			}
+		}
+	}
+}
+
+#Translation of Religious Texts
+country_event = {
+	id = tengri_events.21
+	title = tengri_events.21.t
+	desc = tengri_events.21.d
+	picture = SENCRATIC_ALTER_eventPicture
+	
+	trigger = {
+		has_dlc = "The Cossacks"
+		religion = dremora_pantheon
+		secondary_religion = hist
+		any_known_country = {
+			religion = hist
+			tech_difference = 3
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 360
+	}
+	
+	option = {
+		name = tengri_events.21.a #Welcome the dissemination of these books.
+		ai_chance = {
+			factor = 75
+			modifier = {
+				factor = 0
+				NOT = {
+					legitimacy_or_horde_unity = 70
+				}
+			}
+		}
+		add_adm_power = 25
+	}
+	option = {
+		name = tengri_events.21.b #Attempt to limit the spread of Buddhist literature.
+		ai_chance = {
+			factor = 25
+		}
+		add_mandate_effect = yes
+		add_legitimacy = 5
+		add_horde_unity = 5
+		add_devotion = 3
+		add_republican_tradition = 3
+	}
+}
+
+#Shaman Defeated in X
+province_event = {
+	id = tengri_events.22
+	title = tengri_events.22.t
+	desc = tengri_events.22.d
+	picture = ANGRY_SHAMANS_eventPicture
+	
+	trigger = {
+		has_dlc = "The Cossacks"
+		religion = dremora_pantheon
+		is_capital = no
+		owner = {
+			secondary_religion = hist
+			religion = dremora_pantheon
+		}
+	}
+	
+	is_mtth_scaled_to_size = 1
+	
+	mean_time_to_happen = {
+		months = 460
+		modifier = {
+			factor = 0.9
+			owner = { has_country_modifier = tengri_monks_in_capital }
+		}
+	}
+	
+	option = {
+		name = tengri_events.22.a #Great.
+		change_religion = hist
+	}
+	option = {
+		name = tengri_events.22.b #Depose the noble.
+		spawn_rebels = {
+			type = noble_rebels
+			size = 1
+			win = yes
+		}
+	}
+}
+
+#Burning of Idols
+province_event = {
+	id = tengri_events.23
+	title = tengri_events.23.t
+	desc = tengri_events.23.d
+	picture = ANGRY_SHAMANS_eventPicture
+	
+	is_mtth_scaled_to_size = 1
+	
+	trigger = {
+		has_dlc = "The Cossacks"
+		NOT = { religion = hist }
+		NOT = { is_capital = yes }
+		owner = {
+			secondary_religion = hist
+			religion = hist
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 360
+		
+	}
+	
+	option = {
+		name = tengri_events.23.a #Ok.
+		spawn_rebels = {
+			type = dremora_pantheon_rebels
+			size = 1
+		}
+	}
+}
+
+#Religious Pilgrimages
+country_event = {
+	id = tengri_events.24
+	title = tengri_events.24.t
+	desc = tengri_events.24.d
+	picture = RELIGIOUS_MIGRANTS_eventPicture
+	
+	trigger = {
+		has_dlc = "The Cossacks"
+		religion = dremora_pantheon
+		secondary_religion = hist
+		NOT = { has_country_modifier = tengri_religious_pilgrimages }
+	}
+	
+	mean_time_to_happen = {
+		months = 400
+	}
+	
+	option = {
+		name = tengri_events.24.a #Great!
+		add_country_modifier = {
+			name = "tengri_religious_pilgrimages"
+			duration = 3650
+		}
+	}
+}
+
+#Theravada and Mahayana
+#Land Theft - Tengri vs Buddhist Law
+#Theravada and Mahayana
+country_event = {
+	id = tengri_events.25
+	title = tengri_events.25.t
+	desc = tengri_events.25.d
+	picture = ANGRY_SHAMANS_eventPicture
+	
+	trigger = {
+		has_dlc = "The Cossacks"
+		religion = dremora_pantheon
+		OR = {
+			secondary_religion = altmeri_pantheon #Theravada
+			secondary_religion = snow_elves_pantheon
+		}
+		any_owned_province = {
+			NOT = { has_province_modifier = tengri_monastic_order }
+			NOT = { religion = altmeri_pantheon } #Theravada
+			NOT = { religion = snow_elves_pantheon }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 360
+	}
+	
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					NOT = { has_province_flag = monastic_order_tengri }
+					NOT = { has_province_modifier = tengri_monastic_order }
+					NOT = { religion = altmeri_pantheon } #Theravada
+					NOT = { religion = snow_elves_pantheon }
+				}
+				set_province_flag = monastic_order_tengri
+			}
+		}
+	}
+	
+	option = {
+		name = tengri_events.25.a #We must support the Monastic Orders
+		add_stability = -1
+		random_owned_province = {
+			limit = {
+				has_province_flag = monastic_order_tengri
+			}
+			clr_province_flag = monastic_order_tengri
+			area = {
+				limit = { owned_by = ROOT }
+				add_province_modifier = {
+					name = "tengri_monastic_order"
+					duration = 3650
+				}
+			}
+		}
+	}
+	option = {
+		name = tengri_events.25.b #We must protect traditional rights
+		add_legitimacy = 5
+		add_horde_unity = 5
+		add_devotion = 3
+		add_republican_tradition = 3
+	}
+}
+
+#Pali Legal Tradition
+#Theravada
+country_event = {
+	id = tengri_events.26
+	title = tengri_events.26.t
+	desc = tengri_events.26.d
+	picture = SENCRATIC_ALTER_eventPicture
+	
+	trigger = {
+		has_dlc = "The Cossacks"
+		religion = dremora_pantheon
+		secondary_religion = altmeri_pantheon #Theravada
+		NOT = { has_country_modifier = tengri_pali_legal_traditions }
+	}
+	
+	mean_time_to_happen = {
+		months = 360
+	}
+	
+	option = {
+		name = tengri_events.26.a #Allow the Scholars to Continue
+		add_legitimacy = -5
+		add_horde_unity = -5
+		add_devotion = -5
+		add_republican_tradition = -5
+		add_country_modifier = {
+			name = "tengri_pali_legal_traditions"
+			duration = 3650
+		}
+	}
+	option = {
+		name = tengri_events.26.b #The Yassa is enough for us.
+		add_legitimacy = 5
+		add_horde_unity = 5
+		add_devotion = 3
+		add_republican_tradition = 3
+	}
+}
+
+#Spread of Pure Land Buddhism
+#Mahayana
+country_event = {
+	id = tengri_events.27
+	title = tengri_events.27.t
+	desc = tengri_events.27.d
+	picture = RELIGIOUS_MIGRANTS_eventPicture
+	
+	trigger = {
+		has_dlc = "The Cossacks"
+		religion = dremora_pantheon
+		secondary_religion = snow_elves_pantheon
+		any_owned_province = {
+			NOT = { religion = secondary }
+			OR = {
+				religion = dremora_pantheon
+				any_neighbor_province = {
+					religion = secondary
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 400
+	}
+	
+	option = {
+		name = tengri_events.27.a #Amitābhāya
+		random_owned_province = {
+			limit = {
+				NOT = { religion = secondary }
+				OR = {
+					religion = dremora_pantheon
+					any_neighbor_province = {
+						religion = secondary
+					}
+				}
+			}
+			change_religion = snow_elves_pantheon
+			add_base_tax = 1
+			add_permanent_province_modifier = {
+				name = "religious_zeal_at_conv"
+				duration = 4500
+			}
+		}
+	}
+}
+
+
+
+#Confucianism
+#Events to boost the land and those that rule it.
+
+#Spread of Confucian Ideals
+
+country_event = {
+	id = tengri_events.30
+	title = tengri_events.30.t
+	desc = tengri_events.30.d
+	picture = SENCRATIC_ALTER_eventPicture
+	
+	trigger = {
+		has_dlc = "The Cossacks"
+		religion = dremora_pantheon
+		secondary_religion = po_tun_pantheon
+		is_at_war = no
+		NOT = { has_country_modifier = tengri_confucian_nobles }
+	}
+	
+	mean_time_to_happen = {
+		months = 450
+	}
+	
+	option = {
+		name = tengri_events.30.a #
+		add_country_modifier = {
+			name = "tengri_confucian_nobles"
+			duration = 3650
+		}
+	}
+	option = {
+		name = tengri_events.30.b #
+		add_stability_or_adm_power = yes
+	}
+	option = {
+		name = tengri_events.30.c #
+		random_owned_province = {
+			limit = {
+				controlled_by = ROOT
+			}
+			add_base_tax = 1
+			add_base_production = 1
+		}
+	}
+}
+
+#The Khan and the Beiles
+country_event = {
+	id = tengri_events.31
+	title = tengri_events.31.t
+	desc = tengri_events.31.d
+	picture = FAT_WARRIORS_eventPicture
+	
+	trigger = {
+		has_dlc = "The Cossacks"
+		religion = dremora_pantheon
+		secondary_religion = po_tun_pantheon
+		NOT = { has_country_modifier = tengri_traditionalists_strengthened }
+		NOT = { has_country_modifier = tengri_confucian_titles }
+	}
+	
+	mean_time_to_happen = {
+		months = 400
+		modifier = {
+			factor = 0.95
+			has_country_modifier = tengri_confucian_nobles
+		}
+	}
+	
+	option = {
+		name = tengri_events.31.a #
+		add_adm_power = -25
+		add_country_modifier = {
+			name = "tengri_traditionalists_strengthened"
+			duration = 3650
+		}
+	}
+	option = {
+		name = tengri_events.31.b #
+		add_mil_power = -25
+		add_country_modifier = {
+			name = "tengri_confucian_titles"
+			duration = 3650
+		}
+	}
+}
+
+#Confucian Elites Alienated
+country_event = {
+	id = tengri_events.32
+	title = tengri_events.32.t
+	desc = tengri_events.32.d
+	picture = ANGRY_SHAMANS_eventPicture
+	
+	trigger = {
+		has_dlc = "The Cossacks"
+		religion = dremora_pantheon
+		secondary_religion = po_tun_pantheon
+		NOT = { has_country_modifier = tengri_confucian_elites_alienated }
+		NOT = { has_country_modifier = tengri_traditional_elites_alienated }
+	}
+	
+	mean_time_to_happen = {
+		months = 400
+	}
+	
+	option = {
+		name = tengri_events.32.a #Praise the heavens!
+		add_country_modifier = {
+			name = "tengri_confucian_elites_alienated"
+			duration = 3650
+		}
+	}
+	option = {
+		name = tengri_events.32.b #Let us limit these rituals.
+		add_country_modifier = {
+			name = "tengri_traditional_elites_alienated"
+			duration = 3650
+		}
+	}
+}
+
+
+#Education of ****
+country_event = {
+	id = tengri_events.33
+	title = tengri_events.33.t
+	desc = tengri_events.33.d
+	picture = SENCRATIC_ALTER_eventPicture
+	
+	trigger = {
+		has_dlc = "The Cossacks"
+		religion = dremora_pantheon
+		secondary_religion = po_tun_pantheon
+		NOT = { heir_adm = 5 }
+		NOT = { heir_mil = 5 }
+		heir_age = 6
+		NOT = { heir_age = 15 }
+		NOT = { has_ruler_flag = tengri_confucian_heir_education }
+	}
+	
+	mean_time_to_happen = {
+		months = 160 #OBS tweak
+	}
+	
+	option = {
+		name = tengri_events.33.a #Let us ensure a Confucian Education 
+		add_adm_power = -40
+		change_heir_adm = 1
+		set_ruler_flag = tengri_confucian_heir_education
+	}
+	option = {
+		name = tengri_events.33.b #X must recieve a traditional education
+		add_mil_power = -40
+		change_heir_mil = 1
+		set_ruler_flag = tengri_confucian_heir_education
+	}
+	option = {
+		name = tengri_events.33.c #We have more important matters to attend to.
+		add_prestige = -5
+		set_ruler_flag = tengri_confucian_heir_education
+	}
+}
+
+#Imperial Examinations
+country_event = {
+	id = tengri_events.34
+	title = tengri_events.34.t
+	desc = tengri_events.34.d
+	picture = SENCRATIC_ALTER_eventPicture
+	
+	trigger = {
+		has_dlc = "The Cossacks"
+		religion = dremora_pantheon
+		secondary_religion = po_tun_pantheon
+		overextension_percentage = 0.25
+		num_of_cities = 15
+		NOT = { has_country_modifier = tengri_confucian_administrators }
+		any_known_country = {
+			religion = po_tun_pantheon
+			is_free_or_tributary_trigger = yes
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 320
+		modifier = {
+			factor = 0.9
+			any_neighbor_country = {
+				religion = po_tun_pantheon
+			}
+		}
+	}
+	
+	option = {
+		name = tengri_events.34.a #
+		add_years_of_income = -0.5
+		add_country_modifier = {
+			name = "tengri_confucian_administrators"
+			duration = 3650
+		}
+	}
+	option = {
+		name = tengri_events.34.b #
+		add_prestige = 5
+	}
+}
+
+#Shinto
+
+# Spread of the Tea Ceremonies 
+country_event = {
+	id = tengri_events.35
+	title = tengri_events.35.t
+	desc = tengri_events.35.d
+	picture = SENCRATIC_ALTER_eventPicture
+	
+	trigger = {
+		has_dlc = "The Cossacks"
+		religion = dremora_pantheon
+		secondary_religion = tsaesci_pantheon
+		NOT = {
+			has_ruler_modifier = "tengri_tea_ceremony"
+		}
+		NOT = {
+			has_ruler_modifier = "spread_of_tengri_tea_ceremony"
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 360
+	}
+	
+	option = {
+		name = tengri_events.35.a #Our courtly culture will never be the same.
+		every_known_country = {
+			limit = {
+				religion = tsaesci_pantheon
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_tengri_tea_ceremony
+			}
+		}
+		add_ruler_modifier = {
+			name = tengri_tea_ceremony
+		}
+	}
+	option = {
+		name = tengri_events.35.b #Encourage the spread of the Way of Tea.
+		add_ruler_modifier = {
+			name = spread_of_tengri_tea_ceremony
+		}
+	}
+}
+
+#Losing Face
+country_event = {
+	id = tengri_events.36
+	title = tengri_events.36.t
+	desc = tengri_events.36.d
+	picture = SENCRATIC_ALTER_eventPicture
+	
+	trigger = {
+		has_dlc = "The Cossacks"
+		religion = dremora_pantheon
+		secondary_religion = tsaesci_pantheon
+	}
+	
+	mean_time_to_happen = {
+		months = 460
+	}
+	
+	option = {
+		name = tengri_events.36.a #
+		add_prestige = -10
+	}
+	option = {
+		name = tengri_events.36.b #
+		add_horde_unity = -10
+		add_legitimacy = -10
+		add_devotion = -5
+		add_republican_tradition = -5
+	}
+}
+
+#Japanese Swordsmithing
+country_event = {
+	id = tengri_events.37
+	title = tengri_events.37.t
+	desc = tengri_events.37.d
+	picture = SENCRATIC_ALTER_eventPicture
+	
+	trigger = {
+		has_dlc = "The Cossacks"
+		religion = dremora_pantheon
+		secondary_religion = tsaesci_pantheon
+		NOT = { has_country_modifier = "tengri_japanese_swordsmithing" }
+		NOT = { has_country_modifier = "tengri_bow_and_arrow_defended" }
+		any_owned_province = {
+			trade_goods = iron
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 360
+	}
+	
+	option = {
+		name = tengri_events.37.a #Encourage our elites to use these swords.
+		add_stability = -1
+		add_country_modifier = {
+			name = "tengri_japanese_swordsmithing"
+			duration = 3650
+		}
+	}
+	option = {
+		name = tengri_events.37.b #Bow and arrow are the weapons of a true Tengri Warrior.
+		add_prestige = -15
+		add_country_modifier = {
+			name = "tengri_bow_and_arrow_defended"
+			duration = 3650
+		}
+	}
+}
+
+#Christianity
+
+#Coptic
+country_event = {
+	id = tengri_events.38
+	title = tengri_events.38.t
+	desc = tengri_events.38.d
+	picture = SENCRATIC_ALTER_eventPicture
+	
+	trigger = {
+		has_dlc = "The Cossacks"
+		religion = dremora_pantheon
+		secondary_religion = reason_and_logic_cult
+		any_owned_province = {
+			NOT = { is_core = owner }
+			NOT = { has_construction = core }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 400
+	}
+	
+	option = {
+		name = tengri_events.38.a #
+		add_horde_unity = -10
+		add_legitimacy = -10
+		add_devotion = -5
+		add_republican_tradition = -5
+		random_owned_province = {
+			limit = {
+				NOT = { is_core = owner }
+				NOT = { has_construction = core }
+			}
+			change_religion = reason_and_logic_cult
+			add_core = owner
+		}
+	}
+	option = {
+		name = tengri_events.38.b #
+		add_legitimacy = 5
+		add_horde_unity = 5
+		add_devotion = 3
+		add_republican_tradition = 3
+	}
+}
+
+#Catholic
+country_event = {
+	id = tengri_events.39
+	title = tengri_events.39.t
+	desc = tengri_events.39.d
+	picture = SENCRATIC_ALTER_eventPicture
+	
+	trigger = {
+		has_dlc = "The Cossacks"
+		religion = dremora_pantheon
+		secondary_religion = chimer_pantheon
+		exists = RED
+		NOT = { war_with = RED }
+	}
+	
+	mean_time_to_happen = {
+		months = 460
+	}
+	
+	option = {
+		name = tengri_events.39.a #Send these spies back home.
+		ai_chance = {
+			factor = 1
+		}
+		add_prestige = 10
+		RED = {
+			add_opinion = {
+				who = ROOT
+				modifier = tengri_pope_spurned
+			}
+		}
+	}
+	option = {
+		name = tengri_events.39.b #Profess loyalty to Rome
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { horde_unity = 50 }
+			}
+		}
+		add_adm_power = 15
+		add_dip_power = 15
+		add_mil_power = 15
+		add_horde_unity = -35
+	}
+}
+
+#Healing the Sick / Miracle
+country_event = {
+	id = tengri_events.44
+	title = tengri_events.44.t
+	desc = tengri_events.44.d
+	picture = MIRACLE_MONK_eventPicture
+	
+	trigger = {
+		has_dlc = "The Cossacks"
+		religion = dremora_pantheon
+		NOT = { stability = 3 }
+	}
+	
+	mean_time_to_happen = {
+		months = 360
+	}
+	
+	option = {
+		name = tengri_events.44.a #Let him roam freely.
+		random_owned_province = {
+			limit = {
+				religion = dremora_pantheon
+			}
+			change_to_secondary_religion = yes
+		}
+		add_stability_or_adm_power = yes
+	}
+	option = {
+		name = tengri_events.44.b #Invite him to court.
+		trigger = {
+			government = monarchy
+			has_ruler_modifier = tengri_devout_christian_ruler
+		}
+		add_horde_unity = -10
+		add_legitimacy = -10
+		add_devotion = -5
+		add_republican_tradition = -5
+		add_ruler_modifier = {
+			name = "tengri_personal_confessor"
+		}
+	}
+}
+
+#The Life of X
+country_event = {
+	id = tengri_events.45
+	title = tengri_events.45.t
+	desc = tengri_events.45.d
+	picture = ANGRY_SHAMANS_eventPicture
+	
+	trigger = {
+		has_dlc = "The Cossacks"
+		religion = dremora_pantheon
+		is_female = no
+		dominant_religion = secondary
+		OR = {
+			NOT = { has_country_flag = tengri_christian_devout_court }
+			had_country_flag = { flag = tengri_christian_devout_court days = 26280 }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 560
+	}
+	
+	option = {
+		name = tengri_events.45.a #It is time for a Christian court!
+		ai_chance = {
+			factor = 95
+		}
+		add_ruler_modifier = {
+			name = "tengri_devout_christian_ruler"
+		}
+	}
+	option = {
+		name = tengri_events.45.b # Let the religions coexist, side by side.
+		ai_chance = {
+			factor = 5
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					religion = secondary
+				}
+				add_province_modifier = {
+					name = "tengri_unchristian_values"
+					duration = 3650
+				}
+			}
+		}
+		custom_tooltip = tengri_events.45.b.tt
+	}
+}
+
+#Hinduism
+
+#Brahmans in conflict with Shamans
+country_event = {
+	id = tengri_events.46
+	title = tengri_events.46.t
+	desc = tengri_events.46.d
+	picture = ANGRY_SHAMANS_eventPicture
+	
+	trigger = {
+		has_dlc = "The Cossacks"
+		religion = dremora_pantheon
+		secondary_religion = tang_mo_pantheon
+		NOT = { has_country_modifier = tengri_support_of_brahmins }
+		NOT = { has_country_modifier = tengri_support_of_shamans }
+		NOT = { has_country_modifier = tengri_hindu_conflict }
+	}
+	
+	mean_time_to_happen = {
+		months = 360
+	}
+	
+	option = {
+		name = tengri_events.46.a #
+		add_country_modifier = {
+			name = "tengri_support_of_brahmins"
+			duration = 3650
+		}
+	}
+	option = {
+		name = tengri_events.46.b #
+		add_country_modifier = {
+			name = "tengri_support_of_shamans"
+			duration = 3650
+		}
+	}
+	option = {
+		name = tengri_events.46.c #
+		add_country_modifier = {
+			name = "tengri_hindu_conflict"
+			duration = 3650
+		}
+	}
+}
+
+#Syncretism
+country_event = {
+	id = tengri_events.47
+	title = tengri_events.47.t
+	desc = tengri_events.47.d
+	picture = SENCRATIC_ALTER_eventPicture
+	
+	trigger = {
+		has_dlc = "The Cossacks"
+		religion = dremora_pantheon
+		secondary_religion = tang_mo_pantheon
+		NOT = { has_country_modifier = tengri_hindu_syncretism }
+	}
+	
+	mean_time_to_happen = {
+		months = 360
+	}
+	
+	option = {
+		name = tengri_events.47.a #
+		add_country_modifier = {
+			name = "tengri_hindu_syncretism"
+			duration = 7300
+		}
+	}
+}
+
+#Spread of the Caste System
+province_event = {
+	id = tengri_events.48
+	title = tengri_events.48.t
+	desc = tengri_events.48.d
+	picture = SENCRATIC_ALTER_eventPicture
+	
+	is_mtth_scaled_to_size = 1
+	
+	trigger = {
+		has_dlc = "The Cossacks"
+		religion = dremora_pantheon
+		NOT = { has_province_modifier = hindufication }
+		owner = {
+			religion = dremora_pantheon
+			secondary_religion = tang_mo_pantheon
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 360
+	}
+	
+	option = {
+		name = tengri_events.48.a #
+		add_province_modifier = {
+			name = "hindufication"
+			duration = 3650
+		}
+	}
+}
+
+#Judaism
+
+#A Jewish Homeland?
+country_event = {
+	id = tengri_events.49
+	title = tengri_events.49.t
+	desc = tengri_events.49.d
+	picture = RELIGIOUS_MIGRANTS_eventPicture
+	
+	
+	trigger = {
+		has_dlc = "The Cossacks"
+		religion = dremora_pantheon
+		secondary_religion = sload_faith
+	}
+	
+	mean_time_to_happen = {
+		months = 400
+	}
+	
+	option = { #2 discounted advisors
+		name = tengri_events.49.a #Let them serve as administrators!
+		add_meritocracy_effect = yes
+		define_advisor = {
+			type = master_of_mint
+			religion = sload_faith
+			skill = 2
+			discount = yes
+		}
+		define_advisor = {
+			type = treasurer
+			religion = sload_faith
+			skill = 3
+			discount = yes
+		}
+	}
+	option = {
+		name = tengri_events.49.b #Let them serve as soldiers!
+		add_yearly_manpower = 1.5
+	}
+}
+
+#Zoroastrianism
+
+#Like sugar in milk
+country_event = {
+	id = tengri_events.50
+	title = tengri_events.50.t
+	desc = tengri_events.50.d
+	picture = RELIGIOUS_MIGRANTS_eventPicture
+	
+	
+	trigger = {
+		has_dlc = "The Cossacks"
+		religion = dremora_pantheon
+		secondary_religion = tribunal_pantheon
+		NOT = { has_country_modifier = zoroastrian_traders }
+	}
+	
+	mean_time_to_happen = {
+		months = 400
+	}
+	
+	option = {
+		name = tengri_events.50.a #
+		add_country_modifier = {
+			name = "zoroastrian_traders"
+			duration = 7300
+		}
+	}
+	option = {
+		name = tengri_events.50.b #
+		random_owned_province = {
+			limit = { 
+				is_capital = no
+				NOT = { religion = tribunal_pantheon }
+			}
+			change_religion =  tribunal_pantheon
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+	}
+}
+
+#Growing Pantheon
+country_event = {
+	id = tengri_events.51
+	title = tengri_events.51.t
+	desc = tengri_events.51.d
+	picture = SENCRATIC_ALTER_eventPicture
+	
+	
+	trigger = {
+		has_dlc = "The Cossacks"
+		religion = dremora_pantheon
+		secondary_religion = reclamations_pantheon
+		NOT = { has_country_modifier = tengri_animist_pantheon }
+	}
+	
+	mean_time_to_happen = {
+		months = 360
+	}
+	
+	option = {
+		name = tengri_events.51.a #Great
+		add_country_modifier = {
+			name = "tengri_animist_pantheon"
+			duration = 3650
+		}
+	}
+}
+
+
+#Support of the Shamans
+country_event = {
+	id = tengri_events.52
+	title = tengri_events.52.t
+	desc = tengri_events.52.d
+	picture = ANGRY_SHAMANS_eventPicture
+	
+	
+	trigger = {
+		has_dlc = "The Cossacks"
+		religion = dremora_pantheon
+		OR = {
+			secondary_religion = khajiiti_pantheon
+			secondary_religion = kothri_pantheon
+		}
+		
+		OR = {
+			AND = {
+				NOT = { stability = 3 }
+				is_at_war = no
+			}
+			AND = {
+				war_exhaustion = 1
+				is_at_war = yes
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 360
+	}
+	
+	option = {
+		name = tengri_events.52.a #The Gods favor our wars
+		trigger = { is_at_war = yes }
+		add_war_exhaustion = -2
+	}
+	option = {
+		name = tengri_events.52.b #The Gods will bless this peace
+		trigger = { is_at_war = no }
+		add_stability_or_adm_power = yes
+	}
+}
+
+#Flower Wars
+#Generally Benificial Event. Option 1 only rarely viable.
+country_event = {
+	id = tengri_events.53
+	title = tengri_events.53.t
+	desc = tengri_events.53.d
+	picture = ANGRY_SHAMANS_eventPicture
+	
+	
+	trigger = {
+		has_dlc = "The Cossacks"
+		religion = dremora_pantheon
+		secondary_religion = serpant_king
+		vassal = 1
+	}
+	
+	immediate = {
+		hidden_effect = {
+			random_subject_country = {
+				set_country_flag = tengri_nahautl_raids
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 360
+	}
+	
+	option = {
+		name = tengri_events.53.a #
+		random_subject_country = {
+			add_opinion = {
+				who = ROOT
+				modifier = tengri_nahuatl_extradition
+			}
+			clr_country_flag = tengri_nahautl_raids
+		}
+	}
+	option = {
+		name = tengri_events.53.b #
+		add_army_tradition = 10
+		random_subject_country = {
+			add_opinion = {
+				who = ROOT
+				modifier = tengri_nahuatl_sacrifices
+			}
+			clr_country_flag = tengri_nahautl_raids
+		}
+	}
+}
+
+#Sumptuary Restrictions
+country_event = {
+	id = tengri_events.54
+	title = tengri_events.54.t
+	desc = tengri_events.54.d
+	picture = ANGRY_SHAMANS_eventPicture
+	
+	
+	trigger = {
+		has_dlc = "The Cossacks"
+		religion = dremora_pantheon
+		secondary_religion = serpant_king
+	}
+	
+	mean_time_to_happen = {
+		months = 360
+	}
+	
+	option = {
+		name = tengri_events.54.a #Side with the Merchant.
+		add_horde_unity = -10
+		add_legitimacy = -10
+		add_devotion = -5
+		add_republican_tradition = -5
+	}
+	option = {
+		name = tengri_events.54.b #Side with the Warriors.
+		add_prestige = -15
+	}
+}
+
+#Confiscation of Deities
+province_event = {
+	id = tengri_events.55
+	title = tengri_events.55.t
+	desc = tengri_events.55.d
+	picture = SENCRATIC_ALTER_eventPicture
+	
+	
+	trigger = {
+		has_dlc = "The Cossacks"
+		owner = {
+		religion = dremora_pantheon
+		secondary_religion = kamal_pantheon
+		}
+		NOT = { religion = dremora_pantheon }
+		NOT = { religion = kamal_pantheon }
+		nationalism = 5
+	}
+	
+	mean_time_to_happen = {
+		months = 360
+	}
+	
+	is_mtth_scaled_to_size = 1
+	
+	option = {
+		name = tengri_events.55.a #
+		add_nationalism = -8
+	}
+	option = {
+		name = tengri_events.55.b #
+		owner = {
+			add_prestige = 10
+		}
+	}
+}
+
+#Ball Games
+country_event = {
+	id = tengri_events.56
+	title = tengri_events.56.t
+	desc = tengri_events.56.d
+	picture = SENCRATIC_ALTER_eventPicture
+	
+	
+	trigger = {
+		has_dlc = "The Cossacks"
+		religion = dremora_pantheon
+		secondary_religion = tang_mo_pantheon
+	}
+	
+	mean_time_to_happen = {
+		months = 360
+	}
+	
+	option = {
+		name = tengri_events.56.a #For the gods
+		add_prestige = 10
+	}
+	option = {
+		name = tengri_events.56.b #For the people
+		add_legitimacy = 5
+		add_horde_unity = 5
+		add_devotion = 3
+		add_republican_tradition = 3
+	}
+}
+
+#New Bible Translation
+country_event = {
+	id = tengri_events.57
+	title = tengri_events.57.t
+	desc = tengri_events.57.d
+	picture = SENCRATIC_ALTER_eventPicture
+	
+	
+	trigger = {
+		has_dlc = "The Cossacks"
+		religion = dremora_pantheon
+		OR = {
+		secondary_religion = molog_bal_cult
+		secondary_religion = meridia_cult
+		secondary_religion = mehrunes_dagon_cult
+		secondary_religion = hermeus_mora_cult
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 360
+	}
+	
+	option = {
+		name = tengri_events.57.a #
+		add_horde_unity = 10
+		add_legitimacy = 10
+		add_devotion = 10
+		add_republican_tradition = 5
+	}
+}
+
+#Predestination
+country_event = {
+	id = tengri_events.58
+	title = tengri_events.58.t
+	desc = tengri_events.58.d
+	picture = SENCRATIC_ALTER_eventPicture
+	
+	
+	trigger = {
+		has_dlc = "The Cossacks"
+		religion = dremora_pantheon
+		secondary_religion = marukhism
+	}
+	
+	mean_time_to_happen = {
+		months = 360
+	}
+	
+	option = {
+		name = tengri_events.58.a #
+		add_years_of_income = 0.1
+	}
+	option = {
+		name = tengri_events.58.b #
+		add_horde_unity = 10
+		add_legitimacy = 10
+		add_devotion = 10
+		add_republican_tradition = 5
+	}
+}
+
+#Arrival of Rich Merchant
+country_event = {
+	id = tengri_events.60
+	title = tengri_events.60.t
+	desc = tengri_events.60.d
+	picture = RELIGIOUS_MIGRANTS_eventPicture
+	
+	
+	trigger = {
+		has_dlc = "The Cossacks"
+		religion = dremora_pantheon
+		secondary_religion = old_gods_cult
+		NOT = { has_ruler_flag = rich_merchant_arrived }
+	}
+	
+	mean_time_to_happen = {
+		months = 400
+	}
+	
+	option = {
+		name = tengri_events.60.a #Interesting
+		set_ruler_flag = tengri_rich_merchant_arrived
+		add_meritocracy_effect = yes
+		define_advisor = {
+			type = trader
+			religion = old_gods_cult
+			skill = 2
+			discount = yes
+		}
+	}
+}
+
+#Sickness of Heir
+country_event = {
+	id = tengri_events.61
+	title = tengri_events.61.t
+	desc = tengri_events.61.d
+	picture = MIRACLE_MONK_eventPicture
+	
+	trigger = {
+		has_dlc = "The Cossacks"
+		religion = dremora_pantheon
+		secondary_religion = old_gods_cult
+		government = monarchy
+		has_heir = yes
+	}
+	
+	mean_time_to_happen = {
+		months = 700
+	}
+	
+	option = {
+		name = tengri_events.61.a #
+		add_horde_unity = -10
+		random_list = {
+			20 = { kill_heir = yes }
+			80 = { add_prestige = 5 }
+		}
+	}
+	option = {
+		name = tengri_events.61.b #
+		random_list = {
+			50 = { kill_heir = yes }
+			50 = { add_prestige = 5 }
+		}
+	}
+}
+
+#Protection of Pilgrims
+country_event = {
+	id = tengri_events.62
+	title = tengri_events.62.t
+	desc = tengri_events.62.d
+	picture = RELIGIOUS_MIGRANTS_eventPicture
+	
+	
+	trigger = {
+		has_dlc = "The Cossacks"
+		religion = dremora_pantheon
+		secondary_religion = old_gods_cult
+		is_at_war = yes
+	}
+	
+	mean_time_to_happen = {
+		months = 360
+	}
+	
+	option = {
+		name = tengri_events.62.a #We must ensure their safety.
+		add_years_of_income = -0.15
+	}
+	option = {
+		name = tengri_events.62.b #Their faith will protect them.
+		add_prestige = -10
+	}
+}
+
+#Tensions with the Khojas
+country_event = {
+	id = tengri_events.63
+	title = tengri_events.63.t
+	desc = tengri_events.63.d
+	picture = ANGRY_SHAMANS_eventPicture
+	
+	
+	trigger = {
+		has_dlc = "The Cossacks"
+		has_country_flag = khojas_established
+		NOT = { has_country_flag = end_of_khojas }
+		NOT = { has_ruler_modifier = support_of_the_khojas }
+	}
+	
+	mean_time_to_happen = {
+		months = 300
+	}
+	
+	option = {
+		name = tengri_events.63.a #
+		add_horde_unity = -5
+		add_legitimacy = -5
+		add_devotion = -3
+		add_republican_tradition = -3
+	}
+	option = {
+		name = tengri_events.63.b #
+		add_prestige = -10
+	}
+}

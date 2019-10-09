@@ -1,0 +1,589 @@
+country_decisions = {
+
+    es_3_forelhost = {
+	    major = yes
+		potential = {
+		OR = {
+        NOT = { culture_group = northern_cg }
+		tag = DRA
+		}
+		owns = 1265
+		NOT = { exists = FOR }
+		NOT = { has_country_flag = es_3_forelhost_flag }
+		}
+		allow = {
+		owns = 1265
+		}
+		effect = {
+		set_country_flag = es_3_forelhost_flag
+		1265 = {
+		cede_province = FOR
+		add_core = FOR
+		}
+		ROOT = {
+		create_subject = {
+        subject_type = vassal
+        subject = FOR
+        }
+		}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+    es_3_repair_walls_of_forelhost = {
+	    major = yes
+		potential = {
+        tag = FOR
+		1265 = {
+		NOT = { has_province_modifier = 03_walls_of_forelhost }
+		}
+		}
+		allow = {
+		tag = FOR
+		owns = 1265
+		1265 = {
+		NOT = { has_province_modifier = 03_walls_of_forelhost }
+		}
+		treasury = 100
+		}
+		effect = {
+		add_treasury = -100
+		1265 = {
+		add_province_modifier = {
+		name = "03_walls_of_forelhost"
+		duration = -1
+		}
+		if = {
+		limit = {
+		NOT = { has_building = fort_15th }
+		NOT = { has_building = fort_16th }
+		NOT = { has_building = fort_17th }
+		NOT = { has_building = fort_18th }
+		}
+		add_building = fort_15th
+		}
+		}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	es_3_destroy_forelhost = {
+	    major = yes
+		potential = {
+        NOT = { tag = FOR }
+		NOT = { tag = DRA }
+		culture_group = northern_cg
+		1265 = {
+		owned_by = ROOT
+		NOT = { culture = nord }
+		}
+		}
+		allow = {
+		mil_power = 100
+		}
+		effect = {
+		add_mil_power = -100
+		1265 = {
+		remove_province_modifier = 03_walls_of_forelhost
+		change_culture = nord
+		}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	es_4_skaals = {
+	    major = yes
+		potential = {
+        tag = SKY
+		owns = 949
+		owns = 951
+		NOT = { exists = SKA }
+		NOT = { has_country_flag = es_4_skaals_flag }
+		}
+		allow = {
+		tag = SKY
+		owns = 949
+		owns = 951
+		NOT = { exists = SKA }
+		}
+		effect = {
+		set_country_flag = es_4_skaals_flag
+		949 = {
+		cede_province = SKA
+		add_core = SKA
+		}
+		951 = {
+		cede_province = SKA
+		add_core = SKA
+		}
+		ROOT = {
+		create_subject = {
+        subject_type = vassal
+        subject = SKA
+        }
+		}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	es_5_enslave_elves = {
+		potential = {
+        any_owned_province = {
+		has_province_modifier = 05_elven_migration
+		}
+		}
+		allow = {
+		any_owned_province = {
+		has_province_modifier = 05_elven_migration
+		}
+		treasury = 250
+        }
+		effect = {
+		add_treasury = -250
+		random_owned_province = {
+		limit = {
+		has_province_modifier = 05_elven_migration
+		}
+		remove_province_modifier = 05_elven_migration
+		add_province_modifier = {
+		name = "05_elven_slaves"
+		duration = -1
+		}
+		}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	es_5_remove_slaves = {
+		potential = {
+        any_owned_province = {
+		has_province_modifier = 05_elven_slaves
+		}
+		}
+		allow = {
+		OR = {
+		has_reform = 23_a
+		has_reform = 23_b
+		culture_group = high_elves_cg
+		}
+		any_owned_province = {
+		has_province_modifier = 05_elven_slaves
+		}
+		treasury = 500
+        }
+		effect = {
+		add_treasury = -500
+		random_owned_province = {
+		limit = {
+		has_province_modifier = 05_elven_slaves
+		}
+		remove_province_modifier = 05_elven_slaves
+		}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	es_7_alessian_union = {
+	    major = yes
+		potential = {
+        tag = ALE
+		government = monarchy
+		is_year = 266
+		owns = 1265
+		NOT = { exists = COL }
+		NOT = { exists = NIB }
+		NOT = { has_country_flag = es_7_alessian_union_flag }
+		}
+		allow = {
+		tag = ALE
+		is_year = 266
+		owns = 1265
+		NOT = { exists = COL }
+		NOT = { exists = NIB }
+		any_owned_province = {
+		region = western_syrodiil_lr
+		}
+		any_owned_province = {
+		region = eastern_syrodiil_lr
+		NOT = { area = cyrodiil_19_la }
+		NOT = { area = cyrodiil_20_la }
+		NOT = { area = cyrodiil_21_la }
+		NOT = { area = cyrodiil_25_la }
+		NOT = { area = cyrodiil_28_la }
+		}
+		}
+		effect = {
+		set_country_flag = es_7_alessian_union_flag
+		add_stability = 1
+		add_prestige = 50
+		
+		every_owned_province = {
+		limit = {
+	    region = western_syrodiil_lr
+		}
+		cede_province = COL
+		}
+		every_province = {
+		limit = {
+	    region = western_syrodiil_lr
+		}
+		add_core = COL
+		}
+		ROOT = {
+		create_subject = {
+        subject_type = personal_union
+        subject = COL
+        }
+		}
+		
+		every_owned_province = {
+		limit = {
+	    region = eastern_syrodiil_lr
+		NOT = { area = cyrodiil_19_la }
+		NOT = { area = cyrodiil_20_la }
+		NOT = { area = cyrodiil_21_la }
+		NOT = { area = cyrodiil_25_la }
+		NOT = { area = cyrodiil_28_la }
+		}
+		cede_province = NIB
+		}
+		every_province = {
+		limit = {
+	    region = eastern_syrodiil_lr
+		NOT = { area = cyrodiil_19_la }
+		NOT = { area = cyrodiil_20_la }
+		NOT = { area = cyrodiil_21_la }
+		NOT = { area = cyrodiil_25_la }
+		NOT = { area = cyrodiil_28_la }
+		}
+		add_core = NIB
+		}
+		ROOT = {
+		create_subject = {
+        subject_type = personal_union
+        subject = NIB
+        }
+		}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	es_7_purification = {
+		potential = {
+		tag = ALE
+        any_owned_province = {
+		culture = ayleid
+		}
+		NOT = { is_year = 300 }
+		}
+		allow = {
+		any_owned_province = {
+		culture = ayleid
+		}
+		mil_power = 50
+        }
+		effect = {
+		add_mil_power = -50
+		random_owned_province = {
+		limit = {
+		culture = ayleid
+		}
+		change_culture = nedic
+		}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	es_vampire_purification = {
+	    major = yes
+		potential = {
+		culture_group = dead_cg
+        any_owned_province = {
+		NOT = { culture = vampire }
+		}
+		}
+		allow = {
+		any_owned_province = {
+		NOT = { culture = vampire }
+		}
+		dip_power = 100
+        }
+		effect = {
+		add_dip_power = -100
+		random_owned_province = {
+		limit = {
+		NOT = { culture = vampire }
+		}
+		change_culture = vampire
+		}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	es_12_purification = {
+	    major = yes
+		potential = {
+		is_year = 420
+		NOT = { is_year = 548 }
+		capital_scope = { NOT = { region = hammerfell_lr } }
+		NOT = { religion_group = daedric_group_1 }
+		}
+		allow = {
+		any_owned_province = {
+		region = hammerfell_lr
+		religion_group = daedric_group_1
+		}
+		mil_power = 100
+        }
+		effect = {
+		add_mil_power = -100
+		random_owned_province = {
+		limit = {
+		region = hammerfell_lr
+		religion_group = daedric_group_1
+		}
+		change_religion = ROOT
+		change_culture = ROOT
+		add_core = HAM
+		add_province_modifier = {
+			name = "12_local_unrest"
+			duration = 9125
+		}
+		}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	es_12_kingdom_of_kvatch = {
+	    major = yes
+		potential = {
+		tag = CA7
+		NOT = { government_rank = 5 }
+		}
+		allow = {
+		owns = 1150
+		is_free_or_tributary_trigger = yes
+		}
+		effect = {
+		set_government_rank = 5
+		add_prestige = 25
+		add_country_modifier = {
+			name = "centralization_modifier"
+			duration = 7300
+		}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	es_14_purification = {
+	    major = yes
+		potential = {
+		is_year = 548
+		NOT = { is_year = 660 }
+		capital_scope = { region = hgh_rock_lr }
+		culture_group = half_blood_cg
+		religion = twelve_divines
+		}
+		allow = {
+		any_owned_province = {
+		region = hgh_rock_lr
+		culture = altmer
+		}
+		adm_power = 100
+        }
+		effect = {
+		add_adm_power = -100
+		random_owned_province = {
+		limit = {
+		region = hgh_rock_lr
+		culture = altmer
+		}
+		change_religion = ROOT
+		change_culture = ROOT
+		add_province_modifier = {
+			name = "12_local_unrest"
+			duration = 9125
+		}
+		}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	es_16_rebuild_northern_orsinium = {
+	    major = yes
+		potential = {
+		culture_group = orsimer_cg
+		1391 = {
+		NOT = { has_province_modifier = 16_n_orsinium }
+		}
+		}
+		allow = {
+		treasury = 5000
+		owns = 1391
+        }
+		effect = {
+		add_treasury = -5000
+		1391 = {
+		add_province_modifier = {
+			name = "16_n_orsinium"
+			duration = -1
+		}
+		}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	es_16_rebuild_southern_orsinium = {
+	    major = yes
+		potential = {
+		culture_group = orsimer_cg
+		827 = {
+		NOT = { has_province_modifier = 16_s_orsinium }
+		}
+		}
+		allow = {
+		treasury = 5000
+		owns = 827
+        }
+		effect = {
+		add_treasury = -5000
+		827 = {
+		add_province_modifier = {
+			name = "16_s_orsinium"
+			duration = -1
+		}
+		}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	es_16_sack_orsinium = {
+	    major = yes
+		potential = {
+		NOT = { culture_group = orsimer_cg }
+		OR = {
+		owns = 1391
+		owns = 827
+		}
+		OR = {
+		1391 = {
+		has_province_modifier = 16_n_orsinium
+		}
+		827 = {
+		has_province_modifier = 16_s_orsinium
+		}
+		}
+		}
+		allow = {
+		OR = {
+		owns = 1391
+		owns = 827
+		}
+        }
+		effect = {
+		if = {
+		limit = {
+		owns = 1391
+		1391 = {
+		has_province_modifier = 16_n_orsinium
+		}
+		}
+		1391 = {
+		remove_province_modifier = 16_n_orsinium
+		}
+		add_treasury = 2500
+		}
+		if = {
+		limit = {
+		owns = 827
+		827 = {
+		has_province_modifier = 16_s_orsinium
+		}
+		}
+		827 = {
+		remove_province_modifier = 16_s_orsinium
+		}
+		add_treasury = 2500
+		}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	es_17_enpower_tribunal = {
+	    major = yes
+		potential = {
+		culture_group = chimeris_cg
+		religion = tribunal_pantheon
+		NOT = { has_country_flag = es_17_enpower_tribunal_flag }
+		}
+		allow = {
+		owns_core_province = 1002
+		owns_core_province = 970
+		owns_core_province = 990
+		owns_core_province = 957
+		owns_core_province = 1028
+        }
+		effect = {
+		country_event = { id = es_17_scenario.15 days = 31 tooltip = es_17_scenario.15.a.tt }
+		set_country_flag = es_17_enpower_tribunal_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	es_25_rebuild_imperial_city = {
+		potential = {
+		owns = 1206
+		1206 = { has_province_flag = 25_imperial_city_middle_dawn }
+		}
+		allow = {
+		owns_core_province = 1206
+		treasury = 2500
+        }
+		effect = {
+		add_treasury = -2500
+		1206 = {
+		clr_province_flag = 25_imperial_city_middle_dawn
+		add_base_tax = 3
+		add_base_production = 3
+		add_base_manpower = 3
+		}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+}

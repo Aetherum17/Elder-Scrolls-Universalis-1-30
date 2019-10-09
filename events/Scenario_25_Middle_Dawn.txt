@@ -1,0 +1,765 @@
+namespace = es_25_scenario
+
+country_event = {
+	id = es_25_scenario.1
+	title = es_25_scenario.1.t
+	desc = es_25_scenario.1.d
+	picture = ES_IMPERIAL_CITY_MIDDLE_DAWN_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_25_scenario.1_flag }
+		is_year = 1152
+		NOT = { is_year = 1214 }
+		owns = 1206
+		if = {
+		limit = { ai = no religion = marukhism }
+		has_country_modifier = 11_marukhati_selective
+		}
+    }
+
+	mean_time_to_happen = {
+		days = 11315
+	}
+	
+	immediate = {
+	    set_country_flag = es_25_scenario.1_flag
+		1206 = {
+		add_base_tax = -5
+		add_base_production = -5
+		add_base_manpower = -5
+		set_province_flag = 25_imperial_city_middle_dawn
+		}
+	}
+
+	option = {
+		name = "es_25_scenario.1.a"
+		ai_chance = { factor = 33 }
+		add_stability = -3
+		set_global_flag = middle_dawn_flag
+	}
+	option = {
+		name = "es_25_scenario.1.b"
+		ai_chance = { factor = 33 }
+		add_stability = -2
+		add_prestige = -25
+		set_global_flag = middle_dawn_flag
+	}
+	option = {
+		name = "es_25_scenario.1.c"
+		ai_chance = { factor = 33 }
+		add_stability = -1
+		add_prestige = -25
+		add_legitimacy = -25
+		add_horde_unity = -25
+		add_republican_tradition = -25
+		add_devotion = -25
+		add_meritocracy = -25
+		set_global_flag = middle_dawn_flag
+	}
+	
+}
+
+country_event = {
+	id = es_25_scenario.2
+	title = es_25_scenario.2.t
+	desc = es_25_scenario.2.d
+	picture = MIDDLE_DAWN_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_25_scenario.2_flag }
+		is_year = 1152
+		NOT = { is_year = 1214 }
+		has_global_flag = middle_dawn_flag
+    }
+
+	mean_time_to_happen = {
+		days = 31
+	}
+	
+	immediate = {
+	    set_country_flag = es_25_scenario.2_flag
+	}
+
+	option = {
+		name = "es_25_scenario.2.a"
+		ai_chance = { factor = 100 }
+		add_stability = -1
+		add_country_modifier = {
+		name = "25_middle_down"
+		duration = 18250
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_25_scenario.3
+	title = es_25_scenario.3.t
+	desc = es_25_scenario.3.d
+	picture = DREMORAN_INVASION_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_25_scenario.3_flag }
+		has_global_flag = middle_dawn_flag
+    }
+
+	mean_time_to_happen = {
+		days = 11315
+	}
+	
+	immediate = {
+	    set_country_flag = es_25_scenario.3_flag
+	}
+
+	option = {
+		name = "es_25_scenario.3.a"
+		ai_chance = { factor = 100 }
+		random_owned_province = {
+		add_devastation = 100
+		change_religion = dremora_pantheon
+		spawn_rebels = {
+			type = dremora_pantheon_rebels
+			size = 5
+			win = yes
+			unrest = 10
+		}
+		}
+		if = { limit = { num_of_cities = 5 }
+		random_owned_province = {
+		add_devastation = 100
+		change_religion = dremora_pantheon
+		}
+		random_owned_province = {
+		add_devastation = 100
+		change_religion = dremora_pantheon
+		}
+		}
+		if = { limit = { num_of_cities = 10 }
+		random_owned_province = {
+		add_devastation = 100
+		}
+		random_owned_province = {
+		add_devastation = 100
+		}
+		random_owned_province = {
+		add_devastation = 100
+		}
+		random_owned_province = {
+		add_devastation = 100
+		}
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_25_scenario.4
+	title = es_25_scenario.4.t
+	desc = es_25_scenario.4.d
+	picture = DEATH_FIEAST_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_25_scenario.4_flag }
+		has_global_flag = middle_dawn_flag
+    }
+
+	mean_time_to_happen = {
+		days = 11315
+	}
+	
+	immediate = {
+	    set_country_flag = es_25_scenario.4_flag
+	}
+
+	option = {
+		name = "es_25_scenario.4.a"
+		ai_chance = { factor = 33 }
+		kill_ruler = yes
+		define_ruler = {
+		dynasty = ROOT
+		}
+		add_legitimacy = -35
+		add_horde_unity = -35
+		add_republican_tradition = -35
+		add_devotion = -35
+		add_meritocracy = -35
+		add_country_modifier = {
+		name = "11_succesion_war"
+		duration = 3650
+		}
+	}
+	option = {
+		name = "es_25_scenario.4.b"
+		ai_chance = { factor = 33 }
+		kill_ruler = yes
+        add_country_modifier = {
+		name = "11_succesion_war"
+		duration = 3650
+		}
+		if = { limit = { government = monarchy }
+		random_owned_province = {
+		spawn_rebels = {
+			type = pretender_rebels
+			size = 5
+			win = yes
+			unrest = 10
+		}
+		}
+		}
+		else = {
+		random_owned_province = {
+		spawn_rebels = {
+			type = noble_rebels
+			size = 5
+			win = yes
+			unrest = 10
+		}
+		}
+		}
+	}
+	option = {
+		name = "es_25_scenario.4.c"
+		ai_chance = { factor = 33 }
+		kill_ruler = yes
+		if = { limit = { government = monarchy }
+		random_owned_province = {
+		spawn_rebels = {
+			type = pretender_rebels
+			size = 5
+			win = yes
+			unrest = 10
+		}
+		}
+		}
+		else = {
+		random_owned_province = {
+		spawn_rebels = {
+			type = noble_rebels
+			size = 5
+			win = yes
+			unrest = 10
+		}
+		}
+		}
+		if = { limit = { government = monarchy }
+		random_owned_province = {
+		spawn_rebels = {
+			type = pretender_rebels
+			size = 5
+			win = yes
+			unrest = 10
+		}
+		}
+		}
+		else = {
+		random_owned_province = {
+		spawn_rebels = {
+			type = noble_rebels
+			size = 5
+			win = yes
+			unrest = 10
+		}
+		}
+		}
+		if = { limit = { government = monarchy }
+		random_owned_province = {
+		spawn_rebels = {
+			type = pretender_rebels
+			size = 5
+			win = yes
+			unrest = 10
+		}
+		}
+		}
+		else = {
+		random_owned_province = {
+		spawn_rebels = {
+			type = noble_rebels
+			size = 5
+			win = yes
+			unrest = 10
+		}
+		}
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_25_scenario.5
+	title = es_25_scenario.5.t
+	desc = es_25_scenario.5.d
+	picture = DARK_FOREST_HEIR_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_25_scenario.5_flag }
+		has_global_flag = middle_dawn_flag
+		if = { limit = { has_heir = yes } }
+    }
+
+	mean_time_to_happen = {
+		days = 11315
+	}
+	
+	immediate = {
+	    set_country_flag = es_25_scenario.5_flag
+	}
+
+	option = {
+		name = "es_25_scenario.5.a"
+		ai_chance = { factor = 25 }
+		kill_heir = yes
+		define_heir = {
+		dynasty = ROOT
+		claim = 100
+		culture = dremora
+		religion = dremora_pantheon
+		age = 25
+        adm = 7
+        dip = 7
+        mil = 7
+		female = yes
+		no_consort_with_heir = yes
+		}
+	}
+	
+	option = {
+		name = "es_25_scenario.5.b"
+		ai_chance = { factor = 25 }
+		kill_heir = yes
+		define_heir = {
+		dynasty = ROOT
+		claim = 100
+		culture = vampire
+		religion = molog_bal_cult
+		age = 25
+        adm = 5
+        dip = 5
+        mil = 5
+		female = yes
+		no_consort_with_heir = yes
+		}
+	}
+	
+	option = {
+		name = "es_25_scenario.5.c"
+		ai_chance = { factor = 25 }
+		kill_heir = yes
+		define_heir = {
+		claim = 100
+		age = 25
+        adm = 3
+        dip = 3
+        mil = 3
+		female = yes
+		no_consort_with_heir = yes
+		}
+	}
+	
+	option = {
+		name = "es_25_scenario.5.e"
+		ai_chance = { factor = 25 }
+		kill_heir = yes
+		define_heir = {
+		claim = 100
+		age = 25
+        adm = 1
+        dip = 1
+        mil = 1
+		no_consort_with_heir = yes
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_25_scenario.6
+	title = es_25_scenario.6.t
+	desc = es_25_scenario.6.d
+	picture = CONSORT_TREASON_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_25_scenario.6_flag }
+		has_global_flag = middle_dawn_flag
+		if = { limit = { has_consort = yes } }
+		has_advisor = yes
+    }
+
+	mean_time_to_happen = {
+		days = 11315
+	}
+	
+	immediate = {
+	    set_country_flag = es_25_scenario.6_flag
+	}
+
+	option = {
+		name = "es_25_scenario.6.a"
+		ai_chance = { factor = 33 }
+		remove_consort = yes
+		remove_advisor = random
+		add_treasury = -1000
+	}
+	option = {
+		name = "es_25_scenario.6.b"
+		ai_chance = { factor = 33 }
+	    remove_advisor = random
+		define_heir = {
+		dynasty = ROOT
+		}
+	}
+	option = {
+		name = "es_25_scenario.6.c"
+		ai_chance = { factor = 33 }
+		add_prestige = -35
+	}
+	
+}
+
+country_event = {
+	id = es_25_scenario.7
+	title = es_25_scenario.7.t
+	desc = es_25_scenario.7.d
+	picture = FORBIDDEN_KNOWLEDGE_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_25_scenario.7_flag }
+		has_global_flag = middle_dawn_flag
+    }
+
+	mean_time_to_happen = {
+		days = 11315
+	}
+	
+	immediate = {
+	    set_country_flag = es_25_scenario.7_flag
+	}
+
+	option = {
+		name = "es_25_scenario.7.a"
+		ai_chance = { factor = 50 }
+		add_country_modifier = {
+		name = "25_forbidden_knowledges"
+		duration = 9125
+		}
+	}
+	option = {
+		name = "es_25_scenario.7.b"
+		ai_chance = { factor = 50 }
+		add_prestige = 10
+	}
+	
+}
+
+country_event = {
+	id = es_25_scenario.8
+	title = es_25_scenario.8.t
+	desc = es_25_scenario.8.d
+	picture = ES_OLD_GLORY_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_25_scenario.8_flag }
+		has_global_flag = middle_dawn_flag
+    }
+
+	mean_time_to_happen = {
+		days = 11315
+	}
+	
+	immediate = {
+	    set_country_flag = es_25_scenario.8_flag
+	}
+
+	option = {
+		name = "es_25_scenario.8.a"
+		ai_chance = { factor = 50 }
+		define_general = {
+        shock = 5
+        fire = 5
+        manuever = 5
+        siege = 5
+		}
+
+	}
+	option = {
+		name = "es_25_scenario.8.b"
+		ai_chance = { factor = 50 }
+		add_stability = 1
+	}
+	
+}
+
+country_event = {
+	id = es_25_scenario.9
+	title = es_25_scenario.9.t
+	desc = es_25_scenario.9.d
+	picture = RELIGIOUS_SANCTUARY_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_25_scenario.9_flag }
+		has_global_flag = middle_dawn_flag
+		religion = marukhism
+    }
+
+	mean_time_to_happen = {
+		days = 11315
+	}
+	
+	immediate = {
+	    set_country_flag = es_25_scenario.9_flag
+	}
+
+	option = {
+		name = "es_25_scenario.9.a"
+		ai_chance = { factor = 50 }
+		if = {
+		limit = {
+		OR = {
+		has_country_modifier = 11_marukhati_selective
+		has_country_modifier = 11_alessain_selective
+		}
+		}
+		remove_country_modifier = 11_marukhati_selective
+		remove_country_modifier = 11_alessain_selective
+		}
+		else = {
+		random_owned_province = {
+		spawn_rebels = {
+			type = heretic_rebels
+			size = 5
+			win = yes
+			unrest = 10
+		}
+		}
+		}
+	}
+	
+	option = {
+		name = "es_25_scenario.9.b"
+		ai_chance = { factor = 50 }
+		add_country_modifier = {
+		name = "25_crisis_of_clergy"
+		duration = 9125
+		}
+	}
+	
+}
+
+province_event = {
+	id = es_25_scenario.10
+	title = es_25_scenario.10.t
+	desc = es_25_scenario.10.d
+	picture = ES_HERECY_IN_CHURCH_eventPicture
+	
+	trigger = {
+		has_global_flag = middle_dawn_flag
+		owner = { religion = marukhism }
+		NOT = { religion = marukhism }
+		NOT = { is_year = 1309 }
+    }
+
+	mean_time_to_happen = {
+		days = 9125
+	}
+
+	option = {
+		name = "es_25_scenario.10.a"
+		ai_chance = { factor = 100 }
+	    change_religion = eight_divines
+	}
+	
+}
+
+country_event = {
+	id = es_25_scenario.11
+	title = es_25_scenario.11.t
+	desc = es_25_scenario.11.d
+	picture = SKYWATCH_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_25_scenario.11_flag }
+		is_year = 1152
+		NOT = { is_year = 1214 }
+		NOT = { culture_group = sload_cg }
+		owns = 302
+    }
+
+	mean_time_to_happen = {
+		days = 11315
+	}
+	
+	immediate = {
+	    set_country_flag = es_25_scenario.11_flag
+	}
+
+	option = {
+		name = "es_25_scenario.11.a"
+		ai_chance = { factor = 100 }
+		if = { limit = { exists = COR } 302 = { add_core = COR } }
+		else = { 302 = { add_core = THR } }
+		302 = {
+		add_devastation = 100
+        add_base_tax = -3
+		add_base_production = -3
+		add_base_manpower = -3	
+		spawn_rebels = {
+			type = nationalist_rebels
+			size = 5
+			win = yes
+			unrest = 10
+		}
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_25_scenario.12
+	title = es_25_scenario.12.t
+	desc = es_25_scenario.12.d
+	picture = SKYWATCH_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_25_scenario.12_flag }
+		culture_group = sload_cg
+		owns = 320
+		any_country = {
+		has_country_flag = es_25_scenario.11_flag
+		}
+    }
+
+	mean_time_to_happen = {
+		days = 31
+	}
+	
+	immediate = {
+	    set_country_flag = es_25_scenario.12_flag
+	}
+
+	option = {
+		name = "es_25_scenario.12.a"
+		ai_chance = { factor = 50 }
+		every_province = {
+		limit = {
+		OR = {
+		area = summerset_3_la
+		area = summerset_11_la
+		area = summerset_12_la
+		}
+		}
+		add_core = ROOT
+		}
+		
+		if = {
+		limit = {
+		exists = SUM
+		NOT = { alliance_with = SUM }
+		NOT = { overlord_of = SUM }
+		}
+		declare_war_with_cb = {
+			who = SUM
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = SA6
+		NOT = { alliance_with = SA6 }
+		NOT = { overlord_of = SA6 }
+		}
+		declare_war_with_cb = {
+			who = SA6
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = SB1
+		NOT = { alliance_with = SB1 }
+		NOT = { overlord_of = SB1 }
+		}
+		declare_war_with_cb = {
+			who = SB1
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = SB2
+		NOT = { alliance_with = SB2 }
+		NOT = { overlord_of = SB2 }
+		}
+		declare_war_with_cb = {
+			who = SB2
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = SA4
+		NOT = { alliance_with = SA4 }
+		NOT = { overlord_of = SA4 }
+		}
+		declare_war_with_cb = {
+			who = SA4
+			casus_belli = cb_es_scenario
+		}
+		}
+	}
+	
+	option = {
+		name = "es_25_scenario.12.b"
+		ai_chance = { factor = 50 }
+		add_prestige = -15
+		random_owned_province = {
+		spawn_rebels = {
+			type = noble_rebels
+			size = 5
+			win = yes
+			unrest = 10
+		}
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_25_scenario.13
+	title = es_25_scenario.13.t
+	desc = es_25_scenario.13.d
+	picture = DUNCREIGH_BRIDGE_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_25_scenario.13_flag }
+		is_year = 1152
+		NOT = { is_year = 1214 }
+		owns = 1377
+    }
+
+	mean_time_to_happen = {
+		days = 11315
+	}
+	
+	immediate = {
+	    set_country_flag = es_25_scenario.13_flag
+	}
+
+	option = {
+		name = "es_25_scenario.13.a"
+		ai_chance = { factor = 100 }
+		1377 = {
+		add_devastation = 25 
+		spawn_rebels = {
+			type = anti_tax_rebels
+			size = 5
+			win = yes
+			unrest = 10
+		}
+		}
+	}
+	
+}

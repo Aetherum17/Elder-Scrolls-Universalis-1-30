@@ -1,0 +1,263 @@
+namespace = es_collapse
+
+country_event = {
+	id = es_collapse.16
+	title = es_collapse.16.t
+	desc = es_collapse.16.d
+	picture = ES_PROVINCE_COLLAPSE_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	    add_country_modifier = {
+			name = "vassal_autonomy"
+			duration = 9125
+		}
+	}
+	
+	option = {
+		name = es_collapse.2.a
+		ai_chance = { factor = 75 }
+		hidden_effect = {
+		
+		if = {
+		limit = {
+		NOT = { capital_scope = { region = black_marsh_lr } }
+		}
+		every_core_province = {
+			limit = {
+				region = black_marsh_lr
+			}
+			remove_core = ROOT
+		}
+		}
+		
+		if = {
+		limit = {
+		argonia_1_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = AA1 }
+		NOT = { capital_scope = { area = argonia_1_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = argonia_1_la
+		}
+		add_core = AA1
+		}
+		create_vassal = AA1
+		}
+		
+		if = {
+		limit = {
+		argonia_2_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = AA2 }
+		NOT = { capital_scope = { area = argonia_2_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = argonia_2_la
+		}
+		add_core = AA2
+		}
+		create_vassal = AA2
+		}
+		
+		if = {
+		limit = {
+		argonia_3_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = AA3 }
+		NOT = { capital_scope = { area = argonia_3_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = argonia_3_la
+		}
+		add_core = AA3
+		}
+		create_vassal = AA3
+		}
+		
+		if = {
+		limit = {
+		argonia_4_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = AA4 }
+		NOT = { capital_scope = { area = argonia_4_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = argonia_4_la
+		}
+		add_core = AA4
+		}
+		create_vassal = AA4
+		}
+		
+		if = {
+		limit = {
+		argonia_5_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = AA5 }
+		NOT = { capital_scope = { area = argonia_5_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = argonia_5_la
+		}
+		add_core = AA5
+		}
+		create_vassal = AA5
+		}
+		
+		if = {
+		limit = {
+		argonia_6_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = AA6 }
+		NOT = { capital_scope = { area = argonia_6_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = argonia_6_la
+		}
+		add_core = AA6
+		}
+		create_vassal = AA6
+		}
+		
+		if = {
+		limit = {
+		argonia_7_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = AA7 }
+		NOT = { capital_scope = { area = argonia_7_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = argonia_7_la
+		}
+		add_core = AA7
+		}
+		create_vassal = AA7
+		}
+		
+		if = {
+		limit = {
+		argonia_8_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = AA8 }
+		NOT = { capital_scope = { area = argonia_8_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = argonia_8_la
+		}
+		add_core = AA8
+		}
+		create_vassal = AA8
+		}
+		
+		if = {
+		limit = {
+		argonia_9_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = AA9 }
+		NOT = { capital_scope = { area = argonia_9_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = argonia_9_la
+		}
+		add_core = AA9
+		}
+		create_vassal = AA9
+		}
+		
+		if = {
+		limit = {
+		argonia_10_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = AB0 }
+		NOT = { capital_scope = { area = argonia_10_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = argonia_10_la
+		}
+		add_core = AB0
+		}
+		create_vassal = AB0
+		}
+		
+	    }
+	}
+	
+	option = {
+		name = es_collapse.2.b
+		ai_chance = { factor = 15 }
+		
+		if = {
+		limit = {
+		NOT = { capital_scope = { region = black_marsh_lr } }
+		}
+		every_core_province = {
+			limit = {
+				region = black_marsh_lr
+			}
+			remove_core = ROOT
+		}
+		}
+		
+	}
+	
+	option = {
+		name = es_collapse.2.c
+		ai_chance = { factor = 10 }
+		
+		trigger = {
+		NOT = { capital_scope = { region = black_marsh_lr } }
+		NOT = { exists = ARG }
+		}
+		
+		every_core_province = {
+			limit = {
+				region = black_marsh_lr
+			}
+			remove_core = ROOT
+		}
+		
+		every_owned_province = {
+		limit = {
+		region = black_marsh_lr
+		}
+		add_core = ARG
+		}
+		
+		release = ARG
+		
+		if = {
+		limit = {
+		government = monarchy
+		}
+		create_union = ARG
+	    }
+		else = {
+		create_alliance = ARG
+		add_opinion = { who = ROOT modifier = es_friendly_nation }
+		add_opinion = { who = ARG modifier = es_friendly_nation }
+		}
+	}
+}

@@ -1,0 +1,266 @@
+namespace = es_archeology
+
+country_event = {
+	id = es_archeology.1
+	title = "es_archeology.3.t"
+	desc = "es_archeology.3.d"
+	picture = ARCHEOLOGICAL_SITE_eventPicture
+	
+	is_triggered_only = yes
+	
+	hidden = yes
+	
+	immediate = {
+	    random_list = {
+		33 = {
+		    set_country_flag = failed_archeology_expedition_flag
+		}
+		33 = {
+		    set_country_flag = archeology_expedition_more_funds_flag
+		}
+		33 = {
+		    set_country_flag = successfull_archeology_expedition_flag
+		}
+		}
+	}
+	
+	option = {
+		name = "es_archeology.3.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = es_archeology.2
+	title = "es_archeology.2.t"
+	desc = "es_archeology.2.d"
+	picture = EMPTY_RUINS_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_modifier = es_archeology_expedition }
+		has_country_flag = failed_archeology_expedition_flag
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	immediate = {
+	    clr_country_flag = failed_archeology_expedition_flag
+		clr_country_flag = archeology_expedition_more_funds_flag
+		clr_country_flag = successfull_archeology_expedition_flag
+		clr_country_flag = archeology_expedition_on_flag
+	}
+	
+	option = {
+		name = "es_archeology.2.a"
+		ai_chance = { factor = 100 }
+		add_prestige = -10
+		random_owned_province = {
+		    limit = { has_province_flag = archeology_site }
+			clr_province_flag = archeology_site
+		}
+	}
+}
+
+country_event = {
+	id = es_archeology.3
+	title = "es_archeology.3.t"
+	desc = "es_archeology.3.d"
+	picture = ARCHEOLOGICAL_SITE_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_modifier = es_archeology_expedition }
+		has_country_flag = archeology_expedition_more_funds_flag
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	immediate = {
+	    clr_country_flag = failed_archeology_expedition_flag
+		clr_country_flag = archeology_expedition_more_funds_flag
+		clr_country_flag = successfull_archeology_expedition_flag
+	}
+	
+	option = {
+		name = "es_archeology.3.a"
+		ai_chance = { factor = 50 }
+		add_treasury = -500
+		hidden_effect = {
+			country_event = { id = es_archeology.1 days = 31 tooltip = es_archeology.1.a.tt }
+			add_country_modifier = {
+		        name = "es_archeology_expedition"
+				duration = 1825
+	        }
+		}
+	}
+	
+	option = {
+		name = "es_archeology.3.b"
+		ai_chance = { factor = 50 }
+		add_prestige = -5
+		clr_country_flag = archeology_expedition_on_flag
+		random_owned_province = {
+		    limit = { has_province_flag = archeology_site }
+			clr_province_flag = archeology_site
+		}
+	}
+}
+
+country_event = {
+	id = es_archeology.4
+	title = "es_archeology.4.t"
+	desc = "es_archeology.4.d"
+	picture = TREASURE_ROOM_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_modifier = es_archeology_expedition }
+		has_country_flag = successfull_archeology_expedition_flag
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	immediate = {
+	    clr_country_flag = failed_archeology_expedition_flag
+		clr_country_flag = archeology_expedition_more_funds_flag
+		clr_country_flag = successfull_archeology_expedition_flag
+		clr_country_flag = archeology_expedition_on_flag
+	}
+	
+	option = {
+		name = "es_archeology.4.a"
+		ai_chance = { factor = 100 }
+		add_prestige = 10
+		hidden_effect = {
+		random_list = {
+		    1 = { add_country_modifier = { name = "odhma_infinium" duration = -1 } }
+			1 = { add_country_modifier = { name = "skull_of_corruption" duration = -1 } }
+			1 = { add_country_modifier = { name = "masque_of_clavicus_vile" duration = -1 } }
+			1 = { add_country_modifier = { name = "azura_star" duration = -1 } }
+			1 = { add_country_modifier = { name = "black_star" duration = -1 } }
+			1 = { add_country_modifier = { name = "staff_of_magnus" duration = -1 } }
+			1 = { add_country_modifier = { name = "eye_of_magnus" duration = -1 } }
+			1 = { add_country_modifier = { name = "heart_of_lorkhan" duration = -1 } }
+			1 = { add_country_modifier = { name = "skeleton_key" duration = -1 } }
+			1 = { add_country_modifier = { name = "sanguine_rose" duration = -1 } }
+			1 = { add_country_modifier = { name = "ring_of_hircine" duration = -1 } }
+			1 = { add_country_modifier = { name = "hide_of_savior" duration = -1 } }
+			1 = { add_country_modifier = { name = "wabbajack" duration = -1 } }
+			1 = { add_country_modifier = { name = "brush_of_truepaint" duration = -1 } }
+			1 = { add_country_modifier = { name = "spellbreaker" duration = -1 } }
+			1 = { add_country_modifier = { name = "volendrung" duration = -1 } }
+			1 = { add_country_modifier = { name = "dawnbreaker" duration = -1 } }
+			1 = { add_country_modifier = { name = "ebony_blade" duration = -1 } }
+			1 = { add_country_modifier = { name = "ebony_male" duration = -1 } }
+			1 = { add_country_modifier = { name = "mace_of_molag_bal" duration = -1 } }
+			1 = { add_country_modifier = { name = "razor_of_mehrunes" duration = -1 } }
+			1 = { add_country_modifier = { name = "ring_of_namira" duration = -1 } }
+			1 = { add_country_modifier = { name = "chrysamere" duration = -1 } }
+			1 = { add_country_modifier = { name = "hammer_of_stendarr" duration = -1 } }
+			1 = { add_country_modifier = { name = "mail_of_lord" duration = -1 } }
+			1 = { add_country_modifier = { name = "shield_of_auriel" duration = -1 } }
+			1 = { add_country_modifier = { name = "bow_of_auriel" duration = -1 } }
+			1 = { add_country_modifier = { name = "keening" duration = -1 } }
+			1 = { add_country_modifier = { name = "etherial_crown" duration = -1 } }
+			1 = { add_country_modifier = { name = "etherial_shield" duration = -1 } }
+			1 = { add_country_modifier = { name = "etherial_staff" duration = -1 } }
+			1 = { add_country_modifier = { name = "bow_of_fate" duration = -1 } }
+			1 = { add_country_modifier = { name = "visage_of_mzund" duration = -1 } }
+			1 = { add_country_modifier = { name = "zephyr" duration = -1 } }
+			1 = { add_country_modifier = { name = "spider_control_rod" duration = -1 } }
+			1 = { add_country_modifier = { name = "goldbrand" duration = -1 } }
+			1 = { add_country_modifier = { name = "epistolary_acumen" duration = -1 } }
+			1 = { add_country_modifier = { name = "filament_and_filigree" duration = -1 } }
+			1 = { add_country_modifier = { name = "the_hidden_twilight" duration = -1 } }
+			1 = { add_country_modifier = { name = "the_sallow_regent" duration = -1 } }
+			1 = { add_country_modifier = { name = "the_winds_of_change" duration = -1 } }
+			1 = { add_country_modifier = { name = "untold_legends" duration = -1 } }
+			1 = { add_country_modifier = { name = "waking_dreams" duration = -1 } }
+			1 = { add_country_modifier = { name = "ring_of_kajiiti" duration = -1 } }
+			14 = { add_adm_power = 250 }
+			14 = { add_dip_power = 250 }
+			14 = { add_mil_power = 250 }
+			14 = { add_stability = 1 }
+		}
+		}
+	}
+}
+
+country_event = {
+	id = es_archeology.5
+	title = "es_archeology.3.t"
+	desc = "es_archeology.3.d"
+	picture = ARCHEOLOGICAL_SITE_eventPicture
+	
+	hidden = yes
+	
+	trigger = {
+		has_country_flag = successfull_archeology_expedition_flag
+		has_country_flag = epistolary_acumen_read_flag
+		has_country_flag = filament_and_filigree_read_flag
+		has_country_flag = the_hidden_twilight_read_flag
+		has_country_flag = the_sallow_regent_read_flag
+		has_country_flag = the_winds_of_change_read_flag
+		has_country_flag = untold_legends_read_flag
+		has_country_flag = waking_dreams_read_flag
+		NOT = { has_country_flag = hermaeus_mora_blessing_archeology_flag }
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	immediate = {
+	    set_country_flag = hermaeus_mora_blessing_archeology_flag
+		change_religion = hermeus_mora_cult
+		random_owned_province = { 
+			spawn_rebels = {
+				type = hermeus_mora_cult_rebels
+				size = 5
+				win = yes
+				unrest = 25
+			}
+		}
+		random_owned_province = { 
+			spawn_rebels = {
+				type = hermeus_mora_cult_rebels
+				size = 5
+				win = yes
+				unrest = 25
+			}
+		}
+		random_owned_province = { 
+			spawn_rebels = {
+				type = hermeus_mora_cult_rebels
+				size = 5
+				win = yes
+				unrest = 25
+			}
+		}
+		random_owned_province = { 
+			spawn_rebels = {
+				type = hermeus_mora_cult_rebels
+				size = 5
+				win = yes
+				unrest = 25
+			}
+		}
+		random_owned_province = { 
+			spawn_rebels = {
+				type = hermeus_mora_cult_rebels
+				size = 5
+				win = yes
+				unrest = 25
+			}
+		}
+	}
+	
+	option = {
+		name = "es_archeology.3.a"
+		ai_chance = { factor = 100 }
+	}
+}

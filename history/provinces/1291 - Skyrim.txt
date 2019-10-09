@@ -1,0 +1,64 @@
+owner = NA6
+controller = NA6
+add_core = NA6
+culture = snow_elven
+religion = snow_elves_pantheon
+hre = no
+base_tax = 3
+base_production = 3
+trade_goods = unknown
+base_manpower = 3
+capital = "Falkreath" 
+is_city = yes
+discovered_by = tamriel_tg discovered_by = elsweyr_tg discovered_by = marshan_tg discovered_by = orsimer_tg
+
+center_of_trade = 1
+
+fort_15th = yes
+
+add_permanent_province_modifier = {
+	name = water_trade_modifier
+	duration = -1
+}
+
+68.1.1 = {
+	owner = WIN
+	controller = WIN
+	add_core = WIN
+}
+
+189.1.1 = {
+	owner = SKY
+	controller = SKY
+	add_core = SKY
+	religion = nordic_pantheon
+}
+
+242.1.1 = {
+    culture = nord
+}
+
+308.1.1 = {
+	owner = OLD
+	controller = OLD
+	add_core = OLD
+}
+
+369.1.1 = {
+    owner = WSK
+	controller = WSK
+	add_core = WSK
+	add_core = ESK
+}
+
+420.1.1 = {
+	owner = SKY
+	controller = SKY
+	add_core = SKY
+}
+
+1045.1.1 = {
+	owner = ORD
+	controller = ORD
+	add_core = ORD
+}

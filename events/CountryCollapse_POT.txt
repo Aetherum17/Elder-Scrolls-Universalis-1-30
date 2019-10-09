@@ -1,0 +1,297 @@
+namespace = es_collapse
+
+country_event = {
+	id = es_collapse.9
+	title = es_collapse.9.t
+	desc = es_collapse.9.d
+	picture = ES_PROVINCE_COLLAPSE_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	    add_country_modifier = {
+			name = "vassal_autonomy"
+			duration = 9125
+		}
+	}
+	
+	option = {
+		name = es_collapse.2.a
+		ai_chance = { factor = 75 }
+		hidden_effect = {
+		
+		if = {
+		limit = {
+		NOT = { capital_scope = { region = po_tun_lr } }
+		}
+		every_core_province = {
+			limit = {
+				region = po_tun_lr
+			}
+			remove_core = ROOT
+		}
+		}
+		
+		if = {
+		limit = {
+		po_tun_1_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = OA1 }
+		NOT = { capital_scope = { area = po_tun_1_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = po_tun_1_la
+		}
+		add_core = OA1
+		}
+		create_vassal = OA1
+		}
+		
+		if = {
+		limit = {
+		po_tun_2_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = OA2 }
+		NOT = { capital_scope = { area = po_tun_2_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = po_tun_2_la
+		}
+		add_core = OA2
+		}
+		create_vassal = OA2
+		}
+		
+		if = {
+		limit = {
+		po_tun_3_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = OA3 }
+		NOT = { capital_scope = { area = po_tun_3_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = po_tun_3_la
+		}
+		add_core = OA3
+		}
+		create_vassal = OA3
+		}
+		
+		if = {
+		limit = {
+		po_tun_4_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = OA4 }
+		NOT = { capital_scope = { area = po_tun_4_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = po_tun_4_la
+		}
+		add_core = OA4
+		}
+		create_vassal = OA4
+		}
+		
+		if = {
+		limit = {
+		po_tun_5_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = OA5 }
+		NOT = { capital_scope = { area = po_tun_5_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = po_tun_5_la
+		}
+		add_core = OA5
+		}
+		create_vassal = OA5
+		}
+		
+		if = {
+		limit = {
+		po_tun_6_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = OA6 }
+		NOT = { capital_scope = { area = po_tun_6_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = po_tun_6_la
+		}
+		add_core = OA6
+		}
+		create_vassal = OA6
+		}
+		
+		if = {
+		limit = {
+		po_tun_7_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = OA7 }
+		NOT = { capital_scope = { area = po_tun_7_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = po_tun_7_la
+		}
+		add_core = OA7
+		}
+		create_vassal = OA7
+		}
+		
+		if = {
+		limit = {
+		po_tun_8_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = OA8 }
+		NOT = { capital_scope = { area = po_tun_8_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = po_tun_8_la
+		}
+		add_core = OA8
+		}
+		create_vassal = OA8
+		}
+		
+		if = {
+		limit = {
+		po_tun_9_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = OA9 }
+		NOT = { capital_scope = { area = po_tun_9_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = po_tun_9_la
+		}
+		add_core = OA9
+		}
+		create_vassal = OA9
+		}
+		
+		if = {
+		limit = {
+		po_tun_10_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = OB0 }
+		NOT = { capital_scope = { area = po_tun_10_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = po_tun_10_la
+		}
+		add_core = OB0
+		}
+		create_vassal = OB0
+		}
+		
+		if = {
+		limit = {
+		po_tun_11_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = OB1 }
+		NOT = { capital_scope = { area = po_tun_11_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = po_tun_11_la
+		}
+		add_core = OB1
+		}
+		create_vassal = OB1
+		}
+		
+		if = {
+		limit = {
+		po_tun_12_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = OB2 }
+		NOT = { capital_scope = { area = po_tun_12_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = po_tun_12_la
+		}
+		add_core = OB2
+		}
+		create_vassal = OB2
+		}
+		
+	    }
+	}
+	
+	option = {
+		name = es_collapse.2.b
+		ai_chance = { factor = 15 }
+		
+		if = {
+		limit = {
+		NOT = { capital_scope = { region = po_tun_lr } }
+		}
+		every_core_province = {
+			limit = {
+				region = po_tun_lr
+			}
+			remove_core = ROOT
+		}
+		}
+		
+	}
+	
+	option = {
+		name = es_collapse.2.c
+		ai_chance = { factor = 10 }
+		
+		trigger = {
+		NOT = { capital_scope = { region = po_tun_lr } }
+		NOT = { exists = POT }
+		}
+		
+		every_core_province = {
+			limit = {
+				region = po_tun_lr
+			}
+			remove_core = ROOT
+		}
+		
+		every_owned_province = {
+		limit = {
+		region = po_tun_lr
+		}
+		add_core = POT
+		}
+		
+		release = POT
+		
+		if = {
+		limit = {
+		government = monarchy
+		}
+		create_union = POT
+	    }
+		else = {
+		create_alliance = POT
+		add_opinion = { who = ROOT modifier = es_friendly_nation }
+		add_opinion = { who = POT modifier = es_friendly_nation }
+		}
+	}
+}

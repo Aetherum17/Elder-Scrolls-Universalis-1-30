@@ -1,0 +1,18 @@
+owner = TA3
+controller = TA3
+add_core = TA3
+culture = tsaesci
+religion = tsaesci_pantheon
+hre = no
+base_tax = 3
+base_production = 3
+trade_goods = unknown
+base_manpower = 3
+capital = "Amalam" 
+is_city = yes
+discovered_by = akavir_tg discovered_by = thousand_tg discovered_by = kamal_tg
+
+add_permanent_province_modifier = {
+	name = water_trade_modifier
+	duration = -1
+}

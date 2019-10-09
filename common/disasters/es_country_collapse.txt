@@ -1,0 +1,91 @@
+es_country_collapse = {
+	potential = {
+		always = yes
+	}
+
+	can_start = {
+		OR = {
+		AND = {
+		ai = no
+		NOT = { stability = 0 }
+		}
+		AND = {
+		ai = yes
+		NOT = { stability = -2 }
+		}
+		war_exhaustion = 15
+		}
+		is_free_or_tributary_trigger = yes
+	}
+	
+	can_stop = {
+	    OR = {
+		AND = {
+		ai = no
+		stability = 2
+		}
+		AND = {
+		ai = yes
+		stability = 0
+		}
+		}
+		is_at_war = no
+		NOT = { war_exhaustion = 1 }
+	}
+		
+	progress = {
+		modifier = {
+			factor = 1
+			revolt_percentage = 0.10
+		}	
+		modifier = {
+			factor = 1
+			overextension_percentage = 0.10
+		}
+        modifier = {
+			factor = 1
+			is_at_war = yes
+		}		
+		modifier = {
+			factor = 1
+			NOT = { stability = 0 }
+		}
+        modifier = {
+			factor = 1
+			war_exhaustion = 5
+		} 
+	}
+	
+	can_end = {
+	    OR = {
+	    AND = {
+	    OR = {
+		AND = {
+		ai = no
+		stability = 3
+		}
+		AND = {
+		ai = yes
+		stability = 0
+		}
+		}
+		is_at_war = no
+		NOT = { war_exhaustion = 1 }
+		}
+		is_free_or_tributary_trigger = no
+		}
+	}
+
+	modifier = {
+	    stability_cost_modifier = 1.0
+		global_unrest = 10
+	}	
+	
+	on_start = es_collapse.1
+	on_end = ge_revolution.27
+	
+	on_monthly = {
+		events = {
+		}
+	}
+}

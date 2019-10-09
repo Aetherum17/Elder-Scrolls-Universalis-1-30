@@ -1,0 +1,264 @@
+namespace = es_collapse
+
+country_event = {
+	id = es_collapse.20
+	title = es_collapse.20.t
+	desc = es_collapse.20.d
+	picture = ES_PROVINCE_COLLAPSE_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	    add_country_modifier = {
+			name = "vassal_autonomy"
+			duration = 9125
+		}
+	}
+	
+	option = {
+		name = es_collapse.2.a
+		ai_chance = { factor = 75 }
+		hidden_effect = {
+		
+		if = {
+		limit = {
+		NOT = { capital_scope = { region = western_skyrim_lr } }
+		}
+		every_core_province = {
+			limit = {
+				region = western_skyrim_lr
+			}
+			remove_core = ROOT
+		}
+		}
+		
+		if = {
+		limit = {
+		skyrim_6_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = NA6 }
+		NOT = { exists = NE6 }
+		NOT = { capital_scope = { area = skyrim_6_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = skyrim_6_la
+		}
+		add_core = NA6
+		}
+		create_vassal = NA6
+		}
+		
+		if = {
+		limit = {
+		skyrim_7_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = NA7 }
+		NOT = { capital_scope = { area = skyrim_7_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = skyrim_7_la
+		}
+		add_core = NA7
+		}
+		create_vassal = NA7
+		}
+		
+		if = {
+		limit = {
+		skyrim_13_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = NB3 }
+		NOT = { capital_scope = { area = skyrim_13_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = skyrim_13_la
+		}
+		add_core = NB3
+		}
+		create_vassal = NB3
+		}
+		
+		if = {
+		limit = {
+		skyrim_14_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = NB4 }
+		NOT = { capital_scope = { area = skyrim_14_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = skyrim_14_la
+		}
+		add_core = NB4
+		}
+		create_vassal = NB4
+		}
+		
+		if = {
+		limit = {
+		skyrim_15_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = NB5 }
+		NOT = { capital_scope = { area = skyrim_15_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = skyrim_15_la
+		}
+		add_core = NB5
+		}
+		create_vassal = NB5
+		}
+		
+		if = {
+		limit = {
+		skyrim_16_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = NB6 }
+		NOT = { capital_scope = { area = skyrim_16_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = skyrim_16_la
+		}
+		add_core = NB6
+		}
+		create_vassal = NB6
+		}
+		
+		if = {
+		limit = {
+		skyrim_17_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = VOL }
+		NOT = { capital_scope = { area = skyrim_17_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = skyrim_17_la
+		}
+		add_core = VOL
+		}
+		create_vassal = VOL
+		}
+		
+		if = {
+		limit = {
+		skyrim_18_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = NB8 }
+		NOT = { capital_scope = { area = skyrim_18_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = skyrim_18_la
+		}
+		add_core = NB8
+		}
+		create_vassal = NB8
+		}
+		
+		if = {
+		limit = {
+		skyrim_19_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = NB9 }
+		NOT = { capital_scope = { area = skyrim_19_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = skyrim_19_la
+		}
+		add_core = NB9
+		}
+		create_vassal = NB9
+		}
+		
+		if = {
+		limit = {
+		skyrim_20_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = NC0 }
+		NOT = { capital_scope = { area = skyrim_20_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = skyrim_20_la
+		}
+		add_core = NC0
+		}
+		create_vassal = NC0
+		}
+		
+	    }
+	}
+	
+	option = {
+		name = es_collapse.2.b
+		ai_chance = { factor = 15 }
+		
+		if = {
+		limit = {
+		NOT = { capital_scope = { region = western_skyrim_lr } }
+		}
+		every_core_province = {
+			limit = {
+				region = western_skyrim_lr
+			}
+			remove_core = ROOT
+		}
+		}
+		
+	}
+	
+	option = {
+		name = es_collapse.2.c
+		ai_chance = { factor = 10 }
+		
+		trigger = {
+		NOT = { capital_scope = { region = western_skyrim_lr } }
+		NOT = { exists = WSK }
+		}
+		
+		every_core_province = {
+			limit = {
+				region = western_skyrim_lr
+			}
+			remove_core = ROOT
+		}
+		
+		every_owned_province = {
+		limit = {
+		region = western_skyrim_lr
+		}
+		add_core = WSK
+		}
+		
+		release = WSK
+		
+		if = {
+		limit = {
+		government = monarchy
+		}
+		create_union = WSK
+	    }
+		else = {
+		create_alliance = WSK
+		add_opinion = { who = ROOT modifier = es_friendly_nation }
+		add_opinion = { who = WSK modifier = es_friendly_nation }
+		}
+	}
+}

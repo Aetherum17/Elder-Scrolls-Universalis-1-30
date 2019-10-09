@@ -1,0 +1,187 @@
+country_decisions = {
+
+	start_archeological_expedition = {
+		major = yes
+		potential = {
+			ai = no
+			any_owned_province = { NOT = { has_province_flag = archeology_site_flag } }
+			NOT = { has_country_flag = archeology_expedition_on_flag }
+		}
+		allow = {
+			treasury = 1000
+		}
+		effect = {
+		    custom_tooltip = start_archeological_expedition_tt
+			add_treasury = -1000
+			set_country_flag = archeology_expedition_on_flag
+			random_owned_province = {
+			limit = { NOT = { has_province_flag = archeology_site_flag } }
+			    set_province_flag = archeology_site
+			}
+			hidden_effect = {
+			    country_event = { id = es_archeology.1 days = 31 tooltip = es_archeology.1.a.tt }
+				add_country_modifier = {
+		            name = "es_archeology_expedition"
+					duration = 1825
+	        	}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	read_black_book = {
+		potential = {
+			OR = {
+			    AND = {
+				    has_country_modifier = epistolary_acumen
+					NOT = { has_country_flag = epistolary_acumen_read_flag }
+				}
+				 AND = {
+				    has_country_modifier = filament_and_filigree
+					NOT = { has_country_flag = filament_and_filigree_read_flag }
+				}
+				AND = {
+				    has_country_modifier = the_hidden_twilight
+					NOT = { has_country_flag = the_hidden_twilight_read_flag }
+				}
+				 AND = {
+				    has_country_modifier = the_sallow_regent
+					NOT = { has_country_flag = the_sallow_regent_read_flag }
+				}
+				 AND = {
+				    has_country_modifier = the_winds_of_change
+					NOT = { has_country_flag = the_winds_of_change_read_flag }
+				}
+				 AND = {
+				    has_country_modifier = untold_legends
+					NOT = { has_country_flag = untold_legends_read_flag }
+				}
+				 AND = {
+				    has_country_modifier = waking_dreams
+					NOT = { has_country_flag = waking_dreams_read_flag }
+				}
+			}
+		}
+		allow = {
+		    OR = {
+			    AND = {
+				    has_country_modifier = epistolary_acumen
+					NOT = { has_country_flag = epistolary_acumen_read_flag }
+				}
+				 AND = {
+				    has_country_modifier = filament_and_filigree
+					NOT = { has_country_flag = filament_and_filigree_read_flag }
+				}
+				AND = {
+				    has_country_modifier = the_hidden_twilight
+					NOT = { has_country_flag = the_hidden_twilight_read_flag }
+				}
+				AND = {
+				    has_country_modifier = the_sallow_regent
+					NOT = { has_country_flag = the_sallow_regent_read_flag }
+				}
+				AND = {
+				    has_country_modifier = the_winds_of_change
+					NOT = { has_country_flag = the_winds_of_change_read_flag }
+				}
+				AND = {
+				    has_country_modifier = untold_legends
+					NOT = { has_country_flag = untold_legends_read_flag }
+				}
+				AND = {
+				    has_country_modifier = waking_dreams
+					NOT = { has_country_flag = waking_dreams_read_flag }
+				}
+			}
+		}
+		effect = {
+			if = { limit = { NOT = { has_country_flag = epistolary_acumen_read_flag } } set_country_flag = epistolary_acumen_read_flag add_adm_power = 500 add_dip_power = 500 add_mil_power = 500 random_owned_province = { spawn_rebels = { type = hermeus_mora_cult_rebels size = 5 win = yes unrest = 10 } } }
+			if = { limit = { NOT = { has_country_flag = filament_and_filigree_read_flag } } set_country_flag = filament_and_filigree_read_flag add_adm_power = 500 add_dip_power = 500 add_mil_power = 500 random_owned_province = { spawn_rebels = { type = hermeus_mora_cult_rebels size = 5 win = yes unrest = 10 } } }
+			if = { limit = { NOT = { has_country_flag = the_hidden_twilight_read_flag } } set_country_flag = the_hidden_twilight_read_flag add_adm_power = 500 add_dip_power = 500 add_mil_power = 500 random_owned_province = { spawn_rebels = { type = hermeus_mora_cult_rebels size = 5 win = yes unrest = 10 } } }
+			if = { limit = { NOT = { has_country_flag = the_sallow_regent_read_flag } } set_country_flag = the_sallow_regent_read_flag add_adm_power = 500 add_dip_power = 500 add_mil_power = 500 random_owned_province = { spawn_rebels = { type = hermeus_mora_cult_rebels size = 5 win = yes unrest = 10 } } }
+			if = { limit = { NOT = { has_country_flag = the_winds_of_change_read_flag } } set_country_flag = the_winds_of_change_read_flag add_adm_power = 500 add_dip_power = 500 add_mil_power = 500 random_owned_province = { spawn_rebels = { type = hermeus_mora_cult_rebels size = 5 win = yes unrest = 10 } } }
+			if = { limit = { NOT = { has_country_flag = untold_legends_read_flag } } set_country_flag = untold_legends_read_flag add_adm_power = 500 add_dip_power = 500 add_mil_power = 500 random_owned_province = { spawn_rebels = { type = hermeus_mora_cult_rebels size = 5 win = yes unrest = 10 } } }
+			if = { limit = { NOT = { has_country_flag = waking_dreams_read_flag } } set_country_flag = waking_dreams_read_flag add_adm_power = 500 add_dip_power = 500 add_mil_power = 500 random_owned_province = { spawn_rebels = { type = hermeus_mora_cult_rebels size = 5 win = yes unrest = 10 } } }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	acquire_immortality = {
+		major = yes
+		potential = {
+			ai = no
+			OR = {
+			has_country_modifier = heart_of_lorkhan
+			has_country_modifier = keening
+			owns = 1044
+			}
+			NOT = { ruler_culture = daedra }
+		}
+		allow = {
+			has_country_modifier = heart_of_lorkhan
+			has_country_modifier = keening
+			owns = 1044
+			NOT = { ruler_culture = daedra }
+		}
+		effect = {
+			add_stability = -1
+			add_prestige = -25
+			set_ruler_culture = daedra
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	open_eye_of_magnus = {
+		potential = {
+			ai = no
+			OR = {
+			has_country_modifier = staff_of_magnus
+			has_country_modifier = eye_of_magnus
+			has_country_modifier = skeleton_key
+			}
+		}
+		allow = {
+	     	has_country_modifier = staff_of_magnus
+			has_country_modifier = eye_of_magnus
+			has_country_modifier = skeleton_key
+		}
+		effect = {
+			add_adm_tech = 10
+			add_dip_tech = 10
+			add_mil_tech = 10
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	build_tomb_of_kings = {
+	    potential = {
+			ai = no
+			NOT = { has_country_modifier = amulet_of_kings }
+			owns = 1206
+			is_year = 308
+		}
+		allow = {
+	     	NOT = { has_country_modifier = amulet_of_kings }
+			treasury = 1500
+		}
+		effect = {
+			add_treasury = -1500
+			add_country_modifier = {
+		    name = "amulet_of_kings"
+			duration = -1
+	        }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+}
