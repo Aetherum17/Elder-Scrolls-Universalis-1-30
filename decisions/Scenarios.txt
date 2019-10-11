@@ -586,4 +586,32 @@ country_decisions = {
 		}
 	}
 	
+	es_27_gardner_estate = {
+		potential = {
+		owns = 1426
+		NOT = { has_country_modifier = 27_gardner_estate }
+		culture_group = half_blood_cg
+		OR = {
+		    is_year = 1263
+			war_exhaustion = 10
+			NOT = { stability = 0 }
+		{
+		}
+		allow = {
+		stability = -2
+		owns = 1426
+        }
+		effect = {
+		add_stability = -1
+		add_prestige = -25
+		add_country_modifier = {
+		    name = "27_gardner_estate"
+			duration = -1
+		}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
 }
