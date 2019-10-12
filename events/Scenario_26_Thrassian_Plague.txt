@@ -278,6 +278,12 @@ province_event = {
 		ai_chance = { factor = 100 }
 	    change_culture = anequinan
 		add_core = ANE
+		if = {
+		    limit = {
+			    owner = { primary_culture = khajiiti }
+			}
+			owner = { change_primary_culture = anequinan }
+		}
 	}
 	
 }
@@ -312,6 +318,12 @@ province_event = {
 		ai_chance = { factor = 100 }
 	    change_culture = pellitinian
 		add_core = PEL
+		if = {
+		    limit = {
+			    owner = { primary_culture = khajiiti }
+			}
+			owner = { change_primary_culture = pellitinian }
+		}
 	}
 	
 }

@@ -13,7 +13,7 @@ country_event = {
 		religion = marukhism
 		OR = {
 		has_global_flag = middle_dawn_flag
-		tag = ODR
+		tag = ORD
 		}
     }
 
@@ -87,7 +87,7 @@ country_event = {
 		}
 		}
 		if = {
-		    limit = { limit = { NOT = { exists = CYR } } }
+		    limit = { NOT = { exists = CYR } }
 			every_owned_province = {
 			limit = {
 			OR = {
@@ -253,8 +253,8 @@ country_event = {
 		is_year = 1263
 		NOT = { is_year = 1309 }
 		OR = {
-		NOT = { exists = ODR }
-		ODR = { NOT = { owns = 1206 } }
+		NOT = { exists = ORD }
+		ORD = { NOT = { owns = 1206 } }
 		}
 		any_owned_province = {
 		   region = western_syrodiil_lr
@@ -345,7 +345,7 @@ country_event = {
 		NOT = { tag = TAM }
 		NOT = { tag = CYR }
 		NOT = { tag = ALE }
-		NOT = { tag = ODR }
+		NOT = { tag = ORD }
 		culture_group = cyrodiil_cg
 		}
 		change_tag = COL
@@ -396,8 +396,8 @@ country_event = {
 		is_year = 1263
 		NOT = { is_year = 1309 }
 		OR = {
-		NOT = { exists = ODR }
-		ODR = { NOT = { owns = 1206 } }
+		NOT = { exists = ORD }
+		ORD = { NOT = { owns = 1206 } }
 		}
 		any_owned_province = {
 		   region = eastern_syrodiil_lr
@@ -488,7 +488,7 @@ country_event = {
 		NOT = { tag = TAM }
 		NOT = { tag = CYR }
 		NOT = { tag = ALE }
-		NOT = { tag = ODR }
+		NOT = { tag = ORD }
 		culture_group = cyrodiil_cg
 		}
 		change_tag = NIB
@@ -539,8 +539,8 @@ country_event = {
 		is_year = 1263
 		NOT = { is_year = 1309 }
 		OR = {
-		NOT = { exists = ODR }
-		ODR = { NOT = { owns = 1206 } }
+		NOT = { exists = ORD }
+		ORD = { NOT = { owns = 1206 } }
 		}
 		any_owned_province = {
 		   region = central_syrodiil_lr
@@ -557,7 +557,7 @@ country_event = {
 	}
 
 	option = {
-		name = "es_27_scenario.7.a"
+		name = "es_27_scenario.5.a"
 		ai_chance = { factor = 25 }
 		every_owned_province = {
 		    limit = { region = central_syrodiil_lr }
@@ -569,7 +569,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "es_27_scenario.7.b"
+		name = "es_27_scenario.5.b"
 		ai_chance = { factor = 25 }
 		every_owned_province = {
 		    limit = { region = central_syrodiil_lr }
@@ -622,7 +622,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "es_27_scenario.7.c"
+		name = "es_27_scenario.5.c"
 		ai_chance = { factor = 25 }
 		if = {
 		limit = {
@@ -631,7 +631,7 @@ country_event = {
 		NOT = { tag = TAM }
 		NOT = { tag = CYR }
 		NOT = { tag = ALE }
-		NOT = { tag = ODR }
+		NOT = { tag = ORD }
 		culture_group = cyrodiil_cg
 		}
 		change_tag = HEA
@@ -657,7 +657,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "es_27_scenario.7.e"
+		name = "es_27_scenario.5.e"
 		ai_chance = { factor = 25 }
 		trigger = {
 		NOT = { exists = HEA }

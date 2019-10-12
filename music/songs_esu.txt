@@ -614,3 +614,738 @@ song = {
 			}
 		}
 }
+
+##ARES
+
+song = {
+	name = "Ares - Atmora"
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = {
+					culture_group = northern_cg
+			}
+		}
+		modifier = {
+			factor = 0
+			is_at_war = no
+		}
+	}
+}
+
+song = {
+	name = "Ares - Nordic Pride"
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = {
+					culture_group = northern_cg
+			}
+		}
+		modifier = {
+			factor = 0
+			is_at_war = no
+		}
+	}
+}
+
+song = {
+	name = "Ares - For Skyrim"
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = {
+					culture_group = northern_cg
+			}
+		}
+		modifier = {
+			factor = 0
+			is_at_war = no
+		}
+	}
+}
+
+song = {
+	name = "Ares - The Legions March"
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = {
+					culture_group = cyrodiil_cg
+			}
+		}
+		modifier = {
+			factor = 0
+			is_at_war = no
+		}
+	}
+}
+
+song = {
+	name = "Ares - March of the Empire"
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = {
+					culture_group = cyrodiil_cg
+			}
+		}
+		modifier = {
+			factor = 0
+			is_at_war = no
+		}
+	}
+}
+
+song = {
+	name = "Ares - Libraries of the Moth Priests"
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = {
+					culture_group = cyrodiil_cg
+			}
+		}
+		modifier = {
+			factor = 0
+			is_at_war = yes
+		}
+	}
+}
+
+song = {
+	name = "Ares - Plots of the Elder Council"
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = {
+					culture_group = cyrodiil_cg
+			}
+		}
+		modifier = {
+			factor = 0
+			is_at_war = yes
+		}
+	}
+}
+
+song = {
+	name = "Ares - Arrival of the Prince"
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = {
+					culture_group = cyrodiil_cg
+			}
+		}
+		modifier = {
+			factor = 0
+			is_at_war = yes
+		}
+	}
+}
+
+song = {
+	name = "Ares - Valenwood"
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = {
+					culture_group = bosmer_cg
+			}
+		}
+		modifier = {
+			factor = 0
+			is_at_war = no
+		}
+	}
+}
+
+song = {
+	name = "Ares - A Swarm of Arrows"
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = {
+					culture_group = bosmer_cg
+			}
+		}
+		modifier = {
+			factor = 0
+			is_at_war = no
+		}
+	}
+}
+
+song = {
+	name = "Ares - Princes of Sand"
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = {
+					culture_group = yokudan-redguardian_cg
+			}
+		}
+		modifier = {
+			factor = 0
+			is_at_war = no
+		}
+	}
+}
+
+song = {
+	name = "Ares - Markets of Sentinel"
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = {
+					culture_group = yokudan-redguardian_cg
+			}
+		}
+		modifier = {
+			factor = 0
+			is_at_war = yes
+		}
+	}
+}
+
+song = {
+	name = "Ares - Tribal Might"
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = {
+					culture_group = marsh_cg
+			}
+		}
+		modifier = {
+			factor = 0
+			is_at_war = no
+		}
+	}
+}
+
+song = {
+	name = "Ares - March of the Dominon"
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = {
+					culture_group = high_elves_cg
+			}
+		}
+		modifier = {
+			factor = 0
+			is_at_war = no
+		}
+	}
+}
+
+song = {
+	name = "Ares - Army of Magic"
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = {
+					culture_group = high_elves_cg
+			}
+		}
+		modifier = {
+			factor = 0
+			is_at_war = no
+		}
+	}
+}
+
+song = {
+	name = "Ares - Arrival of the Sunbirds"
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = {
+					culture_group = high_elves_cg
+			}
+		}
+		modifier = {
+			factor = 0
+			is_at_war = yes
+		}
+	}
+}
+
+song = {
+	name = "Ares - Malacath-s Wrath"
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = {
+					culture_group = orsimer_cg
+			}
+		}
+		modifier = {
+			factor = 0
+			is_at_war = no
+		}
+	}
+}
+
+song = {
+	name = "Ares - Khajiiti Speed"
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = {
+					culture_group = khajiiti_cg
+			}
+		}
+		modifier = {
+			factor = 0
+			is_at_war = no
+		}
+	}
+}
+
+song = {
+	name = "Ares - Standing Strong"
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = {
+					primary_culture = breton
+			}
+		}
+		modifier = {
+			factor = 0
+			is_at_war = no
+		}
+	}
+}
+
+song = {
+	name = "Ares - Among the Nobles"
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = {
+					primary_culture = breton
+			}
+		}
+		modifier = {
+			factor = 0
+			is_at_war = yes
+		}
+	}
+}
+
+song = {
+	name = "Ares - The Great Houses"
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = {
+					culture_group = chimeris_cg
+			}
+		}
+		modifier = {
+			factor = 0
+			is_at_war = no
+		}
+	}
+}
+
+song = {
+	name = "Ares - Mountain of Fire"
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = {
+					culture_group = chimeris_cg
+			}
+		}
+		modifier = {
+			factor = 0
+			is_at_war = no
+		}
+	}
+}
+
+song = {
+	name = "Ares - Morrowind Theme"
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = {
+					culture_group = chimeris_cg
+			}
+		}
+		modifier = {
+			factor = 0
+			is_at_war = yes
+		}
+	}
+}
+
+song = {
+	name = "Ares - Great Chantry of Akatosh"
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = {
+					religion = eight_divines
+					religion = nine_divines
+					religion = twelve_divines
+			}
+		}
+		modifier = {
+			factor = 0
+			is_at_war = yes
+		}
+	}
+}
+
+song = {
+	name = "Ares - A Meeting under the Stars"
+		chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			is_at_war = yes
+			}
+		}
+}
+
+song = {
+	name = "Ares - Yokuda"
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = {
+					culture_group = yokudan-redguardian_cg
+			}
+		}
+		modifier = {
+			factor = 0
+			is_at_war = no
+		}
+	}
+}
+
+song = {
+	name = "Ares - Akavir"
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = {
+					culture_group = transpandomaic_cg
+			}
+		}
+		modifier = {
+			factor = 0
+			is_at_war = no
+		}
+	}
+}
+
+song = {
+	name = "Ares - Thras"
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = {
+					primary_culture = sload
+			}
+		}
+		modifier = {
+			factor = 0
+			is_at_war = no
+		}
+	}
+}
+
+song = {
+	name = "Ares - Kitchens of the Gourmet"
+		chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			is_at_war = yes
+			}
+		}
+}
+
+song = {
+	name = "Ares - Heroes and Gods"
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = {
+					religion = eight_divines
+					religion = nine_divines
+					religion = twelve_divines
+			}
+		}
+		modifier = {
+			factor = 0
+			is_at_war = yes
+		}
+	}
+}
+
+song = {
+	name = "Ares - Essence of Magicka"
+		chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			is_at_war = yes
+			}
+		}
+}
+
+song = {
+	name = "Ares - Mara Grace"
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = {
+					religion = eight_divines
+					religion = nine_divines
+					religion = twelve_divines
+			}
+		}
+		modifier = {
+			factor = 0
+			is_at_war = yes
+		}
+	}
+}
+
+song = {
+	name = "Ares - Stendarr Night"
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = {
+					religion = eight_divines
+					religion = nine_divines
+					religion = twelve_divines
+					religion = altmeri_pantheon
+			}
+		}
+		modifier = {
+			factor = 0
+			is_at_war = yes
+		}
+	}
+}
+
+song = {
+	name = "Ares - Gifts of Kynareth"
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = {
+					religion = eight_divines
+					religion = nine_divines
+					religion = twelve_divines
+			}
+		}
+		modifier = {
+			factor = 0
+			is_at_war = yes
+		}
+	}
+}
+
+song = {
+	name = "Ares - Lost Cities"
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = {
+					culture_group = high_elves_cg
+			}
+		}
+		modifier = {
+			factor = 0
+			is_at_war = yes
+		}
+	}
+}
+
+song = {
+	name = "Ares - Knowledge and Ancestry"
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = {
+					religion = altmeri_pantheon
+					religion = snow_elves_pantheon
+					religion = bosmer_pantheon
+					religion = malacath_cult
+					religion = chimer_pantheon
+					religion = tribunal_pantheon
+			}
+		}
+		modifier = {
+			factor = 0
+			is_at_war = yes
+		}
+	}
+}
+
+song = {
+	name = "Ares - Way of the Sword"
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = {
+					culture_group = po_tun_cg
+					culture_group = tsaesci_cg
+					culture_group = tangmo_cg
+					culture_group = transpandomaic_cg
+					culture_group = kamal_cg
+			}
+		}
+		modifier = {
+			factor = 0
+			is_at_war = no
+		}
+	}
+}
+
+song = {
+	name = "Ares - Invasion of Akavir"
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = {
+					culture_group = po_tun_cg
+					culture_group = tsaesci_cg
+					culture_group = tangmo_cg
+					culture_group = transpandomaic_cg
+					culture_group = kamal_cg
+			}
+		}
+		modifier = {
+			factor = 0
+			is_at_war = no
+		}
+	}
+}
+
+song = {
+	name = "Ares - Might of the Imperials"
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = {
+					culture_group = cyrodiil_cg
+			}
+		}
+		modifier = {
+			factor = 0
+			is_at_war = no
+		}
+	}
+}
+
+##Ronald van Deurzen
+
+song = {
+	name = "Ronald van Deurzen - Glorious Era"
+		chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			is_at_war = yes
+			}
+		}
+}
+
+song = {
+	name = "Ronald van Deurzen - Mist At Dawn"
+		chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			is_at_war = yes
+			}
+		}
+}
+
+song = {
+	name = "Ronald van Deurzen - Unsafe Forests"
+		chance = {
+		factor = 2
+		}
+}
+
+song = {
+	name = "Ronald van Deurzen - Serenity Prayer"
+		chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			is_at_war = yes
+			}
+		}
+}
+
+song = {
+	name = "Ronald van Deurzen - Tale of Dreams"
+		chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			is_at_war = yes
+			}
+		}
+}
+
+song = {
+	name = "Ronald van Deurzen - Lore of Wisdom"
+		chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			is_at_war = yes
+			}
+		}
+}
