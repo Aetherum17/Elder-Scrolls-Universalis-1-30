@@ -1,0 +1,303 @@
+namespace = es_tamriel_empire_formation_events
+
+province_event = {
+	id = es_tamriel_empire_formation_events.1
+	title = es_tamriel_empire_formation_events.1.t
+	desc = es_tamriel_empire_formation_events.1.d
+	picture = TRIBUNAL_ELECTIONS_eventPicture
+	
+	hidden = yes
+	
+	trigger = {
+	    NOT = { has_province_flag = tamriel_change_owner_flag }
+		owner = { has_country_flag = summerset_lr_province_flag }
+		NOT = { owner = { capital_scope = { region = summerset_lr } } }
+		NOT = { owned_by = SUM }
+		region = summerset_lr
+		SUM = { is_subject_of_type = imperial_subject }
+	}
+
+	mean_time_to_happen = {
+		days = 365
+	}
+	
+	immediate = {
+	    cede_province = SUM
+		add_core = SUM
+		set_province_flag = tamriel_change_owner_flag
+	}
+
+	option = {
+		name = "es_tamriel_empire_formation_events.1.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+province_event = {
+	id = es_tamriel_empire_formation_events.2
+	title = es_tamriel_empire_formation_events.1.t
+	desc = es_tamriel_empire_formation_events.1.d
+	picture = TRIBUNAL_ELECTIONS_eventPicture
+	
+	hidden = yes
+	
+	trigger = {
+	    NOT = { has_province_flag = tamriel_change_owner_flag }
+		owner = { has_country_flag = valenwood_lr_province_flag }
+		NOT = { owner = { capital_scope = { region = valenwood_lr } } }
+		NOT = { owned_by = VAL }
+		region = valenwood_lr
+		VAL = { is_subject_of_type = imperial_subject }
+	}
+
+	mean_time_to_happen = {
+		days = 365
+	}
+	
+	immediate = {
+	    cede_province = VAL
+		add_core = VAL
+		set_province_flag = tamriel_change_owner_flag
+	}
+
+	option = {
+		name = "es_tamriel_empire_formation_events.1.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+province_event = {
+	id = es_tamriel_empire_formation_events.3
+	title = es_tamriel_empire_formation_events.1.t
+	desc = es_tamriel_empire_formation_events.1.d
+	picture = TRIBUNAL_ELECTIONS_eventPicture
+	
+	hidden = yes
+	
+	trigger = {
+	    NOT = { has_province_flag = tamriel_change_owner_flag }
+		owner = { has_country_flag = eldweyr_lr_province_flag }
+		NOT = { owner = { capital_scope = { region = eldweyr_lr } } }
+		NOT = { owned_by = ELS }
+		region = eldweyr_lr
+		ELS = { is_subject_of_type = imperial_subject }
+	}
+
+	mean_time_to_happen = {
+		days = 365
+	}
+	
+	immediate = {
+	    cede_province = ELS
+		add_core = ELS
+		set_province_flag = tamriel_change_owner_flag
+	}
+
+	option = {
+		name = "es_tamriel_empire_formation_events.1.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+province_event = {
+	id = es_tamriel_empire_formation_events.4
+	title = es_tamriel_empire_formation_events.1.t
+	desc = es_tamriel_empire_formation_events.1.d
+	picture = TRIBUNAL_ELECTIONS_eventPicture
+	
+	hidden = yes
+	
+	trigger = {
+	    NOT = { has_province_flag = tamriel_change_owner_flag }
+		owner = { has_country_flag = morrowind_lr_province_flag }
+		NOT = { owner = { capital_scope = { OR = { region = vvardenfell_lr region = morrowind_lr } } } }
+		NOT = { owned_by = MOR }
+		OR = {
+		region = vvardenfell_lr
+		region = morrowind_lr
+		}
+		MOR = { is_subject_of_type = imperial_subject }
+	}
+
+	mean_time_to_happen = {
+		days = 365
+	}
+	
+	immediate = {
+	    cede_province = MOR
+		add_core = MOR
+		set_province_flag = tamriel_change_owner_flag
+	}
+
+	option = {
+		name = "es_tamriel_empire_formation_events.1.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+province_event = {
+	id = es_tamriel_empire_formation_events.5
+	title = es_tamriel_empire_formation_events.1.t
+	desc = es_tamriel_empire_formation_events.1.d
+	picture = TRIBUNAL_ELECTIONS_eventPicture
+	
+	hidden = yes
+	
+	trigger = {
+	    NOT = { has_province_flag = tamriel_change_owner_flag }
+		owner = { has_country_flag = black_marsh_lr_province_flag }
+		NOT = { owner = { capital_scope = { region = black_marsh_lr } } }
+		NOT = { owned_by = ARG }
+		region = black_marsh_lr
+		ARG = { is_subject_of_type = imperial_subject }
+	}
+
+	mean_time_to_happen = {
+		days = 365
+	}
+	
+	immediate = {
+	    cede_province = ARG
+		add_core = ARG
+		set_province_flag = tamriel_change_owner_flag
+	}
+
+	option = {
+		name = "es_tamriel_empire_formation_events.1.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+province_event = {
+	id = es_tamriel_empire_formation_events.6
+	title = es_tamriel_empire_formation_events.1.t
+	desc = es_tamriel_empire_formation_events.1.d
+	picture = TRIBUNAL_ELECTIONS_eventPicture
+	
+	hidden = yes
+	
+	trigger = {
+	    NOT = { has_province_flag = tamriel_change_owner_flag }
+		owner = { has_country_flag = hgh_rock_lr_province_flag }
+		NOT = { owner = { capital_scope = { region = hgh_rock_lr } } }
+		NOT = { owned_by = HIG }
+		region = hgh_rock_lr
+		HIG = { is_subject_of_type = imperial_subject }
+	}
+
+	mean_time_to_happen = {
+		days = 365
+	}
+	
+	immediate = {
+	    cede_province = HIG
+		add_core = HIG
+		set_province_flag = tamriel_change_owner_flag
+	}
+
+	option = {
+		name = "es_tamriel_empire_formation_events.1.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+province_event = {
+	id = es_tamriel_empire_formation_events.7
+	title = es_tamriel_empire_formation_events.1.t
+	desc = es_tamriel_empire_formation_events.1.d
+	picture = TRIBUNAL_ELECTIONS_eventPicture
+	
+	hidden = yes
+	
+	trigger = {
+	    NOT = { has_province_flag = tamriel_change_owner_flag }
+		owner = { has_country_flag = skyrim_province_flag }
+		NOT = { owner = { capital_scope = { OR = { region = western_skyrim_lr region = eastern_skyrim_lr } } } }
+		NOT = { owned_by = SKY }
+		OR = {
+		region = western_skyrim_lr
+		region = eastern_skyrim_lr
+		}
+		SKY = { is_subject_of_type = imperial_subject }
+	}
+
+	mean_time_to_happen = {
+		days = 365
+	}
+	
+	immediate = {
+	    cede_province = SKY
+		add_core = SKY
+		set_province_flag = tamriel_change_owner_flag
+	}
+
+	option = {
+		name = "es_tamriel_empire_formation_events.1.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+province_event = {
+	id = es_tamriel_empire_formation_events.8
+	title = es_tamriel_empire_formation_events.1.t
+	desc = es_tamriel_empire_formation_events.1.d
+	picture = TRIBUNAL_ELECTIONS_eventPicture
+	
+	hidden = yes
+	
+	trigger = {
+	    NOT = { has_province_flag = tamriel_change_owner_flag }
+		owner = { has_country_flag = hammerfell_lr_province_flag }
+		NOT = { owner = { capital_scope = { region = hammerfell_lr } } }
+		NOT = { owned_by = HAM }
+		region = hammerfell_lr
+		HAM = { is_subject_of_type = imperial_subject }
+	}
+
+	mean_time_to_happen = {
+		days = 365
+	}
+	
+	immediate = {
+	    cede_province = HAM
+		add_core = HAM
+		set_province_flag = tamriel_change_owner_flag
+	}
+
+	option = {
+		name = "es_tamriel_empire_formation_events.1.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = es_tamriel_empire_formation_events.9
+	title = es_tamriel_empire_formation_events.1.t
+	desc = es_tamriel_empire_formation_events.1.d
+	picture = TRIBUNAL_ELECTIONS_eventPicture
+	
+	hidden = yes
+	
+	trigger = {
+	    has_country_flag = integration_by_tamriel_flag
+	}
+
+	mean_time_to_happen = {
+		days = 31
+	}
+	
+	immediate = {
+	    clr_country_flag = integration_by_tamriel_flag
+		every_owned_province = {
+		    set_country_flag = tamriel_change_owner_flag
+		}
+	    overlord = {
+		inherit = ROOT
+		}
+	}
+
+	option = {
+		name = "es_tamriel_empire_formation_events.1.a"
+		ai_chance = { factor = 100 }
+	}
+}

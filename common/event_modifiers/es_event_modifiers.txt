@@ -452,7 +452,7 @@ es_female_advisors = {
 }
 
 150_size = {
-    global_autonomy = 0.005
+    global_autonomy = 0.05
     harsh_treatment_cost = 0.25
     global_unrest = 1
     yearly_corruption = 0.05
@@ -474,7 +474,7 @@ es_female_advisors = {
 }
 
 200_size = {
-    global_autonomy = 0.01
+    global_autonomy = 0.1
     harsh_treatment_cost = 0.50
     global_unrest = 2.5
     yearly_corruption = 0.10
@@ -853,4 +853,22 @@ amulet_of_kings = {
 
 es_archeology_expedition = {
     prestige = 0.25
+}
+
+ruler_almalexia = {
+    global_missionary_strength = 0.01
+	administrative_efficiency = 0.10
+	idea_cost = -0.10
+}
+
+ruler_sotha_sil = {
+    technology_cost = -0.10
+	ae_impact = -0.10
+	trade_efficiency = 0.10
+}
+
+ruler_vivec = {
+    free_leader_pool = 1
+	land_morale = 0.10
+	diplomatic_reputation = 1
 }

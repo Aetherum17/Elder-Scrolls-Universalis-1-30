@@ -809,27 +809,118 @@ country_decisions = {
 			primary_culture = colovian
 			primary_culture = nibenean
 			primary_culture = vampire
+			has_country_flag = new_empire_flag
 			}
 			NOT = { has_country_flag = formed_tam_flag }
 		}
 		provinces_to_highlight = {
 		    OR = {
-			province_id = 1206		
-			province_id = 1342
+			province_id = 271		
+			province_id = 284
+			province_id = 263
+			province_id = 250
+			province_id = 299
+			province_id = 820		
+			province_id = 844
+			province_id = 857
+			province_id = 834
+			province_id = 868
+			province_id = 922		
+			province_id = 933
+			province_id = 888
+			province_id = 912
+			province_id = 915
+			province_id = 1075		
+			province_id = 1098
+			province_id = 1087
+			province_id = 1072
+			province_id = 1064
 			province_id = 1002
-			province_id = 922
-			province_id = 1369
+			province_id = 970
+			province_id = 990
+			province_id = 957
+			province_id = 1028
+			province_id = 1043		
+			province_id = 1037
+			province_id = 1045
+			province_id = 1046
+			province_id = 1052
+			province_id = 1369		
+			province_id = 1379
+			province_id = 1394
+			province_id = 1400
+			province_id = 1424
+			province_id = 1510		
+			province_id = 1478
+			province_id = 1446
+			province_id = 1482
+			province_id = 1474
+			province_id = 1342		
+			province_id = 1291
+			province_id = 1355
+			province_id = 1331
+			province_id = 1325
+			province_id = 1275		
+			province_id = 1306
+			province_id = 1319
+			province_id = 1268
+			province_id = 1286
 			}
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-			owns_core_province = 1206		
-			owns_core_province = 1342
-			owns_core_province = 1002
-			owns_core_province = 922
-			owns_core_province = 1369
+			271	= { country_or_subject_holds = ROOT }
+			284	= { country_or_subject_holds = ROOT }
+			263	= { country_or_subject_holds = ROOT }
+			250	= { country_or_subject_holds = ROOT }
+			299	= { country_or_subject_holds = ROOT }
+			820	= { country_or_subject_holds = ROOT }
+			844	= { country_or_subject_holds = ROOT }
+			857	= { country_or_subject_holds = ROOT }
+			834	= { country_or_subject_holds = ROOT }
+			868	= { country_or_subject_holds = ROOT }
+			922	= { country_or_subject_holds = ROOT }
+			933	= { country_or_subject_holds = ROOT }
+			888	= { country_or_subject_holds = ROOT }
+			912	= { country_or_subject_holds = ROOT }
+			915	= { country_or_subject_holds = ROOT }
+			1075 = { country_or_subject_holds = ROOT }	
+			1098 = { country_or_subject_holds = ROOT }
+			1087 = { country_or_subject_holds = ROOT }
+			1072 = { country_or_subject_holds = ROOT }
+			1064 = { country_or_subject_holds = ROOT }
+			1002 = { country_or_subject_holds = ROOT }
+			970	= { country_or_subject_holds = ROOT }
+			990	= { country_or_subject_holds = ROOT }
+			957	= { country_or_subject_holds = ROOT }
+			1028 = { country_or_subject_holds = ROOT }
+			1043 = { country_or_subject_holds = ROOT }	
+			1037 = { country_or_subject_holds = ROOT }
+			1045 = { country_or_subject_holds = ROOT }
+			1046 = { country_or_subject_holds = ROOT }
+			1052 = { country_or_subject_holds = ROOT }
+			1369 = { country_or_subject_holds = ROOT }	
+			1379 = { country_or_subject_holds = ROOT }
+			1394 = { country_or_subject_holds = ROOT }
+			1400 = { country_or_subject_holds = ROOT }
+			1424 = { country_or_subject_holds = ROOT }
+			1510 = { country_or_subject_holds = ROOT }	
+			1478 = { country_or_subject_holds = ROOT }
+			1446 = { country_or_subject_holds = ROOT }
+			1482 = { country_or_subject_holds = ROOT }
+			1474 = { country_or_subject_holds = ROOT }
+			1342 = { country_or_subject_holds = ROOT }	
+			1291 = { country_or_subject_holds = ROOT }
+			1355 = { country_or_subject_holds = ROOT }
+			1331 = { country_or_subject_holds = ROOT }
+			1325 = { country_or_subject_holds = ROOT }
+			1275 = { country_or_subject_holds = ROOT }	
+			1306 = { country_or_subject_holds = ROOT }
+			1319 = { country_or_subject_holds = ROOT }
+			1268 = { country_or_subject_holds = ROOT }
+			1286 = { country_or_subject_holds = ROOT }
 		}
 		effect = {
 			change_tag = TAM
@@ -3435,7 +3526,6 @@ country_decisions = {
 			primary_culture = dunmer
 			NOT = { has_country_flag = formed_tri_flag }
 			religion = tribunal_pantheon
-			government = theocracy
 		}
 		provinces_to_highlight = {
 		    OR = {
@@ -3459,6 +3549,7 @@ country_decisions = {
 		effect = {
 			change_tag = TRI
 			set_country_flag = formed_tri_flag
+			country_event = { id = es_17_scenario.15 days = 31 tooltip = es_17_scenario.15.a.tt }
 			#
 			if = {
 				limit = {

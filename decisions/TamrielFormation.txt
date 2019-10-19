@@ -1,0 +1,852 @@
+country_decisions = {
+
+	proclaim_the_new_empire = {
+	    major = yes
+		potential = {
+			OR = {
+			owns = 1206
+			culture_group = cyrodiil_cg
+			}
+			NOT = { has_country_flag = new_empire_flag }
+			NOT = { tag = TAM }
+		}
+		allow = {
+		    owns = 1206
+			OR = {
+			    tag = ALE
+				tag = CYR
+				tag = ORD
+			    government_rank = 7
+				prestige = 50
+			}
+		}
+		effect = {
+		    set_country_flag = new_empire_flag
+			every_province = {
+			    limit = {
+				    has_province_flag = tamriel_change_owner_flag
+				}
+				clr_province_flag = tamriel_change_owner_flag
+			}
+			if = {
+			    limit = {
+				    capital_scope = { region = summerset_lr }
+				}
+				set_country_flag = summerset_lr_province_flag
+			}
+		    if = {
+			    limit = {
+				    capital_scope = { region = valenwood_lr }
+				}
+				set_country_flag = valenwood_lr_province_flag
+			}
+			if = {
+			    limit = {
+				    capital_scope = { region = eldweyr_lr }
+				}
+				set_country_flag = eldweyr_lr_province_flag
+			}
+			if = {
+			    limit = {
+				    capital_scope = { OR = { region = vvardenfell_lr region = morrowind_lr } }
+				}
+				set_country_flag = morrowind_lr_province_flag
+			}
+			if = {
+			    limit = {
+				    capital_scope = { region = black_marsh_lr }
+				}
+				set_country_flag = black_marsh_lr_province_flag
+			}
+			if = {
+			    limit = {
+				    capital_scope = { OR = { region = western_skyrim_lr region = eastern_skyrim_lr } }
+				}
+				set_country_flag = skyrim_province_flag
+			}
+			if = {
+			    limit = {
+				    capital_scope = { region = hgh_rock_lr }
+				}
+				set_country_flag = hgh_rock_lr_province_flag
+			}
+			if = {
+			    limit = {
+				    capital_scope = { region = hammerfell_lr }
+				}
+				set_country_flag = hammerfell_lr_province_flag
+			}
+			if = {
+				limit = {
+					NOT = { government_rank = 7 }
+				}
+				set_government_rank = 7
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	create_imperial_province_summerset = {
+	    major = yes
+		potential = {
+			has_country_flag = new_empire_flag
+			NOT = { has_country_flag = summerset_lr_province_flag }
+		}
+		allow = {
+			271 = {
+			    OR = {
+				    owned_by = ROOT
+					controlled_by = ROOT
+					country_or_subject_holds = ROOT
+				}
+			}
+			284 = {
+			    OR = {
+				    owned_by = ROOT
+					controlled_by = ROOT
+					country_or_subject_holds = ROOT
+				}
+			}
+			263 = {
+			    OR = {
+				    owned_by = ROOT
+					controlled_by = ROOT
+					country_or_subject_holds = ROOT
+				}
+			}
+			250 = {
+			    OR = {
+				    owned_by = ROOT
+					controlled_by = ROOT
+					country_or_subject_holds = ROOT
+				}
+			}
+			299 = {
+			    OR = {
+				    owned_by = ROOT
+					controlled_by = ROOT
+					country_or_subject_holds = ROOT
+				}
+			}
+		}
+		effect = {
+		    set_country_flag = summerset_lr_province_flag
+			every_province = {
+			    limit = {
+				    region = summerset_lr
+				}
+				add_permanent_claim = ROOT
+			}
+			if = {
+			    limit = {
+				    exists = SUM
+				}
+				create_subject = {
+                    subject_type = imperial_subject
+                    subject = SUM
+                }
+			}
+			else = {
+			    every_province = {
+				    limit = {
+					    region = summerset_lr
+						OR = { owned_by = ROOT controlled_by = ROOT country_or_subject_holds = ROOT }
+					}
+					cede_province = SUM
+					add_core = SUM
+				}
+				create_subject = {
+                    subject_type = imperial_subject
+                    subject = SUM
+                }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	create_imperial_province_valenwood = {
+	    major = yes
+		potential = {
+			has_country_flag = new_empire_flag
+			NOT = { has_country_flag = valenwood_lr_province_flag }
+		}
+		allow = {
+			820 = {
+			    OR = {
+				    owned_by = ROOT
+					controlled_by = ROOT
+					country_or_subject_holds = ROOT
+				}
+			}
+			844 = {
+			    OR = {
+				    owned_by = ROOT
+					controlled_by = ROOT
+					country_or_subject_holds = ROOT
+				}
+			}
+			857 = {
+			    OR = {
+				    owned_by = ROOT
+					controlled_by = ROOT
+					country_or_subject_holds = ROOT
+				}
+			}
+			834 = {
+			    OR = {
+				    owned_by = ROOT
+					controlled_by = ROOT
+					country_or_subject_holds = ROOT
+				}
+			}
+			868 = {
+			    OR = {
+				    owned_by = ROOT
+					controlled_by = ROOT
+					country_or_subject_holds = ROOT
+				}
+			}
+		}
+		effect = {
+		    set_country_flag = valenwood_lr_province_flag
+			every_province = {
+			    limit = {
+				    region = valenwood_lr
+				}
+				add_permanent_claim = ROOT
+			}
+			if = {
+			    limit = {
+				    exists = VAL
+				}
+				create_subject = {
+                    subject_type = imperial_subject
+                    subject = VAL
+                }
+			}
+			else = {
+			    every_province = {
+				    limit = {
+					    region = valenwood_lr
+						OR = { owned_by = ROOT controlled_by = ROOT country_or_subject_holds = ROOT }
+					}
+					cede_province = VAL
+					add_core = VAL
+				}
+				create_subject = {
+                    subject_type = imperial_subject
+                    subject = VAL
+                }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	create_imperial_province_elsweyr = {
+	    major = yes
+		potential = {
+			has_country_flag = new_empire_flag
+			NOT = { has_country_flag = eldweyr_lr_province_flag }
+		}
+		allow = {
+			922 = {
+			    OR = {
+				    owned_by = ROOT
+					controlled_by = ROOT
+					country_or_subject_holds = ROOT
+				}
+			}
+			933 = {
+			    OR = {
+				    owned_by = ROOT
+					controlled_by = ROOT
+					country_or_subject_holds = ROOT
+				}
+			}
+			888 = {
+			    OR = {
+				    owned_by = ROOT
+					controlled_by = ROOT
+					country_or_subject_holds = ROOT
+				}
+			}
+			912 = {
+			    OR = {
+				    owned_by = ROOT
+					controlled_by = ROOT
+					country_or_subject_holds = ROOT
+				}
+			}
+			915 = {
+			    OR = {
+				    owned_by = ROOT
+					controlled_by = ROOT
+					country_or_subject_holds = ROOT
+				}
+			}
+		}
+		effect = {
+		    set_country_flag = eldweyr_lr_province_flag
+			every_province = {
+			    limit = {
+				    region = eldweyr_lr
+				}
+				add_permanent_claim = ROOT
+			}
+			if = {
+			    limit = {
+				    exists = ELS
+				}
+				create_subject = {
+                    subject_type = imperial_subject
+                    subject = ELS
+                }
+			}
+			else = {
+			    every_province = {
+				    limit = {
+					    region = eldweyr_lr
+						OR = { owned_by = ROOT controlled_by = ROOT country_or_subject_holds = ROOT }
+					}
+					cede_province = ELS
+					add_core = ELS
+				}
+				create_subject = {
+                    subject_type = imperial_subject
+                    subject = ELS
+                }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	create_imperial_province_morrowind = {
+	    major = yes
+		potential = {
+			has_country_flag = new_empire_flag
+			NOT = { has_country_flag = morrowind_lr_province_flag }
+		}
+		allow = {
+			1002 = {
+			    OR = {
+				    owned_by = ROOT
+					controlled_by = ROOT
+					country_or_subject_holds = ROOT
+				}
+			}
+			970 = {
+			    OR = {
+				    owned_by = ROOT
+					controlled_by = ROOT
+					country_or_subject_holds = ROOT
+				}
+			}
+			990 = {
+			    OR = {
+				    owned_by = ROOT
+					controlled_by = ROOT
+					country_or_subject_holds = ROOT
+				}
+			}
+			957 = {
+			    OR = {
+				    owned_by = ROOT
+					controlled_by = ROOT
+					country_or_subject_holds = ROOT
+				}
+			}
+			1028 = {
+			    OR = {
+				    owned_by = ROOT
+					controlled_by = ROOT
+					country_or_subject_holds = ROOT
+				}
+			}
+			1043 = {
+			    OR = {
+				    owned_by = ROOT
+					controlled_by = ROOT
+					country_or_subject_holds = ROOT
+				}
+			}
+			1037 = {
+			    OR = {
+				    owned_by = ROOT
+					controlled_by = ROOT
+					country_or_subject_holds = ROOT
+				}
+			}
+			1045 = {
+			    OR = {
+				    owned_by = ROOT
+					controlled_by = ROOT
+					country_or_subject_holds = ROOT
+				}
+			}
+			1046 = {
+			    OR = {
+				    owned_by = ROOT
+					controlled_by = ROOT
+					country_or_subject_holds = ROOT
+				}
+			}
+			1052 = {
+			    OR = {
+				    owned_by = ROOT
+					controlled_by = ROOT
+					country_or_subject_holds = ROOT
+				}
+			}
+		}
+		effect = {
+		    set_country_flag = morrowind_lr_province_flag
+			every_province = {
+			    limit = {
+				    OR = {
+				    region = morrowind_lr
+					region = vvardenfell_lr 
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			if = {
+			    limit = {
+				    exists = MOR
+				}
+				create_subject = {
+                    subject_type = imperial_subject
+                    subject = MOR
+                }
+			}
+			else = {
+			    every_province = {
+				    limit = {
+					    OR = {
+				        region = morrowind_lr
+					    region = vvardenfell_lr 
+				        }
+						OR = { owned_by = ROOT controlled_by = ROOT country_or_subject_holds = ROOT }
+					}
+					cede_province = MOR
+					add_core = MOR
+				}
+				create_subject = {
+                    subject_type = imperial_subject
+                    subject = MOR
+                }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	create_imperial_province_black_marsh = {
+	    major = yes
+		potential = {
+			has_country_flag = new_empire_flag
+			NOT = { has_country_flag = black_marsh_lr_province_flag }
+		}
+		allow = {
+			1075 = {
+			    OR = {
+				    owned_by = ROOT
+					controlled_by = ROOT
+					country_or_subject_holds = ROOT
+				}
+			}
+			1098 = {
+			    OR = {
+				    owned_by = ROOT
+					controlled_by = ROOT
+					country_or_subject_holds = ROOT
+				}
+			}
+			1087 = {
+			    OR = {
+				    owned_by = ROOT
+					controlled_by = ROOT
+					country_or_subject_holds = ROOT
+				}
+			}
+			1072 = {
+			    OR = {
+				    owned_by = ROOT
+					controlled_by = ROOT
+					country_or_subject_holds = ROOT
+				}
+			}
+			1064 = {
+			    OR = {
+				    owned_by = ROOT
+					controlled_by = ROOT
+					country_or_subject_holds = ROOT
+				}
+			}
+		}
+		effect = {
+		    set_country_flag = black_marsh_lr_province_flag
+			every_province = {
+			    limit = {
+				    region = black_marsh_lr
+				}
+				add_permanent_claim = ROOT
+			}
+			if = {
+			    limit = {
+				    exists = ARG
+				}
+				create_subject = {
+                    subject_type = imperial_subject
+                    subject = ARG
+                }
+			}
+			else = {
+			    every_province = {
+				    limit = {
+					    region = black_marsh_lr
+						OR = { owned_by = ROOT controlled_by = ROOT country_or_subject_holds = ROOT }
+					}
+					cede_province = ARG
+					add_core = ARG
+				}
+				create_subject = {
+                    subject_type = imperial_subject
+                    subject = ARG
+                }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+    create_imperial_province_skyrim = {
+	    major = yes
+		potential = {
+			has_country_flag = new_empire_flag
+			NOT = { has_country_flag = skyrim_province_flag }
+		}
+		allow = {
+			1342 = {
+			    OR = {
+				    owned_by = ROOT
+					controlled_by = ROOT
+					country_or_subject_holds = ROOT
+				}
+			}
+			1291 = {
+			    OR = {
+				    owned_by = ROOT
+					controlled_by = ROOT
+					country_or_subject_holds = ROOT
+				}
+			}
+			1355 = {
+			    OR = {
+				    owned_by = ROOT
+					controlled_by = ROOT
+					country_or_subject_holds = ROOT
+				}
+			}
+			1331 = {
+			    OR = {
+				    owned_by = ROOT
+					controlled_by = ROOT
+					country_or_subject_holds = ROOT
+				}
+			}
+			1325 = {
+			    OR = {
+				    owned_by = ROOT
+					controlled_by = ROOT
+					country_or_subject_holds = ROOT
+				}
+			}
+			1275 = {
+			    OR = {
+				    owned_by = ROOT
+					controlled_by = ROOT
+					country_or_subject_holds = ROOT
+				}
+			}
+			1306 = {
+			    OR = {
+				    owned_by = ROOT
+					controlled_by = ROOT
+					country_or_subject_holds = ROOT
+				}
+			}
+			1319 = {
+			    OR = {
+				    owned_by = ROOT
+					controlled_by = ROOT
+					country_or_subject_holds = ROOT
+				}
+			}
+			1268 = {
+			    OR = {
+				    owned_by = ROOT
+					controlled_by = ROOT
+					country_or_subject_holds = ROOT
+				}
+			}
+			1286 = {
+			    OR = {
+				    owned_by = ROOT
+					controlled_by = ROOT
+					country_or_subject_holds = ROOT
+				}
+			}
+		}
+		effect = {
+		    set_country_flag = skyrim_province_flag
+			every_province = {
+			    limit = {
+				    OR = {
+				    region = western_skyrim_lr
+					region = eastern_skyrim_lr 
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			if = {
+			    limit = {
+				    exists = SKY
+				}
+				create_subject = {
+                    subject_type = imperial_subject
+                    subject = SKY
+                }
+			}
+			else = {
+			    every_province = {
+				    limit = {
+					    OR = {
+				        region = western_skyrim_lr
+					    region = eastern_skyrim_lr 
+				        }
+						OR = { owned_by = ROOT controlled_by = ROOT country_or_subject_holds = ROOT }
+					}
+					cede_province = SKY
+					add_core = SKY
+				}
+				create_subject = {
+                    subject_type = imperial_subject
+                    subject = SKY
+                }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+    }
+	
+	create_imperial_province_high_rock = {
+	    major = yes
+		potential = {
+			has_country_flag = new_empire_flag
+			NOT = { has_country_flag = hgh_rock_lr_province_flag }
+		}
+		allow = {
+			1369 = {
+			    OR = {
+				    owned_by = ROOT
+					controlled_by = ROOT
+					country_or_subject_holds = ROOT
+				}
+			}
+			1379 = {
+			    OR = {
+				    owned_by = ROOT
+					controlled_by = ROOT
+					country_or_subject_holds = ROOT
+				}
+			}
+			1394 = {
+			    OR = {
+				    owned_by = ROOT
+					controlled_by = ROOT
+					country_or_subject_holds = ROOT
+				}
+			}
+			1400 = {
+			    OR = {
+				    owned_by = ROOT
+					controlled_by = ROOT
+					country_or_subject_holds = ROOT
+				}
+			}
+			1424 = {
+			    OR = {
+				    owned_by = ROOT
+					controlled_by = ROOT
+					country_or_subject_holds = ROOT
+				}
+			}
+		}
+		effect = {
+		    set_country_flag = hgh_rock_lr_province_flag
+			every_province = {
+			    limit = {
+				    region = hgh_rock_lr
+				}
+				add_permanent_claim = ROOT
+			}
+			if = {
+			    limit = {
+				    exists = HIG
+				}
+				create_subject = {
+                    subject_type = imperial_subject
+                    subject = HIG
+                }
+			}
+			else = {
+			    every_province = {
+				    limit = {
+					    region = hgh_rock_lr
+						OR = { owned_by = ROOT controlled_by = ROOT country_or_subject_holds = ROOT }
+					}
+					cede_province = HIG
+					add_core = HIG
+				}
+				create_subject = {
+                    subject_type = imperial_subject
+                    subject = HIG
+                }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	create_imperial_province_hammerfell = {
+	    major = yes
+		potential = {
+			has_country_flag = new_empire_flag
+			NOT = { has_country_flag = hammerfell_lr_province_flag }
+		}
+		allow = {
+			1510 = {
+			    OR = {
+				    owned_by = ROOT
+					controlled_by = ROOT
+					country_or_subject_holds = ROOT
+				}
+			}
+			1478 = {
+			    OR = {
+				    owned_by = ROOT
+					controlled_by = ROOT
+					country_or_subject_holds = ROOT
+				}
+			}
+			1446 = {
+			    OR = {
+				    owned_by = ROOT
+					controlled_by = ROOT
+					country_or_subject_holds = ROOT
+				}
+			}
+			1482 = {
+			    OR = {
+				    owned_by = ROOT
+					controlled_by = ROOT
+					country_or_subject_holds = ROOT
+				}
+			}
+			1474 = {
+			    OR = {
+				    owned_by = ROOT
+					controlled_by = ROOT
+					country_or_subject_holds = ROOT
+				}
+			}
+		}
+		effect = {
+		    set_country_flag = hammerfell_lr_province_flag
+			every_province = {
+			    limit = {
+				    region = hammerfell_lr
+				}
+				add_permanent_claim = ROOT
+			}
+			if = {
+			    limit = {
+				    exists = HAM
+				}
+				create_subject = {
+                    subject_type = imperial_subject
+                    subject = HAM
+                }
+			}
+			else = {
+			    every_province = {
+				    limit = {
+					    region = hammerfell_lr
+						OR = { owned_by = ROOT controlled_by = ROOT country_or_subject_holds = ROOT }
+					}
+					cede_province = HAM
+					add_core = HAM
+				}
+				create_subject = {
+                    subject_type = imperial_subject
+                    subject = HAM
+                }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	join_imperial_province = {
+	    major = yes
+		potential = {
+			tag = TAM
+			any_subject_country = { is_subject_of_type = imperial_subject NOT = { has_country_flag = integration_by_tamriel_flag } }
+		}
+		allow = {
+		    NOT = { has_country_modifier = vassal_autonomy }
+			any_subject_country = { is_subject_of_type = imperial_subject NOT = { liberty_desire = 50 } }
+			prestige = 50
+			stability = 3
+		}
+		effect = {
+		    custom_tooltip = join_imperial_province_tt
+		    add_prestige = -50
+			add_stability = -1
+			add_country_modifier = {
+		    name = "vassal_autonomy"
+		    duration = 9125
+	        }
+		    random_country = {
+			    limit = {
+			    is_subject_of = ROOT
+				is_subject_of_type = imperial_subject
+				NOT = { liberty_desire = 50 }
+				}
+				set_country_flag = integration_by_tamriel_flag 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}
