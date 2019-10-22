@@ -756,8 +756,14 @@ country_decisions = {
 		potential = {
 			NOT = { exists = CYR }
 			NOT = { tag = TAM }
-			primary_culture = imperial
 			NOT = { has_country_flag = formed_cyr_flag }
+			OR = {
+			primary_culture = imperial
+			AND = {
+			tag = ORD
+			NOT = { religion = marukhism }
+			}
+			}
 		}
 		provinces_to_highlight = {
 		    OR = {
@@ -781,6 +787,9 @@ country_decisions = {
 		effect = {
 			change_tag = CYR
 			set_country_flag = formed_cyr_flag
+			if = { limit = { primary_culture = nedic }
+			change_primary_culture = imperial
+			}
 			#
 			if = {
 				limit = {

@@ -717,6 +717,30 @@ antibankrapucy = {
 	stability_cost_modifier = -0.10
 }
 
+29_conquest_of_tamriel = {
+    land_morale = 0.15
+	discipline = 0.10
+	infantry_power = 0.25
+	cavalry_power = 0.25
+	artillery_power = 0.25
+}
+
+29_trade_with_tamriel = {
+    trade_range = 1.0
+	embargo_efficiency = 0.75
+	trade_efficiency = 0.50
+	global_trade_power = 0.35
+	trade_steering = 0.25
+}
+
+29_forsworns = {
+    land_morale = 0.10
+	discipline = 0.05
+	global_unrest = 1
+	stability_cost_modifier = 0.10
+	harsh_treatment_cost = 0.10
+}
+
 00_isolation = {
     diplomatic_reputation = -2.5
 	ae_impact = 0.25

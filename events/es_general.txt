@@ -585,3 +585,74 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = es_general.12
+	title = es_general.2.t
+	desc = es_general.2.d
+	picture = ES_ROYAL_BEDROOM_eventPicture
+	
+	trigger = {
+		NOT = { has_global_flag = rise_of_akaviri_protectorate_flag }
+		NOT = { has_global_flag = rise_of_septim_flag }
+		has_heir = no
+		has_government_attribute = heir
+		government = monarchy
+		tag = CYR
+		NOT = { 
+			dynasty = "Cyrodiil" 
+		}
+		NOT = { 
+			has_ruler_modifier = spurn_habsburgs
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	option = {
+		name =  es_general.2.a
+		ai_chance = { factor = 50 }
+		add_legitimacy = 10
+		add_prestige = -10
+		hidden_effect = {
+			add_ruler_modifier = {
+				name = spurn_habsburgs
+				hidden = yes
+			}
+		}
+	}
+	option = {
+		name =  es_general.2.b
+		ai_chance = { factor = 50 }
+		add_legitimacy = -35
+		if = {
+		limit = {
+		    OR = {
+		    has_ruler = "Reman"
+			NOT = { has_country_flag = first_reman_flag }
+			}
+		}
+		define_heir = {
+		name = "Reman"
+		dynasty = "Cyrodiil"
+		ADM = 4
+		DIP = 4
+		MIL = 4			
+		claim = 80
+		}
+		set_country_flag = first_reman_flag
+		}
+		else = {
+		define_heir = {
+		name = "Reman"
+		dynasty = "Cyrodiil"
+		ADM = 4
+		DIP = 4
+		MIL = 4			
+		claim = 80
+		}
+		}
+	}
+}
