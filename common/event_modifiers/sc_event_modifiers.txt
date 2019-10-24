@@ -741,6 +741,60 @@ antibankrapucy = {
 	harsh_treatment_cost = 0.10
 }
 
+29_sky_heaven_temple = {
+    tolerance_heathen = 1
+    tolerance_heretic = 1
+    free_mil_policy = 1
+}
+
+30_death_of_reman = {
+    global_unrest = 2.5
+	stability_cost_modifier = 0.25
+	harsh_treatment_cost = 0.25
+}
+
+30_university_of_gwylim = {
+    idea_cost = -0.10
+	embracement_cost = -0.10
+	advisor_pool = 1
+}
+
+30_tjurhane_fyrre = {
+    tolerance_own = 1
+	global_institution_spread = 0.10
+	prestige_decay = -0.01
+}
+
+30_seizing_of_hostages = {
+    spy_offence = 0.25
+    global_spy_defence = 0.25
+    diplomatic_reputation = -1
+}
+
+30_dragon_guard = {
+    army_tradition_decay = -0.01
+	free_leader_pool = 1
+	mil_advisor_cost = -0.1
+}
+
+30_winterhold_rebellion = {
+    land_morale = 0.25
+	discipline = 0.10
+	infantry_power = 0.15
+	cavalry_power = 0.15
+	artillery_power = 0.15
+}
+
+30_forsworn_separatism = {
+    local_unrest = 5
+	local_missionary_strength = -0.05
+	local_tax_modifier = -0.50
+	local_production_efficiency = -0.50
+	local_manpower_modifier = -0.50
+	province_trade_power_modifier = -0.50
+	trade_goods_size_modifier = -0.50
+}
+
 00_isolation = {
     diplomatic_reputation = -2.5
 	ae_impact = 0.25

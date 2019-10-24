@@ -859,7 +859,7 @@ country_event = {
 		ai_chance = { factor = 100 }
 		if = {
 		limit = {
-		has_ruler = Randic
+		has_ruler = "Randic"
 		}
 		kill_ruler = yes
 		}

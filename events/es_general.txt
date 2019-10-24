@@ -636,17 +636,13 @@ country_event = {
 		}
 		define_heir = {
 		name = "Reman"
-		dynasty = "Cyrodiil"
-		ADM = 4
-		DIP = 4
-		MIL = 4			
+		dynasty = "Cyrodiil"	
 		claim = 80
 		}
 		set_country_flag = first_reman_flag
 		}
 		else = {
 		define_heir = {
-		name = "Reman"
 		dynasty = "Cyrodiil"
 		ADM = 4
 		DIP = 4

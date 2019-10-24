@@ -948,7 +948,7 @@ country_event = {
     }
 
 	mean_time_to_happen = {
-		days = 1825
+		days = 9490
 	}
 	
 	immediate = {
@@ -970,6 +970,44 @@ country_event = {
 		name = "es_29_scenario.8.b"
 		ai_chance = { factor = 50 }
 		add_stability = 1
+	}
+	
+}
+
+country_event = {
+	id = es_29_scenario.9
+	title = es_29_scenario.9.t
+	desc = es_29_scenario.9.d
+	picture = ES_SKY_HEAVEN_TEMPLE_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_29_scenario.9_flag }
+		is_year = 1334
+		NOT = { is_year = 1387 }
+		owns = 1352
+		1352 = { NOT = { has_province_modifier = 29_sky_heaven_temple } }
+    }
+
+	mean_time_to_happen = {
+		days = 9490
+	}
+	
+	immediate = {
+	    set_country_flag = es_29_scenario.9_flag
+	}
+	
+	option = {
+		name = "es_29_scenario.9.a"
+		ai_chance = { factor = 100 }
+		1352 = {
+		add_building = fort_16th
+		change_culture = tsaesci
+		change_religion = tsaesci_pantheon
+		add_province_modifier = {
+		    name = "29_sky_heaven_temple"
+			duration = 9125
+		}
+		}
 	}
 	
 }

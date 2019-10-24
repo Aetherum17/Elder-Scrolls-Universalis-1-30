@@ -31,14 +31,15 @@ country_event = {
 		kill_ruler = yes
 		kill_heir = yes
 		change_religion = eight_divines
+		change_government = monarchy
 		if = { limit = { capital_scope = { region = western_syrodiil_lr } } change_primary_culture = colovian }
 		if = { limit = { capital_scope = { region = eastern_syrodiil_lr } } change_primary_culture = nibenean }
 		if = { limit = { capital_scope = { region = central_syrodiil_lr } } change_primary_culture = imperial }
-		if = { limit = { NOT = { exists = CYR owns = 1206 } }
+		if = { limit = { NOT = { exists = CYR } owns = 1206 }
 		change_tag = CYR
 		define_ruler = {
         name = "Tacinian"
-        dynasty = "Alessian"
+        dynasty = "Cyrodiil"
         adm = 4
         dip = 4
         mil = 4
