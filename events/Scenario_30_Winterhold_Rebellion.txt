@@ -4,7 +4,7 @@ country_event = {
 	id = es_30_scenario.1
 	title = es_30_scenario.1.t
 	desc = es_30_scenario.1.d
-	picture = ES_HEARTLANDS_eventPicture
+	picture = ES_05_eventPicture
 	
 	trigger = {
 	    NOT = { has_country_flag = es_30_scenario.1_flag }
@@ -38,7 +38,7 @@ country_event = {
 	id = es_30_scenario.2
 	title = es_30_scenario.2.t
 	desc = es_30_scenario.2.d
-	picture = ES_HEARTLANDS_eventPicture
+	picture = ES_UNIVERSITY_1_eventPicture
 	
 	trigger = {
 	    NOT = { has_country_flag = es_30_scenario.2_flag }
@@ -63,7 +63,7 @@ country_event = {
 		1139 = {
 		add_province_modifier = {
 		    name = "30_university_of_gwylim"
-			duration = 9125
+			duration = -1
 		}
 		}
 	}
@@ -74,7 +74,7 @@ country_event = {
 	id = es_30_scenario.3
 	title = es_30_scenario.3.t
 	desc = es_30_scenario.3.d
-	picture = ES_HEARTLANDS_eventPicture
+	picture = ES_AYLEID_ELF_eventPicture
 	
 	trigger = {
 	    NOT = { has_country_flag = es_30_scenario.3_flag }
@@ -107,7 +107,7 @@ country_event = {
 	id = es_30_scenario.4
 	title = es_30_scenario.4.t
 	desc = es_30_scenario.4.d
-	picture = ES_HEARTLANDS_eventPicture
+	picture = ES_IMPERIAL_GENERAL_1_eventPicture
 	
 	trigger = {
 	    NOT = { has_country_flag = es_30_scenario.4_flag }
@@ -153,7 +153,7 @@ country_event = {
 		name = "es_30_scenario.4.b"
 		ai_chance = { factor = 50 }
 		kill_ruler = yes
-		add_stability = -1
+		add_stability = -3
 		define_heir = {
 		name = "Reman"
         dynasty = "Cyrodiil"
@@ -167,7 +167,7 @@ country_event = {
 	id = es_30_scenario.5
 	title = es_30_scenario.5.t
 	desc = es_30_scenario.5.d
-	picture = ES_HEARTLANDS_eventPicture
+	picture = ES_PRISON_1_eventPicture
 	
 	trigger = {
 	    NOT = { has_country_flag = es_30_scenario.5_flag }
@@ -212,7 +212,7 @@ country_event = {
 	id = es_30_scenario.6
 	title = es_30_scenario.6.t
 	desc = es_30_scenario.6.d
-	picture = ES_HEARTLANDS_eventPicture
+	picture = ES_PRISON_1_eventPicture
 	
 	trigger = {
 	    NOT = { has_country_flag = es_30_scenario.6_flag }
@@ -281,7 +281,7 @@ country_event = {
 	id = es_30_scenario.7
 	title = es_30_scenario.7.t
 	desc = es_30_scenario.7.d
-	picture = ES_HEARTLANDS_eventPicture
+	picture = ES_SKY_HEAVEN_TEMPLE_eventPicture
 	
 	trigger = {
 	    NOT = { has_country_flag = es_30_scenario.7_flag }
@@ -306,8 +306,8 @@ country_event = {
 	option = {
 		name = "es_30_scenario.7.a"
 		ai_chance = { factor = 50 }
-		if = { limit = { NOT = { religion = tsaesci_pantheon } } 1352 = { change_religion = ROOT } }
-		if = { limit = { NOT = { culture = tsaesci } } 1352 = { change_culture = ROOT } }
+		if = { limit = { NOT = { 1352 = { religion = tsaesci_pantheon } } } 1352 = { change_religion = ROOT } }
+		if = { limit = { NOT = { 1352 = { culture = tsaesci } } } 1352 = { change_culture = ROOT } }
 		add_country_modifier = {
 		    name = "30_dragon_guard"
 			duration = -1
@@ -332,7 +332,7 @@ country_event = {
 	id = es_30_scenario.8
 	title = es_30_scenario.8.t
 	desc = es_30_scenario.8.d
-	picture = ES_HEARTLANDS_eventPicture
+	picture = ES_NORDIC_REBELLION_eventPicture
 	
 	trigger = {
 	    NOT = { has_country_flag = es_30_scenario.8_flag }
@@ -358,10 +358,7 @@ country_event = {
 		    name = "30_winterhold_rebellion"
 			duration = 9125
 		}
-		declare_war_with_cb = {
-			who = overlord
-			casus_belli = cb_independence_war
-		}
+		overlord = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_independence_war } } }
 	}
 	
 	option = {
@@ -423,7 +420,7 @@ country_event = {
 	id = es_30_scenario.9
 	title = es_30_scenario.9.t
 	desc = es_30_scenario.9.d
-	picture = ES_HEARTLANDS_eventPicture
+	picture = ES_FORSWORN_eventPicture
 	
 	trigger = {
 	    NOT = { has_country_flag = es_30_scenario.7_flag }
@@ -442,10 +439,10 @@ country_event = {
 	}
 	
 	option = {
-		name = "es_30_scenario.7.a"
+		name = "es_30_scenario.9.a"
 		ai_chance = { factor = 50 }
 		1352 = {
-		add_country_modifier = {
+		add_province_modifier = {
 		    name = "10_unrest"
 			duration = 9125
 		}
@@ -455,10 +452,10 @@ country_event = {
 }
 
 province_event = {
-	id = es_30_scenario.9
+	id = es_30_scenario.10
 	title = es_30_scenario.9.t
 	desc = es_30_scenario.9.d
-	picture = ES_HEARTLANDS_eventPicture
+	picture = ES_FORSWORN_eventPicture
 	
 	hidden = yes
 	
@@ -469,7 +466,7 @@ province_event = {
 		owner = { NOT = { primary_culture = reachmen } }
 		owner = { NOT = { tag = REA } }
 		OR = {
-		NOT = { has_province_flag = es_30_scenario.9_flag }
+		NOT = { has_province_flag = es_30_scenario.10_flag }
 		is_core = REA
 		}
     }
@@ -479,7 +476,7 @@ province_event = {
 	}
 	
 	immediate = {
-	    set_country_flag = es_30_scenario.9_flag
+	    set_province_flag = es_30_scenario.10_flag
 		add_province_modifier = {
 		    name = "30_forsworn_separatism"
 			duration = 9125
@@ -487,20 +484,20 @@ province_event = {
 	}
 	
 	option = {
-		name = "es_30_scenario.7.a"
+		name = "es_30_scenario.9.a"
 		ai_chance = { factor = 50 }
 	}
 	
 }
 
 country_event = {
-	id = es_30_scenario.10
-	title = es_30_scenario.10.t
-	desc = es_30_scenario.10.d
-	picture = ES_HEARTLANDS_eventPicture
+	id = es_30_scenario.11
+	title = es_30_scenario.11.t
+	desc = es_30_scenario.11.d
+	picture = ES_CITY_IN_FIRE_eventPicture
 	
 	trigger = {
-	    NOT = { has_country_flag = es_30_scenario.10_flag }
+	    NOT = { has_country_flag = es_30_scenario.11_flag }
 		is_year = 1387
 		NOT = { is_year = 1410 }
 		owns = 1352
@@ -512,11 +509,11 @@ country_event = {
 	}
 	
 	immediate = {
-	    set_country_flag = es_30_scenario.10_flag
+	    set_country_flag = es_30_scenario.11_flag
 	}
 	
 	option = {
-		name = "es_30_scenario.10.a"
+		name = "es_30_scenario.11.a"
 		ai_chance = { factor = 50 }
 		1352 = {
 		add_devastation = 100
@@ -526,13 +523,13 @@ country_event = {
 }
 
 country_event = {
-	id = es_30_scenario.11
-	title = es_30_scenario.11.t
-	desc = es_30_scenario.11.d
-	picture = ES_HEARTLANDS_eventPicture
+	id = es_30_scenario.12
+	title = es_30_scenario.12.t
+	desc = es_30_scenario.12.d
+	picture = ES_CITY_IN_FIRE_eventPicture
 	
 	trigger = {
-	    NOT = { has_country_flag = es_30_scenario.11_flag }
+	    NOT = { has_country_flag = es_30_scenario.12_flag }
 		is_year = 1387
 		NOT = { is_year = 1410 }
 		owns = 1299
@@ -544,11 +541,11 @@ country_event = {
 	}
 	
 	immediate = {
-	    set_country_flag = es_30_scenario.11_flag
+	    set_country_flag = es_30_scenario.12_flag
 	}
 	
 	option = {
-		name = "es_30_scenario.10.a"
+		name = "es_30_scenario.12.a"
 		ai_chance = { factor = 50 }
 		1299 = {
 		add_devastation = 100
@@ -556,3 +553,165 @@ country_event = {
 	}
 	
 }
+
+country_event = {
+	id = es_30_scenario.13
+	title = es_30_scenario.13.t
+	desc = es_30_scenario.13.d
+	picture = ES_DRAGON_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_30_scenario.13_flag }
+		is_year = 1387
+		NOT = { is_year = 1410 }
+		any_owned_province = { OR = { region = western_skyrim_lr region = eastern_skyrim_lr } }
+    }
+
+	mean_time_to_happen = {
+		days = 4015
+	}
+	
+	immediate = {
+	    set_country_flag = es_30_scenario.13_flag
+	}
+	
+	option = {
+		name = "es_30_scenario.13.a"
+		ai_chance = { factor = 50 }
+		add_stability = -1
+	}
+	
+	option = {
+		name = "es_30_scenario.13.b"
+		ai_chance = { factor = 50 }
+		trigger = { capital_scope = { OR = { region = western_skyrim_lr region = eastern_skyrim_lr } } }
+		random_list = {
+		    50 = {
+			define_general = {
+		    name = "Dragonborn"
+            shock = 5
+            fire = 5
+            manuever = 5
+            siege = 5
+		    }
+			}
+			50 = {
+			    capital_scope = { add_devastation = 100 }
+			}
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_30_scenario.14
+	title = es_30_scenario.14.t
+	desc = es_30_scenario.14.d
+	picture = ES_BLACK_MARSH_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_30_scenario.14_flag }
+		is_year = 1387
+		NOT = { is_year = 1410 }
+		culture_group = cyrodiil_cg
+		owns = 1206
+    }
+
+	mean_time_to_happen = {
+		days = 4015
+	}
+	
+	immediate = {
+	    set_country_flag = es_30_scenario.14_flag
+	}
+	
+	option = {
+		name = "es_30_scenario.14.a"
+		ai_chance = { factor = 50 }
+		every_province = {
+		    limit = {
+			    region = black_marsh_lr
+			}
+			add_claim = ROOT
+		}
+		
+		if = {
+		limit = {
+		exists = ARG
+		NOT = { alliance_with = ARG }
+		NOT = { overlord_of = ARG }
+		}
+		declare_war_with_cb = {
+			who = ARG
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = KOT
+		NOT = { alliance_with = KOT }
+		NOT = { overlord_of = KOT }
+		}
+		declare_war_with_cb = {
+			who = KOT
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = AA2
+		NOT = { alliance_with = AA2 }
+		NOT = { overlord_of = AA2 }
+		}
+		declare_war_with_cb = {
+			who = AA2
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = AB0
+		NOT = { alliance_with = AB0 }
+		NOT = { overlord_of = AB0 }
+		}
+		declare_war_with_cb = {
+			who = AB0
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = AA8
+		NOT = { alliance_with = AA8 }
+		NOT = { overlord_of = AA8 }
+		}
+		declare_war_with_cb = {
+			who = AA8
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+	}
+	
+	option = {
+		name = "es_30_scenario.14.b"
+		ai_chance = { factor = 50 }
+		add_prestige = -10
+	}
+	
+	option = {
+		name = "es_30_scenario.14.c"
+		ai_chance = { factor = 50 }
+		add_prestige = -25
+		add_country_modifier = {
+		    name = "01_focus_on_trade"
+			duration = 9125
+		}
+	}
+	
+}
+

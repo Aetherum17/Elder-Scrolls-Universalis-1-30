@@ -117,16 +117,18 @@ int main()
 Dynasties: + appearence events
 - Valenwood
 - Skyrim
+- Cyrodiil
+
 - Direnii
-- Order
-- Kvatch
-- High Rock -> Daggerfall
+- Daggerfall
 - Wayrest
+
+NOT = { has_global_flag = rise_of_akaviri_protectorate_flag }
+NOT = { has_global_flag = rise_of_septim_flag }
 
 + random events
 + trade nodes and positions
 
-+ wars for vassals
 + pirate leaders
 
 + educate heirs
@@ -140,57 +142,17 @@ Dynasties: + appearence events
 
 + fix localization - catholic.yml
 
-### Year 1263 ###
-War of Righteousness: Alessian war begins.
-The monastery at Lake Canulus, amongst other locales, is destroyed. + destruction of archives
-End of the Alessian Order.
-Most of the historic texts of this time were destroyed during the War of Righteousness.
-War of Righteousness significantly reduces the population of Daggerfall.
-After ten years of warfare, the War of Righteousness comes to an end.
-Most of Wayrest is forced to move to the Gardner estate, to protect themselves against pirates, the Akaviri, and the Thrassian Plague.
-
-### Year 1309 ###
-### Nibanean Throne ###
-#######################
-Tribunal Pantheon replace Morrowind + event on ruler death choose ruler.
-
-The Akaviri attack Tamriel.
-Battle of Pale Pass is fought. Akaviri army defeated.
-# Akaviri settlers
-Reman Cyrodiil becomes Emperor of the Cyrodilic Empire.
-The Reach is split between High Rock and Skyrim by Reman Cyrodiil in order to stop the Reachmen from forming plots against him, and to stop any one entity or group from gaining full control over the region's silver mines.
-Reman Cyrodiil solidifies his control over his territories.
-Valenwood cedes to the Cyrodilic Empire.
-
-Reman Cyrodiil dies.
-The Ayleid, Tjurhane Fyrre, is born.
-Reman Cyrodiil II is born.
-Kastav rules the Empire.
-Kastav orders the seizing of hostages in Markarth and Hroldan.
-The Winterhold Rebellion breaks out in the Reman Empire due to the implementation of extremely high taxes by Emperor Kastav, and harsh policies to ensure that said taxes were paid. The Dragonguard take no action,—because doing so would violate their Oath of Allegiance—so supplies to them are cut.
-Forsworn noted as helping the Akaviri in Sky Haven Temple.
-Emperor Kastav besieges Sky Haven Temple.
-Kalien, a failed recruit to the Dragonguard, attacks Winterhold, sacking it.
-The siege on Sky Haven Temple is lifted.
-
-Reports of a Dragon in Skyrim.
-The Battle of Argonia is fought, and the Cyrodilic Empire defeats the Argonians in what is to be their last organized army.
-The Argonians retreat to Helstrom.
+##################
+# Blackwater War #
+##################
+### Year 1410 ###
 General Bucco takes command of the Fourth Imperial Legion and begins his campaign to conquer the inner swamps of Argonia.
-Reman Cyrodiil II is crowned Emperor, according to his tomb in Sancre Tor.
 Black Marsh is officially incorporated into the Cyrodilic Empire.
-Alduin's Wall officially begins construction.
-
-Work on Alduin's wall slows when several craftsmen are dismissed from service.
 The language Cyrodilic replaces High Elven as the dominant language for legal documents in Tamriel.
-Grandmaster of the Dragonguard visits Sky Haven Temple, to investigate rumors of the cost of Alduin's Wall, and consequently writes a Writ of Requisition for more supplies.
 General Bucco's legion is depleted to a mere six cohorts. Reinforcements are brought in to aid his conquest but are instead used to build a supply highway.
-Alduin's Wall officially completed.
 Eric of Guis is Ambassador of the Reman Dynasty to the Altmer of Summerset Isles.
-
 After an attempted mutiny, General Bucco orders a retreat from Argonia. The entire Fourth Legion is lost in the process, with Bucco along with it.
 The Elder Council reconstitutes the Fourth Legion and puts it under the command of General Regulus Sardecus, beginning the second campaign of the Blackwater War.
-General Sardecus reacquires all the territory lost in General Bucco's retreat.
 A widespread forest fire, later known as the "Great Burn" occurs in Black Marsh, forcing General Sardecus to retreat from the region. Sardecus dies in the process.
 General Lucinia Falco is placed in command of the legion shortly after Sardecus' death.
 The "Falco Doctrine" is put in full effect, completely revising the Imperial battle-plan in the Blackwater War.
@@ -198,18 +160,29 @@ The Blackwater War evolves into a guerilla conflict.
 The Argonians inexplicably stop fighting and return to their homes, bringing an informal end to the Blackwater war.
 The Second Empire annexation of Argonia is complete, officially creating the province of Black Marsh.
 
+##################
+# Four Score War #
+##################
+### Year 1472 ###
 Four Score War begins, between Morrowind and the Cyrodilic Empire.
-Reman Cyrodiil II dies, according to the date on his tomb in Sancre Tor.
 The dragon Krahjotdaan is slain somewhere in the Jerall Mountains.
-Reman III succeeds to the throne.
-Empress Tavia (wife of Reman Cyrodiil III) is sent to Gideon, Black Marsh, and accused of treason.
+Empress Tavia is sent to Gideon, Black Marsh, and accused of treason.
 Almalexia leaves Morrowind for the Isle of Artaeum.[89]
-
 Beginning of the War of the Uvichil, a war between the Sload of Thras and the Altmer of the Summerset Isles.
 The end of the War of the Uvichil, a war between the Sload of Thras and the Altmer of the Summerset Isles.
-
 Morag Tong assassinates Emperor Reman Cyrodiil III.[3][21][75][90][88]
 Old Mournhold is destroyed by Mehrunes Dagon.[91]
+
+Alduin's Wall officially begins construction.
+Work on Alduin's wall slows when several craftsmen are dismissed from service.
+Grandmaster of the Dragonguard visits Sky Haven Temple, to investigate rumors of the cost of Alduin's Wall, and consequently writes a Writ of Requisition for more supplies.
+Alduin's Wall officially completed.
+
+Elder Council for Cyrodiil
+
+Sancre Tor Tomb for Reman
+
+### Year 1503 ###
 
 2 - Ancient - turkishgfx - altmer-ayleid-sinistral-imga
 2 - Sundered - muslimgfx - yokudan-redguard

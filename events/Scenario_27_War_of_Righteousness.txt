@@ -208,11 +208,13 @@ country_event = {
 	
 	immediate = {
 	    set_country_flag = es_27_scenario.3_flag
+		hidden_effect = {
 		every_country = {
 		    limit = {
 			capital_scope = { continent = Tamriel }
 			}
 			country_event = { id = es_27_scenario.4 days = 31 tooltip = es_27_scenario.4.a.tt }
+		}
 		}
 	}
 

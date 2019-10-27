@@ -6,6 +6,87 @@ religion = eight_divines
 primary_culture = imperial
 capital = 1206
 
+1309.1.1 = {
+	monarch = {
+	    name = "Tacinian"
+        dynasty = "Cyrodiil"
+		birth_date = 1267.1.1
+        adm = 4
+        dip = 4
+        mil = 4
+	}
+}
+
+1330.1.1 = {
+	monarch = {
+	    name = "Bremandrus"
+        dynasty = "Cyrodiil"
+		birth_date = 1309.1.1
+        adm = 5
+        dip = 4
+        mil = 6
+	}
+}
+
+1351.1.1 = {
+	monarch = {
+	    name = "Desicius"
+        dynasty = "Cyrodiil"
+		birth_date = 1317.1.1
+        adm = 3
+        dip = 5
+        mil = 2
+	}
+}
+
 1387.1.1 = {
     government_rank = 10
+	monarch = {
+	name = "Reman"
+    dynasty = "Cyrodiil"
+	birth_date = 1362.1.1
+    adm = 5
+	dip = 5
+    mil = 7	
+    }	
+}
+
+1410.1.1 = {
+    add_country_modifier = {
+		name = "30_dragon_guard"
+		duration = -1
+	}
+}
+
+1431.1.1 = {
+	monarch = {
+	name = "Reman"
+    dynasty = "Cyrodiil"
+	birth_date = 1408.1.1
+    adm = 4
+	dip = 3
+    mil = 6
+    }	
+}
+
+1477.1.1 = {
+	monarch = {
+	name = "Reman"
+    dynasty = "Cyrodiil"
+	birth_date = 1453.1.1
+    adm = 3
+	dip = 2
+    mil = 7
+    }	
+}
+
+1524.1.1 = {
+	monarch = {
+	name = "Reman"
+    dynasty = "Cyrodiil"
+	birth_date = 1502.1.1
+    adm = 4
+	dip = 5
+    mil = 4
+    }	
 }
