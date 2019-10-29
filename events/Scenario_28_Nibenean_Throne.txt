@@ -280,10 +280,7 @@ country_event = {
 			    NOT = { is_subject_of = ROOT }
 			    NOT = { alliance_with = ROOT }
 			}
-			declare_war_with_cb = {
-			who = ROOT
-			casus_belli = cb_restore_personal_union
-		    }
+			PREV = { declare_war_with_cb = { who = PREV casus_belli = cb_restore_personal_union } }
 		}
 	}
 	option = {

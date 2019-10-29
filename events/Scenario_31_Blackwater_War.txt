@@ -1,0 +1,476 @@
+namespace = es_31_scenario
+
+country_event = {
+	id = es_31_scenario.1
+	title = es_31_scenario.1.t
+	desc = es_31_scenario.1.d
+	picture = ES_05_eventPicture
+	
+	trigger = {
+		is_year = 1410
+		NOT = { is_year = 1472 }
+		any_country = { is_neighbor_of = ROOT any_owned_province = { region = black_marsh_lr } }
+		owns = 1206
+		culture_group = cyrodiil_cg
+		is_at_war = no
+    }
+
+	mean_time_to_happen = {
+		days = 2500
+	}
+	
+	option = {
+		name = "es_31_scenario.1.a"
+		ai_chance = { factor = 50 }
+		define_general = {
+		name = "Augurius Bucco"
+        shock = 5
+        fire = 5
+        manuever = 1
+        siege = 1
+		}
+		random_country = {
+		    limit = {
+			    is_neighbor_of = ROOT
+				any_owned_province = { region = black_marsh_lr }
+			}
+			PREV = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario } }
+		}
+	}
+	
+	option = {
+		name = "es_31_scenario.1.b"
+		ai_chance = { factor = 50 }
+		add_prestige = -15
+	}
+}
+
+country_event = {
+	id = es_31_scenario.2
+	title = es_31_scenario.2.t
+	desc = es_31_scenario.2.d
+	picture = ES_05_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_31_scenario.2_flag }
+		is_year = 1410
+		NOT = { is_year = 1472 }
+		any_owned_province = { region = black_marsh_lr }
+    }
+
+	mean_time_to_happen = {
+		days = 5000
+	}
+	
+	immediate = {
+	    set_country_flag = es_31_scenario.2_flag
+	}
+	
+	option = {
+		name = "es_31_scenario.2.a"
+		ai_chance = { factor = 50 }
+		set_country_flag = general_bucco_death_flag
+		every_owned_province = {
+		limit = { region = black_marsh_lr }
+		add_province_modifier = {
+		    name = "31_new_roads"
+			duration = 9125
+		}
+		}
+	}
+	
+	option = {
+		name = "es_31_scenario.2.b"
+		ai_chance = { factor = 50 }
+		add_manpower = 25
+	}
+}
+
+country_event = {
+	id = es_31_scenario.3
+	title = es_31_scenario.3.t
+	desc = es_31_scenario.3.d
+	picture = ES_05_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_31_scenario.3_flag }
+	    has_country_flag = general_bucco_death_flag
+    }
+
+	mean_time_to_happen = {
+		days = 3650
+	}
+	
+	immediate = {
+	    set_country_flag = es_31_scenario.3_flag
+	}
+	
+	option = {
+		name = "es_31_scenario.3.a"
+		ai_chance = { factor = 100 }
+		if = { limit = { has_leader = "Augurius Bucco" } kill_leader = { type = "Augurius Bucco" } }
+		add_prestige = -25
+		add_country_modifier = { 
+		    name = "31_lost_of_forth_legion"
+			duration = 9125
+		}
+	}
+}
+
+country_event = {
+	id = es_31_scenario.4
+	title = es_31_scenario.4.t
+	desc = es_31_scenario.4.d
+	picture = ES_05_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_31_scenario.4_flag }
+	    has_country_modifier = 31_lost_of_forth_legion
+    }
+
+	mean_time_to_happen = {
+		days = 31
+	}
+	
+	immediate = {
+	    set_country_flag = es_31_scenario.4_flag
+	}
+	
+	option = {
+		name = "es_31_scenario.4.a"
+		ai_chance = { factor = 50 }
+		add_stability = -1
+		define_general = {
+		name = "Sardecus"
+		shock = 1
+        fire = 1
+        manuever = 5
+        siege = 5
+		}
+		1206 = {
+		    infantry = ROOT
+			infantry = ROOT
+			infantry = ROOT
+			infantry = ROOT
+			infantry = ROOT
+			infantry = ROOT
+			infantry = ROOT
+			infantry = ROOT
+			infantry = ROOT
+			infantry = ROOT
+			infantry = ROOT
+			infantry = ROOT
+			infantry = ROOT
+			infantry = ROOT
+			infantry = ROOT
+			infantry = ROOT
+			infantry = ROOT
+			infantry = ROOT
+			infantry = ROOT
+			infantry = ROOT
+			cavalry = ROOT
+			cavalry = ROOT
+			cavalry = ROOT
+			cavalry = ROOT
+			cavalry = ROOT
+			cavalry = ROOT
+			cavalry = ROOT
+			cavalry = ROOT
+			cavalry = ROOT
+			cavalry = ROOT
+			artillery = ROOT
+			artillery = ROOT
+			artillery = ROOT
+			artillery = ROOT
+			artillery = ROOT
+			artillery = ROOT
+			artillery = ROOT
+			artillery = ROOT
+			artillery = ROOT
+			artillery = ROOT
+		}
+	}
+	
+	option = {
+		name = "es_31_scenario.4.b"
+		ai_chance = { factor = 50 }
+		every_owned_province = {
+		    limit = {
+			    region = black_marsh_lr
+			    core_claim = ROOT
+			}
+			remove_core = ROOT
+			remove_claim = ROOT
+		}
+	}
+}
+
+country_event = {
+	id = es_31_scenario.5
+	title = es_31_scenario.5.t
+	desc = es_31_scenario.5.d
+	picture = ES_05_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_31_scenario.5_flag }
+	    any_country = { has_country_modifier = 31_lost_of_forth_legion }
+		any_owned_province = { region = black_marsh_lr }
+    }
+
+	mean_time_to_happen = {
+		days = 3650
+	}
+	
+	immediate = {
+	    set_country_flag = es_31_scenario.5_flag
+	}
+	
+	option = {
+		name = "es_31_scenario.5.a"
+		ai_chance = { factor = 100 }
+		if = { limit = { has_leader = "Sardecus" } kill_leader = { type = "Sardecus" } }
+		every_owned_province = {
+		    limit = {
+			    region = black_marsh_lr
+			}
+			add_province_modifier = {
+			    name = "31_great_burn"
+				duration = 9125
+			}
+		}
+	}
+}
+
+country_event = {
+	id = es_31_scenario.6
+	title = es_31_scenario.6.t
+	desc = es_31_scenario.6.d
+	picture = ES_05_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_31_scenario.6_flag }
+	    any_country = {  has_country_modifier = 31_lost_of_forth_legion }
+		any_owned_province = { region = black_marsh_lr }
+    }
+
+	mean_time_to_happen = {
+		days = 3650
+	}
+	
+	immediate = {
+	    set_country_flag = es_31_scenario.6_flag
+	}
+	
+	option = {
+		name = "es_31_scenario.6.a"
+		ai_chance = { factor = 50 }
+		define_general = {
+		name = "Lucinia Falco"
+		shock = 5
+        fire = 5
+        manuever = 5
+        siege = 5
+		female = yes
+		}
+		add_country_modifier = {
+			name = "31_falco_doctrine"
+			duration = 9125
+		}
+		every_owned_province = {
+		    limit = {
+			    region = black_marsh_lr
+			}
+			add_province_modifier = {
+			    name = "10_unrest"
+				duration = 9125
+			}
+		}
+	}
+	
+	option = {
+		name = "es_31_scenario.6.b"
+		ai_chance = { factor = 50 }
+		every_owned_province = {
+		    limit = {
+			    region = black_marsh_lr
+			    core_claim = ROOT
+			}
+			remove_core = ROOT
+			remove_claim = ROOT
+		}
+	}
+}
+
+country_event = {
+	id = es_31_scenario.7
+	title = es_31_scenario.7.t
+	desc = es_31_scenario.7.d
+	picture = ES_05_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_31_scenario.7_flag }
+	    any_country = { has_country_modifier = 31_falco_doctrine }
+		any_owned_province = { region = black_marsh_lr }
+    }
+
+	mean_time_to_happen = {
+		days = 3650
+	}
+	
+	immediate = {
+	    set_country_flag = es_31_scenario.7_flag
+	}
+	
+	option = {
+		name = "es_31_scenario.7.a"
+		ai_chance = { factor = 100 }
+		add_country_modifier = { 
+		    name = "31_guerilla_conflict"
+			duration = 9125
+		}
+	}
+}
+
+country_event = {
+	id = es_31_scenario.8
+	title = es_31_scenario.8.t
+	desc = es_31_scenario.8.d
+	picture = ES_05_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_31_scenario.8_flag }
+	    has_country_modifier = 31_guerilla_conflict
+		any_owned_province = { region = black_marsh_lr }
+    }
+
+	mean_time_to_happen = {
+		days = 3650
+	}
+	
+	immediate = {
+	    set_country_flag = es_31_scenario.8_flag
+	}
+	
+	option = {
+		name = "es_31_scenario.7.a"
+		ai_chance = { factor = 100 }
+		if = {
+		    limit = { capital_scope = { NOT = { region = black_marsh_lr } } }
+			add_stability = 1
+		}
+		else = {
+		    add_stability = -1
+		}
+	}
+}
+
+country_event = {
+	id = es_31_scenario.9
+	title = es_31_scenario.9.t
+	desc = es_31_scenario.9.d
+	picture = ES_05_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_31_scenario.9_flag }
+		is_year = 1410
+		NOT = { is_year = 1472 }
+    }
+
+	mean_time_to_happen = {
+		days = 11315
+	}
+	
+	immediate = {
+	    set_country_flag = es_31_scenario.9_flag
+	}
+	
+	option = {
+		name = "es_31_scenario.9.a"
+		ai_chance = { factor = 100 }
+		if = {
+		    limit = {
+			    OR = {
+				    culture_group = maorner_cg
+					culture_group = high_elves_cg
+					culture_group = snow_elves_cg
+					culture_group = dwemer_cg
+					culture_group = bosmer_cg
+					culture_group = chimeris_cg
+				}
+			}
+		add_country_modifier = { 
+		    name = "31_decay_of_culture"
+			duration = 9125
+		}
+		}
+		else_if = {
+		    limit = {
+			    OR = {
+				    culture_group = yokudan-redguardian_cg
+					culture_group = northern_cg
+					culture_group = half_blood_cg
+					culture_group = cyrodiil_cg
+				}
+			}
+		add_country_modifier = { 
+		    name = "31_rise_of_culture"
+			duration = 9125
+		}
+		}
+		else = {
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_31_scenario.10
+	title = es_31_scenario.10.t
+	desc = es_31_scenario.10.d
+	picture = ES_05_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_31_scenario.10_flag }
+		is_year = 1410
+		NOT = { is_year = 1472 }
+		culture_group = high_elves_cg
+		owns = 271
+		OR = {
+		    exists = CYR
+			exists = HEA
+			exists = TAM
+			exists = ALE
+			exists = ORD
+		}
+    }
+
+	mean_time_to_happen = {
+		days = 11315
+	}
+	
+	immediate = {
+	    set_country_flag = es_31_scenario.10_flag
+	}
+	
+	option = {
+		name = "es_31_scenario.10.a"
+		ai_chance = { factor = 50 }
+		add_opinion = { who = CYR modifier = es_friendly_nation }
+		CYR = { add_opinion = { who = ROOT modifier = es_friendly_nation } }
+		add_opinion = { who = HEA modifier = es_friendly_nation }
+		HEA = { add_opinion = { who = ROOT modifier = es_friendly_nation } }
+		add_opinion = { who = TAM modifier = es_friendly_nation }
+		TAM = { add_opinion = { who = ROOT modifier = es_friendly_nation } }
+		add_opinion = { who = ALE modifier = es_friendly_nation }
+		ALE = { add_opinion = { who = ROOT modifier = es_friendly_nation } }
+		add_opinion = { who = ORD modifier = es_friendly_nation }
+		ORD = { add_opinion = { who = ROOT modifier = es_friendly_nation } }
+	}
+	
+	option = {
+		name = "es_31_scenario.10.b"
+		ai_chance = { factor = 50 }
+		add_prestige = 10
+	}
+	
+}

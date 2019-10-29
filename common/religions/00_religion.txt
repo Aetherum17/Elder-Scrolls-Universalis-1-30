@@ -1131,5 +1131,25 @@ harmony_group = {
 		uses_harmony = yes
 	}
 	
+	unknown_pantheon = {
+		color = { 128 128 128 }
+		icon = 98
+		country = {
+		    yearly_harmony = 1.0
+			harmonization_speed = 0.1
+		}
+		country_as_secondary = {
+			yearly_harmony = 1.0
+			harmonization_speed = 0.1
+		}
+		province = {
+			local_missionary_strength = -0.005
+		}
+		
+		heretic = { UNKNOWN_HERETIC }	
+		
+		uses_harmony = yes
+	}
+	
 	crusade_name = CRUSADE
 }
