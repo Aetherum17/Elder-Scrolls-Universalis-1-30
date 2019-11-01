@@ -199,7 +199,7 @@ country_event = {
 	    }
 		else = {
 		create_alliance = AYL
-		add_opinion = { who = ROOT modifier = es_friendly_nation }
+		AYL = { add_opinion = { who = ROOT modifier = es_friendly_nation } }
 		add_opinion = { who = AYL modifier = es_friendly_nation }
 		}
 		}
@@ -222,7 +222,7 @@ country_event = {
 	    }
 		else = {
 		create_alliance = HEA
-		add_opinion = { who = ROOT modifier = es_friendly_nation }
+		HEA = { add_opinion = { who = ROOT modifier = es_friendly_nation } }
 		add_opinion = { who = HEA modifier = es_friendly_nation }
 		}
 		}

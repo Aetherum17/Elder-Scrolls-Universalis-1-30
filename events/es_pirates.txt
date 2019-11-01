@@ -53,7 +53,7 @@ country_event = {
 		}
 		create_alliance = ABE
 		add_prestige = -15
-		add_opinion = { who = ROOT modifier = es_friendly_nation }
+		ABE = { add_opinion = { who = ROOT modifier = es_friendly_nation } }
 		add_opinion = { who = ABE modifier = es_friendly_nation }
 	}
 }
@@ -111,7 +111,7 @@ country_event = {
 		}
 		create_alliance = RES
 		add_prestige = -15
-		add_opinion = { who = ROOT modifier = es_friendly_nation }
+		RES = { add_opinion = { who = ROOT modifier = es_friendly_nation } }
 		add_opinion = { who = RES modifier = es_friendly_nation }
 	}
 }
@@ -169,7 +169,7 @@ country_event = {
 		}
 		create_alliance = TOP
 		add_prestige = -15
-		add_opinion = { who = ROOT modifier = es_friendly_nation }
+		TOP = { add_opinion = { who = ROOT modifier = es_friendly_nation } }
 		add_opinion = { who = TOP modifier = es_friendly_nation }
 	}
 }
@@ -227,7 +227,7 @@ country_event = {
 		}
 		create_alliance = STA
 		add_prestige = -15
-		add_opinion = { who = ROOT modifier = es_friendly_nation }
+		STA = { add_opinion = { who = ROOT modifier = es_friendly_nation } }
 		add_opinion = { who = STA modifier = es_friendly_nation }
 	}
 }
@@ -285,7 +285,7 @@ country_event = {
 		}
 		create_alliance = SED
 		add_prestige = -15
-		add_opinion = { who = ROOT modifier = es_friendly_nation }
+		SED = { add_opinion = { who = ROOT modifier = es_friendly_nation } }
 		add_opinion = { who = SED modifier = es_friendly_nation }
 	}
 }
@@ -343,7 +343,7 @@ country_event = {
 		}
 		create_alliance = KME
 		add_prestige = -15
-		add_opinion = { who = ROOT modifier = es_friendly_nation }
+		KME = { add_opinion = { who = ROOT modifier = es_friendly_nation } }
 		add_opinion = { who = KME modifier = es_friendly_nation }
 	}
 }
@@ -401,7 +401,7 @@ country_event = {
 		}
 		create_alliance = ELZ
 		add_prestige = -15
-		add_opinion = { who = ROOT modifier = es_friendly_nation }
+		ELZ = { add_opinion = { who = ROOT modifier = es_friendly_nation } }
 		add_opinion = { who = ELZ modifier = es_friendly_nation }
 	}
 }
@@ -459,7 +459,7 @@ country_event = {
 		}
 		create_alliance = KHE
 		add_prestige = -15
-		add_opinion = { who = ROOT modifier = es_friendly_nation }
+		KHE = { add_opinion = { who = ROOT modifier = es_friendly_nation } }
 		add_opinion = { who = KHE modifier = es_friendly_nation }
 	}
 }
@@ -517,7 +517,7 @@ country_event = {
 		}
 		create_alliance = KAA
 		add_prestige = -15
-		add_opinion = { who = ROOT modifier = es_friendly_nation }
+		KAA = { add_opinion = { who = ROOT modifier = es_friendly_nation } }
 		add_opinion = { who = KAA modifier = es_friendly_nation }
 	}
 }
@@ -575,7 +575,7 @@ country_event = {
 		}
 		create_alliance = RAL
 		add_prestige = -15
-		add_opinion = { who = ROOT modifier = es_friendly_nation }
+		RAL = { add_opinion = { who = ROOT modifier = es_friendly_nation } }
 		add_opinion = { who = RAL modifier = es_friendly_nation }
 	}
 }

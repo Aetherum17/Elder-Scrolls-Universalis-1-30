@@ -4,7 +4,7 @@ country_event = {
 	id = es_31_scenario.1
 	title = es_31_scenario.1.t
 	desc = es_31_scenario.1.d
-	picture = ES_05_eventPicture
+	picture = ES_ARGONIAN_VILLAGE_eventPicture
 	
 	trigger = {
 		is_year = 1410
@@ -22,6 +22,7 @@ country_event = {
 	option = {
 		name = "es_31_scenario.1.a"
 		ai_chance = { factor = 50 }
+		if = { limit = { NOT = { has_country_flag = a_bucco_flag } }
 		define_general = {
 		name = "Augurius Bucco"
         shock = 5
@@ -29,6 +30,8 @@ country_event = {
         manuever = 1
         siege = 1
 		}
+		}
+		set_country_flag = a_bucco_flag
 		random_country = {
 		    limit = {
 			    is_neighbor_of = ROOT
@@ -49,7 +52,7 @@ country_event = {
 	id = es_31_scenario.2
 	title = es_31_scenario.2.t
 	desc = es_31_scenario.2.d
-	picture = ES_05_eventPicture
+	picture = ES_ARGONIANIA_1_eventPicture
 	
 	trigger = {
 	    NOT = { has_country_flag = es_31_scenario.2_flag }
@@ -90,11 +93,13 @@ country_event = {
 	id = es_31_scenario.3
 	title = es_31_scenario.3.t
 	desc = es_31_scenario.3.d
-	picture = ES_05_eventPicture
+	picture = ES_IMPERIAL_LEGION_eventPicture
 	
 	trigger = {
 	    NOT = { has_country_flag = es_31_scenario.3_flag }
 	    has_country_flag = general_bucco_death_flag
+		culture_group = cyrodiil_cg
+		owns = 1206
     }
 
 	mean_time_to_happen = {
@@ -121,7 +126,7 @@ country_event = {
 	id = es_31_scenario.4
 	title = es_31_scenario.4.t
 	desc = es_31_scenario.4.d
-	picture = ES_05_eventPicture
+	picture = ES_IMPERIAL_LEGION_1_eventPicture
 	
 	trigger = {
 	    NOT = { has_country_flag = es_31_scenario.4_flag }
@@ -147,7 +152,7 @@ country_event = {
         manuever = 5
         siege = 5
 		}
-		1206 = {
+		capital_scope = {
 		    infantry = ROOT
 			infantry = ROOT
 			infantry = ROOT
@@ -197,7 +202,10 @@ country_event = {
 		every_owned_province = {
 		    limit = {
 			    region = black_marsh_lr
-			    core_claim = ROOT
+				OR = {
+			    is_core = ROOT
+				is_claim = ROOT
+				}
 			}
 			remove_core = ROOT
 			remove_claim = ROOT
@@ -209,7 +217,7 @@ country_event = {
 	id = es_31_scenario.5
 	title = es_31_scenario.5.t
 	desc = es_31_scenario.5.d
-	picture = ES_05_eventPicture
+	picture = ES_GREAT_BURN_eventPicture
 	
 	trigger = {
 	    NOT = { has_country_flag = es_31_scenario.5_flag }
@@ -245,12 +253,14 @@ country_event = {
 	id = es_31_scenario.6
 	title = es_31_scenario.6.t
 	desc = es_31_scenario.6.d
-	picture = ES_05_eventPicture
+	picture = ES_IMPERIAL_GENERAL_2_eventPicture
 	
 	trigger = {
 	    NOT = { has_country_flag = es_31_scenario.6_flag }
-	    any_country = {  has_country_modifier = 31_lost_of_forth_legion }
+	    any_country = { has_country_modifier = 31_lost_of_forth_legion }
 		any_owned_province = { region = black_marsh_lr }
+		culture_group = cyrodiil_cg
+		owns = 1206
     }
 
 	mean_time_to_happen = {
@@ -293,7 +303,10 @@ country_event = {
 		every_owned_province = {
 		    limit = {
 			    region = black_marsh_lr
-			    core_claim = ROOT
+			    OR = {
+			    is_core = ROOT
+				is_claim = ROOT
+				}
 			}
 			remove_core = ROOT
 			remove_claim = ROOT
@@ -305,7 +318,7 @@ country_event = {
 	id = es_31_scenario.7
 	title = es_31_scenario.7.t
 	desc = es_31_scenario.7.d
-	picture = ES_05_eventPicture
+	picture = ES_GUERILLA_WAR_eventPicture
 	
 	trigger = {
 	    NOT = { has_country_flag = es_31_scenario.7_flag }
@@ -335,7 +348,7 @@ country_event = {
 	id = es_31_scenario.8
 	title = es_31_scenario.8.t
 	desc = es_31_scenario.8.d
-	picture = ES_05_eventPicture
+	picture = ES_ARGONIANIA_2_eventPicture
 	
 	trigger = {
 	    NOT = { has_country_flag = es_31_scenario.8_flag }
@@ -352,7 +365,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "es_31_scenario.7.a"
+		name = "es_31_scenario.8.a"
 		ai_chance = { factor = 100 }
 		if = {
 		    limit = { capital_scope = { NOT = { region = black_marsh_lr } } }
@@ -368,7 +381,7 @@ country_event = {
 	id = es_31_scenario.9
 	title = es_31_scenario.9.t
 	desc = es_31_scenario.9.d
-	picture = ES_05_eventPicture
+	picture = ES_09_eventPicture
 	
 	trigger = {
 	    NOT = { has_country_flag = es_31_scenario.9_flag }
@@ -427,7 +440,7 @@ country_event = {
 	id = es_31_scenario.10
 	title = es_31_scenario.10.t
 	desc = es_31_scenario.10.d
-	picture = ES_05_eventPicture
+	picture = ES_ALINOR_eventPicture
 	
 	trigger = {
 	    NOT = { has_country_flag = es_31_scenario.10_flag }

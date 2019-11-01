@@ -252,6 +252,7 @@ country_event = {
 		trigger = {
 		NOT = { capital_scope = { region = morrowind_lr } }
 		NOT = { exists = CHI }
+		NOT = { exists = MOR }
 		}
 		
 		every_core_province = {
@@ -261,6 +262,7 @@ country_event = {
 			remove_core = ROOT
 		}
 		
+		if = { limit = { NOT = { has_global_flag = initiate_chimeri_tribunal_flag } }
 		every_owned_province = {
 		limit = {
 		region = morrowind_lr
@@ -278,8 +280,32 @@ country_event = {
 	    }
 		else = {
 		create_alliance = CHI
-		add_opinion = { who = ROOT modifier = es_friendly_nation }
+		CHI = { add_opinion = { who = ROOT modifier = es_friendly_nation } }
 		add_opinion = { who = CHI modifier = es_friendly_nation }
+		}
+		}
+		
+		if = { limit = { has_global_flag = initiate_chimeri_tribunal_flag }
+		every_owned_province = {
+		limit = {
+		region = morrowind_lr
+		}
+		add_core = MOR
+		}
+		
+		release = MOR
+		
+		if = {
+		limit = {
+		government = monarchy
+		}
+		create_union = MOR
+	    }
+		else = {
+		create_alliance = MOR
+		MOR = { add_opinion = { who = ROOT modifier = es_friendly_nation } }
+		add_opinion = { who = MOR modifier = es_friendly_nation }
+		}
 		}
 	}
 }

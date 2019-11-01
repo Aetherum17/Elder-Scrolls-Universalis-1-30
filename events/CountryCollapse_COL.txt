@@ -273,7 +273,7 @@ country_event = {
 	    }
 		else = {
 		create_alliance = COL
-		add_opinion = { who = ROOT modifier = es_friendly_nation }
+		COL = { add_opinion = { who = ROOT modifier = es_friendly_nation } }
 		add_opinion = { who = COL modifier = es_friendly_nation }
 		}
 	}

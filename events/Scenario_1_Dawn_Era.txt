@@ -162,7 +162,7 @@ country_event = {
 		ai_chance = { factor = 33 }
 		create_alliance = MA5
 		add_prestige = -25
-		add_opinion = { who = ROOT modifier = es_friendly_nation }
+		MA5 = { add_opinion = { who = ROOT modifier = es_friendly_nation } }
 		add_opinion = { who = MA5 modifier = es_friendly_nation }
 	}
 	option = {
@@ -170,7 +170,7 @@ country_event = {
 		ai_chance = { factor = 33 }
 		create_alliance = MB9
 		add_prestige = -25
-		add_opinion = { who = ROOT modifier = es_friendly_nation }
+		MB9 = { add_opinion = { who = ROOT modifier = es_friendly_nation } }
 		add_opinion = { who = MB9 modifier = es_friendly_nation }
 	}
 	option = {

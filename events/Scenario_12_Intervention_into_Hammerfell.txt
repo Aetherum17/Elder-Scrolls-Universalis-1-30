@@ -844,7 +844,7 @@ country_event = {
 		}
 		add_prestige = 25
 		create_alliance = CA7
-		add_opinion = { who = ROOT modifier = es_friendly_nation }
+		CA7 = { add_opinion = { who = ROOT modifier = es_friendly_nation } }
 		add_opinion = { who = CA7 modifier = es_friendly_nation }
 	}
 	option = {

@@ -274,7 +274,7 @@ country_event = {
 	    }
 		else = {
 		create_alliance = NIB
-		add_opinion = { who = ROOT modifier = es_friendly_nation }
+		NIB = { add_opinion = { who = ROOT modifier = es_friendly_nation } }
 		add_opinion = { who = NIB modifier = es_friendly_nation }
 		}
 	}
