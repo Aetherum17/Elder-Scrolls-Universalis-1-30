@@ -32,3 +32,16 @@ discovered_by = tamriel_tg discovered_by = elsweyr_tg discovered_by = marshan_tg
 	add_core = COL
 	culture = colovian
 }
+
+1410.1.1 = {
+    add_province_modifier = {
+		name = "xx_tomb_of_reman_dynasty"
+		duration = -1
+	}
+}
+
+1472.1.1 = {
+    owner = CYR
+	controller = CYR
+	add_core = CYR
+}

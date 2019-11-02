@@ -563,6 +563,29 @@ country_decisions = {
 		}
 	}
 	
+	es_18_hall_of_virtues = {
+	    potential = {
+		is_year = 810
+		owns = 335
+		335 = { NOT = { has_province_modifier = 18_hall_of_virtues } }
+		}
+		allow = {
+		treasury = 1500
+        }
+		effect = {
+		add_treasury = 1500
+		335 = {
+		add_country_modifier = {
+		    name = "18_hall_of_virtues"
+			duration = -1
+		}
+		}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
 	es_25_rebuild_imperial_city = {
 		potential = {
 		owns = 1206
@@ -607,6 +630,81 @@ country_decisions = {
 		add_country_modifier = {
 		    name = "27_gardner_estate"
 			duration = -1
+		}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	es_xx_elder_council = {
+	    potential = {
+		owns = 1206
+		OR = {
+		    primary_culture = imperial
+			primary_culture = nibenean
+			primary_culture = colovian
+		}
+		}
+		allow = {
+		OR = {
+		government_rank = 7
+		tag = CYR
+		tag = TAM
+		}
+        }
+		effect = {
+		add_stability = 1
+		add_country_modifier = {
+		    name = "xx_elder_council"
+			duration = -1
+		}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	es_xx_tomb_of_reman_dynasty = {
+	    potential = {
+		owns = 1181
+		is_year = 1387
+		1181 = { NOT = { has_province_modifier = xx_tomb_of_reman_dynasty } }
+		}
+		allow = {
+		treasury = 2500
+        }
+		effect = {
+		add_treasury = -2500
+		1181 = {
+		add_province_modifier = {
+		    name = "xx_tomb_of_reman_dynasty"
+			duration = -1
+		}
+		}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	es_xx_alduins_wall = {
+	    potential = {
+		owns = 1352
+		is_year = 1387
+		1352 = { NOT = { has_province_flag = xx_alduin_wall_building_flag } }
+		}
+		allow = {
+		treasury = 2500
+        }
+		effect = {
+		add_treasury = -2500
+		1352 = {
+		set_province_flag = xx_alduin_wall_building_flag
+		add_province_modifier = {
+		    name = "xx_building_alduin_wall"
+			duration = 10950
+		}
 		}
 		}
 		ai_will_do = {

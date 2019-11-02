@@ -843,6 +843,56 @@ antibankrapucy = {
 	prestige_decay = -0.01
 }
 
+32_ties_of_consort = {
+    global_spy_defence = -0.25
+	years_of_nationalism = 10
+	diplomatic_reputation = -1.5
+}
+
+32_departure_of_almalexia = {
+    global_missionary_strength = -0.01
+	stability_cost_modifier = 0.10
+	idea_cost = 0.10
+}
+
+32_fear_of_morag_tong = {
+    global_unrest = 5
+	stability_cost_modifier = 0.5
+	harsh_treatment_cost = 0.5
+	global_spy_defence = 0.5
+	spy_offence = 0.5
+}
+
+xx_elder_council = {
+    stability_cost_modifier = -0.10
+	legitimacy = 0.10
+	republican_tradition = 0.10
+	devotion = 0.10
+	horde_unity = 0.10
+	meritocracy - 0.10
+	advisor_pool = 1
+}
+
+xx_tomb_of_reman_dynasty = {
+    leader_siege = 1
+    cavalry_power = 0.10
+	free_leader_pool = 1
+	drill_gain_modifier = 0.10
+	general_cost = 1.0
+}
+
+xx_alduins_wall = {
+    prestige = 0.10
+	infantry_power = 0.10
+	land_morale = 0.10
+	infantry_cost = 0.10
+	global_regiment_recruit_speed = 0.1
+}
+
+xx_building_alduin_wall = {
+    local_build_time = 1.0
+}
+
 00_isolation = {
     diplomatic_reputation = -2.5
 	ae_impact = 0.25

@@ -7,6 +7,10 @@ primary_culture = imperial
 capital = 1206
 
 1309.1.1 = {
+    add_country_modifier = {
+		name = "xx_elder_council"
+		duration = -1
+	}
 	monarch = {
 	    name = "Tacinian"
         dynasty = "Cyrodiil"
@@ -70,6 +74,10 @@ capital = 1206
 	dip = 3
     mil = 6
     }	
+}
+
+1472.1.1 = {
+    set_country_flag = black_marsh_lr_province_flag
 }
 
 1477.1.1 = {

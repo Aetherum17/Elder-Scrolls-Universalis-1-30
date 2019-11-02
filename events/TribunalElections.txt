@@ -32,6 +32,7 @@ country_event = {
 	option = {
 		name = "es_tribunal_events.1.a"
 		ai_chance = { factor = 33 }
+		trigger = { NOT = { has_country_modifier = 32_departure_of_almalexia } }
 		set_country_flag = tribunal_elections_flag
 		add_country_modifier = {
 		    name = "ruler_almalexia"

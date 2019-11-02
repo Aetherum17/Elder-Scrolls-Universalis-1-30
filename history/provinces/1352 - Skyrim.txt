@@ -47,4 +47,8 @@ discovered_by = tamriel_tg discovered_by = elsweyr_tg discovered_by = marshan_tg
 1410.1.1 = {
     culture = imperial
 	religion = eight_divines
+    add_province_modifier = {
+		name = "xx_alduins_wall"
+		duration = -1
+	}
 }
