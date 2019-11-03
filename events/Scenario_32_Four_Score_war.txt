@@ -4,7 +4,7 @@ country_event = {
 	id = es_32_scenario.1
 	title = es_32_scenario.1.t
 	desc = es_32_scenario.1.d
-	picture = ES_05_eventPicture
+	picture = ES_MORROWIND_eventPicture
 	
 	trigger = {
 	    NOT = { has_country_flag = es_32_scenario.1_flag }
@@ -115,7 +115,7 @@ country_event = {
 	id = es_32_scenario.2
 	title = es_32_scenario.2.t
 	desc = es_32_scenario.2.d
-	picture = ES_05_eventPicture
+	picture = ES_DRAGON_1_eventPicture
 	
 	trigger = {
 	    NOT = { has_country_flag = es_32_scenario.2_flag }
@@ -144,7 +144,7 @@ country_event = {
 	id = es_32_scenario.3
 	title = es_32_scenario.3.t
 	desc = es_32_scenario.3.d
-	picture = ES_05_eventPicture
+	picture = ES_CONSORT_IN_PALACE_eventPicture
 	
 	trigger = {
 	    NOT = { has_country_flag = es_32_scenario.3_flag }
@@ -190,7 +190,7 @@ country_event = {
 	id = es_32_scenario.4
 	title = es_32_scenario.4.t
 	desc = es_32_scenario.4.d
-	picture = ES_05_eventPicture
+	picture = ES_ALMALEXIA_eventPicture
 	
 	trigger = {
 	    NOT = { has_country_flag = es_32_scenario.4_flag }
@@ -208,7 +208,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "es_32_scenario.2.a"
+		name = "es_32_scenario.4.a"
 		ai_chance = { factor = 100 }
 		add_stability = -1
 		if = { limit = { has_country_modifier = ruler_almalexia } remove_country_modifier = ruler_almalexia }
@@ -224,7 +224,7 @@ country_event = {
 	id = es_32_scenario.5
 	title = es_32_scenario.5.t
 	desc = es_32_scenario.5.d
-	picture = ES_05_eventPicture
+	picture = ES_SUMMERSET_eventPicture
 	
 	trigger = {
 	    NOT = { has_country_flag = es_32_scenario.5_flag }
@@ -345,7 +345,7 @@ country_event = {
 	id = es_32_scenario.6
 	title = es_32_scenario.6.t
 	desc = es_32_scenario.6.d
-	picture = ES_05_eventPicture
+	picture = ES_MORAG_TONG_eventPicture
 	
 	trigger = {
 	    NOT = { has_country_flag = es_32_scenario.6_flag }
@@ -379,7 +379,7 @@ country_event = {
 	id = es_32_scenario.7
 	title = es_32_scenario.7.t
 	desc = es_32_scenario.7.d
-	picture = ES_05_eventPicture
+	picture = ES_SIEGE_1_eventPicture
 	
 	trigger = {
 	    NOT = { has_country_flag = es_32_scenario.7_flag }
@@ -421,7 +421,7 @@ country_event = {
 	id = es_32_scenario.8
 	title = es_32_scenario.8.t
 	desc = es_32_scenario.8.d
-	picture = ES_05_eventPicture
+	picture = ALDUIN_WALL_PLAN_eventPicture
 	
 	trigger = {
 	    NOT = { has_country_flag = es_32_scenario.8_flag }
@@ -455,7 +455,7 @@ country_event = {
 	id = es_32_scenario.9
 	title = es_32_scenario.9.t
 	desc = es_32_scenario.9.d
-	picture = ES_05_eventPicture
+	picture = ALDUIN_WALL_PLAN_1_eventPicture
 	
 	trigger = {
 	    NOT = { has_country_flag = es_32_scenario.9_flag }
@@ -494,7 +494,7 @@ country_event = {
 	id = es_32_scenario.10
 	title = es_32_scenario.10.t
 	desc = es_32_scenario.10.d
-	picture = ES_05_eventPicture
+	picture = ALDUIN_WALL_eventPicture
 	
 	trigger = {
 	    NOT = { has_country_flag = es_32_scenario.10_flag }
@@ -510,7 +510,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "es_32_scenario.9.a"
+		name = "es_32_scenario.10.a"
 		ai_chance = { factor = 100 }
 		add_prestige = 10
 		1352 = {
