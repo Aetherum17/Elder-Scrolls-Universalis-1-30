@@ -1827,3 +1827,45 @@ SON_ideas = {
 		caravan_power = 0.10
 	}
 }
+
+BAV_ideas = {
+	start = {
+		cavalry_power = 0.15
+		heir_chance = 0.5
+	}
+	
+	bonus = {
+		development_cost = -0.25
+	}
+	
+	trigger = {
+		primary_culture = unknown
+	}
+	free = yes
+	
+	everlating_succeession = {
+		legitimacy = 0.25
+		republican_tradition = 0.25
+		devotion = 0.25							
+        horde_unity = 0.25
+        meritocracy = 0.25
+	}
+	bavarian_purity_law = {
+		production_efficiency = 0.1
+	}
+	bavarian_state_orchestra = {
+		prestige = 0.25
+	}
+	geistlicher_rat = {
+		global_heretic_missionary_strength = 0.03
+	}
+	brewmaster_general = {
+		global_tax_modifier = 0.1
+	}
+	professional_army = {
+		discipline = 0.05
+	}
+	royal_order_of_st_george = {
+		stability_cost_modifier = -0.10
+	}
+}
