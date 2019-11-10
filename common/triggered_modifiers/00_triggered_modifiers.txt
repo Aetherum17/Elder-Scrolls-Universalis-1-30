@@ -37,42 +37,6 @@ east_akaviri_trade_route = {
 }
 
 #######################################################################
-# Chimeri and the Red Mountain.
-#######################################################################
-
-catholic_rome = {
-	potential = {
-		has_discovered = 1062
-		religion = chimer_pantheon
-		NOT = { tag = RED }
-	}
-
-	trigger = {	
-		NOT = { overlord_of = RED }
-		owns_or_vassal_of = 1062		
-	}
-
-	papal_influence = -10
-	diplomatic_reputation = -1
-	#icon = 9
-}
-
-papal_subjugation = {
-	potential = {
-		has_discovered = 1062
-		religion = chimer_pantheon
-		NOT = { tag = RED }
-	}
-
-	trigger = {	
-		overlord_of = RED
-	}
-
-	diplomatic_reputation = -2.5
-	#icon = 9
-}
-
-#######################################################################
 # Crusader
 #######################################################################
 
