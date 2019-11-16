@@ -227,6 +227,15 @@ country_event = {
 		country_event = { id = es_collapse.23 days = 31 tooltip = es_collapse.23.a.tt }
 		 }
 		 
+		 if = {
+		  limit = {
+		   any_owned_province = {
+		   region = northern_islands_lr
+		   }
+		  }
+		country_event = { id = es_collapse.24 days = 31 tooltip = es_collapse.24.a.tt }
+		 }
+		 
 	    }
 	}
 }

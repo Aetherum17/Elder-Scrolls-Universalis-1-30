@@ -1,0 +1,212 @@
+namespace = es_collapse
+
+country_event = {
+	id = es_collapse.24
+	title = es_collapse.24.t
+	desc = es_collapse.24.d
+	picture = ES_PROVINCE_COLLAPSE_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	    add_country_modifier = {
+			name = "vassal_autonomy"
+			duration = 9125
+		}
+	}
+	
+	option = {
+		name = es_collapse.2.a
+		ai_chance = { factor = 75 }
+		hidden_effect = {
+		
+		if = {
+		limit = {
+		NOT = { capital_scope = { region = northern_islands_lr } }
+		}
+		every_core_province = {
+			limit = {
+				region = northern_islands_lr
+			}
+			remove_core = ROOT
+		}
+		}
+		
+		if = {
+		limit = {
+		atmora_8_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = DA8 }
+		NOT = { capital_scope = { area = atmora_8_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = atmora_8_la
+		}
+		add_core = DA8
+		}
+		create_vassal = DA8
+		}
+		
+		if = {
+		limit = {
+		atmora_9_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = DA9 }
+		NOT = { capital_scope = { area = atmora_9_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = atmora_9_la
+		}
+		add_core = DA9
+		}
+		create_vassal = DA9
+		}
+		
+		if = {
+		limit = {
+		upper_tsakara_8_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = UA8 }
+		NOT = { capital_scope = { area = upper_tsakara_8_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = upper_tsakara_8_la
+		}
+		add_core = UA8
+		}
+		create_vassal = UA8
+		}
+		
+		if = {
+		limit = {
+		upper_tsakara_9_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = UA9 }
+		NOT = { capital_scope = { area = upper_tsakara_9_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = upper_tsakara_9_la
+		}
+		add_core = UA9
+		}
+		create_vassal = UA9
+		}
+		
+		if = {
+		limit = {
+		upper_tsakara_10_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = UB0 }
+		NOT = { capital_scope = { area = upper_tsakara_10_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = upper_tsakara_10_la
+		}
+		add_core = UB0
+		}
+		create_vassal = UB0
+		}
+		
+		if = {
+		limit = {
+		upper_tsakara_11_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = UB1 }
+		NOT = { capital_scope = { area = upper_tsakara_11_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = upper_tsakara_11_la
+		}
+		add_core = UB1
+		}
+		create_vassal = UB1
+		}
+		
+		if = {
+		limit = {
+		upper_tsakara_12_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = UB2 }
+		NOT = { capital_scope = { area = upper_tsakara_12_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = upper_tsakara_12_la
+		}
+		add_core = UB2
+		}
+		create_vassal = UB2
+		}
+		
+	    }
+	}
+	
+	option = {
+		name = es_collapse.2.b
+		ai_chance = { factor = 15 }
+		
+		if = {
+		limit = {
+		NOT = { capital_scope = { region = northern_islands_lr } }
+		}
+		every_core_province = {
+			limit = {
+				region = northern_islands_lr
+			}
+			remove_core = ROOT
+		}
+		}
+		
+	}
+	
+	option = {
+		name = es_collapse.2.c
+		ai_chance = { factor = 10 }
+		
+		trigger = {
+		NOT = { capital_scope = { region = northern_islands_lr } }
+		NOT = { exists = ISL }
+		}
+		
+		every_core_province = {
+			limit = {
+				region = northern_islands_lr
+			}
+			remove_core = ROOT
+		}
+		
+		every_owned_province = {
+		limit = {
+		region = northern_islands_lr
+		}
+		add_core = ISL
+		}
+		
+		release = ISL
+		
+		if = {
+		limit = {
+		government = monarchy
+		}
+		create_union = ISL
+	    }
+		else = {
+		create_alliance = ISL
+		ISL = { add_opinion = { who = ROOT modifier = es_friendly_nation } }
+		add_opinion = { who = ISL modifier = es_friendly_nation }
+		}
+	}
+}

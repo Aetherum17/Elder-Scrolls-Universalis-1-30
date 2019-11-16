@@ -153,40 +153,6 @@ country_event = {
 		
 		if = {
 		limit = {
-		atmora_8_la = {
-		owned_by = ROOT
-		}
-		NOT = { exists = DA8 }
-		NOT = { capital_scope = { area = atmora_8_la } }
-		}
-		every_owned_province = {
-		limit = {
-		area = atmora_8_la
-		}
-		add_core = DA8
-		}
-		create_vassal = DA8
-		}
-		
-		if = {
-		limit = {
-		atmora_9_la = {
-		owned_by = ROOT
-		}
-		NOT = { exists = DA9 }
-		NOT = { capital_scope = { area = atmora_9_la } }
-		}
-		every_owned_province = {
-		limit = {
-		area = atmora_9_la
-		}
-		add_core = DA9
-		}
-		create_vassal = DA9
-		}
-		
-		if = {
-		limit = {
 		atmora_10_la = {
 		owned_by = ROOT
 		}
