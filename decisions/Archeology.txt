@@ -18,12 +18,9 @@ country_decisions = {
 			limit = { NOT = { has_province_flag = archeology_site_flag } }
 			    set_province_flag = archeology_site
 			}
-			hidden_effect = {
-			    country_event = { id = es_archeology.1 days = 31 tooltip = es_archeology.1.a.tt }
-				add_country_modifier = {
-		            name = "es_archeology_expedition"
-					duration = 1825
-	        	}
+			add_country_modifier = {
+		        name = "es_archeology_expedition"
+				duration = -1
 			}
 		}
 		ai_will_do = {

@@ -224,6 +224,7 @@ administrative_missions = {
 			every_province = {
 			limit = {
 			region = pyandonea_lr
+			is_city = yes
 			}
 			add_permanent_claim = ROOT
 			}
@@ -248,6 +249,7 @@ administrative_missions = {
 			every_province = {
 			limit = {
 			region = summerset_lr
+			is_city = yes
 			}
 			add_permanent_claim = ROOT
 			}
@@ -274,13 +276,15 @@ administrative_missions = {
 		    add_prestige = 20
 			every_province = {
 			limit = {
-			region = yokuda_lr
-			NOT = { area = atmora_7_la }
-			NOT = { area = atmora_8_la }
-			NOT = { area = atmora_9_la }
-			NOT = { area = atmora_10_la }
-			NOT = { area = atmora_31_la }
-			NOT = { area = atmora_32_la }
+			is_city = yes
+			OR = {
+			area = atmora_1_la
+			area = atmora_2_la
+			area = atmora_3_la
+			area = atmora_4_la
+			area = atmora_5_la
+			area = atmora_6_la
+			}
 			}
 			add_permanent_claim = ROOT
 			}
@@ -313,11 +317,10 @@ administrative_missions = {
 		    add_prestige = 20
 			every_province = {
 			limit = {
+			is_city = yes
 			OR = {
 			area = atmora_7_la
 			area = atmora_10_la
-			area = atmora_31_la
-			area = atmora_32_la
 			}
 			}
 			add_permanent_claim = ROOT
@@ -351,6 +354,7 @@ administrative_missions = {
 		    add_prestige = 20
 			every_province = {
 			limit = {
+			is_city = yes
 			OR = {
 			area = atmora_8_la
 			area = atmora_9_la
@@ -614,6 +618,7 @@ adm_missions = {
 			every_province = {
 			limit = {
 			region = yokuda_lr
+			is_city = yes
 			}
 			add_permanent_claim = ROOT
 			}
@@ -638,6 +643,7 @@ adm_missions = {
 			every_province = {
 			limit = {
 			region = southern_kamal_lr
+			is_city = yes
 			}
 			add_permanent_claim = ROOT
 			}
@@ -662,6 +668,7 @@ adm_missions = {
 			every_province = {
 			limit = {
 			region = northern_kamal_lr
+			is_city = yes
 			}
 			add_permanent_claim = ROOT
 			}
@@ -686,6 +693,7 @@ adm_missions = {
 			every_province = {
 			limit = {
 			region = thousand_lr
+			is_city = yes
 			}
 			add_permanent_claim = ROOT
 			}
@@ -710,6 +718,7 @@ adm_missions = {
 			every_province = {
 			limit = {
 			region = po_tun_lr
+			is_city = yes
 			}
 			add_permanent_claim = ROOT
 			}
@@ -980,13 +989,7 @@ diplomatic_missions = {
 			every_province = {
 			limit = {
 			region = upper_tsakara_lr
-			NOT = { area = upper_tsakara_8_la }
-			NOT = { area = upper_tsakara_9_la }
-			NOT = { area = upper_tsakara_10_la }
-			NOT = { area = upper_tsakara_11_la }
-			NOT = { area = upper_tsakara_12_la }
-			NOT = { area = upper_tsakara_13_la }
-			NOT = { area = upper_tsakara_14_la }
+			is_city = yes
 			}
 			add_permanent_claim = ROOT
 			}
@@ -994,6 +997,12 @@ diplomatic_missions = {
 			add_core = ROOT
 			}
 			1369 = {
+			add_core = ROOT
+			}
+			415 = {
+			add_core = ROOT
+			}
+			412 = {
 			add_core = ROOT
 			}
 		}
@@ -1013,25 +1022,12 @@ diplomatic_missions = {
 		    add_prestige = 20
 			every_province = {
 			limit = {
-			OR = {
-			area = upper_tsakara_8_la
-			area = upper_tsakara_9_la
-			area = upper_tsakara_10_la
-			area = upper_tsakara_11_la
-			area = upper_tsakara_12_la
-			area = upper_tsakara_13_la
-			area = upper_tsakara_14_la
-			}
+			region = northern_islands_lr
+			is_city = yes
 			}
 			add_permanent_claim = ROOT
 			}
 			772 = {
-			add_core = ROOT
-			}
-			415 = {
-			add_core = ROOT
-			}
-			412 = {
 			add_core = ROOT
 			}
 		}
@@ -1052,6 +1048,7 @@ diplomatic_missions = {
 			every_province = {
 			limit = {
 			region = valenwood_lr
+			is_city = yes
 			}
 			add_permanent_claim = ROOT
 			}
@@ -1076,6 +1073,7 @@ diplomatic_missions = {
 			every_province = {
 			limit = {
 			region = eldweyr_lr
+			is_city = yes
 			}
 			add_permanent_claim = ROOT
 			}
@@ -1097,6 +1095,7 @@ diplomatic_missions = {
 			every_province = {
 			limit = {
 			region = vvardenfell_lr
+			is_city = yes
 			}
 			add_permanent_claim = ROOT
 			}
@@ -1333,6 +1332,7 @@ dip_missions = {
 			every_province = {
 			limit = {
 			region = morrowind_lr
+			is_city = yes
 			}
 			add_permanent_claim = ROOT
 			}
@@ -1354,6 +1354,7 @@ dip_missions = {
 			every_province = {
 			limit = {
 			region = black_marsh_lr
+			is_city = yes
 			}
 			add_permanent_claim = ROOT
 			}
@@ -1375,6 +1376,7 @@ dip_missions = {
 			every_province = {
 			limit = {
 			region = western_syrodiil_lr
+			is_city = yes
 			}
 			add_permanent_claim = ROOT
 			}
@@ -1396,6 +1398,7 @@ dip_missions = {
 			every_province = {
 			limit = {
 			region = eastern_syrodiil_lr
+			is_city = yes
 			}
 			add_permanent_claim = ROOT
 			}
@@ -1417,6 +1420,7 @@ dip_missions = {
 			every_province = {
 			limit = {
 			region = central_syrodiil_lr
+			is_city = yes
 			}
 			add_permanent_claim = ROOT
 			}
@@ -1684,6 +1688,7 @@ military_missions = {
 			every_province = {
 			limit = {
 			region = western_skyrim_lr
+			is_city = yes
 			}
 			add_permanent_claim = ROOT
 			}
@@ -1708,6 +1713,7 @@ military_missions = {
 			every_province = {
 			limit = {
 			region = eastern_skyrim_lr
+			is_city = yes
 			}
 			add_permanent_claim = ROOT
 			}
@@ -1735,6 +1741,7 @@ military_missions = {
 			every_province = {
 			limit = {
 			region = hgh_rock_lr
+			is_city = yes
 			}
 			add_permanent_claim = ROOT
 			}
@@ -1756,6 +1763,7 @@ military_missions = {
 			every_province = {
 			limit = {
 			region = hammerfell_lr
+			is_city = yes
 			}
 			add_permanent_claim = ROOT
 			}
@@ -1780,6 +1788,7 @@ military_missions = {
 			every_province = {
 			limit = {
 			region = tsakara_lr
+			is_city = yes
 			}
 			add_permanent_claim = ROOT
 			}

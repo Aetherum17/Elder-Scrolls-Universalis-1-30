@@ -1,55 +1,23 @@
 namespace = es_archeology
 
 country_event = {
-	id = es_archeology.1
-	title = "es_archeology.3.t"
-	desc = "es_archeology.3.d"
-	picture = ARCHEOLOGICAL_SITE_eventPicture
-	
-	is_triggered_only = yes
-	
-	hidden = yes
-	
-	immediate = {
-	    random_list = {
-		33 = {
-		    set_country_flag = failed_archeology_expedition_flag
-		}
-		33 = {
-		    set_country_flag = archeology_expedition_more_funds_flag
-		}
-		33 = {
-		    set_country_flag = successfull_archeology_expedition_flag
-		}
-		}
-	}
-	
-	option = {
-		name = "es_archeology.3.a"
-		ai_chance = { factor = 100 }
-	}
-}
-
-country_event = {
 	id = es_archeology.2
 	title = "es_archeology.2.t"
 	desc = "es_archeology.2.d"
 	picture = EMPTY_RUINS_eventPicture
 	
 	trigger = {
-	    NOT = { has_country_modifier = es_archeology_expedition }
-		has_country_flag = failed_archeology_expedition_flag
+		NOT = { has_country_flag = archeology_expedition_more_funds_flag }
+		has_country_modifier = es_archeology_expedition
 	}
 	
 	mean_time_to_happen = {
-		months = 1
+		days = 3650
 	}
 	
 	immediate = {
-	    clr_country_flag = failed_archeology_expedition_flag
-		clr_country_flag = archeology_expedition_more_funds_flag
-		clr_country_flag = successfull_archeology_expedition_flag
 		clr_country_flag = archeology_expedition_on_flag
+		remove_country_modifier = es_archeology_expedition
 	}
 	
 	option = {
@@ -70,31 +38,23 @@ country_event = {
 	picture = ARCHEOLOGICAL_SITE_eventPicture
 	
 	trigger = {
-	    NOT = { has_country_modifier = es_archeology_expedition }
-		has_country_flag = archeology_expedition_more_funds_flag
+	    has_country_modifier = es_archeology_expedition
+		NOT = { has_country_flag = archeology_expedition_more_funds_flag }
 	}
 	
 	mean_time_to_happen = {
-		months = 1
+		days = 3650
 	}
 	
 	immediate = {
-	    clr_country_flag = failed_archeology_expedition_flag
-		clr_country_flag = archeology_expedition_more_funds_flag
-		clr_country_flag = successfull_archeology_expedition_flag
+	    set_country_flag = archeology_expedition_more_funds_flag
 	}
 	
 	option = {
 		name = "es_archeology.3.a"
 		ai_chance = { factor = 50 }
 		add_treasury = -500
-		hidden_effect = {
-			country_event = { id = es_archeology.1 days = 31 tooltip = es_archeology.1.a.tt }
-			add_country_modifier = {
-		        name = "es_archeology_expedition"
-				duration = 1825
-	        }
-		}
+		clr_country_flag = archeology_expedition_more_funds_flag
 	}
 	
 	option = {
@@ -102,6 +62,8 @@ country_event = {
 		ai_chance = { factor = 50 }
 		add_prestige = -5
 		clr_country_flag = archeology_expedition_on_flag
+		clr_country_flag = archeology_expedition_more_funds_flag
+		remove_country_modifier = es_archeology_expedition
 		random_owned_province = {
 		    limit = { has_province_flag = archeology_site }
 			clr_province_flag = archeology_site
@@ -116,19 +78,18 @@ country_event = {
 	picture = TREASURE_ROOM_eventPicture
 	
 	trigger = {
-	    NOT = { has_country_modifier = es_archeology_expedition }
-		has_country_flag = successfull_archeology_expedition_flag
+	    has_country_modifier = es_archeology_expedition
+		NOT = { has_country_flag = archeology_expedition_more_funds_flag }
 	}
 	
 	mean_time_to_happen = {
-		months = 1
+		days = 3650
 	}
 	
 	immediate = {
-	    clr_country_flag = failed_archeology_expedition_flag
 		clr_country_flag = archeology_expedition_more_funds_flag
-		clr_country_flag = successfull_archeology_expedition_flag
 		clr_country_flag = archeology_expedition_on_flag
+		remove_country_modifier = es_archeology_expedition
 	}
 	
 	option = {
