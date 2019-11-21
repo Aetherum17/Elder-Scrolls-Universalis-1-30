@@ -300,79 +300,18 @@ type={
 	}
 }
 type={
-	type="kiel_canal"
+	type="nammi2_buddha_statues_small_entity"
 	use_animation=no
+	scale=0.120000
 	time_duration=300.000000
-	always_visible=yes
-	visible_in_all_map_modes=yes
 	object={
-		name="sw_daedric_gate"
+		name="buddha_small"
 		hidden_on_start=no
 		position={
-			49.000 -0.100 109.000 
+			3547.000 -0.100 620.000 
 		}
 		rotation={
-			0.000 -60.000 0.000 
-		}
-	}
-	object={
-		name="se_daedric_gate"
-		hidden_on_start=no
-		position={
-			2116.000 -0.100 98.000 
-		}
-		rotation={
-			0.000 60.000 0.000 
-		}
-	}
-	object={
-		name="mi_kin_canal"
-		hidden_on_start=no
-		position={
-			3188.000 -0.100 1287.000 
-		}
-		rotation={
-			0.000 109.000 0.000 
-		}
-	}
-	object={
-		name="nosh_shek_canal"
-		hidden_on_start=no
-		position={
-			3214.500 -0.100 1386.000 
-		}
-		rotation={
-			0.000 -17.000 0.000 
-		}
-	}
-	object={
-		name="tel_mora_canal"
-		hidden_on_start=no
-		position={
-			1965.000 -0.100 1965.000 
-		}
-		rotation={
-			0.000 23.000 0.000 
-		}
-	}
-	object={
-		name="nw_daedric_gate"
-		hidden_on_start=no
-		position={
-			839.000 -0.100 2750.000 
-		}
-		rotation={
-			0.000 -120.000 0.000 
-		}
-	}
-	object={
-		name="ne_daedric_gate"
-		hidden_on_start=no
-		position={
-			3161.000 -0.100 2780.000 
-		}
-		rotation={
-			0.000 120.000 0.000 
+			0.000 -15.000 0.000 
 		}
 	}
 }
@@ -2027,26 +1966,10 @@ type={
 		name="buddha_big"
 		hidden_on_start=no
 		position={
-			3496.000 -0.100 356.000 
+			3510.000 0.250 358.000 
 		}
 		rotation={
-			0.000 25.000 0.000 
-		}
-	}
-}
-type={
-	type="nammi2_buddha_statues_small_entity"
-	use_animation=no
-	scale=0.120000
-	time_duration=300.000000
-	object={
-		name="buddha_small"
-		hidden_on_start=no
-		position={
-			3547.000 -0.100 620.000 
-		}
-		rotation={
-			0.000 -15.000 0.000 
+			0.000 -25.000 0.000 
 		}
 	}
 }
