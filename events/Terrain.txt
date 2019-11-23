@@ -629,7 +629,7 @@ country_event = {
 			}
 	    every_province = {
 		    limit = {
-		        region = atmora_lr
+		        OR = { region = western_atmora_lr region = eastern_atmora_lr region = central_atmora_lr }
 			}
 			add_province_modifier = {
 				name = ice_age
@@ -639,7 +639,7 @@ country_event = {
 		every_country = {
 			limit = {
 			    any_owned_province = {
-				    region = atmora_lr
+				    OR = { region = western_atmora_lr region = eastern_atmora_lr region = central_atmora_lr }
 				}
 			}
 			country_event = { id = es_terrain.12 days = 31 tooltip = es_terrain.12.a.tt }

@@ -712,4 +712,55 @@ country_decisions = {
 		}
 	}
 	
+	es_33_build_blackrose_prison = {
+	    potential = {
+		owns = 1090
+		NOT = { culture_group = marsh_cg }
+		NOT = { has_country_modifier = 33_blackrose_prison }
+		}
+		allow = {
+		treasury = 1000
+        }
+		effect = {
+		add_treasury = -1000
+		add_country_modifier = {
+		    name = "33_blackrose_prison"
+			duration = -1
+		}
+		1090 = {
+		add_province_modifier = {
+		    name = "blackrose_prison"
+			duration = -1
+		}
+		}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	es_33_close_blackrose_prison = {
+	    potential = {
+		owns = 1090
+		culture_group = marsh_cg
+		1090 = { has_province_modifier = blackrose_prison }
+		}
+		allow = {
+		treasury = 500
+        }
+		effect = {
+		add_treasury = -500
+		every_country = {
+		limit = { has_country_modifier = 33_blackrose_prison }
+		remove_country_modifier = 33_blackrose_prison
+		}
+		1090 = {
+		remove_province_modifier = blackrose_prison
+		}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
 }

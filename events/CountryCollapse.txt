@@ -59,7 +59,7 @@ country_event = {
 		 if = {
 		  limit = {
 		   any_owned_province = {
-		   region = atmora_lr
+		   OR = { region = western_atmora_lr region = eastern_atmora_lr region = central_atmora_lr }
 		   }
 		  }
 		country_event = { id = es_collapse.5 days = 31 tooltip = es_collapse.5.a.tt }

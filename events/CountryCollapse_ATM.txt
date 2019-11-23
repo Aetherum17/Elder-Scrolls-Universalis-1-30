@@ -22,11 +22,11 @@ country_event = {
 		
 		if = {
 		limit = {
-		NOT = { capital_scope = { region = atmora_lr } }
+		NOT = { capital_scope = { OR = { region = western_atmora_lr region = eastern_atmora_lr region = central_atmora_lr } } }
 		}
 		every_core_province = {
 			limit = {
-				region = atmora_lr
+				OR = { region = western_atmora_lr region = eastern_atmora_lr region = central_atmora_lr }
 			}
 			remove_core = ROOT
 		}
@@ -381,11 +381,11 @@ country_event = {
 		
 		if = {
 		limit = {
-		NOT = { capital_scope = { region = atmora_lr } }
+		NOT = { capital_scope = { OR = { region = western_atmora_lr region = eastern_atmora_lr region = central_atmora_lr } } }
 		}
 		every_core_province = {
 			limit = {
-				region = atmora_lr
+				OR = { region = western_atmora_lr region = eastern_atmora_lr region = central_atmora_lr }
 			}
 			remove_core = ROOT
 		}
@@ -398,20 +398,20 @@ country_event = {
 		ai_chance = { factor = 10 }
 		
 		trigger = {
-		NOT = { capital_scope = { region = atmora_lr } }
+		NOT = { capital_scope = { OR = { region = western_atmora_lr region = eastern_atmora_lr region = central_atmora_lr } } }
 		NOT = { exists = ATM }
 		}
 		
 		every_core_province = {
 			limit = {
-				region = atmora_lr
+				OR = { region = western_atmora_lr region = eastern_atmora_lr region = central_atmora_lr }
 			}
 			remove_core = ROOT
 		}
 		
 		every_owned_province = {
 		limit = {
-		region = atmora_lr
+		OR = { region = western_atmora_lr region = eastern_atmora_lr region = central_atmora_lr }
 		}
 		add_core = ATM
 		}

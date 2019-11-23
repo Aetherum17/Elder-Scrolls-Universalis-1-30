@@ -893,6 +893,18 @@ xx_building_alduin_wall = {
     local_build_time = 1.0
 }
 
+33_blackrose_prison = {
+    global_unrest = -1
+	harsh_treatment_cost = -0.10
+	stability_cost_modifier = -0.10
+}
+
+blackrose_prison = {
+    local_unrest = 5
+	local_defensiveness = -0.50
+	local_build_cost = 0.50
+}
+
 00_isolation = {
     diplomatic_reputation = -2.5
 	ae_impact = 0.25

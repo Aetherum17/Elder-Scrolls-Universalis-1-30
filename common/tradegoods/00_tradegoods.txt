@@ -299,11 +299,11 @@ fur = {
 		}
 		modifier = {
 			factor = 2.5
-			region = atmora_lr
+			OR = { region = western_atmora_lr region = eastern_atmora_lr region = central_atmora_lr }
 		}
 		modifier = {
 			factor = 0.1
-			NOT = { region = atmora_lr }
+			NOT = { OR = { region = western_atmora_lr region = eastern_atmora_lr region = central_atmora_lr } }
 		}
 	}
 }
