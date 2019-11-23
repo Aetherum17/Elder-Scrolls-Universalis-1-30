@@ -142,6 +142,7 @@ country_decisions = {
 			has_country_modifier = eye_of_magnus
 			has_country_modifier = skeleton_key
 			}
+			NOT = { has_country_flag = eye_of_magnus_used_flag }
 		}
 		allow = {
 	     	has_country_modifier = staff_of_magnus
@@ -152,6 +153,7 @@ country_decisions = {
 			add_adm_tech = 10
 			add_dip_tech = 10
 			add_mil_tech = 10
+			set_country_flag = eye_of_magnus_used_flag
 		}
 		ai_will_do = {
 			factor = 0

@@ -252,6 +252,16 @@ vassal = {
 	subject_opinion_modifier = is_vassal
 }
 
+daimyo_vassal = {
+	copy_from = vassal
+	count = vassal
+	
+	# Graphics:
+	sprite = GFX_icon_vassal
+	diplomacy_overlord_sprite = GFX_diplomacy_leadvassal
+	diplomacy_subject_sprite = GFX_diplomacy_amvassal
+}
+
 march = {
 	copy_from = default
 	
