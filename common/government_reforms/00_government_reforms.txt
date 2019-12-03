@@ -703,7 +703,7 @@ noble_republic = {
 	republican_name = yes
 	royal_marriage = yes
 
-	monarchy = yes
+	republic = yes
 	factions = {
 		mr_aristocrats
 		mr_traders
@@ -872,7 +872,7 @@ imperial_city_legacy = {
 	}
 
 
-    fixed_rank = 1
+    fixed_rank = 4
 	republic = yes
 	factions = {
 		mr_aristocrats
@@ -921,7 +921,7 @@ trading_city_legacy = {
 		mr_guilds
 	}
 
-    fixed_rank = 1
+    fixed_rank = 4
 	republic = yes
 	modifiers = {
 		trade_steering = 0.10
@@ -1034,7 +1034,7 @@ colonial_government_legacy = {
 	republican_name = yes
 	royal_marriage = no
 
-    fixed_rank = 1
+    fixed_rank = 4
 	republic = yes
 	factions = {
 		mr_aristocrats
