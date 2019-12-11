@@ -20,6 +20,7 @@ country_decisions = {
 		effect = {
 		    add_stability = -3
 			change_government = republic
+			if = { limit = { NOT = { has_dlc = "Dharma" } } set_legacy_government = oligarchic_republic }
 		}
 		ai_will_do = {
 			factor = 0
@@ -46,6 +47,7 @@ country_decisions = {
 		effect = {
 		    add_stability = -3
 			change_government = theocracy
+			if = { limit = { NOT = { has_dlc = "Dharma" } } set_legacy_government = theocratic_government }
 		}
 		ai_will_do = {
 			factor = 0
@@ -70,6 +72,7 @@ country_decisions = {
 		effect = {
 		    add_stability = -3
 			change_government = monarchy
+			if = { limit = { NOT = { has_dlc = "Dharma" } } set_legacy_government = despotic_monarchy }
 		}
 		ai_will_do = {
 			factor = 0
@@ -96,6 +99,7 @@ country_decisions = {
 		effect = {
 		    add_stability = -3
 			change_government = monarchy
+			if = { limit = { NOT = { has_dlc = "Dharma" } } set_legacy_government = despotic_monarchy }
 		}
 		ai_will_do = {
 			factor = 1

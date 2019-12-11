@@ -183,7 +183,9 @@ groups = {
 		start_cost_modifier = 0
 		is_primitive = yes
 		nation_designer_trigger = {
-			always = no
+			capital_scope = {
+				continent = Oblivion
+			}
 		}
 		nation_designer_cost = {
 		    trigger = {
