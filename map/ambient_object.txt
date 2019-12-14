@@ -1,3 +1,61 @@
+type = {
+	type = "gate_coldharbour"
+	use_animation = no
+	always_visible = yes
+	scale = 0.75
+	object = {
+		name = "gate_coldharbour"
+		hidden_on_start = no
+		position = {
+			1294.00 32.000 2562.000
+		}
+		rotation = {
+			0.000 0.000 0.000
+		}
+	}
+}
+
+type = {
+	type = "gate_coldharbour"
+	use_animation = no
+	always_visible = yes
+	scale = 0.5
+	object = {
+		name = "gate_coldharbour"
+		hidden_on_start = no
+		position = {
+			475.00 27.000 2616.000
+		}
+		rotation = {
+			0.000 0.000 0.000
+		}
+	}
+}
+
+type = {
+	type = "gate_deadlands"
+	use_animation = no
+	always_visible = yes
+	object = {
+		name = "gate_deadlands"
+		hidden_on_start = no
+		position = {
+			1410.00 28.750 1685.000
+		}
+		rotation = {
+			0.000 25.000 0.000
+		}
+	}
+}
+
+************************************
+************************************
+**                                **
+**       Don't touch these!       **
+**        V V V V  V V V V        **
+**                                **
+************************************
+************************************
 type={
 	type="desert_skeleton_mesh"
 	use_animation=no
