@@ -12,6 +12,11 @@ capital = "Luna"
 is_city = yes
 discovered_by = akavir_tg discovered_by = thousand_tg discovered_by = kamal_tg
 
+add_permanent_province_modifier = {
+	name = water_trade_modifier
+	duration = -1
+}
+
 center_of_trade = 1
 
 fort_15th = yes

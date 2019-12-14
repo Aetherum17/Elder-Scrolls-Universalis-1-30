@@ -795,7 +795,7 @@ diplomatic_missions = {
 	increase_number_of_trade_centers = {
 		icon = mission_iberian_conquistador
 		required_missions = { build_more_workshops }
-		trigger = { num_of_centers_of_trade = 3 }
+		trigger = { num_of_centers_of_trade = 7 }
 		effect = {
 			add_country_modifier = {
 				name = "es_more_tradeceners"
@@ -847,7 +847,7 @@ diplomatic_missions = {
 	increase_1_number_of_trade_centers = {
 		icon = mission_iberian_conquistador
 		required_missions = { build_more_docks }
-		trigger = { num_of_centers_of_trade = 7 }
+		trigger = { num_of_centers_of_trade = 15 }
 		effect = {
 			add_country_modifier = {
 				name = "es_more_1_tradeceners"
@@ -890,7 +890,7 @@ diplomatic_missions = {
 	increase_2_number_of_trade_centers = {
 		icon = mission_iberian_conquistador
 		required_missions = { high_mercantelism_mission }
-		trigger = { num_of_centers_of_trade = 10 }
+		trigger = { num_of_centers_of_trade = 25 }
 		effect = {
 			add_country_modifier = {
 				name = "es_more_2_tradeceners"

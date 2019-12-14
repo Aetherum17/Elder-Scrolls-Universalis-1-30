@@ -11,3 +11,8 @@ base_manpower = 1
 capital = "Challihilla" 
 is_city = yes
 discovered_by = pyandonea_tg
+
+add_permanent_province_modifier = {
+	name = water_trade_modifier
+	duration = -1
+}
