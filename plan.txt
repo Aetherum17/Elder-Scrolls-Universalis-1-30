@@ -137,11 +137,33 @@ NOT = { has_global_flag = rise_of_septim_flag }
 + land and water trade routs
 + castles in provinces
 
++ extend river map
+
 + fix localization - catholic.yml
 
++ daedric invasions
+
 + reform icons
++ redo religions icons (Elsweyr)
+
++ trade companies
 
 + titles for new cultures
++ lifespan for new cultures
+
++ flags for new nations
+
++ centers of trade for new provinces
+
++ create XXX nations + ideas for XXX nations
+
++ Northern Islands - missing province
+
++ check development
+
++ check positions
+
++ country collapse for new nations
 
 ### Year 1503 ###
 
@@ -149,9 +171,9 @@ NOT = { has_global_flag = rise_of_septim_flag }
 2 - Sundered - muslimgfx - yokudan-redguard
 2 - Tropical - southamericagfx - maorner-kamal
 2 - Feline - thaigfx - po_tun-khajiiti-pellitinian
-2 - Tribal - northamericagfx - bosmer-reachmen-falmer-kothringi-scamp
-1 - Beastmen - africangfx - orsimer-wood_orsimer-argonian-archein-agaceph-naga
-4 - Half-Breed - westerngfx - dremora-vampire-breton-soul_shriven
+2 - Tribal - northamericagfx - bosmer-reachmen-falmer-kothringi-scamp-arachnid
+3 - Beastmen - africangfx - orsimer-wood_orsimer-argonian-archein-agaceph-naga-clanfear-daedroth
+5 - Half-Breed - westerngfx - dremora-vampire-breton-soul_shriven-xivilai
 2 - Nomadic - mongolgfx - ashlander-anequinan-glacial-harvester
 1 - Islandic - indiangfx - tangmo
 3 - Northern - easterngfx - atmoran-nord-skaal-islander
@@ -166,6 +188,23 @@ NOT = { has_global_flag = rise_of_septim_flag }
 180 - Elves: maorner-altmer-ayleid-sinistral-snow_elven-falmer-dwemer-bosmer-ashlander-dunmer-chimer
 270 - Unknown: sload-dremora-harvester-scamp
 Immortal: vampire-soul_shriven-daedra
+
+Colonial Pyandonea: native_size = 50 native_ferocity = 5 native_hostileness = 10
+Colonial Tsakara: native_size = 45 native_ferocity = 10 native_hostileness = 7
+Colonial Kamal: native_size = 40 native_ferocity = 7 native_hostileness = 10
+Colonial Thousand Isalnds: native_size = 35 native_ferocity = 5 native_hostileness = 5
+Colonial Yokuda: native_size = 35 native_ferocity = 7 native_hostileness = 5
+Colonial Upper Tsakara: native_size = 30 native_ferocity = 7 native_hostileness = 7
+Colonial Nortern Isalnds: native_size = 25 native_ferocity = 10 native_hostileness = 7
+Colonial Po Tun: native_size = 15 native_ferocity = 3 native_hostileness = 7
+Colonial Southern Coldharvour: native_size = 50 native_ferocity = 5 native_hostileness = 5
+Colonial Eastern Coldharvour: native_size = 25 native_ferocity = 10 native_hostileness = 10
+Colonial Western Coldharvour: native_size = 35 native_ferocity = 5 native_hostileness = 3
+Colonial Northern Coldharvour: native_size = 45 native_ferocity = 5 native_hostileness = 5
+Colonial Eastern Deadlands: native_size = 50 native_ferocity = 5 native_hostileness = 7
+Colonial Western Deadlands: native_size = 15 native_ferocity = 5 native_hostileness = 7
+Colonial Northern Deadlands: native_size = 35 native_ferocity = 10 native_hostileness = 5
+Colonial Southern Deadlands: native_size = 45 native_ferocity = 7 native_hostileness = 7
 
  Diplomacy: - DIP
 #11) Citizenship Policy - diplomatic_annexation_cost = -0.43	
@@ -355,11 +394,6 @@ fortification_expert defensiveness = 0.10
 fortification_curator garrison_size = 0.10
 warden fort_maintenance_modifier = -0.10
 
-    3611 3612 3613 3614 3615 3616 3617 3618 3619 3620 
-    3621 3622 3623 3624 3625 3626 3627 3628 3629 3630 
-    3631 3632 3633 3634 3635 3636 3637 3638 3639 3640 
-    3641 3642 3643 3644 3645 3646 3647 3648 3649 3650 
-    3651 3652 3653 3654 3655 3656 3657 3658 3659 3660 
     3661 3662 3663 3664 3665 3666 3667 3668 3669 3670 
     3671 3672 3673 3674 3675 3676 3677 3678 3679 3680 
     3681 3682 3683 3684 3685 3686 3687 3688 3689 3690 
