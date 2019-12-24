@@ -236,6 +236,87 @@ country_event = {
 		country_event = { id = es_collapse.24 days = 31 tooltip = es_collapse.24.a.tt }
 		 }
 		 
+		 if = {
+		  limit = {
+		   any_owned_province = {
+		   region = central_coldharbour_lr
+		   }
+		  }
+		country_event = { id = es_collapse.25 days = 31 tooltip = es_collapse.24.a.tt }
+		 }
+		 
+		 if = {
+		  limit = {
+		   any_owned_province = {
+		   region = southern_coldharbour_lr
+		   }
+		  }
+		country_event = { id = es_collapse.26 days = 31 tooltip = es_collapse.24.a.tt }
+		 }
+		 
+		 if = {
+		  limit = {
+		   any_owned_province = {
+		   region = eastern_coldharbour_lr
+		   }
+		  }
+		country_event = { id = es_collapse.27 days = 31 tooltip = es_collapse.24.a.tt }
+		 }
+		 
+		 if = {
+		  limit = {
+		   any_owned_province = {
+		   region = western_coldharbour_lr
+		   }
+		  }
+		country_event = { id = es_collapse.28 days = 31 tooltip = es_collapse.24.a.tt }
+		 }
+		 
+		 if = {
+		  limit = {
+		   any_owned_province = {
+		   region = northern_coldharbour_lr
+		   }
+		  }
+		country_event = { id = es_collapse.29 days = 31 tooltip = es_collapse.24.a.tt }
+		 }
+		 
+		 if = {
+		  limit = {
+		   any_owned_province = {
+		   region = eastern_deadlands_lr
+		   }
+		  }
+		country_event = { id = es_collapse.30 days = 31 tooltip = es_collapse.24.a.tt }
+		 }
+		 
+		 if = {
+		  limit = {
+		   any_owned_province = {
+		   region = western_deadlands_lr
+		   }
+		  }
+		country_event = { id = es_collapse.31 days = 31 tooltip = es_collapse.24.a.tt }
+		 }
+		 
+		 if = {
+		  limit = {
+		   any_owned_province = {
+		   region = northern_deadlands_lr
+		   }
+		  }
+		country_event = { id = es_collapse.32 days = 31 tooltip = es_collapse.24.a.tt }
+		 }
+		 
+		 if = {
+		  limit = {
+		   any_owned_province = {
+		   region = southern_deadlands_lr
+		   }
+		  }
+		country_event = { id = es_collapse.33 days = 31 tooltip = es_collapse.24.a.tt }
+		 }
+		 
 	    }
 	}
 }

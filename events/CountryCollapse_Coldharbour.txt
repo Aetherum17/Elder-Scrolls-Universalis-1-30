@@ -1,0 +1,1709 @@
+namespace = es_collapse
+
+country_event = {
+	id = es_collapse.25
+	title = es_collapse.25.t
+	desc = es_collapse.25.d
+	picture = ES_PROVINCE_COLLAPSE_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = es_collapse.2.a
+		ai_chance = { factor = 75 }
+		hidden_effect = {
+		
+		if = {
+		limit = {
+		NOT = { capital_scope = { region = central_coldharbour_lr } }
+		}
+		every_core_province = {
+			limit = {
+				region = central_coldharbour_lr
+			}
+			remove_core = ROOT
+		}
+		}
+		
+		if = {
+		limit = {
+		central_coldlarbour_1_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CQ1 }
+		NOT = { capital_scope = { area = central_coldlarbour_1_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = central_coldlarbour_1_la
+		}
+		add_core = CQ1
+		}
+		create_vassal = CQ1
+		}
+		
+		if = {
+		limit = {
+		central_coldlarbour_2_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CQ2 }
+		NOT = { capital_scope = { area = central_coldlarbour_2_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = central_coldlarbour_2_la
+		}
+		add_core = CQ2
+		}
+		create_vassal = CQ2
+		}
+		
+		if = {
+		limit = {
+		central_coldlarbour_3_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CQ3 }
+		NOT = { capital_scope = { area = central_coldlarbour_3_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = central_coldlarbour_3_la
+		}
+		add_core = CQ3
+		}
+		create_vassal = CQ3
+		}
+		
+		if = {
+		limit = {
+		central_coldlarbour_4_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CQ4 }
+		NOT = { capital_scope = { area = central_coldlarbour_4_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = central_coldlarbour_4_la
+		}
+		add_core = CQ4
+		}
+		create_vassal = CQ4
+		}
+		
+		if = {
+		limit = {
+		central_coldlarbour_5_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CQ5 }
+		NOT = { capital_scope = { area = central_coldlarbour_5_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = central_coldlarbour_5_la
+		}
+		add_core = CQ5
+		}
+		create_vassal = CQ5
+		}
+		
+		if = {
+		limit = {
+		central_coldlarbour_6_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CQ6 }
+		NOT = { capital_scope = { area = central_coldlarbour_6_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = central_coldlarbour_6_la
+		}
+		add_core = CQ6
+		}
+		create_vassal = CQ6
+		}
+		
+		if = {
+		limit = {
+		central_coldlarbour_7_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CQ7 }
+		NOT = { capital_scope = { area = central_coldlarbour_7_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = central_coldlarbour_7_la
+		}
+		add_core = CQ7
+		}
+		create_vassal = CQ7
+		}
+		
+		if = {
+		limit = {
+		central_coldlarbour_8_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CQ8 }
+		NOT = { capital_scope = { area = central_coldlarbour_8_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = central_coldlarbour_8_la
+		}
+		add_core = CQ8
+		}
+		create_vassal = CQ8
+		}
+		
+		if = {
+		limit = {
+		central_coldlarbour_9_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CQ9 }
+		NOT = { capital_scope = { area = central_coldlarbour_9_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = central_coldlarbour_9_la
+		}
+		add_core = CQ9
+		}
+		create_vassal = CQ9
+		}
+		
+		if = {
+		limit = {
+		central_coldlarbour_10_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CR0 }
+		NOT = { capital_scope = { area = central_coldlarbour_10_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = central_coldlarbour_10_la
+		}
+		add_core = CR0
+		}
+		create_vassal = CR0
+		}
+		
+		if = {
+		limit = {
+		central_coldlarbour_11_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CR1 }
+		NOT = { capital_scope = { area = central_coldlarbour_11_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = central_coldlarbour_11_la
+		}
+		add_core = CR1
+		}
+		create_vassal = CR1
+		}
+		
+		if = {
+		limit = {
+		central_coldlarbour_12_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CR2 }
+		NOT = { capital_scope = { area = central_coldlarbour_12_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = central_coldlarbour_12_la
+		}
+		add_core = CR2
+		}
+		create_vassal = CR2
+		}
+		
+		if = {
+		limit = {
+		central_coldlarbour_13_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CR3 }
+		NOT = { capital_scope = { area = central_coldlarbour_13_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = central_coldlarbour_13_la
+		}
+		add_core = CR3
+		}
+		create_vassal = CR3
+		}
+		
+		if = {
+		limit = {
+		central_coldlarbour_14_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CR4 }
+		NOT = { capital_scope = { area = central_coldlarbour_14_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = central_coldlarbour_14_la
+		}
+		add_core = CR4
+		}
+		create_vassal = CR4
+		}
+		
+		if = {
+		limit = {
+		central_coldlarbour_15_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CR4 }
+		NOT = { capital_scope = { area = central_coldlarbour_15_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = central_coldlarbour_15_la
+		}
+		add_core = CR5
+		}
+		create_vassal = CR5
+		}
+		
+	    }
+	}
+	
+	option = {
+		name = es_collapse.2.b
+		ai_chance = { factor = 15 }
+		
+		if = {
+		limit = {
+		NOT = { capital_scope = { region = central_coldharbour_lr } }
+		}
+		every_core_province = {
+			limit = {
+				region = central_coldharbour_lr
+			}
+			remove_core = ROOT
+		}
+		}
+		
+	}
+	
+	option = {
+		name = es_collapse.2.c
+		ai_chance = { factor = 10 }
+		
+		trigger = {
+		NOT = { capital_scope = { region = central_coldharbour_lr } }
+		NOT = { exists = VAM }
+		}
+		
+		every_core_province = {
+			limit = {
+				region = central_coldharbour_lr
+			}
+			remove_core = ROOT
+		}
+		
+		every_owned_province = {
+		limit = {
+		region = central_coldharbour_lr
+		}
+		add_core = VAM
+		}
+		
+		release = VAM
+		
+		if = {
+		limit = {
+		government = monarchy
+		}
+		create_union = VAM
+	    }
+		else = {
+		create_alliance = VAM
+		VAM = { add_opinion = { who = ROOT modifier = es_friendly_nation } }
+		add_opinion = { who = VAM modifier = es_friendly_nation }
+		}
+	}
+}
+
+#######################################################################
+
+country_event = {
+	id = es_collapse.26
+	title = es_collapse.26.t
+	desc = es_collapse.26.d
+	picture = ES_PROVINCE_COLLAPSE_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = es_collapse.2.a
+		ai_chance = { factor = 75 }
+		hidden_effect = {
+		
+		if = {
+		limit = {
+		NOT = { capital_scope = { region = southern_coldharbour_lr } }
+		}
+		every_core_province = {
+			limit = {
+				region = southern_coldharbour_lr
+			}
+			remove_core = ROOT
+		}
+		}
+		
+		if = {
+		limit = {
+		southern_coldharbour_1_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CS1 }
+		NOT = { capital_scope = { area = southern_coldharbour_1_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = southern_coldharbour_1_la
+		}
+		add_core = CS1
+		}
+		create_vassal = CS1
+		}
+		
+		if = {
+		limit = {
+		southern_coldharbour_2_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CS2 }
+		NOT = { capital_scope = { area = southern_coldharbour_2_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = southern_coldharbour_2_la
+		}
+		add_core = CS2
+		}
+		create_vassal = CS2
+		}
+		
+		if = {
+		limit = {
+		southern_coldharbour_3_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CS3 }
+		NOT = { capital_scope = { area = southern_coldharbour_3_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = southern_coldharbour_3_la
+		}
+		add_core = CS3
+		}
+		create_vassal = CS3
+		}
+		
+		if = {
+		limit = {
+		southern_coldharbour_4_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CS4 }
+		NOT = { capital_scope = { area = southern_coldharbour_4_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = southern_coldharbour_4_la
+		}
+		add_core = CS4
+		}
+		create_vassal = CS4
+		}
+		
+		if = {
+		limit = {
+		southern_coldharbour_5_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CS5 }
+		NOT = { capital_scope = { area = southern_coldharbour_5_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = southern_coldharbour_5_la
+		}
+		add_core = CS5
+		}
+		create_vassal = CS5
+		}
+		
+		if = {
+		limit = {
+		southern_coldharbour_6_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CS6 }
+		NOT = { capital_scope = { area = southern_coldharbour_6_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = southern_coldharbour_6_la
+		}
+		add_core = CS6
+		}
+		create_vassal = CS6
+		}
+		
+		if = {
+		limit = {
+		southern_coldharbour_7_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CS7 }
+		NOT = { capital_scope = { area = southern_coldharbour_7_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = southern_coldharbour_7_la
+		}
+		add_core = CS7
+		}
+		create_vassal = CS7
+		}
+		
+		if = {
+		limit = {
+		southern_coldharbour_8_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CS8 }
+		NOT = { capital_scope = { area = southern_coldharbour_8_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = southern_coldharbour_8_la
+		}
+		add_core = CS8
+		}
+		create_vassal = CS8
+		}
+		
+		if = {
+		limit = {
+		southern_coldharbour_9_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CS9 }
+		NOT = { capital_scope = { area = southern_coldharbour_9_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = southern_coldharbour_9_la
+		}
+		add_core = CS9
+		}
+		create_vassal = CS9
+		}
+		
+		if = {
+		limit = {
+		southern_coldharbour_10_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CT0 }
+		NOT = { capital_scope = { area = southern_coldharbour_10_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = southern_coldharbour_10_la
+		}
+		add_core = CT0
+		}
+		create_vassal = CT0
+		}
+		
+		if = {
+		limit = {
+		southern_coldharbour_11_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CT1 }
+		NOT = { capital_scope = { area = southern_coldharbour_11_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = southern_coldharbour_11_la
+		}
+		add_core = CT1
+		}
+		create_vassal = CT1
+		}
+		
+		if = {
+		limit = {
+		southern_coldharbour_12_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CT2 }
+		NOT = { capital_scope = { area = southern_coldharbour_12_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = southern_coldharbour_12_la
+		}
+		add_core = CT2
+		}
+		create_vassal = CT2
+		}
+		
+		if = {
+		limit = {
+		southern_coldharbour_13_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CT3 }
+		NOT = { capital_scope = { area = southern_coldharbour_13_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = southern_coldharbour_13_la
+		}
+		add_core = CT3
+		}
+		create_vassal = CT3
+		}
+		
+		if = {
+		limit = {
+		southern_coldharbour_14_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CT4 }
+		NOT = { capital_scope = { area = southern_coldharbour_14_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = southern_coldharbour_14_la
+		}
+		add_core = CT4
+		}
+		create_vassal = CT4
+		}
+		
+		if = {
+		limit = {
+		southern_coldharbour_15_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CT4 }
+		NOT = { capital_scope = { area = southern_coldharbour_15_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = southern_coldharbour_15_la
+		}
+		add_core = CT5
+		}
+		create_vassal = CT5
+		}
+		
+	    }
+	}
+	
+	option = {
+		name = es_collapse.2.b
+		ai_chance = { factor = 15 }
+		
+		if = {
+		limit = {
+		NOT = { capital_scope = { region = southern_coldharbour_lr } }
+		}
+		every_core_province = {
+			limit = {
+				region = southern_coldharbour_lr
+			}
+			remove_core = ROOT
+		}
+		}
+		
+	}
+	
+	option = {
+		name = es_collapse.2.c
+		ai_chance = { factor = 10 }
+		
+		trigger = {
+		NOT = { capital_scope = { region = southern_coldharbour_lr } }
+		NOT = { exists = CS3 }
+		}
+		
+		every_core_province = {
+			limit = {
+				region = southern_coldharbour_lr
+			}
+			remove_core = ROOT
+		}
+		
+		every_owned_province = {
+		limit = {
+		region = southern_coldharbour_lr
+		}
+		add_core = CS3
+		}
+		
+		release = CS3
+		
+		if = {
+		limit = {
+		government = monarchy
+		}
+		create_union = CS3
+	    }
+		else = {
+		create_alliance = CS3
+		CS3 = { add_opinion = { who = ROOT modifier = es_friendly_nation } }
+		add_opinion = { who = CS3 modifier = es_friendly_nation }
+		}
+	}
+}
+
+#######################################################################
+
+country_event = {
+	id = es_collapse.27
+	title = es_collapse.27.t
+	desc = es_collapse.27.d
+	picture = ES_PROVINCE_COLLAPSE_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = es_collapse.2.a
+		ai_chance = { factor = 75 }
+		hidden_effect = {
+		
+		if = {
+		limit = {
+		NOT = { capital_scope = { region = eastern_coldharbour_lr } }
+		}
+		every_core_province = {
+			limit = {
+				region = eastern_coldharbour_lr
+			}
+			remove_core = ROOT
+		}
+		}
+		
+		if = {
+		limit = {
+		eastern_coldharbour_1_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CW1 }
+		NOT = { capital_scope = { area = eastern_coldharbour_1_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = eastern_coldharbour_1_la
+		}
+		add_core = CW1
+		}
+		create_vassal = CW1
+		}
+		
+		if = {
+		limit = {
+		eastern_coldharbour_2_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CW2 }
+		NOT = { capital_scope = { area = eastern_coldharbour_2_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = eastern_coldharbour_2_la
+		}
+		add_core = CW2
+		}
+		create_vassal = CW2
+		}
+		
+		if = {
+		limit = {
+		eastern_coldharbour_3_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CW3 }
+		NOT = { capital_scope = { area = eastern_coldharbour_3_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = eastern_coldharbour_3_la
+		}
+		add_core = CW3
+		}
+		create_vassal = CW3
+		}
+		
+		if = {
+		limit = {
+		eastern_coldharbour_4_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CW4 }
+		NOT = { capital_scope = { area = eastern_coldharbour_4_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = eastern_coldharbour_4_la
+		}
+		add_core = CW4
+		}
+		create_vassal = CW4
+		}
+		
+		if = {
+		limit = {
+		eastern_coldharbour_5_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CW5 }
+		NOT = { capital_scope = { area = eastern_coldharbour_5_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = eastern_coldharbour_5_la
+		}
+		add_core = CW5
+		}
+		create_vassal = CW5
+		}
+		
+		if = {
+		limit = {
+		eastern_coldharbour_6_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CW6 }
+		NOT = { capital_scope = { area = eastern_coldharbour_6_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = eastern_coldharbour_6_la
+		}
+		add_core = CW6
+		}
+		create_vassal = CW6
+		}
+		
+		if = {
+		limit = {
+		eastern_coldharbour_7_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CW7 }
+		NOT = { capital_scope = { area = eastern_coldharbour_7_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = eastern_coldharbour_7_la
+		}
+		add_core = CW7
+		}
+		create_vassal = CW7
+		}
+		
+		if = {
+		limit = {
+		eastern_coldharbour_8_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CW8 }
+		NOT = { capital_scope = { area = eastern_coldharbour_8_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = eastern_coldharbour_8_la
+		}
+		add_core = CW8
+		}
+		create_vassal = CW8
+		}
+		
+		if = {
+		limit = {
+		eastern_coldharbour_9_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CW9 }
+		NOT = { capital_scope = { area = eastern_coldharbour_9_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = eastern_coldharbour_9_la
+		}
+		add_core = CW9
+		}
+		create_vassal = CW9
+		}
+		
+		if = {
+		limit = {
+		eastern_coldharbour_10_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CX0 }
+		NOT = { capital_scope = { area = eastern_coldharbour_10_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = eastern_coldharbour_10_la
+		}
+		add_core = CX0
+		}
+		create_vassal = CX0
+		}
+		
+		if = {
+		limit = {
+		eastern_coldharbour_11_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CX1 }
+		NOT = { capital_scope = { area = eastern_coldharbour_11_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = eastern_coldharbour_11_la
+		}
+		add_core = CX1
+		}
+		create_vassal = CX1
+		}
+		
+		if = {
+		limit = {
+		eastern_coldharbour_12_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CX2 }
+		NOT = { capital_scope = { area = eastern_coldharbour_12_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = eastern_coldharbour_12_la
+		}
+		add_core = CX2
+		}
+		create_vassal = CX2
+		}
+		
+		if = {
+		limit = {
+		eastern_coldharbour_13_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CX3 }
+		NOT = { capital_scope = { area = eastern_coldharbour_13_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = eastern_coldharbour_13_la
+		}
+		add_core = CX3
+		}
+		create_vassal = CX3
+		}
+		
+		if = {
+		limit = {
+		eastern_coldharbour_14_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CX4 }
+		NOT = { capital_scope = { area = eastern_coldharbour_14_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = eastern_coldharbour_14_la
+		}
+		add_core = CX4
+		}
+		create_vassal = CX4
+		}
+		
+		if = {
+		limit = {
+		eastern_coldharbour_15_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CX4 }
+		NOT = { capital_scope = { area = eastern_coldharbour_15_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = eastern_coldharbour_15_la
+		}
+		add_core = CX5
+		}
+		create_vassal = CX5
+		}
+		
+	    }
+	}
+	
+	option = {
+		name = es_collapse.2.b
+		ai_chance = { factor = 15 }
+		
+		if = {
+		limit = {
+		NOT = { capital_scope = { region = eastern_coldharbour_lr } }
+		}
+		every_core_province = {
+			limit = {
+				region = eastern_coldharbour_lr
+			}
+			remove_core = ROOT
+		}
+		}
+		
+	}
+	
+	option = {
+		name = es_collapse.2.c
+		ai_chance = { factor = 10 }
+		
+		trigger = {
+		NOT = { capital_scope = { region = eastern_coldharbour_lr } }
+		NOT = { exists = CW6 }
+		}
+		
+		every_core_province = {
+			limit = {
+				region = eastern_coldharbour_lr
+			}
+			remove_core = ROOT
+		}
+		
+		every_owned_province = {
+		limit = {
+		region = eastern_coldharbour_lr
+		}
+		add_core = CW6
+		}
+		
+		release = CW6
+		
+		if = {
+		limit = {
+		government = monarchy
+		}
+		create_union = CW6
+	    }
+		else = {
+		create_alliance = CW6
+		CW6 = { add_opinion = { who = ROOT modifier = es_friendly_nation } }
+		add_opinion = { who = CW6 modifier = es_friendly_nation }
+		}
+	}
+}
+
+#######################################################################
+
+country_event = {
+	id = es_collapse.28
+	title = es_collapse.28.t
+	desc = es_collapse.28.d
+	picture = ES_PROVINCE_COLLAPSE_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = es_collapse.2.a
+		ai_chance = { factor = 75 }
+		hidden_effect = {
+		
+		if = {
+		limit = {
+		NOT = { capital_scope = { region = western_coldharbour_lr } }
+		}
+		every_core_province = {
+			limit = {
+				region = western_coldharbour_lr
+			}
+			remove_core = ROOT
+		}
+		}
+		
+		if = {
+		limit = {
+		western_coldharbour_1_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CU1 }
+		NOT = { capital_scope = { area = western_coldharbour_1_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = western_coldharbour_1_la
+		}
+		add_core = CU1
+		}
+		create_vassal = CU1
+		}
+		
+		if = {
+		limit = {
+		western_coldharbour_2_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CU2 }
+		NOT = { capital_scope = { area = western_coldharbour_2_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = western_coldharbour_2_la
+		}
+		add_core = CU2
+		}
+		create_vassal = CU2
+		}
+		
+		if = {
+		limit = {
+		western_coldharbour_3_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CU3 }
+		NOT = { capital_scope = { area = western_coldharbour_3_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = western_coldharbour_3_la
+		}
+		add_core = CU3
+		}
+		create_vassal = CU3
+		}
+		
+		if = {
+		limit = {
+		western_coldharbour_4_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CU4 }
+		NOT = { capital_scope = { area = western_coldharbour_4_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = western_coldharbour_4_la
+		}
+		add_core = CU4
+		}
+		create_vassal = CU4
+		}
+		
+		if = {
+		limit = {
+		western_coldharbour_5_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CU5 }
+		NOT = { capital_scope = { area = western_coldharbour_5_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = western_coldharbour_5_la
+		}
+		add_core = CU5
+		}
+		create_vassal = CU5
+		}
+		
+		if = {
+		limit = {
+		western_coldharbour_6_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CU6 }
+		NOT = { capital_scope = { area = western_coldharbour_6_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = western_coldharbour_6_la
+		}
+		add_core = CU6
+		}
+		create_vassal = CU6
+		}
+		
+		if = {
+		limit = {
+		western_coldharbour_7_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CU7 }
+		NOT = { capital_scope = { area = western_coldharbour_7_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = western_coldharbour_7_la
+		}
+		add_core = CU7
+		}
+		create_vassal = CU7
+		}
+		
+		if = {
+		limit = {
+		western_coldharbour_8_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CU8 }
+		NOT = { capital_scope = { area = western_coldharbour_8_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = western_coldharbour_8_la
+		}
+		add_core = CU8
+		}
+		create_vassal = CU8
+		}
+		
+		if = {
+		limit = {
+		western_coldharbour_9_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CU9 }
+		NOT = { capital_scope = { area = western_coldharbour_9_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = western_coldharbour_9_la
+		}
+		add_core = CU9
+		}
+		create_vassal = CU9
+		}
+		
+		if = {
+		limit = {
+		western_coldharbour_10_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CV0 }
+		NOT = { capital_scope = { area = western_coldharbour_10_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = western_coldharbour_10_la
+		}
+		add_core = CV0
+		}
+		create_vassal = CV0
+		}
+		
+		if = {
+		limit = {
+		western_coldharbour_11_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CV1 }
+		NOT = { capital_scope = { area = western_coldharbour_11_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = western_coldharbour_11_la
+		}
+		add_core = CV1
+		}
+		create_vassal = CV1
+		}
+		
+		if = {
+		limit = {
+		western_coldharbour_12_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CV2 }
+		NOT = { capital_scope = { area = western_coldharbour_12_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = western_coldharbour_12_la
+		}
+		add_core = CV2
+		}
+		create_vassal = CV2
+		}
+		
+		if = {
+		limit = {
+		western_coldharbour_13_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CV3 }
+		NOT = { capital_scope = { area = western_coldharbour_13_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = western_coldharbour_13_la
+		}
+		add_core = CV3
+		}
+		create_vassal = CV3
+		}
+		
+		if = {
+		limit = {
+		western_coldharbour_14_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CV4 }
+		NOT = { capital_scope = { area = western_coldharbour_14_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = western_coldharbour_14_la
+		}
+		add_core = CV4
+		}
+		create_vassal = CV4
+		}
+		
+		if = {
+		limit = {
+		western_coldharbour_15_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CV4 }
+		NOT = { capital_scope = { area = western_coldharbour_15_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = western_coldharbour_15_la
+		}
+		add_core = CV5
+		}
+		create_vassal = CV5
+		}
+		
+	    }
+	}
+	
+	option = {
+		name = es_collapse.2.b
+		ai_chance = { factor = 15 }
+		
+		if = {
+		limit = {
+		NOT = { capital_scope = { region = western_coldharbour_lr } }
+		}
+		every_core_province = {
+			limit = {
+				region = western_coldharbour_lr
+			}
+			remove_core = ROOT
+		}
+		}
+		
+	}
+	
+	option = {
+		name = es_collapse.2.c
+		ai_chance = { factor = 10 }
+		
+		trigger = {
+		NOT = { capital_scope = { region = western_coldharbour_lr } }
+		NOT = { exists = CU5 }
+		}
+		
+		every_core_province = {
+			limit = {
+				region = western_coldharbour_lr
+			}
+			remove_core = ROOT
+		}
+		
+		every_owned_province = {
+		limit = {
+		region = western_coldharbour_lr
+		}
+		add_core = CU5
+		}
+		
+		release = CU5
+		
+		if = {
+		limit = {
+		government = monarchy
+		}
+		create_union = CU5
+	    }
+		else = {
+		create_alliance = CU5
+		CU5 = { add_opinion = { who = ROOT modifier = es_friendly_nation } }
+		add_opinion = { who = CU5 modifier = es_friendly_nation }
+		}
+	}
+}
+
+#######################################################################
+
+country_event = {
+	id = es_collapse.29
+	title = es_collapse.29.t
+	desc = es_collapse.29.d
+	picture = ES_PROVINCE_COLLAPSE_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = es_collapse.2.a
+		ai_chance = { factor = 75 }
+		hidden_effect = {
+		
+		if = {
+		limit = {
+		NOT = { capital_scope = { region = northern_coldharbour_lr } }
+		}
+		every_core_province = {
+			limit = {
+				region = northern_coldharbour_lr
+			}
+			remove_core = ROOT
+		}
+		}
+		
+		if = {
+		limit = {
+		northern_coldharbour_1_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CY1 }
+		NOT = { capital_scope = { area = northern_coldharbour_1_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = northern_coldharbour_1_la
+		}
+		add_core = CY1
+		}
+		create_vassal = CY1
+		}
+		
+		if = {
+		limit = {
+		northern_coldharbour_2_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CY2 }
+		NOT = { capital_scope = { area = northern_coldharbour_2_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = northern_coldharbour_2_la
+		}
+		add_core = CY2
+		}
+		create_vassal = CY2
+		}
+		
+		if = {
+		limit = {
+		northern_coldharbour_3_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CY3 }
+		NOT = { capital_scope = { area = northern_coldharbour_3_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = northern_coldharbour_3_la
+		}
+		add_core = CY3
+		}
+		create_vassal = CY3
+		}
+		
+		if = {
+		limit = {
+		northern_coldharbour_4_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CY4 }
+		NOT = { capital_scope = { area = northern_coldharbour_4_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = northern_coldharbour_4_la
+		}
+		add_core = CY4
+		}
+		create_vassal = CY4
+		}
+		
+		if = {
+		limit = {
+		northern_coldharbour_5_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CY5 }
+		NOT = { capital_scope = { area = northern_coldharbour_5_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = northern_coldharbour_5_la
+		}
+		add_core = CY5
+		}
+		create_vassal = CY5
+		}
+		
+		if = {
+		limit = {
+		northern_coldharbour_6_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CY6 }
+		NOT = { capital_scope = { area = northern_coldharbour_6_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = northern_coldharbour_6_la
+		}
+		add_core = CY6
+		}
+		create_vassal = CY6
+		}
+		
+		if = {
+		limit = {
+		northern_coldharbour_7_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CY7 }
+		NOT = { capital_scope = { area = northern_coldharbour_7_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = northern_coldharbour_7_la
+		}
+		add_core = CY7
+		}
+		create_vassal = CY7
+		}
+		
+		if = {
+		limit = {
+		northern_coldharbour_8_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CY8 }
+		NOT = { capital_scope = { area = northern_coldharbour_8_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = northern_coldharbour_8_la
+		}
+		add_core = CY8
+		}
+		create_vassal = CY8
+		}
+		
+		if = {
+		limit = {
+		northern_coldharbour_9_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CY9 }
+		NOT = { capital_scope = { area = northern_coldharbour_9_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = northern_coldharbour_9_la
+		}
+		add_core = CY9
+		}
+		create_vassal = CY9
+		}
+		
+		if = {
+		limit = {
+		northern_coldharbour_10_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CZ0 }
+		NOT = { capital_scope = { area = northern_coldharbour_10_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = northern_coldharbour_10_la
+		}
+		add_core = CZ0
+		}
+		create_vassal = CZ0
+		}
+		
+		if = {
+		limit = {
+		northern_coldharbour_11_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CZ1 }
+		NOT = { capital_scope = { area = northern_coldharbour_11_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = northern_coldharbour_11_la
+		}
+		add_core = CZ1
+		}
+		create_vassal = CZ1
+		}
+		
+		if = {
+		limit = {
+		northern_coldharbour_12_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CZ2 }
+		NOT = { capital_scope = { area = northern_coldharbour_12_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = northern_coldharbour_12_la
+		}
+		add_core = CZ2
+		}
+		create_vassal = CZ2
+		}
+		
+		if = {
+		limit = {
+		northern_coldharbour_13_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CZ3 }
+		NOT = { capital_scope = { area = northern_coldharbour_13_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = northern_coldharbour_13_la
+		}
+		add_core = CZ3
+		}
+		create_vassal = CZ3
+		}
+		
+		if = {
+		limit = {
+		northern_coldharbour_14_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CZ4 }
+		NOT = { capital_scope = { area = northern_coldharbour_14_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = northern_coldharbour_14_la
+		}
+		add_core = CZ4
+		}
+		create_vassal = CZ4
+		}
+		
+		if = {
+		limit = {
+		northern_coldharbour_15_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = CZ4 }
+		NOT = { capital_scope = { area = northern_coldharbour_15_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = northern_coldharbour_15_la
+		}
+		add_core = CZ5
+		}
+		create_vassal = CZ5
+		}
+		
+	    }
+	}
+	
+	option = {
+		name = es_collapse.2.b
+		ai_chance = { factor = 15 }
+		
+		if = {
+		limit = {
+		NOT = { capital_scope = { region = northern_coldharbour_lr } }
+		}
+		every_core_province = {
+			limit = {
+				region = northern_coldharbour_lr
+			}
+			remove_core = ROOT
+		}
+		}
+		
+	}
+	
+	option = {
+		name = es_collapse.2.c
+		ai_chance = { factor = 10 }
+		
+		trigger = {
+		NOT = { capital_scope = { region = northern_coldharbour_lr } }
+		NOT = { exists = CZ3 }
+		}
+		
+		every_core_province = {
+			limit = {
+				region = northern_coldharbour_lr
+			}
+			remove_core = ROOT
+		}
+		
+		every_owned_province = {
+		limit = {
+		region = northern_coldharbour_lr
+		}
+		add_core = CZ3
+		}
+		
+		release = CZ3
+		
+		if = {
+		limit = {
+		government = monarchy
+		}
+		create_union = CZ3
+	    }
+		else = {
+		create_alliance = CZ3
+		CZ3 = { add_opinion = { who = ROOT modifier = es_friendly_nation } }
+		add_opinion = { who = CZ3 modifier = es_friendly_nation }
+		}
+	}
+}
