@@ -773,6 +773,26 @@ occult_group = {
 		}
 	}
 	
+	all-maker_cult = {
+		color = { 23 35 192 }
+		icon = 32
+		country = {
+			hostile_attrition = 1
+			production_efficiency = 0.10
+		}
+		country_as_secondary = {
+			hostile_attrition = 1
+			production_efficiency = 0.10
+		}
+		province = {
+			local_missionary_strength = -0.025
+		}
+		
+		heretic = { ALL-MAKER_HERETIC }	
+		
+		fervor = yes
+	}
+	
 	crusade_name = CRUSADE
 	harmonized_modifier = harmonized_occult_group
 }
@@ -1076,6 +1096,111 @@ daedric_group_1 = {
 		aspects_name = PROTESTANT_ASPECTS
 		
 		heretic = { HERMEUS_MORA_HERETIC }	
+	}
+	
+	sheogorath_cult = {
+		color = { 235 164 0 }
+		icon = 33
+		country = {
+			unjustified_demands = -0.10
+	        max_absolutism = 10
+		}
+		country_as_secondary = {
+			unjustified_demands = -0.10
+	        max_absolutism = 10
+		}
+		province = {
+			local_missionary_strength = -0.015
+		}
+		
+		uses_church_power = yes
+		aspects = {
+			organised_through_priest_aspect_1
+            priests_may_marry_aspect_1
+            religion_conversation_aspect_1
+            holy_scrolls_aspect_1
+            prince_accept_prayers_aspect_1
+            statures_aspect_1
+            legalised_divorces_aspect_1
+            heretics_deported_aspect_1
+            parish_registers_aspect_1
+            individual_creeds_aspect_1
+            allow_usury_aspect_1
+            translated_scrolls_aspect_1
+		}
+		aspects_name = PROTESTANT_ASPECTS
+		
+		heretic = { SHEOGORATH_HERETIC }	
+	}
+	
+	hircine_cult = {
+		color = { 33 161 37 }
+		icon = 34
+		country = {
+			cavalry_power = 0.10
+	        manpower_recovery_speed = 0.10
+		}
+		country_as_secondary = {
+			cavalry_power = 0.10
+	        manpower_recovery_speed = 0.10
+		}
+		province = {
+			local_missionary_strength = -0.015
+		}
+		
+		uses_church_power = yes
+		aspects = {
+			organised_through_priest_aspect_1
+            priests_may_marry_aspect_1
+            religion_conversation_aspect_1
+            holy_scrolls_aspect_1
+            prince_accept_prayers_aspect_1
+            statures_aspect_1
+            legalised_divorces_aspect_1
+            heretics_deported_aspect_1
+            parish_registers_aspect_1
+            individual_creeds_aspect_1
+            allow_usury_aspect_1
+            translated_scrolls_aspect_1
+		}
+		aspects_name = PROTESTANT_ASPECTS
+		
+		heretic = { HIRCINE_HERETIC }	
+	}
+	
+	nocturnal_cult = {
+		color = { 123 224 228 }
+		icon = 35
+		country = {
+			spy_offence = 0.10
+	        shock_damage_received = -0.1
+		}
+		country_as_secondary = {
+			spy_offence = 0.10
+	        shock_damage_received = -0.1
+		}
+		province = {
+			local_missionary_strength = -0.015
+		}
+		
+		uses_church_power = yes
+		aspects = {
+			organised_through_priest_aspect_1
+            priests_may_marry_aspect_1
+            religion_conversation_aspect_1
+            holy_scrolls_aspect_1
+            prince_accept_prayers_aspect_1
+            statures_aspect_1
+            legalised_divorces_aspect_1
+            heretics_deported_aspect_1
+            parish_registers_aspect_1
+            individual_creeds_aspect_1
+            allow_usury_aspect_1
+            translated_scrolls_aspect_1
+		}
+		aspects_name = PROTESTANT_ASPECTS
+		
+		heretic = { NOCTURNAL_HERETIC }	
 	}
 	
 	dremora_pantheon = {

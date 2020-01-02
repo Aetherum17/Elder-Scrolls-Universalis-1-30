@@ -22,6 +22,7 @@ country_decisions = {
 			}
 		}
 		effect = {
+		    add_years_of_income = 0.10
 		    random_owned_province = {
 			limit = {
 			trade_goods = slaves
@@ -56,6 +57,7 @@ country_decisions = {
 			}
 		}
 		allow =  {
+		    treasury = 0
 		    OR = {
 			has_reform = 23_a
 			has_reform = 23_b
@@ -66,6 +68,7 @@ country_decisions = {
 			}
 		}
 		effect = {
+		    add_years_of_income = -0.10
 		    random_owned_province = {
 			limit = {
 			trade_goods = slaves
@@ -111,6 +114,7 @@ country_decisions = {
 			}
 		}
 		effect = {
+		    add_manpower = 5
 		    random_owned_province = {
 			limit = {
 			trade_goods = wine
@@ -145,6 +149,7 @@ country_decisions = {
 			}
 		}
 		allow =  {
+		   manpower = 5
 		   OR = {
 			has_reform = 51_a
 			has_reform = 51_b
@@ -155,6 +160,7 @@ country_decisions = {
 			}
 		}
 		effect = {
+		    add_manpower = -5
 		    random_owned_province = {
 			limit = {
 			trade_goods = wine
@@ -202,6 +208,7 @@ country_decisions = {
 			}
 		}
 		effect = {
+		    add_prestige = 5
 		    random_owned_province = {
 			limit = {
 			OR = {
@@ -255,6 +262,7 @@ country_decisions = {
 			}
 		}
 		effect = {
+		    add_prestige = -5
 		    random_owned_province = {
 			limit = {
 			trade_goods = sugar

@@ -1113,7 +1113,10 @@ marsh_government = {
 
 	trigger = {
 		government = monarchy
+		OR = {
 		culture_group = marsh_cg
+		culture_group = void_cg
+		}
 	}
 }
 
@@ -2084,6 +2087,7 @@ rep_tsaesci_cg_government = {
 		culture_group = daedra_cg
 		culture_group = yokudan-redguardian_cg
 		culture_group = marsh_cg
+		culture_group = void_cg
 		}
 	}
 }

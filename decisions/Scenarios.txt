@@ -312,7 +312,6 @@ country_decisions = {
 	}
 	
 	es_vampire_purification = {
-	    major = yes
 		potential = {
 		culture_group = dead_cg
         any_owned_province = {
@@ -320,18 +319,51 @@ country_decisions = {
 		}
 		}
 		allow = {
+		prestige = 5
 		any_owned_province = {
 		NOT = { culture = vampire }
 		}
 		dip_power = 100
         }
 		effect = {
+		add_prestige = -5
 		add_dip_power = -100
 		random_owned_province = {
 		limit = {
 		NOT = { culture = vampire }
 		}
 		change_culture = vampire
+		}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	es_tsaesci_consumption = {
+		potential = {
+		culture_group = tsaesci_cg
+        any_owned_province = {
+		NOT = { culture = tsaesci }
+		}
+		}
+		allow = {
+		any_owned_province = {
+		NOT = { culture = tsaesci }
+		}
+		mil_power = 100
+        }
+		effect = {
+		add_mil_power = -100
+		random_owned_province = {
+		limit = {
+		NOT = { culture = tsaesci }
+		}
+		change_culture = tsaesci
+		add_province_modifier = {
+		    name = "00_unrest"
+			duration = 9125
+		}
 		}
 		}
 		ai_will_do = {
@@ -573,9 +605,9 @@ country_decisions = {
 		treasury = 1500
         }
 		effect = {
-		add_treasury = 1500
+		add_treasury = -1500
 		335 = {
-		add_country_modifier = {
+		add_province_modifier = {
 		    name = "18_hall_of_virtues"
 			duration = -1
 		}
@@ -760,6 +792,112 @@ country_decisions = {
 		}
 		ai_will_do = {
 			factor = 1
+		}
+	}
+	
+	es_cede_province_to_order_of_black_worm = {
+	    potential = {
+		has_country_modifier = 33_order_of_black_worm
+		}
+		allow = {
+		owns = 1017
+		any_owned_province = {
+		    NOT = { area = morrowind_14_la }
+			NOT = { has_province_modifier = 33_province_order_of_black_worm }
+		}
+        }
+		effect = {
+		random_owned_province = {
+		    limit = {
+			    NOT = { area = morrowind_14_la }
+			    NOT = { has_province_modifier = 33_province_order_of_black_worm }
+			}
+			add_province_modifier = {
+		    name = "33_province_order_of_black_worm"
+			duration = -1 
+			}
+		}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	es_reform_order_of_black_worm = {
+	    major = yes
+	    potential = {
+		has_country_modifier = 33_order_of_black_worm
+		}
+		allow = {
+		calc_true_if = {
+			all_owned_province = {
+			has_province_modifier = 33_province_order_of_black_worm
+			controlled_by = owner
+			is_core = ROOT
+			}
+		amount = 100
+		}
+        }
+		effect = {
+		    country_event = { id = es_33_scenario.4 days = 31 tooltip = es_17_scenario.15.a.tt }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	es_destroy_order_of_black_worm = {
+	    potential = {
+		NOT = { has_country_modifier = 33_order_of_black_worm }
+		owns = 1017
+		1017 = { has_province_modifier = 33_capital_of_order_of_black_worm }
+		}
+		allow = {
+		1017 = { has_province_modifier = 33_capital_of_order_of_black_worm }
+        }
+		effect = {
+		    1017 = {
+			remove_province_modifier = 33_capital_of_order_of_black_worm
+			spawn_rebels = {
+				type = heretic_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	es_33_found_guild_of_mages = {
+	    major = yes
+	    potential = {
+		any_country = {
+		    has_country_flag = es_33_scenario.6_flag
+		}
+		owns = 1206
+		1206 = { NOT = { has_province_modifier = 33_mages_guild } }
+		}
+		allow = {
+		treasury = 5000
+        }
+		effect = {
+		    add_treasury = -5000
+		    1206 = {
+			    add_province_modifier = {
+		        name = "33_mages_guild"
+			    duration = -1 
+			}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+			    factor = 0
+				NOT = { treasury = 5000 }
+			}
 		}
 	}
 	

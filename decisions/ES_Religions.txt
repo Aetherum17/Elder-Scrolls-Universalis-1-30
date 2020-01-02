@@ -5,13 +5,18 @@ country_decisions = {
 		potential = {
 			NOT = { has_country_modifier = sacrificed_ruler_timer }
 			religion = dragon_cult
-			has_heir = yes
 		}
 		allow = {
 			government = theocracy
 			stability = 0
 		}
 		effect = {
+		    if = {
+			    limit = {
+				    ai = no
+				}
+				kill_ruler = yes
+			}
 			add_country_modifier = {
 				name = "sacrificed_ruler"
 				duration = 3650

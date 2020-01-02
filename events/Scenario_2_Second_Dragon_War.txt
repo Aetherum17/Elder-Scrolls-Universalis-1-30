@@ -48,6 +48,14 @@ country_event = {
 		name = "es_2_scenario.1.b"
 		ai_chance = { factor = 50 }
 		add_stability = -3
+		every_province = {
+		    limit = {
+			    is_city = yes
+			    religion = dragon_cult
+				continent = Atmora
+			}
+			add_core = DRA
+		}
 		random_owned_province = { 
 			spawn_rebels = {
 				type = dragon_cult_rebels
@@ -88,6 +96,7 @@ country_event = {
 		is_year = 65
 		NOT = { is_year = 109 }
 		any_country = {
+		    NOT = { government = native }
 		    capital_scope = { continent = Atmora }
 			NOT = { capital_scope = { area = atmora_8_la } }
 			NOT = { capital_scope = { area = atmora_9_la } }
@@ -110,6 +119,7 @@ country_event = {
 		every_country = {
 			limit = { 
 			capital_scope = { continent = Atmora }
+			NOT = { government = native }
 			NOT = { capital_scope = { area = atmora_8_la } }
 			NOT = { capital_scope = { area = atmora_9_la } }
 			religion = dragon_cult
