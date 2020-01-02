@@ -110,7 +110,6 @@ country_event = {
 		every_country = {
 			limit = { 
 			capital_scope = { continent = Atmora }
-			NOT = { government = tribal }
 			NOT = { capital_scope = { area = atmora_8_la } }
 			NOT = { capital_scope = { area = atmora_9_la } }
 			religion = dragon_cult

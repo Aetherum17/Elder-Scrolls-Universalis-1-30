@@ -51,15 +51,6 @@ on_startup = {
 		    discover_country = ROOT
 		}
 	}
-	if = {
-		limit = {
-		NOT = { is_year = 50 }
-		capital_scope = { superregion = deadric_planes_superregion }
-		}
-		deadric_planes_superregion = {
-		    discover_country = ROOT
-		}
-	}
 	
 	every_owned_province = {
 	    if = {
