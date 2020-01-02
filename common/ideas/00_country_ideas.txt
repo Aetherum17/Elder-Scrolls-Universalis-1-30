@@ -3176,3 +3176,122 @@ PGR_ideas = {
 		stability_cost_modifier = -0.1
     }
 }
+
+ITA_ideas = {
+	start = {
+		global_trade_power = 0.25
+		improve_relation_modifier = 0.25
+	}
+	
+	bonus = {
+		defensiveness = 0.25
+	}
+	
+	trigger = {
+		tag = VAM
+	}
+	free = yes
+	
+	no_a_geographical_construct = {
+		stability_cost_modifier = -0.10
+	}
+	tradition_of_the_legion = {
+		infantry_power = 0.10
+	}
+	mare_nostrum = {
+		advisor_pool = 1
+	}
+	office_of_censor = {
+		global_manpower_modifier = 0.10
+	}
+	italian_tax_reform = {
+		global_tax_modifier = 0.10
+	}
+	heir_to_the_empire = {
+		prestige = 0.25
+	}
+	path_to_citizenship = {
+		core_creation = -0.10
+	}
+}
+
+DAI_ideas = {
+	start = {
+		hostile_attrition = 1
+		enemy_core_creation = 0.25
+	}
+	
+	bonus = {
+		land_morale = 0.15
+	}
+	
+	trigger = {
+			tag = DEA
+	}
+	free = yes
+	
+	the_great_proclamation = {
+		infantry_power = 0.1
+	}
+	confucian_revival = {
+		prestige = 0.25
+	}
+	autonomous_villages = {
+		defensiveness = 0.10
+	}
+	village_militia = {
+		global_manpower_modifier = 0.10
+	}
+	don_dien = {
+		core_creation = -0.10
+	}
+	thuan_thien = {
+		legitimacy = 0.25
+		republican_tradition = 0.25
+		devotion = 0.25							
+        horde_unity = 0.25
+        meritocracy = 0.25
+	}
+	literary_reform = {
+		technology_cost = -0.05
+	}
+}
+
+SHA_ideas = {
+	start = {
+		discipline = 0.10
+		prestige_from_land = 0.5
+	}
+	
+	bonus = {
+		leader_land_manuever = 1
+	}
+	
+	trigger = {
+		tag = COD
+	}
+	free = yes
+	
+	the_wandering_people = {
+		war_exhaustion_cost = -0.10
+	}
+	dark_and_bloody_ground = {
+		hostile_attrition = 1.0
+	}
+	the_bread_dance = {
+		stability_cost_modifier = -0.1
+	}
+	shaawanwaki_identity = {
+		idea_cost = -0.10
+	}
+	autonomous_clans = {
+		advisor_pool = 1
+	}
+	farreaching_relations = {
+		diplomats = 1
+	}
+	private_war_parties = {
+		global_manpower_modifier = 0.10
+
+	}
+}

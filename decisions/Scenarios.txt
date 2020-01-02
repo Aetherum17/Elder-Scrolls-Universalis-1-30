@@ -573,9 +573,9 @@ country_decisions = {
 		treasury = 1500
         }
 		effect = {
-		add_treasury = 1500
+		add_treasury = -1500
 		335 = {
-		add_country_modifier = {
+		add_province_modifier = {
 		    name = "18_hall_of_virtues"
 			duration = -1
 		}
