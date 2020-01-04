@@ -1,3 +1,11 @@
+************************************
+************************************
+**                                **
+**          Gate Objects          **
+**                                **
+************************************
+************************************
+
 type = {
 	type = "gate_coldharbour"
 	use_animation = no
@@ -5,7 +13,10 @@ type = {
 	scale = 0.75
 	object = {
 		name = "gate_coldharbour"
-		hidden_on_start = no
+		
+		# Change "hidden_on_start = yes" in order to view at startup. Will be hidden otherwise.
+		# Use event ESU_GATES.0 to show and hide all gates.
+		hidden_on_start = yes
 		position = {
 			1294.00 32.000 2562.000
 		}
@@ -22,7 +33,7 @@ type = {
 	scale = 0.5
 	object = {
 		name = "gate_coldharbour"
-		hidden_on_start = no
+		hidden_on_start = yes
 		position = {
 			475.00 27.000 2616.000
 		}
@@ -38,9 +49,9 @@ type = {
 	always_visible = yes
 	object = {
 		name = "gate_deadlands"
-		hidden_on_start = no
+		hidden_on_start = yes
 		position = {
-			1410.00 28.750 1685.000
+			1410.00 26.500 1685.000
 		}
 		rotation = {
 			0.000 25.000 0.000
@@ -48,6 +59,13 @@ type = {
 	}
 }
 
+************************************
+************************************
+**                                **
+**        Ambient  Objects        **
+**                                **
+************************************
+************************************
 type={
 	type="desert_skeleton_mesh"
 	use_animation=no
