@@ -145,11 +145,11 @@ NDefines.NDiplomacy.SOW_DISCONTENT_DURATION = 1825 -- days
 NDefines.NDiplomacy.AGITATE_FOR_LIBERTY_DURATION = 60
 NDefines.NDiplomacy.SABOTAGE_RECRUITMENT_DURATION = 60
 NDefines.NDiplomacy.SLANDER_MERCHANTS_DURATION = 60
-NDefines.NDiplomacy.AE_OTHER_CONTINENT = 10
-NDefines.NDiplomacy.AE_SAME_CULTURE = 0.5
+NDefines.NDiplomacy.AE_OTHER_CONTINENT = 15
+NDefines.NDiplomacy.AE_SAME_CULTURE = 0.35
 NDefines.NDiplomacy.AE_SAME_CULTURE_GROUP = 0.25
 NDefines.NDiplomacy.AE_INFIDEL_CONQUEST = 0.25 		-- different religion group conquered same religion province
-NDefines.NDiplomacy.AE_SAME_RELIGION = 0.5
+NDefines.NDiplomacy.AE_SAME_RELIGION = 0.35
 NDefines.NDiplomacy.AE_SAME_RELIGION_GROUP = 0.0
 NDefines.NDiplomacy.AE_DIFFERENT_RELIGION = -0.5
 NDefines.NDiplomacy.AE_HRE_INTERNAL = 0.5
@@ -266,11 +266,11 @@ NDefines.NDiplomacy.SPY_DISCOVERY_COOLDOWN_MONTHS = 12				-- Can't make another 
 NDefines.NDiplomacy.DIPLOANNEX_LIBERTY_THRESHOLD = 50				-- If a vassal has >= this much liberty desire there will be zero diploannexation progress.
 NDefines.NDiplomacy.CELESTIAL_EMPIRE_DEFAULT_INFLUENCE = 75		-- Starting value for Mandate value of a new Chinese Emperor
 NDefines.NDiplomacy.CELESTIAL_EMPIRE_MODIFIER_THRESHOLD = 50		-- Value of Mandate above which the positive Mandate Modifier is used instead of the negative one
-NDefines.NDiplomacy.CELESTIAL_EMPIRE_MANDATE_PER_STABILITY = 0.24	-- Yearly change of Mandate for each point of positive stability
-NDefines.NDiplomacy.CELESTIAL_EMPIRE_MANDATE_PER_STATE_WITH_PROSPERITY = 0.06	-- Yearly change of Mandate for each State with prosperity.
+NDefines.NDiplomacy.CELESTIAL_EMPIRE_MANDATE_PER_STABILITY = 0.25	-- Yearly change of Mandate for each point of positive stability
+NDefines.NDiplomacy.CELESTIAL_EMPIRE_MANDATE_PER_STATE_WITH_PROSPERITY = 0.05	-- Yearly change of Mandate for each State with prosperity.
 NDefines.NDiplomacy.CELESTIAL_EMPIRE_MANDATE_PER_HUNDRED_DEVASTATION = -5.0	-- Yearly change of Mandate for each hundred devastated development (scaled to devastation).
 NDefines.NDiplomacy.CELESTIAL_EMPIRE_MANDATE_PER_HUNDRED_TRIBUTARY_DEV = 0.15	-- Yearly change of Mandate for each hundred development tributary state.
-NDefines.NDiplomacy.CELESTIAL_EMPIRE_MANDATE_PER_HUNDRED_NONTRIBUTARY_DEV = -0.3	-- Yearly change of Mandate for each hundred development of neighbouring states that are not the Emperor's tributaries
+NDefines.NDiplomacy.CELESTIAL_EMPIRE_MANDATE_PER_HUNDRED_NONTRIBUTARY_DEV = -0.35	-- Yearly change of Mandate for each hundred development of neighbouring states that are not the Emperor's tributaries
 NDefines.NDiplomacy.CELESTIAL_EMPIRE_MANDATE_FROM_DEFENDING = 5	-- How much Mandate is gained when successfully defending the Emperor title.
 NDefines.NDiplomacy.REMOVE_ELECTORATE_INFLUENCE_COST = 10			-- The amount of IA Remove Electorate costs.
 NDefines.NDiplomacy.GRANT_ELECTORATE_INFLUENCE = 0					-- The amount of AI Grant Electorate gives.
@@ -654,13 +654,13 @@ NDefines.NCountry.LIBERTY_DESIRE_ENFORCE_PEACE = 0.1				-- Liberty desire from E
 NDefines.NCountry.LIBERTY_DESIRE_WAR_EXHAUSTION = 1				-- Liberty desire from overlord's war exhaustion (per WE)
 NDefines.NCountry.LIBERTY_DESIRE_MERCANTILISM = 0.25				-- Liberty desire from overlord's mercantilism (per Merc).
 NDefines.NCountry.LIBERTY_DESIRE_RELATIVE_POWER = 75				-- Liberty desire from relative power to liege
-NDefines.NCountry.LIBERTY_DESIRE_ADM_EFFICIENCY = 0.2			-- Liberty desire per point of admistrative efficiency (colonies only)
+NDefines.NCountry.LIBERTY_DESIRE_ADM_EFFICIENCY = 0.10			-- Liberty desire per point of admistrative efficiency (colonies only)
 NDefines.NCountry.LIBERTY_DESIRE_DIPLO_TECH = 5					-- Liberty desire per point of diplo tech more than overlord
 NDefines.NCountry.LIBERTY_DESIRE_HISTORICAL_FRIEND = -50			-- Liberty desire from being historical friends
 NDefines.NCountry.LIBERTY_DESIRE_HISTORICAL_RIVAL = 50			-- Liberty desire from being historical rivals
-NDefines.NCountry.LIBERTY_DESIRE_TRUST = -0.4					-- Liberty desire from trust
+NDefines.NCountry.LIBERTY_DESIRE_TRUST = -0.5				-- Liberty desire from trust
 NDefines.NCountry.LIBERTY_DESIRE_POSITIVE_OPINION = -0.1			-- Liberty desire from positive opinion
-NDefines.NCountry.LIBERTY_DESIRE_NEGATIVE_OPINION = 0.2			-- Liberty desire from negative opinion
+NDefines.NCountry.LIBERTY_DESIRE_NEGATIVE_OPINION = 0.25			-- Liberty desire from negative opinion
 NDefines.NCountry.LIBERTY_DESIRE_ANNEXATION = 0					-- Liberty desire from being annexed
 NDefines.NCountry.LIBERTY_DESIRE_DIPLOMATIC_REPUTATION = -3		-- Liberty desire from diplomatic reputation
 NDefines.NCountry.LIBERTY_DESIRE_GREAT_POWER_VASSAL = 50			-- Liberty desire from vassal having more than 300 development
@@ -926,13 +926,13 @@ NDefines.NMilitary.SLAVE_RAIDS_DURATION = 3650
 NDefines.NMilitary.INFANTRY_SPEED = 0.7 							-- _MDEF_INFANTRY_SPEED = 10
 NDefines.NMilitary.CAVALRY_SPEED = 0.7 							-- _MDEF_CAVALRY_SPEED = 10
 NDefines.NMilitary.ARTILLERY_SPEED = 0.7 							-- _MDEF_ARTILLERY_SPEED = 10
-NDefines.NMilitary.HEAVY_SHIP_SPEED = 6.0 						-- _MDEF_HEAVY_SHIP_SPEED = 10
+NDefines.NMilitary.HEAVY_SHIP_SPEED = 7.0 						-- _MDEF_HEAVY_SHIP_SPEED = 10
 NDefines.NMilitary.LIGHT_SHIP_SPEED = 10.0 						-- _MDEF_LIGHT_SHIP_SPEED = 10
-NDefines.NMilitary.GALLEY_SPEED = 4.0 							-- _MDEF_GALLEY_SPEED = 10
-NDefines.NMilitary.TRANSPORT_SPEED = 6.0 							-- _MDEF_TRANSPORT_SPEED = 10
+NDefines.NMilitary.GALLEY_SPEED = 5.0 							-- _MDEF_GALLEY_SPEED = 10
+NDefines.NMilitary.TRANSPORT_SPEED = 5.0 							-- _MDEF_TRANSPORT_SPEED = 10
 NDefines.NMilitary.INFANTRY_COST = 10.0 							-- _MDEF_INFANTRY_COST = 10
 NDefines.NMilitary.CAVALRY_COST = 25.0 							-- _MDEF_CAVALRY_COST = 10
-NDefines.NMilitary.ARTILLERY_COST = 30.0 							-- _MDEF_ARTILLERY_COST = 10
+NDefines.NMilitary.ARTILLERY_COST = 35.0 							-- _MDEF_ARTILLERY_COST = 10
 NDefines.NMilitary.FORTRESS_COST = 0.5							-- base fort cost
 NDefines.NMilitary.HEAVY_SHIP_COST = 50 							-- _MDEF_HEAVY_SHIP_COST = 10
 NDefines.NMilitary.LIGHT_SHIP_COST = 20 							-- _MDEF_LIGHT_SHIP_COST = 10
@@ -1466,7 +1466,7 @@ NDefines.NReligion.MIN_HARMONIZE_DEVELOPMENT = 25
 NDefines.NReligion.STARTING_HARMONY = 50.0							-- Confucian countries start with this.
 NDefines.NReligion.YEARLY_HARMONY_INCREASE = 1.0
 NDefines.NReligion.HARMONY_LOSS_PER_DEV_CONVERTED = 1.0
-NDefines.NReligion.YEARLY_HARMONY_INCREASE_WHEN_HARMONIZING = -3.0
+NDefines.NReligion.YEARLY_HARMONY_INCREASE_WHEN_HARMONIZING = -2.5
 NDefines.NReligion.YEARLY_HARMONIZATION_PROGRESS = 0.03 			-- 3%
 NDefines.NReligion.INITIAL_ISOLATIONISM = 1						-- Level of isolationism for a newly shintoed country.
 NDefines.NReligion.NOT_SAME_MUSLIM_SCHOOL_ALLIANCE_ACCEPTANCE = 15		-- Alliance acceptance value (positive and negative) for different religious schools

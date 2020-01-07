@@ -849,6 +849,7 @@ country_decisions = {
 	es_destroy_order_of_black_worm = {
 	    potential = {
 		NOT = { has_country_modifier = 33_order_of_black_worm }
+		NOT = { has_country_modifier = 33_reformed_order_of_black_worm }
 		owns = 1017
 		1017 = { has_province_modifier = 33_capital_of_order_of_black_worm }
 		}
@@ -898,6 +899,31 @@ country_decisions = {
 			    factor = 0
 				NOT = { treasury = 5000 }
 			}
+		}
+	}
+	
+	es_33_ban_of_morag_tong = {
+	    major = yes
+	    potential = {
+		any_country = {
+		    has_country_flag = es_33_scenario.23_flag
+		}
+		has_country_modifier = 32_fear_of_morag_tong
+		NOT = { has_country_flag = morag-tong_banned_flag }
+		}
+		allow = {
+		    always = yes
+        }
+		effect = {
+		    add_prestige = 10
+		    set_country_flag = morag-tong_banned_flag
+			add_country_modifier = {
+		    name = "33_ban_of_morag_tong"
+			duration = 9125
+		}
+		}
+		ai_will_do = {
+			factor = 1
 		}
 	}
 	

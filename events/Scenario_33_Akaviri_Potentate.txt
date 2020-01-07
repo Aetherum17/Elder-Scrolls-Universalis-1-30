@@ -23,10 +23,11 @@ country_event = {
 		owns_core_province = 1184
 		}
 		}
+		NOT = { is_year = 1555 }
     }
 
 	mean_time_to_happen = {
-		days = 91250
+		days = 36500
 	}
 	
 	immediate = {
@@ -58,6 +59,7 @@ country_event = {
 		culture = tsaesci
 		fixed = yes
         }
+		kill_heir = yes
 	}
 	
 	option = {
@@ -106,12 +108,14 @@ country_event = {
 	}
 	
 	option = {
-		name = "es_33_scenario.1.a"
+		name = "es_33_scenario.2.a"
 		ai_chance = { factor = 33 }
 		add_stability = 1
 	}
 	
 }
+
+### Order of Black Worm ###
 
 country_event = {
 	id = es_33_scenario.3
@@ -199,7 +203,7 @@ country_event = {
 	option = {
 		name = "es_33_scenario.4.a"
 		ai_chance = { factor = 50 }
-		change_government_via_reform = monarchy
+		if = { limit = { NOT = { government = monarchy } } change_government = monarchy if = { limit = { NOT = { has_dlc = "Dharma" } } set_legacy_government = despotic_monarchy } }
 		define_ruler = {
         name = "Mannimarco"
         dynasty = "Worm King"
@@ -274,9 +278,12 @@ country_event = {
 	option = {
 		name = "es_33_scenario.4.b"
 		ai_chance = { factor = 50 }
-		kill_ruler = yes
-		kill_heir = yes
-		remove_consort = yes
+		set_ruler_culture = soul_shriven
+		set_heir_culture = soul_shriven
+		set_consort_culture = soul_shriven
+		set_ruler_religion  = molog_bal_cult
+		set_heir_religion = molog_bal_cult
+		set_consort_religion = molog_bal_cult
 		change_primary_culture = soul_shriven
 		change_religion = molog_bal_cult
 		every_owned_province = {
@@ -323,6 +330,8 @@ country_event = {
 	}
 	
 }
+
+### Order of Black Worm -> Mages Guild ###
 
 country_event = {
 	id = es_33_scenario.6
@@ -371,6 +380,8 @@ country_event = {
 	
 }
 
+#################################################
+
 country_event = {
 	id = es_33_scenario.7
 	title = es_33_scenario.7.t
@@ -386,6 +397,7 @@ country_event = {
 			}
 		}
 		NOT = { has_country_flag = es_33_scenario.7_flag }
+		NOT = { is_year = 1555 }
     }
 
 	mean_time_to_happen = {
@@ -401,7 +413,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "es_33_scenario.6.a"
+		name = "es_33_scenario.7.a"
 		ai_chance = { factor = 100 }
 		add_stability = -1
 	}
@@ -425,6 +437,10 @@ country_event = {
 			}
 		}
 		NOT = { has_country_flag = es_33_scenario.8_flag }
+		OR = {
+		NOT = { culture_group = northern_cg }
+		is_free_or_tributary_trigger = no
+		}
     }
 
 	mean_time_to_happen = {
@@ -436,7 +452,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "es_33_scenario.6.a"
+		name = "es_33_scenario.8.a"
 		ai_chance = { factor = 100 }
 		add_treasury = -1000
         add_prestige = -10
@@ -514,6 +530,7 @@ country_event = {
 		}
 		any_owned_province = { area = cyrodiil_1_la }
 		NOT = { tag = CA1 }
+		NOT = { is_year = 1555 }
     }
 
 	mean_time_to_happen = {
@@ -587,6 +604,7 @@ country_event = {
 		}
 		any_owned_province = { area = cyrodiil_1_la }
 		NOT = { tag = CA2 }
+		NOT = { is_year = 1555 }
     }
 
 	mean_time_to_happen = {
@@ -660,6 +678,7 @@ country_event = {
 		}
 		any_owned_province = { area = cyrodiil_3_la }
 		NOT = { tag = CA3 }
+		NOT = { is_year = 1555 }
     }
 
 	mean_time_to_happen = {
@@ -733,6 +752,7 @@ country_event = {
 		}
 		any_owned_province = { area = cyrodiil_4_la }
 		NOT = { tag = CA4 }
+		NOT = { is_year = 1555 }
     }
 
 	mean_time_to_happen = {
@@ -806,6 +826,7 @@ country_event = {
 		}
 		any_owned_province = { area = cyrodiil_6_la }
 		NOT = { tag = CA6 }
+		NOT = { is_year = 1555 }
     }
 
 	mean_time_to_happen = {
@@ -879,6 +900,7 @@ country_event = {
 		}
 		any_owned_province = { area = cyrodiil_7_la }
 		NOT = { tag = CA7 }
+		NOT = { is_year = 1555 }
     }
 
 	mean_time_to_happen = {
@@ -952,6 +974,7 @@ country_event = {
 		}
 		any_owned_province = { area = cyrodiil_9_la }
 		NOT = { tag = CA9 }
+		NOT = { is_year = 1555 }
     }
 
 	mean_time_to_happen = {
@@ -1025,6 +1048,7 @@ country_event = {
 		}
 		any_owned_province = { area = cyrodiil_16_la }
 		NOT = { tag = CB6 }
+		NOT = { is_year = 1555 }
     }
 
 	mean_time_to_happen = {
@@ -1098,6 +1122,7 @@ country_event = {
 		}
 		any_owned_province = { area = cyrodiil_21_la }
 		NOT = { tag = CC1 }
+		NOT = { is_year = 1555 }
     }
 
 	mean_time_to_happen = {
@@ -1171,6 +1196,7 @@ country_event = {
 		}
 		any_owned_province = { area = cyrodiil_26_la }
 		NOT = { tag = CC6 }
+		NOT = { is_year = 1555 }
     }
 
 	mean_time_to_happen = {
@@ -1228,4 +1254,313 @@ country_event = {
 	
 }
 
+### Unification of Elsweyr ###
+
+country_event = {
+	id = es_33_scenario.20
+	title = es_33_scenario.20.t
+	desc = es_33_scenario.20.d
+	picture = ES_MORROWIND_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_33_scenario.20_flag }
+		is_year = 1334
+		NOT = { is_year = 1555 }
+		culture_group = khajiiti_cg
+		owns = 922
+		NOT = { exists = ELS }
+    }
+
+	mean_time_to_happen = {
+		days = 36500
+	}
+	
+	immediate = {
+	    set_country_flag = es_33_scenario.20_flag
+	}
+	
+	option = {
+		name = "es_33_scenario.20.a"
+		ai_chance = { factor = 33 }
+		set_global_flag = formation_of_wlsweyr_flag
+		if = { limit = { ai = no } add_stability = -3 }
+		if = { limit = { NOT = { government = monarchy } } change_government = monarchy if = { limit = { NOT = { has_dlc = "Dharma" } } set_legacy_government = despotic_monarchy } }
+		change_tag = ELS
+		if = {
+			limit = {
+				NOT = { government_rank = 5 }
+			}
+		set_government_rank = 5
+		}
+		add_country_modifier = {
+			name = "centralization_modifier"
+			duration = 7300
+		}
+		if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		define_ruler = {
+        name = "Eshita"
+        dynasty = "of Pellitine"
+        adm = 3
+        dip = 5
+        mil = 4
+        age = 21
+        claim = 100
+		female = yes
+		fixed = yes
+        }
+		define_consort = {
+		name = "Keirgo"
+        dynasty = "of Anequina"
+        adm = 3
+        dip = 5
+        mil = 3
+        }
+    }
+	
+	option = {
+		name = "es_33_scenario.20.b"
+		ai_chance = { factor = 33 }
+		every_province = {
+		    limit = {
+			    region = eldweyr_lr
+			}
+			add_permanent_claim = ROOT
+		}
+		add_country_modifier = {
+		    name = "01_focus_on_war"
+			duration = 9125
+		}
+		add_country_modifier = {
+		    name = "01_focus_on_internal_sphere"
+			duration = 9125
+		}
+	}
+	
+	option = {
+		name = "es_33_scenario.20.c"
+		ai_chance = { factor = 33 }
+		add_stability = 1
+		if = { limit = { NOT = { government = republic } } change_government = republic add_government_reform = merchants_reform if = { limit = { NOT = { has_dlc = "Dharma" } } set_legacy_government = merchant_republic } }
+		change_tag = ELS
+		if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		if = {
+			limit = {
+				NOT = { government_rank = 5 }
+			}
+		set_government_rank = 5
+		}
+		add_country_modifier = {
+		    name = "01_focus_on_trade"
+			duration = 9125
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_33_scenario.21
+	title = es_33_scenario.21.t
+	desc = es_33_scenario.21.d
+	picture = ES_MORROWIND_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_33_scenario.21_flag }
+		culture_group = khajiiti_cg
+		has_global_flag = formation_of_wlsweyr_flag
+		NOT = { tag = ELS }
+    }
+
+	mean_time_to_happen = {
+		days = 31
+	}
+	
+	immediate = {
+	    set_country_flag = es_33_scenario.21_flag
+	}
+	
+	option = {
+		name = "es_33_scenario.21.a"
+		ai_chance = { factor = 50 }
+		ELS = {
+		    create_subject = {
+            subject_type = personal_union
+            subject = ROOT
+            }
+		}
+    }
+	
+	option = {
+		name = "es_33_scenario.21.b"
+		ai_chance = { factor = 50 }
+		add_stability = 1
+		every_owned_province = {
+		    add_core = ELS
+		}
+	}
+	
+}
+
 #######################################################################
+
+country_event = {
+	id = es_33_scenario.22
+	title = es_33_scenario.22.t
+	desc = es_33_scenario.22.d
+	picture = ES_MORROWIND_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_33_scenario.22_flag }
+		is_year = 1334
+		owns = 1206
+    }
+
+	mean_time_to_happen = {
+		days = 36500
+	}
+	
+	immediate = {
+	    set_country_flag = es_33_scenario.22_flag
+	}
+	
+	option = {
+		name = "es_33_scenario.22.a"
+		ai_chance = { factor = 50 }
+		add_stability = -1
+		add_country_modifier = {
+		    name = "33_guilds_act"
+			duration = -1
+		}
+    }
+	
+	option = {
+		name = "es_33_scenario.22.b"
+		ai_chance = { factor = 50 }
+		add_stability = 1
+		random_owned_province = { 
+			spawn_rebels = {
+				type = particularist_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			}
+		}
+		random_owned_province = { 
+			spawn_rebels = {
+				type = particularist_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			}
+		}
+		random_owned_province = { 
+			spawn_rebels = {
+				type = particularist_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			}
+		}
+		random_owned_province = { 
+			spawn_rebels = {
+				type = particularist_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			}
+		}
+		random_owned_province = { 
+			spawn_rebels = {
+				type = particularist_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			}
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_33_scenario.23
+	title = es_33_scenario.23.t
+	desc = es_33_scenario.23.d
+	picture = ES_MORROWIND_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_33_scenario.23_flag }
+		owns = 1206
+    }
+
+	mean_time_to_happen = {
+		days = 31
+	}
+	
+	immediate = {
+	    set_country_flag = es_33_scenario.23_flag
+	}
+	
+	option = {
+		name = "es_33_scenario.23.a"
+		ai_chance = { factor = 100 }
+		kill_ruler = yes
+		add_stability = -1
+		every_country = {
+		limit = {
+		    capital_scope = { continent = Tamriel }
+		}
+		    country_event = { id = es_33_scenario.25 days = 31 tooltip = es_collapse.2.a.tt }
+		}
+    }
+	
+}
+
+country_event = {
+	id = es_33_scenario.24
+	title = es_33_scenario.24.t
+	desc = es_33_scenario.24.d
+	picture = ES_MORROWIND_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_33_scenario.24_flag }
+		is_year = 1410
+    }
+
+	mean_time_to_happen = {
+		days = 36500
+	}
+	
+	immediate = {
+	    set_country_flag = es_33_scenario.24_flag
+	}
+	
+	option = {
+		name = "es_33_scenario.24.a"
+		ai_chance = { factor = 100 }
+		add_prestige = 10
+		add_country_modifier = {
+		    name = "33_atlas_of_dragons"
+			duration = 9125
+		}
+    }
+	
+}
+
+country_event = {
+	id = es_33_scenario.25
+	title = es_33_scenario.23.t
+	desc = es_33_scenario.23.d
+	picture = ES_MORROWIND_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "es_33_scenario.23.a"
+		ai_chance = { factor = 100 }
+		add_stability = -1
+		add_country_modifier = {
+		    name = "32_fear_of_morag_tong"
+			duration = 9125
+		}
+    }
+	
+}

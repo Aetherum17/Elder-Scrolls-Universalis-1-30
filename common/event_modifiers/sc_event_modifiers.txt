@@ -962,6 +962,28 @@ blackrose_prison = {
 	prestige_decay = 0.01
 }
 
+33_guilds_act = {
+    global_tax_modifier = 0.10
+	global_manpower_modifier = 0.10
+	production_efficiency = 0.10
+	stability_cost_modifier = 0.25
+	global_unrest = 1
+}
+
+33_ban_of_morag_tong = {
+    global_unrest = -2.5
+	stability_cost_modifier = -0.25
+	harsh_treatment_cost = -0.25
+	global_spy_defence = 1.0
+	spy_offence = -1.0
+}
+
+33_atlas_of_dragons = {
+    prestige = 1.0
+	prestige_decay = -0.01
+	land_morale = 0.10
+}
+
 00_isolation = {
     diplomatic_reputation = -2.5
 	ae_impact = 0.25
