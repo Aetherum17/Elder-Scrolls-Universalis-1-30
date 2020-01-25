@@ -72,7 +72,7 @@ type = {
 	type = "imperial_city"
 	use_animation = no
 	always_visible = yes
-	scale = 1.0
+	scale = 0.5
 	object = {
 		name = "imperial_city"
 		hidden_on_start = no
@@ -80,7 +80,58 @@ type = {
 			1440.00 18.500 1618.000
 		}
 		rotation = {
-			0.000 25.000 0.000
+			0.000 90.000 0.000
+		}
+	}
+}
+
+type = {
+	type = "black_gold_tower"
+	use_animation = no
+	always_visible = yes
+	scale = 0.5
+	object = {
+		name = "black_gold_tower"
+		hidden_on_start = no
+		position = {
+			125.00 22.500 2384.000
+		}
+		rotation = {
+			0.000 90.000 0.000
+		}
+	}
+}
+
+type = {
+	type = "orichalc_tower"
+	use_animation = no
+	always_visible = yes
+	scale = 0.4
+	object = {
+		name = "orichalc_tower"
+		hidden_on_start = no
+		position = {
+			183.000 18.500 1778.000
+		}
+		rotation = {
+			0.000 90.000 0.000
+		}
+	}
+}
+
+type = {
+	type = "crystal_tower"
+	use_animation = no
+	always_visible = yes
+	scale = 3
+	object = {
+		name = "crystal_tower"
+		hidden_on_start = no
+		position = {
+			450.000 19.000 1162.000
+		}
+		rotation = {
+			0.000 90.000 0.000
 		}
 	}
 }
