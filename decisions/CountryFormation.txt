@@ -47,6 +47,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	summerset_nation = {
@@ -97,6 +98,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	yokuda_nation = {
@@ -146,6 +148,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	thrass_nation = {
@@ -193,6 +196,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	skyrim_nation = {
@@ -248,6 +252,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	western_skyrim_nation = {
@@ -299,6 +304,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	eastern_skyrim_nation = {
@@ -350,6 +356,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	old_kingdom_nation = {
@@ -401,6 +408,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	volkkihar_nation = {
@@ -449,6 +457,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	winter_elves_nation = {
@@ -497,6 +506,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	reach_nation = {
@@ -545,6 +555,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	colovia_nation = {
@@ -597,6 +608,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	heartlands_nation = {
@@ -649,6 +661,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	nibenean_nation = {
@@ -701,6 +714,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	ayleid_nation = {
@@ -749,6 +763,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	cyrodiil_nation = {
@@ -807,6 +822,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	tamriel_nation = {
@@ -951,6 +967,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	alessian_nation = {
@@ -1004,6 +1021,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	order_nation = {
@@ -1054,6 +1072,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	hammerfell_nation = {
@@ -1106,6 +1125,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	high_rock_nation = {
@@ -1154,6 +1174,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	direnii_nation = {
@@ -1203,6 +1224,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	orsimer_nation = {
@@ -1251,6 +1273,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	elsweyr_nation = {
@@ -1299,6 +1322,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	anequinan_nation = {
@@ -1307,6 +1331,7 @@ country_decisions = {
 			NOT = { exists = ANE }
 			primary_culture = anequinan
 			NOT = { has_country_flag = formed_ane_flag }
+			NOT = { tag = ELS }
 		}
 		provinces_to_highlight = {
 		    OR = {
@@ -1321,11 +1346,19 @@ country_decisions = {
 		allow = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
+			OR = {
+			AND = {
 			owns_core_province = 889		
 			owns_core_province = 895
 			owns_core_province = 888
 			owns_core_province = 905
 			owns_core_province = 912
+			}
+			AND = {
+			has_global_flag = thrassian_plague_flag
+			owns_core_province = 905
+			}
+			}
 		}
 		effect = {
 			change_tag = ANE
@@ -1347,6 +1380,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	pellitinian_nation = {
@@ -1355,14 +1389,21 @@ country_decisions = {
 			NOT = { exists = PEL }
 			primary_culture = pellitinian
 			NOT = { has_country_flag = formed_pel_flag }
+			NOT = { tag = ELS }
 		}
 		provinces_to_highlight = {
 		    OR = {
+			AND = {
 			province_id = 922		
 			province_id = 933
 			province_id = 929
 			province_id = 926
 			province_id = 915
+			}
+			AND = {
+			has_global_flag = thrassian_plague_flag
+			owns_core_province = 922
+			}
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -1395,6 +1436,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	vallenwood_nation = {
@@ -1443,6 +1485,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	southern_orsinium_nation = {
@@ -1491,6 +1534,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	imga_nation = {
@@ -1539,6 +1583,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	argonia_nation = {
@@ -1592,6 +1637,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	chimer_nation = {
@@ -1641,6 +1687,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	dwemer_nation = {
@@ -1689,6 +1736,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	ashland_nation = {
@@ -1738,6 +1786,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	atmora_nation = {
@@ -1790,6 +1839,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	dragon_nation = {
@@ -1842,6 +1892,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	roscrea_nation = {
@@ -1892,6 +1943,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	tsaesci_nation = {
@@ -1940,6 +1992,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	po_tun_nation = {
@@ -1989,6 +2042,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	cathnoquey_nation = {
@@ -2039,6 +2093,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	tangmo_nation = {
@@ -2087,6 +2142,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	akaviri_nation = {
@@ -2135,6 +2191,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	upper_nation = {
@@ -2184,6 +2241,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	island_nation = {
@@ -2233,6 +2291,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	esroniet_nation = {
@@ -2282,6 +2341,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	red_nation = {
@@ -2319,6 +2379,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	kamal_nation = {
@@ -2367,6 +2428,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	dremora_nation = {
@@ -2415,6 +2477,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	kothringi_nation = {
@@ -2463,6 +2526,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	forelhost_nation = {
@@ -2503,6 +2567,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	skaal_nation = {
@@ -2545,6 +2610,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	ka_po_tun_nation = {
@@ -2593,6 +2659,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	transakavir_nation = {
@@ -2643,6 +2710,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	rourken_clan_nation = {
@@ -2692,6 +2760,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	ca7_nation = {
@@ -2752,6 +2821,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	ca6_nation = {
@@ -2812,6 +2882,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	resdayn-dwemeret_nation = {
@@ -2860,6 +2931,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	coral_kingdom_nation = {
@@ -2908,6 +2980,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	sinistral_nation = {
@@ -2956,6 +3029,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	indoril_nation = {
@@ -3021,6 +3095,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	dres_nation = {
@@ -3086,6 +3161,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	dagot_nation = {
@@ -3151,6 +3227,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	redoran_nation = {
@@ -3216,6 +3293,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	telvanni_nation = {
@@ -3281,6 +3359,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	hlaalu_nation = {
@@ -3346,6 +3425,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	sadras_nation = {
@@ -3411,6 +3491,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	falmer_nation = {
@@ -3473,6 +3554,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	morrowind_nation = {
@@ -3527,6 +3609,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	tribunal_nation = {
@@ -3577,6 +3660,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	abeceanea_nation = {
@@ -3630,6 +3714,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	restless_league_nation = {
@@ -3685,6 +3770,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	topalia_nation = {
@@ -3736,6 +3822,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	starkad_nation = {
@@ -3787,6 +3874,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	sedelea_nation = {
@@ -3835,6 +3923,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	kmeiine_nation = {
@@ -3883,6 +3972,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	elzaqess_nation = {
@@ -3890,6 +3980,7 @@ country_decisions = {
 		potential = {
 			NOT = { exists = ELZ }
 			NOT = { tag = TSA }
+			NOT = { tag = POE }
 			primary_culture = tsaesci
 			NOT = { has_country_flag = formed_elz_flag }
 			OR = {
@@ -3931,6 +4022,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	kherso_nation = {
@@ -3980,6 +4072,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	kaalda_nation = {
@@ -4030,6 +4123,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	ralris_nation = {
@@ -4080,6 +4174,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	wayrest_nation = {
@@ -4121,6 +4216,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	united_vampire_duchies_nation = {
@@ -4170,6 +4266,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	coldharbour_nation = {
@@ -4225,6 +4322,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	deadlands_nation = {
@@ -4279,6 +4377,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	akaviri_potentate_nation = {
@@ -4328,5 +4427,6 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 }

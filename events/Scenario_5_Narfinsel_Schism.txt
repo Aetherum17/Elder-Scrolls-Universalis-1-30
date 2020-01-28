@@ -161,6 +161,7 @@ province_event = {
 	picture = ES_RELIGION_CONVERSION_eventPicture
 	
 	trigger = {
+	   continent = Tamriel
 	   NOT = { culture = vampire }
        is_year = 189
 	   NOT = { is_year = 221 }

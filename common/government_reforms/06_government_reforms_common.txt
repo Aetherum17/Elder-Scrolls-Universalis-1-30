@@ -9,7 +9,7 @@
 	icon = "11_b"
 	allow_normal_conversion = yes
 	modifiers = {
-	diplomatic_annexation_cost = -0.15
+	diplomatic_annexation_cost = -0.075
     core_creation = 0.075	
 	}
 }
@@ -18,7 +18,7 @@
 	icon = "11_c"
 	allow_normal_conversion = yes
 	modifiers = {
-	diplomatic_annexation_cost = -0.35	
+	diplomatic_annexation_cost = -0.175	
 	core_creation = 0.175
 	}
 }
@@ -27,7 +27,7 @@
 	icon = "11_d"
 	allow_normal_conversion = yes
 	modifiers = {
-	diplomatic_annexation_cost = -0.50	
+	diplomatic_annexation_cost = -0.25	
 	core_creation = 0.25
 	}
 }
@@ -43,7 +43,7 @@
 	icon = "21_b"
 	allow_normal_conversion = yes
 	modifiers = {
-	global_manpower_modifier = 0.15
+	global_manpower_modifier = 0.075
 	possible_mercenaries = -0.075
 	}
 }
@@ -52,7 +52,7 @@
 	icon = "21_c"
 	allow_normal_conversion = yes
 	modifiers = {
-	global_manpower_modifier = 0.35
+	global_manpower_modifier = 0.175
 	possible_mercenaries = -0.175
 	}
 }
@@ -61,7 +61,7 @@
 	icon = "21_d"
 	allow_normal_conversion = yes
 	modifiers = {
-	global_manpower_modifier = 0.50
+	global_manpower_modifier = 0.25
 	possible_mercenaries = -0.25
 	}
 }
@@ -111,7 +111,7 @@
 	icon = "41_b"
 	allow_normal_conversion = yes
 	modifiers = {
-	stability_cost_modifier = -0.10
+	stability_cost_modifier = -0.05
 	idea_cost = 0.05
 	}
 }
@@ -120,8 +120,8 @@
 	icon = "41_c"
 	allow_normal_conversion = yes
 	modifiers = {
-	stability_cost_modifier = -0.225
-	idea_cost = 0.1125
+	stability_cost_modifier = -0.10
+	idea_cost = 0.10
 	}
 }
 
@@ -129,8 +129,8 @@
 	icon = "41_d"
 	allow_normal_conversion = yes
 	modifiers = {
-	stability_cost_modifier = -0.35
-	idea_cost = 0.175
+	stability_cost_modifier = -0.15
+	idea_cost = 0.15
 	}
 }
 
@@ -145,7 +145,7 @@
 	icon = "51_b"
 	allow_normal_conversion = yes
 	modifiers = {
-	global_sailors_modifier = 0.15
+	global_sailors_modifier = 0.075
     global_ship_recruit_speed = 0.075	
 	}
 }
@@ -154,7 +154,7 @@
 	icon = "51_c"
 	allow_normal_conversion = yes
 	modifiers = {
-	global_sailors_modifier = 0.35
+	global_sailors_modifier = 0.175
     global_ship_recruit_speed = 0.175	
 	}
 }
@@ -163,7 +163,7 @@
 	icon = "51_d"
 	allow_normal_conversion = yes
 	modifiers = {
-	global_sailors_modifier = 0.50
+	global_sailors_modifier = 0.25
     global_ship_recruit_speed = 0.25	
 	}
 }
@@ -179,8 +179,8 @@
 	icon = "12_b"
 	allow_normal_conversion = yes
 	modifiers = {
-	global_autonomy = -0.007
-	stability_cost_modifier = 0.075
+	global_autonomy = -0.005
+	stability_cost_modifier = 0.05
 	}
 }
 
@@ -188,8 +188,8 @@
 	icon = "12_c"
 	allow_normal_conversion = yes
 	modifiers = {
-	global_autonomy = -0.015
-	stability_cost_modifier = 0.15
+	global_autonomy = -0.010
+	stability_cost_modifier = 0.10
 	}
 }
 
@@ -197,8 +197,8 @@
 	icon = "12_d"
 	allow_normal_conversion = yes
 	modifiers = {
-	global_autonomy = -0.025
-	stability_cost_modifier = 0.25
+	global_autonomy = -0.015
+	stability_cost_modifier = 0.15
 	}
 }
 
@@ -213,8 +213,8 @@
 	icon = "22_b"
 	allow_normal_conversion = yes
 	modifiers = {
-	global_tax_modifier = 0.075
-	advisor_cost = 0.075
+	global_tax_modifier = 0.05
+	advisor_cost = 0.05
 	}
 }
 
@@ -222,8 +222,8 @@
 	icon = "22_c"
 	allow_normal_conversion = yes
 	modifiers = {
-	global_tax_modifier = 0.175
-	advisor_cost = 0.175
+	global_tax_modifier = 0.10
+	advisor_cost = 0.10
 	}
 }
 
@@ -231,8 +231,8 @@
 	icon = "22_d"
 	allow_normal_conversion = yes
 	modifiers = {
-	global_tax_modifier = 0.25
-	advisor_cost = 0.25
+	global_tax_modifier = 0.15
+	advisor_cost = 0.15
 	}
 }
 
@@ -282,7 +282,7 @@
 	allow_normal_conversion = yes
 	modifiers = {
 	global_unrest = -1
-	global_tax_modifier = -0.05
+	global_tax_modifier = -0.07
 	}
 }
 
@@ -291,7 +291,7 @@
 	allow_normal_conversion = yes
 	modifiers = {
 	global_unrest = -2.5
-	global_tax_modifier = -0.125
+	global_tax_modifier = -0.15
 	}
 }
 
@@ -317,6 +317,7 @@
 	modifiers = {
 	tolerance_own = 1
 	tolerance_heathen = -1
+	tolerance_heretic = -1
 	}
 }
 
@@ -326,6 +327,7 @@
 	modifiers = {
 	tolerance_own = 2
 	tolerance_heathen = -2
+	tolerance_heretic = -2
 	}
 }
 
@@ -335,6 +337,7 @@
 	modifiers = {
 	tolerance_own = 3
 	tolerance_heathen = -3
+	tolerance_heretic = -3
 	}
 }
 
@@ -417,8 +420,8 @@
 	icon = "33_b"
 	allow_normal_conversion = yes
 	modifiers = {
-	global_missionary_strength = 0.015
-    embracement_cost = 0.15
+	global_missionary_strength = 0.01
+    embracement_cost = 0.10
 	}
 }
 
@@ -426,7 +429,7 @@
 	icon = "33_c"
 	allow_normal_conversion = yes
 	modifiers = {
-	global_missionary_strength = 0.035
+	global_missionary_strength = 0.02
     embracement_cost = 0.35
 	}
 }
@@ -435,7 +438,7 @@
 	icon = "33_d"
 	allow_normal_conversion = yes
 	modifiers = {
-	global_missionary_strength = 0.05
+	global_missionary_strength = 0.03
     embracement_cost = 0.5
 	}
 }
@@ -451,8 +454,8 @@
 	icon = "43_b"
 	allow_normal_conversion = yes
 	modifiers = {
-	yearly_corruption = -0.075
-	diplomatic_annexation_cost = 0.075
+	yearly_corruption = -0.05
+	diplomatic_annexation_cost = 0.15
 	}
 }
 
@@ -460,8 +463,8 @@
 	icon = "43_c"
 	allow_normal_conversion = yes
 	modifiers = {
-	yearly_corruption = -0.175
-	diplomatic_annexation_cost = 0.175
+	yearly_corruption = -0.10
+	diplomatic_annexation_cost = 0.35
 	}
 }
 
@@ -469,8 +472,8 @@
 	icon = "43_d"
 	allow_normal_conversion = yes
 	modifiers = {
-	yearly_corruption = -0.25
-	diplomatic_annexation_cost = 0.25
+	yearly_corruption = -0.15
+	diplomatic_annexation_cost = 0.50
 	}
 }
 
@@ -656,7 +659,7 @@
 	allow_normal_conversion = yes
 	modifiers = {
 	unjustified_demands = -0.075
-	improve_relation_modifier = -0.075
+	improve_relation_modifier = -0.15
 	}
 }
 
@@ -665,7 +668,7 @@
 	allow_normal_conversion = yes
 	modifiers = {
 	unjustified_demands = -0.175
-	improve_relation_modifier = -0.175
+	improve_relation_modifier = -0.35
 	}
 }
 
@@ -674,7 +677,7 @@
 	allow_normal_conversion = yes
 	modifiers = {
 	unjustified_demands = -0.25
-	improve_relation_modifier = -0.25
+	improve_relation_modifier = -0.50
 	}
 }
 
@@ -690,7 +693,7 @@
 	allow_normal_conversion = yes
 	modifiers = {
 	improve_relation_modifier = 0.15
-	fabricate_claims_cost = 0.075
+	fabricate_claims_cost = 0.15
 	}
 }
 
@@ -699,7 +702,7 @@
 	allow_normal_conversion = yes
 	modifiers = {
 	improve_relation_modifier = 0.35
-	fabricate_claims_cost = 0.175
+	fabricate_claims_cost = 0.35
 	}
 }
 
@@ -708,7 +711,7 @@
 	allow_normal_conversion = yes
 	modifiers = {
 	improve_relation_modifier = 0.50
-	fabricate_claims_cost = 0.25
+	fabricate_claims_cost = 0.50
 	}
 }
 
@@ -758,7 +761,7 @@
 	allow_normal_conversion = yes
 	modifiers = {
 	technology_cost = -0.05
-	global_missionary_strength = -0.015
+	global_missionary_strength = -0.025
 	}
 }
 
@@ -767,7 +770,7 @@
 	allow_normal_conversion = yes
 	modifiers = {
 	technology_cost = -0.10
-	global_missionary_strength = -0.035
+	global_missionary_strength = -0.05
 	}
 }
 
@@ -776,7 +779,7 @@
 	allow_normal_conversion = yes
 	modifiers = {
 	technology_cost = -0.15
-	global_missionary_strength = -0.05
+	global_missionary_strength = -0.075
 	}
 }
 
@@ -894,7 +897,7 @@
 	allow_normal_conversion = yes
 	modifiers = {
 	inflation_reduction = 0.005
-	state_maintenance_modifier = 0.05
+	state_maintenance_modifier = 0.10
 	}
 }
 
@@ -903,7 +906,7 @@
 	allow_normal_conversion = yes
 	modifiers = {
 	inflation_reduction = 0.01
-	state_maintenance_modifier = 0.10
+	state_maintenance_modifier = 0.175
 	}
 }
 
@@ -912,7 +915,7 @@
 	allow_normal_conversion = yes
 	modifiers = {
 	inflation_reduction = 0.015
-	state_maintenance_modifier = 0.15
+	state_maintenance_modifier = 0.25
 	}
 }
 
@@ -927,8 +930,8 @@
 	icon = "36_b"
 	allow_normal_conversion = yes
 	modifiers = {
-	idea_cost = -0.075
-	institution_spread_from_true_faith = -0.075
+	idea_cost = -0.05
+	institution_spread_from_true_faith = -0.05
 	}
 }
 
@@ -936,8 +939,8 @@
 	icon = "36_c"
 	allow_normal_conversion = yes
 	modifiers = {
-	idea_cost = -0.175
-	institution_spread_from_true_faith = -0.175
+	idea_cost = -0.10
+	institution_spread_from_true_faith = -0.10
 	}
 }
 
@@ -945,8 +948,8 @@
 	icon = "36_d"
 	allow_normal_conversion = yes
 	modifiers = {
-	idea_cost = -0.25
-	institution_spread_from_true_faith = -0.25
+	idea_cost = -0.15
+	institution_spread_from_true_faith = -0.15
 	}
 }
 
@@ -996,6 +999,7 @@
 	allow_normal_conversion = yes
 	modifiers = {
 	tolerance_heathen = 1
+	tolerance_heretic = 1
 	warscore_cost_vs_other_religion = 0.075
 	}
 }
@@ -1005,6 +1009,7 @@
 	allow_normal_conversion = yes
 	modifiers = {
 	tolerance_heathen = 2
+	tolerance_heretic = 2
 	warscore_cost_vs_other_religion = 0.175
 	}
 }
@@ -1014,6 +1019,7 @@
 	allow_normal_conversion = yes
 	modifiers = {
 	tolerance_heathen = 3
+	tolerance_heretic = 3
 	warscore_cost_vs_other_religion = 0.25
 	}
 }
@@ -1097,7 +1103,7 @@
 	icon = "37_b"
 	allow_normal_conversion = yes
 	modifiers = {
-	naval_attrition = -0.15
+	naval_attrition = -0.075
 	naval_maintenance_modifier = 0.075
 	}
 }
@@ -1106,7 +1112,7 @@
 	icon = "37_c"
 	allow_normal_conversion = yes
 	modifiers = {
-	naval_attrition = -0.25
+	naval_attrition = -0.175
 	naval_maintenance_modifier = 0.175
 	}
 }
@@ -1115,7 +1121,7 @@
 	icon = "37_d"
 	allow_normal_conversion = yes
 	modifiers = {
-	naval_attrition = -0.35
+	naval_attrition = -0.25
 	naval_maintenance_modifier = 0.25
 	}
 }
@@ -1505,7 +1511,7 @@
 	icon = "59_b"
 	allow_normal_conversion = yes
 	modifiers = {
-	development_cost = -0.15
+	development_cost = -0.10
 	war_taxes_cost_modifier = 0.15
 	}
 }
@@ -1514,7 +1520,7 @@
 	icon = "59_c"
 	allow_normal_conversion = yes
 	modifiers = {
-	development_cost = -0.35
+	development_cost = -0.175
 	war_taxes_cost_modifier = 0.35
 	}
 }
@@ -1523,7 +1529,7 @@
 	icon = "59_d"
 	allow_normal_conversion = yes
 	modifiers = {
-	development_cost = -0.5
+	development_cost = -0.25
 	war_taxes_cost_modifier = 0.5
 	}
 }
@@ -1539,7 +1545,7 @@
 	icon = "110_b"
 	allow_normal_conversion = yes
 	modifiers = {
-	trade_efficiency = 0.15
+	trade_efficiency = 0.10
 	embargo_efficiency = -0.15
 	}
 }
@@ -1548,7 +1554,7 @@
 	icon = "110_c"
 	allow_normal_conversion = yes
 	modifiers = {
-	trade_efficiency = 0.35
+	trade_efficiency = 0.175
 	embargo_efficiency = -0.35
 	}
 }
@@ -1557,7 +1563,7 @@
 	icon = "110_d"
 	allow_normal_conversion = yes
 	modifiers = {
-	trade_efficiency = 0.5
+	trade_efficiency = 0.25
 	embargo_efficiency = -0.5
 	}
 }

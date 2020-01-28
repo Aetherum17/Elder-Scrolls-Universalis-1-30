@@ -7,7 +7,7 @@ Akatosh = {
 	devotion = 0.25
 	horde_unity = 0.25
 	meritocracy = 0.25
-	global_institution_spread = 0.25
+	global_institution_spread = 0.10
 	
 	allow = {
 	OR = {
@@ -114,7 +114,7 @@ Auri-El = {
 
 Azura = {
     tolerance_own = 1
-	war_exhaustion = -0.10
+	war_exhaustion_cost = -0.10
 	
 	allow = {
 	OR = {
@@ -132,7 +132,7 @@ Azura = {
 
 Azurah = {
     tolerance_own = 1
-	war_exhaustion = -0.10
+	war_exhaustion_cost = -0.10
 	
 	allow = {
 	religion = khajiiti_pantheon 
@@ -147,7 +147,7 @@ Azurah = {
 
 Baan = {
     global_tax_modifier = 0.10
-	yearly_corruption = -0.10
+	spy_offence = 0.10
 	
 	allow = {
 	OR = {
@@ -165,7 +165,7 @@ Baan = {
 
 Bal = {
     free_leader_pool = 1
-	heir_chance = 1.0
+	heir_chance = 0.25
 	
 	allow = {
 	OR = {
@@ -183,7 +183,7 @@ Bal = {
 
 Boethiah = {
     global_spy_defence = 0.10
-	discovered_relations_impact = -0.10
+	ae_impact = -0.10
 	
 	allow = {
 	OR = {
@@ -269,7 +269,7 @@ Dibella = {
 
 Hermorah = {
     technology_cost = -0.10
-	global_institution_spread = 0.25
+	global_institution_spread = 0.10
 	
 	allow = {
 	religion = khajiiti_pantheon 
@@ -573,7 +573,7 @@ Mafala = {
 }
 
 Magnus = {
-	global_institution_spread = 0.25
+	global_institution_spread = 0.10
 	idea_cost = -0.10
 	
 	allow = {
@@ -591,7 +591,7 @@ Magnus = {
 }
 
 Magrus = {
-	global_institution_spread = 0.25
+	global_institution_spread = 0.10
 	idea_cost = -0.10
 	
 	allow = {
@@ -607,7 +607,7 @@ Magrus = {
 
 Malacath = {
 	infantry_power = 0.10
-	mercenary_discipline = 0.10
+	mercenary_discipline = 0.05
 	
 	allow = {
 	OR = {
@@ -626,7 +626,7 @@ Malacath = {
 
 Maloch = {
 	infantry_power = 0.10
-	mercenary_discipline = 0.10
+	mercenary_discipline = 0.05
 	
 	allow = {
 	religion = nordic_pantheon 
@@ -764,7 +764,7 @@ Merrunz = {
 
 Mora = {
     technology_cost = -0.10
-	global_institution_spread = 0.25
+	global_institution_spread = 0.10
 	
 	allow = {
 	OR = {
@@ -902,7 +902,7 @@ Phynaster = {
 }
 
 Rajhin = {
-	yearly_corruption = -0.10
+	interest = -0.25
 	state_maintenance_modifier = -0.10
 	
 	allow = {

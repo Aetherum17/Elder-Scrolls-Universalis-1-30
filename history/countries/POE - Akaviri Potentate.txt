@@ -6,3 +6,45 @@ technology_group = tamriel_tg
 religion = eight_divines
 primary_culture = tsaesci
 capital = 1206
+
+1503.1.1 = {
+    add_country_modifier = {
+		name = "amulet_of_kings"
+		duration = -1
+	}
+    add_country_modifier = {
+		name = "xx_elder_council"
+		duration = -1
+	}
+	set_country_flag = new_empire_flag
+	set_country_flag = skyrim_province_flag
+	set_country_flag = valenwood_lr_province_flag
+	set_country_flag = black_marsh_lr_province_flag
+	 add_country_modifier = {
+		name = "30_dragon_guard"
+		duration = -1
+	}
+	monarch = {
+	name = "Versidue"
+    dynasty = "Shaie"
+	birth_date = 1455.1.1
+    adm = 2
+	dip = 1
+    mil = 3
+    }	
+}
+
+1555.1.1 = {
+	monarch = {
+	name = "Savirien"
+    dynasty = "Chorak"
+	birth_date = 1515.1.1
+    adm = 3
+	dip = 5
+    mil = 1
+    }	
+	add_country_modifier = {
+		name = "33_guilds_act"
+	    duration = -1
+	}
+}

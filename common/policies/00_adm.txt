@@ -221,7 +221,7 @@ the_royal_commission_act = {
 		full_idea_group = administrative_ideas
 	}
 
-	global_spy_defence = 0.10
+	yearly_corruption = -0.1
 	
 	ai_will_do = {
 		factor = 0.6
@@ -321,8 +321,7 @@ the_spy_discovery_act = {
 		full_idea_group = administrative_ideas
 	}
 
-	yearly_corruption = -0.1
-	global_spy_defence = 0.2
+	global_spy_defence = 0.1
 
 	ai_will_do = {
 		factor = 0.6 #Keep in mind lower stab cost is probably pretty weak given this costs ADM...

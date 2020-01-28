@@ -14,6 +14,10 @@ capital = 1206
         dip = 5
         mil = 4
 	}
+	add_country_modifier = {
+		name = "amulet_of_kings"
+		duration = -1
+	}
 }
 
 389.1.1 = {
@@ -222,6 +226,13 @@ capital = 1206
 		adm = 4
         dip = 5
         mil = 3
+	}
+}
+
+1214.1.1 = {
+    add_country_modifier = {
+		name = "11_marukhati_selective"
+		duration = -1
 	}
 }
 

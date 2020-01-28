@@ -984,6 +984,83 @@ blackrose_prison = {
 	land_morale = 0.10
 }
 
+34_interregnum = {
+    global_unrest = 10
+    harsh_treatment_cost = 1.0
+	stability_cost_modifier = 1.0
+	reduced_liberty_desire = -100
+	manpower_recovery_speed = -1.0
+}
+
+34_interregnum_free = {
+    liberty_desire = 100
+	land_morale = 0.10
+	discipline = 0.10
+	global_manpower_modifier = 1.0
+	manpower_recovery_speed = 1.0
+}
+
+34_rebirth_of_orsinium = {
+    land_morale = 0.5
+	discipline = 0.25
+	global_manpower_modifier = 0.75
+	land_forcelimit_modifier = 0.35
+    liberty_desire = 100
+}
+
+34_loyalty_to_overlord = {
+    global_unrest = -2.5
+	global_tax_modifier = 0.25
+	production_efficiency = 0.25
+	stability_cost_modifier = -0.25
+	liberty_desire = -100
+}
+
+34_pale_watch = {
+    defensiveness = 0.10
+	land_morale = 0.10
+	naval_morale = 0.10
+}
+
+34_pale_watch_unrest = {
+    stability_cost_modifier = 1.0
+	global_unrest = 10
+	harsh_treatment_cost = 1.0
+}
+
+34_order_of_hour_province = {
+    local_unrest = 2.5
+	local_missionary_strength = 0.025
+	local_tax_modifier = -0.25
+	local_production_efficiency = -0.25
+}
+
+34_order_of_hour = {
+    global_missionary_strength = 0.01
+	tolerance_own = 1
+	global_unrest = 1
+	tolerance_heretic = -5
+	tolerance_heathen = -5
+}
+
+34_blacksap_rebellion = {
+    stability_cost_modifier = 1.0
+	harsh_treatment_cost = 1.0
+	trade_efficiency = -0.25
+	trade_steering = -0.25
+	reduced_liberty_desire = -25
+}
+
+34_knahaten_flu = {
+    local_tax_modifier = -0.25
+	local_production_efficiency = -0.25
+	local_manpower_modifier = -0.25
+	trade_goods_size_modifier = -0.25
+	trade_value_modifier = -0.25
+	province_trade_power_modifier = -0.25
+	local_unrest = 2.5
+}
+
 00_isolation = {
     diplomatic_reputation = -2.5
 	ae_impact = 0.25

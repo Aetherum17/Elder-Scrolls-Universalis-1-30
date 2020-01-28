@@ -719,7 +719,7 @@ country_event = {
 			}
 	    every_province = {
 		    limit = {
-		        region = upper_tsakara_lr
+		        OR = { region = upper_tsakara_lr region = northern_islands_lr }
 			}
 			add_province_modifier = {
 				name = ice_age
@@ -729,7 +729,7 @@ country_event = {
 		every_country = {
 			limit = {
 			    any_owned_province = {
-				    region = upper_tsakara_lr
+				    OR = { region = upper_tsakara_lr region = northern_islands_lr }
 				}
 			}
 			country_event = { id = es_terrain.12 days = 31 tooltip = es_terrain.12.a.tt }

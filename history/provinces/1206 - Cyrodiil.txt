@@ -48,3 +48,16 @@ fort_15th = yes
 	religion = eight_divines
 	add_core = HEA
 }
+
+1503.1.1 = {
+    owner = POE
+	controller = POE
+	add_core = POE
+}
+
+1555.1.1 = {
+    add_province_modifier = {
+		name = "33_mages_guild"
+		duration = -1
+	}
+}
