@@ -1019,3 +1019,36 @@ country_event = { #kill heir
 		kill_heir = yes
 	}
 }
+
+#######################################################################
+
+country_event = {
+	id = es_health.4
+	
+	title = es_health.4.t
+	desc = es_health.4.d
+	picture = ES_MAD_KING_eventPicture
+	
+	trigger = { 
+		ruler_has_personality = immortal_personality
+	}
+	
+	mean_time_to_happen = {
+		days = 18250
+	}
+	
+	option = {
+		name = es_health.4.a
+		add_stability = -1
+		add_prestige = -25
+		change_adm = -1
+		change_dip = -1
+		change_mil = -1
+	}
+	
+	option = {
+		name = es_health.4.b
+		kill_ruler = yes
+	}
+	
+}

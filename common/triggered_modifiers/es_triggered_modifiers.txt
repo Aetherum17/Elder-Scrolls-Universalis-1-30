@@ -136,3 +136,28 @@ dwemer_research_hubs_modifier = {
 	idea_cost = -0.10
 	technology_cost = -0.05
 }
+
+#######################################################################
+
+all_towers_united = {
+	potential = {
+		always = yes
+	}
+
+	trigger = {
+		owns = 1382 
+		owns = 1044
+		owns = 271
+		owns = 1206
+		owns = 335
+		owns = 970
+		owns = 834
+		owns = 1288
+		owns = 3188
+		owns = 724
+	}
+
+	missionaries = 1
+	global_missionary_strength = 0.01
+	prestige_decay = -0.01
+}

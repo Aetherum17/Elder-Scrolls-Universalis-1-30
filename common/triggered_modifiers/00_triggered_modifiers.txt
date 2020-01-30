@@ -191,11 +191,12 @@ the_pentarchy = {
 24_holy_city = { potential = { has_discovered = 575 religion = tang_mo_pantheon } trigger = { owns = 575 } prestige = 0.5 missionaries = 1 }
 25_holy_city = { potential = { has_discovered = 493 religion = kamal_pantheon } trigger = { owns = 493 } prestige = 0.5 missionaries = 1 }
 26_holy_city = { potential = { has_discovered = 448 religion = dremora_pantheon } trigger = { owns = 448 } prestige = 0.5 missionaries = 1 }
-27_holy_city = { potential = { has_discovered = 1150 religion = molog_bal_cult } trigger = { owns = 1150 } prestige = 0.5 missionaries = 1 }
+27_holy_city = { potential = { OR = { has_discovered = 1150 has_discovered = 3188 } religion = molog_bal_cult } trigger = { OR = { owns = 1150 owns = 3188 } } prestige = 0.5 missionaries = 1 }
 28_holy_city = { potential = { has_discovered = 1199 religion = meridia_cult } trigger = { owns = 1199 } prestige = 0.5 missionaries = 1 }
-29_holy_city = { potential = { has_discovered = 1233 religion = mehrunes_dagon_cult } trigger = { owns = 1233 } prestige = 0.5 missionaries = 1 }
+29_holy_city = { potential = { OR = { has_discovered = 1233 has_discovered = 4075 } religion = mehrunes_dagon_cult } trigger = { OR = { owns = 1233 owns = 4075 } } prestige = 0.5 missionaries = 1 }
 30_holy_city = { potential = { has_discovered = 1465 religion = hermeus_mora_cult } trigger = { owns = 1465 } prestige = 0.5 missionaries = 1 }
 31_holy_city = { potential = { has_discovered = 631 religion = po_tun_pantheon } trigger = { owns = 631 } prestige = 0.5 missionaries = 1 }
+32_holy_city = { potential = { has_discovered = 949 religion = all-maker_cult } trigger = { owns = 949 } prestige = 0.5 missionaries = 1 }
 
 ######################################
 # Italian - Submission to Emperor

@@ -1393,28 +1393,30 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 		    OR = {
-			AND = {
 			province_id = 922		
 			province_id = 933
 			province_id = 929
 			province_id = 926
 			province_id = 915
 			}
-			AND = {
-			has_global_flag = thrassian_plague_flag
-			owns_core_province = 922
-			}
-			}
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
+			OR = {
+			AND = {
 			owns_core_province = 922		
 			owns_core_province = 933
 			owns_core_province = 929
 			owns_core_province = 926
 			owns_core_province = 915
+			}
+			AND = {
+			has_global_flag = thrassian_plague_flag
+			owns_core_province = 922
+			}
+			}
 		}
 		effect = {
 			change_tag = PEL

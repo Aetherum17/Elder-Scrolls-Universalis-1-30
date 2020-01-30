@@ -171,11 +171,15 @@ country_event = {
 		}
 		add_prestige = -10
 		}
+		
+		every_country = { limit = { ai = no } country_event = { id = es_news.1 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
 	option = {
 		name = "es_0_scenario.5.b"
 		ai_chance = { factor = 50 }
 		add_prestige = 10
+		
+		every_country = { limit = { ai = no } country_event = { id = es_news.2 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
 }
 
@@ -193,6 +197,10 @@ country_event = {
 
 	mean_time_to_happen = {
 		days = 7665
+		modifier = {
+			factor = 0.01
+			any_country = { has_country_flag = es_0_scenario.6_flag }
+		}
 	}
 	
 	immediate = {
@@ -247,6 +255,10 @@ country_event = {
 
 	mean_time_to_happen = {
 		days = 9125
+		modifier = {
+			factor = 0.01
+			any_country = { has_country_flag = es_0_scenario.7_flag }
+		}
 	}
 	
 	immediate = {
@@ -285,6 +297,10 @@ country_event = {
 
 	mean_time_to_happen = {
 		days = 3650
+		modifier = {
+			factor = 0.01
+			any_country = { has_country_flag = es_0_scenario.8_flag }
+		}
 	}
 	
 	immediate = {
@@ -345,6 +361,8 @@ country_event = {
 		change_religion = nine_divines
 		}
 		set_global_flag = nine_divines_flag
+		
+		every_country = { limit = { ai = no } country_event = { id = es_news.3 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
 	
 	option = {
@@ -352,6 +370,8 @@ country_event = {
 		ai_chance = { factor = 50 }
         add_prestige = 50
 		set_global_flag = nine_divines_flag
+		
+		every_country = { limit = { ai = no } country_event = { id = es_news.4 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
 }
 
@@ -385,12 +405,16 @@ country_event = {
 		}
 		change_religion = nine_divines
 		}
+		
+		every_country = { limit = { ai = no } country_event = { id = es_news.3 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
 	
 	option = {
 		name = "es_0_scenario.9.b"
 		ai_chance = { factor = 50 }
         add_prestige = 10
+		
+		every_country = { limit = { ai = no } country_event = { id = es_news.4 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
 }
 

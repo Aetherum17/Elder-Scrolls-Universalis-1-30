@@ -1012,3 +1012,260 @@ country_event = {
 	}
 	
 }
+
+country_event = {
+	id = es_29_scenario.10
+	title = es_29_scenario.10.t
+	desc = es_29_scenario.10.d
+	picture = ES_Vvardenfell_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_29_scenario.10_flag }
+		is_year = 1334
+		NOT = { is_year = 1387 }
+		OR = {
+		owns = 957
+		owns = 1002
+		owns = 1028
+		}
+		culture_group = chimeris_cg
+    }
+
+	mean_time_to_happen = {
+		days = 9490
+	}
+	
+	immediate = {
+	    set_country_flag = es_29_scenario.10_flag
+	}
+
+	option = {
+		name = "es_29_scenario.10.a"
+		ai_chance = { factor = 33 }
+		
+		add_country_modifier = {
+		    name = "19_colonization"
+			duration = 9125
+		}
+		
+		if = {
+		    limit = {
+			    owns = 957
+			}
+			every_province = {
+		    limit = {
+		    area = morrowind_20_la
+			}
+			add_core = ROOT
+		    }
+			
+		if = {
+		limit = {
+		exists = MC0
+		NOT = { alliance_with = MC0 }
+		NOT = { overlord_of = MC0 }
+		}
+		declare_war_with_cb = {
+			who = MC0
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = ASH
+		NOT = { alliance_with = ASH }
+		NOT = { overlord_of = ASH }
+		}
+		declare_war_with_cb = {
+			who = ASH
+			casus_belli = cb_es_scenario
+		}
+		}
+			
+		}
+		
+		if = {
+		    limit = {
+			    owns = 1002
+			}
+			every_province = {
+		    limit = {
+		    area = morrowind_19_la
+			}
+			add_core = ROOT
+		    }
+			
+		if = {
+		limit = {
+		exists = MB9
+		NOT = { alliance_with = MB9 }
+		NOT = { overlord_of = MB9 }
+		}
+		declare_war_with_cb = {
+			who = MB9
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = ASH
+		NOT = { alliance_with = ASH }
+		NOT = { overlord_of = ASH }
+		}
+		declare_war_with_cb = {
+			who = ASH
+			casus_belli = cb_es_scenario
+		}
+		}
+			
+		}
+		
+		if = {
+		    limit = {
+			    owns = 1028
+			}
+			every_province = {
+		    limit = {
+		    area = morrowind_18_la
+			}
+			add_core = ROOT
+		    }
+			
+		if = {
+		limit = {
+		exists = MB8
+		NOT = { alliance_with = MB8 }
+		NOT = { overlord_of = MB8 }
+		}
+		declare_war_with_cb = {
+			who = MB8
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = ASH
+		NOT = { alliance_with = ASH }
+		NOT = { overlord_of = ASH }
+		}
+		declare_war_with_cb = {
+			who = ASH
+			casus_belli = cb_es_scenario
+		}
+		}
+			
+		}
+		
+		
+	}
+	
+	option = {
+		name = "es_29_scenario.10.b"
+		ai_chance = { factor = 33 }
+		add_prestige = -10
+		
+		add_country_modifier = {
+		    name = "19_expansion_via_trade"
+			duration = 9125
+		}
+	}
+	
+	option = {
+		name = "es_29_scenario.10.c"
+		ai_chance = { factor = 33 }
+		add_prestige = 25
+	}
+	
+}
+
+country_event = {
+	id = es_29_scenario.11
+	title = es_29_scenario.11.t
+	desc = es_29_scenario.11.d
+	picture = ES_YOUNG_PIRATE_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_29_scenario.11_flag }
+		is_year = 1334
+		NOT = { is_year = 1387 }
+		OR = {
+		owns = 1275
+		owns = 1028
+		}
+    }
+
+	mean_time_to_happen = {
+		days = 9490
+	}
+	
+	immediate = {
+	    set_country_flag = es_29_scenario.11_flag
+	}
+
+	option = {
+		name = "es_29_scenario.11.a"
+		ai_chance = { factor = 33 }
+		
+		add_stability = -1
+		
+		if = {
+		    limit = {
+			    owns = 1275
+			}
+			add_core = 1274
+			
+		if = {
+		limit = {
+		exists = STA
+		NOT = { alliance_with = STA }
+		NOT = { overlord_of = STA }
+		}
+		declare_war_with_cb = {
+			who = STA
+			casus_belli = cb_es_scenario
+		}
+		}
+		}
+		
+		if = {
+		    limit = {
+			    owns = 1028
+			}
+			add_core = 1035
+			
+		if = {
+		limit = {
+		exists = SED
+		NOT = { alliance_with = SED }
+		NOT = { overlord_of = SED }
+		}
+		declare_war_with_cb = {
+			who = SED
+			casus_belli = cb_es_scenario
+		}
+		}
+		}
+		
+		add_country_modifier = {
+		name = "22_hunt_on_pirates"
+		duration = 9125
+		}
+		
+		
+	}
+	
+	option = {
+		name = "es_29_scenario.11.b"
+		ai_chance = { factor = 33 }
+		add_prestige = -10
+		
+		add_country_modifier = {
+		name = "22_pirate_heaven"
+		duration = 9125
+		}
+	}
+	
+}

@@ -114,28 +114,37 @@ int main()
 	return 0;
 }
 
-Dynasties: + appearence events
+Dynasties: + appearence events +#Future rulers code
 - Valenwood
 - Skyrim
-- Cyrodiil
+- Cyrodiil - Akaviri Potentate
 - Direnii
 - Daggerfall
 - Wayrest
+- Pelletine
 
-NOT = { has_global_flag = rise_of_akaviri_protectorate_flag }
 NOT = { has_global_flag = rise_of_septim_flag }
 
 + random events
 
-+ pirate leaders
-
 + fix localization - catholic.yml
+
++ Governor Fortunata ap Dugal ???
+
++ ### NEWS ###
 
 + extend river map
 + daedric invasions
 + buildings 1.30 update
 
-### Year 1503 ###
++ institutions spread problem
+
++ thras maois position
+
+has_global_flag = three_alliences_flag
+set_global_flag = three_alliences_flag
+
+#######################################################################
 
 2 - Ancient - turkishgfx - altmer-ayleid-sinistral-imga
 2 - Sundered - muslimgfx - yokudan-redguard
@@ -175,6 +184,8 @@ Colonial Eastern Deadlands: native_size = 50 native_ferocity = 5 native_hostilen
 Colonial Western Deadlands: native_size = 15 native_ferocity = 5 native_hostileness = 7
 Colonial Northern Deadlands: native_size = 35 native_ferocity = 10 native_hostileness = 5
 Colonial Southern Deadlands: native_size = 45 native_ferocity = 7 native_hostileness = 7
+	
+	#Remember to add Holy Sites for New Religions
 	
 	12: polytheistic_group
 	altmeri_pantheon

@@ -1064,3 +1064,201 @@ country_event = {
 	}
 	
 }
+
+### Other Pirate Leaders ###
+
+country_event = {
+	id = es_21_scenario.12
+	title = es_21_scenario.12.t
+	desc = es_21_scenario.12.d
+	picture = ES_DREMORAN_PIRATE_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_21_scenario.12_flag }
+		is_year = 1334
+		NOT = { is_year = 1387 }
+		owns = 1171
+		government = republic
+    }
+
+	mean_time_to_happen = {
+		days = 9125
+	}
+	
+	immediate = {
+	    set_country_flag = es_21_scenario.12_flag
+	}
+	
+	option = {
+		name = "es_21_scenario.12.a"
+		ai_chance = { factor = 33 }
+		change_government = monarchy
+		if = {
+		limit = { has_reform = pirate_republic_reform }
+		add_government_reform = pirate_kingdom
+		}
+		define_ruler = {
+        name = "Velehk"
+        dynasty = "Sain"
+        age = 18
+        adm = 5
+        dip = 7
+        mil = 4
+        claim = 100
+		fixed = yes
+        }
+		add_stability = -1
+	}
+	
+	option = {
+		name = "es_21_scenario.12.b"
+		ai_chance = { factor = 33 }
+		define_admiral = {
+		name = "Velehk Sain"
+        shock = 5
+        fire = 5
+        manuever = 5
+        siege = 5
+        }
+		add_years_of_income = -1.0
+	}
+	
+	option = {
+		name = "es_21_scenario.12.c"
+		ai_chance = { factor = 33 }
+		add_stability = 1
+	}
+	
+}
+
+country_event = {
+	id = es_21_scenario.13
+	title = es_21_scenario.13.t
+	desc = es_21_scenario.13.d
+	picture = ES_NORDIC_PIRATE_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_21_scenario.13_flag }
+		is_year = 1334
+		NOT = { is_year = 1387 }
+		owns = 1274
+		government = republic
+    }
+
+	mean_time_to_happen = {
+		days = 9125
+	}
+	
+	immediate = {
+	    set_country_flag = es_21_scenario.13_flag
+	}
+	
+	option = {
+		name = "es_21_scenario.13.a"
+		ai_chance = { factor = 33 }
+		change_government = monarchy
+		if = {
+		limit = { has_reform = pirate_republic_reform }
+		add_government_reform = pirate_kingdom
+		}
+		define_ruler = {
+        name = "Haknir"
+        dynasty = "Death-Brand"
+        age = 18
+        adm = 4
+        dip = 7
+        mil = 7
+        claim = 100
+		fixed = yes
+        }
+		add_stability = -1
+	}
+	
+	option = {
+		name = "es_21_scenario.13.b"
+		ai_chance = { factor = 33 }
+		define_admiral = {
+		name = "Haknir Death-Brand"
+        shock = 5
+        fire = 5
+        manuever = 5
+        siege = 5
+        }
+		add_years_of_income = -1.0
+	}
+	
+	option = {
+		name = "es_21_scenario.13.c"
+		ai_chance = { factor = 33 }
+		add_stability = 1
+	}
+	
+}
+
+country_event = {
+	id = es_21_scenario.14
+	title = es_21_scenario.14.t
+	desc = es_21_scenario.14.d
+	picture = ES_YOUNG_PIRATE_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_21_scenario.14_flag }
+		is_year = 1334
+		NOT = { is_year = 1387 }
+		OR = {
+		owns = 1501
+		owns = 1035
+		owns = 697
+		owns = 766
+		owns = 1625
+		owns = 416
+		}
+		government = republic
+    }
+
+	mean_time_to_happen = {
+		days = 9125
+	}
+	
+	immediate = {
+	    set_country_flag = es_21_scenario.14_flag
+	}
+	
+	option = {
+		name = "es_21_scenario.14.a"
+		ai_chance = { factor = 33 }
+		change_government = monarchy
+		if = {
+		limit = { has_reform = pirate_republic_reform }
+		add_government_reform = pirate_kingdom
+		}
+		define_ruler = {
+        age = 18
+        adm = 7
+        dip = 5
+        mil = 5
+        claim = 100
+		fixed = yes
+        }
+		add_stability = -1
+	}
+	
+	option = {
+		name = "es_21_scenario.14.b"
+		ai_chance = { factor = 33 }
+		define_admiral = {
+        shock = 5
+        fire = 5
+        manuever = 5
+        siege = 5
+        }
+		add_years_of_income = -1.0
+	}
+	
+	option = {
+		name = "es_21_scenario.14.c"
+		ai_chance = { factor = 33 }
+		add_stability = 1
+	}
+	
+}

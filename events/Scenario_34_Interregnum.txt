@@ -147,7 +147,7 @@ country_event = {
 	option = {
 		name = "es_34_scenario.1.b"
 		ai_chance = { factor = 33 }
-		if = { limit = { ai = no } add_stability = -1 add_legitimacy = -75 add_republican_tradition = -75 add_devastation = -75 add_horde_unity = -75 add_meritocracy = -75 }
+		if = { limit = { ai = no } add_stability = -1 add_legitimacy = -75 add_republican_tradition = -75 add_devotion = -75 add_horde_unity = -75 add_meritocracy = -75 }
 		random_owned_province = { 
 			spawn_rebels = {
 				type = noble_rebels
@@ -1555,7 +1555,7 @@ country_event = {
 		NOT = { stability = -2 }
 		}
 		any_subject_country = {
-		    is_subject_of_type = imperial_province
+		    is_subject_of_type = imperial_subject
 		}
 		NOT = { has_country_modifier = 13_internal_instability }
     }
@@ -1577,7 +1577,7 @@ country_event = {
 		add_prestige = 25
 		add_stability = 3
 		every_subject_country = {
-        limit = { is_subject_of_type = imperial_province }
+        limit = { is_subject_of_type = imperial_subject }
         overlord = {
         PREV = { grant_independence = yes }
         }
@@ -1596,7 +1596,7 @@ country_event = {
 		name = "es_34_scenario.22.b"
 		ai_chance = { factor = 50 }
 		every_subject_country = {
-        limit = { is_subject_of_type = imperial_province }
+        limit = { is_subject_of_type = imperial_subject }
         add_country_modifier = {
 		    name = "24_independence_war"
 			duration = 9125

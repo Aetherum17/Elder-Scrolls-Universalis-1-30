@@ -1,0 +1,57 @@
+namespace = es_news
+
+country_event = {
+	id = es_news.1
+	title = es_news.1.t
+	desc = es_news.1.d
+	picture = ES_CITY_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "es_news.1.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = es_news.2
+	title = es_news.2.t
+	desc = es_news.2.d
+	picture = ES_CITY_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "es_news.1.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = es_news.3
+	title = es_news.3.t
+	desc = es_news.3.d
+	picture = ES_06_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "es_news.1.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = es_news.4
+	title = es_news.4.t
+	desc = es_news.4.d
+	picture = ES_06_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "es_news.1.a"
+		ai_chance = { factor = 100 }
+	}
+}

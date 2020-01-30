@@ -12,6 +12,11 @@ capital = "Direnii Tower"
 is_city = yes
 discovered_by = tamriel_tg discovered_by = elsweyr_tg discovered_by = marshan_tg discovered_by = orsimer_tg
 
+add_permanent_province_modifier = {
+	name = xx_the_mundus_tower
+	duration = -1
+}
+
 369.1.1 = {
 	owner = DIR
 	controller = DIR
