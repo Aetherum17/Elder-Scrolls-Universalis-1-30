@@ -75,6 +75,8 @@ country_event = {
 			casus_belli = cb_es_scenario
 		}
 		}
+		
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.24 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
 	option = {
 		name = "es_3_scenario.1.b"
@@ -97,6 +99,8 @@ country_event = {
 		limit = { exists = ESK }
 		add_truce_with = ESK
 		}
+		
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.25 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
 }
 
@@ -129,10 +133,14 @@ country_event = {
 		name = "03_prepare_for_war"
 		duration = 9125
 		}
+		
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.26 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
 	option = {
 		name = "es_3_scenario.2.b"
 		ai_chance = { factor = 50 }
 		add_stability = 1
+		
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.27 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
 }

@@ -103,6 +103,8 @@ country_event = {
 		}
 		}
 		}
+		
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.5 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
 	option = {
 		name = "es_1_scenario.1.b"	
@@ -111,6 +113,8 @@ country_event = {
 		name = "01_focus_on_trade"
 		duration = 9125
 		}
+		
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.6 days = 31 tooltip = es_collapse.2.a.tt } }
 	}	
 	option = {
 		name = "es_1_scenario.1.c"
@@ -119,12 +123,17 @@ country_event = {
 		name = "01_focus_on_internal_sphere"
 		duration = 9125
 		}
+		
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.7 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
 	option = {
 		name = "es_1_scenario.1.e"
 		ai_chance = { factor = 0 }
 		add_prestige = 5
+		
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.8 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
+	
 }
 
 country_event = {
@@ -156,6 +165,8 @@ country_event = {
         value = 50
         mutual = yes
         }
+		
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.9 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
 	option = {
 		name = "es_1_scenario.2.b"
@@ -164,6 +175,8 @@ country_event = {
 		add_prestige = -25
 		MA5 = { add_opinion = { who = ROOT modifier = es_friendly_nation } }
 		add_opinion = { who = MA5 modifier = es_friendly_nation }
+		
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.10 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
 	option = {
 		name = "es_1_scenario.2.b"
@@ -172,11 +185,15 @@ country_event = {
 		add_prestige = -25
 		MB9 = { add_opinion = { who = ROOT modifier = es_friendly_nation } }
 		add_opinion = { who = MB9 modifier = es_friendly_nation }
+		
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.11 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
 	option = {
 		name = "es_1_scenario.1.c"
 		ai_chance = { factor = 0 }
 		add_prestige = 5
+		
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.12 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
 }
 
@@ -230,6 +247,8 @@ country_event = {
         mil = 1
         female = yes
         }
+		
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.13 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
 	option = {
 		name = "es_1_scenario.3.b"
@@ -240,6 +259,8 @@ country_event = {
 		name = "01_camoran_unrest"
 		duration = 3650
 		}
+		
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.14 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
 	
 }

@@ -98,11 +98,15 @@ country_event = {
 			casus_belli = cb_es_scenario
 		}
 		}
+		
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.28 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
 	option = {
 		name = "es_4_scenario.1.b"
 		ai_chance = { factor = 50 }
 		add_prestige = -10
+		
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.29 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
 }
 
@@ -137,6 +141,8 @@ country_event = {
         manuever = 5
         siege = 5
         }
+		
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.30 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
 	option = {
 		name = "es_4_scenario.2.b"
@@ -145,6 +151,8 @@ country_event = {
 		name = "04_last_stand_defence"
 		duration = 9125
 		}
+		
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.31 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
 }
 
@@ -178,8 +186,10 @@ country_event = {
 		add_prestige = -25
 		add_country_modifier = {
 		name = "04_fanatics_in_the_army"
-		duration = 18250
+		duration = -1
 		}
+		
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.32 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
 	option = {
 		name = "es_4_scenario.3.b"
@@ -190,6 +200,8 @@ country_event = {
         loyalty = -35
         duration = 3650
         }
+		
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.33 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
 }
 
@@ -273,11 +285,15 @@ country_event = {
 			casus_belli = cb_es_scenario
 		}
 		}
+		
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.34 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
 	option = {
 		name = "es_4_scenario.4.b"
 		ai_chance = { factor = 50 }
 		add_stability = -1
+		
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.35 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
 }
 
@@ -370,11 +386,15 @@ country_event = {
 			casus_belli = cb_es_scenario
 		}
 		}
+		
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.36 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
 	option = {
 		name = "es_4_scenario.5.b"
 		ai_chance = { factor = 50 }
 		add_prestige = -15
+		
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.37 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
 }
 
@@ -398,6 +418,7 @@ country_event = {
 	
 	immediate = {
 	    set_country_flag = es_4_scenario.6_flag
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.38 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
 
 	option = {

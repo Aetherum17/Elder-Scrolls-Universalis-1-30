@@ -10,7 +10,7 @@ classical_age = {
 	objectives = {
 		obj_classical_empire = {
 			OR = {
-				government_rank = 3
+				government_rank = 10
 				is_emperor_of_china = yes
 			}
 		}
@@ -1446,7 +1446,7 @@ age_of_revolutions = {
 		obj_emperor = {
 			OR = {	
 				is_emperor = yes
-				government_rank = 3
+				government_rank = 10
 				is_emperor_of_china = yes
 			}
 		}

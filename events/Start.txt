@@ -16,14 +16,18 @@ country_event = {
 	
 	immediate = {
 		set_country_flag = es_start_ai_no_flag
-	}
-	
-	option = {
-		name = es_start.1.a	
 		add_country_modifier = {
 		name = "vassal_autonomy"
 		duration = 9125
 	    }
+	}
+	
+	option = {
+		name = es_start.1.a	
+		set_country_flag = esu_news_flag
+	}
+	option = {
+		name = es_start.1.b
 	}
 }
 

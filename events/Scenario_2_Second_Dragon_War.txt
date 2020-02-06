@@ -43,6 +43,8 @@ country_event = {
 			overlord = { free_vassal = ROOT }
 		}
 		if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.15 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
 	option = {
 		name = "es_2_scenario.1.b"
@@ -80,6 +82,8 @@ country_event = {
 				unrest = 25
 			}
 		}
+		
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.16 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
 }
 
@@ -105,17 +109,15 @@ country_event = {
 		}
 	}
 	
+	hidden = yes
+	
 	mean_time_to_happen = {
 		days = 31
 	}
 	
 	immediate = {
 	    set_country_flag = es_2_scenario.2_flag
-	}
-	
-	option = {
-		name = es_2_scenario.1.a
-		ai_chance = { factor = 100 }
+		
 		every_country = {
 			limit = { 
 			capital_scope = { continent = Atmora }
@@ -126,7 +128,14 @@ country_event = {
 			ai = yes
 			}
 			ROOT = { inherit = PREV }
+			
+			every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.17 days = 31 tooltip = es_collapse.2.a.tt } }
 		}
+	}
+	
+	option = {
+		name = es_2_scenario.1.a
+		ai_chance = { factor = 100 }
 	}
 }
 
@@ -139,8 +148,6 @@ country_event = {
 	trigger = {
 		religion = dragon_cult
 		owns = 1572
-		is_year = 65
-		NOT = { is_year = 109 }
 		is_at_war = no
 		NOT = { war_exhaustion = 10 }
 		manpower_percentage = 0.25
@@ -178,6 +185,8 @@ country_event = {
 				}
 			}
 		}
+		
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.18 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
 	option = {
 		name = es_2_scenario.3.b
@@ -190,6 +199,8 @@ country_event = {
         loyalty = -10
         duration = 1825
         }
+		
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.19 days = 31 tooltip = es_collapse.2.a.tt } }
 	} 
 }
 
@@ -225,12 +236,16 @@ country_event = {
 		name = "02_prepare_for_war"
 		duration = 3650
 		}
+		
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag is_free_or_tributary_trigger = yes } country_event = { id = es_news.20 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
 	option = {
 		name = es_2_scenario.4.b
 		ai_chance = { factor = 50 }
 		add_stability = -3
 		change_religion = dragon_cult
+		
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag is_free_or_tributary_trigger = yes } country_event = { id = es_news.21 days = 31 tooltip = es_collapse.2.a.tt } }
 	} 
 }
 
@@ -268,6 +283,8 @@ country_event = {
 			who = DRA
 			casus_belli = cb_es_scenario
 		}
+		
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag is_free_or_tributary_trigger = yes } country_event = { id = es_news.20 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
 	option = {
 		name = es_2_scenario.5.b
@@ -284,10 +301,14 @@ country_event = {
 			add_manpower = 10
 		    add_treasury = 250
 		}
+		
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag is_free_or_tributary_trigger = yes } country_event = { id = es_news.22 days = 31 tooltip = es_collapse.2.a.tt } }
 	} 
 	option = {
 		name = es_2_scenario.5.c
 		ai_chance = { factor = 33 }
 		add_prestige = -25
+		
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag is_free_or_tributary_trigger = yes } country_event = { id = es_news.23 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
 }

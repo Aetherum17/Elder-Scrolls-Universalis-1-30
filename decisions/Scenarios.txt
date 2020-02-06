@@ -1047,4 +1047,29 @@ country_decisions = {
 		}
 	}
 	
+	es_35_five_companions = {
+	    potential = {
+		OR = {
+		    any_country = { has_country_flag = es_35_scenario.2_flag }
+			is_year = 1609
+		}
+		NOT = { has_country_modifier = amulet_of_kings }
+		}
+		allow = {
+		    treasury = 1000
+        }
+		effect = {
+		    add_country_modifier = {
+			    name = "amulet_of_kings"
+				duration = -1
+			}
+			set_global_flag = the_planemeld_activation_flag
+			every_country = { limit = { ai = no } country_event = { id = es_35_scenario.7 days = 31 tooltip = es_collapse.3.a.tt } }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
 }

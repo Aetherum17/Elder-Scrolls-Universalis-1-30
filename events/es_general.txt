@@ -57,9 +57,7 @@ country_event = {
 		has_heir = no
 		has_government_attribute = heir
 		government = monarchy
-		NOT = { 
-			dynasty = "Direnii" 
-		}
+		NOT = { dynasty = "Direnii" }
 		NOT = { 
 			has_ruler_modifier = spurn_habsburgs
 		}
@@ -107,9 +105,7 @@ country_event = {
 		has_heir = no
 		has_government_attribute = heir
 		government = monarchy
-		NOT = { 
-			dynasty = "Camoran" 
-		}
+		NOT = { dynasty = "Camoran" }
 		NOT = { 
 			has_ruler_modifier = spurn_habsburgs
 		}
@@ -157,10 +153,8 @@ country_event = {
 		has_heir = no
 		has_government_attribute = heir
 		government = monarchy
-		NOT = { 
-			dynasty = "Ysgramor"
-			dynasty = "Whitehold"
-		}
+		NOT = { dynasty = "Ysgramor" }
+		NOT = { dynasty = "Whitehold" }
 		NOT = { 
 			has_ruler_modifier = spurn_habsburgs
 		}
@@ -221,9 +215,7 @@ country_event = {
 		has_heir = no
 		has_government_attribute = heir
 		government = monarchy
-		NOT = { 
-			dynasty = "Alessian" 
-		}
+		NOT = { dynasty = "Alessian" }
 		NOT = { 
 			has_ruler_modifier = spurn_habsburgs
 		}
@@ -321,10 +313,9 @@ country_event = {
 		has_heir = no
 		has_government_attribute = heir
 		government = monarchy
-		NOT = { 
-			dynasty = "Daggerfall" 
-			dynasty = "Breton" 
-		}
+		NOT = { dynasty = "Daggerfall" }
+		NOT = { dynasty = "Breton" }
+		NOT = { dynasty = "Cumberland" }
 		NOT = { 
 			has_ruler_modifier = spurn_habsburgs
 		}
@@ -372,6 +363,20 @@ country_event = {
 		claim = 80
 		}
 	}
+	option = {
+		name =  es_general.2.b
+		ai_chance = { factor = 33 }
+		trigger = { has_global_flag = three_alliences_flag }
+		add_legitimacy = -35
+		define_heir = {
+		dynasty = "Cumberland"
+		culture = breton
+		ADM = 4
+		DIP = 4
+		MIL = 4			
+		claim = 80
+		}
+	}
 }
 
 country_event = {
@@ -385,10 +390,8 @@ country_event = {
 		has_heir = no
 		has_government_attribute = heir
 		government = monarchy
-		NOT = { 
-			dynasty = "Sesnit" 
-			dynasty = "Torn" 
-		}
+		NOT = { dynasty = "Sesnit" }
+		NOT = { dynasty = "Torn" }
 		NOT = { 
 			has_ruler_modifier = spurn_habsburgs
 		}
@@ -449,9 +452,8 @@ country_event = {
 		has_heir = no
 		has_government_attribute = heir
 		government = monarchy
-		NOT = { 
-			dynasty = "gro-Igron" 
-		}
+		NOT = { dynasty = "gro-Igron" }
+		NOT = { dynasty = "gro-Bagrakh" }
 		NOT = { 
 			has_ruler_modifier = spurn_habsburgs
 		}
@@ -486,6 +488,21 @@ country_event = {
 		claim = 80
 		}
 	}
+	option = {
+		name =  es_general.2.b
+		ai_chance = { factor = 50 }
+		trigger = { any_country = { has_country_flag = es_21_scenario.4_flag } }
+		add_legitimacy = -35
+		define_heir = {
+		dynasty = "gro-Bagrakh"
+		culture = orsimer
+		ADM = 4
+		DIP = 4
+		MIL = 4			
+		claim = 80
+		}
+	}
+	
 }
 
 country_event = {
@@ -499,9 +516,7 @@ country_event = {
 		has_heir = no
 		has_government_attribute = heir
 		government = monarchy
-		NOT = { 
-			dynasty = "Crown" 
-		}
+		NOT = { dynasty = "Crown" }
 		NOT = { 
 			has_ruler_modifier = spurn_habsburgs
 		}
@@ -548,9 +563,7 @@ country_event = {
 		has_heir = no
 		has_government_attribute = heir
 		government = monarchy
-		NOT = { 
-			dynasty = "Forebear" 
-		}
+		NOT = { dynasty = "Forebear" }
 		NOT = { 
 			has_ruler_modifier = spurn_habsburgs
 		}
@@ -599,9 +612,7 @@ country_event = {
 		has_government_attribute = heir
 		government = monarchy
 		tag = CYR
-		NOT = { 
-			dynasty = "Cyrodiil" 
-		}
+		NOT = { dynasty = "Cyrodiil" }
 		NOT = { 
 			has_ruler_modifier = spurn_habsburgs
 		}

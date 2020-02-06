@@ -256,7 +256,7 @@ country_event = {
 		NOT = { is_year = 1152 }
 		culture_group = half_blood_cg
 		owns = 1426
-		is_free_or_tributary_trigger = no
+		NOT = { is_free_or_tributary_trigger = yes }
     }
 
 	mean_time_to_happen = {

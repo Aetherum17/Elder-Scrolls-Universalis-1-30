@@ -11,9 +11,23 @@ capital = 1206
 }
 
 1609.1.1 = {	
+    add_country_modifier = {
+		name = "amulet_of_kings"
+		duration = -1
+	}
+    add_country_modifier = {
+		name = "xx_elder_council"
+		duration = -1
+	}
+	add_country_modifier = {
+		name = "30_dragon_guard"
+		duration = -1
+	}
 	add_country_modifier = {
 		name = "33_guilds_act"
 	    duration = -1
 	}
 	government_rank = 10
+	government = republic
+	add_government_reform = noble_elite_reform
 }

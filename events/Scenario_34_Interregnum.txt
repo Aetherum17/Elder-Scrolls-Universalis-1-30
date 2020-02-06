@@ -39,7 +39,7 @@ country_event = {
 			owns_or_subject_of = 1379
 			owns_or_subject_of = 1394
 			owns_or_subject_of = 1400
-			owns_or_subject_of = 1424
+			owns_or_subject_of = 1426
 		}
 		any_country = {
 		    owns_or_subject_of = 1002
@@ -89,6 +89,15 @@ country_event = {
 	}
 	
 }
+
+########################
+### Alliences Set Up ###
+
+### Code:
+
+### Daggerfall Covenant Led by Wayrest!
+
+########################
 
 country_event = {
 	id = es_34_scenario.1
@@ -288,7 +297,7 @@ country_event = {
 		}
 		every_country = {
 		limit = {
-		    is_free_or_tributary_trigger = no
+		    NOT = { is_free_or_tributary_trigger = yes }
 		    OR = {
 			    owns = 1206
 				capital_scope = { region = western_syrodiil_lr }
@@ -315,7 +324,7 @@ country_event = {
 	    NOT = { has_country_flag = es_34_scenario.3_flag }
 		culture_group = orsimer_cg
 		owns = 1391
-		is_free_or_tributary_trigger = no
+		NOT = { is_free_or_tributary_trigger = yes }
     }
 
 	mean_time_to_happen = {
@@ -643,10 +652,7 @@ country_event = {
 		has_global_flag = three_alliences_flag
 		has_heir = no
 		has_government_attribute = heir
-		OR = {
-		owns = 1369
 		owns = 1426
-		}
     }
 
 	mean_time_to_happen = {
@@ -659,26 +665,10 @@ country_event = {
 	
 	option = {
 		name =  "es_general.2.a"
-		trigger = { owns = 1369 }
 		ai_chance = { factor = 50 }
 		define_heir = {
 		name = "Emeric"
-		dynasty = "Daggerfall"
-		culture = breton
-		ADM = 5
-		DIP = 4
-		MIL = 6		
-		claim = 80
-		}
-	}
-	
-	option = {
-		name =  "es_general.2.a"
-		trigger = { owns = 1426 }
-		ai_chance = { factor = 50 }
-		define_heir = {
-		name = "Emeric"
-		dynasty = "Gardner"
+		dynasty = "Cumberland"
 		culture = breton
 		ADM = 5
 		DIP = 4

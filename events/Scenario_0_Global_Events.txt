@@ -172,14 +172,14 @@ country_event = {
 		add_prestige = -10
 		}
 		
-		every_country = { limit = { ai = no } country_event = { id = es_news.1 days = 31 tooltip = es_collapse.2.a.tt } }
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.1 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
 	option = {
 		name = "es_0_scenario.5.b"
 		ai_chance = { factor = 50 }
 		add_prestige = 10
 		
-		every_country = { limit = { ai = no } country_event = { id = es_news.2 days = 31 tooltip = es_collapse.2.a.tt } }
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.2 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
 }
 
@@ -362,7 +362,7 @@ country_event = {
 		}
 		set_global_flag = nine_divines_flag
 		
-		every_country = { limit = { ai = no } country_event = { id = es_news.3 days = 31 tooltip = es_collapse.2.a.tt } }
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.3 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
 	
 	option = {
@@ -371,7 +371,7 @@ country_event = {
         add_prestige = 50
 		set_global_flag = nine_divines_flag
 		
-		every_country = { limit = { ai = no } country_event = { id = es_news.4 days = 31 tooltip = es_collapse.2.a.tt } }
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.4 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
 }
 
@@ -405,16 +405,12 @@ country_event = {
 		}
 		change_religion = nine_divines
 		}
-		
-		every_country = { limit = { ai = no } country_event = { id = es_news.3 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
 	
 	option = {
 		name = "es_0_scenario.9.b"
 		ai_chance = { factor = 50 }
         add_prestige = 10
-		
-		every_country = { limit = { ai = no } country_event = { id = es_news.4 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
 }
 
@@ -476,7 +472,7 @@ country_event = {
 	trigger = {
 	   NOT = { has_country_flag = es_0_scenario.12_flag }
 	   has_country_flag = arrow_in_the_knee_flag
-	   is_free_or_tributary_trigger = no
+	   NOT = { is_free_or_tributary_trigger = yes }
     }
 
 	mean_time_to_happen = {

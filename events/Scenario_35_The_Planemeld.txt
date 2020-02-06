@@ -1,0 +1,987 @@
+namespace = es_35_scenario
+
+country_event = {
+	id = es_35_scenario.1
+	title = es_35_scenario.1.t
+	desc = es_35_scenario.1.d
+	picture = ES_REVOLUTION_1_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_35_scenario.1_flag }
+		NOT = { tag = POE }
+		NOT = { is_year = 1668 }
+		owns = 1206
+		government = republic
+    }
+
+	mean_time_to_happen = {
+		days = 18250
+		modifier = {
+			factor = 0.01
+			is_year = 1609
+		}
+	}
+	
+	immediate = {
+	    set_country_flag = es_35_scenario.1_flag
+	}
+	
+	option = {
+		name = "es_35_scenario.1.a"
+		ai_chance = { factor = 50 }
+		add_treasury = 10000
+		add_country_modifier = {
+		    name = "35_loyal_army"
+			duration = 9125
+		}
+		if = {
+		    limit = { has_dlc = "Dharma" }
+			add_government_reform = autocracy_reform
+		}
+		else = {
+		    set_legacy_government = despotic_monarchy
+		}
+		define_ruler = {
+        name = "Leovic"
+        dynasty = "Reachmen"
+        adm = 4
+        dip = 7
+        mil = 2
+        age = 35
+		culture = reachmen
+		fixed = yes
+        }
+	}
+	
+	option = {
+		name = "es_35_scenario.1.b"
+		ai_chance = { factor = 50 }
+		if = { limit = { ai = no } add_stability = -1 }
+		
+		1206 = { 
+			spawn_rebels = {
+				type = pretender_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+				leader = "Leovic Reachmen"
+			}
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_35_scenario.2
+	title = es_35_scenario.2.t
+	desc = es_35_scenario.2.d
+	picture = ES_REVOLUTION_1_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_35_scenario.2_flag }
+		NOT = { is_year = 1668 }
+		owns = 1206
+		OR = {
+		    has_country_flag = es_35_scenario.1_flag
+			is_year = 1609
+		}
+    }
+
+	mean_time_to_happen = {
+		days = 3650
+	}
+	
+	immediate = {
+	    set_country_flag = es_35_scenario.2_flag
+	}
+	
+	option = {
+		name = "es_35_scenario.2.a"
+		ai_chance = { factor = 50 }
+		define_ruler = {
+        name = "Varen"
+        dynasty = "Aquilarios"
+        adm = 4
+        dip = 3
+        mil = 4
+        age = 30
+		culture = imperial
+		fixed = yes
+        }
+		change_religion = molog_bal_cult
+	}
+	
+	option = {
+		name = "es_35_scenario.2.b"
+		ai_chance = { factor = 50 }
+		add_stability = -3
+		
+		random_owned_province = { 
+			spawn_rebels = {
+				type = pretender_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+				leader = "Varen Aquilarios"
+			}
+		}
+		
+		random_owned_province = { 
+			spawn_rebels = {
+				type = pretender_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+				leader = "Varen Aquilarios"
+			}
+		}
+		
+		random_owned_province = { 
+			spawn_rebels = {
+				type = pretender_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+				leader = "Varen Aquilarios"
+			}
+		}
+		
+		random_owned_province = { 
+			spawn_rebels = {
+				type = pretender_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+				leader = "Varen Aquilarios"
+			}
+		}
+		
+		random_owned_province = { 
+			spawn_rebels = {
+				type = pretender_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+				leader = "Varen Aquilarios"
+			}
+		}
+	}
+	
+}
+
+### Amulet of Kings is Lost ###
+
+country_event = {
+	id = es_35_scenario.3
+	title = es_35_scenario.3.t
+	desc = es_35_scenario.3.d
+	picture = ES_REVOLUTION_1_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_35_scenario.3_flag }
+	    tag = RED
+		OR = {
+		    any_country = { has_country_flag = es_35_scenario.2_flag }
+			is_year = 1609
+		}
+    }
+
+	mean_time_to_happen = {
+		days = 9125
+	}
+	
+	immediate = {
+	    set_country_flag = es_35_scenario.3_flag
+	}
+	
+	option = {
+		name = "es_35_scenario.3.a"
+		ai_chance = { factor = 100 }
+		every_country = { limit = { ai = no } country_event = { id = es_35_scenario.4 days = 31 tooltip = es_collapse.3.a.tt } }
+		every_country = { limit = { ai = yes } add_stability = -1 }
+		every_country = { limit = { has_country_modifier = amulet_of_kings } remove_country_modifier = amulet_of_kings }
+	}
+	
+}
+
+country_event = {
+	id = es_35_scenario.4
+	title = es_35_scenario.3.t
+	desc = es_35_scenario.3.d
+	picture = ES_REVOLUTION_1_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "es_35_scenario.3.a"
+		ai_chance = { factor = 100 }
+	    add_stability = -1
+	}
+	
+	
+}
+
+### Mannimarco Betrayal - the Planemeld ###
+
+country_event = {
+	id = es_35_scenario.5
+	title = es_35_scenario.5.t
+	desc = es_35_scenario.5.d
+	picture = ES_REVOLUTION_1_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_35_scenario.5_flag }
+	    tag = RED
+		has_global_flag = the_planemeld_activation_flag
+    }
+
+	mean_time_to_happen = {
+		days = 3650
+	}
+	
+	immediate = {
+	    set_country_flag = es_35_scenario.5_flag
+		1206 = {
+		    add_devastation = 100
+		}
+	}
+	
+	option = {
+		name = "es_35_scenario.5.a"
+		ai_chance = { factor = 100 }
+		every_country = { limit = { OR = { ai = no capital_scope = { continent = Tamriel } } } country_event = { id = es_35_scenario.6 days = 31 tooltip = es_collapse.3.a.tt } }
+		set_global_flag = the_planemeld_flag
+	}
+	
+}
+
+
+country_event = {
+	id = es_35_scenario.6
+	title = es_35_scenario.5.t
+	desc = es_35_scenario.5.d
+	picture = ES_REVOLUTION_1_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "es_35_scenario.5.a"
+		ai_chance = { factor = 100 }
+	    add_stability = -1
+	}
+	
+}
+
+
+### Five Companions ###
+country_event = {
+	id = es_35_scenario.7
+	title = es_35_scenario.7.t
+	desc = es_35_scenario.7.d
+	picture = ES_REVOLUTION_1_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "es_35_scenario.7.a"
+		ai_chance = { factor = 100 }
+	}
+	
+}
+
+### Planemeld is Over ###
+
+country_event = {
+	id = es_35_scenario.8
+	title = es_35_scenario.8.t
+	desc = es_35_scenario.8.d
+	picture = ES_REVOLUTION_1_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_35_scenario.8_flag }
+	    tag = RED
+		has_global_flag = the_planemeld_activation_flag
+    }
+
+	mean_time_to_happen = {
+		days = 18250
+	}
+	
+	immediate = {
+	    set_country_flag = es_35_scenario.8_flag
+	}
+	
+	option = {
+		name = "es_35_scenario.5.a"
+		ai_chance = { factor = 100 }
+		every_country = { limit = { OR = { ai = no capital_scope = { continent = Tamriel } } } country_event = { id = es_35_scenario.9 days = 31 tooltip = es_collapse.3.a.tt } }
+		clr_global_flag = the_planemeld_flag
+	}
+	
+}
+
+country_event = {
+	id = es_35_scenario.9
+	title = es_35_scenario.8.t
+	desc = es_35_scenario.8.d
+	picture = ES_REVOLUTION_1_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "es_35_scenario.8.a"
+		ai_chance = { factor = 100 }
+		add_stability = 1
+	}
+	
+}
+
+### Alliences Try to Conquer Cyrodiil
+
+country_event = {
+	id = es_35_scenario.10
+	title = es_35_scenario.10.t
+	desc = es_35_scenario.10.d
+	picture = ES_REVOLUTION_1_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_35_scenario.10_flag }
+		has_global_flag = the_planemeld_activation_flag
+		has_global_flag = three_alliences_flag
+		OR = {
+		    owns = 271
+			owns = 1369
+			owns = 1043
+		}
+    }
+
+	mean_time_to_happen = {
+		days = 9125
+	}
+	
+	immediate = {
+	    set_country_flag = es_35_scenario.10_flag
+	}
+	
+	option = {
+		name = "es_35_scenario.10.a"
+		ai_chance = { factor = 50 }
+		every_province = {
+		    limit = {
+			    region = central_syrodiil_lr
+			}
+			add_core = ROOT
+		}
+		
+		if = {
+		limit = {
+		exists = ALE
+		NOT = { alliance_with = ALE }
+		NOT = { overlord_of = ALE }
+		}
+		declare_war_with_cb = {
+			who = ALE
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = ORD
+		NOT = { alliance_with = ORD }
+		NOT = { overlord_of = ORD }
+		}
+		declare_war_with_cb = {
+			who = ORD
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = CYR
+		NOT = { alliance_with = CYR }
+		NOT = { overlord_of = CYR }
+		}
+		declare_war_with_cb = {
+			who = CYR
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = HEA
+		NOT = { alliance_with = HEA }
+		NOT = { overlord_of = HEA }
+		}
+		declare_war_with_cb = {
+			who = HEA
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = POE
+		NOT = { alliance_with = POE }
+		NOT = { overlord_of = POE }
+		}
+		declare_war_with_cb = {
+			who = POE
+			casus_belli = cb_es_scenario
+		}
+		}
+	}
+	
+	option = {
+		name = "es_35_scenario.10.b"
+		ai_chance = { factor = 50 }
+		add_prestige = -25
+	}
+	
+}
+
+########## Planemeld Events ##########
+
+### Dremoran Invasion ###
+
+country_event = {
+	id = es_35_scenario.11
+	title = es_35_scenario.11.t
+	desc = es_35_scenario.11.d
+	picture = ES_REVOLUTION_1_eventPicture
+	
+	trigger = {
+		has_global_flag = the_planemeld_activation_flag
+    }
+
+	mean_time_to_happen = {
+		days = 3650
+	}
+	
+	
+	option = {
+		name = "es_35_scenario.11.a"
+		ai_chance = { factor = 100 }
+		
+		random_owned_province = {
+		    add_devastation = 50
+			spawn_rebels = {
+				type = molog_bal_cult_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			}
+		}
+	}
+	
+}
+
+### Sack of Capital City ###
+
+country_event = {
+	id = es_35_scenario.12
+	title = es_35_scenario.12.t
+	desc = es_35_scenario.12.d
+	picture = ES_REVOLUTION_1_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_35_scenario.12_flag }
+		has_global_flag = the_planemeld_activation_flag
+    }
+
+	mean_time_to_happen = {
+		days = 9125
+	}
+	
+	immediate = {
+	    set_country_flag = es_35_scenario.12_flag
+	}
+	
+	option = {
+		name = "es_35_scenario.12.a"
+		ai_chance = { factor = 100 }
+		kill_ruler = yes
+		capital_scope = {
+		    add_devastation = 100
+		}
+	}
+	
+}
+
+### Convertion of Provinces ###
+
+country_event = {
+	id = es_35_scenario.13
+	title = es_35_scenario.11.t
+	desc = es_35_scenario.11.d
+	picture = ES_REVOLUTION_1_eventPicture
+	
+	hidden = yes
+	
+	trigger = {
+		has_global_flag = the_planemeld_activation_flag
+    }
+
+	mean_time_to_happen = {
+		days = 3650
+	}
+	
+	
+	option = {
+		name = "es_35_scenario.11.a"
+		ai_chance = { factor = 100 }
+		
+		random_owned_province = { 
+			change_religion = molog_bal_cult
+			add_devastation = 25
+		}
+	}
+	
+}
+
+### Deal with Molag Bal ###
+
+country_event = {
+	id = es_35_scenario.14
+	title = es_35_scenario.14.t
+	desc = es_35_scenario.14.d
+	picture = ES_REVOLUTION_1_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_35_scenario.14_flag }
+		has_global_flag = the_planemeld_activation_flag
+    }
+
+	mean_time_to_happen = {
+		days = 9125
+	}
+	
+	immediate = {
+	    set_country_flag = es_35_scenario.14_flag
+	}
+	
+	option = {
+		name = "es_35_scenario.14.a"
+		ai_chance = { factor = 50 }
+		add_stability = 3
+		kill_heir = yes
+		set_ruler_culture = soul_shriven
+		change_religion = molog_bal_cult
+	}
+	
+	option = {
+		name = "es_35_scenario.14.a"
+		ai_chance = { factor = 50 }
+		capital_scope = {
+		    spawn_rebels = {
+				type = molog_bal_cult_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			}
+		}
+	}
+	
+}
+
+### Invasion to Coldharbour ###
+
+country_event = {
+	id = es_35_scenario.15
+	title = es_35_scenario.15.t
+	desc = es_35_scenario.15.d
+	picture = ES_REVOLUTION_1_eventPicture
+	
+	trigger = {
+		has_global_flag = the_planemeld_activation_flag
+		any_owned_province = {
+		    has_port = yes
+		}
+    }
+
+	mean_time_to_happen = {
+		days = 5475
+	}
+	
+	option = {
+		name = "es_35_scenario.15.a"
+		ai_chance = { factor = 50 }
+		add_treasury = -500
+		random_province = {
+		    limit = {
+			    OR = {
+				    region = southern_coldharbour_lr
+					region = eastern_coldharbour_lr
+					region = western_coldharbour_lr
+					region = northern_coldharbour_lr
+				}
+				is_city = no
+			    has_port = yes
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		} 
+	}
+	
+	option = {
+		name = "es_35_scenario.15.b"
+		ai_chance = { factor = 50 }
+		add_prestige = -10
+	}
+	
+}
+
+#######################################################################
+
+country_event = {
+	id = es_35_scenario.16
+	title = es_35_scenario.16.t
+	desc = es_35_scenario.16.d
+	picture = ES_REVOLUTION_1_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_35_scenario.16_flag }
+		has_global_flag = three_alliences_flag
+		owns = 1274
+    }
+
+	mean_time_to_happen = {
+		days = 18250
+	}
+	
+	immediate = {
+	    set_country_flag = es_35_scenario.16_flag
+	}
+	
+	option = {
+		name = "es_35_scenario.16.a"
+		ai_chance = { factor = 50 }
+		add_prestige = -10
+		1274 = {
+		    if = {
+		    limit = {
+		    NOT = { has_building = fort_15th }
+		    NOT = { has_building = fort_16th }
+		    NOT = { has_building = fort_17th }
+		    NOT = { has_building = fort_18th }
+		    }
+		add_building = fort_15th
+		}
+		add_province_modifier = {
+			    name = "35_captain_rana"
+				duration = -1
+			}
+		}
+	}
+	
+	option = {
+		name = "es_35_scenario.16.b"
+		ai_chance = { factor = 50 }
+		add_prestige = 25
+	}
+	
+}
+
+country_event = {
+	id = es_35_scenario.17
+	title = es_35_scenario.17.t
+	desc = es_35_scenario.17.d
+	picture = ES_REVOLUTION_1_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_35_scenario.17_flag }
+		has_global_flag = the_planemeld_flag
+		owns = 1199
+    }
+
+	mean_time_to_happen = {
+		days = 9125
+	}
+	
+	immediate = {
+	    set_country_flag = es_35_scenario.17_flag
+	}
+	
+	option = {
+		name = "es_35_scenario.17.a"
+		ai_chance = { factor = 100 }
+		1199 = {
+		    add_devastation = 100
+		}
+		if = {
+		    limit = {
+			    religion_group = daedric_group_1
+			}
+			add_stability = -1
+		}
+		else = {
+		    add_prestige = 10
+		}
+	}
+	
+}
+
+#######################################################################
+
+country_event = {
+	id = es_35_scenario.18
+	title = es_35_scenario.18.t
+	desc = es_35_scenario.18.d
+	picture = ES_REVOLUTION_1_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_35_scenario.18_flag }
+		has_global_flag = the_planemeld_flag
+		owns = 1355
+    }
+
+	mean_time_to_happen = {
+		days = 9125
+	}
+	
+	immediate = {
+	    set_country_flag = es_35_scenario.18_flag
+	}
+	
+	option = {
+		name = "es_35_scenario.18.a"
+		ai_chance = { factor = 50 }
+		trigger = { primary_culture = reachmen }
+		every_province = {
+		limit = {
+		OR = {
+		area = high_5_la
+		area = high_8_la
+		area = high_13_la
+		}
+		}
+		add_core = ROOT
+		}
+		add_country_modifier = {
+			name = "35_winterborn_clan"
+			duration = -1
+		}
+		add_stability = 1
+	}
+	
+	option = {
+		name = "es_35_scenario.18.b"
+		ai_chance = { factor = 50 }
+		trigger = { NOT = { primary_culture = reachmen } }
+		add_prestige = -15
+		every_province = {
+		limit = {
+		OR = {
+		area = high_5_la
+		area = high_8_la
+		area = high_13_la
+		}
+		}
+		add_core = ROOT
+		}
+	}
+	
+	option = {
+		name = "es_35_scenario.18.c"
+		ai_chance = { factor = 50 }
+		trigger = { NOT = { primary_culture = reachmen } }
+		add_prestige = 10
+		every_province = {
+		limit = {
+		OR = {
+		area = high_5_la
+		area = high_8_la
+		area = high_13_la
+		}
+		}
+		add_core = REA
+		}
+		random_province = {
+		    limit = {
+			    OR = {
+		        area = high_5_la
+		        area = high_8_la
+		        area = high_13_la
+		        }
+			}
+			spawn_rebels = {
+				type = nationalist_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+				leader = "Urfon Ice-Heart"
+			}
+		}
+		random_province = {
+		    limit = {
+			    OR = {
+		        area = high_5_la
+		        area = high_8_la
+		        area = high_13_la
+		        }
+			}
+			spawn_rebels = {
+				type = nationalist_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+				leader = "Olarz the Cunning"
+			}
+		}
+		random_province = {
+		    limit = {
+			    OR = {
+		        area = high_5_la
+		        area = high_8_la
+		        area = high_13_la
+		        }
+			}
+			spawn_rebels = {
+				type = nationalist_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+				leader = "Corintthac the Abomination"
+			}
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_35_scenario.19
+	title = es_35_scenario.19.t
+	desc = es_35_scenario.19.d
+	picture = ES_REVOLUTION_1_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_35_scenario.19_flag }
+		has_global_flag = the_planemeld_flag
+		owns = 1391
+    }
+
+	mean_time_to_happen = {
+		days = 9125
+	}
+	
+	immediate = {
+	    set_country_flag = es_35_scenario.19_flag
+	}
+	
+	option = {
+		name = "es_35_scenario.19.a"
+		ai_chance = { factor = 100 }
+		add_stability = -1
+		1391 = {
+			spawn_rebels = {
+				type = heretic_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+				leader = "Azhnura the Proselytizer"
+			}
+		}
+	}
+	
+}
+
+### End of Orcish Dynasty
+
+country_event = {
+	id = es_35_scenario.20
+	title = es_35_scenario.20.t
+	desc = es_35_scenario.20.d
+	picture = ES_REVOLUTION_1_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_35_scenario.20_flag }
+		has_global_flag = the_planemeld_flag
+		owns = 1391
+		culture_group = orsimer_cg
+    }
+
+	mean_time_to_happen = {
+		days = 9125
+	}
+	
+	immediate = {
+	    set_country_flag = es_35_scenario.20_flag
+	}
+	
+	option = {
+		name = "es_35_scenario.20.a"
+		ai_chance = { factor = 100 }
+		define_ruler = {
+		    name = "Bazrag"
+            dynasty = "gro-Fharun"
+            adm = 7
+            dip = 5
+            mil = 6
+            age = 35
+		    culture = orsimer
+		    fixed = yes
+		}
+	}
+	
+	option = {
+		name = "es_35_scenario.20.b"
+		ai_chance = { factor = 100 }
+		add_stability = -1
+		define_ruler = {
+		    name = "(Regency Council)"
+		    adm = 0
+		    mil = 0
+		    dip = 0
+			fixed = yes
+		}
+	}
+	
+}
+
+### Xivilai Consort of Imperial City
+
+country_event = {
+	id = es_35_scenario.21
+	title = es_35_scenario.21.t
+	desc = es_35_scenario.21.d
+	picture = ES_IMPERIAL_EMPERESS_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_35_scenario.21_flag }
+		has_global_flag = the_planemeld_flag
+		owns = 1206
+    }
+
+	mean_time_to_happen = {
+		days = 9125
+	}
+	
+	immediate = {
+	    set_country_flag = es_35_scenario.21_flag
+	}
+	
+	option = {
+		name = "es_35_scenario.21.a"
+		ai_chance = { factor = 100 }
+		define_consort = {
+		    name = "Kena"
+            dynasty = "Molag"
+            adm = 7
+            dip = 7
+            mil = 7
+            age = 21
+		    culture = xivilai
+		    fixed = yes
+			female = yes
+		}
+	}
+	
+	option = {
+		name = "es_35_scenario.21.b"
+		ai_chance = { factor = 100 }
+		add_stability = -1
+	}
+	
+}

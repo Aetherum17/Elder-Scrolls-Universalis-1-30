@@ -338,7 +338,7 @@ country_event = {
 	    NOT = { has_country_flag = es_30_scenario.8_flag }
 		is_year = 1387
 		NOT = { is_year = 1410 }
-		is_free_or_tributary_trigger = no
+		NOT = { is_free_or_tributary_trigger = yes }
 		owns = 1299
     }
 

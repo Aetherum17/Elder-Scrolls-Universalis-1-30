@@ -23,6 +23,8 @@ country_event = {
 	
 	immediate = {
 	    set_country_flag = es_5_scenario.1_flag
+		
+		every_country = { limit = { owns = 1206 ai = no NOT = { culture_group = high_elves_cg } NOT = { culture_group = cyrodiil_cg } } country_event = { id = es_news.39 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
 
 	option = {
@@ -145,6 +147,8 @@ country_event = {
 	
 	immediate = {
 	    set_country_flag = es_5_scenario.3_flag
+		
+		every_country = { limit = { owns = 1206 ai = no } country_event = { id = es_news.40 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
 
 	option = {

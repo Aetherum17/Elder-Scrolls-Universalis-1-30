@@ -591,9 +591,70 @@ country_event = {
 		}
 		add_treasury = 2500
 		}
+		random_country = {
+		    limit = {
+			    culture_group = orsimer_cg
+				owns = 1391
+			}
+			country_event = { id = es_21_scenario.40 days = 31 tooltip = es_collapse.3.a.tt }
+		}
 	}
 	
 }
+
+country_event = {
+	id = es_21_scenario.40
+	title = es_21_scenario.40.t
+	desc = es_21_scenario.40.d
+	picture = ES_ORSINIUM_2_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "es_21_scenario.40.a"
+		ai_chance = { factor = 33 }
+		add_stability = -1
+		
+		add_legitimacy = -75
+		add_republican_tradition = -75
+		add_devotion = -75
+		add_horde_unity = -75
+		add_meritocracy = -75
+	}
+	
+	option = {
+		name = "es_21_scenario.40.b"
+		ai_chance = { factor = 33 }
+		add_stability = -1
+		kill_heir = yes
+		define_ruler = {
+		    name = "(Regency Council)"
+		    adm = 0
+		    mil = 0
+		    dip = 0
+			fixed = yes
+		}
+	}
+	
+	option = {
+		name = "es_21_scenario.40.c"
+		ai_chance = { factor = 33 }
+		add_stability = -1
+		kill_heir = yes
+		define_ruler = {
+		   name = "Muzkul"
+		   dynasty = "gro-Bagrakh"
+		   adm = 4
+		   dip = 5
+		   mil = 3
+		   culture = orsimer
+		   age = 30
+		}
+	}
+	
+}
+
+
 
 country_event = {
 	id = es_21_scenario.5

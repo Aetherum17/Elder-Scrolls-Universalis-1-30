@@ -161,3 +161,22 @@ all_towers_united = {
 	global_missionary_strength = 0.01
 	prestige_decay = -0.01
 }
+
+#######################################################################
+
+subject_in_war = {
+	potential = {
+		NOT = { is_free_or_tributary_trigger = yes }
+	}
+
+	trigger = {
+		NOT = { is_free_or_tributary_trigger = yes }
+		is_at_war = yes
+	}
+
+	discipline = -0.10
+	recover_army_morale_speed = -0.10
+	recover_navy_morale_speed = -0.10
+	land_morale = -0.25
+	naval_morale = -0.25
+}

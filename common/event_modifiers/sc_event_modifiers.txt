@@ -1061,6 +1061,26 @@ blackrose_prison = {
 	local_unrest = 2.5
 }
 
+35_loyal_army = {
+    global_manpower_modifier = 0.25
+	manpower_recovery_speed = 0.25
+	land_maintenance_modifier = 0.25
+}
+
+35_captain_rana = {
+    local_development_cost = -1.0
+	local_defensiveness = 1.0
+	local_hostile_attrition = 1
+}
+
+35_winterborn_clan = {
+    global_manpower_modifier = 0.25
+	manpower_recovery_speed = 0.15
+	army_tradition_decay = -0.01
+	core_creation = 0.10
+	global_spy_defence = -0.15
+}
+
 00_isolation = {
     diplomatic_reputation = -2.5
 	ae_impact = 0.25
