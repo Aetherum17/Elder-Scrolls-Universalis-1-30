@@ -43,6 +43,7 @@ country_event = {
 		if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
 		if = { limit = { NOT = { government_rank = 10 } } set_government_rank = 10 }
 		add_stability = 1
+		change_government = republic
 		if = {
 		    limit = { has_dlc = "Dharma" }
 			add_government_reform = bureaucratic_despotism_reform

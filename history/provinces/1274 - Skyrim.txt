@@ -17,3 +17,11 @@ discovered_by = tamriel_tg discovered_by = elsweyr_tg discovered_by = marshan_tg
 	controller = SKY
 	add_core = SKY
 }
+
+1668.1.1 = {
+    add_building = fort_15th
+	add_province_modifier = {
+	    name = "35_captain_rana"
+		duration = -1
+	}
+}

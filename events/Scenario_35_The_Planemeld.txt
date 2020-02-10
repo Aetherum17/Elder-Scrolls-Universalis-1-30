@@ -4,7 +4,7 @@ country_event = {
 	id = es_35_scenario.1
 	title = es_35_scenario.1.t
 	desc = es_35_scenario.1.d
-	picture = ES_REVOLUTION_1_eventPicture
+	picture = ES_EMPEROR_1_eventPicture
 	
 	trigger = {
 	    NOT = { has_country_flag = es_35_scenario.1_flag }
@@ -34,6 +34,7 @@ country_event = {
 		    name = "35_loyal_army"
 			duration = 9125
 		}
+		change_government = monarchy
 		if = {
 		    limit = { has_dlc = "Dharma" }
 			add_government_reform = autocracy_reform
@@ -75,7 +76,7 @@ country_event = {
 	id = es_35_scenario.2
 	title = es_35_scenario.2.t
 	desc = es_35_scenario.2.d
-	picture = ES_REVOLUTION_1_eventPicture
+	picture = ES_VAREN_AQUILARIUS_eventPicture
 	
 	trigger = {
 	    NOT = { has_country_flag = es_35_scenario.2_flag }
@@ -175,7 +176,7 @@ country_event = {
 	id = es_35_scenario.3
 	title = es_35_scenario.3.t
 	desc = es_35_scenario.3.d
-	picture = ES_REVOLUTION_1_eventPicture
+	picture = ES_AMULET_OF_KINGS_eventPicture
 	
 	trigger = {
 	    NOT = { has_country_flag = es_35_scenario.3_flag }
@@ -208,7 +209,7 @@ country_event = {
 	id = es_35_scenario.4
 	title = es_35_scenario.3.t
 	desc = es_35_scenario.3.d
-	picture = ES_REVOLUTION_1_eventPicture
+	picture = ES_AMULET_OF_KINGS_eventPicture
 	
 	is_triggered_only = yes
 	
@@ -227,7 +228,7 @@ country_event = {
 	id = es_35_scenario.5
 	title = es_35_scenario.5.t
 	desc = es_35_scenario.5.d
-	picture = ES_REVOLUTION_1_eventPicture
+	picture = ES_THE_PLANEMELD_eventPicture
 	
 	trigger = {
 	    NOT = { has_country_flag = es_35_scenario.5_flag }
@@ -260,7 +261,7 @@ country_event = {
 	id = es_35_scenario.6
 	title = es_35_scenario.5.t
 	desc = es_35_scenario.5.d
-	picture = ES_REVOLUTION_1_eventPicture
+	picture = ES_THE_PLANEMELD_eventPicture
 	
 	is_triggered_only = yes
 	
@@ -278,7 +279,7 @@ country_event = {
 	id = es_35_scenario.7
 	title = es_35_scenario.7.t
 	desc = es_35_scenario.7.d
-	picture = ES_REVOLUTION_1_eventPicture
+	picture = ES_FIVE_COMPANIONS_eventPicture
 	
 	is_triggered_only = yes
 	
@@ -295,7 +296,7 @@ country_event = {
 	id = es_35_scenario.8
 	title = es_35_scenario.8.t
 	desc = es_35_scenario.8.d
-	picture = ES_REVOLUTION_1_eventPicture
+	picture = ES_DAMAGED_WHITEGOLDTOWER_eventPicture
 	
 	trigger = {
 	    NOT = { has_country_flag = es_35_scenario.8_flag }
@@ -324,7 +325,7 @@ country_event = {
 	id = es_35_scenario.9
 	title = es_35_scenario.8.t
 	desc = es_35_scenario.8.d
-	picture = ES_REVOLUTION_1_eventPicture
+	picture = ES_DAMAGED_WHITEGOLDTOWER_eventPicture
 	
 	is_triggered_only = yes
 	
@@ -342,12 +343,13 @@ country_event = {
 	id = es_35_scenario.10
 	title = es_35_scenario.10.t
 	desc = es_35_scenario.10.d
-	picture = ES_REVOLUTION_1_eventPicture
+	picture = ES_HEARTLANDS_eventPicture
 	
 	trigger = {
 	    NOT = { has_country_flag = es_35_scenario.10_flag }
 		has_global_flag = the_planemeld_activation_flag
 		has_global_flag = three_alliences_flag
+		NOT = { owns = 1206 }
 		OR = {
 		    owns = 271
 			owns = 1369
@@ -450,7 +452,7 @@ country_event = {
 	id = es_35_scenario.11
 	title = es_35_scenario.11.t
 	desc = es_35_scenario.11.d
-	picture = ES_REVOLUTION_1_eventPicture
+	picture = DREMORAN_INVASION_eventPicture
 	
 	trigger = {
 		has_global_flag = the_planemeld_activation_flag
@@ -484,7 +486,7 @@ country_event = {
 	id = es_35_scenario.12
 	title = es_35_scenario.12.t
 	desc = es_35_scenario.12.d
-	picture = ES_REVOLUTION_1_eventPicture
+	picture = ES_BURNING_CITY_eventPicture
 	
 	trigger = {
 	    NOT = { has_country_flag = es_35_scenario.12_flag }
@@ -516,7 +518,7 @@ country_event = {
 	id = es_35_scenario.13
 	title = es_35_scenario.11.t
 	desc = es_35_scenario.11.d
-	picture = ES_REVOLUTION_1_eventPicture
+	picture = ES_BURNING_CITY_eventPicture
 	
 	hidden = yes
 	
@@ -547,7 +549,7 @@ country_event = {
 	id = es_35_scenario.14
 	title = es_35_scenario.14.t
 	desc = es_35_scenario.14.d
-	picture = ES_REVOLUTION_1_eventPicture
+	picture = ES_MOLAG_BAL_eventPicture
 	
 	trigger = {
 	    NOT = { has_country_flag = es_35_scenario.14_flag }
@@ -592,7 +594,7 @@ country_event = {
 	id = es_35_scenario.15
 	title = es_35_scenario.15.t
 	desc = es_35_scenario.15.d
-	picture = ES_REVOLUTION_1_eventPicture
+	picture = ES_HOLLOW_CITY_eventPicture
 	
 	trigger = {
 		has_global_flag = the_planemeld_activation_flag
@@ -639,7 +641,7 @@ country_event = {
 	id = es_35_scenario.16
 	title = es_35_scenario.16.t
 	desc = es_35_scenario.16.d
-	picture = ES_REVOLUTION_1_eventPicture
+	picture = ES_CAPTAIN_RANA_eventPicture
 	
 	trigger = {
 	    NOT = { has_country_flag = es_35_scenario.16_flag }
@@ -688,7 +690,7 @@ country_event = {
 	id = es_35_scenario.17
 	title = es_35_scenario.17.t
 	desc = es_35_scenario.17.d
-	picture = ES_REVOLUTION_1_eventPicture
+	picture = ES_DAEDRIC_ARTIFACT_1_eventPicture
 	
 	trigger = {
 	    NOT = { has_country_flag = es_35_scenario.17_flag }
@@ -729,7 +731,7 @@ country_event = {
 	id = es_35_scenario.18
 	title = es_35_scenario.18.t
 	desc = es_35_scenario.18.d
-	picture = ES_REVOLUTION_1_eventPicture
+	picture = ES_WINTERBORN_CLAN_eventPicture
 	
 	trigger = {
 	    NOT = { has_country_flag = es_35_scenario.18_flag }
@@ -854,7 +856,7 @@ country_event = {
 	id = es_35_scenario.19
 	title = es_35_scenario.19.t
 	desc = es_35_scenario.19.d
-	picture = ES_REVOLUTION_1_eventPicture
+	picture = ES_VOSH_RAKH_eventPicture
 	
 	trigger = {
 	    NOT = { has_country_flag = es_35_scenario.19_flag }
@@ -893,7 +895,7 @@ country_event = {
 	id = es_35_scenario.20
 	title = es_35_scenario.20.t
 	desc = es_35_scenario.20.d
-	picture = ES_REVOLUTION_1_eventPicture
+	picture = ES_DEAD_ORC_eventPicture
 	
 	trigger = {
 	    NOT = { has_country_flag = es_35_scenario.20_flag }
