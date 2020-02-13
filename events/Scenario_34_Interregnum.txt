@@ -22,10 +22,38 @@ country_event = {
 			any_country = {
 			    owns = 1206
 				NOT = { stability = 0 }
-				NOT = { legitimacy = 35 }
-			}
-			}
-			exists = POE
+				OR = {
+		        AND = {
+		        government = monarchy
+		        NOT = { legitimacy = 35 }
+		        }
+		        AND = {
+		        government = republic
+		        NOT = { republican_tradition = 35 }
+		        }
+		        AND = {
+		        government = theocracy
+		        has_dlc = "Common Sense"
+		        NOT = { devotion = 35 }
+		        }
+		        AND = {
+		        is_nomad = yes
+		        has_dlc = "The Cossacks"
+		        NOT = { horde_unity = 35 }
+		        }
+		        AND = {
+		        is_nomad = yes
+		        NOT = { has_dlc = "The Cossacks" }
+		        NOT = { legitimacy = 35 }
+		        }
+		        AND = {
+		        is_emperor_of_china = yes
+		        NOT = { meritocracy = 35 }
+		        }
+		        }
+		    }
+		    }
+		exists = POE
 		}
 		any_country = {
 		    owns_or_subject_of = 271		
@@ -1538,12 +1566,33 @@ country_event = {
 	
 	trigger = {
 		OR = {
-	    NOT = { legitimacy = 25 }
+		AND = {
+		government = monarchy
+		NOT = { legitimacy = 25 }
+		}
+		AND = {
+		government = republic
 		NOT = { republican_tradition = 25 }
+		}
+		AND = {
+		government = theocracy
+		has_dlc = "Common Sense"
 		NOT = { devotion = 25 }
+		}
+		AND = {
+		is_nomad = yes
+		has_dlc = "The Cossacks"
 		NOT = { horde_unity = 25 }
+		}
+		AND = {
+		is_nomad = yes
+		NOT = { has_dlc = "The Cossacks" }
+		NOT = { legitimacy = 25 }
+		}
+		AND = {
+		is_emperor_of_china = yes
 		NOT = { meritocracy = 25 }
-		NOT = { stability = -2 }
+		}
 		}
 		any_subject_country = {
 		    is_subject_of_type = imperial_subject
