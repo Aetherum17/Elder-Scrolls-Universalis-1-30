@@ -29,14 +29,6 @@
 
 
 # Forward declaring all subject types so they can refer to each other in triggers etc.
-vassal = {}
-march = {}
-daimyo_vassal = {}
-personal_union = {}
-client_vassal = {}
-client_march = {}
-colony = {}
-tributary_state = {}
 
 default = {
 	# Graphics:
@@ -163,6 +155,156 @@ default = {
 	subject_opinion_modifier = null
 }
 
+personal_union = {
+	copy_from = default
+
+	# Graphics:
+	sprite = GFX_court_union
+	diplomacy_overlord_sprite = GFX_diplomacy_leadunions
+	diplomacy_subject_sprite = GFX_diplomacy_inunion
+
+	# Properties:
+	has_overlords_ruler = yes
+	can_be_integrated = yes
+	overlord_can_attack = no
+	has_power_projection = no
+	gets_help_with_rebels = yes
+	can_have_subjects_of_other_types = yes
+	can_union_break = yes
+	transfer_subjects_when_made = no
+
+	liberty_desire_negative_prestige = 1.0
+	military_focus = 0.66
+
+	relative_power_class = 1
+
+	restoration_cb = cb_restore_personal_union
+	
+	# Subject Interactions:
+	placate_rulers = no
+	enforce_culture = yes
+	siphon_income = yes
+	support_loyalists = yes
+	
+	scutage = yes
+	divert_trade = yes
+	seize_territory = yes
+	
+	subsidize_armies = yes
+	
+	send_officers = yes
+
+	# Modifiers:
+	modifier_overlord = {
+		modifier = union_subject
+	}
+
+	overlord_opinion_modifier = in_union
+	subject_opinion_modifier = in_union
+}
+
+march = {
+	copy_from = default
+	
+	# Graphics:
+	sprite = GFX_icon_march
+	diplomacy_overlord_sprite = GFX_diplomacy_leadmarch
+	diplomacy_subject_sprite = GFX_diplomacy_weakmarch
+
+	# Properties:
+	transfer_trade_if_merchant_republic = yes
+	can_be_annexed = no
+	
+	has_power_projection = yes
+	takes_diplo_slot = no
+	gets_help_with_rebels = yes
+	
+	sword_hunt = yes
+	sankin_kotai = yes
+	expel_ronin = yes
+
+	base_liberty_desire = -9999
+	pays_overlord = 0.5
+	forcelimit_bonus = 1.0
+	forcelimit_to_overlord = 0
+	
+	relative_power_class = 1
+	
+	can_marry = {
+		same_overlord = vassal
+		same_overlord = march
+		same_overlord = imperial_subject
+	}
+
+	# Subject Interactions:
+	
+	scutage = yes
+	place_relative_on_throne = yes
+	sacrifice_ruler = yes
+	sacrifice_heir = yes
+	divert_trade = yes
+	seize_territory = yes
+	
+	force_seppuku = yes
+	contribute_to_capital = yes
+	return_land = yes
+	conscript_general = yes
+	
+	subsidize_armies = yes
+	fortify_march = yes
+	
+	send_officers = yes
+
+	# Modifiers:
+	modifier_overlord = clear #We don't want to duplicate the ones inherited from vassal
+	modifier_subject = clear #Ditto
+	modifier_subject = {
+		modifier = subject_nation
+	}
+	modifier_overlord = {
+		modifier = march_subject
+	}
+	modifier_subject = {
+		modifier = march_bonus
+		trigger = {
+			NOT = {
+				development_of_overlord_fraction = 0.25
+			}
+		}
+		expiration_message_overlord = MARCHTOOLARGE
+		expiration_message_subject = MARCHTOOLARGEUS
+	}
+}
+
+holy_order_1 = {
+	copy_from = march
+	
+	# Graphics:
+	sprite = GFX_icon_march
+	diplomacy_overlord_sprite = GFX_diplomacy_leadmarch
+	diplomacy_subject_sprite = GFX_diplomacy_weakmarch
+
+	# Modifiers:
+	modifier_overlord = clear #We don't want to duplicate the ones inherited from vassal
+	modifier_subject = clear #Ditto
+	modifier_subject = {
+		modifier = subject_nation
+	}
+	modifier_overlord = {
+		modifier = march_subject
+	}
+	modifier_subject = {
+		modifier = march_bonus
+		trigger = {
+			NOT = {
+				development_of_overlord_fraction = 0.25
+			}
+		}
+		expiration_message_overlord = MARCHTOOLARGE
+		expiration_message_subject = MARCHTOOLARGEUS
+	}
+}
+
 vassal = {
 	copy_from = default
 	
@@ -252,43 +394,44 @@ vassal = {
 	subject_opinion_modifier = is_vassal
 }
 
-daimyo_vassal = {
-	copy_from = vassal
-	count = vassal
-	
-	# Graphics:
-	sprite = GFX_icon_vassal
-	diplomacy_overlord_sprite = GFX_diplomacy_leadvassal
-	diplomacy_subject_sprite = GFX_diplomacy_amvassal
-}
-
-march = {
+imperial_subject = {
 	copy_from = default
 	
 	# Graphics:
-	sprite = GFX_icon_march
-	diplomacy_overlord_sprite = GFX_diplomacy_leadmarch
-	diplomacy_subject_sprite = GFX_diplomacy_weakmarch
+	sprite = GFX_court_union
+	diplomacy_overlord_sprite = GFX_diplomacy_leadunions
+	diplomacy_subject_sprite = GFX_diplomacy_inunion
 
 	# Properties:
-	transfer_trade_if_merchant_republic = yes
 	can_be_annexed = no
-	
-	has_power_projection = yes
+	can_be_integrated = no
+	has_power_projection = no
 	takes_diplo_slot = no
 	gets_help_with_rebels = yes
+	can_have_subjects_of_other_types = yes
+	can_union_break = yes
+	
+	liberty_desire_negative_prestige = 1.0
+	
+	joins_overlords_wars = no
+	joins_colonial_wars = no
+	is_voluntary = yes
 	
 	sword_hunt = yes
 	sankin_kotai = yes
 	expel_ronin = yes
 
-	base_liberty_desire = -9999
+	base_liberty_desire = -100
 	pays_overlord = 0.5
 	forcelimit_bonus = 1.0
 	forcelimit_to_overlord = 0
 	
 	relative_power_class = 1
 	
+	can_ally = {
+		same_overlord = imperial_subject
+		same_overlord = march
+	}
 	can_marry = {
 		same_overlord = vassal
 		same_overlord = march
@@ -304,75 +447,14 @@ march = {
 	divert_trade = yes
 	seize_territory = yes
 	
-	force_seppuku = yes
-	contribute_to_capital = yes
-	return_land = yes
-	conscript_general = yes
-	
-	subsidize_armies = yes
-	fortify_march = yes
-	
-	send_officers = yes
-
-	# Modifiers:
-	modifier_overlord = clear #We don't want to duplicate the ones inherited from vassal
-	modifier_subject = clear #Ditto
-	modifier_subject = {
-		modifier = subject_nation
-	}
-	modifier_overlord = {
-		modifier = march_subject
-	}
-	modifier_subject = {
-		modifier = march_bonus
-		trigger = {
-			NOT = {
-				development_of_overlord_fraction = 0.25
-			}
-		}
-		expiration_message_overlord = MARCHTOOLARGE
-		expiration_message_subject = MARCHTOOLARGEUS
-	}
-}
-
-personal_union = {
-	copy_from = default
-
-	# Graphics:
-	sprite = GFX_court_union
-	diplomacy_overlord_sprite = GFX_diplomacy_leadunions
-	diplomacy_subject_sprite = GFX_diplomacy_inunion
-
-	# Properties:
-	has_overlords_ruler = yes
-	can_be_integrated = yes
-	overlord_can_attack = no
-	has_power_projection = no
-	gets_help_with_rebels = yes
-	can_have_subjects_of_other_types = yes
-	can_union_break = yes
-	transfer_subjects_when_made = yes
-
-	liberty_desire_negative_prestige = 1.0
-	military_focus = 0.66
-
-	relative_power_class = 1
-
-	restoration_cb = cb_restore_personal_union
-	
-	# Subject Interactions:
-	placate_rulers = no
 	enforce_culture = yes
 	siphon_income = yes
 	support_loyalists = yes
 	
-	scutage = yes
-	divert_trade = yes
-	seize_territory = yes
-	
-	subsidize_armies = yes
-	
-	send_officers = yes
+	force_seppuku = yes
+	contribute_to_capital = yes
+	return_land = yes
+	conscript_general = yes
 
 	# Modifiers:
 	modifier_overlord = {
@@ -382,41 +464,6 @@ personal_union = {
 	overlord_opinion_modifier = in_union
 	subject_opinion_modifier = in_union
 }
-
-client_vassal = {
-	copy_from = vassal
-	count = vassal
-	
-	# Graphics:
-	diplomacy_overlord_sprite = GFX_diplomacy_leadclients
-	diplomacy_subject_sprite = GFX_diplomacy_areclients
-
-	# Properties:
-	created_by_overlord = yes
-
-	# Subject Interactions:
-	customize_subject = yes
-}
-
-client_march = {
-	copy_from = march
-	count = march
-
-	# Graphics:
-	diplomacy_overlord_sprite = GFX_diplomacy_leadclients
-	diplomacy_subject_sprite = GFX_diplomacy_areclients
-
-	# Properties:
-	created_by_overlord = yes
-
-	base_liberty_desire = -9999.0
-	pays_overlord = 1.0
-	forcelimit_bonus = 2.5
-
-	# Subject Interactions:
-	customize_subject = yes
-}
-
 
 colony = {
 	copy_from = default
@@ -480,6 +527,17 @@ colony = {
 
 	overlord_opinion_modifier = colonial_relation
 	subject_opinion_modifier = colonial_relation
+}
+
+native_reservation = {
+	copy_from = march
+	
+	# Graphics:
+	sprite = GFX_icon_federation
+	diplomacy_overlord_sprite = GFX_diplomacy_federation
+	diplomacy_subject_sprite = GFX_diplomacy_federation
+	
+	pays_overlord = 3.5
 }
 
 tributary_state = {
@@ -597,44 +655,48 @@ tributary_state = {
 	}
 }
 
-native_reservation = {
-	copy_from = march
+
+
+#######################################################################
+
+daimyo_vassal = {
+	copy_from = vassal
+	count = vassal
 	
 	# Graphics:
-	sprite = GFX_icon_federation
-	diplomacy_overlord_sprite = GFX_diplomacy_federation
-	diplomacy_subject_sprite = GFX_diplomacy_federation
-	
-	pays_overlord = 3.5
+	sprite = GFX_icon_vassal
+	diplomacy_overlord_sprite = GFX_diplomacy_leadvassal
+	diplomacy_subject_sprite = GFX_diplomacy_amvassal
 }
 
-holy_order_1 = {
-	copy_from = march
+client_vassal = {
+	copy_from = vassal
+	count = vassal
 	
 	# Graphics:
-	sprite = GFX_icon_march
-	diplomacy_overlord_sprite = GFX_diplomacy_leadmarch
-	diplomacy_subject_sprite = GFX_diplomacy_weakmarch
+	diplomacy_overlord_sprite = GFX_diplomacy_leadclients
+	diplomacy_subject_sprite = GFX_diplomacy_areclients
 
-	# Modifiers:
-	modifier_overlord = clear #We don't want to duplicate the ones inherited from vassal
-	modifier_subject = clear #Ditto
-	modifier_subject = {
-		modifier = subject_nation
-	}
-	modifier_overlord = {
-		modifier = march_subject
-	}
-	modifier_subject = {
-		modifier = march_bonus
-		trigger = {
-			NOT = {
-				development_of_overlord_fraction = 0.25
-			}
-		}
-		expiration_message_overlord = MARCHTOOLARGE
-		expiration_message_subject = MARCHTOOLARGEUS
-	}
+	# Properties:
+	created_by_overlord = yes
+
+	# Subject Interactions:
+	customize_subject = yes
+}
+
+client_march = {
+	copy_from = march
+	count = march
+
+	# Graphics:
+	diplomacy_overlord_sprite = GFX_diplomacy_leadclients
+	diplomacy_subject_sprite = GFX_diplomacy_areclients
+
+	# Properties:
+	created_by_overlord = yes
+
+	# Subject Interactions:
+	customize_subject = yes
 }
 
 transitional_state = {
@@ -654,77 +716,6 @@ transitional_state = {
 
 	overlord_opinion_modifier = is_vassal
 	subject_opinion_modifier = is_vassal
-}
-
-imperial_subject = {
-	copy_from = default
-	
-	# Graphics:
-	sprite = GFX_court_union
-	diplomacy_overlord_sprite = GFX_diplomacy_leadunions
-	diplomacy_subject_sprite = GFX_diplomacy_inunion
-
-	# Properties:
-	can_be_annexed = no
-	can_be_integrated = no
-	has_power_projection = no
-	takes_diplo_slot = no
-	gets_help_with_rebels = yes
-	can_have_subjects_of_other_types = yes
-	can_union_break = yes
-	
-	liberty_desire_negative_prestige = 1.0
-	
-	joins_overlords_wars = no
-	joins_colonial_wars = no
-	is_voluntary = yes
-	
-	sword_hunt = yes
-	sankin_kotai = yes
-	expel_ronin = yes
-
-	base_liberty_desire = -100
-	pays_overlord = 0.5
-	forcelimit_bonus = 1.0
-	forcelimit_to_overlord = 0
-	
-	relative_power_class = 1
-	
-	can_ally = {
-		same_overlord = imperial_subject
-		same_overlord = march
-	}
-	can_marry = {
-		same_overlord = vassal
-		same_overlord = march
-		same_overlord = imperial_subject
-	}
-
-	# Subject Interactions:
-	
-	scutage = yes
-	place_relative_on_throne = yes
-	sacrifice_ruler = yes
-	sacrifice_heir = yes
-	divert_trade = yes
-	seize_territory = yes
-	
-	enforce_culture = yes
-	siphon_income = yes
-	support_loyalists = yes
-	
-	force_seppuku = yes
-	contribute_to_capital = yes
-	return_land = yes
-	conscript_general = yes
-
-	# Modifiers:
-	modifier_overlord = {
-		modifier = union_subject
-	}
-
-	overlord_opinion_modifier = in_union
-	subject_opinion_modifier = in_union
 }
 
 # Completely scripted subject type (no code used). Add any number of these. Check common/new_diplomatic_actions for how to make visible in game.

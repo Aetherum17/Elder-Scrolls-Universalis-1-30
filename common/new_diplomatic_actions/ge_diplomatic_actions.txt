@@ -240,14 +240,14 @@ create_personal_union = {
 	}
 	is_allowed = {
 	NOT = { has_country_modifier = ge_2_timer }
+	num_of_cities = FROM
+	prestige = FROM
     FROM = {
 	ai = yes
 	has_opinion = {
 	who = ROOT
 	value = 190
     }
-	num_of_cities = FROM
-	prestige = FROM
 	dynasty = ROOT
 	government = monarchy
 	NOT = { is_subject_of_type = personal_union }

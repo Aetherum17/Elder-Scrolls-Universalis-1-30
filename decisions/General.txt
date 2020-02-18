@@ -101,7 +101,7 @@ country_decisions = {
             mil_power = 100
 		}
 		effect = {
-			add_adm_power = 200
+			add_adm_power = 150
             add_dip_power = -100
             add_mil_power = -100
 		}
@@ -118,7 +118,7 @@ country_decisions = {
 		}
 		effect = {
 			add_adm_power = -100
-            add_dip_power = 200
+            add_dip_power = 150
             add_mil_power = -100
 		}
 	}
@@ -135,7 +135,7 @@ country_decisions = {
 		effect = {
 			add_adm_power = -100
             add_dip_power = -100
-            add_mil_power = 200
+            add_mil_power = 150
 		}
 	}
 	
@@ -146,10 +146,10 @@ country_decisions = {
 			num_of_ports = 1
 		}
 		allow = {
-			dip_power = 100
+			dip_power = 150
 		}
 		effect = {
-        add_dip_power = -100
+        add_dip_power = -150
 		add_sailors = 500
 		}
 	}
@@ -160,10 +160,10 @@ country_decisions = {
 			has_country_modifier = points_1
 		}
 		allow = {
-			mil_power = 100
+			mil_power = 150
 		}
 		effect = {
-        add_mil_power = -100
+        add_mil_power = -150
 		add_manpower = 5
 		}
 	}

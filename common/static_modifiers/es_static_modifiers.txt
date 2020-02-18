@@ -697,6 +697,7 @@ war = {
 	global_regiment_recruit_speed = -0.25
 	reinforce_speed = 0.25
 	production_efficiency = -0.25
+	monthly_militarized_society = 0.1
 	
 	es_warriors_influence = 0.1
 	es_knights_influence = 0.1
@@ -779,7 +780,7 @@ trade_refusal = {
 }
 
 mercantilism = {
-	global_prov_trade_power_modifier = 0.025
+	global_prov_trade_power_modifier = 0.010
 	embargo_efficiency = 0.005
 }
 
@@ -873,7 +874,7 @@ num_of_marriages = {
 }
 
 num_of_provinces = {
-	monthly_militarized_society = -0.005
+	monthly_militarized_society = -0.003
 }
 
 country_development = {
@@ -1164,6 +1165,7 @@ high_army_professionalism = {
 	fire_damage = 0.1
 	shock_damage = 0.1
 	siege_ability = 0.25
+	monthly_militarized_society = 0.1
 }
 
 streltsy_modifier = {

@@ -96,7 +96,7 @@ type={
 		name="orichalc_tower"
 		hidden_on_start=no
 		position={
-			171.000 18.500 1759.000 
+			223.000 18.500 1722.000 
 		}
 		rotation={
 			0.000 90.000 0.000 
@@ -112,7 +112,7 @@ type={
 		name="crystal_tower"
 		hidden_on_start=no
 		position={
-			588.000 19.000 1298.000 
+			569.000 19.000 1307.000 
 		}
 		rotation={
 			0.000 90.000 0.000 
@@ -1905,13 +1905,33 @@ type={
 type={
 	type="nammi2_hagia_sophia_entity"
 	use_animation=no
-	scale=0.260000
+	scale=0.500000
 	time_duration=300.000000
 	object={
 		name="hagia_sophia"
 		hidden_on_start=no
 		position={
-			427.000 -0.100 1171.000 
+			1317.000 -0.100 1199.000 
+		}
+		rotation={
+			0.000 -30.000 0.000 
+		}
+	}
+	object={
+		name="hagia_sophia"
+		hidden_on_start=no
+		position={
+			3279.000 -0.100 1648.000 
+		}
+		rotation={
+			0.000 -30.000 0.000 
+		}
+	}
+	object={
+		name="hagia_sophia"
+		hidden_on_start=no
+		position={
+			432.000 -0.100 1151.000 
 		}
 		rotation={
 			0.000 -30.000 0.000 
