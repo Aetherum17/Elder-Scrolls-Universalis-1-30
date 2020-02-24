@@ -165,14 +165,6 @@ ge_1_unrest = {
  local_unrest = 25
 }
 
-ge_1_timer = {
- diplomatic_annexation_cost = 1.0
- improve_relation_modifier = -1.0
- diplomatic_reputation = -5
- culture_conversion_cost = 1.0
- harsh_treatment_cost = 1.0
-}
-
 ge_2_timer = {
  diplomatic_annexation_cost = 1.0
  culture_conversion_cost = 1.0
@@ -180,4 +172,27 @@ ge_2_timer = {
 }
 
 ge_3_timer = {
+}
+
+ai_holy_order = {
+}
+
+ai_personal_union = {
+}
+
+ai_native_reservation = {
+}
+
+ai_imperial_subject = {
+}
+
+ai_alliance_member = {
+}
+
+war_for_independence = {
+    liberty_desire = 100
+	land_forcelimit = 0.5
+	land_morale = 0.25
+	naval_morale = 0.15
+	discipline = 0.10
 }

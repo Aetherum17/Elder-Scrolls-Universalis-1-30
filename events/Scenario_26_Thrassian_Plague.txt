@@ -254,19 +254,10 @@ province_event = {
 	picture = ES_ElSWEYR_eventPicture
 	
 	trigger = {
-	    region = eldweyr_lr
+	    region = anequina_lr
 		culture = khajiiti
 		NOT = { owned_by = ELS }
 		has_global_flag = thrassian_plague_flag
-		OR = {
-		area = eldweyr_1_la
-		area = eldweyr_2_la
-		area = eldweyr_3_la
-		area = eldweyr_4_la
-		area = eldweyr_5_la
-		area = eldweyr_6_la
-		area = eldweyr_7_la
-		}
     }
 
 	mean_time_to_happen = {
@@ -295,18 +286,10 @@ province_event = {
 	picture = ES_ElSWEYR_eventPicture
 	
 	trigger = {
-	    region = eldweyr_lr
+	    region = pelletine_lr
 		culture = khajiiti
 		NOT = { owned_by = ELS }
 		has_global_flag = thrassian_plague_flag
-		OR = {
-		area = eldweyr_8_la
-		area = eldweyr_9_la
-		area = eldweyr_10_la
-		area = eldweyr_11_la
-		area = eldweyr_12_la
-		area = eldweyr_13_la
-		}
     }
 
 	mean_time_to_happen = {

@@ -265,7 +265,10 @@ country_event = {
 			}
 	    every_province = {
 		    limit = {
-		        region = eldweyr_lr
+			    OR = {
+		        region = anequina_lr
+				region = pelletine_lr
+				}
 			}
 			add_province_modifier = {
 				name = sand_storm
@@ -275,7 +278,10 @@ country_event = {
 		every_country = {
 			limit = {
 			    any_owned_province = {
-				    region = eldweyr_lr
+				    OR = {
+		            region = anequina_lr
+				    region = pelletine_lr
+				    }
 				}
 			}
 			country_event = { id = es_terrain.2 days = 31 tooltip = es_terrain.2.a.tt }
@@ -545,7 +551,10 @@ country_event = {
 			}
 	    every_province = {
 		    limit = {
-		        region = valenwood_lr
+		        OR = {
+				    region = southern_valenwood_lr
+					region = northern_valenwood_lr
+				}
 			}
 			add_province_modifier = {
 				name = floods
@@ -555,7 +564,10 @@ country_event = {
 		every_country = {
 			limit = {
 			    any_owned_province = {
-				    region = valenwood_lr
+				    OR = {
+				    region = southern_valenwood_lr
+					region = northern_valenwood_lr
+				    }
 				}
 			}
 			country_event = { id = es_terrain.12 days = 31 tooltip = es_terrain.12.a.tt }
@@ -642,7 +654,7 @@ country_event = {
 				    OR = { region = western_atmora_lr region = eastern_atmora_lr region = central_atmora_lr }
 				}
 			}
-			country_event = { id = es_terrain.12 days = 31 tooltip = es_terrain.12.a.tt }
+			country_event = { id = es_terrain.18 days = 31 tooltip = es_terrain.12.a.tt }
 		}
 	}
 }
@@ -690,7 +702,7 @@ country_event = {
 				    }
 				}
 			}
-			country_event = { id = es_terrain.12 days = 31 tooltip = es_terrain.12.a.tt }
+			country_event = { id = es_terrain.18 days = 31 tooltip = es_terrain.12.a.tt }
 		}
 	}
 }
@@ -732,7 +744,21 @@ country_event = {
 				    OR = { region = upper_tsakara_lr region = northern_islands_lr }
 				}
 			}
-			country_event = { id = es_terrain.12 days = 31 tooltip = es_terrain.12.a.tt }
+			country_event = { id = es_terrain.18 days = 31 tooltip = es_terrain.12.a.tt }
 		}
+	}
+}
+
+country_event = {
+	id = es_terrain.18
+	title = "es_terrain.16.t"
+	desc = "es_terrain.16.d"
+	picture = TERRAIN_ICE_AGE_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "es_terrain.16.a"
+		ai_chance = { factor = 100 }
 	}
 }

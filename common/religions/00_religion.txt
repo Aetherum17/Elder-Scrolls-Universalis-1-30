@@ -107,8 +107,6 @@ polytheistic_group = {
 		
 		personal_deity = yes
 		
-		hre_heretic_religion = yes
-		
 		heretic = { EIGHT_DIVINES_HERETIC }	
 	}
 	
@@ -128,8 +126,6 @@ polytheistic_group = {
 		}
 		
 		personal_deity = yes
-		
-		hre_religion = yes
 		
 		heretic = { NINE_DIVINES_HERETIC }	
 	}
@@ -1274,6 +1270,8 @@ harmony_group = {
 		heretic = { UNKNOWN_HERETIC }	
 		
 		uses_harmony = yes
+		
+		hre_religion = yes
 	}
 	
 	crusade_name = CRUSADE

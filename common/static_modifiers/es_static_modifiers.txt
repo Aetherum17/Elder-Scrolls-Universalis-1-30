@@ -497,9 +497,9 @@ base_values = {
 	diplomats = 2							
 	missionaries = 1	
     colonists = 0
-	army_tradition_decay = 0.05				
-	navy_tradition_decay = 0.05				
-	prestige_decay = 0.05
+	army_tradition_decay = 0.075				
+	navy_tradition_decay = 0.075			
+	prestige_decay = 0.075
 	tolerance_own = 3
 	diplomatic_upkeep = 3
 	tolerance_heathen = -5
@@ -556,11 +556,11 @@ positive_stability = {
 	es_warriors_influence = 0.025
 	es_knights_influence = 0.025
 	
-	legitimacy = 0.33
-	republican_tradition = 0.33
-	devotion = 0.33
-    horde_unity = 0.33
-	meritocracy = 0.33
+	legitimacy = 0.25
+	republican_tradition = 0.25
+	devotion = 0.25
+    horde_unity = 0.25
+	meritocracy = 0.25
 }
 
 privateering = {
@@ -586,11 +586,11 @@ negative_stability = {
 	es_warriors_influence = 0.025
 	es_knights_influence = 0.025
 	
-	legitimacy = 2.5
-	republican_tradition = 2.5
-	devotion = 2.5
-    horde_unity = 2.5
-	meritocracy = 2.5
+	legitimacy = 1.5
+	republican_tradition = 1.5
+	devotion = 1.5
+    horde_unity = 1.5
+	meritocracy = 1.5
 }
 
 positive_mandate = {	# 100% strength at 100 mandate, 0% at 50 mandate

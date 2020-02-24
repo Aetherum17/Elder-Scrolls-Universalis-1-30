@@ -626,9 +626,13 @@ country_event = {
 		is_year = 939
 		NOT = { is_year = 1609 }
 		any_owned_province = {
-		    region = valenwood_lr
+		    OR = {
+			region = northern_valenwood_lr 
+			region = southern_valenwood_lr 
+			}
 		}
 		NOT = { culture_group = bosmer_cg }
+		NOT = { primary_culture = hollow }
 		NOT = { culture_group = orsimer_cg } 
 		NOT = { culture_group = imga_cg } 
     }
@@ -656,7 +660,10 @@ country_event = {
 		}
 		every_owned_province = {
 		    limit = {
-			    region = valenwood_lr
+			    OR = {
+			    region = northern_valenwood_lr 
+			    region = southern_valenwood_lr 
+			    }
 			}
 			add_core = VAL
 			add_province_modifier = {

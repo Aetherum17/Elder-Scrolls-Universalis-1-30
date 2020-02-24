@@ -1328,7 +1328,10 @@ country_event = {
 		ai_chance = { factor = 33 }
 		every_province = {
 		    limit = {
-			    region = eldweyr_lr
+			    OR = {
+			    region = anequina_lr
+				region = pelletine_lr
+				}
 			}
 			add_permanent_claim = ROOT
 		}
