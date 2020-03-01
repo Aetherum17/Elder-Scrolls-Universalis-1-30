@@ -257,10 +257,8 @@ march = {
 	send_additional_troops = yes
 	force_seppuku = yes
 	press_sailors = yes
-	contribute_to_capital = yes
 	force_isolation = yes
 	return_land = yes
-	conscript_general = yes	
 
 	# Modifiers:
 	modifier_overlord = clear #We don't want to duplicate the ones inherited from vassal
@@ -351,10 +349,8 @@ holy_order_1 = {
 	send_additional_troops = yes
 	force_seppuku = yes
 	press_sailors = yes
-	contribute_to_capital = yes
 	force_isolation = yes
 	return_land = yes
-	conscript_general = yes	
 
 	# Modifiers:
 	modifier_overlord = clear #We don't want to duplicate the ones inherited from vassal
@@ -438,11 +434,8 @@ vassal = {
 	send_additional_troops = yes
 	force_seppuku = yes
 	press_sailors = yes
-	contribute_to_capital = yes
 	force_isolation = yes
 	return_land = yes
-	conscript_general = yes	
-
 	# Modifiers:
 	modifier_subject = {
 		modifier = vassal_nation
@@ -730,6 +723,8 @@ tributary_state = {
 			is_subject_of_type = tributary_state
 		}
 		OR = {
+		    is_emperor = yes
+			is_emperor_of_china = yes
 			has_reform = celestial_empire
 			has_reform = celestial_empire_legacy
 			is_nomad = yes
@@ -795,9 +790,7 @@ tributary_state = {
 	demand_artifacts = yes
 	demand_additional_tribute = yes
 	press_sailors = yes
-	contribute_to_capital = yes
 	return_land = yes
-	conscript_general = yes	
 
 	# Modifiers:
 	modifier_subject = clear # Tributaries don't get the ordinary subject_nation penalty 
@@ -888,9 +881,7 @@ alliance_member = {
 	send_additional_troops = yes
 	demand_artifacts = yes
 	press_sailors = yes
-	contribute_to_capital = yes
 	return_land = yes
-	conscript_general = yes	
 }
 
 #######################################################################

@@ -157,7 +157,7 @@ NDefines.NDiplomacy.AE_ATTACKER_DEVELOPMENT = 0.01	-- +50% cap (at 1000 developm
 NDefines.NDiplomacy.AE_DEFENDER_DEVELOPMENT = 0.01	-- -50% cap (at 1000 development)
 NDefines.NDiplomacy.AE_DISTANCE_BASE = 0.75
 NDefines.NDiplomacy.AE_SAME_OVERLORD = 0.5
-NDefines.NDiplomacy.AE_PROVINCE_CAP = 30				-- Province development above this will not count for AE (also used for warscore cost cap)
+NDefines.NDiplomacy.AE_PROVINCE_CAP = 50				-- Province development above this will not count for AE (also used for warscore cost cap)
 NDefines.NDiplomacy.AE_THREATEN_WAR = 1.0 -- Peace Option Effects base values for the winner. The loser gets the inverse.
 NDefines.NDiplomacy.PO_DEMAND_PROVINCES_AE = 0.75 				-- _DDEF_PO_DEMAND_PROVINCES_AE = 10 (Per development)
 NDefines.NDiplomacy.PO_RETURN_CORES_AE = 0.5 					-- (Per core only applied if returning cores to vassals of winner)
@@ -471,12 +471,12 @@ NDefines.NCountry.REPUBLICAN_TRADITION_YEARLY_INCREASE = 1		-- how much it incre
 NDefines.NCountry.PIETY_PERCENTAGE_AT_NEW_RULER = 0.25			-- percentage of piety kept at new ruler.
 NDefines.NCountry.PIETY_INCREASE_AT_GOOD_WAR = 0.25
 NDefines.NCountry.PIETY_DECREASE_AT_BAD_WAR = -0.33
-NDefines.NCountry.ADVISOR_COST_INCREASE_PER_YEAR = 0.0005			-- yearly increase in price in percent
+NDefines.NCountry.ADVISOR_COST_INCREASE_PER_YEAR = 0.0007			-- yearly increase in price in percent
 NDefines.NCountry.SCRIPTED_ADVISOR_DISCOUNT = 0.5				-- Multiplier on cost for advisors scripted with discount=yes
 NDefines.NCountry.MINIMUM_ADVISOR_DURATION = 10 					-- _CDEF_MINIMUM_ADVISOR_DURATION_
 NDefines.NCountry.MINIMUM_ADVISOR_DURATION_CHANCE_VALUE = 15		-- Higher value here gives lower daily death chance after MINIMUM_ADVISOR_DURATION
 NDefines.NCountry.ADVISOR_CUT_OFF_AGE = 30 						-- _CDEF_ADVISOR_CUT_OFF_AGE = 10
-NDefines.NCountry.MAXIMUM_ADVISOR_SKILL = 5						-- Maximum advisor skill reachable through promotion
+NDefines.NCountry.MAXIMUM_ADVISOR_SKILL = 3						-- Maximum advisor skill reachable through promotion
 NDefines.NCountry.PROMOTE_COST_MONTHS_ADVISOR_SALARY = 50.0		-- Promote advisor cost in monthly salaries
 NDefines.NCountry.CULTURE_LOSS_THRESHOLD = 0.10 					-- _CDEF_CULTURE_LOSS_THRESHOLD = 10
 NDefines.NCountry.CULTURE_GAIN_THRESHOLD = 0.25 					-- _CDEF_CULTURE_GAIN_THRESHOLD = 10
@@ -489,11 +489,11 @@ NDefines.NCountry.MONARCH_DEATH_LEADER_STABILITY_PENALTY = 1		-- Stab hit on mon
 NDefines.NCountry.MONARCH_DEATH = 0 								-- _CDEF_MONARCH_DEATH_
 NDefines.NCountry.HEIR_DEATH = 0								-- _CDEF_HEIR_DEATH_	(Only applies for heirs older than 20 and the chance increases with age.)
 NDefines.NCountry.LEGITIMACY_DYNASTY_CHANGE = 35					-- Legitimacy a new dynasty starts out with
-NDefines.NCountry.BASE_POWER_INCREASE = 3						-- monthly base increase
+NDefines.NCountry.BASE_POWER_INCREASE = 1						-- monthly base increase
 NDefines.NCountry.NAT_FOCUS_DECREASE = -1							-- power taken away from non national focus power
 NDefines.NCountry.NAT_FOCUS_INCREASE = 2							-- extra power given to national focus power
 NDefines.NCountry.NAT_FOCUS_YEARS = 25							-- years before you can change focus again
-NDefines.NCountry.NAT_FOCUS_YEARS_RANK = 5						-- how many years are removed from nat focus cooldown per gov rank above 1
+NDefines.NCountry.NAT_FOCUS_YEARS_RANK = 1						-- how many years are removed from nat focus cooldown per gov rank above 1
 NDefines.NCountry.POWER_MAX = 9999								-- how much power can be stored at maximum.
 NDefines.NCountry.DISMANTLE_HRE_PRESTIGE = 100					-- Prestige gain on dismantling HRE
 NDefines.NCountry.FREE_IDEA_GROUP_COST  = 10						-- modifier on cheapness of "free" idea group
