@@ -528,7 +528,7 @@ country_event = {
     }
 
 	mean_time_to_happen = {
-		days = 3650
+		days = 5475
 	}
 	
 	
@@ -567,7 +567,7 @@ country_event = {
 	
 	option = {
 		name = "es_35_scenario.14.a"
-		ai_chance = { factor = 50 }
+		ai_chance = { factor = 25 }
 		add_stability = 3
 		kill_heir = yes
 		set_ruler_culture = soul_shriven
@@ -576,7 +576,7 @@ country_event = {
 	
 	option = {
 		name = "es_35_scenario.14.a"
-		ai_chance = { factor = 50 }
+		ai_chance = { factor = 75 }
 		capital_scope = {
 		    spawn_rebels = {
 				type = molog_bal_cult_rebels

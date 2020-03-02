@@ -1183,7 +1183,7 @@ dip_missions = {
 	increase_tariffs_mission = {
 		icon = mission_dominate_home_trade_node
 		required_missions = { build_medium_fleet_mission }
-		trigger = { tariff_value = 0.5 }
+		trigger = { any_subject_country = { is_colonial_nation_of = ROOT tariff_value = 0.5 } }
 		effect = {
 			add_country_modifier = {
 				name = "es_tariffs_increased"
