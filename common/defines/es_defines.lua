@@ -1098,7 +1098,7 @@ NDefines.NAI.AI_BUY_PROVINCE_SUBJECT_MAX_OE = 100 -- % of OE (including OE from 
 NDefines.NAI.SUBSIDY_YEARS = 25 -- Years AI will give subsidies for
 NDefines.NAI.MIN_INCOME_FOR_SUBSIDIES = 25 -- Minimum monthly income for AI to want to spend some on subsidies
 NDefines.NAI.PS_SHORT_TERM_POOL = 100 -- Max power AI will store in its short-term spending pool
-NDefines.NAI.AGGRESSIVENESS = 175 -- Base chance (out of 10000) of AI being willing to start a war each diplomatic tick (~1.5 times a month)
+NDefines.NAI.AGGRESSIVENESS = 250 -- Base chance (out of 10000) of AI being willing to start a war each diplomatic tick (~1.5 times a month)
 NDefines.NAI.AGGRESSIVENESS_BONUS_EASY_WAR = 350 -- Added to aggressiveness if the war is against a weak or particularily hated enemy
 NDefines.NAI.MISSION_PICK_CHANCE = 33 -- Monthly chance of AI picking a mission if it lacks one (of 100)
 NDefines.NAI.TRADE_INTEREST_THRESHOLD = 3 -- Number of merchants required to be a nation with trade interest
@@ -1152,7 +1152,7 @@ NDefines.NAI.PEACE_WAR_DIRECTION_WINNING_MULT = 5.0 -- Multiplies AI emphasis on
 NDefines.NAI.PEACE_FORCE_BALANCE_FACTOR = 0.25 -- AI willingness to peace based on strength estimation of both sides
 NDefines.NAI.PEACE_INDEPENDENCE_FACTOR = 50 -- Revolting AI's unwillingness to peace while between -5 and cost of independence wargoal in an independence war.
 NDefines.NAI.PEACE_WARGOAL_FACTOR = 0 -- AI unwillingness to peace based on holding the wargoal
-NDefines.NAI.PEACE_CAPITAL_FACTOR = 5 -- AI unwillingness to peace based on holding their own capital
+NDefines.NAI.PEACE_CAPITAL_FACTOR = 10 -- AI unwillingness to peace based on holding their own capital
 NDefines.NAI.PEACE_MILITARY_STRENGTH_FACTOR = 10 -- AI unwillingness to peace based on manpower & forcelimits
 NDefines.NAI.PEACE_ALLY_BASE_RELUCTANCE_MULT = 2.5 -- Multiplies PEACE_BASE_RELUCTANCE for allies in a war
 NDefines.NAI.PEACE_ALLY_WARSCORE_MULT = 0.5 -- How much extra war enthusiasm from overall warscore allies in a war get
@@ -1407,7 +1407,7 @@ NDefines.NAI.CHARTER_COMPANY_DEVELOPMENT_RELUCTANCE = 5				-- How much developme
 NDefines.NAI.WAR_WARSCORE_TO_JOIN = -100								-- Minimum warscore for the AI to join a call for arms
 NDefines.NAI.WAR_MIN_WARSCORE_TO_JOIN = -25	
 
-NDefines.NEngine.EVENT_PROCESS_OFFSET = 31
+NDefines.NEngine.EVENT_PROCESS_OFFSET = 50
 
 NDefines.NReligion.PIETY_CORRUPTION = -2.5
 NDefines.NReligion.PIETY_MANPOWER = 2.5
