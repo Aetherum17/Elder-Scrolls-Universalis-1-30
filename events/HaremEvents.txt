@@ -97,7 +97,7 @@ country_event = {
 		define_heir = {
 			dynasty = original_dynasty
 			male = yes
-			ADM = 1
+			ADM = 0
 			max_random_dip = 5
 			age = 10
 		}
@@ -121,7 +121,7 @@ country_event = {
 		define_heir = {
 			dynasty = original_dynasty
 			male = yes
-			MIL = 1
+			MIL = 0
 			max_random_dip = 5
 			age = 10
 		}
@@ -145,7 +145,7 @@ country_event = {
 		define_heir = {
 			dynasty = original_dynasty
 			male = yes
-			ADM = 1
+			ADM = 0
 			max_random_mil = 5
 			age = 10
 		}
@@ -169,7 +169,7 @@ country_event = {
 		define_heir = {
 			dynasty = original_dynasty
 			male = yes
-			MIL = 1
+			MIL = 0
 			max_random_adm = 5
 			age = 10
 		}
@@ -193,7 +193,7 @@ country_event = {
 		define_heir = {
 			dynasty = original_dynasty
 			male = yes
-			DIP = 1
+			DIP = 0
 			max_random_mil = 5
 			age = 10
 		}
@@ -239,7 +239,7 @@ country_event = {
 		define_heir = {
 			dynasty = original_dynasty
 			male = yes
-			DIP = 1
+			DIP = 0
 			max_random_adm = 5
 			age = 10
 		}
@@ -282,9 +282,9 @@ country_event = {
 		define_heir = {
 			dynasty = original_dynasty
 			male = yes
-			DIP = 1
-			MIL = 1
-			ADM = 1
+			DIP = 0
+			MIL = 0
+			ADM = 0
 			age = 10
 		}
 	}
@@ -327,9 +327,9 @@ country_event = {
 			dynasty = original_dynasty
 			male = yes
 			age = 10
-			ADM = 1
-			DIP = 1
-			MIL = 1
+			ADM = 0
+			DIP = 0
+			MIL = 0
 		}
 	}
 }

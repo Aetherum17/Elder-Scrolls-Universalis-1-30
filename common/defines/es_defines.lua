@@ -1,4 +1,4 @@
-NDefines.NGame.START_DATE = "2.1.1"
+NDefines.NGame.START_DATE = "7.1.1"
 NDefines.NGame.END_DATE = "9999.12.31"
 NDefines.NGame.MAX_RANDOM_NEW_WORLD = "2.1.1"
 NDefines.NGame.GREAT_POWER_FRENZY_START = "9999.12.31"	-- Latest date for the start of the Great Power Frenzy (struggle).

@@ -58,3 +58,42 @@ country_event = {
 		name = es_start.2.a	
 	}
 }
+
+country_event = {
+	id = es_start.3
+	title = es_start.2.t
+	desc = es_start.2.d
+	picture = ES_MUSIC_MOD_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+	tag = RED
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	immediate = {
+		if = {
+		    limit = {
+			    every_country = {
+				    capital_scope = { continent = Oblivion }
+					ai = yes
+				} 
+			}
+			every_province = {
+			    limit = {
+				    continent = Oblivion
+					is_city = yes
+				}
+				cede_province = ---
+			}
+		}
+	}
+	
+	option = {
+		name = es_start.2.a	
+	}
+}

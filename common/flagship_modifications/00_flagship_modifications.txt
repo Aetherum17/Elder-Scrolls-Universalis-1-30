@@ -98,113 +98,6 @@ hull_sheating = {
     }
 }
 
-
-portuguese_navigators = {
-	modifier = {
-        exploration_mission_range_in_fleet_modifier = 100
-        naval_maintenance_flagship_modifier = 0.5
-	}
-    ai_trade_score = {
-        factor = 1
-    }
-    ai_war_score = {
-        factor = 0
-    }
-}
-
-portuguese_bombardier = {
-	modifier = {
-        barrage_cost_in_fleet_modifier = -0.4
-        naval_maintenance_flagship_modifier = 0.5
-	}
-    ai_trade_score = {
-        factor = 0
-    }
-    ai_war_score = {
-        factor = 1
-    }
-}
-
-portuguese_trade_route_map = {
-	modifier = {
-        trade_power_in_fleet_modifier = 2
-        naval_maintenance_flagship_modifier = 0.25
-	}
-    ai_trade_score = {
-        factor = 1
-    }
-    ai_war_score = {
-        factor = 0
-    }
-}
-
-spanish_grand_armada = {
-	modifier = {
-        naval_attrition_in_fleet_modifier = -0.3
-        naval_maintenance_flagship_modifier = 0.5
-	}
-    ai_trade_score = {
-        factor = 0
-    }
-    ai_war_score = {
-        factor = 1
-    }
-}
-
-spanish_treasure_fleet = {
-	modifier = {
-        cannons_for_hunting_pirates_in_fleet = 1
-        naval_maintenance_flagship_modifier = 0.5
-	}
-    ai_trade_score = {
-        factor = 0
-    }
-    ai_war_score = {
-        factor = 1
-        
-    }
-}
-
-spanish_mass_load_cannons = {
-	modifier = {
-        number_of_cannons_flagship_modifier = 1.0
-        naval_maintenance_flagship_modifier = 0.5
-	}
-    ai_trade_score = {
-        factor = 0
-    }
-    ai_war_score = {
-        factor = 1
-    }
-}
-
-dutch_courage = {
-    modifier = {
-        morale_in_fleet_modifier = 0.1
-        naval_maintenance_flagship_modifier = 0.5
-    }
-    ai_trade_score = {
-        factor = 0
-    }
-    ai_war_score = {
-        factor = 1
-    }
- }
-
-portuguese_corps_of_fusiliers = {
-    modifier = {
-        movement_speed_onto_off_boat_modifier = -0.66
-        flagship_landing_penalty = 2
-        naval_maintenance_flagship_modifier = 0.5
-    }
-    ai_trade_score = {
-        factor = 0
-    }
-    ai_war_score = {
-        factor = 1
-    }
-}
-
 integrated_marines = {
     modifier = {
         movement_speed_onto_off_boat_modifier = -0.33
@@ -212,19 +105,6 @@ integrated_marines = {
     }
     ai_trade_score = {
         factor = 0
-    }
-    ai_war_score = {
-        factor = 1
-    }
-}
-
-scandinavian_flag_officers = {
-    modifier = {
-        admiral_skill_gain_modifier = 0.03
-        naval_maintenance_flagship_modifier = 0.5
-    }
-    ai_trade_score = {
-        factor = 1
     }
     ai_war_score = {
         factor = 1

@@ -144,7 +144,7 @@ late_classical_age = {
 	start = 180
 	
 	can_start = {
-		any_country = { adm_tech = 14 }
+		is_year = 180
 	}
 	
 	religious_conflicts = yes
@@ -280,7 +280,7 @@ age_of_migrations = {
 	start = 360
 	
 	can_start = {
-		any_country = { mil_tech = 26 }
+		is_year = 360
 	}
 	
 	religious_conflicts = yes
@@ -421,7 +421,7 @@ dark_age = {
 	start = 540
 	
 	can_start = {
-		any_country = { dip_tech = 38 }
+		is_year = 540
 	}
 	
 	religious_conflicts = yes
@@ -559,7 +559,7 @@ feudal_age = {
 	start = 720
 	
 	can_start = {
-		any_country = { adm_tech = 50 }
+		is_year = 720
 	}
 	
 	religious_conflicts = yes
@@ -692,7 +692,7 @@ high_middle_ages = {
 	start = 900
 	
 	can_start = {
-		is_institution_enabled = civil_service
+		is_year = 900
 	}
 	
 	religious_conflicts = yes
@@ -836,7 +836,7 @@ late_middle_ages = {
 	start = 1080
 	
 	can_start = {
-		any_country = { mil_tech = 74 }
+		is_year = 1080
 	}
 	
 	religious_conflicts = yes
@@ -972,7 +972,7 @@ age_of_discovery = {
 	start = 1260
 	
 	can_start = {
-		any_country = { dip_tech = 86 }
+		is_year = 1260
 	}
 	
 	religious_conflicts = yes
@@ -1122,7 +1122,7 @@ age_of_reformation = {
 	start = 1440
 	
 	can_start = {
-		any_country = { adm_tech = 98 }
+		is_year = 1440
 	}
 	
 	religious_conflicts = yes
@@ -1278,7 +1278,7 @@ age_of_absolutism = {
 	start = 1620
 	
 	can_start = {
-		any_country = { mil_tech = 110 }
+		is_year = 1620
 	}
 	
 	religious_conflicts = yes
@@ -1421,7 +1421,7 @@ age_of_revolutions = {
 	start = 1800
 	
 	can_start = {
-		is_institution_enabled = global_trade
+		is_year = 1800
 	}
 	
 	religious_conflicts = yes
@@ -1571,7 +1571,7 @@ industrial_age = {
 	start = 1980
 	
 	can_start = {
-		any_country = { dip_tech = 134 }
+		is_year = 1980
 	}
 	
 	religious_conflicts = yes
@@ -1743,7 +1743,7 @@ great_war_age = {
 	start = 2160
 	
 	can_start = {
-		any_country = { adm_tech = 146 }
+		is_year = 2160
 	}
 	
 	religious_conflicts = yes
@@ -1907,7 +1907,7 @@ information_age = {
 	start = 2340
 	
 	can_start = {
-		any_country = { adm_tech = 158 }
+		is_year = 2340
 	}
 	
 	religious_conflicts = yes
