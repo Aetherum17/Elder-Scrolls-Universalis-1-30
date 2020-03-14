@@ -242,11 +242,11 @@ country_decisions = {
 		}
 		allow = {
 			adm_power = 100
-			years_of_income = 0.5
+			years_of_income = 1.0
 		}
 		effect = {
 			add_adm_power = -100
-			add_years_of_income = -0.5
+			add_years_of_income = -1.0
 			add_country_modifier = {
 				name = "gods_pleased"
 				duration = 3650
@@ -270,7 +270,7 @@ country_decisions = {
 			NOT = { has_country_modifier = reformed_clergy }
 		}
 		allow = {
-			adm_tech = 10
+			adm_tech = 50
 			adm_power = 1000
 			calc_true_if = {
 				all_owned_province = { religion = ROOT }

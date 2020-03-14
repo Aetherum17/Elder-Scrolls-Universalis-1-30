@@ -260,9 +260,6 @@ restrictions_for_colonies = {
 	}
 }
 
-
-
-
 naval_infrastructure_act = {
 	monarch_power = DIP
 
@@ -447,8 +444,6 @@ cloth_quality_edict = {
 	}
 }
 
-
-
 production_quota_act = {
 	monarch_power = DIP
 	potential = {
@@ -507,8 +502,6 @@ encouragement_of_merchant_navy = {
 	}
 }
 
-
-
 commercial_embassies = {
 	monarch_power = DIP
 	potential = {
@@ -543,54 +536,6 @@ commercial_embassies = {
 		}
 	}
 }
-
-mandatory_service = {
-	monarch_power = DIP
-	potential = {
-		has_idea_group = diplomatic_ideas
-		has_idea_group = plutocracy_ideas
-	}
-	
-	allow = {
-		full_idea_group = diplomatic_ideas
-		full_idea_group = plutocracy_ideas
-	}
-	
-	reelection_cost = -0.10
-	legitimacy = 1.0
-	devotion = 1.0
-	horde_unity = 1.0
-	meritocracy = 0.5
-	may_recruit_female_generals = yes
-	female_advisor_chance = 0.25
-
-	ai_will_do = {
-		factor = 0
-	}
-}
-
-
-professional_diplomatic_corps = {
-	monarch_power = DIP
-	potential = {
-		has_idea_group = diplomatic_ideas
-		has_idea_group = quality_ideas
-	}
-	
-	allow = {
-		full_idea_group = diplomatic_ideas
-		full_idea_group = quality_ideas
-	}
-	
-	war_exhaustion_cost = -0.10
-
-	ai_will_do = {
-		factor = 0.7
-	}
-
-}
-
-
 
 colonial_companies_act = {
 	monarch_power = DIP
@@ -954,31 +899,6 @@ colonial_administration_act = {
 			NOT = { num_of_colonies = 1 }
 		}
 	}
-}
-
-naval_school_act = {
-	monarch_power = DIP
-
-	potential = {
-		has_idea_group = administrative_ideas
-		has_idea_group = maritime_ideas
-	}
-	
-	allow = {
-		full_idea_group = administrative_ideas
-		full_idea_group = maritime_ideas
-	}
-
-	navy_tradition = 1
-
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0.6
-			NOT = { navy_size = 20 }
-		}		
-	}
-
 }
 
 the_foreign_support_act = {

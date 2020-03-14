@@ -6,9 +6,7 @@ country_event = {
 	desc = es_start.1.d
 	picture = ES_START_eventPicture
 	
-	trigger = {
-	NOT = { has_country_flag = es_start_ai_no_flag }
-	}
+	is_triggered_only = yes
 	
 	mean_time_to_happen = {
 		months = 1
@@ -39,59 +37,36 @@ country_event = {
 	desc = es_start.2.d
 	picture = ES_MUSIC_MOD_eventPicture
 	
-	trigger = {
-	always = no
-	NOT = { has_country_flag = es_start_music_ai_no_flag }
-	NOT = { has_country_flag = esu_music_submode_flag }
-	has_country_flag = esu_music_main_flag
-	}
-	
-	mean_time_to_happen = {
-		months = 1
-	}
+	is_triggered_only = yes
 	
 	immediate = {
-		set_country_flag = es_start_music_ai_no_flag
+    if = {
+        limit = {
+            any_country = {
+                capital_scope = { continent = Oblivion }
+                ai = no
+            } 
+        }
+		add_treasury = 100
+    }
+	else = {
+	    every_country = {
+            limit = {
+                capital_scope = { continent = Oblivion }
+                ai = yes
+				NOT = { tag = CU5 }
+				NOT = { tag = DW2 }
+            }
+            every_owned_province = {
+                limit = {
+                    continent = Oblivion
+                    is_city = yes
+                }
+                cede_province = ---
+            }
+        }
 	}
-	
-	option = {
-		name = es_start.2.a	
-	}
-}
-
-country_event = {
-	id = es_start.3
-	title = es_start.2.t
-	desc = es_start.2.d
-	picture = ES_MUSIC_MOD_eventPicture
-	
-	fire_only_once = yes
-	
-	trigger = {
-	tag = RED
-	}
-	
-	mean_time_to_happen = {
-		months = 1
-	}
-	
-	immediate = {
-		if = {
-		    limit = {
-			    every_country = {
-				    capital_scope = { continent = Oblivion }
-					ai = yes
-				} 
-			}
-			every_province = {
-			    limit = {
-				    continent = Oblivion
-					is_city = yes
-				}
-				cede_province = ---
-			}
-		}
-	}
+    }
 	
 	option = {
 		name = es_start.2.a	

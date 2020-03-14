@@ -523,9 +523,11 @@ ask_to_become_holy_order_1 = {
 	    }
 	}
 	on_accept = {
+	    FROM = {
 		create_subject = {
 			subject_type = holy_order_1 
 			subject = ROOT 
+		}
 		}
 		ROOT = {
 		    change_government = theocracy
@@ -963,9 +965,11 @@ ask_to_become_native_reservation = {
 		is_lesser_in_union = no
 	}
 	on_accept = {
+	    FROM = {
 		create_subject = {
-			subject_type = native_reservation
+			subject_type = native_reservation 
 			subject = ROOT 
+		}
 		}
 		ROOT = {
 			hidden_effect = {
@@ -1402,9 +1406,11 @@ ask_to_become_imperial_subject = {
 		}
 	}
 	on_accept = {
+		FROM = {
 		create_subject = {
-			subject_type = imperial_subject
+			subject_type = imperial_subject 
 			subject = ROOT 
+		}
 		}
 		ROOT = {
 			hidden_effect = {
@@ -1578,16 +1584,15 @@ create_alliance_member = {
 	is_visible = {
 	    OR = {
 	    has_country_flag = allience_leader_flag
+		AND = {
 		government = tribal
+		# add cities
+		# owns = 
+		}
 		}
 		FROM = { NOT = { is_subject_of_type = alliance_member } }
 	}
 	is_allowed = {
-	    OR = {
-		    has_country_flag = allience_leader_flag
-		    # add cities
-		    # owns = 
-		}
 	is_at_war = no
 	num_of_cities = FROM
     FROM = {
@@ -1794,30 +1799,32 @@ ask_to_become_alliance_member = {
 	require_acceptance = yes
 	
 	is_visible = {
-	   FROM = {
-	   OR = {
-	        has_country_flag = allience_leader_flag
-	        government = tribal
-	   }
-	   }
+	    NOT = { is_subject_of_type = alliance_member }
+	    FROM = {
+	    OR = {
+	       has_country_flag = allience_leader_flag
+		   AND = {
+	       government = tribal
+		   # add cities
+		   # owns = 
+		   }
+	    }
+	    }
 	}
 	is_allowed = {
         is_at_war = no
 		FROM = {
 		is_at_war = no 
-		OR = {
-		    has_country_flag = allience_leader_flag
-			# add cities
-		    # owns = 
-		} 
 		}
 		is_free_or_tributary_trigger = yes
 		NOT = { num_of_cities = FROM }
 	}
 	on_accept = {
+		FROM = {
 		create_subject = {
-			subject_type = alliance_member
+			subject_type = alliance_member 
 			subject = ROOT 
+		}
 		}
 		ROOT = {
 			hidden_effect = {
@@ -2126,7 +2133,7 @@ leave_native_reservation  =  {
         }
     }
 	on_decline = {
-	    FROM = {
+	    ROOT = {
 		    add_country_modifier = {
 			    name = "war_for_independence"
 				duration = 9125
@@ -2299,7 +2306,7 @@ leave_imperial_subject  =  {
         }
     }
 	on_decline = {
-	    FROM = {
+	    ROOT = {
 		    add_country_modifier = {
 			    name = "war_for_independence"
 				duration = 9125
@@ -2471,7 +2478,7 @@ leave_alliance_member  =  {
         }
     }
 	on_decline = {
-	    FROM = {
+	    ROOT = {
 		    add_country_modifier = {
 			    name = "war_for_independence"
 				duration = 9125
@@ -2653,7 +2660,7 @@ leave_tributary_state  =  {
         }
     }
 	on_decline = {
-	    FROM = {
+	    ROOT = {
 		    add_country_modifier = {
 			    name = "war_for_independence"
 				duration = 9125
@@ -2843,7 +2850,7 @@ leave_vassal  =  {
         }
     }
 	on_decline = {
-	    FROM = {
+	    ROOT = {
 		    add_country_modifier = {
 			    name = "war_for_independence"
 				duration = 9125
