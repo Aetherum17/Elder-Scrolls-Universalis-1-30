@@ -313,7 +313,7 @@ pyandonea_lr = {
  monsoon = {
 		00.06.01
 		00.09.30
-    }
+ }
 }
 
 summerset_lr = {
@@ -337,7 +337,7 @@ summerset_lr = {
  monsoon = {
 		00.06.01
 		00.09.30
-    }
+ }
 }
 
 auridon_lr = {
@@ -361,7 +361,7 @@ auridon_lr = {
  monsoon = {
 		00.06.01
 		00.09.30
-    }
+ }
 }
 
 yokuda_lr = {
@@ -435,21 +435,21 @@ central_atmora_lr = {
 
 northern_islands_lr = {
  areas = {
-    colonial_northern_islands_1_la
+ colonial_northern_islands_1_la
 	colonial_northern_islands_2_la
 	colonial_northern_islands_3_la
 	colonial_northern_islands_4_la
 	colonial_northern_islands_5_la
 	colonial_northern_islands_6_la
 	upper_tsakara_8_la
-    upper_tsakara_9_la
-    upper_tsakara_10_la
-    upper_tsakara_11_la
-    upper_tsakara_12_la
-    upper_tsakara_13_la
-    upper_tsakara_14_la
+ upper_tsakara_9_la
+ upper_tsakara_10_la
+ upper_tsakara_11_la
+ upper_tsakara_12_la
+ upper_tsakara_13_la
+ upper_tsakara_14_la
 	atmora_8_la
-    atmora_9_la
+ atmora_9_la
  }
 }
 
@@ -736,6 +736,59 @@ black_marsh_lr = {
  argonia_8_la
  argonia_9_la
  argonia_10_la
+ argonia_11_la
+ argonia_12_la
+ argonia_13_la
+ argonia_14_la
+ argonia_15_la
+ }
+ monsoon = {
+		00.06.01
+		00.09.30
+	}
+}
+
+shadowfen_lr = {
+ areas = {
+ argonia_16_la
+ argonia_17_la
+ argonia_18_la
+ argonia_19_la
+ argonia_20_la
+ argonia_21_la
+ argonia_22_la
+ argonia_23_la
+ argonia_24_la
+ argonia_25_la
+ argonia_26_la
+ argonia_27_la
+ argonia_28_la
+ argonia_29_la
+ argonia_30_la
+ }
+ monsoon = {
+		00.06.01
+		00.09.30
+	}
+}
+
+murkmire_lr = {
+ areas = {
+ argonia_31_la
+ argonia_32_la
+ argonia_33_la
+ argonia_34_la
+ argonia_35_la
+ argonia_36_la
+ argonia_37_la
+ argonia_38_la
+ argonia_39_la
+ argonia_40_la
+ argonia_41_la
+ argonia_42_la
+ argonia_43_la
+ argonia_44_la
+ argonia_45_la
  }
  monsoon = {
 		00.06.01
@@ -912,6 +965,28 @@ hgh_rock_lr = {
  high_11_la
  high_12_la
  high_13_la
+ high_14_la
+ high_15_la
+ }
+}
+
+wrothgar_lr = {
+ areas = {
+ high_16_la
+ high_17_la
+ high_18_la
+ high_19_la
+ high_20_la
+ high_21_la
+ high_22_la
+ high_23_la
+ high_24_la
+ high_25_la
+ high_26_la
+ high_27_la
+ high_28_la
+ high_29_la
+ high_30_la
  }
 }
 
@@ -931,186 +1006,227 @@ hammerfell_lr = {
  hammerfell_12_la
  hammerfell_13_la
  hammerfell_14_la
+ hammerfell_15_la
+ }
+}
+
+dragontail_mountains_lr = {
+ areas = {
+ hammerfell_16_la
+ hammerfell_17_la
+ hammerfell_18_la
+ hammerfell_19_la
+ hammerfell_20_la
+ hammerfell_21_la
+ hammerfell_22_la
+ hammerfell_23_la
+ hammerfell_24_la
+ hammerfell_25_la
+ hammerfell_26_la
+ hammerfell_27_la
+ hammerfell_28_la
+ hammerfell_29_la
+ hammerfell_30_la
+ }
+}
+
+alikr_desert_lr = {
+ areas = {
+ hammerfell_31_la
+ hammerfell_32_la
+ hammerfell_33_la
+ hammerfell_34_la
+ hammerfell_35_la
+ hammerfell_36_la
+ hammerfell_37_la
+ hammerfell_38_la
+ hammerfell_39_la
+ hammerfell_40_la
+ hammerfell_41_la
+ hammerfell_42_la
+ hammerfell_43_la
+ hammerfell_44_la
+ hammerfell_45_la
  }
 }
 
 central_coldharbour_lr = {
  areas = {
-    central_coldlarbour_1_la
-	central_coldlarbour_2_la
-	central_coldlarbour_3_la
-	central_coldlarbour_4_la
-	central_coldlarbour_5_la
-	central_coldlarbour_6_la
-	central_coldlarbour_7_la
-	central_coldlarbour_8_la
-	central_coldlarbour_9_la
-	central_coldlarbour_10_la
-	central_coldlarbour_11_la
-	central_coldlarbour_12_la
-	central_coldlarbour_13_la
-	central_coldlarbour_14_la
-	central_coldlarbour_15_la
+ central_coldlarbour_1_la
+ central_coldlarbour_2_la
+ central_coldlarbour_3_la
+ central_coldlarbour_4_la
+ central_coldlarbour_5_la
+ central_coldlarbour_6_la
+ central_coldlarbour_7_la
+ central_coldlarbour_8_la
+ central_coldlarbour_9_la
+ central_coldlarbour_10_la
+ central_coldlarbour_11_la
+ central_coldlarbour_12_la
+ central_coldlarbour_13_la
+ central_coldlarbour_14_la
+central_coldlarbour_15_la
  }
 }
 
 southern_coldharbour_lr = {
  areas = {
-    southern_coldharbour_1_la
-	southern_coldharbour_2_la
-	southern_coldharbour_3_la
-	southern_coldharbour_4_la
-	southern_coldharbour_5_la
-	southern_coldharbour_6_la
-	southern_coldharbour_7_la
-	southern_coldharbour_8_la
-	southern_coldharbour_9_la
-	southern_coldharbour_10_la
-	southern_coldharbour_11_la
-	southern_coldharbour_12_la
-	southern_coldharbour_13_la
-	southern_coldharbour_14_la
-	southern_coldharbour_15_la
+ southern_coldharbour_1_la
+ southern_coldharbour_2_la
+ southern_coldharbour_3_la
+ southern_coldharbour_4_la
+ southern_coldharbour_5_la
+ southern_coldharbour_6_la
+ southern_coldharbour_7_la
+ southern_coldharbour_8_la
+ southern_coldharbour_9_la
+ southern_coldharbour_10_la
+ southern_coldharbour_11_la
+ southern_coldharbour_12_la
+ southern_coldharbour_13_la
+ southern_coldharbour_14_la
+ southern_coldharbour_15_la
  }
 }
 
 eastern_coldharbour_lr = {
  areas = {
-    eastern_coldharbour_1_la
-	eastern_coldharbour_2_la
-	eastern_coldharbour_3_la
-	eastern_coldharbour_4_la
-	eastern_coldharbour_5_la
-	eastern_coldharbour_6_la
-	eastern_coldharbour_7_la
-	eastern_coldharbour_8_la
-	eastern_coldharbour_9_la
-	eastern_coldharbour_10_la
-	eastern_coldharbour_11_la
-	eastern_coldharbour_12_la
-	eastern_coldharbour_13_la
-	eastern_coldharbour_14_la
-	eastern_coldharbour_15_la
+ eastern_coldharbour_1_la
+ eastern_coldharbour_2_la
+ eastern_coldharbour_3_la
+ eastern_coldharbour_4_la
+ eastern_coldharbour_5_la
+ eastern_coldharbour_6_la
+ eastern_coldharbour_7_la
+ eastern_coldharbour_8_la
+ eastern_coldharbour_9_la
+ eastern_coldharbour_10_la
+ eastern_coldharbour_11_la
+ eastern_coldharbour_12_la
+ eastern_coldharbour_13_la
+ eastern_coldharbour_14_la
+ eastern_coldharbour_15_la
  }
 }
 
 western_coldharbour_lr = {
  areas = {
-    western_coldharbour_1_la
-	western_coldharbour_2_la
-	western_coldharbour_3_la
-	western_coldharbour_4_la
-	western_coldharbour_5_la
-	western_coldharbour_6_la
-	western_coldharbour_7_la
-	western_coldharbour_8_la
-	western_coldharbour_9_la
-	western_coldharbour_10_la
-	western_coldharbour_11_la
-	western_coldharbour_12_la
-	western_coldharbour_13_la
-	western_coldharbour_14_la
-	western_coldharbour_15_la
+ western_coldharbour_1_la
+ western_coldharbour_2_la
+ western_coldharbour_3_la
+ western_coldharbour_4_la
+ western_coldharbour_5_la
+ western_coldharbour_6_la
+ western_coldharbour_7_la
+ western_coldharbour_8_la
+ western_coldharbour_9_la
+ western_coldharbour_10_la
+ western_coldharbour_11_la
+ western_coldharbour_12_la
+ western_coldharbour_13_la
+ western_coldharbour_14_la
+ western_coldharbour_15_la
  }
 }
 
 northern_coldharbour_lr = {
  areas = {
-    northern_coldharbour_1_la
-	northern_coldharbour_2_la
-	northern_coldharbour_3_la
-	northern_coldharbour_4_la
-	northern_coldharbour_5_la
-	northern_coldharbour_6_la
-	northern_coldharbour_7_la
-	northern_coldharbour_8_la
-	northern_coldharbour_9_la
-	northern_coldharbour_10_la
-	northern_coldharbour_11_la
-	northern_coldharbour_12_la
-	northern_coldharbour_13_la
-	northern_coldharbour_14_la
-	northern_coldharbour_15_la
+ northern_coldharbour_1_la
+ northern_coldharbour_2_la
+ northern_coldharbour_3_la
+ northern_coldharbour_4_la
+ northern_coldharbour_5_la
+ northern_coldharbour_6_la
+ northern_coldharbour_7_la
+ northern_coldharbour_8_la
+ northern_coldharbour_9_la
+ northern_coldharbour_10_la
+ northern_coldharbour_11_la
+ northern_coldharbour_12_la
+ northern_coldharbour_13_la
+ northern_coldharbour_14_la
+ northern_coldharbour_15_la
  }
 }
 
 eastern_deadlands_lr = {
  areas = {
-    eastern_deadlands_1_la
-	eastern_deadlands_2_la
-	eastern_deadlands_3_la
-	eastern_deadlands_4_la
-	eastern_deadlands_5_la
-	eastern_deadlands_6_la
-	eastern_deadlands_7_la
-	eastern_deadlands_8_la
-	eastern_deadlands_9_la
-	eastern_deadlands_10_la
-	eastern_deadlands_11_la
-	eastern_deadlands_12_la
-	eastern_deadlands_13_la
-	eastern_deadlands_14_la
-	eastern_deadlands_15_la
+ eastern_deadlands_1_la
+ eastern_deadlands_2_la
+ eastern_deadlands_3_la
+ eastern_deadlands_4_la
+ eastern_deadlands_5_la
+ eastern_deadlands_6_la
+ eastern_deadlands_7_la
+ eastern_deadlands_8_la
+ eastern_deadlands_9_la
+ eastern_deadlands_10_la
+ eastern_deadlands_11_la
+ eastern_deadlands_12_la
+ eastern_deadlands_13_la
+ eastern_deadlands_14_la
+ eastern_deadlands_15_la
  }
 }
 
 western_deadlands_lr = {
  areas = {
-    western_deadlands_1_la
-	western_deadlands_2_la
-	western_deadlands_3_la
-	western_deadlands_4_la
-	western_deadlands_5_la
-	western_deadlands_6_la
-	western_deadlands_7_la
-	western_deadlands_8_la
-	western_deadlands_9_la
-	western_deadlands_10_la
-	western_deadlands_11_la
-	western_deadlands_12_la
-	western_deadlands_13_la
-	western_deadlands_14_la
-	western_deadlands_15_la
+ western_deadlands_1_la
+ western_deadlands_2_la
+ western_deadlands_3_la
+ western_deadlands_4_la
+ western_deadlands_5_la
+ western_deadlands_6_la
+ western_deadlands_7_la
+ western_deadlands_8_la
+ western_deadlands_9_la
+ western_deadlands_10_la
+ western_deadlands_11_la
+ western_deadlands_12_la
+ western_deadlands_13_la
+ western_deadlands_14_la
+ western_deadlands_15_la
  }
 }
 
 northern_deadlands_lr = {
  areas = {
-    northern_deadlands_1_la
-	northern_deadlands_2_la
-	northern_deadlands_3_la
-	northern_deadlands_4_la
-	northern_deadlands_5_la
-	northern_deadlands_6_la
-	northern_deadlands_7_la
-	northern_deadlands_8_la
-	northern_deadlands_9_la
-	northern_deadlands_10_la
-	northern_deadlands_11_la
-	northern_deadlands_12_la
-	northern_deadlands_13_la
-	northern_deadlands_14_la
-	northern_deadlands_15_la
+ northern_deadlands_1_la
+ northern_deadlands_2_la
+ northern_deadlands_3_la
+ northern_deadlands_4_la
+ northern_deadlands_5_la
+ northern_deadlands_6_la
+ northern_deadlands_7_la
+ northern_deadlands_8_la
+ northern_deadlands_9_la
+ northern_deadlands_10_la
+ northern_deadlands_11_la
+ northern_deadlands_12_la
+ northern_deadlands_13_la
+ northern_deadlands_14_la
+ northern_deadlands_15_la
  }
 }
 
 southern_deadlands_lr = {
  areas = {
-    southern_deadlands_1_la
-	southern_deadlands_2_la
-	southern_deadlands_3_la
-	southern_deadlands_4_la
-	southern_deadlands_5_la
-	southern_deadlands_6_la
-	southern_deadlands_7_la
-	southern_deadlands_8_la
-	southern_deadlands_9_la
-	southern_deadlands_10_la
-	southern_deadlands_11_la
-	southern_deadlands_12_la
-	southern_deadlands_13_la
-	southern_deadlands_14_la
-	southern_deadlands_15_la
+ southern_deadlands_1_la
+ southern_deadlands_2_la
+ southern_deadlands_3_la
+ southern_deadlands_4_la
+ southern_deadlands_5_la
+ southern_deadlands_6_la
+ southern_deadlands_7_la
+ southern_deadlands_8_la
+ southern_deadlands_9_la
+ southern_deadlands_10_la
+ southern_deadlands_11_la
+ southern_deadlands_12_la
+ southern_deadlands_13_la
+ southern_deadlands_14_la
+ southern_deadlands_15_la
  }
 }
 
