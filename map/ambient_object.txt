@@ -112,7 +112,7 @@ type={
 type={
 	type="desert_skeleton_mesh"
 	use_animation=no
-	scale=0.400000
+	scale=0.750000
 	time_duration=300.000000
 	object={
 		name="desert_skeleton"
@@ -429,13 +429,13 @@ type={
 type={
 	type="crocodile"
 	use_animation=yes
-	scale=0.250000
+	scale=0.50000
 	time_duration=300.000000
 	object={
 		name="crocodile"
 		hidden_on_start=no
 		position={
-			1940.000 -0.100 1182.000 
+			1941.000 -0.100 1183.000 
 		}
 		rotation={
 			0.000 -75.000 0.000 
@@ -643,7 +643,7 @@ type={
 type={
 	type="vulture"
 	use_animation=yes
-	scale=0.300000
+	scale=0.500000
 	time_duration=300.000000
 	object={
 		name="vulture"
@@ -669,7 +669,7 @@ type={
 		name="vulture"
 		hidden_on_start=no
 		position={
-			521.000 25.000 1664.000 
+			520.000 25.000 1675.000 
 		}
 		rotation={
 			0.000 45.000 0.000 
@@ -709,7 +709,7 @@ type={
 type={
 	type="elephant_AO"
 	use_animation=yes
-	scale=0.200000
+	scale=0.500000
 	time_duration=300.000000
 	object={
 		name="elephant_afr"
@@ -745,7 +745,7 @@ type={
 type={
 	type="camel"
 	use_animation=yes
-	scale=0.250000
+	scale=0.500000
 	time_duration=300.000000
 	object={
 		name="camel"
@@ -811,7 +811,7 @@ type={
 type={
 	type="polar_bear"
 	use_animation=yes
-	scale=0.300000
+	scale=0.500000
 	time_duration=300.000000
 	object={
 		name="polar"
@@ -887,7 +887,7 @@ type={
 type={
 	type="zebra"
 	use_animation=yes
-	scale=0.200000
+	scale=0.500000
 	time_duration=300.000000
 	object={
 		name="zebra"
@@ -923,7 +923,7 @@ type={
 type={
 	type="eagle"
 	use_animation=yes
-	scale=0.300000
+	scale=0.500000
 	time_duration=300.000000
 	object={
 		name="eagle"
@@ -979,13 +979,33 @@ type={
 type={
 	type="windmill"
 	use_animation=yes
-	scale=0.300000
+	scale=0.500000
 	time_duration=300.000000
 	object={
 		name="windmill"
 		hidden_on_start=no
 		position={
-			593.000 -0.100 1833.000 
+			596.000 -0.100 1844.000 
+		}
+		rotation={
+			0.000 15.000 0.000 
+		}
+	}
+	object={
+		name="windmill"
+		hidden_on_start=no
+		position={
+			814.000 -0.100 2014.000 
+		}
+		rotation={
+			0.000 -15.000 0.000 
+		}
+	}
+	object={
+		name="windmill"
+		hidden_on_start=no
+		position={
+			687.000 -0.100 1893.000 
 		}
 		rotation={
 			0.000 -15.000 0.000 
@@ -1005,7 +1025,7 @@ type={
 		name="windmill"
 		hidden_on_start=no
 		position={
-			969.000 -0.100 2011.000 
+			969.000 -0.100 2015.000 
 		}
 		rotation={
 			0.000 15.000 0.000 
@@ -1015,7 +1035,7 @@ type={
 		name="windmill"
 		hidden_on_start=no
 		position={
-			638.000 -0.100 1863.000 
+			636.000 -0.100 1864.000 
 		}
 		rotation={
 			0.000 -15.000 0.000 
@@ -1035,7 +1055,7 @@ type={
 type={
 	type="seagulls"
 	use_animation=yes
-	scale=0.300000
+	scale=0.500000
 	time_duration=300.000000
 	object={
 		name="seagulls"
@@ -1191,7 +1211,7 @@ type={
 type={
 	type="black_bear"
 	use_animation=yes
-	scale=0.200000
+	scale=0.500000
 	time_duration=300.000000
 	object={
 		name="black"
@@ -1277,7 +1297,7 @@ type={
 type={
 	type="brown_bear"
 	use_animation=yes
-	scale=0.200000
+	scale=0.500000
 	time_duration=300.000000
 	object={
 		name="brown"
@@ -1343,7 +1363,7 @@ type={
 type={
 	type="kangaroo"
 	use_animation=yes
-	scale=0.200000
+	scale=0.500000
 	time_duration=300.000000
 	object={
 		name="kangaroo"
@@ -1379,7 +1399,7 @@ type={
 type={
 	type="seal"
 	use_animation=yes
-	scale=0.250000
+	scale=0.50000
 	time_duration=300.000000
 	object={
 		name="seal"
@@ -1455,7 +1475,7 @@ type={
 type={
 	type="whale"
 	use_animation=yes
-	scale=0.800000
+	scale=1.000000
 	time_duration=300.000000
 	object={
 		name="whale"
@@ -1611,7 +1631,7 @@ type={
 type={
 	type="bison"
 	use_animation=yes
-	scale=0.200000
+	scale=0.500000
 	time_duration=300.000000
 	object={
 		name="bison"
@@ -1677,7 +1697,7 @@ type={
 type={
 	type="moose"
 	use_animation=yes
-	scale=0.280000
+	scale=0.500000
 	time_duration=300.000000
 	object={
 		name="moose"
@@ -1733,7 +1753,7 @@ type={
 type={
 	type="giraffe"
 	use_animation=yes
-	scale=0.300000
+	scale=0.500000
 	time_duration=300.000000
 	object={
 		name="giraffe"
@@ -1799,7 +1819,7 @@ type={
 type={
 	type="nammi2_forbidden_city_entity"
 	use_animation=no
-	scale=0.350000
+	scale=0.500000
 	time_duration=300.000000
 	object={
 		name="forbidden_city"
@@ -1815,7 +1835,7 @@ type={
 type={
 	type="nammi2_himeji_castle_entity"
 	use_animation=no
-	scale=0.290000
+	scale=0.500000
 	time_duration=300.000000
 	object={
 		name="himeji_castle"
@@ -1831,7 +1851,7 @@ type={
 type={
 	type="nammi2_stonehenge_entity"
 	use_animation=no
-	scale=0.180000
+	scale=0.500000
 	time_duration=300.000000
 	object={
 		name="stonehenge"
@@ -1847,7 +1867,7 @@ type={
 type={
 	type="nammi2_parthenon_entity"
 	use_animation=no
-	scale=0.290000
+	scale=0.500000
 	time_duration=300.000000
 	object={
 		name="parthenon"
@@ -1863,7 +1883,7 @@ type={
 type={
 	type="nammi2_petra_entity"
 	use_animation=no
-	scale=0.150000
+	scale=0.200000
 	time_duration=300.000000
 	object={
 		name="petra"
@@ -1879,13 +1899,13 @@ type={
 type={
 	type="nammi2_chichen_itza_entity"
 	use_animation=no
-	scale=0.340000
+	scale=0.750000
 	time_duration=300.000000
 	object={
 		name="chichen_itza"
 		hidden_on_start=no
 		position={
-			955.000 -0.100 769.000 
+			951.000 -0.100 769.000 
 		}
 		rotation={
 			0.000 -103.000 0.000 
@@ -1931,7 +1951,7 @@ type={
 type={
 	type="nammi2_machu_picchu_entity"
 	use_animation=no
-	scale=0.180000
+	scale=0.500000
 	time_duration=300.000000
 	object={
 		name="machu_picchu"
