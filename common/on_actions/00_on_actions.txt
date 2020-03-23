@@ -5,9 +5,9 @@ on_startup = {
 	if = { limit = { NOT = { has_country_flag = on_action_setup_flag } }
 	
 	RED = {
-	    #country_event = { id = es_start.2 days = 0 tooltip = es_collapse.2.a.tt }
-		#country_event = { id = es_start.3 days = 0 tooltip = es_collapse.2.a.tt }
-		#country_event = { id = es_start.4 days = 0 tooltip = es_collapse.2.a.tt }
+	    country_event = { id = es_start.2 days = 0 tooltip = es_collapse.2.a.tt }
+		country_event = { id = es_start.3 days = 0 tooltip = es_collapse.2.a.tt }
+		country_event = { id = es_start.4 days = 0 tooltip = es_collapse.2.a.tt }
 	}
 	
 	every_country = { limit = { ai = no NOT = { has_country_flag = es_1_start_flag } } country_event = { id = es_start.1 days = 0 tooltip = es_collapse.2.a.tt } set_country_flag = es_1_start_flag }
