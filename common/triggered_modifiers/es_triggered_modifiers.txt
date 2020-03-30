@@ -172,6 +172,9 @@ subject_in_war = {
 	trigger = {
 		NOT = { is_free_or_tributary_trigger = yes }
 		is_at_war = yes
+		overlord = {
+		    is_at_war = yes
+		}
 	}
 
 	discipline = -0.10

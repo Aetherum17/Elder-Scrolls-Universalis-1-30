@@ -624,15 +624,23 @@ song = {
 		modifier = {
 			factor = 0
 			NOT = {
-					culture_group = northern_cg
+					primary_culture = atmoran
+					accepted_culture = atmoran
+					primary_culture = glacial
+					accepted_culture = glacial
+					primary_culture = nord
+					accepted_culture = nord
+					primary_culture = skaal
+					accepted_culture = skaal
+				}
 			}
-		}
 		modifier = {
 			factor = 0
 			is_at_war = no
 		}
 	}
 }
+
 
 song = {
 	name = "Ares - Nordic Pride"
@@ -641,9 +649,16 @@ song = {
 		modifier = {
 			factor = 0
 			NOT = {
-					culture_group = northern_cg
+					primary_culture = atmoran
+					accepted_culture = atmoran
+					primary_culture = glacial
+					accepted_culture = glacial
+					primary_culture = nord
+					accepted_culture = nord
+					primary_culture = skaal
+					accepted_culture = skaal
+				}
 			}
-		}
 		modifier = {
 			factor = 0
 			is_at_war = no
@@ -658,9 +673,16 @@ song = {
 		modifier = {
 			factor = 0
 			NOT = {
-					culture_group = northern_cg
+					primary_culture = atmoran
+					accepted_culture = atmoran
+					primary_culture = glacial
+					accepted_culture = glacial
+					primary_culture = nord
+					accepted_culture = nord
+					primary_culture = skaal
+					accepted_culture = skaal
+				}
 			}
-		}
 		modifier = {
 			factor = 0
 			is_at_war = no
@@ -675,8 +697,17 @@ song = {
 		modifier = {
 			factor = 0
 			NOT = {
-					culture_group = cyrodiil_cg
-			}
+					primary_culture = nedic
+					accepted_culture = nedic
+					primary_culture = imperial
+					accepted_culture = imperial
+					primary_culture = nibenean
+					accepted_culture = nibenean
+					primary_culture = colovian
+					accepted_culture = colovian
+					primary_culture = keptu
+					accepted_culture = keptu
+				}
 		}
 		modifier = {
 			factor = 0
@@ -692,8 +723,17 @@ song = {
 		modifier = {
 			factor = 0
 			NOT = {
-					culture_group = cyrodiil_cg
-			}
+					primary_culture = nedic
+					accepted_culture = nedic
+					primary_culture = imperial
+					accepted_culture = imperial
+					primary_culture = nibenean
+					accepted_culture = nibenean
+					primary_culture = colovian
+					accepted_culture = colovian
+					primary_culture = keptu
+					accepted_culture = keptu
+				}
 		}
 		modifier = {
 			factor = 0
@@ -709,8 +749,17 @@ song = {
 		modifier = {
 			factor = 0
 			NOT = {
-					culture_group = cyrodiil_cg
-			}
+					primary_culture = nedic
+					accepted_culture = nedic
+					primary_culture = imperial
+					accepted_culture = imperial
+					primary_culture = nibenean
+					accepted_culture = nibenean
+					primary_culture = colovian
+					accepted_culture = colovian
+					primary_culture = keptu
+					accepted_culture = keptu
+				}
 		}
 		modifier = {
 			factor = 0
@@ -726,8 +775,17 @@ song = {
 		modifier = {
 			factor = 0
 			NOT = {
-					culture_group = cyrodiil_cg
-			}
+					primary_culture = nedic
+					accepted_culture = nedic
+					primary_culture = imperial
+					accepted_culture = imperial
+					primary_culture = nibenean
+					accepted_culture = nibenean
+					primary_culture = colovian
+					accepted_culture = colovian
+					primary_culture = keptu
+					accepted_culture = keptu
+				}
 		}
 		modifier = {
 			factor = 0
@@ -743,8 +801,17 @@ song = {
 		modifier = {
 			factor = 0
 			NOT = {
-					culture_group = cyrodiil_cg
-			}
+					primary_culture = nedic
+					accepted_culture = nedic
+					primary_culture = imperial
+					accepted_culture = imperial
+					primary_culture = nibenean
+					accepted_culture = nibenean
+					primary_culture = colovian
+					accepted_culture = colovian
+					primary_culture = keptu
+					accepted_culture = keptu
+				}
 		}
 		modifier = {
 			factor = 0
@@ -760,8 +827,11 @@ song = {
 		modifier = {
 			factor = 0
 			NOT = {
-					culture_group = bosmer_cg
-			}
+					primary_culture = bosmer
+					accepted_culture = bosmer
+					primary_culture = wood_orsimer
+					accepted_culture = wood_orsimer
+				}
 		}
 		modifier = {
 			factor = 0
@@ -777,8 +847,11 @@ song = {
 		modifier = {
 			factor = 0
 			NOT = {
-					culture_group = bosmer_cg
-			}
+					primary_culture = bosmer
+					accepted_culture = bosmer
+					primary_culture = wood_orsimer
+					accepted_culture = wood_orsimer
+				}
 		}
 		modifier = {
 			factor = 0
@@ -794,8 +867,11 @@ song = {
 		modifier = {
 			factor = 0
 			NOT = {
-					culture_group = yokudan-redguardian_cg
-			}
+					primary_culture = yokudan
+					accepted_culture = yokudan
+					primary_culture = redguard
+					accepted_culture = redguard
+				}
 		}
 		modifier = {
 			factor = 0
@@ -811,8 +887,11 @@ song = {
 		modifier = {
 			factor = 0
 			NOT = {
-					culture_group = yokudan-redguardian_cg
-			}
+					primary_culture = yokudan
+					accepted_culture = yokudan
+					primary_culture = redguard
+					accepted_culture = redguard
+				}
 		}
 		modifier = {
 			factor = 0
@@ -828,8 +907,15 @@ song = {
 		modifier = {
 			factor = 0
 			NOT = {
-					culture_group = marsh_cg
-			}
+					primary_culture = argonian
+					accepted_culture = argonian
+					primary_culture = archein
+					accepted_culture = archein
+					primary_culture = agaceph
+					accepted_culture = agaceph
+					primary_culture = naga
+					accepted_culture = naga
+				}
 		}
 		modifier = {
 			factor = 0
@@ -845,8 +931,13 @@ song = {
 		modifier = {
 			factor = 0
 			NOT = {
-					culture_group = high_elves_cg
-			}
+					primary_culture = altmer
+					accepted_culture = altmer
+					primary_culture = ayleid
+					accepted_culture = ayleid
+					primary_culture = sinistral
+					accepted_culture = sinistral
+				}
 		}
 		modifier = {
 			factor = 0
@@ -862,8 +953,13 @@ song = {
 		modifier = {
 			factor = 0
 			NOT = {
-					culture_group = high_elves_cg
-			}
+					primary_culture = altmer
+					accepted_culture = altmer
+					primary_culture = ayleid
+					accepted_culture = ayleid
+					primary_culture = sinistral
+					accepted_culture = sinistral
+				}
 		}
 		modifier = {
 			factor = 0
@@ -879,8 +975,13 @@ song = {
 		modifier = {
 			factor = 0
 			NOT = {
-					culture_group = high_elves_cg
-			}
+					primary_culture = altmer
+					accepted_culture = altmer
+					primary_culture = ayleid
+					accepted_culture = ayleid
+					primary_culture = sinistral
+					accepted_culture = sinistral
+				}
 		}
 		modifier = {
 			factor = 0
@@ -896,8 +997,11 @@ song = {
 		modifier = {
 			factor = 0
 			NOT = {
-					culture_group = orsimer_cg
-			}
+					primary_culture = orsimer
+					accepted_culture = orsimer
+					primary_culture = wood_orsimer
+					accepted_culture = wood_orsimer
+				}
 		}
 		modifier = {
 			factor = 0
@@ -913,8 +1017,13 @@ song = {
 		modifier = {
 			factor = 0
 			NOT = {
-					culture_group = khajiiti_cg
-			}
+					primary_culture = khajiiti
+					accepted_culture = khajiiti
+					primary_culture = anequinan
+					accepted_culture = anequinan
+					primary_culture = pellitinian
+					accepted_culture = pellitinian
+				}
 		}
 		modifier = {
 			factor = 0
@@ -931,8 +1040,9 @@ song = {
 			factor = 0
 			NOT = {
 					primary_culture = breton
+					accepted_culture = breton
+				}
 			}
-		}
 		modifier = {
 			factor = 0
 			is_at_war = no
@@ -948,8 +1058,9 @@ song = {
 			factor = 0
 			NOT = {
 					primary_culture = breton
+					accepted_culture = breton
+				}
 			}
-		}
 		modifier = {
 			factor = 0
 			is_at_war = yes
@@ -964,9 +1075,14 @@ song = {
 		modifier = {
 			factor = 0
 			NOT = {
-					culture_group = chimeris_cg
+					primary_culture = ashlander
+					accepted_culture = ashlander
+					primary_culture = dunmer
+					accepted_culture = dunmer
+					primary_culture = chimer
+					accepted_culture = chimer
+				}
 			}
-		}
 		modifier = {
 			factor = 0
 			is_at_war = no
@@ -981,9 +1097,14 @@ song = {
 		modifier = {
 			factor = 0
 			NOT = {
-					culture_group = chimeris_cg
+					primary_culture = ashlander
+					accepted_culture = ashlander
+					primary_culture = dunmer
+					accepted_culture = dunmer
+					primary_culture = chimer
+					accepted_culture = chimer
+				}
 			}
-		}
 		modifier = {
 			factor = 0
 			is_at_war = no
@@ -998,9 +1119,14 @@ song = {
 		modifier = {
 			factor = 0
 			NOT = {
-					culture_group = chimeris_cg
+					primary_culture = ashlander
+					accepted_culture = ashlander
+					primary_culture = dunmer
+					accepted_culture = dunmer
+					primary_culture = chimer
+					accepted_culture = chimer
+				}
 			}
-		}
 		modifier = {
 			factor = 0
 			is_at_war = yes
@@ -1041,12 +1167,15 @@ song = {
 song = {
 	name = "Ares - Yokuda"
 	chance = {
-		factor = 1
+		factor = 2
 		modifier = {
 			factor = 0
 			NOT = {
-					culture_group = yokudan-redguardian_cg
-			}
+					primary_culture = yokudan
+					accepted_culture = yokudan
+					primary_culture = redguard
+					accepted_culture = redguard
+				}
 		}
 		modifier = {
 			factor = 0
@@ -1058,12 +1187,23 @@ song = {
 song = {
 	name = "Ares - Akavir"
 	chance = {
-		factor = 1
+		factor = 2
 		modifier = {
 			factor = 0
 			NOT = {
-					culture_group = transpandomaic_cg
-			}
+					primary_culture = akaviri
+					accepted_culture = akaviri
+					primary_culture = islander
+					accepted_culture = islander
+					primary_culture = kamal
+					accepted_culture = kamal
+					primary_culture = tangmo
+					accepted_culture = tangmo
+					primary_culture = po_tun
+					accepted_culture = po_tun
+					primary_culture = tsaesci
+					accepted_culture = tsaesci
+				}
 		}
 		modifier = {
 			factor = 0
@@ -1080,7 +1220,8 @@ song = {
 			factor = 0
 			NOT = {
 					primary_culture = sload
-			}
+					accepted_culture = sload
+				}
 		}
 		modifier = {
 			factor = 0
@@ -1195,8 +1336,13 @@ song = {
 		modifier = {
 			factor = 0
 			NOT = {
-					culture_group = high_elves_cg
-			}
+					primary_culture = altmer
+					accepted_culture = altmer
+					primary_culture = ayleid
+					accepted_culture = ayleid
+					primary_culture = sinistral
+					accepted_culture = sinistral
+				}
 		}
 		modifier = {
 			factor = 0
@@ -1234,12 +1380,19 @@ song = {
 		modifier = {
 			factor = 0
 			NOT = {
-					culture_group = po_tun_cg
-					culture_group = tsaesci_cg
-					culture_group = tangmo_cg
-					culture_group = transpandomaic_cg
-					culture_group = kamal_cg
-			}
+					primary_culture = akaviri
+					accepted_culture = akaviri
+					primary_culture = islander
+					accepted_culture = islander
+					primary_culture = kamal
+					accepted_culture = kamal
+					primary_culture = tangmo
+					accepted_culture = tangmo
+					primary_culture = po_tun
+					accepted_culture = po_tun
+					primary_culture = tsaesci
+					accepted_culture = tsaesci
+				}
 		}
 		modifier = {
 			factor = 0
@@ -1255,12 +1408,19 @@ song = {
 		modifier = {
 			factor = 0
 			NOT = {
-					culture_group = po_tun_cg
-					culture_group = tsaesci_cg
-					culture_group = tangmo_cg
-					culture_group = transpandomaic_cg
-					culture_group = kamal_cg
-			}
+					primary_culture = akaviri
+					accepted_culture = akaviri
+					primary_culture = islander
+					accepted_culture = islander
+					primary_culture = kamal
+					accepted_culture = kamal
+					primary_culture = tangmo
+					accepted_culture = tangmo
+					primary_culture = po_tun
+					accepted_culture = po_tun
+					primary_culture = tsaesci
+					accepted_culture = tsaesci
+				}
 		}
 		modifier = {
 			factor = 0
@@ -1276,8 +1436,17 @@ song = {
 		modifier = {
 			factor = 0
 			NOT = {
-					culture_group = cyrodiil_cg
-			}
+					primary_culture = nedic
+					accepted_culture = nedic
+					primary_culture = imperial
+					accepted_culture = imperial
+					primary_culture = nibenean
+					accepted_culture = nibenean
+					primary_culture = colovian
+					accepted_culture = colovian
+					primary_culture = keptu
+					accepted_culture = keptu
+				}
 		}
 		modifier = {
 			factor = 0

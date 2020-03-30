@@ -248,7 +248,11 @@ celestial_empire_legacy = {
 	conditional = {
 		allow = { has_dlc = "Mandate of Heaven" }
 		has_meritocracy = yes
-		factions = {}
+		factions = {
+		temples
+		enuchs
+		bureaucrats
+	    }
 	}
 
 	ai = {

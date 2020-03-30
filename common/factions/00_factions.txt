@@ -4,8 +4,7 @@
 # Cleared and replaced by Empire of China 
 # at start of game if MoH DLC is active.
 
-temples =
-{
+temples = {
 	monarch_power = MIL
 	always = yes
 
@@ -17,8 +16,7 @@ temples =
 	}
 }
 
-enuchs =
-{
+enuchs = {
 	monarch_power = DIP
 	always = yes
 
@@ -31,8 +29,7 @@ enuchs =
 	}
 }
 
-bureaucrats =
-{
+bureaucrats = {
 	monarch_power = ADM
 	always = yes
 
@@ -49,8 +46,7 @@ bureaucrats =
 ########################################
 # Merchant Republic Factions
 ########################################
-mr_aristocrats =
-{
+mr_aristocrats = {
 	monarch_power = MIL
 	always = yes
 
@@ -62,8 +58,7 @@ mr_aristocrats =
 	}
 }
 
-mr_traders =
-{
+mr_traders = {
 	monarch_power = DIP
 	always = yes
 
@@ -75,8 +70,7 @@ mr_traders =
 	}
 }
 
-mr_guilds =
-{
+mr_guilds = {
 	monarch_power = ADM
 	always = yes
 
@@ -92,8 +86,7 @@ mr_guilds =
 # Revolutionary Republic Factions
 ########################################
 
-rr_jacobins =
-{
+rr_jacobins = {
 	allow = {
 		has_dlc = "Rights of Man"
 	}
@@ -109,8 +102,7 @@ rr_jacobins =
 	}
 }
 
-rr_royalists =
-{
+rr_royalists = {
 	allow = {
 		has_dlc = "Rights of Man"
 	}
@@ -126,8 +118,7 @@ rr_royalists =
 	}
 }
 
-rr_girondists =
-{
+rr_girondists = {
 	allow = {
 		has_dlc = "Rights of Man"
 	}
@@ -147,8 +138,7 @@ rr_girondists =
 # ESU Factions #
 ################
 
-es_warriors =
-{
+es_warriors = {
 	monarch_power = MIL
 	always = yes
 
@@ -160,8 +150,7 @@ es_warriors =
 	}
 }
 
-es_merchants =
-{
+es_merchants = {
 	monarch_power = DIP
 	always = yes
 
@@ -173,8 +162,7 @@ es_merchants =
 	}
 }
 
-es_clergy =
-{
+es_clergy = {
 	monarch_power = ADM
 	always = yes
 
@@ -188,8 +176,7 @@ es_clergy =
 
 #######################################################################
 
-es_knights =
-{
+es_knights = {
 	monarch_power = MIL
 	always = yes
 
@@ -201,8 +188,7 @@ es_knights =
 	}
 }
 
-es_priests =
-{
+es_priests = {
 	monarch_power = DIP
 	always = yes
 
@@ -214,8 +200,7 @@ es_priests =
 	}
 }
 
-es_monks =
-{
+es_monks = {
 	monarch_power = ADM
 	always = yes
 
