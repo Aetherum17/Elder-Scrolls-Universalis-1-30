@@ -12,61 +12,6 @@ on_startup = {
 	
 	every_country = { limit = { ai = no NOT = { has_country_flag = es_1_start_flag } } country_event = { id = es_start.1 days = 0 tooltip = es_collapse.2.a.tt } set_country_flag = es_1_start_flag }
 	
-	if = {
-		limit = {
-		NOT = { is_year = 50 }
-		capital_scope = { superregion = pyandonea_superregion }
-		}
-		pyandonea_superregion = {
-		    discover_country = ROOT
-		}
-	}
-	if = {
-		limit = {
-		NOT = { is_year = 50 }
-		capital_scope = { superregion = tamriel_superregion }
-		}
-		tamriel_superregion = {
-		    discover_country = ROOT
-		}
-	}
-	if = {
-		limit = {
-		NOT = { is_year = 50 }
-		capital_scope = { superregion = yokuda_superregion }
-		}
-		yokuda_superregion = {
-		    discover_country = ROOT
-		}
-	}
-	if = {
-		limit = {
-		NOT = { is_year = 50 }
-		capital_scope = { superregion = atmora_superregion }
-		}
-		atmora_superregion = {
-		    discover_country = ROOT
-		}
-	}
-	if = {
-		limit = {
-		NOT = { is_year = 50 }
-		capital_scope = { superregion = akavir_superregion }
-		}
-		akavir_superregion = {
-		    discover_country = ROOT
-		}
-	}
-	if = {
-		limit = {
-		NOT = { is_year = 50 }
-		capital_scope = { superregion = deadric_planes_superregion }
-		}
-		deadric_planes_superregion = {
-		    discover_country = ROOT
-		}
-	}
-	
 	every_owned_province = {
 	    if = {
 		limit = {
