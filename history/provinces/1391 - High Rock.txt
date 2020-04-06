@@ -16,16 +16,3 @@ center_of_trade = 1
 
 fort_15th = yes
 
-700.1.1 = {
-    owner = ORS
-	controller = ORS
-	add_core = ORS
-	add_province_modifier = {
-	name = "16_n_orsinium"
-	duration = -1
-	}
-}
-
-990.1.1 = {
-    remove_province_modifier = 16_n_orsinium
-}

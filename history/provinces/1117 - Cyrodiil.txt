@@ -4,41 +4,11 @@ add_core = CA1
 culture = nedic
 religion = mehrunes_dagon_cult
 hre = no
-base_tax = 3
-base_production = 3
+base_tax = 1
+base_production = 1
 trade_goods = unknown
-base_manpower = 3
+base_manpower = 1
 capital = "Mariandia" 
 is_city = yes
 discovered_by = tamriel_tg discovered_by = elsweyr_tg discovered_by = marshan_tg discovered_by = orsimer_tg
 
-211.1.1 = { religion = eight_divines }
-
-1045.1.1 = {
-	owner = ORD
-	controller = ORD
-	add_core = ORD
-}
-
-1309.1.1 = {
-	owner = CYR
-	controller = CYR
-	add_core = CYR
-	add_core = NIB
-}
-
-1503.1.1 = {
-    owner = POE
-	controller = POE
-	add_core = POE
-}
-
-1555.1.1 = {
-    owner = CA1
-	controller = CA1
-	add_core = CA1
-}
-
-1609.1.1 = {
-    culture = argonian
-}

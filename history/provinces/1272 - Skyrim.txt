@@ -4,44 +4,11 @@ add_core = NA2
 culture = dwemer
 religion = reason_and_logic_cult
 hre = no
-base_tax = 3
-base_production = 3
+base_tax = 1
+base_production = 1
 trade_goods = unknown
-base_manpower = 3
+base_manpower = 1
 capital = "Bergan" 
 is_city = yes
 discovered_by = tamriel_tg discovered_by = elsweyr_tg discovered_by = marshan_tg discovered_by = orsimer_tg
 
-fort_15th = yes
-
-center_of_trade = 1
-
-242.1.1 = {
-	owner = SKY
-	controller = SKY
-	add_core = SKY
-}
-
-308.1.1 = {
-	owner = OLD
-	controller = OLD
-	add_core = OLD
-}
-
-369.1.1 = {
-    owner = ESK
-	controller = ESK
-	add_core = ESK
-	add_core = WSK
-}
-
-420.1.1 = {
-	owner = SKY
-	controller = SKY
-	add_core = SKY
-}
-
-750.1.1 = {
-    culture = falmer
-    religion = snow_elves_pantheon
-}

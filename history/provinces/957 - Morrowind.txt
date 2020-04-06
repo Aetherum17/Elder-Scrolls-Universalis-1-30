@@ -4,39 +4,11 @@ add_core = MA2
 culture = dwemer
 religion = reason_and_logic_cult
 hre = no
-base_tax = 3
-base_production = 3
+base_tax = 1
+base_production = 1
 trade_goods = unknown
-base_manpower = 3
+base_manpower = 1
 capital = "Ravaros" 
 is_city = yes
 discovered_by = tamriel_tg discovered_by = elsweyr_tg discovered_by = marshan_tg discovered_by = orsimer_tg
 
-center_of_trade = 1
-
-fort_15th = yes
-
-242.1.1 = {
-	owner = DWE
-	controller = DWE
-	add_core = DWE
-}
-
-420.1.1 = {
-	owner = UNI
-	controller = UNI
-	add_core = UNI
-}
-
-700.1.1 = {
-    owner = REO
-	controller = REO
-	add_core = REO
-	culture = chimer
-	religion = chimer_pantheon
-}
-
-750.1.1 = {
-    culture = dunmer
-	religion = tribunal_pantheon
-}

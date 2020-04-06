@@ -3,7 +3,7 @@ controller = HA8
 add_core = HA8
 culture = ayleid
 religion = sheogorath_cult
-hre = no
+hre = yes
 base_tax = 1
 base_production = 1
 trade_goods = unknown
@@ -17,32 +17,3 @@ add_permanent_province_modifier = {
 	duration = -1
 }
 
-420.1.1 = {
-	owner = ROU
-	controller = ROU
-	add_core = ROU
-	religion = reason_and_logic_cult
-	culture = dwemer
-}
-
-750.1.1 = {
-    owner = FAL
-	controller = FAL
-	add_core = FAL
-	culture = falmer
-	religion = snow_elves_pantheon
-}
-
-810.1.1 = {
-    owner = HAM
-	controller = HAM
-	add_core = HAM
-	culture = redguard
-	religion = redguard_pantheon
-}
-
-1045.1.1 = {
-    owner = HE8
-	controller = HE8
-	add_core = HE8
-}

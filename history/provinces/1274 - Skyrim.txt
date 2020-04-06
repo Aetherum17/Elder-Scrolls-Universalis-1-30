@@ -4,24 +4,11 @@ add_core = NA3
 culture = nord
 religion = nordic_pantheon
 hre = no
-base_tax = 3
-base_production = 3
+base_tax = 1
+base_production = 1
 trade_goods = unknown
-base_manpower = 3
+base_manpower = 1
 capital = "Grerria" 
 is_city = yes
 discovered_by = tamriel_tg discovered_by = elsweyr_tg discovered_by = marshan_tg discovered_by = orsimer_tg
 
-1387.1.1 = {
-	owner = SKY
-	controller = SKY
-	add_core = SKY
-}
-
-1668.1.1 = {
-    add_building = fort_15th
-	add_province_modifier = {
-	    name = "35_captain_rana"
-		duration = -1
-	}
-}
