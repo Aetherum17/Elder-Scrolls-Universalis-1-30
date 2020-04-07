@@ -117,11 +117,17 @@ wine = {
 			OR = {
 			region = western_syrodiil_lr
 			region = eastern_syrodiil_lr
+			region = golden_coast_lr
+			region = jerall_mountains_lr
+			region = valus_mountains_lr
 		    }
 		}
 		modifier = {
 			factor = 0.1
 			NOT = { region = western_syrodiil_lr }
+			NOT = { region = golden_coast_lr }
+			NOT = { region = jerall_mountains_lr }
+			NOT = { region = valus_mountains_lr }
 			NOT = { region = eastern_syrodiil_lr }
 		}
 	}
@@ -182,14 +188,18 @@ wool = {
 		modifier = {
 			factor = 2.5
 			OR = {
-			region = western_skyrim_lr
-			region = eastern_skyrim_lr
+			region = reach_lr
+			region = rift_lr
+			region = great_planes_lr
+			region = nordic_coast_lr
 			}
 		}
 		modifier = {
 			factor = 0.1
-			NOT = { region = western_skyrim_lr }
-			NOT = { region = eastern_skyrim_lr }
+			NOT = { region = reach_lr }
+			NOT = { region = rift_lr }
+			NOT = { region = great_planes_lr }
+			NOT = { region = nordic_coast_lr }
 		}
 	}
 }
@@ -594,11 +604,17 @@ spices = {
 		}
 		modifier = {
 			factor = 2.5
+			OR = {
 			region = black_marsh_lr
+			region = shadowfen_lr
+			region = murkmire_lr
+			}
 		}
 		modifier = {
 			factor = 0.1
 			NOT = { region = black_marsh_lr }
+			NOT = { region = shadowfen_lr }
+			NOT = { region = murkmire_lr }
 		}
 	}
 }
@@ -712,11 +728,15 @@ sugar = {
 		}
 		modifier = {
 			factor = 2.5
-			region = eldweyr_lr
+			OR = {
+			region = anequina_lr
+			region = pelletine_lr
+			}
 		}
 		modifier = {
 			factor = 0.1
-			NOT = { region = eldweyr_lr }
+			NOT = { region = anequina_lr }
+			NOT = { region = pelletine_lr }
 		}
 	}
 }
@@ -833,11 +853,15 @@ silk = {
 		}
 		modifier = {
 			factor = 2.5
+			OR = {
 			region = summerset_lr
+			region = auridon_lr
+			}
 		}
 		modifier = {
 			factor = 0.1
 			NOT = { region = summerset_lr }
+			NOT = { region = auridon_lr }
 		}
 	}
 }
@@ -862,11 +886,17 @@ dyes = {
 		}
 		modifier = {
 			factor = 2.5
+			OR = {
 			region = morrowind_lr
+			region = deshaan_lr
+			region = velothi_mountains_lr
+			}
 		}
 		modifier = {
 			factor = 0.25
 			NOT = { region = morrowind_lr }
+			NOT = { region = deshaan_lr }
+			NOT = { region = velothi_mountains_lr }
 		}
 	}
 }
@@ -964,11 +994,17 @@ incense = {
 		}
 		modifier = {
 			factor = 2.5
-			region = hammerfell_lr
+			OR = {
+			region = corten_heights_lr
+			region = dragontail_mountains_lr
+			region = alikr_desert_lr
+			}
 		}
 		modifier = {
 			factor = 0.1
-			NOT = { region = hammerfell_lr }
+			NOT = { region = corten_heights_lr }
+			NOT = { region = dragontail_mountains_lr }
+			NOT = { region = alikr_desert_lr }
 		}
 	}
 }
@@ -1049,11 +1085,15 @@ gems = {
 		}
 		modifier = {
 			factor = 2.5
+			OR = {
 			region = vvardenfell_lr
+			region = llothanis_peninsula_lr
+			}
 		}
 		modifier = {
 			factor = 0.1
 			NOT = { region = vvardenfell_lr }
+			NOT = { region = llothanis_peninsula_lr }
 		}
 	}
 }
@@ -1472,11 +1512,15 @@ wood = {
 		}
 		modifier = {
 			factor = 2.5
-			region = valenwood_lr
+			OR = {
+			region = northern_valenwood_lr
+			region = southern_valenwood_lr
+			}
 		}
 		modifier = {
 			factor = 0.1
-			NOT = { region = valenwood_lr }
+			NOT = { region = northern_valenwood_lr }
+			NOT = { region = southern_valenwood_lr }
 		}
 	}
 }
@@ -1504,11 +1548,15 @@ lobsters = {
 		}
 		modifier = {
 			factor = 2.5
+			OR = {
 			region = hgh_rock_lr
+			region = wrothgar_lr
+			}
 		}
 		modifier = {
 			factor = 0.1
 			NOT = { region = hgh_rock_lr }
+			NOT = { region = wrothgar_lr }
 		}
 	}
 }
