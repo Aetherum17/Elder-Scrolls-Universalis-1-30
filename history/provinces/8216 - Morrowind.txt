@@ -11,3 +11,8 @@ base_manpower = 1
 capital = "Neveusa"
 is_city = yes
 discovered_by = tamriel_tg discovered_by = elsweyr_tg discovered_by = marshan_tg discovered_by = orsimer_tg
+
+add_permanent_province_modifier = {
+	name = land_trade_modifier
+	duration = -1
+}
