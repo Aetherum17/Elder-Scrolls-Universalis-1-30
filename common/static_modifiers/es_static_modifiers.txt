@@ -274,6 +274,9 @@ development = {
 	local_sailors = 35
 	province_trade_power_value = 0.25
 	local_amount_of_banners = 0.1
+	local_build_cost = 0.015
+	local_build_time = -0.01
+	local_unrest = 0.1
 }
 
 development_scaled = {
@@ -311,7 +314,7 @@ colony_level = {
 }
 
 native_assimilation = {
-	trade_goods_size = 0.05
+	trade_goods_size = 0.10
 }
 
 native_aggressiveness = {
@@ -365,7 +368,7 @@ non_accepted_culture = {
 }
 
 accepted_culture_demoted = {
-	local_unrest = 5
+	local_unrest = 10
 }
 
 non_accepted_culture_republic = {
@@ -893,6 +896,7 @@ country_development = {
 
 tribal_allegiance = {
 	manpower_recovery_speed = 0.25
+	global_manpower_modifier = 0.25
 	global_unrest = -2.5
 }
 
