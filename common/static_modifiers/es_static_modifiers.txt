@@ -229,7 +229,7 @@ blockaded = {
 }
 
 no_adjacent_controlled = {
-	local_colonial_growth = -5
+	local_colonial_growth = -10
 }
 
 provincial_tax_income = {
@@ -242,7 +242,7 @@ provincial_production_size = {
 }
 
 knowledge_sharing = {
-	institution_growth = 12
+	institution_growth = 10
 }
 
 manpower = {
@@ -332,9 +332,9 @@ non_core = {
 }
 
 territory_core = {
-	local_tax_modifier = 0.75				
-	local_manpower_modifier = 0.75
-	local_sailors_modifier = 0.75
+	local_tax_modifier = 0.5				
+	local_manpower_modifier = 0.5
+	local_sailors_modifier = 0.5
 	local_missionary_strength = -0.025
 }
 
@@ -888,6 +888,12 @@ num_of_marriages = {
 
 num_of_provinces = {
 	monthly_militarized_society = -0.003
+	harsh_treatment_cost = 0.001
+	embracement_cost = 0.001
+	fort_maintenance_modifier = 0.001
+	stability_cost_modifier = 0.001
+	war_exhaustion_cost = 0.001
+	advisor_cost = 0.001
 }
 
 country_development = {
@@ -952,7 +958,8 @@ meritocracy = {
 
 low_meritocracy = {
 	yearly_corruption = 0.25
-}								
+}
+								
 corruption = {
 	global_spy_defence = -0.50
 	spy_offence = -0.75
