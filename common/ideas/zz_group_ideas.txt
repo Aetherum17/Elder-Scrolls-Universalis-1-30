@@ -2214,3 +2214,157 @@ PUE_ideas = {
 		prestige = 0.25
 	}
 }
+
+NAJ_ideas = {
+	start = {
+		global_missionary_strength = 0.025
+		movement_speed = 0.15
+	}
+	
+	bonus = {
+		merchants = 1
+	}
+	
+	trigger = {
+		primary_culture = lilmothiit
+	}
+	free = yes
+	
+	bedouin_poets = {
+		army_tradition = 0.25
+	}
+	hanbali_school_ni = {
+		missionaries = 1
+	}
+	ships_of_the_desert = {
+		global_trade_power = 0.1
+	}
+	bedouin_raiders = {
+		hostile_attrition = 1.0
+	}
+	arabian_horsemanship = {
+		cavalry_flanking = 0.25
+	}
+	unite_the_tribes = {
+		land_maintenance_modifier = -0.10
+	}
+	enforce_tawhid = {
+		tolerance_own = 1
+	}
+}
+
+MAL_ideas = {
+	start = {
+		land_attrition = -0.25
+		tolerance_heathen = 1
+	}
+	
+	bonus = {
+		infantry_power = 0.15
+	}
+	
+	trigger = {
+		primary_culture = keptu
+	}
+	free = yes
+
+	restore_malian_suzerainity = {
+		vassal_income = 0.1
+	}
+	gold_of_bure = {
+		production_efficiency = 0.10
+	}
+	reclamation_of_land = {
+		global_manpower_modifier = 0.10
+	}
+	mandinka_warrior_spirit = {
+		discipline = 0.05
+	}
+	lost_fleet_of_abubukari_ii = {
+		navy_tradition = 0.25
+	}
+	seek_new_markets_for_salt = {
+		merchants = 1
+	}
+	west_african_slave_trade = {
+		trade_efficiency = 0.1
+	}
+}
+
+CRE_ideas = {
+	start = {
+		unjustified_demands = -0.25
+		global_spy_defence = 0.25
+	}
+	
+	bonus = {
+		global_tax_modifier = 0.25
+	}
+	
+	trigger = {
+		primary_culture = minotaur
+	}
+	free = yes
+	
+	moundbilders_legacy_CRE = {
+		build_cost = -0.1
+	}
+	creek_caste_system = {
+		stability_cost_modifier = -0.1
+	}
+	green_corn_celebration = {
+		production_efficiency = 0.1
+	}
+	four_mother_towns = {
+		prestige = 0.25
+	}
+	micos_leadership = {
+		global_manpower_modifier = 0.1
+	}
+	muscogee_neutrality = {
+		diplomatic_reputation = 0.5
+	}
+	red_sticks = {
+		land_morale = 0.1
+	}
+}
+
+PRO_ideas = {
+	start = {
+		land_morale = 0.15
+		diplomatic_reputation = 1
+	}
+	bonus = {
+		prestige = 0.5
+	}
+	trigger = {
+		primary_culture = hollow
+	}
+	free = yes
+
+	memory_of_angevin_claims = {
+		land_forcelimit_modifier = 0.10
+	}
+	revive_house_of_anjou = {
+		legitimacy = 0.25
+		republican_tradition = 0.25
+		devotion = 0.25							
+        horde_unity = 0.25
+        meritocracy = 0.25
+	}
+	composite_monarchy = {
+		global_unrest = -1
+	}
+	tarascon_castle = {
+		defensiveness = 0.1
+	}
+	public_weal = {
+		diplomatic_upkeep = 1
+	}
+	toulon_dockyard = {
+		land_maintenance_modifier = -0.10
+	}
+	provencal_quilting = {
+		production_efficiency = 0.1
+	}
+}

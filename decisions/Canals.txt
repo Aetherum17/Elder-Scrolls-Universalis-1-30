@@ -7,30 +7,30 @@ country_decisions = {
 				ai = no
 				AND = {
 					treasury = 15000
-					owns_or_vassal_of = 1037
+					owns_or_vassal_of = 7662
 				}
 			}
-			has_discovered = 1037
-			1037 = {
+			has_discovered = 7662
+			7662 = {
 				NOT = { has_great_project = tel_mora_canal }
 				NOT = { has_construction = canal }
 			}
 		}
 		provinces_to_highlight = {
-			province_id = 1037
+			province_id = 7662
 			OR = {
 				NOT = { owned_by = ROOT }
 				NOT = { owner = { vassal_of = ROOT } }
 			}
 		}
 		allow = {
-			owns_or_vassal_of = 1037
+			owns_or_vassal_of = 7662
 			is_subject = no			
 			treasury = 15000
 		}
 		effect = {
 			add_treasury = -15000
-			1037 = {
+			7662 = {
 				add_great_project = tel_mora_canal
 			}
 		}
@@ -43,20 +43,20 @@ country_decisions = {
 		major = yes
 		potential = {
 			ai = no
-			owns_or_vassal_of = 1037
+			owns_or_vassal_of = 7662
 			is_subject = no
-			1037 = {
+			7662 = {
 				has_construction = canal
 			}
 		}
 		allow = {
-			1037 = {
+			7662 = {
 				has_construction = canal
 			}
 		}
 		effect = {
 		    add_treasury = 5000
-			1037 = {
+			7662 = {
 				cancel_construction = yes
 			}
 		}

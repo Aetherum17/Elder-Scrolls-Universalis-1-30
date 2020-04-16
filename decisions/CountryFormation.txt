@@ -10,10 +10,10 @@ country_decisions = {
 		provinces_to_highlight = {
 		    OR = {
 			province_id = 224		
-			province_id = 219
-			province_id = 209
 			province_id = 240
-			province_id = 231
+			province_id = 2050
+			province_id = 2089
+			province_id = 209
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -21,10 +21,10 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			owns_core_province = 224		
-			owns_core_province = 219
-			owns_core_province = 209
 			owns_core_province = 240
-			owns_core_province = 231
+			owns_core_province = 2050
+			owns_core_province = 2089
+			owns_core_province = 209
 			
 		}
 		effect = {
@@ -47,7 +47,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	summerset_nation = {
@@ -61,9 +61,9 @@ country_decisions = {
 		provinces_to_highlight = {
 		    OR = {
 			province_id = 271		
-			province_id = 284
-			province_id = 263
-			province_id = 250
+			province_id = 4740
+			province_id = 281
+			province_id = 249
 			province_id = 299
 			}
 			NOT = { owned_by = ROOT }
@@ -72,9 +72,9 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			owns_core_province = 271		
-			owns_core_province = 284
-			owns_core_province = 263
-			owns_core_province = 250
+			owns_core_province = 4740
+			owns_core_province = 281
+			owns_core_province = 249
 			owns_core_province = 299
 			
 		}
@@ -98,7 +98,113 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
+	}
+	
+	great_alinor_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = GAL }
+			NOT = { tag = SUM }
+			NOT = { tag = AUR }
+			NOT = { tag = DIR }
+			primary_culture = altmer
+			NOT = { has_country_flag = formed_gal_flag }
+		}
+		provinces_to_highlight = {
+		    OR = {
+			province_id = 271		
+			province_id = 263
+			province_id = 281
+			province_id = 4705
+			province_id = 249
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 271		
+			owns_core_province = 263
+			owns_core_province = 281
+			owns_core_province = 4705
+			owns_core_province = 249
+			
+		}
+		effect = {
+			change_tag = GAL
+			set_country_flag = formed_gal_flag
+			#
+			if = {
+				limit = {
+					NOT = { government_rank = 5 }
+				}
+				set_government_rank = 5
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+	auridon_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = AUR }
+			NOT = { tag = SUM }
+			NOT = { tag = GAL }
+			NOT = { tag = DIR }
+			primary_culture = altmer
+			NOT = { has_country_flag = formed_aur_flag }
+		}
+		provinces_to_highlight = {
+		    OR = {
+			province_id = 299		
+			province_id = 260
+			province_id = 303
+			province_id = 291
+			province_id = 4740
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 299		
+			owns_core_province = 260
+			owns_core_province = 303
+			owns_core_province = 291
+			owns_core_province = 4740
+			
+		}
+		effect = {
+			change_tag = GAL
+			set_country_flag = formed_aur_flag
+			#
+			if = {
+				limit = {
+					NOT = { government_rank = 5 }
+				}
+				set_government_rank = 5
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
 	}
 	
 	yokuda_nation = {
@@ -111,10 +217,10 @@ country_decisions = {
 		provinces_to_highlight = {
 		    OR = {
 			province_id = 335		
-			province_id = 337
-			province_id = 350
-			province_id = 345
+			province_id = 3443
 			province_id = 355
+			province_id = 333
+			province_id = 3467
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -122,10 +228,10 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			owns_core_province = 335		
-			owns_core_province = 337
-			owns_core_province = 350
-			owns_core_province = 345
+			owns_core_province = 3443
 			owns_core_province = 355
+			owns_core_province = 333
+			owns_core_province = 3467
 			
 		}
 		effect = {
@@ -148,7 +254,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	thrass_nation = {
@@ -165,6 +271,7 @@ country_decisions = {
 			province_id = 321
 			province_id = 323
 			province_id = 324
+			province_id = 2110
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -175,6 +282,7 @@ country_decisions = {
 			owns_core_province = 321
 			owns_core_province = 323
 			owns_core_province = 324
+			owns_core_province = 2110
 		}
 		effect = {
 			change_tag = THR
@@ -196,7 +304,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	skyrim_nation = {
@@ -218,8 +326,8 @@ country_decisions = {
 			province_id = 1342		
 			province_id = 1275
 			province_id = 1319
-			province_id = 1299
-			province_id = 1306
+			province_id = 1268
+			province_id = 1291
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -229,8 +337,8 @@ country_decisions = {
 			owns_core_province = 1342		
 			owns_core_province = 1275
 			owns_core_province = 1319
-			owns_core_province = 1299
-			owns_core_province = 1306
+			owns_core_province = 1268
+			owns_core_province = 1291
 		}
 		effect = {
 			change_tag = SKY
@@ -252,7 +360,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	western_skyrim_nation = {
@@ -270,8 +378,8 @@ country_decisions = {
 			province_id = 1342		
 			province_id = 1291
 			province_id = 1355
+			province_id = 1336
 			province_id = 1331
-			province_id = 1325
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -281,8 +389,8 @@ country_decisions = {
 			owns_core_province = 1342		
 			owns_core_province = 1291
 			owns_core_province = 1355
+			owns_core_province = 1336
 			owns_core_province = 1331
-			owns_core_province = 1325
 		}
 		effect = {
 			change_tag = WSK
@@ -304,7 +412,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	eastern_skyrim_nation = {
@@ -320,10 +428,10 @@ country_decisions = {
 		provinces_to_highlight = {
 		    OR = {
 			province_id = 1275		
-			province_id = 1306
-			province_id = 1319
+			province_id = 1299
 			province_id = 1268
 			province_id = 1286
+			province_id = 1306
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -331,10 +439,10 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			owns_core_province = 1275		
-			owns_core_province = 1306
-			owns_core_province = 1319
+			owns_core_province = 1299
 			owns_core_province = 1268
 			owns_core_province = 1286
+			owns_core_province = 1306
 		}
 		effect = {
 			change_tag = ESK
@@ -356,7 +464,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	old_kingdom_nation = {
@@ -373,7 +481,7 @@ country_decisions = {
 		    OR = {
 			province_id = 1342		
 			province_id = 1275
-			province_id = 1400
+			province_id = 1319
 			province_id = 1369
 			province_id = 970
 			}
@@ -384,7 +492,7 @@ country_decisions = {
 			is_at_war = no
 			owns_core_province = 1342		
 			owns_core_province = 1275
-			owns_core_province = 1400
+			owns_core_province = 1319
 			owns_core_province = 1369
 			owns_core_province = 970
 		}
@@ -408,7 +516,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	volkkihar_nation = {
@@ -457,7 +565,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	winter_elves_nation = {
@@ -469,22 +577,22 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 		    OR = {
-			province_id = 1313		
-			province_id = 1280
-			province_id = 1268
+			province_id = 7571		
 			province_id = 1286
-			province_id = 1291
+			province_id = 1268
+			province_id = 1194
+			province_id = 5899
 			}
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-			owns_core_province = 1313		
-			owns_core_province = 1280
-			owns_core_province = 1268
+			owns_core_province = 7571		
 			owns_core_province = 1286
-			owns_core_province = 1291
+			owns_core_province = 1268
+			owns_core_province = 1194
+			owns_core_province = 5899
 		}
 		effect = {
 			change_tag = WIN
@@ -506,7 +614,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	reach_nation = {
@@ -520,9 +628,9 @@ country_decisions = {
 		    OR = {
 			province_id = 1355		
 			province_id = 1331
-			province_id = 1296
-			province_id = 1294
-			province_id = 1357
+			province_id = 7220
+			province_id = 7200
+			province_id = 1363
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -531,9 +639,9 @@ country_decisions = {
 			is_at_war = no
 			owns_core_province = 1355		
 			owns_core_province = 1331
-			owns_core_province = 1296
-			owns_core_province = 1294
-			owns_core_province = 1357
+			owns_core_province = 7220
+			owns_core_province = 7200
+			owns_core_province = 1363
 		}
 		effect = {
 			change_tag = REA
@@ -555,7 +663,186 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
+	}
+	
+	great_plains_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = GRA }
+			NOT = { tag = SKY }
+			NOT = { tag = OLD }
+			NOT = { tag = WSK }
+			NOT = { tag = ESK }
+			NOT = { tag = RIF }
+			NOT = { tag = NOR }
+			NOT = { tag = DWE }
+			NOT = { tag = ROU }
+			OR = {
+			primary_culture = nord
+			primary_culture = dwemer
+			}
+			NOT = { has_country_flag = formed_gra_flag }
+		}
+		provinces_to_highlight = {
+		    OR = {
+			province_id = 1319		
+			province_id = 1314
+			province_id = 1291
+			province_id = 7479
+			province_id = 7532
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 1319		
+			owns_core_province = 1314
+			owns_core_province = 1291
+			owns_core_province = 7479
+			owns_core_province = 7532
+		}
+		effect = {
+			change_tag = GRA
+			set_country_flag = formed_gra_flag
+			#
+			if = {
+				limit = {
+					NOT = { government_rank = 5 }
+				}
+				set_government_rank = 5
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+	nordic_coast_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = NOR }
+			NOT = { tag = SKY }
+			NOT = { tag = OLD }
+			NOT = { tag = WSK }
+			NOT = { tag = ESK }
+			NOT = { tag = RIF }
+			NOT = { tag = GRA }
+			primary_culture = nord
+	
+			NOT = { has_country_flag = formed_nor_flag }
+		}
+		provinces_to_highlight = {
+		    OR = {
+			province_id = 1306		
+			province_id = 1275
+			province_id = 1299
+			province_id = 1336
+			province_id = 1342
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 1306		
+			owns_core_province = 1275
+			owns_core_province = 1299
+			owns_core_province = 1336
+			owns_core_province = 1342
+		}
+		effect = {
+			change_tag = NOR
+			set_country_flag = formed_nor_flag
+			#
+			if = {
+				limit = {
+					NOT = { government_rank = 5 }
+				}
+				set_government_rank = 5
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+	rift_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = RIF }
+			NOT = { tag = SKY }
+			NOT = { tag = OLD }
+			NOT = { tag = WSK }
+			NOT = { tag = ESK }
+			NOT = { tag = GRA }
+			NOT = { tag = NOR }
+			NOT = { tag = DWE }
+			NOT = { tag = ROU }
+			NOT = { tag = JER }
+			NOT = { tag = WIN }
+			OR = {
+			primary_culture = nord
+			primary_culture = snow_elven
+			primary_culture = dwemer
+			}
+			NOT = { has_country_flag = formed_rif_flag }
+		}
+		provinces_to_highlight = {
+		    OR = {
+			province_id = 1268		
+			province_id = 7394
+			province_id = 7571
+			province_id = 1286
+			province_id = 1280
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 1268		
+			owns_core_province = 7394
+			owns_core_province = 7571
+			owns_core_province = 1286
+			owns_core_province = 1280
+		}
+		effect = {
+			change_tag = RIF
+			set_country_flag = formed_rif_flag
+			#
+			if = {
+				limit = {
+					NOT = { government_rank = 5 }
+				}
+				set_government_rank = 5
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
 	}
 	
 	colovia_nation = {
@@ -571,22 +858,22 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 		    OR = {
-			province_id = 1161		
-			province_id = 1163
-			province_id = 1173
-			province_id = 1179
-			province_id = 1150
+			province_id = 5657		
+			province_id = 1191
+			province_id = 5627
+			province_id = 5595
+			province_id = 1139
 			}
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-			owns_core_province = 1161		
-			owns_core_province = 1163
-			owns_core_province = 1173
-			owns_core_province = 1179
-			owns_core_province = 1150
+			owns_core_province = 5657		
+			owns_core_province = 1191
+			owns_core_province = 5627
+			owns_core_province = 5595
+			owns_core_province = 1139
 		}
 		effect = {
 			change_tag = COL
@@ -608,7 +895,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	heartlands_nation = {
@@ -626,9 +913,9 @@ country_decisions = {
 		    OR = {
 			province_id = 1206		
 			province_id = 1130
-			province_id = 1134
-			province_id = 1144
-			province_id = 1139
+			province_id = 1209
+			province_id = 1199
+			province_id = 5542
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -637,9 +924,9 @@ country_decisions = {
 			is_at_war = no
 			owns_core_province = 1206		
 			owns_core_province = 1130
-			owns_core_province = 1134
-			owns_core_province = 1144
-			owns_core_province = 1139
+			owns_core_province = 1209
+			owns_core_province = 1199
+			owns_core_province = 5542
 		}
 		effect = {
 			change_tag = HEA
@@ -661,7 +948,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	nibenean_nation = {
@@ -678,10 +965,10 @@ country_decisions = {
 		provinces_to_highlight = {
 		    OR = {
 			province_id = 1120		
+			province_id = 5506
 			province_id = 1226
 			province_id = 1230
-			province_id = 1209
-			province_id = 1251
+			province_id = 1214
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -689,10 +976,10 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			owns_core_province = 1120		
+			owns_core_province = 5506
 			owns_core_province = 1226
 			owns_core_province = 1230
-			owns_core_province = 1209
-			owns_core_province = 1251
+			owns_core_province = 1214
 		}
 		effect = {
 			change_tag = NIB
@@ -714,7 +1001,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	ayleid_nation = {
@@ -729,9 +1016,9 @@ country_decisions = {
 		    OR = {
 			province_id = 1206		
 			province_id = 1130
-			province_id = 1134
-			province_id = 1144
-			province_id = 1139
+			province_id = 1209
+			province_id = 1199
+			province_id = 5542
 			}
 		}
 		allow = {
@@ -739,9 +1026,9 @@ country_decisions = {
 			is_at_war = no
 			owns_core_province = 1206		
 			owns_core_province = 1130
-			owns_core_province = 1134
-			owns_core_province = 1144
-			owns_core_province = 1139
+			owns_core_province = 1209
+			owns_core_province = 1199
+			owns_core_province = 5542
 		}
 		effect = {
 			change_tag = AYL
@@ -763,7 +1050,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	cyrodiil_nation = {
@@ -783,10 +1070,10 @@ country_decisions = {
 		provinces_to_highlight = {
 		    OR = {
 			province_id = 1206		
-			province_id = 1161
+			province_id = 5657
 			province_id = 1120
-			province_id = 1251
-			province_id = 1184
+			province_id = 1161
+			province_id = 1194
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -794,10 +1081,10 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			owns_core_province = 1206		
-			owns_core_province = 1161
+			owns_core_province = 5657
 			owns_core_province = 1120
-			owns_core_province = 1251
-			owns_core_province = 1184
+			owns_core_province = 1161
+			owns_core_province = 1194
 		}
 		effect = {
 			change_tag = CYR
@@ -822,7 +1109,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	tamriel_nation = {
@@ -967,7 +1254,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	alessian_nation = {
@@ -984,10 +1271,10 @@ country_decisions = {
 		provinces_to_highlight = {
 		    OR = {
 			province_id = 1206		
-			province_id = 1130
-			province_id = 1134
-			province_id = 1144
-			province_id = 1139
+			province_id = 5657
+			province_id = 1120
+			province_id = 1161
+			province_id = 1194
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -995,10 +1282,10 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			owns_core_province = 1206		
-			owns_core_province = 1130
-			owns_core_province = 1134
-			owns_core_province = 1144
-			owns_core_province = 1139
+			owns_core_province = 5657
+			owns_core_province = 1120
+			owns_core_province = 1161
+			owns_core_province = 1194
 		}
 		effect = {
 			change_tag = ALE
@@ -1021,7 +1308,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	order_nation = {
@@ -1035,10 +1322,10 @@ country_decisions = {
 		provinces_to_highlight = {
 		    OR = {
 			province_id = 1206		
-			province_id = 1130
-			province_id = 1134
-			province_id = 1144
-			province_id = 1139
+			province_id = 5657
+			province_id = 1120
+			province_id = 1161
+			province_id = 1194
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -1046,10 +1333,10 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			owns_core_province = 1206		
-			owns_core_province = 1130
-			owns_core_province = 1134
-			owns_core_province = 1144
-			owns_core_province = 1139
+			owns_core_province = 5657
+			owns_core_province = 1120
+			owns_core_province = 1161
+			owns_core_province = 1194
 		}
 		effect = {
 			change_tag = ORD
@@ -1072,7 +1359,234 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
+	}
+	
+	golden_coast_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = GOL }
+			NOT = { tag = CYR }
+			NOT = { tag = COL }
+			NOT = { tag = TAM }
+			NOT = { tag = MIN }
+			NOT = { tag = ORD }
+			NOT = { tag = AYL }
+			OR = {
+			primary_culture = minotaur
+			primary_culture = colovian
+			primary_culture = ayleid
+			}
+			NOT = { has_country_flag = formed_gol_flag }
+		}
+		provinces_to_highlight = {
+		    OR = {
+			province_id = 1161		
+			province_id = 1150
+			province_id = 1144
+			province_id = 1168
+			province_id = 5695
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 1161		
+			owns_core_province = 1150
+			owns_core_province = 1144
+			owns_core_province = 1168
+			owns_core_province = 5695
+		}
+		effect = {
+			change_tag = GOL
+			set_country_flag = formed_gol_flag
+			#
+			if = {
+				limit = {
+					NOT = { government_rank = 5 }
+				}
+				set_government_rank = 5
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+	jeral_mountains_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = JER }
+			NOT = { tag = CYR }
+			NOT = { tag = HEA }
+			NOT = { tag = TAM }
+			NOT = { tag = MIN }
+			NOT = { tag = ORD }
+			NOT = { tag = AYL }
+			NOT = { tag = WIN }
+			OR = {
+			primary_culture = imperial
+			primary_culture = snow_elven
+			primary_culture = minotaur
+			}
+			NOT = { has_country_flag = formed_jer_flag }
+		}
+		provinces_to_highlight = {
+		    OR = {
+			province_id = 1194		
+			province_id = 5899
+			province_id = 5886
+			province_id = 1184
+			province_id = 5828
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 1194		
+			owns_core_province = 5899
+			owns_core_province = 5886
+			owns_core_province = 1184
+			owns_core_province = 5828
+		}
+		effect = {
+			change_tag = JER
+			set_country_flag = formed_jer_flag
+			#
+			if = {
+				limit = {
+					NOT = { government_rank = 5 }
+				}
+				set_government_rank = 5
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+	valus_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = VAL }
+			NOT = { tag = CYR }
+			NOT = { tag = NIB }
+			NOT = { tag = TAM }
+			NOT = { tag = ORD }
+			NOT = { tag = AYL }
+			NOT = { tag = DWE }
+			NOT = { tag = ROU }
+			OR = {
+			primary_culture = nibenean
+			primary_culture = dwemer
+			}
+			NOT = { has_country_flag = formed_val_flag }
+		}
+		provinces_to_highlight = {
+		    OR = {
+			province_id = 1233		
+			province_id = 6044
+			province_id = 1251
+			province_id = 5987
+			province_id = 5926
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 1233		
+			owns_core_province = 6044
+			owns_core_province = 1251
+			owns_core_province = 5987
+			owns_core_province = 5926
+		}
+		effect = {
+			change_tag = VAL
+			set_country_flag = formed_val_flag
+			#
+			if = {
+				limit = {
+					NOT = { government_rank = 5 }
+				}
+				set_government_rank = 5
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+	minotaur_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = MIN }
+			primary_culture = minotaur
+			NOT = { has_country_flag = formed_min_flag }
+		}
+		provinces_to_highlight = {
+		    OR = {
+			province_id = 5657		
+			province_id = 5784
+			province_id = 1184
+			province_id = 1179
+			province_id = 5828
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 5657		
+			owns_core_province = 5784
+			owns_core_province = 1184
+			owns_core_province = 1179
+			owns_core_province = 5828
+		}
+		effect = {
+			change_tag = MIN
+			set_country_flag = formed_min_flag
+			#
+			if = {
+				limit = {
+					NOT = { government_rank = 5 }
+				}
+				set_government_rank = 5
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
 	}
 	
 	hammerfell_nation = {
@@ -1089,10 +1603,10 @@ country_decisions = {
 		provinces_to_highlight = {
 		    OR = {
 			province_id = 1510		
-			province_id = 1478
 			province_id = 1446
-			province_id = 1482
-			province_id = 1474
+			province_id = 1478
+			province_id = 6257
+			province_id = 6178
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -1100,10 +1614,10 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			owns_core_province = 1510		
-			owns_core_province = 1478
 			owns_core_province = 1446
-			owns_core_province = 1482
-			owns_core_province = 1474
+			owns_core_province = 1478
+			owns_core_province = 6257
+			owns_core_province = 6178
 		}
 		effect = {
 			change_tag = HAM
@@ -1125,7 +1639,223 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
+	}
+	
+	alikr_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = ALI }
+			NOT = { tag = HAM }
+			NOT = { tag = AYL }
+			NOT = { tag = COR }
+			NOT = { tag = DRG }
+			NOT = { tag = DWE }
+			NOT = { tag = ROU }
+			OR = {
+			primary_culture = ayleid
+			primary_culture = redguard
+			primary_culture = dwemer
+			}
+			NOT = { has_country_flag = formed_ali_flag }
+		}
+		provinces_to_highlight = {
+		    OR = {
+			province_id = 1510		
+			province_id = 1493
+			province_id = 6402
+			province_id = 6376
+			province_id = 6392
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 1510		
+			owns_core_province = 1493
+			owns_core_province = 6402
+			owns_core_province = 6376
+			owns_core_province = 6392
+		}
+		effect = {
+			change_tag = ALI
+			set_country_flag = formed_ali_flag
+			#
+			if = {
+				limit = {
+					NOT = { government_rank = 5 }
+				}
+				set_government_rank = 5
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+	corten_heights_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = COR }
+			NOT = { tag = HAM }
+			NOT = { tag = AYL }
+			NOT = { tag = ALI }
+			NOT = { tag = DRG }
+			OR = {
+			primary_culture = ayleid
+			primary_culture = redguard
+			}
+			NOT = { has_country_flag = formed_cor_flag }
+		}
+		provinces_to_highlight = {
+		    OR = {
+			province_id = 1446		
+			province_id = 6155
+			province_id = 1478
+			province_id = 6436
+			province_id = 1482
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 1446		
+			owns_core_province = 6155
+			owns_core_province = 1478
+			owns_core_province = 6436
+			owns_core_province = 1482
+		}
+		effect = {
+			change_tag = COR
+			set_country_flag = formed_cor_flag
+			#
+			if = {
+				limit = {
+					NOT = { government_rank = 5 }
+				}
+				set_government_rank = 5
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+	dragontail_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = DRG }
+			NOT = { tag = HAM }
+			NOT = { tag = ALI }
+			NOT = { tag = COR }
+			primary_culture = redguard
+			NOT = { has_country_flag = formed_drg_flag }
+		}
+		provinces_to_highlight = {
+		    OR = {
+			province_id = 6257		
+			province_id = 1459
+			province_id = 6287
+			province_id = 6263
+			province_id = 1474
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 6257		
+			owns_core_province = 1459
+			owns_core_province = 6287
+			owns_core_province = 6263
+			owns_core_province = 1474
+		}
+		effect = {
+			change_tag = DRG
+			set_country_flag = formed_drg_flag
+			#
+			if = {
+				limit = {
+					NOT = { government_rank = 5 }
+				}
+				set_government_rank = 5
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+	keptu_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = KEP }
+			primary_culture = keptu
+			NOT = { has_country_flag = formed_kep_flag }
+		}
+		provinces_to_highlight = {
+		    OR = {
+			province_id = 6257		
+			province_id = 1459
+			province_id = 6287
+			province_id = 6263
+			province_id = 1474
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 6257		
+			owns_core_province = 1459
+			owns_core_province = 6287
+			owns_core_province = 6263
+			owns_core_province = 1474
+		}
+		effect = {
+			change_tag = KEP
+			set_country_flag = formed_kep_flag
+			#
+			if = {
+				limit = {
+					NOT = { government_rank = 5 }
+				}
+				set_government_rank = 5
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
 	}
 	
 	high_rock_nation = {
@@ -1140,8 +1870,8 @@ country_decisions = {
 			province_id = 1369		
 			province_id = 1379
 			province_id = 1394
-			province_id = 1400
-			province_id = 1424
+			province_id = 7019
+			province_id = 1384
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -1151,8 +1881,8 @@ country_decisions = {
 			owns_core_province = 1369		
 			owns_core_province = 1379
 			owns_core_province = 1394
-			owns_core_province = 1400
-			owns_core_province = 1424
+			owns_core_province = 7019
+			owns_core_province = 1384
 		}
 		effect = {
 			change_tag = HIG
@@ -1174,7 +1904,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	direnii_nation = {
@@ -1187,22 +1917,22 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 		    OR = {
-			province_id = 1369		
+			province_id = 6949		
 			province_id = 1379
-			province_id = 1382
-			province_id = 1376
-			province_id = 1384
+			province_id = 6942
+			province_id = 6933
+			province_id = 1369
 			}
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-			owns_core_province = 1369		
+			owns_core_province = 6949		
 			owns_core_province = 1379
-			owns_core_province = 1382
-			owns_core_province = 1376
-			owns_core_province = 1384
+			owns_core_province = 6942
+			owns_core_province = 6933
+			owns_core_province = 1369
 		}
 		effect = {
 			change_tag = DIR
@@ -1224,13 +1954,14 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	orsimer_nation = {
 		major = yes
 		potential = {
 			NOT = { exists = ORS }
+			NOT = { tag = WRO }
 			primary_culture = orsimer
 			NOT = { has_country_flag = formed_ors_flag }
 		}
@@ -1238,9 +1969,9 @@ country_decisions = {
 		    OR = {
 			province_id = 1391		
 			province_id = 1406
-			province_id = 1431
-			province_id = 1388
-			province_id = 1403
+			province_id = 6982
+			province_id = 6990
+			province_id = 7050
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -1249,9 +1980,9 @@ country_decisions = {
 			is_at_war = no
 			owns_core_province = 1391		
 			owns_core_province = 1406
-			owns_core_province = 1431
-			owns_core_province = 1388
-			owns_core_province = 1403
+			owns_core_province = 6982
+			owns_core_province = 6990
+			owns_core_province = 7050
 		}
 		effect = {
 			change_tag = ORS
@@ -1273,7 +2004,106 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
+	}
+	
+	wrothgar_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = WRO }
+			primary_culture = orsimer
+			NOT = { has_country_flag = formed_wro_flag }
+		}
+		provinces_to_highlight = {
+		    OR = {
+			province_id = 1391		
+			province_id = 7029
+			province_id = 7050
+			province_id = 7012
+			province_id = 1414
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 1391		
+			owns_core_province = 7029
+			owns_core_province = 7050
+			owns_core_province = 7012
+			owns_core_province = 1414
+		}
+		effect = {
+			change_tag = WRO
+			set_country_flag = formed_wro_flag
+			#
+			if = {
+				limit = {
+					NOT = { government_rank = 5 }
+				}
+				set_government_rank = 5
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+	winterborn_clan_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = WTB }
+			NOT = { tag = REA }
+			primary_culture = reachmen
+			NOT = { has_country_flag = formed_wtb_flag }
+		}
+		provinces_to_highlight = {
+		    OR = {
+			province_id = 7070		
+			province_id = 7012
+			province_id = 1414
+			province_id = 7210
+			province_id = 7200
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 7070		
+			owns_core_province = 7012
+			owns_core_province = 1414
+			owns_core_province = 7210
+			owns_core_province = 7200
+		}
+		effect = {
+			change_tag = WTB
+			set_country_flag = formed_wtb_flag
+			#
+			if = {
+				limit = {
+					NOT = { government_rank = 5 }
+				}
+				set_government_rank = 5
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
 	}
 	
 	elsweyr_nation = {
@@ -1287,9 +2117,9 @@ country_decisions = {
 		    OR = {
 			province_id = 922		
 			province_id = 933
+			province_id = 5237
+			province_id = 5285
 			province_id = 888
-			province_id = 912
-			province_id = 915
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -1298,9 +2128,9 @@ country_decisions = {
 			is_at_war = no
 			owns_core_province = 922		
 			owns_core_province = 933
+			owns_core_province = 5237
+			owns_core_province = 5285
 			owns_core_province = 888
-			owns_core_province = 912
-			owns_core_province = 915
 		}
 		effect = {
 			change_tag = ELS
@@ -1322,7 +2152,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	anequinan_nation = {
@@ -1335,11 +2165,11 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 		    OR = {
-			province_id = 889		
-			province_id = 895
-			province_id = 888
-			province_id = 905
-			province_id = 912
+			province_id = 926		
+			province_id = 5237
+			province_id = 5136
+			province_id = 889
+			province_id = 5285
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -1348,15 +2178,15 @@ country_decisions = {
 			is_at_war = no
 			OR = {
 			AND = {
-			owns_core_province = 889		
-			owns_core_province = 895
-			owns_core_province = 888
-			owns_core_province = 905
-			owns_core_province = 912
+			owns_core_province = 926		
+			owns_core_province = 5237
+			owns_core_province = 5136
+			owns_core_province = 889
+			owns_core_province = 5285
 			}
 			AND = {
 			has_global_flag = thrassian_plague_flag
-			owns_core_province = 905
+			owns_core_province = 926
 			}
 			}
 		}
@@ -1380,7 +2210,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	pellitinian_nation = {
@@ -1395,9 +2225,9 @@ country_decisions = {
 		    OR = {
 			province_id = 922		
 			province_id = 933
-			province_id = 929
-			province_id = 926
-			province_id = 915
+			province_id = 942
+			province_id = 5186
+			province_id = 5274
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -1408,9 +2238,9 @@ country_decisions = {
 			AND = {
 			owns_core_province = 922		
 			owns_core_province = 933
-			owns_core_province = 929
-			owns_core_province = 926
-			owns_core_province = 915
+			owns_core_province = 942
+			owns_core_province = 5186
+			owns_core_province = 5274
 			}
 			AND = {
 			has_global_flag = thrassian_plague_flag
@@ -1438,23 +2268,25 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	vallenwood_nation = {
 		major = yes
 		potential = {
 			NOT = { exists = VAL }
+			NOT = { tag = MAL }
+			NOT = { tag = GRE }
 			primary_culture = bosmer
 			NOT = { has_country_flag = formed_val_flag }
 		}
 		provinces_to_highlight = {
 		    OR = {
 			province_id = 820		
-			province_id = 844
-			province_id = 857
-			province_id = 834
+			province_id = 812
 			province_id = 868
+			province_id = 4941
+			province_id = 844
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -1462,10 +2294,10 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			owns_core_province = 820		
-			owns_core_province = 844
-			owns_core_province = 857
-			owns_core_province = 834
+			owns_core_province = 812
 			owns_core_province = 868
+			owns_core_province = 4941
+			owns_core_province = 844
 		}
 		effect = {
 			change_tag = VAL
@@ -1487,7 +2319,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	southern_orsinium_nation = {
@@ -1499,22 +2331,22 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 		    OR = {
-			province_id = 815		
-			province_id = 827
+			province_id = 5024		
 			province_id = 829
-			province_id = 833
-			province_id = 825
+			province_id = 815
+			province_id = 869
+			province_id = 812
 			}
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-			owns_core_province = 815		
-			owns_core_province = 827
+			owns_core_province = 5024		
 			owns_core_province = 829
-			owns_core_province = 833
-			owns_core_province = 825
+			owns_core_province = 815
+			owns_core_province = 869
+			owns_core_province = 812
 		}
 		effect = {
 			change_tag = SOR
@@ -1536,7 +2368,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	imga_nation = {
@@ -1548,22 +2380,22 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 		    OR = {
-			province_id = 820		
-			province_id = 844
-			province_id = 857
+			province_id = 5013		
+			province_id = 5029
 			province_id = 834
-			province_id = 868
+			province_id = 857
+			province_id = 4961
 			}
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-			owns_core_province = 820		
-			owns_core_province = 844
-			owns_core_province = 857
+			owns_core_province = 5013		
+			owns_core_province = 5029
 			owns_core_province = 834
-			owns_core_province = 868
+			owns_core_province = 857
+			owns_core_province = 4961
 		}
 		effect = {
 			change_tag = IMG
@@ -1585,43 +2417,38 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
-	argonia_nation = {
+	hollow_nation = {
 		major = yes
 		potential = {
-			NOT = { exists = ARG }
-			OR = {
-			primary_culture = argonian
-			primary_culture = archein
-			primary_culture = agaceph
-			primary_culture = naga
-			}
-			NOT = { has_country_flag = formed_arg_flag }
+			NOT = { exists = HOL }
+			primary_culture = hollow
+			NOT = { has_country_flag = formed_hol_flag }
 		}
 		provinces_to_highlight = {
 		    OR = {
-			province_id = 1075		
-			province_id = 1098
-			province_id = 1087
-			province_id = 1072
-			province_id = 1064
+			province_id = 5020		
+			province_id = 5029
+			province_id = 4990
+			province_id = 5013
+			province_id = 5040
 			}
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-			owns_core_province = 1075		
-			owns_core_province = 1098
-			owns_core_province = 1087
-			owns_core_province = 1072
-			owns_core_province = 1064
+			owns_core_province = 5020		
+			owns_core_province = 5029
+			owns_core_province = 4990
+			owns_core_province = 5013
+			owns_core_province = 5040
 		}
 		effect = {
-			change_tag = ARG
-			set_country_flag = formed_img_flag
+			change_tag = HOL
+			set_country_flag = formed_hol_flag
 			#
 			if = {
 				limit = {
@@ -1639,7 +2466,381 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
+	}
+	
+	greenshade_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = GRE }
+			NOT = { tag = MAL }
+			primary_culture = bosmer
+			NOT = { has_country_flag = formed_gre_flag }
+		}
+		provinces_to_highlight = {
+		    OR = {
+			province_id = 868		
+			province_id = 857
+			province_id = 4941
+			province_id = 834
+			province_id = 844
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 868		
+			owns_core_province = 857
+			owns_core_province = 4941
+			owns_core_province = 834
+			owns_core_province = 844
+		}
+		effect = {
+			change_tag = GRE
+			set_country_flag = formed_gre_flag
+			#
+			if = {
+				limit = {
+					NOT = { government_rank = 5 }
+				}
+				set_government_rank = 5
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+	molag_mar_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = MAL }
+			NOT = { tag = GRE }
+			primary_culture = bosmer
+			NOT = { has_country_flag = formed_mal_flag }
+		}
+		provinces_to_highlight = {
+		    OR = {
+			province_id = 820		
+			province_id = 812
+			province_id = 815
+			province_id = 5054
+			province_id = 882
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 820		
+			owns_core_province = 812
+			owns_core_province = 815
+			owns_core_province = 5054
+			owns_core_province = 882
+		}
+		effect = {
+			change_tag = MAL
+			set_country_flag = formed_mal_flag
+			#
+			if = {
+				limit = {
+					NOT = { government_rank = 5 }
+				}
+				set_government_rank = 5
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+	argonia_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = ARG }
+			OR = {
+			primary_culture = argonian
+			primary_culture = archein
+			primary_culture = agaceph
+			primary_culture = naga
+			}
+			NOT = { has_country_flag = formed_arg_flag }
+		}
+		provinces_to_highlight = {
+		    OR = {
+			province_id = 1087		
+			province_id = 1098
+			province_id = 1075
+			province_id = 1069
+			province_id = 1064
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 1087		
+			owns_core_province = 1098
+			owns_core_province = 1075
+			owns_core_province = 1069
+			owns_core_province = 1064
+		}
+		effect = {
+			change_tag = ARG
+			set_country_flag = formed_arg_flag
+			#
+			if = {
+				limit = {
+					NOT = { government_rank = 5 }
+				}
+				set_government_rank = 5
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+	black_marsh_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = BLC }
+			NOT = { tag = ARG }
+			NOT = { tag = MUR }
+			NOT = { tag = SHA }
+			OR = {
+			primary_culture = argonian
+			primary_culture = archein
+			primary_culture = agaceph
+			primary_culture = naga
+			}
+			NOT = { has_country_flag = formed_blc_flag }
+		}
+		provinces_to_highlight = {
+		    OR = {
+			province_id = 1075		
+			province_id = 1081
+			province_id = 6805
+			province_id = 6614
+			province_id = 6776
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 1075		
+			owns_core_province = 1081
+			owns_core_province = 6805
+			owns_core_province = 6614
+			owns_core_province = 6776
+		}
+		effect = {
+			change_tag = BLC
+			set_country_flag = formed_blc_flag
+			#
+			if = {
+				limit = {
+					NOT = { government_rank = 5 }
+				}
+				set_government_rank = 5
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+	murkmire_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = MUR }
+			NOT = { tag = ARG }
+			NOT = { tag = BLC }
+			NOT = { tag = SHA }
+			OR = {
+			primary_culture = argonian
+			primary_culture = archein
+			primary_culture = agaceph
+			primary_culture = naga
+			}
+			NOT = { has_country_flag = formed_mur_flag }
+		}
+		provinces_to_highlight = {
+		    OR = {
+			province_id = 1098		
+			province_id = 6745
+			province_id = 6794
+			province_id = 1087
+			province_id = 1089
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 1098		
+			owns_core_province = 6745
+			owns_core_province = 6794
+			owns_core_province = 1087
+			owns_core_province = 1089
+		}
+		effect = {
+			change_tag = MUR
+			set_country_flag = formed_mur_flag
+			#
+			if = {
+				limit = {
+					NOT = { government_rank = 5 }
+				}
+				set_government_rank = 5
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+	lilmoith_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = LIL }
+			primary_culture = lilmoith
+			NOT = { has_country_flag = formed_lil_flag }
+		}
+		provinces_to_highlight = {
+		    OR = {
+			province_id = 1098		
+			province_id = 6745
+			province_id = 6794
+			province_id = 1087
+			province_id = 1089
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 1098		
+			owns_core_province = 6745
+			owns_core_province = 6794
+			owns_core_province = 1087
+			owns_core_province = 1089
+		}
+		effect = {
+			change_tag = LIL
+			set_country_flag = formed_lil_flag
+			#
+			if = {
+				limit = {
+					NOT = { government_rank = 5 }
+				}
+				set_government_rank = 5
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+	shadowfen_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = SHA }
+			NOT = { tag = ARG }
+			NOT = { tag = BLC }
+			NOT = { tag = MUR }
+			OR = {
+			primary_culture = argonian
+			primary_culture = archein
+			primary_culture = agaceph
+			primary_culture = naga
+			}
+			NOT = { has_country_flag = formed_sha_flag }
+		}
+		provinces_to_highlight = {
+		    OR = {
+			province_id = 1069		
+			province_id = 6574
+			province_id = 6555
+			province_id = 6604
+			province_id = 1064
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 1098		
+			owns_core_province = 6574
+			owns_core_province = 6555
+			owns_core_province = 6604
+			owns_core_province = 1064
+		}
+		effect = {
+			change_tag = SHA
+			set_country_flag = formed_sha_flag
+			#
+			if = {
+				limit = {
+					NOT = { government_rank = 5 }
+				}
+				set_government_rank = 5
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
 	}
 	
 	chimer_nation = {
@@ -1653,10 +2854,10 @@ country_decisions = {
 		provinces_to_highlight = {
 		    OR = {
 			province_id = 1002		
-			province_id = 995
-			province_id = 1017
+			province_id = 7914
+			province_id = 1018
 			province_id = 985
-			province_id = 990
+			province_id = 8088
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -1664,10 +2865,10 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			owns_core_province = 1002		
-			owns_core_province = 995
-			owns_core_province = 1017
+			owns_core_province = 7914
+			owns_core_province = 1018
 			owns_core_province = 985
-			owns_core_province = 990
+			owns_core_province = 8088
 		}
 		effect = {
 			change_tag = CHI
@@ -1689,7 +2890,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	dwemer_nation = {
@@ -1702,10 +2903,10 @@ country_decisions = {
 		provinces_to_highlight = {
 		    OR = {
 			province_id = 970		
-			province_id = 981
+			province_id = 990
 			province_id = 976
-			province_id = 965
-			province_id = 961
+			province_id = 7753
+			province_id = 7728
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -1713,10 +2914,10 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			owns_core_province = 970		
-			owns_core_province = 981
+			owns_core_province = 990
 			owns_core_province = 976
-			owns_core_province = 965
-			owns_core_province = 961
+			owns_core_province = 7753
+			owns_core_province = 7728
 		}
 		effect = {
 			change_tag = DWE
@@ -1738,7 +2939,172 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
+	}
+	
+	deshaan_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = DES }
+			NOT = { tag = DWE }
+			NOT = { tag = MOR }
+			NOT = { tag = TRI }
+			OR = {
+			primary_culture = dwemer
+			primary_culture = dunmer
+			}
+			NOT = { has_country_flag = formed_des_flag }
+		}
+		provinces_to_highlight = {
+		    OR = {
+			province_id = 970		
+			province_id = 990
+			province_id = 7829
+			province_id = 7832
+			province_id = 7886
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 970		
+			owns_core_province = 990
+			owns_core_province = 7829
+			owns_core_province = 7832
+			owns_core_province = 7886
+		}
+		effect = {
+			change_tag = DES
+			set_country_flag = formed_des_flag
+			#
+			if = {
+				limit = {
+					NOT = { government_rank = 5 }
+				}
+				set_government_rank = 5
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+	veloth_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = VEL }
+			NOT = { tag = DWE }
+			NOT = { tag = MOR }
+			NOT = { tag = TRI }
+			OR = {
+			primary_culture = dwemer
+			primary_culture = dunmer
+			}
+			NOT = { has_country_flag = formed_vel_flag }
+		}
+		provinces_to_highlight = {
+		    OR = {
+			province_id = 958		
+			province_id = 7728
+			province_id = 7753
+			province_id = 7796
+			province_id = 965
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 958		
+			owns_core_province = 7728
+			owns_core_province = 7753
+			owns_core_province = 7796
+			owns_core_province = 965
+		}
+		effect = {
+			change_tag = VEL
+			set_country_flag = formed_vel_flag
+			#
+			if = {
+				limit = {
+					NOT = { government_rank = 5 }
+				}
+				set_government_rank = 5
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+	llothanis_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = LLO }
+			NOT = { tag = CHI }
+			NOT = { tag = MOR }
+			NOT = { tag = TRI }
+			OR = {
+			primary_culture = chimer
+			primary_culture = dunmer
+			}
+			NOT = { has_country_flag = formed_llo_flag }
+		}
+		provinces_to_highlight = {
+		    OR = {
+			province_id = 1018		
+			province_id = 8019
+			province_id = 1020
+			province_id = 8088
+			province_id = 1036
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 1018		
+			owns_core_province = 8019
+			owns_core_province = 1020
+			owns_core_province = 8088
+			owns_core_province = 1036
+		}
+		effect = {
+			change_tag = LLO
+			set_country_flag = formed_llo_flag
+			#
+			if = {
+				limit = {
+					NOT = { government_rank = 5 }
+				}
+				set_government_rank = 5
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
 	}
 	
 	ashland_nation = {
@@ -1752,10 +3118,10 @@ country_decisions = {
 		provinces_to_highlight = {
 		    OR = {
 			province_id = 1043		
-			province_id = 1037
+			province_id = 8204
 			province_id = 1045
-			province_id = 1046
-			province_id = 1052
+			province_id = 8126
+			province_id = 8049
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -1763,10 +3129,10 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			owns_core_province = 1043		
-			owns_core_province = 1037
+			owns_core_province = 8204
 			owns_core_province = 1045
-			owns_core_province = 1046
-			owns_core_province = 1052
+			owns_core_province = 8126
+			owns_core_province = 8049
 		}
 		effect = {
 			change_tag = ASH
@@ -1788,7 +3154,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	atmora_nation = {
@@ -1841,7 +3207,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	dragon_nation = {
@@ -1894,7 +3260,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	roscrea_nation = {
@@ -1945,7 +3311,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	tsaesci_nation = {
@@ -1994,7 +3360,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	po_tun_nation = {
@@ -2044,7 +3410,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	cathnoquey_nation = {
@@ -2095,7 +3461,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	tangmo_nation = {
@@ -2144,7 +3510,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	akaviri_nation = {
@@ -2193,7 +3559,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	upper_nation = {
@@ -2243,7 +3609,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	island_nation = {
@@ -2293,7 +3659,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	esroniet_nation = {
@@ -2343,7 +3709,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	red_nation = {
@@ -2381,7 +3747,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	kamal_nation = {
@@ -2430,7 +3796,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	dremora_nation = {
@@ -2479,7 +3845,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	kothringi_nation = {
@@ -2491,22 +3857,22 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 		    OR = {
-			province_id = 1075		
-			province_id = 1098
-			province_id = 1087
-			province_id = 1072
-			province_id = 1064
+			province_id = 6675		
+			province_id = 6685
+			province_id = 6695
+			province_id = 1075
+			province_id = 6766
 			}
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-			owns_core_province = 1075		
-			owns_core_province = 1098
-			owns_core_province = 1087
-			owns_core_province = 1072
-			owns_core_province = 1064
+			owns_core_province = 6675		
+			owns_core_province = 6685
+			owns_core_province = 6695
+			owns_core_province = 1075
+			owns_core_province = 6766
 		}
 		effect = {
 			change_tag = KOT
@@ -2528,7 +3894,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	forelhost_nation = {
@@ -2542,12 +3908,23 @@ country_decisions = {
 			NOT = { has_country_flag = formed_for_flag }
 		}
 		provinces_to_highlight = {
-			province_id = 1265
+			OR = {
+			province_id = 7549		
+			province_id = 1268
+			province_id = 5899
+			province_id = 7745
+			province_id = 1270
+			}
+			NOT = { owned_by = ROOT }
 		}
 		allow = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-			owns_core_province = 1265
+			owns_core_province = 7549
+			owns_core_province = 1268
+			owns_core_province = 5899
+			owns_core_province = 7745
+			owns_core_province = 1270
 		}
 		effect = {
 			change_tag = FOR
@@ -2569,7 +3946,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	skaal_nation = {
@@ -2581,16 +3958,16 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 		    OR = {
-			province_id = 949
-			province_id = 951
+			province_id = 7695
+			province_id = 952
 			}
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-			owns_core_province = 949
-			owns_core_province = 951
+			owns_core_province = 7695
+			owns_core_province = 952
 		}
 		effect = {
 			change_tag = SKA
@@ -2612,7 +3989,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	ka_po_tun_nation = {
@@ -2661,7 +4038,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	transakavir_nation = {
@@ -2712,7 +4089,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	rourken_clan_nation = {
@@ -2725,22 +4102,22 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 		    OR = {
-			province_id = 1481		
-			province_id = 1482
-			province_id = 1483
-			province_id = 1484
-			province_id = 1515
+			province_id = 6334		
+			province_id = 6316
+			province_id = 6324
+			province_id = 6356
+			province_id = 6367
 			}
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-			owns_core_province = 1481		
-			owns_core_province = 1482
-			owns_core_province = 1483
-			owns_core_province = 1484
-			owns_core_province = 1515
+			owns_core_province = 6334		
+			owns_core_province = 6316
+			owns_core_province = 6324
+			owns_core_province = 6356
+			owns_core_province = 6367
 		}
 		effect = {
 			change_tag = ROU
@@ -2762,7 +4139,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	ca7_nation = {
@@ -2785,22 +4162,22 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 		    OR = {
-			province_id = 1151	
-			province_id = 1150
-			province_id = 1149
-			province_id = 1148
-			province_id = 1147
+			province_id = 1150	
+			province_id = 1173
+			province_id = 1144
+			province_id = 1154
+			province_id = 1161
 			}
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-			owns_core_province = 1151		
-			owns_core_province = 1150
-			owns_core_province = 1149
-			owns_core_province = 1148
-			owns_core_province = 1147
+			owns_core_province = 1150		
+			owns_core_province = 1173
+			owns_core_province = 1144
+			owns_core_province = 1154
+			owns_core_province = 1161
 		}
 		effect = {
 			change_tag = CA7
@@ -2823,7 +4200,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	ca6_nation = {
@@ -2846,22 +4223,22 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 		    OR = {
-			province_id = 1146	
-			province_id = 1145
-			province_id = 1144
-			province_id = 1143
-			province_id = 1142
+			province_id = 1144	
+			province_id = 1150
+			province_id = 1173
+			province_id = 5665
+			province_id = 5607
 			}
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-			owns_core_province = 1146		
-			owns_core_province = 1145
-			owns_core_province = 1144
-			owns_core_province = 1143
-			owns_core_province = 1142
+			owns_core_province = 1144		
+			owns_core_province = 1150
+			owns_core_province = 1173
+			owns_core_province = 5665
+			owns_core_province = 5607
 		}
 		effect = {
 			change_tag = CA6
@@ -2884,7 +4261,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	resdayn-dwemeret_nation = {
@@ -2898,8 +4275,8 @@ country_decisions = {
 		    OR = {
 			province_id = 1002		
 			province_id = 970
-			province_id = 995
-			province_id = 965
+			province_id = 976
+			province_id = 7914
 			province_id = 990
 			}
 			NOT = { owned_by = ROOT }
@@ -2909,8 +4286,8 @@ country_decisions = {
 			is_at_war = no
 			owns_core_province = 1002		
 			owns_core_province = 970
-			owns_core_province = 995
-			owns_core_province = 965
+			owns_core_province = 976
+			owns_core_province = 7914
 			owns_core_province = 990
 		}
 		effect = {
@@ -2933,7 +4310,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	coral_kingdom_nation = {
@@ -2945,22 +4322,22 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 		    OR = {
-			province_id = 323		
+			province_id = 320		
 			province_id = 271
 			province_id = 335
 			province_id = 1510
-			province_id = 284
+			province_id = 299
 			}
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-			owns_core_province = 323		
+			owns_core_province = 320		
 			owns_core_province = 271
 			owns_core_province = 335
 			owns_core_province = 1510
-			owns_core_province = 284
+			owns_core_province = 299
 		}
 		effect = {
 			change_tag = COR
@@ -2982,7 +4359,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	sinistral_nation = {
@@ -2995,10 +4372,10 @@ country_decisions = {
 		provinces_to_highlight = {
 		    OR = {
 			province_id = 2184		
-			province_id = 327
-			province_id = 340
-			province_id = 328
-			province_id = 2113
+			province_id = 335
+			province_id = 333
+			province_id = 355
+			province_id = 2158
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -3006,10 +4383,10 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			owns_core_province = 2184		
-			owns_core_province = 327
-			owns_core_province = 340
-			owns_core_province = 328
-			owns_core_province = 2113
+			owns_core_province = 335
+			owns_core_province = 333
+			owns_core_province = 355
+			owns_core_province = 2158
 		}
 		effect = {
 			change_tag = SIN
@@ -3031,7 +4408,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	indoril_nation = {
@@ -3060,22 +4437,22 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 		    OR = {
-			province_id = 1017	
-			province_id = 1014
-			province_id = 1018
-			province_id = 1019
-			province_id = 1023
+			province_id = 1018	
+			province_id = 8058
+			province_id = 8028
+			province_id = 8019
+			province_id = 1020
 			}
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-			owns_core_province = 1017	
-			owns_core_province = 1014
-			owns_core_province = 1018
-			owns_core_province = 1019
-			owns_core_province = 1023
+			owns_core_province = 1018	
+			owns_core_province = 8058
+			owns_core_province = 8028
+			owns_core_province = 8019
+			owns_core_province = 1020
 		}
 		effect = {
 			change_tag = IND
@@ -3097,7 +4474,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	dres_nation = {
@@ -3126,22 +4503,22 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 		    OR = {
-			province_id = 995	
-			province_id = 998
-			province_id = 1004
-			province_id = 1006
-			province_id = 1007
+			province_id = 7904	
+			province_id = 7886
+			province_id = 7946
+			province_id = 7896
+			province_id = 7956
 			}
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-			owns_core_province = 995	
-			owns_core_province = 998
-			owns_core_province = 1004
-			owns_core_province = 1006
-			owns_core_province = 1007
+			owns_core_province = 7904	
+			owns_core_province = 7886
+			owns_core_province = 7946
+			owns_core_province = 7896
+			owns_core_province = 7956
 		}
 		effect = {
 			change_tag = DRS
@@ -3163,7 +4540,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	dagot_nation = {
@@ -3192,22 +4569,22 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 		    OR = {
-			province_id = 991	
-			province_id = 993
-			province_id = 990
+			province_id = 990	
+			province_id = 7857
+			province_id = 7864
+			province_id = 7873
 			province_id = 981
-			province_id = 983
 			}
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-			owns_core_province = 991	
-			owns_core_province = 993
-			owns_core_province = 990
+			owns_core_province = 990	
+			owns_core_province = 7857
+			owns_core_province = 7864
+			owns_core_province = 7873
 			owns_core_province = 981
-			owns_core_province = 983
 		}
 		effect = {
 			change_tag = DAG
@@ -3229,7 +4606,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	redoran_nation = {
@@ -3259,10 +4636,10 @@ country_decisions = {
 		provinces_to_highlight = {
 		    OR = {
 			province_id = 958	
-			province_id = 957
-			province_id = 959
 			province_id = 961
-			province_id = 962
+			province_id = 7707
+			province_id = 7728
+			province_id = 7715
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -3270,10 +4647,10 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
             owns_core_province = 958	
-			owns_core_province = 957
-			owns_core_province = 959
 			owns_core_province = 961
-			owns_core_province = 962
+			owns_core_province = 7707
+			owns_core_province = 7728
+			owns_core_province = 7715
 		}
 		effect = {
 			change_tag = REO
@@ -3295,7 +4672,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	telvanni_nation = {
@@ -3325,10 +4702,10 @@ country_decisions = {
 		provinces_to_highlight = {
 		    OR = {
 			province_id = 1028	
-			province_id = 1024
-			province_id = 1029
-			province_id = 1032
-			province_id = 1027
+			province_id = 8095
+			province_id = 1030
+			province_id = 8105
+			province_id = 1036
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -3336,10 +4713,10 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
             owns_core_province = 1028	
-			owns_core_province = 1024
-			owns_core_province = 1029
-			owns_core_province = 1032
-			owns_core_province = 1027
+			owns_core_province = 8095
+			owns_core_province = 1030
+			owns_core_province = 8105
+			owns_core_province = 1036
 		}
 		effect = {
 			change_tag = TEL
@@ -3361,7 +4738,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	hlaalu_nation = {
@@ -3390,22 +4767,22 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 		    OR = {
-			province_id = 964	
-			province_id = 968
-			province_id = 967
-			province_id = 969
-			province_id = 970
+			province_id = 7745	
+			province_id = 7736
+			province_id = 965
+			province_id = 7753
+			province_id = 7766
 			}
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-            owns_core_province = 964	
-			owns_core_province = 968
-			owns_core_province = 967
-			owns_core_province = 969
-			owns_core_province = 970
+            owns_core_province = 7745	
+			owns_core_province = 7736
+			owns_core_province = 965
+			owns_core_province = 7753
+			owns_core_province = 7766
 		}
 		effect = {
 			change_tag = HLA
@@ -3427,7 +4804,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	sadras_nation = {
@@ -3456,22 +4833,22 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 		    OR = {
-			province_id = 988	
-			province_id = 978
+			province_id = 7829	
 			province_id = 976
-			province_id = 986
 			province_id = 985
+			province_id = 7832
+			province_id = 7965
 			}
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-            owns_core_province = 988	
-			owns_core_province = 978
+            owns_core_province = 7829	
 			owns_core_province = 976
-			owns_core_province = 986
 			owns_core_province = 985
+			owns_core_province = 7832
+			owns_core_province = 7965
 		}
 		effect = {
 			change_tag = SAD
@@ -3493,7 +4870,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	falmer_nation = {
@@ -3505,15 +4882,21 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 		    OR = {
-            province_id = 957
-			province_id = 965
-			province_id = 970
-			province_id = 1272
+            province_id = 6367
+			province_id = 6356
+			province_id = 6324
+			province_id = 6334
+			province_id = 6316
+			province_id = 7320
+			province_id = 7350
 			province_id = 1314
-			province_id = 1331
-			province_id = 1446
-			province_id = 1452
-			province_id = 1465
+			province_id = 7419
+			province_id = 7333
+			province_id = 970
+			province_id = 976
+			province_id = 990
+			province_id = 7753
+			province_id = 7728
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -3521,19 +4904,25 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			OR = {
-			owns_core_province = 957
-			owns_core_province = 965
-			owns_core_province = 970
+			owns_core_province = 6367
+			owns_core_province = 6356
+			owns_core_province = 6324
+			owns_core_province = 6334
+			owns_core_province = 6316
 			}
 			OR = {
-			owns_core_province = 1272
+			owns_core_province = 7320
+			owns_core_province = 7350
 			owns_core_province = 1314
-			owns_core_province = 1331
+			owns_core_province = 7419
+			owns_core_province = 7333
 			}
 			OR = {
-			owns_core_province = 1446
-			owns_core_province = 1452
-			owns_core_province = 1465
+			owns_core_province = 970
+			owns_core_province = 976
+			owns_core_province = 990
+			owns_core_province = 7753
+			owns_core_province = 7728
 			}
 		}
 		effect = {
@@ -3556,7 +4945,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	morrowind_nation = {
@@ -3575,10 +4964,10 @@ country_decisions = {
 		provinces_to_highlight = {
 		    OR = {
             province_id = 1002
-			province_id = 970
-			province_id = 990
-			province_id = 957
-			province_id = 1028
+			province_id = 985
+			province_id = 7956
+			province_id = 995
+			province_id = 1006
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -3586,10 +4975,10 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			owns_core_province = 1002
-			owns_core_province = 970
-			owns_core_province = 990
-			owns_core_province = 957
-			owns_core_province = 1028
+			owns_core_province = 985
+			owns_core_province = 7956
+			owns_core_province = 995
+			owns_core_province = 1006
 		}
 		effect = {
 			change_tag = MOR
@@ -3611,7 +5000,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	tribunal_nation = {
@@ -3625,10 +5014,10 @@ country_decisions = {
 		provinces_to_highlight = {
 		    OR = {
             province_id = 1002
-			province_id = 970
-			province_id = 990
-			province_id = 957
-			province_id = 1028
+			province_id = 985
+			province_id = 7956
+			province_id = 995
+			province_id = 1006
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -3636,10 +5025,10 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			owns_core_province = 1002
-			owns_core_province = 970
-			owns_core_province = 990
-			owns_core_province = 957
-			owns_core_province = 1028
+			owns_core_province = 985
+			owns_core_province = 7956
+			owns_core_province = 995
+			owns_core_province = 1006
 		}
 		effect = {
 			change_tag = TRI
@@ -3662,7 +5051,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	abeceanea_nation = {
@@ -3672,9 +5061,13 @@ country_decisions = {
 			NOT = { tag = ORD }
 			NOT = { tag = ALE }
 			NOT = { tag = COL }
+			NOT = { tag = AYL }
+			NOT = { tag = CYR }
+			NOT = { tag = TAM }
 			OR = {
 			primary_culture = nedic
 			primary_culture = colovian
+			primary_culture = ayleid
 			}
 			NOT = { has_country_flag = formed_abe_flag }
 			OR = {
@@ -3686,12 +5079,19 @@ country_decisions = {
 			}
 		}
 		provinces_to_highlight = {
+            OR = {
             province_id = 1171
+			province_id = 5351
+			province_id = 5352
+			}
+			NOT = { owned_by = ROOT }
 		}
 		allow = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			owns_core_province = 1171
+			owns_core_province = 5351
+			owns_core_province = 5352
 		}
 		effect = {
 			change_tag = ABE
@@ -3716,7 +5116,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	restless_league_nation = {
@@ -3742,12 +5142,23 @@ country_decisions = {
 			}
 		}
 		provinces_to_highlight = {
+            OR = {
             province_id = 1501
+			province_id = 6116
+			province_id = 1502
+			province_id = 1503
+			province_id = 1504
+			}
+			NOT = { owned_by = ROOT }
 		}
 		allow = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			owns_core_province = 1501
+			owns_core_province = 6116
+			owns_core_province = 1502
+			owns_core_province = 1503
+			owns_core_province = 1504
 		}
 		effect = {
 			change_tag = RES
@@ -3772,7 +5183,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	topalia_nation = {
@@ -3794,12 +5205,23 @@ country_decisions = {
 			}
 		}
 		provinces_to_highlight = {
-            province_id = 1117
+            OR = {
+            province_id = 5441
+			province_id = 5443
+			province_id = 5442
+			province_id = 5444
+			province_id = 5445
+			}
+			NOT = { owned_by = ROOT }
 		}
 		allow = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-			owns_core_province = 1117
+			owns_core_province = 5441
+			owns_core_province = 5443
+			owns_core_province = 5442
+			owns_core_province = 5444
+			owns_core_province = 5445
 		}
 		effect = {
 			change_tag = TOP
@@ -3824,7 +5246,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	starkad_nation = {
@@ -3846,12 +5268,19 @@ country_decisions = {
 			}
 		}
 		provinces_to_highlight = {
-            province_id = 1274
+            OR = {
+            province_id = 7115
+			province_id = 1309
+			province_id = 1303
+			}
+			NOT = { owned_by = ROOT }
 		}
 		allow = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-			owns_core_province = 1274
+			owns_core_province = 7115
+			owns_core_province = 1309
+			owns_core_province = 1303
 		}
 		effect = {
 			change_tag = STA
@@ -3876,7 +5305,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	sedelea_nation = {
@@ -3925,7 +5354,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	kmeiine_nation = {
@@ -3974,7 +5403,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	elzaqess_nation = {
@@ -4024,7 +5453,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	kherso_nation = {
@@ -4074,7 +5503,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	kaalda_nation = {
@@ -4125,7 +5554,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	ralris_nation = {
@@ -4176,7 +5605,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	wayrest_nation = {
@@ -4191,12 +5620,12 @@ country_decisions = {
 			has_global_flag = foundation_of_wayres_flag
 		}
 		provinces_to_highlight = {
-            province_id = 1426
+            province_id = 6989
 		}
 		allow = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-			owns_core_province = 1426
+			owns_core_province = 6989
 		}
 		effect = {
 			change_tag = WAY
@@ -4218,7 +5647,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	united_vampire_duchies_nation = {
@@ -4268,7 +5697,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	coldharbour_nation = {
@@ -4324,7 +5753,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	deadlands_nation = {
@@ -4379,7 +5808,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 	
 	akaviri_potentate_nation = {
@@ -4429,6 +5858,6 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 }

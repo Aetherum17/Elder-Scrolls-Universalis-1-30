@@ -55,6 +55,18 @@ categories =  {
 		supply_limit = 10		
 		local_development_cost = 0.5
 		
+		local_build_cost = 0.50
+        local_build_time = 0.50
+		local_manpower_modifier = -0.50
+        local_regiment_cost = 0.50
+        regiment_recruit_speed = 0.50
+		local_sailors_modifier = -0.5
+        local_ship_cost = 0.50
+        ship_recruit_speed = 0.50
+		local_institution_spread = -0.50
+        local_production_efficiency = -0.50
+        local_tax_modifier = -0.50
+		
 		terrain_override = {
 		    416 417 418 419 420 426 427 429 430 460 431 432 433 436 434
 			437 438 439 440 441 442 443 444 445 448 449 450 451 453
@@ -98,6 +110,18 @@ categories =  {
 		local_development_cost = -0.10
 		supply_limit = 35
 		
+		local_build_cost = -0.35
+        local_build_time = -0.35
+		local_manpower_modifier = 0.35
+        local_regiment_cost = -0.35
+        regiment_recruit_speed = -0.35
+		local_sailors_modifier = 0.35
+        local_ship_cost = -0.35
+        ship_recruit_speed = -0.35
+		local_institution_spread = 0.35
+        local_production_efficiency = 0.35
+        local_tax_modifier = 0.35
+		
 		terrain_override = {
 		    712 713 714 715 716 717 718 720 721 722 723 724 725 726
 			727 728 729 730 731 732 733 734 735 736
@@ -127,12 +151,23 @@ categories =  {
 		defence = 1
 		supply_limit = 20
 		local_development_cost = 0.25
-		                               
-	    terrain_override = {
-			506
+		
+		local_build_cost = -0.20
+        local_build_time = -0.20
+		local_manpower_modifier = 0.20
+        local_regiment_cost = -0.20
+        regiment_recruit_speed = -0.20
+		local_sailors_modifier = 0.20
+        local_ship_cost = -0.20
+        ship_recruit_speed = -0.20
+		local_institution_spread = 0.20
+        local_production_efficiency = 0.20
+        local_tax_modifier = 0.20
+		
+		terrain_override = {
 			508 509 484 483 492 600 602 601 745 604 603 743 481 505 502
 			742 738 482 503 504 501 813 811 810 871 870 818 865 860 877
-			874 876 878 875 843 851 850 849 852 835 834 836 837 838
+			874 876 878 875 843 851 850 849 852 835 834 836 837 838 506
 			2529 2528 2525 2530 2531 2534 2508 2507 2627 2634 2633 4979 
 			2632 2630 2628 2596 2598 2599 2600 2604 2603 2602 2601 4978
 			1765 1766 1764 1604 1603 1768 1767 1770 1769 4854 4852 4853
@@ -164,6 +199,18 @@ categories =  {
 		local_defensiveness = 0.1
 		local_development_cost = 0.25
 		supply_limit = 15
+		
+		local_build_cost = 0.10
+        local_build_time = 0.10
+		local_manpower_modifier = -0.10
+        local_regiment_cost = 0.10
+        regiment_recruit_speed = 0.10
+		local_sailors_modifier = -0.10
+        local_ship_cost = 0.10
+        ship_recruit_speed = 0.10
+		local_institution_spread = -0.10
+        local_production_efficiency = -0.10
+        local_tax_modifier = -0.10
 		
 		terrain_override = {
 			389 392 391 393 409 407 394 814 815 816 817 824 825 826 225
@@ -280,6 +327,18 @@ categories =  {
 		local_development_cost = 0.15
 		supply_limit = 25
 		
+		local_build_cost = -0.15
+        local_build_time = -0.15
+		local_manpower_modifier = 0.15
+        local_regiment_cost = -0.15
+        regiment_recruit_speed = -0.15
+		local_sailors_modifier = 0.15
+        local_ship_cost = -0.15
+        ship_recruit_speed = -0.15
+		local_institution_spread = 0.15
+        local_production_efficiency = 0.15
+        local_tax_modifier = 0.15
+		
 		terrain_override = {
 		    950 951 769 768 770 762 753 756 336 737 739 740 750 752 
             1777 1778 1779 1789 1788 2830 2832 2834 2835 2837 2836 2838
@@ -339,6 +398,18 @@ categories =  {
 		local_defensiveness = 0.25
 		local_development_cost = 0.35
 		supply_limit = 10
+		
+		local_build_cost = 0.25
+        local_build_time = 0.25
+		local_manpower_modifier = -0.25
+        local_regiment_cost = 0.25
+        regiment_recruit_speed = 0.25
+		local_sailors_modifier = -0.25
+        local_ship_cost = 0.25
+        ship_recruit_speed = 0.25
+		local_institution_spread = -0.25
+        local_production_efficiency = -0.25
+        local_tax_modifier = -0.25
 		
 		terrain_override = {
 			263 462 705 657 610 719 614 641 642 640 645 598 856 858 965
@@ -407,6 +478,18 @@ categories =  {
 		movement_cost = 1.0
 		supply_limit = 30
 		
+		local_build_cost = -0.30
+        local_build_time = -0.30
+		local_manpower_modifier = 0.30
+        local_regiment_cost = -0.30
+        regiment_recruit_speed = -0.30
+		local_sailors_modifier = 0.30
+        local_ship_cost = -0.30
+        ship_recruit_speed = -0.30
+		local_institution_spread = 0.30
+        local_production_efficiency = 0.30
+        local_tax_modifier = 0.30
+		
 		terrain_override = {
 		    809 812 819 555 463 425 581 580 583 422 582 556 557 558 559
 			575 576 577 578 579 452
@@ -429,6 +512,18 @@ categories =  {
 		defence = 1
 		local_development_cost = 0.35
 		supply_limit = 15
+		
+		local_build_cost = 0.30
+        local_build_time = 0.30
+		local_manpower_modifier = -0.30
+        local_regiment_cost = 0.30
+        regiment_recruit_speed = 0.30
+		local_sailors_modifier = -0.30
+        local_ship_cost = 0.30
+        ship_recruit_speed = 0.30
+		local_institution_spread = -0.30
+        local_production_efficiency = -0.30
+        local_tax_modifier = -0.30
 		
 		terrain_override = {
 		    214 215 216 226 227 224 220 222 223 229 230 566 244 571 574
@@ -466,6 +561,18 @@ categories =  {
 		defence = 1
 		local_development_cost = 0.25
 		supply_limit = 15
+		
+		local_build_cost = 0.15
+        local_build_time = 0.15
+		local_manpower_modifier = -0.15
+        local_regiment_cost = 0.15
+        regiment_recruit_speed = 0.15
+		local_sailors_modifier = -0.15
+        local_ship_cost = 0.15
+        ship_recruit_speed = 0.15
+		local_institution_spread = -0.15
+        local_production_efficiency = -0.15
+        local_tax_modifier = -0.15
 		
 		terrain_override = {
 			2870 2905 2906 2903 2901 2904 2907 2911 2910 2909 2954 2957 
@@ -514,6 +621,18 @@ categories =  {
 		supply_limit = 20
 		local_development_cost = 0.50
 		
+		local_build_cost = 0.45
+        local_build_time = 0.45
+		local_manpower_modifier = -0.45
+        local_regiment_cost = 0.45
+        regiment_recruit_speed = 0.45
+		local_sailors_modifier = -0.45
+        local_ship_cost = 0.45
+        ship_recruit_speed = 0.45
+		local_institution_spread = -0.45
+        local_production_efficiency = -0.45
+        local_tax_modifier = -0.45
+		
 		terrain_override = {
 		    665 668 612 613 616 617 618 901 903 900 902 899 904 907 905
 			906 908 644 646 647 648 660 661 663 889 892 916 914 915 917
@@ -561,6 +680,18 @@ categories =  {
 		local_development_cost = 0.35		
 		supply_limit = 20
 		
+		local_build_cost = 0.40
+        local_build_time = 0.40
+		local_manpower_modifier = -0.40
+        local_regiment_cost = 0.40
+        regiment_recruit_speed = 0.40
+		local_sailors_modifier = -0.40
+        local_ship_cost = 0.40
+        ship_recruit_speed = 0.40
+		local_institution_spread = -0.40
+        local_production_efficiency = -0.40
+        local_tax_modifier = -0.40
+		
 		terrain_override = {
 		    659 662 664 666 667 615 639 643 654 655 656 658 337 338 339
 			1665 1667 1669 1696 1720 1721 1722 1723 1715 1716 1717 1718
@@ -594,6 +725,18 @@ categories =  {
 		movement_cost = 1.0
 		local_development_cost = 0.25
 		supply_limit = 25
+		
+		local_build_cost = -0.25
+        local_build_time = -0.25
+		local_manpower_modifier = 0.25
+        local_regiment_cost = -0.25
+        regiment_recruit_speed = -0.25
+		local_sailors_modifier = 0.25
+        local_ship_cost = -0.25
+        ship_recruit_speed = -0.25
+		local_institution_spread = 0.25
+        local_production_efficiency = 0.25
+        local_tax_modifier = 0.25
 		
 		terrain_override = {
 			209 210 211 212 213 232 228 219 331 222 224 225 319 846 847
@@ -662,6 +805,18 @@ categories =  {
 		defence = 1
 		local_defensiveness = 0.15
 		local_development_cost = 0.25
+		
+		local_build_cost = 0.20
+        local_build_time = 0.20
+		local_manpower_modifier = -0.20
+        local_regiment_cost = 0.20
+        regiment_recruit_speed = 0.20
+		local_sailors_modifier = -0.20
+        local_ship_cost = 0.20
+        ship_recruit_speed = 0.20
+		local_institution_spread = -0.20
+        local_production_efficiency = -0.20
+        local_tax_modifier = -0.20
 		
 		terrain_override = {
 			284 287 288 290 292 970 258 261 262 264 302 303 307 308 304 
@@ -755,6 +910,18 @@ categories =  {
 		local_development_cost = 0.25
 		supply_limit = 25
 		
+		local_build_cost = 0.05
+        local_build_time = 0.05
+		local_manpower_modifier = -0.05
+        local_regiment_cost = 0.05
+        regiment_recruit_speed = 0.05
+		local_sailors_modifier = -0.05
+        local_ship_cost = 0.05
+        ship_recruit_speed = 0.05
+		local_institution_spread = -0.05
+        local_production_efficiency = -0.05
+        local_tax_modifier = -0.05
+		
 		terrain_override = {
 		    
 			585 586 587 590 592 595 596 597 981 979 980
@@ -797,6 +964,18 @@ categories =  {
 		movement_cost = 1.00
 		local_development_cost = 0.05
 		supply_limit = 25
+		
+		local_build_cost = 0.35
+        local_build_time = 0.35
+		local_manpower_modifier = -0.35
+        local_regiment_cost = 0.35
+        regiment_recruit_speed = 0.35
+		local_sailors_modifier = -0.35
+        local_ship_cost = 0.35
+        ship_recruit_speed = 0.35
+		local_institution_spread = -0.35
+        local_production_efficiency = -0.35
+        local_tax_modifier = -0.35
 		
 		terrain_override = {
 		    344 349 322 333 285 273 348 326 330 340 949 950 951 953 347
@@ -858,6 +1037,18 @@ categories =  {
 		supply_limit = 25
 		movement_cost = 1.00
 		local_development_cost = 0.15
+		
+		local_build_cost = -0.10
+        local_build_time = -0.10
+		local_manpower_modifier = 0.10
+        local_regiment_cost = -0.10
+        regiment_recruit_speed = -0.10
+		local_sailors_modifier = 0.10
+        local_ship_cost = -0.10
+        ship_recruit_speed = -0.10
+		local_institution_spread = 0.10
+        local_production_efficiency = 0.10
+        local_tax_modifier = 0.10
 
         terrain_override = {
 		    516 517 518 519 520 511 514 497 498 499 471 472 473 474 468

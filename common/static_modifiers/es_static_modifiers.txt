@@ -136,17 +136,17 @@ coastal_sea = {
 }
 
 tropical = {
-	local_colonial_growth = -10
+	local_colonial_growth = -25
 	supply_limit_modifier = -0.25
 	local_hostile_attrition = 1
 
-	local_development_cost = 0.10
+	local_development_cost = 0.35
 
 	picture = "climate_tropical"
 }
 
 arctic = {
-	local_colonial_growth = -10
+	local_colonial_growth = -35
 	supply_limit_modifier = -0.5
 	local_hostile_attrition = 1
 
@@ -156,7 +156,7 @@ arctic = {
 }
 
 arid = {
-	local_colonial_growth = -10
+	local_colonial_growth = -15
 	supply_limit_modifier = -0.25
 	local_hostile_attrition = 1
 

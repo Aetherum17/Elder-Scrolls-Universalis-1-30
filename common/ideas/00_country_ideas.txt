@@ -3337,3 +3337,1038 @@ ASS_ideas = {
 		diplomats = 1
 	}
 }
+
+KUR_ideas = {
+	start = {
+		discipline = 0.10
+		army_tradition_decay = -0.025
+	}
+	
+	bonus = {
+		trade_efficiency = 0.15
+	}
+
+	trigger = {
+		tag = MIN
+	}
+	free = yes
+	
+	legacy_of_sword_brethren = {
+		defensiveness = 0.10
+	}	
+	privilegium_gotthardinum = {
+		global_unrest = -1
+	}		
+	duchy_of_mercantilism = {
+		global_foreign_trade_power = 0.1
+	}
+	booming_manufacture = {
+		production_efficiency = 0.1
+	}		
+	couronian_colonization = {
+		cavalry_power = 0.10
+	}
+	palaces_of_mitau = {
+		prestige = 0.25
+	}
+	promote_the_curonian_kings = {
+		cavalry_cost = -0.10
+	}
+}
+
+MDI_ideas = {
+	start = {
+		navy_tradition = 0.5
+		light_ship_cost = -0.25
+	}
+
+	bonus = {
+		naval_morale = 0.15
+	}
+	
+	trigger = {
+		tag = LIL
+	}
+	free = yes
+	
+	mdi_indian_ocean_trade = {
+		merchants = 1
+	}
+	somali_sailors = {
+		leader_naval_manuever = 1
+	}
+	mdi_east_african_gold_trade = {
+		global_trade_power = 0.1
+	}
+	city_of_mogadishu = {
+		development_cost = -0.1
+	}
+	mogadishan_currency = {
+		trade_efficiency = 0.1	
+	}
+	horn_of_africa = {
+		naval_forcelimit_modifier = 0.1
+	}
+	toob_benadir = {
+		global_trade_goods_size_modifier = 0.1
+	}
+}
+
+TRE_ideas = {
+	start = {
+		legitimacy = 0.5
+		republican_tradition = 0.5
+		devotion = 0.5							
+        horde_unity = 0.5
+        meritocracy = 0.5
+		diplomatic_reputation = 1
+	}
+
+	bonus = {
+		global_trade_goods_size_modifier = 0.10
+	}
+
+	trigger = {
+		tag = AUR
+	}
+
+	free = yes
+
+	komnenoi_in_exile = {
+		prestige = 0.25
+	}
+	pontic_mountains = {
+		defensiveness = 0.10
+	}
+	legacy_of_the_alexiad = {
+		idea_cost = -0.1
+	}
+	komnenoi_princesses = {
+		diplomats = 1
+	}
+	the_lessons_of_the_fourth_crusade = {
+		land_morale = 0.1
+	}
+	terminus_of_the_silk_road = {
+		global_own_trade_power = 0.10
+	}
+	greek_scholars_abroad = {
+		spy_offence = 0.10
+	}
+}
+
+javan_ideas = {
+	start = {
+		tolerance_heathen = 1
+		prestige_decay = -0.025
+	}
+	
+	bonus = {
+		naval_maintenance_modifier = -0.25
+	}
+	
+	trigger = {
+		tag = GOL
+	}
+	free = yes
+	
+	candi_shrines = {
+		religious_unity = 0.10
+	}
+	indianization = {
+		global_institution_spread = 0.1
+	}
+	dharmasastra = {
+		global_missionary_strength = 0.01
+	}
+	pan_asian_trade = {
+		merchants = 1
+	}
+	bi_yearly_harvest = {
+		global_trade_goods_size_modifier = 0.10
+	}
+	modernized_shipbuilding = {
+		global_ship_cost = -0.10
+	}
+	terracotta_banking = {
+		trade_efficiency = 0.1
+	}
+}
+
+AFG_ideas = {
+	start = {
+		army_tradition = 0.5
+		global_own_trade_power = 0.25
+	}
+	
+	bonus = {
+		core_creation = -0.25
+	}
+	
+	trigger = {
+		tag = KEP
+	}
+	free = yes
+	
+	pashtunwali = {
+		war_exhaustion_cost = -0.10
+	}
+	shadows_of_the_hindu_kush = {
+		defensiveness = 0.10
+	}
+	tureh = {
+		global_manpower_modifier = 0.10
+	}
+	afghan_diaspora = {
+		diplomatic_reputation = 1
+	}
+	durrani_imperialism = {
+		cavalry_power = 0.10
+	}
+	institutionalized_loya_jirga = {
+		legitimacy = 0.25
+		republican_tradition = 0.25
+		devotion = 0.25							
+        horde_unity = 0.25
+        meritocracy = 0.25
+	}
+	graveyard_of_empires = {
+		hostile_attrition = 1
+	}
+}
+
+WAL_ideas = {
+	start = {
+		core_creation = -0.25
+		discipline = 0.10
+	}
+	
+	bonus = {
+		manpower_recovery_speed = 0.25
+	}
+	
+	trigger = {
+		tag = HOL
+	}
+	free = yes
+	
+	cunning_diplomacy = {
+		diplomatic_reputation = 1
+	}
+	foreign_trade_restrictions = {
+		global_prov_trade_power_modifier = 0.10
+	}
+	mercenary_guard = {
+		merc_maintenance_modifier = -0.10
+	}
+	w_foreign_advisors = {
+		advisor_cost = -0.1
+	}
+	legacy_of_the_impaler = {
+		leader_land_shock = 1
+	}
+	boyar_regime = { 
+		legitimacy = 0.25
+		republican_tradition = 0.25
+		devotion = 0.25							
+        horde_unity = 0.25
+        meritocracy = 0.25
+	}
+	abolition_of_serfdom = {
+		global_manpower_modifier = 0.10
+	}
+}
+
+CRO_ideas = {
+	start = {
+		cavalry_power = 0.15
+		naval_forcelimit_modifier = 0.25
+	}
+
+	bonus = {
+		prestige_decay = -0.025
+	}
+	
+	trigger = {
+		tag = ALI
+	}
+	free = yes
+	
+	hrvatski_ban = {
+		free_leader_pool = 1
+	}
+	pearl_of_the_adriatic = {
+		trade_steering = 0.1
+	}
+	granary_of_croatia = {
+		global_tax_modifier = 0.1
+	}
+	antemurale_christianitatis = {
+		tolerance_own = 1
+	}
+	the_sabor = {
+		ae_impact = -0.10
+	}
+	croatian_renaissance = {
+		adm_tech_cost_modifier = -0.05
+	}
+	pandurs = {
+		infantry_power = 0.1
+	}
+}
+
+CYP_ideas = {
+	start = {
+		galley_cost = -0.25
+		tolerance_heretic = 1
+	}
+	bonus = {
+		naval_forcelimit_modifier = 0.25
+	}
+	trigger = {
+		tag = MUR
+	}
+	free = yes
+
+	king_of_jerusalem = {
+		fabricate_claims_cost = -0.10
+	}
+	frankish_crusaders = {
+		army_tradition = 0.25
+	}
+	commandaria_wine = {
+		production_efficiency = 0.1
+	}
+	lusignan_diplomacy = {
+		diplomatic_reputation = 0.5
+	}
+	cypriot_fortifications = {
+		defensiveness = 0.10
+	}
+	repel_the_corsairs = {
+		galley_power = 0.10
+	}
+	raid_turkish_commerce = {
+		embargo_efficiency = 0.1
+	}
+}
+
+NAV_ideas = {
+	start = {
+		naval_forcelimit_modifier = 0.25
+		light_ship_cost = -0.25
+	}
+	bonus = {
+		trade_efficiency = 0.15
+	}
+	trigger = {
+		tag = GAL
+	}
+	free = yes
+
+	dorretxeak_towers = {
+		defensiveness = 0.1
+	}
+	navarrese_company = {
+		merc_maintenance_modifier = -0.10
+	}
+	intrepid_pioneers = {
+		colonists = 1
+	}
+	transatlantic_whaling = {
+		production_efficiency = 0.1
+	}
+	crosspyrenean_trade = {
+		trade_steering = 0.10
+	}
+	royal_basque_society = {
+		idea_cost = -0.1
+	}
+	end_of_fueros = {
+		global_colonial_growth = 10
+	}
+}
+
+DAH_ideas = {
+	start = {
+		idea_cost = -0.25
+		defensiveness = 0.25
+	}
+
+	bonus = {
+		production_efficiency = 0.25
+	}
+	
+	trigger = {
+		tag = VEL
+	}
+	free = yes
+	
+	children_of_the_panther = {
+		legitimacy = 0.25
+		republican_tradition = 0.25
+		devotion = 0.25							
+        horde_unity = 0.25
+        meritocracy = 0.25
+	}
+	slave_hunts = {
+		global_manpower_modifier = 0.10
+	}
+	migan_and_mehu = {
+		stability_cost_modifier = -0.1
+	}
+	lagredis = {
+		global_spy_defence = 0.10
+	}
+	the_amazons = {
+		discipline = 0.05
+	}
+	the_yovogan = {
+		global_institution_spread = 0.1
+	}
+	palaces_of_abomey = {
+		prestige = 0.25
+	}
+}
+
+KBO_ideas = {
+	start = {
+		vassal_income = 0.25
+		free_leader_pool = 1
+	}
+
+	bonus = {
+		legitimacy = 0.5
+		republican_tradition = 0.5
+		devotion = 0.5							
+        horde_unity = 0.5
+        meritocracy = 0.5
+	}
+ 
+	trigger = {
+		tag = DES
+	}
+	free = yes
+	
+	land_of_ngazargamu = {
+		production_efficiency = 0.1	
+	}
+	sayfawad_dynasty = { 
+		global_unrest = -1
+	}
+	alumas_reforms = {
+		global_trade_goods_size_modifier = 0.10
+	}
+	house_of_kanem = {
+		global_missionary_strength = 0.01
+	}
+	fixed_military_camps = {
+		shock_damage_received = -0.1
+	}
+	clan_head_council = {
+		stability_cost_modifier = -0.1
+	}
+	duties_on_sahara_trade = {
+		global_prov_trade_power_modifier = 0.10
+	}
+}
+
+KRA_ideas = {
+	start = {
+		trade_steering = 0.25
+		trade_efficiency = 0.15
+	}
+
+	bonus = {
+		prestige = 0.5
+	}
+
+	trigger = {
+		tag = GRA
+	}
+
+	free = yes		#will be added at load.
+
+	kra_legendary_legacy = {
+		land_morale = 0.1
+	}
+	kra_seat_of_gov = {
+		stability_cost_modifier = -0.1
+	}
+	kra_city_rights = {
+		global_tax_modifier = 0.10
+	}
+	kra_cas_forts = {
+		defensiveness = 0.10
+	}
+	kra_jewish_community = {
+		advisor_pool = 1
+	}
+	kra_polish_athens = {
+		technology_cost = -0.05
+	}
+	kra_free_city = {
+		diplomats = 1
+	}
+}
+
+AJU_ideas = {
+	start = {
+		build_cost = -0.25
+		global_missionary_strength = 0.01
+	}
+
+	bonus = {
+		land_morale = 0.15
+	}
+	
+	trigger = {
+		tag = GRE
+	}
+	free = yes
+	
+	aju_maritime_enterprise = {
+		global_ship_cost = -0.1
+	}
+	istunka_tournament = {
+		global_unrest = -1
+	}
+	gareen_imams = {
+		missionaries = 1
+	}
+	aju_muslim_migrations = {
+		advisor_pool = 1
+	}
+	aju_hydraulic_empire = {
+		stability_cost_modifier = -0.1
+	}
+	aju_expelling_the_infidel = {
+		leader_land_shock = 1
+	}
+	aju_received_assistance = {
+		global_institution_spread = 0.1
+	}
+}
+
+RYA_ideas = {
+	start = {
+		global_unrest = -1
+		recover_army_morale_speed = 0.10
+	}
+	
+	bonus = {
+		land_morale = 0.15
+	}
+	
+	trigger = {
+		tag = MAL
+	}
+	free = yes
+	
+	arsenal_of_ryazan = {
+		land_forcelimit_modifier = 0.10
+	}
+	tatar_mercenaries = {
+		cavalry_cost = -0.1
+	}
+	rya_land_charters = {
+		manpower_recovery_speed = 0.10
+	}
+	rya_russian_grain = {
+		production_efficiency = 0.1	
+	}
+	march_of_russia = {
+		infantry_power = 0.05
+	}
+	russian_ambition = {
+		core_creation = -0.10
+	}
+	western_contacts = {
+		advisor_cost = -0.1
+	}
+}
+
+TVE_ideas = {
+	start = {
+		land_forcelimit_modifier = 0.25
+		global_prov_trade_power_modifier = 0.25	
+	}
+	
+	bonus = {
+		reinforce_speed = 0.25
+	}
+	
+	trigger = {
+		tag = SHA
+	}
+	free = yes
+	
+	tverian_merchants = {
+		trade_efficiency = 0.1
+	}
+	defend_against_muscowy = {
+		defensiveness = 0.10
+	}
+	patriarch_of_tver = {
+		stability_cost_modifier = -0.1
+	}
+	tverian_architects = {
+		build_cost = -0.10
+	}
+	cloth_business = {
+		production_efficiency = 0.1
+	}
+	tverian_tercio = {
+		infantry_power = 0.1
+	}
+	tve_national_army = {
+		global_manpower_modifier = 0.10
+	}
+}
+
+YAR_ideas = {
+	start = {
+		reinforce_speed = 0.25
+		manpower_recovery_speed = 0.25	
+	}
+	
+	bonus = {
+		prestige_from_land = 0.5
+	}
+	
+	trigger = {
+		tag = WRO
+	}
+	free = yes
+	
+	between_hammer_and_avil = {
+		infantry_cost = -0.10
+	}
+	third_option = {
+		diplomatic_reputation = 0.5
+	}
+	reform_boyars = {
+		cavalry_cost = -0.10		
+	}
+	siberian_mercenaries = {
+		merc_maintenance_modifier = -0.10
+	}
+	cult_of_generals = {
+		army_tradition = 0.25
+	}
+	yar_two_towers = {
+		defensiveness = 0.10
+	}
+	yar_russian_ambition = {
+		improve_relation_modifier = 0.15
+	}
+}
+
+PSK_ideas = {
+	start = {
+		caravan_power = 0.25
+		merchants = 1		
+	}
+	
+	bonus = {
+		global_trade_goods_size_modifier = 0.2
+	}
+	
+	trigger = {
+		tag = COR
+	}
+	free = yes
+	
+	veche_of_pskov = {
+		advisor_pool = 1
+	}
+	legacy_of_daumantas = {
+		recover_army_morale_speed = 0.05
+	}
+	balt_mercenaries = {
+		merc_maintenance_modifier = -0.1
+	}
+	pskov_charter = {
+		global_unrest = -1
+	}
+	psk_knights_guard = {
+		possible_mercenaries = 0.10
+	}
+	arts_and_crafts_of_pskov = {
+ 		global_trade_power = 0.1
+	}
+	pskov_before_all_others = {
+		trade_steering = 0.10
+	}
+}
+
+SMO_ideas = {
+	start = {
+		prestige_decay = -0.025
+		advisor_cost = -0.25	
+	}
+	
+	bonus = {
+		prestige = 0.5
+	}
+	
+	trigger = {
+		tag = RIF
+	}
+	free = yes
+	
+	smolenskian_resolve = {
+		religious_unity = 0.10
+	}
+	armories_of_smolensk = {
+		fire_damage = 0.1	
+	}
+	smo_western_mercenaries = {
+		merc_maintenance_modifier = -0.10
+	}
+	the_great_foundry = {
+		artillery_cost = -0.1
+	}
+	smo_hold_the_line = {
+		leader_land_fire = 1
+	}
+	artillery_before_all = {
+		artillery_power = 0.1
+	}
+	tsar_mortars = {
+		siege_ability = 0.10
+	}
+}
+
+BOS_ideas = {
+	start = {	
+		religious_unity = 0.25
+		tolerance_heretic = 1	
+	}
+	
+	bonus = {
+		core_creation = -0.25
+	}
+	
+	trigger = {
+		tag = BLC
+	}
+	free = yes
+	
+	heretic_teachings = {
+		technology_cost = -0.05
+	}
+	per_aspera_ad_astra = {
+		legitimacy = 0.25
+		republican_tradition = 0.25
+		devotion = 0.25							
+        horde_unity = 0.25
+        meritocracy = 0.25
+	}
+	empower_bosnian_nobility = {
+		free_leader_pool = 1
+	}
+	italian_connections = {
+		diplomatic_upkeep = 1
+	}
+	land_of_princes = {
+		vassal_income = 0.10
+	}
+	flexible_diplomacy = {
+		diplomats = 1
+	}
+	over_hills_through_woods = {
+		hostile_attrition = 1
+	}
+}
+
+AIR_ideas = {
+	start = {
+		movement_speed = 0.15
+		caravan_power = 0.25
+	}
+	
+	bonus = {
+		leader_land_shock = 1
+	}
+	
+	trigger = {
+		TAG = LLO
+	}
+	free = yes
+	
+	taghlamt = {
+		trade_efficiency = 0.10
+	}
+	cross_of_agades = { 
+		land_morale = 0.10
+	}
+	legacy_of_tin_hinan = {
+		legitimacy = 0.25
+		republican_tradition = 0.25
+		devotion = 0.25							
+        horde_unity = 0.25
+        meritocracy = 0.25
+	}
+	blue_people = { 
+		prestige = 0.25
+	}
+	inadan_castes = {
+		production_efficiency = 0.1
+	}
+	nomadic_traditions = {
+		leader_land_manuever = 1
+	}
+	ineslemen_teachings = {
+		global_missionary_strength = 0.01
+	}
+}
+
+mossi_ideas = {
+	start = {
+		global_unrest = -1
+		cavalry_power = 0.15
+	}
+	
+	bonus = {
+		diplomatic_upkeep = 1
+	}
+	
+	trigger = {
+		tag = NOR
+	}
+	free = yes
+	
+	riale_and_yennenga = {
+		legitimacy = 0.25
+		republican_tradition = 0.25
+		devotion = 0.25							
+        horde_unity = 0.25
+        meritocracy = 0.25
+	}
+	mossi_cavalry_raids = { 
+		cavalry_flanking = 0.25
+	}
+	nyonnyonse_vassals = {
+		num_accepted_cultures = 1
+	}
+	nakomse = { 
+		state_maintenance_modifier = -0.10
+	}
+	land_of_the_ancestors = {
+		defensiveness = 0.10
+	}
+	honoring_the_masks = {
+		tolerance_own = 1
+    }
+	friday_court = {
+		stability_cost_modifier = -0.1
+	}
+}
+
+fulani_jihad_ideas = {
+	start = {
+		recover_army_morale_speed = 0.10
+		cavalry_cost = -0.25
+	}
+	
+	bonus = {
+		army_tradition_from_battle = 0.5
+	}
+	
+	trigger = {
+		tag = DRG
+	}
+	free = yes
+	
+	wandering_scholars = {
+		missionaries = 1
+	}
+	unrighteous_kings = { 
+		defensiveness = 0.10
+	}
+	fulani_jihads = {
+		global_missionary_strength = 0.01
+	}
+	imams_and_emirs = { 
+		land_morale = 0.1
+	}
+	islamic_scholarship = {
+		tolerance_own = 1
+	}
+	community_of_the_faithful = {
+		num_accepted_cultures = 1
+	}
+	caliph_in_africa = {
+		prestige = 0.25
+	}
+}
+
+TAR_ideas = {
+	start = {
+		legitimacy = 0.5
+		republican_tradition = 0.5
+		devotion = 0.5							
+        horde_unity = 0.5
+        meritocracy = 0.5
+		years_of_nationalism = -10
+	}
+	
+	bonus = {
+		manpower_recovery_speed = 0.25
+	}
+	
+	trigger = {
+		TAG = VAU
+	}
+	free = yes
+	
+	copperworking = {
+		infantry_power = 0.1
+	}
+	no_mercy = { 
+		global_unrest = -1
+	}
+	merchant_officials = {
+		trade_efficiency = 0.1
+	}
+	war_bonfires = {
+		global_regiment_recruit_speed = -0.10
+	}
+	fortified_frontier = {
+		fort_maintenance_modifier = -0.10
+	}
+	otomi_settlements= {
+		global_manpower_modifier = 0.10
+	}
+	tarascan_assmilation = { 
+		core_creation = -0.10
+	}
+}
+
+MON_ideas = {
+	start = {
+		defensiveness = 0.25	
+		hostile_attrition = 1	
+	}
+	
+	bonus = {
+		infantry_power = 0.15
+	}
+	
+	trigger = {
+		tag = JER
+	}
+	free = yes
+	
+	mon_idea_1 = {
+		legitimacy = 0.25
+		republican_tradition = 0.25
+		devotion = 0.25							
+        horde_unity = 0.25
+        meritocracy = 0.25
+	}
+	mon_idea_2 = {
+		tolerance_own = 1		
+	}
+	mon_idea_3 = {
+		infantry_cost = -0.1
+	}
+	mon_idea_4 = {
+		embargo_efficiency = 0.1
+	}
+	mon_idea_5 = {
+		navy_tradition = 0.5
+	}
+	mon_idea_6 = {
+		global_tax_modifier = 0.1
+	}
+	mon_idea_7 = {
+		global_manpower_modifier = 0.10
+	}
+}
+
+RMN_ideas = {
+	start = {
+		discipline = 0.10
+		tolerance_own = 1
+	}
+
+	bonus = {
+		improve_relation_modifier = 0.25
+	}
+
+	trigger = {
+		tag = WTB
+	}
+
+	free = yes
+
+	flexible_recruiting = {
+		manpower_recovery_speed = 0.10
+	}
+	skilled_commanders = {
+		leader_land_manuever = 1
+	}
+	scorch_the_land_and_poison_the_wells = {
+		hostile_attrition = 1
+	}
+	latin_island = {
+		legitimacy = 0.25
+		republican_tradition = 0.25
+		devotion = 0.25							
+        horde_unity = 0.25
+        meritocracy = 0.25
+	}
+	rom_peasant_soldiers = {
+		infantry_cost = -0.1
+	}
+	phanariote_traders = {
+		global_trade_power = 0.10
+	}
+	phanariote_taxes = {
+		global_tax_modifier = 0.1
+	}
+}
+
+USA_ideas = {
+	start = {
+		merchants = 1
+		technology_cost = -0.10
+	}
+	
+	bonus = {
+		legitimacy = 0.5
+		republican_tradition = 0.5
+		devotion = 0.5							
+        horde_unity = 0.5
+        meritocracy = 0.5
+	}
+	
+	trigger = {
+		tag = WIT
+	}
+	free = yes
+	
+	freedom_of_religion = {
+		no_religion_penalty = yes
+	}
+	usa_bill_of_rights = {
+		global_unrest = -1
+	}
+	empire_of_liberty = {
+		colonists = 1
+	}
+	lessons_of_valley_forge = {
+		land_morale = 0.10
+	}
+	workshop_of_the_world = {
+		global_trade_goods_size_modifier = 0.0
+	}
+	shining_city_on_a_hill = {
+		prestige = 0.25
+	}
+	indian_removal = {
+		cb_on_primitives = yes
+ 	}
+}
