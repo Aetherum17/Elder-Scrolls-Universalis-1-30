@@ -352,13 +352,6 @@ on_startup = {
 		set_global_flag = foundation_of_wayres_flag
 	}
 	
-	if = {
-		limit = {
-		is_free_or_tributary_trigger = yes
-		}
-		set_country_flag = arrow_in_the_knee_flag
-	}
-	
 	add_legitimacy = 100
 	add_republican_tradition = 100
 	add_devotion = 100
@@ -674,6 +667,37 @@ on_new_monarch = {
 		is_free_or_tributary_trigger = yes
 		}
 		set_country_flag = arrow_in_the_knee_flag
+	}
+	
+	if = { limit = { religion_group = polytheistic_group } add_country_modifier = { name = "polytheistic_group_modifier" duration = -1 }
+	remove_country_modifier = occult_group_modifier
+	remove_country_modifier = elemental_group_modifier
+	remove_country_modifier = daedric_group_1_modifier
+	remove_country_modifier = harmony_group_modifier
+	}
+	if = { limit = { religion_group = occult_group } add_country_modifier = { name = "occult_group_modifier" duration = -1 }
+	remove_country_modifier = polytheistic_group_modifier
+	remove_country_modifier = elemental_group_modifier
+	remove_country_modifier = daedric_group_1_modifier
+	remove_country_modifier = harmony_group_modifier
+	}
+	if = { limit = { religion_group = elemental_group } add_country_modifier = { name = "elemental_group_modifier" duration = -1 }
+	remove_country_modifier = polytheistic_group_modifier
+	remove_country_modifier = occult_group_modifier
+	remove_country_modifier = daedric_group_1_modifier
+	remove_country_modifier = harmony_group_modifier
+	}
+	if = { limit = { religion_group = daedric_group_1 } add_country_modifier = { name = "daedric_group_1_modifier" duration = -1 }
+	remove_country_modifier = polytheistic_group_modifier
+	remove_country_modifier = occult_group_modifier
+	remove_country_modifier = elemental_group_modifier
+	remove_country_modifier = harmony_group_modifier
+	}
+	if = { limit = { religion_group = harmony_group } add_country_modifier = { name = "harmony_group_modifier" duration = -1 }
+	remove_country_modifier = polytheistic_group_modifier
+	remove_country_modifier = occult_group_modifier
+	remove_country_modifier = elemental_group_modifier
+	remove_country_modifier = daedric_group_1_modifier
 	}
 
 	if = {

@@ -1,0 +1,255 @@
+country_decisions = {
+
+	east_akaviri_trade_route_decision = {
+	    major = yes
+		potential = {
+			num_of_ports = 1
+			NOT = { capital_scope = { continent = Akavir } }
+			OR = {
+				has_discovered = 702
+				has_discovered = 611
+				has_discovered = 743
+				has_discovered = 583
+				has_discovered = 468
+			}
+			NOT = { has_country_modifier = east_akaviri_trade_route }
+		}
+		allow = {
+			num_of_ports = 10
+		    has_idea = quest_for_the_new_world
+		    any_active_trade_node = {
+			has_merchant = ROOT
+			OR = {
+				province_id = 702
+				province_id = 611
+				province_id = 743
+				province_id = 583
+				province_id = 468
+			}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+			    name = "east_akaviri_trade_route"
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	
+	unite_the_pentarchy = {
+	    major = yes
+		potential = {
+			religion = dragon_cult
+			NOT = { has_country_modifier = the_pentarchy }
+			OR = {
+			owns = 1572
+		    owns = 750
+		    owns = 1325
+		    owns = 1288
+		    owns = 724
+			}
+		}
+		allow = {
+			owns = 1572
+		    owns = 750
+		    owns = 1325
+		    owns = 1288
+		    owns = 724
+		    1572 = { religion = dragon_cult }
+		    750 = { religion = dragon_cult }
+		    1325 = { religion = dragon_cult }
+		    1288 = { religion = dragon_cult}
+		    724 = { religion = dragon_cult }
+		}
+		effect = {
+			add_country_modifier = {
+			    name = "the_pentarchy"
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_desire = 400
+	}
+	
+	unite_all_towers = {
+	    major = yes
+		potential = {
+			NOT = { has_country_modifier = all_towers_united }
+			OR = {
+			1382 = { country_or_subject_holds = ROOT } 
+			1044 = { country_or_subject_holds = ROOT } 
+			263 = { country_or_subject_holds = ROOT } 
+			1206 = { country_or_subject_holds = ROOT } 
+			340 = { country_or_subject_holds = ROOT } 
+			970 = { country_or_subject_holds = ROOT } 
+			834 = { country_or_subject_holds = ROOT } 
+			1288 = { country_or_subject_holds = ROOT } 
+			3188 = { country_or_subject_holds = ROOT } 
+			724 = { country_or_subject_holds = ROOT } 
+			}
+		}
+		allow = {
+			1382 = { country_or_subject_holds = ROOT } 
+			1044 = { country_or_subject_holds = ROOT } 
+			263 = { country_or_subject_holds = ROOT } 
+			1206 = { country_or_subject_holds = ROOT } 
+			340 = { country_or_subject_holds = ROOT } 
+			970 = { country_or_subject_holds = ROOT } 
+			834 = { country_or_subject_holds = ROOT } 
+			1288 = { country_or_subject_holds = ROOT } 
+			3188 = { country_or_subject_holds = ROOT } 
+			724 = { country_or_subject_holds = ROOT } 
+		}
+		effect = {
+			add_country_modifier = {
+			    name = "all_towers_united"
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_desire = 400
+	}
+	
+	unite_dwemer_research_hubs = {
+	    major = yes
+		potential = {
+			NOT = { has_country_modifier = dwemer_research_hubs }
+			NOT = { primary_culture = dwemer }
+		    any_owned_province = { continent = Tamriel }
+			OR = {
+			970 = { country_or_subject_holds = ROOT } 
+		    8186 = { country_or_subject_holds = ROOT }
+		    7419 = { country_or_subject_holds = ROOT }
+		    7559 = { country_or_subject_holds = ROOT }
+		    6334 = { country_or_subject_holds = ROOT }
+			}
+		}
+		allow = {
+			970 = { country_or_subject_holds = ROOT } 
+		    8186 = { country_or_subject_holds = ROOT }
+		    7419 = { country_or_subject_holds = ROOT }
+		    7559 = { country_or_subject_holds = ROOT }
+		    6334 = { country_or_subject_holds = ROOT }
+		}
+		effect = {
+			add_country_modifier = {
+			    name = "dwemer_research_hubs"
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_desire = 400
+	}
+	
+	dwemer_technologies = {
+	    major = yes
+		potential = {
+		    NOT = { has_country_modifier = dwemer_technologies }
+		    NOT = { has_global_flag = dwemer_dissapearence_flag }
+			OR = {
+		    primary_culture = dwemer
+		    tag = UNI
+		    }
+		}
+		allow = {
+			OR = {
+		    primary_culture = dwemer
+		    tag = UNI
+		    }
+		}
+		effect = {
+			add_country_modifier = {
+			    name = "dwemer_technologies"
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	increase_dwemer_influence = {
+	    major = yes
+		potential = {
+		    NOT = { has_country_modifier = increased_dwemer_influence }
+			NOT = { has_country_modifier = reduced_dwemer_influence }
+		    NOT = { has_global_flag = dwemer_dissapearence_flag }
+		    NOT = { primary_culture = dwemer }
+			OR = {
+			any_neighbor_country = {
+		    primary_culture = dwemer
+		    }
+			any_owned_province = {
+			culture = dwemer
+			}
+			}
+		}
+		allow = {
+			OR = {
+			any_neighbor_country = {
+		    primary_culture = dwemer
+		    }
+			any_owned_province = {
+			culture = dwemer
+			}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+			    name = "increased_dwemer_influence"
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	decrease_dwemer_influence = {
+	    major = yes
+		potential = {
+		    NOT = { has_country_modifier = increased_dwemer_influence }
+			NOT = { has_country_modifier = reduced_dwemer_influence }
+		    NOT = { has_global_flag = dwemer_dissapearence_flag }
+		    NOT = { primary_culture = dwemer }
+			OR = {
+			any_neighbor_country = {
+		    primary_culture = dwemer
+		    }
+			any_owned_province = {
+			culture = dwemer
+			}
+			}
+		}
+		allow = {
+			OR = {
+			any_neighbor_country = {
+		    primary_culture = dwemer
+		    }
+			any_owned_province = {
+			culture = dwemer
+			}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+			    name = "reduced_dwemer_influence"
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+}

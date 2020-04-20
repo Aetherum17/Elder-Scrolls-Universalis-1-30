@@ -453,42 +453,6 @@ country_event = {
 	}
 }
 
-# Province of the primary culture of the nation with the dynasty is happy with our king, gain tax modifiers
-
-province_event = {
-	id = elective_monarchy.13
-	title = elective_monarchy.13.t
-	desc = elective_monarchy.13.d
-	picture = CITY_VIEW_eventPicture
-	
-	is_mtth_scaled_to_size = 1
-	
-	trigger = {
-		has_dlc = "Res Publica"
-		owner = {
-			has_reform = elective_monarchy
-			ruler_is_foreigner = yes
-			any_known_country = {
-				dynasty = PREV
-				is_lesser_in_union = no
-				primary_culture = ROOT
-			}
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 300
-	}	
-
-	option = {
-		name = elective_monarchy.13.a
-		add_province_modifier = {
-			name = local_popularity
-			duration = 3650
-		}
-	}
-}
-
 # Friction between country of current monarch and country of heir, forcing the Sejm to take sides (3 events)
 
 country_event = {

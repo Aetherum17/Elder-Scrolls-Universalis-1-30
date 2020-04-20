@@ -49,7 +49,7 @@ administrative_missions = {
 		required_missions = { fill_treasury_mission }
 		trigger = {
 			num_of_owned_provinces_with = {
-				value = 10
+				value = 25
 				has_building = road_network
 			}
 		}
@@ -142,7 +142,7 @@ administrative_missions = {
 		required_missions = { increase_1_prestige_mission }
 		trigger = {
 			num_of_owned_provinces_with = {
-				value = 10
+				value = 25
 				has_building = mint
 			}
 		}
@@ -183,7 +183,7 @@ administrative_missions = {
 		required_missions = { increase_1_prestige_mission }
 		trigger = {
 			num_of_owned_provinces_with = {
-				value = 10
+				value = 25
 				has_building = royal_palace
 			}
 		}
@@ -213,14 +213,15 @@ administrative_missions = {
 		icon = mission_unite_home_region
 		required_missions = { }
 		trigger = {
-			owns_core_province = 224
-			owns_core_province = 209
+			owns_core_province = 224		
 			owns_core_province = 240
-			owns_core_province = 239
-			owns_core_province = 219
+			owns_core_province = 2050
+			owns_core_province = 2089
+			owns_core_province = 209
 		}
 		effect = {
-		    add_prestige = 20
+		    add_prestige = 10
+			hidden_effect = {
 			every_province = {
 			limit = {
 			region = pyandonea_lr
@@ -228,9 +229,10 @@ administrative_missions = {
 			}
 			add_permanent_claim = ROOT
 			}
-			284 = {
-			add_core = ROOT
 			}
+			4740 = { add_core = ROOT }
+			if = { limit = { ai = yes 4740 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			4740 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 4740 } } } } }
 		}
 	}
 	
@@ -238,27 +240,33 @@ administrative_missions = {
 		icon = mission_unite_home_region
 		required_missions = { }
 		trigger = {
-			owns_core_province = 271
+			owns_core_province = 271		
+			owns_core_province = 4740
+			owns_core_province = 281
+			owns_core_province = 249
 			owns_core_province = 299
-			owns_core_province = 308
-			owns_core_province = 263
-			owns_core_province = 284
 		}
 		effect = {
-		    add_prestige = 20
+		    add_prestige = 10
+			hidden_effect = {
 			every_province = {
 			limit = {
+			OR = {
 			region = summerset_lr
+			region = auridon_lr
+			}
 			is_city = yes
 			}
 			add_permanent_claim = ROOT
 			}
-			874 = {
-			add_core = ROOT
 			}
-			209 = {
-			add_core = ROOT
-			}
+			337 = { add_core = ROOT }
+			if = { limit = { ai = yes 337 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			337 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 337 } } } } }
+			
+			209 = { add_core = ROOT }
+			if = { limit = { ai = yes 209 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			209 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 209 } } } } }
 		}
 	}
 	
@@ -273,7 +281,8 @@ administrative_missions = {
 			owns_core_province = 384
 		}
 		effect = {
-		    add_prestige = 20
+		    add_prestige = 10
+			hidden_effect = {
 			every_province = {
 			limit = {
 			is_city = yes
@@ -288,18 +297,23 @@ administrative_missions = {
 			}
 			add_permanent_claim = ROOT
 			}
-			1299 = {
-			add_core = ROOT
 			}
-			389 = {
-			add_core = ROOT
-			}
-			415 = {
-			add_core = ROOT
-			}
-			412 = {
-			add_core = ROOT
-			}
+			
+			1299 = { add_core = ROOT }
+			if = { limit = { ai = yes 1299 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			1299 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 1299 } } } } }
+			
+			389 = { add_core = ROOT }
+			if = { limit = { ai = yes 389 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			389 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 389 } } } } }
+			
+			415 = { add_core = ROOT }
+			if = { limit = { ai = yes 415 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			415 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 415 } } } } }
+			
+			412 = { add_core = ROOT }
+			if = { limit = { ai = yes 412 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			412 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 412 } } } } }
 		}
 	}
 	
@@ -314,7 +328,8 @@ administrative_missions = {
 			owns_core_province = 371
 		}
 		effect = {
-		    add_prestige = 20
+		    add_prestige = 10
+			hidden_effect = {
 			every_province = {
 			limit = {
 			is_city = yes
@@ -325,18 +340,23 @@ administrative_missions = {
 			}
 			add_permanent_claim = ROOT
 			}
-			1299 = {
-			add_core = ROOT
 			}
-			373 = {
-			add_core = ROOT
-			}
-			415 = {
-			add_core = ROOT
-			}
-			412 = {
-			add_core = ROOT
-			}
+			
+			1299 = { add_core = ROOT }
+			if = { limit = { ai = yes 1299 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			1299 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 1299 } } } } }
+			
+			373 = { add_core = ROOT }
+			if = { limit = { ai = yes 373 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			373 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 373 } } } } }
+			
+			415 = { add_core = ROOT }
+			if = { limit = { ai = yes 415 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			415 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 415 } } } } }
+			
+			412 = { add_core = ROOT }
+			if = { limit = { ai = yes 412 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			412 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 412 } } } } }
 		}
 	}
 	
@@ -351,7 +371,8 @@ administrative_missions = {
 			owns_core_province = 2212
 		}
 		effect = {
-		    add_prestige = 20
+		    add_prestige = 10
+			hidden_effect = {
 			every_province = {
 			limit = {
 			is_city = yes
@@ -362,15 +383,19 @@ administrative_missions = {
 			}
 			add_permanent_claim = ROOT
 			}
-			395 = {
-			add_core = ROOT
 			}
-			373 = {
-			add_core = ROOT
-			}
-			795 = {
-			add_core = ROOT
-			}
+			
+			395 = { add_core = ROOT }
+			if = { limit = { ai = yes 395 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			395 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 395 } } } } }
+			
+			373 = { add_core = ROOT }
+			if = { limit = { ai = yes 373 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			373 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 373 } } } } }
+			
+			795 = { add_core = ROOT }
+			if = { limit = { ai = yes 795 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			795 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 795 } } } } }
 		}
 	}
 	
@@ -404,7 +429,7 @@ adm_missions = {
 		required_missions = { increase_religious_unity_mission }
 		trigger = {
 			num_of_owned_provinces_with = {
-				value = 10
+				value = 25
 				OR = {
 					has_building = temple
 					has_building = cathedral
@@ -439,7 +464,7 @@ adm_missions = {
 		required_missions = { build_more_roads_mission }
 		trigger = {
 			num_of_owned_provinces_with = {
-				value = 10
+				value = 25
 				has_building = canal
 			}
 		}
@@ -457,7 +482,7 @@ adm_missions = {
 		position = 6
 		trigger = {
 			num_of_owned_provinces_with = {
-				value = 10
+				value = 25
 				has_building = glorious_monument
 			}
 		}
@@ -503,7 +528,7 @@ adm_missions = {
 		position = 9
 		trigger = {
 			num_of_owned_provinces_with = {
-				value = 10
+				value = 25
 				OR = {
 				    has_building = college
 					has_building = university
@@ -559,7 +584,7 @@ adm_missions = {
 		required_missions = { build_multicultural_nation_mission }
 		trigger = {
 			num_of_owned_provinces_with = {
-				value = 10
+				value = 25
 				OR = {
 					has_building = courthouse
 					has_building = town_hall
@@ -579,7 +604,7 @@ adm_missions = {
 		required_missions = { fill_2_treasury_mission }
 		trigger = {
 			num_of_owned_provinces_with = {
-				value = 10
+				value = 25
 				has_building = treasury_office
 			}
 		}
@@ -607,14 +632,15 @@ adm_missions = {
 		icon = mission_unite_home_region
 		required_missions = { }
 		trigger = {
-			owns_core_province = 335
+			owns_core_province = 335		
+			owns_core_province = 3443
 			owns_core_province = 355
-			owns_core_province = 345
-			owns_core_province = 340
-			owns_core_province = 337
+			owns_core_province = 333
+			owns_core_province = 3467
 		}
 		effect = {
-		    add_prestige = 20
+		    add_prestige = 10
+			hidden_effect = {
 			every_province = {
 			limit = {
 			region = yokuda_lr
@@ -622,9 +648,11 @@ adm_missions = {
 			}
 			add_permanent_claim = ROOT
 			}
-			1497 = {
-			add_core = ROOT
 			}
+			
+			1497 = { add_core = ROOT }
+			if = { limit = { ai = yes 1497 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			1497 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 1497 } } } } }
 		}
 	}
 	
@@ -639,7 +667,8 @@ adm_missions = {
 			owns_core_province = 464
 		}
 		effect = {
-		    add_prestige = 20
+		    add_prestige = 10
+			hidden_effect = {
 			every_province = {
 			limit = {
 			region = southern_kamal_lr
@@ -647,9 +676,11 @@ adm_missions = {
 			}
 			add_permanent_claim = ROOT
 			}
-			1299 = {
-			add_core = ROOT
 			}
+			
+			1299 = { add_core = ROOT }
+			if = { limit = { ai = yes 1299 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			1299 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 1299 } } } } }
 		}
 	}
 	
@@ -664,7 +695,8 @@ adm_missions = {
 			owns_core_province = 471
 		}
 		effect = {
-		    add_prestige = 20
+		    add_prestige = 10
+			hidden_effect = {
 			every_province = {
 			limit = {
 			region = northern_kamal_lr
@@ -672,9 +704,15 @@ adm_missions = {
 			}
 			add_permanent_claim = ROOT
 			}
-			1049 = {
-			add_core = ROOT
 			}
+			
+			542 = { add_core = ROOT }
+			if = { limit = { ai = yes 542 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			542 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 542 } } } } }
+			
+			1049 = { add_core = ROOT }
+			if = { limit = { ai = yes 1049 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			1049 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 1049 } } } } }
 		}
 	}
 	
@@ -689,7 +727,8 @@ adm_missions = {
 			owns_core_province = 575
 		}
 		effect = {
-		    add_prestige = 20
+		    add_prestige = 10
+			hidden_effect = {
 			every_province = {
 			limit = {
 			region = thousand_lr
@@ -697,9 +736,11 @@ adm_missions = {
 			}
 			add_permanent_claim = ROOT
 			}
-			468 = {
-			add_core = ROOT
 			}
+			
+			468 = { add_core = ROOT }
+			if = { limit = { ai = yes 468 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			468 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 468 } } } } }
 		}
 	}
 	
@@ -714,13 +755,15 @@ adm_missions = {
 			owns_core_province = 623
 		}
 		effect = {
-		    add_prestige = 20
+		    add_prestige = 10
+			hidden_effect = {
 			every_province = {
 			limit = {
 			region = po_tun_lr
 			is_city = yes
 			}
 			add_permanent_claim = ROOT
+			}
 			}
 		}
 	}
@@ -755,7 +798,7 @@ diplomatic_missions = {
 		required_missions = { building_alliances_mission }
 		trigger = {
 			num_of_owned_provinces_with = {
-				value = 10
+				value = 25
 				OR = {
 				    has_building = marketplace
 					has_building = trade_depot
@@ -776,7 +819,7 @@ diplomatic_missions = {
 		required_missions = { build_more_marketplaces }
 		trigger = {
 			num_of_owned_provinces_with = {
-				value = 10
+				value = 25
 				OR = {
 				    has_building = workshop
 					has_building = counting_house
@@ -809,7 +852,7 @@ diplomatic_missions = {
 		required_missions = { increase_number_of_trade_centers }
 		trigger = {
 			num_of_owned_provinces_with = {
-				value = 10
+				value = 25
 				OR = {
 				    has_building = naval_arsenal
 					has_building = naval_base
@@ -829,7 +872,7 @@ diplomatic_missions = {
 		required_missions = { build_more_naval_arsenals }
 		trigger = {
 			num_of_owned_provinces_with = {
-				value = 10
+				value = 25
 				OR = {
 				    has_building = dock
 					has_building = drydock
@@ -928,7 +971,7 @@ diplomatic_missions = {
 		required_missions = { find_more_merchants_continents }
 		trigger = {
 			num_of_owned_provinces_with = {
-				value = 10
+				value = 25
 				has_building = farm_estate
 			}
 		}
@@ -945,7 +988,7 @@ diplomatic_missions = {
 		required_missions = { build_farm_estates }
 		trigger = {
 			num_of_owned_provinces_with = {
-				value = 10
+				value = 25
 				has_building = textile
 			}
 		}
@@ -962,7 +1005,7 @@ diplomatic_missions = {
 		required_missions = { es_build_textile }
 		trigger = {
 			num_of_owned_provinces_with = {
-				value = 10
+				value = 25
 				has_building = plantations
 			}
 		}
@@ -985,7 +1028,8 @@ diplomatic_missions = {
 			owns_core_province = 757
 		}
 		effect = {
-		    add_prestige = 20
+		    add_prestige = 10
+			hidden_effect = {
 			every_province = {
 			limit = {
 			region = upper_tsakara_lr
@@ -993,18 +1037,23 @@ diplomatic_missions = {
 			}
 			add_permanent_claim = ROOT
 			}
-			800 = {
-			add_core = ROOT
 			}
-			1369 = {
-			add_core = ROOT
-			}
-			415 = {
-			add_core = ROOT
-			}
-			412 = {
-			add_core = ROOT
-			}
+			
+			800 = { add_core = ROOT }
+			if = { limit = { ai = yes 800 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			800 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 800 } } } } }
+			
+			1369 = { add_core = ROOT }
+			if = { limit = { ai = yes 1369 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			1369 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 1369 } } } } }
+			
+			415 = { add_core = ROOT }
+			if = { limit = { ai = yes 415 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			415 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 415 } } } } }
+			
+			412 = { add_core = ROOT }
+			if = { limit = { ai = yes 412 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			412 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 412 } } } } }
 		}
 	}
 	
@@ -1019,7 +1068,8 @@ diplomatic_missions = {
 			owns_core_province = 415
 		}
 		effect = {
-		    add_prestige = 20
+		    add_prestige = 10
+			hidden_effect = {
 			every_province = {
 			limit = {
 			region = northern_islands_lr
@@ -1027,9 +1077,11 @@ diplomatic_missions = {
 			}
 			add_permanent_claim = ROOT
 			}
-			772 = {
-			add_core = ROOT
 			}
+			
+			772 = { add_core = ROOT }
+			if = { limit = { ai = yes 772 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			772 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 772 } } } } }
 		}
 	}
 	
@@ -1037,23 +1089,25 @@ diplomatic_missions = {
 		icon = mission_unite_home_region
 		required_missions = { }
 		trigger = {
-			owns_core_province = 857
-			owns_core_province = 849
-			owns_core_province = 829
-			owns_core_province = 820
+			owns_core_province = 820		
+			owns_core_province = 812
 			owns_core_province = 868
+			owns_core_province = 4941
+			owns_core_province = 844
 		}
 		effect = {
-		    add_prestige = 20
+		    add_prestige = 10
+			hidden_effect = {
 			every_province = {
 			limit = {
-			region = valenwood_lr
+			OR = {
+			region = northern_valenwood_lr
+			region = southern_valenwood_lr
+			}
 			is_city = yes
 			}
 			add_permanent_claim = ROOT
 			}
-			308 = {
-			add_core = ROOT
 			}
 		}
 	}
@@ -1062,20 +1116,25 @@ diplomatic_missions = {
 		icon = mission_unite_home_region
 		required_missions = { }
 		trigger = {
-			owns_core_province = 922
+			owns_core_province = 922		
 			owns_core_province = 933
-			owns_core_province = 942
-			owns_core_province = 895
+			owns_core_province = 5237
+			owns_core_province = 5285
 			owns_core_province = 888
 		}
 		effect = {
-		    add_prestige = 20
+		    add_prestige = 10
+			hidden_effect = {
 			every_province = {
 			limit = {
-			region = eldweyr_lr
+			OR = {
+			region = anequina_lr
+			region = pelletine_lr
+			}
 			is_city = yes
 			}
 			add_permanent_claim = ROOT
+			}
 			}
 		}
 	}
@@ -1084,20 +1143,25 @@ diplomatic_missions = {
 		icon = mission_unite_home_region
 		required_missions = { }
 		trigger = {
-			owns_core_province = 961
-			owns_core_province = 952
-			owns_core_province = 1043
-			owns_core_province = 1019
+			owns_core_province = 1043		
+			owns_core_province = 1049
+			owns_core_province = 1018
+			owns_core_province = 8088
 			owns_core_province = 1028
 		}
 		effect = {
-		    add_prestige = 20
+		    add_prestige = 10
+			hidden_effect = {
 			every_province = {
 			limit = {
+			OR = {
 			region = vvardenfell_lr
+			region = llothanis_peninsula_lr
+			}
 			is_city = yes
 			}
 			add_permanent_claim = ROOT
+			}
 			}
 		}
 	}
@@ -1127,7 +1191,7 @@ dip_missions = {
 	build_small_fleet_mission = {
 		icon = mission_junk_boat
 		required_missions = { exit_to_sea_mission }
-		trigger = { navy_size_percentage = 1.0 }
+		trigger = { navy_size_percentage = 0.5 }
 		effect = {
 			add_country_modifier = {
 				name = "es_small_fleet"
@@ -1141,7 +1205,7 @@ dip_missions = {
 		required_missions = { build_small_fleet_mission }
 		trigger = {
 			num_of_owned_provinces_with = {
-				value = 10
+				value = 25
 				OR = {
 				    has_building = shipyard
 					has_building = grand_shipyard
@@ -1171,7 +1235,7 @@ dip_missions = {
 	build_medium_fleet_mission = {
 		icon = mission_sea_battles
 		required_missions = { set_up_colony_mission }
-		trigger = { navy_size_percentage = 1.35 }
+		trigger = { navy_size_percentage = 0.75 }
 		effect = {
 			add_country_modifier = {
 				name = "es_medium_fleet"
@@ -1195,7 +1259,7 @@ dip_missions = {
 	build_large_fleet_mission = {
 		icon = mission_establish_high_seas_navy
 		required_missions = { increase_tariffs_mission }
-		trigger = { navy_size_percentage = 1.75 }
+		trigger = { navy_size_percentage = 1.0 }
 		effect = {
 			add_country_modifier = {
 				name = "es_large_fleet"
@@ -1234,7 +1298,7 @@ dip_missions = {
 		trigger = {
 		    any_subject_country = {
 			num_of_owned_provinces_with = {
-				value = 10
+				value = 25
 				OR = {
 				    has_building = march_building
 					has_building = embassy
@@ -1322,19 +1386,25 @@ dip_missions = {
 		required_missions = { }
 		trigger = {
 			owns_core_province = 1002
-			owns_core_province = 995
-			owns_core_province = 1017
-			owns_core_province = 981
-			owns_core_province = 976
+			owns_core_province = 990
+			owns_core_province = 7753
+			owns_core_province = 958
+			owns_core_province = 7914
 		}
 		effect = {
-		    add_prestige = 20
+		    add_prestige = 10
+			hidden_effect = {
 			every_province = {
 			limit = {
+			OR = {
 			region = morrowind_lr
+			region = deshaan_lr
+			region = velothi_mountains_lr
+			}
 			is_city = yes
 			}
 			add_permanent_claim = ROOT
+			}
 			}
 		}
 	}
@@ -1343,20 +1413,26 @@ dip_missions = {
 		icon = mission_unite_home_region
 		required_missions = { }
 		trigger = {
-			owns_core_province = 1087
+			owns_core_province = 1087		
 			owns_core_province = 1098
 			owns_core_province = 1075
-			owns_core_province = 1081
 			owns_core_province = 1069
+			owns_core_province = 1064
 		}
 		effect = {
-		    add_prestige = 20
+		    add_prestige = 10
+			hidden_effect = {
 			every_province = {
 			limit = {
+			OR = {
 			region = black_marsh_lr
+			region = shadowfen_lr
+			region = murkmire_lr
+			}
 			is_city = yes
 			}
 			add_permanent_claim = ROOT
+			}
 			}
 		}
 	}
@@ -1366,19 +1442,24 @@ dip_missions = {
 		required_missions = { }
 		trigger = {
 			owns_core_province = 1161
-			owns_core_province = 1163
-			owns_core_province = 1173
-			owns_core_province = 1150
-			owns_core_province = 1194
+			owns_core_province = 1144
+			owns_core_province = 5657
+			owns_core_province = 5616
+			owns_core_province = 5695
 		}
 		effect = {
-		    add_prestige = 20
+		    add_prestige = 10
+			hidden_effect = {
 			every_province = {
 			limit = {
+			OR = {
 			region = western_syrodiil_lr
+			region = golden_coast_lr
+			}
 			is_city = yes
 			}
 			add_permanent_claim = ROOT
+			}
 			}
 		}
 	}
@@ -1388,19 +1469,24 @@ dip_missions = {
 		required_missions = { }
 		trigger = {
 			owns_core_province = 1120
-			owns_core_province = 1226
-			owns_core_province = 1233
-			owns_core_province = 1253
-			owns_core_province = 1221
+			owns_core_province = 1251
+			owns_core_province = 1238
+			owns_core_province = 6044
+			owns_core_province = 1230
 		}
 		effect = {
-		    add_prestige = 20
+		    add_prestige = 10
+			hidden_effect = {
 			every_province = {
 			limit = {
+			OR = {
 			region = eastern_syrodiil_lr
+			region = valus_mountains_lr
+			}
 			is_city = yes
 			}
 			add_permanent_claim = ROOT
+			}
 			}
 		}
 	}
@@ -1410,19 +1496,24 @@ dip_missions = {
 		required_missions = { }
 		trigger = {
 			owns_core_province = 1206
-			owns_core_province = 1199
 			owns_core_province = 1130
-			owns_core_province = 1139
-			owns_core_province = 1144
+			owns_core_province = 1194
+			owns_core_province = 5905
+			owns_core_province = 1209
 		}
 		effect = {
-		    add_prestige = 20
+		    add_prestige = 10
+			hidden_effect = {
 			every_province = {
 			limit = {
+			OR = {
 			region = central_syrodiil_lr
+			region = jerall_mountains_lr
+			}
 			is_city = yes
 			}
 			add_permanent_claim = ROOT
+			}
 			}
 		}
 	}
@@ -1485,7 +1576,7 @@ military_missions = {
 		required_missions = { es_1_drill_army }
 		trigger = {
 			num_of_owned_provinces_with = {
-				value = 10
+				value = 25
 				OR = {
 				    has_building = fort_15th
 					has_building = fort_16th
@@ -1533,7 +1624,7 @@ military_missions = {
 		required_missions = { es_2_drill_army }
 		trigger = {
 			num_of_owned_provinces_with = {
-				value = 10
+				value = 25
 				OR = {
 				    has_building = barracks
 					has_building = training_fields
@@ -1567,7 +1658,7 @@ military_missions = {
 		required_missions = { increase_1_development_mission }
 		trigger = {
 			num_of_owned_provinces_with = {
-				value = 10
+				value = 25
 				OR = {
 				    has_building = regimental_camp
 					has_building = conscription_center
@@ -1627,7 +1718,7 @@ military_missions = {
 		required_missions = { es_3_drill_army }
 		trigger = {
 			num_of_owned_provinces_with = {
-				value = 10
+				value = 25
 				OR = {
 				    has_building = armory
 					has_building = arsenal
@@ -1661,7 +1752,7 @@ military_missions = {
 		required_missions = { increase_3_development_mission }
 		trigger = {
 			num_of_owned_provinces_with = {
-				value = 10
+				value = 25
 				has_building = mills
 			}
 		}
@@ -1678,23 +1769,29 @@ military_missions = {
 		required_missions = { }
 		trigger = {
 			owns_core_province = 1342
-			owns_core_province = 1291
+			owns_core_province = 1306
 			owns_core_province = 1355
+			owns_core_province = 1275
 			owns_core_province = 1331
-			owns_core_province = 1336
 		}
 		effect = {
-		    add_prestige = 20
+		    add_prestige = 10
+			hidden_effect = {
 			every_province = {
 			limit = {
-			region = western_skyrim_lr
+			OR = {
+			region = reach_lr
+			region = great_planes_lr
+			}
 			is_city = yes
 			}
 			add_permanent_claim = ROOT
 			}
-			357 = {
-			add_core = ROOT
 			}
+			
+			357 = { add_core = ROOT }
+			if = { limit = { ai = yes 357 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			357 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 357 } } } } }
 		}
 	}
 	
@@ -1702,27 +1799,34 @@ military_missions = {
 		icon = mission_unite_home_region
 		required_missions = { }
 		trigger = {
-			owns_core_province = 1275
-			owns_core_province = 1306
 			owns_core_province = 1319
+			owns_core_province = 1291
 			owns_core_province = 1268
-			owns_core_province = 1299
+			owns_core_province = 1286
+			owns_core_province = 7394
 		}
 		effect = {
-		    add_prestige = 20
+		    add_prestige = 10
+			hidden_effect = {
 			every_province = {
 			limit = {
-			region = eastern_skyrim_lr
+			OR = {
+			region = rift_lr
+			region = great_planes_lr
+			}
 			is_city = yes
 			}
 			add_permanent_claim = ROOT
 			}
-			389 = {
-			add_core = ROOT
 			}
-			367 = {
-			add_core = ROOT
-			}
+			
+			389 = { add_core = ROOT }
+			if = { limit = { ai = yes 389 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			389 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 389 } } } } }
+			
+			367 = { add_core = ROOT }
+			if = { limit = { ai = yes 367 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			367 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 367 } } } } }
 		}
 	}
 	
@@ -1731,19 +1835,24 @@ military_missions = {
 		required_missions = { }
 		trigger = {
 			owns_core_province = 1369
+			owns_core_province = 1391
+			owns_core_province = 1413
+			owns_core_province = 7019
 			owns_core_province = 1379
-			owns_core_province = 1394
-			owns_core_province = 1424
-			owns_core_province = 1414
 		}
 		effect = {
-		    add_prestige = 20
+		    add_prestige = 10
+			hidden_effect = {
 			every_province = {
 			limit = {
+			OR = {
 			region = hgh_rock_lr
+			region = wrothgar_lr
+			}
 			is_city = yes
 			}
 			add_permanent_claim = ROOT
+			}
 			}
 		}
 	}
@@ -1752,24 +1861,31 @@ military_missions = {
 		icon = mission_unite_home_region
 		required_missions = { }
 		trigger = {
-			owns_core_province = 1510
-			owns_core_province = 1482
+			owns_core_province = 1510		
 			owns_core_province = 1446
-			owns_core_province = 1488
-			owns_core_province = 1459
+			owns_core_province = 1478
+			owns_core_province = 6257
+			owns_core_province = 6178
 		}
 		effect = {
-		    add_prestige = 20
+		    add_prestige = 10
+			hidden_effect = {
 			every_province = {
 			limit = {
-			region = hammerfell_lr
+			OR = {
+			region = corten_heights_lr
+			region = dragontail_mountains_lr
+			region = alikr_desert_lr
+			}
 			is_city = yes
 			}
 			add_permanent_claim = ROOT
 			}
-			337 = {
-			add_core = ROOT
 			}
+			
+			337 = { add_core = ROOT }
+			if = { limit = { ai = yes 337 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			337 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 337 } } } } }
 		}
 	}
 	
@@ -1784,7 +1900,8 @@ military_missions = {
 			owns_core_province = 679
 		}
 		effect = {
-		    add_prestige = 20
+		    add_prestige = 10
+			hidden_effect = {
 			every_province = {
 			limit = {
 			region = tsakara_lr
@@ -1792,9 +1909,11 @@ military_missions = {
 			}
 			add_permanent_claim = ROOT
 			}
-			1206 = {
-			add_core = ROOT
 			}
+			
+			1206 = { add_core = ROOT }
+			if = { limit = { ai = yes 1206 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			1206 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 1206 } } } } }
 		}
 	}
 	

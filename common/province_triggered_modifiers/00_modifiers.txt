@@ -1,0 +1,89 @@
+religious_center = {
+	potential = {
+	}
+	
+	trigger = {
+		if = { limit = { province_id = 263 } religion = altmeri_pantheon }
+		else_if = { limit = { province_id = 1286 } religion = snow_elves_pantheon }
+		else_if = { limit = { province_id = 7363 } religion = nordic_pantheon } 
+		else_if = { limit = { province_id = 834 } religion = bosmer_pantheon }
+		else_if = { limit = { province_id = 5627 } religion = eight_divines } 
+		else_if = { limit = { province_id = 1206 } religion = nine_divines }
+		else_if = { limit = { province_id = 1394 } religion = twelve_divines }
+		else_if = { limit = { province_id = 5285 } religion = khajiiti_pantheon }
+		else_if = { limit = { province_id = 355 } religion = yokudan_pantheon }
+		else_if = { limit = { province_id = 6392 } religion = redguard_pantheon }
+		else_if = { limit = { province_id = 1406 } religion = malacath_cult }
+		else_if = { limit = { province_id = 6675 } religion = kothri_pantheon } 
+		else_if = { limit = { province_id = 1043 } religion = chimer_pantheon }
+		else_if = { limit = { province_id = 1002 } religion = tribunal_pantheon } 
+		else_if = { limit = { province_id = 985 } religion = reclamations_pantheon } 
+		else_if = { limit = { province_id = 320 } religion = sload_faith }
+		else_if = { limit = { province_id = 240 } religion = serpant_king }
+		else_if = { limit = { province_id = 1572 } religion = dragon_cult }
+		else_if = { limit = { province_id = 1134 } religion = marukhism } 
+		else_if = { limit = { province_id = 1069 } religion = hist } 
+		else_if = { limit = { province_id = 7817 } religion = reason_and_logic_cult }
+		else_if = { limit = { province_id = 7210 } religion = old_gods_cult }
+		else_if = { limit = { province_id = 700 } religion = tsaesci_pantheon } 
+		else_if = { limit = { province_id = 575 } religion = tang_mo_pantheon } 
+		else_if = { limit = { province_id = 493 } religion = kamal_pantheon } 
+		else_if = { limit = { province_id = 448 } religion = dremora_pantheon } 
+		else_if = { limit = { province_id = 1150 } religion = molog_bal_cult } 
+		else_if = { limit = { province_id = 1199 } religion = meridia_cult } 
+		else_if = { limit = { province_id = 5506 } religion = mehrunes_dagon_cult }
+		else_if = { limit = { province_id = 6345 } religion = hermeus_mora_cult } 
+		else_if = { limit = { province_id = 631 } religion = po_tun_pantheon }
+		else_if = { limit = { province_id = 7695 } religion = all-maker_cult }
+		else_if = { limit = { province_id = 1482 } religion = sheogorath_cult }
+		else_if = { limit = { province_id = 5657 } religion = hircine_cult }
+		else_if = { limit = { province_id = 6737 } religion = nocturnal_cult }
+		else_if = { limit = { province_id = 646 } religion = unknown_pantheon }
+	}
+
+	local_missionary_strength = -0.05
+	
+	on_activation = {
+	}
+	
+	on_deactivation = {
+	}
+	
+}
+
+altmeri_pantheon_holy_city = { potential = { } trigger = { owner = { religion = altmeri_pantheon } } prestige = 0.5 missionaries = 1 tolerance_own = 1 on_activation = { } on_deactivation = { } }
+snow_elves_pantheon_holy_city = { potential = { } trigger = { owner = { religion = snow_elves_pantheon } } prestige = 0.5 missionaries = 1 tolerance_own = 1 on_activation = { } on_deactivation = { } }
+nordic_pantheon_holy_city = { potential = { } trigger = { owner = { religion = nordic_pantheon } } prestige = 0.5 missionaries = 1 tolerance_own = 1 on_activation = { } on_deactivation = { } }
+bosmer_pantheon_holy_city = { potential = { } trigger = { owner = { religion = bosmer_pantheon } } prestige = 0.5 missionaries = 1 tolerance_own = 1 on_activation = { } on_deactivation = { } }
+eight_divines_holy_city = { potential = { } trigger = { owner = { religion = eight_divines } } prestige = 0.5 missionaries = 1 tolerance_own = 1 on_activation = { } on_deactivation = { } }
+nine_divines_holy_city = { potential = { } trigger = { owner = { religion = nine_divines } } prestige = 0.5 missionaries = 1 tolerance_own = 1 on_activation = { } on_deactivation = { } }
+twelve_divines_holy_city = { potential = { } trigger = { owner = { religion = twelve_divines } } prestige = 0.5 missionaries = 1 tolerance_own = 1 on_activation = { } on_deactivation = { } }
+khajiiti_pantheon_holy_city = { potential = { } trigger = { owner = { religion = khajiiti_pantheon } } prestige = 0.5 missionaries = 1 tolerance_own = 1 on_activation = { } on_deactivation = { } }
+yokudan_pantheon_holy_city = { potential = { } trigger = { owner = { religion = yokudan_pantheon } } prestige = 0.5 missionaries = 1 tolerance_own = 1 on_activation = { } on_deactivation = { } }
+redguard_pantheon_holy_city = { potential = { } trigger = { owner = { religion = redguard_pantheon } } prestige = 0.5 missionaries = 1 tolerance_own = 1 on_activation = { } on_deactivation = { } }
+malacath_cult_holy_city = { potential = { } trigger = { owner = { religion = malacath_cult } } prestige = 0.5 missionaries = 1 tolerance_own = 1 on_activation = { } on_deactivation = { } }
+kothri_pantheon_holy_city = { potential = { } trigger = { owner = { religion = kothri_pantheon } } prestige = 0.5 missionaries = 1 tolerance_own = 1 on_activation = { } on_deactivation = { } }
+chimer_pantheon_holy_city = { potential = { } trigger = { owner = { religion = chimer_pantheon } } prestige = 0.5 missionaries = 1 tolerance_own = 1 on_activation = { } on_deactivation = { } }
+tribunal_pantheon_holy_city = { potential = { } trigger = { owner = { religion = tribunal_pantheon } } prestige = 0.5 missionaries = 1 tolerance_own = 1 on_activation = { } on_deactivation = { } }
+reclamations_pantheon_holy_city = { potential = { } trigger = { owner = { religion = reclamations_pantheon } } prestige = 0.5 missionaries = 1 tolerance_own = 1 on_activation = { } on_deactivation = { } }
+sload_faith_holy_city = { potential = { } trigger = { owner = { religion = sload_faith } } prestige = 0.5 missionaries = 1 tolerance_own = 1 on_activation = { } on_deactivation = { } }
+serpant_king_holy_city = { potential = { } trigger = { owner = { religion = serpant_king } } prestige = 0.5 missionaries = 1 tolerance_own = 1 on_activation = { } on_deactivation = { } }
+dragon_cult_holy_city = { potential = { } trigger = { owner = { religion = dragon_cult } } prestige = 0.5 missionaries = 1 tolerance_own = 1 on_activation = { } on_deactivation = { } }
+marukhism_holy_city = { potential = { } trigger = { owner = { religion = marukhism } } prestige = 0.5 missionaries = 1 tolerance_own = 1 on_activation = { } on_deactivation = { } }
+hist_holy_city = { potential = { } trigger = { owner = { religion = hist } } prestige = 0.5 missionaries = 1 tolerance_own = 1 on_activation = { } on_deactivation = { } }
+reason_and_logic_cult_holy_city = { potential = { } trigger = { owner = { religion = reason_and_logic_cult } } prestige = 0.5 missionaries = 1 tolerance_own = 1 on_activation = { } on_deactivation = { } }
+old_gods_cult_holy_city = { potential = { } trigger = { owner = { religion = old_gods_cult } } prestige = 0.5 missionaries = 1 tolerance_own = 1 on_activation = { } on_deactivation = { } }
+tsaesci_pantheon_holy_city = { potential = { } trigger = { owner = { religion = tsaesci_pantheon } } prestige = 0.5 missionaries = 1 tolerance_own = 1 on_activation = { } on_deactivation = { } }
+tang_mo_pantheon_holy_city = { potential = { } trigger = { owner = { religion = tang_mo_pantheon } } prestige = 0.5 missionaries = 1 tolerance_own = 1 on_activation = { } on_deactivation = { } }
+kamal_pantheon_holy_city = { potential = { } trigger = { owner = { religion = kamal_pantheon } } prestige = 0.5 missionaries = 1 tolerance_own = 1 on_activation = { } on_deactivation = { } }
+dremora_pantheon_holy_city = { potential = { } trigger = { owner = { religion = dremora_pantheon } } prestige = 0.5 missionaries = 1 tolerance_own = 1 on_activation = { } on_deactivation = { } }
+molog_bal_cult_holy_city = { potential = { } trigger = { owner = { religion = molog_bal_cult } } prestige = 0.5 missionaries = 1 tolerance_own = 1 on_activation = { } on_deactivation = { } }
+meridia_cult_holy_city = { potential = { } trigger = { owner = { religion = meridia_cult } } prestige = 0.5 missionaries = 1 tolerance_own = 1 on_activation = { } on_deactivation = { } }
+mehrunes_dagon_cult_holy_city = { potential = { } trigger = { owner = { religion = mehrunes_dagon_cult } } prestige = 0.5 missionaries = 1 tolerance_own = 1 on_activation = { } on_deactivation = { } }
+hermeus_mora_cult_holy_city = { potential = { } trigger = { owner = { religion = hermeus_mora_cult } } prestige = 0.5 missionaries = 1 tolerance_own = 1 on_activation = { } on_deactivation = { } }
+po_tun_pantheon_holy_city = { potential = { } trigger = { owner = { religion = po_tun_pantheon } } prestige = 0.5 missionaries = 1 tolerance_own = 1 on_activation = { } on_deactivation = { } }
+maker_cult_holy_city = { potential = { } trigger = { owner = { religion = maker_cult } } prestige = 0.5 missionaries = 1 tolerance_own = 1 on_activation = { } on_deactivation = { } }
+sheogorath_cult_holy_city = { potential = { } trigger = { owner = { religion = sheogorath_cult } } prestige = 0.5 missionaries = 1 tolerance_own = 1 on_activation = { } on_deactivation = { } }
+hircine_cult_holy_city = { potential = { } trigger = { owner = { religion = hircine_cult } } prestige = 0.5 missionaries = 1 tolerance_own = 1 on_activation = { } on_deactivation = { } }
+nocturnal_cult_holy_city = { potential = { } trigger = { owner = { religion = nocturnal_cult } } prestige = 0.5 missionaries = 1 tolerance_own = 1 on_activation = { } on_deactivation = { } }
+unknown_pantheon_holy_city = { potential = { } trigger = { owner = { religion = unknown_pantheon } } prestige = 0.5 missionaries = 1 tolerance_own = 1 on_activation = { } on_deactivation = { } }

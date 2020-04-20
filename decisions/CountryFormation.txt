@@ -1484,7 +1484,7 @@ country_decisions = {
 	valus_nation = {
 		major = yes
 		potential = {
-			NOT = { exists = VAL }
+			NOT = { exists = VAU }
 			NOT = { tag = CYR }
 			NOT = { tag = NIB }
 			NOT = { tag = TAM }
@@ -1496,7 +1496,7 @@ country_decisions = {
 			primary_culture = nibenean
 			primary_culture = dwemer
 			}
-			NOT = { has_country_flag = formed_val_flag }
+			NOT = { has_country_flag = formed_vau_flag }
 		}
 		provinces_to_highlight = {
 		    OR = {
@@ -1518,8 +1518,8 @@ country_decisions = {
 			owns_core_province = 5926
 		}
 		effect = {
-			change_tag = VAL
-			set_country_flag = formed_val_flag
+			change_tag = VAU
+			set_country_flag = formed_vau_flag
 			#
 			if = {
 				limit = {
