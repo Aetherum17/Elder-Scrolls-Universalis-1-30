@@ -151,6 +151,142 @@ country_event = {
 		create_vassal = PA7
 		}
 		
+		if = {
+		limit = {
+		pyandonea_8_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = PA8 }
+		NOT = { capital_scope = { area = pyandonea_8_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = pyandonea_8_la
+		}
+		add_core = PA8
+		}
+		create_vassal = PA8
+		}
+		
+		if = {
+		limit = {
+		pyandonea_9_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = PA9 }
+		NOT = { capital_scope = { area = pyandonea_9_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = pyandonea_9_la
+		}
+		add_core = PA9
+		}
+		create_vassal = PA9
+		}
+		
+		if = {
+		limit = {
+		pyandonea_10_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = PB0 }
+		NOT = { capital_scope = { area = pyandonea_10_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = pyandonea_10_la
+		}
+		add_core = PB0
+		}
+		create_vassal = PB0
+		}
+		
+		if = {
+		limit = {
+		pyandonea_11_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = PB1 }
+		NOT = { capital_scope = { area = pyandonea_11_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = pyandonea_11_la
+		}
+		add_core = PB1
+		}
+		create_vassal = PB1
+		}
+		
+		if = {
+		limit = {
+		pyandonea_12_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = PB2 }
+		NOT = { capital_scope = { area = pyandonea_12_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = pyandonea_12_la
+		}
+		add_core = PB2
+		}
+		create_vassal = PB2
+		}
+		
+		if = {
+		limit = {
+		pyandonea_13_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = PB3 }
+		NOT = { capital_scope = { area = pyandonea_13_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = pyandonea_13_la
+		}
+		add_core = PB3
+		}
+		create_vassal = PB3
+		}
+		
+		if = {
+		limit = {
+		pyandonea_14_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = PB4 }
+		NOT = { capital_scope = { area = pyandonea_14_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = pyandonea_14_la
+		}
+		add_core = PB4
+		}
+		create_vassal = PB4
+		}
+		
+		if = {
+		limit = {
+		pyandonea_15_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = PB5 }
+		NOT = { capital_scope = { area = pyandonea_15_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = pyandonea_15_la
+		}
+		add_core = PB5
+		}
+		create_vassal = PB5
+		}
+		
 	    }
 	}
 	

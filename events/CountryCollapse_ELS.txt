@@ -1,9 +1,9 @@
 namespace = es_collapse
 
 country_event = {
-	id = es_collapse.13
-	title = es_collapse.13.t
-	desc = es_collapse.13.d
+	id = es_collapse.54
+	title = es_collapse.54.t
+	desc = es_collapse.54.d
 	picture = ES_PROVINCE_COLLAPSE_eventPicture
 	
 	is_triggered_only = yes
@@ -22,236 +22,270 @@ country_event = {
 		
 		if = {
 		limit = {
-		NOT = { capital_scope = { region = eldweyr_lr } }
+		NOT = { capital_scope = { region = anequina_lr } }
 		}
 		every_core_province = {
 			limit = {
-				region = eldweyr_lr
+				region = anequina_lr
 			}
 			remove_core = ROOT
 		}
 		}
 		
-		if = {
-		limit = {
-		eldweyr_1_la = {
-		owned_by = ROOT
-		}
-		NOT = { exists = EA1 }
-		NOT = { capital_scope = { area = eldweyr_1_la } }
-		}
-		every_owned_province = {
-		limit = {
-		area = eldweyr_1_la
-		}
-		add_core = EA1
-		}
-		create_vassal = EA1
-		}
-		
-		if = {
-		limit = {
-		eldweyr_2_la = {
-		owned_by = ROOT
-		}
-		NOT = { exists = EA2 }
-		NOT = { capital_scope = { area = eldweyr_2_la } }
-		}
-		every_owned_province = {
-		limit = {
-		area = eldweyr_2_la
-		}
-		add_core = EA2
-		}
-		create_vassal = EA2
-		}
-		
-		if = {
-		limit = {
-		eldweyr_3_la = {
-		owned_by = ROOT
-		}
-		NOT = { exists = EA3 }
-		NOT = { capital_scope = { area = eldweyr_3_la } }
-		}
-		every_owned_province = {
-		limit = {
-		area = eldweyr_3_la
-		}
-		add_core = EA3
-		}
-		create_vassal = EA3
-		}
-		
-		if = {
-		limit = {
-		eldweyr_4_la = {
-		owned_by = ROOT
-		}
-		NOT = { exists = EA4 }
-		NOT = { capital_scope = { area = eldweyr_4_la } }
-		}
-		every_owned_province = {
-		limit = {
-		area = eldweyr_4_la
-		}
-		add_core = EA4
-		}
-		create_vassal = EA4
-		}
-		
-		if = {
-		limit = {
-		eldweyr_5_la = {
-		owned_by = ROOT
-		}
-		NOT = { exists = EA5 }
-		NOT = { capital_scope = { area = eldweyr_5_la } }
-		}
-		every_owned_province = {
-		limit = {
-		area = eldweyr_5_la
-		}
-		add_core = EA5
-		}
-		create_vassal = EA5
-		}
-		
-		if = {
-		limit = {
-		eldweyr_6_la = {
-		owned_by = ROOT
-		}
-		NOT = { exists = EA6 }
-		NOT = { capital_scope = { area = eldweyr_6_la } }
-		}
-		every_owned_province = {
-		limit = {
-		area = eldweyr_6_la
-		}
-		add_core = EA6
-		}
-		create_vassal = EA6
-		}
-		
-		if = {
-		limit = {
-		eldweyr_7_la = {
-		owned_by = ROOT
-		}
-		NOT = { exists = EA7 }
-		NOT = { capital_scope = { area = eldweyr_7_la } }
-		}
-		every_owned_province = {
-		limit = {
-		area = eldweyr_7_la
-		}
-		add_core = EA7
-		}
-		create_vassal = EA7
-		}
-		
-		if = {
-		limit = {
-		eldweyr_8_la = {
-		owned_by = ROOT
-		}
-		NOT = { exists = EA8 }
-		NOT = { capital_scope = { area = eldweyr_8_la } }
-		}
-		every_owned_province = {
-		limit = {
-		area = eldweyr_8_la
-		}
-		add_core = EA8
-		}
-		create_vassal = EA8
-		}
-		
-		if = {
-		limit = {
-		eldweyr_9_la = {
-		owned_by = ROOT
-		}
-		NOT = { exists = EA9 }
-		NOT = { capital_scope = { area = eldweyr_9_la } }
-		}
-		every_owned_province = {
-		limit = {
-		area = eldweyr_9_la
-		}
-		add_core = EA9
-		}
-		create_vassal = EA9
-		}
-		
-		if = {
-		limit = {
-		eldweyr_10_la = {
-		owned_by = ROOT
-		}
-		NOT = { exists = EB0 }
-		NOT = { capital_scope = { area = eldweyr_10_la } }
-		}
-		every_owned_province = {
-		limit = {
-		area = eldweyr_10_la
-		}
-		add_core = EB0
-		}
-		create_vassal = EB0
-		}
-		
-		if = {
-		limit = {
-		eldweyr_11_la = {
-		owned_by = ROOT
-		}
-		NOT = { exists = EB1 }
-		NOT = { capital_scope = { area = eldweyr_11_la } }
-		}
-		every_owned_province = {
-		limit = {
-		area = eldweyr_11_la
-		}
-		add_core = EB1
-		}
-		create_vassal = EB1
-		}
-		
-		if = {
-		limit = {
-		eldweyr_12_la = {
-		owned_by = ROOT
-		}
-		NOT = { exists = EB2 }
-		NOT = { capital_scope = { area = eldweyr_12_la } }
-		}
-		every_owned_province = {
-		limit = {
-		area = eldweyr_12_la
-		}
-		add_core = EB2
-		}
-		create_vassal = EB2
-		}
-		
-		if = {
-		limit = {
-		eldweyr_13_la = {
-		owned_by = ROOT
-		}
-		NOT = { exists = EB3 }
-		NOT = { capital_scope = { area = eldweyr_13_la } }
-		}
-		every_owned_province = {
-		limit = {
-		area = eldweyr_13_la
-		}
-		add_core = EB3
-		}
-		create_vassal = EB3
-		}
+        if = {
+        limit = {
+        eldweyr_1_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = EA1 }
+        NOT = { capital_scope = { area = eldweyr_1_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = eldweyr_1_la
+        }
+        add_core = EA1
+        }
+        create_vassal = EA1
+        }
+
+        if = {
+        limit = {
+        eldweyr_2_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = EA2 }
+        NOT = { capital_scope = { area = eldweyr_2_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = eldweyr_2_la
+        }
+        add_core = EA2
+        }
+        create_vassal = EA2
+        }
+
+        if = {
+        limit = {
+        eldweyr_3_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = EA3 }
+        NOT = { capital_scope = { area = eldweyr_3_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = eldweyr_3_la
+        }
+        add_core = EA3
+        }
+        create_vassal = EA3
+        }
+
+        if = {
+        limit = {
+        eldweyr_4_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = EA4 }
+        NOT = { capital_scope = { area = eldweyr_4_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = eldweyr_4_la
+        }
+        add_core = EA4
+        }
+        create_vassal = EA4
+        }
+
+        if = {
+        limit = {
+        eldweyr_5_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = EA5 }
+        NOT = { capital_scope = { area = eldweyr_5_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = eldweyr_5_la
+        }
+        add_core = EA5
+        }
+        create_vassal = EA5
+        }
+
+        if = {
+        limit = {
+        eldweyr_6_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = EA6 }
+        NOT = { capital_scope = { area = eldweyr_6_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = eldweyr_6_la
+        }
+        add_core = EA6
+        }
+        create_vassal = EA6
+        }
+
+        if = {
+        limit = {
+        eldweyr_7_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = EA7 }
+        NOT = { capital_scope = { area = eldweyr_7_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = eldweyr_7_la
+        }
+        add_core = EA7
+        }
+        create_vassal = EA7
+        }
+
+        if = {
+        limit = {
+        eldweyr_9_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = EA9 }
+        NOT = { capital_scope = { area = eldweyr_9_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = eldweyr_9_la
+        }
+        add_core = EA9
+        }
+        create_vassal = EA9
+        }
+
+        if = {
+        limit = {
+        eldweyr_14_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = EB4 }
+        NOT = { capital_scope = { area = eldweyr_14_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = eldweyr_14_la
+        }
+        add_core = EB4
+        }
+        create_vassal = EB4
+        }
+
+        if = {
+        limit = {
+        eldweyr_15_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = EB5 }
+        NOT = { capital_scope = { area = eldweyr_15_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = eldweyr_15_la
+        }
+        add_core = EB5
+        }
+        create_vassal = EB5
+        }
+
+        if = {
+        limit = {
+        eldweyr_22_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = EC2 }
+        NOT = { capital_scope = { area = eldweyr_22_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = eldweyr_22_la
+        }
+        add_core = EC2
+        }
+        create_vassal = EC2
+        }
+
+        if = {
+        limit = {
+        eldweyr_23_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = EC3 }
+        NOT = { capital_scope = { area = eldweyr_23_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = eldweyr_23_la
+        }
+        add_core = EC3
+        }
+        create_vassal = EC3
+        }
+
+        if = {
+        limit = {
+        eldweyr_24_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = EC4 }
+        NOT = { capital_scope = { area = eldweyr_24_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = eldweyr_24_la
+        }
+        add_core = EC4
+        }
+        create_vassal = EC4
+        }
+
+        if = {
+        limit = {
+        eldweyr_29_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = EC9 }
+        NOT = { capital_scope = { area = eldweyr_29_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = eldweyr_29_la
+        }
+        add_core = EC9
+        }
+        create_vassal = EC9
+        }
+
+        if = {
+        limit = {
+        eldweyr_30_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = ED0 }
+        NOT = { capital_scope = { area = eldweyr_30_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = eldweyr_30_la
+        }
+        add_core = ED0
+        }
+        create_vassal = ED0
+        }
 		
 		}
 		
@@ -263,11 +297,11 @@ country_event = {
 		
 		if = {
 		limit = {
-		NOT = { capital_scope = { region = eldweyr_lr } }
+		NOT = { capital_scope = { region = anequina_lr } }
 		}
 		every_core_province = {
 			limit = {
-				region = eldweyr_lr
+				region = anequina_lr
 			}
 			remove_core = ROOT
 		}
@@ -280,36 +314,386 @@ country_event = {
 		ai_chance = { factor = 10 }
 		
 		trigger = {
-		NOT = { capital_scope = { region = eldweyr_lr } }
-		NOT = { exists = ELS }
+		NOT = { capital_scope = { region = anequina_lr } }
+		NOT = { exists = ANE }
 		}
 		
 		every_core_province = {
 			limit = {
-				region = eldweyr_lr
+				region = anequina_lr
 			}
 			remove_core = ROOT
 		}
 		
 		every_owned_province = {
 		limit = {
-		region = eldweyr_lr
+		region = anequina_lr
 		}
-		add_core = ELS
+		add_core = ANE
 		}
 		
-		release = ELS
+		release = ANE
 		
 		if = {
 		limit = {
 		government = monarchy
 		}
-		create_union = ELS
+		create_union = ANE
 	    }
 		else = {
-		create_alliance = ELS
-		ELS = { add_opinion = { who = ROOT modifier = es_friendly_nation } }
-		add_opinion = { who = ELS modifier = es_friendly_nation }
+		create_alliance = ANE
+		ANE = { add_opinion = { who = ROOT modifier = es_friendly_nation } }
+		add_opinion = { who = ANE modifier = es_friendly_nation }
+		}
+	}
+}
+
+###
+
+country_event = {
+	id = es_collapse.36
+	title = es_collapse.36.t
+	desc = es_collapse.36.d
+	picture = ES_PROVINCE_COLLAPSE_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	    add_country_modifier = {
+			name = "vassal_autonomy"
+			duration = 9125
+		}
+	}
+	
+	option = {
+		name = es_collapse.2.a
+		ai_chance = { factor = 75 }
+		hidden_effect = {
+		
+		if = {
+		limit = {
+		NOT = { capital_scope = { region = pelletine_lr } }
+		}
+		every_core_province = {
+			limit = {
+				region = pelletine_lr
+			}
+			remove_core = ROOT
+		}
+		}
+		
+        if = {
+        limit = {
+        eldweyr_8_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = EA8 }
+        NOT = { capital_scope = { area = eldweyr_8_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = eldweyr_8_la
+        }
+        add_core = EA8
+        }
+        create_vassal = EA8
+        }
+
+        if = {
+        limit = {
+        eldweyr_10_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = EB0 }
+        NOT = { capital_scope = { area = eldweyr_10_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = eldweyr_10_la
+        }
+        add_core = EB0
+        }
+        create_vassal = EB0
+        }
+
+        if = {
+        limit = {
+        eldweyr_11_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = EB1 }
+        NOT = { capital_scope = { area = eldweyr_11_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = eldweyr_11_la
+        }
+        add_core = EB1
+        }
+        create_vassal = EB1
+        }
+
+        if = {
+        limit = {
+        eldweyr_12_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = EB2 }
+        NOT = { capital_scope = { area = eldweyr_12_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = eldweyr_12_la
+        }
+        add_core = EB2
+        }
+        create_vassal = EB2
+        }
+
+        if = {
+        limit = {
+        eldweyr_13_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = EB3 }
+        NOT = { capital_scope = { area = eldweyr_13_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = eldweyr_13_la
+        }
+        add_core = EB3
+        }
+        create_vassal = EB3
+        }
+
+        if = {
+        limit = {
+        eldweyr_16_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = EB6 }
+        NOT = { capital_scope = { area = eldweyr_16_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = eldweyr_16_la
+        }
+        add_core = EB6
+        }
+        create_vassal = EB6
+        }
+
+        if = {
+        limit = {
+        eldweyr_17_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = EB7 }
+        NOT = { capital_scope = { area = eldweyr_17_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = eldweyr_17_la
+        }
+        add_core = EB7
+        }
+        create_vassal = EB7
+        }
+
+        if = {
+        limit = {
+        eldweyr_18_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = EB8 }
+        NOT = { capital_scope = { area = eldweyr_18_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = eldweyr_18_la
+        }
+        add_core = EB8
+        }
+        create_vassal = EB8
+        }
+
+        if = {
+        limit = {
+        eldweyr_19_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = EB9 }
+        NOT = { capital_scope = { area = eldweyr_19_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = eldweyr_19_la
+        }
+        add_core = EB9
+        }
+        create_vassal = EB9
+        }
+
+        if = {
+        limit = {
+        eldweyr_20_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = EC0 }
+        NOT = { capital_scope = { area = eldweyr_20_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = eldweyr_20_la
+        }
+        add_core = EC0
+        }
+        create_vassal = EC0
+        }
+
+        if = {
+        limit = {
+        eldweyr_21_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = EC1 }
+        NOT = { capital_scope = { area = eldweyr_21_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = eldweyr_21_la
+        }
+        add_core = EC1
+        }
+        create_vassal = EC1
+        }
+
+        if = {
+        limit = {
+        eldweyr_25_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = EC5 }
+        NOT = { capital_scope = { area = eldweyr_25_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = eldweyr_25_la
+        }
+        add_core = EC5
+        }
+        create_vassal = EC5
+        }
+
+        if = {
+        limit = {
+        eldweyr_26_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = EC6 }
+        NOT = { capital_scope = { area = eldweyr_26_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = eldweyr_26_la
+        }
+        add_core = EC6
+        }
+        create_vassal = EC6
+        }
+
+        if = {
+        limit = {
+        eldweyr_27_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = EC7 }
+        NOT = { capital_scope = { area = eldweyr_27_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = eldweyr_27_la
+        }
+        add_core = EC7
+        }
+        create_vassal = EC7
+        }
+
+        if = {
+        limit = {
+        eldweyr_28_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = EC8 }
+        NOT = { capital_scope = { area = eldweyr_28_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = eldweyr_28_la
+        }
+        add_core = EC8
+        }
+        create_vassal = EC8
+        }
+		
+		}
+		
+	}
+	
+	option = {
+		name = es_collapse.2.b
+		ai_chance = { factor = 15 }
+		
+		if = {
+		limit = {
+		NOT = { capital_scope = { region = pelletine_lr } }
+		}
+		every_core_province = {
+			limit = {
+				region = pelletine_lr
+			}
+			remove_core = ROOT
+		}
+		}
+		
+	}
+	
+	option = {
+		name = es_collapse.2.c
+		ai_chance = { factor = 10 }
+		
+		trigger = {
+		NOT = { capital_scope = { region = pelletine_lr } }
+		NOT = { exists = PEL }
+		}
+		
+		every_core_province = {
+			limit = {
+				region = pelletine_lr
+			}
+			remove_core = ROOT
+		}
+		
+		every_owned_province = {
+		limit = {
+		region = pelletine_lr
+		}
+		add_core = PEL
+		}
+		
+		release = PEL
+		
+		if = {
+		limit = {
+		government = monarchy
+		}
+		create_union = PEL
+	    }
+		else = {
+		create_alliance = PEL
+		PEL = { add_opinion = { who = ROOT modifier = es_friendly_nation } }
+		add_opinion = { who = PEL modifier = es_friendly_nation }
 		}
 	}
 }

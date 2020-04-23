@@ -76,3 +76,39 @@ submission_to_emperor = {
 	stability_cost_modifier = 0.1
 	prestige = -1
 }
+
+##################################################
+# China modifiers
+##################################################
+the_mandate_of_heaven = {
+	potential = {
+		has_reform = celestial_empire
+		NOT = { has_dlc = "Mandate of Heaven" }
+	}
+	
+	trigger = {	
+		stability = 0
+		legitimacy = 60
+	}
+
+	stability_cost_modifier = -0.10
+	global_unrest = -5
+}
+
+the_mandate_of_heaven_lost = {
+	potential = {
+		has_reform = celestial_empire
+		NOT = { has_dlc = "Mandate of Heaven" }
+	}
+
+	trigger = {
+		OR = {
+			NOT = { stability = 0 }
+			NOT = { legitimacy = 60 }
+		}
+	}
+
+	discipline = -0.1
+	stability_cost_modifier = 0.5
+	global_unrest = 10
+}

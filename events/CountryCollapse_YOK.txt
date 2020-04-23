@@ -161,6 +161,125 @@ country_event = {
 		create_vassal = YA8
 		}
 		
+		        if = {
+        limit = {
+        yokuda_9_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = SA9 }
+        NOT = { capital_scope = { area = yokuda_9_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = yokuda_9_la
+        }
+        add_core = SA9
+        }
+        create_vassal = SA9
+        }
+
+        if = {
+        limit = {
+        yokuda_10_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = SB0 }
+        NOT = { capital_scope = { area = yokuda_10_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = yokuda_10_la
+        }
+        add_core = SB0
+        }
+        create_vassal = SB0
+        }
+
+        if = {
+        limit = {
+        yokuda_11_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = SB1 }
+        NOT = { capital_scope = { area = yokuda_11_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = yokuda_11_la
+        }
+        add_core = SB1
+        }
+        create_vassal = SB1
+        }
+
+        if = {
+        limit = {
+        yokuda_12_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = SB2 }
+        NOT = { capital_scope = { area = yokuda_12_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = yokuda_12_la
+        }
+        add_core = SB2
+        }
+        create_vassal = SB2
+        }
+
+        if = {
+        limit = {
+        yokuda_13_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = SB3 }
+        NOT = { capital_scope = { area = yokuda_13_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = yokuda_13_la
+        }
+        add_core = SB3
+        }
+        create_vassal = SB3
+        }
+
+        if = {
+        limit = {
+        yokuda_14_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = SB4 }
+        NOT = { capital_scope = { area = yokuda_14_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = yokuda_14_la
+        }
+        add_core = SB4
+        }
+        create_vassal = SB4
+        }
+
+        if = {
+        limit = {
+        yokuda_15_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = SB5 }
+        NOT = { capital_scope = { area = yokuda_15_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = yokuda_15_la
+        }
+        add_core = SB5
+        }
+        create_vassal = SB5
+        }
+		
 	    }
 	}
 	

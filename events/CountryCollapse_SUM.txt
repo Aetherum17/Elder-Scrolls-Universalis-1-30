@@ -1,9 +1,9 @@
 namespace = es_collapse
 
 country_event = {
-	id = es_collapse.3
-	title = es_collapse.3.t
-	desc = es_collapse.3.d
+	id = es_collapse.53
+	title = es_collapse.53.t
+	desc = es_collapse.53.d
 	picture = ES_PROVINCE_COLLAPSE_eventPicture
 	
 	is_triggered_only = yes
@@ -47,40 +47,6 @@ country_event = {
 		add_core = SA1
 		}
 		create_vassal = SA1
-		}
-		
-		if = {
-		limit = {
-		summerset_2_la = {
-		owned_by = ROOT
-		}
-		NOT = { exists = SA2 }
-		NOT = { capital_scope = { area = summerset_2_la } }
-		}
-		every_owned_province = {
-		limit = {
-		area = summerset_2_la
-		}
-		add_core = SA2
-		}
-		create_vassal = SA2
-		}
-		
-		if = {
-		limit = {
-		summerset_3_la = {
-		owned_by = ROOT
-		}
-		NOT = { exists = SA3 }
-		NOT = { capital_scope = { area = summerset_3_la } }
-		}
-		every_owned_province = {
-		limit = {
-		area = summerset_3_la
-		}
-		add_core = SA3
-		}
-		create_vassal = SA3
 		}
 		
 		if = {
@@ -153,88 +119,173 @@ country_event = {
 		
 		if = {
 		limit = {
-		summerset_8_la = {
+		summerset_13_la = {
 		owned_by = ROOT
 		}
-		NOT = { exists = SA8 }
-		NOT = { capital_scope = { area = summerset_8_la } }
+		NOT = { exists = SB3 }
+		NOT = { capital_scope = { area = summerset_13_la } }
 		}
 		every_owned_province = {
 		limit = {
-		area = summerset_8_la
+		area = summerset_13_la
 		}
-		add_core = SA8
+		add_core = SB3
 		}
-		create_vassal = SA8
+		create_vassal = SB3
 		}
 		
 		if = {
 		limit = {
-		summerset_9_la = {
+		summerset_16_la = {
 		owned_by = ROOT
 		}
-		NOT = { exists = SA9 }
-		NOT = { capital_scope = { area = summerset_9_la } }
+		NOT = { exists = SB6 }
+		NOT = { capital_scope = { area = summerset_16_la } }
 		}
 		every_owned_province = {
 		limit = {
-		area = summerset_9_la
+		area = summerset_16_la
 		}
-		add_core = SA9
+		add_core = SB6
 		}
-		create_vassal = SA9
+		create_vassal = SB6
 		}
 		
 		if = {
 		limit = {
-		summerset_10_la = {
+		summerset_17_la = {
 		owned_by = ROOT
 		}
-		NOT = { exists = SB0 }
-		NOT = { capital_scope = { area = summerset_10_la } }
+		NOT = { exists = SB7 }
+		NOT = { capital_scope = { area = summerset_17_la } }
 		}
 		every_owned_province = {
 		limit = {
-		area = summerset_10_la
+		area = summerset_17_la
 		}
-		add_core = SB0
+		add_core = SB7
 		}
-		create_vassal = SB0
+		create_vassal = SB7
 		}
 		
 		if = {
 		limit = {
-		summerset_11_la = {
+		summerset_18_la = {
 		owned_by = ROOT
 		}
-		NOT = { exists = SB1 }
-		NOT = { capital_scope = { area = summerset_11_la } }
+		NOT = { exists = SB8 }
+		NOT = { capital_scope = { area = summerset_18_la } }
 		}
 		every_owned_province = {
 		limit = {
-		area = summerset_11_la
+		area = summerset_18_la
 		}
-		add_core = SB1
+		add_core = SB8
 		}
-		create_vassal = SB1
+		create_vassal = SB8
 		}
 		
 		if = {
 		limit = {
-		summerset_12_la = {
+		summerset_19_la = {
 		owned_by = ROOT
 		}
-		NOT = { exists = SB2 }
-		NOT = { capital_scope = { area = summerset_12_la } }
+		NOT = { exists = SB9 }
+		NOT = { capital_scope = { area = summerset_19_la } }
 		}
 		every_owned_province = {
 		limit = {
-		area = summerset_11_la
+		area = summerset_19_la
 		}
-		add_core = SB2
+		add_core = SB9
 		}
-		create_vassal = SB2
+		create_vassal = SB9
 		}
+		
+		if = {
+        limit = {
+        summerset_22_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = SC2 }
+        NOT = { capital_scope = { area = summerset_22_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = summerset_22_la
+        }
+        add_core = SC2
+        }
+        create_vassal = SC2
+        }
+
+        if = {
+        limit = {
+        summerset_24_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = SC4 }
+        NOT = { capital_scope = { area = summerset_24_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = summerset_24_la
+        }
+        add_core = SC4
+        }
+        create_vassal = SC4
+        }
+
+        if = {
+        limit = {
+        summerset_25_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = SC5 }
+        NOT = { capital_scope = { area = summerset_25_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = summerset_25_la
+        }
+        add_core = SC5
+        }
+        create_vassal = SC5
+        }
+
+        if = {
+        limit = {
+        summerset_26_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = SC6 }
+        NOT = { capital_scope = { area = summerset_26_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = summerset_26_la
+        }
+        add_core = SC6
+        }
+        create_vassal = SC6
+        }
+
+        if = {
+        limit = {
+        summerset_28_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = SC8 }
+        NOT = { capital_scope = { area = summerset_28_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = summerset_28_la
+        }
+        add_core = SC8
+        }
+        create_vassal = SC8
+        }
 		
 	    }
 	}
@@ -263,7 +314,7 @@ country_event = {
 		
 		trigger = {
 		NOT = { capital_scope = { region = summerset_lr } }
-		NOT = { exists = SUM }
+		NOT = { exists = GAL }
 		}
 		
 		every_core_province = {
@@ -277,21 +328,370 @@ country_event = {
 		limit = {
 		region = summerset_lr
 		}
-		add_core = SUM
+		add_core = GAL
 		}
 		
-		release = SUM
+		release = GAL
 		
 		if = {
 		limit = {
 		government = monarchy
 		}
-		create_union = SUM
+		create_union = GAL
 	    }
 		else = {
-		create_alliance = SUM
-		SUM = { add_opinion = { who = ROOT modifier = es_friendly_nation } }
-		add_opinion = { who = SUM modifier = es_friendly_nation }
+		create_alliance = GAL
+		GAL = { add_opinion = { who = ROOT modifier = es_friendly_nation } }
+		add_opinion = { who = GAL modifier = es_friendly_nation }
+		}
+	}
+}
+
+###
+
+country_event = {
+	id = es_collapse.34
+	title = es_collapse.34.t
+	desc = es_collapse.34.d
+	picture = ES_PROVINCE_COLLAPSE_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	    add_country_modifier = {
+			name = "vassal_autonomy"
+			duration = 9125
+		}
+	}
+	
+	option = {
+		name = es_collapse.2.a
+		ai_chance = { factor = 75 }
+		hidden_effect = {
+		
+		if = {
+		limit = {
+		NOT = { capital_scope = { region = auridon_lr } }
+		}
+		every_core_province = {
+			limit = {
+				region = auridon_lr
+			}
+			remove_core = ROOT
+		}
+		}
+		
+		if = {
+        limit = {
+        summerset_2_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = SA2 }
+        NOT = { capital_scope = { area = summerset_2_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = summerset_2_la
+        }
+        add_core = SA2
+        }
+        create_vassal = SA2
+        }
+
+        if = {
+        limit = {
+        summerset_3_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = SA3 }
+        NOT = { capital_scope = { area = summerset_3_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = summerset_3_la
+        }
+        add_core = SA3
+        }
+        create_vassal = SA3
+        }
+
+        if = {
+        limit = {
+        summerset_8_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = SA8 }
+        NOT = { capital_scope = { area = summerset_8_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = summerset_8_la
+        }
+        add_core = SA8
+        }
+        create_vassal = SA8
+        }
+
+        if = {
+        limit = {
+        summerset_9_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = SA9 }
+        NOT = { capital_scope = { area = summerset_9_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = summerset_9_la
+        }
+        add_core = SA9
+        }
+        create_vassal = SA9
+        }
+
+        if = {
+        limit = {
+        summerset_10_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = SB0 }
+        NOT = { capital_scope = { area = summerset_10_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = summerset_10_la
+        }
+        add_core = SB0
+        }
+        create_vassal = SB0
+        }
+
+        if = {
+        limit = {
+        summerset_11_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = SB1 }
+        NOT = { capital_scope = { area = summerset_11_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = summerset_11_la
+        }
+        add_core = SB1
+        }
+        create_vassal = SB1
+        }
+
+        if = {
+        limit = {
+        summerset_12_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = SB2 }
+        NOT = { capital_scope = { area = summerset_12_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = summerset_12_la
+        }
+        add_core = SB2
+        }
+        create_vassal = SB2
+        }
+
+        if = {
+        limit = {
+        summerset_14_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = SB4 }
+        NOT = { capital_scope = { area = summerset_14_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = summerset_14_la
+        }
+        add_core = SB4
+        }
+        create_vassal = SB4
+        }
+
+        if = {
+        limit = {
+        summerset_15_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = SB5 }
+        NOT = { capital_scope = { area = summerset_15_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = summerset_15_la
+        }
+        add_core = SB5
+        }
+        create_vassal = SB5
+        }
+
+        if = {
+        limit = {
+        summerset_20_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = SC0 }
+        NOT = { capital_scope = { area = summerset_20_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = summerset_20_la
+        }
+        add_core = SC0
+        }
+        create_vassal = SC0
+        }
+
+        if = {
+        limit = {
+        summerset_21_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = SC1 }
+        NOT = { capital_scope = { area = summerset_21_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = summerset_21_la
+        }
+        add_core = SC1
+        }
+        create_vassal = SC1
+        }
+
+        if = {
+        limit = {
+        summerset_23_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = SC3 }
+        NOT = { capital_scope = { area = summerset_23_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = summerset_23_la
+        }
+        add_core = SC3
+        }
+        create_vassal = SC3
+        }
+
+        if = {
+        limit = {
+        summerset_27_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = SC7 }
+        NOT = { capital_scope = { area = summerset_27_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = summerset_27_la
+        }
+        add_core = SC7
+        }
+        create_vassal = SC7
+        }
+
+        if = {
+        limit = {
+        summerset_29_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = SC9 }
+        NOT = { capital_scope = { area = summerset_29_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = summerset_29_la
+        }
+        add_core = SC9
+        }
+        create_vassal = SC9
+        }
+
+        if = {
+        limit = {
+        summerset_30_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = SD0 }
+        NOT = { capital_scope = { area = summerset_30_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = summerset_30_la
+        }
+        add_core = SD0
+        }
+        create_vassal = SD0
+        }
+		
+	    }
+	}
+	
+	option = {
+		name = es_collapse.2.b
+		ai_chance = { factor = 15 }
+		
+		if = {
+		limit = {
+		NOT = { capital_scope = { region = auridon_lr } }
+		}
+		every_core_province = {
+			limit = {
+				region = auridon_lr
+			}
+			remove_core = ROOT
+		}
+		}
+		
+	}
+	
+	option = {
+		name = es_collapse.2.c
+		ai_chance = { factor = 10 }
+		
+		trigger = {
+		NOT = { capital_scope = { region = auridon_lr } }
+		NOT = { exists = AUR }
+		}
+		
+		every_core_province = {
+			limit = {
+				region = auridon_lr
+			}
+			remove_core = ROOT
+		}
+		
+		every_owned_province = {
+		limit = {
+		region = summerset_lr
+		}
+		add_core = AUR
+		}
+		
+		release = AUR
+		
+		if = {
+		limit = {
+		government = monarchy
+		}
+		create_union = AUR
+	    }
+		else = {
+		create_alliance = AUR
+		AUR = { add_opinion = { who = ROOT modifier = es_friendly_nation } }
+		add_opinion = { who = AUR modifier = es_friendly_nation }
 		}
 	}
 }

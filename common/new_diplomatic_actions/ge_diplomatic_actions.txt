@@ -1183,10 +1183,37 @@ create_imperial_subject = {
 		OR = {
 		    owns = 1206
 			owns = 271
-			### add extra cities
+			owns = 299
+			owns = 4941
+			owns = 820
+			owns = 926
+			owns = 922
+			owns = 1098
+			owns = 1075
+			owns = 1069
+			owns = 1120
+			owns = 1251
+			owns = 1194
+			owns = 5657
+			owns = 1161
+			owns = 1446
+			owns = 6257
+			owns = 1369
+			owns = 1391
+			owns = 1355
+			owns = 1342
+			owns = 1319
+			owns = 1275
+			owns = 1268
+			owns = 7753
+			owns = 990
+			owns = 1002
+			owns = 8088
+			owns = 1043
 		}
 	}
 	on_accept = {
+	    add_imperial_influence = 5
 		create_subject = {
 			subject_type = imperial_subject
 			subject = FROM 
@@ -1407,6 +1434,7 @@ ask_to_become_imperial_subject = {
 	}
 	on_accept = {
 		FROM = {
+		add_imperial_influence = 5
 		create_subject = {
 			subject_type = imperial_subject 
 			subject = ROOT 
@@ -1584,10 +1612,7 @@ create_alliance_member = {
 	is_visible = {
 	    OR = {
 	    has_country_flag = allience_leader_flag
-		AND = {
 		government = tribal
-		# add cities
-		# owns = 
 		}
 		}
 		FROM = { NOT = { is_subject_of_type = alliance_member } }
@@ -1803,10 +1828,7 @@ ask_to_become_alliance_member = {
 	    FROM = {
 	    OR = {
 	       has_country_flag = allience_leader_flag
-		   AND = {
 	       government = tribal
-		   # add cities
-		   # owns = 
 		   }
 	    }
 	    }
