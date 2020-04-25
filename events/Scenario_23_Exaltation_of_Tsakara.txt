@@ -629,7 +629,7 @@ country_event = {
 		is_year = 1045
 		NOT = { is_year = 1100 }
 		culture_group = yokudan-redguardian_cg
-		any_owned_province = { region = hammerfell_lr }
+		any_owned_province = { region = alikr_desert_lr }
     }
 
 	mean_time_to_happen = {
@@ -647,8 +647,8 @@ country_event = {
 		name = "23_the_crowns"
 		duration = -1
 		}
-		if = { limit = { NOT = { religion = yokudan_pantheon } } change_religion = yokudan_pantheon every_owned_province = { limit = { region = hammerfell_lr } change_religion = yokudan_pantheon } }
-		random_owned_province = { limit = { region = hammerfell_lr }
+		if = { limit = { NOT = { religion = yokudan_pantheon } } change_religion = yokudan_pantheon every_owned_province = { limit = { region = alikr_desert_lr } change_religion = yokudan_pantheon } }
+		random_owned_province = { limit = { region = alikr_desert_lr }
 			spawn_rebels = {
 				type = redguard_pantheon_rebels
 				size = 3.5
@@ -677,8 +677,8 @@ country_event = {
 		name = "23_the_forebears"
 		duration = -1
 		}
-		if = { limit = { NOT = { religion = redguard_pantheon } } change_religion = redguard_pantheon every_owned_province = { limit = { region = hammerfell_lr } change_religion = redguard_pantheon } }
-		random_owned_province = { limit = { region = hammerfell_lr }
+		if = { limit = { NOT = { religion = redguard_pantheon } } change_religion = redguard_pantheon every_owned_province = { limit = { region = alikr_desert_lr } change_religion = redguard_pantheon } }
+		random_owned_province = { limit = { region = alikr_desert_lr }
 			spawn_rebels = {
 				type = yokudan_pantheon_rebels
 				size = 3.5
@@ -704,7 +704,7 @@ country_event = {
 		name = "es_23_scenario.6.c"
 		ai_chance = { factor = 33 }
 		add_stability = -1
-		random_owned_province = { limit = { region = hammerfell_lr }
+		random_owned_province = { limit = { region = alikr_desert_lr }
 			spawn_rebels = {
 				type = redguard_pantheon_rebels
 				size = 3.5
@@ -712,7 +712,7 @@ country_event = {
 				unrest = 25
 			}
 		}
-		random_owned_province = { limit = { region = hammerfell_lr }
+		random_owned_province = { limit = { region = alikr_desert_lr }
 			spawn_rebels = {
 				type = yokudan_pantheon_rebels
 				size = 3.5

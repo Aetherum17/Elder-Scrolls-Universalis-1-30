@@ -1,0 +1,1459 @@
+namespace = es_holidays
+
+#0601 means 1 june.
+#0101
+country_event = {
+	id = es_holidays.1
+	title = es_holidays.1.t
+	desc = es_holidays.1.d
+	picture = New_Life_Festival_eventpictures
+
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		real_day_of_year = 0
+		NOT = { real_day_of_year = 1 }
+		real_month_of_year = 0
+		NOT = { real_month_of_year = 1 }
+	}
+
+	option = {
+		name = es_holidays.1.a
+	}
+}
+
+
+#0102
+country_event = {
+	id = es_holidays.2
+	title = es_holidays.2.t
+	desc = es_holidays.2.d
+	picture = sour_day_eventpictures
+
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		real_day_of_year = 1
+		NOT = { real_day_of_year = 2 }
+		real_month_of_year = 0
+		NOT = { real_month_of_year = 1 }
+	}
+
+	option = {
+		name = es_holidays.2.a
+	}
+}
+
+
+#0112
+country_event = {
+	id = es_holidays.3
+	title = es_holidays.3.t
+	desc = es_holidays.3.d
+	picture = Ovanka_eventpicuters
+
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		real_day_of_year = 11
+		NOT = { real_day_of_year = 12 }
+		real_month_of_year = 0
+		NOT = { real_month_of_year = 1 }
+	}
+
+	option = {
+		name = es_holidays.3.a
+	}
+}
+
+
+#0113
+country_event = {
+	id = es_holidays.4
+	title = es_holidays.4.t
+	desc = es_holidays.4.d
+	picture = Meridia_Summoning_eventpictures
+
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		real_day_of_year = 12
+		NOT = { real_day_of_year = 13 }
+		real_month_of_year = 0
+		NOT = { real_month_of_year = 1 }
+	}
+
+	option = {
+		name = es_holidays.4.a
+	}
+}
+
+
+#0115
+country_event = {
+	id = es_holidays.5
+	title = es_holidays.5.t
+	desc = es_holidays.5.d
+	picture = South_Winds_Prayer_eventpictures
+
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		real_day_of_year = 14
+		NOT = { real_day_of_year = 16 }
+		real_month_of_year = 0
+		NOT = { real_month_of_year = 1 }
+	}
+
+	option = {
+		name = es_holidays.5.a
+	}
+}
+
+
+#0116
+country_event = {
+	id = es_holidays.6
+	title = es_holidays.6.t
+	desc = es_holidays.6.d
+	picture = Day_of_Lights_eventpictures
+
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		real_day_of_year = 15
+		NOT = { real_day_of_year = 16 }
+		real_month_of_year = 0
+		NOT = { real_month_of_year = 1 }
+	}
+
+	option = {
+		name = es_holidays.6.a
+	}
+}
+
+
+#0118
+country_event = {
+	id = es_holidays.7
+	title = es_holidays.7.t
+	desc = es_holidays.7.d
+	picture = Waking_Day_eventpictures
+
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		real_day_of_year = 17
+		NOT = { real_day_of_year = 18 }
+		real_month_of_year = 0
+		NOT = { real_month_of_year = 1 }
+	}
+
+	option = {
+		name = es_holidays.7.a
+	}
+}
+
+
+#0202
+country_event = {
+	id = es_holidays.8
+	title = es_holidays.8.t
+	desc = es_holidays.8.d
+	picture = Mad_Pelagius_eventpictures
+
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		real_day_of_year = 32
+		NOT = { real_day_of_year = 33 }
+		real_month_of_year = 1
+		NOT = { real_month_of_year = 2 }
+	}
+
+	option = {
+		name = es_holidays.8.a
+	}
+}
+
+
+#0205
+country_event = {
+	id = es_holidays.9
+	title = es_holidays.9.t
+	desc = es_holidays.9.d
+	picture = Othroktide_eventpictures
+
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		real_day_of_year = 35
+		NOT = { real_day_of_year = 36 }
+		real_month_of_year = 1
+		NOT = { real_month_of_year = 2 }
+	}
+
+	option = {
+		name = es_holidays.9.a
+	}
+}
+
+
+#0208
+country_event = {
+	id = es_holidays.10
+	title = es_holidays.10.t
+	desc = es_holidays.10.d
+	picture = Day_of_Release_eventpictures
+
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		real_day_of_year = 38
+		NOT = { real_day_of_year = 39 }
+		real_month_of_year = 1
+		NOT = { real_month_of_year = 2 }
+	}
+
+	option = {
+		name = es_holidays.10.a
+	}
+}
+
+
+#0213
+country_event = {
+	id = es_holidays.11
+	title = es_holidays.11.t
+	desc = es_holidays.11.d
+	picture = feast_of_the_dead_eventpictures
+
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		real_day_of_year = 43
+		NOT = { real_day_of_year = 44 }
+		real_month_of_year = 1
+		NOT = { real_month_of_year = 2 }
+	}
+
+	option = {
+		name = es_holidays.11.a
+	}
+}
+
+
+#0216
+country_event = {
+	id = es_holidays.12
+	title = es_holidays.12.t
+	desc = es_holidays.12.d
+	picture = heartsday_eventpictures
+
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		real_day_of_year = 46
+		NOT = { real_day_of_year = 47 }
+		real_month_of_year = 1
+		NOT = { real_month_of_year = 2 }
+	}
+
+	option = {
+		name = es_holidays.12.a
+	}
+}
+
+
+#0227
+country_event = {
+	id = es_holidays.13
+	title = es_holidays.13.t
+	desc = es_holidays.13.d
+	picture = Perserverance_Day_eventpictures
+
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		real_day_of_year = 57
+		NOT = { real_day_of_year = 58 }
+		real_month_of_year = 1
+		NOT = { real_month_of_year = 2 }
+	}
+
+	option = {
+		name = es_holidays.13.a
+	}
+}
+
+
+#0228
+country_event = {
+	id = es_holidays.14
+	title = es_holidays.14.t
+	desc = es_holidays.14.d
+	picture = Aduros_Nau_eventpictures
+
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		real_day_of_year = 58
+		NOT = { real_day_of_year = 59 }
+		real_month_of_year = 1
+		NOT = { real_month_of_year = 2 }
+	}
+
+	option = {
+		name = es_holidays.14.a
+	}
+}
+
+
+#0305
+country_event = {
+	id = es_holidays.15
+	title = es_holidays.15.t
+	desc = es_holidays.15.d
+	picture = Hermaeus_Mora's_Summoning_Day_eventpictures
+
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		real_day_of_year = 63
+		NOT = { real_day_of_year = 64 }
+		real_month_of_year = 2
+		NOT = { real_month_of_year = 3 }
+	}
+
+	option = {
+		name = es_holidays.15.a
+	}
+}
+
+
+#0307
+country_event = {
+	id = es_holidays.16
+	title = es_holidays.16.t
+	desc = es_holidays.16.d
+	picture = First_Planting_eventpictures
+
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		real_day_of_year = 65
+		NOT = { real_day_of_year = 66 }
+		real_month_of_year = 2
+		NOT = { real_month_of_year = 3 }
+	}
+
+	option = {
+		name = es_holidays.16.a
+	}
+}
+
+
+#0309
+country_event = {
+	id = es_holidays.17
+	title = es_holidays.17.t
+	desc = es_holidays.17.d
+	picture = day_of_wating_eventpictures
+
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		real_day_of_year = 67
+		NOT = { real_day_of_year = 68 }
+		real_month_of_year = 2
+		NOT = { real_month_of_year = 3 }
+	}
+
+	option = {
+		name = es_holidays.17.a
+	}
+}
+
+
+#0321
+country_event = {
+	id = es_holidays.18
+	title = es_holidays.18.t
+	desc = es_holidays.18.d
+	picture = hogithum_eventpictures
+
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		real_day_of_year = 79
+		NOT = { real_day_of_year = 80 }
+		real_month_of_year = 2
+		NOT = { real_month_of_year = 3 }
+	}
+
+	option = {
+		name = es_holidays.18.a
+	}
+}
+
+
+#0325
+country_event = {
+	id = es_holidays.19
+	title = es_holidays.19.t
+	desc = es_holidays.19.d
+	picture = Flower_Day_eventpictures
+
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		real_day_of_year = 83
+		NOT = { real_day_of_year = 84 }
+		real_month_of_year = 2
+		NOT = { real_month_of_year = 3 }
+	}
+
+	option = {
+		name = es_holidays.19.a
+	}
+}
+
+
+#0326
+country_event = {
+	id = es_holidays.20
+	title = es_holidays.20.t
+	desc = es_holidays.20.d
+	picture = Festival_of_Blades_eventpictures
+
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		real_day_of_year = 84
+		NOT = { real_day_of_year = 85 }
+		real_month_of_year = 2
+		NOT = { real_month_of_year = 3 }
+	}
+
+	option = {
+		name = es_holidays.20.a
+	}
+}
+
+
+#0401
+country_event = {
+	id = es_holidays.21
+	title = es_holidays.21.t
+	desc = es_holidays.21.d
+	picture = gardtide_eventpictures
+
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		real_day_of_year = 90
+		NOT = { real_day_of_year = 91 }
+		real_month_of_year = 3
+		NOT = { real_month_of_year = 4 }
+	}
+
+	option = {
+		name = es_holidays.21.a
+	}
+}
+
+
+#0409
+country_event = {
+	id = es_holidays.22
+	title = es_holidays.22.t
+	desc = es_holidays.22.d
+	picture = Peryites_eventpictures
+
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		real_day_of_year = 98
+		NOT = { real_day_of_year = 97 }
+		real_month_of_year = 3
+		NOT = { real_month_of_year = 4 }
+	}
+
+	option = {
+		name = es_holidays.22.a
+	}
+}
+
+
+#0413
+country_event = {
+	id = es_holidays.23
+	title = es_holidays.23.t
+	desc = es_holidays.23.d
+	picture = the_day_of_the_dead_eventpictures
+
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		real_day_of_year = 102
+		NOT = { real_day_of_year = 103 }
+		real_month_of_year = 3
+		NOT = { real_month_of_year = 4 }
+	}
+
+	option = {
+		name = es_holidays.23.a
+	}
+}
+
+
+#0420
+country_event = {
+	id = es_holidays.24
+	title = es_holidays.24.t
+	desc = es_holidays.24.d
+	picture = Day_of_Shame_eventpictures
+
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		real_day_of_year = 109
+		NOT = { real_day_of_year = 110 }
+		real_month_of_year = 3
+		NOT = { real_month_of_year = 4 }
+	}
+
+	option = {
+		name = es_holidays.24.a
+	}
+}
+
+
+#0428
+country_event = {
+	id = es_holidays.25
+	title = es_holidays.25.t
+	desc = es_holidays.25.d
+	picture = Jester's_Day_eventpictures
+
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		real_day_of_year = 117
+		NOT = { real_day_of_year = 118 }
+		real_month_of_year = 3
+		NOT = { real_month_of_year = 4 }
+	}
+
+	option = {
+		name = es_holidays.25.a
+	}
+}
+
+
+#0507
+country_event = {
+	id = es_holidays.26
+	title = es_holidays.26.t
+	desc = es_holidays.26.d
+	picture = Second_Planting_eventpictures
+
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		real_day_of_year = 126
+		NOT = { real_day_of_year = 127 }
+		real_month_of_year = 4
+		NOT = { real_month_of_year = 5 }
+	}
+
+	option = {
+		name = es_holidays.26.a
+	}
+}
+
+
+#0509
+country_event = {
+	id = es_holidays.27
+	title = es_holidays.27.t
+	desc = es_holidays.27.d
+	picture = Marukh's_Day_eventpictures
+
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		real_day_of_year = 128
+		NOT = { real_day_of_year = 129 }
+		real_month_of_year = 4
+		NOT = { real_month_of_year = 5 }
+	}
+
+	option = {
+		name = es_holidays.27.a
+	}
+}
+
+
+#0520
+country_event = {
+	id = es_holidays.28
+	title = es_holidays.28.t
+	desc = es_holidays.28.d
+	picture = Fire_Festival_eventpictures
+
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		real_day_of_year = 139
+		NOT = { real_day_of_year = 140 }
+		real_month_of_year = 4
+		NOT = { real_month_of_year = 5 }
+	}
+
+	option = {
+		name = es_holidays.28.a
+	}
+}
+
+
+#0530
+country_event = {
+	id = es_holidays.29
+	title = es_holidays.29.t
+	desc = es_holidays.29.d
+	picture = Fishing_Day_eventpictures
+
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		real_day_of_year = 149
+		NOT = { real_day_of_year = 150 }
+		real_month_of_year = 4
+		NOT = { real_month_of_year = 5 }
+	}
+
+	option = {
+		name = es_holidays.29.a
+	}
+}
+
+
+#0601
+country_event = {
+	id = es_holidays.30
+	title = es_holidays.30.t
+	desc = es_holidays.30.d
+	picture = Drigh_R'Zimb_eventpictures
+
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		real_day_of_year = 151
+		NOT = { real_day_of_year = 152 }
+		real_month_of_year = 5
+		NOT = { real_month_of_year = 6 }
+	}
+
+	option = {
+		name = es_holidays.30.a
+	}
+}
+
+
+#0605
+country_event = {
+	id = es_holidays.31
+	title = es_holidays.31.t
+	desc = es_holidays.31.d
+	picture = Hircine's_Summoning_Day_eventpictures
+
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		real_day_of_year = 155
+		NOT = { real_day_of_year = 156 }
+		real_month_of_year = 5
+		NOT = { real_month_of_year = 6 }
+	}
+
+	option = {
+		name = es_holidays.31.a
+	}
+}
+
+
+#0616
+country_event = {
+	id = es_holidays.32
+	title = es_holidays.32.t
+	desc = es_holidays.32.d
+	picture = Mid_Year_Celebration_eventpictures
+
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		real_day_of_year = 166
+		NOT = { real_day_of_year = 167 }
+		real_month_of_year = 5
+		NOT = { real_month_of_year = 6 }
+	}
+
+	option = {
+		name = es_holidays.32.a
+	}
+}
+
+
+#0623
+country_event = {
+	id = es_holidays.33
+	title = es_holidays.33.t
+	desc = es_holidays.33.d
+	picture = Dancing_Day_eventpictures
+
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		real_day_of_year = 173
+		NOT = { real_day_of_year = 174 }
+		real_month_of_year = 5
+		NOT = { real_month_of_year = 6 }
+	}
+
+	option = {
+		name = es_holidays.33.a
+	}
+}
+
+
+#0624
+country_event = {
+	id = es_holidays.34
+	title = es_holidays.34.t
+	desc = es_holidays.34.d
+	picture = Tibedetha_eventpictures
+
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		real_day_of_year = 174
+		NOT = { real_day_of_year = 174 }
+		real_month_of_year = 5
+		NOT = { real_month_of_year = 6 }
+	}
+
+	option = {
+		name = es_holidays.34.a
+	}
+}
+
+
+#0710
+country_event = {
+	id = es_holidays.35
+	title = es_holidays.35.t
+	desc = es_holidays.35.d
+	picture = Merchants_Festival_eventpictures
+
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		real_day_of_year = 190
+		NOT = { real_day_of_year = 191 }
+		real_month_of_year = 6
+		NOT = { real_month_of_year = 7 }
+	}
+
+	option = {
+		name = es_holidays.35.a
+	}
+}
+
+
+#0712
+country_event = {
+	id = es_holidays.36
+	title = es_holidays.36.t
+	desc = es_holidays.36.d
+	picture = Divad_Etep't_eventpictures
+
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		real_day_of_year = 192
+		NOT = { real_day_of_year = 193 }
+		real_month_of_year = 6
+		NOT = { real_month_of_year = 7 }
+	}
+
+	option = {
+		name = es_holidays.36.a
+	}
+}
+
+
+#0720
+country_event = {
+	id = es_holidays.37
+	title = es_holidays.37.t
+	desc = es_holidays.37.d
+	picture = Sun's_Rest_eventpictures
+
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		real_day_of_year = 200
+		NOT = { real_day_of_year = 201 }
+		real_month_of_year = 6
+		NOT = { real_month_of_year = 7 }
+	}
+
+	option = {
+		name = es_holidays.37.a
+	}
+}
+
+
+#0729
+country_event = {
+	id = es_holidays.38
+	title = es_holidays.38.t
+	desc = es_holidays.38.d
+	picture = Fiery_Night_eventpictures
+
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		real_day_of_year = 209
+		NOT = { real_day_of_year = 210 }
+		real_month_of_year = 6
+		NOT = { real_month_of_year = 7 }
+	}
+
+	option = {
+		name = es_holidays.38.a
+	}
+}
+
+
+#0802
+country_event = {
+	id = es_holidays.39
+	title = es_holidays.39.t
+	desc = es_holidays.39.d
+	picture = Maiden_Katrica_eventpictures
+
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		real_day_of_year = 213
+		NOT = { real_day_of_year = 214 }
+		real_month_of_year = 7
+		NOT = { real_month_of_year = 8 }
+	}
+
+	option = {
+		name = es_holidays.39.a
+	}
+}
+
+
+#0811
+country_event = {
+	id = es_holidays.40
+	title = es_holidays.40.t
+	desc = es_holidays.40.d
+	picture = Koomu_Alezer'i_eventpictures
+
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		real_day_of_year = 222
+		NOT = { real_day_of_year = 223 }
+		real_month_of_year = 7
+		NOT = { real_month_of_year = 8 }
+	}
+
+	option = {
+		name = es_holidays.40.a
+	}
+}
+
+
+#0814
+country_event = {
+	id = es_holidays.41
+	title = es_holidays.41.t
+	desc = es_holidays.41.d
+	picture = Feast_of_the_Tiger_eventpictures
+
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		real_day_of_year = 225
+		NOT = { real_day_of_year = 226 }
+		real_month_of_year = 7
+		NOT = { real_month_of_year = 8 }
+	}
+
+	option = {
+		name = es_holidays.41.a
+	}
+}
+
+
+#0821
+country_event = {
+	id = es_holidays.42
+	title = es_holidays.42.t
+	desc = es_holidays.42.d
+	picture = Appreciation_Day_eventpictures
+
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		real_day_of_year = 232
+		NOT = { real_day_of_year = 233 }
+		real_month_of_year = 7
+		NOT = { real_month_of_year = 8 }
+	}
+
+	option = {
+		name = es_holidays.42.a
+	}
+}
+
+
+#0827
+country_event = {
+	id = es_holidays.43
+	title = es_holidays.43.t
+	desc = es_holidays.43.d
+	picture = Harvest's_End_eventpictures
+
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		real_day_of_year = 238
+		NOT = { real_day_of_year = 239 }
+		real_month_of_year = 7
+		NOT = { real_month_of_year = 8 }
+	}
+
+	option = {
+		name = es_holidays.43.a
+	}
+}
+
+
+#0903
+country_event = {
+	id = es_holidays.44
+	title = es_holidays.44.t
+	desc = es_holidays.44.d
+	picture = Tales_and_Tallows_eventpictures
+
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		real_day_of_year = 245
+		NOT = { real_day_of_year = 246 }
+		real_month_of_year = 8
+		NOT = { real_month_of_year = 9 }
+	}
+
+	option = {
+		name = es_holidays.44.a
+	}
+}
+
+
+#0906
+country_event = {
+	id = es_holidays.45
+	title = es_holidays.45.t
+	desc = es_holidays.45.d
+	picture = Khurat_eventpictures
+
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		real_day_of_year = 248
+		NOT = { real_day_of_year = 249 }
+		real_month_of_year = 8
+		NOT = { real_month_of_year = 9 }
+	}
+
+	option = {
+		name = es_holidays.45.a
+	}
+}
+
+
+#0908
+country_event = {
+	id = es_holidays.46
+	title = es_holidays.46.t
+	desc = es_holidays.46.d
+	picture = Nocturnal's_Summoning_Day_eventpictures
+
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		real_day_of_year = 250
+		NOT = { real_day_of_year = 251 }
+		real_month_of_year = 8
+		NOT = { real_month_of_year = 9 }
+	}
+
+	option = {
+		name = es_holidays.46.a
+	}
+}
+
+
+#0912
+country_event = {
+	id = es_holidays.47
+	title = es_holidays.47.t
+	desc = es_holidays.47.d
+	picture = Riglametha_eventpictures
+
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		real_day_of_year = 254
+		NOT = { real_day_of_year = 254 }
+		real_month_of_year = 8
+		NOT = { real_month_of_year = 9 }
+	}
+
+	option = {
+		name = es_holidays.47.a
+	}
+}
+
+
+#0919
+country_event = {
+	id = es_holidays.48
+	title = es_holidays.48.t
+	desc = es_holidays.48.d
+	picture = Children's_Day_eventpictures
+
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		real_day_of_year = 261
+		NOT = { real_day_of_year = 262 }
+		real_month_of_year = 8
+		NOT = { real_month_of_year = 9 }
+	}
+
+	option = {
+		name = es_holidays.48.a
+	}
+}
+
+
+#1005
+country_event = {
+	id = es_holidays.49
+	title = es_holidays.49.t
+	desc = es_holidays.49.d
+	picture = Dirij_Tereur_eventpictures
+
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		real_day_of_year = 277
+		NOT = { real_day_of_year = 278 }
+		real_month_of_year = 9
+		NOT = { real_month_of_year = 10 }
+	}
+
+	option = {
+		name = es_holidays.49.a
+	}
+}
+
+
+#1008
+country_event = {
+	id = es_holidays.50
+	title = es_holidays.50.t
+	desc = es_holidays.50.d
+	picture = Malacath's_Summoning_Day_eventpictures
+
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		real_day_of_year = 280
+		NOT = { real_day_of_year = 281 }
+		real_month_of_year = 9
+		NOT = { real_month_of_year = 10 }
+	}
+
+	option = {
+		name = es_holidays.50.a
+	}
+}
+
+
+#1013
+country_event = {
+	id = es_holidays.51
+	title = es_holidays.51.t
+	desc = es_holidays.51.d
+	picture = Witches_Festival_eventpictures
+
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		real_day_of_year = 285
+		NOT = { real_day_of_year = 286 }
+		real_month_of_year = 9
+		NOT = { real_month_of_year = 10 }
+	}
+
+	option = {
+		name = es_holidays.51.a
+	}
+}
+
+
+#1023
+country_event = {
+	id = es_holidays.52
+	title = es_holidays.52.t
+	desc = es_holidays.52.d
+	picture = Broken_Diamonds_eventpictures
+
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		real_day_of_year = 295
+		NOT = { real_day_of_year = 296 }
+		real_month_of_year = 9
+		NOT = { real_month_of_year = 10 }
+	}
+
+	option = {
+		name = es_holidays.52.a
+	}
+}
+
+
+#1030
+country_event = {
+	id = es_holidays.53
+	title = es_holidays.53.t
+	desc = es_holidays.53.d
+	picture = Emperor's_Day_eventpictures
+
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		real_day_of_year = 302
+		NOT = { real_day_of_year = 303 }
+		real_month_of_year = 9
+		NOT = { real_month_of_year = 10 }
+	}
+
+	option = {
+		name = es_holidays.53.a
+	}
+}
+
+
+#1102
+country_event = {
+	id = es_holidays.54
+	title = es_holidays.54.t
+	desc = es_holidays.54.d
+	picture = Gauntlet_eventpictures
+
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		real_day_of_year = 305
+		NOT = { real_day_of_year = 306 }
+		real_month_of_year = 10
+		NOT = { real_month_of_year = 11 }
+	}
+
+	option = {
+		name = es_holidays.54.a
+	}
+}
+
+
+#1103
+country_event = {
+	id = es_holidays.55
+	title = es_holidays.55.t
+	desc = es_holidays.55.d
+	picture = Serpent's_Dance_eventpictures
+
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		real_day_of_year = 306
+		NOT = { real_day_of_year = 306 }
+		real_month_of_year = 10
+		NOT = { real_month_of_year = 11 }
+	}
+
+	option = {
+		name = es_holidays.55.a
+	}
+}
+
+
+#1108
+country_event = {
+	id = es_holidays.56
+	title = es_holidays.56.t
+	desc = es_holidays.56.d
+	picture = Moon_Festival_eventpictures
+
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		real_day_of_year = 311
+		NOT = { real_day_of_year = 312 }
+		real_month_of_year = 10
+		NOT = { real_month_of_year = 11 }
+	}
+
+	option = {
+		name = es_holidays.56.a
+	}
+}
+
+
+#1118
+country_event = {
+	id = es_holidays.57
+	title = es_holidays.57.t
+	desc = es_holidays.57.d
+	picture = Hel_Anseilak_eventpictures
+
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		real_day_of_year = 321
+		NOT = { real_day_of_year = 322 } #is real
+		real_month_of_year = 10
+		NOT = { real_month_of_year = 11 }
+	}
+
+	option = {
+		name = es_holidays.57.a
+	}
+}
+
+
+#1120
+country_event = {
+	id = es_holidays.58
+	title = es_holidays.58.t
+	desc = es_holidays.58.d
+	picture = Warriors_Festival_eventpictures
+
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		real_day_of_year = 323
+		NOT = { real_day_of_year = 324 }
+		real_month_of_year = 10
+		NOT = { real_month_of_year = 11 }
+	}
+
+	option = {
+		name = es_holidays.58.a
+	}
+}
+
+
+#1215
+country_event = {
+	id = es_holidays.59
+	title = es_holidays.59.t
+	desc = es_holidays.59.d
+	picture = North_Winds_Prayer_eventpictures
+
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		real_day_of_year = 348
+		NOT = { real_day_of_year = 349 }
+		real_month_of_year = 11
+		NOT = { real_month_of_year = 12 }
+	}
+
+	option = {
+		name = es_holidays.59.a
+	}
+}
+
+
+#1218
+country_event = {
+	id = es_holidays.60
+	title = es_holidays.60.t
+	desc = es_holidays.60.d
+	picture = Baranth_Do_eventpictures
+
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		real_day_of_year = 351
+		NOT = { real_day_of_year = 352 }
+		real_month_of_year = 11
+		NOT = { real_month_of_year = 12 }
+	}
+
+	option = {
+		name = es_holidays.60.a
+	}
+}
+
+
+#1220
+country_event = {
+	id = es_holidays.61
+	title = es_holidays.61.t
+	desc = es_holidays.61.d
+	picture = Chil'a_eventpictures
+
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		OR = {
+		AND = {
+		real_day_of_year = 353
+		NOT = { real_day_of_year = 354 }
+		}
+		AND = {
+		real_day_of_year = 357
+		NOT = { real_day_of_year = 358 }
+		}
+		}
+		real_month_of_year = 11
+		NOT = { real_month_of_year = 12 }
+	}
+
+	option = {
+		name = es_holidays.61.a
+	}
+}
+
+
+#1225
+country_event = {
+	id = es_holidays.62
+	title = es_holidays.62.t
+	desc = es_holidays.62.d
+	picture = Saturalia_eventpictures
+
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		real_day_of_year = 358
+		NOT = { real_day_of_year = 359 }
+		real_month_of_year = 11
+		NOT = { real_month_of_year = 12 }
+	}
+
+	option = {
+		name = es_holidays.62.a
+	}
+}
+
+
+#1231
+country_event = {
+	id = es_holidays.63
+	title = es_holidays.63.t
+	desc = es_holidays.63.d
+	picture = Old_Life_Festival_eventpictures
+
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		real_day_of_year = 364
+		NOT = { real_day_of_year = 366 }
+		real_month_of_year = 11
+		NOT = { real_month_of_year = 12 }
+	}
+
+	option = {
+		name = es_holidays.63.a
+	}
+}
+

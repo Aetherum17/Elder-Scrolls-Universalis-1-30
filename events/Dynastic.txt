@@ -256,69 +256,6 @@ country_event = {
 	}
 }
 
-# The Family Opt 1
-country_event = {
-	id = 9476
-	title = "EVTNAME9476"
-	desc = "EVTDESC9476"
-	picture = DIPLOMACY_eventPicture
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = "EVTOPTA9476"
-		add_treasury = 100
-		if = {
-			limit = {
-				stability = 3
-			}
-			add_stability_or_adm_power = yes
-		}
-		if = {
-			limit = {
-				NOT = { stability = 3 }
-			}
-			random_list = {
-				10 = {
-					add_stability = 1
-				}
-				10 = {
-					add_stability = 2
-				}
-				
-				10 = { 
-					add_stability = 3
-				}
-			}
-		}
-	}
-}
-
-# The Family Opt 2
-country_event = {
-	id = 9477
-	title = "EVTNAME9477"
-	desc = "EVTDESC9477"
-	picture = DIPLOMACY_eventPicture
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = "EVTOPTA9477"
-		random_list = {
-			10 = {
-				add_stability_or_adm_power = yes
-			}
-			10 = {
-				kill_ruler = yes
-			}
-			10 = {
-				add_stability = -2
-			}
-		}
-	}
-}
-
 # Fear and Loathing 1/3
 province_event = {
 	id = 9481
@@ -1132,34 +1069,5 @@ country_event = {
 				months = 12
 			}
 		}
-	}
-}
-
-# Marriage Policies paid off
-country_event = {
-	id = dynastic_events.8
-	title = dynastic_events.8.t
-	desc = dynastic_events.8.d
-	picture = COURT_eventPicture
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = dynastic_events.8.a
-		trigger = {
-			FROM = {
-				NOT = { dynasty = "von Habsburg" }
-			}
-		}
-		custom_tooltip = dynastic_events.8.a.tt
-	}
-	option = {
-		name = dynastic_events.8.b
-		trigger = {
-			FROM = {
-				dynasty = "von Habsburg"
-			}
-		}
-		custom_tooltip = dynastic_events.8.a.tt
 	}
 }

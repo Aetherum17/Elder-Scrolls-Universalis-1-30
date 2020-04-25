@@ -455,16 +455,16 @@ country_event = {
         morrowind_23_la  = {
         owned_by = ROOT
         }
-        NOT = { exists = MC3 }
+        NOT = { exists = SKA }
         NOT = { capital_scope = { area = morrowind_23_la  } }
         }
         every_owned_province = {
         limit = {
         area = morrowind_23_la 
         }
-        add_core = MC3
+        add_core = SKA
         }
-        create_vassal = MC3
+        create_vassal = SKA
         }
 
         if = {

@@ -39,12 +39,6 @@ country_event = {
 		custom_tooltip = nahuatl_events.1.a.tt #Our ruler will sacrifice some of his own blood to placate the gods.
 		add_doom = -10
 		add_adm_power = -50
-		hidden_effect = {
-			random = {
-				chance = 1
-				country_event = { id = nahuatl_events.17 days = 14 }
-			}
-		}
 	}
 	option = {
 		name = nahuatl_events.1.b #The end is nigh.
@@ -119,12 +113,6 @@ country_event = {
 		custom_tooltip = nahuatl_events.3.b.tt #Our ruler spills some of his blood, aiding our warrior but will now be seen to have part any future defeat.
 		set_country_flag = nahuatl_warrior_to_war
 		set_country_flag = nahuatl_warrior_auto_sacrifice
-		hidden_effect = {
-			random = {
-				chance = 1
-				country_event = { id = nahuatl_events.17 days = 14 }
-			}
-		}
 	}
 }
 
@@ -291,23 +279,6 @@ country_event = {
 		name = nahuatl_events.8.a #Great!
 		add_doom = -5
 		add_stability_or_adm_power = yes
-	}
-}
-
-#Tlacatecolotl
-country_event = {
-	id = nahuatl_events.14
-	title = nahuatl_events.14.t
-	desc = nahuatl_events.14.d
-	picture = END_OF_TIME_eventPicture
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = nahuatl_events.14.a #This does not bode well.
-		add_stability = -1
-		add_doom = 10
-		set_country_flag = tlacatecolotl
 	}
 }
 

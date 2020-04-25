@@ -431,24 +431,24 @@ country_event = {
 		
 		if = {
 		limit = {
-		exists = BE1
-		NOT = { alliance_with = BE1 }
-		NOT = { overlord_of = BE1 }
+		exists = BA1
+		NOT = { alliance_with = BA1 }
+		NOT = { overlord_of = BA1 }
 		}
 		declare_war_with_cb = {
-			who = BE1
+			who = BA1
 			casus_belli = cb_es_scenario
 		}
 		}
 		
 		if = {
 		limit = {
-		exists = BE3
-		NOT = { alliance_with = BE3 }
-		NOT = { overlord_of = BE3 }
+		exists = BA3
+		NOT = { alliance_with = BA3 }
+		NOT = { overlord_of = BA3 }
 		}
 		declare_war_with_cb = {
-			who = BE3
+			who = BA3
 			casus_belli = cb_es_scenario
 		}
 		}

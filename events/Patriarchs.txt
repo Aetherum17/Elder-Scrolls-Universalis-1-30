@@ -27,55 +27,6 @@ country_event = {
 	mean_time_to_happen = {
 		days = 1
 	}
-	
-	immediate = {
-		hidden_effect = {
-			random_owned_province = {
-				limit = {
-					has_state_patriach = yes
-					is_in_capital_area = yes
-					religion = dragon_cult
-				}
-				save_event_target_as = local_see_province
-			}
-			random_owned_province = {
-				limit = {
-					has_state_patriach = yes
-					is_in_capital_area = yes
-					development = 10
-					religion = dragon_cult
-				}
-				save_event_target_as = local_see_province
-			}
-			random_owned_province = {
-				limit = {
-					has_state_patriach = yes
-					is_in_capital_area = yes
-					development = 20
-					religion = dragon_cult
-				}
-				save_event_target_as = local_see_province
-			}
-			random_owned_province = {
-				limit = {
-					has_state_patriach = yes
-					is_in_capital_area = yes
-					development = 25
-					religion = dragon_cult
-				}
-				save_event_target_as = local_see_province
-			}
-			random_owned_province = {
-				limit = {
-					has_state_patriach = yes
-					is_in_capital_area = yes
-					development = 30
-					religion = dragon_cult
-				}
-				save_event_target_as = local_see_province
-			}
-		}
-	}
 
 	option = {
 		name = patriarch_events.2.a #

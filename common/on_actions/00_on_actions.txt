@@ -2,6 +2,73 @@
 
 # country
 on_startup = {
+
+    events = {
+		es_holidays.1
+		es_holidays.2
+		es_holidays.3
+		es_holidays.4
+		es_holidays.5
+		es_holidays.6
+		es_holidays.7
+		es_holidays.8
+		es_holidays.9
+		es_holidays.10
+		es_holidays.11
+		es_holidays.12
+		es_holidays.13
+		es_holidays.14
+		es_holidays.15
+		es_holidays.16
+		es_holidays.17
+		es_holidays.18
+		es_holidays.19
+		es_holidays.20
+		es_holidays.21
+		es_holidays.22
+		es_holidays.23
+		es_holidays.24
+		es_holidays.25
+		es_holidays.26
+		es_holidays.27
+		es_holidays.28
+		es_holidays.29
+		es_holidays.30
+		es_holidays.31
+		es_holidays.32
+		es_holidays.33
+		es_holidays.34
+		es_holidays.35
+		es_holidays.36
+		es_holidays.37
+		es_holidays.38
+		es_holidays.39
+		es_holidays.40
+		es_holidays.41
+		es_holidays.42
+		es_holidays.43
+		es_holidays.44
+		es_holidays.45
+		es_holidays.46
+		es_holidays.47
+		es_holidays.48
+		es_holidays.49
+		es_holidays.50
+		es_holidays.51
+		es_holidays.52
+		es_holidays.53
+		es_holidays.54
+		es_holidays.55
+		es_holidays.56
+		es_holidays.57
+		es_holidays.58
+		es_holidays.59
+		es_holidays.60
+		es_holidays.61
+		es_holidays.62
+		es_holidays.63
+	}
+
 	if = { limit = { NOT = { has_country_flag = on_action_setup_flag } }
 	
 	RED = {
@@ -16,7 +83,7 @@ on_startup = {
 		add_country_modifier = { name = "rise_time" duration = 3650 }
         add_country_modifier = { name = "crisis_time" duration = 3650 }	
         add_country_modifier = { name = "trade_time" duration = 3650 }
-        every_province = { limit = { region = vvvvardenfell_lr } add_province_modifier = { name = "ever-ashland" duration = -1 } }	
+        every_province = { limit = { region = vvardenfell_lr } add_province_modifier = { name = "ever-ashland" duration = -1 } }	
 	}
 	
 	every_country = { limit = { ai = no NOT = { has_country_flag = es_1_start_flag } } country_event = { id = es_start.1 days = 0 tooltip = es_collapse.2.a.tt } set_country_flag = es_1_start_flag }

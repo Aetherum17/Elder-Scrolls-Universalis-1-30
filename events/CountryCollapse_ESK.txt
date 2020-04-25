@@ -71,16 +71,16 @@ country_event = {
         skyrim_17_la = {
         owned_by = ROOT
         }
-        NOT = { exists = NB7 }
+        NOT = { exists = VOL }
         NOT = { capital_scope = { area = skyrim_17_la } }
         }
         every_owned_province = {
         limit = {
         area = skyrim_17_la
         }
-        add_core = NB7
+        add_core = VOL
         }
-        create_vassal = NB7
+        create_vassal = VOL
         }
 
         if = {
@@ -590,16 +590,16 @@ country_event = {
         skyrim_58_la  = {
         owned_by = ROOT
         }
-        NOT = { exists = NF8 }
+        NOT = { exists = FOR }
         NOT = { capital_scope = { area = skyrim_58_la  } }
         }
         every_owned_province = {
         limit = {
         area = skyrim_58_la 
         }
-        add_core = NF8
+        add_core = FOR
         }
-        create_vassal = NF8
+        create_vassal = FOR
         }
 
         if = {

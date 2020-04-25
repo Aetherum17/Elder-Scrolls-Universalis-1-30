@@ -426,50 +426,6 @@ country_event = {
 	}
 }
 
-#Notification from harboring criminals
-#Subject Pays
-country_event = {
-	id = tributary_events.20
-	title = tributary_events.20.t
-	desc = tributary_events.20.d
-	picture = GIFTS_TO_EMPEROR_eventPicture
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = "tributary_events.20.a"
-		FROM = {
-			add_opinion = {
-				who = ROOT
-				modifier = tributary_stopped_smugglers
-			}
-		}
-	}
-	
-}
-
-#Notification from harboring criminals
-#Subject Refuses to Pay
-country_event = {
-	id = tributary_events.21
-	title = tributary_events.21.t
-	desc = tributary_events.21.d
-	picture = GIFTS_TO_EMPEROR_eventPicture
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = "tributary_events.21.a"
-		FROM = {
-			add_opinion = {
-				who = ROOT
-				modifier = tributary_harbored_criminals
-			}
-		}
-	}
-	
-}
-
 # Fortune Seekers (Because non-eastern hordes don't demand Eunuchs).
 country_event = {
 	id = tributary_events.23

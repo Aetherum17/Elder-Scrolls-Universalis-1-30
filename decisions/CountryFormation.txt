@@ -2741,7 +2741,7 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { exists = LIL }
-			primary_culture = lilmoith
+			primary_culture = lilmothiit
 			NOT = { has_country_flag = formed_lil_flag }
 		}
 		provinces_to_highlight = {
@@ -5614,7 +5614,6 @@ country_decisions = {
 			NOT = { exists = WAY }
 			NOT = { tag = HIG }
 			NOT = { tag = BA1 }
-			NOT = { tag = BE1 }
 			primary_culture = breton
 			NOT = { has_country_flag = formed_way_flag }
 			has_global_flag = foundation_of_wayres_flag

@@ -1243,33 +1243,6 @@ country_event = {
 	}
 }
 
-# Surplus Equipment
-country_event = {
-	id = ideagroups.1405
-	title = ideagroups.1405.t
-	desc = ideagroups.1405.d
-	picture = MILITARY_CAMP_eventPicture
-
-	is_triggered_only = yes
-	
-	trigger = {
-		has_idea_group = quantity_ideas
-		NOT = { has_country_modifier = "surplus_equipment" }
-	}
-	
-	mean_time_to_happen = {
-		days = 1
-	}
-
-	option = {
-		name = ideagroups.1405.a
-		add_country_modifier = {
-			name = surplus_equipment
-			duration = 3650
-		}
-	}
-}
-
 # Administrative Problems
 country_event = {
 	id = ideagroups.1410
@@ -1779,46 +1752,6 @@ country_event = {
 		add_country_modifier = {
 			name = "fair_laws"
 			duration = 3650
-		}
-	}
-}
-
-# The Reins Are Too Loose
-country_event = {
-	id = ideagroups.1907
-	title = ideagroups.1907.t
-	desc = ideagroups.1907.d
-	picture = ANGRY_MOB_eventPicture
-
-	is_triggered_only = yes
-	
-	trigger = {
-		has_idea_group = humanist_ideas
-		any_owned_province = {
-			nationalism = 1
-		}
-	}
-
-	mean_time_to_happen = {
-		days = 1
-	}
-
-	option = {
-		name = ideagroups.1907.a
-		random_owned_province = {
-			limit = { nationalism = 1 }
-			add_nationalism = 5
-		}
-	}
-
-	option = {
-		name = ideagroups.1907.b
-		if = {
-			limit = { NOT = { has_completed_all_reforms_trigger = yes } }
-			add_mil_power = -50
-		}
-		else = {
-			reduce_reform_progress_small_effect = yes
 		}
 	}
 }

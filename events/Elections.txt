@@ -106,7 +106,7 @@ country_event = {
 		name = "EVTOPTB700"	# An administrator type
 		ai_chance = { factor = 20 }
 		if = {
-			limit = { has_active_policy = mandatory_service }
+			limit = { always = yes }
 			define_ruler = {
 				mil = 1
 				adm = 4
@@ -138,7 +138,7 @@ country_event = {
 		name = "EVTOPTC700"	# A diplomat
 		ai_chance = { factor = 20 }
 		if = {
-			limit = { has_active_policy = mandatory_service }
+			limit = { always = yes }
 			define_ruler = {
 				dip = 4
 				adm = 1
@@ -170,7 +170,7 @@ country_event = {
 		name = "EVTOPTD700"	# A military man
 		ai_chance = { factor = 20 }
 		if = {
-			limit = { has_active_policy = mandatory_service }
+			limit = { always = yes }
 			define_ruler = {
 				mil = 4
 				adm = 1
@@ -207,7 +207,7 @@ country_event = {
 		ai_chance = { factor = 10 }
 		add_scaled_republican_tradition = -7
 		if = {
-			limit = { has_active_policy = mandatory_service }
+			limit = { always = yes }
 			define_ruler = {
 				mil = -2
 				adm = -2
@@ -259,7 +259,7 @@ country_event = {
 		name = "EVTOPTB700"	# An administrator type
 		ai_chance = { factor = 40 }
 		if = {
-			limit = { has_active_policy = mandatory_service }
+			limit = { always = yes }
 			define_ruler = {
 				mil = 1
 				adm = 4
@@ -290,7 +290,7 @@ country_event = {
 		name = "EVTOPTC700"	# A diplomat
 		ai_chance = { factor = 30 }
 		if = {
-			limit = { has_active_policy = mandatory_service }
+			limit = { always = yes }
 			define_ruler = {
 				dip = 4
 				adm = 1
@@ -321,7 +321,7 @@ country_event = {
 		name = "EVTOPTD700"	# A military man
 		ai_chance = { factor = 30 }
 		if = {
-			limit = { has_active_policy = mandatory_service }
+			limit = { always = yes }
 			define_ruler = {
 				mil = 4
 				adm = 1
@@ -356,7 +356,7 @@ country_event = {
 		ai_chance = { factor = 10 }
 		add_scaled_republican_tradition = -7
 		if = {
-			limit = { has_active_policy = mandatory_service }
+			limit = { always = yes }
 			define_ruler = {
 				mil = -2
 				adm = -2
@@ -597,7 +597,7 @@ country_event = {
 		hidden_effect = {
 			if = {
 				limit = {
-					has_active_policy = mandatory_service
+					always = yes
 				}
 				define_exiled_ruler = {
 					exiled_as = lottery_candidate_a_@ROOT
@@ -621,7 +621,7 @@ country_event = {
 			}
 			if = {
 				limit = {
-					has_active_policy = mandatory_service
+					always = yes
 				}
 				
 				define_exiled_ruler = {
@@ -646,7 +646,7 @@ country_event = {
 			}
 			if = {
 				limit = {
-					has_active_policy = mandatory_service
+					always = yes
 				}
 				
 				define_exiled_ruler = {
@@ -812,7 +812,7 @@ country_event = {
 		ai_chance = { factor = 10 }
 		add_republican_tradition = -15
 		if = {
-			limit = { has_active_policy = mandatory_service }
+			limit = { always = yes }
 			define_ruler = {
 				min_age = 30
 				max_age = 50

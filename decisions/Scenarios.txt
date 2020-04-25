@@ -7,16 +7,18 @@ country_decisions = {
         culture_group = snow_elves_cg
 		tag = DRA
 		}
-		owns = 1265
 		NOT = { exists = FOR }
 		NOT = { has_country_flag = es_3_forelhost_flag }
 		}
 		allow = {
-		owns = 1265
+		skyrim_58_la = {
+		    owned_by = ROOT
+		}
 		}
 		effect = {
 		set_country_flag = es_3_forelhost_flag
-		1265 = {
+		every_owned_province = {
+		limit = { area = skyrim_58_la }
 		cede_province = FOR
 		add_core = FOR
 		}
@@ -36,21 +38,21 @@ country_decisions = {
 	    major = yes
 		potential = {
         tag = FOR
-		1265 = {
+		7549 = {
 		NOT = { has_province_modifier = 03_walls_of_forelhost }
 		}
 		}
 		allow = {
 		tag = FOR
-		owns = 1265
-		1265 = {
+		owns = 7549
+		7549 = {
 		NOT = { has_province_modifier = 03_walls_of_forelhost }
 		}
 		treasury = 100
 		}
 		effect = {
 		add_treasury = -100
-		1265 = {
+		7549 = {
 		add_province_modifier = {
 		name = "03_walls_of_forelhost"
 		duration = -1
@@ -77,7 +79,7 @@ country_decisions = {
         NOT = { tag = FOR }
 		NOT = { tag = DRA }
 		culture_group = northern_cg
-		1265 = {
+		7549 = {
 		owned_by = ROOT
 		NOT = { culture = nord }
 		}
@@ -87,7 +89,7 @@ country_decisions = {
 		}
 		effect = {
 		add_mil_power = -100
-		1265 = {
+		7549 = {
 		remove_province_modifier = 03_walls_of_forelhost
 		change_culture = nord
 		}
@@ -101,26 +103,21 @@ country_decisions = {
 	    major = yes
 		potential = {
         tag = SKY
-		owns = 949
-		owns = 951
 		NOT = { exists = SKA }
 		NOT = { has_country_flag = es_4_skaals_flag }
 		}
 		allow = {
 		tag = SKY
-		owns = 949
-		owns = 951
-		NOT = { exists = SKA }
+		morrowind_23_la = { owned_by = ROOT }
 		}
 		effect = {
 		set_country_flag = es_4_skaals_flag
-		949 = {
-		cede_province = SKA
-		add_core = SKA
-		}
-		951 = {
-		cede_province = SKA
-		add_core = SKA
+		every_owned_province = {
+		    limit = {
+			    area = morrowind_23_la
+			}
+			cede_province = SKA
+		    add_core = SKA
 		}
 		ROOT = {
 		create_subject = {
@@ -226,8 +223,8 @@ country_decisions = {
 		}
 		effect = {
 		set_country_flag = es_7_alessian_union_flag
-		add_stability = 1
-		add_prestige = 50
+		add_stability = 5
+		add_prestige = 100
 		
 		every_owned_province = {
 		limit = {
@@ -376,12 +373,16 @@ country_decisions = {
 		potential = {
 		is_year = 420
 		NOT = { is_year = 548 }
-		capital_scope = { NOT = { region = hammerfell_lr } }
+		capital_scope = { NOT = { region = corten_heights_lr } NOT = { region = dragontail_mountains_lr } NOT = { region = alikr_desert_lr } }
 		NOT = { religion_group = daedric_group_1 }
 		}
 		allow = {
 		any_owned_province = {
-		region = hammerfell_lr
+		OR = {
+		region = corten_heights_lr
+		region = dragontail_mountains_lr
+		region = alikr_desert_lr
+		}
 		religion_group = daedric_group_1
 		}
 		mil_power = 100
@@ -390,7 +391,11 @@ country_decisions = {
 		add_mil_power = -100
 		random_owned_province = {
 		limit = {
-		region = hammerfell_lr
+		OR = {
+		region = corten_heights_lr
+		region = dragontail_mountains_lr
+		region = alikr_desert_lr
+		}
 		religion_group = daedric_group_1
 		}
 		change_religion = ROOT
@@ -496,17 +501,17 @@ country_decisions = {
 	    major = yes
 		potential = {
 		culture_group = orsimer_cg
-		827 = {
+		829 = {
 		NOT = { has_province_modifier = 16_s_orsinium }
 		}
 		}
 		allow = {
 		treasury = 5000
-		owns = 827
+		owns = 829
         }
 		effect = {
 		add_treasury = -5000
-		827 = {
+		829 = {
 		add_province_modifier = {
 			name = "16_s_orsinium"
 			duration = -1
@@ -524,13 +529,13 @@ country_decisions = {
 		NOT = { culture_group = orsimer_cg }
 		OR = {
 		owns = 1391
-		owns = 827
+		owns = 829
 		}
 		OR = {
 		1391 = {
 		has_province_modifier = 16_n_orsinium
 		}
-		827 = {
+		829 = {
 		has_province_modifier = 16_s_orsinium
 		}
 		}
@@ -538,7 +543,7 @@ country_decisions = {
 		allow = {
 		OR = {
 		owns = 1391
-		owns = 827
+		owns = 829
 		}
         }
 		effect = {
@@ -556,12 +561,12 @@ country_decisions = {
 		}
 		if = {
 		limit = {
-		owns = 827
-		827 = {
+		owns = 829
+		829 = {
 		has_province_modifier = 16_s_orsinium
 		}
 		}
-		827 = {
+		829 = {
 		remove_province_modifier = 16_s_orsinium
 		}
 		add_treasury = 2500
@@ -583,8 +588,8 @@ country_decisions = {
 		owns_core_province = 1002
 		owns_core_province = 970
 		owns_core_province = 990
-		owns_core_province = 957
-		owns_core_province = 1028
+		owns_core_province = 976
+		owns_core_province = 995
         }
 		effect = {
 		country_event = { id = es_17_scenario.15 days = 31 tooltip = es_17_scenario.15.a.tt }
@@ -643,7 +648,7 @@ country_decisions = {
 	
 	es_27_gardner_estate = {
 		potential = {
-		owns = 1426
+		owns = 6989
 		NOT = { has_country_modifier = 27_gardner_estate }
 		culture_group = half_blood_cg
 		OR = {
@@ -657,7 +662,7 @@ country_decisions = {
 		war_exhaustion = 10
 		NOT = { stability = 0 }
 		}
-		owns = 1426
+		owns = 6989
         }
 		effect = {
 		add_stability = -1
@@ -702,16 +707,16 @@ country_decisions = {
 	
 	es_xx_tomb_of_reman_dynasty = {
 	    potential = {
-		owns = 1181
+		owns = 5777
 		is_year = 1387
-		1181 = { NOT = { has_province_modifier = xx_tomb_of_reman_dynasty } }
+		5777 = { NOT = { has_province_modifier = xx_tomb_of_reman_dynasty } }
 		}
 		allow = {
 		treasury = 2500
         }
 		effect = {
 		add_treasury = -2500
-		1181 = {
+		5777 = {
 		add_province_modifier = {
 		    name = "xx_tomb_of_reman_dynasty"
 			duration = -1
@@ -725,16 +730,16 @@ country_decisions = {
 	
 	es_xx_alduins_wall = {
 	    potential = {
-		owns = 1352
+		owns = 7230
 		is_year = 1387
-		1352 = { NOT = { has_province_flag = xx_alduin_wall_building_flag } }
+		7230 = { NOT = { has_province_flag = xx_alduin_wall_building_flag } }
 		}
 		allow = {
 		treasury = 2500
         }
 		effect = {
 		add_treasury = -2500
-		1352 = {
+		7230 = {
 		set_province_flag = xx_alduin_wall_building_flag
 		add_province_modifier = {
 		    name = "xx_building_alduin_wall"
@@ -749,7 +754,7 @@ country_decisions = {
 	
 	es_33_build_blackrose_prison = {
 	    potential = {
-		owns = 1090
+		owns = 6745
 		NOT = { culture_group = marsh_cg }
 		NOT = { has_country_modifier = 33_blackrose_prison }
 		}
@@ -762,7 +767,7 @@ country_decisions = {
 		    name = "33_blackrose_prison"
 			duration = -1
 		}
-		1090 = {
+		6745 = {
 		add_province_modifier = {
 		    name = "blackrose_prison"
 			duration = -1
@@ -776,9 +781,9 @@ country_decisions = {
 	
 	es_33_close_blackrose_prison = {
 	    potential = {
-		owns = 1090
+		owns = 6745
 		culture_group = marsh_cg
-		1090 = { has_province_modifier = blackrose_prison }
+		6745 = { has_province_modifier = blackrose_prison }
 		}
 		allow = {
 		treasury = 500
@@ -789,7 +794,7 @@ country_decisions = {
 		limit = { has_country_modifier = 33_blackrose_prison }
 		remove_country_modifier = 33_blackrose_prison
 		}
-		1090 = {
+		6745 = {
 		remove_province_modifier = blackrose_prison
 		}
 		}

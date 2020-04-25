@@ -30,7 +30,7 @@ country_event = {
 		
 		every_owned_province = {
 		limit = {
-		region = eastern_skyrim_lr
+		region = great_planes_lr
 		}
 		cede_province = ESK
 		add_core = ESK
@@ -39,15 +39,15 @@ country_event = {
 		
 		every_owned_province = {
 		limit = {
-		region = western_skyrim_lr
+		region = nordic_coast_lr
 		}
 		add_core = ESK
 		}
 		
 		every_owned_province = {
 		limit = {
-		NOT = { region = western_skyrim_lr }
-		NOT = { region = eastern_skyrim_lr }
+		NOT = { region = nordic_coast_lr }
+		NOT = { region = great_planes_lr }
 		}
 		cede_province = OLD
 		add_core = OLD
@@ -128,7 +128,7 @@ country_event = {
 		
 		every_owned_province = {
 		limit = {
-		region = western_skyrim_lr
+		region = nordic_coast_lr
 		}
 		cede_province = WSK
 		add_core = WSK
@@ -137,15 +137,15 @@ country_event = {
 		
 		every_owned_province = {
 		limit = {
-		region = eastern_skyrim_lr
+		region = great_planes_lr
 		}
 		add_core = WSK
 		}
 		
 		every_owned_province = {
 		limit = {
-		NOT = { region = western_skyrim_lr }
-		NOT = { region = eastern_skyrim_lr }
+		NOT = { region = nordic_coast_lr }
+		NOT = { region = great_planes_lr }
 		}
 		cede_province = OLD
 		add_core = OLD
@@ -225,14 +225,14 @@ country_event = {
 		
 		trigger = {
 		any_owned_province = {
-		NOT = { region = western_skyrim_lr }
-		NOT = { region = eastern_skyrim_lr }
+		NOT = { region = nordic_coast_lr }
+		NOT = { region = great_planes_lr }
 		}
 		}
 		
 		every_owned_province = {
 		limit = {
-		region = western_skyrim_lr
+		region = nordic_coast_lr
 		}
 		cede_province = WSK
 		add_core = WSK
@@ -241,7 +241,7 @@ country_event = {
 		
 		every_owned_province = {
 		limit = {
-		region = eastern_skyrim_lr
+		region = great_planes_lr
 		}
 		cede_province = ESK
 		add_core = ESK
@@ -326,7 +326,7 @@ country_event = {
 		
 		random_owned_province = {
 		limit = {
-		region = western_skyrim_lr
+		region = nordic_coast_lr
 		}
 		spawn_rebels = {
 				type = nationalist_rebels
@@ -338,7 +338,7 @@ country_event = {
 		
 		random_owned_province = {
 		limit = {
-		region = western_skyrim_lr
+		region = nordic_coast_lr
 		}
 		spawn_rebels = {
 				type = nationalist_rebels
@@ -350,7 +350,7 @@ country_event = {
 		
 		random_owned_province = {
 		limit = {
-		region = western_skyrim_lr
+		region = nordic_coast_lr
 		}
 		spawn_rebels = {
 				type = nationalist_rebels
@@ -362,7 +362,7 @@ country_event = {
 		
 		random_owned_province = {
 		limit = {
-		region = eastern_skyrim_lr
+		region = great_planes_lr
 		}
 		spawn_rebels = {
 				type = nationalist_rebels
@@ -374,7 +374,7 @@ country_event = {
 		
 		random_owned_province = {
 		limit = {
-		region = eastern_skyrim_lr
+		region = great_planes_lr
 		}
 		spawn_rebels = {
 				type = nationalist_rebels
@@ -386,7 +386,7 @@ country_event = {
 		
 		random_owned_province = {
 		limit = {
-		region = eastern_skyrim_lr
+		region = great_planes_lr
 		}
 		spawn_rebels = {
 				type = nationalist_rebels
@@ -407,14 +407,14 @@ country_event = {
 		
 		every_owned_province = {
 		limit = {
-		region = eastern_skyrim_lr
+		region = great_planes_lr
 		}
 		add_core = ESK
 		}
 		
 		every_owned_province = {
 		limit = {
-		region = western_skyrim_lr
+		region = nordic_coast_lr
 		}
 		add_core = WSK
 		}

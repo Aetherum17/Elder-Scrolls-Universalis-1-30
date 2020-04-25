@@ -289,18 +289,7 @@ country_event = {
 			casus_belli = cb_es_scenario
 		}
 		}
-		
-		if = {
-		limit = {
-		exists = HE7
-		NOT = { alliance_with = HE7 }
-		NOT = { overlord_of = HE7 }
-		}
-		declare_war_with_cb = {
-			who = HE7
-			casus_belli = cb_es_scenario
-		}
-		}
+
 	}
 }
 	
@@ -355,7 +344,7 @@ country_event = {
 		NOT = { primary_culture = falmer }
 		NOT = { primary_culture = dwemer }
 		any_owned_province = {
-		region = hammerfell_lr
+		region = alikr_desert_lr
 		NOT = { culture = redguard }
 		OR = {
 		culture = ayleid
@@ -374,7 +363,7 @@ country_event = {
 		ai_chance = { factor = 100 }
 		random_owned_province = {
         limit = {
-		region = hammerfell_lr
+		region = alikr_desert_lr
 		NOT = { culture = redguard }
 		OR = {
 		culture = ayleid
@@ -409,7 +398,7 @@ country_event = {
 		}
 		}
 		any_owned_province = {
-		region = hammerfell_lr
+		region = alikr_desert_lr
 		}
     }
 
@@ -444,7 +433,7 @@ country_event = {
 		NOT = { is_year = 1350 }
 		culture_group = yokudan-redguardian_cg
 		any_owned_province = {
-		region = hammerfell_lr
+		region = alikr_desert_lr
 		}
     }
 
@@ -463,7 +452,7 @@ country_event = {
 		change_religion = redguard_pantheon
 		every_owned_province = {
 		limit = {
-		region = hammerfell_lr
+		region = alikr_desert_lr
 		}
 		change_religion = redguard_pantheon
 		}
@@ -473,7 +462,7 @@ country_event = {
 		ai_chance = { factor = 50 }
 		every_owned_province = {
 		limit = {
-		region = hammerfell_lr
+		region = alikr_desert_lr
 		}
 		change_religion = redguard_pantheon
 		}

@@ -29,9 +29,7 @@ divorce_consort_effect = {
 		}
 
 		random_country = {
-			limit = { is_origin_of_consort = ROOT } 
-
-			hidden_effect = { country_event = { id = consort_events.205 days = 1 } } 
+			limit = { is_origin_of_consort = ROOT }  
 
 			tooltip = {
 				add_opinion = {
@@ -76,7 +74,6 @@ divorce_consort_effect = {
 			if = {
 				limit = { NOT = { any_country = { is_origin_of_consort = ROOT } } }
 				remove_consort = yes
-				country_event = { id = consort_events.206 }
 			}
 		}
 	
@@ -96,20 +93,8 @@ divorce_consort_effect = {
 			if = {
 				limit = { NOT = { any_country = { is_origin_of_consort = ROOT } } }
 				remove_consort = yes
-				country_event = { id = consort_events.206 }
 			}
 		}
-	}
-
-	#Papal dispensation
-	if = {
-		limit = {
-			religion = chimer_pantheon 
-			exists = RED
-		}
-
-		#How much influence will you spend?
-		country_event = { id = consort_events.201 }
 	}
 
 	#Prestige hit

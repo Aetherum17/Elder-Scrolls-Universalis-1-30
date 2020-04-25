@@ -243,12 +243,12 @@ country_event = {
 		
 		if = {
 		limit = {
-		exists = BE1
-		NOT = { alliance_with = BE1 }
-		NOT = { overlord_of = BE1 }
+		exists = BA1
+		NOT = { alliance_with = BA1 }
+		NOT = { overlord_of = BA1 }
 		}
 		declare_war_with_cb = {
-			who = BE1
+			who = BA1
 			casus_belli = cb_es_scenario
 		}
 		}
@@ -805,10 +805,10 @@ country_event = {
 		area = hammerfell_14_la
 		}
 		}
-		add_core = HE8
+		add_core = HA8
 		}
-		create_vassal = HE8
-		HE8 = { if = { limit = { NOT = { government_rank = 5 } } set_government_rank = 5 } if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } } }
+		create_vassal = HA8
+		HA8 = { if = { limit = { NOT = { government_rank = 5 } } set_government_rank = 5 } if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } } }
 		
 	}
 	
@@ -854,7 +854,7 @@ country_event = {
 		area = hammerfell_14_la
 		}
 		}
-		add_core = HE8
+		add_core = HA8
 		add_province_modifier = {
 		name = "22_angry_aristocracy"
 		duration = 9125

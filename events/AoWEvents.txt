@@ -338,19 +338,3 @@ country_event = {
 		}
 	}
 }
-
-
-# Cardinal Exposed
-province_event = {
-	id = aow_events.52
-	title = "aow_events.52.t"
-	desc = "aow_events.52.d"
-	picture = ACCUSATION_eventPicture
-
-	is_triggered_only = yes
-
-	option = {
-		name = "aow_events.52.a"
-		remove_cardinal = yes
-	}
-}

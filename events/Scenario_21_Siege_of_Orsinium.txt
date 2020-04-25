@@ -174,7 +174,7 @@ country_event = {
 		75 = {
 		every_province = {
 		limit = {
-		region = hammerfell_lr
+		region = alikr_desert_lr
 		culture = redguard
 		}
 		add_core = ROOT
@@ -210,12 +210,12 @@ country_event = {
 		
 		if = {
 		limit = {
-		exists = HF3
-		NOT = { alliance_with = HF3 }
-		NOT = { overlord_of = HF3 }
+		exists = HB3
+		NOT = { alliance_with = HB3 }
+		NOT = { overlord_of = HB3 }
 		}
 		declare_war_with_cb = {
-			who = HF3
+			who = HB3
 			casus_belli = cb_es_scenario
 		}
 		}
@@ -258,12 +258,12 @@ country_event = {
 		
 		if = {
 		limit = {
-		exists = HE8
-		NOT = { alliance_with = HE8 }
-		NOT = { overlord_of = HE8 }
+		exists = HA8
+		NOT = { alliance_with = HA8 }
+		NOT = { overlord_of = HA8 }
 		}
 		declare_war_with_cb = {
-			who = HE8
+			who = HA8
 			casus_belli = cb_es_scenario
 		}
 		}
@@ -287,7 +287,7 @@ country_event = {
 		50 = {
 		every_province = {
 		limit = {
-		region = hammerfell_lr
+		region = alikr_desert_lr
 		culture = redguard
 		}
 		add_core = ROOT
@@ -323,12 +323,12 @@ country_event = {
 		
 		if = {
 		limit = {
-		exists = HF3
-		NOT = { alliance_with = HF3 }
-		NOT = { overlord_of = HF3 }
+		exists = HB3
+		NOT = { alliance_with = HB3 }
+		NOT = { overlord_of = HB3 }
 		}
 		declare_war_with_cb = {
-			who = HF3
+			who = HB3
 			casus_belli = cb_es_scenario
 		}
 		}
@@ -371,12 +371,12 @@ country_event = {
 		
 		if = {
 		limit = {
-		exists = HE8
-		NOT = { alliance_with = HE8 }
-		NOT = { overlord_of = HE8 }
+		exists = HA8
+		NOT = { alliance_with = HA8 }
+		NOT = { overlord_of = HA8 }
 		}
 		declare_war_with_cb = {
-			who = HE8
+			who = HA8
 			casus_belli = cb_es_scenario
 		}
 		}
@@ -400,7 +400,7 @@ country_event = {
 		25 = {
 		every_province = {
 		limit = {
-		region = hammerfell_lr
+		region = alikr_desert_lr
 		culture = redguard
 		}
 		add_core = ROOT
@@ -436,12 +436,12 @@ country_event = {
 		
 		if = {
 		limit = {
-		exists = HF3
-		NOT = { alliance_with = HF3 }
-		NOT = { overlord_of = HF3 }
+		exists = HB3
+		NOT = { alliance_with = HB3 }
+		NOT = { overlord_of = HB3 }
 		}
 		declare_war_with_cb = {
-			who = HF3
+			who = HB3
 			casus_belli = cb_es_scenario
 		}
 		}
@@ -484,12 +484,12 @@ country_event = {
 		
 		if = {
 		limit = {
-		exists = HE8
-		NOT = { alliance_with = HE8 }
-		NOT = { overlord_of = HE8 }
+		exists = HA8
+		NOT = { alliance_with = HA8 }
+		NOT = { overlord_of = HA8 }
 		}
 		declare_war_with_cb = {
-			who = HE8
+			who = HA8
 			casus_belli = cb_es_scenario
 		}
 		}
@@ -702,7 +702,7 @@ country_event = {
 		any_owned_province = {
 		OR = {
 		region = hgh_rock_lr
-		region = hammerfell_lr
+		region = alikr_desert_lr
 		}
 		}
     }
@@ -780,7 +780,7 @@ country_event = {
 		any_owned_province = {
 		OR = {
 		region = hgh_rock_lr
-		region = hammerfell_lr
+		region = alikr_desert_lr
 		}
 		}
     }

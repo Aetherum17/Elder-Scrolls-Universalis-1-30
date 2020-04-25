@@ -83,18 +83,6 @@ country_event = {
 		
 		if = {
 		limit = {
-		exists = BE1
-		NOT = { alliance_with = BE1 }
-		NOT = { overlord_of = BE1 }
-		}
-		declare_war_with_cb = {
-			who = BE1
-			casus_belli = cb_es_scenario
-		}
-		}
-		
-		if = {
-		limit = {
 		exists = ORS
 		NOT = { alliance_with = ORS }
 		NOT = { overlord_of = ORS }
@@ -167,10 +155,10 @@ country_event = {
 		owns = 1510
 		}
 		any_country = {
-		NOT = { tag = ORS tag = BA5 tag = BA8 tag = BB3 tag = HB1 tag = HF1 }
+		NOT = { tag = ORS tag = BA5 tag = BA8 tag = BB3 tag = HB1 }
 		is_subject_of = ROOT
 		is_subject_of_type = vassal
-		capital_scope = { OR = { region = hgh_rock_lr region = hammerfell_lr} }
+		capital_scope = { OR = { region = hgh_rock_lr region = alikr_desert_lr} }
 		}
     }
 
@@ -183,7 +171,7 @@ country_event = {
 		ai_chance = { factor = 50 }
 		if = {
 		limit = { tag = HIG }
-		change_tag = BE1
+		change_tag = BA1
 		clr_country_flag = formed_hig_flag
 		if = {
 			limit = {
@@ -195,7 +183,7 @@ country_event = {
 		}
 		if = {
 		limit = { tag = HAM }
-		change_tag = HF3
+		change_tag = HB3
 		clr_country_flag = formed_ham_flag
 		if = {
 			limit = {
@@ -207,10 +195,10 @@ country_event = {
 		}
 	    random_country = {
 		limit = {
-		NOT = { tag = ORS tag = BA5 tag = BA8 tag = BB3 tag = HB1 tag = HF1 }
+		NOT = { tag = ORS tag = BA5 tag = BA8 tag = BB3 tag = HB1}
 		is_subject_of = ROOT
 		is_subject_of_type = vassal
-		capital_scope = { OR = { region = hgh_rock_lr region = hammerfell_lr} }
+		capital_scope = { OR = { region = hgh_rock_lr region = alikr_desert_lr} }
 		}
 		grant_independence = yes
 		create_alliance = ROOT
@@ -230,10 +218,10 @@ country_event = {
 		ai_chance = { factor = 50 }
 		random_country = {
 		limit = {
-		NOT = { tag = ORS tag = BA5 tag = BA8 tag = BB3 tag = HB1 tag = HF1 }
+		NOT = { tag = ORS tag = BA5 tag = BA8 tag = BB3 tag = HB1}
 		is_subject_of = ROOT
 		is_subject_of_type = vassal
-		capital_scope = { OR = { region = hgh_rock_lr region = hammerfell_lr} }
+		capital_scope = { OR = { region = hgh_rock_lr region = alikr_desert_lr} }
 		}
 		add_country_modifier = {
 		name = "24_independence_war"

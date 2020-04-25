@@ -83,7 +83,7 @@ country_event = {
 		name = "pirates.1.a"
 		ai_chance = { factor = 20 }
 		if = {
-			limit = { has_active_policy = mandatory_service }
+			limit = { always = yes }
 			define_ruler = {
 				mil = 1
 				adm = 4
@@ -115,7 +115,7 @@ country_event = {
 		name = "pirates.1.b"
 		ai_chance = { factor = 20 }
 		if = {
-			limit = { has_active_policy = mandatory_service }
+			limit = { always = yes }
 			define_ruler = {
 				dip = 4
 				adm = 1
@@ -147,7 +147,7 @@ country_event = {
 		name = "pirates.1.c"
 		ai_chance = { factor = 20 }
 		if = {
-			limit = { has_active_policy = mandatory_service }
+			limit = { always = yes }
 			define_ruler = {
 				mil = 4
 				adm = 1

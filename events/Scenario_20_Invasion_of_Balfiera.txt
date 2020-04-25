@@ -36,8 +36,8 @@ country_event = {
 		limit = {
 		OR = {
 		region = hgh_rock_lr
-		region = hammerfell_lr
-		region = western_skyrim_lr
+		region = alikr_desert_lr
+		region = nordic_coast_lr
 		}
 		}
 		add_core = ROOT
@@ -143,7 +143,7 @@ country_event = {
 		}
 		every_province = {
 		limit = {
-		region = hammerfell_lr
+		region = alikr_desert_lr
 		NOT = { owned_by = ROOT }
 		}
 		add_core = ROOT
@@ -199,12 +199,12 @@ country_event = {
 		
 		if = {
 		limit = {
-		exists = HE8
-		NOT = { alliance_with = HE8 }
-		NOT = { overlord_of = HE8 }
+		exists = HA8
+		NOT = { alliance_with = HA8 }
+		NOT = { overlord_of = HA8 }
 		}
 		declare_war_with_cb = {
-			who = HE8
+			who = HA8
 			casus_belli = cb_es_scenario
 		}
 		}
@@ -223,12 +223,12 @@ country_event = {
 		
 		if = {
 		limit = {
-		exists = HE7
-		NOT = { alliance_with = HE7 }
-		NOT = { overlord_of = HE7 }
+		exists = HA7
+		NOT = { alliance_with = HA7 }
+		NOT = { overlord_of = HA7 }
 		}
 		declare_war_with_cb = {
-			who = HE7
+			who = HA7
 			casus_belli = cb_es_scenario
 		}
 		}
@@ -282,7 +282,7 @@ country_event = {
 		every_province = {
 		limit = {
 		OR = {
-		region = hammerfell_lr
+		region = alikr_desert_lr
 		AND = {
 		region = hgh_rock_lr
 		culture = altmer
@@ -318,12 +318,12 @@ country_event = {
 		
 		if = {
 		limit = {
-		exists = BE3
-		NOT = { alliance_with = BE3 }
-		NOT = { overlord_of = BE3 }
+		exists = BA3
+		NOT = { alliance_with = BA3 }
+		NOT = { overlord_of = BA3 }
 		}
 		declare_war_with_cb = {
-			who = BE3
+			who = BA3
 			casus_belli = cb_es_scenario
 		}
 		}
@@ -459,7 +459,7 @@ country_event = {
 		    area = hammerfell_13_la
 		    NOT = { owned_by = ROOT }
 		    }
-		    add_core = HF1
+		    add_core = HA2
 		    }
 		}
 		else = {
@@ -514,8 +514,8 @@ country_event = {
 		limit = {
 		area = hammerfell_13_la
 		}
-		cede_province = HF1
-		add_core = HF1
+		cede_province = HA1
+		add_core = HA1
 		}
 		add_country_modifier = {
 			name = "vassal_autonomy"
@@ -523,7 +523,7 @@ country_event = {
 		}
 		create_subject = {
         subject_type = vassal
-        subject = HF1
+        subject = HA1
         }
 	}
 	
@@ -534,7 +534,7 @@ country_event = {
 		limit = {
 		area = hammerfell_13_la
 		}
-		add_core = HF1
+		add_core = HA1
 		add_province_modifier = {
 		name = "10_unrest"
 		duration = 9125

@@ -272,9 +272,9 @@ province_event = {
 		OR = {
 		region = morrowind_lr
 		region = vvardenfell_lr
-		region = western_skyrim_lr
-		region = eastern_skyrim_lr
-		region = hammerfell_lr
+		region = nordic_coast_lr
+		region = great_planes_lr
+		region = alikr_desert_lr
 		}
     }
 
@@ -297,15 +297,15 @@ province_event = {
 		if = {
 		limit = {
 		OR = {
-		region = western_skyrim_lr
-		region = eastern_skyrim_lr
+		region = nordic_coast_lr
+		region = great_planes_lr
 		}
 		}
 		change_culture = nord
 		}
 		if = {
 		limit = {
-		region = hammerfell_lr
+		region = alikr_desert_lr
 		}
 		change_culture = redguard
 		}

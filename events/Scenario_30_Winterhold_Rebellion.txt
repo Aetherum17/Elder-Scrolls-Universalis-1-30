@@ -403,8 +403,8 @@ country_event = {
 		every_owned_province = {
 		    limit = {
 			    OR = {
-			    region = western_skyrim_lr
-				region = eastern_skyrim_lr
+			    region = nordic_coast_lr
+				region = great_planes_lr
 				}
 			}
 			add_province_modifier = {
@@ -462,7 +462,7 @@ province_event = {
 	trigger = {
 		is_year = 1387
 	    culture = reachmen
-		region = western_skyrim_lr
+		region = nordic_coast_lr
 		owner = { NOT = { primary_culture = reachmen } }
 		owner = { NOT = { tag = REA } }
 		OR = {
@@ -564,7 +564,7 @@ country_event = {
 	    NOT = { has_country_flag = es_30_scenario.13_flag }
 		is_year = 1387
 		NOT = { is_year = 1410 }
-		any_owned_province = { OR = { region = western_skyrim_lr region = eastern_skyrim_lr } }
+		any_owned_province = { OR = { region = nordic_coast_lr region = great_planes_lr } }
     }
 
 	mean_time_to_happen = {
@@ -584,7 +584,7 @@ country_event = {
 	option = {
 		name = "es_30_scenario.13.b"
 		ai_chance = { factor = 50 }
-		trigger = { capital_scope = { OR = { region = western_skyrim_lr region = eastern_skyrim_lr } } }
+		trigger = { capital_scope = { OR = { region = nordic_coast_lr region = great_planes_lr } } }
 		random_list = {
 		    50 = {
 			define_general = {

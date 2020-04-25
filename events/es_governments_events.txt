@@ -198,7 +198,7 @@ country_event = {
     option = {
         name = "EVTOPTB9462"
         ai_chance = { factor = 0 }
-		if = { limit = { NOT = { governemnt = republic } change_government = republic } }
+		if = { limit = { NOT = { government = republic } } change_government = republic }
 		add_government_reform = bureaucratic_despotism_reform
         set_legacy_government = bureaucratic_despotism
         kill_ruler = yes

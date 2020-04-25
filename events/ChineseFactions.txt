@@ -310,26 +310,6 @@ country_event = {
 	}
 }
 
-# Notification from Riches of China
-country_event = {
-	id = china_events.61
-	title = "china_events.61.t"
-	desc = "china_events.61.d"
-	picture = BAD_WITH_MONARCH_eventPicture
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = "china_events.61.a"
-		random_owned_area = {
-			limit = { has_province_flag = here_be_china }
-			add_claim = FROM
-			clr_province_flag = here_be_china
-		}
-	}
-}
-
-
 # Notification Unruly subject event
 country_event = {
 	id = china_events.62

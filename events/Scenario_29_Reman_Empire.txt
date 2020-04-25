@@ -36,7 +36,7 @@ country_event = {
 		every_province = {
 		    limit = {
 		    OR = {
-			    region = eastern_skyrim_lr
+			    region = great_planes_lr
 				region = central_syrodiil_lr
 			}
 			}
@@ -142,7 +142,7 @@ country_event = {
 		NOT = { is_year = 1387 }
 		capital_scope = {
 		   OR = {
-			    region = eastern_skyrim_lr
+			    region = great_planes_lr
 				region = central_syrodiil_lr
 			}
 		}
@@ -186,7 +186,7 @@ country_event = {
 		random_owned_province = {
 		    limit = {
 			    OR = {
-			    region = eastern_skyrim_lr
+			    region = great_planes_lr
 				region = central_syrodiil_lr
 			    }
 			}
@@ -195,7 +195,7 @@ country_event = {
 		random_owned_province = {
 		    limit = {
 			    OR = {
-			    region = eastern_skyrim_lr
+			    region = great_planes_lr
 				region = central_syrodiil_lr
 			    }
 			}
@@ -204,7 +204,7 @@ country_event = {
 		random_owned_province = {
 		    limit = {
 			    OR = {
-			    region = eastern_skyrim_lr
+			    region = great_planes_lr
 				region = central_syrodiil_lr
 			    }
 			}
@@ -213,7 +213,7 @@ country_event = {
 		random_owned_province = {
 		    limit = {
 			    OR = {
-			    region = eastern_skyrim_lr
+			    region = great_planes_lr
 				region = central_syrodiil_lr
 			    }
 			}
@@ -222,7 +222,7 @@ country_event = {
 		random_owned_province = {
 		    limit = {
 			    OR = {
-			    region = eastern_skyrim_lr
+			    region = great_planes_lr
 				region = central_syrodiil_lr
 			    }
 			}
@@ -246,7 +246,7 @@ country_event = {
 		NOT = { is_year = 1555 }
 		any_owned_province = {
 		    OR = {
-			    region = eastern_skyrim_lr
+			    region = great_planes_lr
 				region = central_syrodiil_lr
 			}
 		}
@@ -264,7 +264,7 @@ country_event = {
 			    NOT = { is_capital = yes }
 				religion = ROOT
 			    OR = {
-				region = eastern_skyrim_lr
+				region = great_planes_lr
 				region = central_syrodiil_lr
 				}
 				NOT = { culture = tsaesci }
@@ -490,8 +490,8 @@ country_event = {
 	        every_province = {
 			    limit = {
 				    OR = {
-				    region = western_skyrim_lr
-					region = eastern_skyrim_lr 
+				    region = nordic_coast_lr
+					region = great_planes_lr 
 					}
 				}
 				add_permanent_claim = TAM
@@ -520,8 +520,8 @@ country_event = {
 			every_province = {
 			    limit = {
 				    OR = {
-				    region = western_skyrim_lr
-					region = eastern_skyrim_lr 
+				    region = nordic_coast_lr
+					region = great_planes_lr 
 					}
 				}
 				add_permanent_claim = CYR
@@ -550,8 +550,8 @@ country_event = {
 			every_province = {
 			    limit = {
 				    OR = {
-				    region = western_skyrim_lr
-					region = eastern_skyrim_lr 
+				    region = nordic_coast_lr
+					region = great_planes_lr 
 					}
 				}
 				add_permanent_claim = ORD
@@ -580,8 +580,8 @@ country_event = {
 			every_province = {
 			    limit = {
 				    OR = {
-				    region = western_skyrim_lr
-					region = eastern_skyrim_lr 
+				    region = nordic_coast_lr
+					region = great_planes_lr 
 					}
 				}
 				add_permanent_claim = ALE
@@ -610,8 +610,8 @@ country_event = {
 			every_province = {
 			    limit = {
 				    OR = {
-				    region = western_skyrim_lr
-					region = eastern_skyrim_lr 
+				    region = nordic_coast_lr
+					region = great_planes_lr 
 					}
 				}
 				add_permanent_claim = HEA

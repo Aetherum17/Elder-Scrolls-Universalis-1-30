@@ -275,7 +275,7 @@ country_event = {
 		ai_chance = { factor = 50 }
 		every_province = {
 		limit = {
-		region = western_skyrim_lr
+		region = nordic_coast_lr
 		}
 		add_claim = ROOT
 		}
@@ -345,7 +345,7 @@ country_event = {
 		ai_chance = { factor = 50 }
 		every_province = {
 		limit = {
-		region = hammerfell_lr
+		region = alikr_desert_lr
 		}
 		add_claim = ROOT
 		}
@@ -370,18 +370,6 @@ country_event = {
 		}
 		declare_war_with_cb = {
 			who = HB3
-			casus_belli = cb_es_scenario
-		}
-		}
-		
-		if = {
-		limit = {
-		exists = HF3
-		NOT = { alliance_with = HF3 }
-		NOT = { overlord_of = HF3 }
-		}
-		declare_war_with_cb = {
-			who = HF3
 			casus_belli = cb_es_scenario
 		}
 		}
@@ -422,17 +410,6 @@ country_event = {
 		}
 		}
 		
-		if = {
-		limit = {
-		exists = HE8
-		NOT = { alliance_with = HE8 }
-		NOT = { overlord_of = HE8 }
-		}
-		declare_war_with_cb = {
-			who = HE8
-			casus_belli = cb_es_scenario
-		}
-		}
 	}
 	option = {
 		name = "es_12_scenario.6.c"
@@ -612,7 +589,7 @@ country_event = {
 		ai_chance = { factor = 33 }
 		trigger = {
 		ai = yes
-		capital_scope = { region = hammerfell_lr}
+		capital_scope = { region = alikr_desert_lr}
 		}
 		change_tag = ROU
 		set_capital = 1474
