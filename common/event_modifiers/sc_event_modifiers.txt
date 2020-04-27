@@ -40,8 +40,10 @@ antibankrapucy = {
 
 01_camoran_unrest = {
     reduced_liberty_desire = -35
-	diplomatic_annexation_cost = 2.5
-	diplomatic_reputation = -10
+	diplomatic_reputation = -2.5
+	global_tax_modifier = -0.25
+	production_efficiency = -0.25
+	global_unrest = 10
 }
 
 02_prepare_for_war = {

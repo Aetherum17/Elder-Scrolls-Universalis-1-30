@@ -1,0 +1,46 @@
+namespace = es_scenario_operator
+
+country_event = {
+	id = es_scenario_operator.1
+	title = es_1_scenario.1.t
+	desc = es_1_scenario.1.d
+	picture = ES_THRONEROOM_1_eventPicture	
+	
+	fire_only_once = yes
+	
+	trigger = {
+	    tag = RED
+		NOT = { is_year = 83 }
+    }
+
+	mean_time_to_happen = {
+		days = 3650		
+	}
+	
+	immediate = {
+		every_country = {
+		limit = { OR = { culture_group = high_elves_cg culture_group = snow_elves_cg } OR = { owns = 271 owns = 1206 owns = 1510 owns = 1379 owns = 7571 } } country_event = { id = es_1_scenario.1 days = 1825 tooltip = es_collapse.2.a.tt }
+		}
+		###
+		every_country = {
+		limit = { culture_group = high_elves_cg owns = 952 } country_event = { id = es_1_scenario.2 days = 1825 tooltip = es_collapse.2.a.tt }
+		}
+		###
+		every_country = {
+		limit = { culture_group = bosmer_cg owns = 4941 } country_event = { id = es_1_scenario.3 days = 1825 tooltip = es_collapse.2.a.tt }
+		}
+		###
+		every_country = {
+		limit = { culture_group = high_elves_cg owns = 1206 } country_event = { id = es_1_scenario.4 days = 1825 tooltip = es_collapse.2.a.tt }
+		}
+		###
+		every_country = {
+		limit = { culture_group = high_elves_cg owns = 1206 } country_event = { id = es_1_scenario.5 days = 3650 tooltip = es_collapse.2.a.tt }
+		}
+	}
+
+	option = {
+		name = "es_1_scenario.1.a"
+	}
+	
+}

@@ -19,6 +19,10 @@ country_event = { #kill ruler
 	
 	mean_time_to_happen = {
 		months = 960
+		modifier = {
+		    factor = 0.5
+			is_emperor = yes
+		}
 		###############################################################
 		modifier = {
 			factor = 0.75

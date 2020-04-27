@@ -215,6 +215,7 @@ country_event = {
 	option = {
 		name = "es_terrain.3.a"
 		ai_chance = { factor = 100 }
+		hidden_effect = {
 		random_list = {
 		    50 = {
 			    every_province = { limit = { OR = { region = morrowind_lr region = vvardenfell_lr region = velothi_mountains_lr region = deshaan_lr region = llothanis_peninsula_lr } }
@@ -240,6 +241,7 @@ country_event = {
 			    }
 			    every_country = { limit = { always = yes } add_manpower = -500 country_event = { id = es_terrain.4 days = 31 tooltip = es_terrain.4.a.tt } } 
 			}
+		}
 		}
 		add_country_modifier = {
 		name = "red_mountain_eruption"

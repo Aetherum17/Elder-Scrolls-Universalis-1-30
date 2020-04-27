@@ -197,6 +197,48 @@ country_event = {
 }
 
 country_event = {
+	id = es_news.1401
+	title = es_news.1401.t
+	desc = es_news.1401.d
+	picture = ES_ELDENROOT_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "es_news.1.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = es_news.1402
+	title = es_news.1402.t
+	desc = es_news.1402.d
+	picture = ES_WEYE_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "es_news.1.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = es_news.1403
+	title = es_news.1403.t
+	desc = es_news.1403.d
+	picture = ES_COLOVIAN_HOUSE_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "es_news.1.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
 	id = es_news.15
 	title = es_news.15.t
 	desc = es_news.15.d

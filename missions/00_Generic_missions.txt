@@ -225,6 +225,7 @@ adm_missions = {
 		position = 2
 		trigger = {
 			religious_unity = 1.0
+			num_of_cities = 50
 		}
 		effect = {
 			add_country_modifier = {
@@ -260,6 +261,7 @@ adm_missions = {
 		required_missions = { build_more_churches_mission }
 		trigger = {
 			is_defender_of_faith = yes
+			num_of_cities = 100
 		}
 		effect = {
 			add_country_modifier = {
