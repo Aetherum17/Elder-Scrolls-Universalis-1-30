@@ -1172,6 +1172,7 @@ create_imperial_subject = {
 	is_at_war = no
 	}
     FROM = {
+	    NOT = { num_of_cities = ROOT }
 		is_part_of_hre = yes
 		OR = {
 		is_subject_of = ROOT

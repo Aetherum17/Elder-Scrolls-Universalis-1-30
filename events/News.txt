@@ -228,6 +228,34 @@ country_event = {
 	id = es_news.1403
 	title = es_news.1403.t
 	desc = es_news.1403.d
+	picture = ES_WEYE_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "es_news.1.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = es_news.1404
+	title = es_news.1404.t
+	desc = es_news.1404.d
+	picture = ES_COLOVIAN_HOUSE_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "es_news.1.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = es_news.1405
+	title = es_news.1405.t
+	desc = es_news.1405.d
 	picture = ES_COLOVIAN_HOUSE_eventPicture
 	
 	is_triggered_only = yes

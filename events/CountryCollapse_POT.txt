@@ -47,6 +47,8 @@ country_event = {
 		add_core = OA1
 		}
 		create_vassal = OA1
+        OA1 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        OA1 = { change_government_reform_progress = -99999 }
 		}
 		
 		if = {
@@ -64,6 +66,8 @@ country_event = {
 		add_core = OA2
 		}
 		create_vassal = OA2
+        OA2 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        OA2 = { change_government_reform_progress = -99999 }
 		}
 		
 		if = {
@@ -81,6 +85,8 @@ country_event = {
 		add_core = OA3
 		}
 		create_vassal = OA3
+        OA3 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        OA3 = { change_government_reform_progress = -99999 }
 		}
 		
 		if = {
@@ -98,6 +104,8 @@ country_event = {
 		add_core = OA4
 		}
 		create_vassal = OA4
+        OA4 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        OA4 = { change_government_reform_progress = -99999 }
 		}
 		
 		if = {
@@ -115,6 +123,8 @@ country_event = {
 		add_core = OA5
 		}
 		create_vassal = OA5
+        OA5 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        OA5 = { change_government_reform_progress = -99999 }
 		}
 		
 		if = {
@@ -132,6 +142,8 @@ country_event = {
 		add_core = OA6
 		}
 		create_vassal = OA6
+        OA6 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        OA6 = { change_government_reform_progress = -99999 }
 		}
 		
 		if = {
@@ -149,6 +161,8 @@ country_event = {
 		add_core = OA7
 		}
 		create_vassal = OA7
+        OA7 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        OA7 = { change_government_reform_progress = -99999 }
 		}
 		
 		if = {
@@ -166,6 +180,8 @@ country_event = {
 		add_core = OA8
 		}
 		create_vassal = OA8
+        OA8 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        OA8 = { change_government_reform_progress = -99999 }
 		}
 		
 		if = {
@@ -183,6 +199,8 @@ country_event = {
 		add_core = OA9
 		}
 		create_vassal = OA9
+        OA9 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        OA9 = { change_government_reform_progress = -99999 }
 		}
 		
 		if = {
@@ -200,6 +218,8 @@ country_event = {
 		add_core = OB0
 		}
 		create_vassal = OB0
+        OB0 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        OB0 = { change_government_reform_progress = -99999 }
 		}
 		
 		if = {
@@ -217,6 +237,8 @@ country_event = {
 		add_core = OB1
 		}
 		create_vassal = OB1
+        OB1 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        OB1 = { change_government_reform_progress = -99999 }
 		}
 		
 		if = {
@@ -234,6 +256,8 @@ country_event = {
 		add_core = OB2
 		}
 		create_vassal = OB2
+        OB2 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        OB2 = { change_government_reform_progress = -99999 }
 		}
 		
 	    }
@@ -243,16 +267,12 @@ country_event = {
 		name = es_collapse.2.b
 		ai_chance = { factor = 15 }
 		
-		if = {
-		limit = {
-		NOT = { capital_scope = { region = po_tun_lr } }
-		}
-		every_core_province = {
+	    every_owned_province = {
 			limit = {
 				region = po_tun_lr
+				NOT = { any_province = { area = PREV is_capital_of = ROOT } }
 			}
 			remove_core = ROOT
-		}
 		}
 		
 	}

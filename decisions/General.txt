@@ -46,7 +46,7 @@ country_decisions = {
 		effect = {
 		add_mil_power = -100
 		add_legitimacy = 10
-		add_republican_tradition = 10
+		add_republican_tradition = 5
 		add_devotion = 10
 		add_horde_unity = 10
 		add_meritocracy = 10
@@ -189,7 +189,7 @@ country_decisions = {
 		}
 		allow = {
 			#treasury = 500
-			years_of_income = 2.5
+			years_of_income = 1.5
 			manpower = 2.5
 			NOT = { num_of_loans = 1 }
 			any_owned_province = {
@@ -200,7 +200,7 @@ country_decisions = {
 	    effect = {
 	    add_manpower = -2.5
 	    #add_treasury = -500
-		add_years_of_income = -2.5
+		add_years_of_income = -1.5
 	    random_owned_province = {
             limit = { 
             NOT = { has_province_modifier = dev }

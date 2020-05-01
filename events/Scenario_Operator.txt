@@ -14,7 +14,7 @@ country_event = {
     }
 
 	mean_time_to_happen = {
-		days = 3650		
+		days = 1825		
 	}
 	
 	immediate = {
@@ -37,6 +37,116 @@ country_event = {
 		every_country = {
 		limit = { culture_group = high_elves_cg owns = 1206 } country_event = { id = es_1_scenario.5 days = 3650 tooltip = es_collapse.2.a.tt }
 		}
+	}
+
+	option = {
+		name = "es_1_scenario.1.a"
+	}
+	
+}
+
+country_event = {
+	id = es_scenario_operator.2
+	title = es_1_scenario.1.t
+	desc = es_1_scenario.1.d
+	picture = ES_THRONEROOM_1_eventPicture	
+	
+	fire_only_once = yes
+	
+	trigger = {
+	    tag = RED
+		OR = {
+		AND = {
+		is_year = 83
+		NOT = { is_year = 109 }
+		}
+		AND = {
+		any_country = {
+			owns_or_subject_of = 357
+			owns_or_subject_of = 363
+			owns_or_subject_of = 367
+			owns_or_subject_of = 373
+			owns_or_subject_of = 382
+		}
+		}
+		}
+    }
+
+	mean_time_to_happen = {
+		days = 1825		
+	}
+	
+	immediate = {
+	    if = { limit = { NOT = { exists = DRA }} 
+		every_country = {
+		limit = { owns = 1572 } country_event = { id = es_2_scenario.1 days = 1825 tooltip = es_collapse.2.a.tt }
+		}
+		}
+	}
+
+	option = {
+		name = "es_1_scenario.1.a"
+	}
+	
+}
+
+country_event = {
+	id = es_scenario_operator.3
+	title = es_1_scenario.1.t
+	desc = es_1_scenario.1.d
+	picture = ES_THRONEROOM_1_eventPicture	
+	
+	fire_only_once = yes
+	
+	trigger = {
+	    tag = RED
+		OR = {
+		AND = {
+		is_year = 109
+		NOT = { is_year = 139 }
+		}
+		AND = {
+		any_country = {
+			owns_or_subject_of = 7571
+			owns_or_subject_of = 1280
+			owns_or_subject_of = 1313
+			owns_or_subject_of = 1286
+			owns_or_subject_of = 1268
+		}
+		}
+		}
+    }
+
+	mean_time_to_happen = {
+		days = 1825		
+	}
+	
+	immediate = {
+	    emperor = { kill_ruler = yes }
+		every_country = {
+		limit = { culture_group = snow_elves_cg owns = 7571 } country_event = { id = es_3_scenario.3 days = 1825 tooltip = es_collapse.2.a.tt }
+		}
+		###
+		every_country = {
+		limit = { culture_group = northern_cg any_neighbor_country = { culture_group = snow_elves_cg } } country_event = { id = es_3_scenario.2 days = 1825 tooltip = es_collapse.2.a.tt }
+		}
+		###
+		every_country = {
+		limit = { culture_group = half_blood_cg owns = 1355 } country_event = { id = es_3_scenario.4 days = 1825 tooltip = es_collapse.2.a.tt }
+		}
+		###
+		every_country = {
+		limit = { owns = 1206 } country_event = { id = es_3_scenario.5 days = 1825 tooltip = es_collapse.2.a.tt }
+		}
+		###
+		every_country = {
+		limit = { culture_group = snow_elves_cg owns = 1194 } country_event = { id = es_3_scenario.6 days = 3650 tooltip = es_collapse.2.a.tt }
+		}
+		###
+		every_country = {
+		limit = { culture_group = high_elves_cg owns = 271 is_emperor = no } country_event = { id = es_3_scenario.7 days = 3650 tooltip = es_collapse.2.a.tt }
+		}
+		
 	}
 
 	option = {

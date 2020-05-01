@@ -143,7 +143,7 @@ country_event = {
 		add_dip_power = 100
 		add_mil_power = 100
 		
-		event_target:820_owner = { create_subject = { subject_type = personal_union subject = ROOT }
+		event_target:820_owner = { create_subject = { subject_type = personal_union subject = ROOT } }
 		
 		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.13 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
@@ -193,10 +193,12 @@ country_event = {
 		name = "es_1_scenario.4.a"
 		ai_chance = { factor = 50 }
 		
+		if = { limit = { NOT = { truce_with = event_target:1191_owner } NOT = { alliance_with = event_target:1191_owner } NOT = { is_subject_of = event_target:1191_owner } }
 		declare_war_with_cb = { who = event_target:1191_owner casus_belli = cb_restore_personal_union }
+		}
 		
 		add_manpower = 50
-		define_general = {}
+		define_general = { shock = 2 fire = 2 manuever = 5 siege = 1 }
 		
 		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.1402 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
@@ -227,10 +229,12 @@ country_event = {
 		name = "es_1_scenario.4.a"
 		ai_chance = { factor = 50 }
 		
-		declare_war_with_cb = { who = event_target:5616_owner casus_belli = cb_restore_personal_union }
+		if = { limit = { NOT = { truce_with = event_target:5616_owner } NOT = { alliance_with = event_target:5616_owner } NOT = { is_subject_of = event_target:5616_owner } }
+		declare_war_with_cb = { who = event_target:5616_owner casus_belli = cb_restore_personal_union } 
+		}
 		
 		add_years_of_income = 10.0
-		define_general = {}
+		define_general = { shock = 5 fire = 2 manuever = 2 siege = 1 }
 		
 		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.1404 days = 31 tooltip = es_collapse.2.a.tt } }
 	}

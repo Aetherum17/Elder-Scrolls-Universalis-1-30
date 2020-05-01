@@ -47,6 +47,8 @@ country_event = {
 		add_core = KB1
 		}
 		create_vassal = KB1
+        KB1 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        KB1 = { change_government_reform_progress = -99999 }
 		}
 		
 		if = {
@@ -64,6 +66,8 @@ country_event = {
 		add_core = KB2
 		}
 		create_vassal = KB2
+        KB2 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        KB2 = { change_government_reform_progress = -99999 }
 		}
 		
 		if = {
@@ -81,6 +85,8 @@ country_event = {
 		add_core = KB3
 		}
 		create_vassal = KB3
+        KB3 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        KB3 = { change_government_reform_progress = -99999 }
 		}
 		
 		if = {
@@ -98,6 +104,8 @@ country_event = {
 		add_core = KB4
 		}
 		create_vassal = KB4
+        KB4 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        KB4 = { change_government_reform_progress = -99999 }
 		}
 		
 		if = {
@@ -115,6 +123,8 @@ country_event = {
 		add_core = KB5
 		}
 		create_vassal = KB5
+        KB5 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        KB5 = { change_government_reform_progress = -99999 }
 		}
 		
 		if = {
@@ -132,6 +142,8 @@ country_event = {
 		add_core = KB6
 		}
 		create_vassal = KB6
+        KB6 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        KB6 = { change_government_reform_progress = -99999 }
 		}
 		
 		if = {
@@ -149,6 +161,8 @@ country_event = {
 		add_core = KB7
 		}
 		create_vassal = KB7
+        KB7 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        KB7 = { change_government_reform_progress = -99999 }
 		}
 		
 		if = {
@@ -166,6 +180,8 @@ country_event = {
 		add_core = KB8
 		}
 		create_vassal = KB8
+        KB8 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        KB8 = { change_government_reform_progress = -99999 }
 		}
 		
 		if = {
@@ -183,6 +199,8 @@ country_event = {
 		add_core = KB9
 		}
 		create_vassal = KB9
+        KB9 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        KB9 = { change_government_reform_progress = -99999 }
 		}
 		
 		if = {
@@ -200,6 +218,8 @@ country_event = {
 		add_core = KB0
 		}
 		create_vassal = KB0
+        KB0 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        KB0 = { change_government_reform_progress = -99999 }
 		}
 		
 		if = {
@@ -217,6 +237,8 @@ country_event = {
 		add_core = KB1
 		}
 		create_vassal = KB1
+        KB1 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        KB1 = { change_government_reform_progress = -99999 }
 		}
 		
 	    }
@@ -226,16 +248,12 @@ country_event = {
 		name = es_collapse.2.b
 		ai_chance = { factor = 15 }
 		
-		if = {
-		limit = {
-		NOT = { capital_scope = { region = northern_kamal_lr } }
-		}
-		every_core_province = {
+		every_owned_province = {
 			limit = {
 				region = northern_kamal_lr
+				NOT = { any_province = { area = PREV is_capital_of = ROOT } }
 			}
 			remove_core = ROOT
-		}
 		}
 		
 	}

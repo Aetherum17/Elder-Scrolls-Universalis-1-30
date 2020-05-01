@@ -6,21 +6,7 @@ country_event = {
 	desc = es_2_scenario.1.d
 	picture = ES_RISE_OF_DRAGONS_eventPicture
 	
-	trigger = {
-	    NOT = { has_country_flag = es_2_scenario.1_flag }
-	    NOT = { exists = DRA }
-		is_year = 65
-		NOT = { is_year = 109 }
-		owns = 1572
-    }
-
-	mean_time_to_happen = {
-		days = 8030		
-	}
-	
-	immediate = {
-	    set_country_flag = es_2_scenario.1_flag
-	}
+	is_triggered_only = yes
 
 	option = {
 		name = "es_2_scenario.1.a"
@@ -43,6 +29,10 @@ country_event = {
 			overlord = { free_vassal = ROOT }
 		}
 		if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		
+		hidden_effect = {
+		every_country = { limit = { religion = dragon_cult owns = 1572 } country_event = { id = es_2_scenario.2 days = 31 tooltip = es_collapse.2.a.tt } }
+		}
 		
 		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.15 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
@@ -93,27 +83,9 @@ country_event = {
 	desc = es_2_scenario.1.d
 	picture = ES_RISE_OF_DRAGONS_eventPicture
 	
-	trigger = {
-        NOT = { has_country_flag = es_2_scenario.2_flag }
-		religion = dragon_cult
-		owns = 1572
-		is_year = 65
-		NOT = { is_year = 109 }
-		any_country = {
-		    NOT = { government = native }
-		    capital_scope = { continent = Atmora }
-			NOT = { capital_scope = { area = atmora_8_la } }
-			NOT = { capital_scope = { area = atmora_9_la } }
-			religion = dragon_cult
-			ai = yes
-		}
-	}
+	is_triggered_only = yes
 	
 	hidden = yes
-	
-	mean_time_to_happen = {
-		days = 31
-	}
 	
 	immediate = {
 	    set_country_flag = es_2_scenario.2_flag
@@ -161,18 +133,17 @@ country_event = {
 	}
 
 	mean_time_to_happen = {
-		days = 10950
+		days = 1825
 	}
 	
 	option = {
 		name = es_2_scenario.3.a
 		ai_chance = { factor = 50 }
 		add_manpower = 25
-		add_stability = 1
 		add_prestige = 10
 		random_neighbor_country = {
 			limit = { 
-				 capital_scope = { continent = Atmora }
+		    capital_scope = { continent = Atmora }
 			NOT = { truce_with = ROOT } 
 			NOT = { alliance_with = ROOT }
 			NOT = { is_subject_of = ROOT }
@@ -192,13 +163,6 @@ country_event = {
 		name = es_2_scenario.3.b
 		ai_chance = { factor = 50 }
 		add_stability = -1
-		add_prestige = -10
-		add_estate_loyalty_modifier = {
-        estate = estate_church
-	    desc = DISLOYAL_DRAGON_PRIESTS
-        loyalty = -10
-        duration = 1825
-        }
 		
 		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.19 days = 31 tooltip = es_collapse.2.a.tt } }
 	} 
@@ -213,7 +177,7 @@ country_event = {
 	trigger = {
 	    NOT = { has_country_flag = es_2_scenario.4_flag }
 		exists = DRA
-		is_year = 65
+		is_year = 83
 		NOT = { is_year = 109 }
 		capital_scope = { continent = Atmora }
 		NOT = { alliance_with = DRA }
@@ -242,7 +206,7 @@ country_event = {
 	option = {
 		name = es_2_scenario.4.b
 		ai_chance = { factor = 50 }
-		add_stability = -3
+		add_stability = -1
 		change_religion = dragon_cult
 		
 		every_country = { limit = { ai = no has_country_flag = esu_news_flag is_free_or_tributary_trigger = yes } country_event = { id = es_news.21 days = 31 tooltip = es_collapse.2.a.tt } }
@@ -258,7 +222,7 @@ country_event = {
 	trigger = {
 	    NOT = { has_country_flag = es_2_scenario.5_flag }
 		exists = DRA
-		is_year = 65
+		is_year = 83
 		NOT = { is_year = 109 }
 		NOT = { alliance_with = DRA }
 		NOT = { is_subject_of = DRA }
@@ -268,7 +232,7 @@ country_event = {
 	}
 
 	mean_time_to_happen = {
-		days = 10950
+		days = 3650
 	}
 	
 	immediate = {
