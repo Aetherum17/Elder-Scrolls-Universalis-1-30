@@ -24,6 +24,15 @@ country_event = {
 				duration = -1
 			}
 		}
+	if = { limit = { ai = yes }
+	end_disaster = es_revolution
+	add_stability = 3
+	add_legitimacy = 50
+	add_republican_tradition = 50
+	add_devotion = 50
+	add_horde_unity = 50
+	add_meritocracy = 50
+	}
 	}
 	option = {
 		name = ge_revolution.1.a

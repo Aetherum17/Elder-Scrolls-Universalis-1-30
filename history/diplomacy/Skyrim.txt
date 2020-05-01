@@ -3,7 +3,7 @@ dependency = {
     first = NB9
     second = NC4
     start_date = 57.1.1
-	end_date = 9999.1.1
+	end_date = 139.1.1
 }
 
 dependency = {
@@ -11,7 +11,7 @@ dependency = {
     first = NB9
     second = NC5
     start_date = 57.1.1
-	end_date = 9999.1.1
+	end_date = 139.1.1
 }
 
 dependency = {
@@ -19,21 +19,21 @@ dependency = {
     first = NB9
     second = NC6
     start_date = 57.1.1
-	end_date = 9999.1.1
+	end_date = 139.1.1
 }
 
 alliance = {
 	first = NB9
 	second = NC0
 	start_date = 57.1.1
-	end_date = 9999.1.1
+	end_date = 139.1.1
 }
 
 alliance = {
 	first = NB9
 	second = NB4
 	start_date = 57.1.1
-	end_date = 9999.1.1
+	end_date = 139.1.1
 }
 
 alliance = {
@@ -203,40 +203,94 @@ vassal = {
 	first = NG0
 	second = NA5
 	start_date = 57.1.1
-	end_date = 9999.1.1
+	end_date = 139.1.1
 }
 
 vassal = {
 	first = NG0
 	second = NB0
 	start_date = 57.1.1
-	end_date = 9999.1.1
+	end_date = 139.1.1
 }
 
 vassal = {
 	first = NG0
 	second = NE3
 	start_date = 57.1.1
-	end_date = 9999.1.1
+	end_date = 139.1.1
 }
 
 vassal = {
 	first = NA1
 	second = FOR
 	start_date = 57.1.1
-	end_date = 9999.1.1
+	end_date = 139.1.1
 }
 
 alliance = {
 	first = NG0
 	second = NA1
 	start_date = 57.1.1
-	end_date = 9999.1.1
+	end_date = 139.1.1
 }
 
 alliance = {
 	first = NG0
 	second = MA1
 	start_date = 57.1.1
+	end_date = 139.1.1
+}
+
+####################################################################### 3
+
+alliance = {
+	first = WIN
+	second = NA1
+	start_date = 139.1.1
+	end_date = 9999.1.1
+}
+
+alliance = {
+	first = WIN
+	second = MA1
+	start_date = 139.1.1
+	end_date = 9999.1.1
+}
+
+dependency = {
+    subject_type = alliance_member
+    first = REA
+    second = NC4
+    start_date = 139.1.1
+	end_date = 9999.1.1
+}
+
+dependency = {
+    subject_type = alliance_member
+    first = REA
+    second = NC5
+    start_date = 139.1.1
+	end_date = 9999.1.1
+}
+
+dependency = {
+    subject_type = alliance_member
+    first = REA
+    second = NC6
+    start_date = 139.1.1
+	end_date = 9999.1.1
+}
+
+alliance = {
+	first = REA
+	second = NC0
+	start_date = 139.1.1
+	end_date = 9999.1.1
+}
+
+alliance = {
+	first = REA
+	second = NB4
+	start_date = 139.1.1
 	end_date = 9999.1.1
 }

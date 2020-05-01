@@ -78,7 +78,7 @@ country_event = {
 	id = es_3_scenario.3
 	title = es_3_scenario.3.t
 	desc = es_3_scenario.3.d
-	picture = ES_WAR_IS_NEAR_eventPicture
+	picture = ES_SNOW_ELVES_eventPicture
 	
 	is_triggered_only = yes
 
@@ -92,14 +92,14 @@ country_event = {
 		if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
 		if = { limit = { NOT = { government_rank = 5 } } set_government_rank = 5 }
 		
-		#every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.26 days = 31 tooltip = es_collapse.2.a.tt } }
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.41 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
 	option = {
 		name = "es_3_scenario.3.b"
 		ai_chance = { factor = 50 }
 		add_prestige = 25
 		
-		#every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.27 days = 31 tooltip = es_collapse.2.a.tt } }
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.42 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
 	after = {
 	    every_country = { limit = { culture_group = snow_elves_cg any_neighbor_country = { culture_group = northern_cg } } country_event = { id = es_3_scenario.1 days = 1825 tooltip = es_collapse.2.a.tt } }
@@ -112,7 +112,7 @@ country_event = {
 	id = es_3_scenario.4
 	title = es_3_scenario.4.t
 	desc = es_3_scenario.4.d
-	picture = ES_WAR_IS_NEAR_eventPicture
+	picture = ES_REACH_1_eventPicture
 	
 	is_triggered_only = yes
 
@@ -124,14 +124,14 @@ country_event = {
 		if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
 		if = { limit = { NOT = { government_rank = 5 } } set_government_rank = 5 }
 		
-		#every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.26 days = 31 tooltip = es_collapse.2.a.tt } }
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.43 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
 	option = {
 		name = "es_3_scenario.4.b"
 		ai_chance = { factor = 50 }
 		add_stability = 1
 		
-		#every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.27 days = 31 tooltip = es_collapse.2.a.tt } }
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.44 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
 }
 
@@ -141,7 +141,7 @@ country_event = {
 	id = es_3_scenario.5
 	title = es_3_scenario.5.t
 	desc = es_3_scenario.5.d
-	picture = ES_WAR_IS_NEAR_eventPicture
+	picture = ES_VALUS_MOUNTAINS_eventPicture
 	
 	is_triggered_only = yes
 	
@@ -151,7 +151,7 @@ country_event = {
 
 	option = {
 		name = "es_3_scenario.5.a"
-		ai_chance = { factor = 50 }
+		ai_chance = { factor = 33 }
 		
 		every_province = {
 		    limit = { region = valus_mountains_lr is_city = yes }
@@ -162,26 +162,26 @@ country_event = {
 		declare_war_with_cb = { who = event_target:1234_owner casus_belli = cb_es_scenario } 
 		}
 		
-		#every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.26 days = 31 tooltip = es_collapse.2.a.tt } }
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.45 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
 	option = {
 		name = "es_3_scenario.5.b"
-		ai_chance = { factor = 50 }
+		ai_chance = { factor = 33 }
 		
 		add_country_modifier = {
 		    name = "19_expansion_via_trade"
 			duration = 9125
 		}
 		
-		#every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.27 days = 31 tooltip = es_collapse.2.a.tt } }
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.46 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
 	option = {
 		name = "es_3_scenario.5.c"
-		ai_chance = { factor = 50 }
+		ai_chance = { factor = 33 }
 		
 		add_prestige = 15
 		
-		#every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.27 days = 31 tooltip = es_collapse.2.a.tt } }
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.47 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
 }
 
@@ -191,7 +191,7 @@ country_event = {
 	id = es_3_scenario.6
 	title = es_3_scenario.6.t
 	desc = es_3_scenario.6.d
-	picture = ES_WAR_IS_NEAR_eventPicture
+	picture = ES_WHITE_GOLD_TOWER_eventPicture
 	
 	is_triggered_only = yes
 	
@@ -209,7 +209,7 @@ country_event = {
 		declare_war_with_cb = { who = event_target:1206_owner casus_belli = cb_es_scenario } 
 		}
 		
-		#every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.26 days = 31 tooltip = es_collapse.2.a.tt } }
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.48 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
 	option = {
 		name = "es_3_scenario.6.b"
@@ -217,7 +217,7 @@ country_event = {
 		
 		add_prestige = -10
 		
-		#every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.27 days = 31 tooltip = es_collapse.2.a.tt } }
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.49 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
 }
 
@@ -227,7 +227,7 @@ country_event = {
 	id = es_3_scenario.7
 	title = es_3_scenario.7.t
 	desc = es_3_scenario.7.d
-	picture = ES_WAR_IS_NEAR_eventPicture
+	picture = ES_SUMMERSET_TOWER_eventPicture
 	
 	is_triggered_only = yes
 
@@ -239,7 +239,7 @@ country_event = {
 		declare_war_with_cb = { who = emperor casus_belli = cb_es_scenario } 
 		}
 		
-		#every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.26 days = 31 tooltip = es_collapse.2.a.tt } }
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.50 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
 	option = {
 		name = "es_3_scenario.7.b"
@@ -255,6 +255,6 @@ country_event = {
 			set_in_empire = no
 		}
 		
-		#every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.27 days = 31 tooltip = es_collapse.2.a.tt } }
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news51 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
 }

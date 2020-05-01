@@ -509,10 +509,11 @@ imperial_subject = {
 	send_officers = yes
 	divert_trade = yes
 	# (immediate)
-	enforce_culture = yes
+	enforce_culture = no
+	enforce_religion = no
 	siphon_income = yes
 	fortify_march = yes
-	seize_territory = yes
+	seize_territory = no
 	sacrifice_ruler = yes
 	sacrifice_heir = yes
 	send_additional_troops = yes
