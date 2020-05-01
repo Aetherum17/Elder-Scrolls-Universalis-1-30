@@ -183,8 +183,8 @@ country_decisions = {
 	bannes_narcotics_production = {
 		potential = {
 		    OR = {
-			has_reform = 51_c
-			has_reform = 51_d
+			has_reform = 55_c
+			has_reform = 55_d
 			}
 			any_owned_province = {
 			NOT = { has_province_modifier = banned_production }
@@ -228,6 +228,12 @@ country_decisions = {
             value = 0.01
             duration = -1
             }
+			change_price = {
+            trade_goods = tobacco
+            key = LESS_TOBACCO
+            value = 0.01
+            duration = -1
+            }
 		}
 		ai_will_do = {
 			factor = 1
@@ -265,13 +271,22 @@ country_decisions = {
 		    add_prestige = -5
 		    random_owned_province = {
 			limit = {
+			OR = {
 			trade_goods = sugar
+			trade_goods = tobacco
+			}
 			has_province_modifier = banned_production
 			}
 			remove_province_modifier = banned_production
 			}
 			change_price = {
             trade_goods = sugar
+            key = MORE_SUGAR
+            value = -0.01
+            duration = -1
+            }
+			change_price = {
+            trade_goods = tobacco
             key = MORE_SUGAR
             value = -0.01
             duration = -1

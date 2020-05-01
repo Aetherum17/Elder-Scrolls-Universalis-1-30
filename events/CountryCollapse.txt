@@ -13,14 +13,15 @@ country_event = {
 	limit = {
 	ai = no
 	}
-	add_stability = -5
-	add_war_exhaustion = 5
+	add_stability = -3
+	add_war_exhaustion = 10
 	}
 	if = {
 	limit = {
 	ai = yes
 	}
 	add_stability = 5
+	add_war_exhaustion = -10
 	end_disaster = es_country_collapse
 	}
 	}

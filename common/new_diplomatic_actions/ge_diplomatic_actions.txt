@@ -1422,11 +1422,12 @@ ask_to_become_imperial_subject = {
 	is_allowed = {
         is_part_of_hre = yes
 		OR = {
-		is_subject_of = ROOT
+		ROOT = { is_subject_of = FROM }
 		is_free_or_tributary_trigger = yes
 		}
 		is_lesser_in_union = no
 		is_at_war = no
+		NOT = { num_of_cities = FROM }
 		OR = {
 		    owns = 1206
 			owns = 271

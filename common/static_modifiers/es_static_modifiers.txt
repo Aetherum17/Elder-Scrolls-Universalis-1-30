@@ -532,7 +532,23 @@ base_values = {
 ai_nation = {
 	diplomats = 1 							
 	free_leader_pool = 1			
-	sailors_recovery_speed = 0.25		
+	sailors_recovery_speed = 0.25
+	
+	legitimacy = 1.0
+	republican_tradition = 1.0
+	devotion = 1.0
+	meritocracy = 1.0
+	horde_unity = 1.0
+	
+	stability_cost_modifier = -0.25
+	global_tax_modifier = 0.25
+	production_efficiency = 0.25
+	manpower_recovery_speed = 0.25
+	global_tax_income = 50
+	
+	monarch_admin_power = 1
+    monarch_diplomatic_power = 1
+    monarch_military_power = 1
 }
 
 war_taxes = {
@@ -1117,7 +1133,6 @@ total_blockaded = {
 }
 
 uncontested_cores = {
-	prestige = -0.1
 }
 
 num_objectives_fullfilled = {
@@ -1334,11 +1349,6 @@ merchants_slandered = {
 
 discontent_sowed = {
 	global_unrest = 5
-	legitimacy = -1
-	republican_tradition = -1.0
-	devotion = -1
-	horde_unity = -1
-	meritocracy = -1.0
 }
 
 reputation_sabotaged = {

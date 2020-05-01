@@ -4,34 +4,28 @@ es_revolution = {
 	}
 
 	can_start = {
+	    OR = {
+	    AND = {
+		ai = no
 		OR = {
-		AND = {
-		government = monarchy
-		NOT = { legitimacy = 25 }
+		AND = { government = monarchy NOT = { legitimacy = 25 } }
+		AND = { government = republic NOT = { republican_tradition = 25 } }
+		AND = { government = theocracy has_dlc = "Common Sense" NOT = { devotion = 25 } }
+		AND = { is_nomad = yes has_dlc = "The Cossacks" NOT = { horde_unity = 25 } }
+		AND = { is_nomad = yes NOT = { has_dlc = "The Cossacks" } NOT = { legitimacy = 25 } }
+		AND = { is_emperor_of_china = yes has_dlc = "Mandate of Heaven" NOT = { meritocracy = 25 } } 
+		}
 		}
 		AND = {
-		government = republic
-		NOT = { republican_tradition = 25 }
+		ai = yes
+		OR = {
+		AND = { government = monarchy NOT = { legitimacy = 5 } }
+		AND = { government = republic NOT = { republican_tradition = 5 } }
+		AND = { government = theocracy has_dlc = "Common Sense" NOT = { devotion = 5 } }
+		AND = { is_nomad = yes has_dlc = "The Cossacks" NOT = { horde_unity = 5 } }
+		AND = { is_nomad = yes NOT = { has_dlc = "The Cossacks" } NOT = { legitimacy = 5 } }
+		AND = { is_emperor_of_china = yes has_dlc = "Mandate of Heaven" NOT = { meritocracy = 5 } } 
 		}
-		AND = {
-		government = theocracy
-		has_dlc = "Common Sense"
-		NOT = { devotion = 25 }
-		}
-		AND = {
-		is_nomad = yes
-		has_dlc = "The Cossacks"
-		NOT = { horde_unity = 25 }
-		}
-		AND = {
-		is_nomad = yes
-		NOT = { has_dlc = "The Cossacks" }
-		NOT = { legitimacy = 25 }
-		}
-		AND = {
-		is_emperor_of_china = yes
-		has_dlc = "Mandate of Heaven"
-		NOT = { meritocracy = 25 }
 		}
 		}
 		is_lesser_in_union = no
