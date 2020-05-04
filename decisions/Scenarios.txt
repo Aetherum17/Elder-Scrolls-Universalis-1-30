@@ -1,39 +1,5 @@
 country_decisions = {
 
-    es_3_forelhost = {
-	    major = yes
-		potential = {
-		OR = {
-        culture_group = snow_elves_cg
-		tag = DRA
-		}
-		NOT = { exists = FOR }
-		NOT = { has_country_flag = es_3_forelhost_flag }
-		}
-		allow = {
-		skyrim_58_la = {
-		    owned_by = ROOT
-		}
-		}
-		effect = {
-		set_country_flag = es_3_forelhost_flag
-		every_owned_province = {
-		limit = { area = skyrim_58_la }
-		cede_province = FOR
-		add_core = FOR
-		}
-		ROOT = {
-		create_subject = {
-        subject_type = vassal
-        subject = FOR
-        }
-		}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
     es_3_repair_walls_of_forelhost = {
 	    major = yes
 		potential = {
@@ -76,22 +42,31 @@ country_decisions = {
 	es_3_destroy_forelhost = {
 	    major = yes
 		potential = {
+		NOT = { has_country_flag = forelhost_destroyd_flag }
         NOT = { tag = FOR }
 		NOT = { tag = DRA }
 		culture_group = northern_cg
 		7549 = {
 		owned_by = ROOT
-		NOT = { culture = nord }
 		}
 		}
 		allow = {
-		mil_power = 100
+		mil_power = 250
 		}
 		effect = {
-		add_mil_power = -100
+		set_country_flag = forelhost_destroyd_flag
+		add_mil_power = -250
 		7549 = {
 		remove_province_modifier = 03_walls_of_forelhost
-		change_culture = nord
+		}
+		every_province = {
+		    limit = { area = skyrim_58_la }
+			change_religion = ROOT
+			change_culture = ROOT
+			add_province_modifier = {
+			    name = "00_unrest"
+				duration = 9125
+			}
 		}
 		}
 		ai_will_do = {
@@ -150,10 +125,11 @@ country_decisions = {
 		set_country_flag = es_4_riften_flag
 		1268 = { owner = { save_event_target_as = 1268_owner } }
 		
-		every_province = { limit = { area = skyrim_1_la owned_by = 1268_owner } cede_province = NA1 add_core = NA1 }
+		every_province = { limit = { area = skyrim_1_la owned_by = event_target:1268_owner } cede_province = NA1 add_core = NA1 }
 		
 		ROOT = { create_subject = { subject_type = vassal subject = NA1 } }
 		NA1 = { change_religion = ROOT change_primary_culture = ROOT }
+		every_province = { limit = { owned_by = NA1 } change_religion = ROOT change_culture = ROOT add_country_modifier = { name = "00_unrest" duration = 9125 } }
 		}
 		ai_will_do = {
 			factor = 1

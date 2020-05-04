@@ -11,7 +11,7 @@ country_event = {
 	immediate = {
 		random_neighbor_country = {
 		    limit = { culture_group = northern_cg }
-			owner = { save_event_target_as = x_3_owner }
+			save_event_target_as = x_3_owner
 		}
 	}
 
@@ -36,10 +36,6 @@ country_event = {
 		ai_chance = { factor = 50 }
 		add_stability = 1
 		add_prestige = -25
-		
-		if = { limit = { NOT = { truce_with = event_target:x_3_owner } NOT = { alliance_with = event_target:x_3_owner } NOT = { is_subject_of = event_target:x_3_owner } }
-		add_truce_with = event_target:x_3_owner
-		}
 		
 		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.25 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
@@ -255,6 +251,6 @@ country_event = {
 			set_in_empire = no
 		}
 		
-		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news51 days = 31 tooltip = es_collapse.2.a.tt } }
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.51 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
 }

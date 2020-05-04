@@ -123,7 +123,7 @@ country_event = {
 		ai_chance = { factor = 50 }
 		every_province = {
 		limit = {
-		region = great_plains_lr
+		region = great_planes_lr
 		NOT = { owned_by = ROOT }
 		}
 		add_claim = ROOT
@@ -235,7 +235,7 @@ country_event = {
 		define_ruler = {
 		    name = "Harald"
 			dynasty = "Ysgramor"
-		    birth_date = 113.1.1
+		    age = 25
 		    adm = 4
 		    dip = 7
 		    mil = 5

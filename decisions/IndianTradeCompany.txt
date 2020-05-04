@@ -9,7 +9,7 @@ country_decisions = {
 				}
 			}
 			Akavir = {
-					has_discovered = ROOT
+				has_discovered = ROOT
 			}
 			num_of_ports = 5
 		}
@@ -17,9 +17,9 @@ country_decisions = {
 		allow = {
 			has_institution = global_trade
 			any_owned_province = {
-					continent = Akavir
-					has_port = yes
-			    }
+				continent = Akavir
+				has_port = yes
+			}
 		}
 
 		effect = {

@@ -4,7 +4,7 @@ create_personal_union = {
 	category = influence
 	
 	alert_index = 40
-	alert_tooltip = demand_dummy_alert_tooltip
+	alert_tooltip = create_personal_union_alert_tooltip
 	
 	require_acceptance = yes # Whether the recipient gets an option to decline
 	
@@ -268,7 +268,7 @@ create_holy_order_1 = {
 	category = influence
 	
 	alert_index = 40
-	alert_tooltip = demand_dummy_alert_tooltip
+	alert_tooltip = create_holy_order_1_alert_tooltip
 	
 	require_acceptance = yes
 	
@@ -497,7 +497,7 @@ ask_to_become_holy_order_1 = {
 	category = influence
 	
 	alert_index = 40
-	alert_tooltip = demand_dummy_alert_tooltip
+	alert_tooltip = ask_to_become_holy_order_1_alert_tooltip
 	
 	require_acceptance = yes
 	
@@ -723,7 +723,7 @@ create_native_reservation = {
 	category = influence
 	
 	alert_index = 40
-	alert_tooltip = demand_dummy_alert_tooltip
+	alert_tooltip = create_native_reservation_alert_tooltip
 	
 	require_acceptance = yes
 	
@@ -951,7 +951,7 @@ ask_to_become_native_reservation = {
 	category = influence
 	
 	alert_index = 40
-	alert_tooltip = demand_dummy_alert_tooltip
+	alert_tooltip = ask_to_become_native_reservation_alert_tooltip
 	
 	require_acceptance = yes
 	
@@ -1159,7 +1159,7 @@ create_imperial_subject = {
 	category = influence
 	
 	alert_index = 40
-	alert_tooltip = demand_dummy_alert_tooltip
+	alert_tooltip = create_imperial_subject_alert_tooltip
 	
 	require_acceptance = yes
 	
@@ -1411,7 +1411,7 @@ ask_to_become_imperial_subject = {
 	category = influence
 	
 	alert_index = 40
-	alert_tooltip = demand_dummy_alert_tooltip
+	alert_tooltip = ask_to_become_imperial_subject_alert_tooltip
 	
 	require_acceptance = yes
 	
@@ -1633,7 +1633,7 @@ create_alliance_member = {
 	category = influence
 	
 	alert_index = 40
-	alert_tooltip = demand_dummy_alert_tooltip
+	alert_tooltip = create_alliance_member_alert_tooltip
 	
 	require_acceptance = yes
 	
@@ -1846,7 +1846,7 @@ ask_to_become_alliance_member = {
 	category = influence
 	
 	alert_index = 40
-	alert_tooltip = demand_dummy_alert_tooltip
+	alert_tooltip = ask_to_become_alliance_member_alert_tooltip
 	
 	require_acceptance = yes
 	
@@ -2163,7 +2163,7 @@ leave_native_reservation  =  {
 	category = influence
 	require_acceptance = yes
 	alert_index = 40
-	alert_tooltip = demand_dummy_alert_tooltip
+	alert_tooltip = leave_native_reservation_alert_tooltip
 	is_visible = {
 		FROM = { overlord_of = ROOT }
 		ROOT = {
@@ -2336,7 +2336,7 @@ leave_imperial_subject  =  {
 	category = influence
 	require_acceptance = yes
 	alert_index = 40
-	alert_tooltip = demand_dummy_alert_tooltip
+	alert_tooltip = leave_imperial_subject_alert_tooltip
 	is_visible = {
 		FROM = { overlord_of = ROOT }
 		ROOT = {
@@ -2508,7 +2508,7 @@ leave_alliance_member  =  {
 	category = influence
 	require_acceptance = yes
 	alert_index = 40
-	alert_tooltip = demand_dummy_alert_tooltip
+	alert_tooltip = leave_alliance_member_alert_tooltip
 	is_visible = {
 		FROM = { overlord_of = ROOT }
 		ROOT = {
@@ -2690,7 +2690,7 @@ leave_tributary_state  =  {
 	category = influence
 	require_acceptance = yes
 	alert_index = 40
-	alert_tooltip = demand_dummy_alert_tooltip
+	alert_tooltip = leave_tributary_state_alert_tooltip
 	is_visible = {
 		FROM = { overlord_of = ROOT }
 		ROOT = {
@@ -2872,7 +2872,7 @@ leave_vassal  =  {
 	category = influence
 	require_acceptance = yes
 	alert_index = 40
-	alert_tooltip = demand_dummy_alert_tooltip
+	alert_tooltip = leave_vassal_alert_tooltip
 	is_visible = {
 		FROM = { overlord_of = ROOT }
 		ROOT = {
