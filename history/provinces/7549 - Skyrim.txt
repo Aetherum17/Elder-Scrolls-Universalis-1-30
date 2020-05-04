@@ -15,3 +15,17 @@ discovered_by = tamriel_tg discovered_by = elsweyr_tg discovered_by = marshan_tg
 center_of_trade = 1
 
 fort_15th = yes
+
+139.1.1 = {
+    add_province_modifier = {
+	    name = "03_walls_of_forelhost"
+		duration = -1
+	}
+}
+
+189.1.1 = {
+    remove_province_modifier = 03_walls_of_forelhost
+    owner = NA1
+    controller = NA1
+    add_core = NA1
+}

@@ -86,7 +86,7 @@ country_decisions = {
 		}
 	}
 	
-	empire_of_china = {
+	empire_of_china_1 = {
 		major = yes
 		potential = {
 			normal_or_historical_nations = yes
@@ -109,14 +109,11 @@ country_decisions = {
 		allow = {
 			is_at_war = no
 			is_free_or_tributary_trigger = yes
-			custom_trigger_tooltip = {
-				tooltip = empire_of_china_not_in_china
-				po_tun_lr = {
-					owner = {
-						is_emperor_of_china = no
-					}
-					type = all
+			po_tun_lr = {
+				owner = {
+					is_emperor_of_china = no
 				}
+				type = all
 			}
 			adm_power = 100
 			mil_power = 100

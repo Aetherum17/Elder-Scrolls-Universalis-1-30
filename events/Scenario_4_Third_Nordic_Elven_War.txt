@@ -6,20 +6,10 @@ country_event = {
 	desc = es_4_scenario.1.d
 	picture = ES_SIEGE_eventPicture
 	
-	trigger = {
-	    NOT = { has_country_flag = es_4_scenario.1_flag }
-	    culture_group = northern_cg
-		is_year = 139
-		NOT = { is_year = 189 }
-		owns = 1275
-    }
-
-	mean_time_to_happen = {
-		days = 9125		
-	}
+	is_triggered_only = yes
 	
 	immediate = {
-	    set_country_flag = es_4_scenario.1_flag
+		7571 = { owner = { save_event_target_as = 7571_owner } }
 	}
 
 	option = {
@@ -39,64 +29,8 @@ country_event = {
         siege = 5
         }
 		
-		if = {
-		limit = {
-		exists = WIN
-		NOT = { alliance_with = WIN }
-		NOT = { overlord_of = WIN }
-		}
-		declare_war_with_cb = {
-			who = WIN
-			casus_belli = cb_es_scenario
-		}
-		}
-		
-		if = {
-		limit = {
-		exists = NA1
-		NOT = { alliance_with = NA1 }
-		NOT = { overlord_of = NA1 }
-		}
-		declare_war_with_cb = {
-			who = NA1
-			casus_belli = cb_es_scenario
-		}
-		}
-		
-		if = {
-		limit = {
-		exists = NA5
-		NOT = { alliance_with = NA5 }
-		NOT = { overlord_of = NA5 }
-		}
-		declare_war_with_cb = {
-			who = NA5
-			casus_belli = cb_es_scenario
-		}
-		}
-		
-		if = {
-		limit = {
-		exists = NA6
-		NOT = { alliance_with = NA6 }
-		NOT = { overlord_of = NA6 }
-		}
-		declare_war_with_cb = {
-			who = NA6
-			casus_belli = cb_es_scenario
-		}
-		}
-		
-		if = {
-		limit = {
-		exists = FOR
-		NOT = { alliance_with = FOR }
-		NOT = { overlord_of = FOR }
-		}
-		declare_war_with_cb = {
-			who = FOR
-			casus_belli = cb_es_scenario
-		}
+		if = { limit = { NOT = { truce_with = event_target:7571_owner } NOT = { alliance_with = event_target:7571_owner } NOT = { is_subject_of = event_target:7571_owner } }
+		declare_war_with_cb = { who = event_target:7571_owner casus_belli = cb_es_scenario } 
 		}
 		
 		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.28 days = 31 tooltip = es_collapse.2.a.tt } }
@@ -116,21 +50,7 @@ country_event = {
 	desc = es_4_scenario.2.d
 	picture = ES_WAR_IS_NEAR_eventPicture
 	
-	trigger = {
-	    NOT = { has_country_flag = es_4_scenario.2_flag }
-	    culture_group = snow_elves_cg
-		is_year = 139
-		NOT = { is_year = 189 }
-		owns = 1288
-    }
-
-	mean_time_to_happen = {
-		days = 9125		
-	}
-	
-	immediate = {
-	    set_country_flag = es_4_scenario.2_flag
-	}
+	is_triggered_only = yes
 
 	option = {
 		name = "es_4_scenario.2.a"
@@ -162,22 +82,7 @@ country_event = {
 	desc = es_4_scenario.3.d
 	picture = ES_DRAGON_WAR_eventPicture
 	
-	trigger = {
-	    NOT = { has_country_flag = es_4_scenario.3_flag }
-	    culture_group = snow_elves_cg
-		is_year = 139
-		NOT = { is_year = 189 }
-		tag = FOR
-		NOT = { has_country_modifier = 04_fanatics_in_the_army }
-    }
-
-	mean_time_to_happen = {
-		days = 1825		
-	}
-	
-	immediate = {
-	    set_country_flag = es_4_scenario.3_flag
-	}
+	is_triggered_only = yes
 
 	option = {
 		name = "es_4_scenario.3.a"
@@ -194,12 +99,8 @@ country_event = {
 	option = {
 		name = "es_4_scenario.3.b"
 		ai_chance = { factor = 50 }
-		add_estate_loyalty_modifier = {
-        estate = estate_church
-	    desc = DISLOYAL_DRAGON_PRIESTS
-        loyalty = -35
-        duration = 3650
-        }
+		
+		add_stability = -1
 		
 		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.33 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
@@ -211,20 +112,10 @@ country_event = {
 	desc = es_4_scenario.4.d
 	picture = ES_RUINS_eventPicture
 	
-	trigger = {
-	    NOT = { has_country_flag = es_4_scenario.4_flag }
-	    culture_group = half_blood_cg
-		is_year = 139
-		NOT = { is_year = 189 }
-		owns = 1355
-    }
-
-	mean_time_to_happen = {
-		days = 9125		
-	}
+	is_triggered_only = yes
 	
 	immediate = {
-	    set_country_flag = es_4_scenario.4_flag
+		1319 = { owner = { save_event_target_as = 1319_owner } }
 	}
 
 	option = {
@@ -232,58 +123,14 @@ country_event = {
 		ai_chance = { factor = 50 }
 		every_province = {
 		limit = {
-		region = nordic_coast_lr
+		region = great_plains_lr
 		NOT = { owned_by = ROOT }
 		}
 		add_claim = ROOT
 		}
 		
-		if = {
-		limit = {
-		exists = SKY
-		NOT = { alliance_with = SKY }
-	    NOT = { overlord_of = SKY }
-		}
-		declare_war_with_cb = {
-			who = SKY
-			casus_belli = cb_es_scenario
-		}
-		}
-		
-		if = {
-		limit = {
-		exists = OLD
-		NOT = { alliance_with = OLD }
-	    NOT = { overlord_of = OLD }
-		}
-		declare_war_with_cb = {
-			who = OLD
-			casus_belli = cb_es_scenario
-		}
-		}
-		
-		if = {
-		limit = {
-		exists = WSK
-		NOT = { alliance_with = WSK }
-	    NOT = { overlord_of = WSK }
-		}
-		declare_war_with_cb = {
-			who = WSK
-			casus_belli = cb_es_scenario
-		}
-		}
-		
-		if = {
-		limit = {
-		exists = NB6
-		NOT = { alliance_with = NB6 }
-	    NOT = { overlord_of = NB6 }
-		}
-		declare_war_with_cb = {
-			who = NB6
-			casus_belli = cb_es_scenario
-		}
+		if = { limit = { NOT = { truce_with = event_target:1319_owner } NOT = { alliance_with = event_target:1319_owner } NOT = { is_subject_of = event_target:1319_owner } }
+		declare_war_with_cb = { who = event_target:1319_owner casus_belli = cb_es_scenario } 
 		}
 		
 		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.34 days = 31 tooltip = es_collapse.2.a.tt } }
@@ -291,7 +138,8 @@ country_event = {
 	option = {
 		name = "es_4_scenario.4.b"
 		ai_chance = { factor = 50 }
-		add_stability = -1
+		
+		add_prestige = -25
 		
 		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.35 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
@@ -303,89 +151,23 @@ country_event = {
 	desc = es_4_scenario.5.d
 	picture = BATTLE_1_eventPicture
 	
-	trigger = {
-	    NOT = { has_country_flag = es_4_scenario.5_flag }
-	    culture_group = high_elves_cg
-		is_year = 139
-		NOT = { is_year = 189 }
-		owns = 1206
-		NOT = { owns = 1287 }
-    }
-
-	mean_time_to_happen = {
-		days = 9125		
-	}
+	is_triggered_only = yes
 	
 	immediate = {
-	    set_country_flag = es_4_scenario.5_flag
+		5849 = { owner = { save_event_target_as = 5849_owner } }
 	}
 
 	option = {
 		name = "es_4_scenario.5.a"
 		ai_chance = { factor = 50 }
-		1287 = {
+		5849 = {
 		add_core = ROOT
 		}
 		
-		if = {
-		limit = {
-		exists = SKY
-		NOT = { alliance_with = SKY }
-	    NOT = { overlord_of = SKY }
-		}
-		declare_war_with_cb = {
-			who = SKY
-			casus_belli = cb_es_scenario
-		}
+		if = { limit = { NOT = { truce_with = event_target:5849_owner } NOT = { alliance_with = event_target:5849_owner } NOT = { is_subject_of = event_target:5849_owner } }
+		declare_war_with_cb = { who = event_target:5849_owner casus_belli = cb_es_scenario } 
 		}
 		
-		if = {
-		limit = {
-		exists = OLD
-		NOT = { alliance_with = OLD }
-	    NOT = { overlord_of = OLD }
-		}
-		declare_war_with_cb = {
-			who = OLD
-			casus_belli = cb_es_scenario
-		}
-		}
-		
-		if = {
-		limit = {
-		exists = WSK
-		NOT = { alliance_with = WSK }
-	    NOT = { overlord_of = WSK }
-		}
-		declare_war_with_cb = {
-			who = WSK
-			casus_belli = cb_es_scenario
-		}
-		}
-		
-		if = {
-		limit = {
-		exists = ESK
-		NOT = { alliance_with = ESK }
-	    NOT = { overlord_of = ESK }
-		}
-		declare_war_with_cb = {
-			who = ESK
-			casus_belli = cb_es_scenario
-		}
-		}
-		
-		if = {
-		limit = {
-		exists = NA5
-		NOT = { alliance_with = NA5 }
-	    NOT = { overlord_of = NA5 }
-		}
-		declare_war_with_cb = {
-			who = NA5
-			casus_belli = cb_es_scenario
-		}
-		}
 		
 		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.36 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
@@ -398,78 +180,75 @@ country_event = {
 	}
 }
 
+### Formation of Ayleid State
+
 country_event = {
 	id = es_4_scenario.6
 	title = es_4_scenario.6.t
 	desc = es_4_scenario.6.d
-	picture = ES_SKAAL_eventPicture
+	picture = ES_AYLEID_PALACE_eventPicture
 	
-	trigger = {
-	    NOT = { has_country_flag = es_4_scenario.6_flag }
-		is_year = 139
-		NOT = { is_year = 189 }
-		any_owned_province = { culture = skaal }
-		NOT = { primary_culture = skaal }
-    }
-
-	mean_time_to_happen = {
-		days = 9125		
-	}
-	
-	immediate = {
-	    set_country_flag = es_4_scenario.6_flag
-		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.38 days = 31 tooltip = es_collapse.2.a.tt } }
-	}
+	is_triggered_only = yes
 
 	option = {
 		name = "es_4_scenario.6.a"
-		ai_chance = { factor = 33 }
-		every_owned_province = {
-		    limit = {
-			    culture = skaal
-			}
-			cede_province = SKA
-		    add_core = SKA
-			change_religion = all-maker_cult
-		}
-		if = {
-		    limit = { SKA = { is_free_or_tributary_trigger = yes } }
-			create_vassal = SKA
-		}
+		ai_chance = { factor = 50 }
+		
+		add_prestige = -25
+		
+		change_tag = AYL
+		if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		if = { limit = { NOT = { government_rank = 5 } } set_government_rank = 5 }
+		
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.52 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
 	option = {
 		name = "es_4_scenario.6.b"
-		ai_chance = { factor = 33 }
-		every_owned_province = {
-		    limit = {
-			    culture = skaal
-			}
-			cede_province = SKA
-		    add_core = SKA
-			change_religion = all-maker_cult
+		ai_chance = { factor = 50 }
+		
+		add_years_of_income = 1.0
+		
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.53 days = 31 tooltip = es_collapse.2.a.tt } }
+	}
+}
+
+### Formation of Skyrim
+
+country_event = {
+	id = es_4_scenario.7
+	title = es_4_scenario.7.t
+	desc = es_4_scenario.7.d
+	picture = ES_PALACE_OF_THE_KINGS_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "es_4_scenario.7.a"
+		ai_chance = { factor = 50 }
+		
+		add_years_of_income = -1.0
+		
+		change_tag = SKY
+		if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		if = { limit = { NOT = { government_rank = 5 } } set_government_rank = 5 }
+		
+		define_ruler = {
+		    name = "Harald"
+			dynasty = "Ysgramor"
+		    birth_date = 113.1.1
+		    adm = 4
+		    dip = 7
+		    mil = 5
 		}
-		if = {
-		    limit = { SKA = { is_free_or_tributary_trigger = yes } }
-			create_alliance = SKA
-		}
-		add_country_modifier = {
-		    name = "16_good_reputation"
-			duration = 9125
-		}
+		
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.54 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
 	option = {
-		name = "es_4_scenario.6.c"
-		ai_chance = { factor = 33 }
-		every_owned_province = {
-		    limit = {
-			    culture = skaal
-			}
-		    add_core = SKA
-			change_religion = all-maker_cult
-			add_province_modifier = {
-		    name = "00_unrest"
-			duration = 9125
-		    }
-		}
+		name = "es_4_scenario.7.b"
+		ai_chance = { factor = 50 }
+		
+		add_stability = 1
+		
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.55 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
 }

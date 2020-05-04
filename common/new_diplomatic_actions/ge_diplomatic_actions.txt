@@ -2177,7 +2177,7 @@ leave_native_reservation  =  {
 	}
 	on_accept = {
 		ROOT = {
-        FROM = { grant_independence = yes }
+        grant_independence = yes
         }
     }
 	on_decline = {
@@ -2350,7 +2350,7 @@ leave_imperial_subject  =  {
 	}
 	on_accept = {
 		ROOT = {
-        FROM = { grant_independence = yes }
+        grant_independence = yes
         }
     }
 	on_decline = {
@@ -2522,7 +2522,7 @@ leave_alliance_member  =  {
 	}
 	on_accept = {
 		ROOT = {
-        FROM = { grant_independence = yes }
+        grant_independence = yes
         }
     }
 	on_decline = {
@@ -2704,7 +2704,7 @@ leave_tributary_state  =  {
 	}
 	on_accept = {
 		ROOT = {
-        FROM = { grant_independence = yes }
+        grant_independence = yes
         }
     }
 	on_decline = {
@@ -2894,7 +2894,7 @@ leave_vassal  =  {
 	}
 	on_accept = {
 		ROOT = {
-        FROM = { grant_independence = yes }
+        grant_independence = yes
         }
     }
 	on_decline = {

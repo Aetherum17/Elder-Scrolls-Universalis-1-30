@@ -131,6 +131,35 @@ country_decisions = {
 		}
 	}
 	
+	es_4_subjuction_of_riften = {
+	    major = yes
+		potential = {
+        NOT = { has_country_flag = es_4_riften_flag }
+		culture_group = northern_cg
+		owns = 1275
+		NOT = { 1268 = { country_or_subject_holds = ROOT } }
+		1268 = { owner = { ai = yes } }
+		}
+		allow = {
+		OR = {
+		owns = 1268
+		1268 = { controlled_by = ROOT }
+		}
+		}
+		effect = {
+		set_country_flag = es_4_riften_flag
+		1268 = { owner = { save_event_target_as = 1268_owner } }
+		
+		every_province = { limit = { area = skyrim_1_la owned_by = 1268_owner } cede_province = NA1 add_core = NA1 }
+		
+		ROOT = { create_subject = { subject_type = vassal subject = NA1 } }
+		NA1 = { change_religion = ROOT change_primary_culture = ROOT }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
 	es_5_enslave_elves = {
 		potential = {
         any_owned_province = {

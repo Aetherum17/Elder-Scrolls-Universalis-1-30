@@ -154,3 +154,81 @@ country_event = {
 	}
 	
 }
+
+country_event = {
+	id = es_scenario_operator.4
+	title = es_1_scenario.1.t
+	desc = es_1_scenario.1.d
+	picture = ES_THRONEROOM_1_eventPicture	
+	
+	fire_only_once = yes
+	
+	trigger = {
+	    tag = RED
+		OR = {
+		AND = {
+		is_year = 139
+		NOT = { is_year = 189 }
+		}
+		AND = {
+		any_country = {
+			owns_or_subject_of = 1275
+			owns_or_subject_of = 7363
+			owns_or_subject_of = 7412
+			owns_or_subject_of = 1299
+			owns_or_subject_of = 7350
+		}
+		}
+		}
+    }
+
+	mean_time_to_happen = {
+		days = 1825		
+	}
+	
+	immediate = {
+		every_country = {
+		limit = { culture_group = northern_cg owns = 1275 } country_event = { id = es_4_scenario.1 days = 1825 tooltip = es_collapse.2.a.tt }
+		}
+		###
+		every_province = {
+		limit = { area = morrowind_23_la is_city = no } cede_province = SKA add_core = SKA
+		}
+		if = { limit = { any_province = { area = morrowind_23_la is_city = yes owner = { NOT = { primary_culture = skaal } } } } random_province = { limit = { area = morrowind_23_la is_city = yes owner = { NOT = { primary_culture = skaal } } } } spawn_rebels = { type = nationalist_rebels size = 3.5 win = yes unrest = 25 } }
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.38 days = 31 tooltip = es_collapse.2.a.tt } }
+		###
+		every_country = {
+		limit = { culture_group = snow_elves_cg owns = 7571 } country_event = { id = es_4_scenario.2 days = 1825 tooltip = es_collapse.2.a.tt }
+		}
+		###
+		every_country = {
+		limit = { owns = 7549 religion = dragon_cult } country_event = { id = es_4_scenario.3 days = 1825 tooltip = es_collapse.2.a.tt }
+		}
+		###
+		every_country = {
+		limit = { culture_group = half_blood_cg owns = 1355 } country_event = { id = es_4_scenario.4 days = 1825 tooltip = es_collapse.2.a.tt }
+		}
+		###
+		every_country = {
+		limit = { culture_group = high_elves_cg owns = 1206 NOT = { owns = 1194 } } country_event = { id = es_4_scenario.5 days = 1825 tooltip = es_collapse.2.a.tt }
+		}
+		###
+		7520 = { cede_province = NF5 add_core = NF5 }
+		every_province = { limit = { area = skyrim_55_la is_city = no } change_religion = nordic_pantheon change_culture = nord }
+		if = { limit = { any_province = { area = skyrim_55_la is_city = yes owner = { NOT = { primary_culture = nord } } } } random_province = { limit = { area = skyrim_55_la is_city = yes owner = { NOT = { primary_culture = nord } } } } spawn_rebels = { type = nationalist_rebels size = 3.5 win = yes unrest = 25 } }
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.56 days = 31 tooltip = es_collapse.2.a.tt } }
+		###
+		every_country = {
+		limit = { primary_culture = ayleid owns = 1206 NOT = { tag = AYL } } country_event = { id = es_4_scenario.6 days = 1825 tooltip = es_collapse.2.a.tt }
+		}
+		###
+		every_country = {
+		limit = { primary_culture = nord owns = 1275 NOT = { tag = SKY } NOT = { tag = OLD } } country_event = { id = es_4_scenario.7 days = 1825 tooltip = es_collapse.2.a.tt }
+		}
+	}
+
+	option = {
+		name = "es_1_scenario.1.a"
+	}
+	
+}
