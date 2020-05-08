@@ -9,6 +9,7 @@ country_decisions = {
 			any_owned_province = {
 			NOT = { has_province_modifier = enslaved_province }
 			trade_goods = slaves
+			NOT = { has_province_flag = enslaved_province_flag }
 			}
 		}
 		allow =  {
@@ -19,6 +20,7 @@ country_decisions = {
 			any_owned_province = {
 			NOT = { has_province_modifier = enslaved_province }
 			trade_goods = slaves
+			NOT = { has_province_flag = enslaved_province_flag }
 			}
 		}
 		effect = {
@@ -28,10 +30,11 @@ country_decisions = {
 			trade_goods = slaves
 			NOT = { has_province_modifier = enslaved_province }
 			}
-			add_province_modifier = {
+			add_permanent_province_modifier = {
 			name = "enslaved_province"
 			duration = -1
 			}
+			set_province_flag = enslaved_province_flag
 			}
 			change_price = {
             trade_goods = slaves
@@ -52,8 +55,7 @@ country_decisions = {
 			has_reform = 23_b
 			}
 			any_owned_province = {
-			has_province_modifier = enslaved_province
-			trade_goods = slaves
+			has_province_flag = enslaved_province_flag
 			}
 		}
 		allow =  {
@@ -63,19 +65,18 @@ country_decisions = {
 			has_reform = 23_b
 		    }
 			any_owned_province = {
-			has_province_modifier = enslaved_province
-			trade_goods = slaves
+			has_province_flag = enslaved_province_flag
 			}
 		}
 		effect = {
 		    add_years_of_income = -0.10
 		    random_owned_province = {
 			limit = {
-			trade_goods = slaves
-			has_province_modifier = enslaved_province
+			has_province_flag = enslaved_province_flag
 			}
 			remove_province_modifier = enslaved_province
-			add_province_modifier = {
+			clr_province_flag = enslaved_province_flag
+			add_permanent_province_modifier = {
 			name = "liberated_province"
 			duration = 3650
 			}
@@ -101,6 +102,7 @@ country_decisions = {
 			any_owned_province = {
 			NOT = { has_province_modifier = banned_production }
 			trade_goods = wine
+			NOT = { has_province_flag = banned_alcohol_production_flag }
 			}
 		}
 		allow =  {
@@ -111,6 +113,7 @@ country_decisions = {
 			any_owned_province = {
 			NOT = { has_province_modifier = banned_production }
 			trade_goods = wine
+			NOT = { has_province_flag = banned_alcohol_production_flag }
 			}
 		}
 		effect = {
@@ -120,10 +123,11 @@ country_decisions = {
 			trade_goods = wine
 			NOT = { has_province_modifier = banned_production }
 			}
-			add_province_modifier = {
+			add_permanent_province_modifier = {
 			name = "banned_production"
 			duration = -1
 			}
+			set_province_flag = banned_alcohol_production_flag
 			}
 			change_price = {
             trade_goods = wine
@@ -144,8 +148,7 @@ country_decisions = {
 			has_reform = 51_b
 			}
 			any_owned_province = {
-			has_province_modifier = banned_production
-			trade_goods = wine
+			has_province_flag = banned_alcohol_production_flag
 			}
 		}
 		allow =  {
@@ -155,18 +158,17 @@ country_decisions = {
 			has_reform = 51_b
 			}
 			any_owned_province = {
-			has_province_modifier = banned_production
-			trade_goods = wine
+			has_province_flag = banned_alcohol_production_flag
 			}
 		}
 		effect = {
 		    add_manpower = -5
 		    random_owned_province = {
 			limit = {
-			trade_goods = wine
-			has_province_modifier = banned_production
+			has_province_flag = banned_alcohol_production_flag
 			}
 			remove_province_modifier = banned_production
+			clr_province_flag = banned_alcohol_production_flag
 			}
 			change_price = {
             trade_goods = wine
@@ -192,9 +194,11 @@ country_decisions = {
 			trade_goods = sugar
 			trade_goods = tobacco
 			}
+			NOT = { has_province_flag = banned_narcotics_production_flag }
 			}
 		}
 		allow =  {
+		    NOT = { prestige = 95 }
 		    OR = {
 			has_reform = 55_c
 			has_reform = 55_d
@@ -205,6 +209,7 @@ country_decisions = {
 			trade_goods = sugar
 			trade_goods = tobacco
 			}
+			NOT = { has_province_flag = banned_narcotics_production_flag }
 			}
 		}
 		effect = {
@@ -217,10 +222,11 @@ country_decisions = {
 			}
 			NOT = { has_province_modifier = banned_production }
 			}
-			add_province_modifier = {
+			add_permanent_province_modifier = {
 			name = "banned_production"
 			duration = -1
 			}
+			set_province_flag = banned_narcotics_production_flag
 			}
 			change_price = {
             trade_goods = sugar
@@ -247,24 +253,17 @@ country_decisions = {
 			has_reform = 55_b
 			}
 			any_owned_province = {
-			has_province_modifier = banned_production
-			OR = {
-			trade_goods = sugar
-			trade_goods = tobacco
-			}
+			has_province_flag = banned_narcotics_production_flag
 			}
 		}
 		allow =  {
+		   prestige = 0 
 		   OR = {
 			has_reform = 55_a
 			has_reform = 55_b
 			}
 			any_owned_province = {
-			has_province_modifier = banned_production
-			OR = {
-			trade_goods = sugar
-			trade_goods = tobacco
-			}
+			has_province_flag = banned_narcotics_production_flag
 			}
 		}
 		effect = {
@@ -278,6 +277,7 @@ country_decisions = {
 			has_province_modifier = banned_production
 			}
 			remove_province_modifier = banned_production
+			clr_province_flag = banned_narcotics_production_flag
 			}
 			change_price = {
             trade_goods = sugar

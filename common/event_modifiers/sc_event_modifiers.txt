@@ -89,16 +89,18 @@ antibankrapucy = {
 }
 
 05_elven_migration = {
-  local_production_efficiency = 0.25
-  trade_goods_size_modifier = 0.15
+  local_production_efficiency = 0.10
+  trade_goods_size_modifier = 0.10
   local_manpower_modifier = 0.10
+  local_culture_conversion_cost = 1.0
+  local_unrest = 1
 }
 
 05_elven_slaves = {
-  local_production_efficiency = 0.50
-  trade_goods_size_modifier = 0.35
+  local_production_efficiency = 0.25
+  trade_goods_size_modifier = 0.25
   local_manpower_modifier = 0.25
-  local_culture_conversion_cost = 0.5
+  local_culture_conversion_cost = 2.5
   local_unrest = 2.5
 }
 

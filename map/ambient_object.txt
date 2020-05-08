@@ -1,11 +1,62 @@
 type={
+	type="tel_mora_canal"
+	use_animation=no
+	time_duration=300.000000
+	always_visible=yes
+	visible_in_all_map_modes=yes
+	object={
+		name="kiel_canal"
+		hidden_on_start=no
+		position={
+			39.000 50.500 2413.000 
+		}
+		rotation={
+			0.000 -75.000 0.000 
+		}
+	}
+}
+type={
+	type="mi_kin_canal"
+	use_animation=no
+	time_duration=300.000000
+	always_visible=yes
+	visible_in_all_map_modes=yes
+	object={
+		name="kiel_canal"
+		hidden_on_start=no
+		position={
+			39.000 50.500 2413.000 
+		}
+		rotation={
+			0.000 -75.000 0.000 
+		}
+	}
+}
+type={
+	type="nosh_shek_canal"
+	use_animation=no
+	time_duration=300.000000
+	always_visible=yes
+	visible_in_all_map_modes=yes
+	object={
+		name="kiel_canal"
+		hidden_on_start=no
+		position={
+			39.000 50.500 2413.000 
+		}
+		rotation={
+			0.000 -75.000 0.000 
+		}
+	}
+}
+type={
 	type="gate_coldharbour"
 	use_animation=no
 	scale=0.750000
 	always_visible=yes
 	object={
 		name="gate_coldharbour"
-		hidden_on_start=yes
+		hidden_on_start=no
 		position={
 			1294.000 32.000 2562.000 
 		}
@@ -21,7 +72,7 @@ type={
 	always_visible=yes
 	object={
 		name="gate_coldharbour"
-		hidden_on_start=yes
+		hidden_on_start=no
 		position={
 			475.000 27.000 2616.000 
 		}
@@ -36,7 +87,7 @@ type={
 	always_visible=yes
 	object={
 		name="gate_deadlands"
-		hidden_on_start=yes
+		hidden_on_start=no
 		position={
 			1410.000 26.500 1685.000 
 		}

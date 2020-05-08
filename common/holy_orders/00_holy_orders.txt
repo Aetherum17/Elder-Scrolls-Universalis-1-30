@@ -2,7 +2,6 @@ shadhili_order = {
     icon = GFX_holy_order_shadhili
     trigger = {
         NOT = { religion = dragon_cult }
-		
     }
     cost = 50
     cost_type = adm_power
@@ -13,8 +12,8 @@ shadhili_order = {
 	    add_base_manpower = -1
     }
     modifier = {
+	    local_regiment_cost = 0.10
         local_manpower_modifier = 0.10
-        local_regiment_cost = 0.10
     }
     ai_priority = {
         factor = 2
@@ -29,7 +28,6 @@ qadiri_order = {
     icon = GFX_holy_order_qadiri
     trigger = {
         NOT = { religion = dragon_cult }
-		
     }
     cost = 50
     cost_type = dip_power
@@ -60,7 +58,6 @@ aissawa_order = {
     icon = GFX_holy_order_aissawa
     trigger = {
         NOT = { religion = dragon_cult }
-		
     }
     cost = 50
     cost_type = mil_power
@@ -72,7 +69,7 @@ aissawa_order = {
     }
     modifier = {
         local_unrest = 1
-        culture_conversion_cost = -0.10
+        local_culture_conversion_cost = -0.10
     }
     ai_priority = {
         factor = 1
