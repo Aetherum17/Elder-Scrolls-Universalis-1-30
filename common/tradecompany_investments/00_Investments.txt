@@ -79,7 +79,7 @@ company_warehouse = {
 	cost = 500.0
 
 	company_province_area_modifier = {
-		province_trade_power_value = 1.0
+		province_trade_power_value = 0.1
 	}
 
 	area_modifier = {
@@ -100,11 +100,11 @@ company_depot = {
 	cost = 750.0
 
 	company_province_area_modifier = {
-		province_trade_power_value = 2.5
+		province_trade_power_value = 0.25
 	}
 
 	area_modifier = {
-		local_production_efficiency = 2.5
+		local_production_efficiency = 0.25
 	}
 	
 	ai_global_worth = { factor = 0 }

@@ -61,7 +61,7 @@ country_event = {
 		ai_chance = { factor = 100 }
 		add_prestige = 10
 		1139 = {
-		add_province_modifier = {
+		add_permanent_province_modifier = {
 		    name = "30_university_of_gwylim"
 			duration = -1
 		}
@@ -243,7 +243,7 @@ country_event = {
 			    limit = {
 		        area = skyrim_19_la
 				}
-				add_province_modifier = {
+				add_permanent_province_modifier = {
 				    name = "00_unrest"
 					duration = 9125
 				}
@@ -255,7 +255,7 @@ country_event = {
 			    limit = {
 		        area = skyrim_14_la
 				}
-				add_province_modifier = {
+				add_permanent_province_modifier = {
 				    name = "00_unrest"
 					duration = 9125
 				}
@@ -267,7 +267,7 @@ country_event = {
 			    limit = {
 		        area = skyrim_7_la
 				}
-				add_province_modifier = {
+				add_permanent_province_modifier = {
 				    name = "00_unrest"
 					duration = 9125
 				}
@@ -389,7 +389,7 @@ country_event = {
 				}
 				NOT = { owned_by = ROOT }
 			}
-			add_province_modifier = {
+			add_permanent_province_modifier = {
 				name = "10_unrest"
 				duration = 9125
 			}
@@ -407,7 +407,7 @@ country_event = {
 				region = great_planes_lr
 				}
 			}
-			add_province_modifier = {
+			add_permanent_province_modifier = {
 				name = "00_unrest"
 				duration = 9125
 			}
@@ -442,7 +442,7 @@ country_event = {
 		name = "es_30_scenario.9.a"
 		ai_chance = { factor = 50 }
 		1352 = {
-		add_province_modifier = {
+		add_permanent_province_modifier = {
 		    name = "10_unrest"
 			duration = 9125
 		}
@@ -477,7 +477,7 @@ province_event = {
 	
 	immediate = {
 	    set_province_flag = es_30_scenario.10_flag
-		add_province_modifier = {
+		add_permanent_province_modifier = {
 		    name = "30_forsworn_separatism"
 			duration = 9125
 		}

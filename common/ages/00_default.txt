@@ -21,7 +21,7 @@ classical_age = {
 					controlled_by = owner
 					is_core = ROOT
 				}
-				amount = 10
+				amount = 25
 			}
 		}
 		obj_classical_scientist = {
@@ -40,7 +40,7 @@ classical_age = {
 				all_owned_province = {
 					development = 15
 				}
-				amount = 10
+				amount = 25
 			}
 		}
 		obj_classical_income = {
@@ -313,7 +313,7 @@ age_of_migrations = {
 			}
 		}
 		obj_migration_cavalry = {
-			num_of_cavalry = 30
+			num_of_cavalry = 50
 		}
 		obj_migration_roads = {
 			all_owned_province = {
@@ -445,7 +445,7 @@ dark_age = {
 					controlled_by = owner
 					is_core = ROOT
 				}
-				amount = 10
+				amount = 25
 			}
 		}	
 		obj_darkage_buddhism = {
@@ -592,7 +592,7 @@ feudal_age = {
 			prestige = 75
 		}
 		obj_feudal_infantry = {
-			num_of_infantry = 50
+			num_of_infantry = 100
 		}
 	}
 
@@ -728,7 +728,7 @@ high_middle_ages = {
 					controlled_by = owner
 					is_core = ROOT
 				}
-				amount = 10
+				amount = 25
 			}
 		}
 		obj_highmiddle_religious_unity = {
@@ -991,7 +991,7 @@ age_of_discovery = {
 					controlled_by = owner
 					is_core = ROOT
 				}
-				amount = 7
+				amount = 10
 			}
 		}
 	obj_30_development_city = {
@@ -1301,7 +1301,7 @@ age_of_absolutism = {
 			num_of_trade_companies = 3
 		}
 		obj_universities = {
-			university = 10
+			university = 25
 		}
 		obj_large_forcelimit = {
 			land_forcelimit = 250
@@ -1597,7 +1597,7 @@ industrial_age = {
 					controlled_by = owner
 					is_core = ROOT
 				}
-				amount = 10
+				amount = 25
 			}
 		}
 		obj_industrial_10_manufactories = {
@@ -1613,7 +1613,7 @@ industrial_age = {
 					controlled_by = owner
 					is_core = ROOT
 				}
-				amount = 25
+				amount = 50
 			}
 		}
 		obj_industrial_african_colonies = {
@@ -1632,7 +1632,7 @@ industrial_age = {
 				all_owned_province = {
 					development = 50
 				}
-				amount = 10
+				amount = 25
 			}
 		}
 		obj_industrial_japan = {
@@ -1803,7 +1803,7 @@ great_war_age = {
 		obj_greatwar_win_battles = {	
 			check_variable = {
 				which = num_of_battles_won
-				value = 25
+				value = 100
 			}
 		}
 	}	

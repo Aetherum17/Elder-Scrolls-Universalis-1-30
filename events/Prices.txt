@@ -7,1541 +7,634 @@ country_event = {
 	picture = ES_TRADE_GOODS_eventPicture
 
 	trigger = {
-	tag = RED
-	NOT = { has_country_modifier = trade_time }
+		tag = RED
+		NOT = { has_country_modifier = trade_time }
 	}
 	
 	mean_time_to_happen = {
-		months = 150
+		months = 1
 	}
 	
 	immediate = {
-	hidden_effect = {
-	add_country_modifier = {
-		name = "trade_time"
-		duration = 5475
-	}
-	every_country = {
-	limit = {
-	ai = no
-	}
-	country_event = { id = es_trade.4 days = 31 tooltip = es_trade.4.a.tt }
-	}
-	}
+		hidden_effect = {
+			add_country_modifier = {
+				name = "trade_time"
+				duration = 18250
+			}
+			every_country = {
+				limit = { ai = no }
+				country_event = { id = es_trade.4 days = 31 tooltip = es_trade.4.a.tt }
+			}
+		}
     }
 	
 	option = {
 		name = es_trade.1.a
 		
 		hidden_effect = {
+			random_list = {
+				10 = { change_price = { trade_goods = algae key = ANNUAL_TRADE value = 0.25 duration = 36500 } }
+				10 = { change_price = { trade_goods = algae key = ANNUAL_TRADE value = 0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = algae key = ANNUAL_TRADE value = 0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = algae key = ANNUAL_TRADE value = 0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = algae key = ANNUAL_TRADE value = 0.05 duration = 36500 } }
+			
+				10 = { change_price = { trade_goods = algae key = ANNUAL_TRADE value = -0.05 duration = 36500 } }
+				10 = { change_price = { trade_goods = algae key = ANNUAL_TRADE value = -0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = algae key = ANNUAL_TRADE value = -0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = algae key = ANNUAL_TRADE value = -0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = algae key = ANNUAL_TRADE value = -0.25 duration = 36500 } }
+			}
 		
-		random_list = {
-		25 = {
-		change_price = {
-			trade_goods = grain
-			key = ANNUAL_TRADE
-			value = 0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = grain
-			key = ANNUAL_TRADE
-			value = -0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = grain
-			key = ANNUAL_TRADE
-			value = 0.10
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = grain
-			key = ANNUAL_TRADE
-			value = -0.10
-			duration = 91250
-		}
-		}
-		}
+			random_list = {
+				10 = { change_price = { trade_goods = aluminum key = ANNUAL_TRADE value = 0.25 duration = 36500 } }
+				10 = { change_price = { trade_goods = aluminum key = ANNUAL_TRADE value = 0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = aluminum key = ANNUAL_TRADE value = 0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = aluminum key = ANNUAL_TRADE value = 0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = aluminum key = ANNUAL_TRADE value = 0.05 duration = 36500 } }
+			
+				10 = { change_price = { trade_goods = aluminum key = ANNUAL_TRADE value = -0.05 duration = 36500 } }
+				10 = { change_price = { trade_goods = aluminum key = ANNUAL_TRADE value = -0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = aluminum key = ANNUAL_TRADE value = -0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = aluminum key = ANNUAL_TRADE value = -0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = aluminum key = ANNUAL_TRADE value = -0.25 duration = 36500 } }
+			}
 		
-		random_list = {
-		25 = {
-		change_price = {
-			trade_goods = wine
-			key = ANNUAL_TRADE
-			value = 0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = wine
-			key = ANNUAL_TRADE
-			value = -0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = wine
-			key = ANNUAL_TRADE
-			value = 0.10
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = wine
-			key = ANNUAL_TRADE
-			value = -0.10
-			duration = 91250
-		}
-		}
-		}
+			random_list = {
+				10 = { change_price = { trade_goods = cars key = ANNUAL_TRADE value = 0.25 duration = 36500 } }
+				10 = { change_price = { trade_goods = cars key = ANNUAL_TRADE value = 0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = cars key = ANNUAL_TRADE value = 0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = cars key = ANNUAL_TRADE value = 0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = cars key = ANNUAL_TRADE value = 0.05 duration = 36500 } }
+			
+				10 = { change_price = { trade_goods = cars key = ANNUAL_TRADE value = -0.05 duration = 36500 } }
+				10 = { change_price = { trade_goods = cars key = ANNUAL_TRADE value = -0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = cars key = ANNUAL_TRADE value = -0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = cars key = ANNUAL_TRADE value = -0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = cars key = ANNUAL_TRADE value = -0.25 duration = 36500 } }
+			}
 		
-		random_list = {
-		25 = {
-		change_price = {
-			trade_goods = wool
-			key = ANNUAL_TRADE
-			value = 0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = wool
-			key = ANNUAL_TRADE
-			value = -0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = wool
-			key = ANNUAL_TRADE
-			value = 0.10
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = wool
-			key = ANNUAL_TRADE
-			value = -0.10
-			duration = 91250
-		}
-		}
-		}
+			random_list = {
+				10 = { change_price = { trade_goods = chinaware key = ANNUAL_TRADE value = 0.25 duration = 36500 } }
+				10 = { change_price = { trade_goods = chinaware key = ANNUAL_TRADE value = 0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = chinaware key = ANNUAL_TRADE value = 0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = chinaware key = ANNUAL_TRADE value = 0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = chinaware key = ANNUAL_TRADE value = 0.05 duration = 36500 } }
+			
+				10 = { change_price = { trade_goods = chinaware key = ANNUAL_TRADE value = -0.05 duration = 36500 } }
+				10 = { change_price = { trade_goods = chinaware key = ANNUAL_TRADE value = -0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = chinaware key = ANNUAL_TRADE value = -0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = chinaware key = ANNUAL_TRADE value = -0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = chinaware key = ANNUAL_TRADE value = -0.25 duration = 36500 } }
+			}
 		
-		random_list = {
-		25 = {
-		change_price = {
-			trade_goods = cloth
-			key = ANNUAL_TRADE
-			value = 0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = cloth
-			key = ANNUAL_TRADE
-			value = -0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = cloth
-			key = ANNUAL_TRADE
-			value = 0.10
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = cloth
-			key = ANNUAL_TRADE
-			value = -0.10
-			duration = 91250
-		}
-		}
-		}
+			random_list = {
+				10 = { change_price = { trade_goods = cloth key = ANNUAL_TRADE value = 0.25 duration = 36500 } }
+				10 = { change_price = { trade_goods = cloth key = ANNUAL_TRADE value = 0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = cloth key = ANNUAL_TRADE value = 0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = cloth key = ANNUAL_TRADE value = 0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = cloth key = ANNUAL_TRADE value = 0.05 duration = 36500 } }
+			
+				10 = { change_price = { trade_goods = cloth key = ANNUAL_TRADE value = -0.05 duration = 36500 } }
+				10 = { change_price = { trade_goods = cloth key = ANNUAL_TRADE value = -0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = cloth key = ANNUAL_TRADE value = -0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = cloth key = ANNUAL_TRADE value = -0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = cloth key = ANNUAL_TRADE value = -0.25 duration = 36500 } }
+			}
 		
-		random_list = {
-		25 = {
-		change_price = {
-			trade_goods = fish
-			key = ANNUAL_TRADE
-			value = 0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = fish
-			key = ANNUAL_TRADE
-			value = -0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = fish
-			key = ANNUAL_TRADE
-			value = 0.10
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = fish
-			key = ANNUAL_TRADE
-			value = -0.10
-			duration = 91250
-		}
-		}
-		}
+			random_list = {
+				10 = { change_price = { trade_goods = coal key = ANNUAL_TRADE value = 0.25 duration = 36500 } }
+				10 = { change_price = { trade_goods = coal key = ANNUAL_TRADE value = 0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = coal key = ANNUAL_TRADE value = 0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = coal key = ANNUAL_TRADE value = 0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = coal key = ANNUAL_TRADE value = 0.05 duration = 36500 } }
+			
+				10 = { change_price = { trade_goods = coal key = ANNUAL_TRADE value = -0.05 duration = 36500 } }
+				10 = { change_price = { trade_goods = coal key = ANNUAL_TRADE value = -0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = coal key = ANNUAL_TRADE value = -0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = coal key = ANNUAL_TRADE value = -0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = coal key = ANNUAL_TRADE value = -0.25 duration = 36500 } }
+			}
 		
-		random_list = {
-		25 = {
-		change_price = {
-			trade_goods = fur
-			key = ANNUAL_TRADE
-			value = 0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = fur
-			key = ANNUAL_TRADE
-			value = -0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = fur
-			key = ANNUAL_TRADE
-			value = 0.10
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = fur
-			key = ANNUAL_TRADE
-			value = -0.10
-			duration = 91250
-		}
-		}
-		}
+			random_list = {
+				10 = { change_price = { trade_goods = cocoa key = ANNUAL_TRADE value = 0.25 duration = 36500 } }
+				10 = { change_price = { trade_goods = cocoa key = ANNUAL_TRADE value = 0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = cocoa key = ANNUAL_TRADE value = 0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = cocoa key = ANNUAL_TRADE value = 0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = cocoa key = ANNUAL_TRADE value = 0.05 duration = 36500 } }
+			
+				10 = { change_price = { trade_goods = cocoa key = ANNUAL_TRADE value = -0.05 duration = 36500 } }
+				10 = { change_price = { trade_goods = cocoa key = ANNUAL_TRADE value = -0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = cocoa key = ANNUAL_TRADE value = -0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = cocoa key = ANNUAL_TRADE value = -0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = cocoa key = ANNUAL_TRADE value = -0.25 duration = 36500 } }
+			}
 		
-		random_list = {
-		25 = {
-		change_price = {
-			trade_goods = salt
-			key = ANNUAL_TRADE
-			value = 0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = salt
-			key = ANNUAL_TRADE
-			value = -0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = salt
-			key = ANNUAL_TRADE
-			value = 0.10
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = salt
-			key = ANNUAL_TRADE
-			value = -0.10
-			duration = 91250
-		}
-		}
-		}
+			random_list = {
+				10 = { change_price = { trade_goods = coffee key = ANNUAL_TRADE value = 0.25 duration = 36500 } }
+				10 = { change_price = { trade_goods = coffee key = ANNUAL_TRADE value = 0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = coffee key = ANNUAL_TRADE value = 0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = coffee key = ANNUAL_TRADE value = 0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = coffee key = ANNUAL_TRADE value = 0.05 duration = 36500 } }
+			
+				10 = { change_price = { trade_goods = coffee key = ANNUAL_TRADE value = -0.05 duration = 36500 } }
+				10 = { change_price = { trade_goods = coffee key = ANNUAL_TRADE value = -0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = coffee key = ANNUAL_TRADE value = -0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = coffee key = ANNUAL_TRADE value = -0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = coffee key = ANNUAL_TRADE value = -0.25 duration = 36500 } }
+			}
 		
-		random_list = {
-		25 = {
-		change_price = {
-			trade_goods = naval_supplies
-			key = ANNUAL_TRADE
-			value = 0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = naval_supplies
-			key = ANNUAL_TRADE
-			value = -0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = naval_supplies
-			key = ANNUAL_TRADE
-			value = 0.10
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = naval_supplies
-			key = ANNUAL_TRADE
-			value = -0.10
-			duration = 91250
-		}
-		}
-		}
+			random_list = {
+				10 = { change_price = { trade_goods = copper key = ANNUAL_TRADE value = 0.25 duration = 36500 } }
+				10 = { change_price = { trade_goods = copper key = ANNUAL_TRADE value = 0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = copper key = ANNUAL_TRADE value = 0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = copper key = ANNUAL_TRADE value = 0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = copper key = ANNUAL_TRADE value = 0.05 duration = 36500 } }
+			
+				10 = { change_price = { trade_goods = copper key = ANNUAL_TRADE value = -0.05 duration = 36500 } }
+				10 = { change_price = { trade_goods = copper key = ANNUAL_TRADE value = -0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = copper key = ANNUAL_TRADE value = -0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = copper key = ANNUAL_TRADE value = -0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = copper key = ANNUAL_TRADE value = -0.25 duration = 36500 } }
+			}
 		
-		random_list = {
-		25 = {
-		change_price = {
-			trade_goods = copper
-			key = ANNUAL_TRADE
-			value = 0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = copper
-			key = ANNUAL_TRADE
-			value = -0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = copper
-			key = ANNUAL_TRADE
-			value = 0.10
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = copper
-			key = ANNUAL_TRADE
-			value = -0.10
-			duration = 91250
-		}
-		}
-		}
+			random_list = {
+				10 = { change_price = { trade_goods = corals key = ANNUAL_TRADE value = 0.25 duration = 36500 } }
+				10 = { change_price = { trade_goods = corals key = ANNUAL_TRADE value = 0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = corals key = ANNUAL_TRADE value = 0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = corals key = ANNUAL_TRADE value = 0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = corals key = ANNUAL_TRADE value = 0.05 duration = 36500 } }
+			
+				10 = { change_price = { trade_goods = corals key = ANNUAL_TRADE value = -0.05 duration = 36500 } }
+				10 = { change_price = { trade_goods = corals key = ANNUAL_TRADE value = -0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = corals key = ANNUAL_TRADE value = -0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = corals key = ANNUAL_TRADE value = -0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = corals key = ANNUAL_TRADE value = -0.25 duration = 36500 } }
+			}
 		
-		random_list = {
-		25 = {
-		change_price = {
-			trade_goods = iron
-			key = ANNUAL_TRADE
-			value = 0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = iron
-			key = ANNUAL_TRADE
-			value = -0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = iron
-			key = ANNUAL_TRADE
-			value = 0.10
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = iron
-			key = ANNUAL_TRADE
-			value = -0.10
-			duration = 91250
-		}
-		}
-		}
+			random_list = {
+				10 = { change_price = { trade_goods = cotton key = ANNUAL_TRADE value = 0.25 duration = 36500 } }
+				10 = { change_price = { trade_goods = cotton key = ANNUAL_TRADE value = 0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = cotton key = ANNUAL_TRADE value = 0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = cotton key = ANNUAL_TRADE value = 0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = cotton key = ANNUAL_TRADE value = 0.05 duration = 36500 } }
+			
+				10 = { change_price = { trade_goods = cotton key = ANNUAL_TRADE value = -0.05 duration = 36500 } }
+				10 = { change_price = { trade_goods = cotton key = ANNUAL_TRADE value = -0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = cotton key = ANNUAL_TRADE value = -0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = cotton key = ANNUAL_TRADE value = -0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = cotton key = ANNUAL_TRADE value = -0.25 duration = 36500 } }
+			}
 		
-		random_list = {
-		25 = {
-		change_price = {
-			trade_goods = slaves
-			key = ANNUAL_TRADE
-			value = 0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = slaves
-			key = ANNUAL_TRADE
-			value = -0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = slaves
-			key = ANNUAL_TRADE
-			value = 0.10
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = slaves
-			key = ANNUAL_TRADE
-			value = -0.10
-			duration = 91250
-		}
-		}
-		}
+			random_list = {
+				10 = { change_price = { trade_goods = dyes key = ANNUAL_TRADE value = 0.25 duration = 36500 } }
+				10 = { change_price = { trade_goods = dyes key = ANNUAL_TRADE value = 0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = dyes key = ANNUAL_TRADE value = 0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = dyes key = ANNUAL_TRADE value = 0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = dyes key = ANNUAL_TRADE value = 0.05 duration = 36500 } }
+			
+				10 = { change_price = { trade_goods = dyes key = ANNUAL_TRADE value = -0.05 duration = 36500 } }
+				10 = { change_price = { trade_goods = dyes key = ANNUAL_TRADE value = -0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = dyes key = ANNUAL_TRADE value = -0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = dyes key = ANNUAL_TRADE value = -0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = dyes key = ANNUAL_TRADE value = -0.25 duration = 36500 } }
+			}
 		
-		random_list = {
-		25 = {
-		change_price = {
-			trade_goods = ivory
-			key = ANNUAL_TRADE
-			value = 0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = ivory
-			key = ANNUAL_TRADE
-			value = -0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = ivory
-			key = ANNUAL_TRADE
-			value = 0.10
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = ivory
-			key = ANNUAL_TRADE
-			value = -0.10
-			duration = 91250
-		}
-		}
-		}
+			random_list = {
+				10 = { change_price = { trade_goods = electronics key = ANNUAL_TRADE value = 0.25 duration = 36500 } }
+				10 = { change_price = { trade_goods = electronics key = ANNUAL_TRADE value = 0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = electronics key = ANNUAL_TRADE value = 0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = electronics key = ANNUAL_TRADE value = 0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = electronics key = ANNUAL_TRADE value = 0.05 duration = 36500 } }
+			
+				10 = { change_price = { trade_goods = electronics key = ANNUAL_TRADE value = -0.05 duration = 36500 } }
+				10 = { change_price = { trade_goods = electronics key = ANNUAL_TRADE value = -0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = electronics key = ANNUAL_TRADE value = -0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = electronics key = ANNUAL_TRADE value = -0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = electronics key = ANNUAL_TRADE value = -0.25 duration = 36500 } }
+			}
 		
-		random_list = {
-		25 = {
-		change_price = {
-			trade_goods = tea
-			key = ANNUAL_TRADE
-			value = 0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = tea
-			key = ANNUAL_TRADE
-			value = -0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = tea
-			key = ANNUAL_TRADE
-			value = 0.10
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = tea
-			key = ANNUAL_TRADE
-			value = -0.10
-			duration = 91250
-		}
-		}
-		}
+			random_list = {
+				10 = { change_price = { trade_goods = fish key = ANNUAL_TRADE value = 0.25 duration = 36500 } }
+				10 = { change_price = { trade_goods = fish key = ANNUAL_TRADE value = 0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = fish key = ANNUAL_TRADE value = 0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = fish key = ANNUAL_TRADE value = 0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = fish key = ANNUAL_TRADE value = 0.05 duration = 36500 } }
+			
+				10 = { change_price = { trade_goods = fish key = ANNUAL_TRADE value = -0.05 duration = 36500 } }
+				10 = { change_price = { trade_goods = fish key = ANNUAL_TRADE value = -0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = fish key = ANNUAL_TRADE value = -0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = fish key = ANNUAL_TRADE value = -0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = fish key = ANNUAL_TRADE value = -0.25 duration = 36500 } }
+			}
 		
-		random_list = {
-		25 = {
-		change_price = {
-			trade_goods = chinaware
-			key = ANNUAL_TRADE
-			value = 0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = chinaware
-			key = ANNUAL_TRADE
-			value = -0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = chinaware
-			key = ANNUAL_TRADE
-			value = 0.10
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = chinaware
-			key = ANNUAL_TRADE
-			value = -0.10
-			duration = 91250
-		}
-		}
-		}
+			random_list = {
+				10 = { change_price = { trade_goods = fur key = ANNUAL_TRADE value = 0.25 duration = 36500 } }
+				10 = { change_price = { trade_goods = fur key = ANNUAL_TRADE value = 0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = fur key = ANNUAL_TRADE value = 0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = fur key = ANNUAL_TRADE value = 0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = fur key = ANNUAL_TRADE value = 0.05 duration = 36500 } }
+			
+				10 = { change_price = { trade_goods = fur key = ANNUAL_TRADE value = -0.05 duration = 36500 } }
+				10 = { change_price = { trade_goods = fur key = ANNUAL_TRADE value = -0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = fur key = ANNUAL_TRADE value = -0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = fur key = ANNUAL_TRADE value = -0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = fur key = ANNUAL_TRADE value = -0.25 duration = 36500 } }
+			}
 		
-		random_list = {
-		25 = {
-		change_price = {
-			trade_goods = spices
-			key = ANNUAL_TRADE
-			value = 0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = spices
-			key = ANNUAL_TRADE
-			value = -0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = spices
-			key = ANNUAL_TRADE
-			value = 0.10
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = spices
-			key = ANNUAL_TRADE
-			value = -0.10
-			duration = 91250
-		}
-		}
-		}
+			random_list = {
+				10 = { change_price = { trade_goods = gems key = ANNUAL_TRADE value = 0.25 duration = 36500 } }
+				10 = { change_price = { trade_goods = gems key = ANNUAL_TRADE value = 0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = gems key = ANNUAL_TRADE value = 0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = gems key = ANNUAL_TRADE value = 0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = gems key = ANNUAL_TRADE value = 0.05 duration = 36500 } }
+			
+				10 = { change_price = { trade_goods = gems key = ANNUAL_TRADE value = -0.05 duration = 36500 } }
+				10 = { change_price = { trade_goods = gems key = ANNUAL_TRADE value = -0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = gems key = ANNUAL_TRADE value = -0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = gems key = ANNUAL_TRADE value = -0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = gems key = ANNUAL_TRADE value = -0.25 duration = 36500 } }
+			}
 		
-		random_list = {
-		25 = {
-		change_price = {
-			trade_goods = coffee
-			key = ANNUAL_TRADE
-			value = 0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = coffee
-			key = ANNUAL_TRADE
-			value = -0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = coffee
-			key = ANNUAL_TRADE
-			value = 0.10
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = coffee
-			key = ANNUAL_TRADE
-			value = -0.10
-			duration = 91250
-		}
-		}
-		}
+			random_list = {
+				10 = { change_price = { trade_goods = glass key = ANNUAL_TRADE value = 0.25 duration = 36500 } }
+				10 = { change_price = { trade_goods = glass key = ANNUAL_TRADE value = 0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = glass key = ANNUAL_TRADE value = 0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = glass key = ANNUAL_TRADE value = 0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = glass key = ANNUAL_TRADE value = 0.05 duration = 36500 } }
+			
+				10 = { change_price = { trade_goods = glass key = ANNUAL_TRADE value = -0.05 duration = 36500 } }
+				10 = { change_price = { trade_goods = glass key = ANNUAL_TRADE value = -0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = glass key = ANNUAL_TRADE value = -0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = glass key = ANNUAL_TRADE value = -0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = glass key = ANNUAL_TRADE value = -0.25 duration = 36500 } }
+			}
 		
-		random_list = {
-		25 = {
-		change_price = {
-			trade_goods = cotton
-			key = ANNUAL_TRADE
-			value = 0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = cotton
-			key = ANNUAL_TRADE
-			value = -0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = cotton
-			key = ANNUAL_TRADE
-			value = 0.10
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = cotton
-			key = ANNUAL_TRADE
-			value = -0.10
-			duration = 91250
-		}
-		}
-		}
+			random_list = {
+				10 = { change_price = { trade_goods = grain key = ANNUAL_TRADE value = 0.25 duration = 36500 } }
+				10 = { change_price = { trade_goods = grain key = ANNUAL_TRADE value = 0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = grain key = ANNUAL_TRADE value = 0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = grain key = ANNUAL_TRADE value = 0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = grain key = ANNUAL_TRADE value = 0.05 duration = 36500 } }
+			
+				10 = { change_price = { trade_goods = grain key = ANNUAL_TRADE value = -0.05 duration = 36500 } }
+				10 = { change_price = { trade_goods = grain key = ANNUAL_TRADE value = -0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = grain key = ANNUAL_TRADE value = -0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = grain key = ANNUAL_TRADE value = -0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = grain key = ANNUAL_TRADE value = -0.25 duration = 36500 } }
+			}
 		
-		random_list = {
-		25 = {
-		change_price = {
-			trade_goods = sugar
-			key = ANNUAL_TRADE
-			value = 0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = sugar
-			key = ANNUAL_TRADE
-			value = -0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = sugar
-			key = ANNUAL_TRADE
-			value = 0.10
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = sugar
-			key = ANNUAL_TRADE
-			value = -0.10
-			duration = 91250
-		}
-		}
-		}
+			random_list = {
+				10 = { change_price = { trade_goods = incense key = ANNUAL_TRADE value = 0.25 duration = 36500 } }
+				10 = { change_price = { trade_goods = incense key = ANNUAL_TRADE value = 0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = incense key = ANNUAL_TRADE value = 0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = incense key = ANNUAL_TRADE value = 0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = incense key = ANNUAL_TRADE value = 0.05 duration = 36500 } }
+			
+				10 = { change_price = { trade_goods = incense key = ANNUAL_TRADE value = -0.05 duration = 36500 } }
+				10 = { change_price = { trade_goods = incense key = ANNUAL_TRADE value = -0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = incense key = ANNUAL_TRADE value = -0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = incense key = ANNUAL_TRADE value = -0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = incense key = ANNUAL_TRADE value = -0.25 duration = 36500 } }
+			}
 		
-		random_list = {
-		25 = {
-		change_price = {
-			trade_goods = tobacco
-			key = ANNUAL_TRADE
-			value = 0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = tobacco
-			key = ANNUAL_TRADE
-			value = -0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = tobacco
-			key = ANNUAL_TRADE
-			value = 0.10
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = tobacco
-			key = ANNUAL_TRADE
-			value = -0.10
-			duration = 91250
-		}
-		}
-		}
+			random_list = {
+				10 = { change_price = { trade_goods = iron key = ANNUAL_TRADE value = 0.25 duration = 36500 } }
+				10 = { change_price = { trade_goods = iron key = ANNUAL_TRADE value = 0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = iron key = ANNUAL_TRADE value = 0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = iron key = ANNUAL_TRADE value = 0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = iron key = ANNUAL_TRADE value = 0.05 duration = 36500 } }
+			
+				10 = { change_price = { trade_goods = iron key = ANNUAL_TRADE value = -0.05 duration = 36500 } }
+				10 = { change_price = { trade_goods = iron key = ANNUAL_TRADE value = -0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = iron key = ANNUAL_TRADE value = -0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = iron key = ANNUAL_TRADE value = -0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = iron key = ANNUAL_TRADE value = -0.25 duration = 36500 } }
+			}
 		
-		random_list = {
-		25 = {
-		change_price = {
-			trade_goods = cocoa
-			key = ANNUAL_TRADE
-			value = 0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = cocoa
-			key = ANNUAL_TRADE
-			value = -0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = cocoa
-			key = ANNUAL_TRADE
-			value = 0.10
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = cocoa
-			key = ANNUAL_TRADE
-			value = -0.10
-			duration = 91250
-		}
-		}
-		}
+			random_list = {
+				10 = { change_price = { trade_goods = ivory key = ANNUAL_TRADE value = 0.25 duration = 36500 } }
+				10 = { change_price = { trade_goods = ivory key = ANNUAL_TRADE value = 0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = ivory key = ANNUAL_TRADE value = 0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = ivory key = ANNUAL_TRADE value = 0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = ivory key = ANNUAL_TRADE value = 0.05 duration = 36500 } }
+			
+				10 = { change_price = { trade_goods = ivory key = ANNUAL_TRADE value = -0.05 duration = 36500 } }
+				10 = { change_price = { trade_goods = ivory key = ANNUAL_TRADE value = -0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = ivory key = ANNUAL_TRADE value = -0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = ivory key = ANNUAL_TRADE value = -0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = ivory key = ANNUAL_TRADE value = -0.25 duration = 36500 } }
+			}
 		
-		random_list = {
-		25 = {
-		change_price = {
-			trade_goods = silk
-			key = ANNUAL_TRADE
-			value = 0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = silk
-			key = ANNUAL_TRADE
-			value = -0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = silk
-			key = ANNUAL_TRADE
-			value = 0.10
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = silk
-			key = ANNUAL_TRADE
-			value = -0.10
-			duration = 91250
-		}
-		}
-		}
+			random_list = {
+				10 = { change_price = { trade_goods = light_metals key = ANNUAL_TRADE value = 0.25 duration = 36500 } }
+				10 = { change_price = { trade_goods = light_metals key = ANNUAL_TRADE value = 0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = light_metals key = ANNUAL_TRADE value = 0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = light_metals key = ANNUAL_TRADE value = 0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = light_metals key = ANNUAL_TRADE value = 0.05 duration = 36500 } }
+			
+				10 = { change_price = { trade_goods = light_metals key = ANNUAL_TRADE value = -0.05 duration = 36500 } }
+				10 = { change_price = { trade_goods = light_metals key = ANNUAL_TRADE value = -0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = light_metals key = ANNUAL_TRADE value = -0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = light_metals key = ANNUAL_TRADE value = -0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = light_metals key = ANNUAL_TRADE value = -0.25 duration = 36500 } }
+			}
 		
-		random_list = {
-		25 = {
-		change_price = {
-			trade_goods = dyes
-			key = ANNUAL_TRADE
-			value = 0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = dyes
-			key = ANNUAL_TRADE
-			value = -0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = dyes
-			key = ANNUAL_TRADE
-			value = 0.10
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = dyes
-			key = ANNUAL_TRADE
-			value = -0.10
-			duration = 91250
-		}
-		}
-		}
+			random_list = {
+				10 = { change_price = { trade_goods = livestock key = ANNUAL_TRADE value = 0.25 duration = 36500 } }
+				10 = { change_price = { trade_goods = livestock key = ANNUAL_TRADE value = 0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = livestock key = ANNUAL_TRADE value = 0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = livestock key = ANNUAL_TRADE value = 0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = livestock key = ANNUAL_TRADE value = 0.05 duration = 36500 } }
+			
+				10 = { change_price = { trade_goods = livestock key = ANNUAL_TRADE value = -0.05 duration = 36500 } }
+				10 = { change_price = { trade_goods = livestock key = ANNUAL_TRADE value = -0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = livestock key = ANNUAL_TRADE value = -0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = livestock key = ANNUAL_TRADE value = -0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = livestock key = ANNUAL_TRADE value = -0.25 duration = 36500 } }
+			}
 		
-		random_list = {
-		25 = {
-		change_price = {
-			trade_goods = tropical_wood
-			key = ANNUAL_TRADE
-			value = 0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = tropical_wood
-			key = ANNUAL_TRADE
-			value = -0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = tropical_wood
-			key = ANNUAL_TRADE
-			value = 0.10
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = tropical_wood
-			key = ANNUAL_TRADE
-			value = -0.10
-			duration = 91250
-		}
-		}
-		}
+			random_list = {
+				10 = { change_price = { trade_goods = lobsters key = ANNUAL_TRADE value = 0.25 duration = 36500 } }
+				10 = { change_price = { trade_goods = lobsters key = ANNUAL_TRADE value = 0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = lobsters key = ANNUAL_TRADE value = 0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = lobsters key = ANNUAL_TRADE value = 0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = lobsters key = ANNUAL_TRADE value = 0.05 duration = 36500 } }
+			
+				10 = { change_price = { trade_goods = lobsters key = ANNUAL_TRADE value = -0.05 duration = 36500 } }
+				10 = { change_price = { trade_goods = lobsters key = ANNUAL_TRADE value = -0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = lobsters key = ANNUAL_TRADE value = -0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = lobsters key = ANNUAL_TRADE value = -0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = lobsters key = ANNUAL_TRADE value = -0.25 duration = 36500 } }
+			}
 		
-		random_list = {
-		25 = {
-		change_price = {
-			trade_goods = livestock
-			key = ANNUAL_TRADE
-			value = 0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = livestock
-			key = ANNUAL_TRADE
-			value = -0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = livestock
-			key = ANNUAL_TRADE
-			value = 0.10
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = livestock
-			key = ANNUAL_TRADE
-			value = -0.10
-			duration = 91250
-		}
-		}
-		}
+			random_list = {
+				10 = { change_price = { trade_goods = manganates key = ANNUAL_TRADE value = 0.25 duration = 36500 } }
+				10 = { change_price = { trade_goods = manganates key = ANNUAL_TRADE value = 0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = manganates key = ANNUAL_TRADE value = 0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = manganates key = ANNUAL_TRADE value = 0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = manganates key = ANNUAL_TRADE value = 0.05 duration = 36500 } }
+			
+				10 = { change_price = { trade_goods = manganates key = ANNUAL_TRADE value = -0.05 duration = 36500 } }
+				10 = { change_price = { trade_goods = manganates key = ANNUAL_TRADE value = -0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = manganates key = ANNUAL_TRADE value = -0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = manganates key = ANNUAL_TRADE value = -0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = manganates key = ANNUAL_TRADE value = -0.25 duration = 36500 } }
+			}
 		
-		random_list = {
-		25 = {
-		change_price = {
-			trade_goods = incense
-			key = ANNUAL_TRADE
-			value = 0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = incense
-			key = ANNUAL_TRADE
-			value = -0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = incense
-			key = ANNUAL_TRADE
-			value = 0.10
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = incense
-			key = ANNUAL_TRADE
-			value = -0.10
-			duration = 91250
-		}
-		}
-		}
+			random_list = {
+				10 = { change_price = { trade_goods = naval_supplies key = ANNUAL_TRADE value = 0.25 duration = 36500 } }
+				10 = { change_price = { trade_goods = naval_supplies key = ANNUAL_TRADE value = 0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = naval_supplies key = ANNUAL_TRADE value = 0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = naval_supplies key = ANNUAL_TRADE value = 0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = naval_supplies key = ANNUAL_TRADE value = 0.05 duration = 36500 } }
+			
+				10 = { change_price = { trade_goods = naval_supplies key = ANNUAL_TRADE value = -0.05 duration = 36500 } }
+				10 = { change_price = { trade_goods = naval_supplies key = ANNUAL_TRADE value = -0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = naval_supplies key = ANNUAL_TRADE value = -0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = naval_supplies key = ANNUAL_TRADE value = -0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = naval_supplies key = ANNUAL_TRADE value = -0.25 duration = 36500 } }
+			}
 		
-		random_list = {
-		25 = {
-		change_price = {
-			trade_goods = glass
-			key = ANNUAL_TRADE
-			value = 0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = glass
-			key = ANNUAL_TRADE
-			value = -0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = glass
-			key = ANNUAL_TRADE
-			value = 0.10
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = glass
-			key = ANNUAL_TRADE
-			value = -0.10
-			duration = 91250
-		}
-		}
-		}
+			random_list = {
+				10 = { change_price = { trade_goods = oil key = ANNUAL_TRADE value = 0.25 duration = 36500 } }
+				10 = { change_price = { trade_goods = oil key = ANNUAL_TRADE value = 0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = oil key = ANNUAL_TRADE value = 0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = oil key = ANNUAL_TRADE value = 0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = oil key = ANNUAL_TRADE value = 0.05 duration = 36500 } }
+			
+				10 = { change_price = { trade_goods = oil key = ANNUAL_TRADE value = -0.05 duration = 36500 } }
+				10 = { change_price = { trade_goods = oil key = ANNUAL_TRADE value = -0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = oil key = ANNUAL_TRADE value = -0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = oil key = ANNUAL_TRADE value = -0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = oil key = ANNUAL_TRADE value = -0.25 duration = 36500 } }
+			}
 		
-		random_list = {
-		25 = {
-		change_price = {
-			trade_goods = paper
-			key = ANNUAL_TRADE
-			value = 0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = paper
-			key = ANNUAL_TRADE
-			value = -0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = paper
-			key = ANNUAL_TRADE
-			value = 0.10
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = paper
-			key = ANNUAL_TRADE
-			value = -0.10
-			duration = 91250
-		}
-		}
-		}
+			random_list = {
+				10 = { change_price = { trade_goods = paper key = ANNUAL_TRADE value = 0.25 duration = 36500 } }
+				10 = { change_price = { trade_goods = paper key = ANNUAL_TRADE value = 0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = paper key = ANNUAL_TRADE value = 0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = paper key = ANNUAL_TRADE value = 0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = paper key = ANNUAL_TRADE value = 0.05 duration = 36500 } }
+			
+				10 = { change_price = { trade_goods = paper key = ANNUAL_TRADE value = -0.05 duration = 36500 } }
+				10 = { change_price = { trade_goods = paper key = ANNUAL_TRADE value = -0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = paper key = ANNUAL_TRADE value = -0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = paper key = ANNUAL_TRADE value = -0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = paper key = ANNUAL_TRADE value = -0.25 duration = 36500 } }
+			}
 		
-		random_list = {
-		25 = {
-		change_price = {
-			trade_goods = gems
-			key = ANNUAL_TRADE
-			value = 0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = gems
-			key = ANNUAL_TRADE
-			value = -0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = gems
-			key = ANNUAL_TRADE
-			value = 0.10
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = gems
-			key = ANNUAL_TRADE
-			value = -0.10
-			duration = 91250
-		}
-		}
-		}
+			random_list = {
+				10 = { change_price = { trade_goods = rare_metals key = ANNUAL_TRADE value = 0.25 duration = 36500 } }
+				10 = { change_price = { trade_goods = rare_metals key = ANNUAL_TRADE value = 0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = rare_metals key = ANNUAL_TRADE value = 0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = rare_metals key = ANNUAL_TRADE value = 0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = rare_metals key = ANNUAL_TRADE value = 0.05 duration = 36500 } }
+			
+				10 = { change_price = { trade_goods = rare_metals key = ANNUAL_TRADE value = -0.05 duration = 36500 } }
+				10 = { change_price = { trade_goods = rare_metals key = ANNUAL_TRADE value = -0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = rare_metals key = ANNUAL_TRADE value = -0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = rare_metals key = ANNUAL_TRADE value = -0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = rare_metals key = ANNUAL_TRADE value = -0.25 duration = 36500 } }
+			}
 		
-		random_list = {
-		25 = {
-		change_price = {
-			trade_goods = oil
-			key = ANNUAL_TRADE
-			value = 0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = oil
-			key = ANNUAL_TRADE
-			value = -0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = oil
-			key = ANNUAL_TRADE
-			value = 0.10
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = oil
-			key = ANNUAL_TRADE
-			value = -0.10
-			duration = 91250
-		}
-		}
-		}
+			random_list = {
+				10 = { change_price = { trade_goods = salt key = ANNUAL_TRADE value = 0.25 duration = 36500 } }
+				10 = { change_price = { trade_goods = salt key = ANNUAL_TRADE value = 0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = salt key = ANNUAL_TRADE value = 0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = salt key = ANNUAL_TRADE value = 0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = salt key = ANNUAL_TRADE value = 0.05 duration = 36500 } }
+			
+				10 = { change_price = { trade_goods = salt key = ANNUAL_TRADE value = -0.05 duration = 36500 } }
+				10 = { change_price = { trade_goods = salt key = ANNUAL_TRADE value = -0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = salt key = ANNUAL_TRADE value = -0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = salt key = ANNUAL_TRADE value = -0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = salt key = ANNUAL_TRADE value = -0.25 duration = 36500 } }
+			}
 		
-		random_list = {
-		25 = {
-		change_price = {
-			trade_goods = uranium
-			key = ANNUAL_TRADE
-			value = 0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = uranium
-			key = ANNUAL_TRADE
-			value = -0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = uranium
-			key = ANNUAL_TRADE
-			value = 0.10
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = uranium
-			key = ANNUAL_TRADE
-			value = -0.10
-			duration = 91250
-		}
-		}
-		}
+			random_list = {
+				10 = { change_price = { trade_goods = silicates key = ANNUAL_TRADE value = 0.25 duration = 36500 } }
+				10 = { change_price = { trade_goods = silicates key = ANNUAL_TRADE value = 0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = silicates key = ANNUAL_TRADE value = 0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = silicates key = ANNUAL_TRADE value = 0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = silicates key = ANNUAL_TRADE value = 0.05 duration = 36500 } }
+			
+				10 = { change_price = { trade_goods = silicates key = ANNUAL_TRADE value = -0.05 duration = 36500 } }
+				10 = { change_price = { trade_goods = silicates key = ANNUAL_TRADE value = -0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = silicates key = ANNUAL_TRADE value = -0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = silicates key = ANNUAL_TRADE value = -0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = silicates key = ANNUAL_TRADE value = -0.25 duration = 36500 } }
+			}
 		
-		random_list = {
-		25 = {
-		change_price = {
-			trade_goods = coal
-			key = ANNUAL_TRADE
-			value = 0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = coal
-			key = ANNUAL_TRADE
-			value = -0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = coal
-			key = ANNUAL_TRADE
-			value = 0.10
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = coal
-			key = ANNUAL_TRADE
-			value = -0.10
-			duration = 91250
-		}
-		}
-		}
+			random_list = {
+				10 = { change_price = { trade_goods = silk key = ANNUAL_TRADE value = 0.25 duration = 36500 } }
+				10 = { change_price = { trade_goods = silk key = ANNUAL_TRADE value = 0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = silk key = ANNUAL_TRADE value = 0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = silk key = ANNUAL_TRADE value = 0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = silk key = ANNUAL_TRADE value = 0.05 duration = 36500 } }
+			
+				10 = { change_price = { trade_goods = silk key = ANNUAL_TRADE value = -0.05 duration = 36500 } }
+				10 = { change_price = { trade_goods = silk key = ANNUAL_TRADE value = -0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = silk key = ANNUAL_TRADE value = -0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = silk key = ANNUAL_TRADE value = -0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = silk key = ANNUAL_TRADE value = -0.25 duration = 36500 } }
+			}
 		
-		random_list = {
-		25 = {
-		change_price = {
-			trade_goods = aluminum
-			key = ANNUAL_TRADE
-			value = 0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = aluminum
-			key = ANNUAL_TRADE
-			value = -0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = aluminum
-			key = ANNUAL_TRADE
-			value = 0.10
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = aluminum
-			key = ANNUAL_TRADE
-			value = -0.10
-			duration = 91250
-		}
-		}
-		}
+			random_list = {
+				10 = { change_price = { trade_goods = slaves key = ANNUAL_TRADE value = 0.25 duration = 36500 } }
+				10 = { change_price = { trade_goods = slaves key = ANNUAL_TRADE value = 0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = slaves key = ANNUAL_TRADE value = 0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = slaves key = ANNUAL_TRADE value = 0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = slaves key = ANNUAL_TRADE value = 0.05 duration = 36500 } }
+			
+				10 = { change_price = { trade_goods = slaves key = ANNUAL_TRADE value = -0.05 duration = 36500 } }
+				10 = { change_price = { trade_goods = slaves key = ANNUAL_TRADE value = -0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = slaves key = ANNUAL_TRADE value = -0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = slaves key = ANNUAL_TRADE value = -0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = slaves key = ANNUAL_TRADE value = -0.25 duration = 36500 } }
+			}
 		
-		random_list = {
-		25 = {
-		change_price = {
-			trade_goods = cars
-			key = ANNUAL_TRADE
-			value = 0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = cars
-			key = ANNUAL_TRADE
-			value = -0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = cars
-			key = ANNUAL_TRADE
-			value = 0.10
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = cars
-			key = ANNUAL_TRADE
-			value = -0.10
-			duration = 91250
-		}
-		}
-		}
+			random_list = {
+				10 = { change_price = { trade_goods = spices key = ANNUAL_TRADE value = 0.25 duration = 36500 } }
+				10 = { change_price = { trade_goods = spices key = ANNUAL_TRADE value = 0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = spices key = ANNUAL_TRADE value = 0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = spices key = ANNUAL_TRADE value = 0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = spices key = ANNUAL_TRADE value = 0.05 duration = 36500 } }
+			
+				10 = { change_price = { trade_goods = spices key = ANNUAL_TRADE value = -0.05 duration = 36500 } }
+				10 = { change_price = { trade_goods = spices key = ANNUAL_TRADE value = -0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = spices key = ANNUAL_TRADE value = -0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = spices key = ANNUAL_TRADE value = -0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = spices key = ANNUAL_TRADE value = -0.25 duration = 36500 } }
+			}
 		
-		random_list = {
-		25 = {
-		change_price = {
-			trade_goods = electronics
-			key = ANNUAL_TRADE
-			value = 0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = electronics
-			key = ANNUAL_TRADE
-			value = -0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = electronics
-			key = ANNUAL_TRADE
-			value = 0.10
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = electronics
-			key = ANNUAL_TRADE
-			value = -0.10
-			duration = 91250
-		}
-		}
-		}
+			random_list = {
+				10 = { change_price = { trade_goods = sugar key = ANNUAL_TRADE value = 0.25 duration = 36500 } }
+				10 = { change_price = { trade_goods = sugar key = ANNUAL_TRADE value = 0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = sugar key = ANNUAL_TRADE value = 0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = sugar key = ANNUAL_TRADE value = 0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = sugar key = ANNUAL_TRADE value = 0.05 duration = 36500 } }
+			
+				10 = { change_price = { trade_goods = sugar key = ANNUAL_TRADE value = -0.05 duration = 36500 } }
+				10 = { change_price = { trade_goods = sugar key = ANNUAL_TRADE value = -0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = sugar key = ANNUAL_TRADE value = -0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = sugar key = ANNUAL_TRADE value = -0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = sugar key = ANNUAL_TRADE value = -0.25 duration = 36500 } }
+			}
 		
-		random_list = {
-		25 = {
-		change_price = {
-			trade_goods = algae
-			key = ANNUAL_TRADE
-			value = 0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = algae
-			key = ANNUAL_TRADE
-			value = -0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = algae
-			key = ANNUAL_TRADE
-			value = 0.10
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = algae
-			key = ANNUAL_TRADE
-			value = -0.10
-			duration = 91250
-		}
-		}
-		}
+			random_list = {
+				10 = { change_price = { trade_goods = tea key = ANNUAL_TRADE value = 0.25 duration = 36500 } }
+				10 = { change_price = { trade_goods = tea key = ANNUAL_TRADE value = 0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = tea key = ANNUAL_TRADE value = 0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = tea key = ANNUAL_TRADE value = 0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = tea key = ANNUAL_TRADE value = 0.05 duration = 36500 } }
+			
+				10 = { change_price = { trade_goods = tea key = ANNUAL_TRADE value = -0.05 duration = 36500 } }
+				10 = { change_price = { trade_goods = tea key = ANNUAL_TRADE value = -0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = tea key = ANNUAL_TRADE value = -0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = tea key = ANNUAL_TRADE value = -0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = tea key = ANNUAL_TRADE value = -0.25 duration = 36500 } }
+			}
 		
-		random_list = {
-		25 = {
-		change_price = {
-			trade_goods = corals
-			key = ANNUAL_TRADE
-			value = 0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = corals
-			key = ANNUAL_TRADE
-			value = -0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = corals
-			key = ANNUAL_TRADE
-			value = 0.10
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = corals
-			key = ANNUAL_TRADE
-			value = -0.10
-			duration = 91250
-		}
-		}
-		}
+			random_list = {
+				10 = { change_price = { trade_goods = tobacco key = ANNUAL_TRADE value = 0.25 duration = 36500 } }
+				10 = { change_price = { trade_goods = tobacco key = ANNUAL_TRADE value = 0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = tobacco key = ANNUAL_TRADE value = 0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = tobacco key = ANNUAL_TRADE value = 0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = tobacco key = ANNUAL_TRADE value = 0.05 duration = 36500 } }
+			
+				10 = { change_price = { trade_goods = tobacco key = ANNUAL_TRADE value = -0.05 duration = 36500 } }
+				10 = { change_price = { trade_goods = tobacco key = ANNUAL_TRADE value = -0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = tobacco key = ANNUAL_TRADE value = -0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = tobacco key = ANNUAL_TRADE value = -0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = tobacco key = ANNUAL_TRADE value = -0.25 duration = 36500 } }
+			}
 		
-		random_list = {
-		25 = {
-		change_price = {
-			trade_goods = rare_metals
-			key = ANNUAL_TRADE
-			value = 0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = rare_metals
-			key = ANNUAL_TRADE
-			value = -0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = rare_metals
-			key = ANNUAL_TRADE
-			value = 0.10
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = rare_metals
-			key = ANNUAL_TRADE
-			value = -0.10
-			duration = 91250
-		}
-		}
-		}
+			random_list = {
+				10 = { change_price = { trade_goods = tropical_wood key = ANNUAL_TRADE value = 0.25 duration = 36500 } }
+				10 = { change_price = { trade_goods = tropical_wood key = ANNUAL_TRADE value = 0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = tropical_wood key = ANNUAL_TRADE value = 0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = tropical_wood key = ANNUAL_TRADE value = 0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = tropical_wood key = ANNUAL_TRADE value = 0.05 duration = 36500 } }
+			
+				10 = { change_price = { trade_goods = tropical_wood key = ANNUAL_TRADE value = -0.05 duration = 36500 } }
+				10 = { change_price = { trade_goods = tropical_wood key = ANNUAL_TRADE value = -0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = tropical_wood key = ANNUAL_TRADE value = -0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = tropical_wood key = ANNUAL_TRADE value = -0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = tropical_wood key = ANNUAL_TRADE value = -0.25 duration = 36500 } }
+			}
 		
-		random_list = {
-		25 = {
-		change_price = {
-			trade_goods = silicates
-			key = ANNUAL_TRADE
-			value = 0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = silicates
-			key = ANNUAL_TRADE
-			value = -0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = silicates
-			key = ANNUAL_TRADE
-			value = 0.10
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = silicates
-			key = ANNUAL_TRADE
-			value = -0.10
-			duration = 91250
-		}
-		}
-		}
+			random_list = {
+				10 = { change_price = { trade_goods = uranium key = ANNUAL_TRADE value = 0.25 duration = 36500 } }
+				10 = { change_price = { trade_goods = uranium key = ANNUAL_TRADE value = 0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = uranium key = ANNUAL_TRADE value = 0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = uranium key = ANNUAL_TRADE value = 0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = uranium key = ANNUAL_TRADE value = 0.05 duration = 36500 } }
+			
+				10 = { change_price = { trade_goods = uranium key = ANNUAL_TRADE value = -0.05 duration = 36500 } }
+				10 = { change_price = { trade_goods = uranium key = ANNUAL_TRADE value = -0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = uranium key = ANNUAL_TRADE value = -0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = uranium key = ANNUAL_TRADE value = -0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = uranium key = ANNUAL_TRADE value = -0.25 duration = 36500 } }
+			}
 		
-		random_list = {
-		25 = {
-		change_price = {
-			trade_goods = wood_coal
-			key = ANNUAL_TRADE
-			value = 0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = wood_coal
-			key = ANNUAL_TRADE
-			value = -0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = wood_coal
-			key = ANNUAL_TRADE
-			value = 0.10
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = wood_coal
-			key = ANNUAL_TRADE
-			value = -0.10
-			duration = 91250
-		}
-		}
-		}
+			random_list = {
+				10 = { change_price = { trade_goods = wine key = ANNUAL_TRADE value = 0.25 duration = 36500 } }
+				10 = { change_price = { trade_goods = wine key = ANNUAL_TRADE value = 0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = wine key = ANNUAL_TRADE value = 0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = wine key = ANNUAL_TRADE value = 0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = wine key = ANNUAL_TRADE value = 0.05 duration = 36500 } }
+			
+				10 = { change_price = { trade_goods = wine key = ANNUAL_TRADE value = -0.05 duration = 36500 } }
+				10 = { change_price = { trade_goods = wine key = ANNUAL_TRADE value = -0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = wine key = ANNUAL_TRADE value = -0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = wine key = ANNUAL_TRADE value = -0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = wine key = ANNUAL_TRADE value = -0.25 duration = 36500 } }
+			}
+
 		
-		random_list = {
-		25 = {
-		change_price = {
-			trade_goods = manganates
-			key = ANNUAL_TRADE
-			value = 0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = manganates
-			key = ANNUAL_TRADE
-			value = -0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = manganates
-			key = ANNUAL_TRADE
-			value = 0.10
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = manganates
-			key = ANNUAL_TRADE
-			value = -0.10
-			duration = 91250
-		}
-		}
-		}
+			random_list = {
+				10 = { change_price = { trade_goods = wood key = ANNUAL_TRADE value = 0.25 duration = 36500 } }
+				10 = { change_price = { trade_goods = wood key = ANNUAL_TRADE value = 0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = wood key = ANNUAL_TRADE value = 0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = wood key = ANNUAL_TRADE value = 0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = wood key = ANNUAL_TRADE value = 0.05 duration = 36500 } }
+			
+				10 = { change_price = { trade_goods = wood key = ANNUAL_TRADE value = -0.05 duration = 36500 } }
+				10 = { change_price = { trade_goods = wood key = ANNUAL_TRADE value = -0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = wood key = ANNUAL_TRADE value = -0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = wood key = ANNUAL_TRADE value = -0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = wood key = ANNUAL_TRADE value = -0.25 duration = 36500 } }
+			}
 		
-		random_list = {
-		25 = {
-		change_price = {
-			trade_goods = light_metals
-			key = ANNUAL_TRADE
-			value = 0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = light_metals
-			key = ANNUAL_TRADE
-			value = -0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = light_metals
-			key = ANNUAL_TRADE
-			value = 0.10
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = light_metals
-			key = ANNUAL_TRADE
-			value = -0.10
-			duration = 91250
-		}
-		}
-		}
+			random_list = {
+				10 = { change_price = { trade_goods = wood_coal key = ANNUAL_TRADE value = 0.25 duration = 36500 } }
+				10 = { change_price = { trade_goods = wood_coal key = ANNUAL_TRADE value = 0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = wood_coal key = ANNUAL_TRADE value = 0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = wood_coal key = ANNUAL_TRADE value = 0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = wood_coal key = ANNUAL_TRADE value = 0.05 duration = 36500 } }
+			
+				10 = { change_price = { trade_goods = wood_coal key = ANNUAL_TRADE value = -0.05 duration = 36500 } }
+				10 = { change_price = { trade_goods = wood_coal key = ANNUAL_TRADE value = -0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = wood_coal key = ANNUAL_TRADE value = -0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = wood_coal key = ANNUAL_TRADE value = -0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = wood_coal key = ANNUAL_TRADE value = -0.25 duration = 36500 } }
+			}
 		
-		random_list = {
-		25 = {
-		change_price = {
-			trade_goods = wood
-			key = ANNUAL_TRADE
-			value = 0.25
-			duration = 91250
+			random_list = {
+				10 = { change_price = { trade_goods = wool key = ANNUAL_TRADE value = 0.25 duration = 36500 } }
+				10 = { change_price = { trade_goods = wool key = ANNUAL_TRADE value = 0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = wool key = ANNUAL_TRADE value = 0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = wool key = ANNUAL_TRADE value = 0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = wool key = ANNUAL_TRADE value = 0.05 duration = 36500 } }
+			
+				10 = { change_price = { trade_goods = wool key = ANNUAL_TRADE value = -0.05 duration = 36500 } }
+				10 = { change_price = { trade_goods = wool key = ANNUAL_TRADE value = -0.10 duration = 36500 } }
+				10 = { change_price = { trade_goods = wool key = ANNUAL_TRADE value = -0.15 duration = 36500 } }
+				10 = { change_price = { trade_goods = wool key = ANNUAL_TRADE value = -0.20 duration = 36500 } }
+				10 = { change_price = { trade_goods = wool key = ANNUAL_TRADE value = -0.25 duration = 36500 } }
+			}		
 		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = wood
-			key = ANNUAL_TRADE
-			value = -0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = wood
-			key = ANNUAL_TRADE
-			value = 0.10
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = wood
-			key = ANNUAL_TRADE
-			value = -0.10
-			duration = 91250
-		}
-		}
-		}
-		
-		random_list = {
-		25 = {
-		change_price = {
-			trade_goods = lobsters
-			key = ANNUAL_TRADE
-			value = 0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = lobsters
-			key = ANNUAL_TRADE
-			value = -0.25
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = lobsters
-			key = ANNUAL_TRADE
-			value = 0.10
-			duration = 91250
-		}
-		}
-		25 = {
-		change_price = {
-			trade_goods = lobsters
-			key = ANNUAL_TRADE
-			value = -0.10
-			duration = 91250
-		}
-		}
-		}
-		
-		}
-		
 	}
 }
 

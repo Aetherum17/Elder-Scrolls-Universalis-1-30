@@ -36,7 +36,7 @@ province_event = {
 			limit = { base_manpower = 4 }
 			add_base_manpower = -3
 		}
-		add_province_modifier = {
+		add_permanent_province_modifier = {
 			name = "13_great_plague"
 			duration = 3650
 		}
@@ -632,7 +632,7 @@ country_event = {
 		NOT = { culture = orsimer }
 		}
 		add_core = HIG
-		add_province_modifier = {
+		add_permanent_province_modifier = {
 			name = "12_local_unrest"
 			duration = 9125
 		}

@@ -105,9 +105,21 @@ antibankrapucy = {
 }
 
 06_etherial_mine = {
-  local_production_efficiency = 0.35
-  trade_goods_size_modifier = 0.25
-  local_build_cost = -0.15
+  build_time = -0.10
+  production_efficiency = 0.10
+  build_cost = -0.10
+}
+
+06_etherial_forge = {
+  regiment_recruit_speed = -0.10
+  global_regiment_cost = -0.10
+  global_trade_power = 0.10
+}
+
+06_etherial_research_facility = {
+  global_institution_spread = 0.10
+  idea_cost = -0.10
+  technology_cost = -0.10
 }
 
 06_etherial_crisis = {
@@ -121,7 +133,7 @@ antibankrapucy = {
 }
 
 06_gradual_massacre = {
-   culture_conversion_cost = -1.0
+   culture_conversion_cost = -0.5
 }
 
 07_aedric_blessing = {

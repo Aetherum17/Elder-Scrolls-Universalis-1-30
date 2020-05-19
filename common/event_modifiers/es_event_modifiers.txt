@@ -662,7 +662,7 @@ temp-ashland = {
 	local_tax_modifier = -0.25
 	local_production_efficiency = -0.25
 	local_hostile_attrition = 1
-	local_defensiveness = -0.25
+	local_monthly_devastation = 0.25
 }
 
 sand_storm = {
@@ -1010,4 +1010,65 @@ harmony_group_modifier = {
 	global_regiment_cost = 0.10
 	spy_offence = -0.10
 	global_regiment_recruit_speed = 0.10
+}
+
+#######################################################################
+
+arthritis = {
+   stability_cost_modifier = -0.05
+   global_manpower_modifier = -0.10
+}
+
+heart_problems = {
+    stability_cost_modifier = -0.05
+	legitimacy = -0.05
+}
+
+cancer = {
+    stability_cost_modifier = -0.20
+}
+
+stroke = {
+    stability_cost_modifier = -0.05
+	mil_tech_cost_modifier = 0.10
+}
+
+blindness = {
+    stability_cost_modifier = -0.05
+	land_morale = -0.05
+}
+
+respiratory_problems = {
+    stability_cost_modifier = -0.05
+	dip_tech_cost_modifier = -0.10
+}
+
+influenza = {
+    stability_cost_modifier = -0.05
+	adm_tech_cost_modifier = -0.10
+}
+
+pneumonia = {
+    stability_cost_modifier = -0.05
+	trade_efficiency = -0.10
+}
+
+dementia = {
+   stability_cost_modifier = -0.05 
+   diplomatic_reputation = -1
+}
+
+depression = {
+    stability_cost_modifier = -0.05
+	local_unrest = -1
+}
+
+diabetes = {
+    stability_cost_modifier = -0.05
+	global_tax_modifier = -0.10
+}
+
+broken_bone = {
+    stability_cost_modifier = -0.05
+	global_autonomy = -0.01
 }

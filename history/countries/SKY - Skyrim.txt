@@ -56,6 +56,7 @@ capital = 1275
 
 242.1.1 = {
     add_government_reform = elective_monarchy
+	add_country_modifier = { name = "06_gradual_massacre" duration = 36500 }
 }
 
 288.1.1 = {
@@ -68,6 +69,8 @@ capital = 1275
 		mil = 5
 	}
 }
+
+308.1.1 = { remove_country_modifier = 06_gradual_massacre }
 
 420.1.1 = {
     monarch = {

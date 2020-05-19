@@ -603,20 +603,6 @@ country_event = {
 }
 
 country_event = {
-	id = es_news.39
-	title = es_news.39.t
-	desc = es_news.39.d
-	picture = ES_BURNING_THEOCRATIC_PALACE_eventPicture
-	
-	is_triggered_only = yes
-
-	option = {
-		name = "es_news.1.a"
-		ai_chance = { factor = 100 }
-	}
-}
-
-country_event = {
 	id = es_news.40
 	title = es_news.40.t
 	desc = es_news.40.d
@@ -781,9 +767,8 @@ country_event = { id = es_news.55 title = es_news.55.t desc = es_news.55.d pictu
 country_event = { id = es_news.56 title = es_news.56.t desc = es_news.56.d picture = ES_HIGH_HROTHGAR_eventPicture is_triggered_only = yes option = { name = "es_news.1.a" ai_chance = { factor = 100 } } }
 
 country_event = { id = es_news.57 title = es_news.57.t desc = es_news.57.d picture = ES_SIEGE_eventPicture is_triggered_only = yes option = { name = "es_news.1.a" ai_chance = { factor = 100 } } }
-country_event = { id = es_news.58 title = es_news.58.t desc = es_news.58.d picture = ES_SIEGE_eventPicture is_triggered_only = yes option = { name = "es_news.1.a" ai_chance = { factor = 100 } } }
 
-country_event = { id = es_news.58 title = es_news.59.t desc = es_news.59.d picture = ES_EIGHT_DIVINES_eventPicture is_triggered_only = yes option = { name = "es_news.1.a" ai_chance = { factor = 100 } } }
+country_event = { id = es_news.59 title = es_news.59.t desc = es_news.59.d picture = ES_EIGHT_DIVINES_eventPicture is_triggered_only = yes option = { name = "es_news.1.a" ai_chance = { factor = 100 } } }
 
 country_event = { id = es_news.60 title = es_news.60.t desc = es_news.60.d picture = ES_WHITERUN_eventPicture is_triggered_only = yes option = { name = "es_news.1.a" ai_chance = { factor = 100 } } }
 country_event = { id = es_news.61 title = es_news.61.t desc = es_news.61.d picture = ES_WHITERUN_eventPicture is_triggered_only = yes option = { name = "es_news.1.a" ai_chance = { factor = 100 } } }
@@ -792,7 +777,6 @@ country_event = { id = es_news.62 title = es_news.62.t desc = es_news.62.d pictu
 country_event = { id = es_news.63 title = es_news.63.t desc = es_news.63.d picture = ES_REVOLUTION_eventPicture is_triggered_only = yes option = { name = "es_news.1.a" ai_chance = { factor = 100 } } }
 
 country_event = { id = es_news.64 title = es_news.64.t desc = es_news.64.d picture = ES_MERIDIA_1_eventPicture is_triggered_only = yes option = { name = "es_news.1.a" ai_chance = { factor = 100 } } }
-country_event = { id = es_news.65 title = es_news.65.t desc = es_news.65.d picture = ES_MERIDIA_1_eventPicture is_triggered_only = yes option = { name = "es_news.1.a" ai_chance = { factor = 100 } } }
 
 
 

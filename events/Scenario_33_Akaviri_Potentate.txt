@@ -79,7 +79,7 @@ country_event = {
 		ai_chance = { factor = 33 }
 		add_stability = 1
 		every_owned_province = {
-		    add_province_modifier = {
+		    add_permanent_province_modifier = {
 		    name = "00_autonomy"
 			duration = 9125 
 			}
@@ -151,7 +151,7 @@ country_event = {
 			duration = -1
 		}
 		1017 = {
-		    add_province_modifier = {
+		    add_permanent_province_modifier = {
 		    name = "33_capital_of_order_of_black_worm"
 			duration = 9125 
 			}
@@ -162,7 +162,7 @@ country_event = {
 		name = "es_33_scenario.3.b"
 		ai_chance = { factor = 50 }
 		1017 = {
-		    add_province_modifier = {
+		    add_permanent_province_modifier = {
 		    name = "33_capital_of_order_of_black_worm"
 			duration = 9125 
 			}
@@ -365,7 +365,7 @@ country_event = {
 		ai_chance = { factor = 50 }
 		add_treasury = -2500
 		1206 = {
-		    add_province_modifier = {
+		    add_permanent_province_modifier = {
 			    name = "33_mages_guild"
 				duration = -1
 			}
@@ -570,7 +570,7 @@ country_event = {
 			    area = cyrodiil_1_la
 			}
 			add_core = CA1
-			add_province_modifier = {
+			add_permanent_province_modifier = {
 			    name = "00_autonomy"
 				duration = 18250
 			}
@@ -585,7 +585,7 @@ country_event = {
 			    area = cyrodiil_1_la
 			}
 			add_core = CA1
-			add_province_modifier = {
+			add_permanent_province_modifier = {
 			    name = "00_unrest"
 				duration = 3650
 			}
@@ -644,7 +644,7 @@ country_event = {
 			    area = cyrodiil_2_la
 			}
 			add_core = CA2
-			add_province_modifier = {
+			add_permanent_province_modifier = {
 			    name = "00_autonomy"
 				duration = 18250
 			}
@@ -659,7 +659,7 @@ country_event = {
 			    area = cyrodiil_2_la
 			}
 			add_core = CA2
-			add_province_modifier = {
+			add_permanent_province_modifier = {
 			    name = "00_unrest"
 				duration = 3650
 			}
@@ -718,7 +718,7 @@ country_event = {
 			    area = cyrodiil_3_la
 			}
 			add_core = CA3
-			add_province_modifier = {
+			add_permanent_province_modifier = {
 			    name = "00_autonomy"
 				duration = 18250
 			}
@@ -733,7 +733,7 @@ country_event = {
 			    area = cyrodiil_3_la
 			}
 			add_core = CA3
-			add_province_modifier = {
+			add_permanent_province_modifier = {
 			    name = "00_unrest"
 				duration = 3650
 			}
@@ -792,7 +792,7 @@ country_event = {
 			    area = cyrodiil_4_la
 			}
 			add_core = CE4
-			add_province_modifier = {
+			add_permanent_province_modifier = {
 			    name = "00_autonomy"
 				duration = 18250
 			}
@@ -807,7 +807,7 @@ country_event = {
 			    area = cyrodiil_4_la
 			}
 			add_core = CE4
-			add_province_modifier = {
+			add_permanent_province_modifier = {
 			    name = "00_unrest"
 				duration = 3650
 			}
@@ -866,7 +866,7 @@ country_event = {
 			    area = cyrodiil_6_la
 			}
 			add_core = CE6
-			add_province_modifier = {
+			add_permanent_province_modifier = {
 			    name = "00_autonomy"
 				duration = 18250
 			}
@@ -881,7 +881,7 @@ country_event = {
 			    area = cyrodiil_6_la
 			}
 			add_core = CE6
-			add_province_modifier = {
+			add_permanent_province_modifier = {
 			    name = "00_unrest"
 				duration = 3650
 			}
@@ -940,7 +940,7 @@ country_event = {
 			    area = cyrodiil_7_la
 			}
 			add_core = CA7
-			add_province_modifier = {
+			add_permanent_province_modifier = {
 			    name = "00_autonomy"
 				duration = 18250
 			}
@@ -955,7 +955,7 @@ country_event = {
 			    area = cyrodiil_7_la
 			}
 			add_core = CA7
-			add_province_modifier = {
+			add_permanent_province_modifier = {
 			    name = "00_unrest"
 				duration = 3650
 			}
@@ -1014,7 +1014,7 @@ country_event = {
 			    area = cyrodiil_9_la
 			}
 			add_core = CA9
-			add_province_modifier = {
+			add_permanent_province_modifier = {
 			    name = "00_autonomy"
 				duration = 18250
 			}
@@ -1029,7 +1029,7 @@ country_event = {
 			    area = cyrodiil_9_la
 			}
 			add_core = CA9
-			add_province_modifier = {
+			add_permanent_province_modifier = {
 			    name = "00_unrest"
 				duration = 3650
 			}
@@ -1088,7 +1088,7 @@ country_event = {
 			    area = cyrodiil_16_la
 			}
 			add_core = CB6
-			add_province_modifier = {
+			add_permanent_province_modifier = {
 			    name = "00_autonomy"
 				duration = 18250
 			}
@@ -1103,7 +1103,7 @@ country_event = {
 			    area = cyrodiil_16_la
 			}
 			add_core = CB6
-			add_province_modifier = {
+			add_permanent_province_modifier = {
 			    name = "00_unrest"
 				duration = 3650
 			}
@@ -1162,7 +1162,7 @@ country_event = {
 			    area = cyrodiil_21_la
 			}
 			add_core = CC1
-			add_province_modifier = {
+			add_permanent_province_modifier = {
 			    name = "00_autonomy"
 				duration = 18250
 			}
@@ -1177,7 +1177,7 @@ country_event = {
 			    area = cyrodiil_21_la
 			}
 			add_core = CC1
-			add_province_modifier = {
+			add_permanent_province_modifier = {
 			    name = "00_unrest"
 				duration = 3650
 			}
@@ -1236,7 +1236,7 @@ country_event = {
 			    area = cyrodiil_26_la
 			}
 			add_core = CC6
-			add_province_modifier = {
+			add_permanent_province_modifier = {
 			    name = "00_autonomy"
 				duration = 18250
 			}
@@ -1251,7 +1251,7 @@ country_event = {
 			    area = cyrodiil_26_la
 			}
 			add_core = CC6
-			add_province_modifier = {
+			add_permanent_province_modifier = {
 			    name = "00_unrest"
 				duration = 3650
 			}

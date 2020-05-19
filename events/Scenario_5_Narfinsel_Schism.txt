@@ -83,7 +83,7 @@ country_event = {
 		change_religion = eight_divines
 		
 		if = { limit = { owns = 1206 }
-		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.58 days = 31 tooltip = es_collapse.2.a.tt } }
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.57 days = 31 tooltip = es_collapse.2.a.tt } }
 		}
 	}
 }
@@ -109,7 +109,7 @@ country_event = {
 		ai_chance = { factor = 50 }
 		random_owned_province = {
 		change_culture = snow_elven
-		add_province_modifier = {
+		add_permanent_province_modifier = {
 		name = "05_elven_migration"
 		duration = -1
 		}
@@ -130,7 +130,11 @@ country_event = {
 	
 	trigger = {
 	    NOT = { has_country_flag = es_5_scenario.3_flag }
+		is_at_war = yes
+		OR = {
 	    has_country_flag = country_narfinsel_schism_flag 
+		has_country_flag = es_5_scenario.7_war_flag
+		}
     }
 
 	mean_time_to_happen = {
@@ -163,25 +167,8 @@ country_event = {
 
 	option = {
 		name = "es_5_scenario.4.a"
-		ai_chance = { factor = 100 }
-		if = {
-			limit = {
-				capital_scope = {
-					can_have_center_of_reformation_trigger = {
-						RELIGION = eight_divines
-					}
-				}
-			}
-			capital_scope = {
-				change_religion = eight_divines
-				add_reform_center = eight_divines
-				add_permanent_province_modifier = {
-					name = "religious_zeal_at_conv"
-					duration = 9000
-				}
-			}
-		}
 		if = { limit = { owns = 1130 }
+		if = { limit = { ai = yes NOT = { owns = 1206 } } change_religion = eight_divines }
 		1130 = {
 		    change_religion = eight_divines
 		    add_reform_center = eight_divines
@@ -202,7 +189,9 @@ country_event = {
 			add_permanent_province_modifier = { name = "religious_zeal_at_conv" duration = 9000 }
 		}
 		}
+		if = { limit = { owns = 1130 }
 		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.59 days = 31 tooltip = es_collapse.2.a.tt } }
+		}
 	}
 }
 
@@ -303,15 +292,18 @@ country_event = {
 	trigger = {
 	    any_country = { has_country_flag = country_narfinsel_schism_flag }
 		OR = { culture_group = high_elves_cg culture_group = cyrodiil_cg }
-		any_neighbor_country = { NOT = { religion = ROOT } OR = { culture_group = high_elves_cg culture_group = cyrodiil_cg } }
+		any_neighbor_country = { NOT = { religion_group = ROOT } OR = { culture_group = high_elves_cg culture_group = cyrodiil_cg } }
 		NOT = { has_country_flag = es_5_scenario.7_flag }
+		NOT = { is_year = 242 }
 	}
 	
 	immediate = {
 	    set_country_flag = es_5_scenario.7_flag
+		hidden_effect = {
 		random_neighbor_country = {
-		    limit = { NOT = { religion = ROOT } OR = { culture_group = high_elves_cg culture_group = cyrodiil_cg } }
+		    limit = { NOT = { religion_group = ROOT } OR = { culture_group = high_elves_cg culture_group = cyrodiil_cg } }
 			save_event_target_as = neighbour_heretic_country
+		}
 		}
 	}
 
@@ -319,15 +311,17 @@ country_event = {
 		name = "es_5_scenario.7.a"
 		ai_chance = { factor = 50 }
 		
+		set_country_flag = es_5_scenario.7_war_flag
+		
 		add_manpower = 50
 		add_years_of_income = 2.5
 		add_prestige = 10
 		
-		if = { limit = { NOT = { truce_with = event_target:neighbour_heretic_country } NOT = { alliance_with = event_target:neighbour_heretic_country } NOT = { is_subject_of = event_target:neighbour_heretic_country } }
 		declare_war_with_cb = { who = event_target:neighbour_heretic_country casus_belli = cb_es_scenario }
-		}
 		
+		if = { limit = { owns = 1206 }
 		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.64 days = 31 tooltip = es_collapse.2.a.tt } }
+		}
 	}
 	option = {
 		name = "es_5_scenario.7.b"
@@ -339,6 +333,8 @@ country_event = {
 		duration = 3650
 		}
 		
-		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.65 days = 31 tooltip = es_collapse.2.a.tt } }
+		if = { limit = { owns = 1206 }
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.64 days = 31 tooltip = es_collapse.2.a.tt } }
+		}
 	}
 }

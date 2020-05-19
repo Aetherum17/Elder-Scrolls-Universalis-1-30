@@ -75,7 +75,7 @@ country_event = {
 		set_country_flag = general_bucco_death_flag
 		every_owned_province = {
 		limit = { region = black_marsh_lr }
-		add_province_modifier = {
+		add_permanent_province_modifier = {
 		    name = "31_new_roads"
 			duration = 9125
 		}
@@ -241,7 +241,7 @@ country_event = {
 		    limit = {
 			    region = black_marsh_lr
 			}
-			add_province_modifier = {
+			add_permanent_province_modifier = {
 			    name = "31_great_burn"
 				duration = 9125
 			}
@@ -290,7 +290,7 @@ country_event = {
 		    limit = {
 			    region = black_marsh_lr
 			}
-			add_province_modifier = {
+			add_permanent_province_modifier = {
 			    name = "10_unrest"
 				duration = 9125
 			}

@@ -77,7 +77,7 @@ alliance = {
 	first = NB2
 	second = NA6
 	start_date = 57.1.1
-	end_date = 9999.1.1
+	end_date = 221.1.1
 }
 
 vassal = {
@@ -161,42 +161,42 @@ alliance = {
 	first = NB1
 	second = ND6
 	start_date = 57.1.1
-	end_date = 9999.1.1
+	end_date = 242.1.1
 }
 
 vassal = {
 	first = NB1
 	second = ND5
 	start_date = 57.1.1
-	end_date = 9999.1.1
+	end_date = 242.1.1
 }
 
 vassal = {
 	first = NB1
 	second = ND8
 	start_date = 57.1.1
-	end_date = 9999.1.1
+	end_date = 242.1.1
 }
 
 vassal = {
 	first = NB1
 	second = NE5
 	start_date = 57.1.1
-	end_date = 9999.1.1
+	end_date = 242.1.1
 }
 
 vassal = {
 	first = NE2
 	second = NE1
 	start_date = 57.1.1
-	end_date = 9999.1.1
+	end_date = 242.1.1
 }
 
 vassal = {
 	first = NE2
 	second = NA2
 	start_date = 57.1.1
-	end_date = 9999.1.1
+	end_date = 242.1.1
 }
 
 vassal = {
@@ -301,21 +301,21 @@ alliance = {
 	first = NB2
 	second = SKY
 	start_date = 189.1.1
-	end_date = 9999.1.1
+	end_date = 221.1.1
 }
 
 alliance = {
 	first = NB6
 	second = SKY
 	start_date = 189.1.1
-	end_date = 9999.1.1
+	end_date = 221.1.1
 }
 
 alliance = {
 	first = NB5
 	second = SKY
 	start_date = 189.1.1
-	end_date = 9999.1.1
+	end_date = 221.1.1
 }
 
 vassal = {
@@ -344,4 +344,73 @@ vassal = {
 	second = NA1
 	start_date = 189.1.1
 	end_date = 9999.1.1
+}
+
+####################################################################### 5
+
+union = {
+    first = SKY
+	second = NB2
+	start_date = 221.1.1
+	end_date = 9999.1.1
+}
+
+vassal = {
+	first = SKY
+	second = NB5
+	start_date = 221.1.1
+	end_date = 9999.1.1
+}
+
+vassal = {
+	first = SKY
+	second = NB6
+	start_date = 221.1.1
+	end_date = 9999.1.1
+}
+
+####################################################################### 6
+
+alliance = {
+	first = NF7
+	second = NF4
+	start_date = 242.1.1
+	end_date = 266.1.1
+}
+
+alliance = {
+	first = NF7
+	second = NE4
+	start_date = 242.1.1
+	end_date = 266.1.1
+}
+
+alliance = {
+	first = NE1
+	second = NE4
+	start_date = 242.1.1
+	end_date = 266.1.1
+}
+
+dependency = {
+    subject_type = alliance_member
+    first = NA7
+    second = NC8
+    start_date = 242.1.1
+	end_date = 266.1.1
+}
+
+dependency = {
+    subject_type = alliance_member
+    first = NA7
+    second = NC9
+    start_date = 242.1.1
+	end_date = 266.1.1
+}
+
+alliance = {
+	first = ND1
+	second = ND0
+	start_date = 242.1.1
+	end_date = 266.1.1
 }

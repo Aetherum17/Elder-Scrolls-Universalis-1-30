@@ -14,6 +14,7 @@ create_personal_union = {
 		FROM = {
 		    NOT = { is_subject_of = ROOT }
 			NOT = { is_subject_of_type = personal_union }
+			NOT = { overlord_of = ROOT }
 		}
 	}
 	is_allowed = {
@@ -729,7 +730,7 @@ create_native_reservation = {
 	
 	is_visible = {
 	    NOT = { government = native }
-		FROM = { NOT = { is_subject_of_type = native_reservation } government = native }
+		FROM = { NOT = { is_subject_of_type = native_reservation } government = native NOT = { overlord_of = ROOT } }
 	}
 	is_allowed = {
 	ROOT = {
@@ -1642,7 +1643,7 @@ create_alliance_member = {
 	    has_country_flag = allience_leader_flag
 		government = tribal
 		}
-		FROM = { NOT = { is_subject_of_type = alliance_member } }
+		FROM = { NOT = { is_subject_of_type = alliance_member } NOT = { overlord_of = ROOT } }
 	}
 	is_allowed = {
 	is_at_war = no
@@ -1853,6 +1854,7 @@ ask_to_become_alliance_member = {
 	is_visible = {
 	    NOT = { is_subject_of_type = alliance_member }
 	    FROM = {
+		NOT = { overlord_of = ROOT }
 	    OR = {
 	       has_country_flag = allience_leader_flag
 	       government = tribal

@@ -3,7 +3,6 @@
 
     diplomatic_reputation = 3
 	improve_relation_modifier = 0.5
-	global_spy_defence = 0.5
 	global_manpower_modifier = 0.5
 	global_sailors_modifier = 0.5
 	defensiveness = 0.5
@@ -19,15 +18,13 @@
 	global_autonomy = -0.010
 	
 	diplomatic_reputation = 2.5
-	yearly_corruption = 0.10
-	improve_relation_modifier = 0.4
-	global_spy_defence = 0.4
-	global_manpower_modifier = 0.4
-	global_sailors_modifier = 0.4
-	defensiveness = 0.4
+	improve_relation_modifier = 0.35
+	global_manpower_modifier = 0.35
+	global_sailors_modifier = 0.35
+	defensiveness = 0.35
 	
-	diplomatic_annexation_cost = 2.0
-	vassal_forcelimit_bonus = -0.40
+	diplomatic_annexation_cost = 1.5
+	vassal_forcelimit_bonus = -0.35
     vassal_income = -0.20
 }
 
@@ -35,18 +32,15 @@
     diplomats = 1
 	max_states = 10
 	global_autonomy = -0.015
-	free_leader_pool = 1
 	
 	diplomatic_reputation = 2.0
-	yearly_corruption = 0.15
-	improve_relation_modifier = 0.3
-	global_spy_defence = 0.3
-	global_manpower_modifier = 0.3
-	global_sailors_modifier = 0.3
-	defensiveness = 0.3
+	improve_relation_modifier = 0.25
+	global_manpower_modifier = 0.25
+	global_sailors_modifier = 0.25
+	defensiveness = 0.25
 	
-	diplomatic_annexation_cost = 1.5
-	vassal_forcelimit_bonus = -0.30
+	diplomatic_annexation_cost = 1.0
+	vassal_forcelimit_bonus = -0.25
     vassal_income = -0.15
 }
 
@@ -58,15 +52,13 @@
 	free_leader_pool = 1
 	
 	diplomatic_reputation = 1.5
-	yearly_corruption = 0.20
-	improve_relation_modifier = 0.2
-	global_spy_defence = 0.2
-	global_manpower_modifier = 0.2
-	global_sailors_modifier = 0.2
-	defensiveness = 0.2
+	improve_relation_modifier = 0.15
+	global_manpower_modifier = 0.15
+	global_sailors_modifier = 0.15
+	defensiveness = 0.15
 	
-	diplomatic_annexation_cost = 1.0
-	vassal_forcelimit_bonus = -0.20
+	diplomatic_annexation_cost = 0.5
+	vassal_forcelimit_bonus = -0.10
     vassal_income = -0.10
 }
 
@@ -77,16 +69,13 @@
 	max_absolutism = 10
 	free_leader_pool = 2
 	
-	core_creation = -0.1
-	diplomatic_reputation = 1
-	yearly_corruption = 0.25
+	diplomatic_reputation = 1.0
 	improve_relation_modifier = 0.1
-	global_spy_defence = 0.1
-	global_manpower_modifier = 0.1
-	global_sailors_modifier = 0.1
-	defensiveness = 0.1
-	diplomatic_annexation_cost = 0.5
-	vassal_forcelimit_bonus = -0.10
+	defensiveness = 0.10
+	
+	core_creation = -0.10
+	diplomatic_annexation_cost = -0.25
+	prestige_from_land = 0.10
 }
 
 6 = {
@@ -97,17 +86,14 @@
 	free_leader_pool = 2
 	
 	core_creation = -0.15
-	yearly_corruption = 0.30
 	diplomatic_annexation_cost = -0.30
-	ae_impact = 0.1
-	unjustified_demands = -0.1
+	unjustified_demands = -0.10
 	province_warscore_cost = -0.1
-	global_spy_defence = -0.1
-	global_tax_modifier = -0.05
-    production_efficiency = -0.05
+	prestige_from_land = 0.15
+	
+	yearly_corruption = 0.1
+	ae_impact = 0.1
 	global_manpower_modifier = -0.1
-	global_sailors_modifier = -0.1
-	defensiveness = -0.1
 }
 
 7 = {
@@ -118,17 +104,14 @@
 	free_leader_pool = 2
 	
 	core_creation = -0.20
-	yearly_corruption = 0.35
 	diplomatic_annexation_cost = -0.35
-	ae_impact = 0.2
-	unjustified_demands = -0.2
+	unjustified_demands = -0.20
 	province_warscore_cost = -0.2
-	global_spy_defence = -0.2
-	global_tax_modifier = -0.10
-    production_efficiency = -0.10
+	prestige_from_land = 0.20
+	
+	yearly_corruption = 0.20
+	ae_impact = 0.2
 	global_manpower_modifier = -0.2
-	global_sailors_modifier = -0.2
-	defensiveness = -0.2
 }
 
 8 = {
@@ -139,17 +122,14 @@
 	free_leader_pool = 3
 	
 	core_creation = -0.25
-	yearly_corruption = 0.40
 	diplomatic_annexation_cost = -0.40
-	ae_impact = 0.3
-	unjustified_demands = -0.3
+	unjustified_demands = -0.30
 	province_warscore_cost = -0.3
-	global_spy_defence = -0.3
-	global_tax_modifier = -0.15
-    production_efficiency = -0.15
+	prestige_from_land = 0.25
+	
+	yearly_corruption = 0.25
+	ae_impact = 0.3
 	global_manpower_modifier = -0.3
-	global_sailors_modifier = -0.3
-	defensiveness = -0.3
 }
 
 9 = {
@@ -160,17 +140,14 @@
 	free_leader_pool = 3
 	
 	core_creation = -0.30
-	yearly_corruption = 0.45
 	diplomatic_annexation_cost = -0.45
-	ae_impact = 0.4
 	unjustified_demands = -0.4
 	province_warscore_cost = -0.4
-	global_spy_defence = -0.4
-	global_tax_modifier = -0.20
-    production_efficiency = -0.20
+	prestige_from_land = 0.30
+	
+	yearly_corruption = 0.30
+	ae_impact = 0.4
 	global_manpower_modifier = -0.4
-	global_sailors_modifier = -0.4
-	defensiveness = -0.4
 }
 
 10 = {
@@ -181,15 +158,12 @@
 	free_leader_pool = 3
 	
 	core_creation = -0.35
-	yearly_corruption = 0.50
 	diplomatic_annexation_cost = -0.50
-	ae_impact = 0.5
 	unjustified_demands = -0.5
 	province_warscore_cost = -0.5
-	global_spy_defence = -0.5
-	global_tax_modifier = -0.25
-    production_efficiency = -0.25
+	prestige_from_land = 0.35
+	
+	yearly_corruption = 0.35
+	ae_impact = 0.5
 	global_manpower_modifier = -0.5
-	global_sailors_modifier = -0.5
-	defensiveness = -0.5
 }

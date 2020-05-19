@@ -125,7 +125,7 @@ country_event = {
 		area = cyrodiil_6_la
 		}
 		add_core = CE6
-		add_province_modifier = {
+		add_permanent_province_modifier = {
 		name = "12_local_unrest"
 		duration = 9125
 		}
@@ -180,7 +180,7 @@ country_event = {
 		area = cyrodiil_7_la
 		}
 		add_core = CA7
-		add_province_modifier = {
+		add_permanent_province_modifier = {
 		name = "12_local_unrest"
 		duration = 9125
 		}
@@ -618,7 +618,7 @@ country_event = {
 		limit = {
 		area = hammerfell_8_la
 		}
-		add_province_modifier = {
+		add_permanent_province_modifier = {
 		name = "12_local_unrest"
 		duration = 9125
 		}
@@ -837,7 +837,7 @@ country_event = {
 		}
 		add_core = CA7
 		add_prestige = -25
-		add_province_modifier = {
+		add_permanent_province_modifier = {
 		name = "12_local_unrest"
 		duration = 9125
 		}

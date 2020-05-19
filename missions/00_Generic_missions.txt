@@ -715,7 +715,7 @@ dip_missions = {
 	build_small_fleet_mission = {
 		icon = mission_junk_boat
 		required_missions = { exit_to_sea_mission }
-		trigger = { navy_size_percentage = 0.5 }
+		trigger = { navy_size_percentage = 0.5 num_of_ports = 25 }
 		effect = {
 			add_country_modifier = {
 				name = "es_small_fleet"
@@ -759,7 +759,7 @@ dip_missions = {
 	build_medium_fleet_mission = {
 		icon = mission_sea_battles
 		required_missions = { set_up_colony_mission }
-		trigger = { navy_size_percentage = 0.75 }
+		trigger = { navy_size_percentage = 0.75 num_of_ports = 50 }
 		effect = {
 			add_country_modifier = {
 				name = "es_medium_fleet"
@@ -783,7 +783,7 @@ dip_missions = {
 	build_large_fleet_mission = {
 		icon = mission_establish_high_seas_navy
 		required_missions = { increase_tariffs_mission }
-		trigger = { navy_size_percentage = 1.0 }
+		trigger = { navy_size_percentage = 1.0 num_of_ports = 75 }
 		effect = {
 			add_country_modifier = {
 				name = "es_large_fleet"

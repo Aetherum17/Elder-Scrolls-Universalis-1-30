@@ -272,7 +272,7 @@ country_event = {
 		name = "es_34_scenario.1.c"
 		ai_chance = { factor = 33 }
 		every_owned_province = {
-		    add_province_modifier = {
+		    add_permanent_province_modifier = {
 		    name = "00_autonomy"
 			duration = 9125 
 			}
@@ -451,7 +451,7 @@ country_event = {
 			}
 		}
 		add_core = ORS
-		add_province_modifier = {
+		add_permanent_province_modifier = {
 		    name = "00_unrest"
 			duration = 9125
 		}
@@ -572,7 +572,7 @@ province_event = {
 	option = {
 		name = "es_34_scenario.6.a"
 		ai_chance = { factor = 100 }
-		add_province_modifier = {
+		add_permanent_province_modifier = {
 		    name = "34_order_of_hour_province"
 			duration = 36500
 		}
@@ -606,7 +606,7 @@ country_event = {
 		ai_chance = { factor = 100 }
 		add_treasury = -1000
 		1150 = {
-		add_province_modifier = {
+		add_permanent_province_modifier = {
 		    name = "00_unrest"
 			duration = 9125
 		}
@@ -666,7 +666,7 @@ country_event = {
 			    }
 			}
 			add_core = VAL
-			add_province_modifier = {
+			add_permanent_province_modifier = {
 		    name = "10_unrest"
 			duration = 9125
 		    }
@@ -875,7 +875,7 @@ country_event = {
 	immediate = {
 	    set_country_flag = es_34_scenario.14_flag
 		1069 = {
-		add_province_modifier = {
+		add_permanent_province_modifier = {
 			name = "34_knahaten_flu"
 			duration = 9125
 		}
@@ -980,7 +980,7 @@ province_event = {
 	
 	immediate = {
 	    set_province_flag = es_34_scenario.16_flag
-		add_province_modifier = {
+		add_permanent_province_modifier = {
 			name = "34_knahaten_flu"
 			duration = 9125
 		}
@@ -1035,7 +1035,7 @@ country_event = {
 	immediate = {
 	    set_country_flag = es_34_scenario.17_flag
 		1161 = {
-		add_province_modifier = {
+		add_permanent_province_modifier = {
 			name = "34_knahaten_flu"
 			duration = 9125
 		}
@@ -1093,7 +1093,7 @@ country_event = {
 	immediate = {
 	    set_country_flag = es_34_scenario.18_flag
 		271 = {
-		add_province_modifier = {
+		add_permanent_province_modifier = {
 			name = "34_knahaten_flu"
 			duration = 9125
 		}
@@ -1160,7 +1160,7 @@ country_event = {
 	option = {
 		name =  "es_34_scenario.19.b"
 		1510 = {
-		add_province_modifier = {
+		add_permanent_province_modifier = {
 			name = "34_knahaten_flu"
 			duration = 9125
 		}

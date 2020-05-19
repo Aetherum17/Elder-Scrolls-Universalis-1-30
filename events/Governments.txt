@@ -7,6 +7,7 @@ country_event = {
 	
 	trigger = {
 		government = monarchy
+		NOT = { has_reform = english_monarchy }								 
 		NOT = { has_reform = celestial_empire }
 		has_country_modifier = separation_of_powers
 	}
@@ -29,6 +30,7 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTB9479"
+		add_government_reform = english_monarchy								  
 		add_stability_or_adm_power = yes
 	}
 }

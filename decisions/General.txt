@@ -207,7 +207,7 @@ country_decisions = {
 		    NOT = { development = 45 }
         } 
 		 
-		add_province_modifier = {
+		add_permanent_province_modifier = {
             name = "dev"
             duration = 18250
         }
@@ -247,7 +247,7 @@ country_decisions = {
            NOT = { has_province_modifier = dev }
 		   NOT = { development = 45 }
         } 
-		add_province_modifier = {
+		add_permanent_province_modifier = {
             name = "dev"
             duration = 18250
         }

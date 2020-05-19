@@ -1026,33 +1026,138 @@ country_event = { #kill heir
 
 #######################################################################
 
-country_event = {
-	id = es_health.4
+#country_event = {
+	#id = es_health.4
 	
+	#title = es_health.4.t
+	#desc = es_health.4.d
+	#picture = ES_MAD_KING_eventPicture
+	
+	#trigger = { 
+		#ruler_has_personality = immortal_personality
+	#}
+	
+	#mean_time_to_happen = {
+		#days = 18250
+	#}
+	
+	#option = {
+		#name = es_health.4.a
+		#add_stability = -1
+		#add_prestige = -25
+		#change_adm = -1
+		#change_dip = -1
+		#change_mil = -1
+	#}
+	
+	#option = {
+		#name = es_health.4.b
+		#kill_ruler = yes
+	#}
+	
+#}
+
+country_event = {
+	id = es_health.5
 	title = es_health.4.t
 	desc = es_health.4.d
 	picture = ES_MAD_KING_eventPicture
 	
+	hidden = yes
+	
 	trigger = { 
-		ruler_has_personality = immortal_personality
+		ruler_age = 50
 	}
 	
 	mean_time_to_happen = {
 		days = 18250
+		modifier = {
+			factor = 0.5
+			government = republic
+		}
+		modifier = {
+			factor = 0.85
+			ruler_age = 100
+		}
+		modifier = {
+			factor = 0.85
+			ruler_age = 150
+		}
+		modifier = {
+			factor = 0.85
+			ruler_age = 200
+		}
+		modifier = {
+			factor = 0.85
+			ruler_age = 250
+		}
+		modifier = {
+			factor = 0.85
+			ruler_age = 300
+		}
+		modifier = {
+			factor = 0.85
+			ruler_age = 350
+		}
+		modifier = {
+			factor = 0.85
+			ruler_age = 400
+		}
+		modifier = {
+			factor = 0.85
+			ruler_age = 450
+		}
+		modifier = {
+			factor = 0.85
+			ruler_age = 500
+		}
 	}
 	
 	option = {
 		name = es_health.4.a
-		add_stability = -1
-		add_prestige = -25
-		change_adm = -1
-		change_dip = -1
-		change_mil = -1
-	}
-	
-	option = {
-		name = es_health.4.b
-		kill_ruler = yes
+		
+		if = {
+		    limit = { adm = 1 dip = 1 mil = 1 }
+			random_list = {
+			33 = { change_adm = -1 }
+			33 = { change_dip = -1 }
+			33 = { change_mil = -1 }
+			}
+		}
+		else_if = {
+		    limit = { dip = 1 mil = 1 }
+			random_list = {
+			50 = { change_dip = -1 }
+			50 = { change_mil = -1 }
+			}
+		}
+		else_if = {
+		    limit = { adm = 1 mil = 1 }
+			random_list = {
+			50 = { change_adm = -1 }
+			50 = { change_mil = -1 }
+			}
+		}
+		else_if = {
+		    limit = { adm = 1 dip = 1 }
+			random_list = {
+			50 = { change_adm = -1 }
+			50 = { change_dip = -1 }
+			}
+		}
+		else_if = {
+		    limit = { adm = 1 }
+			change_adm = -1
+		}
+		else_if = {
+		    limit = { dip = 1 }
+			change_dip = -1
+		}
+		else = {
+		    limit = { mil = 1 }
+			change_mil = -1
+		}
+		
 	}
 	
 }

@@ -73,6 +73,7 @@ country_event = {
 		}
 		else_if = {
 			limit = {
+			    is_tribal = no 
 				government = republic
 				NOT = { republican_tradition = 20 }	
 			}
