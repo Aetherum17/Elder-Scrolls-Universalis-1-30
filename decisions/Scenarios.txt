@@ -87,7 +87,7 @@ country_decisions = {
 		}
 		allow = {
 		tag = SKY
-		every_province = { morrowind_23_la = { owned_by = ROOT } }
+		morrowind_23_la = { type = all owned_by = ROOT }
 		NOT = { exists = SKA }
 		}
 		effect = {

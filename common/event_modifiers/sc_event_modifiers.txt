@@ -136,6 +136,14 @@ antibankrapucy = {
    culture_conversion_cost = -0.5
 }
 
+06_nordic_centralization = {
+    local_culture_conversion_cost = -0.35
+	local_tax_modifier = -0.75
+	local_production_efficiency = -0.75
+	local_manpower_modifier = -0.75
+	local_unrest = 5
+}
+
 07_aedric_blessing = {
    land_morale = 0.10
    discipline = 0.05

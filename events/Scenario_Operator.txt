@@ -346,6 +346,14 @@ country_event = {
 		every_country = {
 		limit = { culture_group = northern_cg any_neighbor_country = { OR = { owns = 7419 owns = 7559 owns = 7394 } } } country_event = { id = es_6_scenario.7 days = 3650 tooltip = es_collapse.2.a.tt }
 		}
+		###
+		every_country = {
+		limit = { culture_group = dwemer_cg owns = 970 } country_event = { id = es_6_scenario.8 days = 1825 tooltip = es_collapse.2.a.tt }
+		}
+		###
+		every_country = {
+		limit = { owns = 952 NOT = { owns = 7695 } } country_event = { id = es_6_scenario.10 days = 1825 tooltip = es_collapse.2.a.tt }
+		}
 		
 	}
 

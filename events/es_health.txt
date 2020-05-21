@@ -1066,13 +1066,17 @@ country_event = {
 	hidden = yes
 	
 	trigger = { 
+	    has_regency = no 
 		ruler_age = 50
+		NOT = { ruler_culture = vampire }
+		NOT = { ruler_culture = soul_shriven }
+		NOT = { ruler_culture = daedra }
 	}
 	
 	mean_time_to_happen = {
 		days = 18250
 		modifier = {
-			factor = 0.5
+			factor = 0.15
 			government = republic
 		}
 		modifier = {

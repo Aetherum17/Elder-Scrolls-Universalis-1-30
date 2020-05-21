@@ -11,7 +11,6 @@ country_event = {
 	option = {
 		name = "es_6_scenario.1.a"
 		ai_chance = { factor = 100 }
-		}
 	}
 }
 
@@ -143,6 +142,9 @@ country_event = {
 		add_legitimacy = -100
 		}
 	}
+	after = {
+	    set_global_flag = es_6_skyrim_path_flag
+	}
 }
 
 country_event = {
@@ -195,5 +197,103 @@ country_event = {
 		    name = "10_trade_agreement"
 			duration = 9125
 		}
+	}
+}
+
+country_event = {
+	id = es_6_scenario.8
+	title = es_6_scenario.8.t
+	desc = es_6_scenario.8.d
+	picture = ES_DWEMER_CITY_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "es_6_scenario.8.a"
+		ai_chance = { factor = 50 }
+		
+		change_tag = DWE
+		if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		if = { limit = { NOT = { government_rank = 5 } } set_government_rank = 5 }
+		
+	}
+	option = {
+		name = "es_6_scenario.8.b"
+		ai_chance = { factor = 50 }
+		add_stability = 1
+		
+	}
+}
+
+### Centralization or Decentralization of Skyrim
+
+country_event = {
+	id = es_6_scenario.9
+	title = es_6_scenario.9.t
+	desc = es_6_scenario.9.d
+	picture = ES_SKYRIM_MAP_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_6_scenario.9_flag }
+        culture_group = northern_cg
+		owns = 1275
+		OR = {
+		has_global_flag = es_6_skyrim_path_flag
+		tag = OLD 
+		OR = {
+		    has_reform = elective_monarchy
+			legacy_government = elective_monarchy_legacy
+		}
+		}
+		government_rank = 5
+    }
+
+	mean_time_to_happen = {
+		days = 1825		
+	}
+	
+	immediate = {
+	    set_country_flag = es_6_scenario.9_flag
+	}
+
+	option = {
+		name = "es_6_scenario.9.a"
+		ai_chance = { factor = 50 }
+		set_country_flag = centralize_skyrim_glag
+		add_stability = -1
+	}
+	option = {
+		name = "es_6_scenario.9.b"
+		ai_chance = { factor = 50 }
+		set_country_flag = decentralize_skyrim_flag
+		add_stability = 1
+	}
+}
+
+### Attempt to Subjuct Skaals
+
+country_event = {
+	id = es_6_scenario.10
+	title = es_6_scenario.10.t
+	desc = es_6_scenario.10.d
+	picture = ES_SKAAL_VILLAGE_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	    7695 = { owner = { save_event_target_as = 7695_owner } }
+	}
+
+	option = {
+		name = "es_6_scenario.10.a"
+		7695 = { add_core = ROOT }
+		if = { limit = { NOT = { truce_with = event_target:7695_owner } NOT = { alliance_with = event_target:7695_owner } NOT = { is_subject_of = event_target:7695_owner } }
+		declare_war_with_cb = { who = event_target:7695_owner casus_belli = cb_es_scenario } 
+		}
+	}
+	option = {
+		name = "es_6_scenario.10.b"
+		ai_chance = { factor = 50 }
+		add_prestige = -10
 	}
 }

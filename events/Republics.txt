@@ -9,7 +9,10 @@ country_event = {
 	
 	trigger = {
 		government = republic
-		NOT = { has_dlc = "Res Publica" }
+		OR = {
+			NOT = { has_dlc = "Res Publica" }
+			NOT = { has_reform = dutch_republic }
+		}
 		NOT = { republican_tradition = 50 }
 	}
 	
@@ -38,8 +41,11 @@ country_event = {
 	
 	trigger = {
 		government = republic
-		NOT = { has_dlc = "Res Publica" }
 		is_colonial_nation = no
+		OR = {
+			NOT = { has_dlc = "Res Publica" }
+			NOT = { has_reform = dutch_republic }
+		}
 		OR = {
 			AND = {
 				NOT = { republican_tradition = 40 }
@@ -132,7 +138,10 @@ country_event = {
 	
 	trigger = {
 		government = republic
-		NOT = { has_dlc = "Res Publica" }
+		OR = {
+			NOT = { has_dlc = "Res Publica" }
+			NOT = { has_reform = dutch_republic }
+		}
 	}
 	
 	mean_time_to_happen = {
@@ -167,7 +176,10 @@ country_event = {
 	
 	trigger = {
 		government = republic
-		NOT = { has_dlc = "Res Publica" }
+		OR = {
+			NOT = { has_dlc = "Res Publica" }
+			NOT = { has_reform = dutch_republic }
+		}
 		NOT = { stability = 3 }
 		NOT = { republican_tradition = 80 }
 	}
@@ -204,7 +216,10 @@ country_event = {
 	
 	trigger = {
 		government = republic
-		NOT = { has_dlc = "Res Publica" }
+		OR = {
+			NOT = { has_dlc = "Res Publica" }
+			NOT = { has_reform = dutch_republic }
+		}
 		NOT = { republican_tradition = 80 }
 	}
 	
@@ -245,7 +260,10 @@ country_event = {
 	
 	trigger = {
 		government = republic
-		NOT = { has_dlc = "Res Publica" }
+		OR = {
+			NOT = { has_dlc = "Res Publica" }
+			NOT = { has_reform = dutch_republic }
+		}
 		NOT = { republican_tradition = 80 }
 	}
 	
@@ -450,7 +468,7 @@ country_event = {
 	trigger = {
 		NOT = { has_country_modifier = trade_and_production_cutbacks }
 		NOT = { has_country_modifier = military_cutbacks }
-		has_reform = noble_republic
+		government = republic
 		is_at_war = yes
 		OR = {
 			NOT = { trade_efficiency = 0.4 }

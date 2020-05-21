@@ -1,0 +1,693 @@
+country_decisions = {
+    es_riften_uni = {
+		potential = {
+            has_country_flag = centralize_skyrim_glag
+			NOT = { has_country_flag = decentralize_skyrim_flag }
+			NOT = { has_country_flag = es_riften_uni_flag }
+			
+		}
+		allow = {
+			skyrim_59_la = { type = all owned_by = ROOT }
+			skyrim_1_la = { type = all owned_by = ROOT }
+			skyrim_58_la = { type = all owned_by = ROOT }
+			skyrim_2_la = { type = all owned_by = ROOT }
+			skyrim_4_la = { type = all owned_by = ROOT }
+		}
+		effect = {
+		    set_country_flag = es_riften_uni_flag
+			every_owned_province = {
+			    limit = {
+				    OR = {
+					    area = skyrim_59_la
+						area = skyrim_1_la
+						area = skyrim_58_la
+						area = skyrim_2_la
+						area = skyrim_4_la
+					}
+				}
+				add_province_modifier = { name = "06_nordic_centralization" duration = 9125 }
+				add_core = ROOT
+				change_religion = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	es_riften_con = {
+		potential = {
+            NOT = { has_country_flag = centralize_skyrim_glag }
+			has_country_flag = decentralize_skyrim_flag
+			NOT = { has_country_flag = es_riften_con_flag }
+		}
+		allow = {
+			skyrim_59_la = { type = all owned_by = ROOT }
+			skyrim_1_la = { type = all owned_by = ROOT }
+			skyrim_58_la = { type = all owned_by = ROOT }
+			skyrim_2_la = { type = all owned_by = ROOT }
+			skyrim_4_la = { type = all owned_by = ROOT }
+		}
+		effect = {
+		    set_country_flag = es_riften_con_flag
+			every_owned_province = {
+			    limit = {
+				    OR = {
+					    area = skyrim_59_la
+						area = skyrim_1_la
+						area = skyrim_58_la
+						area = skyrim_2_la
+						area = skyrim_4_la
+					}
+				}
+				cede_province = NA1
+				add_core = NA1
+			}
+			create_march = NA1
+			NA1 = { change_government = monarchy }
+		    NA1 = { change_government_reform_progress = -99999 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	###
+	es_ivarstead_uni = {
+		potential = {
+            has_country_flag = centralize_skyrim_glag
+			NOT = { has_country_flag = decentralize_skyrim_flag }
+			NOT = { has_country_flag = es_riften_uni_flag }
+			
+		}
+		allow = {
+			skyrim_60_la = { type = all owned_by = ROOT }
+			skyrim_57_la = { type = all owned_by = ROOT }
+			skyrim_5_la = { type = all owned_by = ROOT }
+			skyrim_54_la = { type = all owned_by = ROOT }
+		}
+		effect = {
+		    set_country_flag = es_riften_uni_flag
+			every_owned_province = {
+			    limit = {
+				    OR = {
+					    area = skyrim_60_la
+						area = skyrim_57_la
+						area = skyrim_5_la
+						area = skyrim_54_la
+					}
+				}
+				add_province_modifier = { name = "06_nordic_centralization" duration = 9125 }
+				add_core = ROOT
+				change_religion = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	es_ivarstead_con = {
+		potential = {
+            NOT = { has_country_flag = centralize_skyrim_glag }
+			has_country_flag = decentralize_skyrim_flag
+			NOT = { has_country_flag = es_riften_con_flag }
+		}
+		allow = {
+			skyrim_60_la = { type = all owned_by = ROOT }
+			skyrim_57_la = { type = all owned_by = ROOT }
+			skyrim_5_la = { type = all owned_by = ROOT }
+			skyrim_54_la = { type = all owned_by = ROOT }
+		}
+		effect = {
+		    set_country_flag = es_riften_con_flag
+			every_owned_province = {
+			    limit = {
+				    OR = {
+					    area = skyrim_60_la
+						area = skyrim_57_la
+						area = skyrim_5_la
+						area = skyrim_54_la
+					}
+				}
+				cede_province = NA5
+				add_core = NA5
+			}
+			create_march = NA5
+			NA5 = { change_government = monarchy }
+		    NA5 = { change_government_reform_progress = -99999 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	###
+	es_falkreath_uni = {
+		potential = {
+            has_country_flag = centralize_skyrim_glag
+			NOT = { has_country_flag = decentralize_skyrim_flag }
+			NOT = { has_country_flag = es_riften_uni_flag }
+			
+		}
+		allow = {
+			skyrim_53_la = { type = all owned_by = ROOT }
+			skyrim_6_la = { type = all owned_by = ROOT }
+			skyrim_52_la = { type = all owned_by = ROOT }
+			skyrim_31_la = { type = all owned_by = ROOT }
+			skyrim_30_la = { type = all owned_by = ROOT }
+		}
+		effect = {
+		    set_country_flag = es_riften_uni_flag
+			every_owned_province = {
+			    limit = {
+				    OR = {
+					    area = skyrim_53_la
+						area = skyrim_6_la
+						area = skyrim_52_la
+						area = skyrim_31_la
+						area = skyrim_30_la
+					}
+				}
+				add_province_modifier = { name = "06_nordic_centralization" duration = 9125 }
+				add_core = ROOT
+				change_religion = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	es_falkreath_con = {
+		potential = {
+            NOT = { has_country_flag = centralize_skyrim_glag }
+			has_country_flag = decentralize_skyrim_flag
+			NOT = { has_country_flag = es_riften_con_flag }
+		}
+		allow = {
+			skyrim_53_la = { type = all owned_by = ROOT }
+			skyrim_6_la = { type = all owned_by = ROOT }
+			skyrim_52_la = { type = all owned_by = ROOT }
+			skyrim_31_la = { type = all owned_by = ROOT }
+			skyrim_30_la = { type = all owned_by = ROOT }
+		}
+		effect = {
+		    set_country_flag = es_riften_con_flag
+			every_owned_province = {
+			    limit = {
+				   OR = {
+					    area = skyrim_53_la
+						area = skyrim_6_la
+						area = skyrim_52_la
+						area = skyrim_31_la
+						area = skyrim_30_la
+					}
+				}
+				cede_province = NA6
+				add_core = NA6
+			}
+			create_march = NA6
+			NA6 = { change_government = monarchy }
+		    NA6 = { change_government_reform_progress = -99999 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	###
+	es_whiterun_uni = {
+		potential = {
+            has_country_flag = centralize_skyrim_glag
+			NOT = { has_country_flag = decentralize_skyrim_flag }
+			NOT = { has_country_flag = es_riften_uni_flag }
+			
+		}
+		allow = {
+			skyrim_47_la = { type = all owned_by = ROOT }
+			skyrim_12_la = { type = all owned_by = ROOT }
+			skyrim_49_la = { type = all owned_by = ROOT }
+			skyrim_56_la = { type = all owned_by = ROOT }
+			skyrim_51_la = { type = all owned_by = ROOT }
+		}
+		effect = {
+		    set_country_flag = es_riften_uni_flag
+			every_owned_province = {
+			    limit = {
+				    OR = {
+					    area = skyrim_47_la
+						area = skyrim_12_la
+						area = skyrim_49_la
+						area = skyrim_56_la
+						area = skyrim_51_la
+					}
+				}
+				add_province_modifier = { name = "06_nordic_centralization" duration = 9125 }
+				add_core = ROOT
+				change_religion = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	es_whiterun_con = {
+		potential = {
+            NOT = { has_country_flag = centralize_skyrim_glag }
+			has_country_flag = decentralize_skyrim_flag
+			NOT = { has_country_flag = es_riften_con_flag }
+		}
+		allow = {
+			skyrim_47_la = { type = all owned_by = ROOT }
+			skyrim_12_la = { type = all owned_by = ROOT }
+			skyrim_49_la = { type = all owned_by = ROOT }
+			skyrim_56_la = { type = all owned_by = ROOT }
+			skyrim_51_la = { type = all owned_by = ROOT }
+		}
+		effect = {
+		    set_country_flag = es_riften_con_flag
+			every_owned_province = {
+			    limit = {
+				    OR = {
+					    area = skyrim_47_la
+						area = skyrim_12_la
+						area = skyrim_49_la
+						area = skyrim_56_la
+						area = skyrim_51_la
+					}
+				}
+				cede_province = NB2
+				add_core = NB2
+			}
+			create_march = NB2
+			NB2 = { change_government = monarchy }
+		    NB2 = { change_government_reform_progress = -99999 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	###
+	es_markarth_uni = {
+		potential = {
+            has_country_flag = centralize_skyrim_glag
+			NOT = { has_country_flag = decentralize_skyrim_flag }
+			NOT = { has_country_flag = es_riften_uni_flag }
+			
+		}
+		allow = {
+			skyrim_29_la = { type = all owned_by = ROOT }
+			skyrim_7_la = { type = all owned_by = ROOT }
+			skyrim_28_la = { type = all owned_by = ROOT }
+			skyrim_27_la = { type = all owned_by = ROOT }
+			skyrim_19_la = { type = all owned_by = ROOT }
+		}
+		effect = {
+		    set_country_flag = es_riften_uni_flag
+			every_owned_province = {
+			    limit = {
+				    OR = {
+					    area = skyrim_29_la
+						area = skyrim_7_la
+						area = skyrim_28_la
+						area = skyrim_27_la
+						area = skyrim_19_la
+					}
+				}
+				add_province_modifier = { name = "06_nordic_centralization" duration = 9125 }
+				add_core = ROOT
+				change_religion = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	es_markarth_con = {
+		potential = {
+            NOT = { has_country_flag = centralize_skyrim_glag }
+			has_country_flag = decentralize_skyrim_flag
+			NOT = { has_country_flag = es_riften_con_flag }
+		}
+		allow = {
+			skyrim_29_la = { type = all owned_by = ROOT }
+			skyrim_7_la = { type = all owned_by = ROOT }
+			skyrim_28_la = { type = all owned_by = ROOT }
+			skyrim_27_la = { type = all owned_by = ROOT }
+			skyrim_19_la = { type = all owned_by = ROOT }
+		}
+		effect = {
+		    set_country_flag = es_riften_con_flag
+			every_owned_province = {
+			    limit = {
+				    OR = {
+					    area = skyrim_29_la
+						area = skyrim_7_la
+						area = skyrim_28_la
+						area = skyrim_27_la
+						area = skyrim_19_la
+					}
+				}
+				cede_province = NB9
+				add_core = NB9
+			}
+			create_march = NB9
+			NB9 = { change_government = monarchy }
+		    NB9 = { change_government_reform_progress = -99999 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	###
+	es_karthwasten_uni = {
+		potential = {
+            has_country_flag = centralize_skyrim_glag
+			NOT = { has_country_flag = decentralize_skyrim_flag }
+			NOT = { has_country_flag = es_riften_uni_flag }
+			
+		}
+		allow = {
+			skyrim_23_la = { type = all owned_by = ROOT }
+			skyrim_24_la = { type = all owned_by = ROOT }
+			skyrim_25_la = { type = all owned_by = ROOT }
+			skyrim_32_la = { type = all owned_by = ROOT }
+			skyrim_14_la = { type = all owned_by = ROOT }
+		}
+		effect = {
+		    set_country_flag = es_riften_uni_flag
+			every_owned_province = {
+			    limit = {
+				    OR = {
+					    area = skyrim_23_la
+						area = skyrim_24_la
+						area = skyrim_25_la
+						area = skyrim_32_la
+						area = skyrim_14_la
+					}
+				}
+				add_province_modifier = { name = "06_nordic_centralization" duration = 9125 }
+				add_core = ROOT
+				change_religion = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	es_karthwasten_con = {
+		potential = {
+            NOT = { has_country_flag = centralize_skyrim_glag }
+			has_country_flag = decentralize_skyrim_flag
+			NOT = { has_country_flag = es_riften_con_flag }
+		}
+		allow = {
+		    skyrim_23_la = { type = all owned_by = ROOT }
+			skyrim_24_la = { type = all owned_by = ROOT }
+			skyrim_25_la = { type = all owned_by = ROOT }
+			skyrim_32_la = { type = all owned_by = ROOT }
+			skyrim_14_la = { type = all owned_by = ROOT }
+		}
+		effect = {
+		    set_country_flag = es_riften_con_flag
+			every_owned_province = {
+			    limit = {
+				    OR = {
+					    area = skyrim_23_la
+						area = skyrim_24_la
+						area = skyrim_25_la
+						area = skyrim_32_la
+						area = skyrim_14_la
+					}
+				}
+				cede_province = NC5
+				add_core = NC5
+			}
+			create_march = NC5
+			NC5 = { change_government = monarchy }
+		    NC5 = { change_government_reform_progress = -99999 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	###
+	es_solitude_uni = {
+		potential = {
+            has_country_flag = centralize_skyrim_glag
+			NOT = { has_country_flag = decentralize_skyrim_flag }
+			NOT = { has_country_flag = es_riften_uni_flag }
+			
+		}
+		allow = {
+			skyrim_16_la = { type = all owned_by = ROOT }
+			skyrim_20_la = { type = all owned_by = ROOT }
+			skyrim_21_la = { type = all owned_by = ROOT }
+			skyrim_22_la = { type = all owned_by = ROOT }
+		}
+		effect = {
+		    set_country_flag = es_riften_uni_flag
+			every_owned_province = {
+			    limit = {
+				    OR = {
+					    area = skyrim_16_la
+						area = skyrim_20_la
+						area = skyrim_21_la
+						area = skyrim_22_la
+					}
+				}
+				add_province_modifier = { name = "06_nordic_centralization" duration = 9125 }
+				add_core = ROOT
+				change_religion = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	es_solitude_con = {
+		potential = {
+            NOT = { has_country_flag = centralize_skyrim_glag }
+			has_country_flag = decentralize_skyrim_flag
+			NOT = { has_country_flag = es_riften_con_flag }
+		}
+		allow = {
+		    skyrim_16_la = { type = all owned_by = ROOT }
+			skyrim_20_la = { type = all owned_by = ROOT }
+			skyrim_21_la = { type = all owned_by = ROOT }
+			skyrim_22_la = { type = all owned_by = ROOT }
+		}
+		effect = {
+		    set_country_flag = es_riften_con_flag
+			every_owned_province = {
+			    limit = {
+				    OR = {
+					    area = skyrim_16_la
+						area = skyrim_20_la
+						area = skyrim_21_la
+						area = skyrim_22_la
+					}
+				}
+				cede_province = NB6
+				add_core = NB6
+			}
+			create_march = NB6
+			NB6 = { change_government = monarchy }
+		    NB6 = { change_government_reform_progress = -99999 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	###
+	es_morthal_uni = {
+		potential = {
+            has_country_flag = centralize_skyrim_glag
+			NOT = { has_country_flag = decentralize_skyrim_flag }
+			NOT = { has_country_flag = es_riften_uni_flag }
+			
+		}
+		allow = {
+			skyrim_32_la = { type = all owned_by = ROOT }
+			skyrim_18_la = { type = all owned_by = ROOT }
+			skyrim_15_la = { type = all owned_by = ROOT }
+			skyrim_33_la = { type = all owned_by = ROOT }
+		}
+		effect = {
+		    set_country_flag = es_riften_uni_flag
+			every_owned_province = {
+			    limit = {
+				    OR = {
+					    area = skyrim_32_la
+						area = skyrim_18_la
+						area = skyrim_15_la
+						area = skyrim_33_la
+					}
+				}
+				add_province_modifier = { name = "06_nordic_centralization" duration = 9125 }
+				add_core = ROOT
+				change_religion = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	es_morthal_con = {
+		potential = {
+            NOT = { has_country_flag = centralize_skyrim_glag }
+			has_country_flag = decentralize_skyrim_flag
+			NOT = { has_country_flag = es_riften_con_flag }
+		}
+		allow = {
+		    skyrim_32_la = { type = all owned_by = ROOT }
+			skyrim_18_la = { type = all owned_by = ROOT }
+			skyrim_15_la = { type = all owned_by = ROOT }
+			skyrim_33_la = { type = all owned_by = ROOT }
+		}
+		effect = {
+		    set_country_flag = es_riften_con_flag
+			every_owned_province = {
+			    limit = {
+				    OR = {
+					    area = skyrim_32_la
+						area = skyrim_18_la
+						area = skyrim_15_la
+						area = skyrim_33_la
+					}
+				}
+				cede_province = NB5
+				add_core = NB5
+			}
+			create_march = NB5
+			NB5 = { change_government = monarchy }
+		    NB5 = { change_government_reform_progress = -99999 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	###
+	es_dawnstar_uni = {
+		potential = {
+            has_country_flag = centralize_skyrim_glag
+			NOT = { has_country_flag = decentralize_skyrim_flag }
+			NOT = { has_country_flag = es_riften_uni_flag }
+			
+		}
+		allow = {
+			skyrim_34_la = { type = all owned_by = ROOT }
+			skyrim_9_la = { type = all owned_by = ROOT }
+			skyrim_35_la = { type = all owned_by = ROOT }
+		}
+		effect = {
+		    set_country_flag = es_riften_uni_flag
+			every_owned_province = {
+			    limit = {
+				    OR = {
+					    area = skyrim_34_la
+						area = skyrim_9_la
+						area = skyrim_35_la
+					}
+				}
+				add_province_modifier = { name = "06_nordic_centralization" duration = 9125 }
+				add_core = ROOT
+				change_religion = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	es_dawnstar_con = {
+		potential = {
+            NOT = { has_country_flag = centralize_skyrim_glag }
+			has_country_flag = decentralize_skyrim_flag
+			NOT = { has_country_flag = es_riften_con_flag }
+		}
+		allow = {
+		    skyrim_34_la = { type = all owned_by = ROOT }
+			skyrim_9_la = { type = all owned_by = ROOT }
+			skyrim_35_la = { type = all owned_by = ROOT }
+		}
+		effect = {
+		    set_country_flag = es_riften_con_flag
+			every_owned_province = {
+			    limit = {
+				    OR = {
+					    area = skyrim_34_la
+						area = skyrim_9_la
+						area = skyrim_35_la
+					}
+				}
+				cede_province = NA9
+				add_core = NA9
+			}
+			create_march = NA9
+			NA9 = { change_government = monarchy }
+		    NA9 = { change_government_reform_progress = -99999 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	###
+	es_winterhold_uni = {
+		potential = {
+            has_country_flag = centralize_skyrim_glag
+			NOT = { has_country_flag = decentralize_skyrim_flag }
+			NOT = { has_country_flag = es_riften_uni_flag }
+			
+		}
+		allow = {
+			skyrim_8_la = { type = all owned_by = ROOT }
+			skyrim_39_la = { type = all owned_by = ROOT }
+			skyrim_40_la = { type = all owned_by = ROOT }
+		}
+		effect = {
+		    set_country_flag = es_riften_uni_flag
+			every_owned_province = {
+			    limit = {
+				    OR = {
+					    area = skyrim_8_la
+						area = skyrim_39_la
+						area = skyrim_40_la
+					}
+				}
+				add_province_modifier = { name = "06_nordic_centralization" duration = 9125 }
+				add_core = ROOT
+				change_religion = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	es_winterhold_con = {
+		potential = {
+            NOT = { has_country_flag = centralize_skyrim_glag }
+			has_country_flag = decentralize_skyrim_flag
+			NOT = { has_country_flag = es_riften_con_flag }
+		}
+		allow = {
+		    skyrim_8_la = { type = all owned_by = ROOT }
+			skyrim_39_la = { type = all owned_by = ROOT }
+			skyrim_40_la = { type = all owned_by = ROOT }
+		}
+		effect = {
+		    set_country_flag = es_riften_con_flag
+			every_owned_province = {
+			    limit = {
+				    OR = {
+					    area = skyrim_8_la
+						area = skyrim_39_la
+						area = skyrim_40_la
+					}
+				}
+				cede_province = NA8
+				add_core = NA8
+			}
+			create_march = NA8
+			NA8 = { change_government = monarchy }
+		    NA8 = { change_government_reform_progress = -99999 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
