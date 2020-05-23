@@ -93,14 +93,14 @@ alliance = {
 	first = CC5
 	second = CI3
 	start_date = 57.1.1
-	end_date = 9999.1.1
+	end_date = 266.1.1
 }
 
 vassal = {
 	first = CC5
 	second = CH9
 	start_date = 57.1.1
-	end_date = 9999.1.1
+	end_date = 266.1.1
 }
 
 vassal = {
@@ -199,7 +199,7 @@ dependency = {
     first = CB3
     second = CG7
     start_date = 57.1.1
-	end_date = 9999.1.1
+	end_date = 266.1.1
 }
 
 dependency = {
@@ -207,7 +207,7 @@ dependency = {
     first = CB3
     second = CF0
     start_date = 57.1.1
-	end_date = 9999.1.1
+	end_date = 266.1.1
 }
 
 alliance = {
@@ -336,8 +336,8 @@ union = {
 alliance = {
 	first = CC0
 	second = CC3
-	start_date = 57.1.1
-	end_date = 139.1.1
+	start_date = 139.1.1
+	end_date = 9999.1.1
 }
 
 ####################################################################### 4
@@ -346,49 +346,49 @@ vassal = {
 	first = AYL
 	second = CA5
 	start_date = 189.1.1
-	end_date = 9999.1.1
+	end_date = 266.1.1
 }
 
 vassal = {
 	first = AYL
 	second = CB9
 	start_date = 189.1.1
-	end_date = 9999.1.1
+	end_date = 266.1.1
 }
 
 vassal = {
 	first = AYL
 	second = CH6
 	start_date = 189.1.1
-	end_date = 9999.1.1
+	end_date = 266.1.1
 }
 
 vassal = {
 	first = AYL
 	second = CB6
 	start_date = 189.1.1
-	end_date = 9999.1.1
+	end_date = 266.1.1
 }
 
 vassal = {
 	first = AYL
 	second = CG9
 	start_date = 189.1.1
-	end_date = 9999.1.1
+	end_date = 266.1.1
 }
 
 union = {
 	first = AYL
 	second = CB5
 	start_date = 189.1.1
-	end_date = 9999.1.1
+	end_date = 266.1.1
 }
 
 union = {
 	first = AYL
 	second = CE6
 	start_date = 189.1.1
-	end_date = 9999.1.1
+	end_date = 266.1.1
 }
 
 alliance = {
@@ -396,4 +396,64 @@ alliance = {
 	second = CA3
 	start_date = 189.1.1
 	end_date = 221.1.1
+}
+
+####################################################################### 7
+
+dependency = {
+    subject_type = alliance_member
+    first = MIN
+    second = CG7
+    start_date = 266.1.1
+	end_date = 9999.1.1
+}
+
+dependency = {
+    subject_type = alliance_member
+    first = MIN
+    second = CF0
+    start_date = 266.1.1
+	end_date = 9999.1.1
+}
+
+alliance = {
+	first = ALE
+	second = MIN
+	start_date = 266.1.1
+	end_date = 9999.1.1
+}
+
+alliance = {
+	first = ALE
+	second = SKY
+	start_date = 266.1.1
+	end_date = 9999.1.1
+}
+
+alliance = {
+	first = ALE
+	second = CI3
+	start_date = 266.1.1
+	end_date = 9999.1.1
+}
+
+vassal = {
+	first = ALE
+	second = CH9
+	start_date = 266.1.1
+	end_date = 9999.1.1
+}
+
+alliance = {
+	first = NIB
+	second = CC3
+	start_date = 266.1.1
+	end_date = 9999.1.1
+}
+
+alliance = {
+	first = COL
+	second = MIN
+	start_date = 266.1.1
+	end_date = 9999.1.1
 }

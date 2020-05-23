@@ -242,7 +242,7 @@ country_event = {
 		tag = OLD 
 		OR = {
 		    has_reform = elective_monarchy
-			legacy_government = elective_monarchy_legacy
+			has_reform = elective_monarchy_legacy
 		}
 		}
 		government_rank = 5

@@ -63,7 +63,7 @@ country_decisions = {
 				add_core = NA1
 			}
 			create_march = NA1
-			NA1 = { change_government = monarchy }
+			NA1 = { change_government = monarchy change_religion = ROOT }
 		    NA1 = { change_government_reform_progress = -99999 }
 		}
 		ai_will_do = {
@@ -75,7 +75,7 @@ country_decisions = {
 		potential = {
             has_country_flag = centralize_skyrim_glag
 			NOT = { has_country_flag = decentralize_skyrim_flag }
-			NOT = { has_country_flag = es_riften_uni_flag }
+			NOT = { has_country_flag = es_ivarstead_uni_flag }
 			
 		}
 		allow = {
@@ -85,7 +85,7 @@ country_decisions = {
 			skyrim_54_la = { type = all owned_by = ROOT }
 		}
 		effect = {
-		    set_country_flag = es_riften_uni_flag
+		    set_country_flag = es_ivarstead_uni_flag
 			every_owned_province = {
 			    limit = {
 				    OR = {
@@ -108,7 +108,7 @@ country_decisions = {
 		potential = {
             NOT = { has_country_flag = centralize_skyrim_glag }
 			has_country_flag = decentralize_skyrim_flag
-			NOT = { has_country_flag = es_riften_con_flag }
+			NOT = { has_country_flag = es_ivarstead_con_flag }
 		}
 		allow = {
 			skyrim_60_la = { type = all owned_by = ROOT }
@@ -117,7 +117,7 @@ country_decisions = {
 			skyrim_54_la = { type = all owned_by = ROOT }
 		}
 		effect = {
-		    set_country_flag = es_riften_con_flag
+		    set_country_flag = es_ivarstead_con_flag
 			every_owned_province = {
 			    limit = {
 				    OR = {
@@ -131,7 +131,7 @@ country_decisions = {
 				add_core = NA5
 			}
 			create_march = NA5
-			NA5 = { change_government = monarchy }
+			NA5 = { change_government = monarchy change_religion = ROOT }
 		    NA5 = { change_government_reform_progress = -99999 }
 		}
 		ai_will_do = {
@@ -143,7 +143,7 @@ country_decisions = {
 		potential = {
             has_country_flag = centralize_skyrim_glag
 			NOT = { has_country_flag = decentralize_skyrim_flag }
-			NOT = { has_country_flag = es_riften_uni_flag }
+			NOT = { has_country_flag = es_falkreath_uni_flag }
 			
 		}
 		allow = {
@@ -154,7 +154,7 @@ country_decisions = {
 			skyrim_30_la = { type = all owned_by = ROOT }
 		}
 		effect = {
-		    set_country_flag = es_riften_uni_flag
+		    set_country_flag = es_falkreath_uni_flag
 			every_owned_province = {
 			    limit = {
 				    OR = {
@@ -178,7 +178,7 @@ country_decisions = {
 		potential = {
             NOT = { has_country_flag = centralize_skyrim_glag }
 			has_country_flag = decentralize_skyrim_flag
-			NOT = { has_country_flag = es_riften_con_flag }
+			NOT = { has_country_flag = es_falkreath_con_flag }
 		}
 		allow = {
 			skyrim_53_la = { type = all owned_by = ROOT }
@@ -188,7 +188,7 @@ country_decisions = {
 			skyrim_30_la = { type = all owned_by = ROOT }
 		}
 		effect = {
-		    set_country_flag = es_riften_con_flag
+		    set_country_flag = es_falkreath_con_flag
 			every_owned_province = {
 			    limit = {
 				   OR = {
@@ -203,7 +203,7 @@ country_decisions = {
 				add_core = NA6
 			}
 			create_march = NA6
-			NA6 = { change_government = monarchy }
+			NA6 = { change_government = monarchy change_religion = ROOT }
 		    NA6 = { change_government_reform_progress = -99999 }
 		}
 		ai_will_do = {
@@ -215,7 +215,7 @@ country_decisions = {
 		potential = {
             has_country_flag = centralize_skyrim_glag
 			NOT = { has_country_flag = decentralize_skyrim_flag }
-			NOT = { has_country_flag = es_riften_uni_flag }
+			NOT = { has_country_flag = es_whiterun_uni_flag }
 			
 		}
 		allow = {
@@ -226,7 +226,7 @@ country_decisions = {
 			skyrim_51_la = { type = all owned_by = ROOT }
 		}
 		effect = {
-		    set_country_flag = es_riften_uni_flag
+		    set_country_flag = es_whiterun_uni_flag
 			every_owned_province = {
 			    limit = {
 				    OR = {
@@ -250,7 +250,7 @@ country_decisions = {
 		potential = {
             NOT = { has_country_flag = centralize_skyrim_glag }
 			has_country_flag = decentralize_skyrim_flag
-			NOT = { has_country_flag = es_riften_con_flag }
+			NOT = { has_country_flag = es_whiterun_con_flag }
 		}
 		allow = {
 			skyrim_47_la = { type = all owned_by = ROOT }
@@ -260,7 +260,7 @@ country_decisions = {
 			skyrim_51_la = { type = all owned_by = ROOT }
 		}
 		effect = {
-		    set_country_flag = es_riften_con_flag
+		    set_country_flag = es_whiterun_con_flag
 			every_owned_province = {
 			    limit = {
 				    OR = {
@@ -275,7 +275,7 @@ country_decisions = {
 				add_core = NB2
 			}
 			create_march = NB2
-			NB2 = { change_government = monarchy }
+			NB2 = { change_government = monarchy change_religion = ROOT }
 		    NB2 = { change_government_reform_progress = -99999 }
 		}
 		ai_will_do = {
@@ -287,7 +287,7 @@ country_decisions = {
 		potential = {
             has_country_flag = centralize_skyrim_glag
 			NOT = { has_country_flag = decentralize_skyrim_flag }
-			NOT = { has_country_flag = es_riften_uni_flag }
+			NOT = { has_country_flag = es_markarth_uni_flag }
 			
 		}
 		allow = {
@@ -298,7 +298,7 @@ country_decisions = {
 			skyrim_19_la = { type = all owned_by = ROOT }
 		}
 		effect = {
-		    set_country_flag = es_riften_uni_flag
+		    set_country_flag = es_markarth_uni_flag
 			every_owned_province = {
 			    limit = {
 				    OR = {
@@ -322,7 +322,7 @@ country_decisions = {
 		potential = {
             NOT = { has_country_flag = centralize_skyrim_glag }
 			has_country_flag = decentralize_skyrim_flag
-			NOT = { has_country_flag = es_riften_con_flag }
+			NOT = { has_country_flag = es_markarth_con_flag }
 		}
 		allow = {
 			skyrim_29_la = { type = all owned_by = ROOT }
@@ -332,7 +332,7 @@ country_decisions = {
 			skyrim_19_la = { type = all owned_by = ROOT }
 		}
 		effect = {
-		    set_country_flag = es_riften_con_flag
+		    set_country_flag = es_markarth_con_flag
 			every_owned_province = {
 			    limit = {
 				    OR = {
@@ -347,7 +347,7 @@ country_decisions = {
 				add_core = NB9
 			}
 			create_march = NB9
-			NB9 = { change_government = monarchy }
+			NB9 = { change_government = monarchy change_religion = ROOT }
 		    NB9 = { change_government_reform_progress = -99999 }
 		}
 		ai_will_do = {
@@ -359,7 +359,7 @@ country_decisions = {
 		potential = {
             has_country_flag = centralize_skyrim_glag
 			NOT = { has_country_flag = decentralize_skyrim_flag }
-			NOT = { has_country_flag = es_riften_uni_flag }
+			NOT = { has_country_flag = es_karthwasten_uni_flag }
 			
 		}
 		allow = {
@@ -370,7 +370,7 @@ country_decisions = {
 			skyrim_14_la = { type = all owned_by = ROOT }
 		}
 		effect = {
-		    set_country_flag = es_riften_uni_flag
+		    set_country_flag = es_karthwasten_uni_flag
 			every_owned_province = {
 			    limit = {
 				    OR = {
@@ -394,7 +394,7 @@ country_decisions = {
 		potential = {
             NOT = { has_country_flag = centralize_skyrim_glag }
 			has_country_flag = decentralize_skyrim_flag
-			NOT = { has_country_flag = es_riften_con_flag }
+			NOT = { has_country_flag = es_karthwasten_con_flag }
 		}
 		allow = {
 		    skyrim_23_la = { type = all owned_by = ROOT }
@@ -404,7 +404,7 @@ country_decisions = {
 			skyrim_14_la = { type = all owned_by = ROOT }
 		}
 		effect = {
-		    set_country_flag = es_riften_con_flag
+		    set_country_flag = es_karthwasten_con_flag
 			every_owned_province = {
 			    limit = {
 				    OR = {
@@ -419,7 +419,7 @@ country_decisions = {
 				add_core = NC5
 			}
 			create_march = NC5
-			NC5 = { change_government = monarchy }
+			NC5 = { change_government = monarchy change_religion = ROOT }
 		    NC5 = { change_government_reform_progress = -99999 }
 		}
 		ai_will_do = {
@@ -431,7 +431,7 @@ country_decisions = {
 		potential = {
             has_country_flag = centralize_skyrim_glag
 			NOT = { has_country_flag = decentralize_skyrim_flag }
-			NOT = { has_country_flag = es_riften_uni_flag }
+			NOT = { has_country_flag = es_solitude_uni_flag }
 			
 		}
 		allow = {
@@ -441,7 +441,7 @@ country_decisions = {
 			skyrim_22_la = { type = all owned_by = ROOT }
 		}
 		effect = {
-		    set_country_flag = es_riften_uni_flag
+		    set_country_flag = es_solitude_uni_flag
 			every_owned_province = {
 			    limit = {
 				    OR = {
@@ -464,7 +464,7 @@ country_decisions = {
 		potential = {
             NOT = { has_country_flag = centralize_skyrim_glag }
 			has_country_flag = decentralize_skyrim_flag
-			NOT = { has_country_flag = es_riften_con_flag }
+			NOT = { has_country_flag = es_solitude_con_flag }
 		}
 		allow = {
 		    skyrim_16_la = { type = all owned_by = ROOT }
@@ -473,7 +473,7 @@ country_decisions = {
 			skyrim_22_la = { type = all owned_by = ROOT }
 		}
 		effect = {
-		    set_country_flag = es_riften_con_flag
+		    set_country_flag = es_solitude_con_flag
 			every_owned_province = {
 			    limit = {
 				    OR = {
@@ -487,7 +487,7 @@ country_decisions = {
 				add_core = NB6
 			}
 			create_march = NB6
-			NB6 = { change_government = monarchy }
+			NB6 = { change_government = monarchy change_religion = ROOT }
 		    NB6 = { change_government_reform_progress = -99999 }
 		}
 		ai_will_do = {
@@ -499,7 +499,7 @@ country_decisions = {
 		potential = {
             has_country_flag = centralize_skyrim_glag
 			NOT = { has_country_flag = decentralize_skyrim_flag }
-			NOT = { has_country_flag = es_riften_uni_flag }
+			NOT = { has_country_flag = es_morthal_uni_flag }
 			
 		}
 		allow = {
@@ -509,7 +509,7 @@ country_decisions = {
 			skyrim_33_la = { type = all owned_by = ROOT }
 		}
 		effect = {
-		    set_country_flag = es_riften_uni_flag
+		    set_country_flag = es_morthal_uni_flag
 			every_owned_province = {
 			    limit = {
 				    OR = {
@@ -532,7 +532,7 @@ country_decisions = {
 		potential = {
             NOT = { has_country_flag = centralize_skyrim_glag }
 			has_country_flag = decentralize_skyrim_flag
-			NOT = { has_country_flag = es_riften_con_flag }
+			NOT = { has_country_flag = es_morthal_con_flag }
 		}
 		allow = {
 		    skyrim_32_la = { type = all owned_by = ROOT }
@@ -541,7 +541,7 @@ country_decisions = {
 			skyrim_33_la = { type = all owned_by = ROOT }
 		}
 		effect = {
-		    set_country_flag = es_riften_con_flag
+		    set_country_flag = es_morthal_con_flag
 			every_owned_province = {
 			    limit = {
 				    OR = {
@@ -555,7 +555,7 @@ country_decisions = {
 				add_core = NB5
 			}
 			create_march = NB5
-			NB5 = { change_government = monarchy }
+			NB5 = { change_government = monarchy change_religion = ROOT }
 		    NB5 = { change_government_reform_progress = -99999 }
 		}
 		ai_will_do = {
@@ -567,7 +567,7 @@ country_decisions = {
 		potential = {
             has_country_flag = centralize_skyrim_glag
 			NOT = { has_country_flag = decentralize_skyrim_flag }
-			NOT = { has_country_flag = es_riften_uni_flag }
+			NOT = { has_country_flag = es_dawnstar_uni_flag }
 			
 		}
 		allow = {
@@ -576,7 +576,7 @@ country_decisions = {
 			skyrim_35_la = { type = all owned_by = ROOT }
 		}
 		effect = {
-		    set_country_flag = es_riften_uni_flag
+		    set_country_flag = es_dawnstar_uni_flag
 			every_owned_province = {
 			    limit = {
 				    OR = {
@@ -598,7 +598,7 @@ country_decisions = {
 		potential = {
             NOT = { has_country_flag = centralize_skyrim_glag }
 			has_country_flag = decentralize_skyrim_flag
-			NOT = { has_country_flag = es_riften_con_flag }
+			NOT = { has_country_flag = es_dawnstar_con_flag }
 		}
 		allow = {
 		    skyrim_34_la = { type = all owned_by = ROOT }
@@ -606,7 +606,7 @@ country_decisions = {
 			skyrim_35_la = { type = all owned_by = ROOT }
 		}
 		effect = {
-		    set_country_flag = es_riften_con_flag
+		    set_country_flag = es_dawnstar_con_flag
 			every_owned_province = {
 			    limit = {
 				    OR = {
@@ -619,7 +619,7 @@ country_decisions = {
 				add_core = NA9
 			}
 			create_march = NA9
-			NA9 = { change_government = monarchy }
+			NA9 = { change_government = monarchy change_religion = ROOT }
 		    NA9 = { change_government_reform_progress = -99999 }
 		}
 		ai_will_do = {
@@ -631,7 +631,7 @@ country_decisions = {
 		potential = {
             has_country_flag = centralize_skyrim_glag
 			NOT = { has_country_flag = decentralize_skyrim_flag }
-			NOT = { has_country_flag = es_riften_uni_flag }
+			NOT = { has_country_flag = es_winterhold_uni_flag }
 			
 		}
 		allow = {
@@ -640,7 +640,7 @@ country_decisions = {
 			skyrim_40_la = { type = all owned_by = ROOT }
 		}
 		effect = {
-		    set_country_flag = es_riften_uni_flag
+		    set_country_flag = es_winterhold_uni_flag
 			every_owned_province = {
 			    limit = {
 				    OR = {
@@ -662,7 +662,7 @@ country_decisions = {
 		potential = {
             NOT = { has_country_flag = centralize_skyrim_glag }
 			has_country_flag = decentralize_skyrim_flag
-			NOT = { has_country_flag = es_riften_con_flag }
+			NOT = { has_country_flag = es_winterhold_con_flag }
 		}
 		allow = {
 		    skyrim_8_la = { type = all owned_by = ROOT }
@@ -670,7 +670,7 @@ country_decisions = {
 			skyrim_40_la = { type = all owned_by = ROOT }
 		}
 		effect = {
-		    set_country_flag = es_riften_con_flag
+		    set_country_flag = es_winterhold_con_flag
 			every_owned_province = {
 			    limit = {
 				    OR = {
@@ -683,7 +683,7 @@ country_decisions = {
 				add_core = NA8
 			}
 			create_march = NA8
-			NA8 = { change_government = monarchy }
+			NA8 = { change_government = monarchy change_religion = ROOT }
 		    NA8 = { change_government_reform_progress = -99999 }
 		}
 		ai_will_do = {

@@ -210,7 +210,7 @@ country_decisions = {
         tag = ALE
 		government = monarchy
 		is_year = 266
-		owns = 1265
+		owns = 1206
 		NOT = { exists = COL }
 		NOT = { exists = NIB }
 		NOT = { has_country_flag = es_7_alessian_union_flag }
@@ -218,7 +218,7 @@ country_decisions = {
 		allow = {
 		tag = ALE
 		is_year = 266
-		owns = 1265
+		owns = 1206
 		NOT = { exists = COL }
 		NOT = { exists = NIB }
 		any_owned_province = {
@@ -226,11 +226,6 @@ country_decisions = {
 		}
 		any_owned_province = {
 		region = eastern_syrodiil_lr
-		NOT = { area = cyrodiil_19_la }
-		NOT = { area = cyrodiil_20_la }
-		NOT = { area = cyrodiil_21_la }
-		NOT = { area = cyrodiil_25_la }
-		NOT = { area = cyrodiil_28_la }
 		}
 		}
 		effect = {
@@ -243,13 +238,8 @@ country_decisions = {
 	    region = western_syrodiil_lr
 		}
 		cede_province = COL
-		}
-		every_province = {
-		limit = {
-	    region = western_syrodiil_lr
-		}
 		add_core = COL
-		}
+		}	
 		ROOT = {
 		create_subject = {
         subject_type = personal_union
@@ -260,23 +250,8 @@ country_decisions = {
 		every_owned_province = {
 		limit = {
 	    region = eastern_syrodiil_lr
-		NOT = { area = cyrodiil_19_la }
-		NOT = { area = cyrodiil_20_la }
-		NOT = { area = cyrodiil_21_la }
-		NOT = { area = cyrodiil_25_la }
-		NOT = { area = cyrodiil_28_la }
 		}
 		cede_province = NIB
-		}
-		every_province = {
-		limit = {
-	    region = eastern_syrodiil_lr
-		NOT = { area = cyrodiil_19_la }
-		NOT = { area = cyrodiil_20_la }
-		NOT = { area = cyrodiil_21_la }
-		NOT = { area = cyrodiil_25_la }
-		NOT = { area = cyrodiil_28_la }
-		}
 		add_core = NIB
 		}
 		ROOT = {
@@ -314,6 +289,25 @@ country_decisions = {
 		}
 		change_culture = nedic
 		}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	es_7_new_elector = {
+		potential = {
+		tag = ALE
+        is_elector = no
+		}
+		allow = {
+		any_neighbor_country = { is_elector = yes capital_scope = { controlled_by = ROOT } }
+        }
+		effect = {
+		random_neighbor_country = { limit = { is_elector = yes capital_scope = { controlled_by = ROOT } } elector = no }
+		elector = yes
+		add_prestige = 25
+		every_owned_province = { limit = { is_part_of_hre = no } set_in_empire = yes }
 		}
 		ai_will_do = {
 			factor = 1
@@ -360,10 +354,10 @@ country_decisions = {
 		any_owned_province = {
 		NOT = { culture = tsaesci }
 		}
-		mil_power = 100
+		mil_power = 50
         }
 		effect = {
-		add_mil_power = -100
+		add_mil_power = -50
 		random_owned_province = {
 		limit = {
 		NOT = { culture = tsaesci }

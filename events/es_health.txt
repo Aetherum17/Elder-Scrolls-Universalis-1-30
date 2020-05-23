@@ -1026,39 +1026,8 @@ country_event = { #kill heir
 
 #######################################################################
 
-#country_event = {
-	#id = es_health.4
-	
-	#title = es_health.4.t
-	#desc = es_health.4.d
-	#picture = ES_MAD_KING_eventPicture
-	
-	#trigger = { 
-		#ruler_has_personality = immortal_personality
-	#}
-	
-	#mean_time_to_happen = {
-		#days = 18250
-	#}
-	
-	#option = {
-		#name = es_health.4.a
-		#add_stability = -1
-		#add_prestige = -25
-		#change_adm = -1
-		#change_dip = -1
-		#change_mil = -1
-	#}
-	
-	#option = {
-		#name = es_health.4.b
-		#kill_ruler = yes
-	#}
-	
-#}
-
 country_event = {
-	id = es_health.5
+	id = es_health.4
 	title = es_health.4.t
 	desc = es_health.4.d
 	picture = ES_MAD_KING_eventPicture
@@ -1075,6 +1044,10 @@ country_event = {
 	
 	mean_time_to_happen = {
 		days = 18250
+		modifier = {
+			factor = 1.5
+			ai = yes
+		}
 		modifier = {
 			factor = 0.15
 			government = republic
@@ -1158,10 +1131,41 @@ country_event = {
 			change_dip = -1
 		}
 		else = {
-		    limit = { mil = 1 }
 			change_mil = -1
 		}
 		
+		if = { limit = { ai = no }
+		    random_list = {
+			    5 = { add_ruler_modifier = { name = "arthritis" duration = -1 } if = { limit = { NOT = { has_ruler_modifier = arthritis } } country_event = { id = es_health.5 days = 31 tooltip = es_collapse.2.a.tt } } }
+				5 = { add_ruler_modifier = { name = "insomnia" duration = -1 } if = { limit = { NOT = { has_ruler_modifier = insomnia } } country_event = { id = es_health.5 days = 31 tooltip = es_collapse.2.a.tt } } }
+				5 = { add_ruler_modifier = { name = "tumor" duration = -1 } if = { limit = { NOT = { has_ruler_modifier = tumor } } country_event = { id = es_health.5 days = 31 tooltip = es_collapse.2.a.tt } } }
+				5 = { add_ruler_modifier = { name = "stroke" duration = -1 } if = { limit = { NOT = { has_ruler_modifier = stroke } } country_event = { id = es_health.5 days = 31 tooltip = es_collapse.2.a.tt } } }
+				5 = { add_ruler_modifier = { name = "blindness" duration = -1 } if = { limit = { NOT = { has_ruler_modifier = blindness } } country_event = { id = es_health.5 days = 31 tooltip = es_collapse.2.a.tt } } }
+				5 = { add_ruler_modifier = { name = "madness" duration = -1 } if = { limit = { NOT = { has_ruler_modifier = madness } } country_event = { id = es_health.5 days = 31 tooltip = es_collapse.2.a.tt } } }
+				5 = { add_ruler_modifier = { name = "es_influenza" duration = -1 } if = { limit = { NOT = { has_ruler_modifier = es_influenza } } country_event = { id = es_health.5 days = 31 tooltip = es_collapse.2.a.tt } } }
+				5 = { add_ruler_modifier = { name = "pneumonia" duration = -1 } if = { limit = { NOT = { has_ruler_modifier = pneumonia } } country_event = { id = es_health.5 days = 31 tooltip = es_collapse.2.a.tt } } }
+				5 = { add_ruler_modifier = { name = "dementia" duration = -1 } if = { limit = { NOT = { has_ruler_modifier = dementia } } country_event = { id = es_health.5 days = 31 tooltip = es_collapse.2.a.tt } } }
+				5 = { add_ruler_modifier = { name = "depression" duration = -1 } if = { limit = { NOT = { has_ruler_modifier = depression } } country_event = { id = es_health.5 days = 31 tooltip = es_collapse.2.a.tt } } }
+				5 = { add_ruler_modifier = { name = "ulcer" duration = -1 } if = { limit = { NOT = { has_ruler_modifier = ulcer } } country_event = { id = es_health.5 days = 31 tooltip = es_collapse.2.a.tt } } }
+				5 = { add_ruler_modifier = { name = "gout" duration = -1 } if = { limit = { NOT = { has_ruler_modifier = gout } } country_event = { id = es_health.5 days = 31 tooltip = es_collapse.2.a.tt } } }
+				40 = { }
+			}
+		}
+		
+	}
+	
+}
+
+country_event = {
+	id = es_health.5
+	title = es_health.4.t
+	desc = es_health.4.d
+	picture = ES_MAD_KING_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = es_health.4.a
 	}
 	
 }
