@@ -529,6 +529,7 @@ country_event = {
 	    NOT = { has_country_flag = es_7_scenario.13_flag }
 		ai = yes
 		has_global_flag = alessian_rebellion_flag
+		culture_group = cyrodiil_cg
 		1206 = { owner = { OR = { NOT = { religion = eight_divines } NOT = { culture_group = cyrodiil_cg } } } }
     }
 
