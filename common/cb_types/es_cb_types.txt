@@ -40,7 +40,7 @@ cb_vassal_annex = {
 	prerequisites = {
 		is_neighbor_of = FROM
 		is_subject = yes
-		from = {
+		FROM = {
 			is_subject = yes
 		}
 		is_revolution_target = no
@@ -54,6 +54,24 @@ cb_es_scenario = {
 
 	prerequisites = {
 		always = no
+	}
+
+	war_goal = es_scenario
+}
+
+cb_es_ayleid_purification = {
+	valid_for_subject = yes
+
+	prerequisites = {
+	    NOT = { culture_group = high_elves_cg }
+	    OR = {
+		tag = ALE
+		tag = ORD
+		}
+		FROM = {
+		is_neighbor_of = ROOT
+		primary_culture = ayleid
+		}
 	}
 
 	war_goal = es_scenario

@@ -35,7 +35,7 @@ administrative_missions = {
 	fill_treasury_mission = {
 		icon = mission_war_chest
 		required_missions = { increase_income_mission }
-		trigger = { treasury = 1000 }
+		trigger = { years_of_income = 5 }
 		effect = {
 			add_country_modifier = {
 				name = "es_1_full_treasury"
@@ -92,7 +92,7 @@ administrative_missions = {
 	fill_1_treasury_mission = {
 		icon = mission_war_chest
 		required_missions = { develop_capital_mission }
-		trigger = { treasury = 2500 }
+		trigger = { years_of_income = 7.5 }
 		effect = {
 			add_country_modifier = {
 				name = "es_2_full_treasury"
@@ -169,7 +169,7 @@ administrative_missions = {
 	fill_2_treasury_mission = {
 		icon = mission_war_chest
 		required_missions = { build_multicultural_nation_mission }
-		trigger = { treasury = 5000 }
+		trigger = { years_of_income = 10 }
 		effect = {
 			add_country_modifier = {
 				name = "es_3_full_treasury"
@@ -225,7 +225,7 @@ adm_missions = {
 		position = 2
 		trigger = {
 			religious_unity = 1.0
-			num_of_cities = 50
+			check_variable = { which = religions_converted value = 50 }
 		}
 		effect = {
 			add_country_modifier = {
@@ -261,7 +261,7 @@ adm_missions = {
 		required_missions = { build_more_churches_mission }
 		trigger = {
 			is_defender_of_faith = yes
-			num_of_cities = 100
+			check_variable = { which = religions_converted value = 100 }
 		}
 		effect = {
 			add_country_modifier = {
@@ -510,7 +510,7 @@ diplomatic_missions = {
 	increase_number_of_trade_centers = {
 		icon = mission_iberian_conquistador
 		required_missions = { build_more_workshops }
-		trigger = { num_of_centers_of_trade = 7 }
+		trigger = { check_variable = { which = cot_upgraded value = 5 } }
 		effect = {
 			add_country_modifier = {
 				name = "es_more_tradeceners"
@@ -562,7 +562,7 @@ diplomatic_missions = {
 	increase_1_number_of_trade_centers = {
 		icon = mission_iberian_conquistador
 		required_missions = { build_more_docks }
-		trigger = { num_of_centers_of_trade = 15 }
+		trigger = { check_variable = { which = cot_upgraded value = 15 } }
 		effect = {
 			add_country_modifier = {
 				name = "es_more_1_tradeceners"
@@ -605,7 +605,7 @@ diplomatic_missions = {
 	increase_2_number_of_trade_centers = {
 		icon = mission_iberian_conquistador
 		required_missions = { high_mercantelism_mission }
-		trigger = { num_of_centers_of_trade = 25 }
+		trigger = { check_variable = { which = cot_upgraded value = 25 } }
 		effect = {
 			add_country_modifier = {
 				name = "es_more_2_tradeceners"
@@ -936,7 +936,7 @@ military_missions = {
 		icon = mission_chinese_general_riding
 		required_missions = { es_build_army_mission }
 		trigger = {
-			num_of_cities = 25
+			check_variable = { which = provinces_gained value = 25 }
 		}
 		effect = {
 			add_country_modifier = {
@@ -984,7 +984,7 @@ military_missions = {
 		icon = mission_chinese_general_riding
 		required_missions = { build_more_forts_mission }
 		trigger = {
-			num_of_cities = 75
+			check_variable = { which = provinces_gained value = 75 }
 		}
 		effect = {
 			add_country_modifier = {
@@ -1030,7 +1030,7 @@ military_missions = {
 		icon = mission_trade_company_region_abroad
 		required_missions = { build_more_training_fields_mission }
 		trigger = {
-			total_development = 300
+			grown_by_development = 300
 		}
 		effect = {
 			add_country_modifier = {
@@ -1064,7 +1064,7 @@ military_missions = {
 		icon = mission_chinese_general_riding
 		required_missions = { build_more_conscription_center_mission }
 		trigger = {
-			num_of_cities = 175
+			check_variable = { which = provinces_gained value = 175 }
 		}
 		effect = {
 			add_country_modifier = {
@@ -1078,7 +1078,7 @@ military_missions = {
 		icon = mission_trade_company_region_abroad
 		required_missions = { es_3_new_lands }
 		trigger = {
-			total_development = 500
+			grown_by_development = 500
 		}
 		effect = {
 			add_country_modifier = {
@@ -1124,7 +1124,7 @@ military_missions = {
 		icon = mission_trade_company_region_abroad
 		required_missions = { build_more_arsenal_mission }
 		trigger = {
-			total_development = 750
+			grown_by_development = 750
 		}
 		effect = {
 			add_country_modifier = {

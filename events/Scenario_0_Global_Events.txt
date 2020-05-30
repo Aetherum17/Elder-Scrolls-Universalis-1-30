@@ -6,19 +6,7 @@ country_event = {
 	desc = es_0_scenario.1.d
 	picture = ES_01_eventPicture
 	
-	trigger = {
-	    NOT = { has_country_flag = es_0_scenario.1_flag }
-		is_year = 20
-		NOT = { is_year = 65 }
-    }
-
-	mean_time_to_happen = {
-		days = 8030	
-	}
-	
-	immediate = {
-	    set_country_flag = es_0_scenario.1_flag
-	}
+	is_triggered_only = yes
 
 	option = {
 		name = "es_0_scenario.1.a"
@@ -37,20 +25,7 @@ country_event = {
 	desc = es_0_scenario.2.d
 	picture = ES_02_eventPicture	
 	
-	trigger = {
-	    NOT = { has_country_flag = es_0_scenario.2_flag }
-		is_year = 68
-		NOT = { is_year = 109 }
-		capital_scope = { continent = Tamriel }
-    }
-
-	mean_time_to_happen = {
-		days = 7300	
-	}
-	
-	immediate = {
-	    set_country_flag = es_0_scenario.2_flag
-	}
+	is_triggered_only = yes
 
 	option = {
 		name = "es_0_scenario.2.a"
@@ -70,20 +45,7 @@ country_event = {
 	desc = es_0_scenario.3.d
 	picture = ES_03_eventPicture	
 	
-	trigger = {
-	    NOT = { has_country_flag = es_0_scenario.3_flag }
-		is_year = 200
-		NOT = { is_year = 242 }
-		capital_scope = { continent = Tamriel }
-    }
-
-	mean_time_to_happen = {
-		days = 7665	
-	}
-	
-	immediate = {
-	    set_country_flag = es_0_scenario.3_flag
-	}
+	is_triggered_only = yes
 
 	option = {
 		name = "es_0_scenario.3.a"
@@ -138,38 +100,25 @@ country_event = {
 	desc = es_0_scenario.5.d
 	picture = ES_CITY_eventPicture
 	
-	trigger = {
-	   NOT = { has_country_flag = es_0_scenario.5_flag }
-	   is_year = 246
-	   owns = 1369
-	   NOT = { is_year = 369 }
-	   1369 = {
-	   NOT = { culture = nord }
-	   }
-    }
-
-	mean_time_to_happen = {
-		days = 22265	
-	}
-	
-	immediate = {
-	    set_country_flag = es_0_scenario.5_flag
-	}
+	is_triggered_only = yes
 
 	option = {
 		name = "es_0_scenario.5.a"
 		ai_chance = { factor = 50 }
-        1369 = {
-		change_culture = nord
-		add_base_tax = 5
-		add_base_production = 5
-		add_base_manpower = 5
+		1369 = {
+		    add_base_tax = 2
+			add_base_production = 2
+			add_base_manpower = 2
 		}
-		if = {
-		limit = {
-		NOT = { culture_group = northern_cg }
-		}
-		add_prestige = -10
+        every_province = {
+		    limit = {
+			OR = { area = high_14_la area = high_15_la } is_city = no
+			}
+			add_colonysize = 1000
+			cede_province = ROOT
+			add_core = ROOT
+			change_religion = nordic_pantheon
+			change_culture = nord
 		}
 		
 		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.1 days = 31 tooltip = es_collapse.2.a.tt } }
@@ -177,7 +126,7 @@ country_event = {
 	option = {
 		name = "es_0_scenario.5.b"
 		ai_chance = { factor = 50 }
-		add_prestige = 10
+		add_stability = 1
 		
 		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.2 days = 31 tooltip = es_collapse.2.a.tt } }
 	}
@@ -471,8 +420,7 @@ country_event = {
 	
 	trigger = {
 	   NOT = { has_country_flag = es_0_scenario.12_flag }
-	   has_country_flag = arrow_in_the_knee_flag
-	   NOT = { is_free_or_tributary_trigger = yes }
+	   check_variable = { which = war_lost value = 10 }
     }
 
 	mean_time_to_happen = {

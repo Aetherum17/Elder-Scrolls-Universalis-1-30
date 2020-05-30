@@ -444,6 +444,8 @@ country_event = {
 	option = {
 		name = "es_7_scenario.10.a"
 		
+		add_prestige = -25
+		
 		change_tag = MIN
 		if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
 		if = { limit = { NOT = { government_rank = 5 } } set_government_rank = 5 }
@@ -475,6 +477,8 @@ country_event = {
 	option = {
 		name = "es_7_scenario.11.a"
 		
+		add_stability = -1
+		
 		change_tag = COL
 		if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
 		if = { limit = { NOT = { government_rank = 5 } } set_government_rank = 5 }
@@ -482,7 +486,7 @@ country_event = {
 	option = {
 		name = "es_7_scenario.11.b"
 		ai_chance = { factor = 50 }
-		add_stability = 1
+		add_prestige = 25
 	}
 }
 
@@ -505,6 +509,8 @@ country_event = {
 
 	option = {
 		name = "es_7_scenario.12.a"
+		
+		add_prestige = -25
 		
 		change_tag = NIB
 		if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }

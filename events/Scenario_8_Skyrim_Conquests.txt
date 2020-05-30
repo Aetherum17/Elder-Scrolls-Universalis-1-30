@@ -6,28 +6,14 @@ country_event = {
 	desc = es_8_scenario.1.d
 	picture = ES_TRIUMPH_eventPicture
 	
-	trigger = {
-	    NOT = { has_country_flag = es_8_scenario.1_flag }
-		is_year = 266
-		NOT = { is_year = 308 }
-		culture_group = northern_cg
-		OR = {
-		owns = 1275
-		owns = 1342
-		}
-    }
-
-	mean_time_to_happen = {
-		days = 7665
-	}
-	
-	immediate = {
-	    set_country_flag = es_8_scenario.1_flag
-	}
+	is_triggered_only = yes
 
 	option = {
 		name = "es_8_scenario.1.a"
 		ai_chance = { factor = 50 }
+		
+		add_stability = -1
+		
 		change_tag = OLD
 		if = {
 			limit = {
@@ -36,101 +22,19 @@ country_event = {
 			set_government_rank = 7
 			}
 		if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
-		if = {
-		limit = {
-		owns = 1342
-		}
-		every_province = {
-		limit = {
-		region = hgh_rock_lr
-		}
-		add_claim = ROOT
-		}
-		}
-		if = {
-		limit = {
-		owns = 1275
-		}
-		every_province = {
-		limit = {
-		region = morrowind_lr
-		}
-		add_claim = ROOT
-		}
-		}
 		add_country_modifier = {
 		name = "08_prepare_for_war"
 		duration = 3650
-		}
-		
-		if = {
-		limit = {
-		exists = DWE
-		NOT = { alliance_with = DWE }
-		NOT = { overlord_of = DWE }
-		}
-		declare_war_with_cb = {
-			who = DWE
-			casus_belli = cb_es_scenario
-		}
-		}
-		
-		if = {
-		limit = {
-		exists = DIR
-		NOT = { alliance_with = DIR }
-		NOT = { overlord_of = DIR }
-		}
-		declare_war_with_cb = {
-			who = DIR
-			casus_belli = cb_es_scenario
-		}
-		}
-		
-		if = {
-		limit = {
-		exists = HIG
-		NOT = { alliance_with = HIG }
-		NOT = { overlord_of = HIG }
-		}
-		declare_war_with_cb = {
-			who = HIG
-			casus_belli = cb_es_scenario
-		}
-		}
-		
-		if = {
-		limit = {
-		exists = BA1
-		NOT = { alliance_with = BA1 }
-		NOT = { overlord_of = BA1 }
-		}
-		declare_war_with_cb = {
-			who = BA1
-			casus_belli = cb_es_scenario
-		}
-		}
-		
-		if = {
-		limit = {
-		exists = BA3
-		NOT = { alliance_with = BA3 }
-		NOT = { overlord_of = BA3 }
-		}
-		declare_war_with_cb = {
-			who = BA3
-			casus_belli = cb_es_scenario
-		}
 		}
 	}
 	option = {
 		name = "es_8_scenario.1.b"
 		ai_chance = { factor = 50 }
-		add_prestige = -25
+		add_prestige = 25
 	}
 }
 
-province_event = {
+country_event = {
 	id = es_8_scenario.2
 	title = es_8_scenario.2.t
 	desc = es_8_scenario.2.d
@@ -138,20 +42,16 @@ province_event = {
 	
 	trigger = {
 		is_year = 266
-		NOT = { is_year = 308 }
-		culture = nedic
-		OR = {
-		region = western_syrodiil_lr
-		region = eastern_syrodiil_lr
-		region = central_syrodiil_lr
-		}
+		NOT = { is_year = 337 }
+		NOT = { primary_culture = ayleid }
+		has_global_flag = alessian_rebellion_flag
 		any_owned_province = {
-		NOT = { culture = ayleid }
+		culture = nedic
 		}
     }
 
 	mean_time_to_happen = {
-		days = 22995
+		days = 1825
 	}
 
 	option = {
@@ -159,7 +59,7 @@ province_event = {
 		ai_chance = { factor = 50 }
 		random_owned_province = {
 		limit = {
-		NOT = { culture = ayleid }
+		culture = nedic
 		}
 		change_culture = ayleid
 		add_base_tax = 3
@@ -167,13 +67,16 @@ province_event = {
 		add_base_manpower = 3
 		add_permanent_province_modifier = {
 		name = "08_ayleid_lords"
-		duration = 3650
+		duration = 9125
 		}
 		}
 	}
 	option = {
 		name = "es_8_scenario.2.b"
 		ai_chance = { factor = 50 }
+        random_list = {
+		33 = { add_adm_power = 25} 33 = { add_dip_power = 25 } 33 = { add_mil_power = 25 }
+		}
 	}
 }
 
@@ -183,20 +86,10 @@ country_event = {
 	desc = es_8_scenario.3.d
 	picture = ES_DWEMES_eventPicture
 	
-	trigger = {
-	    NOT = { has_country_flag = es_8_scenario.3_flag }
-		is_year = 266
-		NOT = { is_year = 308 }
-		culture_group = dwemer_cg
-		owns = 970
-    }
-
-	mean_time_to_happen = {
-		days = 7665
-	}
+	is_triggered_only = yes
 	
 	immediate = {
-	    set_country_flag = es_8_scenario.3_flag
+	    1275 = { owner = { save_event_target_as = 1275_owner } }
 	}
 
 	option = {
@@ -204,73 +97,18 @@ country_event = {
 		ai_chance = { factor = 50 }
 		every_province = {
 		limit = {
-		region = great_planes_lr
+		culture = dwemer
+		NOT = { owned_by = ROOT }
 		}
-		add_claim = ROOT
+		add_core = ROOT
 		}
 		add_country_modifier = {
 		name = "08_prepare_for_war"
 		duration = 3650
 		}
 		
-		if = {
-		limit = {
-		exists = SKY
-		NOT = { alliance_with = SKY }
-		NOT = { overlord_of = SKY }
-		}
-		declare_war_with_cb = {
-			who = SKY
-			casus_belli = cb_es_scenario
-		}
-		}
-		
-		if = {
-		limit = {
-		exists = OLD
-		NOT = { alliance_with = OLD }
-		NOT = { overlord_of = OLD }
-		}
-		declare_war_with_cb = {
-			who = OLD
-			casus_belli = cb_es_scenario
-		}
-		}
-		
-		if = {
-		limit = {
-		exists = NA3
-		NOT = { alliance_with = NA3 }
-		NOT = { overlord_of = NA3 }
-		}
-		declare_war_with_cb = {
-			who = NA3
-			casus_belli = cb_es_scenario
-		}
-		}
-		
-		if = {
-		limit = {
-		exists = NA9
-		NOT = { alliance_with = NA9 }
-		NOT = { overlord_of = NA9 }
-		}
-		declare_war_with_cb = {
-			who = NA9
-			casus_belli = cb_es_scenario
-		}
-		}
-		
-		if = {
-		limit = {
-		exists = NB2
-		NOT = { alliance_with = NB2 }
-		NOT = { overlord_of = NB2 }
-		}
-		declare_war_with_cb = {
-			who = NB2
-			casus_belli = cb_es_scenario
-		}
+		if = { limit = { NOT = { truce_with = event_target:1275_owner } NOT = { alliance_with = event_target:1275_owner } NOT = { is_subject_of = event_target:1275_owner } }
+		declare_war_with_cb = { who = event_target:1275_owner casus_belli = cb_es_scenario } 
 		}
 	}
 	option = {
@@ -286,21 +124,7 @@ country_event = {
 	desc = es_8_scenario.4.d
 	picture = ES_BANK_eventPicture
 	
-	trigger = {
-	    NOT = { has_country_flag = es_8_scenario.4_flag }
-		is_year = 266
-		NOT = { is_year = 308 }
-		culture_group = high_elves_cg
-		owns = 1369
-    }
-
-	mean_time_to_happen = {
-		days = 7665
-	}
-	
-	immediate = {
-	    set_country_flag = es_8_scenario.4_flag
-	}
+	is_triggered_only = yes
 
 	option = {
 		name = "es_8_scenario.4.a"
@@ -326,85 +150,242 @@ country_event = {
 	desc = es_8_scenario.5.d
 	picture = ES_REBELLION_eventPicture
 	
-	trigger = {
-	    NOT = { has_country_flag = es_8_scenario.5_flag }
-		is_year = 266
-		NOT = { is_year = 308 }
-		culture_group = dead_cg
-		owns = 1344
-    }
-
-	mean_time_to_happen = {
-		days = 7665
-	}
-	
-	immediate = {
-	    set_country_flag = es_8_scenario.5_flag
-	}
+	is_triggered_only = yes
 
 	option = {
-		name = "es_8_scenario.4.a"
+		name = "es_8_scenario.5.a"
 		ai_chance = { factor = 50 }
-		define_ruler = {
-        name = "Harkon"
-        dynasty = "Volhkihar"
-		culture = vampire
-        adm = 3
-        dip = 5
-        mil = 7
-        age = 40
-        claim = 100
-		fixed = yes
-        }
-		define_heir = {
-        name = "Serana"
-		dynasty = "Volhkihar"
-		culture = vampire
-        age = 14
-        adm = 5
-        dip = 7
-        mil = 3
-        claim = 100 
-        female = yes		
-        }
-		define_consort = {
-		name = "Valerica"
-		dynasty = "Volhkihar"
-		age = 35
-        culture = vampire
-        adm = 7
-        dip = 3
-        mil = 5
-        female = yes
-        }
+		define_ruler = { name = "Harkon" dynasty = "Volhkihar" culture = vampire adm = 3 dip = 5 mil = 7 age = 40 claim = 100 fixed = yes }
+		define_heir = { name = "Serana" dynasty = "Volhkihar" culture = vampire age = 14 adm = 5 dip = 7 mil = 3 claim = 100  female = yes }
+		define_consort = { name = "Valerica" dynasty = "Volhkihar" age = 35 culture = vampire adm = 7 dip = 3 mil = 5 female = yes }
 	}
 	option = {
-		name = "es_8_scenario.4.b"
+		name = "es_8_scenario.5.b"
 		ai_chance = { factor = 50 }
 		add_stability = -1
-		random_owned_province = { 
-			spawn_rebels = {
-				type = noble_rebels
-				size = 3.5
-				win = yes
-				unrest = 25
+		random_owned_province = { spawn_rebels = { type = noble_rebels size = 3.5 win = yes unrest = 25 } }
+		random_owned_province = { spawn_rebels = { type = heretic_rebels size = 3.5 win = yes unrest = 25 } }
+		random_owned_province = { spawn_rebels = { type = particularist_rebels size = 3.5 win = yes unrest = 25 } }
+	}
+}
+
+# 6 Nordic Colonisation of Skyrim
+
+country_event = {
+	id = es_8_scenario.6
+	title = es_8_scenario.6.t
+	desc = es_8_scenario.6.d
+	picture = ES_SKYRIM_LANDSCAPE_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "es_8_scenario.6.a"
+		ai_chance = { factor = 50 }
+		add_years_of_income = -1.0
+		add_yearly_manpower = -2.5
+		add_country_modifier = { name = "08_nordic_colonization" duration = 9125 }
+	}
+	option = {
+		name = "es_8_scenario.6.b"
+		ai_chance = { factor = 50 }
+		add_prestige = 15
+	}
+}
+
+# 7 Form Direnii Hegemony
+
+country_event = {
+	id = es_8_scenario.7
+	title = es_8_scenario.7.t
+	desc = es_8_scenario.7.d
+	picture = ES_ALTMERI_CITY_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "es_8_scenario.7.a"
+		ai_chance = { factor = 50 }
+		
+		add_prestige = -25
+		
+		change_tag = DIR
+		if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		if = { limit = { NOT = { government_rank = 5 } } set_government_rank = 5 }
+	}
+	option = {
+		name = "es_8_scenario.7.b"
+		ai_chance = { factor = 50 }
+		add_stability = 1
+	}
+}
+
+# 8 protect Nords in High Rock
+
+country_event = {
+	id = es_8_scenario.8
+	title = es_8_scenario.8.t
+	desc = es_8_scenario.8.d
+	picture = ES_NORDIC_COLONIZATION_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	    1369 = { owner = { save_event_target_as = 1369_owner } }
+	}
+
+	option = {
+		name = "es_8_scenario.8.a"
+		ai_chance = { factor = 50 }
+		every_province = {
+		    limit = {
+			region = hgh_rock_lr
+			NOT = { owned_by = ROOT }
+			OR = {
+			    culture = nord
+				culture = altmer
 			}
-		}
-        random_owned_province = { 
-			spawn_rebels = {
-				type = heretic_rebels
-				size = 3.5
-				win = yes
-				unrest = 25
 			}
+			add_core = ROOT
 		}
-		random_owned_province = { 
-			spawn_rebels = {
-				type = particularist_rebels
-				size = 3.5
-				win = yes
-				unrest = 25
+		if = { limit = { NOT = { truce_with = event_target:1369_owner } NOT = { alliance_with = event_target:1369_owner } NOT = { is_subject_of = event_target:1369_owner } }
+		declare_war_with_cb = { who = event_target:1369_owner casus_belli = cb_es_scenario } 
+		}
+	}
+	option = {
+		name = "es_8_scenario.8.b"
+		ai_chance = { factor = 50 }
+		add_prestige = -25
+	}
+}
+
+# 9 Cyrodiil - Dwemer State
+
+country_event = {
+	id = es_8_scenario.9
+	title = es_8_scenario.9.t
+	desc = es_8_scenario.9.d
+	picture = ES_DWEMER_SETTLEMENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	    random_neighbor_country = {
+		    limit = { any_owned_province = { culture = dwemer } NOT = { is_subject_of = ROOT } is_free_or_tributary_trigger = yes }
+			save_event_target_as = x_8_owner
+		}
+	}
+
+	option = {
+		name = "es_8_scenario.9.a"
+		ai_chance = { factor = 50 }
+		every_province = {
+		    limit = {
+			region = valus_mountains_lr
+			NOT = { owned_by = ROOT }
+			culture = dwemer
 			}
+			add_core = ROOT
 		}
+		if = { limit = { NOT = { truce_with = event_target:x_8_owner } NOT = { alliance_with = event_target:x_8_owner } NOT = { is_subject_of = event_target:x_8_owner } }
+		declare_war_with_cb = { who = event_target:x_8_owner casus_belli = cb_es_scenario } 
+		}
+	}
+	option = {
+		name = "es_8_scenario.9.b"
+		ai_chance = { factor = 50 }
+		add_prestige = -25
+	}
+}
+
+# 10 Event - Nedic Countries join Empire
+
+country_event = {
+	id = es_8_scenario.10
+	title = es_8_scenario.10.t
+	desc = es_8_scenario.10.d
+	picture = ES_THE_EMPIRE_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "es_8_scenario.8.a"
+		ai_chance = { factor = 50 }
+		every_owned_province = { limit = { is_part_of_hre = no } set_in_empire = yes }
+	}
+	option = {
+		name = "es_8_scenario.8.b"
+		ai_chance = { factor = 50 }
+		add_stability = 1
+	}
+}
+
+# Nordic Conquest of Reach
+
+country_event = {
+	id = es_8_scenario.11
+	title = es_8_scenario.11.t
+	desc = es_8_scenario.11.d
+	picture = ES_REACH_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	    1355 = { owner = { save_event_target_as = 1355_owner } }
+	}
+
+	option = {
+		name = "es_8_scenario.11.a"
+		ai_chance = { factor = 50 }
+		every_province = {
+		    limit = {
+			region = reach_lr
+			NOT = { owned_by = ROOT }
+			}
+			add_claim = ROOT
+		}
+		if = { limit = { NOT = { truce_with = event_target:1355_owner } NOT = { alliance_with = event_target:1355_owner } NOT = { is_subject_of = event_target:1355_owner } }
+		declare_war_with_cb = { who = event_target:1355_owner casus_belli = cb_es_scenario } 
+		}
+	}
+	option = {
+		name = "es_8_scenario.11.b"
+		ai_chance = { factor = 50 }
+		add_years_of_income = -2.5
+	}
+}
+
+# 12 Colovia Pushes Ayleids
+
+country_event = {
+	id = es_8_scenario.12
+	title = es_8_scenario.12.t
+	desc = es_8_scenario.12.d
+	picture = ES_GOLDEN_COAST_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	    1144 = { owner = { save_event_target_as = 1144_owner } }
+	}
+
+	option = {
+		name = "es_8_scenario.12.a"
+		ai_chance = { factor = 50 }
+		every_province = {
+		    limit = {
+			region = golden_coast_lr
+			NOT = { owned_by = ROOT }
+			}
+			add_claim = ROOT
+		}
+		if = { limit = { NOT = { truce_with = event_target:1144_owner } NOT = { alliance_with = event_target:1144_owner } NOT = { is_subject_of = event_target:1144_owner } }
+		declare_war_with_cb = { who = event_target:1144_owner casus_belli = cb_es_scenario } 
+		}
+	}
+	option = {
+		name = "es_8_scenario.12.b"
+		ai_chance = { factor = 50 }
+		add_stability = -1
 	}
 }

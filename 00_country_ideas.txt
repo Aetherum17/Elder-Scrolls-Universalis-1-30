@@ -4,45 +4,6 @@
 
 ### Nation specific idea groups
 
-KAR_ideas = {
-	start = {
-		army_tradition = 0.5
-		core_creation = -0.2
-	}
-
-	bonus = {
-		discipline = 0.05
-	}
-	
-	trigger = {
-		tag = KAR
-	}
-	free = yes		#will be added at load.
-	
-	mehmet_bey_firman = {
-		stability_cost_modifier = -0.1
-		culture_conversion_cost = -0.2
-	}
-	ghazi = {
-		#uses ottoman ideas
-	}
-	karamanid_cavalry = {
-		cavalry_power = 0.15
-	}
-	kar_seize_the_opportunity = {
-		diplomats = 1
-	}
-	karamanid_architecture = {
-		development_cost = -0.1
-	}
-	home_of_the_whirling_dervishes = {
-		religious_unity = 0.2
-	}
-	true_heirs_seljuk_empire = {
-		legitimacy = 1
-	}
-}
-
 ATH_ideas = {
 	start = {
 		defensiveness = 0.1

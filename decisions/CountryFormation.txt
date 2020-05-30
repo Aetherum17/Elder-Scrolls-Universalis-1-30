@@ -1008,7 +1008,6 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { exists = AYL }
-			NOT = { tag = HAM }
 			primary_culture = ayleid
 			NOT = { has_country_flag = formed_ayl_flag }
 		}
@@ -1593,11 +1592,7 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { exists = HAM }
-			NOT = { tag = AYL }
-			OR = {
-			primary_culture = ayleid
 			primary_culture = redguard
-			}
 			NOT = { has_country_flag = formed_ham_flag }
 		}
 		provinces_to_highlight = {
@@ -1622,6 +1617,55 @@ country_decisions = {
 		effect = {
 			change_tag = HAM
 			set_country_flag = formed_ham_flag
+			#
+			if = {
+				limit = {
+					NOT = { government_rank = 5 }
+				}
+				set_government_rank = 5
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 300
+	}
+	
+	corelanyan_clan_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = COE }
+			primary_culture = corelanyan
+			NOT = { has_country_flag = formed_coe_flag }
+		}
+		provinces_to_highlight = {
+		    OR = {
+			province_id = 1510		
+			province_id = 1446
+			province_id = 1478
+			province_id = 6257
+			province_id = 6178
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 1510		
+			owns_core_province = 1446
+			owns_core_province = 1478
+			owns_core_province = 6257
+			owns_core_province = 6178
+		}
+		effect = {
+			change_tag = COE
+			set_country_flag = formed_coe_flag
 			#
 			if = {
 				limit = {

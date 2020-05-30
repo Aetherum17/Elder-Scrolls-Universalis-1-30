@@ -68,8 +68,8 @@ on_startup = {
 		es_holidays.62
 		es_holidays.63
 	}
-
-	if = { limit = { NOT = { has_global_flag = on_action_setup_flag } }
+	
+	if = { limit = { NOT = { has_global_flag = on_action_set_up_global_flag } }
 	
 	RED = {
 	    country_event = { id = es_start.2 days = 0 tooltip = es_collapse.2.a.tt }
@@ -85,6 +85,11 @@ on_startup = {
         add_country_modifier = { name = "trade_time" duration = 3650 }
         every_province = { limit = { region = vvardenfell_lr } add_permanent_province_modifier = { name = "ever-ashland" duration = -1 } }	
 	}
+	
+	set_global_flag = on_action_set_up_global_flag
+	}
+
+	if = { limit = { NOT = { has_country_flag = on_action_setup_flag } }
 	
 	every_country = { limit = { ai = no NOT = { has_country_flag = es_1_start_flag } } country_event = { id = es_start.1 days = 0 tooltip = es_collapse.2.a.tt } set_country_flag = es_1_start_flag }
 	
@@ -184,7 +189,17 @@ on_startup = {
 	add_horde_unity = 100
 	add_meritocracy = 100
 	
-	set_global_flag = on_action_setup_flag
+	init_variables = yes
+	
+	if = { 
+		limit = { 
+			any_owned_province = {
+				has_port = yes
+			}
+		}
+		set_country_flag = started_with_port
+	}			 
+	set_country_flag = on_action_setup_flag
 	}
 	initialize_schools_effect = yes
 }
@@ -369,15 +384,23 @@ on_war_won = {
 	if = {
 		limit = { current_age = dark_age }
 		change_variable = {
-			which = num_of_wars_won
+			which = war_won
 			value = 1
 		}
 	}
+	change_variable = {
+		which = war_won
+		value = 1
+	}				
 }
 
 # country
 # root = loser country, from = winner country
 on_war_lost = {
+	change_variable = {
+		which = war_lost
+		value = 1
+	}	
 }
 
 # country
@@ -519,13 +542,6 @@ on_abandon_colony = {
 on_new_monarch = {
 	crimean_succession_effect = yes #Scripted effect
 	slesvig_question_effect = yes #Scripted effect
-	
-	if = {
-		limit = {
-		is_free_or_tributary_trigger = yes
-		}
-		set_country_flag = arrow_in_the_knee_flag
-	}
 	
 	if = { limit = { religion_group = polytheistic_group } add_country_modifier = { name = "polytheistic_group_modifier" duration = -1 }
 	remove_country_modifier = occult_group_modifier
@@ -680,6 +696,10 @@ on_diplomatic_annex = {
 	events = {
 		610
 	}
+	change_variable = {
+		which = diplo_annexed_nation
+		value = 1
+	}		
 }
 
 # country
@@ -940,6 +960,10 @@ on_annexed = {
 	events = {
 		celestial_empire_events.1 # Empire dismantled
 	}
+	change_variable = {
+		which = annexed_nation
+		value = 1
+	}			
 	FROM = {
 		if = {
 			limit = { is_emperor_of_china = yes }
@@ -1999,10 +2023,22 @@ on_lose_great_power_status = {
 
 # province
 on_province_religion_converted = {
+    owner = {
+		change_variable = {
+			which = religions_converted
+			value = 1
+		}
+	}
 }
 
 # province
 on_province_culture_converted = {
+    owner = {
+		change_variable = {
+			which = cultures_converted
+			value = 1
+		}
+	}
 }
 
 # THIS = Province, FROM = Country who Propogated
@@ -2012,6 +2048,12 @@ on_convert_by_trade_policy = {
 # province
 # FROM = old owner
 on_province_owner_change = {
+    owner = {
+		change_variable = {
+			which = provinces_gained
+			value = 1
+		}
+	}
 	events = {
 	}
 }
@@ -2139,7 +2181,10 @@ on_trade_company_investment = {
 }
 
 on_center_of_trade_upgrade = {
-
+    change_variable = {
+		which = cot_upgraded
+		value = 1
+	}
 }
 
 on_center_of_trade_downgrade = {
@@ -2147,7 +2192,10 @@ on_center_of_trade_downgrade = {
 }
 
 on_culture_promoted = {
-
+    change_variable = {
+		which = culture_promoted
+		value = 1
+	}
 }
 
 # FROM = Previous Country, ROOT = Province

@@ -153,6 +153,8 @@ antibankrapucy = {
 
 08_ayleid_lords = {
   local_unrest = 5
+  culture_conversion_cost = 0.5
+  local_missionary_strength = 0.05
 }
 
 08_prepare_for_war = {
@@ -171,6 +173,12 @@ antibankrapucy = {
 
 08_refuse_autonomy = {
    reduced_liberty_desire = -25
+}
+
+08_nordic_colonization = {
+    colonists = 1
+	global_colonial_growth = 25
+	range = 0.25
 }
 
 09_revolution = {

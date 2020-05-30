@@ -116,6 +116,8 @@ country_event = {
 		name = "es_3_scenario.4.a"
 		ai_chance = { factor = 50 }
 		
+		add_prestige = -25
+		
 		change_tag = REA
 		if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
 		if = { limit = { NOT = { government_rank = 5 } } set_government_rank = 5 }

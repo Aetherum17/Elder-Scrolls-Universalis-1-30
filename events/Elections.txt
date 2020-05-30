@@ -50,16 +50,14 @@ country_event = {
 			}		
 		}
 		custom_tooltip = remains_ruler
-		random_list = {
-		33 = {
-		change_adm = 1
-		}
-		33 = {
-		change_dip = 1
-		}
-		33 = {
-		change_mil = 1
-		}
+		if = { limit = { adm = 7 dip = 7 NOT = { mil = 7 } } change_mil = 1 }
+		else_if = { limit = { adm = 7 NOT = { dip = 7 } mil = 7 } change_dip = 1 }
+		else_if = { limit = {  NOT = { adm = 7 } dip = 7 mil = 7 } change_adm = 1 }
+		else_if = { limit = { adm = 7  NOT = { dip = 7 }  NOT = { mil = 7 } } random_list = { 50 = { change_dip = 1 } 50 = { change_mil = 1 } } }
+		else_if = { limit = { NOT = { adm = 7 } dip = 7 NOT = { mil = 7 } } random_list = { 50 = { change_adm = 1 } 50 = { change_mil = 1 } } }
+		else_if = { limit = { NOT = { adm = 7 } NOT = { dip = 7 }  mil = 7 } random_list = { 50 = { change_adm = 1 } 50 = { change_dip = 1 } } }
+		else = {
+			random_list = { 33 = { change_adm = 1 } 33 = { change_dip = 1 } 33 = { change_mil = 1 } }
 		}
 		if = {
 			limit = { 
@@ -97,7 +95,7 @@ country_event = {
 			change_government = monarchy
 			set_legacy_government = despotic_monarchy
 		}
-		add_scaled_republican_tradition = -15
+		add_scaled_republican_tradition = -10
 		random_list = {
 			10 = {
 				add_adm_power = 50
@@ -214,7 +212,7 @@ country_event = {
 			has_government_attribute = enables_nepotism
 		}
 		ai_chance = { factor = 10 }
-		add_scaled_republican_tradition = -7
+		add_scaled_republican_tradition = -5
 		if = {
 			limit = { always = yes }
 			define_ruler = {
@@ -363,7 +361,7 @@ country_event = {
 			has_government_attribute = enables_nepotism
 		}
 		ai_chance = { factor = 10 }
-		add_scaled_republican_tradition = -7
+		add_scaled_republican_tradition = -5
 		if = {
 			limit = { always = yes }
 			define_ruler = {
@@ -415,8 +413,8 @@ country_event = {
 		FROM = {
 			define_ruler = {
 				adm = 4
-				mil = 2
-				dip = 2
+				mil = 1
+				dip = 1
 				fixed = yes
 			}
 			set_ruler_flag = appointed_by_overlord
@@ -427,9 +425,9 @@ country_event = {
 		ai_chance = { factor = 20 }
 		FROM = {
 			define_ruler = {
-				adm = 2
+				adm = 1
 				dip = 4
-				mil = 2
+				mil = 1
 				fixed = yes
 			}
 			set_ruler_flag = appointed_by_overlord
@@ -440,8 +438,8 @@ country_event = {
 		ai_chance = { factor = 20 }
 		FROM = {
 			define_ruler = {
-				adm = 2
-				dip = 2
+				adm = 1
+				dip = 1
 				mil = 4
 				fixed = yes
 			}	

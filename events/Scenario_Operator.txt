@@ -37,6 +37,13 @@ country_event = {
 		every_country = {
 		limit = { culture_group = high_elves_cg owns = 1206 } country_event = { id = es_1_scenario.5 days = 3650 tooltip = es_collapse.2.a.tt }
 		}
+		###############################################################
+		every_country = {
+		limit = { capital_scope = { continent = Tamriel } } country_event = { id = es_0_scenario.1 days = 9125 tooltip = es_collapse.2.a.tt }
+		}
+		every_country = {
+		limit = { capital_scope = { continent = Tamriel } } country_event = { id = es_0_scenario.2 days = 9125 tooltip = es_collapse.2.a.tt }
+		}
 	}
 
 	option = {
@@ -344,6 +351,10 @@ country_event = {
 		every_country = {
 		limit = { owns = 952 NOT = { owns = 7695 } } country_event = { id = es_6_scenario.10 days = 1825 tooltip = es_collapse.2.a.tt }
 		}
+		###############################################################
+		every_country = {
+		limit = { capital_scope = { continent = Tamriel } } country_event = { id = es_0_scenario.3 days = 9125 tooltip = es_collapse.2.a.tt }
+		}
 		
 	}
 
@@ -398,35 +409,118 @@ country_event = {
 		}
 		###
 		every_country = {
-		limit = { culture_group = northern_cg owns = 1275 } country_event = { id = es_7_scenario.6 days = 31 tooltip = es_collapse.2.a.tt }
+		limit = { culture_group = northern_cg owns = 1275 } country_event = { id = es_7_scenario.6 days = 1825 tooltip = es_collapse.2.a.tt }
 		}
 		###
 		every_country = {
-		limit = { culture_group = northern_cg owns = 1291 } country_event = { id = es_7_scenario.7 days = 31 tooltip = es_collapse.2.a.tt }
+		limit = { culture_group = northern_cg owns = 1291 } country_event = { id = es_7_scenario.7 days = 1825 tooltip = es_collapse.2.a.tt }
 		}
 		###
 		every_country = {
-		limit = { NOT = { culture_group = snow_elves_cg } any_owned_province = { region = rift_lr } any_neighbor_country = { culture_group = snow_elves_cg } } country_event = { id = es_7_scenario.8 days = 31 tooltip = es_collapse.2.a.tt }
+		limit = { NOT = { culture_group = snow_elves_cg } any_owned_province = { region = rift_lr } any_neighbor_country = { culture_group = snow_elves_cg } } country_event = { id = es_7_scenario.8 days = 1825 tooltip = es_collapse.2.a.tt }
 		}
 		###
 		every_country = {
-		limit = { NOT = { culture_group = snow_elves_cg } any_owned_province = { region = jerall_mountains_lr } any_neighbor_country = { culture_group = snow_elves_cg } } country_event = { id = es_7_scenario.9 days = 31 tooltip = es_collapse.2.a.tt }
+		limit = { NOT = { culture_group = snow_elves_cg } any_owned_province = { region = jerall_mountains_lr } any_neighbor_country = { culture_group = snow_elves_cg } } country_event = { id = es_7_scenario.9 days = 1825 tooltip = es_collapse.2.a.tt }
 		}
 		###
 		every_country = {
-		limit = { culture_group = minotaur_cg owns = 1179 }  country_event = { id = es_7_scenario.10 days = 31 tooltip = es_collapse.2.a.tt }
+		limit = { culture_group = minotaur_cg owns = 1179 }  country_event = { id = es_7_scenario.10 days = 1825 tooltip = es_collapse.2.a.tt }
 		}
 		###
 		every_country = {
-		limit = { culture_group = cyrodiil_cg owns = 5616 } country_event = { id = es_7_scenario.11 days = 31 tooltip = es_collapse.2.a.tt }
+		limit = { culture_group = cyrodiil_cg owns = 5616 } country_event = { id = es_7_scenario.11 days = 1825 tooltip = es_collapse.2.a.tt }
 		}
 		###
 		every_country = {
-		limit = { culture_group = cyrodiil_cg owns = 1120 } country_event = { id = es_7_scenario.12 days = 31 tooltip = es_collapse.2.a.tt }
+		limit = { culture_group = cyrodiil_cg owns = 1120 } country_event = { id = es_7_scenario.12 days = 1825 tooltip = es_collapse.2.a.tt }
 		}
 		###
 		every_country = {
-		limit = { culture_group = half_blood_cg owns = 1355 } country_event = { id = es_7_scenario.14 days = 31 tooltip = es_collapse.2.a.tt }
+		limit = { culture_group = half_blood_cg owns = 1355 } country_event = { id = es_7_scenario.14 days = 1825 tooltip = es_collapse.2.a.tt }
+		}
+		###############################################################
+		every_country = {
+		limit = { owns = 1369 } country_event = { id = es_0_scenario.5 days = 9125 tooltip = es_collapse.2.a.tt }
+		}
+	}
+
+	option = {
+		name = "es_1_scenario.1.a"
+	}
+	
+}
+
+country_event = {
+	id = es_scenario_operator.8
+	title = es_1_scenario.1.t
+	desc = es_1_scenario.1.d
+	picture = ES_THRONEROOM_1_eventPicture	
+	
+	fire_only_once = yes
+	
+	trigger = {
+	    tag = RED
+		NOT = { is_year = 308 }
+		OR = {
+		is_year = 266
+		any_country = {
+			owns_or_subject_of = 1275
+			owns_or_subject_of = 1342
+			owns_or_subject_of = 1291
+			owns_or_subject_of = 1355
+			owns_or_subject_of = 1268
+		}
+		}
+    }
+
+	mean_time_to_happen = {
+		days = 1825		
+	}
+	
+	immediate = {
+		every_country = {
+		limit = { owns = 1275 culture_group = northern_cg } country_event = { id = es_8_scenario.1 days = 1825 tooltip = es_collapse.2.a.tt }
+		}
+		###
+		every_country = {
+		limit = { owns = 970 culture_group = dwemer_cg } country_event = { id = es_8_scenario.3 days = 1825 tooltip = es_collapse.2.a.tt }
+		}
+		###
+		every_country = {
+		limit = { owns = 1379 culture_group = high_elves_cg } country_event = { id = es_8_scenario.4 days = 1825 tooltip = es_collapse.2.a.tt }
+		}
+		###
+		every_country = {
+		limit = { owns = 1344 culture_group = dead_cg } country_event = { id = es_8_scenario.5 days = 1825 tooltip = es_collapse.2.a.tt }
+		}
+		###
+		every_country = {
+		limit = { primary_culture = nord } country_event = { id = es_8_scenario.6 days = 1825 tooltip = es_collapse.2.a.tt }
+		}
+		###
+		every_country = {
+		limit = { owns = 1379 culture_group = high_elves_cg } country_event = { id = es_8_scenario.7 days = 1825 tooltip = es_collapse.2.a.tt }
+		}
+		###
+		every_country = {
+		limit = { owns = 1275 culture_group = northern_cg } country_event = { id = es_8_scenario.8 days = 9125 tooltip = es_collapse.2.a.tt }
+		}
+		###
+		every_country = {
+		limit = { owns = 6044 culture_group = dwemer_cg } country_event = { id = es_8_scenario.9 days = 1825 tooltip = es_collapse.2.a.tt }
+		}
+		###
+		every_country = {
+		limit = { is_part_of_hre = no culture_group = cyrodiil_cg } country_event = { id = es_8_scenario.10 days = 1825 tooltip = es_collapse.2.a.tt }
+		}
+		###
+		every_country = {
+		limit = { owns = 1275 culture_group = northern_cg } country_event = { id = es_8_scenario.11 days = 9125 tooltip = es_collapse.2.a.tt }
+		}
+		###
+		every_country = {
+		limit = { owns = 5616 culture_group = cyrodiil_cg } country_event = { id = es_8_scenario.12 days = 1825 tooltip = es_collapse.2.a.tt }
 		}
 	}
 

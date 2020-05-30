@@ -37,6 +37,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	es_3_destroy_forelhost = {
@@ -171,6 +172,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	es_5_remove_slaves = {
@@ -202,6 +204,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	es_7_alessian_union = {
@@ -265,6 +268,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	es_7_purification = {
@@ -293,9 +297,12 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		
+		ai_importance = 300
 	}
 	
 	es_7_new_elector = {
+	    major = yes
 		potential = {
 		tag = ALE
         is_elector = no
@@ -312,6 +319,8 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		
+		ai_importance = 300
 	}
 	
 	es_vampire_purification = {
@@ -341,6 +350,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	es_tsaesci_consumption = {
@@ -372,6 +382,113 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
+	}
+	
+	es_8_enforce_culture_convertion = {
+		potential = {
+		NOT = { culture_group = high_elves_cg }
+		OR = {
+		tag = ALE
+		tag = ORD
+		}
+		any_neighbor_country = { primary_culture = ayleid }
+		}
+		allow = {
+		adm_power = 100
+		dip_power = 100
+		mil_power = 100
+		any_neighbor_country = { primary_culture = ayleid capital_scope = { controlled_by = ROOT } }
+        }
+		effect = {
+		add_adm_power = -100
+		add_dip_power = -100
+		add_mil_power = -100
+		random_neighbor_country = {
+		limit = { primary_culture = ayleid capital_scope = { controlled_by = ROOT } }
+		change_primary_culture = ROOT
+		capital_scope = { add_devastation = 100 }
+		}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 300
+	}
+	
+	es_8_convertion_of_golden_coast = {
+		potential = {
+		culture_group = cyrodiil_cg
+		OR = { exists = ALE exists = ORD has_global_flag = alessian_rebellion_flag }
+		any_province = { region = golden_coast_lr culture = ayleid }
+		}
+		allow = {
+		prestige = 0
+		any_province = { region = golden_coast_lr culture = ayleid controlled_by = ROOT }
+        }
+		effect = {
+		add_prestige = -2.5
+		random_province = { limit = { region = golden_coast_lr culture = ayleid controlled_by = ROOT } add_devastation = 50 change_culture = ROOT }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		ai_importance = 300
+	}
+	
+	es_8_create_duchy_of_kvatch = {
+	    major = yes
+		potential = {
+		    NOT = { has_country_flag = es_8_create_kingdom_of_kvatch_flag }
+			culture_group = cyrodiil_cg
+			capital_scope = { NOT = { region = golden_coast_lr } }
+			NOT = { exists = CA7 }
+		}
+		allow = {
+			cyrodiil_7_la = { type = all owned_by = ROOT }
+        }
+		effect = {
+		    set_country_flag = es_8_create_kingdom_of_kvatch_flag
+			every_owned_province = {
+			    limit = { area = cyrodiil_7_la }
+				cede_province = CA7
+				add_core = CA7
+			}
+			create_subject = { subject_type = personal_union subject = CA7 }
+			CA7 = { change_government_reform_progress = -99999 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 300
+	}
+	
+	es_8_create_duchy_of_anvil = {
+	    major = yes
+		potential = {
+		    NOT = { has_country_flag = es_8_create_kingdom_of_anvil_flag }
+			culture_group = cyrodiil_cg
+			capital_scope = { NOT = { region = golden_coast_lr } }
+			NOT = { exists = CA9 }
+		}
+		allow = {
+			cyrodiil_9_la = { type = all owned_by = ROOT }
+        }
+		effect = {
+		    set_country_flag = es_8_create_kingdom_of_anvil_flag
+			every_owned_province = {
+			    limit = { area = cyrodiil_9_la }
+				cede_province = CA9
+				add_core = CA9
+			}
+			create_subject = { subject_type = personal_union subject = CA9 }
+			CA9 = { change_government_reform_progress = -99999 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 300
 	}
 	
 	es_12_purification = {
@@ -416,6 +533,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	es_12_kingdom_of_kvatch = {
