@@ -11,7 +11,7 @@ trade_goods = unknown
 base_manpower = 1
 capital = "Matvenne"
 is_city = no
-discovered_by = tamriel_tg discovered_by = elsweyr_tg discovered_by = marshan_tg discovered_by = orsimer_tg
+discovered_by = tamriel_tg
 
 266.1.1 = {
     owner = BA1
@@ -19,4 +19,9 @@ discovered_by = tamriel_tg discovered_by = elsweyr_tg discovered_by = marshan_tg
     add_core = BA1
     culture = nord
     religion = nordic_pantheon
+}
+308.1.1 = {
+    owner = OLD
+    controller = OLD
+    add_core = OLD
 }

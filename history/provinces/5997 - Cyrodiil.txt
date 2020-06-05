@@ -11,7 +11,7 @@ trade_goods = unknown
 base_manpower = 3
 capital = "Restae"
 is_city = no
-discovered_by = tamriel_tg discovered_by = elsweyr_tg discovered_by = marshan_tg discovered_by = orsimer_tg
+discovered_by = tamriel_tg
 
 center_of_trade = 1
 
@@ -22,4 +22,12 @@ fort_15th = yes
     owner = CI4
     controller = CI4
     add_core = CI4
+}
+308.1.1 = { culture = nedic
+    owner = CI3
+    controller = CI3
+    add_core = CI3 hre = yes
+}
+308.1.1 = { culture = nedic
+    religion = eight_divines
 }

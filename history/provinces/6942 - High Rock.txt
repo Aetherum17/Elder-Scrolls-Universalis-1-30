@@ -10,7 +10,7 @@ trade_goods = unknown
 base_manpower = 3
 capital = "Aldcroft"
 is_city = yes
-discovered_by = tamriel_tg discovered_by = elsweyr_tg discovered_by = marshan_tg discovered_by = orsimer_tg
+discovered_by = tamriel_tg
 
 center_of_trade = 1
 
@@ -20,4 +20,10 @@ fort_15th = yes
     owner = BA3
     controller = BA3
     add_core = BA3
+}
+
+308.1.1 = {
+    owner = DIR
+    controller = DIR
+    add_core = DIR
 }

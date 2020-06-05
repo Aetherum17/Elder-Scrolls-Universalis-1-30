@@ -11,7 +11,7 @@ trade_goods = unknown
 base_manpower = 1
 capital = "Rikje"
 is_city = no
-discovered_by = tamriel_tg discovered_by = elsweyr_tg discovered_by = marshan_tg discovered_by = orsimer_tg
+discovered_by = tamriel_tg
 
 242.1.1 = {
     owner = NF7
@@ -22,4 +22,8 @@ discovered_by = tamriel_tg discovered_by = elsweyr_tg discovered_by = marshan_tg
     owner = NA5
     controller = NA5
     add_core = NA5
+}
+308.1.1 = {
+    culture = nord
+    religion = nordic_pantheon
 }

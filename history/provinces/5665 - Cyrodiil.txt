@@ -10,9 +10,15 @@ trade_goods = unknown
 base_manpower = 3
 capital = "Carlononia"
 is_city = yes
-discovered_by = tamriel_tg discovered_by = elsweyr_tg discovered_by = marshan_tg discovered_by = orsimer_tg
+discovered_by = tamriel_tg
 
 center_of_trade = 1
 
 fort_15th = yes
 
+
+308.1.1 = { religion = eight_divines
+    owner = CA7
+    controller = CA7
+    add_core = CA7 culture = nedic
+}

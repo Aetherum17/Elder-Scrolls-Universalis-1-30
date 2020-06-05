@@ -11,7 +11,7 @@ trade_goods = unknown
 base_manpower = 3
 capital = "Fort Neugrad"
 is_city = no
-discovered_by = tamriel_tg discovered_by = elsweyr_tg discovered_by = marshan_tg discovered_by = orsimer_tg
+discovered_by = tamriel_tg
 
 center_of_trade = 1
 
@@ -27,4 +27,8 @@ fort_15th = yes
     owner = NA5
     controller = NA5
     add_core = NA5
+}
+308.1.1 = {
+    culture = nord
+    religion = nordic_pantheon
 }

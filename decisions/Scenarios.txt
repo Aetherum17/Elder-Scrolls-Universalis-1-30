@@ -541,6 +541,7 @@ country_decisions = {
 		potential = {
 		tag = CA7
 		NOT = { government_rank = 5 }
+		NOT = { culture_group = high_elves_cg }
 		}
 		allow = {
 		owns = 1150

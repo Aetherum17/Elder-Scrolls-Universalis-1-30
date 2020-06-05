@@ -11,7 +11,7 @@ trade_goods = unknown
 base_manpower = 3
 capital = "Rasandia"
 is_city = no
-discovered_by = tamriel_tg discovered_by = elsweyr_tg discovered_by = marshan_tg discovered_by = orsimer_tg
+discovered_by = tamriel_tg
 
 center_of_trade = 1
 
@@ -22,4 +22,9 @@ fort_15th = yes
     owner = CE1
     controller = CE1
     add_core = CE1
+}
+308.1.1 = { religion = eight_divines culture = nedic
+    owner = CD9
+    controller = CD9
+    add_core = CD9 hre = yes
 }

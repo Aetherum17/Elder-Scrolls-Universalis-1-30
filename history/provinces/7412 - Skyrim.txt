@@ -10,7 +10,7 @@ trade_goods = unknown
 base_manpower = 3
 capital = "Reydlaith"
 is_city = yes
-discovered_by = tamriel_tg discovered_by = elsweyr_tg discovered_by = marshan_tg discovered_by = orsimer_tg
+discovered_by = tamriel_tg
 
 center_of_trade = 1
 
@@ -26,4 +26,9 @@ fort_15th = yes
     owner = SKY
     controller = SKY
     add_core = SKY
+}
+308.1.1 = {
+    owner = OLD
+    controller = OLD
+    add_core = OLD
 }

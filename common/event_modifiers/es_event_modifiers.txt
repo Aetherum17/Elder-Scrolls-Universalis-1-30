@@ -7,14 +7,16 @@ red_mountain_eruption = {
 
 enslaved_province = {
     trade_goods_size_modifier = 0.25
+	local_manpower_modifier = 0.25
     local_production_efficiency = 0.10
 	local_institution_spread = -0.10
 	local_unrest = 2.5
 }
 
 liberated_province = {
-    trade_goods_size_modifier = -0.25
-    local_production_efficiency = -0.10
+    local_tax_modifier = 0.25
+	local_build_cost = -0.25
+	local_missionary_strength = 0.01
 	local_institution_spread = 0.10
 	local_unrest = -2.5
 }

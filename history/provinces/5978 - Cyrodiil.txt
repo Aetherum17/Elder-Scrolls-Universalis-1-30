@@ -11,10 +11,13 @@ trade_goods = unknown
 base_manpower = 1
 capital = "Fulione"
 is_city = no
-discovered_by = tamriel_tg discovered_by = elsweyr_tg discovered_by = marshan_tg discovered_by = orsimer_tg
+discovered_by = tamriel_tg
 
 266.1.1 = {
     owner = CI2
     controller = CI2
     add_core = CI2
+}
+308.1.1 = {
+    hre = yes
 }

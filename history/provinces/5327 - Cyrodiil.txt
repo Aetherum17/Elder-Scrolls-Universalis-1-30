@@ -10,4 +10,10 @@ trade_goods = unknown
 base_manpower = 1
 capital = "Amane"
 is_city = yes
-discovered_by = tamriel_tg discovered_by = elsweyr_tg discovered_by = marshan_tg discovered_by = orsimer_tg
+discovered_by = tamriel_tg
+
+308.1.1 = { religion = eight_divines
+    owner = CA7
+    controller = CA7
+    add_core = CA7 culture = nedic
+}

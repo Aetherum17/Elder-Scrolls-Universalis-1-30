@@ -98,6 +98,10 @@ wine = {
 			}
 		}
 		modifier = {
+		    factor = 0
+			has_province_flag = banned_wine_production_flag
+		}
+		modifier = {
 			factor = 0.25
 			has_winter = normal_winter
 		}
@@ -727,6 +731,10 @@ sugar = {
 			}
 		}
 		modifier = {
+		    factor = 0
+			has_province_flag = banned_sugar_production_flag
+		}
+		modifier = {
 			factor = 2.5
 			OR = {
 			region = anequina_lr
@@ -765,6 +773,10 @@ tobacco = {
 				has_terrain = drylands
 				has_terrain = desert
 			}
+		}
+		modifier = {
+		    factor = 0
+			has_province_flag = banned_tobacco_production_flag
 		}
 		modifier = {
 			factor = 0

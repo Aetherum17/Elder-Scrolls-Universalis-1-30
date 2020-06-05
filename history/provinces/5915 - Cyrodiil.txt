@@ -10,11 +10,14 @@ trade_goods = unknown
 base_manpower = 1
 capital = "Astilaine"
 is_city = yes
-discovered_by = tamriel_tg discovered_by = elsweyr_tg discovered_by = marshan_tg discovered_by = orsimer_tg
+discovered_by = tamriel_tg
 
-266.1.1 = {
+266.1.1 = { culture = nedic
     owner = ALE
     controller = ALE
     add_core = ALE
 	religion = eight_divines
+}
+308.1.1 = {
+    religion = eight_divines
 }

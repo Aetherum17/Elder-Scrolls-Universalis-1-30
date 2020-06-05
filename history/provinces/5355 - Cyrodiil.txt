@@ -10,8 +10,14 @@ trade_goods = unknown
 base_manpower = 1
 capital = "Horobrina"
 is_city = yes
-discovered_by = tamriel_tg discovered_by = elsweyr_tg discovered_by = marshan_tg discovered_by = orsimer_tg
+discovered_by = tamriel_tg
 
 221.1.1 = {
     religion = eight_divines
+}
+337.1.1 = {
+    owner = CA9
+    controller = CA9
+    add_core = CA9
+    culture = nedic
 }

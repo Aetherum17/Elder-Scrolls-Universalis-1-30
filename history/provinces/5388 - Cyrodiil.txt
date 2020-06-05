@@ -10,15 +10,18 @@ trade_goods = unknown
 base_manpower = 1
 capital = "Logan"
 is_city = yes
-discovered_by = tamriel_tg discovered_by = elsweyr_tg discovered_by = marshan_tg discovered_by = orsimer_tg
+discovered_by = tamriel_tg
 
 189.1.1 = {
     owner = AYL
     controller = AYL
     add_core = AYL
 }
-266.1.1 = {
+266.1.1 = { culture = nedic
     owner = ALE
     controller = ALE
     add_core = ALE
+}
+308.1.1 = {
+    religion = eight_divines
 }

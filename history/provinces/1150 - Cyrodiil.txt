@@ -10,7 +10,7 @@ trade_goods = unknown
 base_manpower = 3
 capital = "Kvatch" 
 is_city = yes
-discovered_by = tamriel_tg discovered_by = elsweyr_tg discovered_by = marshan_tg discovered_by = orsimer_tg
+discovered_by = tamriel_tg
 
 add_province_triggered_modifier = religious_center
 add_province_triggered_modifier = molog_bal_cult_holy_city
@@ -22,4 +22,7 @@ fort_15th = yes
 
 221.1.1 = {
     religion = eight_divines
+}
+308.1.1 = {
+    culture = nedic
 }

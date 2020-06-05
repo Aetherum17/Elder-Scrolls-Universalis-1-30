@@ -2,46 +2,19 @@ country_decisions = {
 
 	enslave_population = {
 		potential = {
-		    OR = {
-			has_reform = 23_c
-			has_reform = 23_d
-			}
-			any_owned_province = {
-			NOT = { has_province_modifier = enslaved_province }
-			trade_goods = slaves
-			NOT = { has_province_flag = enslaved_province_flag }
-			}
+		    OR = { has_reform = 23_c has_reform = 23_d }
+			any_owned_province = { NOT = { has_province_modifier = enslaved_province } trade_goods = slaves NOT = { has_province_flag = enslaved_province_flag } }
 		}
 		allow =  {
-		    OR = {
-			has_reform = 23_c
-			has_reform = 23_d
-			}
-			any_owned_province = {
-			NOT = { has_province_modifier = enslaved_province }
-			trade_goods = slaves
-			NOT = { has_province_flag = enslaved_province_flag }
-			}
+		    OR = { has_reform = 23_c has_reform = 23_d }
+			any_owned_province = { NOT = { has_province_modifier = enslaved_province } trade_goods = slaves NOT = { has_province_flag = enslaved_province_flag } }
 		}
 		effect = {
 		    add_years_of_income = 0.10
-		    random_owned_province = {
-			limit = {
-			trade_goods = slaves
-			NOT = { has_province_modifier = enslaved_province }
-			}
-			add_permanent_province_modifier = {
-			name = "enslaved_province"
-			duration = -1
-			}
+		    random_owned_province = { limit = { trade_goods = slaves NOT = { has_province_modifier = enslaved_province } }
+			add_permanent_province_modifier = { name = "enslaved_province" duration = -1 } 
 			set_province_flag = enslaved_province_flag
 			}
-			change_price = {
-            trade_goods = slaves
-            key = MORE_SLAVES
-            value = -0.01
-            duration = -1
-            }
 		}
 		ai_will_do = {
 			factor = 1
@@ -50,43 +23,21 @@ country_decisions = {
 	
 	liberate_population = {
 		potential = {
-			OR = {
-			has_reform = 23_a
-			has_reform = 23_b
-			}
-			any_owned_province = {
-			has_province_flag = enslaved_province_flag
-			}
+			OR = { has_reform = 23_a has_reform = 23_b }
+			any_owned_province = { has_province_flag = enslaved_province_flag }
 		}
 		allow =  {
 		    treasury = 0
-		    OR = {
-			has_reform = 23_a
-			has_reform = 23_b
-		    }
-			any_owned_province = {
-			has_province_flag = enslaved_province_flag
-			}
+		    OR = { has_reform = 23_a has_reform = 23_b }
+			any_owned_province = { has_province_flag = enslaved_province_flag }
 		}
 		effect = {
 		    add_years_of_income = -0.10
-		    random_owned_province = {
-			limit = {
-			has_province_flag = enslaved_province_flag
-			}
+		    random_owned_province = { limit = { has_province_flag = enslaved_province_flag }
 			remove_province_modifier = enslaved_province
-			clr_province_flag = enslaved_province_flag
-			add_permanent_province_modifier = {
-			name = "liberated_province"
-			duration = 3650
+            clr_province_flag = enslaved_province_flag
+			add_permanent_province_modifier = { name = "liberated_province" duration = 9125 }
 			}
-			}
-			change_price = {
-            trade_goods = slaves
-            key = LESS_SLAVES
-            value = 0.01
-            duration = -1
-            }
 		}
 		ai_will_do = {
 			factor = 1
@@ -95,46 +46,19 @@ country_decisions = {
 	
 	bannes_alcohol_production = {
 		potential = {
-		    OR = {
-			has_reform = 51_c
-			has_reform = 51_d
-			}
-			any_owned_province = {
-			NOT = { has_province_modifier = banned_production }
-			trade_goods = wine
-			NOT = { has_province_flag = banned_alcohol_production_flag }
-			}
+		    OR = { has_reform = 51_c has_reform = 51_d }
+			any_owned_province = { trade_goods = wine NOT = { has_province_modifier = banned_wine_production_flag } }
 		}
 		allow =  {
-		    OR = {
-			has_reform = 51_c
-			has_reform = 51_d
-			}
-			any_owned_province = {
-			NOT = { has_province_modifier = banned_production }
-			trade_goods = wine
-			NOT = { has_province_flag = banned_alcohol_production_flag }
-			}
+		    OR = { has_reform = 51_c has_reform = 51_d }
+			any_owned_province = { trade_goods = wine NOT = { has_province_modifier = banned_wine_production_flag } }
 		}
 		effect = {
 		    add_manpower = 5
-		    random_owned_province = {
-			limit = {
-			trade_goods = wine
-			NOT = { has_province_modifier = banned_production }
+		    random_owned_province = { limit = { trade_goods = wine NOT = { has_province_modifier = banned_wine_production_flag } }
+			set_province_flag = banned_wine_production_flag
+		    change_trade_goods = unknown
 			}
-			add_permanent_province_modifier = {
-			name = "banned_production"
-			duration = -1
-			}
-			set_province_flag = banned_alcohol_production_flag
-			}
-			change_price = {
-            trade_goods = wine
-            key = LESS_WINE
-            value = 0.01
-            duration = -1
-            }
 		}
 		ai_will_do = {
 			factor = 1
@@ -143,39 +67,20 @@ country_decisions = {
 	
 	remove_alcohol_ban = {
 		potential = {
-		    OR = {
-			has_reform = 51_a
-			has_reform = 51_b
-			}
-			any_owned_province = {
-			has_province_flag = banned_alcohol_production_flag
-			}
+		    OR = { has_reform = 51_a has_reform = 51_b }
+			any_owned_province = { has_province_flag = banned_wine_production_flag }
 		}
 		allow =  {
-		   manpower = 5
-		   OR = {
-			has_reform = 51_a
-			has_reform = 51_b
-			}
-			any_owned_province = {
-			has_province_flag = banned_alcohol_production_flag
-			}
+		    manpower = 5
+		    OR = { has_reform = 51_a has_reform = 51_b }
+		    any_owned_province = { has_province_flag = banned_wine_production_flag }
 		}
 		effect = {
 		    add_manpower = -5
-		    random_owned_province = {
-			limit = {
-			has_province_flag = banned_alcohol_production_flag
+		    random_owned_province = { limit = { has_province_flag = banned_wine_production_flag }
+			clr_province_flag = banned_wine_production_flag
+			change_trade_goods = wine
 			}
-			remove_province_modifier = banned_production
-			clr_province_flag = banned_alcohol_production_flag
-			}
-			change_price = {
-            trade_goods = wine
-            key = MORE_WINE
-            value = -0.01
-            duration = -1
-            }
 		}
 		ai_will_do = {
 			factor = 1
@@ -184,32 +89,22 @@ country_decisions = {
 	
 	bannes_narcotics_production = {
 		potential = {
-		    OR = {
-			has_reform = 55_c
-			has_reform = 55_d
-			}
+		    OR = { has_reform = 55_c has_reform = 55_d }
 			any_owned_province = {
-			NOT = { has_province_modifier = banned_production }
-			OR = {
-			trade_goods = sugar
-			trade_goods = tobacco
+			OR = { 
+			AND = { trade_goods = sugar NOT = { has_province_flag = banned_sugar_production_flag } }
+			AND = { trade_goods = tobacco NOT = { has_province_flag = banned_tobacco_production_flag } } 
 			}
-			NOT = { has_province_flag = banned_narcotics_production_flag }
 			}
 		}
 		allow =  {
 		    NOT = { prestige = 95 }
-		    OR = {
-			has_reform = 55_c
-			has_reform = 55_d
-			}
+		    OR = { has_reform = 55_c has_reform = 55_d }
 			any_owned_province = {
-			NOT = { has_province_modifier = banned_production }
 			OR = {
-			trade_goods = sugar
-			trade_goods = tobacco
+			AND = { trade_goods = sugar NOT = { has_province_flag = banned_sugar_production_flag } }
+			AND = { trade_goods = tobacco NOT = { has_province_flag = banned_tobacco_production_flag } }
 			}
-			NOT = { has_province_flag = banned_narcotics_production_flag }
 			}
 		}
 		effect = {
@@ -217,29 +112,14 @@ country_decisions = {
 		    random_owned_province = {
 			limit = {
 			OR = {
-			trade_goods = sugar
-			trade_goods = tobacco
+			AND = { trade_goods = sugar NOT = { has_province_flag = banned_sugar_production_flag } }
+			AND = { trade_goods = tobacco NOT = { has_province_flag = banned_tobacco_production_flag } }
 			}
-			NOT = { has_province_modifier = banned_production }
 			}
-			add_permanent_province_modifier = {
-			name = "banned_production"
-			duration = -1
+			if = { limit = { trade_goods = sugar } set_province_flag = banned_sugar_production_flag }
+			if = { limit = { trade_goods = tobacco } set_province_flag = banned_tobacco_production_flag }
+			change_trade_goods = unknown
 			}
-			set_province_flag = banned_narcotics_production_flag
-			}
-			change_price = {
-            trade_goods = sugar
-            key = LESS_SUGAR
-            value = 0.01
-            duration = -1
-            }
-			change_price = {
-            trade_goods = tobacco
-            key = LESS_TOBACCO
-            value = 0.01
-            duration = -1
-            }
 		}
 		ai_will_do = {
 			factor = 1
@@ -248,49 +128,22 @@ country_decisions = {
 	
 	remove_narcotics_ban = {
 		potential = {
-		    OR = {
-			has_reform = 55_a
-			has_reform = 55_b
-			}
-			any_owned_province = {
-			has_province_flag = banned_narcotics_production_flag
+		    OR = { has_reform = 55_a has_reform = 55_b }
+			any_owned_province = { OR = { has_province_flag = banned_sugar_production_flag has_province_flag = banned_tobacco_production_flag }
 			}
 		}
 		allow =  {
-		   prestige = 0 
-		   OR = {
-			has_reform = 55_a
-			has_reform = 55_b
-			}
-			any_owned_province = {
-			has_province_flag = banned_narcotics_production_flag
+		    prestige = 0 
+		    OR = { has_reform = 55_a has_reform = 55_b }
+			any_owned_province = { OR = { has_province_flag = banned_sugar_production_flag has_province_flag = banned_tobacco_production_flag }
 			}
 		}
 		effect = {
 		    add_prestige = -5
-		    random_owned_province = {
-			limit = {
-			OR = {
-			trade_goods = sugar
-			trade_goods = tobacco
+		    random_owned_province = { limit = { OR = { has_province_flag = banned_sugar_production_flag has_province_flag = banned_tobacco_production_flag } }
+			if = { limit = { has_province_flag = banned_sugar_production_flag } clr_province_flag = banned_sugar_production_flag change_trade_goods = sugar }
+			if = { limit = { has_province_flag = banned_tobacco_production_flag } clr_province_flag = banned_tobacco_production_flag change_trade_goods = tobacco }
 			}
-			has_province_modifier = banned_production
-			}
-			remove_province_modifier = banned_production
-			clr_province_flag = banned_narcotics_production_flag
-			}
-			change_price = {
-            trade_goods = sugar
-            key = MORE_SUGAR
-            value = -0.01
-            duration = -1
-            }
-			change_price = {
-            trade_goods = tobacco
-            key = MORE_TOBACCO
-            value = -0.01
-            duration = -1
-            }
 		}
 		ai_will_do = {
 			factor = 1

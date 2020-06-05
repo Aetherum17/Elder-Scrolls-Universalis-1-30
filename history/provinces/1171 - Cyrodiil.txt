@@ -3,16 +3,19 @@ controller = ABE
 add_core = ABE
 culture = ayleid
 religion = molog_bal_cult
-hre = yes
+hre = no
 base_tax = 3
 base_production = 3
 trade_goods = unknown
 base_manpower = 3
 capital = "Stirk" 
 is_city = yes
-discovered_by = tamriel_tg discovered_by = elsweyr_tg discovered_by = marshan_tg discovered_by = orsimer_tg
+discovered_by = tamriel_tg
 
 
 221.1.1 = {
     religion = eight_divines
+}
+337.1.1 = {
+    culture = nedic
 }

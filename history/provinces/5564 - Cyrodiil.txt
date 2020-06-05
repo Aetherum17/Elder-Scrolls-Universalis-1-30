@@ -11,10 +11,15 @@ trade_goods = unknown
 base_manpower = 1
 capital = "Lioria"
 is_city = no
-discovered_by = tamriel_tg discovered_by = elsweyr_tg discovered_by = marshan_tg discovered_by = orsimer_tg
+discovered_by = tamriel_tg
 
 266.1.1 = {
     owner = CE1
     controller = CE1
     add_core = CE1
+}
+308.1.1 = { religion = eight_divines culture = nedic
+    owner = CD9
+    controller = CD9
+    add_core = CD9 hre = yes
 }

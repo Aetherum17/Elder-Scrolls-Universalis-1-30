@@ -10,10 +10,15 @@ trade_goods = unknown
 base_manpower = 1
 capital = "Daynhyne"
 is_city = yes
-discovered_by = tamriel_tg discovered_by = elsweyr_tg discovered_by = marshan_tg discovered_by = orsimer_tg
+discovered_by = tamriel_tg
 
 242.1.1 = {
     owner = DWE
     controller = DWE
     add_core = DWE
+}
+308.1.1 = {
+    owner = OLD
+    controller = OLD
+    add_core = OLD
 }

@@ -11,9 +11,15 @@ trade_goods = unknown
 base_manpower = 3
 capital = "Syldi"
 is_city = no
-discovered_by = tamriel_tg discovered_by = elsweyr_tg discovered_by = marshan_tg discovered_by = orsimer_tg
+discovered_by = tamriel_tg
 
 center_of_trade = 1
 
 fort_15th = yes
 
+
+308.1.1 = {
+    owner = OLD
+    controller = OLD
+    add_core = OLD
+}

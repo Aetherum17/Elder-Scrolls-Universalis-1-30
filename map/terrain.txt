@@ -51,9 +51,10 @@ categories =  {
 		sound_type = desert
 
 		defence = 1
+		local_defensiveness = 0.25
 		movement_cost = 1.25
-		supply_limit = 10		
 		local_development_cost = 0.5
+		supply_limit = 10		
 		
 		local_build_cost = 0.50
         local_build_time = 0.50
@@ -101,14 +102,14 @@ categories =  {
 		sound_type = plains
 
 		movement_cost = 1.15
-		local_development_cost = -0.10
+		local_development_cost = -0.30
 		supply_limit = 35
 		
-		local_build_cost = -0.35
-        local_build_time = -0.35
-        regiment_recruit_speed = -0.35
-        ship_recruit_speed = -0.35
-		local_institution_spread = 0.35
+		local_build_cost = -0.30
+        local_build_time = -0.30
+        regiment_recruit_speed = -0.30
+        ship_recruit_speed = -0.30
+		local_institution_spread = 0.30
 		
 		terrain_override = {
 		    712 713 714 715 716 717 718 720 721 722 723 724 725 726
@@ -135,16 +136,17 @@ categories =  {
 		type = forest
 		sound_type = forest
 		
-		movement_cost = 1.35
 		defence = 1
-		supply_limit = 20
-		local_development_cost = 0.25
+		local_defensiveness = 0.25
+		movement_cost = 1.35
+		local_development_cost = -0.15
+		supply_limit = 25
 		
-		local_build_cost = -0.20
-        local_build_time = -0.20
-        regiment_recruit_speed = -0.20
-        ship_recruit_speed = -0.20
-		local_institution_spread = 0.20
+		local_build_cost = -0.15
+        local_build_time = -0.15
+        regiment_recruit_speed = -0.15
+        ship_recruit_speed = -0.15
+		local_institution_spread = 0.15
 		
 		terrain_override = {
 			508 509 484 483 492 600 602 601 745 604 603 743 481 505 502
@@ -176,11 +178,11 @@ categories =  {
 		type = hills
 		sound_type = mountain
 
+		defence = 2
+		local_defensiveness = 0.15
 		movement_cost = 1.35
-		defence = 1
-		local_defensiveness = 0.1
-		local_development_cost = 0.25
-		supply_limit = 15
+		local_development_cost = 0.10
+		supply_limit = 25
 		
 		local_build_cost = 0.10
         local_build_time = 0.10
@@ -298,16 +300,17 @@ categories =  {
 		type = forest
 		sound_type = forest
 
-		movement_cost = 1.25
 		defence = 1
-		local_development_cost = 0.15
+		local_defensiveness = 0.20
+		movement_cost = 1.25
+		local_development_cost = -0.10
 		supply_limit = 25
 		
-		local_build_cost = -0.15
-        local_build_time = -0.15
-        regiment_recruit_speed = -0.15
-        ship_recruit_speed = -0.15
-		local_institution_spread = 0.15
+		local_build_cost = -0.10
+        local_build_time = -0.10
+        regiment_recruit_speed = -0.10
+        ship_recruit_speed = -0.10
+		local_institution_spread = 0.10	
 		
 		terrain_override = {
 		    950 951 769 768 770 762 753 756 336 737 739 740 750 752 
@@ -363,10 +366,10 @@ categories =  {
 		type = mountains
 		sound_type = mountain
 
+		defence = 3
+		local_defensiveness = 0.35
 		movement_cost = 1.5
-		defence = 1
-		local_defensiveness = 0.25
-		local_development_cost = 0.35
+		local_development_cost = 0.25
 		supply_limit = 10
 		
 		local_build_cost = 0.25
@@ -428,8 +431,8 @@ categories =  {
 
 		sound_type = desert
 
-		movement_cost = 8.0
-		defence = 6
+		movement_cost = 5.0
+		defence = 5
 		local_development_cost = 10		
 	}
 	
@@ -440,13 +443,14 @@ categories =  {
 		sound_type = plains
 
 		movement_cost = 1.0
+		local_development_cost = -0.25
 		supply_limit = 30
 		
-		local_build_cost = -0.30
-        local_build_time = -0.30
-        regiment_recruit_speed = -0.30
-        ship_recruit_speed = -0.30
-		local_institution_spread = 0.30
+		local_build_cost = -0.25
+        local_build_time = -0.25
+        regiment_recruit_speed = -0.25
+        ship_recruit_speed = -0.25
+		local_institution_spread = 0.25
 		
 		terrain_override = {
 		    809 812 819 555 463 425 581 580 583 422 582 556 557 558 559
@@ -466,10 +470,11 @@ categories =  {
 		type = jungle
 		sound_type = jungle
 
-		movement_cost = 1.50
-		defence = 1
-		local_development_cost = 0.35
-		supply_limit = 15
+		defence = 2
+		local_defensiveness = 0.35
+		movement_cost = 1.35
+		local_development_cost = 0.30
+		supply_limit = 30
 		
 		local_build_cost = 0.30
         local_build_time = 0.30
@@ -509,10 +514,11 @@ categories =  {
 		type = marsh
 		sound_type = forest
 
-		movement_cost = 1.50
-		defence = 1
-		local_development_cost = 0.25
-		supply_limit = 15
+		defence = 2
+		local_defensiveness = 0.25
+		movement_cost = 1.40
+		local_development_cost = 0.15
+		supply_limit = 20
 		
 		local_build_cost = 0.15
         local_build_time = 0.15
@@ -563,9 +569,9 @@ categories =  {
 		type = desert
 		sound_type = desert
 
-		movement_cost = 1.15
-		supply_limit = 20
-		local_development_cost = 0.50
+		movement_cost = 1.20
+		local_development_cost = 0.15
+		supply_limit = 15
 		
 		local_build_cost = 0.45
         local_build_time = 0.45
@@ -616,8 +622,8 @@ categories =  {
 		type = desert
 		sound_type = desert
 
-		movement_cost = 1.0
-		local_development_cost = 0.35		
+		movement_cost = 1.15
+		local_development_cost = 0.40		
 		supply_limit = 20
 		
 		local_build_cost = 0.40
@@ -657,14 +663,14 @@ categories =  {
 		sound_type = sea
 
 		movement_cost = 1.0
-		local_development_cost = 0.25
-		supply_limit = 25
+		local_development_cost = -0.20
+		supply_limit = 30
 		
-		local_build_cost = -0.25
-        local_build_time = -0.25
-        regiment_recruit_speed = -0.25
-        ship_recruit_speed = -0.25
-		local_institution_spread = 0.25
+		local_build_cost = -0.20
+        local_build_time = -0.20
+        regiment_recruit_speed = -0.20
+        ship_recruit_speed = -0.20
+		local_institution_spread = 0.20
 		
 		terrain_override = {
 			209 210 211 212 213 232 228 219 331 222 224 225 319 846 847
@@ -728,11 +734,11 @@ categories =  {
 		type = hills
 		sound_type = mountain
 		
+		defence = 3
+		local_defensiveness = 0.25
+		movement_cost = 1.45
+		local_development_cost = 0.20
 		supply_limit = 15
-		movement_cost = 1.50
-		defence = 1
-		local_defensiveness = 0.15
-		local_development_cost = 0.25
 		
 		local_build_cost = 0.20
         local_build_time = 0.20
@@ -829,8 +835,8 @@ categories =  {
 		sound_type = plains
 
 		movement_cost = 1.00
-		local_development_cost = 0.25
-		supply_limit = 25
+		local_development_cost = 0.05
+		supply_limit = 30
 		
 		local_build_cost = 0.05
         local_build_time = 0.05
@@ -877,8 +883,8 @@ categories =  {
 		type = plains
 		sound_type = plains
 
-		movement_cost = 1.00
-		local_development_cost = 0.05
+		movement_cost = 1.10
+		local_development_cost = 0.35
 		supply_limit = 25
 		
 		local_build_cost = 0.35
@@ -944,15 +950,15 @@ categories =  {
 
 		sound_type = plains
 
-		supply_limit = 25
 		movement_cost = 1.00
-		local_development_cost = 0.15
+		local_development_cost = -0.05
+		supply_limit = 30
 		
-		local_build_cost = -0.10
-        local_build_time = -0.10
-        regiment_recruit_speed = -0.10
-        ship_recruit_speed = -0.10
-		local_institution_spread = 0.10
+		local_build_cost = -0.05
+        local_build_time = -0.05
+        regiment_recruit_speed = -0.05
+        ship_recruit_speed = -0.05
+		local_institution_spread = 0.05
 
         terrain_override = {
 		    516 517 518 519 520 511 514 497 498 499 471 472 473 474 468

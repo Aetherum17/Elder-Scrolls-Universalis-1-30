@@ -10,10 +10,15 @@ trade_goods = unknown
 base_manpower = 1
 capital = "Lydny"
 is_city = yes
-discovered_by = tamriel_tg discovered_by = elsweyr_tg discovered_by = marshan_tg discovered_by = orsimer_tg
+discovered_by = tamriel_tg
 
 189.1.1 = {
     owner = SKY
     controller = SKY
     add_core = SKY
+}
+308.1.1 = {
+    owner = OLD
+    controller = OLD
+    add_core = OLD
 }

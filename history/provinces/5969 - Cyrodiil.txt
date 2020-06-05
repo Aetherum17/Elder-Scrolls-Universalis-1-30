@@ -10,7 +10,7 @@ trade_goods = unknown
 base_manpower = 1
 capital = "Bulfre"
 is_city = yes
-discovered_by = tamriel_tg discovered_by = elsweyr_tg discovered_by = marshan_tg discovered_by = orsimer_tg
+discovered_by = tamriel_tg
 57.1.1 = {
     owner = CB8
     controller = CB8
@@ -22,8 +22,11 @@ discovered_by = tamriel_tg discovered_by = elsweyr_tg discovered_by = marshan_tg
     controller = AYL
     add_core = AYL
 }
-266.1.1 = {
+266.1.1 = { culture = nedic
     owner = ALE
     controller = ALE
     add_core = ALE
+}
+308.1.1 = {
+    religion = eight_divines
 }

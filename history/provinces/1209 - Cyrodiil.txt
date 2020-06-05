@@ -10,7 +10,7 @@ trade_goods = unknown
 base_manpower = 3
 capital = "Vanua" 
 is_city = yes
-discovered_by = tamriel_tg discovered_by = elsweyr_tg discovered_by = marshan_tg discovered_by = orsimer_tg
+discovered_by = tamriel_tg
 
 fort_15th = yes
 
@@ -20,8 +20,11 @@ center_of_trade = 1
 221.1.1 = {
     religion = eight_divines
 }
-266.1.1 = {
+266.1.1 = { culture = nedic
     owner = ALE
     controller = ALE
     add_core = ALE
+}
+308.1.1 = {
+    religion = eight_divines
 }

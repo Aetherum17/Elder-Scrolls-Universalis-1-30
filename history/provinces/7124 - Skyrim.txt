@@ -10,7 +10,7 @@ trade_goods = unknown
 base_manpower = 1
 capital = "Fjorfnhild"
 is_city = yes
-discovered_by = tamriel_tg discovered_by = elsweyr_tg discovered_by = marshan_tg discovered_by = orsimer_tg
+discovered_by = tamriel_tg
 
 139.1.1 = {
     owner = WIN
@@ -27,4 +27,9 @@ discovered_by = tamriel_tg discovered_by = elsweyr_tg discovered_by = marshan_tg
 }
 242.1.1 = {
     culture = nord
+}
+308.1.1 = {
+    owner = OLD
+    controller = OLD
+    add_core = OLD
 }

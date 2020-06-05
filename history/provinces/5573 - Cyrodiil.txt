@@ -11,10 +11,15 @@ trade_goods = unknown
 base_manpower = 1
 capital = "Lalaivia"
 is_city = no
-discovered_by = tamriel_tg discovered_by = elsweyr_tg discovered_by = marshan_tg discovered_by = orsimer_tg
+discovered_by = tamriel_tg
 
 266.1.1 = {
     owner = CE2
     controller = CE2
     add_core = CE2
+}
+308.1.1 = { religion = eight_divines culture = nedic
+    owner = CE0
+    controller = CE0
+    add_core = CE0 hre = yes
 }

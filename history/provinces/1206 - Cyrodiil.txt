@@ -10,7 +10,7 @@ trade_goods = paper
 base_manpower = 5
 capital = "White-Gold Tower" 
 is_city = yes
-discovered_by = tamriel_tg discovered_by = elsweyr_tg discovered_by = marshan_tg discovered_by = orsimer_tg
+discovered_by = tamriel_tg
 
 add_province_triggered_modifier = religious_center
 add_province_triggered_modifier = nine_divines_holy_city
@@ -30,8 +30,11 @@ fort_15th = yes
     controller = AYL
     add_core = AYL
 }
-266.1.1 = {
+266.1.1 = { culture = nedic
     owner = ALE
     controller = ALE
     add_core = ALE
+}
+308.1.1 = {
+    religion = eight_divines
 }

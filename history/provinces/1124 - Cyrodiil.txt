@@ -10,7 +10,7 @@ trade_goods = unknown
 base_manpower = 3
 capital = "Blankenmarch" 
 is_city = yes
-discovered_by = tamriel_tg discovered_by = elsweyr_tg discovered_by = marshan_tg discovered_by = orsimer_tg
+discovered_by = tamriel_tg
 
 fort_15th = yes
 
@@ -24,4 +24,7 @@ center_of_trade = 1
     owner = NIB
     controller = NIB
     add_core = NIB
+}
+308.1.1 = {
+    hre = yes
 }

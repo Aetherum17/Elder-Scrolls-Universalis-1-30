@@ -95,7 +95,7 @@ country_event = {
 			change_government = monarchy
 			set_legacy_government = despotic_monarchy
 		}
-		add_scaled_republican_tradition = -10
+		add_scaled_republican_tradition = -7.5
 		random_list = {
 			10 = {
 				add_adm_power = 50
@@ -216,9 +216,9 @@ country_event = {
 		if = {
 			limit = { always = yes }
 			define_ruler = {
-				mil = -2
-				adm = -2
-				dip = -2
+				mil = -1
+				adm = -1
+				dip = -1
 				min_age = 30
 				max_age = 50
 				name = "lastname"
@@ -227,9 +227,9 @@ country_event = {
 		}
 		else = {
 			define_ruler = {
-				mil = -2
-				adm = -2
-				dip = -2
+				mil = -1
+				adm = -1
+				dip = -1
 				min_age = 30
 				max_age = 50
 				name = "lastname"
@@ -365,9 +365,9 @@ country_event = {
 		if = {
 			limit = { always = yes }
 			define_ruler = {
-				mil = -2
-				adm = -2
-				dip = -2
+				mil = -1
+				adm = -1
+				dip = -1
 				age = 30
 				name = "lastname"
 				random_gender = yes # Allows random gender for republics
@@ -375,9 +375,9 @@ country_event = {
 		}
 		else = {
 			define_ruler = {
-				mil = -2
-				adm = -2
-				dip = -2
+				mil = -1
+				adm = -1
+				dip = -1
 				age = 30
 				name = "lastname"
 			}

@@ -10,10 +10,14 @@ trade_goods = unknown
 base_manpower = 1
 capital = "Bernja"
 is_city = yes
-discovered_by = tamriel_tg discovered_by = elsweyr_tg discovered_by = marshan_tg discovered_by = orsimer_tg
+discovered_by = tamriel_tg
 
 266.1.1 = {
     owner = NA9
     controller = NA9
     add_core = NA9
+}
+308.1.1 = {
+    culture = nord
+    religion = nordic_pantheon
 }
