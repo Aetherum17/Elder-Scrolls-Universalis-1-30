@@ -161,6 +161,10 @@ country_event = {
 	trigger = {
 	    NOT = { has_country_flag = es_25_scenario.4_flag }
 		has_global_flag = middle_dawn_flag
+		NOT = { ruler_culture = vampire }
+		NOT = { ruler_culture = soul_shriven }
+		NOT = { ruler_culture = daedra }
+		NOT = { ruler_has_personality = immortal_personality }
     }
 
 	mean_time_to_happen = {
@@ -295,6 +299,10 @@ country_event = {
 	    NOT = { has_country_flag = es_25_scenario.5_flag }
 		has_global_flag = middle_dawn_flag
 		if = { limit = { has_heir = yes } }
+		NOT = { heir_culture = vampire }
+		NOT = { heir_culture = soul_shriven }
+		NOT = { heir_culture = daedra }
+		NOT = { heir_has_personality = immortal_personality }							 										   
     }
 
 	mean_time_to_happen = {

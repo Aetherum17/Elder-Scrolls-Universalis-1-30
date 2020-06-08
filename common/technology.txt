@@ -1,12 +1,12 @@
 # Do not change tags in here without changing every other reference to them.
 # If adding new technology, make sure they are uniquely named.
 
-
 # Groups must be defined BEFORE tables.
 
 #Nation Designer Cost is set to match triggers for starting institutions.
 
 groups = {
+    ### Remove
     tamriel_tg = {
 		start_level = 1
 		start_cost_modifier = 0
@@ -14,12 +14,6 @@ groups = {
 				capital_scope = {
 					continent = Tamriel
 				}
-				NOT = { culture_group = maorner_cg }
-				NOT = { culture_group = khajiiti_cg }
-				NOT = { culture_group = marsh_cg }
-				NOT = { culture_group = orsimer_cg }
-				NOT = { culture_group = tangmo_cg }
-				NOT = { culture_group = kamal_cg }
 		}
 		nation_designer_cost = {
 		    trigger = {
@@ -28,20 +22,71 @@ groups = {
 			value = 0
 		}
 	}
-    atmora_tg = {
+	### Tamriel
+	elven_tg = {
 		start_level = 1
 		start_cost_modifier = 0
 		nation_designer_trigger = {
-				capital_scope = {
-					continent = Atmora
-				}
-				NOT = { culture_group = maorner_cg }
-				NOT = { culture_group = khajiiti_cg }
-				NOT = { culture_group = marsh_cg }
-				NOT = { culture_group = orsimer_cg }
-				NOT = { culture_group = tangmo_cg }
-				NOT = { culture_group = kamal_cg }
+		    OR = {
+			capital_scope = { continent = Tamriel }
+			culture_group = high_elves_cg
+			culture_group = snow_elves_cg
+			culture_group = imga_cg
+			culture_group = bosmer_cg
+			culture_group = unknown_cg
 			}
+		}
+		nation_designer_cost = {
+		    trigger = {
+			always = yes
+			}
+			value = 0
+		}
+	}
+	exiled_tg = {
+		start_level = 1
+		start_cost_modifier = 0
+		nation_designer_trigger = {
+		    OR = {
+			capital_scope = { continent = Tamriel }
+			culture_group = dwemer_cg
+			culture_group = chimeris_cg
+			}
+		}
+		nation_designer_cost = {
+		    trigger = {
+			always = yes
+			}
+			value = 0
+		}
+	}
+	northern_tg = {
+		start_level = 1
+		start_cost_modifier = 0
+		nation_designer_trigger = {
+		    OR = {
+			capital_scope = { continent = Tamriel }
+			culture_group = northern_cg
+			culture_group = half_blood_cg
+			}
+		}
+		nation_designer_cost = {
+		    trigger = {
+			always = yes
+			}
+			value = 0
+		}
+	}
+	cyrodiil_tg = {
+		start_level = 1
+		start_cost_modifier = 0
+		nation_designer_trigger = {
+		    OR = {
+			capital_scope = { continent = Tamriel }
+			culture_group = cyrodiil_cg
+			culture_group = minotaur_cg
+			}
+		}
 		nation_designer_cost = {
 		    trigger = {
 			always = yes
@@ -53,42 +98,10 @@ groups = {
 		start_level = 1
 		start_cost_modifier = 0
 		nation_designer_trigger = {
+		    OR = {
+			capital_scope = { continent = Tamriel }
 			culture_group = khajiiti_cg
-		}
-		nation_designer_cost = {
-		    trigger = {
-			always = yes
 			}
-			value = 0
-		}
-	}
-	yokudan_tg = {
-		start_level = 1
-		start_cost_modifier = 0
-		nation_designer_trigger = {
-				capital_scope = {
-					continent = Yokuda
-				}
-				NOT = { culture_group = maorner_cg }
-				NOT = { culture_group = khajiiti_cg }
-				NOT = { culture_group = marsh_cg }
-				NOT = { culture_group = orsimer_cg }
-				NOT = { culture_group = tangmo_cg }
-				NOT = { culture_group = kamal_cg }
-			}
-		nation_designer_cost = {
-		    trigger = {
-			always = yes
-			}
-			value = 0
-		}
-	}
-	thousand_tg = {
-		start_level = 1
-		start_cost_modifier = 0
-		is_primitive = yes
-		nation_designer_trigger = {
-			culture_group = tangmo_cg
 		}
 		nation_designer_cost = {
 		    trigger = {
@@ -101,42 +114,10 @@ groups = {
 		start_level = 1
 		start_cost_modifier = 0
 		nation_designer_trigger = {
+		    OR = {
+			capital_scope = { continent = Tamriel }
 			culture_group = orsimer_cg
-		}
-		nation_designer_cost = {
-		    trigger = {
-			always = yes
 			}
-			value = 0
-		}
-	}
-	akavir_tg = {
-		start_level = 1
-		start_cost_modifier = 0
-		nation_designer_trigger = {
-			capital_scope = {
-				continent = Akavir
-			}
-			NOT = { culture_group = maorner_cg }
-			NOT = { culture_group = khajiiti_cg }
-			NOT = { culture_group = marsh_cg }
-			NOT = { culture_group = orsimer_cg }
-			NOT = { culture_group = tangmo_cg }
-			NOT = { culture_group = kamal_cg }
-		}
-		nation_designer_cost = {
-		    trigger = {
-			always = yes
-			}
-			value = 0
-		}
-	}
-	pyandonea_tg = {
-		start_level = 1
-		start_cost_modifier = 0
-		is_primitive = yes
-		nation_designer_trigger = {
-			culture_group = maorner_cg
 		}
 		nation_designer_cost = {
 		    trigger = {
@@ -150,8 +131,10 @@ groups = {
 		start_cost_modifier = 0
 		nation_designer_trigger = {
 		    OR = {
+			capital_scope = { continent = Tamriel }
 			culture_group = marsh_cg
 			culture_group = kothringi_cg
+			culture_group = lilmothiit_cg
 			}
 		}
 		nation_designer_cost = {
@@ -161,12 +144,15 @@ groups = {
 			value = 0
 		}
 	}
-	kamal_tg = {
+	### Atmora 
+	atmora_tg = {
 		start_level = 1
 		start_cost_modifier = 0
-		is_primitive = yes
 		nation_designer_trigger = {
-			culture_group = kamal_cg
+		    OR = {
+				capital_scope = { continent = Atmora }
+				culture_group = northern_cg
+			}
 		}
 		nation_designer_cost = {
 		    trigger = {
@@ -175,13 +161,14 @@ groups = {
 			value = 0
 		}
 	}
-	daedric_tg = {
+	### Yokuda 
+	yokudan_tg = {
 		start_level = 1
 		start_cost_modifier = 0
-		is_primitive = yes
 		nation_designer_trigger = {
-			capital_scope = {
-				continent = Oblivion
+		    OR = {
+				capital_scope = { continent = Yokuda }
+				culture_group = yokudan-redguardian_cg
 			}
 		}
 		nation_designer_cost = {
@@ -196,7 +183,100 @@ groups = {
 		start_cost_modifier = 0
 		is_primitive = yes
 		nation_designer_trigger = {
-			always = no
+		    OR = {
+			capital_scope = { continent = Yokuda }
+			culture_group = sload_cg
+			}
+		}
+		nation_designer_cost = {
+		    trigger = {
+			always = yes
+			}
+			value = 0
+		}
+	}
+	### Pyandonea 
+	pyandonea_tg = {
+		start_level = 1
+		start_cost_modifier = 0
+		is_primitive = yes
+		nation_designer_trigger = {
+		    OR = {
+			capital_scope = { continent = Pyandonea } 
+			culture_group = maorner_cg
+			}
+		}
+		nation_designer_cost = {
+		    trigger = {
+			always = yes
+			}
+			value = 0
+		}
+	}
+	### Akavir 
+	akavir_tg = {
+		start_level = 1
+		start_cost_modifier = 0
+		nation_designer_trigger = {
+		    OR = {
+			capital_scope = { continent = Akavir }
+			culture_group = transpandomaic_cg
+			culture_group = tsaesci_cg
+			culture_group = po_tun_cg
+			}
+		}
+		nation_designer_cost = {
+		    trigger = {
+			always = yes
+			}
+			value = 0
+		}
+	}
+	kamal_tg = {
+		start_level = 1
+		start_cost_modifier = 0
+		is_primitive = yes
+		nation_designer_trigger = {
+		    OR = {
+			capital_scope = { continent = Akavir }
+			culture_group = kamal_cg
+			}
+		}
+		nation_designer_cost = {
+		    trigger = {
+			always = yes
+			}
+			value = 0
+		}
+	}
+	thousand_tg = {
+		start_level = 1
+		start_cost_modifier = 0
+		is_primitive = yes
+		nation_designer_trigger = {
+		    OR = {
+			capital_scope = { continent = Akavir }
+			culture_group = tangmo_cg
+			}
+		}
+		nation_designer_cost = {
+		    trigger = {
+			always = yes
+			}
+			value = 0
+		}
+	}
+	### Oblivion
+	daedric_tg = {
+		start_level = 1
+		start_cost_modifier = 0
+		is_primitive = yes
+		nation_designer_trigger = {
+		    OR = {
+			capital_scope = { continent = Oblivion }
+			culture_group = daedra_cg
+			culture_group = void_cg
+			}
 		}
 		nation_designer_cost = {
 		    trigger = {

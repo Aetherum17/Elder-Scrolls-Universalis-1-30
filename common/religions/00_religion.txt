@@ -114,6 +114,10 @@ polytheistic_group = {
                     religion = meridia_cult
                     religion = mehrunes_dagon_cult
                     religion = molog_bal_cult
+					religion = hermeus_mora_cult
+					religion = hircine_cult
+					religion = sheogorath_cult
+					religion = nocturnal_cult
                     religion = eight_divines
                 }
                 is_in_capital_area = yes
@@ -753,6 +757,21 @@ occult_group = {
 			tolerance_own = 1
 			culture_conversion_cost = -0.10
 		}
+		allowed_center_conversion = {
+			eight_divines
+			nine_divines
+		}
+		will_get_center = {
+            any_owned_province = {
+                OR = {
+                    religion = nocturnal_cult
+                    religion = nine_divines
+                    religion = marukhism
+                }
+                is_in_capital_area = yes
+                is_reformation_center = no
+            }
+        }
 		country_as_secondary = {
 			tolerance_own = 1
 			culture_conversion_cost = -0.10

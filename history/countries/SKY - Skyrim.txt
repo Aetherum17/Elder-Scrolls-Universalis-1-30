@@ -63,7 +63,7 @@ capital = 1275
 
 266.1.1 = {
     set_country_flag = es_riften_con_flag
-	set_country_flag = es_riften_con_flag
+	set_country_flag = es_ivarstead_con_flag
 }
 
 288.1.1 = {
@@ -77,7 +77,16 @@ capital = 1275
 	}
 }
 
-308.1.1 = { remove_country_modifier = 06_gradual_massacre }
+308.1.1 = {
+    remove_country_modifier = 06_gradual_massacre
+	set_country_flag = es_falkreath_con_flag
+	set_country_flag = es_markarth_con_flag
+	set_country_flag = es_karthwasten_con_flag
+	set_country_flag = es_solitude_con_flag
+	set_country_flag = es_morthal_con_flag
+	set_country_flag = es_dawnstar_con_flag
+	set_country_flag = es_winterhold_con_flag
+}
 
 420.1.1 = {
     monarch = {

@@ -529,3 +529,132 @@ country_event = {
 	}
 	
 }
+
+country_event = {
+	id = es_scenario_operator.9
+	title = es_1_scenario.1.t
+	desc = es_1_scenario.1.d
+	picture = ES_THRONEROOM_1_eventPicture	
+	
+	fire_only_once = yes
+	
+	trigger = {
+	    tag = RED
+		NOT = { is_year = 337 }
+		OR = {
+		is_year = 308
+		any_country = {
+			owns_or_subject_of = 724
+			owns_or_subject_of = 702
+			owns_or_subject_of = 700
+			owns_or_subject_of = 691
+			owns_or_subject_of = 715
+		}
+		}
+    }
+
+	mean_time_to_happen = {
+		days = 3650		
+	}
+	
+	immediate = {
+		every_country = {
+		limit = { owns = 724 culture_group = tsaesci_cg } country_event = { id = es_9_scenario.1 days = 3650 tooltip = es_collapse.2.a.tt }
+		}
+		###
+		every_country = {
+		limit = { 
+		culture_group = po_tun_cg
+		OR = { overlord_of = OA3 overlord_of = OA4 overlord_of = OA5 overlord_of = OA6 AND = { owns = 646 any_owned_province = { OR = { area = po_tun_3_la area = po_tun_4_la area = po_tun_5_la area = po_tun_6_la  } } } }
+        }
+		country_event = { id = es_9_scenario.2 days = 3650 tooltip = es_collapse.2.a.tt }
+		}
+		###
+		every_country = {
+		limit = { is_free_or_tributary_trigger = no culture_group = tangmo_cg } country_event = { id = es_9_scenario.3 days = 3650 tooltip = es_collapse.2.a.tt }
+		}
+		###
+		every_country = {
+		limit = { owns = 750 culture_group = transpandomaic_cg } country_event = { id = es_9_scenario.3 days = 3650 tooltip = es_collapse.2.a.tt }
+		}
+	}
+
+	option = {
+		name = "es_1_scenario.1.a"
+	}
+	
+}
+
+country_event = {
+	id = es_scenario_operator.10
+	title = es_1_scenario.1.t
+	desc = es_1_scenario.1.d
+	picture = ES_THRONEROOM_1_eventPicture	
+	
+	fire_only_once = yes
+	
+	trigger = {
+	    tag = RED
+		NOT = { is_year = 369 }
+		OR = {
+		is_year = 337
+		AND = {
+		has_global_flag = alessian_rebellion_flag
+		any_country = {
+			owns_or_subject_of = 1206
+			owns_or_subject_of = 5616
+			owns_or_subject_of = 1150
+			owns_or_subject_of = 1179
+			owns_or_subject_of = 1230
+		}
+		}
+		}
+    }
+
+	mean_time_to_happen = {
+		days = 3650		
+	}
+	
+	immediate = {
+	    1130 = { remove_reform_center = eight_divines }
+		1120 = { remove_reform_center = eight_divines }
+        1161 = { remove_reform_center = eight_divines }
+	    ### 
+		every_country = {
+		limit = { OR = { owns = 1206 owns = 820 } } country_event = { id = es_10_scenario.1 days = 3650 tooltip = es_collapse.2.a.tt }
+		}
+		###
+		every_country = {
+		limit = { owns = 1382 culture_group = high_elves_cg } country_event = { id = es_10_scenario.2 days = 3650 tooltip = es_collapse.2.a.tt }
+		}
+		###
+		every_country = {
+		limit = { owns = 1206 culture_group = cyrodiil_cg } country_event = { id = es_10_scenario.3 days = 3650 tooltip = es_collapse.2.a.tt }
+		}
+		###
+		every_country = {
+		limit = { owns = 1206 culture_group = cyrodiil_cg } country_event = { id = es_10_scenario.4 days = 3650 tooltip = es_collapse.2.a.tt }
+		}
+		###
+		every_country = {
+		limit = { owns = 1002 culture_group = chimeris_cg } country_event = { id = es_10_scenario.7 days = 3650 tooltip = es_collapse.2.a.tt }
+		}
+		###
+		every_country = {
+		limit = { owns = 8088 culture_group = chimeris_cg } country_event = { id = es_10_scenario.9 days = 3650 tooltip = es_collapse.2.a.tt }
+		}
+		###
+		every_country = {
+		limit = { NOT = { is_free_or_tributary_trigger = yes } culture_group = chimeris_cg } country_event = { id = es_10_scenario.9 days = 3650 tooltip = es_collapse.2.a.tt }
+		}
+		###
+		every_country = {
+		limit = { owns = 1002 culture_group = chimeris_cg } country_event = { id = es_10_scenario.10 days = 3650 tooltip = es_collapse.2.a.tt }
+		}
+	}
+
+	option = {
+		name = "es_1_scenario.1.a"
+	}
+	
+}

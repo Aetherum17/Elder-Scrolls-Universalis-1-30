@@ -6,20 +6,12 @@ country_event = {
 	desc = es_9_scenario.1.d
 	picture = ES_CITY_IN_FIRE_eventPicture
 	
-	trigger = {
-	    NOT = { has_country_flag = es_9_scenario.1_flag }
-		is_year = 308
-		NOT = { is_year = 337 }
-		culture_group = tsaesci_cg
-		owns = 724
-    }
-
-	mean_time_to_happen = {
-		days = 5110
-	}
+	is_triggered_only = yes
 	
 	immediate = {
-	    set_country_flag = es_9_scenario.1_flag
+	    623 = { owner = { save_event_target_as = 623_owner } }
+		611 = { owner = { save_event_target_as = 611_owner } }
+		654 = { owner = { save_event_target_as = 654_owner } }
 	}
 
 	option = {
@@ -49,64 +41,8 @@ country_event = {
 		add_claim = ROOT
 		}
 		
-		if = {
-		limit = {
-		exists = TRA
-		NOT = { alliance_with = TRA }
-		NOT = { overlord_of = TRA }
-		}
-		declare_war_with_cb = {
-			who = TRA
-			casus_belli = cb_es_scenario
-		}
-		}
-		
-		if = {
-		limit = {
-		exists = OA3
-		NOT = { alliance_with = OA3 }
-		NOT = { overlord_of = OA3 }
-		}
-		declare_war_with_cb = {
-			who = OA3
-			casus_belli = cb_es_scenario
-		}
-		}
-		
-		if = {
-		limit = {
-		exists = OA4
-		NOT = { alliance_with = OA4 }
-		NOT = { overlord_of = OA4 }
-		}
-		declare_war_with_cb = {
-			who = OA4
-			casus_belli = cb_es_scenario
-		}
-		}
-		
-		if = {
-		limit = {
-		exists = OA5
-		NOT = { alliance_with = OA5 }
-		NOT = { overlord_of = OA5 }
-		}
-		declare_war_with_cb = {
-			who = OA5
-			casus_belli = cb_es_scenario
-		}
-		}
-		
-		if = {
-		limit = {
-		exists = OA6
-		NOT = { alliance_with = OA6 }
-		NOT = { overlord_of = OA6 }
-		}
-		declare_war_with_cb = {
-			who = OA6
-			casus_belli = cb_es_scenario
-		}
+		if = { limit = { NOT = { truce_with = event_target:623_owner } NOT = { alliance_with = event_target:623_owner } NOT = { is_subject_of = event_target:623_owner } }
+		declare_war_with_cb = { who = event_target:623_owner casus_belli = cb_es_scenario } 
 		}
 	}
 	option = {
@@ -136,64 +72,8 @@ country_event = {
 		add_claim = ROOT
 		}
 		
-		if = {
-		limit = {
-		exists = TRA
-		NOT = { alliance_with = TRA }
-		NOT = { overlord_of = TRA }
-		}
-		declare_war_with_cb = {
-			who = TRA
-			casus_belli = cb_es_scenario
-		}
-		}
-		
-		if = {
-		limit = {
-		exists = OA3
-		NOT = { alliance_with = OA3 }
-		NOT = { overlord_of = OA3 }
-		}
-		declare_war_with_cb = {
-			who = OA3
-			casus_belli = cb_es_scenario
-		}
-		}
-		
-		if = {
-		limit = {
-		exists = OA4
-		NOT = { alliance_with = OA4 }
-		NOT = { overlord_of = OA4 }
-		}
-		declare_war_with_cb = {
-			who = OA4
-			casus_belli = cb_es_scenario
-		}
-		}
-		
-		if = {
-		limit = {
-		exists = OA5
-		NOT = { alliance_with = OA5 }
-		NOT = { overlord_of = OA5 }
-		}
-		declare_war_with_cb = {
-			who = OA5
-			casus_belli = cb_es_scenario
-		}
-		}
-		
-		if = {
-		limit = {
-		exists = OA6
-		NOT = { alliance_with = OA6 }
-		NOT = { overlord_of = OA6 }
-		}
-		declare_war_with_cb = {
-			who = OA6
-			casus_belli = cb_es_scenario
-		}
+		if = { limit = { NOT = { truce_with = event_target:611_owner } NOT = { alliance_with = event_target:611_owner } NOT = { is_subject_of = event_target:611_owner } }
+		declare_war_with_cb = { who = event_target:611_owner casus_belli = cb_es_scenario } 
 		}
 	}
 	option = {
@@ -223,64 +103,8 @@ country_event = {
 		add_claim = ROOT
 		}
 		
-		if = {
-		limit = {
-		exists = TRA
-		NOT = { alliance_with = TRA }
-		NOT = { overlord_of = TRA }
-		}
-		declare_war_with_cb = {
-			who = TRA
-			casus_belli = cb_es_scenario
-		}
-		}
-		
-		if = {
-		limit = {
-		exists = OA3
-		NOT = { alliance_with = OA3 }
-		NOT = { overlord_of = OA3 }
-		}
-		declare_war_with_cb = {
-			who = OA3
-			casus_belli = cb_es_scenario
-		}
-		}
-		
-		if = {
-		limit = {
-		exists = OA4
-		NOT = { alliance_with = OA4 }
-		NOT = { overlord_of = OA4 }
-		}
-		declare_war_with_cb = {
-			who = OA4
-			casus_belli = cb_es_scenario
-		}
-		}
-		
-		if = {
-		limit = {
-		exists = OA5
-		NOT = { alliance_with = OA5 }
-		NOT = { overlord_of = OA5 }
-		}
-		declare_war_with_cb = {
-			who = OA5
-			casus_belli = cb_es_scenario
-		}
-		}
-		
-		if = {
-		limit = {
-		exists = OA6
-		NOT = { alliance_with = OA6 }
-		NOT = { overlord_of = OA6 }
-		}
-		declare_war_with_cb = {
-			who = OA6
-			casus_belli = cb_es_scenario
-		}
+		if = { limit = { NOT = { truce_with = event_target:654_owner } NOT = { alliance_with = event_target:654_owner } NOT = { is_subject_of = event_target:654_owner } }
+		declare_war_with_cb = { who = event_target:654_owner casus_belli = cb_es_scenario } 
 		}
 	}
 	option = {
@@ -291,115 +115,6 @@ country_event = {
 		name = "09_revolution"
 		duration = 9125
 		}
-		if = {
-		limit = {
-		government = monarchy
-		}
-		every_province = {
-		limit = {
-		OR = {
-		area = po_tun_3_la
-		area = po_tun_4_la
-		area = po_tun_5_la
-		area = po_tun_6_la
-		}
-		}
-		add_claim = ROOT
-		}
-		}
-		if = {
-		limit = {
-		government = republic
-		}
-		every_province = {
-		limit = {
-		OR = {
-		area = po_tun_1_la
-		area = po_tun_2_la
-		area = po_tun_3_la
-		area = po_tun_4_la
-		}
-		}
-		add_claim = ROOT
-		}
-		}
-		if = {
-		limit = {
-		government = theocracy
-		}
-		every_province = {
-		limit = {
-		OR = {
-		area = po_tun_1_la
-		area = po_tun_2_la
-		area = po_tun_8_la
-		area = po_tun_10_la
-		}
-		}
-		add_claim = ROOT
-		}
-		}
-		
-		if = {
-		limit = {
-		exists = TRA
-		NOT = { alliance_with = TRA }
-		NOT = { overlord_of = TRA }
-		}
-		declare_war_with_cb = {
-			who = TRA
-			casus_belli = cb_es_scenario
-		}
-		}
-		
-		if = {
-		limit = {
-		exists = POT
-		NOT = { alliance_with = POT }
-		NOT = { overlord_of = POT }
-		}
-		declare_war_with_cb = {
-			who = POT
-			casus_belli = cb_es_scenario
-		}
-		}
-		
-		if = {
-		limit = {
-		exists = OA1
-		NOT = { alliance_with = OA1 }
-		NOT = { overlord_of = OA1 }
-		}
-		declare_war_with_cb = {
-			who = OA1
-			casus_belli = cb_es_scenario
-		}
-		}
-		
-		if = {
-		limit = {
-		exists = OA6
-		NOT = { alliance_with = OA6 }
-		NOT = { overlord_of = OA6 }
-		}
-		declare_war_with_cb = {
-			who = OA6
-			casus_belli = cb_es_scenario
-		}
-		}
-		
-		if = {
-		limit = {
-		exists = OA8
-		NOT = { alliance_with = OA8 }
-		NOT = { overlord_of = OA8 }
-		}
-		declare_war_with_cb = {
-			who = OA8
-			casus_belli = cb_es_scenario
-		}
-		}
-		
 	}
 }
 
@@ -409,109 +124,17 @@ country_event = {
 	desc = es_9_scenario.2.d
 	picture = ES_AKAVIR_CITY_eventPicture
 	
-	trigger = {
-	    NOT = { has_country_flag = es_9_scenario.2_flag }
-		is_year = 308
-		NOT = { is_year = 337 }
-		culture_group = po_tun_cg
-		OR = {
-		overlord_of = OA3
-		overlord_of = OA4
-		overlord_of = OA5
-		overlord_of = OA6
-		AND = {
-		owns = 646
-		any_owned_province = {
-		OR = {
-		area = po_tun_3_la
-		area = po_tun_4_la
-		area = po_tun_5_la
-		area = po_tun_6_la 
-		}
-		}
-		}
-		}
-    }
-
-	mean_time_to_happen = {
-		days = 5110
-	}
-	
-	immediate = {
-	    set_country_flag = es_9_scenario.2_flag
-	}
+	is_triggered_only = yes
 
 	option = {
 		name = "es_9_scenario.2.a"
 		ai_chance = { factor = 50 }
-		every_owned_province = {
-		limit = {
-		OR = {
-		area = po_tun_3_la
-		area = po_tun_4_la
-		area = po_tun_5_la
-		area = po_tun_6_la 
-		}
-		}
-		cede_province = TRA
-		add_core = TRA
-		}
+		every_owned_province = { limit = { OR = { area = po_tun_3_la area = po_tun_4_la area = po_tun_5_la area = po_tun_6_la  } } cede_province = TRA add_core = TRA }
 		
-		if = {
-		limit = {
-		OA3 = { ai = yes }
-		overlord_of = OA3
-		}
-		every_province = {
-		limit = {
-		owned_by = OA3
-		}
-		cede_province = TRA
-		add_core = TRA
-		}
-		}
-		
-		if = {
-		limit = {
-		OA4 = { ai = yes }
-		overlord_of = OA4
-		}
-		every_province = {
-		limit = {
-		owned_by = OA4
-		}
-		cede_province = TRA
-		add_core = TRA
-		}
-		}
-		
-		if = {
-		limit = {
-		OA5 = { ai = yes }
-		overlord_of = OA5
-		}
-		every_province = {
-		limit = {
-		owned_by = OA5
-		}
-		cede_province = TRA
-		add_core = TRA
-		}
-		}
-		
-		if = {
-		limit = {
-		OA6 = { ai = yes }
-		overlord_of = OA6
-		}
-		every_province = {
-		limit = {
-		owned_by = OA6
-		}
-		cede_province = TRA
-		add_core = TRA
-		}
-		}
+		if = { limit = { OA3 = { ai = yes } overlord_of = OA3 } every_province = { limit = { owned_by = OA3 } cede_province = TRA add_core = TRA } }
+		if = { limit = { OA4 = { ai = yes } overlord_of = OA4 } every_province = { limit = { owned_by = OA4 } cede_province = TRA add_core = TRA } }
+		if = { limit = { OA5 = { ai = yes } overlord_of = OA5 } every_province = { limit = { owned_by = OA5 } cede_province = TRA add_core = TRA } }
+		if = { limit = { OA6 = { ai = yes } overlord_of = OA6 } every_province = { limit = { owned_by = OA6 } cede_province = TRA add_core = TRA } }
 		
 		create_guarantee = TRA
 		
@@ -523,17 +146,8 @@ country_event = {
 	option = {
 		name = "es_9_scenario.2.b"
 		ai_chance = { factor = 50 }
-		every_province = {
-		limit = {
-		OR = {
-		area = po_tun_3_la
-		area = po_tun_4_la
-		area = po_tun_5_la
-		area = po_tun_6_la 
-		}
-		}
-		add_core = TRA
-		}
+		every_province = { limit = { OR = { area = po_tun_3_la area = po_tun_4_la area = po_tun_5_la area = po_tun_6_la  } } add_core = TRA }
+		add_prestige = 10
 	}
 }
 
@@ -543,29 +157,12 @@ country_event = {
 	desc = es_9_scenario.3.d
 	picture = ES_ISLANDS_CITY_eventPicture
 	
-	trigger = {
-	    NOT = { has_country_flag = es_9_scenario.3_flag }
-		is_year = 308
-		NOT = { is_year = 337 }
-		culture_group = tangmo_cg
-		is_vassal = yes
-    }
-
-	mean_time_to_happen = {
-		days = 5110
-	}
-	
-	immediate = {
-	    set_country_flag = es_9_scenario.3_flag
-	}
+	is_triggered_only = yes
 
 	option = {
 		name = "es_9_scenario.3.a"
 		ai_chance = { factor = 50 }
-		add_country_modifier = {
-		name = "09_indepandence"
-		duration = 5475
-		}
+		add_country_modifier = { name = "09_indepandence" duration = 5475 }
 	}
 	
 	option = {
@@ -581,42 +178,26 @@ country_event = {
 	desc = es_9_scenario.4.d
 	picture = ES_OLD_GLORY_eventPicture
 	
-	trigger = {
-	    NOT = { has_country_flag = es_9_scenario.4_flag }
-		is_year = 308
-		NOT = { is_year = 337 }
-		culture_group = transpandomaic_cg
-		owns = 750
-    }
-
-	mean_time_to_happen = {
-		days = 5110
-	}
+	is_triggered_only = yes
 	
 	immediate = {
-	    set_country_flag = es_9_scenario.4_flag
+	    597 = { owner = { save_event_target_as = 597_owner } }
 	}
 
 	option = {
 		name = "es_9_scenario.4.a"
 		ai_chance = { factor = 50 }
-		every_province = {
-		limit = {
-		OR = {
-		area = thousand_11_la
-		area = thousand_12_la
-		area = thousand_13_la
-		area = thousand_14_la
-		}
-		}
-		add_claim = ROOT
+		every_province = { limit = { OR = { area = thousand_11_la area = thousand_12_la area = thousand_13_la area = thousand_14_la } } add_core = ROOT }
+		
+		if = { limit = { NOT = { truce_with = event_target:597_owner } NOT = { alliance_with = event_target:597_owner } NOT = { is_subject_of = event_target:597_owner } }
+		declare_war_with_cb = { who = event_target:597_owner casus_belli = cb_es_scenario } 
 		}
 	}
 	
 	option = {
 		name = "es_9_scenario.4.b"
 		ai_chance = { factor = 50 }
-		add_prestige = -10
+		add_prestige = -15
 	}
 }
 
@@ -657,6 +238,6 @@ country_event = {
 	option = {
 		name = "es_9_scenario.4.b"
 		ai_chance = { factor = 50 }
-		add_prestige = -25
+		add_stability = 1
 	}
 }

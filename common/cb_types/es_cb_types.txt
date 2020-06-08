@@ -74,5 +74,34 @@ cb_es_ayleid_purification = {
 		}
 	}
 
-	war_goal = es_scenario
+	war_goal = es_ayleid_purification
+}
+
+cb_es_purification = {
+	valid_for_subject = yes
+
+	prerequisites = {
+	    OR = {
+		culture_group = cyrodiil_cg
+		culture_group = yokudan-redguardian_cg
+		culture_group = northern_cg
+		culture_group = half_blood_cg
+		culture_group = imga_cg
+		culture_group = transpandomaic_cg
+		culture_group = kothringi_cg
+		}
+		tag = ORD
+		FROM = {
+		is_neighbor_of = ROOT
+		NOT = { culture_group = cyrodiil_cg }
+		NOT = { culture_group = yokudan-redguardian_cg }
+		NOT = { culture_group = northern_cg }
+		NOT = { culture_group = half_blood_cg }
+		NOT = { culture_group = imga_cg }
+		NOT = { culture_group = transpandomaic_cg }
+		NOT = { culture_group = kothringi_cg }
+		}
+	}
+
+	war_goal = es_purification
 }
