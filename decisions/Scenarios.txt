@@ -449,6 +449,7 @@ country_decisions = {
 			cyrodiil_7_la = { type = all owned_by = ROOT }
         }
 		effect = {
+		    add_prestige = 35
 		    set_country_flag = es_8_create_kingdom_of_kvatch_flag
 			every_owned_province = {
 			    limit = { area = cyrodiil_7_la }
@@ -476,6 +477,7 @@ country_decisions = {
 			cyrodiil_9_la = { type = all owned_by = ROOT }
         }
 		effect = {
+		    add_prestige = 35
 		    set_country_flag = es_8_create_kingdom_of_anvil_flag
 			every_owned_province = {
 			    limit = { area = cyrodiil_9_la }
@@ -484,6 +486,33 @@ country_decisions = {
 			}
 			create_subject = { subject_type = personal_union subject = CA9 }
 			CA9 = { change_government_reform_progress = -99999 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 300
+	}
+	
+	es_8_create_duchy_of_daggerfall = {
+	    major = yes
+		potential = {
+		    NOT = { has_country_flag = es_8_create_duchy_of_daggerfall_flag }
+			culture_group = high_elves_cg
+			NOT = { exists = BA1 }
+		}
+		allow = {
+			high_1_la = { type = all owned_by = ROOT }
+        }
+		effect = {
+		    add_prestige = 35
+		    set_country_flag = es_8_create_duchy_of_daggerfall_flag
+			every_owned_province = {
+			    limit = { area = high_1_la }
+				cede_province = BA1
+				add_core = BA1
+			}
+			create_subject = { subject_type = personal_union subject = BA1 }
+			BA1 = { change_government_reform_progress = -99999 }
 		}
 		ai_will_do = {
 			factor = 1

@@ -139,7 +139,7 @@ dependency = {
 	first = MB1
 	second = MB2
 	start_date = 57.1.1
-	end_date = 9999.1.1
+	end_date = 369.1.1
 }
 
 dependency = {
@@ -147,7 +147,7 @@ dependency = {
 	first = MB1
 	second = MF4
 	start_date = 57.1.1
-	end_date = 9999.1.1
+	end_date = 369.1.1
 }
 
 dependency = {
@@ -155,7 +155,7 @@ dependency = {
 	first = MB1
 	second = MF7
 	start_date = 57.1.1
-	end_date = 9999.1.1
+	end_date = 369.1.1
 }
 
 alliance = {
@@ -176,21 +176,21 @@ alliance = {
 	first = ME9
 	second = MB1
 	start_date = 57.1.1
-	end_date = 9999.1.1
+	end_date = 369.1.1
 }
 
 alliance = {
 	first = MA8
 	second = MB1
 	start_date = 57.1.1
-	end_date = 9999.1.1
+	end_date = 369.1.1
 }
 
 alliance = {
 	first = MF5
 	second = MB1
 	start_date = 57.1.1
-	end_date = 9999.1.1
+	end_date = 369.1.1
 }
 
 alliance = {
@@ -221,7 +221,7 @@ dependency = {
 	first = MB7
 	second = MG2
 	start_date = 57.1.1
-	end_date = 9999.1.1
+	end_date = 369.1.1
 }
 
 dependency = {
@@ -229,7 +229,7 @@ dependency = {
 	first = MB7
 	second = MB8
 	start_date = 57.1.1
-	end_date = 9999.1.1
+	end_date = 369.1.1
 }
 
 dependency = {
@@ -237,14 +237,14 @@ dependency = {
 	first = MB7
 	second = MB6
 	start_date = 57.1.1
-	end_date = 9999.1.1
+	end_date = 369.1.1
 }
 
 alliance = {
 	first = MB7
 	second = MB5
 	start_date = 57.1.1
-	end_date = 9999.1.1
+	end_date = 369.1.1
 }
 
 #######################################################################
@@ -389,5 +389,52 @@ vassal = {
 	first = OLD
 	second = MC7
 	start_date = 308.1.1
+	end_date = 9999.1.1
+}
+
+####################################################################### 10
+
+alliance = {
+	first = ME9
+	second = RES
+	start_date = 369.1.1
+	end_date = 9999.1.1
+}
+
+alliance = {
+	first = MA8
+	second = RES
+	start_date = 369.1.1
+	end_date = 9999.1.1
+}
+
+alliance = {
+	first = MF5
+	second = RES
+	start_date = 369.1.1
+	end_date = 9999.1.1
+}
+
+dependency = {
+    subject_type = alliance_member
+    first = RES
+    second = MB2
+    start_date = 369.1.1
+	end_date = 9999.1.1
+}
+
+dependency = {
+    subject_type = alliance_member
+    first = RES
+    second = MF5
+    start_date = 369.1.1
+	end_date = 9999.1.1
+}
+
+dependency = {
+    subject_type = alliance_member
+    first = RES
+    second = MB4
+    start_date = 369.1.1
 	end_date = 9999.1.1
 }

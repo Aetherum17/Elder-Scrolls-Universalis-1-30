@@ -571,11 +571,11 @@ country_event = {
 		}
 		###
 		every_country = {
-		limit = { is_free_or_tributary_trigger = no culture_group = tangmo_cg } country_event = { id = es_9_scenario.3 days = 3650 tooltip = es_collapse.2.a.tt }
+		limit = { NOT = { is_free_or_tributary_trigger = yes } culture_group = tangmo_cg } country_event = { id = es_9_scenario.3 days = 3650 tooltip = es_collapse.2.a.tt }
 		}
 		###
 		every_country = {
-		limit = { owns = 750 culture_group = transpandomaic_cg } country_event = { id = es_9_scenario.3 days = 3650 tooltip = es_collapse.2.a.tt }
+		limit = { owns = 750 culture_group = transpandomaic_cg } country_event = { id = es_9_scenario.4 days = 3650 tooltip = es_collapse.2.a.tt }
 		}
 	}
 
@@ -641,7 +641,7 @@ country_event = {
 		}
 		###
 		every_country = {
-		limit = { owns = 8088 culture_group = chimeris_cg } country_event = { id = es_10_scenario.9 days = 3650 tooltip = es_collapse.2.a.tt }
+		limit = { owns = 8088 culture_group = chimeris_cg } country_event = { id = es_10_scenario.8 days = 3650 tooltip = es_collapse.2.a.tt }
 		}
 		###
 		every_country = {
