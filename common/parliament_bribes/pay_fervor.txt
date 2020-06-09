@@ -3,10 +3,11 @@ pay_fervor = {
 		religion = marukhism
 		FROM = { religion = marukhism }
 		has_dlc = "Wealth of Nations"
+		fervor = 10
 	}
 	
 	effect = {
-		add_fervor = -5
+		add_fervor = -10
 	}
 	
 	ai_will_do = {

@@ -1,11 +1,12 @@
 pay_pa = {
 	trigger = {
-			religion = dragon_cult
-			FROM = { religion = dragon_cult }
+		religion = dragon_cult
+		FROM = { religion = dragon_cult }
+		patriarch_authority = 0.10
 	}
 	
 	effect = {
-		add_patriarch_authority = -0.05
+		add_patriarch_authority = -0.10
 	}
 	
 	ai_will_do = {

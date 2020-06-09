@@ -1,6 +1,6 @@
 pay_inflation = {
 	trigger = {
-		always = yes
+		NOT = { corruption = 99.91 }
 	}
 	
 	effect = {

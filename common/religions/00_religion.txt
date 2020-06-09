@@ -323,6 +323,69 @@ occult_group = {
 			election_cost = 5
 			seat_of_papacy = 1062
 			
+			#Council of Trent Positions
+			harsh = {
+				relation_with_heretics = -20
+				global_religious_conversion_resistance = 0.25
+				global_institution_spread = -0.25
+				global_missionary_strength = 0.02
+			}
+			neutral = {
+				global_religious_conversion_resistance = -0.33
+			}
+			concilatory = {
+				relation_with_heretics = 10
+				global_religious_conversion_resistance = 0.25
+				global_heretic_missionary_strength = -0.05
+				improve_relation_modifier = 0.25
+			}
+			
+			#Council of Trent Concessions
+			concessions = {
+				first_concession = {
+					harsh = {
+						relation_with_heretics = -20
+						global_heretic_missionary_strength  = 0.02
+					}	
+					concilatory = {
+						relation_with_heretics = 10
+						tolerance_heretic = 2
+					}
+				}
+				second_concession = {
+					harsh = {
+						relation_with_heretics = -20
+						institution_spread_from_true_faith = 0.30
+					}	
+					concilatory = {
+						relation_with_heretics = 10
+						global_institution_spread = 0.10
+					}
+				}
+				third_concession = {
+					harsh = {
+						relation_with_heretics = -20
+						manpower_in_true_faith_provinces  = 0.1
+					}	
+					concilatory = {
+						relation_with_heretics = 10
+						global_manpower_modifier = 0.05
+					}
+				}
+				fourth_concession = {
+					harsh = {
+						relation_with_heretics = -20
+						warscore_cost_vs_other_religion  = -0.10
+					}	
+					concilatory = {
+						relation_with_heretics = 10
+						curia_powers_cost = -0.10
+					}
+				}
+			}
+			
+			# Papal Actions below!
+			
 			levy_church_tax = {
 				cost = 50
 				potential = {

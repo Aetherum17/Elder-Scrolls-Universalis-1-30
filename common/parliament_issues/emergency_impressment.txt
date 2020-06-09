@@ -3,7 +3,10 @@ emergency_impressment_act = {
 	category = 2
 
 	allow = {
-		num_of_ports = 1
+		any_owned_province = {
+			has_seat_in_parliament = yes
+			has_port = yes
+		}
 	}
 	
 	effect = {

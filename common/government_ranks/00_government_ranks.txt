@@ -14,7 +14,7 @@
 
 2 = {
 	diplomats = 1
-	max_states = 5
+	governing_capacity_modifier = 0.05
 	global_autonomy = -0.010
 	
 	diplomatic_reputation = 2.5
@@ -30,7 +30,7 @@
 
 3 = {
     diplomats = 1
-	max_states = 10
+	governing_capacity_modifier = 0.10
 	global_autonomy = -0.015
 	
 	diplomatic_reputation = 2.0
@@ -46,7 +46,7 @@
 
 4 = {
     diplomats = 1
-	max_states = 15
+	governing_capacity_modifier = 0.15
 	global_autonomy = -0.020
 	max_absolutism = 5
 	free_leader_pool = 1
@@ -64,7 +64,7 @@
 
 5 = {
     diplomats = 2
-	max_states = 20
+	governing_capacity_modifier = 0.20
 	global_autonomy = -0.025
 	max_absolutism = 10
 	free_leader_pool = 2
@@ -80,7 +80,7 @@
 
 6 = {
     diplomats = 2
-	max_states = 25
+	governing_capacity_modifier = 0.25
 	global_autonomy = -0.030
 	max_absolutism = 15
 	free_leader_pool = 2
@@ -98,7 +98,7 @@
 
 7 = {
     diplomats = 2
-	max_states = 30
+	governing_capacity_modifier = 0.30
 	global_autonomy = -0.035
 	max_absolutism = 20
 	free_leader_pool = 2
@@ -116,7 +116,7 @@
 
 8 = {
     diplomats = 3
-	max_states = 35
+	governing_capacity_modifier = 0.35
 	global_autonomy = -0.040
 	max_absolutism = 25
 	free_leader_pool = 3
@@ -134,7 +134,7 @@
 
 9 = {
     diplomats = 3
-	max_states = 40
+	governing_capacity_modifier = 0.40
 	global_autonomy = -0.045
 	max_absolutism = 30
 	free_leader_pool = 3
@@ -152,7 +152,7 @@
 
 10 = {
     diplomats = 3
-	max_states = 45
+	governing_capacity_modifier = 0.45
 	global_autonomy = -0.050
 	max_absolutism = 35
 	free_leader_pool = 3

@@ -1,10 +1,11 @@
 grant_local_autonomy = {
 	trigger = {
 		FROM = { is_capital = no }
+		FROM = { NOT = { local_autonomy = 75 } }
 	}
 	
 	effect = {
-		FROM = { add_local_autonomy = 20 }
+		FROM = { add_local_autonomy = 25 }
 	}
 	
 	ai_will_do = {

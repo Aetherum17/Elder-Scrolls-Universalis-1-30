@@ -30,7 +30,7 @@ leading_clergy_reform = {
 	}
 	
 	modifiers = {
-		max_states = 1
+		governing_capacity_modifier = 0.1
 		tolerance_own = 1
 		global_missionary_strength = 0.01
 		global_autonomy = -0.05
@@ -67,7 +67,7 @@ monastic_order_reform = {
 	}
 	
 	modifiers = {
-		max_states = 1
+		governing_capacity_modifier = 0.1
 		global_heretic_missionary_strength = 0.01
 		fort_maintenance_modifier = -0.10
 		defensiveness = 0.10
@@ -101,7 +101,7 @@ papacy_reform = {
 	}
 	
 	modifiers = {
-		max_states = 1
+		governing_capacity_modifier = 0.1
 		global_unrest = -1
 		prestige = 0.5
 		diplomatic_reputation = 1

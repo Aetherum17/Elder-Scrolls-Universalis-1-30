@@ -40,5 +40,5 @@ tags={
 }
 picture="thumbnail.png"
 version="1.4.0"
-supported_version="1.29.*.*"
+supported_version="1.30.*.*"
 remote_file_id="1449952810"

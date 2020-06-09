@@ -4,6 +4,13 @@ insult_default = {
 	}
 }
 
+insult_default2 = {
+	trigger = {
+		FROM = {
+			religion_group = polytheistic_group
+		}
+	}
+}				   
 insult_default3 = {
 	trigger = {
 		always = yes
@@ -160,6 +167,17 @@ insult_fort = {
 	}
 }
 
+insult_revolutionary = {
+	trigger = {
+		has_regency = no
+		FROM = {
+			OR = {
+				has_reform = revolutionary_empire_reform
+				is_revolutionary_republic_trigger = yes
+			}
+		}
+	}
+}
 insult_monarchy_rank = {
 	trigger = {
 		FROM = {

@@ -8,8 +8,10 @@ establish_gaituguiliu_decision = {
 seaban_decision = {
 	empire = celestial_empire
 	emperor = {
-		trade_efficiency = 0.10
+		diplomats = 1
+		trade_efficiency = 0.05
 	}
+	required_reform = establish_gaituguiliu_decision
 }
 
 reform_land_tax_decision = {
@@ -17,6 +19,7 @@ reform_land_tax_decision = {
 	emperor = {
 		global_autonomy = -0.05
 	}
+	required_reform = seaban_decision
 }
 
 military_governors_decision = {
@@ -24,6 +27,7 @@ military_governors_decision = {
 	emperor = {
 		core_creation = -0.1
 	}
+	required_reform = reform_land_tax_decision
 }
 
 centralizing_top_government_decision = {
@@ -31,4 +35,5 @@ centralizing_top_government_decision = {
 	emperor = {
 		monarch_admin_power = 1
 	}
+	required_reform = military_governors_decision
 }

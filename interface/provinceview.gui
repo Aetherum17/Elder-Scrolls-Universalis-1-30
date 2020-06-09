@@ -2778,43 +2778,49 @@ guiTypes = {
 
 				position = { x = 283 y = 427 }
 			}
-		}
+		
 
-		## State Window
-		windowType = {
-			name = "edicts_window"
-			backGround=""
-			position = { x=0 y=-552 }
-			size = { x=475 y=480 }
-			dontRender = ""
-			horizontalBorder= ""
-			verticalBorder= ""
-			fullScreen = no
-			moveable = 0
-			Orientation = "LOWER_LEFT"
-
-			iconType =
-			{
-				name ="edicts_bg"
-				spriteType = "GFX_edicts_bg_overlay"
-				position = { x = 484 y = -20 }
+			windowType = {
+				name = "investment_offset"
+				backGround=""
+				
+				position = { x=12 y=419 }
+				if_resolution = {
+					max_height = 800
+					size= { x=458 y=150 }
+				}
+				if_resolution = {
+					max_height = 1047
+					min_height = 801
+					size = { x=458 y=230}
+				}
+				if_resolution = {
+					min_height = 1048
+					size = { x=458 y=240}
+				}
+				dontRender = ""
+				horizontalBorder= ""
+				verticalBorder= ""
+				fullScreen = no
+				moveable = 0
+				Orientation = "UPPER_LEFT"
 			}
 
-			listboxType = {
-				name = "edicts_listbox"
-				backGround = ""
-				position = { x = 500 y = 0 }
-				size = { x = 380 y = 450 }
-				horizontal = 0
-				scrollbartype = "standardlistbox_slider"
-				borderSize = { x = 0 y = 0}
-			}
-			guiButtonType = {
-				name = "close_edicts_button"
-				position = { x = 888 y = -26 }
-				quadTextureSprite ="GFX_closebutton2"
-				clicksound = close_window
-			}
+				  
+						   
+				   
+								
+							  
+				  
+											
+							   
+	
+					
+								
+								  
+										 
+							 
+	
 		}
 
 
@@ -3392,6 +3398,31 @@ guiTypes = {
 						maxHeight = 20
 						format = center
 					}
+					
+				
+	
+				
+					
+					iconType =
+					{
+						name ="governing_capacity_icon"
+						spriteType = "GFX_governing_capacity"
+						position = { x= 220 y = 640  }
+						Orientation = "UPPER_LEFT"
+						scale = 0.75
+					}
+					
+					instantTextBoxType = {
+						name = "capacity_value"
+						position = { x = 260 y = 654 }
+						textureFile = ""
+						font = "vic_18"
+						borderSize = {x = 2 y = 2}
+						text = "200"
+						maxWidth = 40
+						maxHeight = 20
+						format = right
+					}
 
 					iconType =
 					{
@@ -3591,6 +3622,29 @@ guiTypes = {
 						format = center
 					}
 
+				
+				
+					iconType =
+					{
+						name ="governing_capacity_icon"
+						spriteType = "GFX_governing_capacity"
+						position = { x= 220 y = 634  }
+						Orientation = "UPPER_LEFT"
+						scale = 0.75
+					}
+					
+					instantTextBoxType = {
+						name = "capacity_value"
+						position = { x = 260 y = 638 }
+						textureFile = ""
+						font = "vic_18"
+						borderSize = {x = 2 y = 2}
+						text = "200"
+						maxWidth = 40
+						maxHeight = 20
+						format = right
+					}
+	
 					iconType =
 					{
 						name ="build_allowed_icon"
@@ -5020,6 +5074,23 @@ guiTypes = {
 		guiButtonType = {
 			name = "monarchy_checkbox"
 			position = { x= 82 y= 320 }
+			quadTextureSprite = "GFX_checkbox_gold_32"
+		}
+		instantTextBoxType = {
+				name = "RevolutionText"
+				position = { x= 121 y= 365 }
+				textureFile = ""
+				font = "vic_22"
+				text = "REVOLUTIONARY"
+				maxWidth = 160
+				maxHeight = 24
+				fixedsize = yes
+				format = left
+		}
+
+		guiButtonType = {
+			name = "revolution_checkbox"
+			position = { x= 82 y= 360 }
 			quadTextureSprite = "GFX_checkbox_gold_32"
 		}
 
@@ -6883,5 +6954,41 @@ guiTypes = {
 
 	}
 
+	## State Window
+		windowType = {
+			name = "edicts_window"
+			backGround=""
+			position = { x=0 y=0 }
+			size = { x=475 y=480 }
+			dontRender = ""
+			horizontalBorder= ""
+			verticalBorder= ""
+			fullScreen = no
+			moveable = 0
+			#Orientation = "LOWER_LEFT"
+
+			iconType =
+			{
+				name ="edicts_bg"
+				spriteType = "GFX_edicts_bg_overlay"
+				position = { x = 484 y = -20 }
+			}
+
+			listboxType = {
+				name = "edicts_listbox"
+				backGround = ""
+				position = { x = 500 y = 0 }
+				size = { x = 380 y = 450 }
+				horizontal = 0
+				scrollbartype = "standardlistbox_slider"
+				borderSize = {x = 0 y = 0}
+			}
+			guiButtonType = {
+				name = "close_edicts_button"
+				position = { x = 888 y = -26 }
+				quadTextureSprite ="GFX_closebutton2"
+				clicksound = close_window
+			}
+		}
 
 }

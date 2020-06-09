@@ -7,7 +7,7 @@ altmeri_pantheon_rebels = {
 	defect_delay = 120				# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
 	independence = none				# Does not strive for independence
 	unit_transfer = no
-	gfx_type = culture_province
+	gfx_type = culture_province will_relocate = yes
 	
 	resilient = no
 	reinforcing = yes
@@ -118,7 +118,7 @@ altmeri_pantheon_rebels = {
 			}
 		}
  	}
-	siege_won_effect = {
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
 		if = {
 			limit = {
 				religion = altmeri_pantheon
@@ -157,7 +157,7 @@ altmeri_pantheon_rebels = {
 	demands_description = "altmeri_pantheon_rebels_demand"
 	
 	# Country Scope
-	demands_enforced_effect = {
+	demands_enforced_effect = { hidden_effect = { add_country_modifier = { name = just_lost_to_rebels duration = 10 hidden = yes } change_estate_land_share = { estate = estate_church share = 10.0 }
 		if = {
 			limit = {
 				NOT = { religion_group = polytheistic_group }
@@ -216,7 +216,7 @@ snow_elves_pantheon_rebels = {
 	defect_delay = 120				# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
 	independence = none				# Does not strive for independence
 	unit_transfer = no
-	gfx_type = culture_province
+	gfx_type = culture_province will_relocate = yes
 	
 	resilient = no
 	reinforcing = yes
@@ -327,7 +327,7 @@ snow_elves_pantheon_rebels = {
 			}
 		}
  	}
-	siege_won_effect = {
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
 		if = {
 			limit = {
 				religion = snow_elves_pantheon
@@ -366,7 +366,7 @@ snow_elves_pantheon_rebels = {
 	demands_description = "snow_elves_pantheon_rebels_demand"
 	
 	# Country Scope
-	demands_enforced_effect = {
+	demands_enforced_effect = { hidden_effect = { add_country_modifier = { name = just_lost_to_rebels duration = 10 hidden = yes } change_estate_land_share = { estate = estate_church share = 10.0 }
 		if = {
 			limit = {
 				NOT = { religion_group = polytheistic_group }
@@ -425,7 +425,7 @@ nordic_pantheon_rebels = {
 	defect_delay = 120				# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
 	independence = none				# Does not strive for independence
 	unit_transfer = no
-	gfx_type = culture_province
+	gfx_type = culture_province will_relocate = yes
 	
 	resilient = no
 	reinforcing = yes
@@ -536,7 +536,7 @@ nordic_pantheon_rebels = {
 			}
 		}
  	}
-	siege_won_effect = {
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
 		if = {
 			limit = {
 				religion = nordic_pantheon
@@ -575,7 +575,7 @@ nordic_pantheon_rebels = {
 	demands_description = "nordic_pantheon_rebels_demand"
 	
 	# Country Scope
-	demands_enforced_effect = {
+	demands_enforced_effect = { hidden_effect = { add_country_modifier = { name = just_lost_to_rebels duration = 10 hidden = yes } change_estate_land_share = { estate = estate_church share = 10.0 }
 		if = {
 			limit = {
 				NOT = { religion_group = polytheistic_group }
@@ -634,7 +634,7 @@ bosmer_pantheon_rebels = {
 	defect_delay = 120				# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
 	independence = none				# Does not strive for independence
 	unit_transfer = no
-	gfx_type = culture_province
+	gfx_type = culture_province will_relocate = yes
 	
 	resilient = no
 	reinforcing = yes
@@ -745,7 +745,7 @@ bosmer_pantheon_rebels = {
 			}
 		}
  	}
-	siege_won_effect = {
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
 		if = {
 			limit = {
 				religion = bosmer_pantheon
@@ -784,7 +784,7 @@ bosmer_pantheon_rebels = {
 	demands_description = "bosmer_pantheon_rebels_demand"
 	
 	# Country Scope
-	demands_enforced_effect = {
+	demands_enforced_effect = { hidden_effect = { add_country_modifier = { name = just_lost_to_rebels duration = 10 hidden = yes } change_estate_land_share = { estate = estate_church share = 10.0 }
 		if = {
 			limit = {
 				NOT = { religion_group = polytheistic_group }
@@ -843,7 +843,7 @@ eight_divines_rebels = {
 	defect_delay = 120				# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
 	independence = none				# Does not strive for independence
 	unit_transfer = no
-	gfx_type = culture_province
+	gfx_type = culture_province will_relocate = yes
 	
 	resilient = no
 	reinforcing = yes
@@ -954,7 +954,7 @@ eight_divines_rebels = {
 			}
 		}
  	}
-	siege_won_effect = {
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
 		if = {
 			limit = {
 				religion = eight_divines
@@ -993,7 +993,7 @@ eight_divines_rebels = {
 	demands_description = "eight_divines_rebels_demand"
 	
 	# Country Scope
-	demands_enforced_effect = {
+	demands_enforced_effect = { hidden_effect = { add_country_modifier = { name = just_lost_to_rebels duration = 10 hidden = yes } change_estate_land_share = { estate = estate_church share = 10.0 }
 		if = {
 			limit = {
 				NOT = { religion_group = polytheistic_group }
@@ -1052,7 +1052,7 @@ nine_divines_rebels = {
 	defect_delay = 120				# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
 	independence = none				# Does not strive for independence
 	unit_transfer = no
-	gfx_type = culture_province
+	gfx_type = culture_province will_relocate = yes
 	
 	resilient = no
 	reinforcing = yes
@@ -1163,7 +1163,7 @@ nine_divines_rebels = {
 			}
 		}
  	}
-	siege_won_effect = {
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
 		if = {
 			limit = {
 				religion = nine_divines
@@ -1202,7 +1202,7 @@ nine_divines_rebels = {
 	demands_description = "nine_divines_rebels_demand"
 	
 	# Country Scope
-	demands_enforced_effect = {
+	demands_enforced_effect = { hidden_effect = { add_country_modifier = { name = just_lost_to_rebels duration = 10 hidden = yes } change_estate_land_share = { estate = estate_church share = 10.0 }
 		if = {
 			limit = {
 				NOT = { religion_group = polytheistic_group }
@@ -1261,7 +1261,7 @@ twelve_divines_rebels = {
 	defect_delay = 120				# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
 	independence = none				# Does not strive for independence
 	unit_transfer = no
-	gfx_type = culture_province
+	gfx_type = culture_province will_relocate = yes
 	
 	resilient = no
 	reinforcing = yes
@@ -1372,7 +1372,7 @@ twelve_divines_rebels = {
 			}
 		}
  	}
-	siege_won_effect = {
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
 		if = {
 			limit = {
 				religion = twelve_divines
@@ -1411,7 +1411,7 @@ twelve_divines_rebels = {
 	demands_description = "twelve_divines_rebels_demand"
 	
 	# Country Scope
-	demands_enforced_effect = {
+	demands_enforced_effect = { hidden_effect = { add_country_modifier = { name = just_lost_to_rebels duration = 10 hidden = yes } change_estate_land_share = { estate = estate_church share = 10.0 }
 		if = {
 			limit = {
 				NOT = { religion_group = polytheistic_group }
@@ -1470,7 +1470,7 @@ khajiiti_pantheon_rebels = {
 	defect_delay = 120				# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
 	independence = none				# Does not strive for independence
 	unit_transfer = no
-	gfx_type = culture_province
+	gfx_type = culture_province will_relocate = yes
 	
 	resilient = no
 	reinforcing = yes
@@ -1581,7 +1581,7 @@ khajiiti_pantheon_rebels = {
 			}
 		}
  	}
-	siege_won_effect = {
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
 		if = {
 			limit = {
 				religion = khajiiti_pantheon
@@ -1620,7 +1620,7 @@ khajiiti_pantheon_rebels = {
 	demands_description = "khajiiti_pantheon_rebels_demand"
 	
 	# Country Scope
-	demands_enforced_effect = {
+	demands_enforced_effect = { hidden_effect = { add_country_modifier = { name = just_lost_to_rebels duration = 10 hidden = yes } change_estate_land_share = { estate = estate_church share = 10.0 }
 		if = {
 			limit = {
 				NOT = { religion_group = polytheistic_group }
@@ -1679,7 +1679,7 @@ yokudan_pantheon_rebels = {
 	defect_delay = 120				# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
 	independence = none				# Does not strive for independence
 	unit_transfer = no
-	gfx_type = culture_province
+	gfx_type = culture_province will_relocate = yes
 	
 	resilient = no
 	reinforcing = yes
@@ -1790,7 +1790,7 @@ yokudan_pantheon_rebels = {
 			}
 		}
  	}
-	siege_won_effect = {
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
 		if = {
 			limit = {
 				religion = yokudan_pantheon
@@ -1829,7 +1829,7 @@ yokudan_pantheon_rebels = {
 	demands_description = "yokudan_pantheon_rebels_demand"
 	
 	# Country Scope
-	demands_enforced_effect = {
+	demands_enforced_effect = { hidden_effect = { add_country_modifier = { name = just_lost_to_rebels duration = 10 hidden = yes } change_estate_land_share = { estate = estate_church share = 10.0 }
 		if = {
 			limit = {
 				NOT = { religion_group = polytheistic_group }
@@ -1888,7 +1888,7 @@ redguard_pantheon_rebels = {
 	defect_delay = 120				# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
 	independence = none				# Does not strive for independence
 	unit_transfer = no
-	gfx_type = culture_province
+	gfx_type = culture_province will_relocate = yes
 	
 	resilient = no
 	reinforcing = yes
@@ -1999,7 +1999,7 @@ redguard_pantheon_rebels = {
 			}
 		}
  	}
-	siege_won_effect = {
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
 		if = {
 			limit = {
 				religion = redguard_pantheon
@@ -2038,7 +2038,7 @@ redguard_pantheon_rebels = {
 	demands_description = "redguard_pantheon_rebels_demand"
 	
 	# Country Scope
-	demands_enforced_effect = {
+	demands_enforced_effect = { hidden_effect = { add_country_modifier = { name = just_lost_to_rebels duration = 10 hidden = yes } change_estate_land_share = { estate = estate_church share = 10.0 }
 		if = {
 			limit = {
 				NOT = { religion_group = polytheistic_group }
@@ -2097,7 +2097,7 @@ malacath_cult_rebels = {
 	defect_delay = 120				# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
 	independence = none				# Does not strive for independence
 	unit_transfer = no
-	gfx_type = culture_province
+	gfx_type = culture_province will_relocate = yes
 	
 	resilient = no
 	reinforcing = yes
@@ -2208,7 +2208,7 @@ malacath_cult_rebels = {
 			}
 		}
  	}
-	siege_won_effect = {
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
 		if = {
 			limit = {
 				religion = malacath_cult
@@ -2247,7 +2247,7 @@ malacath_cult_rebels = {
 	demands_description = "malacath_cult_rebels_demand"
 	
 	# Country Scope
-	demands_enforced_effect = {
+	demands_enforced_effect = { hidden_effect = { add_country_modifier = { name = just_lost_to_rebels duration = 10 hidden = yes } change_estate_land_share = { estate = estate_church share = 10.0 }
 		if = {
 			limit = {
 				NOT = { religion_group = polytheistic_group }
@@ -2306,7 +2306,7 @@ kothri_pantheon_rebels = {
 	defect_delay = 120				# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
 	independence = none				# Does not strive for independence
 	unit_transfer = no
-	gfx_type = culture_province
+	gfx_type = culture_province will_relocate = yes
 	
 	resilient = no
 	reinforcing = yes
@@ -2417,7 +2417,7 @@ kothri_pantheon_rebels = {
 			}
 		}
  	}
-	siege_won_effect = {
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
 		if = {
 			limit = {
 				religion = kothri_pantheon
@@ -2456,7 +2456,7 @@ kothri_pantheon_rebels = {
 	demands_description = "kothri_pantheon_rebels_demand"
 	
 	# Country Scope
-	demands_enforced_effect = {
+	demands_enforced_effect = { hidden_effect = { add_country_modifier = { name = just_lost_to_rebels duration = 10 hidden = yes } change_estate_land_share = { estate = estate_church share = 10.0 }
 		if = {
 			limit = {
 				NOT = { religion_group = polytheistic_group }
@@ -2515,7 +2515,7 @@ chimer_pantheon_rebels = {
 	defect_delay = 120				# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
 	independence = none				# Does not strive for independence
 	unit_transfer = no
-	gfx_type = culture_province
+	gfx_type = culture_province will_relocate = yes
 	
 	resilient = no
 	reinforcing = yes
@@ -2626,7 +2626,7 @@ chimer_pantheon_rebels = {
 			}
 		}
  	}
-	siege_won_effect = {
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
 		if = {
 			limit = {
 				religion = chimer_pantheon
@@ -2665,7 +2665,7 @@ chimer_pantheon_rebels = {
 	demands_description = "chimer_pantheon_rebels_demand"
 	
 	# Country Scope
-	demands_enforced_effect = {
+	demands_enforced_effect = { hidden_effect = { add_country_modifier = { name = just_lost_to_rebels duration = 10 hidden = yes } change_estate_land_share = { estate = estate_church share = 10.0 }
 		if = {
 			limit = {
 				NOT = { religion_group = occult_group }
@@ -2724,7 +2724,7 @@ tribunal_pantheon_rebels = {
 	defect_delay = 120				# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
 	independence = none				# Does not strive for independence
 	unit_transfer = no
-	gfx_type = culture_province
+	gfx_type = culture_province will_relocate = yes
 	
 	resilient = no
 	reinforcing = yes
@@ -2835,7 +2835,7 @@ tribunal_pantheon_rebels = {
 			}
 		}
  	}
-	siege_won_effect = {
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
 		if = {
 			limit = {
 				religion = tribunal_pantheon
@@ -2874,7 +2874,7 @@ tribunal_pantheon_rebels = {
 	demands_description = "tribunal_pantheon_rebels_demand"
 	
 	# Country Scope
-	demands_enforced_effect = {
+	demands_enforced_effect = { hidden_effect = { add_country_modifier = { name = just_lost_to_rebels duration = 10 hidden = yes } change_estate_land_share = { estate = estate_church share = 10.0 }
 		if = {
 			limit = {
 				NOT = { religion_group = occult_group }
@@ -2933,7 +2933,7 @@ reclamations_pantheon_rebels = {
 	defect_delay = 120				# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
 	independence = none				# Does not strive for independence
 	unit_transfer = no
-	gfx_type = culture_province
+	gfx_type = culture_province will_relocate = yes
 	
 	resilient = no
 	reinforcing = yes
@@ -3044,7 +3044,7 @@ reclamations_pantheon_rebels = {
 			}
 		}
  	}
-	siege_won_effect = {
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
 		if = {
 			limit = {
 				religion = reclamations_pantheon
@@ -3083,7 +3083,7 @@ reclamations_pantheon_rebels = {
 	demands_description = "reclamations_pantheon_rebels_demand"
 	
 	# Country Scope
-	demands_enforced_effect = {
+	demands_enforced_effect = { hidden_effect = { add_country_modifier = { name = just_lost_to_rebels duration = 10 hidden = yes } change_estate_land_share = { estate = estate_church share = 10.0 }
 		if = {
 			limit = {
 				NOT = { religion_group = occult_group }
@@ -3142,7 +3142,7 @@ sload_faith_rebels = {
 	defect_delay = 120				# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
 	independence = none				# Does not strive for independence
 	unit_transfer = no
-	gfx_type = culture_province
+	gfx_type = culture_province will_relocate = yes
 	
 	resilient = no
 	reinforcing = yes
@@ -3253,7 +3253,7 @@ sload_faith_rebels = {
 			}
 		}
  	}
-	siege_won_effect = {
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
 		if = {
 			limit = {
 				religion = sload_faith
@@ -3292,7 +3292,7 @@ sload_faith_rebels = {
 	demands_description = "sload_faith_rebels_demand"
 	
 	# Country Scope
-	demands_enforced_effect = {
+	demands_enforced_effect = { hidden_effect = { add_country_modifier = { name = just_lost_to_rebels duration = 10 hidden = yes } change_estate_land_share = { estate = estate_church share = 10.0 }
 		if = {
 			limit = {
 				NOT = { religion_group = elemental_group }
@@ -3351,7 +3351,7 @@ serpant_king_rebels = {
 	defect_delay = 120				# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
 	independence = none				# Does not strive for independence
 	unit_transfer = no
-	gfx_type = culture_province
+	gfx_type = culture_province will_relocate = yes
 	
 	resilient = no
 	reinforcing = yes
@@ -3462,7 +3462,7 @@ serpant_king_rebels = {
 			}
 		}
  	}
-	siege_won_effect = {
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
 		if = {
 			limit = {
 				religion = serpant_king
@@ -3501,7 +3501,7 @@ serpant_king_rebels = {
 	demands_description = "serpant_king_rebels_demand"
 	
 	# Country Scope
-	demands_enforced_effect = {
+	demands_enforced_effect = { hidden_effect = { add_country_modifier = { name = just_lost_to_rebels duration = 10 hidden = yes } change_estate_land_share = { estate = estate_church share = 10.0 }
 		if = {
 			limit = {
 				NOT = { religion_group = occult_group }
@@ -3560,7 +3560,7 @@ dragon_cult_rebels = {
 	defect_delay = 120				# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
 	independence = none				# Does not strive for independence
 	unit_transfer = no
-	gfx_type = culture_province
+	gfx_type = culture_province will_relocate = yes
 	
 	resilient = no
 	reinforcing = yes
@@ -3671,7 +3671,7 @@ dragon_cult_rebels = {
 			}
 		}
  	}
-	siege_won_effect = {
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
 		if = {
 			limit = {
 				religion = dragon_cult
@@ -3710,7 +3710,7 @@ dragon_cult_rebels = {
 	demands_description = "dragon_cult_rebels_demand"
 	
 	# Country Scope
-	demands_enforced_effect = {
+	demands_enforced_effect = { hidden_effect = { add_country_modifier = { name = just_lost_to_rebels duration = 10 hidden = yes } change_estate_land_share = { estate = estate_church share = 10.0 }
 		if = {
 			limit = {
 				NOT = { religion_group = occult_group }
@@ -3769,7 +3769,7 @@ marukhism_rebels = {
 	defect_delay = 120				# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
 	independence = none				# Does not strive for independence
 	unit_transfer = no
-	gfx_type = culture_province
+	gfx_type = culture_province will_relocate = yes
 	
 	resilient = no
 	reinforcing = yes
@@ -3880,7 +3880,7 @@ marukhism_rebels = {
 			}
 		}
  	}
-	siege_won_effect = {
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
 		if = {
 			limit = {
 				religion = marukhism
@@ -3919,7 +3919,7 @@ marukhism_rebels = {
 	demands_description = "marukhism_rebels_demand"
 	
 	# Country Scope
-	demands_enforced_effect = {
+	demands_enforced_effect = { hidden_effect = { add_country_modifier = { name = just_lost_to_rebels duration = 10 hidden = yes } change_estate_land_share = { estate = estate_church share = 10.0 }
 		if = {
 			limit = {
 				NOT = { religion_group = occult_group }
@@ -3978,7 +3978,7 @@ hist_rebels = {
 	defect_delay = 120				# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
 	independence = none				# Does not strive for independence
 	unit_transfer = no
-	gfx_type = culture_province
+	gfx_type = culture_province will_relocate = yes
 	
 	resilient = no
 	reinforcing = yes
@@ -4089,7 +4089,7 @@ hist_rebels = {
 			}
 		}
  	}
-	siege_won_effect = {
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
 		if = {
 			limit = {
 				religion = hist
@@ -4128,7 +4128,7 @@ hist_rebels = {
 	demands_description = "hist_rebels_demand"
 	
 	# Country Scope
-	demands_enforced_effect = {
+	demands_enforced_effect = { hidden_effect = { add_country_modifier = { name = just_lost_to_rebels duration = 10 hidden = yes } change_estate_land_share = { estate = estate_church share = 10.0 }
 		if = {
 			limit = {
 				NOT = { religion_group = elemental_group }
@@ -4187,7 +4187,7 @@ reason_and_logic_cult_rebels = {
 	defect_delay = 120				# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
 	independence = none				# Does not strive for independence
 	unit_transfer = no
-	gfx_type = culture_province
+	gfx_type = culture_province will_relocate = yes
 	
 	resilient = no
 	reinforcing = yes
@@ -4298,7 +4298,7 @@ reason_and_logic_cult_rebels = {
 			}
 		}
  	}
-	siege_won_effect = {
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
 		if = {
 			limit = {
 				religion = reason_and_logic_cult
@@ -4337,7 +4337,7 @@ reason_and_logic_cult_rebels = {
 	demands_description = "reason_and_logic_cult_rebels_demand"
 	
 	# Country Scope
-	demands_enforced_effect = {
+	demands_enforced_effect = { hidden_effect = { add_country_modifier = { name = just_lost_to_rebels duration = 10 hidden = yes } change_estate_land_share = { estate = estate_church share = 10.0 }
 		if = {
 			limit = {
 				NOT = { religion_group = occult_group }
@@ -4396,7 +4396,7 @@ old_gods_cult_rebels = {
 	defect_delay = 120				# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
 	independence = none				# Does not strive for independence
 	unit_transfer = no
-	gfx_type = culture_province
+	gfx_type = culture_province will_relocate = yes
 	
 	resilient = no
 	reinforcing = yes
@@ -4507,7 +4507,7 @@ old_gods_cult_rebels = {
 			}
 		}
  	}
-	siege_won_effect = {
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
 		if = {
 			limit = {
 				religion = old_gods_cult
@@ -4546,7 +4546,7 @@ old_gods_cult_rebels = {
 	demands_description = "old_gods_cult_rebels_demand"
 	
 	# Country Scope
-	demands_enforced_effect = {
+	demands_enforced_effect = { hidden_effect = { add_country_modifier = { name = just_lost_to_rebels duration = 10 hidden = yes } change_estate_land_share = { estate = estate_church share = 10.0 }
 		if = {
 			limit = {
 				NOT = { religion_group = elemental_group }
@@ -4605,7 +4605,7 @@ tsaesci_pantheon_rebels = {
 	defect_delay = 120				# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
 	independence = none				# Does not strive for independence
 	unit_transfer = no
-	gfx_type = culture_province
+	gfx_type = culture_province will_relocate = yes
 	
 	resilient = no
 	reinforcing = yes
@@ -4716,7 +4716,7 @@ tsaesci_pantheon_rebels = {
 			}
 		}
  	}
-	siege_won_effect = {
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
 		if = {
 			limit = {
 				religion = tsaesci_pantheon
@@ -4755,7 +4755,7 @@ tsaesci_pantheon_rebels = {
 	demands_description = "tsaesci_pantheon_rebels_demand"
 	
 	# Country Scope
-	demands_enforced_effect = {
+	demands_enforced_effect = { hidden_effect = { add_country_modifier = { name = just_lost_to_rebels duration = 10 hidden = yes } change_estate_land_share = { estate = estate_church share = 10.0 }
 		if = {
 			limit = {
 				NOT = { religion_group = elemental_group }
@@ -4814,7 +4814,7 @@ tang_mo_pantheon_rebels = {
 	defect_delay = 120				# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
 	independence = none				# Does not strive for independence
 	unit_transfer = no
-	gfx_type = culture_province
+	gfx_type = culture_province will_relocate = yes
 	
 	resilient = no
 	reinforcing = yes
@@ -4925,7 +4925,7 @@ tang_mo_pantheon_rebels = {
 			}
 		}
  	}
-	siege_won_effect = {
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
 		if = {
 			limit = {
 				religion = tang_mo_pantheon
@@ -4964,7 +4964,7 @@ tang_mo_pantheon_rebels = {
 	demands_description = "tang_mo_pantheon_rebels_demand"
 	
 	# Country Scope
-	demands_enforced_effect = {
+	demands_enforced_effect = { hidden_effect = { add_country_modifier = { name = just_lost_to_rebels duration = 10 hidden = yes } change_estate_land_share = { estate = estate_church share = 10.0 }
 		if = {
 			limit = {
 				NOT = { religion_group = elemental_group }
@@ -5023,7 +5023,7 @@ kamal_pantheon_rebels = {
 	defect_delay = 120				# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
 	independence = none				# Does not strive for independence
 	unit_transfer = no
-	gfx_type = culture_province
+	gfx_type = culture_province will_relocate = yes
 	
 	resilient = no
 	reinforcing = yes
@@ -5134,7 +5134,7 @@ kamal_pantheon_rebels = {
 			}
 		}
  	}
-	siege_won_effect = {
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
 		if = {
 			limit = {
 				religion = kamal_pantheon
@@ -5173,7 +5173,7 @@ kamal_pantheon_rebels = {
 	demands_description = "kamal_pantheon_rebels_demand"
 	
 	# Country Scope
-	demands_enforced_effect = {
+	demands_enforced_effect = { hidden_effect = { add_country_modifier = { name = just_lost_to_rebels duration = 10 hidden = yes } change_estate_land_share = { estate = estate_church share = 10.0 }
 		if = {
 			limit = {
 				NOT = { religion_group = elemental_group }
@@ -5232,7 +5232,7 @@ dremora_pantheon_rebels = {
 	defect_delay = 120				# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
 	independence = none				# Does not strive for independence
 	unit_transfer = no
-	gfx_type = culture_province
+	gfx_type = culture_province will_relocate = yes
 	
 	resilient = no
 	reinforcing = yes
@@ -5343,7 +5343,7 @@ dremora_pantheon_rebels = {
 			}
 		}
  	}
-	siege_won_effect = {
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
 		if = {
 			limit = {
 				religion = dremora_pantheon
@@ -5382,7 +5382,7 @@ dremora_pantheon_rebels = {
 	demands_description = "dremora_pantheon_rebels_demand"
 	
 	# Country Scope
-	demands_enforced_effect = {
+	demands_enforced_effect = { hidden_effect = { add_country_modifier = { name = just_lost_to_rebels duration = 10 hidden = yes } change_estate_land_share = { estate = estate_church share = 10.0 }
 		if = {
 			limit = {
 				NOT = { religion_group = daedric_group_1 }
@@ -5441,7 +5441,7 @@ molog_bal_cult_rebels = {
 	defect_delay = 120				# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
 	independence = none				# Does not strive for independence
 	unit_transfer = no
-	gfx_type = culture_province
+	gfx_type = culture_province will_relocate = yes
 	
 	resilient = no
 	reinforcing = yes
@@ -5552,7 +5552,7 @@ molog_bal_cult_rebels = {
 			}
 		}
  	}
-	siege_won_effect = {
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
 		if = {
 			limit = {
 				religion = molog_bal_cult
@@ -5591,7 +5591,7 @@ molog_bal_cult_rebels = {
 	demands_description = "molog_bal_cult_rebels_demand"
 	
 	# Country Scope
-	demands_enforced_effect = {
+	demands_enforced_effect = { hidden_effect = { add_country_modifier = { name = just_lost_to_rebels duration = 10 hidden = yes } change_estate_land_share = { estate = estate_church share = 10.0 }
 		if = {
 			limit = {
 				NOT = { religion_group = daedric_group_1 }
@@ -5650,7 +5650,7 @@ meridia_cult_rebels = {
 	defect_delay = 120				# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
 	independence = none				# Does not strive for independence
 	unit_transfer = no
-	gfx_type = culture_province
+	gfx_type = culture_province will_relocate = yes
 	
 	resilient = no
 	reinforcing = yes
@@ -5761,7 +5761,7 @@ meridia_cult_rebels = {
 			}
 		}
  	}
-	siege_won_effect = {
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
 		if = {
 			limit = {
 				religion = meridia_cult
@@ -5800,7 +5800,7 @@ meridia_cult_rebels = {
 	demands_description = "meridia_cult_rebels_demand"
 	
 	# Country Scope
-	demands_enforced_effect = {
+	demands_enforced_effect = { hidden_effect = { add_country_modifier = { name = just_lost_to_rebels duration = 10 hidden = yes } change_estate_land_share = { estate = estate_church share = 10.0 }
 		if = {
 			limit = {
 				NOT = { religion_group = daedric_group_1 }
@@ -5859,7 +5859,7 @@ mehrunes_dagon_cult_rebels = {
 	defect_delay = 120				# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
 	independence = none				# Does not strive for independence
 	unit_transfer = no
-	gfx_type = culture_province
+	gfx_type = culture_province will_relocate = yes
 	
 	resilient = no
 	reinforcing = yes
@@ -5970,7 +5970,7 @@ mehrunes_dagon_cult_rebels = {
 			}
 		}
  	}
-	siege_won_effect = {
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
 		if = {
 			limit = {
 				religion = mehrunes_dagon_cult
@@ -6009,7 +6009,7 @@ mehrunes_dagon_cult_rebels = {
 	demands_description = "mehrunes_dagon_cult_rebels_demand"
 	
 	# Country Scope
-	demands_enforced_effect = {
+	demands_enforced_effect = { hidden_effect = { add_country_modifier = { name = just_lost_to_rebels duration = 10 hidden = yes } change_estate_land_share = { estate = estate_church share = 10.0 }
 		if = {
 			limit = {
 				NOT = { religion_group = daedric_group_1 }
@@ -6068,7 +6068,7 @@ hermeus_mora_cult_rebels = {
 	defect_delay = 120				# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
 	independence = none				# Does not strive for independence
 	unit_transfer = no
-	gfx_type = culture_province
+	gfx_type = culture_province will_relocate = yes
 	
 	resilient = no
 	reinforcing = yes
@@ -6179,7 +6179,7 @@ hermeus_mora_cult_rebels = {
 			}
 		}
  	}
-	siege_won_effect = {
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
 		if = {
 			limit = {
 				religion = hermeus_mora_cult
@@ -6218,7 +6218,7 @@ hermeus_mora_cult_rebels = {
 	demands_description = "hermeus_mora_cult_rebels_demand"
 	
 	# Country Scope
-	demands_enforced_effect = {
+	demands_enforced_effect = { hidden_effect = { add_country_modifier = { name = just_lost_to_rebels duration = 10 hidden = yes } change_estate_land_share = { estate = estate_church share = 10.0 }
 		if = {
 			limit = {
 				NOT = { religion_group = daedric_group_1 }
@@ -6277,7 +6277,7 @@ po_tun_pantheon_rebels = {
 	defect_delay = 120				# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
 	independence = none				# Does not strive for independence
 	unit_transfer = no
-	gfx_type = culture_province
+	gfx_type = culture_province will_relocate = yes
 	
 	resilient = no
 	reinforcing = yes
@@ -6388,7 +6388,7 @@ po_tun_pantheon_rebels = {
 			}
 		}
  	}
-	siege_won_effect = {
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
 		if = {
 			limit = {
 				religion = po_tun_pantheon
@@ -6427,7 +6427,7 @@ po_tun_pantheon_rebels = {
 	demands_description = "po_tun_pantheon_rebels_demand"
 	
 	# Country Scope
-	demands_enforced_effect = {
+	demands_enforced_effect = { hidden_effect = { add_country_modifier = { name = just_lost_to_rebels duration = 10 hidden = yes } change_estate_land_share = { estate = estate_church share = 10.0 }
 		if = {
 			limit = {
 				NOT = { religion_group = harmony_group }
@@ -6486,7 +6486,7 @@ unknown_pantheon_rebels = {
 	defect_delay = 120				# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
 	independence = none				# Does not strive for independence
 	unit_transfer = no
-	gfx_type = culture_province
+	gfx_type = culture_province will_relocate = yes
 	
 	resilient = no
 	reinforcing = yes
@@ -6597,7 +6597,7 @@ unknown_pantheon_rebels = {
 			}
 		}
  	}
-	siege_won_effect = {
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
 		if = {
 			limit = {
 				religion = unknown_pantheon
@@ -6636,7 +6636,7 @@ unknown_pantheon_rebels = {
 	demands_description = "unknown_pantheon_rebels_demand"
 	
 	# Country Scope
-	demands_enforced_effect = {
+	demands_enforced_effect = { hidden_effect = { add_country_modifier = { name = just_lost_to_rebels duration = 10 hidden = yes } change_estate_land_share = { estate = estate_church share = 10.0 }
 		if = {
 			limit = {
 				NOT = { religion_group = harmony_group }
@@ -6695,7 +6695,7 @@ all-maker_cult_rebels = {
 	defect_delay = 120				# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
 	independence = none				# Does not strive for independence
 	unit_transfer = no
-	gfx_type = culture_province
+	gfx_type = culture_province will_relocate = yes
 	
 	resilient = no
 	reinforcing = yes
@@ -6806,7 +6806,7 @@ all-maker_cult_rebels = {
 			}
 		}
  	}
-	siege_won_effect = {
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
 		if = {
 			limit = {
 				religion = all-maker_cult
@@ -6845,7 +6845,7 @@ all-maker_cult_rebels = {
 	demands_description = "all-maker_cult_rebels_demand"
 	
 	# Country Scope
-	demands_enforced_effect = {
+	demands_enforced_effect = { hidden_effect = { add_country_modifier = { name = just_lost_to_rebels duration = 10 hidden = yes } change_estate_land_share = { estate = estate_church share = 10.0 }
 		if = {
 			limit = {
 				NOT = { religion_group = occult_group }
@@ -6904,7 +6904,7 @@ sheogorath_cult_rebels = {
 	defect_delay = 120				# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
 	independence = none				# Does not strive for independence
 	unit_transfer = no
-	gfx_type = culture_province
+	gfx_type = culture_province will_relocate = yes
 	
 	resilient = no
 	reinforcing = yes
@@ -7015,7 +7015,7 @@ sheogorath_cult_rebels = {
 			}
 		}
  	}
-	siege_won_effect = {
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
 		if = {
 			limit = {
 				religion = sheogorath_cult
@@ -7054,7 +7054,7 @@ sheogorath_cult_rebels = {
 	demands_description = "sheogorath_cult_rebels_demand"
 	
 	# Country Scope
-	demands_enforced_effect = {
+	demands_enforced_effect = { hidden_effect = { add_country_modifier = { name = just_lost_to_rebels duration = 10 hidden = yes } change_estate_land_share = { estate = estate_church share = 10.0 }
 		if = {
 			limit = {
 				NOT = { religion_group = daedric_group_1 }
@@ -7113,7 +7113,7 @@ hircine_cult_rebels = {
 	defect_delay = 120				# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
 	independence = none				# Does not strive for independence
 	unit_transfer = no
-	gfx_type = culture_province
+	gfx_type = culture_province will_relocate = yes
 	
 	resilient = no
 	reinforcing = yes
@@ -7224,7 +7224,7 @@ hircine_cult_rebels = {
 			}
 		}
  	}
-	siege_won_effect = {
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
 		if = {
 			limit = {
 				religion = hircine_cult
@@ -7263,7 +7263,7 @@ hircine_cult_rebels = {
 	demands_description = "hircine_cult_rebels_demand"
 	
 	# Country Scope
-	demands_enforced_effect = {
+	demands_enforced_effect = { hidden_effect = { add_country_modifier = { name = just_lost_to_rebels duration = 10 hidden = yes } change_estate_land_share = { estate = estate_church share = 10.0 }
 		if = {
 			limit = {
 				NOT = { religion_group = daedric_group_1 }
@@ -7322,7 +7322,7 @@ nocturnal_cult_rebels = {
 	defect_delay = 120				# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
 	independence = none				# Does not strive for independence
 	unit_transfer = no
-	gfx_type = culture_province
+	gfx_type = culture_province will_relocate = yes
 	
 	resilient = no
 	reinforcing = yes
@@ -7433,7 +7433,7 @@ nocturnal_cult_rebels = {
 			}
 		}
  	}
-	siege_won_effect = {
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
 		if = {
 			limit = {
 				religion = nocturnal_cult
@@ -7472,7 +7472,7 @@ nocturnal_cult_rebels = {
 	demands_description = "nocturnal_cult_rebels_demand"
 	
 	# Country Scope
-	demands_enforced_effect = {
+	demands_enforced_effect = { hidden_effect = { add_country_modifier = { name = just_lost_to_rebels duration = 10 hidden = yes } change_estate_land_share = { estate = estate_church share = 10.0 }
 		if = {
 			limit = {
 				NOT = { religion_group = daedric_group_1 }

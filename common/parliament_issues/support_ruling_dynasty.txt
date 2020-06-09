@@ -4,12 +4,20 @@ support_ruling_dynasty = {
 
 	allow = {
 		government = monarchy
+		has_regency = no
 		is_lesser_in_union = no
 		NOT = { legitimacy = 80 }
+		is_year = 1500
+		NOT = {
+			AND = {
+				has_reform = celestial_empire
+				has_dlc = "Mandate of Heaven"
+			}
+		}
 	}
 	
 	effect = {
-		add_legitimacy = 5
+		add_legitimacy = 10
 	}
 	
 	modifier = {

@@ -26,7 +26,7 @@ steppe_horde = {
 	queen = yes
 	
 	modifiers = {
-	    max_states = 1
+	    governing_capacity_modifier = 0.1
 		global_manpower_modifier = 0.10
 		land_forcelimit_modifier = 0.10
 		years_of_nationalism = -5
@@ -66,7 +66,7 @@ tribal_federation = {
 	queen = yes
 
 	modifiers = {
-		max_states = 1
+		governing_capacity_modifier = 0.1
 		monarch_admin_power = 1
 		stability_cost_modifier = -0.10
 		reduced_liberty_desire = 10
@@ -100,7 +100,7 @@ tribal_kingdom = {
 	queen = yes
 
 	modifiers = {
-		max_states = 1
+		governing_capacity_modifier = 0.1
 		monarch_diplomatic_power = 1
 		diplomatic_reputation = 1
 		unjustified_demands = -0.10
@@ -134,7 +134,7 @@ tribal_despotism = {
 	queen = yes
 	
 	modifiers = {
-	    max_states = 1
+	    governing_capacity_modifier = 0.1
 	    monarch_military_power = 1
 		global_unrest = -1
 		core_creation = -0.1
@@ -168,7 +168,7 @@ nomad_state_reform = {
 	queen = yes
 	
 	modifiers = {
-	    max_states = 1
+	    governing_capacity_modifier = 0.1
 		culture_conversion_cost = -0.10
         monarch_military_power = 1
 		reinforce_cost_modifier = -0.10
@@ -209,7 +209,7 @@ war_against_the_world_reform = {
 		loot_amount = 0.10
 		naval_forcelimit_modifier = 0.10
 		land_forcelimit_modifier = 0.10
-		possible_mercenaries = 0.10
+		mercenary_manpower = 0.10
 		may_perform_slave_raid_on_same_religion = yes
 	}
 	factions = {
@@ -243,7 +243,7 @@ tribal_republic = {
 	duration = 5
 
 	modifiers = {
-		max_states = 1
+		governing_capacity_modifier = 0.1
 		trade_efficiency = 0.10
 		num_accepted_cultures = 1
 		navy_tradition_decay = -0.01
@@ -282,7 +282,7 @@ tribal_theocratic_state = {
 	heir = yes
 
 	modifiers = {
-		max_states = 1
+		governing_capacity_modifier = 0.1
 		tolerance_own = 1
 		culture_conversion_cost = -0.10
 		global_missionary_strength = 0.01

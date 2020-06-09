@@ -1,14 +1,14 @@
 pay_institutiongrowth = {
 	trigger = {
 		FROM = {
-			current_institution = 1
+			current_institution = 10
 			NOT = { current_institution = 100 }
 		}
 	}
 	
 	effect = {
 		FROM = {
-			add_next_institution_embracement = -5
+			add_next_institution_embracement = -10
 		}
 	}
 	

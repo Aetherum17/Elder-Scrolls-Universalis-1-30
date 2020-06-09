@@ -369,7 +369,7 @@ PB0_ideas = {
     transport_cost = -0.10
     }
     PB0_idea_2 = {
-    max_states = 5
+    governing_capacity_modifier = 0.25
     }
     PB0_idea_3 = {
     global_unrest = -1
@@ -586,7 +586,7 @@ PB5_ideas = {
 SA1_ideas = {
     start = {
     naval_morale = 0.15
-    possible_mercenaries = 0.5
+    mercenary_manpower = 0.5
     }
 
     bonus = {
@@ -723,7 +723,7 @@ SA4_ideas = {
     cavalry_flanking = 0.25
     }
     SA4_idea_3 = {
-    possible_mercenaries = 0.25
+    mercenary_manpower = 0.25
     }
     SA4_idea_4 = {
     monarch_admin_power = 1
@@ -859,7 +859,7 @@ SA7_ideas = {
 SA8_ideas = {
     start = {
     fire_damage = 0.15
-    max_states = 10
+    governing_capacity_modifier = 0.35
     }
 
     bonus = {
@@ -873,7 +873,7 @@ SA8_ideas = {
     free = yes
 
     SA8_idea_1 = {
-    possible_mercenaries = 0.25
+    mercenary_manpower = 0.25
     }
     SA8_idea_2 = {
     artillery_bonus_vs_fort = 1
@@ -1214,7 +1214,7 @@ SB7_ideas = {
     }
 
     bonus = {
-    max_states = 10
+    governing_capacity_modifier = 0.35
     }
 
     trigger = {
@@ -1506,7 +1506,7 @@ SC4_ideas = {
     global_ship_repair = 0.10
     }
     SC4_idea_4 = {
-    max_states = 5
+    governing_capacity_modifier = 0.25
     }
     SC4_idea_5 = {
     transport_cost = -0.10
@@ -2091,7 +2091,7 @@ YB1_ideas = {
     diplomatic_reputation = 0.5
     }
     YB1_idea_4 = {
-    possible_mercenaries = 0.25
+    mercenary_manpower = 0.25
     }
     YB1_idea_5 = {
     prestige_from_land = 0.25
@@ -2208,7 +2208,7 @@ YB4_ideas = {
     merchants = 1
     }
     YB4_idea_4 = {
-    possible_mercenaries = 0.25
+    mercenary_manpower = 0.25
     }
     YB4_idea_5 = {
     tolerance_own = 1
@@ -3501,7 +3501,7 @@ ND3_ideas = {
     fire_damage = 0.1
     }
     ND3_idea_6 = {
-    max_states = 5
+    governing_capacity_modifier = 0.25
     }
     ND3_idea_7 = {
     yearly_corruption = -0.10
@@ -4563,7 +4563,7 @@ CA1_ideas = {
 
 CA2_ideas = {
     start = {
-    max_states = 10
+    governing_capacity_modifier = 0.35
     vassal_forcelimit_bonus = 0.25
     }
 
@@ -4581,7 +4581,7 @@ CA2_ideas = {
     free_adm_policy = 1
     }
     CA2_idea_2 = {
-    possible_mercenaries = 0.25
+    mercenary_manpower = 0.25
     }
     CA2_idea_3 = {
     mil_advisor_cost = -0.1
@@ -5933,7 +5933,7 @@ CD7_ideas = {
     }
 
     bonus = {
-    max_states = 10
+    governing_capacity_modifier = 0.35
     }
 
     trigger = {
@@ -6114,7 +6114,7 @@ CE1_ideas = {
     yearly_corruption = -0.10
     }
     CE1_idea_6 = {
-    possible_mercenaries = 0.25
+    mercenary_manpower = 0.25
     }
     CE1_idea_7 = {
     build_time = -0.10
@@ -6177,7 +6177,7 @@ CE3_ideas = {
     free = yes
 
     CE3_idea_1 = {
-    possible_mercenaries = 0.25
+    mercenary_manpower = 0.25
     }
     CE3_idea_2 = {
     leader_naval_shock = 1
@@ -6592,7 +6592,7 @@ CF3_ideas = {
 CF4_ideas = {
     start = {
     global_unrest = -1
-    max_states = 10
+    governing_capacity_modifier = 0.35
     }
 
     bonus = {
@@ -6888,7 +6888,7 @@ CG1_ideas = {
     sunk_ship_morale_hit_recieved = -0.10
     }
     CG1_idea_4 = {
-    possible_mercenaries = 0.25
+    mercenary_manpower = 0.25
     }
     CG1_idea_5 = {
     mil_tech_cost_modifier = -0.05
@@ -6981,7 +6981,7 @@ CG3_ideas = {
 
 CG4_ideas = {
     start = {
-    possible_mercenaries = 0.5
+    mercenary_manpower = 0.5
     fire_damage_received = -0.15
     }
 
@@ -7401,7 +7401,7 @@ CH4_ideas = {
     missionaries = 1
     }
     CH4_idea_6 = {
-    possible_mercenaries = 0.25
+    mercenary_manpower = 0.25
     }
     CH4_idea_7 = {
     merchants = 1
@@ -7503,7 +7503,7 @@ CH7_ideas = {
     free = yes
 
     CH7_idea_1 = {
-    possible_mercenaries = 0.25
+    mercenary_manpower = 0.25
     }
     CH7_idea_2 = {
     infantry_cost = -0.1
@@ -7869,7 +7869,7 @@ CI6_ideas = {
     ship_power_propagation = 0.10
     }
     CI6_idea_6 = {
-    possible_mercenaries = 0.25
+    mercenary_manpower = 0.25
     }
     CI6_idea_7 = {
     global_unrest = -1
@@ -7883,7 +7883,7 @@ CI7_ideas = {
     }
 
     bonus = {
-    max_states = 10
+    governing_capacity_modifier = 0.35
     }
 
     trigger = {
@@ -8457,7 +8457,7 @@ HB1_ideas = {
     rebel_support_efficiency = 0.10
     }
     HB1_idea_7 = {
-    max_states = 5
+    governing_capacity_modifier = 0.25
     }
 }
 
@@ -8574,7 +8574,7 @@ HB4_ideas = {
     artillery_bonus_vs_fort = 1
     }
     HB4_idea_7 = {
-    max_states = 5
+    governing_capacity_modifier = 0.25
     }
 }
 
@@ -8737,7 +8737,7 @@ HB8_ideas = {
 HB9_ideas = {
     start = {
     siege_ability = 0.15
-    possible_mercenaries = 0.5
+    mercenary_manpower = 0.5
     }
 
     bonus = {
@@ -9150,7 +9150,7 @@ HC9_ideas = {
     missionaries = 1
     }
     HC9_idea_4 = {
-    possible_mercenaries = 0.25
+    mercenary_manpower = 0.25
     }
     HC9_idea_5 = {
     global_own_trade_power = 0.10
@@ -9237,7 +9237,7 @@ HD1_ideas = {
     same_culture_advisor_cost = -0.10
     }
     HD1_idea_7 = {
-    possible_mercenaries = 0.25
+    mercenary_manpower = 0.25
     }
 }
 
@@ -9633,7 +9633,7 @@ HE1_ideas = {
 
 HE2_ideas = {
     start = {
-    max_states = 10
+    governing_capacity_modifier = 0.35
     cavalry_cost = -0.25
     }
 
@@ -9780,7 +9780,7 @@ HE5_ideas = {
     blockade_efficiency = 0.1
     }
     HE5_idea_6 = {
-    max_states = 5
+    governing_capacity_modifier = 0.25
     }
     HE5_idea_7 = {
     tolerance_heathen = 1
@@ -9819,7 +9819,7 @@ BA1_ideas = {
     navy_tradition_decay = -0.01
     }
     BA1_idea_6 = {
-    possible_mercenaries = 0.25
+    mercenary_manpower = 0.25
     }
     BA1_idea_7 = {
     drill_decay_modifier = -0.10
@@ -9849,7 +9849,7 @@ BA2_ideas = {
     diplomatic_annexation_cost = -0.10
     }
     BA2_idea_3 = {
-    max_states = 5
+    governing_capacity_modifier = 0.25
     }
     BA2_idea_4 = {
     diplomats = 1
@@ -10080,7 +10080,7 @@ BA8_ideas = {
     hostile_attrition = 1
     }
     BA8_idea_2 = {
-    max_states = 5
+    governing_capacity_modifier = 0.25
     }
     BA8_idea_3 = {
     num_accepted_cultures = 1
@@ -10275,7 +10275,7 @@ BB3_ideas = {
     cavalry_power = 0.1
     }
     BB3_idea_2 = {
-    max_states = 5
+    governing_capacity_modifier = 0.25
     }
     BB3_idea_3 = {
     leader_land_fire = 1
@@ -10726,7 +10726,7 @@ BC4_ideas = {
 BC5_ideas = {
     start = {
     native_assimilation = 0.5
-    max_states = 10
+    governing_capacity_modifier = 0.35
     }
 
     bonus = {
@@ -10857,7 +10857,7 @@ BC8_ideas = {
     free = yes
 
     BC8_idea_1 = {
-    max_states = 5
+    governing_capacity_modifier = 0.25
     }
     BC8_idea_2 = {
     reinforce_speed = 0.10
@@ -11526,7 +11526,7 @@ EB5_ideas = {
     blockade_efficiency = 0.1
     }
     EB5_idea_3 = {
-    max_states = 5
+    governing_capacity_modifier = 0.25
     }
     EB5_idea_4 = {
     state_maintenance_modifier = -0.10
@@ -11832,7 +11832,7 @@ EC3_ideas = {
     free = yes
 
     EC3_idea_1 = {
-    possible_mercenaries = 0.25
+    mercenary_manpower = 0.25
     }
     EC3_idea_2 = {
     land_maintenance_modifier = -0.1
@@ -12247,7 +12247,7 @@ VA3_ideas = {
 VA4_ideas = {
     start = {
     prestige = 0.5
-    possible_mercenaries = 0.5
+    mercenary_manpower = 0.5
     }
 
     bonus = {
@@ -13041,7 +13041,7 @@ VC4_ideas = {
     free = yes
 
     VC4_idea_1 = {
-    possible_mercenaries = 0.25
+    mercenary_manpower = 0.25
     }
     VC4_idea_2 = {
     reinforce_cost_modifier = -0.10
@@ -13304,7 +13304,7 @@ AA1_ideas = {
     }
 
     bonus = {
-    max_states = 10
+    governing_capacity_modifier = 0.35
     }
 
     trigger = {
@@ -13368,7 +13368,7 @@ AA2_ideas = {
     leader_land_manuever = 1
     }
     AA2_idea_6 = {
-    possible_mercenaries = 0.25
+    mercenary_manpower = 0.25
     }
     AA2_idea_7 = {
     rebel_support_efficiency = 0.10
@@ -13956,7 +13956,7 @@ AB7_ideas = {
     naval_tradition_from_battle = 0.25
     }
     AB7_idea_7 = {
-    max_states = 5
+    governing_capacity_modifier = 0.25
     }
 }
 
@@ -14097,7 +14097,7 @@ AC1_ideas = {
     galley_cost = -0.10
     }
     AC1_idea_2 = {
-    possible_mercenaries = 0.25
+    mercenary_manpower = 0.25
     }
     AC1_idea_3 = {
     loot_amount = 0.1
@@ -14217,7 +14217,7 @@ AC4_ideas = {
     same_culture_advisor_cost = -0.10
     }
     AC4_idea_3 = {
-    possible_mercenaries = 0.25
+    mercenary_manpower = 0.25
     }
     AC4_idea_4 = {
     infantry_cost = -0.1
@@ -14298,7 +14298,7 @@ AC6_ideas = {
     advisor_cost = -0.10
     }
     AC6_idea_4 = {
-    possible_mercenaries = 0.25
+    mercenary_manpower = 0.25
     }
     AC6_idea_5 = {
     global_manpower_modifier = 0.10
@@ -14470,7 +14470,7 @@ AD0_ideas = {
 AD1_ideas = {
     start = {
     stability_cost_modifier = -0.25
-    max_states = 10
+    governing_capacity_modifier = 0.35
     }
 
     bonus = {
@@ -14796,7 +14796,7 @@ AD9_ideas = {
     free = yes
 
     AD9_idea_1 = {
-    possible_mercenaries = 0.25
+    mercenary_manpower = 0.25
     }
     AD9_idea_2 = {
     trade_steering = 0.10
@@ -14967,7 +14967,7 @@ AE3_ideas = {
     advisor_pool = 1
     }
     AE3_idea_6 = {
-    max_states = 5
+    governing_capacity_modifier = 0.25
     }
     AE3_idea_7 = {
     trade_efficiency = 0.10
@@ -15123,7 +15123,7 @@ MA2_ideas = {
     global_unrest = -1
     }
     MA2_idea_6 = {
-    max_states = 5
+    governing_capacity_modifier = 0.25
     }
     MA2_idea_7 = {
     land_attrition = -0.10
@@ -15484,7 +15484,7 @@ MB1_ideas = {
 MB2_ideas = {
     start = {
     garrison_size = 0.25
-    possible_mercenaries = 0.5
+    mercenary_manpower = 0.5
     }
 
     bonus = {
@@ -15774,7 +15774,7 @@ MB9_ideas = {
     global_ship_recruit_speed = -0.1
     }
     MB9_idea_2 = {
-    max_states = 5
+    governing_capacity_modifier = 0.25
     }
     MB9_idea_3 = {
     embargo_efficiency = 0.10
@@ -16303,7 +16303,7 @@ MD3_ideas = {
 MD4_ideas = {
     start = {
     siege_blockade_progress = 1
-    max_states = 10
+    governing_capacity_modifier = 0.35
     }
 
     bonus = {
@@ -16473,7 +16473,7 @@ MD8_ideas = {
     free = yes
 
     MD8_idea_1 = {
-    possible_mercenaries = 0.25
+    mercenary_manpower = 0.25
     }
     MD8_idea_2 = {
     galley_power = 0.1
@@ -16580,7 +16580,7 @@ ME1_ideas = {
     }
 
     bonus = {
-    possible_mercenaries = 0.5
+    mercenary_manpower = 0.5
     }
 
     trigger = {
@@ -16635,7 +16635,7 @@ ME2_ideas = {
     advisor_cost = -0.10
     }
     ME2_idea_3 = {
-    possible_mercenaries = 0.25
+    mercenary_manpower = 0.25
     }
     ME2_idea_4 = {
     reduced_liberty_desire_on_same_continent = 10
@@ -16775,7 +16775,7 @@ ME6_ideas = {
     }
 
     bonus = {
-    max_states = 10
+    governing_capacity_modifier = 0.35
     }
 
     trigger = {
@@ -17473,7 +17473,7 @@ MG3_ideas = {
 MG4_ideas = {
     start = {
     global_trade_goods_size_modifier = 0.25
-    possible_mercenaries = 0.5
+    mercenary_manpower = 0.5
     }
 
     bonus = {
@@ -17633,7 +17633,7 @@ MG8_ideas = {
     }
 
     bonus = {
-    max_states = 10
+    governing_capacity_modifier = 0.35
     }
 
     trigger = {

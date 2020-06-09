@@ -10,10 +10,11 @@ pay_churchpower = {
 				FROM = { religion = sload_faith }
 			}
 		}
+		church_power = 10
 	}
 	
 	effect = {
-		add_church_power = -5
+		add_church_power = -10
 	}
 	
 	ai_will_do = {

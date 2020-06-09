@@ -31,7 +31,7 @@ cossack_rebels = {
 	
 	# The rebel type with the highest modifier for this province gets picked
 	spawn_chance = {
-		factor = 14		
+		factor = 15		
 		modifier = {
 			factor = 0.2
 			is_core = owner
@@ -59,8 +59,17 @@ cossack_rebels = {
 			NOT = { has_terrain = steppe }
 		}
 		modifier = {
-			factor = 15.0
-			has_estate = estate_cossacks
+			factor = 2.0
+			culture_group = east_slavic
+		}
+		modifier = {
+			factor = 2.0
+			owner = {
+				estate_territory = {
+					estate = estate_cossacks
+					territory = 20
+				}
+			}
 		}
 	}
  
@@ -104,6 +113,13 @@ cossack_rebels = {
  	}
 	siege_won_effect = {
 		add_local_autonomy = 10	
+		owner = {
+			change_estate_land_share = {
+				estate = estate_cossacks
+				share = 10.0
+				province = ROOT
+			}
+		}
 	}	
 	
 	# Country scope
@@ -121,9 +137,24 @@ cossack_rebels = {
 	
 	# Country scope
 	demands_enforced_effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = just_lost_to_rebels
+				duration = 10
+				hidden = yes
+			}
+		}
 		create_independent_estate = {
 			estate = estate_cossacks
 			play_as = no
+		}
+		change_estate_land_share = {
+			estate = estate_cossacks
+			share = -30.0
+		}
+		change_estate_land_share = {
+			estate = all
+			share = 20.0
 		}
 	}
 }

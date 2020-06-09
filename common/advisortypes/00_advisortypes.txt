@@ -72,7 +72,7 @@ grand_champion = { monarch_power = MIL merc_maintenance_modifier = -0.10 skill_s
 chief = { monarch_power = MIL global_regiment_cost = -0.10 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
 #######################################################################
 army_organiser = { monarch_power = MIL  land_forcelimit_modifier = 0.10 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
-mercenary_recruiter = { monarch_power = MIL  possible_mercenaries = 0.1 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
+mercenary_recruiter = { monarch_power = MIL  mercenary_manpower = 0.1 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
 army_coordinator = { monarch_power = MIL  land_attrition = -0.1 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
 instructor = { monarch_power = MIL  discipline = 0.025 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
 commandant = { monarch_power = MIL  mercenary_discipline = 0.025 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }

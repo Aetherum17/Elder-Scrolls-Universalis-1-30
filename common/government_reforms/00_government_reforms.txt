@@ -58,6 +58,9 @@ defaults_reform = {
 	generals_become_rulers = no
 	allow_banners = no
 	disallowed_trade_goods = {}
+	uses_revolutionary_zeal = no
+    revolutionary = no
+    revolutionary_client_state = no
 }
 
 # legacy governments
@@ -82,7 +85,7 @@ despotic_monarchy = {
 		es_warriors
 	}
 	modifiers = {
-    	max_states = 1
+    	governing_capacity_modifier = 0.1
 		global_unrest = -1
 		unjustified_demands = -0.10
 		global_autonomy = -0.05
@@ -118,7 +121,7 @@ english_monarchy_legacy = {
 		es_warriors
 	}
 	modifiers = {
-		max_states = 1
+		governing_capacity_modifier = 0.1
 		legitimacy = 0.25
 		global_unrest = -1
 		global_autonomy = -0.025
@@ -166,7 +169,7 @@ mamluk_government_legacy = {
 		monarch_admin_power = 1
 		same_culture_advisor_cost = -0.10
 		promote_culture_cost = -0.10
-		max_states = 1
+		governing_capacity_modifier = 0.1
 	}
 
 	conditional = {
@@ -201,7 +204,7 @@ elective_monarchy_legacy = {
 		vassal_income = 0.10
 		global_unrest = -1
 		max_absolutism = -30
-		max_states = 1
+		governing_capacity_modifier = 0.1
 		global_autonomy = -0.025
 	}
 
@@ -322,7 +325,7 @@ ottoman_government_legacy = {
 		diplomatic_annexation_cost = -0.10
 		max_absolutism = 5
 		monarch_diplomatic_power = 1
-		max_states = 1
+		governing_capacity_modifier = 0.1
 	}
 	
 	factions = {
@@ -406,7 +409,7 @@ mughal_government_legacy = {
 
 	modifiers = {
 		tolerance_own = 1
-		max_states = 1
+		governing_capacity_modifier = 0.1
 		monarch_military_power = 1
 		global_autonomy = -0.025
 		num_accepted_cultures = 1
@@ -527,7 +530,7 @@ merchant_republic = {
 		caravan_power = 0.10
 		trade_efficiency = 0.10
 		max_absolutism = -50
-    	max_states = 1
+    	governing_capacity_modifier = 0.1
 	}
 
 	conditional = {
@@ -590,7 +593,7 @@ oligarchic_republic = {
 		mr_guilds
 	}
 	modifiers = {
-		max_states = 1
+		governing_capacity_modifier = 0.1
 		years_of_nationalism = -5
 		stability_cost_modifier = -0.10
 		global_autonomy = -0.10
@@ -714,7 +717,7 @@ noble_republic = {
 		mr_guilds
 	}
 	modifiers = {
-   		max_states = 1
+   		governing_capacity_modifier = 0.1
 		tolerance_heathen = 1
 		cavalry_power = 0.10
 		free_leader_pool = 1
@@ -754,7 +757,7 @@ republican_dictatorship = {
 		mr_guilds
 	}
 	modifiers = {
-    	max_states = 1
+    	governing_capacity_modifier = 0.1
 		global_autonomy = -0.075
 		tolerance_heathen = 1
 		land_morale = 0.1
@@ -789,7 +792,7 @@ bureaucratic_despotism = {
 
 	republic = yes
 	modifiers = {
-		max_states = 1
+		governing_capacity_modifier = 0.1
 		global_autonomy = -0.10
 		stability_cost_modifier = -0.10
 		global_unrest = -1
@@ -932,7 +935,7 @@ trading_city_legacy = {
 		global_trade_power = 0.1
 		max_absolutism = -25
 		merchants = 1
-    	max_states = 1
+    	governing_capacity_modifier = 0.1
 	}
 
 	conditional = {
@@ -992,7 +995,7 @@ dutch_republic_legacy = {
 		mr_guilds
 	}
 	modifiers = {
-		max_states = 1
+		governing_capacity_modifier = 0.1
 		global_tax_modifier = 0.10
 		tolerance_heathen = 1
 		global_autonomy = -0.10
@@ -1049,7 +1052,7 @@ colonial_government_legacy = {
 		global_autonomy = -0.05
 		recover_army_morale_speed = 0.01
 		embracement_cost = -0.10
-		max_states = 1
+		governing_capacity_modifier = 0.1
 		global_institution_spread = 0.10
 	}
 	
@@ -1089,7 +1092,7 @@ peasants_republic_legacy = {
 		production_efficiency = 0.10
 		land_morale = 0.05
 		max_absolutism = -50
-		max_states = 1
+		governing_capacity_modifier = 0.1
 		global_autonomy = -0.05
 	}
 
@@ -1136,7 +1139,7 @@ theocratic_government = {
 		es_knights
 	}
 	modifiers = {
-		max_states = 1
+		governing_capacity_modifier = 0.1
 		tolerance_own = 1
 		global_missionary_strength = 0.01
 		global_autonomy = -0.05
@@ -1188,7 +1191,7 @@ monastic_order_government = {
 		es_knights
 	}
 	modifiers = {
-		max_states = 1
+		governing_capacity_modifier = 0.1
 		global_heretic_missionary_strength = 0.01
 		fort_maintenance_modifier = -0.10
 		defensiveness = 0.10
@@ -1238,7 +1241,7 @@ papal_government = {
 		es_knights
 	}
 	modifiers = {
-		max_states = 1
+		governing_capacity_modifier = 0.1
 		global_unrest = -1
 		prestige = 0.5
 		diplomatic_reputation = 1
@@ -1583,7 +1586,7 @@ steppe_horde_legacy = {
 
 	monarchy = yes
 	modifiers = {
-	    max_states = 1
+	    governing_capacity_modifier = 0.1
 		global_manpower_modifier = 0.10
 		land_forcelimit_modifier = 0.10
 		years_of_nationalism = -5
@@ -1622,7 +1625,7 @@ tribal_federation_legacy = {
 
 	monarchy = yes
 	modifiers = {
-		max_states = 1
+		governing_capacity_modifier = 0.1
 		monarch_admin_power = 1
 		stability_cost_modifier = -0.10
 		reduced_liberty_desire = 10
@@ -1656,7 +1659,7 @@ tribal_kingdom_legacy = {
 	nation_designer_cost = 0
 
 	modifiers = {
-		max_states = 1
+		governing_capacity_modifier = 0.1
 		monarch_diplomatic_power = 1
 		diplomatic_reputation = 1
 		unjustified_demands = -0.10
@@ -1690,7 +1693,7 @@ tribal_despotism_legacy = {
 	nation_designer_cost = 0
 
 	modifiers = {
-	    max_states = 1
+	    governing_capacity_modifier = 0.1
 	    monarch_military_power = 1
 		global_unrest = -1
 		core_creation = -0.1
@@ -1725,7 +1728,7 @@ nomad_state_legacy = {
 
 	monarchy = yes
 	modifiers = {
-	    max_states = 1
+	    governing_capacity_modifier = 0.1
 		culture_conversion_cost = -0.10
         monarch_military_power = 1
 		reinforce_cost_modifier = -0.10
@@ -1765,7 +1768,7 @@ war_against_the_world_legacy = {
 		loot_amount = 0.10
 		naval_forcelimit_modifier = 0.10
 		land_forcelimit_modifier = 0.10
-		possible_mercenaries = 0.10
+		mercenary_manpower = 0.10
 		may_perform_slave_raid_on_same_religion = yes
 	}
 	factions = {
@@ -1797,7 +1800,7 @@ tribal_republic_legacy = {
 	nation_designer_cost = 0
 
 	modifiers = {
-		max_states = 1
+		governing_capacity_modifier = 0.1
 		trade_efficiency = 0.10
 		num_accepted_cultures = 1
 		navy_tradition_decay = -0.01
@@ -1831,7 +1834,7 @@ tribal_theocratic_state_legacy = {
 	nation_designer_cost = 0
 
 	modifiers = {
-		max_states = 1
+		governing_capacity_modifier = 0.1
 		tolerance_own = 1
 		culture_conversion_cost = -0.10
 		global_missionary_strength = 0.01
@@ -1879,7 +1882,7 @@ native_council_legacy = {
 		land_maintenance_modifier = -0.10
 		diplomatic_reputation = 1
 		global_manpower_modifier = 0.10
-		possible_mercenaries = 0.10
+		mercenary_manpower = 0.10
 	}
 	conditional = {
 		allow = { has_dlc = "Cradle of Civilization" }

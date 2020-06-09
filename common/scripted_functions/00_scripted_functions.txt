@@ -132,6 +132,30 @@ can_add_estate = {
 }
 
 can_expel_minority_from = {
+condition = {
+		potential = {
+			OR = {
+				is_religious_center_province = yes
+				is_reformation_center = yes
+			}
+		}
+		allow = {
+			always = no
+		}
+	}
+}
+
+#hardcoded: has a colonial parent or is in the same colonial region as the capital
+can_have_colonial_nations = {
+	condition = {
+		potential = {
+			FROM = {
+				has_country_flag = no_colonial_nations
+			}
+		}
+		allow = {
+			always = no
+		}
 }
 
 ### Special functions
@@ -144,6 +168,17 @@ is_possible_hre_province = {
 		}
 		allow = {
 			always = yes
+		}
+	}
+}
+
+will_demand_annexation = {
+	condition = {
+		potential = {
+			is_elector = yes
+		}
+		allow = {
+			NOT = { hre_reform_passed = landfriede }
 		}
 	}
 }

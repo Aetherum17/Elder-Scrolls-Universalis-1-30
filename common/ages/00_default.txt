@@ -530,7 +530,7 @@ dark_age = {
 		}
 		ab_darkage_frankish_states = {
 			modifier = {
-				max_states = 1
+				governing_capacity_modifier = 0.1
 			}
 			ai_will_do = {
 				factor = 10
@@ -919,7 +919,7 @@ late_middle_ages = {
 		}
 		ab_latemiddle_state_administration = {
 			modifier = {
-				max_states = 1
+				governing_capacity_modifier = 0.1
 			}
 			ai_will_do = {
 				factor = 10
@@ -1550,7 +1550,7 @@ age_of_revolutions = {
 		}
 		ab_russia_boost = {
 			modifier = {
-				max_states = 1
+				governing_capacity_modifier = 0.1
 			}
 			ai_will_do = {
 				factor = 10

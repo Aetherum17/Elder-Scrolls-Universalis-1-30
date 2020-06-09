@@ -1,10 +1,12 @@
 pay_legitimacy = {
 	trigger = {
 		government = monarchy
+		legitimacy = 10
+		NOT = { has_reform = celestial_empire }
 	}
 	
 	effect = {
-		add_legitimacy = -5
+		add_legitimacy = -10
 	}
 	
 	ai_will_do = {

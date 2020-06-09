@@ -92,6 +92,10 @@ default = {
 
 	relative_power_class = 1 							# See description above
 	diplomacy_view_class = 1							# See description above
+	
+	liberty_desire_revolution = 50.0					# Liberty desire at 100% revolution spread in country
+	block_settlement_growth = yes
+	allow_settlement_growth = yes
 
 	can_fight = {
 	}
@@ -905,6 +909,7 @@ client_vassal = {
 
 	# Properties:
 	created_by_overlord = yes
+	liberty_desire_revolution = 0
 
 	# Subject Interactions:
 	customize_subject = yes
@@ -920,6 +925,7 @@ client_march = {
 
 	# Properties:
 	created_by_overlord = yes
+	liberty_desire_revolution = 0
 
 	# Subject Interactions:
 	customize_subject = yes

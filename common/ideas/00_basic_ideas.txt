@@ -37,7 +37,7 @@ aristocracy_ideas = {
 		free_leader_pool = 1
 	}
 	noble_resilience = {
-		possible_mercenaries = 0.10
+		mercenary_manpower = 0.10
 	}
 
 	ai_will_do = {
@@ -61,7 +61,7 @@ plutocracy_ideas = {
 	}
 
 	tradition_of_payment = {
-		possible_mercenaries = 0.10
+		mercenary_manpower = 0.10
 	}
 	abolished_serfdom = {
 		land_morale = 0.10
@@ -559,7 +559,7 @@ quantity_ideas = {
 		land_maintenance_modifier = -0.05
 	}
 	mercenary_contracts = {
-		possible_mercenaries = 0.10
+		mercenary_manpower = 0.10
 	}
 	garrison_conscription = {
 		garrison_size = 0.10
@@ -623,7 +623,7 @@ administrative_ideas = {
 	category = ADM
 
 	bonus = {
-		max_states = 5
+		governing_capacity_modifier = 0.25
 	}
 	trigger = {
 	}
@@ -641,7 +641,7 @@ administrative_ideas = {
 		interest = -0.5
 	}
 	organised_mercenary_recruitment = {
-		possible_mercenaries = 0.10
+		mercenary_manpower = 0.10
 	}
 	administrative_efficiency_idea = {
 		advisor_pool = 1
@@ -913,7 +913,7 @@ kolonialimperium0 = {
 	}
 	
 	kolonialimperium1 = {
-		max_states = 5
+		governing_capacity_modifier = 0.25
 	}
 	
 	kolonialimperium4 = {
@@ -1324,7 +1324,7 @@ staatsverwaltung0 = {
 		
 	
 	staatsverwaltung1 = {
-		max_states = 5
+		governing_capacity_modifier = 0.25
 		
 	}
 	staatsverwaltung2 = {
@@ -1426,7 +1426,7 @@ dezentra0 = {
 		global_institution_spread = 0.15
 	}
 	dezentra5 = {
-		max_states = 5
+		governing_capacity_modifier = 0.25
 	}
 	dezentra6 = {
 		global_manpower_modifier = 0.1
