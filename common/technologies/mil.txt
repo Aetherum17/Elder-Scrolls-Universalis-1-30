@@ -23,6 +23,7 @@ technology = {
 	enable = I00
 	enable = C00
 	enable = A00
+	
 }
 
 technology = {
@@ -89,6 +90,7 @@ technology = {
 	enable = C01
 	enable = C02
 	
+	#fort_15th = yes
 	fort_15th = yes
 }
 
@@ -154,6 +156,7 @@ technology = {
 
 	land_morale 	= 	0.25
 	
+	#barracks = yes
 	barracks = yes
 }
 
@@ -223,6 +226,7 @@ technology = {
 	enable = C11
 	enable = C12
 	
+	#regimental_camp = yes
 	regimental_camp = yes
 }
 
@@ -290,7 +294,8 @@ technology = {
 	
 	sprite_level = 2
 	
-	armory = yes
+	#armory = yes
+	weapons = yes
 }
 
 technology = {
@@ -359,7 +364,8 @@ technology = {
 	enable = C21
 	enable = C22
 	
-	earth_rampart = yes
+	#earth_rampart = yes
+	fort_16th = yes
 }
 
 technology = {
@@ -424,7 +430,8 @@ technology = {
 
 	land_morale 	= 	0.25
 	
-	march_building = yes
+	#march_building = yes
+	training_fields = yes
 }
 
 technology = {
@@ -493,7 +500,8 @@ technology = {
 	enable = C31
 	enable = C32
 	
-	weapons = yes
+	#weapons = yes
+	conscription_center = yes
 }
 
 technology = {
@@ -560,7 +568,7 @@ technology = {
 	
 	sprite_level = 3
 	
-	constable = yes
+	#constable = yes
 }
 
 technology = {
@@ -629,7 +637,7 @@ technology = {
 	enable = C41
 	enable = C42
 	
-	fort_16th = yes
+	#fort_16th = yes
 }
 
 technology = {
@@ -693,7 +701,8 @@ technology = {
 
 	land_morale 	= 	0.25
 	
-	conscription_center = yes
+	#conscription_center = yes
+	fort_17th = yes
 }
 
 technology = {
@@ -762,7 +771,7 @@ technology = {
 	enable = C51
 	enable = C52
 	
-	arsenal = yes
+	#arsenal = yes
 }
 
 technology = {
@@ -828,7 +837,7 @@ technology = {
 	
 	sprite_level = 4
 	
-	tenaille = yes
+	#tenaille = yes
 }
 
 technology = {
@@ -897,7 +906,7 @@ technology = {
 	enable = C61
 	enable = C62
 	
-	mills = yes
+	#mills = yes
 }
 
 technology = {
@@ -961,7 +970,7 @@ technology = {
 
 	land_morale 	= 	0.25
 	
-	fort_17th = yes
+	#fort_17th = yes
 }
 
 technology = {
@@ -1030,7 +1039,8 @@ technology = {
 	enable = C71
 	enable = C72
 	
-	training_fields = yes
+	#training_fields = yes
+	fort_18th = yes
 }
 
 technology = {
@@ -1096,7 +1106,7 @@ technology = {
 	
 	sprite_level = 5
 	
-	redoubt = yes
+	#redoubt = yes
 }
 
 technology = {
@@ -1165,7 +1175,7 @@ technology = {
 	enable = C81
 	enable = C82
 	
-	furnace = yes
+	#furnace = yes
 }
 
 technology = {
@@ -1229,7 +1239,7 @@ technology = {
 
 	land_morale 		= 	0.25
 	
-	war_college = yes
+	#war_college = yes
 }
 
 technology = {
@@ -1298,7 +1308,7 @@ technology = {
 	enable = C91
 	enable = C92
 	
-	fort_18th = yes
+	#fort_18th = yes
 }
 
 technology = {

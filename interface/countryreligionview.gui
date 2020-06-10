@@ -1472,6 +1472,8 @@ guiTypes = {
 				Orientation = "UPPER_LEFT"
 				format = centre
 			}
+		
+			
 					
 			iconType =
 			{
@@ -1492,6 +1494,7 @@ guiTypes = {
 				maxHeight = 25
 				Orientation = "UPPER_LEFT"
 				format = centre
+			}
 			
 			
 			iconType =
@@ -1707,12 +1710,7 @@ guiTypes = {
 			spriteType = "GFX_religious_unity_icon_with_frame"
 			scale=0.7
 			position = { x= 17 y = 332 }
-						   
-				 
-				 
 			Orientation = "UPPER_LEFT"
-				
-						  
 		}		
 
 		instantTextBoxType = {
@@ -1726,6 +1724,8 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 			format = centre
 		}
+		
+
 		
 		
 		###Missionary Strength
@@ -1924,14 +1924,15 @@ guiTypes = {
 		
 		
 		###Defender of the Faith
-		iconType = {
+
+        iconType = {
 			name ="defender_of_the_faith_tier"
 			spriteType = "GFX_defender_of_the_faith_tier"
 			position = { x=355 y=260 }
 			Orientation = "UPPER_LEFT"
         }
 
-        guiButtonType = 	
+        guiButtonType = 
 		{
 			name ="become_Defender_of_the_Faith"
 			quadTextureSprite = "GFX_become_Defender_of_the_Faith"
@@ -1944,7 +1945,7 @@ guiTypes = {
 		
 		guiButtonType = 
 		{
-		name ="defender_of_the_faith_emperor_button"
+			name ="defender_of_the_faith_emperor_button"
 			quadTextureSprite = "GFX_become_Defender_of_the_Faith"
 			position = { x = 408 y = 265 }
 			tooltip = ""
@@ -1956,6 +1957,7 @@ guiTypes = {
 		}
 
 		guiButtonType = 
+		{
 			name ="defender_of_the_faith_button"
 			quadTextureSprite = "GFX_become_Defender_of_the_Faith"
 			position = { x = 398 y = 265 }
@@ -1981,7 +1983,7 @@ guiTypes = {
 		{
 			name ="defender_of_the_faith_emperor_shield"
 			quadTextureSprite = "GFX_shield_medium"
-			position = { x = 403 y = 260 }						   
+			position = { x = 403 y = 260 }
 			tooltip = ""
 			tooltipText =""
 			delayedTooltipText = ""
@@ -1989,7 +1991,7 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 	#		scale = 0.75
 		}
-	
+
 # Needs txt linking	
 		instantTextBoxType = {
 				name = "defender_title"
@@ -2913,11 +2915,64 @@ guiTypes = {
 			Orientation = "LEFT"
 		}
 	}
+	
+	################################################################################################
+	################# Church aspect item (for selection) For Protestants
+	windowType = {
+		name = "countryreligionview_aspectitem_hussite"
+		backGround =""
+		position = { x=10 y=-20 }	
+		size = { x=50 y=46 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+		Orientation = "UPPER_LEFT"
+		
+		iconType =
+		{
+			name ="aspect_icon"
+			spriteType = "GFX_hindu_deities_strip"
+			position = { x= 45 y = -14 }
+		}
+		
+		instantTextBoxType = {
+			name = "aspect_name"
+			position = { x= -42 y = 6 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "AspectName"	
+			maxWidth = 102
+			maxHeight = 24
+			Orientation = "UPPER_LEFT"
+			format = left
+		}
+		
+		instantTextBoxType = {
+			name = "aspect_effect"
+			position = { x = 98 y = -2 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "AspectEffect"	
+			maxWidth = 206
+			maxHeight = 24
+			Orientation = "UPPER_LEFT"
+			format = left
+		}
+		
+		guiButtonType = {
+			name = "pick_aspect"
+			position = { x=301 y = 1}
+			quadTextureSprite ="GFX_standard_button_71"
+			buttonText = "SELECT"
+			buttonFont = "vic_18"
+			Orientation = "LEFT"
+		}
+	}
 
 	################################################################################################
 	################# Church aspect item (for selection) For Anglican
 	windowType = {
-		name = "countryreligionview_aspectitem_sload_faith"
+		name = "countryreligionview_aspectitem_anglican"
 		backGround =""
 		position = { x=10 y=-30 }	
 		size = { x=50 y=55 }

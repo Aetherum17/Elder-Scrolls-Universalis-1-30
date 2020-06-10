@@ -20,7 +20,7 @@
 
 
 native_earthwork = {
-	cost = 50
+	cost = 100
 	time = 12
 	build_trigger = {
 		owner = { government = native }
@@ -43,7 +43,7 @@ native_earthwork = {
 }
 
 native_palisade = {
-	cost = 50
+	cost = 250
 	time = 12
 	build_trigger = {
 		owner = { government = native }
@@ -69,7 +69,7 @@ native_palisade = {
 }
 
 native_fortified_house = {
-	cost = 50
+	cost = 500
 	time = 12
 	build_trigger = {
 		owner = { government = native }
@@ -95,7 +95,7 @@ native_fortified_house = {
 
 
 native_ceremonial_fire_pit = {
-	cost = 50
+	cost = 500
 	time = 12
 	build_trigger = {
 		owner = { government = native }
@@ -104,7 +104,7 @@ native_ceremonial_fire_pit = {
 		owner = { government = native }
 	}
 	modifier = {
-		advisor_cost = -0.50
+		advisor_cost = -0.15
 	}
 	one_per_country = yes
 	government_specific = yes
@@ -119,7 +119,7 @@ native_ceremonial_fire_pit = {
 }
 
 native_irrigation = {
-	cost = 50
+	cost = 100
 	time = 12
 	build_trigger = {
 		owner = { government = native }
@@ -128,7 +128,7 @@ native_irrigation = {
 		owner = { government = native }
 	}
 	modifier = {
-		local_tax_modifier = 0.5
+		local_tax_modifier = 0.25
 	}
 	government_specific = yes
 	
@@ -142,7 +142,7 @@ native_irrigation = {
 }
 
 native_storehouse = {
-	cost = 50
+	cost = 100
 	time = 12
 	build_trigger = {
 		owner = { government = native }
@@ -151,7 +151,7 @@ native_storehouse = {
 		owner = { government = native }
 	}
 	modifier = {
-		local_production_efficiency = 0.5
+		local_production_efficiency = 0.25
 	}
 	government_specific = yes
 	
@@ -165,7 +165,7 @@ native_storehouse = {
 }
 
 native_longhouse = {
-	cost = 50
+	cost = 500
 	time = 12
 	build_trigger = {
 		owner = { government = native }
@@ -174,7 +174,7 @@ native_longhouse = {
 		owner = { government = native }
 	}
 	modifier = {
-		tax_income = 1
+		tax_income = 12
 	}
 	one_per_country = yes
 	government_specific = yes
@@ -189,7 +189,7 @@ native_longhouse = {
 }
 
 native_sweat_lodge = {
-	cost = 50
+	cost = 500
 	time = 12
 	build_trigger = {
 		owner = { government = native }
@@ -213,7 +213,7 @@ native_sweat_lodge = {
 }
 
 native_great_trail = {
-	cost = 50
+	cost = 100
 	time = 12
 	build_trigger = {
 		owner = { government = native }
@@ -222,7 +222,7 @@ native_great_trail = {
 		owner = { government = native }
 	}
 	modifier = {
-		local_manpower_modifier = 0.5
+		local_manpower_modifier = 0.25
 	}
 	government_specific = yes
 
@@ -238,7 +238,7 @@ native_great_trail = {
 
 
 native_three_sisters_field = {
-	cost = 50
+	cost = 100
 	time = 12
 	build_trigger = {
 		owner = { government = native }
@@ -247,7 +247,7 @@ native_three_sisters_field = {
 		owner = { government = native }
 	}
 	modifier = {
-		trade_goods_size_modifier = 0.5
+		trade_goods_size_modifier = 0.25
 	}
 	government_specific = yes
 	
