@@ -62,7 +62,7 @@ country_decisions = {
             mil_power = 100
 		}
 		effect = {
-			add_adm_power = 150
+			add_adm_power = 175
             add_dip_power = -100
             add_mil_power = -100
 		}
@@ -78,7 +78,7 @@ country_decisions = {
 		}
 		effect = {
 			add_adm_power = -100
-            add_dip_power = 150
+            add_dip_power = 175
             add_mil_power = -100
 		}
 	}
@@ -94,7 +94,7 @@ country_decisions = {
 		effect = {
 			add_adm_power = -100
             add_dip_power = -100
-            add_mil_power = 150
+            add_mil_power = 175
 		}
 	}
 	
@@ -103,11 +103,11 @@ country_decisions = {
 		    ai = no
 		}
 		allow = {
-			mil_power = 150
+			mil_power = 100
 		}
 		effect = {
-        add_mil_power = -150
-		add_manpower = 2.5
+        add_mil_power = -100
+		add_manpower = 5
 		}
 	}
 
@@ -189,7 +189,7 @@ country_decisions = {
 		}
 		allow = {
 			#treasury = 500
-			years_of_income = 1.5
+			years_of_income = 1.35
 			manpower = 2.5
 			NOT = { num_of_loans = 1 }
 			any_owned_province = {
@@ -200,7 +200,7 @@ country_decisions = {
 	    effect = {
 	    add_manpower = -2.5
 	    #add_treasury = -500
-		add_years_of_income = -1.5
+		add_years_of_income = -1.35
 	    random_owned_province = {
             limit = { 
             NOT = { has_province_modifier = dev }
