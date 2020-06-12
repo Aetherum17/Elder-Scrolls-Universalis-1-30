@@ -118,7 +118,7 @@ altmeri_pantheon_rebels = {
 			}
 		}
  	}
-	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT } }
 		if = {
 			limit = {
 				religion = altmeri_pantheon
@@ -203,6 +203,7 @@ altmeri_pantheon_rebels = {
 				name = "heretic_tolerance"
 				duration = 3650
 			}
+		}
 		}
 	}
 }
@@ -327,7 +328,7 @@ snow_elves_pantheon_rebels = {
 			}
 		}
  	}
-	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT } }
 		if = {
 			limit = {
 				religion = snow_elves_pantheon
@@ -412,6 +413,7 @@ snow_elves_pantheon_rebels = {
 				name = "heretic_tolerance"
 				duration = 3650
 			}
+		}
 		}
 	}
 }
@@ -536,7 +538,7 @@ nordic_pantheon_rebels = {
 			}
 		}
  	}
-	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT } }
 		if = {
 			limit = {
 				religion = nordic_pantheon
@@ -622,6 +624,7 @@ nordic_pantheon_rebels = {
 				duration = 3650
 			}
 		}
+	}
 	}
 }
 
@@ -745,7 +748,7 @@ bosmer_pantheon_rebels = {
 			}
 		}
  	}
-	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT } }
 		if = {
 			limit = {
 				religion = bosmer_pantheon
@@ -831,6 +834,7 @@ bosmer_pantheon_rebels = {
 				duration = 3650
 			}
 		}
+	}
 	}
 }
 
@@ -954,7 +958,7 @@ eight_divines_rebels = {
 			}
 		}
  	}
-	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT } }
 		if = {
 			limit = {
 				religion = eight_divines
@@ -1040,6 +1044,7 @@ eight_divines_rebels = {
 				duration = 3650
 			}
 		}
+	}
 	}
 }
 
@@ -1163,7 +1168,7 @@ nine_divines_rebels = {
 			}
 		}
  	}
-	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT } }
 		if = {
 			limit = {
 				religion = nine_divines
@@ -1249,6 +1254,7 @@ nine_divines_rebels = {
 				duration = 3650
 			}
 		}
+	}
 	}
 }
 
@@ -1372,7 +1378,7 @@ twelve_divines_rebels = {
 			}
 		}
  	}
-	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT } }
 		if = {
 			limit = {
 				religion = twelve_divines
@@ -1458,6 +1464,7 @@ twelve_divines_rebels = {
 				duration = 3650
 			}
 		}
+	}
 	}
 }
 
@@ -1581,7 +1588,7 @@ khajiiti_pantheon_rebels = {
 			}
 		}
  	}
-	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT } }
 		if = {
 			limit = {
 				religion = khajiiti_pantheon
@@ -1667,6 +1674,7 @@ khajiiti_pantheon_rebels = {
 				duration = 3650
 			}
 		}
+	}
 	}
 }
 
@@ -1790,7 +1798,7 @@ yokudan_pantheon_rebels = {
 			}
 		}
  	}
-	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT } }
 		if = {
 			limit = {
 				religion = yokudan_pantheon
@@ -1876,6 +1884,7 @@ yokudan_pantheon_rebels = {
 				duration = 3650
 			}
 		}
+	}
 	}
 }
 
@@ -1999,7 +2008,7 @@ redguard_pantheon_rebels = {
 			}
 		}
  	}
-	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT } }
 		if = {
 			limit = {
 				religion = redguard_pantheon
@@ -2085,6 +2094,7 @@ redguard_pantheon_rebels = {
 				duration = 3650
 			}
 		}
+	}
 	}
 }
 
@@ -2208,7 +2218,7 @@ malacath_cult_rebels = {
 			}
 		}
  	}
-	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT } }
 		if = {
 			limit = {
 				religion = malacath_cult
@@ -2294,6 +2304,7 @@ malacath_cult_rebels = {
 				duration = 3650
 			}
 		}
+	}
 	}
 }
 
@@ -2417,7 +2428,7 @@ kothri_pantheon_rebels = {
 			}
 		}
  	}
-	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT } }
 		if = {
 			limit = {
 				religion = kothri_pantheon
@@ -2503,6 +2514,7 @@ kothri_pantheon_rebels = {
 				duration = 3650
 			}
 		}
+	}
 	}
 }
 
@@ -2626,7 +2638,7 @@ chimer_pantheon_rebels = {
 			}
 		}
  	}
-	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT } }
 		if = {
 			limit = {
 				religion = chimer_pantheon
@@ -2712,6 +2724,7 @@ chimer_pantheon_rebels = {
 				duration = 3650
 			}
 		}
+	}
 	}
 }
 
@@ -2835,7 +2848,7 @@ tribunal_pantheon_rebels = {
 			}
 		}
  	}
-	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT } }
 		if = {
 			limit = {
 				religion = tribunal_pantheon
@@ -2921,6 +2934,7 @@ tribunal_pantheon_rebels = {
 				duration = 3650
 			}
 		}
+	}
 	}
 }
 
@@ -3044,7 +3058,7 @@ reclamations_pantheon_rebels = {
 			}
 		}
  	}
-	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT } }
 		if = {
 			limit = {
 				religion = reclamations_pantheon
@@ -3130,6 +3144,7 @@ reclamations_pantheon_rebels = {
 				duration = 3650
 			}
 		}
+	}
 	}
 }
 
@@ -3253,7 +3268,7 @@ sload_faith_rebels = {
 			}
 		}
  	}
-	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT } }
 		if = {
 			limit = {
 				religion = sload_faith
@@ -3339,6 +3354,7 @@ sload_faith_rebels = {
 				duration = 3650
 			}
 		}
+	}
 	}
 }
 
@@ -3462,7 +3478,7 @@ serpant_king_rebels = {
 			}
 		}
  	}
-	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT } }
 		if = {
 			limit = {
 				religion = serpant_king
@@ -3548,6 +3564,7 @@ serpant_king_rebels = {
 				duration = 3650
 			}
 		}
+	}
 	}
 }
 
@@ -3671,7 +3688,7 @@ dragon_cult_rebels = {
 			}
 		}
  	}
-	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT } }
 		if = {
 			limit = {
 				religion = dragon_cult
@@ -3757,6 +3774,7 @@ dragon_cult_rebels = {
 				duration = 3650
 			}
 		}
+	}
 	}
 }
 
@@ -3880,7 +3898,7 @@ marukhism_rebels = {
 			}
 		}
  	}
-	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT } }
 		if = {
 			limit = {
 				religion = marukhism
@@ -3966,6 +3984,7 @@ marukhism_rebels = {
 				duration = 3650
 			}
 		}
+	}
 	}
 }
 
@@ -4089,7 +4108,7 @@ hist_rebels = {
 			}
 		}
  	}
-	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT } }
 		if = {
 			limit = {
 				religion = hist
@@ -4175,6 +4194,7 @@ hist_rebels = {
 				duration = 3650
 			}
 		}
+	}
 	}
 }
 
@@ -4298,7 +4318,7 @@ reason_and_logic_cult_rebels = {
 			}
 		}
  	}
-	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT } }
 		if = {
 			limit = {
 				religion = reason_and_logic_cult
@@ -4384,6 +4404,7 @@ reason_and_logic_cult_rebels = {
 				duration = 3650
 			}
 		}
+	}
 	}
 }
 
@@ -4507,7 +4528,7 @@ old_gods_cult_rebels = {
 			}
 		}
  	}
-	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT } }
 		if = {
 			limit = {
 				religion = old_gods_cult
@@ -4593,6 +4614,7 @@ old_gods_cult_rebels = {
 				duration = 3650
 			}
 		}
+	}
 	}
 }
 
@@ -4716,7 +4738,7 @@ tsaesci_pantheon_rebels = {
 			}
 		}
  	}
-	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT } }
 		if = {
 			limit = {
 				religion = tsaesci_pantheon
@@ -4802,6 +4824,7 @@ tsaesci_pantheon_rebels = {
 				duration = 3650
 			}
 		}
+	}
 	}
 }
 
@@ -4925,7 +4948,7 @@ tang_mo_pantheon_rebels = {
 			}
 		}
  	}
-	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT } }
 		if = {
 			limit = {
 				religion = tang_mo_pantheon
@@ -5011,6 +5034,7 @@ tang_mo_pantheon_rebels = {
 				duration = 3650
 			}
 		}
+	}
 	}
 }
 
@@ -5134,7 +5158,7 @@ kamal_pantheon_rebels = {
 			}
 		}
  	}
-	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT } }
 		if = {
 			limit = {
 				religion = kamal_pantheon
@@ -5220,6 +5244,7 @@ kamal_pantheon_rebels = {
 				duration = 3650
 			}
 		}
+	}
 	}
 }
 
@@ -5343,7 +5368,7 @@ dremora_pantheon_rebels = {
 			}
 		}
  	}
-	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT } }
 		if = {
 			limit = {
 				religion = dremora_pantheon
@@ -5429,6 +5454,7 @@ dremora_pantheon_rebels = {
 				duration = 3650
 			}
 		}
+	}
 	}
 }
 
@@ -5552,7 +5578,7 @@ molog_bal_cult_rebels = {
 			}
 		}
  	}
-	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT } }
 		if = {
 			limit = {
 				religion = molog_bal_cult
@@ -5638,6 +5664,7 @@ molog_bal_cult_rebels = {
 				duration = 3650
 			}
 		}
+	}
 	}
 }
 
@@ -5761,7 +5788,7 @@ meridia_cult_rebels = {
 			}
 		}
  	}
-	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT } }
 		if = {
 			limit = {
 				religion = meridia_cult
@@ -5847,6 +5874,7 @@ meridia_cult_rebels = {
 				duration = 3650
 			}
 		}
+	}
 	}
 }
 
@@ -5970,7 +5998,7 @@ mehrunes_dagon_cult_rebels = {
 			}
 		}
  	}
-	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT } }
 		if = {
 			limit = {
 				religion = mehrunes_dagon_cult
@@ -6056,6 +6084,7 @@ mehrunes_dagon_cult_rebels = {
 				duration = 3650
 			}
 		}
+	}
 	}
 }
 
@@ -6179,7 +6208,7 @@ hermeus_mora_cult_rebels = {
 			}
 		}
  	}
-	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT } }
 		if = {
 			limit = {
 				religion = hermeus_mora_cult
@@ -6265,6 +6294,7 @@ hermeus_mora_cult_rebels = {
 				duration = 3650
 			}
 		}
+	}
 	}
 }
 
@@ -6388,7 +6418,7 @@ po_tun_pantheon_rebels = {
 			}
 		}
  	}
-	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT } }
 		if = {
 			limit = {
 				religion = po_tun_pantheon
@@ -6474,6 +6504,7 @@ po_tun_pantheon_rebels = {
 				duration = 3650
 			}
 		}
+	}
 	}
 }
 
@@ -6597,7 +6628,7 @@ unknown_pantheon_rebels = {
 			}
 		}
  	}
-	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT } }
 		if = {
 			limit = {
 				religion = unknown_pantheon
@@ -6683,6 +6714,7 @@ unknown_pantheon_rebels = {
 				duration = 3650
 			}
 		}
+	}
 	}
 }
 
@@ -6806,7 +6838,7 @@ all-maker_cult_rebels = {
 			}
 		}
  	}
-	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT } }
 		if = {
 			limit = {
 				religion = all-maker_cult
@@ -6892,6 +6924,7 @@ all-maker_cult_rebels = {
 				duration = 3650
 			}
 		}
+	}
 	}
 }
 
@@ -7015,7 +7048,7 @@ sheogorath_cult_rebels = {
 			}
 		}
  	}
-	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT } }
 		if = {
 			limit = {
 				religion = sheogorath_cult
@@ -7101,6 +7134,7 @@ sheogorath_cult_rebels = {
 				duration = 3650
 			}
 		}
+	}
 	}
 }
 
@@ -7224,7 +7258,7 @@ hircine_cult_rebels = {
 			}
 		}
  	}
-	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT } }
 		if = {
 			limit = {
 				religion = hircine_cult
@@ -7310,6 +7344,7 @@ hircine_cult_rebels = {
 				duration = 3650
 			}
 		}
+	}
 	}
 }
 
@@ -7433,7 +7468,7 @@ nocturnal_cult_rebels = {
 			}
 		}
  	}
-	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT }
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT } }
 		if = {
 			limit = {
 				religion = nocturnal_cult
@@ -7519,5 +7554,6 @@ nocturnal_cult_rebels = {
 				duration = 3650
 			}
 		}
+	}
 	}
 }

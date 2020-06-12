@@ -7,7 +7,7 @@ spriteTypes = {
 	
 	spriteType = {
 		name = "GFX_combat_bg"	
-		texturefile = "gfx//interface//combat_bg.tga"
+		texturefile = "gfx//interface//combat_bgv2.dds"
 		transparencecheck = yes
 	}
 
@@ -70,9 +70,32 @@ spriteTypes = {
 		color = { 0.0 0.5 0.0 }
 		colortwo = { 1.0 0.0 0.0 }
 		textureFile1 = "gfx\\interface\\default_progressbar_w256_h32_green.dds"
-		textureFile2 = "gfx\\interface\\default_progressbar_w256_h32_red.dds"
-		size = { x = 136 y = 18 }
+		textureFile2 = "gfx\\interface\\custom2_progressbar_w256_h32_red.dds"
+		size = { x = 172 y = 38 } ###was 136
 		effectFile = "gfx/FX/progress.lua"
+	}
+	progressbartype = {
+		name = "GFX_combat_morale2"
+		color = { 0.0 0.5 0.0 }
+		colortwo = { 1.0 0.0 0.0 }
+		textureFile1 = "gfx\\interface\\default_progressbar_w256_h32_green.dds"
+		textureFile2 = "gfx\\interface\\custom2_1_progressbar_w256_h32_red.dds"
+		size = { x = 172 y = 38 } ###was 136
+		effectFile = "gfx/FX/progress.lua"
+	}
+	progressbartype = {
+		name = "GFX_combat_morale_siege_custom"
+		color = { 0.0 0.5 0.0 }
+		colortwo = { 1.0 0.0 0.0 }
+		textureFile1 = "gfx\\interface\\default_progressbar_w256_h32_green.dds"
+		textureFile2 = "gfx\\interface\\default_progressbar_w256_h32_red.dds"
+		size = { x = 136 y = 18 } 
+		effectFile = "gfx/FX/progress.lua"
+	}
+	spriteType = {
+		name = "GFX_combat_morale_frame_siege_custom"
+		texturefile = "gfx//interface//combat_morale_frame_siege.dds"
+		allwaystransparent = yes
 	}
 	spriteType = {
 		name = "GFX_captured_ships_icon"
@@ -90,26 +113,6 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_combat_banner"
 		texturefile = "gfx//interface//combat_banner.dds"
-	}
-
-	spriteType = {
-		name = "GFX_build_unit_entry_reserve"
-		texturefile = "gfx/interface/naval/build_unit_entry_reserve.dds"
-	}
-	
-	spriteType = {
-		name = "GFX_build_unit_entry_combat"
-		texturefile = "gfx/interface/naval/build_unit_entry_combat.dds"
-	}
-
-	spriteType = {
-		name = "GFX_build_unit_entry_demoralized"
-		texturefile = "gfx/interface/naval/build_unit_entry_demoralized.dds"
-	}
-	
-	spriteType = {
-		name = "GFX_build_unit_entry_disengaged"
-		texturefile = "gfx/interface/naval/build_unit_entry_disengaged.dds"
 	}
 
 	progressbartype = {

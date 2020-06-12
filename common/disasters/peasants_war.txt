@@ -9,19 +9,18 @@ peasant_war = {
 		uses_doom = no
 		is_free_or_tributary_trigger = yes
 		num_of_cities = 5
-			NOT = { has_country_flag = had_peasant_war }
-			AND = {
-				has_global_flag = great_peasants_war_flag
-				is_part_of_hre = yes
-			}
+		NOT = { has_country_flag = had_peasant_war }
+		AND = {
+			has_global_flag = great_peasants_war_flag
+			is_part_of_hre = yes
 		}
 	}
 	
 	
-	can_start = {
-								   
+	can_start = {				   
 		is_at_war = no
 		has_any_disaster = no
+		if = {
 			limit = {
 				has_global_flag = great_peasants_war_flag
 				is_part_of_hre = yes
@@ -100,7 +99,6 @@ peasant_war = {
 		global_unrest = 5
 		stability_cost_modifier = 0.50
 	}	
-	
 	
 	on_start = peasants_war.1
 	on_end = peasants_war.6

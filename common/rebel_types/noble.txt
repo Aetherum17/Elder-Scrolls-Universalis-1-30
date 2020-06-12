@@ -230,7 +230,8 @@ noble_rebels = {
 		add_prestige = -20
 		add_legitimacy = -20
 		add_horde_unity = -20
-			limit = { has_disaster = counts_feud }
+		if = {
+		limit = { has_disaster = counts_feud }
 			end_disaster = counts_feud
 			clr_country_flag = pretender_flag
 			clr_country_flag = monarch_flag
@@ -247,23 +248,7 @@ noble_rebels = {
 			limit = {
 				has_country_modifier = recently_repealed_elective_monarchy_timer
 				NOT = {
-					has_reform = papacy_reform
-					has_reform = steppe_horde
-					has_reform = celestial_empire
-					has_reform = iqta
-					has_reform = indep_daimyo
-					has_reform = principality
-					has_reform = daimyo
-					has_reform = shogunate
-					has_reform = colonial_government
-					has_reform = siberian_tribe
 					government = native
-					has_reform = elective_monarchy
-					has_reform = english_monarchy
-					has_reform = ottoman_government
-					has_reform = tribal_federation
-					has_reform = feudal_theocracy
-					has_reform = mamluk_government
 				}
 			}
 			add_government_reform = elective_monarchy

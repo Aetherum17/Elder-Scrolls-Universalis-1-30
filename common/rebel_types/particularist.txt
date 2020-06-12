@@ -283,6 +283,7 @@ particularist_rebels = {
 			hidden_effect = { country_event = { id = court_and_country_events.100 } }
 			end_disaster = court_and_country
 		}
+		if = {
 			limit = { has_estate = estate_dhimmi }
 			change_estate_land_share = {
 				estate = estate_dhimmi
@@ -309,6 +310,5 @@ particularist_rebels = {
 				share = 10.0
 			}
 		}
-	}
 	}
 }

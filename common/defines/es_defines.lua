@@ -344,7 +344,7 @@ NDefines.NDiplomacy.HRE_AUTHORITY_JOIN_EMPIRE = 10
 NDefines.NDiplomacy.HRE_AUTHORITY_LEAVE_EMPIRE = -10
 NDefines.NDiplomacy.HRE_AUTHORITY_PROVINCE_JOIN = 0.5
 NDefines.NDiplomacy.IMPERIAL_REALM_WAR_IA_COST = 25.0				-- How much IA the Realm War CB costs.
-NDefines.NDiplomacy.IMPERIAL_REALM_WAR_MONTHS = 60					-- How many months the CB will be available
+NDefines.NDiplomacy.IMPERIAL_REALM_WAR_MONTHS = 50					-- How many months the CB will be available
 
 NDefines.NCountry.EXPLOIT_ADM_INCOME = 50	-- months of income
 NDefines.NCountry.EXPLOIT_DIP_SAILORS = 5

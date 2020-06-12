@@ -14,7 +14,8 @@ local_quarter = {
 	
 	company_province_area_modifier = {
 		local_defensiveness = 0.10
-		supply_limit = 0.10
+		supply_limit = 0.15
+		local_regiment_cost = -0.10
 	}
 	
 	ai_global_worth = { factor = 0 }
@@ -33,6 +34,7 @@ permanent_quarters = {
 	company_province_area_modifier = {
 		local_defensiveness = 0.25
 		supply_limit = 0.25
+		local_regiment_cost = -0.25
 	}
 	
 	ai_global_worth = { factor = 0 }
@@ -397,6 +399,7 @@ company_administration = {
 	company_province_area_modifier = {
 		local_manpower_modifier = 0.10
 		local_sailors_modifier = 0.10
+		local_tax_modifier = 0.10
 	}
 	
 	ai_global_worth = { factor = 0 }
@@ -415,6 +418,7 @@ military_administration = {
 	company_province_area_modifier = {
 		local_manpower_modifier = 0.25
 		local_sailors_modifier = 0.25
+		local_tax_modifier = 0.25
 	}
 	
 	ai_global_worth = { factor = 0 }

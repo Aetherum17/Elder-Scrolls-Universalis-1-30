@@ -122,10 +122,6 @@ pretender_rebels = {
 			factor = 50.0
 			owner = { has_disaster = war_of_the_roses }
 		}
-		modifier = {
-			factor = 2
-			owner = { religion = inti }
-		}
 		modifier = {	  
 			factor = 30
 			owner = {
@@ -344,6 +340,7 @@ pretender_rebels = {
 			country_event = { id = internal_conflicts.8 }
 			end_disaster = internal_conflicts
 		}
+		if = {
 			limit = { has_disaster = castilian_civil_war }
 			set_country_flag = cas_civil_war_rebels_won
 			country_event = { id = castilian_civil_war.100 }
