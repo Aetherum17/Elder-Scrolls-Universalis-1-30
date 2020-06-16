@@ -62,7 +62,7 @@ estate_maratha_advisor = {
 	max_absolutism = -5
 	influence = 0.1
 	is_valid = {
-		NOT = { religion_group = muslim }
+		always = yes
 	}
 	loyalty = 0.05
 	penalties = {
@@ -111,7 +111,7 @@ estate_maratha_levies = {
 	max_absolutism = -5
 	influence = 0.1
 	is_valid = {
-		NOT = { religion_group = muslim }
+		always = yes
 	}
 	modifier_by_land_ownership = {
 		global_tax_modifier = -0.25
@@ -202,14 +202,14 @@ estate_maratha_levies_for_muslims = {
 	max_absolutism = -5
 	influence = 0.1
 	is_valid = {
-		religion_group = muslim
+		always = yes
 	}
 	on_granted = {
 		custom_tooltip = estate_maratha_levies_for_muslims_effect_tooltip
 		hidden_effect = {
 			every_owned_province = {
 				limit = {
-					religion = hinduism
+					religion = root
 				}
 				add_province_modifier = {
 					name = estate_maratha_levies_for_muslims_mod

@@ -8,7 +8,12 @@ estate_maratha_monopoly_of_metals = {
 			OR = {
 				trade_goods = iron
 				trade_goods = copper
+				trade_goods = rare_metals
+				trade_goods = light_metals
 			}
+			NOT = { has_province_modifier = estate_nobles_monopoly_of_metals_mod }
+			NOT = { has_province_modifier = estate_rajput_monopoly_of_metals_mod }
+			NOT = { has_province_modifier = estate_maratha_monopoly_of_metals_mod }
 		}
 	}
 	can_select = {
@@ -25,6 +30,8 @@ estate_maratha_monopoly_of_metals = {
 				OR = {
 					trade_goods = iron
 					trade_goods = copper
+					trade_goods = rare_metals
+				    trade_goods = light_metals
 				}
 			}
 			custom_tooltip = MONOPOLY_INCOME_IRON_DESC
@@ -36,7 +43,12 @@ estate_maratha_monopoly_of_metals = {
 					OR = {
 						trade_goods = iron
 						trade_goods = copper
+						trade_goods = rare_metals
+				        trade_goods = light_metals
 					}
+					NOT = { has_province_modifier = estate_nobles_monopoly_of_metals_mod }
+			        NOT = { has_province_modifier = estate_rajput_monopoly_of_metals_mod }
+			        NOT = { has_province_modifier = estate_maratha_monopoly_of_metals_mod }
 				}
 				add_province_modifier = {
 					name = estate_maratha_monopoly_of_metals_mod
@@ -88,6 +100,9 @@ estate_maratha_monopoly_of_livestock = {
 		has_dlc = "Emperor"
 		any_owned_province = {
 			trade_goods = livestock
+			NOT = { has_province_modifier = estate_nobles_monopoly_of_livestock_mod }
+			NOT = { has_province_modifier = estate_rajput_monopoly_of_livestock_mod }
+			NOT = { has_province_modifier = estate_maratha_monopoly_of_livestock_mod }
 		}
 	}
 	can_select = {
@@ -110,6 +125,9 @@ estate_maratha_monopoly_of_livestock = {
 			every_owned_province = {
 				limit = {
 					trade_goods = livestock
+					NOT = { has_province_modifier = estate_nobles_monopoly_of_livestock_mod }
+			        NOT = { has_province_modifier = estate_rajput_monopoly_of_livestock_mod }
+			        NOT = { has_province_modifier = estate_maratha_monopoly_of_livestock_mod }
 				}
 				add_province_modifier = {
 					name = estate_maratha_monopoly_of_livestock_mod
@@ -161,6 +179,9 @@ estate_maratha_monopoly_of_gems = {
 		has_dlc = "Emperor"
 		any_owned_province = {
 			trade_goods = gems
+			NOT = { has_province_modifier = estate_nobles_monopoly_of_gems_mod }
+			NOT = { has_province_modifier = estate_rajput_monopoly_of_gems_mod }
+			NOT = { has_province_modifier = estate_maratha_monopoly_of_gems_mod }
 		}
 	}
 	can_select = {
@@ -183,6 +204,9 @@ estate_maratha_monopoly_of_gems = {
 			every_owned_province = {
 				limit = {
 					trade_goods = gems
+			 		NOT = { has_province_modifier = estate_nobles_monopoly_of_gems_mod }
+			        NOT = { has_province_modifier = estate_rajput_monopoly_of_gems_mod }
+			        NOT = { has_province_modifier = estate_maratha_monopoly_of_gems_mod }
 				}
 				add_province_modifier = {
 					name = estate_maratha_monopoly_of_gems_mod

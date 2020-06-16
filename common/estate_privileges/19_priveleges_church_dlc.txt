@@ -6,6 +6,8 @@ estate_church_monopoly_of_incense = {
 		has_dlc = "Emperor"
 		any_owned_province = {
 			trade_goods = incense
+			NOT = { has_province_modifier = estate_brahmins_monopoly_of_incense_mod }
+			NOT = { has_province_modifier = estate_church_monopoly_of_incense_mod }
 		}
 	}
 	can_select = {
@@ -28,6 +30,8 @@ estate_church_monopoly_of_incense = {
 			every_owned_province = {
 				limit = {
 					trade_goods = incense
+					NOT = { has_province_modifier = estate_brahmins_monopoly_of_incense_mod }
+			        NOT = { has_province_modifier = estate_church_monopoly_of_incense_mod }
 				}
 				add_province_modifier = {
 					name = estate_church_monopoly_of_incense_mod
@@ -79,6 +83,8 @@ estate_church_monopoly_of_wool = {
 		has_dlc = "Emperor"
 		any_owned_province = {
 			trade_goods = wool
+			NOT = { has_province_modifier = estate_brahmins_monopoly_of_wool_mod }
+			NOT = { has_province_modifier = estate_church_monopoly_of_wool_mod }
 		}
 	}
 	can_select = {
@@ -101,6 +107,8 @@ estate_church_monopoly_of_wool = {
 			every_owned_province = {
 				limit = {
 					trade_goods = wool
+					NOT = { has_province_modifier = estate_brahmins_monopoly_of_wool_mod }
+			        NOT = { has_province_modifier = estate_church_monopoly_of_wool_mod }
 				}
 				add_province_modifier = {
 					name = estate_church_monopoly_of_wool_mod

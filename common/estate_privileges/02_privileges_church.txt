@@ -106,50 +106,19 @@ estate_church_papal_emissary = {
 	loyalty = 0.05
 	influence = 0.05
 	is_valid = {
-		religion = catholic
-		NOT = { tag = PAP }
+		always = no
 	}
 	can_select = {
-		papal_influence = 20
-		num_of_cardinals = 1
+		always = no
 	}
 	on_granted = {
-		add_papal_influence = -5
 	}
 	penalties = {
-		curia_powers_cost = 0.05
 	}
 	benefits = {
-		papal_influence = 1
 	}
 	ai_will_do = {
-		factor = 10
-		modifier = {
-			factor = 0
-			is_part_of_hre = yes
-			is_emperor = no
-		}
-		modifier = {
-			factor = 0
-			OR = {
-				tag = SWE
-				tag = ENG
-				tag = GBR
-			}
-		}
-		modifier = {
-			factor = 0
-			is_absolutism_active = yes
-		}
-		modifier = {
-			factor = 0.75
-			NOT = {
-				reverse_has_opinion = {
-					who = PAP
-					value = 50
-				}
-			}
-		}
+		factor = 0
 	}
 }
 
@@ -157,132 +126,18 @@ estate_church_clerical_ministers = {
 	icon = privilege_recruit_minister
 	max_absolutism = -5
 	influence = 0.10
-	conditional_modifier = {
-		trigger = {
-			if = {
-				limit = {
-					has_dlc = "Common Sense"
-				}
-				NOT = { religion = protestant }
-				NOT = { religion = buddhism }
-				NOT = { religion = vajrayana }
-				NOT = { religion = mahayana }
-			}
-			if = {
-				limit = {
-					has_dlc = "Wealth of Nations"
-				}
-				NOT = { religion = reformed }
-			}
-			if = {
-				limit = {
-					has_dlc = "Cradle of Civilization"
-				}
-				NOT = { religion_group = muslim }
-			}
-			if = {
-				limit = {
-					has_dlc = "Mandate of Heaven"
-				}
-				NOT = { religion = confucianism }
-			}
-			if = {
-				limit = {
-					has_dlc = "Third Rome"
-				}
-				NOT = { religion = orthodox }
-			}
-			NOT = { religion = anglican }
-		}
-		modifier = {
-			missionary_maintenance_cost = -0.2
-		}
+	is_valid = {
+		always = no
 	}
-	conditional_modifier = {
-		trigger = {
-			has_dlc = "Common Sense"
-			OR = {
-				religion = buddhism
-				religion = vajrayana
-				religion = mahayana
-			}
-		}
-		modifier = {
-			yearly_karma_decay = 0.005
-		}
-	}
-	conditional_modifier = {
-		trigger = {
-			has_dlc = "Common Sense"
-			religion = protestant
-		}
-		modifier = {
-			church_power_modifier = 0.1
-		}
-	}
-	conditional_modifier = {
-		trigger = {
-			has_dlc = "Wealth of Nations"
-			religion = reformed
-		}
-		modifier = {
-			monthly_fervor_increase = 0.5
-		}
-	}
-	conditional_modifier = {
-		trigger = {
-			has_dlc = "Cradle of Civilization"
-			religion_group = muslim
-		}
-		modifier = {
-			monthly_piety = 0.001
-		}
-	}
-	conditional_modifier = {
-		trigger = {
-			has_dlc = "Mandate of Heaven"
-			religion = confucianism
-		}
-		modifier = {
-			yearly_harmony = 0.25
-		}
-	}
-	conditional_modifier = {
-		trigger = {
-			has_dlc = "Third Rome"
-			religion = orthodox
-		}
-		modifier = {
-			yearly_patriarch_authority = 0.005
-		}
-	}
-	conditional_modifier = {
-		trigger = {
-			religion = anglican
-		}
-		modifier = {
-			church_power_modifier = 0.1
-		}
+	can_select = {
+		always = no
 	}
 	penalties = {
 	}
 	benefits = {
 	}
 	ai_will_do = {
-		factor = 10
-		modifier = {
-			factor = 0.5
-			is_absolutism_active = yes
-		}
-		modifier = {
-			factor = 0.5
-			OR = {
-				religion = protestant
-				religion = anglican
-			}
-			religion = protestant
-			num_of_aspects = 3
-		}
+		factor = 0
 	}
 }
 
@@ -311,7 +166,7 @@ estate_church_inwards_perfection = {
 	loyalty = 0.1
 	influence = 0.05
 	is_valid = {
-		religion_group = eastern
+		always = yes
 	}
 	can_select = {
 		NOT = { has_estate_privilege = estate_church_for_the_faith }
@@ -328,13 +183,6 @@ estate_church_inwards_perfection = {
 	}
 	ai_will_do = {
 		factor = 1
-		modifier = {
-			factor = 7.5
-			tag = KOR
-			NOT = { num_of_cities = 30 }
-			religion = confucianism
-			is_absolutism_active = no
-		}
 	}
 }
 
@@ -345,10 +193,6 @@ estate_burghers_enforced_interfaith_dialogue = {
 	is_valid = {
 		any_owned_province = {
 			NOT = { religion = root }
-		}
-		OR = {
-			has_estate_privilege = estate_burghers_enforced_interfaith_dialogue
-			NOT = { has_estate = estate_dhimmi }
 		}
 	}
 	can_select = {

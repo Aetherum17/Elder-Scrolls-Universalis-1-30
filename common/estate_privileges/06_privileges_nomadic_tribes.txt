@@ -73,10 +73,7 @@ estate_nomadic_tribes_primacy_to_the_bannermen = {
 	max_absolutism = -5
 	influence = 0.1
 	is_valid = {
-		OR = {
-			primary_culture = manchu
-			primary_culture = manchu_new
-		}
+		always = yes
 	}
 	penalties = {
 		amount_of_banners = -0.25
@@ -87,11 +84,7 @@ estate_nomadic_tribes_primacy_to_the_bannermen = {
 	ai_will_do = {
 		factor = 1
 		modifier = {
-			factor = 10
-			OR = {
-				tag = MCH
-				tag = MJZ
-			}
+			factor = 1
 		}
 	}
 }

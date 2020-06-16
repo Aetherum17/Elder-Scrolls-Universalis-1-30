@@ -4,7 +4,7 @@ estate_brahmins_brahmin_governance = {
 	max_absolutism = -5
 	loyalty = -0.05
 	is_valid = {
-		NOT = { religion_group = muslim }
+		always = yes
 	}
 	can_select = {
 	}
@@ -59,7 +59,7 @@ estate_brahmins_legitimacy_to_rule = {
 	max_absolutism = -5
 	influence = 0.05
 	is_valid = {
-		religion_group = muslim
+		always = yes
 	}
 	penalties = {
 		church_loyalty_modifier = -0.05
@@ -107,7 +107,7 @@ estate_brahmins_brahmin_leadership = {
 	max_absolutism = -5
 	influence = 0.1
 	is_valid = {
-		NOT = { religion_group = muslim }
+		always = yes
 	}
 	loyalty = 0.05
 	penalties = {
@@ -138,7 +138,6 @@ estate_brahmins_flexible_deities = {
 	max_absolutism = -5
 	influence = 0.1
 	is_valid = {
-		NOT = { religion_group = muslim }
 		has_dlc = "Wealth of Nations"
 	}
 	can_select = {
@@ -185,9 +184,8 @@ estate_brahmins_guaranteed_autonomy = {
 	max_absolutism = -5
 	loyalty = 0.05
 	is_valid = {
-		religion_group = muslim
 		any_owned_province = {
-			religion_group = dharmic
+			NOT = { religion_group = root }
 		}
 	}
 	on_granted = {
@@ -195,7 +193,7 @@ estate_brahmins_guaranteed_autonomy = {
 		hidden_effect = {
 			every_owned_province = {
 				limit = {
-					religion_group = dharmic
+					NOT = { religion_group = root }
 				}
 				add_province_modifier = {
 					name = estate_brahmins_guaranteed_autonomy_mod
@@ -231,14 +229,6 @@ estate_brahmins_guaranteed_autonomy = {
 	benefits = {
 	}
 	ai_will_do = {
-		factor = 1000
-		modifier = {
-			factor = 0
-			NOT = {
-				any_owned_province = {
-					religion_group = dharmic
-				}
-			}
-		}
+		factor = 1
 	}
 }

@@ -9,6 +9,9 @@ estate_jains_monopoly_of_textiles = {
 				trade_goods = cloth
 				trade_goods = silk
 			}
+			NOT = { has_province_modifier = estate_burghers_monopoly_of_textiles_mod }
+			NOT = { has_province_modifier = estate_vaisyas_monopoly_of_textiles_mod }
+			NOT = { has_province_modifier = estate_jains_monopoly_of_textiles_mod }
 		}
 	}
 	can_select = {
@@ -37,6 +40,9 @@ estate_jains_monopoly_of_textiles = {
 						trade_goods = cloth
 						trade_goods = silk
 					}
+					NOT = { has_province_modifier = estate_burghers_monopoly_of_textiles_mod }
+			        NOT = { has_province_modifier = estate_vaisyas_monopoly_of_textiles_mod }
+			        NOT = { has_province_modifier = estate_jains_monopoly_of_textiles_mod }
 				}
 				add_province_modifier = {
 					name = estate_jains_monopoly_of_textiles_mod
@@ -89,6 +95,9 @@ estate_jains_monopoly_of_dyes = {
 		has_dlc = "Emperor"
 		any_owned_province = {
 			trade_goods = dyes
+			NOT = { has_province_modifier = estate_burghers_monopoly_of_dyes_mod }
+			NOT = { has_province_modifier = estate_vaisyas_monopoly_of_dyes_mod }
+			NOT = { has_province_modifier = estate_jains_monopoly_of_dyes_mod }
 		}
 	}
 	can_select = {
@@ -111,6 +120,9 @@ estate_jains_monopoly_of_dyes = {
 			every_owned_province = {
 				limit = {
 					trade_goods = dyes
+					NOT = { has_province_modifier = estate_burghers_monopoly_of_dyes_mod }
+			        NOT = { has_province_modifier = estate_vaisyas_monopoly_of_dyes_mod }
+			        NOT = { has_province_modifier = estate_jains_monopoly_of_dyes_mod }
 				}
 				add_province_modifier = {
 					name = estate_jains_monopoly_of_dyes_mod
@@ -162,7 +174,13 @@ estate_jains_monopoly_of_glass = {
 	is_valid = {
 		has_dlc = "Emperor"
 		any_owned_province = {
+			OR = {
 			trade_goods = glass
+			trade_goods = silicates
+			}
+			NOT = { has_province_modifier = estate_burghers_monopoly_of_glass_mod }
+			NOT = { has_province_modifier = estate_vaisyas_monopoly_of_glass_mod }
+			NOT = { has_province_modifier = estate_jains_monopoly_of_glass_mod }
 		}
 	}
 	can_select = {
@@ -176,7 +194,10 @@ estate_jains_monopoly_of_glass = {
 		add_years_of_owned_provinces_production_income = {
 			years = 8
 			trigger = {
-				trade_goods = glass
+				OR = {
+			    trade_goods = glass
+			    trade_goods = silicates
+			    }
 			}
 			custom_tooltip = MONOPOLY_INCOME_GLASS_DESC
 		}
@@ -184,7 +205,13 @@ estate_jains_monopoly_of_glass = {
 		hidden_effect = {
 			every_owned_province = {
 				limit = {
-					trade_goods = glass
+					OR = {
+			        trade_goods = glass
+			        trade_goods = silicates
+			        }
+			        NOT = { has_province_modifier = estate_burghers_monopoly_of_glass_mod }
+			        NOT = { has_province_modifier = estate_vaisyas_monopoly_of_glass_mod }
+			        NOT = { has_province_modifier = estate_jains_monopoly_of_glass_mod }
 				}
 				add_province_modifier = {
 					name = estate_jains_monopoly_of_glass_mod
@@ -237,9 +264,10 @@ estate_jains_monopoly_of_paper = {
 		has_dlc = "Emperor"
 		any_owned_province = {
 			trade_goods = paper
+			NOT = { has_province_modifier = estate_burghers_monopoly_of_paper_mod }
+			NOT = { has_province_modifier = estate_vaisyas_monopoly_of_paper_mod }
+			NOT = { has_province_modifier = estate_jains_monopoly_of_paper_mod }
 		}
-		NOT = { has_estate = estate_vaisyas }
-		NOT = { has_estate = estate_burghers }
 	}
 	can_select = {
 		custom_trigger_tooltip = {
@@ -261,6 +289,9 @@ estate_jains_monopoly_of_paper = {
 			every_owned_province = {
 				limit = {
 					trade_goods = paper
+					NOT = { has_province_modifier = estate_burghers_monopoly_of_paper_mod }
+			        NOT = { has_province_modifier = estate_vaisyas_monopoly_of_paper_mod }
+			        NOT = { has_province_modifier = estate_jains_monopoly_of_paper_mod }
 				}
 				add_province_modifier = {
 					name = estate_jains_monopoly_of_paper_mod
@@ -321,7 +352,6 @@ estate_jains_exclusive_trade_rights = {
 				}
 			}
 		}
-		NOT = { has_estate = estate_vaisyas }
 	}
 	on_granted = {
 		random_active_trade_node = {
@@ -388,7 +418,6 @@ estate_jains_control_over_monetary_policy = {
 	loyalty = 0.05
 	is_valid = {
 		has_dlc = "Emperor"
-		NOT = { has_estate = estate_vaisyas }
 	}
 	penalties = {
 		all_power_cost = 0.05
@@ -421,7 +450,6 @@ estate_jains_private_trade_fleets = {
 	loyalty = 0.05
 	is_valid = {
 		has_dlc = "Emperor"
-		NOT = { has_estate = estate_vaisyas }
 		any_owned_province = {
 			has_port = yes
 		}
