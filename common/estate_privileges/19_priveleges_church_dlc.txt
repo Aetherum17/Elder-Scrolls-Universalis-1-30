@@ -1,0 +1,379 @@
+estate_church_monopoly_of_incense = {
+	icon = privilege_monopoly_of_goods_incence
+	max_absolutism = -10
+	loyalty = 0.1
+	is_valid = {
+		has_dlc = "Emperor"
+		any_owned_province = {
+			trade_goods = incense
+		}
+	}
+	can_select = {
+		custom_trigger_tooltip = {
+			tooltip = unavailable_during_revolution_disaster
+			NOT = { has_disaster = revolution }
+		}
+	}
+	on_granted = {
+		add_mercantilism = 1
+		add_years_of_owned_provinces_production_income = {
+			years = 8
+			trigger = {
+				trade_goods = incense
+			}
+			custom_tooltip = MONOPOLY_INCOME_INCENSE_DESC
+		}
+		custom_tooltip = estate_church_monopoly_of_incense_effect_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					trade_goods = incense
+				}
+				add_province_modifier = {
+					name = estate_church_monopoly_of_incense_mod
+					duration = -1
+				}
+			}
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_church_monopoly_of_incense_revoke_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = estate_church_monopoly_of_incense_mod
+				}
+				remove_province_modifier = estate_church_monopoly_of_incense_mod
+			}
+		}
+	}
+	on_invalid = {
+		custom_tooltip = estate_church_monopoly_of_incense_revoke_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = estate_church_monopoly_of_incense_mod
+				}
+				remove_province_modifier = estate_church_monopoly_of_incense_mod
+			}
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+	cooldown_years = 10
+	on_cooldown_expires = {
+		country_event = { id = monopoly_privileges.8 }
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+estate_church_monopoly_of_wool = {
+	icon = privilege_monopoly_of_goods_wool
+	max_absolutism = -10
+	loyalty = 0.1
+	is_valid = {
+		has_dlc = "Emperor"
+		any_owned_province = {
+			trade_goods = wool
+		}
+	}
+	can_select = {
+		custom_trigger_tooltip = {
+			tooltip = unavailable_during_revolution_disaster
+			NOT = { has_disaster = revolution }
+		}
+	}
+	on_granted = {
+		add_mercantilism = 1
+		add_years_of_owned_provinces_production_income = {
+			years = 8
+			trigger = {
+				trade_goods = wool
+			}
+			custom_tooltip = MONOPOLY_INCOME_WOOL_DESC
+		}
+		custom_tooltip = estate_church_monopoly_of_wool_effect_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					trade_goods = wool
+				}
+				add_province_modifier = {
+					name = estate_church_monopoly_of_wool_mod
+					duration = -1
+				}
+			}
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_church_monopoly_of_wool_revoke_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = estate_church_monopoly_of_wool_mod
+				}
+				remove_province_modifier = estate_church_monopoly_of_wool_mod
+			}
+		}
+	}
+	on_invalid = {
+		custom_tooltip = estate_church_monopoly_of_wool_revoke_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = estate_church_monopoly_of_wool_mod
+				}
+				remove_province_modifier = estate_church_monopoly_of_wool_mod
+			}
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+	cooldown_years = 10
+	on_cooldown_expires = {
+		country_event = { id = monopoly_privileges.9 }
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+estate_church_monopoly_of_wine = {
+	icon = privilege_monopoly_of_goods_wine
+	max_absolutism = -10
+	loyalty = 0.1
+	is_valid = {
+		has_dlc = "Emperor"
+		any_owned_province = {
+			trade_goods = wine
+		}
+	}
+	can_select = {
+		custom_trigger_tooltip = {
+			tooltip = unavailable_during_revolution_disaster
+			NOT = { has_disaster = revolution }
+		}
+	}
+	on_granted = {
+		add_mercantilism = 1
+		add_years_of_owned_provinces_production_income = {
+			years = 8
+			trigger = {
+				trade_goods = wine
+			}
+			custom_tooltip = MONOPOLY_INCOME_WINE_DESC
+		}
+		custom_tooltip = estate_church_monopoly_of_wine_effect_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					trade_goods = wine
+				}
+				add_province_modifier = {
+					name = estate_church_monopoly_of_wine_mod
+					duration = -1
+				}
+			}
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_church_monopoly_of_wine_revoke_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = estate_church_monopoly_of_wine_mod
+				}
+				remove_province_modifier = estate_church_monopoly_of_wine_mod
+			}
+		}
+	}
+	on_invalid = {
+		custom_tooltip = estate_church_monopoly_of_wine_revoke_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = estate_church_monopoly_of_wine_mod
+				}
+				remove_province_modifier = estate_church_monopoly_of_wine_mod
+			}
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+	cooldown_years = 10
+	on_cooldown_expires = {
+		country_event = { id = monopoly_privileges.10 }
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+estate_church_monopoly_of_slaves = {
+	icon = privilege_monopoly_of_goods_slaves
+	max_absolutism = -10
+	loyalty = 0.1
+	is_valid = {
+		has_dlc = "Emperor"
+		any_owned_province = {
+			trade_goods = slaves
+		}
+	}
+	can_select = {
+		custom_trigger_tooltip = {
+			tooltip = unavailable_during_revolution_disaster
+			NOT = { has_disaster = revolution }
+		}
+	}
+	on_granted = {
+		add_mercantilism = 1
+		add_years_of_owned_provinces_production_income = {
+			years = 8
+			trigger = {
+				trade_goods = slaves
+			}
+			custom_tooltip = MONOPOLY_INCOME_SLAVES_DESC
+		}
+		custom_tooltip = estate_church_monopoly_of_slaves_effect_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					trade_goods = slaves
+				}
+				add_province_modifier = {
+					name = estate_church_monopoly_of_slaves_mod
+					duration = -1
+				}
+			}
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_church_monopoly_of_slaves_revoke_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = estate_church_monopoly_of_slaves_mod
+				}
+				remove_province_modifier = estate_church_monopoly_of_slaves_mod
+			}
+		}
+	}
+	on_invalid = {
+		custom_tooltip = estate_church_monopoly_of_slaves_revoke_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = estate_church_monopoly_of_slaves_mod
+				}
+				remove_province_modifier = estate_church_monopoly_of_slaves_mod
+			}
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+	cooldown_years = 10
+	on_cooldown_expires = {
+		country_event = { id = monopoly_privileges.11 }
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+estate_church_for_the_faith = {
+	icon = privilege_recruit_inouisitor
+	max_absolutism = -5
+	is_valid = {
+		has_dlc = "Emperor"
+		OR = {
+			any_known_country = {
+				NOT = { religion = root }
+			}
+			has_country_modifier = recently_force_converted_protagonist_timer
+			has_country_modifier = recently_annexed_other_religion_timer
+		}
+	}
+	can_select = {
+		any_known_country = {
+			NOT = { religion = root }
+		}
+		NOT = { has_estate_privilege = estate_church_inwards_perfection }
+	}
+	on_granted = {
+		custom_tooltip = estate_church_for_the_faith_effect_tooltip
+	}
+	on_revoked = {
+		custom_tooltip = estate_church_for_the_faith_effect_tooltip
+	}
+	conditional_modifier = {
+		trigger = {
+			any_known_country = {
+				NOT = { religion = root }
+				war_with = root
+			}
+		}
+		modifier = {
+			church_loyalty_modifier = 0.1
+			land_morale = 0.05
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			NOT = {
+				any_known_country = {
+					NOT = { religion = root }
+					OR = {
+						war_with = root
+						truce_with = root
+					}
+				}
+			}
+			NOT = { has_country_modifier = recently_force_converted_protagonist_timer }
+			NOT = { has_country_modifier = recently_annexed_other_religion_timer }
+		}
+		modifier = {
+			church_loyalty_modifier = -0.1
+			land_morale = -0.05
+		}
+		is_bad = yes
+	}
+	penalties = {
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+estate_church_statutory_rights = {
+	icon = privilege_grant_autonomy
+	max_absolutism = -5
+	influence = 0.1
+	is_valid = {
+		has_estate_privilege = estate_church_statutory_rights
+	}
+	on_granted = {
+		change_estate_land_share = {
+			estate = all
+			share = -30
+		}
+	}
+	penalties = {
+		min_autonomy = 25
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 0
+	}
+	cooldown_years = 20
+}

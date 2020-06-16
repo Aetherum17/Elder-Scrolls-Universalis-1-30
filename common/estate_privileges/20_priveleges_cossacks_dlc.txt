@@ -1,0 +1,74 @@
+estate_cossacks_recruit_cossack_generals = {
+	icon = privilege_conscript_cossack_elite
+	max_absolutism = -5
+	influence = 0.1
+	penalties = {
+	}
+	benefits = {
+		army_tradition = 0.5
+		leader_land_shock = 1
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0
+			is_absolutism_active = yes
+		}
+	}
+}
+
+estate_cossacks_prime_herding_rights = {
+	icon = privilege_monopoly_of_goods_livestock
+	max_absolutism = -5
+	influence = 0.05
+	loyalty = 0.05
+	is_valid = {
+		has_dlc = "Emperor"
+		any_owned_province = {
+			has_terrain = steppe
+		}
+	}
+	on_granted = {
+		custom_tooltip = estate_cossacks_prime_herding_rights_effect_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_terrain = steppe
+				}
+				add_province_modifier = {
+					name = estate_cossacks_prime_herding_rights_mod
+					duration = -1
+				}
+			}
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_cossacks_prime_herding_rights_mod_revoke_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = estate_cossacks_prime_herding_rights_mod
+				}
+				remove_province_modifier = estate_cossacks_prime_herding_rights_mod
+			}
+		}
+	}
+	on_invalid = {
+		custom_tooltip = estate_cossacks_prime_herding_rights_mod_revoke_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = estate_cossacks_prime_herding_rights_mod
+				}
+				remove_province_modifier = estate_cossacks_prime_herding_rights_mod
+			}
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}

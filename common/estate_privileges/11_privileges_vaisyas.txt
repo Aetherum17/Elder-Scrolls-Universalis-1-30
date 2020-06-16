@@ -1,0 +1,82 @@
+estate_vaisyas_loyalty_privilege = {
+	icon = privilege_royal_authority
+	max_absolutism = -10
+	loyalty = 0.1
+	influence = 0.1
+	penalties = {
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0
+			is_absolutism_active = yes
+		}
+	}
+}
+
+estate_vaisyas_advisor = {
+	icon = privilege_recruit_minister
+	max_absolutism = -5
+	influence = 0.1
+	loyalty = 0.05
+	penalties = {
+		stability_cost_modifier = 0.1
+	}
+	benefits = {
+		dip_advisor_cost = -0.25
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { dip = 2 }
+		}
+		modifier = {
+			factor = 0.8
+			dip = 5
+		}
+	}
+}
+
+estate_vaisyas_wartaxes = {
+	icon = privilege_exempt_officers_from_jaziya
+	max_absolutism = -5
+	loyalty = -0.05
+	benefits = {
+		war_taxes_cost_modifier = -0.5
+		war_exhaustion = -0.02
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0
+			current_age = age_of_discovery
+		}
+		modifier = {
+			factor = 0
+			is_absolutism_active = yes
+		}
+	}
+}
+
+estate_vaisyas_patronage_of_the_arts = {
+	icon = privilege_build_jain_temple
+	max_absolutism = -5
+	loyalty = 0.05
+	influence = 0.05
+	penalties = {
+		global_tax_modifier = -0.05
+	}
+	benefits = {
+		prestige = 0.5
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
