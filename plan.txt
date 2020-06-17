@@ -153,19 +153,31 @@ Change names for rulers in common/cultures for:
 #############
 
 de Bretons
+Rui- Reachmem
+Vul- Atmorans
 Jar- Nords
 Lath- Snow Elves
-Al- Reguards
+Al' Reguards
 Lu- Pyandonean
-
-+ Redo High Rock, Argonia, Hammerfell
-+ Winterborn Clan
-+ Ayleids and Nedic in 2 AD
-+ Split Cyrodiil more for interregum or Planemeld
+Q' Sloads
+Mz' Dwemers
+Os- Nedes
+of Imperials
+Kas- Keptu
+Gro- Orcs
+Kur- Khajiit
+Sahx- Argonians
+Naz - Ashlender
+Nath- Chimer
+Cyn- Xivilai
+Naak- Kothringi
+Khaz- Minotaurs
 
 + fix localization - catholic.yml
 
 + Governor Fortunata ap Dugal ???
+
++ Dwemer Dissapear - Remove Etherial Modifiers
 
 + ### NEWS ###
 
@@ -179,77 +191,27 @@ Lu- Pyandonean
 + daedric invasions
 + buildings 1.30 update
 
-+ Add governmental variety for new basic nations
-
-= FIX trade goods regions
-
-+ #FIX SOUTHERN ORSINIUM Decision
-
-+ Salingaere name problem
-
 has_global_flag = three_alliences_flag
 set_global_flag = three_alliences_flag
 
-# Create: + Check HISTORY FILES (CAPITAL)
-- Auridon
-- Imga (Change)
-- Southern Orsinium (Change)
-- Hollow
-# Other formable countries, like summerset, valenwoodm elsweyr, et cetera
-# form winterborn clan
+# form winterhold college
 
 #######################################################################
-
- AB1:0 ""
- AB2:0 ""
- AB3:0 ""
- AB4:0 ""
- AB5:0 ""
- AB6:0 ""
- AB7:0 ""
- AB8:0 ""
- AB9:0 ""
- AC0:0 ""
- AC1:0 ""
- AC2:0 ""
- AC3:0 ""
- AC4:0 ""
- AC5:0 ""
- AC6:0 ""
- AC7:0 ""
- AC8:0 ""
- AC9:0 ""
- AD0:0 ""
- AD1:0 ""
- AD2:0 ""
- AD3:0 ""
- AD4:0 ""
- AD5:0 ""
- AD6:0 ""
- AD7:0 ""
- AD8:0 ""
- AD9:0 ""
- AE0:0 ""
- AE1:0 ""
- AE2:0 ""
- AE3:0 ""
- AE4:0 ""
- AE5:0 ""
 
 4 - Ancient - turkishgfx - altmer-ayleid-sinistral-imga
 4 - Sundered - muslimgfx - yokudan-redguard-keptu
 2 - Tropical - southamericagfx - maorner-kamal
 3 - Feline - thaigfx - po_tun-khajiiti-pellitinian-lilmothiit
-4 - Tribal - northamericagfx - bosmer-reachmen-falmer-kothringi-scamp-arachnid
+6 - Tribal - northamericagfx - bosmer-reachmen-falmer-kothringi-scamp-arachnid
 6 - Beastmen - africangfx - orsimer-wood_orsimer-argonian-archein-agaceph-naga-clanfear-daedroth-minotaur
 6 - Half-Breed - westerngfx - dremora-vampire-breton-soul_shriven-xivilai-hollow
 4 - Nomadic - mongolgfx - ashlander-anequinan-glacial-harvester
 1 - Islandic - indiangfx - tangmo
-3 - Northern - easterngfx - atmoran-nord-skaal-islander
+4 - Northern - easterngfx - atmoran-nord-skaal-islander
 2 - Cyrodiilian - latingfx - nedic-imperial-nibenean-colovian
 0 - Oceanic - new_southamericagfx - sload
-1 - Ehlnofar - persiangfx - dwemer-dunmer-chimer
-1 - Elven - greekgfx - snow_elven
+5 - Ehlnofar - persiangfx - dwemer-dunmer-chimer
+2 - Elven - greekgfx - snow_elven
 2 - Akaviri - asiangfx - akaviri-tsaesci
 
 80 - Human: yokudan-redguard-atmoran-glacial-nord-skaal-nedic-imperial-nibenean-colovian-akaviri-islander-keptu
@@ -274,6 +236,16 @@ Colonial Eastern Coldharvour: native_size = 25 native_ferocity = 10 native_hosti
 Colonial Nortern Isalnds: native_size = 25 native_ferocity = 10 native_hostileness = 7
 Colonial Western Deadlands: native_size = 15 native_ferocity = 5 native_hostileness = 7
 Colonial Po Tun: native_size = 15 native_ferocity = 3 native_hostileness = 7
+
+Colonial Summerset: native_size = 50 native_ferocity = 10 native_hostileness = 7
+Colonial Valenwood: native_size = 50 native_ferocity = 7 native_hostileness = 10
+Colonial Elsweyr: native_size = 35 native_ferocity = 7 native_hostileness = 3
+Colonial Argonia: native_size = 40 native_ferocity = 7 native_hostileness = 5
+Colonial Cyrodiil: native_size = 30 native_ferocity = 3 native_hostileness = 5
+Colonial Morrowind: native_size = 15 native_ferocity = 5 native_hostileness = 5
+Colonial Skyrim: native_size = 20 native_ferocity = 10 native_hostileness = 5
+Colonial High Rock: native_size = 25 native_ferocity = 7 native_hostileness = 3
+Colonial Hammerfell: native_size = 15 native_ferocity = 5 native_hostileness = 7
 
 ##############################
 ### ESU System of Subjects: 
@@ -1053,3 +1025,46 @@ Diplomacy: - DIP
 	conscript_general = yes	
 	
 #######################################################################	
+
+Monarchies:
+1) Nobility
+2) Mages
+3) Burgers
+4) Mercenaries
+5) Peasants
+
+Republics:
+1) Burgers
+2) Merchants
+3) Minorities
+4) Citizens
+5) Mercenaries
+
+Theocracies:
+1) Clergy
+2) Mages
+3) Peasants
+4) Citizens
+5) Warriors
+
+Tribal:
+1) Warriors
+2) Merchants
+3) Minorities
+4) Nobility
+5) Clergy
+
+Nomad:
+1) Tribes
+
+1) Nobility - 127 0 110
+2) Mages - 255 106 0
+3) Burgers - 0 19 127
+4) Mercenaries - 0 127 14
+5) Peasants - 128 128 128
+2) Merchants - 0 148 255
+3) Minorities - 0 255 255
+4) Citizens - 76 255 0
+1) Clergy - 255 216 0
+5) Warriors - 255 0 0
+1) Tribes - 0 0 0

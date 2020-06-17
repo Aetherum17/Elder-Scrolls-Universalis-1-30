@@ -14,12 +14,39 @@ guiTypes = {
 		iconType =
 		{
 			name ="engagement_bg"
-			spriteType = "GFX_build_unit_entry_merc"
+			spriteType = "GFX_build_unit_entry_combat"
+			position = { x= 0 y = 0 }
+			Orientation = "UPPER_LEFT"
+			scale = 0.4
+		}
+
+		iconType =
+		{
+			name ="disengagement_bg"
+			spriteType = "GFX_build_unit_entry_disengaged"
+			position = { x= 0 y = 0 }
+			Orientation = "UPPER_LEFT"
+			scale = 0.4
+		}
+
+		iconType =
+		{
+			name ="demoralized_bg"
+			spriteType = "GFX_build_unit_entry_demoralized"							  
 			position = { x= 0 y = 0 }
 			Orientation = "UPPER_LEFT"
 			scale = 0.4
 		}
 	
+		iconType =
+		{
+			name ="reserve_bg"
+			spriteType = "GFX_build_unit_entry_reserve"
+			position = { x= 0 y = 0 }
+			Orientation = "UPPER_LEFT"
+			scale = 0.4
+		}
+		
 		iconType =
 		{
 			name ="navy_icon"
