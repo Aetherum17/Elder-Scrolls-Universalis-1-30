@@ -1,0 +1,128 @@
+### Lilmothiit ###
+blackrise_knights_company = {
+    regiments_per_development = 0.075
+	cost_modifier = 0.75
+    home_province = 6745
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		culture_group = lilmothiit_cg
+	}
+	modifier = { 
+		infantry_power = 0.10
+		land_morale = 0.10
+	}
+}
+
+###Argonian###
+an-xileel_company = {
+    regiments_per_development = 0.075
+	cost_modifier = 0.75
+    home_province = 1098
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { africangfx_sprite_pack }
+    trigger = {
+		OR = {
+		culture_group = marsh_cg
+		culture_group = kothringi_cg
+		}
+	}
+	modifier = { 
+		siege_ability = 0.25
+		prestige_from_land = 0.25
+	}
+}
+
+shadowscale_company = {
+    regiments_per_development = 0.065
+	cost_modifier = 0.65
+    home_province = 1069
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { africangfx_sprite_pack }
+    trigger = {
+		OR = {
+		culture_group = marsh_cg
+		culture_group = kothringi_cg
+		}
+	}
+	modifier = { 
+		infantry_power = 0.15
+		movement_speed = 0.10
+	}
+}
+
+shellbacks_company = {
+    regiments_per_development = 0.055
+	cost_modifier = 0.55
+    home_province = 1106
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { africangfx_sprite_pack }
+    trigger = {
+		OR = {
+		culture_group = marsh_cg
+		culture_group = kothringi_cg
+		}
+	}
+	modifier = { 
+		infantry_power = 0.10
+		movement_speed = 0.10
+	}
+}
+
+naga-kur_company = {
+    regiments_per_development = 0.045
+	cost_modifier = 0.45
+    home_province = 6757
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { africangfx_sprite_pack }
+    trigger = {
+		OR = {
+		culture_group = marsh_cg
+		culture_group = kothringi_cg
+		}
+	}
+	modifier = { 
+		fire_damage = 0.10
+		land_attrition = -0.25
+	}
+}
+
+root-whispers_company = {
+    regiments_per_development = 0.035
+	cost_modifier = 0.35
+    home_province = 6776
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { africangfx_sprite_pack }
+    trigger = {
+		OR = {
+		culture_group = marsh_cg
+		culture_group = kothringi_cg
+		}
+	}
+	modifier = { 
+		fire_damage = 0.10 land_attrition = -0.25
+	}
+}
+
+###Free for all###
+free_argonian_company = {
+    regiments_per_development = 0.05
+	cost_modifier = 0.5
+    home_province = 1064
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { africangfx_sprite_pack }
+    trigger = {
+		any_owned_province = { superregion = black_marsh_superregion }
+	}
+	modifier = { 
+		land_morale = 0.10
+		siege_ability = 0.10
+	}
+}
