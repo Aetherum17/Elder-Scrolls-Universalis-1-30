@@ -1,0 +1,99 @@
+### Pyandonean ###
+
+serpant_army_company = {
+    regiments_per_development = 0.075
+	cost_modifier = 0.75
+    home_province = 224
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { easterngfx_sprite_pack }
+    trigger = {
+		culture_group = maorner_cg
+	}
+	modifier = { 
+	    land_morale = 0.10
+		prestige_from_land = 0.07
+	}
+}
+
+jungle_warriors_company = {
+    regiments_per_development = 0.065
+	cost_modifier = 0.65
+    home_province = 240
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { easterngfx_sprite_pack }
+    trigger = {
+		culture_group = maorner_cg
+	}
+	modifier = { 
+	    reinforce_speed = 0.25
+		infantry_power = 0.05
+	}
+}
+
+knights_of_the_sun_company = {
+    regiments_per_development = 0.055
+	cost_modifier = 0.55
+    home_province = 2050
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { easterngfx_sprite_pack }
+    trigger = {
+		culture_group = maorner_cg
+	}
+	modifier = { 
+		shock_damage = 0.10
+		siege_ability = 0.15
+	}
+}
+
+knights_of_the_mist_company = {
+    regiments_per_development = 0.045
+	cost_modifier = 0.45
+    home_province = 2089
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { easterngfx_sprite_pack }
+    trigger = {
+		culture_group = maorner_cg
+	}
+	modifier = { 
+		movement_speed = 0.25
+		cavalry_power = 0.05
+	}
+}
+
+deepwater_brigands_company = {
+    regiments_per_development = 0.035
+	cost_modifier = 0.35
+    home_province = 209
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { easterngfx_sprite_pack }
+    trigger = {
+		culture_group = maorner_cg
+	}
+	modifier = { 
+		fire_damage_received = -0.10
+		land_attrition = -0.15
+	}
+}
+
+### Free For ALL ###
+
+maormer_free_company_company = {
+    regiments_per_development = 0.075
+	cost_modifier = 0.75
+    home_province = 219
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { easterngfx_sprite_pack }
+    trigger = {
+		any_owned_province = { superregion = pyandonea_superregion }
+	}
+	modifier = { 
+	    discipline = 0.05
+	    reinforce_speed = 0.07
+	}
+}

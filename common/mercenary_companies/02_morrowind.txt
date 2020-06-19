@@ -1,0 +1,323 @@
+### Ashlander ###
+ahemmusa_tribe_company = {
+    regiments_per_development = 0.075
+	cost_modifier = 0.75
+    home_province = 8145
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		culture_group = chimeris_cg
+		any_owned_province = { region = vvardenfell_lr }
+	}
+	modifier = { 
+		infantry_power = 0.15
+		movement_speed = 0.07
+	}
+}
+
+urshilaku_tribe_company = {
+    regiments_per_development = 0.065
+	cost_modifier = 0.65
+    home_province = 8204
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		culture_group = chimeris_cg
+		any_owned_province = { region = vvardenfell_lr }
+	}
+	modifier = { 
+		discipline = 0.05
+		land_attrition = -0.25
+	}
+}
+
+kagesh_tribe_company = {
+    regiments_per_development = 0.055
+	cost_modifier = 0.55
+    home_province = 8174
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		culture_group = chimeris_cg
+		any_owned_province = { region = vvardenfell_lr }
+	}
+	modifier = { 
+		fire_damage_received = -0.1
+		prestige_from_land = 0.15
+	}
+}
+
+mabrigash_tribe_company = {
+    regiments_per_development = 0.045
+	cost_modifier = 0.45
+    home_province = 8182
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		culture_group = chimeris_cg
+		any_owned_province = { region = vvardenfell_lr }
+	}
+	modifier = { 
+		land_morale = 0.10
+		reinforce_speed = 0.07
+	}
+}
+
+ulath_tribe_company = {
+    regiments_per_development = 0.035
+	cost_modifier = 0.35
+    home_province = 8126
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		culture_group = chimeris_cg
+		any_owned_province = { region = vvardenfell_lr }
+	}
+	modifier = { 
+		shock_damage_received = -0.10
+		siege_ability = 0.15
+	}
+}
+
+### Skaal ###
+
+bloodskal_clan_company = {
+    regiments_per_development = 0.075
+	cost_modifier = 0.75
+    home_province = 7695
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { easterngfx_sprite_pack }
+    trigger = {
+		culture_group = northern_cg
+		any_owned_province = { area = morrowind_23_la }
+	}
+	modifier = { 
+		discipline = 0.10
+		infantry_power = 0.05
+	}
+}
+
+### Dunmer ###
+
+order_of_war_company = {
+    regiments_per_development = 0.075
+	cost_modifier = 0.75
+    home_province = 985
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		culture_group = chimeris_cg
+		any_owned_province = { OR = { region = morrowind_lr region = llothanis_peninsula_lr} }
+	}
+	modifier = { 
+		discipline = 0.05
+		infantry_power = 0.15
+	}
+}
+
+camonna_tong_company = {
+    regiments_per_development = 0.065
+	cost_modifier = 0.65
+    home_province = 1002
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		culture_group = chimeris_cg
+		any_owned_province = { OR = { region = morrowind_lr region = llothanis_peninsula_lr} }
+	}
+	modifier = { 
+		movement_speed = 0.25
+		reinforce_speed = 0.07
+	}
+}
+
+boyant_armingers_company = {
+    regiments_per_development = 0.055
+	cost_modifier = 0.55
+    home_province = 8088
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		culture_group = chimeris_cg
+		any_owned_province = { OR = { region = morrowind_lr region = llothanis_peninsula_lr} }
+	}
+	modifier = { 
+		cavalry_power = 0.15
+		prestige_from_land = 0.07
+	}
+}
+
+drothmeri_army_company = {
+    regiments_per_development = 0.045
+	cost_modifier = 0.45
+    home_province = 7956
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		culture_group = chimeris_cg
+		any_owned_province = { OR = { region = morrowind_lr region = llothanis_peninsula_lr} }
+	}
+	modifier = { 
+		siege_ability = 0.15
+		land_morale = 0.05
+	}
+}
+
+heran_clan_company = {
+    regiments_per_development = 0.035
+	cost_modifier = 0.35
+    home_province = 8019
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		culture_group = chimeris_cg
+		any_owned_province = { OR = { region = morrowind_lr region = llothanis_peninsula_lr} }
+	}
+	modifier = { 
+	    fire_damage_received = -0.1
+		reinforce_speed = 0.15
+	}
+}
+
+### Dwemer ###
+
+kragen_clan_company = {
+    regiments_per_development = 0.075
+	cost_modifier = 0.75
+    home_province = 970
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		culture_group = dwemer_cg
+	}
+	modifier = { 
+		discipline = 0.10
+		siege_ability = 0.07
+	}
+}
+
+### Free For All ###
+
+fryse_hags_company = {
+    regiments_per_development = 0.075
+	cost_modifier = 0.75
+    home_province = 952
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		any_owned_province = { superregion = morrowind_superregion }
+	}
+	modifier = { 
+		shock_damage = 0.05
+		shock_damage_received = -0.05
+	}
+}
+
+black_dart_gang_company = {
+    regiments_per_development = 0.065
+	cost_modifier = 0.65
+    home_province = 7846
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		any_owned_province = { superregion = morrowind_superregion }
+	}
+	modifier = { 
+		movement_speed = 0.07
+		discipline = 0.05
+	}
+}
+
+aundae_clan_company = {
+    regiments_per_development = 0.055
+	cost_modifier = 0.55
+    home_province = 7728
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		any_owned_province = { superregion = morrowind_superregion }
+	}
+	modifier = { 
+		fire_damage_received = -0.05
+		reinforce_speed = 0.07
+	}
+}
+
+berne_clan_company = {
+    regiments_per_development = 0.045
+	cost_modifier = 0.45
+    home_province = 7753
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		any_owned_province = { superregion = morrowind_superregion }
+	}
+	modifier = { 
+		fire_damage = 0.05
+		land_attrition = -0.07
+	}
+}
+
+quarra_clan_company = {
+    regiments_per_development = 0.035
+	cost_modifier = 0.35
+    home_province = 976
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		any_owned_province = { superregion = morrowind_superregion }
+	}
+	modifier = { 
+		cavalry_power = 0.05
+		reinforce_speed = 0.07
+	}
+}
+
+thrafey_caln_company = {
+    regiments_per_development = 0.025
+	cost_modifier = 0.25
+    home_province = 1017
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		any_owned_province = { superregion = morrowind_superregion }
+	}
+	modifier = { 
+		prestige_from_land = 0.07
+		land_morale = 0.05
+	}
+}
+
+bal_molagmer_company = {
+    regiments_per_development = 0.015
+	cost_modifier = 0.15
+    home_province = 7886
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		any_owned_province = { superregion = morrowind_superregion }
+	}
+	modifier = { 
+		discipline = 0.05
+		infantry_power = 0.05
+	}
+}

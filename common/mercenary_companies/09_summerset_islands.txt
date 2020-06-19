@@ -1,0 +1,102 @@
+### Altmer ###
+
+high_elven_forces_company = {
+    regiments_per_development = 0.075
+	cost_modifier = 0.75
+    home_province = 281
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		culture_group = high_elves_cg
+		any_owned_province = { superregion = summerset_islands_superregion }
+	}
+	modifier = { 
+	    discipline = 0.10
+		land_attrition = -0.07
+	}
+}
+
+trebbite_monks_company = {
+    regiments_per_development = 0.065
+	cost_modifier = 0.65
+    home_province = 263
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		culture_group = high_elves_cg
+		any_owned_province = { superregion = summerset_islands_superregion }
+	}
+	modifier = { 
+	    shock_damage = 0.15
+		reinforce_speed = 0.07
+	}
+}
+
+welkynars_company = {
+    regiments_per_development = 0.055
+	cost_modifier = 0.55
+    home_province = 4740
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		culture_group = high_elves_cg
+		any_owned_province = { superregion = summerset_islands_superregion }
+	}
+	modifier = { 
+	    cavalry_power = 0.10
+		prestige_from_land = 0.15
+	}
+}
+
+### Free For All ###
+
+the_beautiful_company = {
+    regiments_per_development = 0.075
+	cost_modifier = 0.75
+    home_province = 282
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		any_owned_province = { superregion = summerset_islands_superregion }
+	}
+	modifier = { 
+	    land_morale = 0.05
+		infantry_power = 0.05
+	}
+}
+
+veiled_heritance_company = {
+    regiments_per_development = 0.065
+	cost_modifier = 0.65
+    home_province = 4823
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+     trigger = {
+		any_owned_province = { superregion = summerset_islands_superregion }
+	}
+	modifier = { 
+	    fire_damage = 0.05
+	    siege_ability = 0.07
+	}
+}
+
+summerset_shadows_company = {
+    regiments_per_development = 0.055
+	cost_modifier = 0.55
+    home_province = 249
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+     trigger = {
+		any_owned_province = { superregion = summerset_islands_superregion }
+	}
+	modifier = { 
+	    shock_damage_received = -0.05
+		reinforce_speed = 0.07
+	}
+}

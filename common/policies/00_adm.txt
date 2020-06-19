@@ -10,7 +10,7 @@ the_combination_act = {
 		full_idea_group = innovativeness_ideas
 	}
 	
-	production_efficiency = 0.10
+	production_efficiency = 0.15
 
 	ai_will_do = {
 		factor = 1
@@ -49,7 +49,7 @@ the_court_of_wards_and_liveries = {
 		full_idea_group = economic_ideas
 	}
 		
-	cavalry_cost = -0.10
+	cavalry_cost = -0.15
 		
 	ai_will_do = {
 		factor = 1	
@@ -102,7 +102,7 @@ formalized_measures = {
 		full_idea_group = economic_ideas
 	}	
 
-	global_tax_modifier = 0.10
+	global_tax_modifier = 0.15
 
 	ai_will_do = {
 		factor = 1
@@ -134,7 +134,7 @@ agricultural_cultivations = {
 		full_idea_group = quantity_ideas
 	}		
 	
-	land_forcelimit_modifier = 0.1
+	land_forcelimit_modifier = 0.15
 
 	ai_will_do = {
 		factor = 1
@@ -195,7 +195,7 @@ manueline_architecture = {
 		full_idea_group = expansion_ideas
 	}
 
-	build_cost = -0.10
+	build_cost = -0.15
 	
 	ai_will_do = {
 		factor = 1
@@ -220,7 +220,7 @@ the_royal_commission_act = {
 		full_idea_group = administrative_ideas
 	}
 
-	yearly_corruption = -0.1
+	yearly_corruption = -0.15
 	
 	ai_will_do = {
 		factor = 0.6
@@ -279,7 +279,7 @@ public_welfare_act = {
 		full_idea_group = economic_ideas
 	}
 
-	global_unrest = -1
+	global_unrest = -1.5
 
 	ai_will_do = {
 		factor = 1
@@ -320,7 +320,7 @@ the_spy_discovery_act = {
 		full_idea_group = administrative_ideas
 	}
 
-	global_spy_defence = 0.1
+	global_spy_defence = 0.15
 
 	ai_will_do = {
 		factor = 0.6 #Keep in mind lower stab cost is probably pretty weak given this costs ADM...
@@ -340,7 +340,7 @@ enforce_religious_law = {
 		full_idea_group = spy_ideas
 	}
 
-	global_missionary_strength = 0.01
+	global_missionary_strength = 0.015
 
 	ai_will_do = {
 		factor = 1
@@ -380,7 +380,7 @@ the_tolerance_act = {
 		full_idea_group = plutocracy_ideas
 	}
 
-	tolerance_heretic = 1
+	tolerance_heretic = 1.5
 
 	ai_will_do = {
 		factor = 1
@@ -420,7 +420,7 @@ vassal_taxation_policy = {
 		full_idea_group = administrative_ideas
 	}
 
-	vassal_income = 0.10
+	vassal_income = 0.15
 
 	ai_will_do = {
 		factor = 1
@@ -481,7 +481,7 @@ land_inheritance_act = {
 		full_idea_group = plutocracy_ideas
 	}
 
-	global_manpower_modifier = 0.1
+	global_manpower_modifier = 0.15
 	
 	ai_will_do = {
 		factor = 1
@@ -517,7 +517,7 @@ the_witchcraft_act = {
 		full_idea_group = aristocracy_ideas
 	}
 	
-	stability_cost_modifier = -0.10
+	stability_cost_modifier = -0.15
 
 	ai_will_do = {
 		factor = 1
@@ -575,7 +575,7 @@ the_education_act = {
 		full_idea_group = plutocracy_ideas
 	}
 
-	advisor_cost = -0.1
+	advisor_cost = -0.15
 
 	ai_will_do = {
 		factor = 0.8
@@ -675,7 +675,7 @@ exchange_of_ideas = {
 		full_idea_group = trade_ideas
 	}	
 	
-	idea_cost = -0.1
+	idea_cost = -0.15
 	
 	ai_will_do = {
 		factor = 0.8
@@ -695,7 +695,7 @@ vassal_obligations_act = {
 		full_idea_group = economic_ideas
 	}	
 	
-	vassal_forcelimit_bonus = 1
+	vassal_forcelimit_bonus = 0.15
 	
 	ai_will_do = {
 		factor = 1
@@ -755,7 +755,7 @@ vassal_integration_act = {
 		full_idea_group = administrative_ideas
 	}	
 	
-	diplomatic_annexation_cost = -0.10
+	diplomatic_annexation_cost = -0.15
 	
 	ai_will_do = {
 		factor = 1
@@ -833,7 +833,7 @@ visionary_thinkers = {
 		full_idea_group = quality_ideas
 	}	
 
-	prestige_decay = -0.01
+	prestige_decay = -0.015
 	
 	ai_will_do = {
 		factor = 0.6
@@ -853,7 +853,7 @@ the_transportation_act = {
 		full_idea_group = economic_ideas
 	}	
 	
-	global_trade_goods_size_modifier = 0.1
+	global_trade_goods_size_modifier = 0.15
 	
 	ai_will_do = {
 		factor = 0.6
@@ -893,7 +893,7 @@ harbour_administration = {
 		full_idea_group = administrative_ideas
 	}
 
-	global_ship_recruit_speed = -0.10
+	global_ship_recruit_speed = -0.15
 	
 	ai_will_do = {
 		factor = 1
@@ -933,7 +933,7 @@ supply_convoys = {
 		full_idea_group = expansion_ideas
 	}	
 	
-	state_maintenance_modifier = -0.10
+	state_maintenance_modifier = -0.15
 	
 	ai_will_do = {
 		factor = 1
@@ -973,7 +973,7 @@ cultural_recognition_act = {
 		full_idea_group = plutocracy_ideas
 	}	
 	
-	global_institution_spread = 0.1
+	global_institution_spread = 0.15
 	
 	ai_will_do = {
 		factor = 1
@@ -994,10 +994,10 @@ the_licensing_of_the_press_act = {
 	}
 
 	legitimacy = 1
-	republican_tradition = 0.1
+	republican_tradition = 1
 	devotion = 1
 	horde_unity = 1
-	meritocracy = 0.5
+	meritocracy = 1
 	
 	ai_will_do = {
 		factor = 0.8
@@ -1017,7 +1017,7 @@ the_dissolution_act = {
 		full_idea_group = economic_ideas
 	}
 	
-	liberty_desire_from_subject_development = -0.10
+	liberty_desire_from_subject_development = -0.15
 
 	ai_will_do = {
 		factor = 1
@@ -1078,7 +1078,7 @@ the_statute_of_monopolies = {
 		full_idea_group = economic_ideas
 	}
 
-	trade_efficiency = 0.1
+	trade_efficiency = 0.15
 
 	ai_will_do = {
 		factor = 1
@@ -1138,7 +1138,7 @@ taxation_with_representation = {
 		full_idea_group = plutocracy_ideas
 	}
 	
-	trade_steering = 0.10
+	trade_steering = 0.15
 
 	ai_will_do = {
 		factor = 1
@@ -1219,7 +1219,7 @@ the_citrus_statute = {
 		full_idea_group = maritime_ideas
 	}	
 	
-	sunk_ship_morale_hit_recieved = -0.10
+	sunk_ship_morale_hit_recieved = -0.15
 	
 	ai_will_do = {
 		factor = 0.6
@@ -1298,7 +1298,7 @@ church_sponsored_guilds = {
 		full_idea_group = trade_ideas
 	}
 	
-	tolerance_own = 1
+	tolerance_own = 1.5
 	
 	ai_will_do = {
 		factor = 1
@@ -1338,7 +1338,7 @@ anti_heresy_act = {
 		full_idea_group = offensive_ideas
 	}
 	
-	global_heretic_missionary_strength = 0.01
+	global_heretic_missionary_strength = 0.015
 
 	ai_will_do = {
 		factor = 1

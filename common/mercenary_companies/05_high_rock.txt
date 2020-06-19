@@ -1,0 +1,240 @@
+### Breton ###
+
+knights_of_the_dragon_company = {
+    regiments_per_development = 0.075
+	cost_modifier = 0.75
+    home_province = 1369
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { easterngfx_sprite_pack }
+    trigger = {
+		culture_group = half_blood_cg
+		any_owned_province = { superregion = high_rock_superregion }
+	}
+	modifier = { 
+	    infantry_power = 0.10
+		cavalry_power = 0.10
+	}
+}
+
+knights_of_the_flame_company = {
+    regiments_per_development = 0.065
+	cost_modifier = 0.65
+    home_province = 6949
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { easterngfx_sprite_pack }
+    trigger = {
+		culture_group = half_blood_cg
+		any_owned_province = { superregion = high_rock_superregion }
+	}
+	modifier = { 
+	    fire_damage = 0.10
+		land_attrition = -0.15
+	}
+}
+
+gautier_clan_company = {
+    regiments_per_development = 0.055
+	cost_modifier = 0.55
+    home_province = 1384
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { easterngfx_sprite_pack }
+    trigger = {
+		culture_group = half_blood_cg
+		any_owned_province = { superregion = high_rock_superregion }
+	}
+	modifier = { 
+		shock_damage = 0.10
+		reinforce_speed = 0.15
+	}
+}
+
+grimard_clan_company = {
+    regiments_per_development = 0.045
+	cost_modifier = 0.45
+    home_province = 1424
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { easterngfx_sprite_pack }
+    trigger = {
+		culture_group = half_blood_cg
+		any_owned_province = { superregion = high_rock_superregion }
+	}
+	modifier = { 
+		fire_damage = 0.10
+		prestige_from_land = 0.15
+	}
+}
+
+river_horse_bretons_clan_company = {
+    regiments_per_development = 0.035
+	cost_modifier = 0.35
+    home_province = 7050
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { easterngfx_sprite_pack }
+    trigger = {
+		culture_group = half_blood_cg
+		any_owned_province = { superregion = high_rock_superregion }
+	}
+	modifier = { 
+		cavalry_power = 0.15
+		movement_speed = 0.07
+	}
+}
+
+### Orcish ###
+
+cursed_legion_company = {
+    regiments_per_development = 0.075
+	cost_modifier = 0.75
+    home_province = 1391
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { africangfx_sprite_pack }
+    trigger = {
+		culture_group = orsimer_cg
+		any_owned_province = { superregion = high_rock_superregion }
+	}
+	modifier = { 
+	    reinforce_speed = 0.15
+		infantry_power = 0.10
+	}
+}
+
+iron_army_company = {
+    regiments_per_development = 0.065
+	cost_modifier = 0.65
+    home_province = 1406
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { africangfx_sprite_pack }
+    trigger = {
+		culture_group = orsimer_cg
+		any_owned_province = { superregion = high_rock_superregion }
+	}
+	modifier = { 
+	    siege_ability = 0.07
+		discipline = 0.10
+	}
+}
+
+malacaths_brutal_breed_company = {
+    regiments_per_development = 0.055
+	cost_modifier = 0.55
+    home_province = 1413
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { africangfx_sprite_pack }
+    trigger = {
+		culture_group = orsimer_cg
+		any_owned_province = { superregion = high_rock_superregion }
+	}
+	modifier = { 
+		land_morale = 0.10
+		movement_speed = 0.07
+	}
+}
+
+### Reachmen ###
+
+winterborn_army_company = {
+    regiments_per_development = 0.075
+	cost_modifier = 0.75
+    home_province = 7070
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { easterngfx_sprite_pack }
+    trigger = {
+		culture_group = half_blood_cg
+		any_owned_province = { area = high_30_la }
+	}
+	modifier = { 
+	    movement_speed = 0.15
+		reinforce_speed = 0.15
+	}
+}
+
+### Free For ALL ###
+
+knights_of_the_owl_company = {
+    regiments_per_development = 0.075
+	cost_modifier = 0.75
+    home_province = 7029
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { easterngfx_sprite_pack }
+    trigger = {
+		any_owned_province = { superregion = high_rock_superregion }
+	}
+	modifier = { 
+	    land_morale = 0.05
+		shock_damage_received = -0.05
+	}
+}
+
+anthotis_clan_company = {
+    regiments_per_development = 0.065
+	cost_modifier = 0.65
+    home_province = 1400
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { easterngfx_sprite_pack }
+    trigger = {
+		any_owned_province = { superregion = high_rock_superregion }
+	}
+	modifier = { 
+		infantry_power = 0.05
+		land_attrition = -0.07
+	}
+}
+
+garlythi_clan_company = {
+    regiments_per_development = 0.055
+	cost_modifier = 0.55
+    home_province = 1394
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { easterngfx_sprite_pack }
+    trigger = {
+		any_owned_province = { superregion = high_rock_superregion }
+	}
+	modifier = { 
+		fire_damage = 0.05
+		siege_ability = 0.07
+	}
+}
+
+lyrezi_clan_company = {
+    regiments_per_development = 0.045
+	cost_modifier = 0.45
+    home_province = 6942
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { easterngfx_sprite_pack }
+    trigger = {
+		any_owned_province = { superregion = high_rock_superregion }
+	}
+	modifier = { 
+		shock_damage = 0.05
+		prestige_from_land = 0.07
+	}
+}
+
+haarvenu_clan_company = {
+    regiments_per_development = 0.035
+	cost_modifier = 0.35
+    home_province = 6982
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { easterngfx_sprite_pack }
+    trigger = {
+		any_owned_province = { superregion = high_rock_superregion }
+	}
+	modifier = { 
+		discipline = 0.05
+		movement_speed = 0.07
+	}
+}

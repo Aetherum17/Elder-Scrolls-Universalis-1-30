@@ -1,0 +1,131 @@
+### Khajiiti ###
+
+baandari_pedlars_company = {
+    regiments_per_development = 0.075
+	cost_modifier = 0.75
+    home_province = 922
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		culture_group = khajiiti_cg
+	}
+	modifier = { 
+	    land_morale = 0.10
+		cavalry_power = 0.05
+	}
+}
+
+khajiiti_confederative_army_company = {
+    regiments_per_development = 0.065
+	cost_modifier = 0.65
+    home_province = 905
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		culture_group = khajiiti_cg
+	}
+	modifier = { 
+	    infantry_power = 0.10
+		land_attrition = -0.15
+	}
+}
+
+renrijra_krin_company = {
+    regiments_per_development = 0.055
+	cost_modifier = 0.55
+    home_province = 889
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		culture_group = khajiiti_cg
+	}
+	modifier = { 
+		discipline = 0.10
+		movement_speed = 0.07
+	}
+}
+
+### Free For All ###
+
+dakarn_tribe_company = {
+    regiments_per_development = 0.075
+	cost_modifier = 0.75
+    home_province = 929
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		any_owned_province = { superregion = elsweyr_superregion }
+	}
+	modifier = { 
+	    shock_damage_received = -0.05
+		fire_damage_received = -0.05
+	}
+}
+
+rim-men_company = {
+    regiments_per_development = 0.065
+	cost_modifier = 0.65
+    home_province = 5237
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		any_owned_province = { superregion = elsweyr_superregion }
+	}
+	modifier = { 
+		discipline = 0.05
+		prestige_from_land = 0.07
+	}
+}
+
+thazahrr_cartel_company = {
+    regiments_per_development = 0.055
+	cost_modifier = 0.55
+    home_province = 942
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		any_owned_province = { superregion = elsweyr_superregion }
+	}
+	modifier = { 
+		siege_ability = 0.07
+		infantry_power = 0.05
+	}
+}
+
+black_dart_gang_company = {
+    regiments_per_development = 0.045
+	cost_modifier = 0.45
+    home_province = 5136
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		any_owned_province = { superregion = elsweyr_superregion }
+	}
+	modifier = { 
+		cavalry_power = 0.05
+		movement_speed = 0.07
+	}
+}
+
+hollowfang_clan_company = {
+    regiments_per_development = 0.035
+	cost_modifier = 0.35
+    home_province = 5274
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		any_owned_province = { superregion = elsweyr_superregion }
+	}
+	modifier = { 
+		reinforce_speed = 0.07
+		land_morale = 0.05
+	}
+}

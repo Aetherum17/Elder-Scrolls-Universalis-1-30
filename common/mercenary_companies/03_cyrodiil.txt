@@ -1,0 +1,261 @@
+### Ayleid ###
+barsaebic_ayleids_company = {
+    regiments_per_development = 0.075
+	cost_modifier = 0.75
+    home_province = 1209
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		culture_group = high_elves_cg
+		any_owned_province = { region = central_syrodiil_lr }
+	}
+	modifier = { 
+		discipline = 0.10
+		land_attrition = -0.07
+	}
+}
+
+### Nedic ###
+
+colovian_estate_militia_company = {
+    regiments_per_development = 0.075
+	cost_modifier = 0.75
+    home_province = 5616
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		culture_group = cyrodiil_cg
+	}
+	modifier = { 
+	    shock_damage_received = -0.10
+		fire_damage_received = -0.10
+	}
+}
+
+zero_knights_company = {
+    regiments_per_development = 0.065
+	cost_modifier = 0.65
+    home_province = 1238
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		culture_group = cyrodiil_cg
+	}
+	modifier = { 
+	    cavalry_power = 0.15
+		reinforce_speed = 0.07
+	}
+}
+
+knights_of_the_rose_company = {
+    regiments_per_development = 0.055
+	cost_modifier = 0.55
+    home_province = 5645
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		culture_group = cyrodiil_cg
+	}
+	modifier = { 
+		discipline = 0.05
+		fire_damage = 0.10
+	}
+}
+
+knights_of_the_thorn_company = {
+    regiments_per_development = 0.045
+	cost_modifier = 0.45
+    home_province = 1221
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		culture_group = cyrodiil_cg
+	}
+	modifier = { 
+		land_morale = 0.05
+		movement_speed = 0.25
+	}
+}
+
+knights_of_the_white_stallion_company = {
+    regiments_per_development = 0.035
+	cost_modifier = 0.35
+    home_province = 1120
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		culture_group = cyrodiil_cg
+	}
+	modifier = { 
+	    cavalry_power = 0.15
+		prestige_from_land = 0.07
+	}
+}
+
+### Free For All ###
+
+red_sabre_company = {
+    regiments_per_development = 0.075
+	cost_modifier = 0.75
+    home_province = 1161
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		any_owned_province = { superregion = cyrodiil_superregion }
+	}
+	modifier = { 
+	    reinforce_speed = 0.07
+		land_attrition = -0.07
+	}
+}
+
+the_claws_company = {
+    regiments_per_development = 0.065
+	cost_modifier = 0.65
+    home_province = 5485
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		any_owned_province = { superregion = cyrodiil_superregion }
+	}
+	modifier = { 
+		infantry_power = 0.05
+		shock_damage_received = -0.05
+	}
+}
+
+the_ecipse_company = {
+    regiments_per_development = 0.055
+	cost_modifier = 0.55
+    home_province = 5947
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		any_owned_province = { superregion = cyrodiil_superregion }
+	}
+	modifier = { 
+		siege_ability = 0.07
+		land_morale = 0.05
+	}
+}
+
+the_natives_company = {
+    regiments_per_development = 0.045
+	cost_modifier = 0.45
+    home_province = 1144
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		any_owned_province = { superregion = cyrodiil_superregion }
+	}
+	modifier = { 
+		infantry_power = 0.05
+		movement_speed = 0.07
+	}
+}
+
+thousand-strong_of_sedor_company = {
+    regiments_per_development = 0.035
+	cost_modifier = 0.35
+    home_province = 5854
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		any_owned_province = { superregion = cyrodiil_superregion }
+	}
+	modifier = { 
+		discipline = 0.05
+		reinforce_speed = 0.07
+	}
+}
+
+gaspards_stalkers_company = {
+    regiments_per_development = 0.025
+	cost_modifier = 0.25
+    home_province = 5685
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		any_owned_province = { superregion = cyrodiil_superregion }
+	}
+	modifier = { 
+		discipline = 0.05
+		siege_ability = 0.07
+	}
+}
+
+black_bow_bandits_company = {
+    regiments_per_development = 0.015
+	cost_modifier = 0.15
+    home_province = 5506
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		any_owned_province = { superregion = cyrodiil_superregion }
+	}
+	modifier = { 
+		reinforce_speed = 0.07
+		movement_speed = 0.07
+	}
+}
+
+blackwood_company_company = {
+    regiments_per_development = 0.015
+	cost_modifier = 0.15
+    home_province = 1226
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		any_owned_province = { superregion = cyrodiil_superregion }
+	}
+	modifier = { 
+		shock_damage = 0.05
+		siege_ability = 0.07
+	}
+}
+
+host_of_the_horn_company = {
+    regiments_per_development = 0.015
+	cost_modifier = 0.15
+    home_province = 1226
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		any_owned_province = { superregion = cyrodiil_superregion }
+	}
+	modifier = { 
+		infantry_power = 0.05
+		cavalry_power = 0.05
+	}
+}
+
+blackwater_brigands_company = {
+    regiments_per_development = 0.015
+	cost_modifier = 0.15
+    home_province = 5448
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		any_owned_province = { superregion = cyrodiil_superregion }
+	}
+	modifier = { 
+		land_morale = 0.05
+		movement_speed = 0.07
+	}
+}

@@ -1,0 +1,136 @@
+### Atmoran ###
+
+broadwall_clan_company = {
+    regiments_per_development = 0.075
+	cost_modifier = 0.75
+    home_province = 357
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { easterngfx_sprite_pack }
+    trigger = {
+		culture_group = northern_cg
+		any_owned_province = { superregion = atmora_superregion }
+	}
+	modifier = { 
+	    fire_damage_received = -0.10
+		siege_ability = 0.15
+	}
+}
+
+naugrheim_clan_company = {
+    regiments_per_development = 0.065
+	cost_modifier = 0.65
+    home_province = 363
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { easterngfx_sprite_pack }
+    trigger = {
+		culture_group = northern_cg
+		any_owned_province = { superregion = atmora_superregion }
+	}
+	modifier = { 
+	    land_morale = 0.10
+		land_attrition = -0.07
+	}
+}
+
+moraheim_clan_company = {
+    regiments_per_development = 0.055
+	cost_modifier = 0.55
+    home_province = 367
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { easterngfx_sprite_pack }
+    trigger = {
+		culture_group = northern_cg
+		any_owned_province = { superregion = atmora_superregion }
+	}
+	modifier = { 
+		infantry_power = 0.15
+		prestige_from_land = 0.07
+	}
+}
+
+isalur_clan_company = {
+    regiments_per_development = 0.045
+	cost_modifier = 0.45
+    home_province = 373
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { easterngfx_sprite_pack }
+    trigger = {
+		culture_group = northern_cg
+		any_owned_province = { superregion = atmora_superregion }
+	}
+	modifier = { 
+		discipline = 0.10
+		movement_speed = 0.07
+	}
+}
+
+skalrheim_clan_company = {
+    regiments_per_development = 0.035
+	cost_modifier = 0.35
+    home_province = 384
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { easterngfx_sprite_pack }
+    trigger = {
+		culture_group = northern_cg
+		any_owned_province = { superregion = atmora_superregion }
+	}
+	modifier = { 
+		shock_damage = 0.10
+		reinforce_speed = 0.15
+	}
+}
+
+### Free For ALL ###
+
+glacial_tribe_company = {
+    regiments_per_development = 0.075
+	cost_modifier = 0.75
+    home_province = 2315
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { easterngfx_sprite_pack }
+    trigger = {
+		any_owned_province = { superregion = atmora_superregion }
+	}
+	modifier = { 
+	    infantry_power = 0.05
+		siege_ability = 0.07
+	}
+}
+
+algid_tribe_company = {
+    regiments_per_development = 0.065
+	cost_modifier = 0.65
+    home_province = 2391
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { easterngfx_sprite_pack }
+    trigger = {
+		any_owned_province = { superregion = atmora_superregion }
+	}
+	modifier = { 
+		land_morale = 0.05
+		prestige_from_land = 0.07
+	}
+}
+
+inclement_tribe_company = {
+    regiments_per_development = 0.055
+	cost_modifier = 0.55
+    home_province = 2378
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { easterngfx_sprite_pack }
+    trigger = {
+		any_owned_province = { superregion = atmora_superregion }
+	}
+	modifier = { 
+		fire_damage = 0.05
+		movement_speed = 0.07
+	}
+}

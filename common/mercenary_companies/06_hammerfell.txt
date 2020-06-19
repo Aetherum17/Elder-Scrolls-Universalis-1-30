@@ -1,0 +1,219 @@
+### Redguard ###
+
+knights_of_the_true_horn_company = {
+    regiments_per_development = 0.075
+	cost_modifier = 0.75
+    home_province = 6436
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { muslimgfx_sprite_pack }
+    trigger = {
+		culture_group = yokudan-redguardian_cg
+		any_owned_province = { superregion = hammerfell_superregion }
+	}
+	modifier = { 
+	    discipline = 0.10
+		fire_damage_received = -0.05
+	}
+}
+
+knights_of_the_hawk_company = {
+    regiments_per_development = 0.065
+	cost_modifier = 0.65
+    home_province = 1478
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { muslimgfx_sprite_pack }
+    trigger = {
+		culture_group = yokudan-redguardian_cg
+		any_owned_province = { superregion = hammerfell_superregion }
+	}
+	modifier = { 
+	    infantry_power = 0.15
+		prestige_from_land = 0.07
+	}
+}
+
+knights_of_the_moon_company = {
+    regiments_per_development = 0.055
+	cost_modifier = 0.55
+    home_province = 1510
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { muslimgfx_sprite_pack }
+    trigger = {
+		culture_group = yokudan-redguardian_cg
+		any_owned_province = { superregion = hammerfell_superregion }
+	}
+	modifier = { 
+		land_morale = 0.10
+		land_attrition = -0.07
+	}
+}
+
+knights_of_the_wheel_company = {
+    regiments_per_development = 0.045
+	cost_modifier = 0.45
+    home_province = 1493
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { muslimgfx_sprite_pack }
+    trigger = {
+		culture_group = yokudan-redguardian_cg
+		any_owned_province = { superregion = hammerfell_superregion }
+	}
+	modifier = { 
+		movement_speed = 0.15
+		cavalry_power = 0.10
+	}
+}
+
+lhotuics_company = {
+    regiments_per_development = 0.035
+	cost_modifier = 0.35
+    home_province = 6155
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { muslimgfx_sprite_pack }
+    trigger = {
+		culture_group = yokudan-redguardian_cg
+		any_owned_province = { superregion = hammerfell_superregion }
+	}
+	modifier = { 
+		fire_damage = 0.10
+		siege_ability = 0.15
+	}
+}
+
+### Corelanyan ###
+
+corelanyan_army_company = {
+    regiments_per_development = 0.075
+	cost_modifier = 0.75
+    home_province = 6392
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { muslimgfx_sprite_pack }
+    trigger = {
+		culture_group = high_elves_cg
+		any_owned_province = { superregion = hammerfell_superregion }
+	}
+	modifier = { 
+	    land_morale = 0.10
+		infantry_power = 0.05
+	}
+}
+
+### Free For All ###
+
+ash-abah_company = {
+    regiments_per_development = 0.075
+	cost_modifier = 0.75
+    home_province = 6257
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { muslimgfx_sprite_pack }
+    trigger = {
+		any_owned_province = { superregion = hammerfell_superregion }
+	}
+	modifier = { 
+	    shock_damage = 0.05
+		discipline = 0.05
+	}
+}
+
+dervishes_of_rihad_company = {
+    regiments_per_development = 0.065
+	cost_modifier = 0.65
+    home_province = 1446
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { muslimgfx_sprite_pack }
+    trigger = {
+		any_owned_province = { superregion = hammerfell_superregion }
+	}
+	modifier = { 
+		infantry_power = 0.05
+		prestige_from_land = 0.07
+	}
+}
+
+knights_of_stendarr_company = {
+    regiments_per_development = 0.055
+	cost_modifier = 0.55
+    home_province = 6178
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { muslimgfx_sprite_pack }
+    trigger = {
+		any_owned_province = { superregion = hammerfell_superregion }
+	}
+	modifier = { 
+		land_morale = 0.05
+		fire_damage_received = -0.05
+	}
+}
+
+khulari_clan_company = {
+    regiments_per_development = 0.045
+	cost_modifier = 0.45
+    home_province = 6263
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { muslimgfx_sprite_pack }
+    trigger = {
+		any_owned_province = { superregion = hammerfell_superregion }
+	}
+	modifier = { 
+		movement_speed = 0.07
+		reinforce_speed = 0.07
+	}
+}
+
+selenu_clan_company = {
+    regiments_per_development = 0.035
+	cost_modifier = 0.35
+    home_province = 1465
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { muslimgfx_sprite_pack }
+    trigger = {
+		any_owned_province = { superregion = hammerfell_superregion }
+	}
+	modifier = { 
+		cavalry_power = 0.05
+		shock_damage = 0.05
+	}
+}
+
+montalion_clan_company = {
+    regiments_per_development = 0.025
+	cost_modifier = 0.25
+    home_province = 6376
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { muslimgfx_sprite_pack }
+    trigger = {
+		any_owned_province = { superregion = hammerfell_superregion }
+	}
+	modifier = { 
+		discipline = 0.05
+		siege_ability = 0.07
+	}
+}
+
+moraelyns_companions_company = {
+    regiments_per_development = 0.015
+	cost_modifier = 0.15
+    home_province = 6287
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { muslimgfx_sprite_pack }
+    trigger = {
+		any_owned_province = { superregion = hammerfell_superregion }
+	}
+	modifier = { 
+		fire_damage = 0.05
+		land_attrition = -0.07
+	}
+}

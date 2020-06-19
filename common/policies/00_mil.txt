@@ -12,7 +12,7 @@ privy_council_establishment_act = {
 		full_idea_group = defensive_ideas
 	}
 
-	defensiveness = 0.10
+	defensiveness = 0.15
 	
 	ai_will_do = {
 		factor = 0.6
@@ -37,7 +37,7 @@ the_mercenary_registration_act = {
 		full_idea_group = quantity_ideas
 	}
 
-	merc_maintenance_modifier = -0.10
+	merc_maintenance_modifier = -0.15
 	
 	ai_will_do = {
 		factor = 1
@@ -61,7 +61,7 @@ the_provincial_taxation_system = {
 		full_idea_group = quantity_ideas
 	}
 	
-	land_maintenance_modifier = -0.10
+	land_maintenance_modifier = -0.15
 	
 	ai_will_do = {
 		factor = 1
@@ -110,7 +110,7 @@ the_liquor_act = {
 		full_idea_group = administrative_ideas
 	}	
 	
-	reinforce_speed = 0.10
+	reinforce_speed = 0.15
 
 	ai_will_do = {
 		factor = 0.6
@@ -130,7 +130,7 @@ horse_artillery = {
 		full_idea_group = economic_ideas
 	}
 	
-	artillery_power = 0.1
+	artillery_power = 0.15
 
 	ai_will_do = {
 		factor = 1
@@ -166,7 +166,7 @@ public_road_act = {
 		full_idea_group = trade_ideas
 	}
 	
-	movement_speed = 0.10
+	movement_speed = 0.15
 
 	ai_will_do = {
 		factor = 1
@@ -206,7 +206,7 @@ superior_supply_system = {
 		full_idea_group = exploration_ideas
 	}
 	
-	manpower_recovery_speed = 0.1
+	manpower_recovery_speed = 0.15
 
 	ai_will_do = {
 		factor = 1
@@ -231,7 +231,7 @@ modern_siege_weapons = {
 		full_idea_group = offensive_ideas
 	}
 	
-	siege_ability = 0.1
+	siege_ability = 0.15
 
 	ai_will_do = {
 		factor = 1
@@ -255,7 +255,7 @@ superior_fortification_act = {
 		full_idea_group = defensive_ideas
 	}
 	
-	fort_maintenance_modifier = -0.10
+	fort_maintenance_modifier = -0.15
 
 	ai_will_do = {
 		factor = 1
@@ -275,7 +275,7 @@ modern_firearm_techniques = {
 		full_idea_group = quality_ideas
 	}
 	
-	infantry_power = 0.10
+	infantry_power = 0.15
 
 	ai_will_do = {
 		factor = 1.2		
@@ -307,7 +307,7 @@ the_garrison_act = {
 		full_idea_group = quantity_ideas
 	}
 	
-	garrison_size = 0.1
+	garrison_size = 0.15
 
 	ai_will_do = {
 		factor = 1
@@ -327,7 +327,7 @@ military_zeal_act = {
 		full_idea_group = religious_ideas
 	}
 	
-	land_morale = 0.10
+	land_morale = 0.15
 
 	ai_will_do = {
 		factor = 1
@@ -351,7 +351,7 @@ field_priests = {
 		full_idea_group = quantity_ideas
 	}
 
-	shock_damage_received = -0.10
+	shock_damage_received = -0.15
 	
 	ai_will_do = {
 		factor = 1.2
@@ -374,7 +374,7 @@ pen_rely_on_sword_act = {
 		full_idea_group = quantity_ideas
 	}
 	
-	diplomatic_reputation = 1
+	diplomatic_reputation = 1.5
 	
 	ai_will_do = {
 		factor = 1
@@ -413,7 +413,7 @@ local_army_organisation = {
 		full_idea_group = defensive_ideas
 	}
 
-	global_regiment_cost = -0.1
+	global_regiment_cost = -0.15
 
 	ai_will_do = {
 		factor = 1
@@ -432,7 +432,7 @@ underhanded_diplomacy_act = {
 		full_idea_group = offensive_ideas
 	}
 	
-	mercenary_manpower = 0.10
+	mercenary_manpower = 0.15
 
 	ai_will_do = {
 		factor = 0.6
@@ -497,7 +497,7 @@ colonial_garrisons = {
 		full_idea_group = expansion_ideas
 	}
 
-	land_forcelimit_modifier = 0.1
+	land_forcelimit_modifier = 0.15
 
 	ai_will_do = {
 		factor = 0.8
@@ -605,7 +605,7 @@ autonomous_estates = {
 		full_idea_group = aristocracy_ideas
 	}	
 	
-	global_unrest = -1
+	global_unrest = -1.5
 	
 	ai_will_do = {
 		factor = 1
@@ -669,7 +669,7 @@ the_naval_inspection_act = {
 		full_idea_group = naval_ideas
 	}	
 	
-	ship_durability = 0.10
+	ship_durability = 0.15
 	
 	ai_will_do = {
 		factor = 0.8
@@ -693,7 +693,7 @@ the_preparation_act = {
 		full_idea_group = defensive_ideas
 	}	
 	
-	land_attrition = -0.10
+	land_attrition = -0.15
 	
 	ai_will_do = {
 		factor = 0.9
@@ -717,7 +717,7 @@ local_militias = {
 		full_idea_group = defensive_ideas
 	}	
 	
-	rival_border_fort_maintenance = -0.10
+	rival_border_fort_maintenance = -0.15
 	
 	ai_will_do = {
 		factor = 1
@@ -737,7 +737,7 @@ foreign_conscription_centers = {
 		full_idea_group = offensive_ideas
 	}	
 	
-	reinforce_cost_modifier = -0.10
+	reinforce_cost_modifier = -0.15
 	
 	ai_will_do = {
 		factor = 1
@@ -796,7 +796,7 @@ weapon_quality_standards = {
 		full_idea_group = quality_ideas
 	}
 	
-	discipline = 0.05
+	discipline = 0.10
 	
 	ai_will_do = {
 		factor = 2
@@ -820,7 +820,7 @@ noble_loyalty_act = {
 		full_idea_group = spy_ideas
 	}
 
-	cavalry_power = 0.10
+	cavalry_power = 0.15
 	
 	ai_will_do = {
 		factor = 1
@@ -855,7 +855,7 @@ the_colonial_nobility_act = {
 		full_idea_group = exploration_ideas
 	}
 
-	global_manpower_modifier = 0.10
+	global_manpower_modifier = 0.15
 
 	ai_will_do = {
 		factor = 0.8
@@ -874,7 +874,7 @@ nobles_in_navy_act = {
 		full_idea_group = maritime_ideas
 	}
 
-	navy_tradition_decay = -0.01
+	navy_tradition_decay = -0.015
 
 	ai_will_do = {
 		factor = 0.6
@@ -898,7 +898,7 @@ military_allotment_act = {
 		full_idea_group = plutocracy_ideas
 	}
 
-	discipline = 0.05
+	discipline = 0.10
 
 	ai_will_do = {
 		factor = 0.8
@@ -918,7 +918,7 @@ unified_army_command = {
 		full_idea_group = influence_ideas
 	}	
 	
-	vassal_forcelimit_bonus = 0.1
+	vassal_forcelimit_bonus = 0.15
 	
 	ai_will_do = {
 		factor = 1
@@ -997,7 +997,7 @@ deserteur_act = {
 		full_idea_group = quality_ideas
 	}
 
-	army_tradition_decay = -0.01
+	army_tradition_decay = -0.015
 	
 	ai_will_do = {
 		factor = 0.75

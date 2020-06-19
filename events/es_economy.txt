@@ -34,7 +34,7 @@ country_event = {
 
 		modifier = {
 			factor = 0.85
-			treasury = 10000
+			treasury = 7000
 		}
 		modifier = {
 			factor = 0.70
@@ -42,7 +42,7 @@ country_event = {
 		}
 		modifier = {
 			factor = 0.55
-			treasury = 20000
+			treasury = 25000
 		}
 	
 	}
@@ -229,11 +229,10 @@ province_event = {
 		is_city = yes
 		NOT = { development = 35 }
 		NOT = { has_province_modifier = dev }
-		owner = { NOT = { has_country_modifier = es_dev_1_timer } }
 	}
 
 	mean_time_to_happen = {
-		days = 49275
+		days = 50000
 		
 		modifier = {
             factor = 0.90
@@ -584,13 +583,6 @@ province_event = {
         name = "dev"
         duration = 3650
         }
-		owner = {
-		add_country_modifier = {
-        name = "es_dev_1_timer"
-        duration = 3650
-		hidden = yes
-        }
-		}
 	}
 
 	option = {
@@ -617,7 +609,6 @@ province_event = {
 		unrest = 10
 		devastation = 10
 		}
-		owner = { NOT = { has_country_modifier = es_dev_2_timer } }
 		
 	}
 
@@ -872,13 +863,6 @@ province_event = {
 	    add_base_tax = -1
         add_base_production = -1
         add_base_manpower = -1
-		owner = {
-		add_country_modifier = {
-        name = "es_dev_2_timer"
-        duration = 365
-		hidden = yes
-        }
-		}
 	}
 
 	option = {

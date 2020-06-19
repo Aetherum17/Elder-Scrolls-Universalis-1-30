@@ -1,0 +1,236 @@
+### Snow Elven ###
+chantry_paladins_company = {
+    regiments_per_development = 0.075
+	cost_modifier = 0.75
+    home_province = 7571
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		culture_group = snow_elves_cg
+	}
+	modifier = { 
+		infantry_power = 0.05
+		land_morale = 0.10
+	}
+}
+
+### Nordic ###
+
+five_hundred_companions_company = {
+    regiments_per_development = 0.075
+	cost_modifier = 0.75
+    home_province = 1319
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { easterngfx_sprite_pack }
+    trigger = {
+		culture_group = northern_cg
+		any_owned_province = { superregion = skyrim_superregion }
+	}
+	modifier = { 
+	    discipline = 0.10
+		fire_damage = 0.05
+	}
+}
+
+stormcloak_clan_company = {
+    regiments_per_development = 0.065
+	cost_modifier = 0.65
+    home_province = 7412
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { easterngfx_sprite_pack }
+    trigger = {
+		culture_group = northern_cg
+		any_owned_province = { superregion = skyrim_superregion }
+	}
+	modifier = { 
+	    infantry_power = 0.10
+		shock_damage_received = -0.10
+	}
+}
+
+shatter-shield_clan_company = {
+    regiments_per_development = 0.055
+	cost_modifier = 0.55
+    home_province = 1306
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { easterngfx_sprite_pack }
+    trigger = {
+		culture_group = northern_cg
+		any_owned_province = { superregion = skyrim_superregion }
+	}
+	modifier = { 
+		fire_damage_received = -0.10
+		movement_speed = 0.15
+	}
+}
+
+### Reachmen ###
+
+crow-wife_clan_company = {
+    regiments_per_development = 0.075
+	cost_modifier = 0.75
+    home_province = 7200
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { northamericagfx_sprite_pack }
+    trigger = {
+		culture_group = half_blood_cg
+		any_owned_province = { superregion = skyrim_superregion }
+	}
+	modifier = { 
+	    shock_damage = 0.10
+		land_attrition = -0.15
+	}
+}
+
+forsworn_clan_company = {
+    regiments_per_development = 0.065
+	cost_modifier = 0.65
+    home_province = 1355
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { northamericagfx_sprite_pack }
+    trigger = {
+		culture_group = half_blood_cg
+		any_owned_province = { superregion = skyrim_superregion }
+	}
+	modifier = { 
+	    land_morale = 0.10
+		movement_speed = 0.07
+	}
+}
+
+glenmoril_witches_company = {
+    regiments_per_development = 0.055
+	cost_modifier = 0.55
+    home_province = 1331
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { northamericagfx_sprite_pack }
+     trigger = {
+		culture_group = half_blood_cg
+		any_owned_province = { superregion = skyrim_superregion }
+	}
+	modifier = { 
+		fire_damage = 0.10
+		reinforce_speed = 0.15
+	}
+}
+
+### Free For All ###
+
+black-heather_clan_company = {
+    regiments_per_development = 0.075
+	cost_modifier = 0.75
+    home_province = 1268
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { easterngfx_sprite_pack }
+    trigger = {
+		any_owned_province = { superregion = skyrim_superregion }
+	}
+	modifier = { 
+	    fire_damage = 0.05
+		shock_damage = 0.05
+	}
+}
+
+direfrost_clan_company = {
+    regiments_per_development = 0.065
+	cost_modifier = 0.65
+    home_province = 1299
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { easterngfx_sprite_pack }
+    trigger = {
+		any_owned_province = { superregion = skyrim_superregion }
+	}
+	modifier = { 
+		cavalry_power = 0.05
+		reinforce_speed = 0.07
+	}
+}
+
+the_horme_company = {
+    regiments_per_development = 0.055
+	cost_modifier = 0.55
+    home_province = 1342
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { easterngfx_sprite_pack }
+    trigger = {
+		any_owned_province = { superregion = skyrim_superregion }
+	}
+	modifier = { 
+		prestige_from_land = 0.07
+		shock_damage_received = -0.05
+	}
+}
+
+silver-blood_company_company = {
+    regiments_per_development = 0.045
+	cost_modifier = 0.45
+    home_province = 7503
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { easterngfx_sprite_pack }
+    trigger = {
+		any_owned_province = { superregion = skyrim_superregion }
+	}
+	modifier = { 
+		discipline = 0.05
+		shock_damage_received = -0.05
+	}
+}
+
+snow-shods_clan_company = {
+    regiments_per_development = 0.035
+	cost_modifier = 0.35
+    home_province = 7381
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { easterngfx_sprite_pack }
+    trigger = {
+		any_owned_province = { superregion = skyrim_superregion }
+	}
+	modifier = { 
+		land_morale = 0.05
+		siege_ability = 0.07
+	}
+}
+
+blackboot_marauders_company = {
+    regiments_per_development = 0.025
+	cost_modifier = 0.25
+    home_province = 1314
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { easterngfx_sprite_pack }
+    trigger = {
+		any_owned_province = { superregion = skyrim_superregion }
+	}
+	modifier = { 
+		fire_damage = 0.05
+		reinforce_speed = 0.07
+	}
+}
+
+blood_horkers_company = {
+    regiments_per_development = 0.015
+	cost_modifier = 0.15
+    home_province = 1336
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { easterngfx_sprite_pack }
+    trigger = {
+		any_owned_province = { superregion = skyrim_superregion }
+	}
+	modifier = { 
+	    movement_speed = 0.07
+		land_attrition = -0.07
+	}
+}
