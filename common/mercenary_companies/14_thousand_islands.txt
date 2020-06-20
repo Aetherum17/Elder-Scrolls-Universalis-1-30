@@ -1,0 +1,99 @@
+### Thousand ###
+
+monkey_warriors_company = {
+    regiments_per_development = 0.075
+	cost_modifier = 0.75
+    home_province = 545
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { asiangfx_sprite_pack }
+    trigger = {
+		culture_group = tangmo_cg
+	}
+	modifier = { 
+	    fire_damage_received = -0.10
+		siege_ability = 0.15
+	}
+}
+
+brave_folks_company = {
+    regiments_per_development = 0.065
+	cost_modifier = 0.65
+    home_province = 568
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { asiangfx_sprite_pack }
+    trigger = {
+		culture_group = tangmo_cg
+	}
+	modifier = { 
+        land_attrition = -0.25
+		infantry_power = 0.05
+	}
+}
+
+insame_warriors_company = {
+    regiments_per_development = 0.055
+	cost_modifier = 0.55
+    home_province = 575
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { asiangfx_sprite_pack }
+    trigger = {
+		culture_group = tangmo_cg
+	}
+	modifier = { 
+		land_morale = 0.10
+		fire_damage_received = -0.05
+	}
+}
+
+oceanic_knights_company = {
+    regiments_per_development = 0.045
+	cost_modifier = 0.45
+    home_province = 551
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { asiangfx_sprite_pack }
+    trigger = {
+		culture_group = tangmo_cg
+	}
+	modifier = { 
+		shock_damage = 0.15
+		discipline = 0.05
+	}
+}
+
+protectors_of_mainland_company = {
+    regiments_per_development = 0.035
+	cost_modifier = 0.35
+    home_province = 587
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { asiangfx_sprite_pack }
+    trigger = {
+		culture_group = tangmo_cg
+	}
+	modifier = { 
+		reinforce_speed = 0.15
+		prestige_from_land = 0.15
+	}
+}
+
+### Free For ALL ###
+
+free_thousand_islands_company_company = {
+    regiments_per_development = 0.075
+	cost_modifier = 0.75
+    home_province = 558
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { asiangfx_sprite_pack }
+    trigger = {
+		any_owned_province = { superregion = thousand_superregion }
+	}
+	modifier = { 
+	    reinforce_speed = 0.07
+		fire_damage = 0.05
+	}
+}

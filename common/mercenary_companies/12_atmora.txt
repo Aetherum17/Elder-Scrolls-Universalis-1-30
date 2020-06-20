@@ -134,3 +134,35 @@ inclement_tribe_company = {
 		movement_speed = 0.07
 	}
 }
+
+free_roscrean_company_company = {
+    regiments_per_development = 0.055
+	cost_modifier = 0.55
+    home_province = 389
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { easterngfx_sprite_pack }
+    trigger = {
+		any_owned_province = { superregion = atmora_superregion }
+	}
+	modifier = { 
+		discipline = 0.05
+		land_attrition = -0.07
+	}
+}
+
+ice-water_brigands_company = {
+    regiments_per_development = 0.055
+	cost_modifier = 0.55
+    home_province = 395
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { easterngfx_sprite_pack }
+    trigger = {
+		any_owned_province = { superregion = atmora_superregion }
+	}
+	modifier = { 
+		infantry_power = 0.05
+		fire_damage_received = -0.05
+	}
+}

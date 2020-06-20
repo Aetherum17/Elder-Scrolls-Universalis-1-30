@@ -1,0 +1,230 @@
+### Mehrunes Dagon Cult ###
+
+mythic_dawn_army_company = {
+    regiments_per_development = 0.075
+	cost_modifier = 0.75
+    home_province = 1124
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		religion = mehrunes_dagon_cult
+		any_owned_province = { continent = Tamriel }
+	}
+	modifier = { 
+	    land_morale = 0.05
+		siege_ability = 0.07
+	}
+}
+
+### Hircine Cult ###
+
+moon_hunters_pack_company = {
+    regiments_per_development = 0.075
+	cost_modifier = 0.75
+    home_province = 5657
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+   trigger = {
+		religion = hircine_cult
+		any_owned_province = { continent = Tamriel }
+	}
+	modifier = { 
+	    discipline = 0.05
+		fire_damage = 0.05
+	}
+}
+
+hunters_of_hircine_company = {
+    regiments_per_development = 0.065
+	cost_modifier = 0.65
+    home_province = 1179
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		religion = hircine_cult
+		any_owned_province = { continent = Tamriel }
+	}
+	modifier = { 
+        infantry_power = 0.05
+		reinforce_speed = 0.07
+	}
+}
+
+werewolve_army_company = {
+    regiments_per_development = 0.055
+	cost_modifier = 0.55
+    home_province = 5828
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		religion = hircine_cult
+		any_owned_province = { continent = Tamriel }
+	}
+	modifier = { 
+	    cavalry_power = 0.05
+		movement_speed = 0.07
+	}
+}
+
+### The Divines ###
+
+knights_of_iron_company = {
+    regiments_per_development = 0.075
+	cost_modifier = 0.75
+    home_province = 5987
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+	    OR = {
+		religion = eight_divines
+		religion = nine_divines
+		}
+		any_owned_province = { continent = Tamriel }
+	}
+	modifier = { 
+	    fire_damage_received = -0.05
+		prestige_from_land = 0.07
+	}
+}
+
+knights_of_the_circle_company = {
+    regiments_per_development = 0.065
+	cost_modifier = 0.65
+    home_province = 5627
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		OR = {
+		religion = eight_divines
+		religion = nine_divines
+		}
+		any_owned_province = { continent = Tamriel }
+	}
+	modifier = { 
+	    reinforce_speed = 0.07
+		discipline = 0.05
+	}
+}
+
+maran_knights = {
+    regiments_per_development = 0.055
+	cost_modifier = 0.55
+    home_province = 1251
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		OR = {
+		religion = eight_divines
+		religion = nine_divines
+		}
+		any_owned_province = { continent = Tamriel }
+	}
+	modifier = { 
+		reinforce_speed = 0.07
+		prestige_from_land = 0.07
+	}
+}
+
+vigilants_of_stendarr = {
+    regiments_per_development = 0.045
+	cost_modifier = 0.45
+    home_province = 1233
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		OR = {
+		religion = eight_divines
+		religion = nine_divines
+		}
+		any_owned_province = { continent = Tamriel }
+	}
+	modifier = { 
+		infantry_power = 0.05
+		shock_damage_received = -0.05
+	}
+}
+
+knights_of_the_divines = {
+    regiments_per_development = 0.035
+	cost_modifier = 0.35
+    home_province = 1191
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		OR = {
+		religion = eight_divines
+		religion = nine_divines
+		}
+		any_owned_province = { continent = Tamriel }
+	}
+	modifier = { 
+	    cavalry_power = 0.05
+		land_attrition = -0.07
+	}
+}
+
+### Nordic Pantheon ###
+
+kynaran_order_company = {
+    regiments_per_development = 0.075
+	cost_modifier = 0.75
+    home_province = 7479
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		religion = nordic_pantheon
+		any_owned_province = { continent = Tamriel }
+	}
+	modifier = { 
+	    discipline = 0.05
+		shock_damage = 0.05
+	}
+}
+
+### Nocturnal Cult ###
+
+nightingale_army_company = {
+    regiments_per_development = 0.075
+	cost_modifier = 0.75
+    home_province = 1087
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		religion = nocturnal_cult
+		any_owned_province = { continent = Tamriel }
+	}
+	modifier = { 
+	    reinforce_speed = 0.07
+		land_morale = 0.05
+	}
+}
+
+### Molag Bal Cult ###
+
+shadowed_path_company = {
+    regiments_per_development = 0.075
+	cost_modifier = 0.75
+    home_province = 1150
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		religion = molog_bal_cult
+		any_owned_province = { continent = Tamriel }
+	}
+	modifier = { 
+	    cavalry_power = 0.05
+		fire_damage = 0.05
+	}
+}

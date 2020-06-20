@@ -1,0 +1,223 @@
+### Akaviri ###
+
+united_akaviri_forces_company = {
+    regiments_per_development = 0.075
+	cost_modifier = 0.75
+    home_province = 750
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { asiangfx_sprite_pack }
+    trigger = {
+		culture_group = transpandomaic_cg
+		any_owned_province = { superregion = upper_akavir_superregion }
+	}
+	modifier = { 
+	    discipline = 0.10
+		prestige_from_land = 0.07
+	}
+}
+
+the_old_order_company = {
+    regiments_per_development = 0.065
+	cost_modifier = 0.65
+    home_province = 761
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { asiangfx_sprite_pack }
+    trigger = {
+		culture_group = transpandomaic_cg
+		any_owned_province = { superregion = upper_akavir_superregion }
+	}
+	modifier = { 
+        siege_ability = 0.15
+		land_attrition = -0.15
+	}
+}
+
+noble_knighrs_company = {
+    regiments_per_development = 0.055
+	cost_modifier = 0.55
+    home_province = 741
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { asiangfx_sprite_pack }
+    trigger = {
+		culture_group = transpandomaic_cg
+		any_owned_province = { superregion = upper_akavir_superregion }
+	}
+	modifier = { 
+		land_morale = 0.10
+		cavalry_power = 0.05
+	}
+}
+
+the_expelled_company_company = {
+    regiments_per_development = 0.045
+	cost_modifier = 0.45
+    home_province = 763
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { asiangfx_sprite_pack }
+    trigger = {
+		culture_group = transpandomaic_cg
+		any_owned_province = { superregion = upper_akavir_superregion }
+	}
+	modifier = { 
+	    infantry_power = 0.15
+		shock_damage_received = -0.05
+	}
+}
+
+warriors_of_the_light_company = {
+    regiments_per_development = 0.035
+	cost_modifier = 0.35
+    home_province = 772
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { asiangfx_sprite_pack }
+    trigger = {
+		culture_group = transpandomaic_cg
+		any_owned_province = { superregion = upper_akavir_superregion }
+	}
+	modifier = { 
+		shock_damage = 0.10
+		movement_speed = 0.15
+	}
+}
+
+### Islandic ###
+
+islandic_warriors_company = {
+    regiments_per_development = 0.075
+	cost_modifier = 0.75
+    home_province = 800
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { easterngfx_sprite_pack }
+    trigger = {
+		culture_group = transpandomaic_cg
+		any_owned_province = { superregion = northern_islands_superregion }
+	}
+	modifier = { 
+	    land_morale = 0.05
+		fire_damage_received = -0.15
+	}
+}
+
+servants_of_the_sea_company = {
+    regiments_per_development = 0.065
+	cost_modifier = 0.65
+    home_province = 1541
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { easterngfx_sprite_pack }
+    trigger = {
+		culture_group = transpandomaic_cg
+		any_owned_province = { superregion = northern_islands_superregion }
+	}
+	modifier = { 
+        shock_damage = 0.15
+		movement_speed = 0.07
+	}
+}
+
+forgotten_legion_company = {
+    regiments_per_development = 0.055
+	cost_modifier = 0.55
+    home_province = 806
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { easterngfx_sprite_pack }
+    trigger = {
+		culture_group = transpandomaic_cg
+		any_owned_province = { superregion = northern_islands_superregion }
+	}
+	modifier = { 
+		infantry_power = 0.10
+		siege_ability = 0.15
+	}
+}
+
+clan_of_ancients_company = {
+    regiments_per_development = 0.045
+	cost_modifier = 0.45
+    home_province = 415
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { easterngfx_sprite_pack }
+    trigger = {
+		culture_group = transpandomaic_cg
+		any_owned_province = { superregion = northern_islands_superregion }
+	}
+	modifier = { 
+		prestige_from_land = 0.25
+		reinforce_speed = 0.07
+	}
+}
+
+winter_warriors_company = {
+    regiments_per_development = 0.035
+	cost_modifier = 0.35
+    home_province = 407
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { easterngfx_sprite_pack }
+    trigger = {
+		culture_group = transpandomaic_cg
+		any_owned_province = { superregion = northern_islands_superregion }
+	}
+	modifier = { 
+		land_attrition = -0.25
+		shock_damage_received = -0.05
+	}
+}
+
+### Free For ALL ###
+
+free_upper_akavir_company_company = {
+    regiments_per_development = 0.075
+	cost_modifier = 0.75
+    home_province = 757
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { asiangfx_sprite_pack }
+    trigger = {
+		any_owned_province = { OR = { superregion = upper_akavir_superregion superregion = northern_islands_superregion } }
+	}
+	modifier = { 
+	    fire_damage = 0.05
+		siege_ability = 0.07
+	}
+}
+
+independent_akaviri_army_company = {
+    regiments_per_development = 0.065
+	cost_modifier = 0.65
+    home_province = 743
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { asiangfx_sprite_pack }
+    trigger = {
+		any_owned_province = { OR = { superregion = upper_akavir_superregion superregion = northern_islands_superregion } }
+	}
+	modifier = { 
+	    movement_speed = 0.07
+		land_attrition = -0.07
+	}
+}
+
+free_northern_islands_company_company = {
+    regiments_per_development = 0.055
+	cost_modifier = 0.55
+    home_province = 799
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { easterngfx_sprite_pack }
+    trigger = {
+		any_owned_province = { OR = { superregion = upper_akavir_superregion superregion = northern_islands_superregion } }
+	}
+	modifier = { 
+	    land_morale = 0.05
+		infantry_power = 0.05
+	}
+}

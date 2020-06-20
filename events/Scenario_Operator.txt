@@ -616,6 +616,21 @@ country_event = {
 	}
 	
 	immediate = {
+	    every_province = { limit = { is_city = no area = cyrodiil_71_la } cede_province = CH1 add_core = CH1 }
+	    every_province = { limit = { is_city = no area = cyrodiil_72_la } cede_province = CH2 add_core = CH2 }
+	    every_province = { limit = { is_city = no area = cyrodiil_66_la } cede_province = CG6 add_core = CG6 }
+	    every_province = { limit = { is_city = no area = cyrodiil_65_la } cede_province = CG5 add_core = CG5 }
+	    every_province = { limit = { is_city = no area = cyrodiil_64_la } cede_province = CG4 add_core = CG4 }
+	    every_province = { limit = { is_city = no area = cyrodiil_62_la } cede_province = CG2 add_core = CG2 }
+	    every_province = { limit = { is_city = no area = cyrodiil_61_la } cede_province = CG1 add_core = CG1 }
+	    every_province = { limit = { is_city = no area = cyrodiil_60_la } cede_province = CG0 add_core = CG0 }
+	    every_province = { limit = { is_city = no area = cyrodiil_52_la } cede_province = CF2 add_core = CF2 }
+	    every_province = { limit = { is_city = no area = cyrodiil_59_la } cede_province = CF9 add_core = CF9 }
+	    every_province = { limit = { is_city = no area = cyrodiil_58_la } cede_province = CF8 add_core = CF8 }
+	    every_province = { limit = { is_city = no area = cyrodiil_56_la } cede_province = CF6 add_core = CF6 }
+	    every_province = { limit = { is_city = no area = cyrodiil_57_la } cede_province = CF7 add_core = CF7 }
+	    every_province = { limit = { is_city = no area = cyrodiil_55_la } cede_province = CF5 add_core = CF5 }
+	    ###
 	    1130 = { remove_reform_center = eight_divines }
 		1120 = { remove_reform_center = eight_divines }
         1161 = { remove_reform_center = eight_divines }
