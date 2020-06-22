@@ -1,0 +1,413 @@
+### Clanfear ###
+
+oducroh_tribe_company = {
+    regiments_per_development = 0.075
+	cost_modifier = 0.75
+    home_province = 3817
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { africangfx_sprite_pack }
+    trigger = {
+		culture_group = void_cg
+		any_owned_province = { region = eastern_deadlands_lr }
+	}
+	modifier = { 
+	    fire_damage = 0.10
+		reinforce_speed = 0.15
+	}
+}
+
+ohgi_tribe_company = {
+    regiments_per_development = 0.065
+	cost_modifier = 0.65
+    home_province = 3907
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { africangfx_sprite_pack }
+    trigger = {
+		culture_group = void_cg
+		any_owned_province = { region = eastern_deadlands_lr }
+	}
+	modifier = {
+        shock_damage = 0.10
+		land_morale = 0.05
+	}
+}
+
+tavi_tribe_company = {
+    regiments_per_development = 0.055
+	cost_modifier = 0.55
+    home_province = 3774
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { africangfx_sprite_pack }
+    trigger = {
+		culture_group = void_cg
+		any_owned_province = { region = eastern_deadlands_lr }
+	}
+	modifier = {
+	    cavalry_power = 0.15
+		prestige_from_land = 0.07
+	}
+}
+
+onci_tribe_company = {
+    regiments_per_development = 0.045
+	cost_modifier = 0.45
+    home_province = 3854
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { africangfx_sprite_pack }
+    trigger = {
+		culture_group = void_cg
+		any_owned_province = { region = eastern_deadlands_lr }
+	}
+	modifier = { 
+	    discipline = 0.10
+		siege_ability = 0.07
+	}
+}
+
+kolri_tribe_company = {
+    regiments_per_development = 0.035
+	cost_modifier = 0.35
+    home_province = 3877
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { africangfx_sprite_pack }
+    trigger = {
+		culture_group = void_cg
+		any_owned_province = { region = eastern_deadlands_lr }
+	}
+	modifier = { 
+	    land_attrition = -0.25
+		infantry_power = 0.05
+	}
+}
+
+### Arahnid ###
+
+zilni_tribe_company = {
+    regiments_per_development = 0.075
+	cost_modifier = 0.75
+    home_province = 4328
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { northamericagfx_sprite_pack }
+    trigger = {
+		culture_group = void_cg
+		any_owned_province = { region = southern_deadlands_lr }
+	}
+	modifier = { 
+	    discipline = 0.10
+		prestige_from_land = 0.07
+	}
+}
+
+ilod_tribe_company = {
+    regiments_per_development = 0.065
+	cost_modifier = 0.65
+    home_province = 4345
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { northamericagfx_sprite_pack }
+    trigger = {
+		culture_group = void_cg
+		any_owned_province = { region = southern_deadlands_lr }
+	}
+	modifier = { 
+	    movement_speed = 0.25
+		fire_damage_received = -0.05
+	}
+}
+
+qaicoth-ad_tribe_company = {
+    regiments_per_development = 0.055
+	cost_modifier = 0.55
+    home_province = 4276
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { northamericagfx_sprite_pack }
+    trigger = {
+		culture_group = void_cg
+		any_owned_province = { region = southern_deadlands_lr }
+	}
+	modifier = { 
+	    reinforce_speed = 0.15
+		shock_damage = 0.10
+	}
+}
+
+chan-qie_tribe_company = {
+    regiments_per_development = 0.045
+	cost_modifier = 0.45
+    home_province = 4244
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { northamericagfx_sprite_pack }
+    trigger = {
+		culture_group = void_cg
+		any_owned_province = { region = southern_deadlands_lr }
+	}
+	modifier = { 
+	    land_morale = 0.10
+		infantry_power = 0.05
+	}
+}
+
+charosa_tribe_company = {
+    regiments_per_development = 0.035
+	cost_modifier = 0.35
+    home_province = 4216
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { northamericagfx_sprite_pack }
+    trigger = {
+		culture_group = void_cg
+		any_owned_province = { region = southern_deadlands_lr }
+	}
+	modifier = { 
+	    siege_ability = 0.25
+		land_attrition = -0.07
+	}
+}
+
+### Daedroth ###
+
+gnisira_tribe_company = {
+    regiments_per_development = 0.075
+	cost_modifier = 0.75
+    home_province = 3913
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { northamericagfx_sprite_pack }
+    trigger = {
+		culture_group = void_cg
+		any_owned_province = { region = western_deadlands_lr }
+	}
+	modifier = {
+        fire_damage_received = -0.15
+		cavalry_power = 0.05
+	}
+}
+
+mirsira_tribe_company = {
+    regiments_per_development = 0.065
+	cost_modifier = 0.65
+    home_province = 3954
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { northamericagfx_sprite_pack }
+    trigger = {
+		culture_group = void_cg
+		any_owned_province = { region = western_deadlands_lr }
+	}
+	modifier = {
+        discipline = 0.05
+		reinforce_speed = 0.25
+	}
+}
+
+debise_tribe_company = {
+    regiments_per_development = 0.055
+	cost_modifier = 0.55
+    home_province = 3987
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { northamericagfx_sprite_pack }
+    trigger = {
+		culture_group = void_cg
+		any_owned_province = { region = western_deadlands_lr }
+	}
+	modifier = {
+	    movement_speed = 0.15
+		land_morale = 0.05
+	}
+}
+
+gnivien_tribe_company = {
+    regiments_per_development = 0.045
+	cost_modifier = 0.45
+    home_province = 4007
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { northamericagfx_sprite_pack }
+    trigger = {
+		culture_group = void_cg
+		any_owned_province = { region = western_deadlands_lr }
+	}
+	modifier = { 
+	    infantry_power = 0.10
+		siege_ability = 0.15
+	}
+}
+
+xeljei_tribe_company = {
+    regiments_per_development = 0.035
+	cost_modifier = 0.35
+    home_province = 4023
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { northamericagfx_sprite_pack }
+    trigger = {
+		culture_group = void_cg
+		any_owned_province = { region = western_deadlands_lr }
+	}
+	modifier = {
+        prestige_from_land = 0.07	
+		shock_damage = 0.15
+	}
+}
+
+### Xivilai ###
+
+bynlaema_tribe_company = {
+    regiments_per_development = 0.075
+	cost_modifier = 0.75
+    home_province = 4143
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		culture_group = daedra_cg
+		any_owned_province = { region = northern_deadlands_lr }
+	}
+	modifier = { 
+	    infantry_power = 0.15
+		prestige_from_land = 0.07
+	}
+}
+
+lucaryn_tribe_company = {
+    regiments_per_development = 0.065
+	cost_modifier = 0.65
+    home_province = 4174
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+     trigger = {
+		culture_group = daedra_cg
+		any_owned_province = { region = northern_deadlands_lr }
+	}
+	modifier = {
+	    land_attrition = -0.15
+		fire_damage_received = -0.10
+	}
+}
+
+ysania_tribe_company = {
+    regiments_per_development = 0.055
+	cost_modifier = 0.55
+    home_province = 4285
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+     trigger = {
+		culture_group = daedra_cg
+		any_owned_province = { region = northern_deadlands_lr }
+	}
+	modifier = { 
+	    discipline = 0.10
+		reinforce_speed = 0.07
+	}
+}
+
+reykalyn_tribe_company = {
+    regiments_per_development = 0.045
+	cost_modifier = 0.45
+    home_province = 4124
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+     trigger = {
+		culture_group = daedra_cg
+		any_owned_province = { region = northern_deadlands_lr }
+	}
+	modifier = { 
+	    land_attrition = -0.25
+		movement_speed = 0.07
+	}
+}
+
+reslyn_tribe_company = {
+    regiments_per_development = 0.035
+	cost_modifier = 0.35
+    home_province = 4117
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+     trigger = {
+		culture_group = daedra_cg
+		any_owned_province = { region = northern_deadlands_lr }
+	}
+	modifier = { 
+	    cavalry_power = 0.15
+		land_morale = 0.05
+	}
+}
+
+### Free For All ###
+
+free_xivilai_company_company = {
+    regiments_per_development = 0.075
+	cost_modifier = 0.75
+    home_province = 4075
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		any_owned_province = { region = northern_deadlands_lr }
+	}
+	modifier = { 
+	    fire_damage = 0.05
+		siege_ability = 0.07
+	}
+}
+
+free_daedroth_company_company = {
+    regiments_per_development = 0.075
+	cost_modifier = 0.75
+    home_province = 3966
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { northamericagfx_sprite_pack }
+    trigger = {
+		any_owned_province = { region = western_deadlands_lr }
+	}
+	modifier = { 
+	    reinforce_speed = 0.07
+		discipline = 0.05
+	}
+}
+
+free_arahnid_company_company = {
+    regiments_per_development = 0.075
+	cost_modifier = 0.75
+    home_province = 4337
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { northamericagfx_sprite_pack }
+    trigger = {
+		any_owned_province = { region = southern_deadlands_lr }
+	}
+	modifier = {
+        fire_damage = 0.05
+		land_attrition = -0.07
+	}
+}
+
+free_clanfear_company_company = {
+    regiments_per_development = 0.075
+	cost_modifier = 0.75
+    home_province = 3826
+	cavalry_weight = 0.25
+	artillery_weight = 0.15
+	sprites = { africangfx_sprite_pack }
+    trigger = {
+		any_owned_province = { region = eastern_deadlands_lr }
+	}
+	modifier = { 
+	    infantry_power = 0.05
+		fire_damage_received = -0.05
+	}
+}

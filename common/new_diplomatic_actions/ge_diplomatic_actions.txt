@@ -223,7 +223,7 @@ create_personal_union = {
 			who = FROM
 			with = ROOT
 		}
-		divide_variable = { which = ai_value value = -2 }
+		divide_variable = { which = ai_value value = -1.5 }
 	    }
 		add_entry = {
 			name = ROOT_FROM_HAVE_SAME_PRIMARY_CULTURE
@@ -916,7 +916,7 @@ create_native_reservation = {
 			who = FROM
 			with = ROOT
 		}
-		divide_variable = { which = ai_value value = -2 }
+		divide_variable = { which = ai_value value = -1.5 }
 	    }
 		add_entry = {
 			name = FROM_HAS_MORE_THAN_500_TOTAL_DEVELOPMENT
@@ -1824,7 +1824,7 @@ create_alliance_member = {
 			who = FROM
 			with = ROOT
 		}
-		divide_variable = { which = ai_value value = -2 }
+		divide_variable = { which = ai_value value = -1.5 }
 	    }
 		add_entry = {
 			name = OPINION
