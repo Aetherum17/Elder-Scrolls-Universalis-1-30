@@ -50,7 +50,7 @@ cb_vassal_annex = {
 }
 
 cb_es_scenario = {
-	valid_for_subject = yes
+	valid_for_subject = no
 
 	prerequisites = {
 		always = no
@@ -60,7 +60,7 @@ cb_es_scenario = {
 }
 
 cb_es_ayleid_purification = {
-	valid_for_subject = yes
+	valid_for_subject = no
 
 	prerequisites = {
 	    NOT = { culture_group = high_elves_cg }
@@ -78,7 +78,7 @@ cb_es_ayleid_purification = {
 }
 
 cb_es_purification = {
-	valid_for_subject = yes
+	valid_for_subject = no
 
 	prerequisites = {
 	    OR = {

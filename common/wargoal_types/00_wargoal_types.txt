@@ -144,7 +144,6 @@ superiority_revolution = {
 			po_revoke_cores
 			po_release_vassals
 			po_release_annexed
-			po_change_religion
 			po_gold
 			po_annul_treaties
 			po_spread_revolution		   
@@ -210,6 +209,7 @@ take_capital_revolution = {
 			po_gold
 			po_concede_defeat
 			po_annul_treaties
+			po_spread_revolution		   
 		}
 	}
 }
@@ -1371,6 +1371,32 @@ war_goal_change_government = {
 	peace_options = {
 		po_change_government
 		po_demand_provinces
+		force_peasant_republic
+	}
+	
+	war_name = CHANGE_GOVERNMENT_WAR_NAME
+}
+
+war_goal_peasants_change_government = {
+	type = take_capital
+	
+	badboy_factor = 0.75
+	prestige_factor = 1
+	peace_cost_factor = 1.0	
+	
+	allowed_provinces = {
+		OR = {
+			is_core = ROOT
+			is_claim = ROOT
+			any_neighbor_province = {
+				owned_by = ROOT
+			}
+		}
+	}
+
+	peace_options = {
+		po_demand_provinces
+		force_peasant_republic
 	}
 	
 	war_name = CHANGE_GOVERNMENT_WAR_NAME

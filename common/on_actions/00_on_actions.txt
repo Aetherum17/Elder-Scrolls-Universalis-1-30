@@ -163,14 +163,6 @@ on_startup = {
 	
 	every_country = { limit = { ai = no NOT = { has_country_flag = es_1_start_flag } } country_event = { id = es_start.1 days = 0 tooltip = es_collapse.2.a.tt } set_country_flag = es_1_start_flag }
 	
-	every_owned_province = {
-	    if = { limit = { has_estate = estate_church } remove_estate = estate_church }
-		if = { limit = { has_estate = estate_nobles } remove_estate = estate_nobles }
-		if = { limit = { has_estate = estate_burghers } remove_estate = estate_burghers }
-		if = { limit = { has_estate = estate_cossacks } remove_estate = estate_cossacks }
-		if = { limit = { has_estate = estate_nomadic_tribes } remove_estate = estate_nomadic_tribes }
-	}
-	
 	if = { limit = { NOT = { has_dlc = "Dharma" } is_emperor_of_china = yes } set_legacy_government = celestial_empire_legacy }
 	
 	if = { limit = { government = tribal has_dlc = "Dharma" }
@@ -482,15 +474,12 @@ on_war_won = {
 		}
 		set_country_flag = won_against_great_power
 	}
-	if = {
-		limit = { current_age = dark_age }
-		change_variable = {
-			which = war_won
-			value = 1
-		}
-	}
 	change_variable = {
 		which = war_won
+		value = 1
+	}
+	change_variable = {
+		which = num_of_wars_won
 		value = 1
 	}
     if = {
@@ -549,6 +538,10 @@ on_war_lost = {
 # country
 # root = winning country, from = loser country
 on_battle_won_country = {
+    change_variable = {
+		which = num_of_battles_won
+		value = 1
+	}	
 }
 
 # country

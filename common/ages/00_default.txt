@@ -1017,10 +1017,10 @@ age_of_discovery = {
 			num_of_continents = 2
 		}
 	obj_humiliate_rival = {
-			custom_trigger_tooltip = {
-				tooltip = obj_humiliate_rival_tooltip
-				has_country_flag = humiliated_rival
-			}
+		custom_trigger_tooltip = {
+			tooltip = obj_humiliate_rival_tooltip
+			has_country_flag = humiliated_rival
+		}
 	}	
 	}
 	
@@ -1593,7 +1593,7 @@ industrial_age = {
 		obj_industrial_20_factories = {
 			calc_true_if = {
 				all_owned_province = {
-					has_building = royal_palace
+					has_building = town_hall
 					controlled_by = owner
 					is_core = ROOT
 				}
@@ -1793,10 +1793,7 @@ great_war_age = {
 		obj_greatwar_more_nuclear_than_rivals = {
 			all_rival_country = {
 				NOT = {
-					check_variable = {
-						which = num_of_nuclear_weapons
-						which = ROOT
-					}
+					army_size = ROOT 
 				}
 			}
 		}
@@ -1957,7 +1954,7 @@ information_age = {
 		obj_info_fusion_power = {
 			calc_true_if = {
 				all_owned_province = {
-					has_building = war_college
+					has_building = fort_18th
 					controlled_by = owner
 					is_core = ROOT
 				}

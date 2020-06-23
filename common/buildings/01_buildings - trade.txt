@@ -1,0 +1,93 @@
+marketplace = {
+	cost = 50	
+	time = 12
+
+	modifier = {
+		province_trade_power_modifier = 0.25			
+	}
+	
+	ai_will_do = {
+		factor = 1		
+		modifier = {
+			factor = 0.50
+			NOT = { FROM = { mercantilism = 25 } }			
+		}
+		modifier = {
+			factor = 1.5
+			FROM = { mercantilism = 50 }			
+		}
+		modifier = {
+			factor = 2.5
+			FROM = {			
+				OR = {
+					is_in_trade_league = yes
+					has_government_attribute = is_merchant_republic
+				}
+			}
+		}
+	}
+}
+
+trade_depot = {
+	cost = 150			
+	time = 24
+	
+	make_obsolete = marketplace
+	
+	modifier = {
+		province_trade_power_modifier = 0.5
+	}
+	
+	ai_will_do = {
+		factor = 2.5		
+		modifier = {
+			factor = 0.50
+			NOT = { FROM = { mercantilism = 25 } }			
+		}
+		modifier = {
+			factor = 1.5
+			FROM = { mercantilism = 50 }			
+		}
+		modifier = {
+			factor = 2.5
+			FROM = {			
+				OR = {
+					is_in_trade_league = yes
+					has_government_attribute = is_merchant_republic
+				}
+			}
+		}
+	}
+}
+
+stock_exchange = {
+	cost = 250
+	time = 36			
+	
+	make_obsolete = trade_depot
+	
+	modifier = {
+		province_trade_power_modifier = 0.75			
+	}
+	
+	ai_will_do = {
+		factor = 5	
+		modifier = {
+			factor = 0.50
+			NOT = { FROM = { mercantilism = 25 } }			
+		}
+		modifier = {
+			factor = 1.5
+			FROM = { mercantilism = 50 }			
+		}
+		modifier = {
+			factor = 2.5
+			FROM = {			
+				OR = {
+					is_in_trade_league = yes
+					has_government_attribute = is_merchant_republic
+				}
+			}
+		}
+	}
+}

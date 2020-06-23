@@ -1,8 +1,9 @@
 order_of_the_lamp = {
     icon = GFX_holy_order_qadiri
     trigger = {
-	
-	} 
+        any_owned_province = { continent = Tamriel } 
+        NOT = { culture_group = chimeris_cg }
+	}
 	cost = 100 cost_type = adm_power per_province_effect = { add_base_tax = 1 } per_province_abandon_effect = { add_base_tax = -1 }
     modifier = { local_regiment_cost = -0.15 local_institution_spread = 0.10 }
     ai_priority = { factor = 1 }
@@ -11,8 +12,10 @@ order_of_the_lamp = {
 vampyrum_order = {
     icon = GFX_holy_order_shadhili
     trigger = {
-	
-	} 
+        any_owned_province = { continent = Tamriel } 
+        NOT = { culture_group = chimeris_cg }
+        NOT = { culture_group = yokudan-redguardian_cg } OR = { capital_scope = { superregion = cyrodiil_superregion } religion_group = daedric_group_1 }
+	}
     cost = 100 cost_type = dip_power per_province_effect = { add_base_production = 1 } per_province_abandon_effect = { add_base_production = -1 }
     modifier = { local_development_cost = -0.15 local_state_maintenance_modifier = -0.10 }
     ai_priority = { factor = 1 }
@@ -21,7 +24,9 @@ vampyrum_order = {
 order_of_the_hour = {
     icon = GFX_holy_order_aissawa
     trigger = {
-	
+        any_owned_province = { continent = Tamriel } 
+        NOT = { culture_group = chimeris_cg }
+        NOT = { capital_scope = { superregion = hammerfell_superregion } } NOT = { OR = { culture_group = half_blood_cg religion_group = polytheistic_group } }
 	}
     cost = 100 cost_type = mil_power per_province_effect = { add_base_manpower = 1 } per_province_abandon_effect = { add_base_manpower = -1 }
     modifier = { local_missionary_strength = 0.015 local_manpower_modifier = 0.10 }
@@ -33,7 +38,8 @@ order_of_the_hour = {
 order_of_doctrine_and_ordination = {
     icon = GFX_order_of_doctrine_and_ordination
     trigger = {
-	
+        any_owned_province = { continent = Tamriel } 
+        culture_group = chimeris_cg
 	}
 	cost = 100 cost_type = adm_power per_province_effect = { add_base_tax = 1 } per_province_abandon_effect = { add_base_tax = -1 }
     modifier = { local_manpower_modifier = 0.15 local_years_of_nationalism = -5 }
@@ -41,9 +47,10 @@ order_of_doctrine_and_ordination = {
 }
 
 order_of_the_watch = {
-    icon = GFX_holy_order_shadhili
+    icon = GFX_order_of_the_watch
     trigger = {
-	
+        any_owned_province = { continent = Tamriel } 
+        culture_group = chimeris_cg
 	}
     cost = 100 cost_type = dip_power per_province_effect = { add_base_production = 1 } per_province_abandon_effect = { add_base_production = -1 }
     modifier = { local_state_maintenance_modifier = -0.15 local_defensiveness = 0.10 }
@@ -53,7 +60,8 @@ order_of_the_watch = {
 order_of_inquisition = {
     icon = GFX_order_of_inquisition
     trigger = {
-	
+        any_owned_province = { continent = Tamriel } 
+        culture_group = chimeris_cg
 	}
     cost = 100 cost_type = mil_power per_province_effect = { add_base_manpower = 1 } per_province_abandon_effect = { add_base_manpower = -1 }
     modifier = { local_culture_conversion_cost = -0.15 local_missionary_strength = 0.01 }
@@ -65,7 +73,9 @@ order_of_inquisition = {
 baldama_wyrd_order = {
     icon = GFX_baldama_wyrd_order
     trigger = {
-	
+        any_owned_province = { continent = Tamriel } 
+        NOT = { culture_group = chimeris_cg }
+        capital_scope = { superregion = high_rock_superregion }
 	}
 	cost = 100 cost_type = adm_power per_province_effect = { add_base_tax = 1 } per_province_abandon_effect = { add_base_tax = -1 }
     modifier = { local_build_cost = -0.15 local_production_efficiency = 0.10 }
@@ -75,7 +85,9 @@ baldama_wyrd_order = {
 order_of_the_raven = {
     icon = GFX_order_of_the_raven
     trigger = {
-	
+        any_owned_province = { continent = Tamriel } 
+        NOT = { culture_group = chimeris_cg }
+        NOT = { culture_group = yokudan-redguardian_cg } NOT = { OR = { capital_scope = { superregion = cyrodiil_superregion } religion_group = daedric_group_1 } }
 	}
     cost = 100 cost_type = dip_power per_province_effect = { add_base_production = 1 } per_province_abandon_effect = { add_base_production = -1 }
     modifier = { trade_goods_size = 0.15 local_regiment_cost = -0.10 }
@@ -85,7 +97,9 @@ order_of_the_raven = {
 order_of_saint_pelin = {
     icon = GFX_order_of_saint_pelin
     trigger = {
-	
+        any_owned_province = { continent = Tamriel } 
+        NOT = { culture_group = chimeris_cg }
+        NOT = { capital_scope = { superregion = hammerfell_superregion } } OR = { culture_group = half_blood_cg religion_group = polytheistic_group }
 	}
     cost = 100 cost_type = mil_power per_province_effect = { add_base_manpower = 1 } per_province_abandon_effect = { add_base_manpower = -1 }
     modifier = { local_defensiveness = 0.15 local_friendly_movement_speed = 0.10 }
@@ -97,7 +111,9 @@ order_of_saint_pelin = {
 sapiarchs_order = {
     icon = GFX_sapiarchs_order
     trigger = {
-	
+        any_owned_province = { continent = Tamriel } 
+        NOT = { culture_group = chimeris_cg }
+        capital_scope = { superregion = summerset_islands_superregion }
 	}
 	cost = 100 cost_type = adm_power per_province_effect = { add_base_tax = 1 } per_province_abandon_effect = { add_base_tax = -1 }
     modifier = { local_hostile_movement_speed = 0.15 local_tax_modifier = 0.10 }
@@ -107,7 +123,9 @@ sapiarchs_order = {
 order_of_the_candle = {
     icon = GFX_order_of_the_candle
     trigger = {
-	
+        any_owned_province = { continent = Tamriel } 
+        NOT = { culture_group = chimeris_cg }
+        culture_group = yokudan-redguardian_cg
 	}
     cost = 100 cost_type = dip_power per_province_effect = { add_base_production = 1 } per_province_abandon_effect = { add_base_production = -1 }
     modifier = { local_years_of_nationalism = -10 local_religious_unity_contribution = -1 }
@@ -117,7 +135,9 @@ order_of_the_candle = {
 order_of_diagna = {
     icon = GFX_order_of_diagna
     trigger = {
-	
+        any_owned_province = { continent = Tamriel } 
+        NOT = { culture_group = chimeris_cg }
+        capital_scope = { superregion = hammerfell_superregion } 
 	}
     cost = 100 cost_type = mil_power per_province_effect = { add_base_manpower = 1 } per_province_abandon_effect = { add_base_manpower = -1 }
     modifier = { regiment_recruit_speed = -0.15 local_unrest = -1 }

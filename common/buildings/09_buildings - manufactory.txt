@@ -1,0 +1,639 @@
+manufactory = {
+	cost = 350
+	time = 36
+	modifier = { }
+}
+
+#If trade good assignment changes, also update scripted trigger "has_manufactory trigger"!
+
+wharf = {
+	manufactory = {
+		naval_supplies
+		fish
+		salt
+		algae
+        lobsters
+	}
+	modifier = {
+		trade_goods_size = 0.5
+		trade_goods_size_modifier = 0.5		
+        naval_forcelimit = 2.5		
+	}
+	onmap = yes
+	
+	ai_will_do = {
+		factor = 15
+		modifier = {
+			factor = 1.5
+			owner = { is_great_power = yes }
+		}	
+		modifier = {
+			factor = 1.25
+			owner = { ruler_has_personality = entrepreneur_personality }
+		}
+		modifier = {
+			factor = 1.25
+			owner = { ruler_has_personality = industrious_personality }
+		}
+		modifier = {
+			factor = 1.25
+			owner = { full_idea_group = economic_ideas }
+		}
+		modifier = {
+			factor = 1.5
+			owner = { navy_size_percentage = 0.75 }
+		}
+		modifier = {
+			factor = 1.5
+			FROM = { navy_tradition = 50 }
+		}
+		modifier = {
+			factor = 1.15
+			base_production = 5
+		}
+		modifier = {
+			factor = 1.25
+			base_production = 7
+		}
+		modifier = {
+			factor = 1.5
+			base_production = 10
+		}
+	}
+}
+
+weapons = {
+	manufactory = {
+		copper
+		iron
+		rare_metals
+        manganates
+        light_metals
+	}
+	modifier = {
+		trade_goods_size = 0.5	
+		trade_goods_size_modifier = 0.5			
+		land_forcelimit = 2.5		
+	}
+	onmap = yes
+	
+	ai_will_do = {
+		factor = 15
+		modifier = {
+			factor = 1.5
+			owner = { is_great_power = yes }
+		}	
+		modifier = {
+			factor = 1.25
+			owner = { ruler_has_personality = entrepreneur_personality }
+		}
+		modifier = {
+			factor = 1.25
+			owner = { ruler_has_personality = industrious_personality }
+		}
+		modifier = {
+			factor = 1.25
+			owner = { full_idea_group = economic_ideas }
+		}
+		modifier = {
+			factor = 1.5
+			owner = { army_size_percentage = 0.9 }
+		}
+		modifier = {
+			factor = 1.5
+			FROM = { army_tradition = 50 }
+		}
+		modifier = {
+			factor = 1.15
+			base_production = 5
+		}
+		modifier = {
+			factor = 1.25
+			base_production = 7
+		}
+		modifier = {
+			factor = 1.5
+			base_production = 10
+		}
+	}
+}
+
+textile = {
+	manufactory = {
+		wool
+		cloth
+		silk
+		dyes
+	}
+	modifier = {
+		trade_goods_size = 0.5	
+		trade_goods_size_modifier = 0.5			
+		local_tax_modifier = 0.25		
+	}
+	onmap = yes
+	
+	ai_will_do = {
+		factor = 15
+		modifier = {
+			factor = 1.5
+			owner = { is_great_power = yes }
+		}	
+		modifier = {
+			factor = 1.25
+			owner = { ruler_has_personality = entrepreneur_personality }
+		}
+		modifier = {
+			factor = 1.25
+			owner = { ruler_has_personality = industrious_personality }
+		}
+		modifier = {
+			factor = 1.25
+			owner = { full_idea_group = economic_ideas }
+		}
+		modifier = {
+			factor = 1.5
+			owner = { army_size_percentage = 0.9 }
+		}
+		modifier = {
+			factor = 1.5
+			FROM = { army_tradition = 50 }
+		}
+		modifier = {
+			factor = 1.15
+			base_production = 5
+		}
+		modifier = {
+			factor = 1.25
+			base_production = 7
+		}
+		modifier = {
+			factor = 1.5
+			base_production = 10
+		}
+	}
+}
+
+plantations = {
+	manufactory = {
+		coffee
+		cotton
+		sugar
+		tobacco
+		tea
+		cocoa
+		wood
+	}
+	modifier = {
+		trade_goods_size = 0.5		
+		trade_goods_size_modifier = 0.5			
+		local_production_efficiency = 0.25
+	}
+	onmap = yes
+	
+	ai_will_do = {
+		factor = 15
+		modifier = {
+			factor = 1.5
+			owner = { is_great_power = yes }
+		}	
+		modifier = {
+			factor = 1.25
+			owner = { ruler_has_personality = entrepreneur_personality }
+		}
+		modifier = {
+			factor = 1.25
+			owner = { ruler_has_personality = industrious_personality }
+		}
+		modifier = {
+			factor = 1.25
+			owner = { full_idea_group = economic_ideas }
+		}
+		modifier = {
+			factor = 1.5
+			owner = { army_size_percentage = 0.9 }
+		}
+		modifier = {
+			factor = 1.5
+			FROM = { army_tradition = 50 }
+		}
+		modifier = {
+			factor = 1.15
+			base_production = 5
+		}
+		modifier = {
+			factor = 1.25
+			base_production = 7
+		}
+		modifier = {
+			factor = 1.5
+			base_production = 10
+		}
+	}
+}
+
+tradecompany = {
+	manufactory = {
+		ivory
+		slaves
+		spices
+		fur
+		incense
+		corals
+	}
+	modifier = {
+		trade_goods_size = 0.5		
+		trade_goods_size_modifier = 0.5			
+		province_trade_power_modifier = 0.25	
+	}
+	onmap = yes
+
+	ai_will_do = {
+		factor = 15
+		modifier = {
+			factor = 1.5
+			owner = { is_great_power = yes }
+		}	
+		modifier = {
+			factor = 1.25
+			owner = { ruler_has_personality = entrepreneur_personality }
+		}
+		modifier = {
+			factor = 1.25
+			owner = { ruler_has_personality = industrious_personality }
+		}
+		modifier = {
+			factor = 1.25
+			owner = { full_idea_group = economic_ideas }
+		}
+		modifier = {
+			factor = 1.5
+			owner = { army_size_percentage = 0.9 }
+		}
+		modifier = {
+			factor = 1.5
+			FROM = { army_tradition = 50 }
+		}
+		modifier = {
+			factor = 1.15
+			base_production = 5
+		}
+		modifier = {
+			factor = 1.25
+			base_production = 7
+		}
+		modifier = {
+			factor = 1.5
+			base_production = 10
+		}
+	}
+}
+
+farm_estate = {
+	manufactory = {
+		grain
+		livestock
+		wine
+	}
+	modifier = {
+		trade_goods_size = 0.5		
+		trade_goods_size_modifier = 0.5			
+		local_manpower_modifier = 0.25
+	}
+	onmap = yes
+	
+	ai_will_do = {
+		factor = 15
+		modifier = {
+			factor = 1.5
+			owner = { is_great_power = yes }
+		}	
+		modifier = {
+			factor = 1.25
+			owner = { ruler_has_personality = entrepreneur_personality }
+		}
+		modifier = {
+			factor = 1.25
+			owner = { ruler_has_personality = industrious_personality }
+		}
+		modifier = {
+			factor = 1.25
+			owner = { full_idea_group = economic_ideas }
+		}
+		modifier = {
+			factor = 1.5
+			owner = { army_size_percentage = 0.9 }
+		}
+		modifier = {
+			factor = 1.5
+			FROM = { army_tradition = 50 }
+		}
+		modifier = {
+			factor = 1.15
+			base_production = 5
+		}
+		modifier = {
+			factor = 1.25
+			base_production = 7
+		}
+		modifier = {
+			factor = 1.5
+			base_production = 10
+		}
+	}
+}
+
+
+mills = {
+	manufactory = {
+		paper
+		gems
+		tropical_wood
+		glass
+		chinaware
+		silicates
+		wood_coal
+	}
+	modifier = {
+		trade_goods_size = 0.5			
+		trade_goods_size_modifier = 0.5			
+		local_development_cost = -0.25
+	}
+	onmap = yes
+	
+	ai_will_do = {
+		factor = 15
+		modifier = {
+			factor = 1.5
+			owner = { is_great_power = yes }
+		}	
+		modifier = {
+			factor = 1.25
+			owner = { ruler_has_personality = entrepreneur_personality }
+		}
+		modifier = {
+			factor = 1.25
+			owner = { ruler_has_personality = industrious_personality }
+		}
+		modifier = {
+			factor = 1.25
+			owner = { full_idea_group = economic_ideas }
+		}
+		modifier = {
+			factor = 1.5
+			owner = { army_size_percentage = 0.9 }
+		}
+		modifier = {
+			factor = 1.5
+			FROM = { army_tradition = 50 }
+		}
+		modifier = {
+			factor = 1.15
+			base_production = 5
+		}
+		modifier = {
+			factor = 1.25
+			base_production = 7
+		}
+		modifier = {
+			factor = 1.5
+			base_production = 10
+		}
+	}
+}
+
+furnace = {
+	manufactory = {
+		coal
+		oil
+        uranium
+        aluminum
+        cars
+        electronics
+	}
+
+	potential = {
+		has_dlc = "Rule Britannia"
+	}
+
+	modifier = {
+		trade_goods_size = 0.4			
+		trade_goods_size_modifier = 0.5			
+		global_trade_goods_size_modifier = 0.03
+	}
+	onmap = yes
+	show_separate = yes 
+	
+	ai_will_do = {
+		factor = 15
+		modifier = {
+			factor = 1.5
+			owner = { is_great_power = yes }
+		}	
+		modifier = {
+			factor = 1.25
+			owner = { ruler_has_personality = entrepreneur_personality }
+		}
+		modifier = {
+			factor = 1.25
+			owner = { ruler_has_personality = industrious_personality }
+		}
+		modifier = {
+			factor = 1.25
+			owner = { full_idea_group = economic_ideas }
+		}
+		modifier = {
+			factor = 1.5
+			owner = { army_size_percentage = 0.9 }
+		}
+		modifier = {
+			factor = 1.5
+			FROM = { army_tradition = 50 }
+		}
+		modifier = {
+			factor = 1.15
+			base_production = 5
+		}
+		modifier = {
+			factor = 1.25
+			base_production = 7
+		}
+		modifier = {
+			factor = 1.5
+			base_production = 10
+		}
+	}
+}
+
+ramparts = {
+	manufactory = {
+		all
+	}
+	modifier = {
+		local_hostile_attrition = 1
+		local_defensiveness = 0.15
+		garrison_growth = 0.15
+	}
+	onmap = no
+	show_separate = yes
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+soldier_households = {
+	manufactory = {
+		all
+	}
+
+	modifier = {
+		local_manpower = 0.5
+	}
+
+	onmap = no
+	show_separate = yes
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+impressment_offices = {
+	manufactory = {
+		all
+	}
+
+	build_trigger = {
+		has_port = yes
+	}
+
+	modifier = {
+		local_sailors = 250
+	}
+
+	onmap = no
+	show_separate = yes
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+
+state_house = {
+	manufactory = {
+		all
+	}
+
+	build_trigger = {
+		is_state = yes
+		NOT = {
+			area_for_scope_province = {
+				owner = {
+					tag = ROOT
+				}
+				OR = {
+					has_building = state_house
+					has_construction = state_house
+				}
+			}
+		}
+	}
+	
+	keep_trigger = {
+		NOT = {
+			area_for_scope_province = {
+				NOT = { province_id = root }
+				owner = {
+					tag = ROOT
+				}
+				OR = {
+					has_building = state_house
+					has_construction = state_house
+				}
+			}
+		}
+	}
+
+	modifier = {
+		min_local_autonomy = -10
+	}
+	
+	onmap = no
+	show_separate = yes
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+#######################################################################
+
+mint = {
+	cost = 350
+	time = 36
+	
+	build_trigger = {
+		trade_goods = gold
+    }
+	
+	modifier = {
+		trade_goods_size = 0.5			
+		trade_goods_size_modifier = 0.5	
+		global_tax_modifier = 0.05
+	}
+	
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 0.5
+			FROM = { inflation = 5 }
+		}
+		modifier = {
+			factor = 0.4
+			FROM = { inflation = 10 }
+		}
+		modifier = {
+			factor = 0.3
+			FROM = { inflation = 15 }
+		}
+		modifier = {
+			factor = 0.2
+			FROM = { inflation = 20 }
+		}
+		modifier = {
+			factor = 0.1
+			FROM = { inflation = 25 }
+		}
+		
+		modifier = {
+			factor = 1.5
+			owner = { is_great_power = yes }
+		}
+		
+		modifier = {
+			factor = 1.25
+			owner = { ruler_has_personality = entrepreneur_personality }
+		}
+		modifier = {
+			factor = 1.25
+			owner = { ruler_has_personality = industrious_personality }
+		}
+		modifier = {
+			factor = 1.25
+			owner = { full_idea_group = economic_ideas }
+		}
+		modifier = {
+			factor = 1.15
+			base_production = 5
+		}
+		modifier = {
+			factor = 1.35
+			base_production = 7
+		}
+		modifier = {
+			factor = 1.5
+			base_production = 10
+		}
+	}
+}

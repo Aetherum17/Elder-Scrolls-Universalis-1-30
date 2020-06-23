@@ -1,0 +1,59 @@
+temple = {
+	cost = 75
+	time = 12
+	modifier = {
+		local_missionary_strength = 0.015	
+		local_unrest = -1.5
+		tax_income = 1.5
+	}
+	
+	ai_will_do = {
+		factor = 1			
+		modifier = {
+			factor = 1.5
+			has_owner_religion = no			
+		}
+		modifier = {
+			factor = 2.5
+			FROM = { government = theocracy }		
+		}
+	}
+}	
+
+cathedral = {
+	make_obsolete = temple
+	
+	cost = 150			
+	time = 24			
+	modifier = {
+		local_missionary_strength = 0.025	
+		local_culture_conversion_cost = -0.25		
+		local_tax_modifier = 0.25
+	}
+	
+	ai_will_do = {
+		factor = 5		
+		modifier = {
+			factor = 1.5
+			has_owner_religion = no			
+		}
+		modifier = {
+			factor = 2.5
+			FROM = { government = theocracy }		
+		}
+	}
+}
+
+tax_assessor = {
+	#make_obsolete = cathedral
+	
+	cost = 225	
+	time = 48			
+	modifier = {
+		local_tax_modifier = 0.5
+	}
+	
+	ai_will_do = {
+		factor = 1
+	}
+}

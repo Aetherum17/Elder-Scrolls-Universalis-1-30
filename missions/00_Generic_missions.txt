@@ -184,7 +184,7 @@ administrative_missions = {
 		trigger = {
 			num_of_owned_provinces_with = {
 				value = 25
-				has_building = royal_palace
+				has_building = constable
 			}
 		}
 		effect = {
@@ -525,10 +525,10 @@ diplomatic_missions = {
 		trigger = {
 			num_of_owned_provinces_with = {
 				value = 25
-				OR = {
-				    has_building = naval_arsenal
-					has_building = naval_base
-				}
+                OR = {
+					has_building = coastal_defence
+					has_building = naval_battery
+                }
 			}
 		}
 		effect = {

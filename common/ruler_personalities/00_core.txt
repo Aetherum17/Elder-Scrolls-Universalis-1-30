@@ -162,7 +162,6 @@ righteous_personality = {
 	horde_unity = 1
 	meritocracy = 1
 	nation_designer_cost = 1
-	wants_ecumenical_council = yes
 } #1 better, 1 less bad
 
 tolerant_personality = {
@@ -216,8 +215,7 @@ tolerant_personality = {
 	heathen_ally_acceptance = 25
 	
 	tolerance_heretic = 1
-	tolerance_heathen = 1
-	wants_ecumenical_council = yes						   
+	tolerance_heathen = 1						   
 	nation_designer_cost = 1
 }
 
@@ -873,8 +871,7 @@ pious_personality = {
 	wants_excommunicate = yes
 	heretic_ally_acceptance = -30
 	
-	devotion = 1
-	wants_ecumenical_council = yes						   
+	devotion = 1				   
 	nation_designer_cost = 1
 } #1 Less bad
 
@@ -1700,8 +1697,7 @@ strict_personality = {
 	}
 	
 	wants_avoid_debase = yes
-	wants_avoid_loans = yes
-	wants_ecumenical_council = yes						   
+	wants_avoid_loans = yes					   
 	
 	discipline = 0.05
 	nation_designer_cost = 5
@@ -2113,9 +2109,7 @@ embezzler_personality = {
 	chance = {
 	}
 	
-	wants_debase = yes
-	wants_to_appoint_cardinals_in_his_own_land = yes											 
-	#wants_sell_ships = yes
+	wants_debase = yes											 
 	wants_sell_provinces = yes
 	
 	yearly_corruption = 0.05
@@ -2506,8 +2500,7 @@ greedy_personality = {
 	chance = {
 	}
 	
-	wants_gold = yes
-	wants_to_appoint_cardinals_in_his_own_land = yes											 
+	wants_gold = yes								 
 	gift_chance = -100
 	
 	war_priority = {

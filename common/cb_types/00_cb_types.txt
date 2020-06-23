@@ -279,7 +279,7 @@ cb_peasants_war_for_peasants = {
 		has_reform = peasants_republic
 	}
 	
-	war_goal = war_goal_change_government	
+	war_goal = war_goal_peasants_change_government	
 }
 # One OPM can try to humiliate another OPM.
 cb_humiliate = {
@@ -358,6 +358,7 @@ cb_nationalist = {
 		dip_tech = 91
 		is_free_or_tributary_trigger = yes
 		culture_group_claim = FROM
+		is_revolutionary = no			   
 	}
 
 	war_goal = take_province_nationalist
@@ -821,7 +822,6 @@ cb_crush_the_revolution = {
 
 	prerequisites = {
 		is_neighbor_of = FROM
-		revolution_target_exists = yes
 		is_revolutionary = no
 		is_free_or_tributary_trigger = yes
 		NOT = { truce_with = FROM }
@@ -1076,13 +1076,10 @@ cb_world_crusade = {
 			is_neighbor_of = FROM
 			claim = FROM
 			cb_on_religious_enemies = yes
-			AND  = {
 				OR = {
 					cb_on_primitives = yes
 					cb_on_overseas = yes
-					has_reform = mission_to_civilize_reform
 				}
-				FROM = { religion_group = pagan }
 			}
 		}
 		NOT = { religion_group = FROM }

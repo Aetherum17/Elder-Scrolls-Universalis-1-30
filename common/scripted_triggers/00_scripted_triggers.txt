@@ -498,6 +498,8 @@ has_manufactory_no_custom_tooltip_trigger = { #Province Scope
 				trade_goods = naval_supplies
 				trade_goods = fish
 				trade_goods = salt
+				trade_goods = algae
+				trade_goods = lobsters
 			}
 		}
 		has_building = wharf
@@ -507,6 +509,9 @@ has_manufactory_no_custom_tooltip_trigger = { #Province Scope
 			OR = {
 				trade_goods = copper
 				trade_goods = iron
+				trade_goods = rare_metals
+				trade_goods = manganates
+				trade_goods = light_metals
 			}
 		}
 		has_building = weapons
@@ -530,6 +535,7 @@ has_manufactory_no_custom_tooltip_trigger = { #Province Scope
 				trade_goods = spices
 				trade_goods = fur
 				trade_goods = incense
+				trade_goods = corals
 			}
 		}
 		has_building = tradecompany
@@ -552,13 +558,22 @@ has_manufactory_no_custom_tooltip_trigger = { #Province Scope
 				trade_goods = tropical_wood
 				trade_goods = glass
 				trade_goods = chinaware
+				trade_goods = silicates
+				trade_goods = wood_coal
 			}
 		}
 		has_building = mills
 	}
 	else_if = {
 		limit = {
+			OR = {
 			trade_goods = coal
+			trade_goods = oil
+			trade_goods = uranium
+			trade_goods = aluminum
+			trade_goods = cars
+			trade_goods = electronics
+			}
 		}
 		has_building = furnace
 	}
