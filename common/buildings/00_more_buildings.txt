@@ -1,0 +1,1147 @@
+#Infrastructure
+
+road_network = {
+	cost = 200			#Roads are expensive!
+	time = 36
+	
+	build_trigger = {
+        OR = {
+			is_capital = yes
+			province_has_center_of_trade_of_level = 2
+			province_has_center_of_trade_of_level = 3
+			any_neighbor_province = {
+				has_building = road_network
+			}
+		}
+    }
+	
+	modifier = {
+		local_friendly_movement_speed = 0.2 #Troop movement and whatnot
+		local_hostile_movement_speed = 0.1
+		province_trade_power_modifier = 0.25 #Toll roads
+		allowed_num_of_buildings = 2 #Adding a bit of a reason to actually build roads.
+	}
+	
+	ai_will_do = {
+		factor = 5 #The AI does consider the trade power, but I did not see a single road being built, so increasing this for now.
+	}
+}
+
+canal = {
+	cost = 200			#Stuff
+	time = 36
+	
+	build_trigger = {
+        OR = {
+			has_port = yes
+			any_neighbor_province = {
+				has_building = canal
+			}
+		}
+    }
+	
+	modifier = {
+		local_development_cost = -0.2 #Canals allow trade, thus furthering development
+		province_trade_power_modifier = 0.25 #Promotes trade.
+		allowed_num_of_buildings = 2 #Adding a bit of a reason to actually build roads.
+	}
+	
+	ai_will_do = {
+		factor = 5 #The AI does consider the trade power, but I did not see a single canal being built, so increasing this for now.
+	}
+}
+
+grain_depot = {
+	cost = 100			#Stuff
+	time = 36
+	
+	modifier = {
+		local_monthly_devastation = -0.1
+	}
+	
+	ai_will_do = {
+		factor = 80 #AI should avoid this in provinces with no devastation.
+		modifier = {
+			factor = 1.25
+			devastation = 10
+		}
+		modifier = {
+			factor = 1.25
+			devastation = 20
+		}
+		modifier = {
+			factor = 1.5
+			devastation = 30
+		}
+		modifier = {
+			factor = 1.5
+			devastation = 40
+		}
+		modifier = {
+			factor = 1.5
+			devastation = 50
+		}
+		modifier = {
+			factor = 1.5
+			devastation = 60
+		}
+		modifier = {
+			factor = 2
+			devastation = 70
+		}
+		modifier = {
+			factor = 2
+			devastation = 80
+		}
+		modifier = {
+			factor = 2.5
+			devastation = 90
+		}
+	}
+}
+
+#Manufactory(-ish)
+
+mint = {
+	cost = 500			#This is very much like a manufactory
+	time = 36
+	
+	build_trigger = {
+		trade_goods = gold
+    }
+	
+	modifier = {
+		trade_goods_size = 0.4			#BTAddon Note - Alright, alright. I'm giving in. It makes no sense, but vanilla apparently didn't bother to code in compatibility with the modifier version, so I have little choice but to give a flat bonus here.
+		trade_goods_size_modifier = 0.5			#BTAddOn changed from flat trade good size increase. Logic above at the top of Manufactories entries.
+		global_tax_modifier = 0.05
+	}
+	#show_separate = yes # Means as a manufactory it will be shown according to the old way
+	
+	ai_will_do = {
+		factor = 6
+		#Lots of factors taken from BT manufactories
+		modifier = {
+			factor = 0.5
+			FROM = { inflation = 5 }
+		}	#Does not want to build if has high inflation
+		modifier = {
+			factor = 0.4
+			FROM = { inflation = 10 }
+		}	#Does not want to build if has high inflation
+		modifier = {
+			factor = 0.3
+			FROM = { inflation = 15 }
+		}	#Does not want to build if has high inflation
+		modifier = {
+			factor = 0.2
+			FROM = { inflation = 20 }
+		}	#Does not want to build if has high inflation
+		modifier = {
+			factor = 0.1
+			FROM = { inflation = 25 }
+		}	#AI, the fuck you doing?
+		
+		modifier = {
+			factor = 1.5
+			is_great_power = yes
+		}	#Great powers get a sustantial bonus, putting Muslims on par with Europeans, other Old World techs on par with Muslims, and rocketing European powers even higher.
+		
+		modifier = {
+			factor = 1.3
+			owner = { ruler_has_personality = entrepreneur_personality }
+		}
+		modifier = {
+			factor = 1.3
+			owner = { ruler_has_personality = industrious_personality }
+		}
+		modifier = {
+			factor = 1.3
+			owner = { full_idea_group = economic_ideas }
+		}
+		modifier = {
+			factor = 1.1
+			base_production = 4
+		}
+		modifier = {
+			factor = 1.2
+			base_production = 8
+		}
+		modifier = {
+			factor = 1.4
+			base_production = 12
+		}
+	}
+}
+
+#Fortifications
+
+earth_rampart = {
+	cost = 100			#Addon fortifications. Should be comparatively cheap.
+	time = 12
+	
+	build_trigger = {
+		OR = {
+			has_building = fort_15th
+			has_building = fort_16th
+			has_building = fort_17th
+			has_building = fort_18th
+		}
+    }
+	
+	modifier = {
+		local_hostile_attrition = 1
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 1000 #To get over the 0.01% base value.
+			any_neighbor_province = { #This is intended to check if the country at hand is rivalling or is threatened by a neighbour. Whether this actually works that way, I'm not sure.
+				OR = {
+					owner = { 
+						is_threat = FROM
+					}
+					owner = {
+						is_rival = FROM
+					}
+				}
+			}
+		}
+	}
+}
+
+tenaille = {
+	cost = 200			#Addon fortifications. Should be comparatively cheap.
+	time = 24
+	
+	make_obsolete = earth_rampart
+	
+	build_trigger = {
+		OR = {
+			has_building = fort_16th
+			has_building = fort_17th
+			has_building = fort_18th
+		}
+    }
+	
+	modifier = {
+		local_defensiveness = 0.1
+		max_attrition = 2
+		local_hostile_attrition = 2
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2000 #To get over the 0.01% base value.
+			any_neighbor_province = { #This is intended to check if the country at hand is rivalling or is threatened by a neighbour. Whether this actually works that way, I'm not sure.
+				OR = {
+					owner = { 
+						is_threat = FROM
+					}
+					owner = {
+						is_rival = FROM
+					}
+				}
+			}
+		}
+	}
+}
+
+redoubt = {
+	cost = 400			#Addon fortifications. Should be comparatively cheap.
+	time = 48
+	
+	build_trigger = {
+		OR = {
+			has_building = fort_17th
+			has_building = fort_18th
+		}
+    }
+	
+	make_obsolete = tenaille
+	
+	modifier = {
+		local_defensiveness = 0.2
+		max_attrition = 4
+		local_hostile_attrition = 4
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 4000 #To get over the 0.01% base value.
+			any_neighbor_province = { #This is intended to check if the country at hand is rivalling or is threatened by a neighbour. Whether this actually works that way, I'm not sure.
+				OR = {
+					owner = { 
+						is_threat = FROM
+					}
+					owner = {
+						is_rival = FROM
+					}
+				}
+			}
+		}
+	}
+}
+
+#Army Recruitment
+armory = {
+	cost = 50			#Building an armoury should not cost much.
+	time = 12
+	
+	modifier = {
+		local_regiment_cost = -0.125
+		regiment_recruit_speed = -0.25
+		supply_limit = 1
+		supply_limit_modifier = 0.50
+	}
+	
+	ai_will_do = {
+		factor = 80 #To counterbalance the non-existent economic value of this building, automatically assigning it a value of 0.01.
+		modifier = {
+			factor = 1.5
+			FROM = {			#Military minded governments are more likely to build barracks... that is rather their mandate, no?
+				OR = {
+					government = feudal_monarchy
+					government = enlightened_despotism
+					government = revolutionary_empire
+					government = steppe_horde
+				}
+			}
+		}
+		modifier = {
+			NOT = { FROM = { army_tradition = 20 } }			#Army tradition now either encourages or discourages building camps
+			factor = 0.75
+		}
+		modifier = {
+			NOT = { FROM = { army_tradition = 40 } }			#Army tradition now either encourages or discourages building camps
+			factor = 0.9
+		}
+		modifier = {
+			FROM = { army_tradition = 60 }			#Army tradition now either encourages or discourages building camps
+			factor = 1.1
+		}
+		modifier = {
+			FROM = { army_tradition = 80 }			#Army tradition now either encourages or discourages building camps
+			factor = 1.25
+		}
+	}
+}
+
+arsenal = {
+	cost = 200			#Building an armoury should not cost much.
+	time = 24
+	
+	make_obsolete = armory
+	
+	modifier = {
+		local_regiment_cost = -0.25
+		regiment_recruit_speed = -0.50 			#Meant to be a bigger boost than the conscription center, but stacks with it. And before you point out this makes a total of -75%, I'm fine with that.
+		supply_limit = 2
+		supply_limit_modifier = 1.00
+	}
+	
+	ai_will_do = {
+		factor = 160 #To counterbalance the non-existent economic value of this building, automatically assigning it a value of 0.01.
+		modifier = {
+			factor = 1.5
+			FROM = {			#Military minded governments are more likely to build barracks... that is rather their mandate, no?
+				OR = {
+					government = feudal_monarchy
+					government = enlightened_despotism
+					government = revolutionary_empire
+					government = steppe_horde
+				}
+			}
+		}
+		modifier = {
+			NOT = { FROM = { army_tradition = 20 } }			#Army tradition now either encourages or discourages building camps
+			factor = 0.75
+		}
+		modifier = {
+			NOT = { FROM = { army_tradition = 40 } }			#Army tradition now either encourages or discourages building camps
+			factor = 0.9
+		}
+		modifier = {
+			FROM = { army_tradition = 60 }			#Army tradition now either encourages or discourages building camps
+			factor = 1.1
+		}
+		modifier = {
+			FROM = { army_tradition = 80 }			#Army tradition now either encourages or discourages building camps
+			factor = 1.25
+		}
+	}
+}
+
+#Level 3 Taxation
+
+tax_assessor = {
+	make_obsolete = cathedral
+	
+	cost = 300	#Lowered a bit to compensate for the lack of missionary strength.		
+	time = 48			
+	modifier = {
+		#local_missionary_strength = 0.02			#BTAddOn changed from 0.03, might slow conversion slightly, but avg dev is also lower, so that might be a good thing
+		local_tax_modifier = 1.0 
+	}
+	
+	ai_will_do = {
+		factor = 1 #Removed all factors.
+	}
+}
+
+#Level 3 Production
+
+customs_house = { #Is in reality the Stock Exchange.
+	cost = 400			
+	time = 48			
+	
+	make_obsolete = counting_house
+	modifier = {
+		local_development_cost = -0.3			#BTAddOn new. A little non-cash boost to make this building not worthless when it is too late in the game to make your ducats back from the cost to build it. Note the corresponding dev cost reduction has been removed from universities, where I felt it made less logical sense. Here, production and industry encourage development.
+		local_production_efficiency = 1			#BTAddOn changed from 1.0. Part of the comprehensive balance overhaul to adjust buildings to the BT map (with all its new provinces)
+	}
+	
+	allow_in_gold_provinces = no
+	
+	ai_will_do = {
+		factor = 1.34 #Slightly buffed factor to account for the slightly higher cost.
+		#BT Addon New factors, range 13 percent to 675 percent
+		modifier = {
+			factor = 0.2
+			OR = {			#AI is strongly discouraged to build this where climate renders development difficult
+				has_climate = arctic
+				has_climate = arid
+				has_climate = tropical
+			}
+		}
+		modifier = {
+			factor = 0.65
+			OR = {			#AI is discouraged to build this where development isn't really feasible
+				has_terrain = steppe
+				has_terrain = highlands
+				has_terrain = jungle
+				has_terrain = desert
+				has_terrain = coastal_desert
+				has_terrain = glacier
+			}
+		}
+		#Drylands, forest, coastline, marsh, hills, mountains, and savannah receive neither penalty nor bonus
+		modifier = {
+			factor = 1.5
+			OR = {			#AI is encouraged to build this where development is feasible
+				has_terrain = farmlands
+				has_terrain = grasslands
+				has_terrain = woods
+			}
+		}
+		modifier = {
+			factor = 1.5
+			has_estate = estate_burghers			#Provinces with burgher estates will also be more likely to have workshops
+		}
+		modifier = {
+			factor = 1.5
+			FROM = {			#Economically minded governments are more likely to build workshops... that is rather their mandate, no?
+				OR = {
+					government = administrative_monarchy
+					government = administrative_republic
+					government = constitutional_republic
+					government = peasants_republic
+				}
+			}
+		}
+		modifier = {
+			factor = 2.0
+			is_part_of_hre = yes			#HRE was a production powerhouse of this period
+		}
+	}
+}
+
+#Subject-only buildings
+
+march_building = {
+	cost = 500			#I think this is sensible, considering you only ever build 1 per subject.
+	time = 48
+
+	build_trigger = {
+		owner = {
+			is_march = yes
+		}
+		#This does NOT work. Apparently FROM in this case is not the overlord, but rather the province owner.
+		# FROM = {  #Test logic just to see whether it actually checks for province owner, or whether it checks for builder country.
+			# NOT = { is_subject = yes }
+		# }
+		is_capital = yes
+	}
+	
+	modifier = {
+		defensiveness = 0.2
+		fort_maintenance_modifier = -0.5
+	}
+	
+	ai_will_do = {
+		factor = 500 #AI sees no value in this building, so this brings it to 1% yearly return, i.e AI will build it.
+	}
+}
+
+embassy = {
+	cost = 500			#I think this is sensible, considering you only ever build 1 per subject.
+	time = 48
+
+	build_trigger = {
+		owner = {
+			is_subject = yes
+		}
+		#This does NOT work. Apparently FROM in this case is not the overlord, but rather the province owner.
+		# FROM = {  #Test logic just to see whether it actually checks for province owner, or whether it checks for builder country.
+			# NOT = { is_subject = yes }
+		# }
+		is_capital = yes
+	}
+	
+	modifier = {
+		liberty_desire = -15
+		#Borked.
+		#overlord = {
+		#	liberty_desire_from_subject_development = -0.1 #NOTE: This stacks for each embassy you build. Which makes sense, as multiple subjects result in this.
+		#}
+	}
+	
+	ai_will_do = {
+		factor = 500 #AI sees no value in this building, so this brings it to 1% yearly return, i.e AI will build it.
+	}
+}
+
+spy_agency = {
+	cost = 500			#I think this is sensible, considering you only ever build 1 per subject.
+	time = 48
+
+	build_trigger = {
+		owner = {
+			is_subject = yes
+		}
+		#This does NOT work. Apparently FROM in this case is not the overlord, but rather the province owner.
+		# FROM = {  #Test logic just to see whether it actually checks for province owner, or whether it checks for builder country.
+			# NOT = { is_subject = yes }
+		# }
+		is_capital = yes
+	}
+	
+	modifier = {
+		fabricate_claims_cost = -0.33 
+		administrative_efficiency = 0.1 #This building is here as a way of buffing subjects a bit.
+	}
+	
+	ai_will_do = {
+		factor = 500 #AI sees no value in this building, so this brings it to 1% yearly return, i.e AI will build it.
+	}
+}
+
+#Area-wide buildings
+
+post_office = {
+	cost = 250			#An area-wide effect seems sensible for this price.
+	time = 36
+
+	build_trigger = {
+		is_state = yes
+		#OR = {
+			#has_building = post_office
+			#has_construction = post_office
+			NOT = {
+				any_province_in_state = {
+					OR = {
+						has_building = post_office
+						has_construction = post_office
+					}
+				}
+			}
+		#}
+	}
+	
+	keep_trigger = { #Copying vanilla for now.
+		NOT = {
+			area_for_scope_province = {
+				NOT = { province_id = root }
+				owner = {
+					tag = ROOT
+				}
+				OR = {
+					has_building = post_office
+					has_construction = post_office
+				}
+			}
+		}
+	}
+	
+	modifier = {
+		local_institution_spread = 0.5
+		province_trade_power_modifier = 0.25
+	}
+	
+	# THIS = Province, FROM = Builder(not nessecairly owner, can be overlord)
+	on_built = {
+		every_province_in_state = {
+			limit = {
+				NOT = { province_id = ROOT }
+			}
+			add_province_modifier = {
+				name = post_office_area_modifier
+				duration = -1
+			}
+		}
+	}
+
+	# THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
+	on_destroyed = { #There's no actual remove province triggered modifier command, is there?
+		if = {
+			limit = {
+				NOT = {
+					any_province_in_state = {
+						has_building = post_office
+					}
+				}
+			}
+			every_province_in_state = {
+				remove_province_modifier = post_office_area_modifier
+			}
+		}
+	}
+	
+	ai_will_do = {
+		factor = 1.5 #AI sees value in this building, so factor will be 1.5 (accounting for the vanilla 1.5 factor)
+		#Number of provinces in state modifiers
+		modifier = { #If the AI only controls 1 province in the state, they shall never build this.
+			factor = 0
+			NOT = {
+				calc_true_if = {
+					all_province_in_state = {
+						owned_by = FROM
+					}
+					amount = 2
+				}
+			}
+		}
+		modifier = { #2-province states shouldn't get this in most cases.
+			factor = 0.5
+			NOT = {
+				calc_true_if = {
+					all_province_in_state = {
+						owned_by = FROM
+					}
+					amount = 3
+				}
+			}
+		}
+		modifier = { #4-province states get higher priority.
+			factor = 1.5
+			calc_true_if = {
+				all_province_in_state = {
+					owned_by = FROM
+				}
+				amount = 4
+			}
+		}
+		modifier = { #5-province states get higher priority.
+			factor = 1.5
+			calc_true_if = {
+				all_province_in_state = {
+					owned_by = FROM
+				}
+				amount = 5
+			}
+		}
+		modifier = { #6-province states get higher priority.
+			factor = 1.5
+			calc_true_if = {
+				all_province_in_state = {
+					owned_by = FROM
+				}
+				amount = 6
+			}
+		}
+		modifier = { #7-province states get higher priority.
+			factor = 1.5
+			calc_true_if = {
+				all_province_in_state = {
+					owned_by = FROM
+				}
+				amount = 7
+			}
+		}
+		modifier = {
+			factor = 1.4
+			FROM = { is_great_power = yes }			#Primarily to keep Russia, Poland, and Ottomans in line with western, and the top western powers ahead of everyone else, as real history went, but also may potentially help China, India, or any ahistorical superpower in Asia or Africa as well.
+		}
+		modifier = {
+			factor = 1.4
+			province_has_center_of_trade_of_level = 1			#Cheap shortcut method to try to get unis in plausible rich centers, especially for alt history non-european unis.
+		}
+	}
+}
+
+glorious_monument = {
+	cost = 250			#An area-wide effect seems sensible for this price.
+	time = 36
+
+
+	build_trigger = {
+		is_state = yes
+		#OR = {
+			#has_building = glorious_monument
+			#has_construction = glorious_monument
+			NOT = {
+				any_province_in_state = {
+					OR = {
+						has_building = glorious_monument
+						has_construction = glorious_monument
+					}
+				}
+			}
+		#}
+	}
+	
+	keep_trigger = { #Copying vanilla for now.
+		NOT = {
+			area_for_scope_province = {
+				NOT = { province_id = root }
+				owner = {
+					tag = ROOT
+				}
+				OR = {
+					has_building = glorious_monument
+					has_construction = glorious_monument
+				}
+			}
+		}
+	}
+	
+	modifier = {
+		#Area-wide effects:
+		local_unrest = -2
+	}
+	
+	# THIS = Province, FROM = Builder(not nessecairly owner, can be overlord)
+	on_built = {
+		every_province_in_state = {
+			limit = {
+				NOT = { province_id = ROOT }
+			}
+			add_province_modifier = {
+				name = glorious_monument_area_modifier
+				duration = -1
+			}
+		}
+	}
+
+	# THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
+	on_destroyed = { #There's no actual remove province triggered modifier command, is there?
+		if = {
+			limit = {
+				NOT = {
+					any_province_in_state = {
+						has_building = glorious_monument
+					}
+				}
+			}
+			every_province_in_state = {
+				remove_province_modifier = glorious_monument_area_modifier
+			}
+		}
+	}
+	
+	ai_will_do = {
+		factor = 200 #AI sees no value in this building, so this brings it to 0.8% yearly return
+		#Number of provinces in state modifiers
+		modifier = { #If the AI only controls 1 province in the state, they shall never build this.
+			factor = 0
+			NOT = {
+				calc_true_if = {
+					all_province_in_state = {
+						owned_by = FROM
+					}
+					amount = 2
+				}
+			}
+		}
+		modifier = { #2-province states shouldn't get this in most cases.
+			factor = 0.5
+			NOT = {
+				calc_true_if = {
+					all_province_in_state = {
+						owned_by = FROM
+					}
+					amount = 3
+				}
+			}
+		}
+		modifier = { #4-province states get higher priority.
+			factor = 1.5
+			calc_true_if = {
+				all_province_in_state = {
+					owned_by = FROM
+				}
+				amount = 4
+			}
+		}
+		modifier = { #5-province states get higher priority.
+			factor = 1.5
+			calc_true_if = {
+				all_province_in_state = {
+					owned_by = FROM
+				}
+				amount = 5
+			}
+		}
+		modifier = { #6-province states get higher priority.
+			factor = 1.5
+			calc_true_if = {
+				all_province_in_state = {
+					owned_by = FROM
+				}
+				amount = 6
+			}
+		}
+		modifier = { #7-province states get higher priority.
+			factor = 1.5
+			calc_true_if = {
+				all_province_in_state = {
+					owned_by = FROM
+				}
+				amount = 7
+			}
+		}
+		modifier = {
+			factor = 5
+			unrest = 5
+		}
+		#Dynamix
+		modifier = {
+			factor = 2
+			ruler_has_personality = conqueror_personality
+		}
+		modifier = {
+			factor = 2
+			ruler_has_personality = architectural_visionary_personality
+		}
+		modifier = {
+			factor = 2
+			ruler_has_personality = embezzler_personality
+		}
+		modifier = {
+			factor = 2
+			consort_has_personality = conqueror_personality
+		}
+		modifier = {
+			factor = 2
+			consort_has_personality = architectural_visionary_personality
+		}
+		modifier = {
+			factor = 2
+			consort_has_personality = embezzler_personality
+		}
+	}
+}
+
+treasury_office = {
+	cost = 250			#An area-wide effect seems sensible for this price.
+	time = 36
+
+	allow_in_gold_provinces = no
+	
+	build_trigger = {
+		is_state = yes
+		#OR = {
+			#has_building = treasury_office
+			#has_construction = treasury_office
+			NOT = {
+				any_province_in_state = {
+					OR = {
+						has_building = treasury_office
+						has_construction = treasury_office
+					}
+				}
+			}
+		#}
+	}
+	
+	keep_trigger = { #Copying vanilla for now.
+		NOT = {
+			area_for_scope_province = {
+				NOT = { province_id = root }
+				owner = {
+					tag = ROOT
+				}
+				OR = {
+					has_building = treasury_office
+					has_construction = treasury_office
+				}
+			}
+		}
+	}
+	
+	modifier = {
+		#Area-wide effects:
+		trade_goods_size_modifier = 0.25
+	}
+	
+	# THIS = Province, FROM = Builder(not nessecairly owner, can be overlord)
+	on_built = {
+		every_province_in_state = {
+			limit = {
+				NOT = { trade_goods = gold  }
+				NOT = { province_id = ROOT }
+			}
+			add_province_modifier = {
+				name = treasury_office_area_modifier
+				duration = -1
+			}
+		}
+	}
+
+	# THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
+	on_destroyed = { #There's no actual remove province triggered modifier command, is there?
+		if = {
+			limit = {
+				NOT = {
+					any_province_in_state = {
+						has_building = treasury_office
+					}
+				}
+			}
+			every_province_in_state = {
+				remove_province_modifier = treasury_office_area_modifier
+			}
+		}
+	}
+	
+	ai_will_do = {
+		factor = 1 #AI sees value in this building, so factor will be 1.
+		#Number of provinces in state modifiers
+		modifier = { #If the AI only controls 1 province in the state, they shall never build this.
+			factor = 0
+			NOT = {
+				calc_true_if = {
+					all_province_in_state = {
+						owned_by = FROM
+					}
+					amount = 2
+				}
+			}
+		}
+		modifier = { #2-province states shouldn't get this in most cases.
+			factor = 0.5
+			NOT = {
+				calc_true_if = {
+					all_province_in_state = {
+						owned_by = FROM
+					}
+					amount = 3
+				}
+			}
+		}
+		modifier = { #4-province states get higher priority.
+			factor = 1.5
+			calc_true_if = {
+				all_province_in_state = {
+					owned_by = FROM
+				}
+				amount = 4
+			}
+		}
+		modifier = { #5-province states get higher priority.
+			factor = 1.5
+			calc_true_if = {
+				all_province_in_state = {
+					owned_by = FROM
+				}
+				amount = 5
+			}
+		}
+		modifier = { #6-province states get higher priority.
+			factor = 1.5
+			calc_true_if = {
+				all_province_in_state = {
+					owned_by = FROM
+				}
+				amount = 6
+			}
+		}
+		modifier = { #7-province states get higher priority.
+			factor = 1.5
+			calc_true_if = {
+				all_province_in_state = {
+					owned_by = FROM
+				}
+				amount = 7
+			}
+		}
+		modifier = { #4 BP
+			factor = 2
+			base_production = 4
+		}
+		modifier = { #8 BP
+			factor = 3
+			base_production = 8
+		}
+		modifier = { #12 BP
+			factor = 4
+			base_production = 12
+		}
+		modifier = { #Provinces with burgher estates will also be more likely to have
+			factor = 1.5
+			has_estate = estate_burghers			
+		}
+		modifier = {
+			factor = 2.0
+			is_part_of_hre = yes			#HRE was a production powerhouse of this period
+		}
+	
+	}
+}
+
+constable = {
+	cost = 250			#An area-wide effect seems sensible for this price.
+	time = 36
+	
+	build_trigger = {
+		is_state = yes
+		#OR = {
+			#has_building = constable
+			#has_construction = constable
+			NOT = {
+				any_province_in_state = {
+					OR = {
+						has_building = constable
+						has_construction = constable
+					}
+				}
+			}
+		#}
+	}
+	
+	keep_trigger = { #Copying vanilla for now.
+		NOT = {
+			area_for_scope_province = {
+				NOT = { province_id = root }
+				owner = {
+					tag = ROOT
+				}
+				OR = {
+					has_building = constable
+					has_construction = constable
+				}
+			}
+		}
+	}
+	
+	modifier = {
+		#Area-wide effects:
+		local_tax_modifier = 0.33
+	}
+	
+	# THIS = Province, FROM = Builder(not nessecairly owner, can be overlord)
+	on_built = {
+		every_province_in_state = {
+			limit = {
+				NOT = { province_id = ROOT }
+			}
+			add_province_modifier = {
+				name = constable_area_modifier
+				duration = -1
+			}
+		}
+	}
+
+	# THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
+	on_destroyed = { #There's no actual remove province triggered modifier command, is there?
+		if = {
+			limit = {
+				NOT = {
+					any_province_in_state = {
+						has_building = constable
+					}
+				}
+			}
+			every_province_in_state = {
+				remove_province_modifier = constable_area_modifier
+			}
+		}
+	}
+	
+	ai_will_do = {
+		factor = 1 #AI sees value in this building, so factor will be 1.
+		#Number of provinces in state modifiers
+		modifier = { #If the AI only controls 1 province in the state, they shall never build this.
+			factor = 0
+			NOT = {
+				calc_true_if = {
+					all_province_in_state = {
+						owned_by = FROM
+					}
+					amount = 2
+				}
+			}
+		}
+		modifier = { #2-province states shouldn't get this in most cases.
+			factor = 0.5
+			NOT = {
+				calc_true_if = {
+					all_province_in_state = {
+						owned_by = FROM
+					}
+					amount = 3
+				}
+			}
+		}
+		modifier = { #4-province states get higher priority.
+			factor = 1.5
+			calc_true_if = {
+				all_province_in_state = {
+					owned_by = FROM
+				}
+				amount = 4
+			}
+		}
+		modifier = { #5-province states get higher priority.
+			factor = 1.5
+			calc_true_if = {
+				all_province_in_state = {
+					owned_by = FROM
+				}
+				amount = 5
+			}
+		}
+		modifier = { #6-province states get higher priority.
+			factor = 1.5
+			calc_true_if = {
+				all_province_in_state = {
+					owned_by = FROM
+				}
+				amount = 6
+			}
+		}
+		modifier = { #7-province states get higher priority.
+			factor = 1.5
+			calc_true_if = {
+				all_province_in_state = {
+					owned_by = FROM
+				}
+				amount = 7
+			}
+		}
+		modifier = { #4 BT
+			factor = 2
+			base_tax = 4
+		}
+		modifier = { #8 BT
+			factor = 3
+			base_tax = 8
+		}
+		modifier = { #12 BT
+			factor = 4
+			base_tax = 12
+		}
+	}
+}

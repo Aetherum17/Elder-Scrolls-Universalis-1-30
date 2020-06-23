@@ -1,65 +1,125 @@
 order_of_the_lamp = {
     icon = GFX_holy_order_qadiri
     trigger = {
-        NOT = { religion = dragon_cult }
-    }
-    cost = 100
-    cost_type = adm_power
-    per_province_effect = {
-		add_base_tax = 1
-    }
-    per_province_abandon_effect = {
-        add_base_tax = -1
-    }
-    modifier = {
-	    local_regiment_cost = -0.15
-	    local_institution_spread = 0.10
-    }
-    ai_priority = {
-        factor = 1
-    }
+	
+	} 
+	cost = 100 cost_type = adm_power per_province_effect = { add_base_tax = 1 } per_province_abandon_effect = { add_base_tax = -1 }
+    modifier = { local_regiment_cost = -0.15 local_institution_spread = 0.10 }
+    ai_priority = { factor = 1 }
 }
 
 vampyrum_order = {
     icon = GFX_holy_order_shadhili
     trigger = {
-        NOT = { religion = dragon_cult }
-    }
-    cost = 100
-    cost_type = dip_power
-	per_province_effect = {
-        add_base_production = 1
-    }
-    per_province_abandon_effect = {
-        add_base_production = -1
-    }
-    modifier = {
-        local_development_cost = -0.15
-		local_state_maintenance_modifier = -0.10
-    }
-    ai_priority = {
-        factor = 1
-    }
+	
+	} 
+    cost = 100 cost_type = dip_power per_province_effect = { add_base_production = 1 } per_province_abandon_effect = { add_base_production = -1 }
+    modifier = { local_development_cost = -0.15 local_state_maintenance_modifier = -0.10 }
+    ai_priority = { factor = 1 }
 }
 
 order_of_the_hour = {
     icon = GFX_holy_order_aissawa
     trigger = {
-        NOT = { religion = dragon_cult }
-    }
-    cost = 100
-    cost_type = mil_power
-	per_province_effect = {
-        add_base_manpower = 1
-    }
-    per_province_abandon_effect = {
-	    add_base_manpower = -1
-    }
-    modifier = {
-        local_missionary_strength = 0.015
-		local_manpower_modifier = 0.10
-    }
-    ai_priority = {
-        factor = 1
-    }
+	
+	}
+    cost = 100 cost_type = mil_power per_province_effect = { add_base_manpower = 1 } per_province_abandon_effect = { add_base_manpower = -1 }
+    modifier = { local_missionary_strength = 0.015 local_manpower_modifier = 0.10 }
+    ai_priority = { factor = 1 }
+}
+
+#######################################################################
+
+order_of_doctrine_and_ordination = {
+    icon = GFX_order_of_doctrine_and_ordination
+    trigger = {
+	
+	}
+	cost = 100 cost_type = adm_power per_province_effect = { add_base_tax = 1 } per_province_abandon_effect = { add_base_tax = -1 }
+    modifier = { local_manpower_modifier = 0.15 local_years_of_nationalism = -5 }
+    ai_priority = { factor = 1 }
+}
+
+order_of_the_watch = {
+    icon = GFX_holy_order_shadhili
+    trigger = {
+	
+	}
+    cost = 100 cost_type = dip_power per_province_effect = { add_base_production = 1 } per_province_abandon_effect = { add_base_production = -1 }
+    modifier = { local_state_maintenance_modifier = -0.15 local_defensiveness = 0.10 }
+    ai_priority = { factor = 1 }
+}
+
+order_of_inquisition = {
+    icon = GFX_order_of_inquisition
+    trigger = {
+	
+	}
+    cost = 100 cost_type = mil_power per_province_effect = { add_base_manpower = 1 } per_province_abandon_effect = { add_base_manpower = -1 }
+    modifier = { local_culture_conversion_cost = -0.15 local_missionary_strength = 0.01 }
+    ai_priority = { factor = 1 }
+}
+
+#######################################################################
+
+baldama_wyrd_order = {
+    icon = GFX_baldama_wyrd_order
+    trigger = {
+	
+	}
+	cost = 100 cost_type = adm_power per_province_effect = { add_base_tax = 1 } per_province_abandon_effect = { add_base_tax = -1 }
+    modifier = { local_build_cost = -0.15 local_production_efficiency = 0.10 }
+    ai_priority = { factor = 1 }
+}
+
+order_of_the_raven = {
+    icon = GFX_order_of_the_raven
+    trigger = {
+	
+	}
+    cost = 100 cost_type = dip_power per_province_effect = { add_base_production = 1 } per_province_abandon_effect = { add_base_production = -1 }
+    modifier = { trade_goods_size = 0.15 local_regiment_cost = -0.10 }
+    ai_priority = { factor = 1 }
+}
+
+order_of_saint_pelin = {
+    icon = GFX_order_of_saint_pelin
+    trigger = {
+	
+	}
+    cost = 100 cost_type = mil_power per_province_effect = { add_base_manpower = 1 } per_province_abandon_effect = { add_base_manpower = -1 }
+    modifier = { local_defensiveness = 0.15 local_friendly_movement_speed = 0.10 }
+    ai_priority = { factor = 1 }
+}
+
+#######################################################################
+
+sapiarchs_order = {
+    icon = GFX_sapiarchs_order
+    trigger = {
+	
+	}
+	cost = 100 cost_type = adm_power per_province_effect = { add_base_tax = 1 } per_province_abandon_effect = { add_base_tax = -1 }
+    modifier = { local_hostile_movement_speed = 0.15 local_tax_modifier = 0.10 }
+    ai_priority = { factor = 1 }
+}
+
+order_of_the_candle = {
+    icon = GFX_order_of_the_candle
+    trigger = {
+	
+	}
+    cost = 100 cost_type = dip_power per_province_effect = { add_base_production = 1 } per_province_abandon_effect = { add_base_production = -1 }
+    modifier = { local_years_of_nationalism = -10 local_religious_unity_contribution = -1 }
+    ai_priority = { factor = 1 }
+}
+
+order_of_diagna = {
+    icon = GFX_order_of_diagna
+    trigger = {
+	
+	}
+    cost = 100 cost_type = mil_power per_province_effect = { add_base_manpower = 1 } per_province_abandon_effect = { add_base_manpower = -1 }
+    modifier = { regiment_recruit_speed = -0.15 local_unrest = -1 }
+    ai_priority = { factor = 1 }
 }

@@ -1,0 +1,1797 @@
+college = {
+	cost = 250			#BTAddOn changed from 300. This is late game, vital to the spread of the enlightenment, and generally very important. Furthermore the development of centres of learning and scholarship was more expensive and time consuming than one might think. Changing cost and time to be closer to/higher than the earlier manufactories. Note I'll also increase the enlightenment spread from a uni, so this becomes something to be built in key cities & let spread, not something to spam everywhere at tech 17 for tech spread and dev cost.
+	time = 24			#BTAddOn changed from 12. This is not meant to be spammed when the enlightenment hits to catch up, increased to 4y
+	
+	modifier = {
+		local_institution_spread = 0.33			#BTAddOn new. Fits perfectly in the new tech system =D. Currently 100 percent bonus, which may be a bit much, but on the other hand still requires normal spread, and if a province is advanced enough to have a university, it probably is somwhat cutting edge anyway. Nice counterpoint for new non western tech penalties, too, so a tech minded country in Asia or Africa can still keep up with the spread bonus offsetting tech group spread penalties.
+		local_tax_modifier = 0.1			#BTAddOn new. Little bonus to sweeten the deal, in case institution spread isn't that important. Make a fair bit of sense, too. Universities do encourage complex economic systems, advanced industry, and improved production methods.
+		local_production_efficiency = 0.1			#BTAddOn new. Little bonus to sweeten the deal, in case institution spread isn't that important. Make a fair bit of sense, too. Universities do encourage complex economic systems, advanced industry, and improved production methods.
+	}
+	
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 1.5
+			FROM = { ruler_has_personality = scholar_personality }
+		}
+		modifier = {
+			factor = 1.5
+			FROM = { advisor = natural_scientist }
+		}
+		modifier = {
+			factor = 1.5
+			FROM = { advisor = philosopher }
+		}
+		modifier = {
+			factor = 1.5
+			FROM = { full_idea_group = innovativeness_ideas }
+		}
+		modifier = {
+			factor = 1.5
+			FROM = { is_great_power = yes }			#Primarily to keep Russia, Poland, and Ottomans in line with western, and the top western powers ahead of everyone else, as real history went, but also may potentially help China, India, or any ahistorical superpower in Asia or Africa as well.
+		}
+		modifier = {
+			factor = 1.5
+			province_has_center_of_trade_of_level = 1			#Cheap shortcut method to try to get unis in plausible rich centers, especially for alt history non-european unis.
+		}
+		modifier = {
+			factor = 1.25			#Half strength
+			num_of_times_improved = 10
+		}	#A province which has been developed intensely is slightly more likely to get a uni
+		modifier = {
+			factor = 1.25			#Half strength
+			development = 20
+		}	#Large, important provinces slightly more likely to get a uni
+		modifier = {
+			factor = 10
+			is_institution_origin = enlightenment
+		}
+		modifier = {
+			factor = 0.25
+			FROM = {
+				num_of_owned_provinces_with = {
+					value = 25
+					OR = {
+						has_building = university
+					}
+					is_core = PREV			#I'm useless with coding =p. Do I need PREV or ROOT here, or will either work?
+				}
+			}
+		}	#If the owner has 5 cores with unis already, make it less likely to build more
+		modifier = {
+			factor = 0.25
+			any_neighbor_province = {
+					has_building = university
+				}
+			}
+		}	#Hopefully this doesn't make the engine go too insane. From a gameplay perspective, this is huge at distributing enlightenment spreaders evenly. Could also try to do something area related, but with the other factors below this should suffice.
+		modifier = {
+			factor = 0.1
+			NOT = { development = 10 }
+		}	#Minor provinces (for now calling that 7 dev and lower) very unlikely to receive a uni
+		modifier = {
+			factor = 0.5
+			is_in_capital_area = no
+		}			#AI should rarely build uni in a province which is not connected to the capital by land. This could cause some issues in the extremely rare cases of thalassocracies, but it fixes far more problems than it creates, so leaving it.
+		modifier = {
+			factor = 0.1
+			is_state = no
+		}			#AI should almost never build uni in a province which is not a state
+		modifier = {
+			factor = 0.1
+			has_owner_culture = no
+			has_owner_accepted_culture = no
+		}			#AI should almost never build uni in a province with a different culture, even if that culure is accepted
+		modifier = {
+			factor = 0.25
+			has_owner_culture = no
+			has_owner_accepted_culture = yes
+		}			#Though an accepted culture is still more likely than a non accepted culture
+		modifier = {
+			factor = 0.1
+			has_owner_religion = no
+		}			#AI should almost never build uni in a province with a different religion, even if there is positive tolerance.
+		modifier = {
+			factor = 0.1
+			OR = {
+				has_climate = tropical
+				has_climate = arctic
+				has_climate = arid
+			}
+		}	#AI should almost never build uni in a province with a hostile climate. This may hurt the chances of some small countries who only own land in these climate types, but well... they really shouldn't be building too many unis anyway, with very, very few exceptions. As in none I can think of
+	}
+}
+
+################################################
+# Tier 1, 15th Century Buildings
+################################################
+marketplace = {
+	cost = 100			#BTAddOn changed from 100. Logically, a market shouldn't be so expensive, and in gameplay terms, 100 ducats this early is also rather expensive. Lowering cost and effect by half.
+	time = 12
+
+	modifier = {
+		province_trade_power_modifier = 0.25			#BTAddOn changed from .5 A 50 percent bonus available at practically day 1 was overpowered, and it snowballed for CoTs. While we still want CoTs strong, not x15 any other province this early. BT's lower avg dev but generally same dev for capitals and CoTs only made this worse, as well.
+	}
+	
+	ai_will_do = {
+		factor = 0.75			#BT Addon changed from 1.5. Changing all base factors to price divided by 100. Note markets get a 50 percent bonus. As vanilla puts it, AI only factors what it gains, not what enemies lose.
+		modifier = {
+			factor = 0.50
+			NOT = { FROM = { mercantilism = 25 } }			#I know this is probably already factored in, but I want highly mercantile states to build trade buildings everywhere, while lower mercantilism states only build these in provinces with high TP. Note 25 is base for several mercantile nations like England, so some will start with this, and many more reach it later.
+		}
+		modifier = {
+			factor = 1.5
+			FROM = { mercantilism = 40 }			#I know this is probably already factored in, but I want highly mercantile states to build trade buildings everywhere, while lower mercantilism states only build these in provinces with high TP. Note England can hit 40s by the late 1400s with some luck, so this isn't so high.
+		}
+		modifier = {
+			factor = 2.5
+			FROM = {			#Trade leagues and merchant republics will get more trade buildings... that is rather their mandate, no?
+				OR = {
+					is_in_trade_league = yes
+					has_government_attribute = is_merchant_republic
+				}
+			}
+		}
+	}
+}
+
+workshop = {
+	cost = 100			#BTAddOn changed from 100. Part of the comprehensive balance overhaul to adjust buildings to the BT map (with all its new provinces)
+	time = 12
+	modifier = {
+		local_development_cost = -0.1			#BTAddOn new. A little non-cash boost to make this building not worthless when it is too late in the game to make your ducats back from the cost to build it. Note the corresponding dev cost reduction has been removed from universities, where I felt it made less logical sense. Here, production and industry encourage development.
+		local_production_efficiency = 0.25			#BTAddOn changed from 0.5. Part of the comprehensive balance overhaul to adjust buildings to the BT map (with all its new provinces).
+	}
+	
+	allow_in_gold_provinces = no
+
+	ai_will_do = {
+		factor = 1			#BT Addon changed from 1. Changing all base factors to price divided by 100
+		modifier = {
+			factor = 0.25
+			OR = {			#AI is strongly discouraged to build this where climate renders development difficult
+				has_climate = arctic
+				has_climate = arid
+				has_climate = tropical
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {			#AI is discouraged to build this where development isn't really feasible
+				has_terrain = steppe
+				has_terrain = highlands
+				has_terrain = jungle
+				has_terrain = desert
+				has_terrain = coastal_desert
+				has_terrain = glacier
+			}
+		}
+		modifier = {
+			factor = 1.5
+			OR = {			#AI is encouraged to build this where development is feasible
+				has_terrain = farmlands
+				has_terrain = grasslands
+				has_terrain = woods
+			}
+		}
+		modifier = {
+			factor = 2.5
+			is_part_of_hre = yes			#HRE was a production powerhouse of this period
+		}
+	}
+}
+
+temple = {
+	cost = 100			#BTAddOn note - Though 'temple' is a somewhat vague term and may refer to any variety of buildings feasibly costing between 5 and 5000 ducats. Balancing for gameplay to match other similar buildings.
+	time = 12
+	modifier = {
+		local_missionary_strength = 0.01			#BTAddOn new effect. Giving the temple the same bonus of this building's upgrade, simply weaker. Makes it more useful when it is too late in the game to make money back from building cost.
+		local_tax_modifier = 0.25			#BTAddOn changed from 0.4. Part of the comprehensive balance overhaul to adjust buildings to the BT map (with all its new provinces)
+	}
+	
+	ai_will_do = {
+		factor = 1			#BT Addon changed from 1. Changing all base factors to price divided by 100
+		modifier = {
+			factor = 1.5
+			has_owner_religion = no			#AI is encouraged to build this where they need to convert the local population
+		}
+		modifier = {
+			factor = 2.5
+			FROM = { government = theocracy }			#Theocracies will build more temples.
+		}
+	}
+}
+
+barracks = {
+	cost = 100			#BTAddOn changed from 100. Part of the comprehensive balance overhaul to adjust buildings to the BT map (with all its new provinces)
+	time = 12
+	modifier = {
+		local_manpower_modifier = 0.25			#BTAddOn changed from 0.5. Part of the comprehensive balance overhaul to adjust buildings to the BT map (with all its new provinces)
+	}
+	
+	ai_will_do = {
+		factor = 50			#BT Addon changed from 1. Changing all base factors to price divided by 100 (or equal to cost minus 20 pecent for non economic buildings). 
+		modifier = {
+			factor = 0.5
+			NOT = { FROM = { army_tradition = 20 } }			#Army tradition now either encourages or discourages building barracks
+		}
+		modifier = {
+			factor = 0.75
+			NOT = { FROM = { army_tradition = 40 } }			#Army tradition now either encourages or discourages building barracks
+		}
+		modifier = {
+			factor = 1.25
+			FROM = { army_tradition = 60 }			#Army tradition now either encourages or discourages building barracks
+		}
+		modifier = {
+			factor = 1.55
+			FROM = { army_tradition = 80 }			#Army tradition now either encourages or discourages building barracks
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { owner = { manpower_percentage = 0.35 } }			#Further encouraged if low on manpower
+		}
+		modifier = {
+			factor = 0.75
+			owner = { manpower_percentage = 0.75 }			#Slightly discouraged if plenty of manpower
+		}
+		modifier = {
+			factor = 0.65
+			local_autonomy = 40			
+		}
+		modifier = {
+			factor = 0.65
+			is_state = no
+		}
+	}
+}		
+
+shipyard = {
+	cost = 100			#BTAddOn notes - leaving cost here despite lowering most others. Dramtically improving naval capabilities was a bit overpowered, in my opinion. Especially compared to the regimental camp with half effect at double the price.
+	time = 12
+	build_trigger = {
+		has_port = yes
+	}
+	modifier = {
+		naval_forcelimit = 1			#BTAddOn changed from 2. Part of the comprehensive balance overhaul to adjust buildings to the BT map (with all its new provinces)
+		ship_recruit_speed = -0.25
+		local_ship_repair = 0.25 
+	}
+	
+	ai_will_do = {
+		factor = 50			#BT Addon changed from 1. Changing all base factors to price divided by 100 (or equal to cost minus 20 pecent for non economic buildings). 
+		modifier = {
+			factor = 1.25			#running total 72
+			FROM = { navy_size_percentage = 0.75 }
+		}
+		modifier = {
+			factor = 1.35		#running total 93.6
+			FROM = { navy_size_percentage = 1.0 }
+		}
+		modifier = {
+			factor = 1.5			#running total 131.04
+			FROM = { navy_size_percentage = 1.25 }
+		}
+		modifier = {
+			factor = 1.5			#running total 196.56
+			FROM = { navy_size_percentage = 1.5 }
+		}
+		modifier = {
+			factor = 0.75
+			NOT = { FROM = { navy_tradition = 20 } }			#Naval tradition now either encourages or discourages building shipyards
+		}
+		modifier = {
+			factor = 0.75
+			NOT = { FROM = { navy_tradition = 40 } }			#Naval tradition now either encourages or discourages building shipyards
+		}
+		modifier = {
+			factor = 1.15
+			FROM = { navy_tradition = 60 }			#Naval tradition now either encourages or discourages building shipyards
+		}
+		modifier = {
+			factor = 1.25
+			FROM = { navy_tradition = 80 }			#Naval tradition now either encourages or discourages building shipyards
+		}
+		#Non-economic buildings get some penalties in high autonomy regions. This is intended to prevent situations caused by the AI not understand how to prioritise non-economic buildings in high autonomy regions due to factoring being forced and not dynamic.
+		modifier = {
+			factor = 0.50
+			local_autonomy = 40			
+		}
+		modifier = {
+			factor = 0.50
+			is_state = no
+		}
+	}
+}
+
+fort_15th = {
+	cost = 100			#BTAddOn changed from original 200. Castles were way too cheap to build but also too expensive to maintain in BT. Note upkeep is controlled in defines and is generated based on fort level, I believe with reduced fort levels the vanilla .5 per month per level is fine
+	time = 30
+	modifier = {
+		fort_level = 1			#BTAddOn changed from original 2. Fort levels are just ridiculous in vanilla and require far too many cannons, especially at later levels. After some testing, I'm content with my new 1-2-3-5 system. 
+		local_unrest = -0.5			#BTAddOn new. The days of controling a region by building a castle there were largely over by the later EU4 period, but I really like the concept of forts establishing a permanent military presence, much like friendly troops in the province reduce unrest. Also want another bonus to justify cost
+		local_defensiveness = 0.1			#BTAddOn new. The point of weakening forts isn't to speed up the game, or make conquest easier or faster, but rather to reduce how mandatory cannons and obscenely large armies are for sieges. Local defensiveness slows things back down after reducing fort levels.
+	}
+	
+	onmap = yes
+	influencing_fort = yes
+	
+	ai_will_do = {
+		factor = 1 #Lots of logic in code instead, that multiplies with this value
+		modifier = {
+			factor = 2.5
+			is_capital = yes			#AI would want to fortify their home province.
+		}
+		modifier = {
+			factor = 1.5
+			FROM = { is_march = yes }
+		}
+		modifier = {
+			factor = 0.75
+			NOT = { FROM = { army_tradition = 20 } }			#Army tradition now either encourages or discourages building forts
+		}
+		modifier = {
+			factor = 0.75
+			NOT = { FROM = { army_tradition = 40 } }			#Army tradition now either encourages or discourages building forts
+		}
+		modifier = {
+			factor = 1.15
+			FROM = { army_tradition = 60 }			#Army tradition now either encourages or discourages building forts
+		}
+		modifier = {
+			factor = 1.15
+			FROM = { army_tradition = 80 }			#Army tradition now either encourages or discourages building forts
+		}
+	}
+}
+
+coastal_defence = {
+
+	cost = 100
+	time = 12
+	build_trigger = {
+		has_port = yes
+	}
+	modifier = {
+		blockade_force_required = 0.5
+		hostile_disembark_speed = 1.0
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+################################################
+# Tier 2, 16th Century Buildings
+################################################
+courthouse = {
+	cost = 100			#BTAddOn changed from 100. Part of the comprehensive balance overhaul to adjust buildings to the BT map (with all its new provinces)
+	time = 12
+	
+	build_trigger = { #BT 13 added to balance states territories and tradecompanies.
+		is_state = yes
+	}
+	
+	modifier = {
+		local_state_maintenance_modifier = -0.25
+		local_autonomy = -0.1
+		local_governing_cost = -0.25
+	}
+	
+	ai_will_do = {
+		factor = 0.5			#BT Addon changed from 1. Changing all base factors to price divided by 100.
+		modifier = {
+			factor = 0.5
+			NOT = { development = 5	}			#Discouraged if too small for owner to care
+		}
+		modifier = {
+			factor = 0.75
+			NOT = { local_autonomy = 10 }			#Slightly discouraged if autonomy is very low already
+		}
+		modifier = {
+			factor = 1.25
+			local_autonomy = 75			#Slightly encouraged if autonomy is a problem here
+		}
+		modifier = {
+			factor = 1.5
+			development = 20			#Encourage if so big the owner should care
+		}
+	}
+}
+
+dock = {
+	cost = 100			#BTAddOn changed from 100. Part of the comprehensive balance overhaul to adjust buildings to the BT map (with all its new provinces)
+	time = 12
+	build_trigger = {
+		has_port = yes
+	}
+	modifier = {
+		local_sailors_modifier = 0.5
+	}
+	
+	ai_will_do = {
+		factor = 20			#BT Addon changed from 1. Changing all base factors to price divided by 100 (or equal to cost minus 20 pecent for non economic buildings). Special penalty for Docks, as it is worthless.
+		modifier = {
+			factor = 0.5
+			NOT = { FROM = { navy_tradition = 20 } }			#Naval tradition now either encourages or discourages building docks
+		}
+		modifier = {
+			factor = 0.75
+			NOT = { FROM = { navy_tradition = 40 } }			#Naval tradition now either encourages or discourages building docks
+		}
+		modifier = {
+			factor = 1.25
+			FROM = { navy_tradition = 60 }			#Naval tradition now either encourages or discourages building docks
+		}
+		modifier = {
+			factor = 1.5
+			FROM = { navy_tradition = 80 }			#Naval tradition now either encourages or discourages building docks
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { owner = { sailors_percentage = 0.35 } }			#Further encouraged if low on sailors
+		}
+		modifier = {
+			factor = 0.75
+			owner = { sailors_percentage = 0.8 }			#Slightly discouraged if plenty of sailors
+		}
+		modifier = {
+			factor = 0.5
+			local_autonomy = 40			
+		}
+		modifier = {
+			factor = 0.5
+			is_state = no
+		}
+	}
+}
+
+regimental_camp = {
+	cost = 100			#BTAddOn changed from 200. Part of the comprehensive balance overhaul to adjust buildings to the BT map (with all its new provinces)
+	time = 12
+	modifier = {
+		land_forcelimit = 0.5			#BTAddOn changed from 1.0. Part of the comprehensive balance overhaul to adjust buildings to the BT map (with all its new provinces)
+		regiment_recruit_speed = -0.125			#BTAddOn new. Adding this new feature to match the shipyard equivalents, which also speed recruit time.
+	}
+	
+	ai_will_do = {
+		factor = 50			#BT Addon changed from 1. Changing all base factors to price divided by 100 (or equal to cost minus 20 pecent for non economic buildings). 
+		modifier = {
+			factor = 1.25			#running total 72
+			FROM = { army_size_percentage = 0.75 }
+		}
+		modifier = {
+			factor = 1.35			#running total 93.6
+			FROM = { army_size_percentage = 1.0 }
+		}
+		modifier = {
+			factor = 1.5			#running total 131.04
+			FROM = { army_size_percentage = 1.25 }
+		}
+		modifier = {
+			factor = 1.5			#running total 196.56
+			FROM = { army_size_percentage = 1.5 }
+		}
+		modifier = {
+			factor = 0.75
+		NOT = { FROM = { army_tradition = 20 } }			#Army tradition now either encourages or discourages building camps
+		}
+		modifier = {
+			factor = 0.75
+			NOT = { FROM = { army_tradition = 40 } }			#Army tradition now either encourages or discourages building camps
+		}
+		modifier = {
+			factor = 1.15
+			FROM = { army_tradition = 60 }			#Army tradition now either encourages or discourages building camps
+		}
+		modifier = {
+			factor = 1.25
+			FROM = { army_tradition = 80 }			#Army tradition now either encourages or discourages building camps
+		}
+		modifier = {
+			factor = 0.5
+			local_autonomy = 40			
+		}
+		modifier = {
+			factor = 0.5
+			is_state = no
+		}
+	}
+}
+
+fort_16th = {
+	cost = 250			#BTAddOn changed from original 400
+	time = 36			#BTAddOn changed from original 30. Increasing build time of later forts by 6 months, 12 months, and 24 months
+	make_obsolete = fort_15th
+	modifier = {
+		fort_level = 2			#BTAddOn changed from 4
+		local_unrest = -1.0			#BTAddOn new
+		local_defensiveness = 0.3			#BTAddOn new
+	}
+
+	onmap = yes
+	
+	influencing_fort = yes
+	
+	ai_will_do = {
+		factor = 1 #Lots of logic in code instead, that multiplies with this value
+		modifier = {
+			factor = 2.5
+			is_capital = yes			#AI would want to fortify their home province.
+		}
+		modifier = {
+			factor = 1.5
+			FROM = { is_march = yes }
+		}
+		modifier = {
+			factor = 0.75
+			NOT = { FROM = { army_tradition = 20 } }			#Army tradition now either encourages or discourages building forts
+		}
+		modifier = {
+			factor = 0.75
+			NOT = { FROM = { army_tradition = 40 } }			#Army tradition now either encourages or discourages building forts
+		}
+		modifier = {
+			factor = 1.05
+			FROM = { army_tradition = 60 }			#Army tradition now either encourages or discourages building forts
+		}
+		modifier = {
+			factor = 1.15
+			FROM = { army_tradition = 80 }			#Army tradition now either encourages or discourages building forts
+		}
+	} 
+}
+
+naval_battery = {
+
+	make_obsolete = coastal_defence
+	cost = 250
+	time = 12
+	build_trigger = {
+		has_port = yes
+	}
+	modifier = {
+		blockade_force_required = 1.0
+		hostile_disembark_speed = 2.0
+		hostile_fleet_attrition = 5
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+################################################
+# Tier 3, 17th Century Buildings
+################################################
+cathedral = {
+	make_obsolete = temple
+	
+	cost = 250			#BTAddOn changed from 300. Part of the comprehensive balance overhaul to adjust buildings to the BT map (with all its new provinces)
+	time = 24			#BTAddOn changed from 12. Doubling upgraded buildings' build time
+	modifier = {
+		local_missionary_strength = 0.025			#BTAddOn changed from 0.03, might slow conversion slightly, but avg dev is also lower, so that might be a good thing
+		local_tax_modifier = 0.25
+	}
+	
+	ai_will_do = {
+		factor = 5			#BT Addon changed from 1. Changing all base factors to price divided by 100. 
+		#BT Addon New factors, range 100 percent to 450 percent
+		modifier = {
+			factor = 1.5
+			has_owner_religion = no			#AI is encouraged to build this where they need to convert the local population
+		}
+		modifier = {
+			factor = 2.5
+			FROM = { government = theocracy }			#Theocracies will build more temples.
+		}
+	}
+}
+
+university = {
+	cost = 500			#BTAddOn changed from 300. This is late game, vital to the spread of the enlightenment, and generally very important. Furthermore the development of centres of learning and scholarship was more expensive and time consuming than one might think. Changing cost and time to be closer to/higher than the earlier manufactories. Note I'll also increase the enlightenment spread from a uni, so this becomes something to be built in key cities & let spread, not something to spam everywhere at tech 17 for tech spread and dev cost.
+	time = 48			#BTAddOn changed from 12. This is not meant to be spammed when the enlightenment hits to catch up, increased to 4y
+	
+	make_obsolete = college #BT More Buildings added, as college is a tier before this.
+	
+	modifier = {
+		local_institution_spread = 0.5			#BTAddOn new. Fits perfectly in the new tech system =D. Currently 100 percent bonus, which may be a bit much, but on the other hand still requires normal spread, and if a province is advanced enough to have a university, it probably is somwhat cutting edge anyway. Nice counterpoint for new non western tech penalties, too, so a tech minded country in Asia or Africa can still keep up with the spread bonus offsetting tech group spread penalties.
+		local_tax_modifier = 0.15			#BTAddOn new. Little bonus to sweeten the deal, in case institution spread isn't that important. Make a fair bit of sense, too. Universities do encourage complex economic systems, advanced industry, and improved production methods.
+		local_production_efficiency = 0.15			#BTAddOn new. Little bonus to sweeten the deal, in case institution spread isn't that important. Make a fair bit of sense, too. Universities do encourage complex economic systems, advanced industry, and improved production methods.
+	}
+	
+	ai_will_do = {
+		factor = 12	
+		modifier = {
+			factor = 1.5
+			FROM = { ruler_has_personality = scholar_personality }
+		}
+		modifier = {
+			factor = 1.5
+			FROM = { advisor = natural_scientist }
+		}
+		modifier = {
+			factor = 1.5
+			FROM = { advisor = philosopher }
+		}
+		modifier = {
+			factor = 1.5
+			FROM = { full_idea_group = innovativeness_ideas }
+		}
+		modifier = {
+			factor = 1.5
+			FROM = { is_great_power = yes }			#Primarily to keep Russia, Poland, and Ottomans in line with western, and the top western powers ahead of everyone else, as real history went, but also may potentially help China, India, or any ahistorical superpower in Asia or Africa as well.
+		}
+		modifier = {
+			factor = 1.5
+			province_has_center_of_trade_of_level = 1			#Cheap shortcut method to try to get unis in plausible rich centers, especially for alt history non-european unis.
+		}
+		modifier = {
+			factor = 1.25			#Half strength
+			num_of_times_improved = 10
+		}	#A province which has been developed intensely is slightly more likely to get a uni
+		modifier = {
+			factor = 1.25			#Half strength
+			development = 20
+		}	#Large, important provinces slightly more likely to get a uni
+		modifier = {
+			factor = 10
+			is_institution_origin = enlightenment
+		}
+		modifier = {
+			factor = 0.2
+			FROM = {
+				num_of_owned_provinces_with = {
+					value = 25
+					OR = {
+						has_building = university
+						has_construction = university
+					}
+					is_core = PREV			#I'm useless with coding =p. Do I need PREV or ROOT here, or will either work?
+				}
+			}
+		}	#If the owner has 5 cores with unis already, make it less likely to build more
+		modifier = {
+			factor = 0.2
+			any_neighbor_province = {
+				has_building = university
+			}
+		}
+		modifier = {
+			factor = 0.1
+			NOT = { development = 8 }
+		}	#Minor provinces (for now calling that 7 dev and lower) very unlikely to receive a uni
+		modifier = {
+			factor = 0.5
+			is_in_capital_area = no
+		}			#AI should rarely build uni in a province which is not connected to the capital by land. This could cause some issues in the extremely rare cases of thalassocracies, but it fixes far more problems than it creates, so leaving it.
+		modifier = {
+			factor = 0.1
+			is_state = no
+		}			#AI should almost never build uni in a province which is not a state
+		modifier = {
+			factor = 0.1
+			has_owner_culture = no
+			has_owner_accepted_culture = no
+		}			#AI should almost never build uni in a province with a different culture, even if that culure is accepted
+		modifier = {
+			factor = 0.33
+			has_owner_culture = no
+			has_owner_accepted_culture = yes
+		}			#Though an accepted culture is still more likely than a non accepted culture
+		modifier = {
+			factor = 0.1
+			has_owner_religion = no
+		}			#AI should almost never build uni in a province with a different religion, even if there is positive tolerance.
+		modifier = {
+			factor = 0.1
+			OR = {
+				has_climate = tropical
+				has_climate = arctic
+				has_climate = arid
+			}
+		}	
+	}
+}
+
+trade_depot = {
+	cost = 250			#BTAddOn changed from 300. 
+	time = 24			#BTAddOn changed from 12. Doubling upgraded buildings' build time
+	
+	make_obsolete = marketplace
+	
+	modifier = {
+		province_trade_power_modifier = 0.75			#BTAddOn changed from 1.0, for reasons explained in market entry.
+	}
+	
+	ai_will_do = {
+		factor = 3			#BT Addon changed from 1.5. Changing all base factors to price divided by 100. Note markets get a 50 percent bonus. As vanilla puts it, AI only factors what it gains, not what enemies lose.
+		#BT Addon New factors, range 65 percent to 600 percent
+		modifier = {
+			factor = 0.65
+			NOT = { FROM = { mercantilism = 25 } }			#I know this is probably already factored in, but I want highly mercantile states to build trade buildings everywhere, while lower mercantilism states only build these in provinces with high TP. Note 25 is base for several mercantile nations like England, so some will start with this, and many more reach it later.
+		}
+		modifier = {
+			factor = 1.5
+			FROM = { mercantilism = 40 }			#I know this is probably already factored in, but I want highly mercantile states to build trade buildings everywhere, while lower mercantilism states only build these in provinces with high TP. Note England can hit 40s by the late 1400s with some luck, so this isn't so high.
+		}
+		modifier = {
+			factor = 2.0
+			FROM = {			#Trade leagues and merchant republics will get more trade buildings... that is rather their mandate, no?
+				OR = {
+					is_in_trade_league = yes
+					has_government_attribute = is_merchant_republic
+				}
+			}
+		}
+	}
+}
+
+grand_shipyard = {
+	cost = 300			#BTAddOn notes - leaving this alone, see shipyard entry for logic
+	time = 24			#BTAddOn changed from 12. Doubling second level military buildings build time.
+	
+	make_obsolete = shipyard
+	
+	build_trigger = {
+		has_port = yes
+	}
+	modifier = {
+		naval_forcelimit = 2			#BTAddOn changed from 4. Part of the comprehensive balance overhaul to adjust buildings to the BT map (with all its new provinces)
+		ship_recruit_speed = -0.50
+		local_ship_repair = 0.50
+	}
+	
+	ai_will_do = {
+		factor = 180			#BT Addon changed from 1. Changing all base factors to price divided by 100 (or equal to cost minus 20 pecent for non economic buildings).
+		
+		modifier = {
+			factor = 1.2			#running total 216
+			FROM = { navy_size_percentage = 0.75 }
+		}
+		modifier = {
+			factor = 1.3			#running total 280.8
+			FROM = { navy_size_percentage = 1.0 }
+		}
+		modifier = {
+			factor = 1.4			#running total 393.12
+			FROM = { navy_size_percentage = 1.25 }
+		}
+		modifier = {
+			factor = 1.5			#running total 589.68
+			FROM = { navy_size_percentage = 1.5 }
+		}
+		modifier = {
+			factor = 0.75
+			NOT = { FROM = { navy_tradition = 20 } }			#Naval tradition now either encourages or discourages building shipyards
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { FROM = { navy_tradition = 40 } }			#Naval tradition now either encourages or discourages building shipyards
+		}
+		modifier = {
+			factor = 1.1
+			FROM = { navy_tradition = 60 }			#Naval tradition now either encourages or discourages building shipyards
+		}
+		modifier = {
+			factor = 1.25
+			FROM = { navy_tradition = 80 }			#Naval tradition now either encourages or discourages building shipyards
+		}
+		#Non-economic buildings get some penalties in high autonomy regions. This is intended to prevent situations caused by the AI not understand how to prioritise non-economic buildings in high autonomy regions due to factoring being forced and not dynamic.
+		modifier = {
+			factor = 0.5
+			local_autonomy = 40			
+		}
+		modifier = {
+			factor = 0.5
+			is_state = no
+		}
+	}
+}
+
+training_fields = {
+	cost = 250			#BTAddOn changed from 300. Part of the comprehensive balance overhaul to adjust buildings to the BT map (with all its new provinces)
+	time = 24			#BTAddOn changed from 12. Doubling second level military buildings build time.
+	
+	make_obsolete = barracks
+	
+	modifier = {
+		local_manpower_modifier = 0.5			#BTAddOn changed from 1.0. Part of the comprehensive balance overhaul to adjust buildings to the BT map (with all its new provinces)
+	}
+	
+	ai_will_do = {
+		factor = 150			#BT Addon changed from 1. Changing all base factors to price divided by 100 (or equal to cost minus 20 pecent for non economic buildings).
+		#BT Addon New factors, range 36 percent to 486 percent
+		modifier = {
+			factor = 0.5
+			NOT = { FROM = { army_tradition = 20 } }			#Army tradition now either encourages or discourages building barracks
+		}
+		modifier = {
+			factor = 0.75
+			NOT = { FROM = { army_tradition = 40 } }			#Army tradition now either encourages or discourages building barracks
+		}
+		modifier = {
+			factor = 1.25
+			FROM = { army_tradition = 60 }			#Army tradition now either encourages or discourages building barracks
+		}
+		modifier = {
+			factor = 1.5
+			FROM = { army_tradition = 80 }			#Army tradition now either encourages or discourages building barracks
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { owner = { manpower_percentage = 0.35 } }			#Further encouraged if low on manpower
+		}
+		modifier = {
+			factor = 0.75
+			owner = { manpower_percentage = 0.75 }			#Slightly discouraged if plenty of manpower
+		}
+		modifier = {
+			factor = 0.65
+			local_autonomy = 40			
+		}
+		modifier = {
+			factor = 0.65
+			is_state = no
+		}
+	}
+}
+
+fort_17th = {
+	cost = 500			#BTAddOn changed from original 600
+	time = 48			#BTAddOn changed from original 30. Increasing build time of later forts by 6 months, 12 months, and 24 months
+	
+	make_obsolete = fort_16th
+	
+	modifier = {
+		fort_level = 3			#BTAddOn changed from 6
+		local_unrest = -1.5			#BTAddOn new
+		local_defensiveness = 0.6			#BTAddOn new
+	}
+
+	onmap = yes
+	
+	influencing_fort = yes
+	
+	ai_will_do = {
+		factor = 1 #Lots of logic in code instead, that multiplies with this value
+		modifier = {
+			factor = 2.5
+			is_capital = yes			#AI would want to fortify their home province.
+		}
+		modifier = {
+			factor = 1.5
+			FROM = { is_march = yes }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { FROM = { army_tradition = 20 } }			#Army tradition now either encourages or discourages building forts
+		}
+		modifier = {
+			factor = 0.95
+			NOT = { FROM = { army_tradition = 40 } }			#Army tradition now either encourages or discourages building forts
+		}
+		modifier = {
+			factor = 1.05
+			FROM = { army_tradition = 60 }			#Army tradition now either encourages or discourages building forts
+		}
+		modifier = {
+			factor = 1.1
+			FROM = { army_tradition = 80 }			#Army tradition now either encourages or discourages building forts
+		}
+	} 
+}
+
+################################################
+# Tier 4, 18th Century Buildings
+################################################
+stock_exchange = {
+	cost = 400
+	time = 36			#BTAddOn changed from 12. tripling stock exchange build time, as a doubled upgraded building
+	
+	make_obsolete = trade_depot
+	
+	modifier = {
+		province_trade_power_modifier = 1.5			#BTAddOn changed from 1.25. While earlier levels were weaker than vanilla, I'm increasing the final level, because by this tech level, the centres of wealth should be pulling a massive slice of the wealth in a node, and the many new provinces will have had plenty chance to build up and compete with the capitals much more than in vanilla.
+	}
+	
+	ai_will_do = {
+		factor = 6			#BT Addon changed from 1.5. Changing all base factors to price divided by 100. Note markets get a 50 percent bonus. As vanilla puts it, AI only factors what it gains, not what enemies lose.
+		modifier = {
+			factor = 0.65
+			NOT = { FROM = { mercantilism = 25 } }			#I know this is probably already factored in, but I want highly mercantile states to build trade buildings everywhere, while lower mercantilism states only build these in provinces with high TP. Note 25 is base for several mercantile nations like England, so some will start with this, and many more reach it later.
+		}
+		modifier = {
+			factor = 1.5
+			FROM = { mercantilism = 40 }			#I know this is probably already factored in, but I want highly mercantile states to build trade buildings everywhere, while lower mercantilism states only build these in provinces with high TP. Note England can hit 40s by the late 1400s with some luck, so this isn't so high.
+		}
+		modifier = {
+			factor = 2.0
+			FROM = {			#Trade leagues and merchant republics will get more trade buildings... that is rather their mandate, no?
+				OR = {
+					is_in_trade_league = yes
+					has_government_attribute = is_merchant_republic
+				}
+			}
+		}
+	}
+}
+
+counting_house = {
+	cost = 200			#BTAddOn changed from 400. Part of the comprehensive balance overhaul to adjust buildings to the BT map (with all its new provinces)
+	time = 24			#BTAddOn changed from 12. Doubling upgraded buildings' build time
+	
+	make_obsolete = workshop
+	modifier = {
+		local_development_cost = -0.2			#BTAddOn new. A little non-cash boost to make this building not worthless when it is too late in the game to make your ducats back from the cost to build it. Note the corresponding dev cost reduction has been removed from universities, where I felt it made less logical sense. Here, production and industry encourage development.
+		local_production_efficiency = 0.6			#BTAddOn changed from 1.0. Part of the comprehensive balance overhaul to adjust buildings to the BT map (with all its new provinces)
+	}
+	
+	allow_in_gold_provinces = no
+	
+	ai_will_do = {
+		factor = 4			#BT Addon changed from 1. Changing all base factors to price divided by 100.
+		#BT Addon New factors, range 13 percent to 675 percent
+		modifier = {
+			factor = 0.2
+			OR = {			#AI is strongly discouraged to build this where climate renders development difficult
+				has_climate = arctic
+				has_climate = arid
+				has_climate = tropical
+			}
+		}
+		modifier = {
+			factor = 0.65
+			OR = {			#AI is discouraged to build this where development isn't really feasible
+				has_terrain = steppe
+				has_terrain = highlands
+				has_terrain = jungle
+				has_terrain = desert
+				has_terrain = coastal_desert
+				has_terrain = glacier
+			}
+		}
+		#Drylands, forest, coastline, marsh, hills, mountains, and savannah receive neither penalty nor bonus
+		modifier = {
+			factor = 1.5
+			OR = {			#AI is encouraged to build this where development is feasible
+				has_terrain = farmlands
+				has_terrain = grasslands
+				has_terrain = woods
+			}
+		}
+		modifier = {
+			factor = 2.5
+			is_part_of_hre = yes			#HRE was a production powerhouse of this period
+		}
+	}
+}
+
+town_hall = {
+	cost = 200
+	time = 24			#BTAddOn changed from 12. Doubling upgraded buildings' build time
+	
+	make_obsolete = courthouse
+	
+	build_trigger = { #BT 13 added to balance states territories and tradecompanies.
+		is_state = yes
+	}
+	
+	modifier = {
+		local_state_maintenance_modifier = -0.5
+		local_autonomy = -0.2
+		local_governing_cost = -0.5
+	}
+	
+	ai_will_do = {
+		factor = 2.5
+		modifier = {
+			factor = 0.5
+			NOT = { development = 5	}			#Discouraged if too small for owner to care
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { local_autonomy = 10 }			#Slightly discouraged if autonomy is very low already
+		}
+		modifier = {
+			factor = 1.2
+			local_autonomy = 75			#Slightly encouraged if autonomy is a problem here
+		}
+		modifier = {
+			factor = 1.5
+			development = 20			#Encourage if so big the owner should care
+		}
+	}
+}
+
+drydock = {
+	cost = 250			#BTAddOn changed from 300. Part of the comprehensive balance overhaul to adjust buildings to the BT map (with all its new provinces)
+	time = 24			#BTAddOn changed from 12. Doubling second level military buildings build time.
+	
+	make_obsolete = dock
+	
+	build_trigger = {
+		has_port = yes
+	}
+	
+	modifier = {
+		local_sailors_modifier = 1.0
+	}
+	
+	ai_will_do = {
+		factor = 80			#BT Addon changed from 1. Changing all base factors to price divided by 100 (or equal to cost minus 20 pecent for non economic buildings). Special penalty for Docks because they're worthless
+		#BT Addon New factors, range 36 percent to 216 percent
+		modifier = {
+			factor = 0.5
+			NOT = { FROM = { navy_tradition = 20 } }			#Naval tradition now either encourages or discourages building docks
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { FROM = { navy_tradition = 40 } }			#Naval tradition now either encourages or discourages building docks
+		}
+		modifier = {
+			factor = 1.2
+			FROM = { navy_tradition = 60 }			#Naval tradition now either encourages or discourages building docks
+		}
+		modifier = {
+			factor = 1.5
+			FROM = { navy_tradition = 80 }			#Naval tradition now either encourages or discourages building docks
+		}
+		modifier = {
+			factor = 1.2
+			NOT = { owner = { sailors_percentage = 0.35 } }			#Further encouraged if low on sailors
+		}
+		modifier = {
+			factor = 0.9
+			owner = { sailors_percentage = 0.8 }			#Slightly discouraged if plenty of sailors
+		}
+		#Non-economic buildings get some penalties in high autonomy regions. This is intended to prevent situations caused by the AI not understand how to prioritise non-economic buildings in high autonomy regions due to factoring being forced and not dynamic.
+		modifier = {
+			factor = 0.65
+			local_autonomy = 40			
+		}
+		modifier = {
+			factor = 0.65
+			is_state = no
+		}
+	}
+}
+
+conscription_center = {
+	cost = 300			#BTAddOn changed from 400. Part of the comprehensive balance overhaul to adjust buildings to the BT map (with all its new provinces)
+	time = 24			#BTAddOn changed from 12. Doubling second level military buildings build time.
+	
+	
+	make_obsolete = regimental_camp
+	
+	modifier = {
+		land_forcelimit = 1			#BTAddOn changed from 2.0. Part of the comprehensive balance overhaul to adjust buildings to the BT map (with all its new provinces)
+		#regiment_recruit_speed = -0.25			#BTAddOn new. Adding this new feature to match the shipyard equivalents, which also speed recruit time.
+	}
+	
+	ai_will_do = {
+		factor = 180			#BT Addon changed from 1. Changing all base factors to price divided by 100 (or equal to cost minus 20 pecent for non economic buildings).
+		modifier = {
+			factor = 1.2			#running total 216
+			FROM = { army_size_percentage = 0.75 }
+		}
+		modifier = {
+			factor = 1.3			#running total 280.8
+			FROM = { army_size_percentage = 1.0 }
+		}
+		modifier = {
+			factor = 1.4			#running total 393.12
+			FROM = { army_size_percentage = 1.25 }
+		}
+		modifier = {
+			factor = 1.5			#running total 589.68
+			FROM = { army_size_percentage = 1.5 }
+		}
+		modifier = {
+			factor = 0.75
+			NOT = { FROM = { army_tradition = 20 } }			#Army tradition now either encourages or discourages building camps
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { FROM = { army_tradition = 40 } }			#Army tradition now either encourages or discourages building camps
+		}
+		modifier = {
+			factor = 1.1
+			FROM = { army_tradition = 60 }			#Army tradition now either encourages or discourages building camps
+		}
+		modifier = {
+			factor = 1.25
+			FROM = { army_tradition = 80 }			#Army tradition now either encourages or discourages building camps
+		}
+		modifier = {
+			factor = 0.65
+			local_autonomy = 40			
+		}
+		modifier = {
+			factor = 0.65
+			is_state = no
+		}
+	}
+}
+
+
+
+fort_18th = {
+	cost = 1000			#BTAddOn changed from original 800
+	time = 72			#BTAddOn changed from original 30. Increasing build time of later forts by 6 months (to 3y), then 12 more months (to 4y), and then 24 more months (to 6y)
+	
+	
+	make_obsolete = fort_17th
+	
+	modifier = {
+		fort_level = 5			#BTAddOn changed from 8
+		local_unrest = -2.0			#BTAddOn new
+		local_defensiveness = 1.0			#BTAddOn new
+	}
+
+	onmap = yes
+	
+	influencing_fort = yes
+	
+	ai_will_do = {
+		factor = 1 #Lots of logic in code instead, that multiplies with this value
+		modifier = {
+			factor = 2
+			is_capital = yes			#AI would want to fortify their home province.
+		}
+		#BT Addon New factors, range 25 percent to 216.5625 percent
+		modifier = {
+			factor = 1.5
+			FROM = { is_march = yes }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { FROM = { army_tradition = 20 } }			#Army tradition now either encourages or discourages building forts
+		}
+		modifier = {
+			factor = 0.95
+			NOT = { FROM = { army_tradition = 40 } }			#Army tradition now either encourages or discourages building forts
+		}
+		modifier = {
+			factor = 1.05
+			FROM = { army_tradition = 60 }			#Army tradition now either encourages or discourages building forts
+		}
+		modifier = {
+			factor = 1.1
+			FROM = { army_tradition = 80 }			#Army tradition now either encourages or discourages building forts
+		}
+	} 
+}
+
+################################################
+# Manufactories
+################################################
+manufactory = {
+	cost = 500
+	time = 36			#BTAddOn changed from 60. 5 year construction times are way out of line with all other buildings, and quite unneccessary, I think. Reducing this to comparable with other buildings.
+	modifier = { }
+}
+
+#If trade good assignment changes, also update scripted trigger "has_manufactory trigger"!
+
+wharf = {
+	manufactory = {
+		naval_supplies
+		fish
+		salt
+	}
+	modifier = {
+		trade_goods_size = 0.4			#BTAddon Note - Alright, alright. I'm giving in. It makes no sense, but vanilla apparently didn't bother to code in compatibility with the modifier version, so I have little choice but to give a flat bonus here.
+		trade_goods_size_modifier = 0.5			#BTAddOn changed from flat trade good size increase. Logic above at the top of Manufactories entries.
+		naval_forcelimit = 1			#BTAddOn new - Just a fun little new bonus
+	}
+	onmap = yes
+	
+	ai_will_do = {
+		factor = 12			#BT Addon changed from 1. Changing all base factors to price divided by 100. AI apparently doesn't factor the modifier, just the raw size increase, so also increasing weight beyond that by 20 percent for manufacturies with other bonuses, and 60 for non-factored bonuses. Note vanilla was 1750, but considering this building had the same effect as other manufacturies and they all have factors of 1, I assumed this was a vanilla oversight.
+		#BT Addon removed a bunch of modifiers for the same reason as directly above.
+		#BT Addon New factors, range 2 percent to about 425 percent
+		modifier = {
+			factor = 1.5
+			is_great_power = yes
+		}	#Great powers get a sustantial bonus, putting Muslims on par with Europeans, other Old World techs on par with Muslims, and rocketing European powers even higher.
+		modifier = {
+			factor = 1.3
+			owner = { ruler_has_personality = entrepreneur_personality }
+		}
+		modifier = {
+			factor = 1.3
+			owner = { ruler_has_personality = industrious_personality }
+		}
+		modifier = {
+			factor = 1.3
+			owner = { full_idea_group = economic_ideas }
+		}
+		modifier = {
+			factor = 1.5
+			owner = { navy_size_percentage = 0.9 }
+		}
+		modifier = {
+			factor = 1.5
+			FROM = { navy_tradition = 50 }
+		}
+		modifier = {
+			factor = 1.1
+			base_production = 4
+		}
+		modifier = {
+			factor = 1.2
+			base_production = 8
+		}
+		modifier = {
+			factor = 1.4
+			base_production = 12
+		}
+	}
+}
+
+weapons = {
+	manufactory = {
+		copper
+		iron
+	}
+	modifier = {
+		trade_goods_size = 0.4			#BTAddon Note - Alright, alright. I'm giving in. It makes no sense, but vanilla apparently didn't bother to code in compatibility with the modifier version, so I have little choice but to give a flat bonus here.
+		trade_goods_size_modifier = 0.5			#BTAddOn changed from flat trade good size increase. Logic above at the top of Manufactories entries.
+		land_forcelimit = 0.5			#BTAddOn new - Just a fun little new bonus
+	}
+	onmap = yes
+	
+	ai_will_do = {
+		factor = 12			#BT Addon changed from 1. Changing all base factors to price divided by 100. AI apparently doesn't factor the modifier, just the raw size increase, so also increasing weight beyond that by 20 percent for manufacturies with other bonuses, and 60 for non-factored bonuses.
+		modifier = {
+			factor = 1.5
+			is_great_power = yes
+		}	#Great powers get a sustantial bonus, putting Muslims on par with Europeans, other Old World techs on par with Muslims, and rocketing European powers even higher.
+		modifier = {
+			factor = 0.1
+			AND = {
+				NOT = { technology_group = western }
+				NOT = { total_development = 100 }
+			}
+		}	#Small non western AI countries shouldn't be grasping like this, institutions can spread to them from bigger neighbours. Further penalty even beyond the tech group penalty above. 
+		modifier = {
+			factor = 1.3
+			owner = { ruler_has_personality = entrepreneur_personality }
+		}
+		modifier = {
+			factor = 1.3
+			owner = { ruler_has_personality = industrious_personality }
+		}
+		modifier = {
+			factor = 1.3
+			owner = { full_idea_group = economic_ideas }
+		}
+		modifier = {
+			factor = 1.5
+			owner = { army_size_percentage = 0.9 }
+		}
+		modifier = {
+			factor = 1.5
+			FROM = { army_tradition = 50 }
+		}
+		modifier = {
+			factor = 1.1
+			base_production = 4
+		}
+		modifier = {
+			factor = 1.2
+			base_production = 8
+		}
+		modifier = {
+			factor = 1.4
+			base_production = 12
+		}
+	}
+}
+
+textile = {
+	manufactory = {
+		wool
+		cloth
+		silk
+		dyes
+		bt_trade_good_books
+	}
+	modifier = {
+		trade_goods_size = 0.4			#BTAddon Note - Alright, alright. I'm giving in. It makes no sense, but vanilla apparently didn't bother to code in compatibility with the modifier version, so I have little choice but to give a flat bonus here.
+		trade_goods_size_modifier = 0.5			#BTAddOn changed from flat trade good size increase. Logic above at the top of Manufactories entries.
+		local_tax_modifier = 0.25			#BTAddOn new - Just a fun little new bonus
+	}
+	onmap = yes
+	
+	ai_will_do = {
+		factor = 8			#BT Addon changed from 1. Changing all base factors to price divided by 100. AI apparently doesn't factor the modifier, just the raw size increase, so also increasing weight beyond that by 20 percent for manufacturies with other bonuses, and 60 for non-factored bonuses.
+		modifier = {
+			factor = 1.5
+			is_great_power = yes
+		}	#Great powers get a sustantial bonus, putting Muslims on par with Europeans, other Old World techs on par with Muslims, and rocketing European powers even higher.
+		modifier = {
+			factor = 0.1
+			AND = {
+				NOT = { technology_group = western }
+				NOT = { total_development = 100 }
+			}
+		}	#Small non western AI countries shouldn't be grasping like this, institutions can spread to them from bigger neighbours. Further penalty even beyond the tech group penalty above. 
+		modifier = {
+			factor = 1.3
+			owner = { ruler_has_personality = entrepreneur_personality }
+		}
+		modifier = {
+			factor = 1.3
+			owner = { ruler_has_personality = industrious_personality }
+		}
+		modifier = {
+			factor = 1.3
+			owner = { full_idea_group = economic_ideas }
+		}
+		modifier = {
+			factor = 1.1
+			base_tax = 4
+		}
+		modifier = {
+			factor = 1.2
+			base_tax = 8
+		}
+		modifier = {
+			factor = 1.4
+			base_tax = 12
+		}
+		modifier = {
+			factor = 1.1
+			base_production = 4
+		}
+		modifier = {
+			factor = 1.2
+			base_production = 8
+		}
+		modifier = {
+			factor = 1.4
+			base_production = 12
+		}
+	}
+}
+
+plantations = {
+	manufactory = {
+		coffee
+		cotton
+		sugar
+		tobacco
+		tea
+		cocoa
+	}
+	modifier = {
+		trade_goods_size = 0.4			#BTAddon Note - Alright, alright. I'm giving in. It makes no sense, but vanilla apparently didn't bother to code in compatibility with the modifier version, so I have little choice but to give a flat bonus here.
+		trade_goods_size_modifier = 0.5			#BTAddOn changed from flat trade good size increase. Logic above at the top of Manufactories entries.
+		local_production_efficiency = 0.25			#BTAddOn new - Just a fun little new bonus
+	}
+	onmap = yes
+	
+	ai_will_do = {
+		factor = 8			#BT Addon changed from 1. Changing all base factors to price divided by 100. AI apparently doesn't factor the modifier, just the raw size increase, so also increasing weight beyond that by 20 percent for manufacturies with other bonuses, and 60 for non-factored bonuses.
+		modifier = {
+			factor = 1.5
+			is_great_power = yes
+		}	#Great powers get a sustantial bonus, putting Muslims on par with Europeans, other Old World techs on par with Muslims, and rocketing European powers even higher.
+		modifier = {
+			factor = 0.1
+			AND = {
+				NOT = { technology_group = western }
+				NOT = { total_development = 100 }
+			}
+		}	#Small non western AI countries shouldn't be grasping like this, institutions can spread to them from bigger neighbours. Further penalty even beyond the tech group penalty above. 
+		modifier = {
+			factor = 1.3
+			owner = { ruler_has_personality = entrepreneur_personality }
+		}
+		modifier = {
+			factor = 1.3
+			owner = { ruler_has_personality = industrious_personality }
+		}
+		modifier = {
+			factor = 1.3
+			owner = { full_idea_group = economic_ideas }
+		}
+		modifier = {
+			factor = 1.15
+			base_production = 4
+		}
+		modifier = {
+			factor = 1.3
+			base_production = 8
+		}
+		modifier = {
+			factor = 1.6
+			base_production = 12
+		}
+	}
+}
+
+tradecompany = {
+	manufactory = {
+		ivory
+		slaves
+		spices
+		fur
+		incense
+	}
+	modifier = {
+		trade_goods_size = 0.4			#BTAddon Note - Alright, alright. I'm giving in. It makes no sense, but vanilla apparently didn't bother to code in compatibility with the modifier version, so I have little choice but to give a flat bonus here.
+		trade_goods_size_modifier = 0.5			#BTAddOn changed from flat trade good size increase. Logic above at the top of Manufactories entries.
+		province_trade_power_modifier = 0.5			#BTAddOn new - Just a fun little new bonus
+	}
+	onmap = yes
+
+	ai_will_do = {
+		factor = 7			#BT Addon changed from 1. Changing all base factors to price divided by 100. AI apparently doesn't factor the modifier, just the raw size increase, so also increasing weight beyond that by 20 percent for manufacturies with other bonuses, and 60 for non-factored bonuses.
+		modifier = {
+			factor = 1.5
+			is_great_power = yes
+		}	#Great powers get a sustantial bonus, putting Muslims on par with Europeans, other Old World techs on par with Muslims, and rocketing European powers even higher.
+		modifier = {
+			factor = 0.1
+			AND = {
+				NOT = { technology_group = western }
+				NOT = { total_development = 100 }
+			}
+		}	#Small non western AI countries shouldn't be grasping like this, institutions can spread to them from bigger neighbours. Further penalty even beyond the tech group penalty above. 
+		modifier = {
+			factor = 1.3
+			owner = { ruler_has_personality = entrepreneur_personality }
+		}
+		modifier = {
+			factor = 1.3
+			owner = { ruler_has_personality = industrious_personality }
+		}
+		modifier = {
+			factor = 1.3
+			owner = { full_idea_group = economic_ideas }
+		}
+		modifier = {
+			factor = 1.3
+			owner = { full_idea_group = trade_ideas }
+		}
+		modifier = {
+			factor = 1.1
+			province_trade_power = 5			#Note trade power 5 is 21 dev non coastal with 0 autonomy, starting mercantalism, and no estate. OR 9 dev coastal with 40 mercantalism, 0 autonomy, burgher estate, max tech, and trade national ideas, OR some combination of the two.
+		}
+		modifier = {
+			factor = 1.2
+			province_trade_power = 8			#Note 8 trade power is between 31 dev and 14 dev (or 3 dev for CoTs), depending on modifiers, estates, mercantalism, autonomy etc.
+		}
+		modifier = {
+			factor = 1.4
+			province_trade_power = 12			#Note 12 trade power is between
+		}
+		modifier = {
+			factor = 1.1
+			base_production = 4
+		}
+		modifier = {
+			factor = 1.2
+			base_production = 8
+		}
+		modifier = {
+			factor = 1.4
+			base_production = 12
+		}
+	}
+}
+
+farm_estate = {
+	manufactory = {
+		grain
+		livestock
+		wine
+		bt_trade_good_beer
+		bt_trade_good_fruit
+		bt_trade_good_apiculture
+	}
+	modifier = {
+		trade_goods_size = 0.4			#BTAddon Note - Alright, alright. I'm giving in. It makes no sense, but vanilla apparently didn't bother to code in compatibility with the modifier version, so I have little choice but to give a flat bonus here.
+		trade_goods_size_modifier = 0.5			#BTAddOn changed from flat trade good size increase. Logic above at the top of Manufactories entries.
+		local_production_efficiency = 0.25			#BTAddOn new - Just a fun little new bonus
+	}
+	onmap = yes
+	
+	ai_will_do = {
+		factor = 8			#BT Addon changed from 1. Changing all base factors to price divided by 100. AI apparently doesn't factor the modifier, just the raw size increase, so also increasing weight beyond that by 20 percent for manufacturies with other bonuses, and 60 for non-factored bonuses.
+		modifier = {
+			factor = 1.5
+			is_great_power = yes
+		}	#Great powers get a sustantial bonus, putting Muslims on par with Europeans, other Old World techs on par with Muslims, and rocketing European powers even higher.
+		modifier = {
+			factor = 0.1
+			AND = {
+				NOT = { technology_group = western }
+				NOT = { total_development = 100 }
+			}
+		}	#Small non western AI countries shouldn't be grasping like this, institutions can spread to them from bigger neighbours. Further penalty even beyond the tech group penalty above. 
+		modifier = {
+			factor = 1.3
+			owner = { ruler_has_personality = entrepreneur_personality }
+		}
+		modifier = {
+			factor = 1.3
+			owner = { ruler_has_personality = industrious_personality }
+		}
+		modifier = {
+			factor = 1.3
+			owner = { full_idea_group = economic_ideas }
+		}
+		modifier = {
+			factor = 1.15
+			base_production = 4
+		}
+		modifier = {
+			factor = 1.3
+			base_production = 8
+		}
+		modifier = {
+			factor = 1.6
+			base_production = 12
+		}
+	}
+}
+
+
+mills = {
+	manufactory = {
+		paper
+		gems
+		tropical_wood
+		glass
+		chinaware
+	}
+	modifier = {
+		trade_goods_size = 0.4			#BTAddon Note - Alright, alright. I'm giving in. It makes no sense, but vanilla apparently didn't bother to code in compatibility with the modifier version, so I have little choice but to give a flat bonus here.
+		trade_goods_size_modifier = 0.5			#BTAddOn changed from flat trade good size increase. Logic above at the top of Manufactories entries.
+		local_tax_modifier = 0.25			#BTAddOn new - Just a fun little new bonus
+	}
+	onmap = yes
+	
+	ai_will_do = {
+		factor = 8			#BT Addon changed from 1. Changing all base factors to price divided by 100. AI apparently doesn't factor the modifier, just the raw size increase, so also increasing weight beyond that by 20 percent for manufacturies with other bonuses, and 60 for non-factored bonuses.
+		modifier = {
+			factor = 1.5
+			is_great_power = yes
+		}	#Great powers get a sustantial bonus, putting Muslims on par with Europeans, other Old World techs on par with Muslims, and rocketing European powers even higher.
+		modifier = {
+			factor = 0.1
+			AND = {
+				NOT = { technology_group = western }
+				NOT = { total_development = 100 }
+			}
+		}	#Small non western AI countries shouldn't be grasping like this, institutions can spread to them from bigger neighbours. Further penalty even beyond the tech group penalty above. 
+		modifier = {
+			factor = 1.3
+			owner = { ruler_has_personality = entrepreneur_personality }
+		}
+		modifier = {
+			factor = 1.3
+			owner = { ruler_has_personality = industrious_personality }
+		}
+		modifier = {
+			factor = 1.3
+			owner = { full_idea_group = economic_ideas }
+		}
+		modifier = {
+			factor = 1.1
+			base_tax = 4
+		}
+		modifier = {
+			factor = 1.2
+			base_tax = 8
+		}
+		modifier = {
+			factor = 1.4
+			base_tax = 12
+		}
+		modifier = {
+			factor = 1.1
+			base_production = 4
+		}
+		modifier = {
+			factor = 1.2
+			base_production = 8
+		}
+		modifier = {
+			factor = 1.4
+			base_production = 12
+		}
+	}
+}
+
+furnace = {
+	manufactory = {
+		coal
+	}
+
+	potential = {
+		has_dlc = "Rule Britannia"
+	}
+
+	modifier = {
+		trade_goods_size = 0.4			#BTAddon Note - Alright, alright. I'm giving in. It makes no sense, but vanilla apparently didn't bother to code in compatibility with the modifier version, so I have little choice but to give a flat bonus here.
+		trade_goods_size_modifier = 0.5			#BTAddOn changed from flat trade good size increase. Logic above at the top of Manufactories entries.
+		global_trade_goods_size_modifier = 0.03			#BTAddOn changed from 0.05. This was just too huge, especially with all the new provinces.
+	}
+	onmap = yes
+	show_separate = yes # Means as a manufactory it will be shown according to the old way
+	
+	ai_will_do = {
+		factor = 15			#BT Addon changed from 1. Changing all base factors to price divided by 100. AI apparently doesn't factor the modifier, just the raw size increase, so also increasing weight beyond that by 20 percent for manufacturies with other bonuses, and 60 for non-factored bonuses.
+		modifier = {
+			factor = 1.5
+			is_great_power = yes
+		}	#Great powers get a sustantial bonus, putting Muslims on par with Europeans, other Old World techs on par with Muslims, and rocketing European powers even higher.
+		modifier = {
+			factor = 0.1
+			AND = {
+				NOT = { technology_group = western }
+				NOT = { total_development = 100 }
+			}
+		}	#Small non western AI countries shouldn't be grasping like this, institutions can spread to them from bigger neighbours. Further penalty even beyond the tech group penalty above. 
+		modifier = {
+			factor = 1.3
+			owner = { ruler_has_personality = entrepreneur_personality }
+		}
+		modifier = {
+			factor = 1.3
+			owner = { ruler_has_personality = industrious_personality }
+		}
+		modifier = {
+			factor = 1.3
+			owner = { full_idea_group = economic_ideas }
+		}
+		modifier = {
+			factor = 1.15
+			base_production = 4
+		}
+		modifier = {
+			factor = 1.3
+			base_production = 8
+		}
+		modifier = {
+			factor = 1.6
+			base_production = 12
+		}
+	}
+}
+
+ramparts = {
+	manufactory = {
+		all
+	}
+	modifier = {
+		local_hostile_attrition = 1
+		local_defensiveness = 0.15
+	}
+	onmap = no
+	show_separate = yes # Means as a manufactory it will be shown according to the old way
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+soldier_households = {
+	manufactory = {
+		all
+	}
+
+	bonus_manufactory = { # Will apply an extra modifier if these goods
+		grain
+		fish
+		livestock
+		wine
+	}
+
+	modifier = {
+		local_manpower = 0.75
+	}
+	bonus_modifier = {
+		local_manpower = 0.75
+	}
+	onmap = no
+	show_separate = yes # Means as a manufactory it will be shown according to the old way
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+impressment_offices = {
+	manufactory = {
+		all
+	}
+
+	bonus_manufactory = { # Will apply an extra modifier if these goods
+		salt
+		fish
+		naval_supplies
+		tropical_wood
+	}
+
+	build_trigger = {
+		has_port = yes
+	}
+
+	modifier = {
+		local_sailors = 250
+	}
+	bonus_modifier = {
+		local_sailors = 250
+	}
+	onmap = no
+	show_separate = yes # Means as a manufactory it will be shown according to the old way
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+
+state_house = {
+	manufactory = {
+		all
+	}
+
+	bonus_manufactory = { # Will apply an extra modifier if these goods
+		paper
+		glass
+		gems
+	}
+
+	build_trigger = {
+		is_state = yes
+		NOT = {
+			area_for_scope_province = {
+				owner = {
+					tag = ROOT
+				}
+				OR = {
+					has_building = state_house
+					has_construction = state_house
+				}
+			}
+		}
+	}
+	
+	keep_trigger = {
+		NOT = {
+			area_for_scope_province = {
+				NOT = { province_id = root }
+				owner = {
+					tag = ROOT
+				}
+				OR = {
+					has_building = state_house
+					has_construction = state_house
+				}
+			}
+		}
+	}
+
+	modifier = {
+		statewide_governing_cost = -0.2
+		min_local_autonomy = -5
+	}
+	bonus_modifier = {
+		statewide_governing_cost = -0.2
+		min_local_autonomy = -5
+	}
+	onmap = no
+	show_separate = yes # Means as a manufactory it will be shown according to the old way
+
+	ai_will_do = {
+		factor = 1
+	}
+}

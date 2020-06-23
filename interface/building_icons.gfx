@@ -1650,6 +1650,42 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_soldier_households"
+		texturefile = "gfx//interface//buildings//latin_war_college.tga"
+		loadType = "INGAME"
+	}
+
+	spriteType = {
+		name = "GFX_ramparts"
+		texturefile = "gfx//interface//buildings//ramparts.tga"
+		loadType = "INGAME"
+	}
+
+	spriteType = {
+		name = "GFX_impressment_offices"
+		texturefile = "gfx//interface//buildings//latin_admiralty.tga"
+		loadType = "INGAME"
+	}
+
+	spriteType = {
+		name = "GFX_state_house"
+		texturefile = "gfx//interface//buildings//latin_royal_palace.tga"
+		loadType = "INGAME"
+	}
+	
+	spriteType = {
+		name = "GFX_coastal_defence"
+		texturefile = "gfx/interface/buildings/coastal_defence.dds"
+		loadType = "INGAME"
+	}
+	
+	spriteType = {
+		name = "GFX_naval_battery"
+		texturefile = "gfx/interface/buildings/naval_battery.dds"
+		loadType = "INGAME"
+	}
+
+	spriteType = {		   
 		name = "GFX_plantations"
 		texturefile = "gfx//interface//buildings//manufactory_plantations.tga"
 		loadType = "INGAME"
@@ -1828,4 +1864,86 @@ spriteTypes = {
 		loadType = "INGAME"
 	}
 
+	#Mesogeios compatibility. Don't need to modify latingfx since they use western stuff, which is the default.
+	#List:
+	#Turkish -> Muslim
+	#Greek -> Eastern
+	#Persian -> Muslim
+	#Mongol -> Chinese (Was considering Muslim here, but not all Mongols are Muslim)
+	#Thai -> Chinese (Mostly because there are no other options for them)
+	spriteType = {
+		name = "GFX_earth_rampart_turkishgfx"
+		texturefile = "gfx//interface//buildings//muslim_earth_rampart.tga"
+		loadType = "INGAME"
+	}	
+	spriteType = {
+		name = "GFX_earth_rampart_greekgfx"
+		texturefile = "gfx//interface//buildings//eastern_earth_rampart.tga"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_earth_rampart_persiangfx"
+		texturefile = "gfx//interface//buildings//muslim_earth_rampart.tga"
+		loadType = "INGAME"
+	}	
+	spriteType = {
+		name = "GFX_earth_rampart_mongolgfx"
+		texturefile = "gfx//interface//buildings//chinese_earth_rampart.tga"
+		loadType = "INGAME"
+	}	
+	spriteType = {
+		name = "GFX_earth_rampart_thaigfx"
+		texturefile = "gfx//interface//buildings//chinese_earth_rampart.tga"
+		loadType = "INGAME"
+	}	
+	spriteType = {
+		name = "GFX_tenaille_turkishgfx"
+		texturefile = "gfx//interface//buildings//muslim_tenaille.tga"
+		loadType = "INGAME"
+	}	
+	spriteType = {
+		name = "GFX_tenaille_greekgfx"
+		texturefile = "gfx//interface//buildings//eastern_tenaille.tga"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_tenaille_persiangfx"
+		texturefile = "gfx//interface//buildings//muslim_tenaille.tga"
+		loadType = "INGAME"
+	}	
+	spriteType = {
+		name = "GFX_tenaille_mongolgfx"
+		texturefile = "gfx//interface//buildings//chinese_tenaille.tga"
+		loadType = "INGAME"
+	}	
+	spriteType = {
+		name = "GFX_tenaille_thaigfx"
+		texturefile = "gfx//interface//buildings//chinese_tenaille.tga"
+		loadType = "INGAME"
+	}	
+	spriteType = {
+		name = "GFX_redoubt_turkishgfx"
+		texturefile = "gfx//interface//buildings//muslim_redoubt.tga"
+		loadType = "INGAME"
+	}	
+	spriteType = {
+		name = "GFX_redoubt_greekgfx"
+		texturefile = "gfx//interface//buildings//eastern_redoubt.tga"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_redoubt_persiangfx"
+		texturefile = "gfx//interface//buildings//muslim_redoubt.tga"
+		loadType = "INGAME"
+	}	
+	spriteType = {
+		name = "GFX_redoubt_mongolgfx"
+		texturefile = "gfx//interface//buildings//chinese_redoubt.tga"
+		loadType = "INGAME"
+	}	
+	spriteType = {
+		name = "GFX_redoubt_thaigfx"
+		texturefile = "gfx//interface//buildings//chinese_redoubt.tga"
+		loadType = "INGAME"
+	}	
 }
