@@ -15,6 +15,10 @@ march_building = {
 		has_building = fort_17th
 		has_building = fort_18th
 	}
+
+	keep_trigger = {
+		owner = { is_subject = yes }
+	}
 	
 	modifier = {
 		local_defensiveness = 0.25
@@ -39,6 +43,10 @@ embassy = {
 		}
 		development = 25
 	}
+
+	keep_trigger = {
+		owner = { is_subject = yes }
+	}
 	
 	modifier = {
 		local_unrest = -2.5
@@ -62,6 +70,10 @@ spy_agency = {
 			is_subject = yes
 		}
 		is_capital = yes
+	}
+
+	keep_trigger = {
+		owner = { is_subject = yes }
 	}
 	
 	modifier = {

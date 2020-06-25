@@ -3,6 +3,8 @@ order_of_the_lamp = {
     trigger = {
         any_owned_province = { continent = Tamriel } 
         NOT = { culture_group = chimeris_cg }
+        NOT = { capital_scope = { superregion = high_rock_superregion } }
+        NOT = { capital_scope = { superregion = summerset_islands_superregion } }
 	}
 	cost = 100 cost_type = adm_power per_province_effect = { add_base_tax = 1 } per_province_abandon_effect = { add_base_tax = -1 }
     modifier = { local_regiment_cost = -0.15 local_institution_spread = 0.10 }
@@ -116,7 +118,7 @@ sapiarchs_order = {
         capital_scope = { superregion = summerset_islands_superregion }
 	}
 	cost = 100 cost_type = adm_power per_province_effect = { add_base_tax = 1 } per_province_abandon_effect = { add_base_tax = -1 }
-    modifier = { local_hostile_movement_speed = 0.15 local_tax_modifier = 0.10 }
+    modifier = { local_hostile_movement_speed = -0.15 local_tax_modifier = 0.10 }
     ai_priority = { factor = 1 }
 }
 

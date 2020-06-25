@@ -40,7 +40,7 @@ post_office = {
 			limit = {
 				NOT = { province_id = ROOT }
 			}
-			add_province_modifier = {
+			add_permanent_province_modifier = {
 				name = post_office_area_modifier
 				duration = -1
 			}
@@ -146,7 +146,7 @@ glorious_monument = {
 			limit = {
 				NOT = { province_id = ROOT }
 			}
-			add_province_modifier = {
+			add_permanent_province_modifier = {
 				name = glorious_monument_area_modifier
 				duration = -1
 			}
@@ -279,7 +279,7 @@ treasury_office = {
 				NOT = { trade_goods = gold  }
 				NOT = { province_id = ROOT }
 			}
-			add_province_modifier = {
+			add_permanent_province_modifier = {
 				name = treasury_office_area_modifier
 				duration = -1
 			}
@@ -394,7 +394,7 @@ constable = {
 			limit = {
 				NOT = { province_id = ROOT }
 			}
-			add_province_modifier = {
+			add_permanent_province_modifier = {
 				name = constable_area_modifier
 				duration = -1
 			}

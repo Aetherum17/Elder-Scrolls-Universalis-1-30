@@ -180,7 +180,7 @@ administrative_missions = {
 	
 	build_palaces_mission = {
 		icon = mission_japanese_fort
-		required_missions = { increase_1_prestige_mission }
+		required_missions = { fill_2_treasury_mission }
 		trigger = {
 			num_of_owned_provinces_with = {
 				value = 25
@@ -539,21 +539,18 @@ diplomatic_missions = {
 		}
 	}
 	
-	build_more_docks = {
-		icon = mission_galleys_in_port
+	build_farm_estates = {
+		icon = mission_rice_field
 		required_missions = { build_more_naval_arsenals }
 		trigger = {
 			num_of_owned_provinces_with = {
 				value = 25
-				OR = {
-				    has_building = dock
-					has_building = drydock
-				}
+				has_building = farm_estate
 			}
 		}
 		effect = {
 			add_country_modifier = {
-				name = "es_more_docks"
+				name = "es_farm_estate"
 				duration = -1
 			}
 		}
@@ -561,7 +558,7 @@ diplomatic_missions = {
 	
 	increase_1_number_of_trade_centers = {
 		icon = mission_iberian_conquistador
-		required_missions = { build_more_docks }
+		required_missions = { build_farm_estates }
 		trigger = { check_variable = { which = cot_upgraded value = 15 } }
 		effect = {
 			add_country_modifier = {
@@ -637,19 +634,22 @@ diplomatic_missions = {
 			}
 		}
 	}
-	
-	build_farm_estates = {
-		icon = mission_rice_field
+
+	build_more_docks = {
+		icon = mission_galleys_in_port
 		required_missions = { find_more_merchants_continents }
 		trigger = {
 			num_of_owned_provinces_with = {
 				value = 25
-				has_building = farm_estate
+				OR = {
+				    has_building = dock
+					has_building = drydock
+				}
 			}
 		}
 		effect = {
 			add_country_modifier = {
-				name = "es_farm_estate"
+				name = "es_more_docks"
 				duration = -1
 			}
 		}
@@ -657,7 +657,7 @@ diplomatic_missions = {
 	
 	es_build_textile = {
 		icon = mission_have_manufactories
-		required_missions = { build_farm_estates }
+		required_missions = { build_more_docks }
 		trigger = {
 			num_of_owned_provinces_with = {
 				value = 25
