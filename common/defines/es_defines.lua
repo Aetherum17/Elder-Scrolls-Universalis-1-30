@@ -794,7 +794,7 @@ NDefines.NCountry.MONARCH_DEATH_MIN_CHANCE_MODIFIER = 0		-- Minimum death chance
 NDefines.NCountry.CROWN_LANDS_ALERT_THRESHOLD = 25
 NDefines.NCountry.PS_MOVE_CAPITAL_DISTANCE = 10					-- How many pixels distance per 1 Adm.
 NDefines.NCountry.PS_MOVE_CAPITAL_DISTANCE_CAP = 500				-- How much this penalty is allowed to cost in Adm.
-NDefines.NCountry.PS_RAISE_WAR_TAXES = 2.5	-- Monthly Cost
+NDefines.NCountry.PS_RAISE_WAR_TAXES = 1	-- Monthly Cost
 NDefines.NCountry.PROVOKE_REVOLT_SIZE_FACTOR = 0.5 -- Extra strength of revolt when using provoke revolt
 NDefines.NCountry.PROVOKE_REVOLT_MIN_PROGRESS = 25.0	-- Minimum revolt progress to use provoke
 NDefines.NCountry.UNREST_DECAY = 1.0
@@ -1146,6 +1146,9 @@ NDefines.NMilitary.LEADER_MAX_RANDOM_DAYS = 730
 NDefines.NMilitary.LEADER_WORK_YEARS_DEATH_FACTOR = 2.5					-- Divides how many years he has been working to calculate chance
 NDefines.NMilitary.LEADER_AGE_DEATH_FACTOR = 2.5					-- Divides age with this to calculate chance
 NDefines.NMilitary.MERCENARY_COMPANY_ARMY_TRADITION = 50.0		-- At what army tradition mercenaries leaders are generated on.
+
+NDefines.NMilitary.FLAGSHIP_COST_DUCATS = 250
+NDefines.NMilitary.FLAGSHIP_COST_SAILORS = 500
 
 NDefines.NEngine.EVENT_PROCESS_OFFSET = 50
 

@@ -268,27 +268,4 @@ country_decisions = {
 			factor = 1
 		}
 	}
-	cossack_nation = {
-		major = yes
-		potential = {
-			tag = ZAZ
-			NOT = { has_reform = cossacks_reform }
-			has_dlc = "The Cossacks"
-		}
-		allow = {
-			stability = 0
-			NOT = { government = dictatorship }
-			NOT = { has_reform = presidential_despot_reform }
-		}
-		effect = {
-			if = {
-				limit = { NOT = { government = republic } }
-				change_government_to_republic = yes
-			}
-			add_government_reform = cossacks_reform
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
 }

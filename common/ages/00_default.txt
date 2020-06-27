@@ -51,7 +51,7 @@ classical_age = {
 	abilities = {
 		ab_classical_architecture = {
 			modifier = {
-				build_cost = -0.10
+				build_cost = -0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -83,7 +83,7 @@ classical_age = {
 		}
 		ab_classical_great_people = {
 			modifier = {
-				advisor_cost = -0.10
+				advisor_cost = -0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -91,7 +91,7 @@ classical_age = {
 		}
 		ab_classical_defence = {
 			modifier = {
-				enemy_core_creation = 0.10
+				defensiveness = 0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -107,7 +107,7 @@ classical_age = {
 		}
 		ab_classical_roman_stability = {
 			modifier = {
-				global_unrest = -1
+				global_unrest = -1.5
 			}
 			ai_will_do = {
 				factor = 10
@@ -195,7 +195,7 @@ late_classical_age = {
 		}
 		ab_lateclassical_expeditions = {
 			modifier = {
-				trade_range_modifier = 0.10
+				trade_range_modifier = 0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -203,7 +203,7 @@ late_classical_age = {
 		}
 		ab_lateclassical_conscription = {
 			modifier = {
-				global_manpower_modifier = 0.10
+				global_manpower_modifier = 0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -328,7 +328,7 @@ age_of_migrations = {
 	abilities = {
 		ab_migration_foraging = {
 			modifier = {
-				land_attrition = -0.1
+				land_attrition = -0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -336,7 +336,7 @@ age_of_migrations = {
 		}
 		ab_migration_resettlement = {
 			modifier = {
-				culture_conversion_cost = -0.10
+				culture_conversion_cost = -0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -344,7 +344,7 @@ age_of_migrations = {
 		}
 		ab_migration_expansion = {
 			modifier = {
-				core_creation = -0.10
+				core_creation = -0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -352,7 +352,7 @@ age_of_migrations = {
 		}
 		ab_migration_marching = {
 			modifier = {
-				movement_speed = 0.10
+				movement_speed = 0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -360,7 +360,7 @@ age_of_migrations = {
 		}
 		ab_migration_looting = {
 			modifier = {
-				loot_amount = 0.10
+				loot_amount = 0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -368,7 +368,7 @@ age_of_migrations = {
 		}
 		ab_migration_border_walls = {
 			modifier = {
-				defensiveness = 0.10
+				defensiveness = 0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -376,7 +376,7 @@ age_of_migrations = {
 		}
 		ab_migration_siege = {
 			modifier = {
-				siege_ability = 0.10
+				siege_ability = 0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -384,7 +384,7 @@ age_of_migrations = {
 		}
 		ab_migration_migration = {
 			modifier = {
-				claim_duration = 0.10
+				claim_duration = 0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -392,7 +392,7 @@ age_of_migrations = {
 		}
 		ab_migration_horde_razing = {
 			modifier = {
-				raze_power_gain = 0.10
+				raze_power_gain = 0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -400,7 +400,7 @@ age_of_migrations = {
 		}	
 		ab_migration_barbarian_swarm = {
 			modifier = {
-				land_maintenance_modifier = -0.10
+				land_maintenance_modifier = -0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -408,7 +408,7 @@ age_of_migrations = {
 		}
 		ab_migration_hunnic_horde = {
 			modifier = {
-				cavalry_cost = -0.10
+				cavalry_cost = -0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -466,7 +466,7 @@ dark_age = {
 	abilities = {
 		ab_darkage_raiding = {
 			modifier = {
-				privateer_efficiency = 0.10
+				privateer_efficiency = 0.25
 			}
 			ai_will_do = {
 				factor = 10
@@ -474,7 +474,7 @@ dark_age = {
 		}
 		ab_darkage_border_disputes = {
 			modifier = {
-				fabricate_claims_cost = -0.10
+				fabricate_claims_cost = -0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -482,7 +482,7 @@ dark_age = {
 		}
 		ab_darkage_spies = {
 			modifier = {
-				spy_offence = 0.10
+				spy_offence = 0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -490,7 +490,7 @@ dark_age = {
 		}
 		ab_darkage_stable_empire = {
 			modifier = {
-				stability_cost_modifier = -0.10
+				stability_cost_modifier = -0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -530,7 +530,7 @@ dark_age = {
 		}
 		ab_darkage_frankish_states = {
 			modifier = {
-				governing_capacity_modifier = 0.1
+				governing_capacity_modifier = 0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -538,7 +538,7 @@ dark_age = {
 		}
 		ab_darkage_chinese_innovation = {
 			modifier = {
-				idea_cost = -0.1
+				idea_cost = -0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -546,7 +546,7 @@ dark_age = {
 		}
 		ab_darkage_mulim_expansion = {
 			modifier = {
-				core_creation = -0.10
+				core_creation = -0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -599,7 +599,7 @@ feudal_age = {
 	abilities = {
 		ab_feudal_glorious_battles = {
 			modifier = {
-				prestige_from_land = 0.10
+				prestige_from_land = 0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -607,7 +607,7 @@ feudal_age = {
 		}
 		ab_feudal_tax = {
 			modifier = {
-				vassal_income = 0.10
+				vassal_income = 0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -623,7 +623,7 @@ feudal_age = {
 		}
 		ab_feudal_mercenaries = {
 			modifier = {
-				merc_maintenance_modifier = -0.10
+				merc_maintenance_modifier = -0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -631,7 +631,7 @@ feudal_age = {
 		}
 		ab_feudal_levies = {
 			modifier = {
-				vassal_forcelimit_bonus = 0.10
+				vassal_forcelimit_bonus = 0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -639,7 +639,7 @@ feudal_age = {
 		}
 		ab_feudal_military_duty = {
 			modifier = {
-				global_manpower_modifier = 0.10
+				global_manpower_modifier = 0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -647,7 +647,7 @@ feudal_age = {
 		}
 		ab_feudal_law = {
 			modifier = {
-				stability_cost_modifier = -0.10
+				stability_cost_modifier = -0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -655,7 +655,7 @@ feudal_age = {
 		}
 		ab_feudal_norse_expeditions = {
 			modifier = {
-				range = 0.10
+				range = 0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -679,7 +679,7 @@ feudal_age = {
 		}
 		ab_feudal_pagan_defensiveness = {
 			modifier = {
-				defensiveness = 0.10
+				defensiveness = 0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -747,7 +747,7 @@ high_middle_ages = {
 		}
 		ab_highmiddle_crusaders = {
 			modifier = {
-				warscore_cost_vs_other_religion = -0.10
+				warscore_cost_vs_other_religion = -0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -755,7 +755,7 @@ high_middle_ages = {
 		}
 		ab_highmiddle_castles = {
 			modifier = {
-				fort_maintenance_modifier = -0.10
+				fort_maintenance_modifier = -0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -763,11 +763,11 @@ high_middle_ages = {
 		}
 		ab_highmiddle_lasting_dynasty = {
 			modifier = {
-			legitimacy = 0.25
+			legitimacy = 0.5
 			republican_tradition = 0.25
-			devotion = 0.25
-			horde_unity = 0.25
-			meritocracy = 0.25
+			devotion = 0.5
+			horde_unity = 0.5
+			meritocracy = 0.5
 			}
 			ai_will_do = {
 				factor = 10
@@ -775,7 +775,7 @@ high_middle_ages = {
 		}
 		ab_highmiddle_shock_tactics = {
 			modifier = {
-				shock_damage = 0.10
+				shock_damage = 0.1
 			}
 			ai_will_do = {
 				factor = 10
@@ -791,7 +791,7 @@ high_middle_ages = {
 		}
 		ab_highmiddle_fertile_farmlands = {
 			modifier = {
-				manpower_recovery_speed = 0.10
+				manpower_recovery_speed = 0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -799,7 +799,7 @@ high_middle_ages = {
 		}
 		ab_highmiddle_turkic_invasions = {
 			modifier = {
-				core_creation = -0.10
+				core_creation = -0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -807,7 +807,7 @@ high_middle_ages = {
 		}
 		ab_highmiddle_holy_roman_army = {
 			modifier = {
-				land_forcelimit_modifier = 0.10
+				land_forcelimit_modifier = 0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -815,7 +815,7 @@ high_middle_ages = {
 		}
 		ab_highmiddle_byzantine_defences = {
 			modifier = {
-				garrison_size = 0.10
+				garrison_size = 0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -823,7 +823,7 @@ high_middle_ages = {
 		}
 		ab_highmiddle_influential_bishops = {
 			modifier = {
-				global_missionary_strength = 0.01
+				global_missionary_strength = 0.015
 			}
 			ai_will_do = {
 				factor = 10
@@ -879,7 +879,7 @@ late_middle_ages = {
 	abilities = {
 		ab_latemiddle_legitimacy = {
 			modifier = {
-				global_unrest = -1
+				global_unrest = -1.5
 			}
 			ai_will_do = {
 				factor = 10
@@ -887,7 +887,7 @@ late_middle_ages = {
 		}
 		ab_latemiddle_trade = {
 			modifier = {
-				global_trade_power = 0.10
+				global_trade_power = 0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -903,7 +903,7 @@ late_middle_ages = {
 		}
 		ab_latemiddle_proselytism = {
 			modifier = {
-				global_missionary_strength = 0.01
+				global_missionary_strength = 0.015
 			}
 			ai_will_do = {
 				factor = 10
@@ -911,7 +911,7 @@ late_middle_ages = {
 		}
 		ab_latemiddle_cheaper_mercenaries = {
 			modifier = {
-				merc_maintenance_modifier = -0.10
+				merc_maintenance_modifier = -0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -919,7 +919,7 @@ late_middle_ages = {
 		}
 		ab_latemiddle_state_administration = {
 			modifier = {
-				governing_capacity_modifier = 0.1
+				governing_capacity_modifier = 0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -927,7 +927,7 @@ late_middle_ages = {
 		}
 		ab_latemiddle_careful_diplomacy = {
 			modifier = {
-				improve_relation_modifier = 0.10
+				improve_relation_modifier = 0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -959,7 +959,7 @@ late_middle_ages = {
 		}
 		ab_latemiddle_delhi_architecture = {
 			modifier = {
-				build_cost = -0.10
+				build_cost = -0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -1061,7 +1061,7 @@ age_of_discovery = {
 		}
 		ab_cavalry_armies = {
 			modifier = {
-				cav_to_inf_ratio = 0.10
+				cav_to_inf_ratio = 0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -1085,7 +1085,7 @@ age_of_discovery = {
 		}
 		ab_ottoman_siege_ability = {
 			modifier = {
-				siege_ability = 0.10
+				siege_ability = 0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -1093,7 +1093,7 @@ age_of_discovery = {
 		}
 		ab_portugal_colonial_growth = {
 			modifier = {
-				global_colonial_growth = 10
+				global_colonial_growth = 15
 			}
 			ai_will_do = {
 				factor = 10
@@ -1109,7 +1109,7 @@ age_of_discovery = {
 		}
 		ab_venice_ship_trade = {
 			modifier = {
-				global_ship_trade_power = 0.10
+				global_ship_trade_power = 0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -1200,7 +1200,7 @@ age_of_reformation = {
 		}
 		ab_warscore_vs_religion = {
 			modifier = {
-				warscore_cost_vs_other_religion = -0.10
+				warscore_cost_vs_other_religion = -0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -1216,7 +1216,7 @@ age_of_reformation = {
 		}
 		ab_ship_power_propagation = {
 			modifier = {
-				ship_power_propagation = 0.2
+				ship_power_propagation = 0.25
 			}
 			ai_will_do = {
 				factor = 10
@@ -1232,7 +1232,7 @@ age_of_reformation = {
 		}
 		ab_prestige_per_development_from_conversion = {
 			modifier = {
-				prestige_per_development_from_conversion = 0.10
+				prestige_per_development_from_conversion = 0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -1248,7 +1248,7 @@ age_of_reformation = {
 		}
 		ab_mughal_artillery = {
 			modifier = {
-				artillery_cost = -0.10
+				artillery_cost = -0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -1257,7 +1257,7 @@ age_of_reformation = {
 		
 		ab_polish_legitimacy = {
 			modifier = {
-				global_trade_goods_size_modifier = 0.10
+				global_trade_goods_size_modifier = 0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -1265,7 +1265,7 @@ age_of_reformation = {
 		}
 		ab_persia_reinforce = {
 			modifier = {
-				reinforce_cost_modifier = -0.10
+				reinforce_cost_modifier = -0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -1336,7 +1336,7 @@ age_of_absolutism = {
 		}
 		ab_rival_change = {
 			modifier = {
-				rival_change_cost = -0.10
+				rival_change_cost = -0.15
 			}
 			ai_will_do = {
 				factor = 0
@@ -1344,7 +1344,7 @@ age_of_absolutism = {
 		}
 		ab_rival_border_fort = {
 			modifier = {
-				rival_border_fort_maintenance = -0.10
+				rival_border_fort_maintenance = -0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -1352,7 +1352,7 @@ age_of_absolutism = {
 		}
 		ab_autonomy = {
 			modifier = {
-				autonomy_change_time = -0.10
+				autonomy_change_time = -0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -1360,7 +1360,7 @@ age_of_absolutism = {
 		}
 		ab_harsh_treatment = {
 			modifier = {
-				harsh_treatment_cost = -0.10
+				harsh_treatment_cost = -0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -1400,7 +1400,7 @@ age_of_absolutism = {
 		}	
 		ab_sweden_manpower = {
 			modifier = {
-				manpower_recovery_speed = 0.10
+				manpower_recovery_speed = 0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -1408,7 +1408,7 @@ age_of_absolutism = {
 		}
 		ab_manchu_banner = {
 			modifier = {
-				amount_of_banners = 0.10
+				amount_of_banners = 0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -1502,7 +1502,7 @@ age_of_revolutions = {
 		}
 		ab_more_ships_can_fire = {
 			modifier = {
-				global_naval_engagement_modifier = 0.10
+				global_naval_engagement_modifier = 0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -1518,7 +1518,7 @@ age_of_revolutions = {
 		}
 		ab_backrow_artillery = {
 			modifier = {
-				backrow_artillery_damage = 0.10
+				backrow_artillery_damage = 0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -1542,7 +1542,7 @@ age_of_revolutions = {
 		}
 		ab_gbr_fleet = {
 			modifier = {
-				naval_maintenance_modifier = -0.10
+				naval_maintenance_modifier = -0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -1550,7 +1550,7 @@ age_of_revolutions = {
 		}
 		ab_russia_boost = {
 			modifier = {
-				governing_capacity_modifier = 0.1
+				governing_capacity_modifier = 0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -1650,7 +1650,7 @@ industrial_age = {
 	abilities = {
 		ab_industrial_construction = {
 			modifier = {
-				build_cost = -0.10
+				build_cost = -0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -1658,7 +1658,7 @@ industrial_age = {
 		}
 		ab_industrial_development = {
 			modifier = {
-				development_cost = -0.10
+				development_cost = -0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -1682,7 +1682,7 @@ industrial_age = {
 		}
 		ab_industrial_weapons_industry = {
 			modifier = {
-				infantry_cost = -0.10
+				infantry_cost = -0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -1722,7 +1722,7 @@ industrial_age = {
 		}
 		ab_industrial_dutch_traders = {
 			modifier = {
-				global_trade_power = 0.10
+				global_trade_power = 0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -1808,7 +1808,7 @@ great_war_age = {
 	abilities = {
 		ab_greatwar_secret_police = {
 			modifier = {
-				global_unrest = -1
+				global_unrest = -1.5
 			}
 			ai_will_do = {
 				factor = 10
@@ -1816,7 +1816,7 @@ great_war_age = {
 		}
 		ab_greatwar_intelligence_network = {
 			modifier = {
-				spy_offence = 0.10
+				spy_offence = 0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -1824,8 +1824,7 @@ great_war_age = {
 		}
 		ab_greatwar_nuclear_project = {
 			effect = {
-				custom_tooltip = allow_construction_of_nuclear_weapons
-				set_country_flag = nuclear_weapons_allowed
+				fire_damage = 0.10
 			}
 			ai_will_do = {
 				factor = 10
@@ -1841,7 +1840,7 @@ great_war_age = {
 		}
 		ab_greatwar_war_industry = {
 			modifier = {
-				global_regiment_recruit_speed = -0.10
+				global_regiment_recruit_speed = -0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -1849,7 +1848,7 @@ great_war_age = {
 		}
 		ab_greatwar_total_war = {
 			modifier = {
-				war_exhaustion = -0.10
+				war_exhaustion_cost = -0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -1857,7 +1856,7 @@ great_war_age = {
 		}
 		ab_greatwar_military_expansion = {
 			modifier = {
-				core_creation = -0.10
+				core_creation = -0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -1865,7 +1864,7 @@ great_war_age = {
 		}
 		ab_greatwar_usa_production = {
 			modifier = {
-				global_trade_goods_size_modifier = 0.10
+				global_trade_goods_size_modifier = 0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -1873,7 +1872,7 @@ great_war_age = {
 		}
 		ab_greatwar_russian_tanks = {
 			modifier = {
-				cavalry_cost = -0.10
+				cavalry_cost = -0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -1988,7 +1987,7 @@ information_age = {
 		}
 		ab_info_stable_society = {
 			modifier = {
-				global_unrest = -1
+				global_unrest = -1.5
 			}
 			ai_will_do = {
 				factor = 10
@@ -2028,7 +2027,7 @@ information_age = {
 		}
 		ab_info_chinese_industry = {
 			modifier = {
-				global_trade_goods_size_modifier = 0.10
+				global_trade_goods_size_modifier = 0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -2036,7 +2035,7 @@ information_age = {
 		}
 		ab_info_indian_development = {
 			modifier = {
-				development_cost = -0.10
+				development_cost = -0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -2044,7 +2043,7 @@ information_age = {
 		}	
 		ab_info_arabian_oilfields = {
 			modifier = {
-				global_trade_goods_size_modifier = 0.10
+				global_trade_goods_size_modifier = 0.15
 			}
 			ai_will_do = {
 				factor = 10

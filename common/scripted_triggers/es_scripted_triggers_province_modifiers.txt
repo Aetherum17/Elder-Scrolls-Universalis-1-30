@@ -21,3 +21,69 @@ has_no_river_estuary_trigger = {
 		}
 	}
 }
+
+is_elven_nation_trigger = {
+    custom_trigger_tooltip = {
+        tooltip = has_river_estuary_tooltip
+		OR = {
+		    culture_group = maorner_cg
+			culture_group = high_elves_cg
+			culture_group = snow_elves_cg
+			culture_group = dwemer_cg
+			culture_group = bosmer_cg
+			culture_group = chimeris_cg
+		}
+	}
+}
+
+is_human_nation_trigger = {
+    custom_trigger_tooltip = {
+        tooltip = has_river_estuary_tooltip
+		OR = {
+		    culture_group = yokudan-redguardian_cg
+			culture_group = northern_cg
+			culture_group = half_blood_cg
+			culture_group = cyrodiil_cg
+			culture_group = kothringi_cg
+		}
+	}
+}
+
+is_beast_nation_trigger = {
+    custom_trigger_tooltip = {
+        tooltip = has_river_estuary_tooltip
+		OR = {
+		    culture_group = sload_cg
+			culture_group = orsimer_cg
+			culture_group = khajiiti_cg
+			culture_group = imga_cg
+			culture_group = marsh_cg
+			culture_group = minotaur_cg
+			culture_group = lilmothiit_cg
+		}
+	}
+}
+
+is_akaviri_nation_trigger = {
+    custom_trigger_tooltip = {
+        tooltip = has_river_estuary_tooltip
+		OR = {
+		    culture_group = po_tun_cg
+			culture_group = tsaesci_cg
+			culture_group = transpandomaic_cg
+			culture_group = kamal_cg
+		}
+	}
+}
+
+is_daedric_nation_trigger = {
+    custom_trigger_tooltip = {
+        tooltip = has_river_estuary_tooltip
+		OR = {
+		    culture_group = dead_cg
+			culture_group = daedra_cg
+			culture_group = void_cg
+			culture_group = unknown_cg
+		}
+	}
+}

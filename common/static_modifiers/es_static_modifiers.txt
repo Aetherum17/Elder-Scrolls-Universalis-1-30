@@ -576,9 +576,7 @@ ai_nation = {
 war_taxes = {
 	land_maintenance_modifier = -0.15
 	naval_maintenance_modifier = -0.15
-	merc_maintenance_modifier = -0.15
-	global_unrest = 2.5
-	war_exhaustion = 0.05
+	global_unrest = 3.5
 }
 
 stability = {
@@ -755,7 +753,7 @@ war = {
 }
 
 peace = {
-	war_exhaustion = -0.1
+	war_exhaustion = -0.15
 	monthly_fervor_increase = 1
 	global_autonomy = -0.1
 	global_institution_spread = 0.1
@@ -770,13 +768,13 @@ peace = {
 }
 
 unconditional_surrender = {
-	war_exhaustion = -0.1
-	global_autonomy = -0.1
-	global_institution_spread = 0.1
+	war_exhaustion = -0.15
+	global_autonomy = -0.15
+	global_institution_spread = 0.15
 }
 
 call_for_peace = {
-	war_exhaustion = 0.008
+	war_exhaustion = 0.01
 }
 
 war_exhaustion = {
@@ -800,6 +798,7 @@ war_exhaustion = {
 	devotion = -0.25
 	republican_tradition = -0.25
 	meritocracy = -0.25
+	defensiveness = -0.05
 	
 	es_warriors_influence = -0.05
 	es_merchants_influence = 0.05
@@ -1540,16 +1539,21 @@ invasion_nation = {
 ########################################
 
 native_policy_coexist = {
-	native_uprising_chance = -1.0
+	global_trade_goods_size_modifier = 0.10
+	num_accepted_cultures = 1
+	religious_unity = 0.10
 }
 
 native_policy_trade = {
 	native_assimilation = 0.5
-	native_uprising_chance = -0.5
+	trade_range_modifier = 0.5
+	merchants = 1
 }
 
 native_policy_hostile = {
 	global_colonial_growth = 25
+	tolerance_heathen = -2.5
+	tolerance_heretic = -2.5
 }
 
 ########################################

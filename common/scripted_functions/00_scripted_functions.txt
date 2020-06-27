@@ -51,7 +51,14 @@ can_increase_stability = {
 
 # ROOT = province, FROM = country
 can_add_province_to_hre = {
-	
+	condition = {
+		potential = {
+			owner = { is_part_of_hre = yes }
+		}
+		allow = {
+			is_part_of_hre = no
+		}
+	} 
 }
 
 can_remove_province_from_hre = {
@@ -183,6 +190,7 @@ is_possible_hre_province = {
 	condition = {
 		tooltip = "APH_ONLY_EUROPE"
 		potential = {
+		    continent = Tamriel
 		}
 		allow = {
 			continent = Tamriel
