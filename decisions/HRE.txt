@@ -1,0 +1,70 @@
+country_decisions = {    
+	
+	join_hre = {
+		major = yes
+		
+		potential = {
+			is_part_of_hre = no
+			any_neighbor_country = {
+				is_part_of_hre = yes
+			}
+			NOT = { tag = TAM }
+            capital_scope = { continent = Tamriel }
+		}
+		
+		allow = {
+			OR = {
+				is_emperor = yes
+				overlord = { is_part_of_hre = yes }
+				AND = {
+				any_neighbor_country = { is_part_of_hre = yes }
+				OR = {
+				emperor = { has_opinion = { who = ROOT value = 175 } }
+				alliance_with = emperor 
+				}
+				}
+			}
+		}
+		
+		effect = {
+			every_owned_province = {
+				limit = { 
+				religion = root
+				}
+				set_in_empire = yes
+			}
+		    emperor = { add_imperial_influence = 10 }
+			add_prestige = -10
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+	}
+	
+	you_become_elector = {
+		major = yes
+		potential = {
+		    ai = no
+		    is_part_of_hre = yes
+			is_elector = no
+			NOT = { calc_true_if = { all_country = { is_elector = yes } amount = 8 } }
+		}
+
+		allow = {
+		    OR = {
+			is_emperor = yes
+			emperor = { has_opinion = { who = ROOT value = 175 } }
+			}
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+		}
+
+		effect = {
+			elector = yes
+			add_prestige = 25
+			emperor = { add_imperial_influence = -25 }
+		}
+	}
+}
