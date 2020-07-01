@@ -120,7 +120,7 @@ country_event = {
 		}
 		add_devastation = 15
 		owner = {
-		add_treasury = -250
+		add_years_of_income = -0.5
 		}
 		add_province_modifier = {
 			name = 00_small_plague
@@ -135,7 +135,7 @@ country_event = {
 		}
 		add_devastation = 35
 		owner = {
-		add_treasury = -500
+		add_years_of_income = -1.0
 		}
 		add_province_modifier = {
 			name = 00_medium_plague
@@ -149,7 +149,7 @@ country_event = {
 		}
 		add_devastation = 50
 		owner = {
-		add_treasury = -750
+		add_years_of_income = -1.5
 		}
 		add_province_modifier = {
 			name = 00_large_plague
@@ -180,7 +180,7 @@ country_event = {
         NOT = { development = 20 }
 		}
 		owner = {
-		add_treasury = -500
+		add_years_of_income = -1.0
 		}
 		}
 		
@@ -190,7 +190,7 @@ country_event = {
         NOT = { development = 30 }
 		}
 		owner = {
-		add_treasury = -1000
+		add_years_of_income = -1.75
 		}
 		}
 		
@@ -199,7 +199,7 @@ country_event = {
 		development = 30
 		}
 		owner = {
-		add_treasury = -1500
+		add_years_of_income = -2.5
 		}
 		}
 		
@@ -232,7 +232,7 @@ province_event = {
 	}
 
 	mean_time_to_happen = {
-		days = 50000
+		days = 75000
 		
 		modifier = {
             factor = 0.90
@@ -576,9 +576,17 @@ province_event = {
 	}
 	
 	immediate = {
+	    random_list = {
+		33 = {
 	    add_base_tax = 1
+		}
+		33 = {
         add_base_production = 1
+		}
+		33 = {
         add_base_manpower = 1
+		}
+		}
 		add_province_modifier = {
         name = "dev"
         duration = 3650
@@ -860,9 +868,15 @@ province_event = {
 	}
 	
 	immediate = {
+	    if = { limit = { base_tax = 2 }
 	    add_base_tax = -1
+		}
+		if = { limit = { base_production = 2 }
         add_base_production = -1
+		}
+		if = { limit = { base_manpower = 2 }
         add_base_manpower = -1
+		}
 	}
 
 	option = {

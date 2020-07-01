@@ -420,14 +420,6 @@ monarchy = {
 
 	legacy_government = {
 		despotic_monarchy
-		english_monarchy_legacy
-		elective_monarchy_legacy
-		celestial_empire_legacy
-		mamluk_government_legacy
-		pirate_kingdom_legacy
-		ottoman_government_legacy
-		shogunate_legacy
-		mughal_government_legacy
 	}
 
 	color = { 179 25 25 }
@@ -438,30 +430,35 @@ republic = {
 
 	color = { 65 155 220 }
 	legacy_government = {
-	    dutch_republic_legacy
 		oligarchic_republic
-		merchant_republic
-		republican_dictatorship
-		noble_republic
-		pirate_republic
-		imperial_city_legacy
-		trading_city_legacy
-		colonial_government_legacy
-		peasants_republic_legacy
-		consortium_republic
-		bureaucratic_despotism
 	}
 	reform_levels = {
 		government_policy = {
 			reforms = {
+			    oligarchy_reform
+			    merchants_reform
+			    colonial_government
+			    presidential_despot_reform
+			    revolutionary_republic_reform 
+			    junior_revolutionary_republic_reform
+			    trading_city
+			    free_city
+			    pirate_republic_reform
+			    noble_elite_reform
+			    peasants_republic
+			    protectorate_parliament_reform
+			    veche_republic 
+			    ambrosian_republic
 			    dutch_republic
-				oligarchy_reform
-				merchants_reform
-				peasants_republic
-				pirate_republic_reform
-				noble_elite_reform
-				bureaucratic_despotism_reform
-				consortium_government_reform
+			    venice_merchants_reform
+			    federal_republic
+			    cossacks_reform 
+			    american_republic
+			    prussian_republic_reform
+			    signoria_reform
+			    military_dictatorship_reform
+				pirate_king_reform
+				war_against_the_world_doctrine_reform
 			}
 		}
 		citizenship_policy = {
@@ -1296,14 +1293,7 @@ theocracy = {
 	basic_reform = theocracy_mechanic
 
 	legacy_government = {
-		papal_government
 		theocratic_government
-		monastic_order_government
-		holy_republic_government
-		religious_republic_government
-		college_of_mages_government
-		secret_order_government
-		holy_city_government
 	}
 	reform_levels = {
 		government_policy = {
@@ -1311,11 +1301,21 @@ theocracy = {
 				leading_clergy_reform
 				monastic_order_reform
 				papacy_reform
-				religious_republic_reform
-				holy_republic_reform
-				college_of_mages_reform
-				secret_order_reform
-				holy_city_reform
+				tribunal_reform
+				guru_advisors_reform
+				warrior_monks_reform
+				pious_merchants_reform 
+				loyal_nobility_reform
+				kingdom_of_god_reform
+				theocratic_democracy_reform
+				divine_guidance_reform
+				monastic_elections_reform 
+				battle_pope_reform 
+				religious_harmony_reform 
+				proclaim_religious_head_reform 
+				admiral_king_reform
+				commander_king_reform 
+				religious_permanent_revolution_reform
 			}
 		}
 		citizenship_policy = {

@@ -9,331 +9,689 @@ theocracy_mechanic = {
 	heir = yes
 	basic_reform = yes # = invisible/does not take up a slot
 	valid_for_nation_designer = no
+
+	modifiers = {
+		brahmins_hindu_influence_modifier = 0.1
+		church_loyalty_modifier = 0.1
+		church_influence_modifier = 0.05
+	}
 }
 
+### General 
+
 leading_clergy_reform = {
+    icon = "clergyman"
 	allow_normal_conversion = yes
+	potential = {
+		NOT = { tag = RED }
+		NOT = { tag = TRI }
+	}
 	legacy_equivalent = theocratic_government
-	icon = "religious_leader"
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
 	
-	rulers_can_be_generals = no
-	
-	different_religion_acceptance = -25
-	different_religion_group_acceptance = -50
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
 	
 	factions = {
-		es_monks
-		es_priests
-		es_knights
+		es_clergy
+		es_merchants
+		es_warriors
 	}
 	
 	modifiers = {
-		governing_capacity_modifier = 0.1
-		tolerance_own = 1
-		global_missionary_strength = 0.01
-		global_autonomy = -0.05
-		missionaries = 1
-		
+		global_tax_modifier = 0.10
+		tolerance_own = 1.5
+		global_autonomy = -0.075
+		governing_capacity = 100
 		free_adm_policy = 1
 	}
-	conditional = {
-		allow = { has_dlc = "Cradle of Civilization" }
-		government_abilities = {
-			feudal_theocracy_mechanic
-		}
+	
+	ai = {
+		factor = 0.5
 	}
 }
 
 monastic_order_reform = {
-	rulers_can_be_generals = yes
-	heirs_can_be_generals = yes
+    icon = "daimyo"
+	allow_normal_conversion = yes
+	potential = {
+		always = yes
+	}
+	legacy_equivalent = theocratic_government
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
-	icon = "monks"
-	allow_normal_conversion = yes
-	legacy_equivalent = monastic_order_government
+	rulers_can_be_generals = yes
+	heirs_can_be_generals = yes
 	monastic = yes
-	fixed_rank = 4
-	
-	different_religion_acceptance = -25
-	different_religion_group_acceptance = -50
 	
 	factions = {
-		es_monks
-		es_priests
-		es_knights
+		es_clergy
+		es_merchants
+		es_warriors
 	}
 	
 	modifiers = {
-		governing_capacity_modifier = 0.1
-		global_heretic_missionary_strength = 0.01
-		fort_maintenance_modifier = -0.10
-		defensiveness = 0.10
-	    land_morale = 0.10
-		
+	    missionaries = 1
+		global_missionary_strength = 0.025
+		defensiveness = 0.15
+		governing_capacity = 100
 		free_mil_policy = 1
 	}
-	conditional = {
-		allow = { has_dlc = "Cradle of Civilization" }
-		government_abilities = {
-			feudal_theocracy_mechanic
-		}
+	
+	ai = {
+		factor = 0.5
 	}
 }
+
+### Special 
 
 papacy_reform = {
     icon = "papacy"
-	valid_for_nation_designer = yes
 	allow_normal_conversion = yes
-	legacy_equivalent = papal_government
-	papacy = yes
-	rulers_can_be_generals = no
-	
-	different_religion_acceptance = -25
-	different_religion_group_acceptance = -50
-	
-    factions = {
-		es_monks
-		es_priests
-		es_knights
+	potential = {
+		tag = RED
 	}
+	valid_for_nation_designer = yes
+	legacy_equivalent = theocratic_government
+	papacy = yes
+	allow_convert = no
 	
+	factions = {
+		es_clergy
+		es_merchants
+		es_warriors
+	}
+
 	modifiers = {
-		governing_capacity_modifier = 0.1
-		global_unrest = -1
+		diplomatic_reputation = 1.5
+		tolerance_own = 2.5
 		prestige = 0.5
-		diplomatic_reputation = 1
-		global_autonomy = -0.05
-		
+		appoint_cardinal_cost = -0.5
+		papal_influence_from_cardinals = 1.0
+		governing_capacity = 250
 		free_adm_policy = 1
 	}
-
-	conditional = {
-		allow = { has_dlc = "Cradle of Civilization" }
-		government_abilities = {
-			feudal_theocracy_mechanic
-		}
+	
+	custom_attributes = {
+		locked_government_type = yes
+	}
+	
+	ai = {
+		factor = 1000
 	}
 }
 
-holy_republic_reform = {
-	icon = "paper_money_map"
+tribunal_reform = {
+    icon = "indian_palace"
 	allow_normal_conversion = yes
-	
-	factions = {
-		es_monks
-		es_priests
-		es_knights
-	}
-	
-	modifiers = {
-		max_absolutism = -50
-		merchants = 1
-		global_own_trade_power = 0.1
-		global_trade_goods_size_modifier = 0.1
-		trade_steering = 0.10
-		
-		free_dip_policy = 1
+	potential = {
+		tag = TRI
 	}
 	valid_for_nation_designer = yes
-	nation_designer_cost = 0
-	legacy_equivalent = holy_republic_government
-	boost_income = yes
-	conditional = {
-		allow = {
-			has_dlc = "Res Publica"
-			NOT = { has_dlc = "Mare Nostrum" }
-		}
-		can_use_trade_post = yes
+	legacy_equivalent = theocratic_government
+	papacy = yes
+	
+	factions = {
+		es_clergy
+		es_merchants
+		es_warriors
 	}
-	conditional = {
-		allow = {
-			has_dlc = "Mare Nostrum"
-			NOT = { has_dlc = "Res Publica" }
-		}
-		can_form_trade_league = yes
-		trade_city_reform = trading_city
+
+	modifiers = {
+		global_missionary_strength = 0.01
+		global_unrest = -1.5
+		ae_impact = -0.10
+		governing_capacity = 250
+		free_adm_policy = 1
 	}
-	conditional = {
-		allow = {
-			has_dlc = "Res Publica"
-			has_dlc = "Mare Nostrum"
-		}
-		can_use_trade_post = yes
-		can_form_trade_league = yes
-		trade_city_reform = trading_city
-	}
-	conditional = {
-		allow = { has_dlc = "Cradle of Civilization" }
-		government_abilities = {
-			feudal_theocracy_mechanic
-		}
+	
+	ai = {
+		factor = 1000
 	}
 }
 
-religious_republic_reform = {
-	icon = "parliament"
+#######################################################################
+
+guru_advisors_reform = {
+    icon = "mandala_system"
 	allow_normal_conversion = yes
+	potential = {
+		always = yes
+	}
+	trigger = {
+		OR = {
+		    adm = 7
+			dip = 7
+			mil = 7
+			treasury = 3500
+		}
+	}
+	legacy_equivalent = theocratic_government
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
 	
 	factions = {
-		es_monks
-		es_priests
-		es_knights
+		mr_aristocrats
+		mr_traders
+		mr_guilds
 	}
 	
 	modifiers = {
-		max_absolutism = -50
-		religious_unity = 0.1
-		tolerance_heathen = 1
-        tolerance_heretic = 1
-		num_accepted_cultures = 1
-		
+	    advisor_cost = -0.15
+		global_institution_spread = 0.25
+		global_autonomy = -0.025
+		governing_capacity = 100
+		free_dip_policy = 1
+	}
+	
+	effect = {
+	    if = { limit = { NOT = { adm = 7 } NOT = { dip = 7 } NOT = { mil = 7 } } add_treasury = -3500 }
+	}
+	
+	ai = {
+		factor = 5
+	}
+}
+
+warrior_monks_reform = {
+    icon = "soldiers_3"
+	allow_normal_conversion = yes
+	potential = {
+		always = yes
+	}
+	trigger = {
+		calc_true_if = { all_owned_province = {	NOT = { culture = ROOT } } amount = 100 } 
+	}
+	legacy_equivalent = theocratic_government
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	rulers_can_be_generals = yes
+	heirs_can_be_generals = yes
+	monastic = yes
+	
+	factions = {
+		es_clergy
+		es_merchants
+		es_warriors
+	}
+	
+	modifiers = {
+		land_maintenance_modifier = -0.10
+		infantry_power = 0.15
+		mercenary_manpower = 0.25
+		governing_capacity = 100
 		free_mil_policy = 1
 	}
 	
-	valid_for_nation_designer = yes
-	nation_designer_cost = 0
-	legacy_equivalent = religious_republic_government
-	conditional = {
-		allow = {
-			has_dlc = "Common Sense"
-		}
-		has_parliament = yes
-	}
-	conditional = {
-		allow = { has_dlc = "Cradle of Civilization" }
-		government_abilities = {
-			feudal_theocracy_mechanic
-		}
+	ai = {
+		factor = 5
 	}
 }
 
-college_of_mages_reform = {
-	icon = "clergyman"
+pious_merchants_reform = {
+	icon = "church_and_state_reform"
 	allow_normal_conversion = yes
+	potential = {
+		always = yes
+	}
+	trigger = {
+		home_trade_node = { has_most_province_trade_power = ROOT } 
+	}
+	legacy_equivalent = theocratic_government
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
 	
 	factions = {
-		es_monks
-		es_priests
-		es_knights
+		mr_aristocrats
+		mr_traders
+		mr_guilds
 	}
 	
 	modifiers = {
-		max_absolutism = -35
-		technology_cost = -0.10
-		idea_cost = -0.10
-		advisor_cost = -0.1
-		advisor_pool = 1
-		
+		global_trade_power = 0.25
+		merchants = 1
+		global_autonomy = -0.05
+		governing_capacity = 100
+		free_dip_policy = 1
+	}
+	
+	ai = {
+		factor = 5
+	}
+}
+
+loyal_nobility_reform = {
+	icon = "dutch_republic"
+	allow_normal_conversion = yes
+	potential = {
+		always = yes
+	}
+	trigger = {
+	    calc_true_if = { all_owned_province = {	base_manpower = 7 } } amount = 25 } 
+	}
+	legacy_equivalent = theocratic_government
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	
+	factions = {
+		es_clergy
+		es_merchants
+		es_warriors
+	}
+	
+	modifiers = {
+		army_tradition = 0.25
+		cavalry_power = 0.10
+		global_autonomy = -0.05
+		governing_capacity = 100
+		free_mil_policy = 1
+	}
+	
+	ai = {
+		factor = 5
+	}
+}
+
+### Elves
+
+kingdom_of_god_reform = {
+	icon = "kingdom_of_god"
+	allow_normal_conversion = yes
+	potential = {
+		is_elven_nation_trigger = yes
+	}
+	trigger = {
+		calc_true_if = { all_owned_province = {	religion = ROOT } } amount = 500 }
+	}
+	legacy_equivalent = theocratic_government
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	
+	factions = {
+		es_clergy
+		es_merchants
+		es_warriors
+	}
+	
+	modifiers = {
+		global_manpower_modifier = 0.25
+		prestige = 0.5
+		global_missionary_strength = 0.015
+		governing_capacity = 250
 		free_adm_policy = 1
 	}
 	
-	valid_for_nation_designer = yes
-	nation_designer_cost = 0
-	legacy_equivalent = college_of_mages_government
-	conditional = {
-		allow = { has_dlc = "Cradle of Civilization" }
-		government_abilities = {
-			feudal_theocracy_mechanic
-		}
+	ai = {
+		factor = 1000
 	}
 }
 
-secret_order_reform = {
-	icon = "noble_muslim"
-	allow_normal_conversion = yes
-	
-	factions = {
-		es_monks
-		es_priests
-		es_knights
-	}
-	
-	modifiers = {
-		diplomats = 1
-		improve_relation_modifier = 0.10
-		spy_offence = 0.1
-		rebel_support_efficiency = 0.1
-		discovered_relations_impact = -0.10
-		
-		free_dip_policy = 1
-	}
-	
-	valid_for_nation_designer = yes
-	nation_designer_cost = 0
-	legacy_equivalent = secret_order_government
-	conditional = {
-		allow = { has_dlc = "Cradle of Civilization" }
-		government_abilities = {
-			feudal_theocracy_mechanic
-		}
-	}
-}
-
-holy_city_reform = {
+theocratic_democracy_reform = {
 	icon = "states_general"
 	allow_normal_conversion = yes
+	potential = {
+		is_elven_nation_trigger = yes
+	}
+	trigger = {
+		OR = {
+		    innovativeness = 50
+			total_development = 1500
+	        num_accepted_cultures = 5
+		}
+	}
+	legacy_equivalent = theocratic_government
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
-	legacy_equivalent = holy_city_government
-	papacy = yes
 	
 	factions = {
-		es_monks
-		es_priests
-		es_knights
+		mr_aristocrats
+		mr_traders
+		mr_guilds
 	}
 	
 	modifiers = {
-	    merchants = 1
-		trade_efficiency = 0.10
-		navy_tradition_decay = -0.01
-		army_tradition_decay = -0.01
-		naval_forcelimit = 0.10
-		
+		global_unrest = -1
+		idea_cost = -0.25
+		global_autonomy = -0.05
+		governing_capacity = 250
+		free_dip_policy = 1
+	}
+
+	conditional = {
+		allow = { has_dlc = "Common Sense" }
+		has_parliament = yes
+	}
+	custom_attributes = {
+		blocked_call_diet = yes
+	}
+	
+	ai = {
+		factor = 1000
+	}
+}
+
+### Humans
+
+divine_guidance_reform = {
+	icon = "divine_guidance_reform"
+	allow_normal_conversion = yes
+	potential = {
+		is_human_nation_trigger = yes
+	}
+	trigger = {
+		calc_true_if = { all_owned_province = {	has_building = temple } } amount = 350 }
+	}
+	legacy_equivalent = theocratic_government
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	
+	factions = {
+		es_clergy
+		es_merchants
+		es_warriors
+	}
+	
+	modifiers = {
+	    core_creation = -0.25
+		ae_impact = -0.15
+		diplomats = 1
+		governing_capacity = 250
 		free_dip_policy = 1
 	}
 	
-	conditional = {
-		allow = {
-			has_dlc = "Common Sense"
-		}
-		has_parliament = yes
+	potential = {
+		NOT = { has_reform = monastic_order_reform }
 	}
 	
-	boost_income = yes
-	
-	conditional = {
-		allow = {
-			has_dlc = "Res Publica"
-			NOT = { has_dlc = "Mare Nostrum" }
-		}
-		can_use_trade_post = yes
-	}
-	conditional = {
-		allow = {
-			has_dlc = "Mare Nostrum"
-			NOT = { has_dlc = "Res Publica" }
-		}
-		can_form_trade_league = yes
-		trade_city_reform = trading_city
-	}
-	conditional = {
-		allow = {
-			has_dlc = "Res Publica"
-			has_dlc = "Mare Nostrum"
-		}
-		can_use_trade_post = yes
-		can_form_trade_league = yes
-		trade_city_reform = trading_city
+	trigger = {
+		NOT = { has_reform = monastic_order_reform }
 	}
 	
+	ai = {
+		factor = 1000
+	}
+}
+
+monastic_elections_reform = {
+	icon = "ottoman_government"
+	allow_normal_conversion = yes
+	potential = {
+		is_human_nation_trigger = yes
+	}
+	trigger = {
+		innovativeness = 25
+		num_of_owned_and_controlled_institutions = 1
+		army_size = 100
+	}
+	legacy_equivalent = theocratic_government
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	
+	factions = {
+		mr_aristocrats
+		mr_traders
+		mr_guilds
+	}
+	
+	modifiers = {
+	    stability_cost_modifier = -0.25
+		land_morale = 0.10
+		global_autonomy = -0.05
+		governing_capacity = 250
+		free_adm_policy = 1
+	}
+	
 	conditional = {
-		allow = { has_dlc = "Cradle of Civilization" }
-		government_abilities = {
-			feudal_theocracy_mechanic
+		allow = { has_dlc = "Res Publica" }
+		heir = no
+		election_on_death = yes
+		states_general_mechanic = {
+			militarists = {
+				manpower_recovery_speed = 0.2
+				warscore_cost_vs_other_religion = -0.15
+				army_tradition_from_battle = 0.5
+			}
+
+			theocrats = {
+				tolerance_own = 2
+				global_missionary_strength = 0.02
+				devotion = 0.5
+			}
 		}
+	}
+	
+	ai = {
+		factor = 1000
+	}
+}
+
+### Beasts
+
+battle_pope_reform = {
+	icon = "soldiers_6"
+	allow_normal_conversion = yes
+	potential = {
+		is_beast_nation_trigger = yes
+	}
+	trigger = {
+		max_manpower = 250
+		num_of_cavalry = 250
+		cavalry_fraction = 0.5
+	}
+	legacy_equivalent = theocratic_government
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+
+	rulers_can_be_generals = yes
+	
+	factions = {
+		es_clergy
+		es_merchants
+		es_warriors
+	}
+
+	modifiers = {
+		manpower_in_true_faith_provinces = 0.25
+		free_leader_pool = 1
+		fire_damage = 0.10
+		governing_capacity = 250
+		free_mil_policy = 1
+	}
+	
+	ai = {
+		factor = 1000
+	}
+}
+
+religious_harmony_reform = {
+	icon = "nayankara_system"
+	allow_normal_conversion = yes
+	potential = {
+		is_beast_nation_trigger = yes
+	}
+	trigger = {
+		calc_true_if = { all_owned_province = {	base_production = 7 } } amount = 75 }
+		any_neighbor_country = { NOT = { army_size = ROOT } }
+		num_of_cities = 100
+	}
+	legacy_equivalent = theocratic_government
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	
+	factions = {
+		es_clergy
+		es_merchants
+		es_warriors
+	}
+	
+	modifiers = {
+		num_accepted_cultures = 3
+		religious_unity = 0.15
+		global_autonomy = -0.025
+		governing_capacity = 250
+		free_dip_policy = 1
+	}
+	
+	ai = {
+		factor = 1000
+	}
+}
+
+### Akaviri
+
+proclaim_religious_head_reform = {
+	icon = "muslim"
+	allow_normal_conversion = yes
+	potential = {
+		is_akaviri_nation_trigger = yes
+	}
+	trigger = {
+		is_great_power = yes
+		is_defender_of_faith = yes
+		calc_true_if = { all_owned_province = {	base_tax = 7 } } amount = 75 } 
+	}
+	legacy_equivalent = theocratic_government
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	
+	factions = {
+		es_clergy
+		es_merchants
+		es_warriors
+	}
+	
+	modifiers = {
+		warscore_cost_vs_other_religion = -0.25
+		culture_conversion_cost = -0.15
+		diplomatic_reputation = 1
+		governing_capacity = 250
+		free_mil_policy = 1
+	}
+	
+	ai = {
+		factor = 1000
+	}
+}
+
+admiral_king_reform = {
+	icon = "admiral_king_reform"
+	allow_normal_conversion = yes
+	potential = {
+		is_akaviri_nation_trigger = yes
+	}
+	trigger = {
+	    num_of_heavy_ship = 100
+		heavy_ship_fraction = 0.35
+		government_rank = = 7
+	}
+	legacy_equivalent = theocratic_government
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	has_term_election = no
+	heir = no
+	
+	factions = {
+		es_clergy
+		es_merchants
+		es_warriors
+	}
+	
+	modifiers = {
+		sailor_maintenance_modifer = -0.25
+		naval_forcelimit_modifier = 0.15
+		naval_morale = 0.10
+		governing_capacity = 250
+		free_dip_policy = 1
+	}
+	custom_attributes = {
+		admirals_become_rulers = yes
+	}
+	
+	ai = {
+		factor = 1000
+	}
+}
+
+### Daedric
+
+commander_king_reform = {
+	icon = "noble_indian"
+	allow_normal_conversion = yes
+	potential = {
+		is_daedric_nation_trigger = yes
+	}
+	trigger = {
+		num_of_infantry = 250
+		any_owned_province = { continent = Oblivion }
+		government_rank = = 7
+	}
+	legacy_equivalent = theocratic_government
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	has_term_election = no
+	queen = yes
+	royal_marriage = yes
+	heir = no
+	
+	factions = {
+		es_clergy
+		es_merchants
+		es_warriors
+	}
+	
+	modifiers = {
+		harsh_treatment_cost = -0.15
+		land_forcelimit_modifier = 0.10
+		global_unrest = -2.5
+		governing_capacity = 250
+		free_mil_policy = 1
+	}
+	custom_attributes = {
+		generals_become_rulers = yes
+	}
+	
+	ai = {
+		factor = 1000
+	}
+}
+
+religious_permanent_revolution_reform = {
+	icon = "black_army_reform"
+	allow_normal_conversion = yes
+	potential = {
+		is_daedric_nation_trigger = yes
+	}
+	trigger = {
+		any_owned_province = { continent = Tamriel }
+		any_neighbor_country = { NOT = { religion_group = ROOT } }
+		total_development = 1000
+	}
+	legacy_equivalent = theocratic_government
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	different_religion_acceptance = -100
+	different_religion_group_acceptance = -250
+	
+	factions = {
+		es_clergy
+		es_merchants
+		es_warriors
+	}
+	
+	modifiers = {
+		enforce_religion_cost = -0.5
+		global_regiment_cost = -0.15
+		discipline = 0.10
+		governing_capacity = 250
+		free_adm_policy = 1
+	}
+	
+	effect = {
+		custom_tooltip = world_crusade_tt
+	}
+	
+	ai = {
+		factor = 1000
 	}
 }

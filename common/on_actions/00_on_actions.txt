@@ -2614,9 +2614,11 @@ on_trade_company_investment = {
 }
 
 on_center_of_trade_upgrade = {
+    owner = {
     change_variable = {
 		which = cot_upgraded
 		value = 1
+	}
 	}
 }
 
@@ -2625,9 +2627,11 @@ on_center_of_trade_downgrade = {
 }
 
 on_culture_promoted = {
+    owner = {
     change_variable = {
 		which = culture_promoted
 		value = 1
+	}
 	}
 }
 
