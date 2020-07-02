@@ -862,15 +862,17 @@ tribal = {
 	reform_levels = {
 	    government_policy = {
 			reforms = {
+				siberian_tribe
 				steppe_horde
 				tribal_federation
-				tribal_kingdom
 				tribal_despotism
-				nomad_state_reform
-				war_against_the_world_reform
-				tribal_republic
-				tribal_theocratic_state
-				}
+				tribal_kingdom 
+				great_mongol_state_reform 
+				martial_society_reform
+				civil_society_reform
+				religious_societies_reform
+				retain_tribal_hierarchy_reform 
+			}
 		}
 		citizenship_policy = {
 			reforms = {
@@ -1267,13 +1269,6 @@ tribal = {
     }
 	legacy_government = {
 		steppe_horde_legacy
-		tribal_federation_legacy
-		tribal_kingdom_legacy
-		tribal_despotism_legacy
-		nomad_state_legacy
-		war_against_the_world_legacy
-		tribal_republic_legacy
-		tribal_theocratic_state_legacy
 	}
 
 }
