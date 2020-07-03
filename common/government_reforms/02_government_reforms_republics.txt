@@ -12,9 +12,13 @@ republic_mechanic = {
 
 	modifiers = {
 	    max_absolutism = -50
+		max_revolutionary_zeal = 75
 		
-		burghers_influence_modifier = 0.15
+		burghers_influence_modifier	= 0.25
 		vaisyas_influence_modifier = 0.15
+		dhimmi_influence_modifier = -0.15
+		maratha_influence_modifier = 0.10
+		cossacks_influence_modifier = -0.10
 	}
 
 	valid_for_nation_designer = no
@@ -354,7 +358,7 @@ become_rev_empire_reform = {
         NOT = { has_reform = war_against_the_world_doctrine_reform }
 	}
 	
-	trigger = {
+	trigger = { 
 		has_reform = revolutionary_republic_reform
 		is_revolution_target = yes
 		OR = {
@@ -496,11 +500,12 @@ pirate_republic_reform = {
 	potential = {
 	    has_dlc = "Golden Century"
 	}
-	trigger = {
+	trigger = { OR = { has_reform = pirate_republic_reform
 	    OR = {
 		    tag = ABE tag = RES tag = TOP tag = STA tag = SED tag = KME tag = ELZ tag = KHE tag = KAA tag = RAL
 			AND = { capital_scope = { is_island = yes } ai = yes }
 			AND = { OR = { capital_scope = { is_island = yes } NOT = { num_of_cities = 10 } } ai = no any_owned_province = { has_port = yes } }
+		}
 		}
 	}
 	legacy_equivalent = oligarchic_republic
@@ -558,8 +563,9 @@ pirate_king_reform = {
 		has_reform = war_against_the_world_doctrine_reform
 		}
 	}
-	trigger = {
+	trigger = { OR = { has_reform = pirate_king_reform
 	    NOT = { republican_tradition = 50 }
+		}
 	}
 	
 	factions_frame = 9
@@ -612,8 +618,9 @@ war_against_the_world_doctrine_reform = {
 		has_reform = pirate_king_reform
 		}
 	}
-	trigger = {
+	trigger = { OR = { has_reform = war_against_the_world_doctrine_reform
 	    NOT = { republican_tradition = 50 }
+		}
 	}
 	
 	factions_frame = 9
@@ -655,10 +662,13 @@ noble_elite_reform = {
 	potential = {
 	   always = yes
 	}
-	trigger = {
+	trigger = { OR = { has_reform = noble_elite_reform
+	    AND = {
 	    monthly_income = 35
 		num_of_cavalry = 35
 		cavalry_fraction = 0.35
+		}
+		}
 	}
 	legacy_equivalent = oligarchic_republic
 	valid_for_nation_designer = yes
@@ -697,7 +707,7 @@ peasants_republic = {
 	potential = {
 	    always = yes
 	}
-	trigger = {
+	trigger = { OR = { has_reform = peasants_republic
 		OR = {
 		    custom_trigger_tooltip = {
 			    tooltip = great_peasants_war_peasant_republic_tooltip
@@ -705,6 +715,7 @@ peasants_republic = {
 			}
 			production_income_percentage = 0.35
 			calc_true_if = { all_owned_province = { trade_goods = grain } amount = 25 }
+		}
 		}
 	}
 	legacy_equivalent = oligarchic_republic
@@ -750,8 +761,9 @@ protectorate_parliament_reform = {
 	potential = {
 		always = yes
 	}
-	trigger = {
+	trigger = { OR = { has_reform = protectorate_parliament_reform
 	    total_development = 500
+		}
 	}
 	legacy_equivalent = oligarchic_republic
 	valid_for_nation_designer = yes
@@ -800,10 +812,13 @@ veche_republic = {
 	potential = {
 		is_elven_nation_trigger = yes
 	}
-	trigger = {
+	trigger = { OR = { has_reform = veche_republic
+	    AND = {
 	    government_rank = 5
 	    calc_true_if = { all_subject_country = { is_colonial_nation = yes } amount = 3 }
 		NOT = { calc_true_if = { all_subject_country = { liberty_desire = 50 } amount = 1 } }
+		}
+		}
 	}
 	legacy_equivalent = oligarchic_republic
 	valid_for_nation_designer = yes
@@ -917,8 +932,9 @@ ambrosian_republic = {
 	potential = {
 		is_elven_nation_trigger = yes
 	}
-	trigger = {
+	trigger = { OR = { has_reform = ambrosian_republic
 	    calc_true_if = { all_owned_province = { has_province_modifier = xx_the_mundus_tower } amount = 3 }
+		}
 	}
 	legacy_equivalent = oligarchic_republic
 	valid_for_nation_designer = yes
@@ -958,10 +974,13 @@ dutch_republic = {
 	potential = {
 		is_human_nation_trigger = yes
 	}
-	trigger = {
+	trigger = { OR = { has_reform = dutch_republic
+	    AND = {
 	    government_rank = 7
 		num_of_cities = 100
 		NOT = { average_unrest = 1 }
+		}
+		}
 	}
 	legacy_equivalent = oligarchic_republic
 	valid_for_nation_designer = yes
@@ -998,14 +1017,14 @@ dutch_republic = {
 
 		states_general_mechanic = {
 			statists = {
-				naval_forcelimit_modifier = 0.10
-				global_trade_power = 0.05
+				naval_forcelimit_modifier = 0.25
+				global_trade_power = 0.15
 				republican_tradition = 1
 			}
 
 			orangists = {
 				land_forcelimit_modifier = 0.25
-				stability_cost_modifier = -0.10
+				stability_cost_modifier = -0.15
 				republican_tradition = -1
 			}
 		}
@@ -1022,10 +1041,13 @@ venice_merchants_reform = {
 	potential = {
 		is_human_nation_trigger = yes
 	}
-	trigger = {
+	trigger = { OR = { has_reform = venice_merchants_reform
+	    AND = {
 	    government_rank = 5
 	    num_of_ports = 175
 		prestige = 25
+		}
+		}
 	}
 
 	valid_for_nation_designer = yes
@@ -1095,8 +1117,9 @@ federal_republic = {
 	potential = {
 		is_beast_nation_trigger = yes
 	}
-	trigger = {
+	trigger = { OR = { has_reform = federal_republic
 	    calc_true_if = { all_owned_province = { province_has_center_of_trade_of_level = 1 } amount = 50 }
+		}
 	}
 	legacy_equivalent = oligarchic_republic
 	valid_for_nation_designer = yes
@@ -1142,8 +1165,9 @@ cossacks_reform = {
 	potential = {
 		is_beast_nation_trigger = yes
 	}
-	trigger = {
+	trigger = { OR = { has_reform = cossacks_reform
 	    calc_true_if = { all_owned_province = { has_terrain = steppe } amount = 150 }
+		}
 	}
 	legacy_equivalent = oligarchic_republic
 	valid_for_nation_designer = yes
@@ -1187,11 +1211,12 @@ american_republic = {
 	potential = {
 	    is_akaviri_nation_trigger = yes
 	}
-	trigger = {
+	trigger = { OR = { has_reform = american_republic
 	    OR = {
 		    num_of_owned_and_controlled_institutions = 5
 			innovativeness = 50
 			government_rank = 7
+		}
 		}
 	}
 	legacy_equivalent = oligarchic_republic
@@ -1237,8 +1262,9 @@ prussian_republic_reform = {
 	potential = {
 		is_akaviri_nation_trigger = yes
 	}
-	trigger = {
+	trigger = { OR = { has_reform = prussian_republic_reform
 		num_of_strong_trade_companies = 5
+		}
 	}
 	legacy_equivalent = oligarchic_republic
 	valid_for_nation_designer = yes
@@ -1284,11 +1310,12 @@ signoria_reform = {
 	potential = {
 		is_daedric_nation_trigger = yes
 	}
-	trigger = {
+	trigger = { OR = { has_reform = signoria_reform
 	    OR = {
 		calc_true_if = { all_owned_province = { region = central_coldharbour_lr } amount = 150 }
 		calc_true_if = { all_owned_province = { continent = Tamriel } amount = 150 }
 		government_rank = 10
+		}
 		}
 	}
 	legacy_equivalent = oligarchic_republic
@@ -1329,10 +1356,13 @@ military_dictatorship_reform = {
 	potential = {
 		is_daedric_nation_trigger = yes
 	}
-	trigger = {
+	trigger = { OR = { has_reform = military_dictatorship_reform
+	    AND = {
 		army_size = 250
 		army_tradition = 25
 		manpower = 500
+		}
+		}
 	}
 	legacy_equivalent = oligarchic_republic
 	valid_for_nation_designer = yes

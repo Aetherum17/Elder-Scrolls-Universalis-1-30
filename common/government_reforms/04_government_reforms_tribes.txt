@@ -12,6 +12,12 @@ tribe_mechanic = {
 	technology_cost = 0.15
 	idea_cost = 0.15
 	advisor_cost = 0.15
+	
+	rajput_influence_modifier = 0.15
+	vaisyas_influence_modifier = -0.25
+	dhimmi_influence_modifier = 0.10
+	nobles_influence_modifier = -0.15
+	church_influence_modifier = -0.10
 	}
 }
 
@@ -56,8 +62,9 @@ steppe_horde = {
 	potential = {
 		NOT = { has_reform = great_mongol_state_reform }
 	}
-	trigger = {
+	trigger = { OR = { has_reform = steppe_horde
 	    calc_true_if = { all_owned_province = {	has_terrain = steppe } amount = 10 }
+		}
 	}
 	legacy_equivalent = steppe_horde_legacy
 	valid_for_nation_designer = yes
@@ -83,8 +90,9 @@ tribal_federation = {
 	potential = {
 	    always = yes
 	}
-	trigger = {
+	trigger = { OR = { has_reform = tribal_federation
 	    num_accepted_cultures = 1
+		}
 	}
 	legacy_equivalent = steppe_horde_legacy
 	valid_for_nation_designer = yes
@@ -116,8 +124,9 @@ tribal_despotism = {
 	potential = {
 	    always = yes
 	}
-	trigger = {
+	trigger = { OR = { has_reform = tribal_despotism
 	    total_development = 250
+		}
 	}
 	legacy_equivalent = steppe_horde_legacy
 	valid_for_nation_designer = yes
@@ -141,8 +150,9 @@ tribal_kingdom = {
 	potential = {
 	    always = yes
 	}
-	trigger = {
+	trigger = { OR = { has_reform = tribal_kingdom
 	    num_of_subjects = 5
+		}
 	}
 	legacy_equivalent = steppe_horde_legacy
 	valid_for_nation_designer = yes
@@ -170,8 +180,9 @@ great_mongol_state_reform = {
 		NOT = { has_reform = siberian_tribe }
 		has_reform = steppe_horde
 	}
-	trigger = {
+	trigger = { OR = { has_reform = great_mongol_state_reform
 	    num_of_cities = 250
+		}
 	}
 	legacy_equivalent = steppe_horde_legacy
 	valid_for_nation_designer = yes
@@ -202,8 +213,9 @@ martial_society_reform = {
 	potential = {
 		NOT = { has_reform = siberian_tribe }
 	}
-	trigger = {
+	trigger = { OR = { has_reform = martial_society_reform
 	    army_size = 250
+		}
 	}
 	legacy_equivalent = steppe_horde_legacy
 	valid_for_nation_designer = yes
@@ -228,10 +240,13 @@ civil_society_reform = {
 	potential = {
 		NOT = { has_reform = siberian_tribe }
 	}
-	trigger = {
+	trigger = { OR = { has_reform = civil_society_reform
+	    AND = {
 	    calc_true_if = { all_owned_province = {	has_building = workshop } amount = 50 }
 		calc_true_if = { all_owned_province = {	has_building = marketplace } amount = 50 }
 		calc_true_if = { all_owned_province = {	has_building = road_network } amount = 50 }
+		}
+		}
 	}
 	legacy_equivalent = steppe_horde_legacy
 	valid_for_nation_designer = yes
@@ -256,10 +271,13 @@ religious_societies_reform = {
 	potential = {
 		NOT = { has_reform = siberian_tribe }
 	}
-	trigger = {
+	trigger = { OR = { has_reform = religious_societies_reform
+	    AND = {
 	    is_defender_of_faith = yes
 		calc_true_if = { all_owned_province = {	has_building = temple } amount = 50 }
 		all_owned_province = { religion = root }
+		}
+		}
 	}
 	legacy_equivalent = steppe_horde_legacy
 	valid_for_nation_designer = yes
@@ -284,10 +302,13 @@ retain_tribal_hierarchy_reform = {
 	potential = {
 		NOT = { has_reform = siberian_tribe }
 	}
-	trigger = {
+	trigger = { OR = { has_reform = retain_tribal_hierarchy_reform
+	    AND = {
 	    total_development = 1000
 		government_rank = 5
 		all_neighbor_country = { NOT = { army_size = ROOT } }
+		}
+		}
 	}
 	legacy_equivalent = steppe_horde_legacy
 	valid_for_nation_designer = yes

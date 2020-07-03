@@ -8,7 +8,13 @@ monarchy_mechanic = {
 		enables_aristocratic_idea_group = yes
 	}
 	modifiers = {
-		nobles_influence_modifier = 0.05
+		nobles_influence_modifier = 0.25
+		brahmins_influence_modifier	= 0.15
+        brahmins_influence_modifier	= 0.15
+        brahmins_influence_modifier	= 0.15
+		burghers_influence_modifier	= -0.10
+		cossacks_influence_modifier	= 0.10
+		jains_influence_modifier = -0.15
 	}
 }
 
@@ -19,8 +25,9 @@ autocracy_reform = {
 		NOT = { is_emperor_of_china = yes }
 		NOT = { is_revolution_target = yes }
 	}
-	trigger = {
+	trigger = { OR = { has_reform = autocracy_reform
 	    NOT = { has_country_modifier = 06_the_moot }
+		}
 	}
 	legacy_equivalent = despotic_monarchy
 	valid_for_nation_designer = yes
@@ -199,10 +206,13 @@ feudalism_reform = {
 	potential = {
 	    always = yes
 	}
-	trigger = {
+	trigger = { OR = { has_reform = feudalism_reform
+	    AND = {
 	    num_of_subjects = 5
 		NOT = { has_country_modifier = 06_the_moot }
 		NOT = { calc_true_if = { all_subject_country = { liberty_desire = 50 } amount = 1 } }
+		}
+		}
 	}
 	legacy_equivalent = despotic_monarchy
 	valid_for_nation_designer = yes
@@ -236,10 +246,13 @@ austrian_archduchy_reform = {
 	potential = {
 	    always = yes
 	}
-	trigger = {
+	trigger = { OR = { has_reform = austrian_archduchy_reform
+	    AND = {
 	    is_elector = yes
 		NOT = { has_country_modifier = 06_the_moot }
 		prestige = 25
+		}
+		}
 	}
 	legacy_equivalent = despotic_monarchy
 	valid_for_nation_designer = yes
@@ -273,10 +286,13 @@ grand_duchy_reform = {
 	potential = {
 	    always = yes
 	}
-	trigger = {
+	trigger = { OR = { has_reform = grand_duchy_reform
+	    AND = {
 	    num_of_cities = 100
 		NOT = { has_country_modifier = 06_the_moot }
 		NOT = { average_unrest = 1 }
+		}
+		}
 	}
 	legacy_equivalent = despotic_monarchy
 	valid_for_nation_designer = yes
@@ -310,7 +326,8 @@ austrian_dual_monarchy = {
 	potential = {
 	    always = yes
 	}
-	trigger = {
+	trigger = { OR = { has_reform = austrian_dual_monarchy
+	    AND = {
 	    calc_true_if = {
 			all_subject_country = {
 				is_subject_of_type = personal_union 
@@ -319,6 +336,8 @@ austrian_dual_monarchy = {
 		}
 		NOT = { calc_true_if = { all_subject_country = { liberty_desire = 50 } amount = 1 } }
 		NOT = { has_country_modifier = 06_the_moot }
+		}
+		}
 	}
 	legacy_equivalent = despotic_monarchy
 	valid_for_nation_designer = yes
@@ -355,7 +374,7 @@ mamluk_government = {
 	potential = {
 		is_elven_nation_trigger = yes
 	}
-	trigger = {
+	trigger = { OR = { has_reform = mamluk_government
 		OR = {
 		    owns = 1206
 			calc_true_if = {
@@ -370,6 +389,7 @@ mamluk_government = {
 				}
 				amount = 25
 			}
+		}
 		}
 	}
 	legacy_equivalent = despotic_monarchy
@@ -413,8 +433,9 @@ english_monarchy = {
 	potential = {
 		is_elven_nation_trigger = yes
 	}
-	trigger = {
+	trigger = { OR = { has_reform = english_monarchy
 	    is_emperor = yes
+		}
 	}
 	legacy_equivalent = despotic_monarchy
 	valid_for_nation_designer = yes
@@ -463,11 +484,12 @@ prussian_monarchy = {
     potential = {
 		is_human_nation_trigger = yes
 	}
-	trigger = {
+	trigger = { OR = { has_reform = prussian_monarchy
 	    OR = {
 		    government_rank = 10
 			is_emperor = yes
 			owns = 1206
+		}
 		}
 	}
 	valid_for_nation_designer = yes
@@ -506,10 +528,13 @@ ottoman_government = {
 	potential = {
 		is_human_nation_trigger = yes
 	}
-	trigger = {
+	trigger = { OR = { has_reform = ottoman_government
+	    AND = {
 	    calc_true_if = { all_owned_province = {	continent = Tamriel } amount = 50 }
 		calc_true_if = { all_owned_province = {	NOT = { continent = Tamriel } } amount = 25 }
 		government_rank = 5
+		}
+		}
 	}
 	legacy_equivalent = despotic_monarchy
 	valid_for_nation_designer = yes
@@ -554,8 +579,9 @@ shogunate = {
 	potential = {
 		is_beast_nation_trigger = yes
 	}
-	trigger = {
+	trigger = { OR = { has_reform = shogunate
 	    num_of_subjects = 35
+		}
 	}
 	legacy_equivalent = despotic_monarchy
 	valid_for_nation_designer = yes
@@ -591,7 +617,8 @@ feudal_theocracy = {
 	potential = {
 		is_beast_nation_trigger = yes
 	}
-	trigger = {
+	trigger = { OR = { has_reform = feudal_theocracy
+	    AND = {
 	    government_rank = 5
 		calc_true_if = {
 			all_owned_province = {
@@ -600,6 +627,8 @@ feudal_theocracy = {
 			amount = 750
 		}
 		is_defender_of_faith = yes
+		}
+		}
 	}
 	legacy_equivalent = despotic_monarchy
 	valid_for_nation_designer = yes
@@ -635,12 +664,15 @@ mughal_government = {
 	potential = {
 		is_akaviri_nation_trigger = yes
 	}
-	trigger = {
+	trigger = { OR = { has_reform = mughal_government
+	    AND = {
 	    owns = 724
 		owns = 646
 		owns = 750
 		owns = 691
 		owns = 561
+		}
+		}
 	}
 	legacy_equivalent = despotic_monarchy
 	valid_for_nation_designer = yes
@@ -757,10 +789,13 @@ plutocratic_reform = {
 	potential = {
 		is_akaviri_nation_trigger = yes
 	}
-	trigger = {
+	trigger = { OR = { has_reform = plutocratic_reform
+	    AND = {
 	    government_rank = 5
 		trade_income_percentage = 50
 		light_ship_fraction = 0.5
+		}
+		}
 	}
 	legacy_equivalent = despotic_monarchy
 	valid_for_nation_designer = yes
@@ -800,11 +835,12 @@ principality = {
 	potential = {
 		is_daedric_nation_trigger = yes
 	}
-	trigger = {
+	trigger = { OR = { has_reform = principality
 	    OR = { 
 		AND = { capital_scope = { NOT = { continent = Tamriel } } calc_true_if = { all_owned_province = { religion = root } amount = 50 } }
 		AND = { capital_scope = { continent = Tamriel } calc_true_if = { all_owned_province = { religion = root } amount = 250 } }
 		AND = { capital_scope = { continent = Tamriel } calc_true_if = { all_owned_province = { culture = root } amount = 100 } }
+		}
 		}
 	}
 	legacy_equivalent = despotic_monarchy
@@ -839,11 +875,12 @@ iqta = {
 	potential = {
 		is_daedric_nation_trigger = yes
 	}
-	trigger = {
+	trigger = { OR = { has_reform = iqta
 	    OR = {
 		    owns = 4075
 			owns = 3188
 			government_rank = 10
+		}
 		}
 	}
 	legacy_equivalent = despotic_monarchy

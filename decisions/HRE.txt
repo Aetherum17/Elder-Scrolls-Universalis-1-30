@@ -67,4 +67,122 @@ country_decisions = {
 			emperor = { add_imperial_influence = -25 }
 		}
 	}
+	
+	you_become_free_city = {
+		major = yes
+		potential = {
+		    is_emperor = no
+		    is_emperor_of_china = no
+		    is_part_of_hre = yes
+			NOT = { has_reform = free_city }
+			NOT = { num_of_cities = 6 }
+			NOT = { government = tribal }
+			NOT = { government = native }
+		}
+
+		allow = {
+		    OR = {
+				emperor = { has_opinion = { who = ROOT value = 175 } }
+				alliance_with = emperor 
+			}
+		}
+
+		effect = {
+			change_government = republic
+			add_government_reform = free_city
+			kill_ruler = yes
+			add_prestige = 25
+			emperor = { add_imperial_influence = 5 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+			    factor = 0.5
+				government = monarchy
+			}
+			modifier = {
+			    factor = 0.5
+				government = theocracy
+			}
+			modifier = {
+			    factor = 0
+				OR = {
+				is_in_trade_league = yes 
+				emperor = { NOT = { reverse_has_opinion  = { who = ROOT value = 0 } } }
+				revolutionary = yes
+				}
+			}
+			modifier = {
+			    factor = 1.5
+				emperor = { NOT = { reverse_has_opinion  = { who = ROOT value = 100 } } }
+			}
+			modifier = {
+			    factor = 1.75
+				emperor = { NOT = { reverse_has_opinion  = { who = ROOT value = 175 } } }
+			}
+		}
+	}
+	
+	regency_council_sieges_power = {
+		major = yes
+		potential = {
+		    government = monarchy 
+		}
+
+		allow = {
+		    OR = {
+				emperor = { has_opinion = { who = ROOT value = 175 } }
+				alliance_with = emperor 
+			}
+		}
+
+		effect = {
+			change_government = republic
+			add_government_reform = free_city
+			kill_ruler = yes
+			add_prestige = 25
+			emperor = { add_imperial_influence = 5 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+			    factor = 0
+				government = monarchy
+			}
+			
+		}
+	}
+	
+	consort_sieges_power = {
+		major = yes
+		potential = {
+		    government = monarchy 
+		}
+
+		allow = {
+		    OR = {
+				emperor = { has_opinion = { who = ROOT value = 175 } }
+				alliance_with = emperor 
+			}
+		}
+
+		effect = {
+			change_government = republic
+			add_government_reform = free_city
+			kill_ruler = yes
+			add_prestige = 25
+			emperor = { add_imperial_influence = 5 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+			    factor = 0
+				government = monarchy
+			}
+			
+		}
+	}
 }
