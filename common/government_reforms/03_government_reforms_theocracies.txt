@@ -34,9 +34,6 @@ leading_clergy_reform = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
 	
-	valid_for_nation_designer = yes
-	nation_designer_cost = 0
-	
 	factions = {
 		es_clergy
 		es_merchants
@@ -49,6 +46,13 @@ leading_clergy_reform = {
 		global_autonomy = -0.075
 		governing_capacity = 100
 		free_adm_policy = 1
+	}
+	
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		government_abilities = {
+			feudal_theocracy_mechanic
+		}
 	}
 	
 	ai = {
@@ -81,6 +85,13 @@ monastic_order_reform = {
 		defensiveness = 0.15
 		governing_capacity = 100
 		free_mil_policy = 1
+	}
+	
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		government_abilities = {
+			tribal_federation_mechanic
+		}
 	}
 	
 	ai = {
@@ -121,6 +132,16 @@ papacy_reform = {
 		locked_government_type = yes
 	}
 	
+	conditional = {
+		allow = { has_dlc = "Mandate of Heaven" }
+		allow_banners = yes
+	}
+	
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		has_pashas = yes
+	}
+	
 	ai = {
 		factor = 1000
 	}
@@ -148,6 +169,16 @@ tribunal_reform = {
 		ae_impact = -0.10
 		governing_capacity = 250
 		free_adm_policy = 1
+	}
+	
+	conditional = {
+		allow = { has_dlc = "Mandate of Heaven" }
+		allow_banners = yes
+	}
+	
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		has_pashas = yes
 	}
 	
 	ai = {
@@ -194,6 +225,11 @@ guru_advisors_reform = {
 	    if = { limit = { NOT = { adm = 7 } NOT = { dip = 7 } NOT = { mil = 7 } } add_treasury = -3500 }
 	}
 	
+	conditional = {
+		allow = { has_dlc = "Common Sense" }
+		has_parliament = yes
+	}
+	
 	ai = {
 		factor = 5
 	}
@@ -230,6 +266,13 @@ warrior_monks_reform = {
 		free_mil_policy = 1
 	}
 	
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		government_abilities = {
+			tribal_federation_mechanic
+		}
+	}
+	
 	ai = {
 		factor = 5
 	}
@@ -263,6 +306,32 @@ pious_merchants_reform = {
 		free_dip_policy = 1
 	}
 	
+	boost_income = yes
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			NOT = { has_dlc = "Mare Nostrum" }
+		}
+		can_use_trade_post = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Mare Nostrum"
+			NOT = { has_dlc = "Res Publica" }
+		}
+		can_form_trade_league = yes
+		trade_city_reform = trading_city
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			has_dlc = "Mare Nostrum"
+		}
+		can_use_trade_post = yes
+		can_form_trade_league = yes
+		trade_city_reform = trading_city
+	}
+	
 	ai = {
 		factor = 5
 	}
@@ -275,12 +344,14 @@ loyal_nobility_reform = {
 		always = yes
 	}
 	trigger = { OR = { has_reform = loyal_nobility_reform
-	    calc_true_if = { all_owned_province = {	base_manpower = 7 } amount = 25 }
+	    calc_true_if = { all_owned_province = {	base_manpower = 5 } amount = 15 }
 		}
 	}
 	legacy_equivalent = theocratic_government
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
+	allow_vassal_war = yes
+	allow_vassal_alliance = yes
 	
 	factions = {
 		es_clergy
@@ -331,6 +402,16 @@ kingdom_of_god_reform = {
 		free_adm_policy = 1
 	}
 	
+	conditional = {
+		allow = { has_dlc = "Mandate of Heaven" }
+		allow_banners = yes
+	}
+	
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		has_pashas = yes
+	}
+	
 	ai = {
 		factor = 1000
 	}
@@ -366,6 +447,13 @@ theocratic_democracy_reform = {
 		global_autonomy = -0.05
 		governing_capacity = 250
 		free_dip_policy = 1
+	}
+	
+	conditional = {
+		allow = { has_dlc = "Third Rome" }
+		government_abilities = {
+			russian_mechanic
+		}
 	}
 
 	conditional = {
@@ -411,6 +499,13 @@ divine_guidance_reform = {
 		free_dip_policy = 1
 	}
 	
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		government_abilities = {
+			feudal_theocracy_mechanic
+		}
+	}
+	
 	ai = {
 		factor = 1000
 	}
@@ -446,6 +541,11 @@ monastic_elections_reform = {
 		global_autonomy = -0.05
 		governing_capacity = 250
 		free_adm_policy = 1
+	}
+	
+	conditional = {
+		allow = { has_dlc = "Common Sense" }
+		has_parliament = yes
 	}
 	
 	conditional = {
@@ -508,6 +608,90 @@ battle_pope_reform = {
 		free_mil_policy = 1
 	}
 	
+	assimilation_cultures = {
+		marsh_cg = {
+			ship_durability = 0.10
+		}
+		yokudan-redguardian_cg = {
+			free_leader_pool = 1
+		}
+		bosmer_cg = {
+			land_attrition = -0.1
+		}
+		half_blood_cg = {
+			state_maintenance_modifier = -0.10
+		}
+		chimeris_cg = {
+			missionaries = 1
+		}
+		kamal_cg = {
+			global_trade_goods_size_modifier = 0.10
+		}
+		transpandomaic_cg = {
+			production_efficiency = 0.10
+		}
+		dead_cg = {
+			diplomats = 1
+		}
+		dwemer_cg = {
+			global_institution_spread = 0.10
+		}
+		sload_cg = {
+			core_creation = -0.1
+		}
+		po_tun_cg = {
+			advisor_cost = -0.1
+		}
+		tsaesci_cg = {
+			land_morale = 0.1
+		}
+		snow_elves_cg = {
+			idea_cost = -0.10
+		}
+		orsimer_cg = {
+			discipline = 0.05
+		}
+		tangmo_cg = {
+			merchants = 1
+		}
+		maorner_cg = {
+			global_sailors_modifier = 0.1
+		}
+		imga_cg = {
+			movement_speed = 0.1
+		}
+		northern_cg = {
+			mil_advisor_cost = -0.1
+		}
+		kothringi_cg = {
+			caravan_power = 0.1
+		}
+		high_elves_cg = {
+			prestige_decay = -0.01
+		}
+		cyrodiil_cg = {
+			global_autonomy = -0.025
+		}
+		daedra_cg = {
+			leader_land_fire = 1
+		}
+		khajiiti_cg = {
+			trade_efficiency = 0.10
+		}
+		minotaur_cg = {
+		    cavalry_power = 0.10
+		}
+		lilmothiit_cg = {
+		    global_missionary_strength = 0.01
+		}
+		void_cg = {
+		    global_manpower_modifier = 0.10
+		}
+		unknown_cg = {
+		    technology_cost = -0.10
+		}
+	}
+	
 	ai = {
 		factor = 1000
 	}
@@ -543,6 +727,13 @@ religious_harmony_reform = {
 		global_autonomy = -0.025
 		governing_capacity = 250
 		free_dip_policy = 1
+	}
+	
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		government_abilities = {
+			iqta_mechanic
+		}
 	}
 	
 	ai = {
@@ -584,6 +775,13 @@ proclaim_religious_head_reform = {
 		free_mil_policy = 1
 	}
 	
+	conditional = {
+		allow = { has_dlc = "Third Rome" }
+		government_abilities = {
+			russian_mechanic
+		}
+	}
+	
 	ai = {
 		factor = 1000
 	}
@@ -622,6 +820,33 @@ admiral_king_reform = {
 		governing_capacity = 250
 		free_dip_policy = 1
 	}
+	
+	boost_income = yes
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			NOT = { has_dlc = "Mare Nostrum" }
+		}
+		can_use_trade_post = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Mare Nostrum"
+			NOT = { has_dlc = "Res Publica" }
+		}
+		can_form_trade_league = yes
+		trade_city_reform = trading_city
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			has_dlc = "Mare Nostrum"
+		}
+		can_use_trade_post = yes
+		can_form_trade_league = yes
+		trade_city_reform = trading_city
+	}
+	
 	custom_attributes = {
 		admirals_become_rulers = yes
 	}
@@ -668,6 +893,12 @@ commander_king_reform = {
 		governing_capacity = 250
 		free_mil_policy = 1
 	}
+	
+	conditional = {
+		allow = { has_dlc = "Rights of Man" }
+		militarised_society = yes
+	}
+	
 	custom_attributes = {
 		generals_become_rulers = yes
 	}
@@ -709,6 +940,13 @@ religious_permanent_revolution_reform = {
 		discipline = 0.10
 		governing_capacity = 250
 		free_adm_policy = 1
+	}
+	
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		government_abilities = {
+			iqta_mechanic
+		}
 	}
 	
 	effect = {

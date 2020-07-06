@@ -128,61 +128,72 @@ country_decisions = {
 		major = yes
 		potential = {
 		    government = monarchy 
+			has_regency = yes
 		}
 
 		allow = {
 		    OR = {
-				emperor = { has_opinion = { who = ROOT value = 175 } }
-				alliance_with = emperor 
+			    NOT = { stability = 0 }
+				NOT = { legitimacy_or_horde_unity = 50 }
 			}
 		}
 
 		effect = {
 			change_government = republic
-			add_government_reform = free_city
-			kill_ruler = yes
-			add_prestige = 25
-			emperor = { add_imperial_influence = 5 }
+			add_stability = 1
+			add_republican_tradition = 100
+			add_country_modifier = {
+			    name = "regency_council_in_power"
+				duration = 9125
+			}
 		}
 		
 		ai_will_do = {
 			factor = 1
 			modifier = {
 			    factor = 0
-				government = monarchy
+				OR = {
+				stability = -2
+				legitimacy_or_horde_unity = 15
+				}
 			}
-			
 		}
 	}
 	
 	consort_sieges_power = {
 		major = yes
 		potential = {
-		    government = monarchy 
+		    government = monarchy
+            has_consort_regency	= yes	
 		}
 
 		allow = {
 		    OR = {
-				emperor = { has_opinion = { who = ROOT value = 175 } }
-				alliance_with = emperor 
+			    NOT = { stability = 0 }
+				NOT = { legitimacy_or_horde_unity = 50 }
 			}
 		}
 
 		effect = {
-			change_government = republic
-			add_government_reform = free_city
-			kill_ruler = yes
-			add_prestige = 25
-			emperor = { add_imperial_influence = 5 }
+			change_consort_regent_to_ruler = yes
+			add_stability = 1
+			add_legitimacy = 100
+			add_horde_unity = 100
+			add_country_modifier = {
+			    name = "consort_in_power"
+				duration = 9125
+			}
 		}
 		
 		ai_will_do = {
 			factor = 1
 			modifier = {
 			    factor = 0
-				government = monarchy
+				OR = {
+				stability = -2
+				legitimacy_or_horde_unity = 15
+				}
 			}
-			
 		}
 	}
 }

@@ -49,6 +49,11 @@ autocracy_reform = {
 	
 	start_territory_to_estates = 0.75
 	
+	conditional = {
+		allow = { has_dlc = "Rights of Man" }
+		militarised_society = yes
+	}
+	
 	ai = {
 		factor = 0.5
 	}
@@ -84,6 +89,13 @@ elective_monarchy = {
 	conditional = {
 		allow = { has_dlc = "Res Publica" }
 		is_elective = yes
+	}
+	
+	conditional = {
+	allow = { has_dlc = "The Cossacks" }
+	government_abilities = {
+		cossacks_mechanic
+	}
 	}
 	
 	custom_attributes = {
@@ -139,6 +151,11 @@ celestial_empire = {
 		allow_banners = yes
 	}
 	
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		has_pashas = yes
+	}
+	
 	ai = {
 		factor = 1000 # should always be picked if available
 	}
@@ -179,6 +196,13 @@ revolutionary_empire_reform = {
 	}
 	
 	start_territory_to_estates = 0.15
+	
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		government_abilities = {
+			iqta_mechanic
+		}
+	}
 
 	custom_attributes = {
 		locked_government_type = yes
@@ -217,6 +241,8 @@ feudalism_reform = {
 	legacy_equivalent = despotic_monarchy
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
+	allow_vassal_war = yes
+	allow_vassal_alliance = yes
 	
 	factions = {
 		es_clergy
@@ -272,6 +298,18 @@ austrian_archduchy_reform = {
 		free_dip_policy = 1
 	}
 	
+	conditional = {
+		allow = { has_dlc = "Res Publica" }
+		is_elective = yes
+	}
+	
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		government_abilities = {
+			feudal_theocracy_mechanic
+		}
+	}
+	
 	start_territory_to_estates = 0.50
 	
 	ai = {
@@ -312,6 +350,13 @@ grand_duchy_reform = {
 		free_mil_policy = 1
 	}
 	
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		government_abilities = {
+			iqta_mechanic
+		}
+	}
+	
 	start_territory_to_estates = 0.75
 	
 	ai = {
@@ -348,6 +393,13 @@ austrian_dual_monarchy = {
 		es_merchants
 		es_warriors
 	}
+	
+	conditional = {
+		allow = { has_dlc = "Third Rome" }
+		government_abilities = {
+			russian_mechanic
+		}
+	}
 
 	modifiers = {
 		num_accepted_cultures = 1
@@ -355,6 +407,11 @@ austrian_dual_monarchy = {
 		stability_cost_modifier = -0.25
 		governing_capacity = 100
 		free_adm_policy = 1
+	}
+	
+	conditional = {
+		allow = { has_dlc = "Common Sense" }
+		has_parliament = yes
 	}
 	
 	start_territory_to_estates = 0.50
@@ -460,6 +517,16 @@ english_monarchy = {
 	conditional = {
 		allow = { has_dlc = "Common Sense" }
 		has_parliament = yes
+	}
+	
+	conditional = {
+		allow = { has_dlc = "Mandate of Heaven" }
+		allow_banners = yes
+	}
+	
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		has_pashas = yes
 	}
 	
 	custom_attributes = {
@@ -820,6 +887,37 @@ plutocratic_reform = {
 	custom_attributes = {
 		enables_plutocratic_idea_group = yes
 		enables_aristocratic_idea_group = no
+	}
+	
+	conditional = {
+		allow = { has_dlc = "Common Sense" }
+		has_parliament = yes
+	}
+	
+	boost_income = yes
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			NOT = { has_dlc = "Mare Nostrum" }
+		}
+		can_use_trade_post = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Mare Nostrum"
+			NOT = { has_dlc = "Res Publica" }
+		}
+		can_form_trade_league = yes
+		trade_city_reform = trading_city
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			has_dlc = "Mare Nostrum"
+		}
+		can_use_trade_post = yes
+		can_form_trade_league = yes
+		trade_city_reform = trading_city
 	}
 	
 	ai = {

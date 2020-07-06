@@ -25,7 +25,7 @@ tribe_mechanic = {
 
 siberian_tribe = {
 	icon = "shaman"
-	allow_normal_conversion = tes
+	allow_normal_conversion = yes
 	potential = {
 		NOT = { has_reform = steppe_horde }
 		NOT = { has_reform = tribal_federation }
@@ -47,6 +47,13 @@ siberian_tribe = {
 		global_autonomy = -0.025
 		governing_capacity = 100
 		free_adm_policy = 1
+	}
+	
+	conditional = {
+	allow = { has_dlc = "The Cossacks" }
+	government_abilities = {
+		cossacks_mechanic
+	}
 	}
 	
 	ai = {
@@ -77,6 +84,13 @@ steppe_horde = {
 		loot_amount = 0.50
 		governing_capacity = 100
 		free_mil_policy = 1
+	}
+	
+	conditional = {
+	allow = { has_dlc = "The Cossacks" }
+	government_abilities = {
+		cossacks_mechanic
+	}
 	}
 	
 	ai = {
@@ -125,7 +139,11 @@ tribal_despotism = {
 	    always = yes
 	}
 	trigger = { OR = { has_reform = tribal_despotism
+	    AND = {
 	    total_development = 250
+		num_of_infantry = 50
+		NOT = { average_unrest = 1}
+		}
 		}
 	}
 	legacy_equivalent = steppe_horde_legacy
@@ -137,6 +155,11 @@ tribal_despotism = {
 		reduced_liberty_desire = 10
 		governing_capacity = 100
 		free_adm_policy = 1
+	}
+	
+	conditional = {
+		allow = { has_dlc = "Rights of Man" }
+		militarised_society = yes
 	}
 	
 	ai = {
@@ -151,7 +174,11 @@ tribal_kingdom = {
 	    always = yes
 	}
 	trigger = { OR = { has_reform = tribal_kingdom
+	    AND = {
 	    num_of_subjects = 5
+		prestige = 25
+		stability = 3
+		}
 		}
 	}
 	legacy_equivalent = steppe_horde_legacy
@@ -166,6 +193,18 @@ tribal_kingdom = {
 		free_dip_policy = 1
 	}
 	
+	conditional = {
+		allow = { has_dlc = "Res Publica" }
+		is_elective = yes
+	}
+	
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		government_abilities = {
+			feudal_theocracy_mechanic
+		}
+	}
+	
 	ai = {
 		factor = 5
 	}
@@ -177,11 +216,10 @@ great_mongol_state_reform = {
 	icon = "strength_of_the_khalsa"
 	allow_normal_conversion = yes
 	potential = {
-		NOT = { has_reform = siberian_tribe }
 		has_reform = steppe_horde
 	}
 	trigger = { OR = { has_reform = great_mongol_state_reform
-	    num_of_cities = 250
+	    num_of_cities = 500
 		}
 	}
 	legacy_equivalent = steppe_horde_legacy
@@ -202,6 +240,11 @@ great_mongol_state_reform = {
 		allow_banners = yes
 	}
 	
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		has_pashas = yes
+	}
+	
 	ai = {
 		factor = 1000
 	}
@@ -211,10 +254,19 @@ martial_society_reform = {
 	allow_normal_conversion = yes
 	icon = "warrior_monks_reform"
 	potential = {
-		NOT = { has_reform = siberian_tribe }
+		OR = {
+		has_reform = tribal_federation
+		has_reform = tribal_despotism
+		has_reform = tribal_kingdom
+		has_reform = great_mongol_state_reform
+		has_reform = martial_society_reform
+		has_reform = civil_society_reform
+		has_reform = religious_societies_reform
+		has_reform = retain_tribal_hierarchy_reform
+		}
 	}
 	trigger = { OR = { has_reform = martial_society_reform
-	    army_size = 250
+	    army_size = 500
 		}
 	}
 	legacy_equivalent = steppe_horde_legacy
@@ -229,6 +281,13 @@ martial_society_reform = {
 		free_mil_policy = 1
 	}
 	
+	conditional = {
+		allow = { has_dlc = "Third Rome" }
+		government_abilities = {
+			russian_mechanic
+		}
+	}
+	
 	ai = {
 		factor = 1000
 	}
@@ -238,13 +297,22 @@ civil_society_reform = {
 	allow_normal_conversion = yes
 	icon = "tribal_civil_society"
 	potential = {
-		NOT = { has_reform = siberian_tribe }
+		OR = {
+		has_reform = tribal_federation
+		has_reform = tribal_despotism
+		has_reform = tribal_kingdom
+		has_reform = great_mongol_state_reform
+		has_reform = martial_society_reform
+		has_reform = civil_society_reform
+		has_reform = religious_societies_reform
+		has_reform = retain_tribal_hierarchy_reform
+		}
 	}
 	trigger = { OR = { has_reform = civil_society_reform
 	    AND = {
-	    calc_true_if = { all_owned_province = {	has_building = workshop } amount = 50 }
-		calc_true_if = { all_owned_province = {	has_building = marketplace } amount = 50 }
-		calc_true_if = { all_owned_province = {	has_building = road_network } amount = 50 }
+	    calc_true_if = { all_owned_province = {	has_building = workshop } amount = 250 }
+		calc_true_if = { all_owned_province = {	has_building = marketplace } amount = 250 }
+		calc_true_if = { all_owned_province = {	has_building = road_network } amount = 250 }
 		}
 		}
 	}
@@ -260,6 +328,18 @@ civil_society_reform = {
 		free_dip_policy = 1
 	}
 	
+	conditional = {
+		allow = { has_dlc = "Common Sense" }
+		has_parliament = yes
+	}
+	
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		government_abilities = {
+			iqta_mechanic
+		}
+	}
+	
 	ai = {
 		factor = 1000
 	}
@@ -269,12 +349,21 @@ religious_societies_reform = {
 	icon = "organising_our_religion_reform"
 	allow_normal_conversion = yes
 	potential = {
-		NOT = { has_reform = siberian_tribe }
+		OR = {
+		has_reform = tribal_federation
+		has_reform = tribal_despotism
+		has_reform = tribal_kingdom
+		has_reform = great_mongol_state_reform
+		has_reform = martial_society_reform
+		has_reform = civil_society_reform
+		has_reform = religious_societies_reform
+		has_reform = retain_tribal_hierarchy_reform
+		}
 	}
 	trigger = { OR = { has_reform = religious_societies_reform
 	    AND = {
 	    is_defender_of_faith = yes
-		calc_true_if = { all_owned_province = {	has_building = temple } amount = 50 }
+		calc_true_if = { all_owned_province = {	has_building = temple } amount = 350 }
 		all_owned_province = { religion = root }
 		}
 		}
@@ -291,6 +380,13 @@ religious_societies_reform = {
 		free_adm_policy = 1
 	}
 	
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		government_abilities = {
+			feudal_theocracy_mechanic
+		}
+	}
+	
 	ai = {
 		factor = 1000
 	}
@@ -300,12 +396,21 @@ retain_tribal_hierarchy_reform = {
 	icon = "retain_tribal_hierarchy"
 	allow_normal_conversion = yes
 	potential = {
-		NOT = { has_reform = siberian_tribe }
+		OR = {
+		has_reform = tribal_federation
+		has_reform = tribal_despotism
+		has_reform = tribal_kingdom
+		has_reform = great_mongol_state_reform
+		has_reform = martial_society_reform
+		has_reform = civil_society_reform
+		has_reform = religious_societies_reform
+		has_reform = retain_tribal_hierarchy_reform
+		}
 	}
 	trigger = { OR = { has_reform = retain_tribal_hierarchy_reform
 	    AND = {
-	    total_development = 1000
-		government_rank = 5
+	    total_development = 1500
+		government_rank = 7
 		all_neighbor_country = { NOT = { army_size = ROOT } }
 		}
 		}
@@ -320,6 +425,90 @@ retain_tribal_hierarchy_reform = {
 		land_morale = 0.10
 		governing_capacity = 250
 		free_mil_policy = 1
+	}
+	
+	assimilation_cultures = {
+		marsh_cg = {
+			ship_durability = 0.10
+		}
+		yokudan-redguardian_cg = {
+			free_leader_pool = 1
+		}
+		bosmer_cg = {
+			land_attrition = -0.1
+		}
+		half_blood_cg = {
+			state_maintenance_modifier = -0.10
+		}
+		chimeris_cg = {
+			missionaries = 1
+		}
+		kamal_cg = {
+			global_trade_goods_size_modifier = 0.10
+		}
+		transpandomaic_cg = {
+			production_efficiency = 0.10
+		}
+		dead_cg = {
+			diplomats = 1
+		}
+		dwemer_cg = {
+			global_institution_spread = 0.10
+		}
+		sload_cg = {
+			core_creation = -0.1
+		}
+		po_tun_cg = {
+			advisor_cost = -0.1
+		}
+		tsaesci_cg = {
+			land_morale = 0.1
+		}
+		snow_elves_cg = {
+			idea_cost = -0.10
+		}
+		orsimer_cg = {
+			discipline = 0.05
+		}
+		tangmo_cg = {
+			merchants = 1
+		}
+		maorner_cg = {
+			global_sailors_modifier = 0.1
+		}
+		imga_cg = {
+			movement_speed = 0.1
+		}
+		northern_cg = {
+			mil_advisor_cost = -0.1
+		}
+		kothringi_cg = {
+			caravan_power = 0.1
+		}
+		high_elves_cg = {
+			prestige_decay = -0.01
+		}
+		cyrodiil_cg = {
+			global_autonomy = -0.025
+		}
+		daedra_cg = {
+			leader_land_fire = 1
+		}
+		khajiiti_cg = {
+			trade_efficiency = 0.10
+		}
+		minotaur_cg = {
+		    cavalry_power = 0.10
+		}
+		lilmothiit_cg = {
+		    global_missionary_strength = 0.01
+		}
+		void_cg = {
+		    global_manpower_modifier = 0.10
+		}
+		unknown_cg = {
+		    technology_cost = -0.10
+		}
 	}
 	
 	ai = {

@@ -731,7 +731,6 @@ tributary_state = {
 		    is_emperor = yes
 			is_emperor_of_china = yes
 			has_reform = celestial_empire
-			has_reform = celestial_empire_legacy
 			is_nomad = yes
 		}
 	}
@@ -743,6 +742,7 @@ tributary_state = {
 
 	# Properties:
     is_voluntary = yes
+    can_send_tribute = yes
 	joins_overlords_wars = no
 	overlord_can_be_subject = yes
 	can_have_subjects_of_other_types = yes

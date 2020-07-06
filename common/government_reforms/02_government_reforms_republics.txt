@@ -58,6 +58,26 @@ oligarchy_reform = {
 	
 	duration = 4
 	
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+		}
+
+		states_general_mechanic = {
+			particularists = {
+			    vassal_income = 0.25
+				state_maintenance_modifier = -0.15
+				republican_tradition = 1
+			}
+
+			сentralists = {
+				global_unrest = -2.5
+				yearly_corruption = -0.15
+				republican_tradition = -1
+			}
+		}
+	}
+	
 	custom_attributes = {
 		enables_plutocratic_idea_group = yes
 		enables_aristocratic_idea_group = no
@@ -167,6 +187,13 @@ colonial_government = {
 	}
 	
 	duration = 4
+	
+	conditional = {
+		allow = { has_dlc = "Third Rome" }
+		government_abilities = {
+			russian_mechanic
+		}
+	}
 
 	custom_attributes = {
 		locked_government_type = yes
@@ -211,6 +238,11 @@ presidential_despot_reform = {
 	}
 	
 	has_term_election = no
+	
+	conditional = {
+		allow = { has_dlc = "Rights of Man" }
+		militarised_society = yes
+	}
 
 	custom_attributes = {
 		locked_government_type = yes
@@ -270,6 +302,16 @@ revolutionary_republic_reform = {
 			rr_girondists
 		}
 	}
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		government_abilities = {
+			feudal_theocracy_mechanic
+		}
+	}
+	conditional = {
+		allow = { has_dlc = "Common Sense" }
+		has_parliament = yes
+	}
 	removed_effect = {
 		hidden_effect = {
 			if = { limit = { has_country_flag = is_revolutionary_china_flag is_revolutionary = no } clr_country_flag = is_revolutionary_china_flag restore_country_name = yes override_country_name = CHINA_STRING set_country_flag = is_china_flag }
@@ -326,6 +368,18 @@ junior_revolutionary_republic_reform = {
 			if = { limit = { has_country_flag = is_revolutionary_china_flag is_revolutionary = no } clr_country_flag = is_revolutionary_china_flag restore_country_name = yes override_country_name = CHINA_STRING set_country_flag = is_china_flag }
 			if = { limit = { has_country_flag = is_revolutionary_turkey_flag is_revolutionary = no } clr_country_flag = is_revolutionary_turkey_flag restore_country_name = yes override_country_name = TURKEY_STRING set_country_flag = is_turkey_flag }
 			if = { limit = { has_country_flag = is_revolutionary_gurkani_flag is_revolutionary = no } clr_country_flag = is_revolutionary_gurkani_flag restore_country_name = yes override_country_name = GURKANI_EMPIRE_STRING set_country_flag = is_gurkani_flag }
+		}
+	}
+	
+	conditional = {
+		allow = { has_dlc = "Common Sense" }
+		has_parliament = yes
+	}
+	
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		government_abilities = {
+			feudal_theocracy_mechanic
 		}
 	}
 
@@ -484,11 +538,23 @@ free_city = {
 	}
 	
 	duration = 4
+	
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		government_abilities = {
+			iqta_mechanic
+		}
+	}
 
 	custom_attributes = {
 		locked_government_type = yes
 		enables_plutocratic_idea_group = yes
 		enables_aristocratic_idea_group = no
+	}
+	
+	conditional = {
+		allow = { has_dlc = "Common Sense" }
+		has_parliament = yes
 	}
 }
 
@@ -532,6 +598,30 @@ pirate_republic_reform = {
 	}
 	
 	duration = 5
+	
+	boost_income = yes
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			NOT = { has_dlc = "Mare Nostrum" }
+		}
+		can_use_trade_post = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Mare Nostrum"
+			NOT = { has_dlc = "Res Publica" }
+		}
+		trade_city_reform = trading_city
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			has_dlc = "Mare Nostrum"
+		}
+		can_use_trade_post = yes
+		trade_city_reform = trading_city
+	}
 	
 	removed_effect = {
 		clr_country_flag = pirate_mutineer_council
@@ -591,6 +681,15 @@ pirate_king_reform = {
 		}
 	}
 	
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		government_abilities = {
+			mamluk_mechanic
+		}
+		heir = no
+		foreign_slave_rulers = yes
+	}
+	
 	custom_attributes = {
 		admirals_become_rulers = yes
 	}
@@ -636,6 +735,13 @@ war_against_the_world_doctrine_reform = {
 		mercenary_cost = -0.15
 		free_mil_policy = 1
 		may_perform_slave_raid_on_same_religion = yes
+	}
+	
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		government_abilities = {
+			tribal_federation_mechanic
+		}
 	}
 	
 	effect = {
@@ -689,6 +795,13 @@ noble_elite_reform = {
 	}
 	
 	duration = 7
+	
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		government_abilities = {
+			iqta_mechanic
+		}
+	}
 
 	custom_attributes = {
 	    enables_nepotism = yes
@@ -750,6 +863,18 @@ peasants_republic = {
 		enables_aristocratic_idea_group = no
 	}
 	
+	conditional = {
+	allow = { has_dlc = "The Cossacks" }
+	government_abilities = {
+		cossacks_mechanic
+	}
+	}
+	
+	conditional = {
+		allow = { has_dlc = "Common Sense" }
+		has_parliament = yes
+	}
+	
 	ai = {
 		factor = 5
 	}
@@ -784,6 +909,13 @@ protectorate_parliament_reform = {
 	}
 	
 	duration = 4
+	
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		government_abilities = {
+			iqta_mechanic
+		}
+	}
 
 	conditional = {
 		allow = { has_dlc = "Common Sense" }
@@ -920,6 +1052,10 @@ veche_republic = {
 		can_form_trade_league = yes
 		trade_city_reform = trading_city
 	}
+	conditional = {
+		allow = { has_dlc = "Common Sense" }
+		has_parliament = yes
+	}
 	
 	ai = {
 		factor = 1000
@@ -955,6 +1091,13 @@ ambrosian_republic = {
 	}
 	
 	duration = 4
+	
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		government_abilities = {
+			feudal_theocracy_mechanic
+		}
+	}
 	
 	custom_attributes = {
 		enables_plutocratic_idea_group = yes
@@ -1044,7 +1187,7 @@ venice_merchants_reform = {
 	trigger = { OR = { has_reform = venice_merchants_reform
 	    AND = {
 	    government_rank = 5
-	    num_of_ports = 175
+	    num_of_ports = 250
 		prestige = 25
 		}
 		}
@@ -1104,6 +1247,11 @@ venice_merchants_reform = {
 		is_merchant_republic = yes
 	}
 	
+	conditional = {
+		allow = { has_dlc = "Common Sense" }
+		has_parliament = yes
+	}
+	
 	ai = {
 		factor = 1000
 	}
@@ -1154,6 +1302,16 @@ federal_republic = {
 		has_parliament = yes
 	}
 	
+	conditional = {
+		allow = { has_dlc = "Mandate of Heaven" }
+		allow_banners = yes
+	}
+	
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		has_pashas = yes
+	}
+	
 	ai = {
 		factor = 1000
 	}
@@ -1189,8 +1347,11 @@ cossacks_reform = {
 	
 	duration = 5
 	
+	conditional = {
+	allow = { has_dlc = "The Cossacks" }
 	government_abilities = {
 		cossacks_mechanic
+	}
 	}
 
 	custom_attributes = {
@@ -1249,6 +1410,12 @@ american_republic = {
 			has_dlc = "Common Sense"
 		}
 		has_parliament = yes
+	}
+	conditional = {
+		allow = { has_dlc = "Third Rome" }
+		government_abilities = {
+			russian_mechanic
+		}
 	}
 	
 	ai = {
@@ -1337,6 +1504,13 @@ signoria_reform = {
 		free_adm_policy = 1
 	}
 	
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		government_abilities = {
+			feudal_theocracy_mechanic
+		}
+	}
+	
 	duration = 12
 	
 	custom_attributes = {
@@ -1383,6 +1557,90 @@ military_dictatorship_reform = {
 	}
 	
 	has_term_election = no
+	
+	assimilation_cultures = {
+		marsh_cg = {
+			ship_durability = 0.10
+		}
+		yokudan-redguardian_cg = {
+			free_leader_pool = 1
+		}
+		bosmer_cg = {
+			land_attrition = -0.1
+		}
+		half_blood_cg = {
+			state_maintenance_modifier = -0.10
+		}
+		chimeris_cg = {
+			missionaries = 1
+		}
+		kamal_cg = {
+			global_trade_goods_size_modifier = 0.10
+		}
+		transpandomaic_cg = {
+			production_efficiency = 0.10
+		}
+		dead_cg = {
+			diplomats = 1
+		}
+		dwemer_cg = {
+			global_institution_spread = 0.10
+		}
+		sload_cg = {
+			core_creation = -0.1
+		}
+		po_tun_cg = {
+			advisor_cost = -0.1
+		}
+		tsaesci_cg = {
+			land_morale = 0.1
+		}
+		snow_elves_cg = {
+			idea_cost = -0.10
+		}
+		orsimer_cg = {
+			discipline = 0.05
+		}
+		tangmo_cg = {
+			merchants = 1
+		}
+		maorner_cg = {
+			global_sailors_modifier = 0.1
+		}
+		imga_cg = {
+			movement_speed = 0.1
+		}
+		northern_cg = {
+			mil_advisor_cost = -0.1
+		}
+		kothringi_cg = {
+			caravan_power = 0.1
+		}
+		high_elves_cg = {
+			prestige_decay = -0.01
+		}
+		cyrodiil_cg = {
+			global_autonomy = -0.025
+		}
+		daedra_cg = {
+			leader_land_fire = 1
+		}
+		khajiiti_cg = {
+			trade_efficiency = 0.10
+		}
+		minotaur_cg = {
+		    cavalry_power = 0.10
+		}
+		lilmothiit_cg = {
+		    global_missionary_strength = 0.01
+		}
+		void_cg = {
+		    global_manpower_modifier = 0.10
+		}
+		unknown_cg = {
+		    technology_cost = -0.10
+		}
+	}
 	
 	custom_attributes = {
 		generals_become_rulers = yes
