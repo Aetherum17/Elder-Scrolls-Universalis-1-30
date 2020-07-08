@@ -129,4 +129,25 @@ country_decisions = {
 		}
 	}
 	
+	go_cult_of_reason = {
+		potential = {
+			is_revolutionary_republic_trigger = yes
+			NOT = {
+				has_country_modifier = cult_of_reason
+			}
+		}
+		allow = {
+			NOT = { stability = -1 }
+		}
+		effect = {
+			add_country_modifier = {
+				name = "cult_of_reason"
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
 }

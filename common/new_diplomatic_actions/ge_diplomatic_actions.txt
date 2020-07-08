@@ -303,7 +303,7 @@ create_holy_order_1 = {
 		}
 		FROM = {
 		    change_government = theocracy
-			set_legacy_government = monastic_order_government
+			set_legacy_government = theocratic_government
 		    add_government_reform = monastic_order_reform
 		    add_devotion = 100		
 		}
@@ -532,7 +532,7 @@ ask_to_become_holy_order_1 = {
 		}
 		ROOT = {
 		    change_government = theocracy
-			set_legacy_government = monastic_order_government
+			set_legacy_government = theocratic_government
 		    add_government_reform = monastic_order_reform
 		    add_devotion = 100		
 		}

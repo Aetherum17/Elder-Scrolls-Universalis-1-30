@@ -977,6 +977,19 @@ age_of_discovery = {
 	
 	religious_conflicts = yes
 	
+	absolutism = {
+		harsh_treatment = 1
+		stability = 1
+		decrease_autonomy_command = 1
+		strengthen_government = 1
+		
+		increase_autonomy_command = -1
+		debase_currency = -1
+		execute_rebel_acceptance_command = -10
+		seat_in_parliament = -5
+		war_exhaustion = -1
+	}
+	
     objectives = {
 	obj_100_development = {
 			total_development = 1000
@@ -1126,6 +1139,19 @@ age_of_reformation = {
 	}
 	
 	religious_conflicts = yes
+	
+	absolutism = {
+		harsh_treatment = 1
+		stability = 1
+		decrease_autonomy_command = 1
+		strengthen_government = 1
+		
+		increase_autonomy_command = -1
+		debase_currency = -1
+		execute_rebel_acceptance_command = -10
+		seat_in_parliament = -5
+		war_exhaustion = -1
+	}
 	
 	objectives = {
 		obj_christian_convert = {

@@ -1076,10 +1076,9 @@ cb_world_crusade = {
 			is_neighbor_of = FROM
 			claim = FROM
 			cb_on_religious_enemies = yes
-				OR = {
-					cb_on_primitives = yes
-					cb_on_overseas = yes
-				}
+			OR = {
+				cb_on_primitives = yes
+				cb_on_overseas = yes
 			}
 		}
 		NOT = { religion_group = FROM }

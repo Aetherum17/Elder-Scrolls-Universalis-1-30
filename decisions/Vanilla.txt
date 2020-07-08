@@ -236,4 +236,56 @@ country_decisions = {
 		}
 	}
 	
+	say_the_state_is_me_1 = {
+		potential = {
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { has_country_modifier = the_state_is_me }
+			current_age = age_of_discovery
+		}
+		allow = {
+			adm = 5
+			monthly_income = 100
+		}
+		effect = {
+			add_ruler_modifier = {
+				name = "the_state_is_me"
+				duration = -1
+			}
+			add_absolutism = 10
+		}
+		ai_will_do = {
+			factor = 1
+		}	
+	}
+	
+	abolish_slavery_act = {
+	    major = yes
+		potential = {
+			full_idea_group = humanist_ideas
+			any_owned_province = { trade_goods = slaves }
+			NOT = { has_reform = mamluk_government }
+			NOT = { has_reform = pirate_king_reform }
+			NOT = { has_reform = pirate_republic_reform }
+			NOT = { has_reform = war_against_the_world_doctrine_reform }
+			NOT = { overextension_percentage = 0.01 }
+		}
+		allow = {
+			dip = 3
+		}
+		effect = {
+			add_prestige = 10
+			add_country_modifier = {
+				name = "the_abolish_slavery_act"
+				duration = -1
+			}
+			
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
 }
