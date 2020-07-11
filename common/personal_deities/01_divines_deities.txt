@@ -1,0 +1,240 @@
+Akatosh = {
+	legitimacy = 0.25
+	republican_tradition = 0.25
+	devotion = 0.25
+	horde_unity = 0.25
+	meritocracy = 0.25
+	global_institution_spread = 0.10
+	
+	allow = {
+	OR = {
+	AND = { religion = eight_divines has_country_flag = eight_divines_1_flag }
+	AND = { religion = nine_divines has_country_flag = nine_divines_1_flag }
+	AND = { religion = twelve_divines has_country_flag = twelve_divines_1_flag }
+    }	
+	}
+	
+	sprite = 28
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Arkay = {
+	manpower_recovery_speed = 0.10
+	global_regiment_cost = -0.10
+	
+	allow = {
+	OR = {
+	AND = { religion = eight_divines NOT = { has_country_flag = eight_divines_1_flag } }
+	AND = { religion = nine_divines NOT = { has_country_flag = nine_divines_1_flag } }
+	AND = { religion = twelve_divines NOT = { has_country_flag = twelve_divines_1_flag } }
+	}
+	}
+	
+	sprite = 22
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Mara = {
+	global_manpower_modifier = 0.10
+	manpower_recovery_speed = 0.10
+	
+	allow = {
+	OR = {
+	AND = { religion = altmeri_pantheon has_country_flag = altmeri_pantheon_1_flag }
+	AND = { religion = snow_elves_pantheon has_country_flag = snow_elves_pantheon_1_flag }
+	AND = { religion = nordic_pantheon has_country_flag = nordic_pantheon_2_flag }
+	religion = eight_divines 
+	AND = { religion = nine_divines has_country_flag = nine_divines_2_flag }
+	AND = { religion = kothri_pantheon has_country_flag = kothri_pantheon_2_flag }
+	AND = { religion = twelve_divines has_country_flag = twelve_divines_2_flag }
+	AND = { religion = bosmer_pantheon has_country_flag = bosmer_pantheon_4_flag }
+	}
+	}
+	
+	sprite = 5
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Dibella = {
+    diplomatic_reputation = 0.5
+	ae_impact = -0.10
+	
+	allow = {
+	OR = {
+	AND = { religion = nordic_pantheon NOT = { has_country_flag = nordic_pantheon_2_flag } }
+	religion = eight_divines 
+	AND = { religion = nine_divines NOT = { has_country_flag = nine_divines_2_flag } }
+	AND = { religion = twelve_divines NOT = { has_country_flag = twelve_divines_2_flag } }
+    }
+	}
+	
+	sprite = 13
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Julianos = {
+	idea_cost = -0.10
+	build_cost = -0.10
+	
+	allow = {
+	OR = {
+	AND = { religion = eight_divines has_country_flag = eight_divines_2_flag }
+	AND = { religion = nine_divines has_country_flag = nine_divines_3_flag }
+	AND = { religion = twelve_divines has_country_flag = twelve_divines_3_flag }
+    }	
+	}
+	
+	sprite = 29
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Zenithar = {
+    global_trade_power = 0.10
+	global_trade_goods_size_modifier = 0.10
+	
+	allow = {
+	OR = {
+	AND = { religion = eight_divines NOT = { has_country_flag = eight_divines_2_flag } }
+	AND = { religion = nine_divines NOT = { has_country_flag = nine_divines_3_flag } }
+    }	
+	}
+	
+	sprite = 34
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Kynareth = {
+	land_attrition = -0.10
+	movement_speed = 0.10
+	
+	allow = {
+	OR = {
+	religion = eight_divines 
+	AND = { religion = nine_divines NOT = { has_country_flag = nine_divines_4_flag } }
+	AND = { religion = twelve_divines NOT = { has_country_flag = twelve_divines_4_flag } }
+    }	
+	}
+	
+	sprite = 30
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Morihaus = {
+    discipline = 0.05
+	global_unrest = -1
+	
+	allow = {
+    religion = nine_divines has_country_flag = nine_divines_4_flag
+	}
+	
+	sprite = 31
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Sheor = {
+	global_unrest = -1
+	stability_cost_modifier = -0.10
+	
+	allow = {
+	religion = twelve_divines NOT = { has_country_flag = twelve_divines_6_flag }
+	}
+	
+	sprite = 19
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Stendarr = {
+    tolerance_heretic = 1
+	tolerance_heathen = 1
+	
+	allow = {
+	OR = {
+	religion = snow_elves_pantheon
+    AND = { religion = bosmer_pantheon NOT = { has_country_flag = bosmer_pantheon_4_flag } }
+	AND = { religion = eight_divines has_country_flag = eight_divines_3_flag }
+	AND = { religion = nine_divines has_country_flag = nine_divines_5_flag }
+	AND = { religion = twelve_divines has_country_flag = twelve_divines_6_flag }
+	}
+	}
+	
+	sprite = 7
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Shezarr = {
+	land_morale = 0.10
+	stability_cost_modifier = -0.10
+	
+	allow = {
+	OR = {
+	AND = { religion = eight_divines NOT = { has_country_flag = nine_divines_5_flag } }
+	AND = { religion = eight_divines NOT = { has_country_flag = eight_divines_3_flag } }
+    }	
+	}
+	
+	sprite = 3
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Reman = {
+    diplomatic_reputation = 0.5
+	reduced_liberty_desire = 10
+	
+	allow = {
+	religion = nine_divines has_country_flag = nine_divines_6_flag
+	}
+	
+	sprite = 32
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Talos = {
+    land_morale = 0.10
+	discipline = 0.05
+	
+	allow = {
+	religion = nine_divines NOT = { has_country_flag = nine_divines_6_flag }
+	}
+	
+	sprite = 33
+	
+	ai_will_do = {
+		factor = 1
+	}
+}

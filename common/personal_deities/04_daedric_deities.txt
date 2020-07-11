@@ -1,0 +1,218 @@
+Maloch = {
+	infantry_power = 0.10
+	mercenary_discipline = 0.05
+	
+	allow = {
+	religion = nordic_pantheon has_country_flag = nordic_pantheon_4_flag
+	}
+	
+	sprite = 17
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Mora = {
+    technology_cost = -0.05
+	global_institution_spread = 0.10
+	
+	allow = {
+	OR = {
+	AND = { religion = nordic_pantheon NOT = { has_country_flag = nordic_pantheon_4_flag } }
+	AND = { religion = bosmer_pantheon NOT = { has_country_flag = bosmer_pantheon_5_flag } }
+	}
+	}
+	
+	sprite = 14
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Clavicus_Vile = {
+    trade_efficiency = 0.10
+    improve_relation_modifier = 0.25
+	
+	allow = {
+	religion = kothri_pantheon has_country_flag = kothri_pantheon_1_flag
+	}
+	
+	sprite = 58
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Bal = {
+    free_leader_pool = 1
+	heir_chance = 0.25
+	
+	allow = {
+	religion = kothri_pantheon NOT = { has_country_flag = kothri_pantheon_3_flag }
+	}
+	
+	sprite = 63
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Boethiah = {
+    global_spy_defence = 0.10
+	ae_impact = -0.10
+	
+	allow = {
+	AND = { religion = kothri_pantheon NOT = { has_country_flag = kothri_pantheon_4_flag } }
+	}
+	
+	sprite = 62
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Malacath = {
+	infantry_power = 0.10
+	mercenary_discipline = 0.05
+	
+	allow = {
+	OR = {
+	religion = malacath_cult
+	AND = { religion = kothri_pantheon has_country_flag = kothri_pantheon_4_flag }
+    }	 
+	}
+	
+	sprite = 17
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Mauloch = {
+	land_morale = 0.10
+	discipline = 0.05
+	
+	allow = {
+	religion = malacath_cult 
+	}
+	
+	sprite = 57
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Mehrunes = {
+	fire_damage = 0.10
+	loot_amount = 0.25
+	
+	allow = {
+	religion = malacath_cult 
+	}
+	
+	sprite = 40
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Namiira = {
+	advisor_cost = -0.10
+	claim_duration = 0.25
+	
+	allow = {
+	religion = malacath_cult 
+	}
+	
+	sprite = 42
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Mephala = {
+	spy_offence = 0.10
+	rebel_support_efficiency = 0.25
+	
+	allow = {
+	religion = malacath_cult 
+	}
+	
+	sprite = 41
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Hircine = {
+    mercenary_manpower = 0.10
+	merc_maintenance_modifier = -0.10
+	
+	allow = {
+	religion = kothri_pantheon has_country_flag = kothri_pantheon_5_flag
+	}
+	
+	sprite = 37
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Sangiine = {
+    global_unrest = -1
+	culture_conversion_cost = -0.10
+	
+	allow = {
+	religion = kothri_pantheon NOT = { has_country_flag = kothri_pantheon_5_flag }
+	}
+	
+	sprite = 45
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Sheogorath = {
+    unjustified_demands = -0.10
+	province_warscore_cost = -0.10
+	
+	allow = {
+	religion = kothri_pantheon NOT = { has_country_flag = kothri_pantheon_6_flag }
+	}
+	
+	sprite = 46
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Azura = {
+    tolerance_own = 1
+	war_exhaustion_cost = -0.10
+	
+	allow = {
+	OR = {
+	religion = reclamations_pantheon 
+	AND = { religion = kothri_pantheon has_country_flag = kothri_pantheon_6_flag }
+	}
+	}
+	
+	sprite = 36
+	
+	ai_will_do = {
+		factor = 1
+	}
+}

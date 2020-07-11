@@ -14,12 +14,12 @@ polytheistic_group = {
 		color = { 236 223 33 }
 		icon = 1
 		country = {
-			tolerance_own = 1
-			tolerance_heretic = 1
+			tolerance_own = 2.5
+			tolerance_heretic = 2.5
 		}
 		country_as_secondary = {
-			tolerance_own = 1
-			tolerance_heretic = 1
+			tolerance_own = 2.5
+			tolerance_heretic = 2.5
 		}
 		province = {
 			local_missionary_strength = -0.015
@@ -34,12 +34,12 @@ polytheistic_group = {
 		color = { 230 222 100 }
 		icon = 2
 		country = {
-			tolerance_own = 1
-			religious_unity = 0.10
+			religious_unity = 0.25
+			province_warscore_cost = -0.25
 		}
 		country_as_secondary = {
-			tolerance_own = 1
-			religious_unity = 0.10
+			religious_unity = 0.25
+			province_warscore_cost = -0.25
 		}
 		province = {
 			local_missionary_strength = -0.015
@@ -56,12 +56,12 @@ polytheistic_group = {
 		color = { 77 145 138 }
 		icon = 3
 		country = {
-		    land_morale = 0.10
-			land_forcelimit_modifier  = 0.10
+		    land_forcelimit_modifier  = 0.25
+			global_regiment_recruit_speed = -0.25
 		}
 		country_as_secondary = {
-			land_morale = 0.10
-			land_forcelimit_modifier  = 0.10
+			land_forcelimit_modifier  = 0.25
+			global_regiment_recruit_speed = -0.25
 		}
 		province = {
 			local_missionary_strength = -0.015
@@ -76,12 +76,12 @@ polytheistic_group = {
 		color = { 24 137 43 }
 		icon = 4
 		country = {
-			land_attrition = -0.10
-		    garrison_size = 0.10
+			land_attrition = -0.25
+		    garrison_size = 0.25
 		}
 		country_as_secondary = {
-			land_attrition = -0.10
-		    garrison_size = 0.10
+			land_attrition = -0.25
+		    garrison_size = 0.25
 		}
 		province = {
 			local_missionary_strength = -0.015
@@ -96,8 +96,8 @@ polytheistic_group = {
 		color = { 77 101 198 }
 		icon = 5
 		country = {
-			global_spy_defence = 0.10
-		    enemy_core_creation = 0.10
+			global_spy_defence = 0.25
+		    core_creation = -0.25
 		}
 		allowed_center_conversion = {
 			meridia_cult
@@ -125,8 +125,8 @@ polytheistic_group = {
             }
         }
 		country_as_secondary = {
-			global_spy_defence = 0.10
-		    enemy_core_creation = 0.10
+			global_spy_defence = 0.25
+		    core_creation = -0.25
 		}
 		province = {
 			local_missionary_strength = -0.015
@@ -142,11 +142,11 @@ polytheistic_group = {
 		icon = 6
 		country = {
 			diplomatic_reputation = 1
-		    prestige_decay = -0.01
+		    prestige_decay = -0.025
 		}
 		country_as_secondary = {
 			diplomatic_reputation = 1
-		    prestige_decay = -0.01
+		    prestige_decay = -0.025
 		}
 		province = {
 			local_missionary_strength = -0.015
@@ -161,11 +161,11 @@ polytheistic_group = {
 		color = { 9 38 154 }
 		icon = 7
 		country = {
-		    global_unrest = -1
+		    global_unrest = -2.5
 			num_accepted_cultures = 1
 		}
 		country_as_secondary = {
-			global_unrest = -1
+			global_unrest = -2.5
 			num_accepted_cultures = 1
 		}
 		province = {
@@ -203,14 +203,12 @@ polytheistic_group = {
 		color = { 230 167 40 }
 		icon = 9
 		country = {
-		    heir_chance = 1.0
-			trade_efficiency = 0.10
-			may_perform_slave_raid = yes
+			trade_efficiency = 0.15
+			light_ship_power = 0.15
 		}
 		country_as_secondary = {
-			heir_chance = 1.0
-			trade_efficiency = 0.10
-			may_perform_slave_raid = yes
+			trade_efficiency = 0.15
+			light_ship_power = 0.15
 		}
 		province = {
 			local_missionary_strength = -0.015
@@ -225,12 +223,12 @@ polytheistic_group = {
 		color = { 198 135 11 }
 		icon = 10
 		country = {
-		    heir_chance = 1.0
-			land_morale = 0.10
+		    cavalry_cost = -0.25
+			infantry_power = 0.15
 		}
 		country_as_secondary = {
-			heir_chance = 1.0
-			land_morale = 0.10
+			cavalry_cost = -0.25
+			infantry_power = 0.15
 		}
 		province = {
 			local_missionary_strength = -0.015
@@ -247,12 +245,12 @@ polytheistic_group = {
 		color = { 24 122 14 }
 		icon = 11
 		country = {
-			army_tradition_decay = -0.01
-	        defensiveness = 0.10
+			army_tradition_decay = -0.025
+	        defensiveness = 0.25
 		}
 		country_as_secondary = {
-			army_tradition_decay = -0.01
-	        defensiveness = 0.10
+			army_tradition_decay = -0.025
+	        defensiveness = 0.25
 		}
 		province = {
 			local_missionary_strength = -0.015
@@ -267,14 +265,12 @@ polytheistic_group = {
 		color = { 236 201 26 }
 		icon = 12
 		country = {
-		    fire_damage_received = -0.10
-			global_trade_power = 0.10
-			may_perform_slave_raid = yes
+		    fire_damage_received = -0.15
+			global_trade_power = 0.25
 		}
 		country_as_secondary = {
-			fire_damage_received = -0.10
-			global_trade_power = 0.10
-			may_perform_slave_raid = yes
+			fire_damage_received = -0.15
+			global_trade_power = 0.25
 		}
 		province = {
 			local_missionary_strength = -0.015
@@ -305,18 +301,36 @@ occult_group = {
 		color = { 203 203 205 }
 		icon = 13
 		country = {
-		    diplomatic_reputation = 1
-			papal_influence = 1
+			global_missionary_strength = 0.025
+			build_cost = -0.25
 		}
 		country_as_secondary = {
-			diplomatic_reputation = 1
-			papal_influence = 1
+			global_missionary_strength = 0.025
+			build_cost = -0.25
 		}
 		province = {
 			local_missionary_strength = -0.025
 		}
 		
+		fetishist_cult = yes
+		
 		heretic = { CHIMER_HERETIC }	
+	}
+	
+	tribunal_pantheon = {
+		color = { 170 11 202 }
+		icon = 14
+		country = {
+		    papal_influence = 1
+			discipline = 0.10
+		}
+		country_as_secondary = {
+			papal_influence = 1
+			discipline = 0.10
+		}
+		province = {
+			local_missionary_strength = -0.025
+		}
 		
 		papacy = {
 			papal_tag = RED
@@ -552,24 +566,6 @@ occult_group = {
 				}
 			}			
 		}
-	}
-	
-	tribunal_pantheon = {
-		color = { 170 11 202 }
-		icon = 14
-		country = {
-			tolerance_own = 1
-		    global_missionary_strength = 0.01
-		}
-		country_as_secondary = {
-			tolerance_own = 1
-		    global_missionary_strength = 0.01
-		}
-		province = {
-			local_missionary_strength = -0.025
-		}
-		
-		personal_deity = yes
 		
 		heretic = { TRIBUNAL_HERETIC }	
 	}
@@ -578,12 +574,12 @@ occult_group = {
 		color = { 10 14 146 }
 		icon = 15
 		country = {
-			tolerance_heretic = 1
-		    religious_unity = 0.1
+			years_of_nationalism = -10
+			same_culture_advisor_cost = -0.25
 		}
 		country_as_secondary = {
-			tolerance_heretic = 1
-		    religious_unity = 0.1
+			years_of_nationalism = -10
+			same_culture_advisor_cost = -0.25
 		}
 		province = {
 			local_missionary_strength = -0.025
@@ -598,14 +594,12 @@ occult_group = {
 		color = { 130 210 96 }
 		icon = 17
 		country = {
-			land_morale = 0.10
-			global_unrest = -1
-			may_perform_slave_raid = yes
+			land_morale = 0.15
+			harsh_treatment_cost = -0.50
 		}
 		country_as_secondary = {
-			land_morale = 0.10
-			global_unrest = -1
-			may_perform_slave_raid = yes
+			land_morale = 0.15
+			harsh_treatment_cost = -0.50
 		}
 		province = {
 			local_missionary_strength = -0.025
@@ -623,14 +617,12 @@ occult_group = {
 		color = { 202 208 43 }
 		icon = 18
 		country = {
-		    tolerance_own = 1
-			stability_cost_modifier = -0.1
-			may_perform_slave_raid = yes
+			stability_cost_modifier = -0.25
+			warscore_cost_vs_other_religion = -0.25
 		}
 		country_as_secondary = {
-			 tolerance_own = 1
-			stability_cost_modifier = -0.1
-			may_perform_slave_raid = yes
+			stability_cost_modifier = -0.25
+			warscore_cost_vs_other_religion = -0.25
 		}
 		province = {
 			local_missionary_strength = -0.025
@@ -643,8 +635,8 @@ occult_group = {
 		orthodox_icons = {
 
 			icon_hevnoraak = {
-				land_attrition = -0.10
-				naval_attrition = -0.10
+				recover_navy_morale_speed = 0.10
+				naval_attrition = -0.25
 				
 				allow = {
 					always = yes
@@ -655,9 +647,8 @@ occult_group = {
 			}
 
 			icon_krosis = {
-				fire_damage = 0.10
-				spy_offence = 0.10
-				
+				liberty_desire_from_subject_development = -0.15
+				rebel_support_efficiency = 0.5
 				allow = {
 					always = yes
 				}
@@ -667,8 +658,8 @@ occult_group = {
 			}
 			
 			icon_morokei = {
-				idea_cost = -0.10
-				recover_army_morale_speed = 0.10
+				
+				
 				
 				allow = {
 					always = yes
@@ -679,8 +670,8 @@ occult_group = {
 			}
 			
 			icon_nahkriin = {
-				shock_damage = 0.10	
-				reinforce_cost_modifier = -0.10
+				monarch_diplomatic_power = 1
+				reinforce_cost_modifier = -0.25
 				
 				allow = {
 					always = yes
@@ -691,9 +682,8 @@ occult_group = {
 			}
 			
 			icon_otar = {
-				fire_damage_received = -0.10	
-				shock_damage_received = -0.10
-				
+				fort_maintenance_modifier = -0.25
+				war_exhaustion_cost = -0.25
 				allow = {
 					always = yes
 				}
@@ -703,9 +693,8 @@ occult_group = {
 			}
 			
 			icon_rahgot = {
-				siege_ability = 0.10	
-				build_cost = -0.10
-				
+				drill_gain_modifier = 0.25
+				drill_decay_modifier = -0.15
 				allow = {
 					always = yes
 				}
@@ -715,9 +704,8 @@ occult_group = {
 			}
 			
 			icon_vokun = {
-				global_unrest = -1	
-				production_efficiency = 0.10
-				
+				prestige_from_land = 0.5
+				global_tax_modifier = 0.15
 				allow = {
 					always = yes
 				}
@@ -727,9 +715,8 @@ occult_group = {
 			}
 			
 			icon_volsung = {
-			    global_manpower_modifier = 0.1
-				diplomatic_reputation = 1	
-				
+			    global_own_trade_power = 0.15
+				ship_power_propagation = 0.25
 				allow = {
 					always = yes
 				}
@@ -740,8 +727,7 @@ occult_group = {
 			
 			icon_wooden_mask = {
 			    monarch_military_power = 1
-				prestige_decay = -0.01	
-				
+				merc_maintenance_modifier = -0.25
 				allow = {
 					always = yes
 				}
@@ -751,9 +737,8 @@ occult_group = {
 			}
 			
 			icon_konahrik = {
-			    infantry_power = 0.10
-				defensiveness = 0.10	
-				
+			    monarch_admin_power = 1
+				administrative_efficiency = 0.10
 				allow = {
 					always = yes
 				}
@@ -763,9 +748,8 @@ occult_group = {
 			}
 			
 			icon_ahzidal = {
-			    cavalry_power = 0.10
-				loot_amount = 0.10	
-				
+			    yearly_corruption = -0.15
+				rival_border_fort_maintenance = -0.25
 				allow = {
 					always = yes
 				}
@@ -775,9 +759,8 @@ occult_group = {
 			}
 			
 			icon_dukaan = {
-			    army_tradition = 0.10
-			    global_regiment_cost = -0.10	
-				
+			    naval_morale = 0.15
+				sailor_maintenance_modifer = -0.25
 				allow = {
 					always = yes
 				}
@@ -787,9 +770,8 @@ occult_group = {
 			}
 			
 			icon_zahkriisos = {
-			    land_maintenance_modifier = -0.10
-                naval_maintenance_modifier = -0.10				
-				
+			    land_maintenance_modifier = -0.25
+                naval_maintenance_modifier = -0.15	
 				allow = {
 					always = yes
 				}
@@ -799,9 +781,8 @@ occult_group = {
 			}
 			
 			icon_miraak = {
-			    unjustified_demands = -0.10
-                claim_duration = 0.10				
-				
+			    vassal_forcelimit_bonus = 0.15
+				diplomatic_annexation_cost = -0.25
 				allow = {
 					always = yes
 				}
@@ -817,8 +798,8 @@ occult_group = {
 		color = { 243 212 12 }
 		icon = 19
 		country = {
-			tolerance_own = 1
-			culture_conversion_cost = -0.10
+			culture_conversion_cost = -0.25
+			prestige_per_development_from_conversion = 0.10
 		}
 		allowed_center_conversion = {
 			eight_divines
@@ -836,8 +817,8 @@ occult_group = {
             }
         }
 		country_as_secondary = {
-			tolerance_own = 1
-			culture_conversion_cost = -0.10
+			culture_conversion_cost = -0.25
+			prestige_per_development_from_conversion = 0.10
 		}
 		province = {
 			local_missionary_strength = -0.025
@@ -852,12 +833,12 @@ occult_group = {
 		color = { 40 40 166 }
 		icon = 21
 		country = {
-		    siege_ability = 0.10
-			defensiveness = 0.10
+		    siege_ability = 0.25
+			improve_relation_modifier = 0.5
 		}
 		country_as_secondary = {
-			siege_ability = 0.10
-			defensiveness = 0.10
+			siege_ability = 0.25
+			improve_relation_modifier = 0.5
 		}
 		province = {
 			local_missionary_strength = -0.025
@@ -881,11 +862,11 @@ occult_group = {
 		icon = 32
 		country = {
 			hostile_attrition = 1
-			production_efficiency = 0.10
+			production_efficiency = 0.25
 		}
 		country_as_secondary = {
 			hostile_attrition = 1
-			production_efficiency = 0.10
+			production_efficiency = 0.25
 		}
 		province = {
 			local_missionary_strength = -0.025
@@ -894,6 +875,46 @@ occult_group = {
 		heretic = { ALL-MAKER_HERETIC }	
 		
 		fervor = yes
+	}
+	
+	dremora_pantheon = {
+		color = { 121 15 117 }
+		icon = 26
+		country = {
+			global_regiment_cost = -0.25
+			movement_speed = 0.25
+		}
+		country_as_secondary = {
+			global_regiment_cost = -0.25
+			movement_speed = 0.25
+		}
+		province = {
+			local_missionary_strength = -0.025
+		}
+		
+		can_have_secondary_religion = yes
+		
+		heretic = { DREMORA_HERETIC }	
+	}
+	
+	cult_of_black_worm = {
+		color = { 200 25 25 }
+		icon = 36
+		country = {
+			mil_tech_cost_modifier = -0.1
+			leader_cost = -0.50
+		}
+		country_as_secondary = {
+			mil_tech_cost_modifier = -0.1
+			leader_cost = -0.50
+		}
+		province = {
+			local_missionary_strength = -0.025
+		}
+		
+		#Hussite
+		
+		heretic = { CULT_OF_BLACK_WORM_HERETIC }	
 	}
 	
 	crusade_name = CRUSADE
@@ -915,12 +936,12 @@ elemental_group = {
 		color = { 255 255 255 }
 		icon = 20
 		country = {
-			development_cost = -0.1
-		    tolerance_heathen = 1
+			development_cost = -0.25
+		    tolerance_heathen = 2.5
 		}
 		country_as_secondary = {
-			development_cost = -0.1
-		    tolerance_heathen = 1
+			development_cost = -0.25
+		    tolerance_heathen = 2.5
 		}
 		province = {
 			local_missionary_strength = -0.010
@@ -936,13 +957,11 @@ elemental_group = {
 		icon = 16
 		country = {
 		    advisor_pool = 1
-			advisor_cost = -0.1
-			may_perform_slave_raid = yes
+			sunk_ship_morale_hit_recieved = -0.25
 		}
 		country_as_secondary = {
 			advisor_pool = 1
-			advisor_cost = -0.1
-			may_perform_slave_raid = yes
+			sunk_ship_morale_hit_recieved = -0.25
 		}
 		province = {
 			local_missionary_strength = -0.010
@@ -966,14 +985,12 @@ elemental_group = {
 		color = { 239 110 217 }
 		icon = 22
 		country = {
-			land_morale = 0.10
-			advisor_cost = -0.1
-			may_perform_slave_raid = yes
+			advisor_cost = -0.25
+			army_tradition = 0.5
 		}
 		country_as_secondary = {
-			land_morale = 0.10
-			advisor_cost = -0.1
-			may_perform_slave_raid = yes
+			advisor_cost = -0.25
+			army_tradition = 0.5
 		}
 		province = {
 			local_missionary_strength = -0.010
@@ -988,14 +1005,12 @@ elemental_group = {
 		color = { 138 44 85 }
 		icon = 23
 		country = {
-			discipline = 0.05
-			global_unrest = -1
-			may_perform_slave_raid = yes
+			naval_forcelimit_modifier = 0.25
+			vassal_income = 0.25
 		}
 		country_as_secondary = {
-			discipline = 0.05
-			global_unrest = -1
-			may_perform_slave_raid = yes
+			naval_forcelimit_modifier = 0.25
+			vassal_income = 0.25
 		}
 		province = {
 			local_missionary_strength = -0.010
@@ -1010,12 +1025,12 @@ elemental_group = {
 		color = { 22 232 127 }
 		icon = 24
 		country = {
-			advisor_pool = 1
-			stability_cost_modifier = -0.10
+			reinforce_speed = 0.25
+			ship_durability = 0.25
 		}
 		country_as_secondary = {
-			advisor_pool = 1
-			stability_cost_modifier = -0.10
+			reinforce_speed = 0.25
+			ship_durability = 0.25
 		}
 		province = {
 			local_missionary_strength = -0.010
@@ -1032,12 +1047,12 @@ elemental_group = {
 		color = { 233 172 30 }
 		icon = 25
 		country = {
-			tolerance_own = 1
 			global_autonomy = -0.05
+			institution_spread_from_true_faith = 0.25
 		}
 		country_as_secondary = {
-			tolerance_own = 1
 			global_autonomy = -0.05
+			institution_spread_from_true_faith = 0.25
 		}
 		province = {
 			local_missionary_strength = -0.010
@@ -1048,6 +1063,26 @@ elemental_group = {
 		reform_tooltip = INTI_REFORM_TOOLTIP
 		
 		heretic = { KAMAL_HERETIC }	
+	}
+	
+	cult_of_the_moth = {
+		color = { 185 250 250 }
+		icon = 37
+		country = {
+			idea_cost = -0.25
+			build_time = -0.25
+		}
+		country_as_secondary = {
+			idea_cost = -0.25
+			build_time = -0.25
+		}
+		province = {
+			local_missionary_strength = -0.010
+		}
+		
+		#Karma
+		
+		heretic = { CULT_OF_THE_MOTH_HERETIC }	
 	}
 	
 	crusade_name = CRUSADE
@@ -1070,13 +1105,11 @@ daedric_group_1 = {
 		icon = 27
 		country = {
 			free_leader_pool = 1
-			heir_chance = 1.0
-			may_perform_slave_raid = yes
+			mercenary_manpower = 0.5
 		}
 		country_as_secondary = {
 			free_leader_pool = 1
-			heir_chance = 1.0
-			may_perform_slave_raid = yes
+			mercenary_manpower = 0.5
 		}
 		province = {
 			local_missionary_strength = -0.015
@@ -1106,12 +1139,12 @@ daedric_group_1 = {
 		color = { 172 181 193 }
 		icon = 28
 		country = {
-			land_morale = 0.10
-			global_manpower_modifier = 0.10
+			global_manpower_modifier = 0.25
+			state_maintenance_modifier = -0.25
 		}
 		country_as_secondary = {
-			land_morale = 0.10
-			global_manpower_modifier = 0.10
+			global_manpower_modifier = 0.25
+			state_maintenance_modifier = -0.25
 		}
 		province = {
 			local_missionary_strength = -0.015
@@ -1141,14 +1174,12 @@ daedric_group_1 = {
 		color = { 138 7 68 }
 		icon = 29
 		country = {
-			fire_damage = 0.10
-			loot_amount = 0.10
-			may_perform_slave_raid = yes
+			fire_damage = 0.15
+			loot_amount = 0.50
 		}
 		country_as_secondary = {
-			fire_damage = 0.10
-			loot_amount = 0.10
-			may_perform_slave_raid = yes
+			fire_damage = 0.15
+			loot_amount = 0.50
 		}
 		province = {
 			local_missionary_strength = -0.015
@@ -1179,11 +1210,11 @@ daedric_group_1 = {
 		icon = 30
 		country = {
 			technology_cost = -0.10
-	        global_institution_spread = 0.10
+	        global_institution_spread = 0.25
 		}
 		country_as_secondary = {
 			technology_cost = -0.10
-	        global_institution_spread = 0.10
+	        global_institution_spread = 0.25
 		}
 		province = {
 			local_missionary_strength = -0.015
@@ -1213,12 +1244,12 @@ daedric_group_1 = {
 		color = { 235 164 0 }
 		icon = 33
 		country = {
-			unjustified_demands = -0.10
-	        max_absolutism = 10
+			unjustified_demands = -0.25
+			shock_damage = 0.15
 		}
 		country_as_secondary = {
-			unjustified_demands = -0.10
-	        max_absolutism = 10
+			unjustified_demands = -0.25
+			shock_damage = 0.15
 		}
 		province = {
 			local_missionary_strength = -0.015
@@ -1248,12 +1279,12 @@ daedric_group_1 = {
 		color = { 33 161 37 }
 		icon = 34
 		country = {
-			cavalry_power = 0.10
-	        manpower_recovery_speed = 0.10
+			cavalry_power = 0.15
+	        manpower_recovery_speed = 0.25
 		}
 		country_as_secondary = {
-			cavalry_power = 0.10
-	        manpower_recovery_speed = 0.10
+			cavalry_power = 0.15
+	        manpower_recovery_speed = 0.25
 		}
 		province = {
 			local_missionary_strength = -0.015
@@ -1283,12 +1314,12 @@ daedric_group_1 = {
 		color = { 123 224 228 }
 		icon = 35
 		country = {
-			spy_offence = 0.10
-	        shock_damage_received = -0.1
+			spy_offence = 0.25
+	        shock_damage_received = -0.15
 		}
 		country_as_secondary = {
-			spy_offence = 0.10
-	        shock_damage_received = -0.1
+			spy_offence = 0.25
+	        shock_damage_received = -0.15
 		}
 		province = {
 			local_missionary_strength = -0.015
@@ -1314,26 +1345,6 @@ daedric_group_1 = {
 		heretic = { NOCTURNAL_HERETIC }	
 	}
 	
-	dremora_pantheon = {
-		color = { 121 15 117 }
-		icon = 26
-		country = {
-			global_regiment_cost = -0.10
-			may_perform_slave_raid = yes
-		}
-		country_as_secondary = {
-			global_regiment_cost = -0.10
-			may_perform_slave_raid = yes
-		}
-		province = {
-			local_missionary_strength = -0.015
-		}
-		
-		can_have_secondary_religion = yes
-		
-		heretic = { DREMORA_HERETIC }	
-	}
-	
 	crusade_name = CRUSADE
 	harmonized_modifier = harmonized_daedric_group_1
 }
@@ -1351,12 +1362,12 @@ harmony_group = {
 		color = { 236 240 123 }
 		icon = 31
 		country = {
-			tolerance_heathen = 1
 			adm_tech_cost_modifier = -0.10
+			mercenary_discipline = 0.10
 		}
 		country_as_secondary = {
-			tolerance_heathen = 1
 			adm_tech_cost_modifier = -0.10
+			mercenary_discipline = 0.10
 		}
 		province = {
 			local_missionary_strength = -0.005
@@ -1387,6 +1398,26 @@ harmony_group = {
 		uses_harmony = yes
 		
 		hre_religion = yes
+	}
+	
+	cult_of_lorelia = {
+		color = { 0 255 255 }
+		icon = 97
+		country = {
+			ae_impact = -0.25
+			diplomatic_upkeep = 1
+		}
+		country_as_secondary = {
+			ae_impact = -0.25
+			diplomatic_upkeep = 1
+		}
+		province = {
+			local_missionary_strength = -0.005
+		}
+		
+		uses_harmony = yes
+		
+		heretic = { CULT_OF_LORELIA_HERETIC }	
 	}
 	
 	crusade_name = CRUSADE

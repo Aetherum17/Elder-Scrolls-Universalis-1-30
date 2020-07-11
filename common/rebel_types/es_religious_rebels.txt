@@ -5393,7 +5393,7 @@ dremora_pantheon_rebels = {
 	# Country scope
 	can_negotiate_trigger = {
 		OR = {
-			religion_group = daedric_group_1
+			religion_group = cult_of_black_worm
 			dominant_religion = dremora_pantheon
 		}
 	}
@@ -5410,7 +5410,7 @@ dremora_pantheon_rebels = {
 	demands_enforced_effect = { hidden_effect = { add_country_modifier = { name = just_lost_to_rebels duration = 10 hidden = yes } change_estate_land_share = { estate = estate_church share = 10.0 }
 		if = {
 			limit = {
-				NOT = { religion_group = daedric_group_1 }
+				NOT = { religion_group = cult_of_black_worm }
 			}
 			add_prestige = -50
 			every_owned_province = {
@@ -5447,7 +5447,7 @@ dremora_pantheon_rebels = {
 			limit = {
 				NOT = { religion = dremora_pantheon }
 				NOT = { dominant_religion = dremora_pantheon }
-				religion_group = daedric_group_1
+				religion_group = cult_of_black_worm
 			}
 			add_country_modifier = {
 				name = "heretic_tolerance"
@@ -7548,6 +7548,638 @@ nocturnal_cult_rebels = {
 				NOT = { religion = nocturnal_cult }
 				NOT = { dominant_religion = nocturnal_cult }
 				religion_group = daedric_group_1
+			}
+			add_country_modifier = {
+				name = "heretic_tolerance"
+				duration = 3650
+			}
+		}
+	}
+	}
+}
+
+###################################################################################################
+
+cult_of_black_worm_rebels = {
+
+	area = nation 					# Sticks to provinces of their nation
+	government = theocracy 			# Desires Theocracy
+	religion = cult_of_black_worm
+	defection = none				# Will not defect
+	defect_delay = 120				# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
+	independence = none				# Does not strive for independence
+	unit_transfer = no
+	gfx_type = culture_province will_relocate = yes
+	
+	resilient = no
+	reinforcing = yes
+	general = yes
+	smart = yes
+	
+	artillery = 0.0
+	infantry = 0.7
+	cavalry = 0.3
+	
+	morale = 1.1
+
+	# Possible handle actions
+	handle_action_negotiate = yes
+	handle_action_stability = yes
+	handle_action_build_core = yes
+	handle_action_send_missionary = yes		
+	
+	# The rebel type with the highest modifier for this province gets picked
+	spawn_chance = {
+		factor = 1
+		modifier = {
+			factor = 0.5
+			is_overseas = yes
+		}
+		modifier = {
+			factor = 0.0
+			owner = { religion = ROOT }
+		}
+		modifier = {
+			factor = 0.0
+			NOT = { religion = cult_of_black_worm }
+		}
+		modifier = {
+			factor = 0.001
+			tolerance_to_this = 5
+		}
+		modifier = {
+			factor = 0.5
+			tolerance_to_this = 2
+		}
+		modifier = {
+			factor = 5.0
+			owner = { has_country_flag = religious_turmoil }
+		}		
+		modifier = {
+			factor = 2000
+			has_missionary = yes
+		}
+		modifier = {
+			factor = 2
+			NOT = { tolerance_to_this = 1 }
+		}
+		modifier = {
+			factor = 2
+			NOT = { tolerance_to_this = -1 }
+		}
+		modifier = {
+			factor = 2
+			NOT = { tolerance_to_this = -2 }
+		}
+	}
+ 
+ 	# This is checked for EACH province in the Area of Operations
+	movement_evaluation = {
+		factor = 1
+		modifier = {
+			factor = 0.5
+			units_in_province = 1
+		}
+		modifier = {
+			factor = 0.001
+			controlled_by = REB
+		}
+		modifier = {
+			factor = 0.0
+			religion = cult_of_black_worm
+			owner = { religion = cult_of_black_worm }
+		}
+		modifier = {
+			factor = 2.0
+			NOT = { religion = cult_of_black_worm }
+			any_neighbor_province = {
+	 			religion = cult_of_black_worm
+	 			NOT = { has_province_modifier = "forced_conversion" }
+	 		}
+	 	}
+		modifier = {
+			factor = 1.5
+			unrest = 2
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 4
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 6
+		}
+	}
+ 
+ 	# Province Scope
+ 	siege_won_trigger = {
+		NOT = {
+			AND = {
+				owned_by = RED
+				is_capital = yes
+			}
+		}
+ 	}
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT } }
+		if = {
+			limit = {
+				religion = cult_of_black_worm
+			}
+			add_province_modifier = {
+				name = "religious_violence"
+				duration = 730
+			}
+		}
+		if = {
+			limit = {
+				NOT = { religion = cult_of_black_worm }
+			}
+			change_religion = cult_of_black_worm
+			add_province_modifier = {
+				name = "forced_conversion"
+				duration = 730
+			}
+		}
+	}
+	
+	# Country scope
+	can_negotiate_trigger = {
+		OR = {
+			religion_group = occult_group
+			dominant_religion = cult_of_black_worm
+		}
+	}
+	
+	# Country scope
+	can_enforce_trigger = {
+		always = yes
+	}
+	
+	# Localisation for their demands
+	demands_description = "cult_of_black_worm_demand"
+	
+	# Country Scope
+	demands_enforced_effect = { hidden_effect = { add_country_modifier = { name = just_lost_to_rebels duration = 10 hidden = yes } change_estate_land_share = { estate = estate_church share = 10.0 }
+		if = {
+			limit = {
+				NOT = { religion_group = occult_group }
+			}
+			add_prestige = -50
+			every_owned_province = {
+				limit = {
+					has_rebel_faction = REB
+				}
+				add_local_autonomy = 25
+			}
+		}
+		if = {
+			limit = {
+				tag = RED
+			}
+			add_stability = -1
+		}
+		if = {
+			limit = {
+				religion = cult_of_black_worm
+			}
+			add_country_modifier = {
+				name = "religious_intolerance"
+				duration = 3650
+			}
+		}
+		if = {
+			limit = {
+				NOT = { religion = cult_of_black_worm }
+				dominant_religion = cult_of_black_worm
+			}
+			change_religion = cult_of_black_worm
+			force_converted = yes
+		}
+		if = {
+			limit = {
+				NOT = { religion = cult_of_black_worm }
+				NOT = { dominant_religion = cult_of_black_worm }
+				religion_group = occult_group
+			}
+			add_country_modifier = {
+				name = "heretic_tolerance"
+				duration = 3650
+			}
+		}
+	}
+	}
+}
+
+cult_of_the_moth_rebels = {
+
+	area = nation 					# Sticks to provinces of their nation
+	government = theocracy 			# Desires Theocracy
+	religion = cult_of_the_moth
+	defection = none				# Will not defect
+	defect_delay = 120				# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
+	independence = none				# Does not strive for independence
+	unit_transfer = no
+	gfx_type = culture_province will_relocate = yes
+	
+	resilient = no
+	reinforcing = yes
+	general = yes
+	smart = yes
+	
+	artillery = 0.0
+	infantry = 0.7
+	cavalry = 0.3
+	
+	morale = 1.1
+
+	# Possible handle actions
+	handle_action_negotiate = yes
+	handle_action_stability = yes
+	handle_action_build_core = yes
+	handle_action_send_missionary = yes		
+	
+	# The rebel type with the highest modifier for this province gets picked
+	spawn_chance = {
+		factor = 1
+		modifier = {
+			factor = 0.5
+			is_overseas = yes
+		}
+		modifier = {
+			factor = 0.0
+			owner = { religion = ROOT }
+		}
+		modifier = {
+			factor = 0.0
+			NOT = { religion = cult_of_the_moth }
+		}
+		modifier = {
+			factor = 0.001
+			tolerance_to_this = 5
+		}
+		modifier = {
+			factor = 0.5
+			tolerance_to_this = 2
+		}
+		modifier = {
+			factor = 5.0
+			owner = { has_country_flag = religious_turmoil }
+		}		
+		modifier = {
+			factor = 2000
+			has_missionary = yes
+		}
+		modifier = {
+			factor = 2
+			NOT = { tolerance_to_this = 1 }
+		}
+		modifier = {
+			factor = 2
+			NOT = { tolerance_to_this = -1 }
+		}
+		modifier = {
+			factor = 2
+			NOT = { tolerance_to_this = -2 }
+		}
+	}
+ 
+ 	# This is checked for EACH province in the Area of Operations
+	movement_evaluation = {
+		factor = 1
+		modifier = {
+			factor = 0.5
+			units_in_province = 1
+		}
+		modifier = {
+			factor = 0.001
+			controlled_by = REB
+		}
+		modifier = {
+			factor = 0.0
+			religion = cult_of_the_moth
+			owner = { religion = cult_of_the_moth }
+		}
+		modifier = {
+			factor = 2.0
+			NOT = { religion = cult_of_the_moth }
+			any_neighbor_province = {
+	 			religion = cult_of_the_moth
+	 			NOT = { has_province_modifier = "forced_conversion" }
+	 		}
+	 	}
+		modifier = {
+			factor = 1.5
+			unrest = 2
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 4
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 6
+		}
+	}
+ 
+ 	# Province Scope
+ 	siege_won_trigger = {
+		NOT = {
+			AND = {
+				owned_by = RED
+				is_capital = yes
+			}
+		}
+ 	}
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT } }
+		if = {
+			limit = {
+				religion = cult_of_the_moth
+			}
+			add_province_modifier = {
+				name = "religious_violence"
+				duration = 730
+			}
+		}
+		if = {
+			limit = {
+				NOT = { religion = cult_of_the_moth }
+			}
+			change_religion = cult_of_the_moth
+			add_province_modifier = {
+				name = "forced_conversion"
+				duration = 730
+			}
+		}
+	}
+	
+	# Country scope
+	can_negotiate_trigger = {
+		OR = {
+			religion_group = elemental_group
+			dominant_religion = cult_of_the_moth
+		}
+	}
+	
+	# Country scope
+	can_enforce_trigger = {
+		always = yes
+	}
+	
+	# Localisation for their demands
+	demands_description = "cult_of_the_moth_demand"
+	
+	# Country Scope
+	demands_enforced_effect = { hidden_effect = { add_country_modifier = { name = just_lost_to_rebels duration = 10 hidden = yes } change_estate_land_share = { estate = estate_church share = 10.0 }
+		if = {
+			limit = {
+				NOT = { religion_group = elemental_group }
+			}
+			add_prestige = -50
+			every_owned_province = {
+				limit = {
+					has_rebel_faction = REB
+				}
+				add_local_autonomy = 25
+			}
+		}
+		if = {
+			limit = {
+				tag = RED
+			}
+			add_stability = -1
+		}
+		if = {
+			limit = {
+				religion = cult_of_the_moth
+			}
+			add_country_modifier = {
+				name = "religious_intolerance"
+				duration = 3650
+			}
+		}
+		if = {
+			limit = {
+				NOT = { religion = cult_of_the_moth }
+				dominant_religion = cult_of_the_moth
+			}
+			change_religion = cult_of_the_moth
+			force_converted = yes
+		}
+		if = {
+			limit = {
+				NOT = { religion = cult_of_the_moth }
+				NOT = { dominant_religion = cult_of_the_moth }
+				religion_group = elemental_group
+			}
+			add_country_modifier = {
+				name = "heretic_tolerance"
+				duration = 3650
+			}
+		}
+	}
+	}
+}
+
+cult_of_lorelia_rebels = {
+
+	area = nation 					# Sticks to provinces of their nation
+	government = theocracy 			# Desires Theocracy
+	religion = cult_of_lorelia
+	defection = none				# Will not defect
+	defect_delay = 120				# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
+	independence = none				# Does not strive for independence
+	unit_transfer = no
+	gfx_type = culture_province will_relocate = yes
+	
+	resilient = no
+	reinforcing = yes
+	general = yes
+	smart = yes
+	
+	artillery = 0.0
+	infantry = 0.7
+	cavalry = 0.3
+	
+	morale = 1.1
+
+	# Possible handle actions
+	handle_action_negotiate = yes
+	handle_action_stability = yes
+	handle_action_build_core = yes
+	handle_action_send_missionary = yes		
+	
+	# The rebel type with the highest modifier for this province gets picked
+	spawn_chance = {
+		factor = 1
+		modifier = {
+			factor = 0.5
+			is_overseas = yes
+		}
+		modifier = {
+			factor = 0.0
+			owner = { religion = ROOT }
+		}
+		modifier = {
+			factor = 0.0
+			NOT = { religion = cult_of_lorelia }
+		}
+		modifier = {
+			factor = 0.001
+			tolerance_to_this = 5
+		}
+		modifier = {
+			factor = 0.5
+			tolerance_to_this = 2
+		}
+		modifier = {
+			factor = 5.0
+			owner = { has_country_flag = religious_turmoil }
+		}		
+		modifier = {
+			factor = 2000
+			has_missionary = yes
+		}
+		modifier = {
+			factor = 2
+			NOT = { tolerance_to_this = 1 }
+		}
+		modifier = {
+			factor = 2
+			NOT = { tolerance_to_this = -1 }
+		}
+		modifier = {
+			factor = 2
+			NOT = { tolerance_to_this = -2 }
+		}
+	}
+ 
+ 	# This is checked for EACH province in the Area of Operations
+	movement_evaluation = {
+		factor = 1
+		modifier = {
+			factor = 0.5
+			units_in_province = 1
+		}
+		modifier = {
+			factor = 0.001
+			controlled_by = REB
+		}
+		modifier = {
+			factor = 0.0
+			religion = cult_of_lorelia
+			owner = { religion = cult_of_lorelia }
+		}
+		modifier = {
+			factor = 2.0
+			NOT = { religion = cult_of_lorelia }
+			any_neighbor_province = {
+	 			religion = cult_of_lorelia
+	 			NOT = { has_province_modifier = "forced_conversion" }
+	 		}
+	 	}
+		modifier = {
+			factor = 1.5
+			unrest = 2
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 4
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 6
+		}
+	}
+ 
+ 	# Province Scope
+ 	siege_won_trigger = {
+		NOT = {
+			AND = {
+				owned_by = RED
+				is_capital = yes
+			}
+		}
+ 	}
+	siege_won_effect = { custom_tooltip = religious_rebels_seige_effect_tooltip owner = { change_estate_land_share = { estate = estate_church share = 10.0 province = ROOT } }
+		if = {
+			limit = {
+				religion = cult_of_lorelia
+			}
+			add_province_modifier = {
+				name = "religious_violence"
+				duration = 730
+			}
+		}
+		if = {
+			limit = {
+				NOT = { religion = cult_of_lorelia }
+			}
+			change_religion = cult_of_lorelia
+			add_province_modifier = {
+				name = "forced_conversion"
+				duration = 730
+			}
+		}
+	}
+	
+	# Country scope
+	can_negotiate_trigger = {
+		OR = {
+			religion_group = harmony_group
+			dominant_religion = cult_of_lorelia
+		}
+	}
+	
+	# Country scope
+	can_enforce_trigger = {
+		always = yes
+	}
+	
+	# Localisation for their demands
+	demands_description = "cult_of_lorelia_demand"
+	
+	# Country Scope
+	demands_enforced_effect = { hidden_effect = { add_country_modifier = { name = just_lost_to_rebels duration = 10 hidden = yes } change_estate_land_share = { estate = estate_church share = 10.0 }
+		if = {
+			limit = {
+				NOT = { religion_group = harmony_group }
+			}
+			add_prestige = -50
+			every_owned_province = {
+				limit = {
+					has_rebel_faction = REB
+				}
+				add_local_autonomy = 25
+			}
+		}
+		if = {
+			limit = {
+				tag = RED
+			}
+			add_stability = -1
+		}
+		if = {
+			limit = {
+				religion = cult_of_lorelia
+			}
+			add_country_modifier = {
+				name = "religious_intolerance"
+				duration = 3650
+			}
+		}
+		if = {
+			limit = {
+				NOT = { religion = cult_of_lorelia }
+				dominant_religion = cult_of_lorelia
+			}
+			change_religion = cult_of_lorelia
+			force_converted = yes
+		}
+		if = {
+			limit = {
+				NOT = { religion = cult_of_lorelia }
+				NOT = { dominant_religion = cult_of_lorelia }
+				religion_group = harmony_group
 			}
 			add_country_modifier = {
 				name = "heretic_tolerance"

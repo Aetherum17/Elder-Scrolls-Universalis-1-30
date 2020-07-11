@@ -1,0 +1,123 @@
+Alduin = {
+    discipline = 0.05
+	army_tradition = 0.25
+	
+	allow = {
+	religion = nordic_pantheon has_country_flag = nordic_pantheon_1_flag
+	}
+	
+	sprite = 12
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Orkey = {
+	unjustified_demands = -0.10
+	spy_offence = 0.10
+	
+	allow = {
+	religion = nordic_pantheon NOT = { has_country_flag = nordic_pantheon_1_flag }
+	}
+	
+	sprite = 18
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Jhunal = {
+	idea_cost = -0.10
+	build_cost = -0.10
+	
+	allow = {
+	religion = nordic_pantheon has_country_flag = nordic_pantheon_3_flag
+	}
+	
+	sprite = 15
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Kyne = {
+	land_attrition = -0.10
+	movement_speed = 0.10
+	
+	allow = {
+	religion = nordic_pantheon NOT = { has_country_flag = nordic_pantheon_3_flag }
+	}
+	
+	sprite = 16
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Shor = {
+	legitimacy = 0.25
+	republican_tradition = 0.25
+	devotion = 0.25
+	horde_unity = 0.25
+	meritocracy = 0.25
+	stability_cost_modifier = -0.10
+	
+	allow = {
+	religion = nordic_pantheon has_country_flag = nordic_pantheon_5_flag
+	}
+	
+	sprite = 19
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Ysmir = {
+	fire_damage = 0.10
+	shock_damage = 0.10
+	
+	allow = {
+	religion = nordic_pantheon NOT = { has_country_flag = nordic_pantheon_5_flag }
+	}
+	
+	sprite = 21
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Stuhn = {
+	siege_ability = 0.10
+	defensiveness = 0.10
+	
+	allow = {
+	religion = nordic_pantheon has_country_flag = nordic_pantheon_6_flag
+	}
+	
+	sprite = 7
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Tsun = {
+	garrison_size = 0.1
+	fort_maintenance_modifier = -0.10
+	
+	allow = {
+	religion = nordic_pantheon NOT = { has_country_flag = nordic_pantheon_6_flag }
+	}
+	
+	sprite = 20
+	
+	ai_will_do = {
+		factor = 1
+	}
+}

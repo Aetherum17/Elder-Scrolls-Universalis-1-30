@@ -935,7 +935,7 @@ principality = {
 	}
 	trigger = { OR = { has_reform = principality
 	    OR = { 
-		AND = { capital_scope = { NOT = { continent = Tamriel } } calc_true_if = { all_owned_province = { religion = root } amount = 50 } }
+		AND = { capital_scope = { NOT = { continent = Tamriel } } calc_true_if = { all_owned_province = { continent = Tamriel religion = root } amount = 50 } }
 		AND = { capital_scope = { continent = Tamriel } calc_true_if = { all_owned_province = { religion = root } amount = 250 } }
 		AND = { capital_scope = { continent = Tamriel } calc_true_if = { all_owned_province = { culture = root } amount = 100 } }
 		}

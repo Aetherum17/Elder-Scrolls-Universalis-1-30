@@ -1,0 +1,187 @@
+
+Leki = {
+    land_morale = 0.10
+    light_ship_power = 0.10
+	
+	allow = {
+	religion = yokudan_pantheon
+	}
+	
+	sprite = 49
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Morwha = {
+    production_efficiency = 0.10
+    global_manpower_modifier = 0.10
+	
+	allow = {
+	religion = yokudan_pantheon 
+	}
+	
+	sprite = 50
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Tava = {
+    navy_tradition = 0.25
+    naval_attrition = -0.10
+	
+	allow = {
+	religion = yokudan_pantheon 	
+	}
+	
+	sprite = 54
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Diagna = {
+    fire_damage = 0.10
+    siege_ability = 0.10
+	
+	allow = {
+	religion = redguard_pantheon
+	}
+	
+	sprite = 47
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+HoonDing = {
+    shock_damage = 0.10
+    movement_speed = 0.10
+	
+	allow = {
+	religion = redguard_pantheon
+	}
+	
+	sprite = 48
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Sep = {
+    legitimacy = 0.25
+	republican_tradition = 0.25
+	devotion = 0.25
+	horde_unity = 0.25
+	meritocracy = 0.25
+	stability_cost_modifier = -0.10
+	
+	allow = {
+	religion = redguard_pantheon
+    }
+	
+	sprite = 3
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+
+#######################################################################
+
+Ruptga = {
+    global_unrest = -1
+    prestige_decay = -0.01
+	
+	allow = {
+	OR = {
+	AND = { religion = yokudan_pantheon has_country_flag = yokudan_pantheon_1_flag }
+	AND = { religion = redguard_pantheon has_country_flag = redguard_pantheon_1_flag }
+    }	
+	}
+	
+	sprite = 52
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Satakal = {
+    discipline = 0.05
+    unjustified_demands = -0.10
+	
+	allow = {
+	OR = {
+	AND = { religion = yokudan_pantheon has_country_flag = yokudan_pantheon_2_flag }
+	AND = { religion = redguard_pantheon has_country_flag = redguard_pantheon_2_flag }
+    }	
+	}
+	
+	sprite = 53
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Onsi = {
+    infantry_power = 0.10
+    defensiveness = 0.10
+	
+	allow = {
+	OR = {
+	AND = { religion = yokudan_pantheon NOT = { has_country_flag = yokudan_pantheon_2_flag } } 
+	AND = { religion = redguard_pantheon NOT = { has_country_flag = redguard_pantheon_2_flag } } 
+    }	
+	}
+	
+	sprite = 51
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Zeht = {
+    land_attrition = -0.10
+    garrison_size = 0.10
+	
+	allow = {
+	OR = {
+	AND = { religion = yokudan_pantheon has_country_flag = yokudan_pantheon_3_flag }
+	AND = { religion = redguard_pantheon has_country_flag = redguard_pantheon_3_flag }
+    }
+	}
+	
+	sprite = 56
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Tuwhacca = {
+    tolerance_own = 1
+    religious_unity = 0.10
+	
+	allow = {
+	OR = {
+	AND = { religion = yokudan_pantheon NOT = { has_country_flag = yokudan_pantheon_3_flag } } 
+	AND = { religion = redguard_pantheon NOT = { has_country_flag = redguard_pantheon_3_flag } } 
+    }	
+	}
+	
+	sprite = 55
+	
+	ai_will_do = {
+		factor = 1
+	}
+}

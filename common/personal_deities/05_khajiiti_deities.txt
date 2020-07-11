@@ -1,0 +1,175 @@
+Alkosh = {
+	legitimacy = 0.25
+	republican_tradition = 0.25
+	devotion = 0.25
+	horde_unity = 0.25
+	meritocracy = 0.25
+	land_morale = 0.10
+	
+	allow = {
+	religion = khajiiti_pantheon has_country_flag = khajiiti_pantheon_1_flag
+	}
+	
+	sprite = 35
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Baan = {
+    global_tax_modifier = 0.10
+	spy_offence = 0.10
+	
+	allow = {
+	OR = {
+	AND = { religion = khajiiti_pantheon NOT = { has_country_flag = khajiiti_pantheon_1_flag } }
+	AND = { religion = bosmer_pantheon has_country_flag = bosmer_pantheon_2_flag }
+	}
+	}
+	
+	sprite = 23
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Ja-Khajay = {
+    advisor_pool = 1
+	envoy_travel_time = -0.25
+	
+	allow = {
+	religion = khajiiti_pantheon has_country_flag = khajiiti_pantheon_2_flag
+	}
+	
+	sprite = 38
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Khenarthi = {
+	land_attrition = -0.10
+	movement_speed = 0.10
+	
+	allow = {
+	religion = khajiiti_pantheon has_country_flag = khajiiti_pantheon_3_flag
+	}
+	
+	sprite = 39
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Lorkhaj = {
+	legitimacy = 0.25
+	republican_tradition = 0.25
+	devotion = 0.25
+	horde_unity = 0.25
+	meritocracy = 0.25
+	stability_cost_modifier = -0.10
+	
+	allow = {
+	religion = khajiiti_pantheon NOT = { has_country_flag = khajiiti_pantheon_3_flag }
+	}
+	
+	sprite = 3
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Magrus = {
+	global_institution_spread = 0.10
+	idea_cost = -0.10
+	
+	allow = {
+	religion = khajiiti_pantheon has_country_flag = khajiiti_pantheon_4_flag
+	}
+	
+	sprite = 4
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Masser = {
+    core_creation = -0.10
+	unjustified_demands = -0.10
+	
+	allow = {
+	religion = khajiiti_pantheon NOT = { has_country_flag = khajiiti_pantheon_4_flag }
+	}
+	
+	sprite = 25
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Rajhin = {
+	interest = -0.25
+	state_maintenance_modifier = -0.10
+	
+	allow = {
+	religion = khajiiti_pantheon has_country_flag = khajiiti_pantheon_5_flag
+	}
+	
+	sprite = 43
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Riddle-Thar = {
+	production_efficiency = 0.10
+	global_trade_goods_size_modifier = 0.10
+	
+	allow = {
+	religion = khajiiti_pantheon NOT = { has_country_flag = khajiiti_pantheon_5_flag }
+	}
+	
+	sprite = 44
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Secunda = {
+	advisor_pool = 1
+	advisor_cost = -0.10
+	
+	allow = {
+	religion = khajiiti_pantheon has_country_flag = khajiiti_pantheon_6_flag
+	}
+	
+	sprite = 26
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+Yffer = {
+	culture_conversion_cost = -0.10
+	global_trade_goods_size_modifier = 0.10
+	
+	allow = {	
+	religion = khajiiti_pantheon NOT = { has_country_flag = khajiiti_pantheon_6_flag }
+	}
+	
+	sprite = 2
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
