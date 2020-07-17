@@ -333,7 +333,7 @@ country_event = {
 		
 		trigger = {
 		NOT = { capital_scope = { region = eastern_deadlands_lr } }
-		NOT = { exists = DS7 }
+		NOT = { exists = CLA }
 		}
 		
 		every_core_province = {
@@ -347,21 +347,21 @@ country_event = {
 		limit = {
 		region = eastern_deadlands_lr
 		}
-		add_core = DS7
+		add_core = CLA
 		}
 		
-		release = DS7
+		release = CLA
 		
 		if = {
 		limit = {
 		government = monarchy
 		}
-		create_union = DS7
+		create_union = CLA
 	    }
 		else = {
-		create_alliance = DS7
-		DS7 = { add_opinion = { who = ROOT modifier = es_friendly_nation } }
-		add_opinion = { who = DS7 modifier = es_friendly_nation }
+		create_alliance = CLA
+		CLA = { add_opinion = { who = ROOT modifier = es_friendly_nation } }
+		add_opinion = { who = CLA modifier = es_friendly_nation }
 		}
 	}
 }
@@ -701,7 +701,7 @@ country_event = {
 		
 		trigger = {
 		NOT = { capital_scope = { region = western_deadlands_lr } }
-		NOT = { exists = DU5 }
+		NOT = { exists = DAE }
 		}
 		
 		every_core_province = {
@@ -715,21 +715,21 @@ country_event = {
 		limit = {
 		region = western_deadlands_lr
 		}
-		add_core = DU5
+		add_core = DAE
 		}
 		
-		release = DU5
+		release = DAE
 		
 		if = {
 		limit = {
 		government = monarchy
 		}
-		create_union = DU5
+		create_union = DAE
 	    }
 		else = {
-		create_alliance = DU5
-		DU5 = { add_opinion = { who = ROOT modifier = es_friendly_nation } }
-		add_opinion = { who = DU5 modifier = es_friendly_nation }
+		create_alliance = DAE
+		DAE = { add_opinion = { who = ROOT modifier = es_friendly_nation } }
+		add_opinion = { who = DAE modifier = es_friendly_nation }
 		}
 	}
 }
@@ -1069,7 +1069,7 @@ country_event = {
 		
 		trigger = {
 		NOT = { capital_scope = { region = northern_deadlands_lr } }
-		NOT = { exists = DW2 }
+		NOT = { exists = XIV }
 		}
 		
 		every_core_province = {
@@ -1083,21 +1083,21 @@ country_event = {
 		limit = {
 		region = northern_deadlands_lr
 		}
-		add_core = DW2
+		add_core = XIV
 		}
 		
-		release = DW2
+		release = XIV
 		
 		if = {
 		limit = {
 		government = monarchy
 		}
-		create_union = DW2
+		create_union = XIV
 	    }
 		else = {
-		create_alliance = DW2
-		DW2 = { add_opinion = { who = ROOT modifier = es_friendly_nation } }
-		add_opinion = { who = DW2 modifier = es_friendly_nation }
+		create_alliance = XIV
+		XIV = { add_opinion = { who = ROOT modifier = es_friendly_nation } }
+		add_opinion = { who = XIV modifier = es_friendly_nation }
 		}
 	}
 }
@@ -1437,7 +1437,7 @@ country_event = {
 		
 		trigger = {
 		NOT = { capital_scope = { region = southern_deadlands_lr } }
-		NOT = { exists = DY4 }
+		NOT = { exists = SPI }
 		}
 		
 		every_core_province = {
@@ -1451,21 +1451,21 @@ country_event = {
 		limit = {
 		region = southern_deadlands_lr
 		}
-		add_core = DY4
+		add_core = SPI
 		}
 		
-		release = DY4
+		release = SPI
 		
 		if = {
 		limit = {
 		government = monarchy
 		}
-		create_union = DY4
+		create_union = SPI
 	    }
 		else = {
-		create_alliance = DY4
-		DY4 = { add_opinion = { who = ROOT modifier = es_friendly_nation } }
-		add_opinion = { who = DY4 modifier = es_friendly_nation }
+		create_alliance = SPI
+		SPI = { add_opinion = { who = ROOT modifier = es_friendly_nation } }
+		add_opinion = { who = SPI modifier = es_friendly_nation }
 		}
 	}
 }

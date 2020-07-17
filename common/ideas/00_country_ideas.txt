@@ -788,7 +788,7 @@ PAP_ideas = {
 		prestige_decay = -0.01
 	}
 	donation_of_constantine = {
-		fabricate_claims_cost = -0.10
+		fabricate_claims_cost = -0.25
 	}
 	centralize_the_states = {
 		production_efficiency = 0.1
@@ -2984,7 +2984,7 @@ GEL_ideas = {
 		land_morale = 0.10
 	}
 	gel_looting = {
-		loot_amount = 0.10
+		loot_amount = 0.25
 	}
 	gel_diplomatic_expansion = {
 		diplomatic_annexation_cost = -0.10
@@ -3631,7 +3631,7 @@ CYP_ideas = {
 	free = yes
 
 	king_of_jerusalem = {
-		fabricate_claims_cost = -0.10
+		fabricate_claims_cost = -0.25
 	}
 	frankish_crusaders = {
 		army_tradition = 0.25
@@ -4412,5 +4412,353 @@ KAR_ideas = {
 		devotion = 0.25							
         horde_unity = 0.25
         meritocracy = 0.25
+	}
+}
+
+ATH_ideas = {
+	start = {
+		defensiveness = 0.25
+		tolerance_heretic = 1
+	}
+	bonus = {
+		land_morale = 0.15
+	}
+	trigger = {
+		tag = SPI
+	}
+	free = yes		#will be added at load
+
+	dominus_athenarum = {
+		legitimacy = 0.25
+		republican_tradition = 0.25
+		devotion = 0.25							
+        horde_unity = 0.25
+        meritocracy = 0.25
+	}
+	athenian_openeness = {
+		num_accepted_cultures = 1
+	}
+	athenian_pragmatism = {
+		diplomatic_reputation = 0.5
+	}
+	revive_the_latin_greece = {
+		prestige = 0.25
+	}
+	latin_contracts = {
+		global_unrest = -1
+	}
+	archbishop_of_athens = {
+		global_missionary_strength = 0.01
+	}
+	athenian_army_reform = {
+		artillery_power = 0.1		
+	}
+}
+
+FIN_ideas = {
+	start = {
+		discipline = 0.10
+		development_cost = -0.25
+	}
+	
+	bonus = {
+		global_heretic_missionary_strength = 0.025
+	}
+	
+	trigger = {
+		tag = DAE
+	}
+	free = yes
+	
+	expand_viborg = {
+		defensiveness = 0.10
+	}
+	hakkapelitta_fin = {
+ 		cavalry_power = 0.10
+	}	
+	the_fourth_estate = {
+		production_efficiency = 0.1
+	}
+	settle_middle_finland = {
+		build_cost = -0.1
+	}
+	found_turun_akatemia = {
+		technology_cost = -0.05
+	}
+	the_white_death = {
+		hostile_attrition = 1
+	}
+	anjala_conspiracy = {
+		land_morale = 0.1
+	}
+}
+
+ALB_ideas = {
+	start = {
+		defensiveness = 0.25
+		manpower_recovery_speed = 0.25	
+	}
+	
+	bonus = {
+		army_tradition_decay = -0.025
+	}
+	
+	trigger = {
+		tag = XIV
+	}
+	free = yes
+	
+	all_lands_under_skanderbeg = {
+		land_forcelimit_modifier = 0.10
+	}
+	land_of_ambushers = {
+		leader_land_manuever = 1		
+	}
+	kingdom_of_albania = {
+		prestige = 0.25
+	}
+	hit_and_run = {
+		cavalry_flanking = 0.25
+	}
+	land_of_eagles = {
+		stability_cost_modifier = -0.1
+	}
+	albanian_tolerance = {
+		tolerance_heathen = 1		
+	}
+	break_the_princes = {
+		global_manpower_modifier = 0.10
+	}
+}
+
+PLT_ideas = {
+	start = {
+		infantry_cost = -0.25
+		hostile_attrition = 1	
+	}
+	
+	bonus = {
+		infantry_power = 0.15
+	}
+	
+	trigger = {
+		tag = CLA
+	}
+	free = yes
+	
+	legacy_of_the_werewolf_prince = {
+		fabricate_claims_cost = -0.25
+	}	
+	heritage_of_the_rus = {
+		legitimacy = 0.25
+		republican_tradition = 0.25
+		devotion = 0.25							
+        horde_unity = 0.25
+        meritocracy = 0.25
+	}
+	cultural_center = {
+		idea_cost = -0.1	
+	}
+	land_of_strongholds = {
+		defensiveness = 0.1
+	}
+	trade_hub = {
+		trade_efficiency = 0.1
+	}
+	diplomatic_initiative = {
+		diplomatic_upkeep = 1
+	}
+	forest_of_europe = {
+		build_cost = -0.1
+	}
+}
+
+PRM_ideas = {
+	start = {
+		prestige_decay = -0.025
+		tolerance_heathen = 1
+	}
+	
+	bonus = {
+		defensiveness = 0.25
+	}
+	
+	trigger = {
+		tag = HAR
+	}
+	free = yes
+	
+	capital_of_prikamye = {
+		advisor_cost = -0.1
+	}
+	turkic_mercenaries = {
+		cavalry_cost = -0.1
+	}	
+	the_old_traditions = {
+		global_unrest = -1		
+	}
+	the_great_perm = {
+		trade_efficiency = 0.10		
+	}
+	warriors_of_taiga = {
+		leader_land_manuever = 1		
+	}
+	komi_tolerance = {
+		religious_unity = 0.10
+	}
+	permian_army_reform = {
+		land_forcelimit_modifier = 0.10
+	}
+}
+
+ASH_ideas = {
+	start = {
+		infantry_power = 0.15
+		loot_amount = 0.50
+	}
+	
+	bonus = {
+		merchants = 1
+	}
+	
+	trigger = {
+		tag = DRM
+	}
+	free = yes
+	
+	ash_idea_1 = {
+		advisor_cost = -0.10
+	}
+	ash_idea_2 = {
+		global_institution_spread = 0.1
+	}
+	ash_idea_3 = {
+		merc_maintenance_modifier = -0.10
+	}
+	ash_idea_4 = {
+		legitimacy = 0.25
+		republican_tradition = 0.25
+		devotion = 0.25							
+        horde_unity = 0.25
+        meritocracy = 0.25
+	}
+	ash_idea_5 = {
+		global_manpower_modifier = 0.10
+	}
+	ash_idea_6 = {
+		global_tax_modifier = 0.10
+	}
+	ash_idea_7 = {
+		years_of_nationalism = -5
+	}
+}
+
+MPC_ideas = {
+	start = {
+		hostile_attrition = 1
+		global_manpower_modifier = 0.25
+	}
+	bonus = {
+		diplomats = 1
+	}
+	trigger = {
+		tag = HOH
+	}
+	free = yes		#will be added at load.
+		
+	mpc_idea_1 = {
+		defensiveness = 0.10
+	}
+	mpc_idea_2 = {
+		discipline = 0.05
+	}
+	mpc_idea_3 = {
+		army_tradition_from_battle = 0.25
+	}
+	mpc_idea_4 = {
+		trade_steering = 0.1
+	}
+	mpc_idea_5 = {
+		global_unrest = -1
+	}
+	mpc_idea_6 = {
+		diplomatic_reputation = 0.5
+	}
+	mpc_idea_7 = {
+		prestige = 0.25
+	}
+}
+
+INC_ideas = {
+	start = {
+		idea_cost = -0.25
+		land_forcelimit_modifier = 0.25
+	}
+	bonus = {
+		free_leader_pool = 1
+	}
+	trigger = {
+		tag = SOU
+	}
+	free = yes		#will be added at load.
+		
+	machu_picchu = {
+		prestige = 0.5
+	}
+	mitma = {
+		development_cost = -0.1
+	}
+	quipu = {
+		global_tax_modifier = 0.1
+	}
+	drafted_hatun_runas = {
+		discipline = 0.05
+	}
+	mita_system = {
+		build_cost = -0.1
+	}
+	llama_michis = {
+		production_efficiency = 0.1
+	}
+	tambo = {
+		land_attrition = -0.10
+	}
+}
+
+KAZ_ideas = {
+	start = {
+		ae_impact = -0.25
+		tolerance_heathen = 21	
+	}
+	
+	bonus = {
+		cavalry_flanking = 0.5
+	}
+	
+	trigger = {
+		tag = SCA
+	}
+	free = yes
+	
+	kaz_idea_1 = {
+		religious_unity = 0.10
+	}
+	kaz_idea_2 = {
+		core_creation = -0.10
+	}
+	kaz_idea_3 = {
+		cavalry_power = 0.10
+	}
+	kaz_idea_4 = {
+		global_manpower_modifier = 0.10
+	}
+	kaz_idea_5 = {
+		leader_land_manuever = 1
+	}
+	kaz_idea_6 = {
+		defensiveness = 0.10
+	}
+	kaz_idea_7 = {
+		trade_efficiency = 0.1
 	}
 }

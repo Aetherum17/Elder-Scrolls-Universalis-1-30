@@ -701,7 +701,7 @@ country_event = {
 		
 		trigger = {
 		NOT = { capital_scope = { region = southern_coldharbour_lr } }
-		NOT = { exists = CS3 }
+		NOT = { exists = SCA }
 		}
 		
 		every_core_province = {
@@ -715,21 +715,21 @@ country_event = {
 		limit = {
 		region = southern_coldharbour_lr
 		}
-		add_core = CS3
+		add_core = SCA
 		}
 		
-		release = CS3
+		release = SCA
 		
 		if = {
 		limit = {
 		government = monarchy
 		}
-		create_union = CS3
+		create_union = SCA
 	    }
 		else = {
-		create_alliance = CS3
-		CS3 = { add_opinion = { who = ROOT modifier = es_friendly_nation } }
-		add_opinion = { who = CS3 modifier = es_friendly_nation }
+		create_alliance = SCA
+		SCA = { add_opinion = { who = ROOT modifier = es_friendly_nation } }
+		add_opinion = { who = SCA modifier = es_friendly_nation }
 		}
 	}
 }
@@ -1069,7 +1069,7 @@ country_event = {
 		
 		trigger = {
 		NOT = { capital_scope = { region = eastern_coldharbour_lr } }
-		NOT = { exists = CW6 }
+		NOT = { exists = HAR }
 		}
 		
 		every_core_province = {
@@ -1083,21 +1083,21 @@ country_event = {
 		limit = {
 		region = eastern_coldharbour_lr
 		}
-		add_core = CW6
+		add_core = HAR
 		}
 		
-		release = CW6
+		release = HAR
 		
 		if = {
 		limit = {
 		government = monarchy
 		}
-		create_union = CW6
+		create_union = HAR
 	    }
 		else = {
-		create_alliance = CW6
-		CW6 = { add_opinion = { who = ROOT modifier = es_friendly_nation } }
-		add_opinion = { who = CW6 modifier = es_friendly_nation }
+		create_alliance = HAR
+		HAR = { add_opinion = { who = ROOT modifier = es_friendly_nation } }
+		add_opinion = { who = HAR modifier = es_friendly_nation }
 		}
 	}
 }
@@ -1437,7 +1437,7 @@ country_event = {
 		
 		trigger = {
 		NOT = { capital_scope = { region = western_coldharbour_lr } }
-		NOT = { exists = CU5 }
+		NOT = { exists = SOU }
 		}
 		
 		every_core_province = {
@@ -1451,21 +1451,21 @@ country_event = {
 		limit = {
 		region = western_coldharbour_lr
 		}
-		add_core = CU5
+		add_core = SOU
 		}
 		
-		release = CU5
+		release = SOU
 		
 		if = {
 		limit = {
 		government = monarchy
 		}
-		create_union = CU5
+		create_union = SOU
 	    }
 		else = {
-		create_alliance = CU5
-		CU5 = { add_opinion = { who = ROOT modifier = es_friendly_nation } }
-		add_opinion = { who = CU5 modifier = es_friendly_nation }
+		create_alliance = SOU
+		SOU = { add_opinion = { who = ROOT modifier = es_friendly_nation } }
+		add_opinion = { who = SOU modifier = es_friendly_nation }
 		}
 	}
 }
@@ -1805,7 +1805,7 @@ country_event = {
 		
 		trigger = {
 		NOT = { capital_scope = { region = northern_coldharbour_lr } }
-		NOT = { exists = CZ3 }
+		NOT = { exists = DRM }
 		}
 		
 		every_core_province = {
@@ -1819,21 +1819,21 @@ country_event = {
 		limit = {
 		region = northern_coldharbour_lr
 		}
-		add_core = CZ3
+		add_core = DRM
 		}
 		
-		release = CZ3
+		release = DRM
 		
 		if = {
 		limit = {
 		government = monarchy
 		}
-		create_union = CZ3
+		create_union = DRM
 	    }
 		else = {
-		create_alliance = CZ3
-		CZ3 = { add_opinion = { who = ROOT modifier = es_friendly_nation } }
-		add_opinion = { who = CZ3 modifier = es_friendly_nation }
+		create_alliance = DRM
+		DRM = { add_opinion = { who = ROOT modifier = es_friendly_nation } }
+		add_opinion = { who = DRM modifier = es_friendly_nation }
 		}
 	}
 }

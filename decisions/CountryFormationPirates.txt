@@ -1,0 +1,557 @@
+country_decisions = {
+
+    abeceanea_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = ABE }
+			NOT = { tag = ORD }
+			NOT = { tag = ALE }
+			NOT = { tag = COL }
+			NOT = { tag = AYL }
+			NOT = { tag = CYR }
+			NOT = { tag = TAM }
+			OR = {
+			primary_culture = nedic
+			primary_culture = colovian
+			primary_culture = ayleid
+			}
+			NOT = { has_country_flag = formed_abe_flag }
+			OR = {
+		    ai = no
+			AND = {
+			ai = yes
+			NOT = { num_of_cities = 10 }
+			}
+			}
+		}
+		provinces_to_highlight = {
+            OR = {
+            province_id = 1171
+			province_id = 5351
+			province_id = 5352
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 1171
+			owns_core_province = 5351
+			owns_core_province = 5352
+		}
+		effect = {
+			change_tag = ABE
+			set_country_flag = formed_abe_flag
+			change_government = republic
+			add_government_reform = pirate_republic_reform
+			add_republican_tradition = 100
+			#
+			if = {
+				limit = {
+					NOT = { government_rank = 3 }
+				}
+				set_government_rank = 3
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 300
+	}
+	
+	restless_league_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = RES }
+			NOT = { tag = AYL }
+			NOT = { tag = HAM }
+			NOT = { tag = SUM }
+			NOT = { tag = DIR }
+			OR = {
+			primary_culture = ayleid
+			primary_culture = altmer
+			primary_culture = redguard
+			}
+			NOT = { has_country_flag = formed_res_flag }
+			OR = {
+		    ai = no
+			AND = {
+			ai = yes
+			NOT = { num_of_cities = 10 }
+			}
+			}
+		}
+		provinces_to_highlight = {
+            OR = {
+            province_id = 1501
+			province_id = 6116
+			province_id = 1502
+			province_id = 1503
+			province_id = 1504
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 1501
+			owns_core_province = 6116
+			owns_core_province = 1502
+			owns_core_province = 1503
+			owns_core_province = 1504
+		}
+		effect = {
+			change_tag = RES
+			set_country_flag = formed_res_flag
+			change_government = republic
+			add_government_reform = pirate_republic_reform
+			add_republican_tradition = 100
+			#
+			if = {
+				limit = {
+					NOT = { government_rank = 3 }
+				}
+				set_government_rank = 3
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 300
+	}
+	
+	topalia_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = TOP }
+			NOT = { tag = ARG }
+			OR = {
+			primary_culture = archein
+			primary_culture = argonian
+			}
+			NOT = { has_country_flag = formed_top_flag }
+			OR = {
+		    ai = no
+			AND = {
+			ai = yes
+			NOT = { num_of_cities = 10 }
+			}
+			}
+		}
+		provinces_to_highlight = {
+            OR = {
+            province_id = 5441
+			province_id = 5443
+			province_id = 5442
+			province_id = 5444
+			province_id = 5445
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 5441
+			owns_core_province = 5443
+			owns_core_province = 5442
+			owns_core_province = 5444
+			owns_core_province = 5445
+		}
+		effect = {
+			change_tag = TOP
+			set_country_flag = formed_top_flag
+			change_government = republic
+			add_government_reform = pirate_republic_reform
+			add_republican_tradition = 100
+			#
+			if = {
+				limit = {
+					NOT = { government_rank = 3 }
+				}
+				set_government_rank = 3
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 300
+	}
+	
+	starkad_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = STA }
+			NOT = { tag = SKY }
+			NOT = { tag = OLD }
+			NOT = { tag = WSK }
+			NOT = { tag = ESK }
+			primary_culture = nord
+			NOT = { has_country_flag = formed_sta_flag }
+			OR = {
+		    ai = no
+			AND = {
+			ai = yes
+			NOT = { num_of_cities = 10 }
+			}
+			}
+		}
+		provinces_to_highlight = {
+            OR = {
+            province_id = 7115
+			province_id = 1309
+			province_id = 1303
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 7115
+			owns_core_province = 1309
+			owns_core_province = 1303
+		}
+		effect = {
+			change_tag = STA
+			set_country_flag = formed_sta_flag
+			change_government = republic
+			add_government_reform = pirate_republic_reform
+			add_republican_tradition = 100
+			#
+			if = {
+				limit = {
+					NOT = { government_rank = 3 }
+				}
+				set_government_rank = 3
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 300
+	}
+	
+	sedelea_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = SED }
+			NOT = { tag = ASH }
+			primary_culture = ashlander
+			NOT = { has_country_flag = formed_sed_flag }
+			OR = {
+		    ai = no
+			AND = {
+			ai = yes
+			NOT = { num_of_cities = 10 }
+			}
+			}
+		}
+		provinces_to_highlight = {
+            province_id = 1035
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 1035
+		}
+		effect = {
+			change_tag = SED
+			set_country_flag = formed_sed_flag
+			change_government = republic
+			add_government_reform = pirate_republic_reform
+			add_republican_tradition = 100
+			#
+			if = {
+				limit = {
+					NOT = { government_rank = 3 }
+				}
+				set_government_rank = 3
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 300
+	}
+	
+	kmeiine_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = KME }
+			NOT = { tag = DRE }
+			primary_culture = dremora
+			NOT = { has_country_flag = formed_kme_flag }
+			OR = {
+		    ai = no
+			AND = {
+			ai = yes
+			NOT = { num_of_cities = 10 }
+			}
+			}
+		}
+		provinces_to_highlight = {
+            province_id = 416
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 416
+		}
+		effect = {
+			change_tag = KME
+			set_country_flag = formed_kme_flag
+			change_government = republic
+			add_government_reform = pirate_republic_reform
+			add_republican_tradition = 100
+			#
+			if = {
+				limit = {
+					NOT = { government_rank = 3 }
+				}
+				set_government_rank = 3
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 300
+	}
+	
+	elzaqess_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = ELZ }
+			NOT = { tag = TSA }
+			NOT = { tag = POE }
+			primary_culture = tsaesci
+			NOT = { has_country_flag = formed_elz_flag }
+			OR = {
+		    ai = no
+			AND = {
+			ai = yes
+			NOT = { num_of_cities = 10 }
+			}
+			}
+		}
+		provinces_to_highlight = {
+            province_id = 1645
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 1645
+		}
+		effect = {
+			change_tag = ELZ
+			set_country_flag = formed_elz_flag
+			change_government = republic
+			add_government_reform = pirate_republic_reform
+			add_republican_tradition = 100
+			#
+			if = {
+				limit = {
+					NOT = { government_rank = 3 }
+				}
+				set_government_rank = 3
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 300
+	}
+	
+	kherso_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = KHE }
+			NOT = { tag = UPP }
+			NOT = { tag = AKA }
+			primary_culture = akaviri
+			NOT = { has_country_flag = formed_khe_flag }
+			OR = {
+		    ai = no
+			AND = {
+			ai = yes
+			NOT = { num_of_cities = 10 }
+			}
+			}
+		}
+		provinces_to_highlight = {
+            province_id = 1625
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 1625
+		}
+		effect = {
+			change_tag = KHE
+			set_country_flag = formed_khe_flag
+			change_government = republic
+			add_government_reform = pirate_republic_reform
+			add_republican_tradition = 100
+			#
+			if = {
+				limit = {
+					NOT = { government_rank = 3 }
+				}
+				set_government_rank = 3
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 300
+	}
+	
+	kaalda_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = KAA }
+			NOT = { tag = CAT }
+			NOT = { tag = ISL }
+			NOT = { tag = ESR }
+			primary_culture = islander
+			NOT = { has_country_flag = formed_kaa_flag }
+			OR = {
+		    ai = no
+			AND = {
+			ai = yes
+			NOT = { num_of_cities = 10 }
+			}
+			}
+		}
+		provinces_to_highlight = {
+            province_id = 766
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 766
+		}
+		effect = {
+			change_tag = KAA
+			set_country_flag = formed_kaa_flag
+			change_government = republic
+			add_government_reform = pirate_republic_reform
+			add_republican_tradition = 100
+			#
+			if = {
+				limit = {
+					NOT = { government_rank = 3 }
+				}
+				set_government_rank = 3
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 300
+	}
+	
+	ralris_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = RAL }
+			NOT = { tag = POT }
+			NOT = { tag = KAP }
+			NOT = { tag = TRA }
+			primary_culture = po_tun
+			NOT = { has_country_flag = formed_ral_flag }
+			OR = {
+		    ai = no
+			AND = {
+			ai = yes
+			NOT = { num_of_cities = 10 }
+			}
+			}
+		}
+		provinces_to_highlight = {
+            province_id = 697
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 697
+		}
+		effect = {
+			change_tag = RAL
+			set_country_flag = formed_ral_flag
+			change_government = republic
+			add_government_reform = pirate_republic_reform
+			add_republican_tradition = 100
+			#
+			if = {
+				limit = {
+					NOT = { government_rank = 3 }
+				}
+				set_government_rank = 3
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 300
+	}
+
+}
