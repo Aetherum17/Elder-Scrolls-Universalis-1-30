@@ -3,35 +3,49 @@ divorce_consort_aspect = {
 	cost = 100
 	potential = {
 		has_dlc = "Rights of Man"
-		government = monarchy
 	}
 	trigger = {
+	    OR = {
+		AND = {
 		has_consort = yes
+		government = monarchy
+		}
+		has_country_modifier = married_consort_ruler
+		}
 		is_female = no
-		has_heir = no
 		is_lesser_in_union = no
 		has_regency = no
 	}
 	effect = {
+	    if = { limit = { government = monarchy }
 		custom_tooltip = divorce_consort_tooltip
 		hidden_effect = {
 			remove_consort = yes
 		}		
+		}
+		else = {
+		    custom_tooltip = divorce_first_lady_tooltip
+			hidden_effect = {
+		    add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			add_prestige = -10
+			remove_country_modifier = married_consort_ruler
+		    add_ruler_modifier = {
+			    name = "divorsed_consort_ruler"
+				duration = 9125
+			}
+			}
+		}
 	}
 	ai_will_do = {
 		factor = 2
 		modifier = {
 			factor = 0
-			NOT = {
-				consort_has_personality = infertile_personality
-			}
-		}
-		modifier = {
-			factor = 0
 			OR = {
-				consort_adm = 2
-				consort_dip = 2
-				consort_mil = 2
+				consort_adm = 3
+				consort_dip = 3
+				consort_mil = 3
 			}
 		}
 	}
@@ -42,29 +56,44 @@ gain_consort_aspect = {
 	cost = 100
 	potential = {
 		has_dlc = "Rights of Man"
-		government = monarchy
 	}
 	trigger = {
+	    OR = {
+		AND = {
 		has_consort = no
+		government = monarchy
+		}
+		AND = {
+		NOT = { has_country_modifier = divorsed_consort_ruler }
+	    NOT = { has_country_modifier = married_consort_ruler }
+		}
+		}
 		is_female = no
 		is_lesser_in_union = no
 		has_regency = no
 	}
 	effect = {
+	    if = { limit = { government = monarchy }
 		define_consort = {
 			country_of_origin = ROOT
 			female = yes
+		}
+		}
+		else = {
+		    custom_tooltip = marry_first_lady_tooltip
+			hidden_effect = {
+		    add_country_modifier = {
+			    name = "married_consort_ruler"
+				duration = -1
+			}
+			}
 		}
 	}
 	ai_will_do = {
 		factor = 1
 		modifier = {
-			factor = 2
-			ruler_age = 40
-		}
-		modifier = {
-			factor = 2
-			ruler_age = 60
+			factor = 2.5
+			ruler_age = 50
 		}
 	}
 }
@@ -98,10 +127,6 @@ monopoly_aspect = {
 	}
 	ai_will_do = {
 		factor = 1
-		modifier = {
-			factor = 2
-			trade_income_percentage = 40
-		}
 	}
 }
 

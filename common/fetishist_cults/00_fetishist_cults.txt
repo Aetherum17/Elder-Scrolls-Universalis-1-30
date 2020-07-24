@@ -1,7 +1,8 @@
-azura_cult = {
+cult_molag_bal_cult = {
+    discipline = 0.05
+	build_cost = -0.10
     allow = {
-	    always = yes
-		#has_unlocked_cult = azura_cult
+		has_unlocked_cult = cult_molag_bal_cult
 	}
 	sprite = 1
 	ai_will_do = {
@@ -9,10 +10,11 @@ azura_cult = {
 	}
 }
 
-boethiah_cult = {
+cult_boethiah_cult = {
+    infantry_power = 0.10
+	fort_maintenance_modifier = -0.10
     allow = {
-	    always = yes
-		#has_unlocked_cult = boethiah_cult
+		has_unlocked_cult = cult_boethiah_cult
 	}
 	sprite = 2
 	ai_will_do = {
@@ -20,10 +22,11 @@ boethiah_cult = {
 	}
 }
 
-mephala_cult = {
+cult_azura_cult = {
+    siege_ability = 0.10
+	province_warscore_cost = -0.10
     allow = {
 	    always = yes
-		#has_unlocked_cult = mephala_cult
 	}
 	sprite = 3
 	ai_will_do = {
@@ -31,10 +34,11 @@ mephala_cult = {
 	}
 }
 
-lorkhan_cult = {
+cult_clavicus_vile_cult = {
+    mercenary_discipline = 0.05
+	administrative_efficiency = 0.05
     allow = {
-	    always = yes
-		#has_unlocked_cult = lorkhan_cult
+		has_unlocked_cult = cult_clavicus_vile_cult
 	}
 	sprite = 4
 	ai_will_do = {
@@ -42,12 +46,157 @@ lorkhan_cult = {
 	}
 }
 
-namira_cult = {
+cult_sheogorath_cult = {
+    fire_damage_received = -0.10
+	core_creation = -0.10
     allow = {
-	    always = yes
-		#has_unlocked_cult = namira_cult
+		has_unlocked_cult = cult_sheogorath_cult
 	}
 	sprite = 5
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+cult_nocturnal_cult = {
+    fire_damage_received = -0.10
+	shock_damage = 0.10
+    allow = {
+		has_unlocked_cult = cult_nocturnal_cult
+	}
+	sprite = 6
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+cult_malacath_cult = {
+    reinforce_cost_modifier = -0.10
+	unjustified_demands = -0.10
+    allow = {
+		has_unlocked_cult = cult_malacath_cult
+	}
+	sprite = 7
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+cult_mehrunes_dagon_cult = {
+    artillery_power = 0.10
+	global_regiment_cost = -0.10
+    allow = {
+		has_unlocked_cult = cult_mehrunes_dagon_cult
+	}
+	sprite = 8
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+cult_hircine_cult = {
+    cavalry_power = 0.10
+	free_leader_pool = 1
+    allow = {
+		has_unlocked_cult = cult_hircine_cult
+	}
+	sprite = 9
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+cult_namira_cult = {
+    shock_damage_received = -0.10
+	land_attrition = -0.10
+    allow = {
+		has_unlocked_cult = cult_namira_cult
+	}
+	sprite = 10
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+cult_sanguine_cult = {
+    manpower_recovery_speed = 0.10
+	improve_relation_modifier = 0.25
+    allow = {
+		has_unlocked_cult = cult_sanguine_cult
+	}
+	sprite = 11
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+cult_hermaeus_mora_cult = {
+    drill_gain_modifier = 0.25
+	idea_cost = -0.10
+    allow = {
+		has_unlocked_cult = cult_hermaeus_mora_cult
+	}
+	sprite = 12
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+cult_vaermina_cult = {
+    fire_damage = 0.10
+	global_regiment_recruit_speed = -0.10
+    allow = {
+		has_unlocked_cult = cult_vaermina_cult
+	}
+	sprite = 13
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+cult_meridia_cult = {
+    land_morale = 0.10
+	drill_decay_modifier = -0.10
+    allow = {
+		has_unlocked_cult = cult_meridia_cult
+	}
+	sprite = 14
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+cult_jyggalag_cult = {
+    prestige_from_land = 0.25
+	advisor_cost = -0.10
+    allow = {
+		has_unlocked_cult = cult_jyggalag_cult
+	}
+	sprite = 15
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+cult_peryite_cult = {
+    defensiveness = 0.10
+	production_efficiency = 0.10
+    allow = {
+		has_unlocked_cult = cult_peryite_cult
+	}
+	sprite = 16
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+cult_mephala_cult = {
+    movement_speed = 0.10
+	global_tax_modifier = 0.10
+    allow = {
+		has_unlocked_cult = cult_mephala_cult
+	}
+	sprite = 17
 	ai_will_do = {
 		factor = 1
 	}

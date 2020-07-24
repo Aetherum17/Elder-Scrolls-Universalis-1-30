@@ -1104,3 +1104,13 @@ consort_in_power = {
 	harsh_treatment_cost = 1.0
 	legitimacy = -1.75
 }
+
+divorsed_consort_ruler = {
+    prestige_decay = 0.01
+}
+
+married_consort_ruler = {
+    prestige = 0.10
+	improve_relation_modifier = 0.10
+	stability_cost_modifier = -0.10
+}

@@ -92,7 +92,7 @@ order_of_the_raven = {
         NOT = { culture_group = yokudan-redguardian_cg } NOT = { OR = { owner = { capital_scope = { superregion = cyrodiil_superregion } } religion_group = daedric_group_1 } }
 	}
     cost = 100 cost_type = dip_power per_province_effect = { add_base_production = 1 } per_province_abandon_effect = { add_base_production = -1 }
-    modifier = { trade_goods_size = 0.15 local_regiment_cost = -0.10 }
+    modifier = { trade_goods_size_modifier = 0.15 local_regiment_cost = -0.10 }
     ai_priority = { factor = 1 }
 }
 

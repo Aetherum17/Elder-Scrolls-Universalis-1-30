@@ -1,15 +1,9 @@
 1 = {
-    trade_efficiency = 0.10
-
     diplomatic_reputation = 3
 	improve_relation_modifier = 0.5
 	global_manpower_modifier = 0.5
 	global_sailors_modifier = 0.5
 	defensiveness = 0.5
-	
-	diplomatic_annexation_cost = 2.5
-	vassal_forcelimit_bonus = -0.50
-    vassal_income = -0.25
 }
 
 2 = {
@@ -22,26 +16,20 @@
 	global_manpower_modifier = 0.35
 	global_sailors_modifier = 0.35
 	defensiveness = 0.35
-	
-	diplomatic_annexation_cost = 1.5
-	vassal_forcelimit_bonus = -0.35
-    vassal_income = -0.20
 }
 
 3 = {
     diplomats = 1
 	governing_capacity_modifier = 0.10
 	global_autonomy = -0.015
+	vassal_forcelimit_bonus = -0.25
+    vassal_income = -0.15
 	
 	diplomatic_reputation = 2.0
 	improve_relation_modifier = 0.25
 	global_manpower_modifier = 0.25
 	global_sailors_modifier = 0.25
 	defensiveness = 0.25
-	
-	diplomatic_annexation_cost = 1.0
-	vassal_forcelimit_bonus = -0.25
-    vassal_income = -0.15
 }
 
 4 = {
@@ -50,16 +38,14 @@
 	global_autonomy = -0.020
 	max_absolutism = 5
 	free_leader_pool = 1
+	vassal_forcelimit_bonus = -0.10
+    vassal_income = -0.10
 	
 	diplomatic_reputation = 1.5
 	improve_relation_modifier = 0.15
 	global_manpower_modifier = 0.15
 	global_sailors_modifier = 0.15
 	defensiveness = 0.15
-	
-	diplomatic_annexation_cost = 0.5
-	vassal_forcelimit_bonus = -0.10
-    vassal_income = -0.10
 }
 
 5 = {
@@ -72,9 +58,7 @@
 	diplomatic_reputation = 1.0
 	improve_relation_modifier = 0.1
 	defensiveness = 0.10
-	
 	core_creation = -0.10
-	diplomatic_annexation_cost = -0.25
 	prestige_from_land = 0.10
 }
 
@@ -86,14 +70,12 @@
 	free_leader_pool = 2
 	
 	core_creation = -0.15
-	diplomatic_annexation_cost = -0.30
+	diplomatic_annexation_cost = -0.15
 	unjustified_demands = -0.10
 	province_warscore_cost = -0.1
 	prestige_from_land = 0.15
 	
 	yearly_corruption = 0.1
-	ae_impact = 0.1
-	global_manpower_modifier = -0.1
 }
 
 7 = {
@@ -104,14 +86,12 @@
 	free_leader_pool = 2
 	
 	core_creation = -0.20
-	diplomatic_annexation_cost = -0.35
+	diplomatic_annexation_cost = -0.20
 	unjustified_demands = -0.20
 	province_warscore_cost = -0.2
 	prestige_from_land = 0.20
 	
 	yearly_corruption = 0.20
-	ae_impact = 0.2
-	global_manpower_modifier = -0.2
 }
 
 8 = {
@@ -122,14 +102,12 @@
 	free_leader_pool = 3
 	
 	core_creation = -0.25
-	diplomatic_annexation_cost = -0.40
+	diplomatic_annexation_cost = -0.25
 	unjustified_demands = -0.30
 	province_warscore_cost = -0.3
 	prestige_from_land = 0.25
 	
-	yearly_corruption = 0.25
-	ae_impact = 0.3
-	global_manpower_modifier = -0.3
+	yearly_corruption = 0.30
 }
 
 9 = {
@@ -140,14 +118,12 @@
 	free_leader_pool = 3
 	
 	core_creation = -0.30
-	diplomatic_annexation_cost = -0.45
+	diplomatic_annexation_cost = -0.30
 	unjustified_demands = -0.4
 	province_warscore_cost = -0.4
 	prestige_from_land = 0.30
 	
-	yearly_corruption = 0.30
-	ae_impact = 0.4
-	global_manpower_modifier = -0.4
+	yearly_corruption = 0.40
 }
 
 10 = {
@@ -158,12 +134,10 @@
 	free_leader_pool = 3
 	
 	core_creation = -0.35
-	diplomatic_annexation_cost = -0.50
+	diplomatic_annexation_cost = -0.35
 	unjustified_demands = -0.5
 	province_warscore_cost = -0.5
 	prestige_from_land = 0.35
 	
-	yearly_corruption = 0.35
-	ae_impact = 0.5
-	global_manpower_modifier = -0.5
+	yearly_corruption = 0.50
 }

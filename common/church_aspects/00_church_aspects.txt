@@ -1,206 +1,475 @@
-organised_through_priest_aspect_1 = {
-	cost = 100
+# Molag Bal
+
+blood_rituals_aspect = {
+    cost = 100
 	modifier = {
-		development_cost = -0.10
+	    leader_land_fire = 1
+		leader_land_shock = 1
 	}
 	ai_will_do = {
-		factor = 15
+		factor = 1
 	}
 }
 
-priests_may_marry_aspect_1 = {
-	cost = 100
+enslaement_of_mortals_aspect = {
+    cost = 100
 	modifier = {
+	    province_warscore_cost = -0.10
+		global_regiment_recruit_speed = -0.10
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+eternal_domination_aspect = {
+    cost = 100
+	modifier = {
+	    land_attrition = -0.10
+		land_forcelimit_modifier = 0.10
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+harvest_of_souls_aspect = {
+    cost = 100
+	modifier = {
+	    global_ship_trade_power = 0.10
+		navy_tradition_decay = -0.01
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+encouragement_of_strife_aspect = {
+    cost = 100
+	modifier = {
+	    harsh_treatment_cost = -0.25
+		global_spy_defence = 0.10
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+abetment_to_lust_aspect = {
+    cost = 100
+	modifier = {
+	    vassal_income = 0.10
 		stability_cost_modifier = -0.10
 	}
 	ai_will_do = {
-		factor = 10
-		modifier = {
-			factor = 2
-			NOT = { religious_unity = 0.8 }
-		}
-		modifier = {
-			factor = 2
-			unrest = 4
-			NOT = { stability = 0 }
-		}
+		factor = 1
 	}
 }
 
-religion_conversation_aspect_1 = {
-	cost = 100
-	modifier = { 
-		global_missionary_strength = 0.01
-	}
-	ai_will_do = {
-		factor = 12
-		modifier = {
-			factor = 2
-			NOT = { religious_unity = 0.8 }
-		}
-		modifier = {
-			factor = 0
-			NOT = {
-				any_owned_province = {
-					has_owner_religion = no
-				}
-			}
-		}
-	}
-}
+# Meridia
 
-holy_scrolls_aspect_1 = {
-	cost = 100
-	modifier = { 
-		discipline = 0.05
-	}
-	ai_will_do = {
-		factor = 12
-		modifier = {
-			factor = 2
-			is_at_war = yes
-		}
-	}
-}
-
-prince_accept_prayers_aspect_1 = {
-	cost = 100
-	modifier = { 
-		land_morale = 0.10
-		naval_morale = 0.10
-	}
-	ai_will_do = {
-		factor = 12
-		modifier = {
-			factor = 2
-			is_at_war = yes
-		}
-	}
-}
-
-statures_aspect_1 = {
-	cost = 100
-	modifier = { 
+infinite_energies_aspect = {
+    cost = 100
+	modifier = {
+	    production_efficiency = 0.10
 		prestige_decay = -0.01
 	}
 	ai_will_do = {
-		factor = 12
-		modifier = {
-			factor = 2
-			NOT = { prestige = -40 }
-		}
+		factor = 1
 	}
 }
 
-legalised_divorces_aspect_1 = {
-	cost = 100
+purification_of_land_aspect = {
+    cost = 100
 	modifier = {
-		legitimacy = 1.0
-		devotion = 1.0
-		horde_unity = 1.0
-		republican_tradition = 1.0
-		meritocracy = 1.0
+	    fire_damage = 0.1
+		reinforce_speed = 0.10
 	}
 	ai_will_do = {
-		factor = 6
-		modifier = {
-			factor = 2
-			NOT = { legitimacy_equivalent = 80 }
-		}
-		modifier = {
-			factor = 2
-			NOT = { legitimacy_equivalent = 60 }
-		}
-		modifier = {
-			factor = 2
-			NOT = { legitimacy_equivalent = 40 }
-		}
-		modifier = {
-			factor = 0
-			legitimacy_equivalent = 95
-		}
+		factor = 1
 	}
 }
 
-heretics_deported_aspect_1 = {
-	cost = 100
+purge_of_undead_aspect = {
+    cost = 100
 	modifier = {
-		core_creation = -0.10
+	    merc_maintenance_modifier = -0.10
+		mercenary_manpower = 0.25
 	}
 	ai_will_do = {
-		factor = 10
-		modifier = {
-			factor = 2
-			num_of_colonies = 1
-		}
-		modifier = {
-			factor = 2
-			num_of_colonists = 2
-		}
+		factor = 1
 	}
 }
 
-parish_registers_aspect_1 = {
-	cost = 100
+inspiration_of_life_aspect = {
+    cost = 100
 	modifier = {
-		manpower_recovery_speed = 0.1
+	    num_accepted_cultures = 1
+		rebel_support_efficiency = 0.25
 	}
 	ai_will_do = {
-		factor = 10
-		modifier = {
-			factor = 2
-			is_at_war = yes
-			NOT = { manpower_percentage = 0.9 }
-		}
-		modifier = {
-			factor = 2
-			NOT = { manpower_percentage = 0.5 }
-		}
+		factor = 1
 	}
 }
 
-individual_creeds_aspect_1 = {
-	cost = 100
-	modifier = { 
-		idea_cost = -0.10
-	}
-	ai_will_do = {
-		factor = 15
-	}
-}
-
-allow_usury_aspect_1 = {
-	cost = 100
-	modifier = { 
-		production_efficiency = 0.10
-	}
-	ai_will_do = {
-		factor = 17
-		modifier = {
-			factor = 0.5
-			treasury = 500
-		}
-		modifier = {
-			factor = 0
-			treasury = 2500
-		}
-	}
-}
-
-translated_scrolls_aspect_1 = {
-	cost = 100
+light_preservation_aspect = {
+    cost = 100
 	modifier = {
-		global_unrest = -1
+	    unjustified_demands = -0.10
+		improve_relation_modifier = 0.25
 	}
 	ai_will_do = {
-		factor = 10
-		modifier = {
-			factor = 2
-			unrest = 2
-		}
-		modifier = {
-			factor = 2
-			num_of_rebel_controlled_provinces = 1
-		}	
+		factor = 1
+	}
+}
+
+worship_of_dawn_aspect = {
+    cost = 100
+	modifier = {
+	    naval_morale = 0.10
+		trade_steering = 0.10
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# Mehrunes Dagon
+
+spread_destruction_aspect = {
+    cost = 100
+	modifier = {
+	    siege_ability = 0.1
+		infantry_cost = -0.1
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+inception_of_revolution_aspect = {
+    cost = 100
+	modifier = {
+	    mercenary_cost = -0.10
+		culture_conversion_cost = -0.10
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+energy_patronage_aspect = {
+    cost = 100
+	modifier = {
+	    naval_attrition = -0.10
+		navy_tradition = 0.25
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+change_approachment_aspect = {
+    cost = 100
+	modifier = {
+	    shock_damage = 0.10
+		free_leader_pool = 1
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+aspiration_to_ambitions_aspect = {
+    cost = 100
+	modifier = {
+	    reduced_liberty_desire = 7
+		spy_offence = 0.10
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+deification_of_filth_aspect = {
+    cost = 100
+	modifier = {
+	    hostile_attrition = 1
+		artillery_bonus_vs_fort = 1
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# Hermeus Mora
+
+protection_of_knowledge_aspect = {
+    cost = 100
+	modifier = {
+	    state_maintenance_modifier = -0.10
+		advisor_pool = 1
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+memory_strengthening_aspect = {
+    cost = 100
+	modifier = {
+	    drill_gain_modifier = 0.25
+		drill_decay_modifier = -0.10
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+gratification_of_fate_aspect = {
+    cost = 100
+	modifier = {
+	    global_tax_modifier = 0.10
+		global_tariffs = 0.10
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+perpetuation_of_past_aspect = {
+    cost = 100
+	modifier = {
+	    army_tradition = 0.25
+		garrison_size = 0.10
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+future_provision_aspect = {
+    cost = 100
+	modifier = {
+	    administrative_efficiency = 0.05
+		development_cost = -0.1
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+vindication_of_stars_aspect = {
+    cost = 100
+	modifier = {
+	    build_cost = -0.10
+		build_time = -0.10
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# Sheogorath
+
+falling_into_madness_aspect = {
+    cost = 100
+	modifier = {
+	    tolerance_own = 1
+		global_missionary_strength = 0.01
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+adoration_of_horripilation_aspect = {
+    cost = 100
+	modifier = {
+	    leader_naval_manuever = 1
+		leader_siege = 1
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+frantic_scrolls_aspect = {
+    cost = 100
+	modifier = {
+	    core_creation = -0.10
+		manpower_recovery_speed = 0.10
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+submission_to_deliration_aspect = {
+    cost = 100
+	modifier = {
+	    sailor_maintenance_modifer = -0.1
+		global_sailors_modifier = 0.10
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+life_in_lunacy_aspect = {
+    cost = 100
+	modifier = {
+	    privateer_efficiency = 0.25
+		recover_navy_morale_speed = 0.05
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+acquiration_of_dementia_aspect = {
+    cost = 100
+	modifier = {
+	    mercenary_discipline = 0.05
+		loot_amount = 0.25
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# Hircine
+
+eternal_hunt_aspect = {
+    cost = 100
+	modifier = {
+	    cavalry_flanking = 0.25
+		global_regiment_cost = -0.1
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+greatest_games_aspect = {
+    cost = 100
+	modifier = {
+	    general_cost = -0.25
+		shock_damage_received = -0.10
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+the_chase_aspect = {
+    cost = 100
+	modifier = {
+	    movement_speed = 0.10
+		cavalry_cost = -0.10
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+bloodmoon_rituals_aspect = {
+    cost = 100
+	modifier = {
+	    ship_durability = 0.1
+		sailors_recovery_speed = 0.10
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+bless_of_savior_aspect = {
+    cost = 100
+	modifier = {
+	    religious_unity = 0.10
+		prestige = 0.25
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+merciful_spears_aspect = {
+    cost = 100
+	modifier = {
+	    years_of_nationalism = -5
+		embargo_efficiency = 0.25
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# Nocturnal
+
+night_benison_aspect = {
+    cost = 100
+	modifier = {
+	    land_morale = 0.10
+		fort_maintenance_modifier = -0.1
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+custody_of_shadows_aspect = {
+    cost = 100
+	modifier = {
+	    idea_cost = -0.1
+		advisor_cost = -0.10
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+care_of_night_aspect = {
+    cost = 100
+	modifier = {
+	    diplomatic_reputation = 0.5
+		diplomatic_upkeep = 1
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+raven_inclination_aspect = {
+    cost = 100
+	modifier = {
+	    tolerance_heathen = 1
+		tolerance_heretic = 1
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+gray_cowls_aspect = {
+    cost = 100
+	modifier = {
+	    defensiveness = 0.10
+		army_tradition_decay = -0.01
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+appeal_to_luck_aspect = {
+    cost = 100
+	modifier = {
+	    reinforce_cost_modifier = -0.10
+		fire_damage_received = -0.10
+	}
+	ai_will_do = {
+		factor = 1
 	}
 }

@@ -912,7 +912,15 @@ occult_group = {
 			local_missionary_strength = -0.025
 		}
 		
-		#Hussite
+		uses_hussite_power = yes
+		aspects = {
+			forbidden_rituals_aspect
+			forgotten_deities_aspect
+			ecstasy_of_suffering_aspect
+			summon_the_dead_aspect
+			curse_the_ghosts_aspect
+		}
+		aspects_name = PROTESTANT_ASPECTS
 		
 		heretic = { CULT_OF_BLACK_WORM_HERETIC }	
 	}
@@ -1117,18 +1125,12 @@ daedric_group_1 = {
 		
 		uses_church_power = yes
 		aspects = {
-			organised_through_priest_aspect_1
-            priests_may_marry_aspect_1
-            religion_conversation_aspect_1
-            holy_scrolls_aspect_1
-            prince_accept_prayers_aspect_1
-            statures_aspect_1
-            legalised_divorces_aspect_1
-            heretics_deported_aspect_1
-            parish_registers_aspect_1
-            individual_creeds_aspect_1
-            allow_usury_aspect_1
-            translated_scrolls_aspect_1
+			blood_rituals_aspect
+            enslaement_of_mortals_aspect
+            eternal_domination_aspect
+            harvest_of_souls_aspect
+            encouragement_of_strife_aspect
+            abetment_to_lust_aspect
 		}
 		aspects_name = PROTESTANT_ASPECTS
 		
@@ -1152,18 +1154,12 @@ daedric_group_1 = {
 		
 		uses_church_power = yes
 		aspects = {
-			organised_through_priest_aspect_1
-            priests_may_marry_aspect_1
-            religion_conversation_aspect_1
-            holy_scrolls_aspect_1
-            prince_accept_prayers_aspect_1
-            statures_aspect_1
-            legalised_divorces_aspect_1
-            heretics_deported_aspect_1
-            parish_registers_aspect_1
-            individual_creeds_aspect_1
-            allow_usury_aspect_1
-            translated_scrolls_aspect_1
+			infinite_energies_aspect
+            purification_of_land_aspect
+            purge_of_undead_aspect
+            inspiration_of_life_aspect
+            light_preservation_aspect
+            worship_of_dawn_aspect
 		}
 		aspects_name = PROTESTANT_ASPECTS
 		
@@ -1187,18 +1183,12 @@ daedric_group_1 = {
 		
 		uses_church_power = yes
 		aspects = {
-			organised_through_priest_aspect_1
-            priests_may_marry_aspect_1
-            religion_conversation_aspect_1
-            holy_scrolls_aspect_1
-            prince_accept_prayers_aspect_1
-            statures_aspect_1
-            legalised_divorces_aspect_1
-            heretics_deported_aspect_1
-            parish_registers_aspect_1
-            individual_creeds_aspect_1
-            allow_usury_aspect_1
-            translated_scrolls_aspect_1
+			spread_destruction_aspect
+            inception_of_revolution_aspect
+            energy_patronage_aspect
+            change_approachment_aspect
+            aspiration_to_ambitions_aspect
+            deification_of_filth_aspect
 		}
 		aspects_name = PROTESTANT_ASPECTS
 		
@@ -1222,18 +1212,12 @@ daedric_group_1 = {
 		
 		uses_church_power = yes
 		aspects = {
-			organised_through_priest_aspect_1
-            priests_may_marry_aspect_1
-            religion_conversation_aspect_1
-            holy_scrolls_aspect_1
-            prince_accept_prayers_aspect_1
-            statures_aspect_1
-            legalised_divorces_aspect_1
-            heretics_deported_aspect_1
-            parish_registers_aspect_1
-            individual_creeds_aspect_1
-            allow_usury_aspect_1
-            translated_scrolls_aspect_1
+			protection_of_knowledge_aspect
+            memory_strengthening_aspect
+            gratification_of_fate_aspect
+            perpetuation_of_past_aspect
+            future_provision_aspect
+            vindication_of_stars_aspect
 		}
 		aspects_name = PROTESTANT_ASPECTS
 		
@@ -1257,18 +1241,12 @@ daedric_group_1 = {
 		
 		uses_church_power = yes
 		aspects = {
-			organised_through_priest_aspect_1
-            priests_may_marry_aspect_1
-            religion_conversation_aspect_1
-            holy_scrolls_aspect_1
-            prince_accept_prayers_aspect_1
-            statures_aspect_1
-            legalised_divorces_aspect_1
-            heretics_deported_aspect_1
-            parish_registers_aspect_1
-            individual_creeds_aspect_1
-            allow_usury_aspect_1
-            translated_scrolls_aspect_1
+			falling_into_madness_aspect
+            adoration_of_horripilation_aspect
+            frantic_scrolls_aspect
+            submission_to_deliration_aspect
+            life_in_lunacy_aspect
+            acquiration_of_dementia_aspect
 		}
 		aspects_name = PROTESTANT_ASPECTS
 		
@@ -1292,18 +1270,12 @@ daedric_group_1 = {
 		
 		uses_church_power = yes
 		aspects = {
-			organised_through_priest_aspect_1
-            priests_may_marry_aspect_1
-            religion_conversation_aspect_1
-            holy_scrolls_aspect_1
-            prince_accept_prayers_aspect_1
-            statures_aspect_1
-            legalised_divorces_aspect_1
-            heretics_deported_aspect_1
-            parish_registers_aspect_1
-            individual_creeds_aspect_1
-            allow_usury_aspect_1
-            translated_scrolls_aspect_1
+			eternal_hunt_aspect
+            greatest_games_aspect
+            the_chase_aspect
+            bloodmoon_rituals_aspect
+            bless_of_savior_aspect
+            merciful_spears_aspect
 		}
 		aspects_name = PROTESTANT_ASPECTS
 		
@@ -1327,18 +1299,12 @@ daedric_group_1 = {
 		
 		uses_church_power = yes
 		aspects = {
-			organised_through_priest_aspect_1
-            priests_may_marry_aspect_1
-            religion_conversation_aspect_1
-            holy_scrolls_aspect_1
-            prince_accept_prayers_aspect_1
-            statures_aspect_1
-            legalised_divorces_aspect_1
-            heretics_deported_aspect_1
-            parish_registers_aspect_1
-            individual_creeds_aspect_1
-            allow_usury_aspect_1
-            translated_scrolls_aspect_1
+			night_benison_aspect
+            custody_of_shadows_aspect
+            care_of_night_aspect
+            raven_inclination_aspect
+            gray_cowls_aspect
+            appeal_to_luck_aspect
 		}
 		aspects_name = PROTESTANT_ASPECTS
 		
