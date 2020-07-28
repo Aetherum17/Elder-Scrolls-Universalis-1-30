@@ -658,8 +658,8 @@ occult_group = {
 			}
 			
 			icon_morokei = {
-				
-				
+				mercenary_cost = -0.25
+				reduced_liberty_desire = 25
 				
 				allow = {
 					always = yes
@@ -939,6 +939,247 @@ elemental_group = {
 	
 	defender_of_faith = yes
 	can_form_personal_unions = yes
+	
+	religious_schools = {
+	
+	    alrabeg_school = {
+		    potential_invite_scholar = { religion = old_gods_cult knows_of_scholar_country_capital_trigger = yes }
+			can_invite_scholar = { adm_power_cost = 50 reverse_has_opinion = { who = FROM value = 150 } NOT = { has_country_modifier = alrabeg_school_modifier } OR = { alliance_with = FROM is_subject_of = FROM overlord_of = FROM } hidden_progressive_opinion_for_scholar_trigger = yes }
+			on_invite_scholar = { adm_power_cost = 100 clear_religious_scholar_modifiers_effect = yes custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT add_country_modifier = { 
+			name = alrabeg_school_modifier duration = 7300 } }
+			
+			invite_scholar_modifier_display = alrabeg_school_modifier
+			
+			picture = "GFX_icon_alrabeg_school"
+			
+			discipline = 0.05
+		}
+		
+		storihbeg_school = {
+		    potential_invite_scholar = { religion = old_gods_cult knows_of_scholar_country_capital_trigger = yes }
+			can_invite_scholar = { adm_power_cost = 50 reverse_has_opinion = { who = FROM value = 150 } NOT = { has_country_modifier = storihbeg_school_modifier } OR = { alliance_with = FROM is_subject_of = FROM overlord_of = FROM } hidden_progressive_opinion_for_scholar_trigger = yes }
+			on_invite_scholar = { adm_power_cost = 100 clear_religious_scholar_modifiers_effect = yes custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT add_country_modifier = { 
+			name = storihbeg_school_modifier duration = 7300 } }
+			
+			invite_scholar_modifier_display = storihbeg_school_modifier
+			
+			picture = "GFX_icon_storihbeg_school"
+			
+			shock_damage = 0.10
+		}
+		
+		uricanbeg_school = {
+		    potential_invite_scholar = { religion = old_gods_cult knows_of_scholar_country_capital_trigger = yes }
+			can_invite_scholar = { adm_power_cost = 50 reverse_has_opinion = { who = FROM value = 150 } NOT = { has_country_modifier = uricanbeg_school_modifier } OR = { alliance_with = FROM is_subject_of = FROM overlord_of = FROM } hidden_progressive_opinion_for_scholar_trigger = yes }
+			on_invite_scholar = { adm_power_cost = 100 clear_religious_scholar_modifiers_effect = yes custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT add_country_modifier = { 
+			name = uricanbeg_school_modifier duration = 7300 } }
+			
+			invite_scholar_modifier_display = uricanbeg_school_modifier
+			
+			picture = "GFX_icon_uricanbeg_school"
+			
+			land_forcelimit_modifier = 0.1
+		}
+		
+		gulibeg_school = {
+		    potential_invite_scholar = { religion = old_gods_cult knows_of_scholar_country_capital_trigger = yes }
+			can_invite_scholar = { adm_power_cost = 50 reverse_has_opinion = { who = FROM value = 150 } NOT = { has_country_modifier = gulibeg_school_modifier } OR = { alliance_with = FROM is_subject_of = FROM overlord_of = FROM } hidden_progressive_opinion_for_scholar_trigger = yes }
+			on_invite_scholar = { adm_power_cost = 100 clear_religious_scholar_modifiers_effect = yes custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT add_country_modifier = { 
+			name = gulibeg_school_modifier duration = 7300 } }
+			
+			invite_scholar_modifier_display = gulibeg_school_modifier
+			
+			picture = "GFX_icon_gulibeg_school"
+			
+			recover_army_morale_speed = 0.05
+		}
+		
+		hrokkibeg_school = {
+		    potential_invite_scholar = { religion = old_gods_cult knows_of_scholar_country_capital_trigger = yes }
+			can_invite_scholar = { adm_power_cost = 50 reverse_has_opinion = { who = FROM value = 150 } NOT = { has_country_modifier = hrokkibeg_school_modifier } OR = { alliance_with = FROM is_subject_of = FROM overlord_of = FROM } hidden_progressive_opinion_for_scholar_trigger = yes }
+			on_invite_scholar = { adm_power_cost = 100 clear_religious_scholar_modifiers_effect = yes custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT add_country_modifier = { 
+			name = hrokkibeg_school_modifier duration = 7300 } }
+			
+			invite_scholar_modifier_display = hrokkibeg_school_modifier
+			
+			picture = "GFX_icon_hrokkibeg_school"
+			
+			infantry_power = 0.10
+		}
+		
+		hagraven_school = {
+		    potential_invite_scholar = { religion = old_gods_cult knows_of_scholar_country_capital_trigger = yes }
+			can_invite_scholar = { adm_power_cost = 50 reverse_has_opinion = { who = FROM value = 150 } NOT = { has_country_modifier = hagraven_school_modifier } OR = { alliance_with = FROM is_subject_of = FROM overlord_of = FROM } hidden_progressive_opinion_for_scholar_trigger = yes }
+			on_invite_scholar = { adm_power_cost = 100 clear_religious_scholar_modifiers_effect = yes custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT add_country_modifier = { 
+			name = hagraven_school_modifier duration = 7300 } }
+			
+			invite_scholar_modifier_display = hagraven_school_modifier
+			
+			picture = "GFX_icon_hagraven_school"
+			
+			free_leader_pool = 1
+		}
+		
+		#############################################################################################################################################
+		
+		dragon_school = {
+		    potential_invite_scholar = { NOT = { religion = old_gods_cult } capital_scope = { continent = Akavir } knows_of_scholar_country_capital_trigger = yes }
+			can_invite_scholar = { adm_power_cost = 50 reverse_has_opinion = { who = FROM value = 150 } NOT = { has_country_modifier = dragon_school_modifier } OR = { alliance_with = FROM is_subject_of = FROM overlord_of = FROM } hidden_progressive_opinion_for_scholar_trigger = yes }
+			on_invite_scholar = { adm_power_cost = 100 clear_religious_scholar_modifiers_effect = yes custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT add_country_modifier = { 
+			name = dragon_school_modifier duration = 7300 } }
+			
+			invite_scholar_modifier_display = dragon_school_modifier
+			
+			picture = "GFX_icon_dragon_school"
+			
+			fire_damage = 0.1
+		}
+		
+		lizard_school = {
+		    potential_invite_scholar = { NOT = { religion = old_gods_cult } capital_scope = { continent = Akavir } knows_of_scholar_country_capital_trigger = yes }
+			can_invite_scholar = { adm_power_cost = 50 reverse_has_opinion = { who = FROM value = 150 } NOT = { has_country_modifier = lizard_school_modifier } OR = { alliance_with = FROM is_subject_of = FROM overlord_of = FROM } hidden_progressive_opinion_for_scholar_trigger = yes }
+			on_invite_scholar = { adm_power_cost = 100 clear_religious_scholar_modifiers_effect = yes custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT add_country_modifier = { 
+			name = lizard_school_modifier duration = 7300 } }
+			
+			invite_scholar_modifier_display = lizard_school_modifier
+			
+			picture = "GFX_icon_lizard_school"
+			
+			advisor_cost = -0.10
+		}
+		
+		tortoise_school = {
+		    potential_invite_scholar = { NOT = { religion = old_gods_cult } capital_scope = { continent = Akavir } knows_of_scholar_country_capital_trigger = yes }
+			can_invite_scholar = { adm_power_cost = 50 reverse_has_opinion = { who = FROM value = 150 } NOT = { has_country_modifier = tortoise_school_modifier } OR = { alliance_with = FROM is_subject_of = FROM overlord_of = FROM } hidden_progressive_opinion_for_scholar_trigger = yes }
+			on_invite_scholar = { adm_power_cost = 100 clear_religious_scholar_modifiers_effect = yes custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT add_country_modifier = { 
+			name = tortoise_school_modifier duration = 7300 } }
+			
+			invite_scholar_modifier_display = tortoise_school_modifier
+			
+			picture = "GFX_icon_tortoise_school"
+			
+			defensiveness = 0.10
+		}
+		
+		crocodile_school = {
+		    potential_invite_scholar = { NOT = { religion = old_gods_cult } capital_scope = { continent = Akavir } knows_of_scholar_country_capital_trigger = yes }
+			can_invite_scholar = { adm_power_cost = 50 reverse_has_opinion = { who = FROM value = 150 } NOT = { has_country_modifier = crocodile_school_modifier } OR = { alliance_with = FROM is_subject_of = FROM overlord_of = FROM } hidden_progressive_opinion_for_scholar_trigger = yes }
+			on_invite_scholar = { adm_power_cost = 100 clear_religious_scholar_modifiers_effect = yes custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT add_country_modifier = { 
+			name = crocodile_school_modifier duration = 7300 } }
+			
+			invite_scholar_modifier_display = crocodile_school_modifier
+			
+			picture = "GFX_icon_crocodile_school"
+			
+			recover_navy_morale_speed = 0.05
+		}
+		
+		viper_school = {
+		    potential_invite_scholar = { NOT = { religion = old_gods_cult } capital_scope = { continent = Akavir } knows_of_scholar_country_capital_trigger = yes }
+			can_invite_scholar = { adm_power_cost = 50 reverse_has_opinion = { who = FROM value = 150 } NOT = { has_country_modifier = viper_school_modifier } OR = { alliance_with = FROM is_subject_of = FROM overlord_of = FROM } hidden_progressive_opinion_for_scholar_trigger = yes }
+			on_invite_scholar = { adm_power_cost = 100 clear_religious_scholar_modifiers_effect = yes custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT add_country_modifier = { 
+			name = viper_school_modifier duration = 7300 } }
+			
+			invite_scholar_modifier_display = viper_school_modifier
+			
+			picture = "GFX_icon_viper_school"
+			
+			ae_impact = -0.10
+		}
+		
+		tuatara_school = {
+		    potential_invite_scholar = { NOT = { religion = old_gods_cult } capital_scope = { continent = Akavir } knows_of_scholar_country_capital_trigger = yes }
+			can_invite_scholar = { adm_power_cost = 50 reverse_has_opinion = { who = FROM value = 150 } NOT = { has_country_modifier = tuatara_school_modifier } OR = { alliance_with = FROM is_subject_of = FROM overlord_of = FROM } hidden_progressive_opinion_for_scholar_trigger = yes }
+			on_invite_scholar = { adm_power_cost = 100 clear_religious_scholar_modifiers_effect = yes custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT add_country_modifier = { 
+			name = tuatara_school_modifier duration = 7300 } }
+			
+			invite_scholar_modifier_display = tuatara_school_modifier
+			
+			picture = "GFX_icon_tuatara_school"
+			
+			merchants = 1
+		}
+		
+		#############################################################################################################################################
+		
+		lotus_school = {
+		    potential_invite_scholar = { NOT = { religion = old_gods_cult } capital_scope = { NOT = { continent = Akavir } } knows_of_scholar_country_capital_trigger = yes }
+			can_invite_scholar = { adm_power_cost = 50 reverse_has_opinion = { who = FROM value = 150 } NOT = { has_country_modifier = lotus_school_modifier } OR = { alliance_with = FROM is_subject_of = FROM overlord_of = FROM } hidden_progressive_opinion_for_scholar_trigger = yes }
+			on_invite_scholar = { adm_power_cost = 100 clear_religious_scholar_modifiers_effect = yes custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT add_country_modifier = { 
+			name = lotus_school_modifier duration = 7300 } }
+			
+			invite_scholar_modifier_display = lotus_school_modifier
+			
+			picture = "GFX_icon_lotus_school"
+			
+			land_morale = 0.10
+		}
+		
+		magnolia_school = {
+		    potential_invite_scholar = { NOT = { religion = old_gods_cult } capital_scope = { NOT = { continent = Akavir } } knows_of_scholar_country_capital_trigger = yes }
+			can_invite_scholar = { adm_power_cost = 50 reverse_has_opinion = { who = FROM value = 150 } NOT = { has_country_modifier = magnolia_school_modifier } OR = { alliance_with = FROM is_subject_of = FROM overlord_of = FROM } hidden_progressive_opinion_for_scholar_trigger = yes }
+			on_invite_scholar = { adm_power_cost = 100 clear_religious_scholar_modifiers_effect = yes custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT add_country_modifier = { 
+			name = magnolia_school_modifier duration = 7300 } }
+			
+			invite_scholar_modifier_display = magnolia_school_modifier
+			
+			picture = "GFX_icon_magnolia_school"
+			
+			trade_efficiency = 0.10
+		}
+		
+		rose_school = {
+		    potential_invite_scholar = { NOT = { religion = old_gods_cult } capital_scope = { NOT = { continent = Akavir } } knows_of_scholar_country_capital_trigger = yes }
+			can_invite_scholar = { adm_power_cost = 50 reverse_has_opinion = { who = FROM value = 150 } NOT = { has_country_modifier = rose_school_modifier } OR = { alliance_with = FROM is_subject_of = FROM overlord_of = FROM } hidden_progressive_opinion_for_scholar_trigger = yes }
+			on_invite_scholar = { adm_power_cost = 100 clear_religious_scholar_modifiers_effect = yes custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT add_country_modifier = { 
+			name = rose_school_modifier duration = 7300 } }
+			
+			invite_scholar_modifier_display = rose_school_modifier
+			
+			picture = "GFX_icon_rose_school"
+			
+			prestige_decay = -0.01
+		}
+		
+		orchid_school = {
+		    potential_invite_scholar = { NOT = { religion = old_gods_cult } capital_scope = { NOT = { continent = Akavir } } knows_of_scholar_country_capital_trigger = yes }
+			can_invite_scholar = { adm_power_cost = 50 reverse_has_opinion = { who = FROM value = 150 } NOT = { has_country_modifier = orchid_school_modifier } OR = { alliance_with = FROM is_subject_of = FROM overlord_of = FROM } hidden_progressive_opinion_for_scholar_trigger = yes }
+			on_invite_scholar = { adm_power_cost = 100 clear_religious_scholar_modifiers_effect = yes custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT add_country_modifier = { 
+			name = orchid_school_modifier duration = 7300 } }
+			
+			invite_scholar_modifier_display = orchid_school_modifier
+			
+			picture = "GFX_icon_orchid_school"
+			
+			global_institution_spread = 0.10
+		}
+		
+		tulip_school = {
+		    potential_invite_scholar = { NOT = { religion = old_gods_cult } capital_scope = { NOT = { continent = Akavir } } knows_of_scholar_country_capital_trigger = yes }
+			can_invite_scholar = { adm_power_cost = 50 reverse_has_opinion = { who = FROM value = 150 } NOT = { has_country_modifier = tulip_school_modifier } OR = { alliance_with = FROM is_subject_of = FROM overlord_of = FROM } hidden_progressive_opinion_for_scholar_trigger = yes }
+			on_invite_scholar = { adm_power_cost = 100 clear_religious_scholar_modifiers_effect = yes custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT add_country_modifier = { 
+			name = tulip_school_modifier duration = 7300 } }
+			
+			invite_scholar_modifier_display = tulip_school_modifier
+			
+			picture = "GFX_icon_tulip_school"
+			
+			reduced_liberty_desire = 10
+		}
+		
+		carnation_school = {
+		    potential_invite_scholar = { NOT = { religion = old_gods_cult } capital_scope = { NOT = { continent = Akavir } } knows_of_scholar_country_capital_trigger = yes }
+			can_invite_scholar = { adm_power_cost = 50 reverse_has_opinion = { who = FROM value = 150 } NOT = { has_country_modifier = carnation_school_modifier } OR = { alliance_with = FROM is_subject_of = FROM overlord_of = FROM } hidden_progressive_opinion_for_scholar_trigger = yes }
+			on_invite_scholar = { adm_power_cost = 100 clear_religious_scholar_modifiers_effect = yes custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT add_country_modifier = { 
+			name = carnation_school_modifier duration = 7300 } }
+			
+			invite_scholar_modifier_display = carnation_school_modifier
+			
+			picture = "GFX_icon_carnation_school"
+			
+			warscore_cost_vs_other_religion = -0.1
+		}
+	}
 	
 	hist = {
 		color = { 255 255 255 }

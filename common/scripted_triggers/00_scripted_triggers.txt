@@ -755,53 +755,6 @@ has_dharma_elephants_trigger = {
 	culture_group = tangmo_cg
 }
 
-# This is for when we want to award government reform progress and need to check if that's useful to the player based on dlc ownership
-has_completed_all_reforms_trigger = {
-	custom_trigger_tooltip = {
-		tooltip = has_completed_all_reforms_trigger_tooltip
-		NOT = { has_dlc = "Emperor" }
-		OR = {
-			has_reform = political_absolutism_reform
-			has_reform = legislative_houses_reform
-			has_reform = strengthen_executive_powers_reform
-			has_reform = reinforce_republican_values_reform
-			has_reform = enlightened_monarchy_reform
-			has_reform = emperor_of_the_revolution_reform
-			has_reform = government_for_people_reform
-			has_reform = president_for_life_reform
-			has_reform = all_under_tengri_reform
-			has_reform = proclaim_religious_head_reform
-			has_reform = priestly_autonomy_reform
-			has_reform = many_fingers_of_god_reform
-			has_reform = religious_permanent_revolution_reform
-			has_reform = religion_in_one_country_reform
-		}
-	}
-}
-
-# This is for all other situations
-has_final_tier_reforms_trigger = {
-	custom_trigger_tooltip = {
-		tooltip = has_completed_all_reforms_trigger_tooltip
-		OR = {
-			has_reform = political_absolutism_reform
-			has_reform = legislative_houses_reform
-			has_reform = strengthen_executive_powers_reform
-			has_reform = reinforce_republican_values_reform
-			has_reform = enlightened_monarchy_reform
-			has_reform = emperor_of_the_revolution_reform
-			has_reform = government_for_people_reform
-			has_reform = president_for_life_reform
-			has_reform = all_under_tengri_reform
-			has_reform = proclaim_religious_head_reform
-			has_reform = priestly_autonomy_reform
-			has_reform = many_fingers_of_god_reform
-			has_reform = religious_permanent_revolution_reform
-			has_reform = religion_in_one_country_reform
-		}
-	}
-}
-
 has_holy_order_trigger = {
 	custom_trigger_tooltip = {
 		tooltip = "has_holy_order_trigger_tooltip"

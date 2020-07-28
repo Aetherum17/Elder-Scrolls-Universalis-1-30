@@ -51,13 +51,13 @@ country_event = {
 
 	trigger = {
 		papacy_active = yes
-		religion = chimer_pantheon
+		religion = tribunal_pantheon
 		NOT = { tag = RED }
 		NOT = { num_of_cardinals = 7 }
 		any_owned_province = {
 			development = 10
 			has_cardinal = no
-			religion = chimer_pantheon
+			religion = tribunal_pantheon
 			any_neighbor_province = {
 				has_cardinal = yes
 				NOT = { owned_by = ROOT }
@@ -89,7 +89,7 @@ country_event = {
 		random_owned_province = {
 			limit = {
 				has_cardinal = no
-				religion = chimer_pantheon
+				religion = tribunal_pantheon
 				development = 10
 				any_neighbor_province = {
 					has_cardinal = yes
@@ -180,7 +180,7 @@ province_event = {
 	trigger = {
 		has_cardinal = yes
 		any_neighbor_province = {
-			NOT = { religion = chimer_pantheon }
+			NOT = { religion = tribunal_pantheon }
 		}
 	}
 
@@ -247,16 +247,16 @@ country_event = {
 
 	trigger = {
 		papacy_active = yes
-		religion = chimer_pantheon
+		religion = tribunal_pantheon
 		NOT = { tag = RED }
 		OR = {
 			employed_advisor = {
 				type = theologian
-				religion = chimer_pantheon
+				religion = tribunal_pantheon
 			}
 			employed_advisor = {
 				type = inquisitor
-				religion = chimer_pantheon
+				religion = tribunal_pantheon
 			}
 		}
 		NOT = { num_of_cardinals = 7 }

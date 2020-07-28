@@ -165,13 +165,24 @@ add_loot_from_rich_province_general_effect = {
 #Religious Schools:
 #Country Scope
 clear_religious_scholar_modifiers_effect = {
-	remove_country_modifier = hanafi_scholar_modifier
-	remove_country_modifier = hanbali_scholar_modifier
-	remove_country_modifier = maliki_scholar_modifier
-	remove_country_modifier = shafii_scholar_modifier
-	remove_country_modifier = ismaili_scholar_modifier
-	remove_country_modifier = jafari_scholar_modifier
-	remove_country_modifier = zaidi_scholar_modifier										 
+    remove_country_modifier = alrabeg_school_modifier
+	remove_country_modifier = storihbeg_school_modifier
+	remove_country_modifier = uricanbeg_school_modifier
+	remove_country_modifier = gulibeg_school_modifier
+	remove_country_modifier = hrokkibeg_school_modifier
+	remove_country_modifier = dragon_school_modifier
+	remove_country_modifier = lizard_school_modifier
+	remove_country_modifier = tortoise_school_modifier
+	remove_country_modifier = crocodile_school_modifier
+	remove_country_modifier = viper_school_modifier
+	remove_country_modifier = lotus_school_modifier
+	remove_country_modifier = magnolia_school_modifier
+	remove_country_modifier = rose_school_modifier
+	remove_country_modifier = orchid_school_modifier
+	remove_country_modifier = tulip_school_modifier
+	remove_country_modifier = hagraven_school_modifier
+    remove_country_modifier = tuatara_school_modifier
+    remove_country_modifier = carnation_school_modifier	
 }
 
 #Move capital along with all that also needs to be done. Used in capital decisions.

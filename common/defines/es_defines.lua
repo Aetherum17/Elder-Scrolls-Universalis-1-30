@@ -1341,7 +1341,7 @@ NDefines.NGovernment.LEGACY_NATIVES_REFORM_REPUBLIC_SPONSOR = "oligarchic_republ
 NDefines.NGovernment.LEGACY_NATIVES_REFORM_MONARCHY_SPONSOR = "despotic_monarchy"
 NDefines.NGovernment.LEGACY_NATIVES_REFORM_THEOCRACY_SPONSOR = "theocratic_government"
 NDefines.NGovernment.GOVERNMENT_REFORM_CHANGE_PROGRESS_COST = 25.0
-NDefines.NGovernment.EXPAND_ADMIN_COST = 25.0
+NDefines.NGovernment.EXPAND_ADMIN_COST = 10.0
 
 NDefines.NFrontend.FRONTEND_POS_X = 1238.0
 NDefines.NFrontend.FRONTEND_POS_Y = 1500.0

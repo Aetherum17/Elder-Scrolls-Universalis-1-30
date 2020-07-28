@@ -1643,7 +1643,7 @@ create_alliance_member = {
 	    has_country_flag = allience_leader_flag
 		government = tribal
 		}
-		FROM = { NOT = { is_subject_of_type = alliance_member } NOT = { overlord_of = ROOT } }
+		FROM = { NOT = { is_subject_of_type = alliance_member } NOT = { overlord_of = ROOT } is_emperor = no }
 	}
 	is_allowed = {
 	is_at_war = no
@@ -1853,6 +1853,7 @@ ask_to_become_alliance_member = {
 	
 	is_visible = {
 	    NOT = { is_subject_of_type = alliance_member }
+		is_emperor = no
 	    FROM = {
 		NOT = { overlord_of = ROOT }
 	    OR = {

@@ -664,7 +664,7 @@ country_event = {
 		add_legitimacy = -10
 		if = {
 			limit = {
-				religion = chimer_pantheon
+				religion = tribunal_pantheon
 			}
 			add_papal_influence = -10
 		}
@@ -758,7 +758,7 @@ country_event = {
 		name = dynastic_events.4.a
 		if = {
 			limit = {
-				religion = chimer_pantheon
+				religion = tribunal_pantheon
 			}
 			add_papal_influence = -10
 		}

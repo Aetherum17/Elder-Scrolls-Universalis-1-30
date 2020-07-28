@@ -300,9 +300,6 @@ country_event = {
 	}
 	option = {
 		name = theocracy.1.d		# A REDal Protege
-		trigger = {
-			religion = chimer_pantheon
-		}
 		if = {
 			limit = {
 				has_estate = estate_church

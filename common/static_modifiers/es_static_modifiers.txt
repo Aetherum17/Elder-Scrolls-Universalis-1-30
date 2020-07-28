@@ -881,7 +881,6 @@ positive_piety = {
 	technology_cost = -0.1
 	global_manpower_modifier = 0.10
 	global_tax_modifier = 0.10
-	brahmins_muslim_loyalty_modifier = -0.1
 	church_loyalty_modifier = 0.1
 	dhimmi_loyalty_modifier = -0.1					   
 }
@@ -890,7 +889,6 @@ negative_piety = {
 	land_morale = 0.10
 	global_missionary_strength = 0.010
 	defensiveness = 0.10
-	brahmins_muslim_loyalty_modifier = 0.1
 	church_loyalty_modifier = -0.1
 	dhimmi_loyalty_modifier = 0.1					  
 }
@@ -1006,7 +1004,6 @@ devotion = {
 	diplomatic_reputation = 2
 	vassal_income = 0.5
 	church_loyalty_modifier = 0.05
-	brahmins_hindu_loyalty_modifier = 0.05
 }
 
 # Multiplied by current meritocracy - 50
@@ -1032,8 +1029,6 @@ corruption = {
 	min_autonomy = 75
 	global_unrest = 25
 	imperial_mandate = -1
-	brahmins_hindu_loyalty_modifier = 0.1
-	brahmins_muslim_loyalty_modifier = 0.1
 	brahmins_other_loyalty_modifier = 0.1
 	church_loyalty_modifier = 0.1
 	maratha_loyalty_modifier = 0.1
@@ -1134,8 +1129,6 @@ prestige = {
 	ae_impact = -0.10
 	embracement_cost = -0.1
 
-	brahmins_hindu_loyalty_modifier = 0.05
-	brahmins_muslim_loyalty_modifier = 0.05
 	brahmins_other_loyalty_modifier = 0.05
 	church_loyalty_modifier = 0.05
 	maratha_loyalty_modifier = 0.05
@@ -1195,8 +1188,7 @@ bought_indulgence = {
 religious_unity = {
 	monthly_fervor_increase = 1
 	max_absolutism = 5
-	church_loyalty_modifier = 0.05
-	brahmins_hindu_loyalty_modifier = 0.05		  
+	church_loyalty_modifier = 0.05  
 }
 
 inverse_religious_unity = {
@@ -1503,7 +1495,7 @@ divert_trade = {
 karma_just_right =
 {
 	diplomatic_reputation = 2.5
-	discipline = 0.05
+	discipline = 0.10
 }
 
 karma_too_high =
@@ -1513,7 +1505,7 @@ karma_too_high =
 
 karma_too_low =
 {
-	discipline = 0.025
+	discipline = 0.05
 }
 
 ########################################
@@ -1724,7 +1716,7 @@ cossacks_modifier = {
 	stability_cost_modifier = 1.0
 }
 
- ########################################
+#########################################
 # Government/Reform modfiers
 ########################################
 
@@ -1750,4 +1742,151 @@ lost_hegemony = {
 
 at_peace_revolutionary = { # Applied if at peace while reactionaries are bordering you
 	yearly_revolutionary_zeal = -5
+}
+
+########################################
+# Religious Schools
+########################################
+alrabeg_school_modifier = {
+    religion_sub_modifier = yes # Will make icon placed next to religion modifier
+	religion = yes
+	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	discipline = 0.05
+}
+
+storihbeg_school_modifier = {
+    religion_sub_modifier = yes # Will make icon placed next to religion modifier
+	religion = yes
+	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	shock_damage = 0.10
+}
+
+uricanbeg_school_modifier = {
+    religion_sub_modifier = yes # Will make icon placed next to religion modifier
+	religion = yes
+	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	land_forcelimit_modifier = 0.1
+}
+
+gulibeg_school_modifier = {
+    religion_sub_modifier = yes # Will make icon placed next to religion modifier
+	religion = yes
+	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	recover_army_morale_speed = 0.05
+}
+
+hrokkibeg_school_modifier = {
+    religion_sub_modifier = yes # Will make icon placed next to religion modifier
+	religion = yes
+	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	infantry_power = 0.10
+}
+
+dragon_school_modifier = {
+    religion_sub_modifier = yes # Will make icon placed next to religion modifier
+	religion = yes
+	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	fire_damage = 0.1
+}
+
+lizard_school_modifier = {
+    religion_sub_modifier = yes # Will make icon placed next to religion modifier
+	religion = yes
+	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	advisor_cost = -0.10
+}
+
+tortoise_school_modifier = {
+    religion_sub_modifier = yes # Will make icon placed next to religion modifier
+	religion = yes
+	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	defensiveness = 0.10
+}
+
+crocodile_school_modifier = {
+    religion_sub_modifier = yes # Will make icon placed next to religion modifier
+	religion = yes
+	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	recover_navy_morale_speed = 0.05
+}
+
+viper_school_modifier = {
+    religion_sub_modifier = yes # Will make icon placed next to religion modifier
+	religion = yes
+	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	ae_impact = -0.10
+}
+
+lotus_school_modifier = {
+    religion_sub_modifier = yes # Will make icon placed next to religion modifier
+	religion = yes
+	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	land_morale = 0.10
+}
+
+magnolia_school_modifier = {
+    religion_sub_modifier = yes # Will make icon placed next to religion modifier
+	religion = yes
+	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	trade_efficiency = 0.10
+}
+
+rose_school_modifier = {
+    religion_sub_modifier = yes # Will make icon placed next to religion modifier
+	religion = yes
+	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	prestige_decay = -0.01
+}
+
+orchid_school_modifier = {
+    religion_sub_modifier = yes # Will make icon placed next to religion modifier
+	religion = yes
+	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	global_institution_spread = 0.10
+}
+
+tulip_school_modifier = {
+    religion_sub_modifier = yes # Will make icon placed next to religion modifier
+	religion = yes
+	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	reduced_liberty_desire = 10
+}
+
+hagraven_school_modifier = {
+    religion_sub_modifier = yes # Will make icon placed next to religion modifier
+	religion = yes
+	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	free_leader_pool = 1
+}
+
+tuatara_school_modifier = {
+    religion_sub_modifier = yes # Will make icon placed next to religion modifier
+	religion = yes
+	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	merchants = 1
+}
+
+carnation_school_modifier = {
+    religion_sub_modifier = yes # Will make icon placed next to religion modifier
+	religion = yes
+	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	warscore_cost_vs_other_religion = -0.1
 }

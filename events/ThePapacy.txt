@@ -22,7 +22,7 @@ country_event = {
 		any_known_country = {
 			has_opinion = { who = ROOT value = 25 }
 			reverse_has_opinion = { who = ROOT value = 25 }
-			religion = chimer_pantheon
+			religion = tribunal_pantheon
 			NOT = { num_of_cardinals = 7 }
 			any_owned_province = {
 				has_cardinal = no
@@ -50,7 +50,7 @@ country_event = {
 			limit = {
 				has_opinion = { who = ROOT value = 25 }
 				reverse_has_opinion = { who = ROOT value = 25 }
-				religion = chimer_pantheon
+				religion = tribunal_pantheon
 				NOT = { num_of_cardinals = 7 }
 				any_owned_province = {
 					has_cardinal = no
@@ -346,7 +346,7 @@ country_event = {
 		tag = RED
 		NOT = { has_country_flag = pap_condemned_slavery }
 		any_known_country = {
-			religion = chimer_pantheon 
+			religion = tribunal_pantheon 
 			any_owned_province = {
 				is_colony = yes
 			}
@@ -367,7 +367,7 @@ country_event = {
 		add_devotion = 10
 		every_known_country = {
 			limit = {
-				religion = chimer_pantheon 
+				religion = tribunal_pantheon 
 				any_owned_province = {
 					is_colony = yes
 				}
@@ -485,7 +485,7 @@ country_event = {
 			AND = {
 				tag = RED
 				any_known_country = {
-					religion = chimer_pantheon
+					religion = tribunal_pantheon
 					OR = {
 						any_owned_province = {
 							has_province_modifier = local_witch_hunts
@@ -495,7 +495,7 @@ country_event = {
 				}
 			}
 			AND = {
-				religion = chimer_pantheon
+				religion = tribunal_pantheon
 				OR = {
 					any_owned_province = {
 						has_province_modifier = local_witch_hunts
@@ -520,7 +520,7 @@ country_event = {
 		}
 		random_known_country = {
 			limit = {
-				religion = chimer_pantheon
+				religion = tribunal_pantheon
 				OR = {
 					any_owned_province = {
 						has_province_modifier = local_witch_hunts

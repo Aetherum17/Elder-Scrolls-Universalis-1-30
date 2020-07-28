@@ -142,7 +142,7 @@ administrative_missions = {
 		required_missions = { increase_1_prestige_mission }
 		trigger = {
 			num_of_owned_provinces_with = {
-				value = 25
+				value = 10
 				has_building = mint
 			}
 		}
@@ -240,7 +240,7 @@ adm_missions = {
 		required_missions = { increase_religious_unity_mission }
 		trigger = {
 			num_of_owned_provinces_with = {
-				value = 25
+				value = 50
 				OR = {
 					has_building = temple
 					has_building = cathedral
@@ -470,7 +470,7 @@ diplomatic_missions = {
 		required_missions = { building_alliances_mission }
 		trigger = {
 			num_of_owned_provinces_with = {
-				value = 25
+				value = 50
 				OR = {
 				    has_building = marketplace
 					has_building = trade_depot
@@ -491,7 +491,7 @@ diplomatic_missions = {
 		required_missions = { build_more_marketplaces }
 		trigger = {
 			num_of_owned_provinces_with = {
-				value = 25
+				value = 50
 				OR = {
 				    has_building = workshop
 					has_building = counting_house
@@ -510,7 +510,7 @@ diplomatic_missions = {
 	increase_number_of_trade_centers = {
 		icon = mission_iberian_conquistador
 		required_missions = { build_more_workshops }
-		trigger = { check_variable = { which = cot_upgraded value = 5 } }
+		trigger = { check_variable = { which = cot_upgraded value = 10 } }
 		effect = {
 			add_country_modifier = {
 				name = "es_more_tradeceners"
@@ -544,7 +544,7 @@ diplomatic_missions = {
 		required_missions = { build_more_naval_arsenals }
 		trigger = {
 			num_of_owned_provinces_with = {
-				value = 25
+				value = 10
 				has_building = farm_estate
 			}
 		}
@@ -559,7 +559,7 @@ diplomatic_missions = {
 	increase_1_number_of_trade_centers = {
 		icon = mission_iberian_conquistador
 		required_missions = { build_farm_estates }
-		trigger = { check_variable = { which = cot_upgraded value = 15 } }
+		trigger = { check_variable = { which = cot_upgraded value = 25 } }
 		effect = {
 			add_country_modifier = {
 				name = "es_more_1_tradeceners"
@@ -602,7 +602,7 @@ diplomatic_missions = {
 	increase_2_number_of_trade_centers = {
 		icon = mission_iberian_conquistador
 		required_missions = { high_mercantelism_mission }
-		trigger = { check_variable = { which = cot_upgraded value = 25 } }
+		trigger = { check_variable = { which = cot_upgraded value = 50 } }
 		effect = {
 			add_country_modifier = {
 				name = "es_more_2_tradeceners"
@@ -660,7 +660,7 @@ diplomatic_missions = {
 		required_missions = { build_more_docks }
 		trigger = {
 			num_of_owned_provinces_with = {
-				value = 25
+				value = 10
 				has_building = textile
 			}
 		}
@@ -677,7 +677,7 @@ diplomatic_missions = {
 		required_missions = { es_build_textile }
 		trigger = {
 			num_of_owned_provinces_with = {
-				value = 25
+				value = 10
 				has_building = plantations
 			}
 		}
@@ -822,7 +822,7 @@ dip_missions = {
 		trigger = {
 		    any_subject_country = {
 			num_of_owned_provinces_with = {
-				value = 25
+				value = 10
 				OR = {
 				    has_building = march_building
 					has_building = embassy
@@ -1139,7 +1139,7 @@ military_missions = {
 		required_missions = { increase_3_development_mission }
 		trigger = {
 			num_of_owned_provinces_with = {
-				value = 25
+				value = 10
 				has_building = mills
 			}
 		}

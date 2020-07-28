@@ -84,12 +84,6 @@ country_event = {
 		set_country_flag = religious_revolution
 		if = {
 			limit = {
-				religion = chimer_pantheon
-			}
-			reverse_add_opinion = { who = RED modifier = opinion_too_tolerate }
-		}
-		if = {
-			limit = {
 				has_disaster = revolution
 			}
 			add_country_modifier = {

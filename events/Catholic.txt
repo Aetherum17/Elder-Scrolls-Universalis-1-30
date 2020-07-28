@@ -16,10 +16,10 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		religion = chimer_pantheon
+		religion = tribunal_pantheon
 		NOT = { tag = RED }
 		any_owned_province = {
-			religion = chimer_pantheon
+			religion = tribunal_pantheon
 		}
 		is_year = 1490
 		NOT = {
@@ -41,7 +41,7 @@ country_event = {
 		add_reform_desire = 0.005
 		random_owned_province = {
 			limit = {
-				religion = chimer_pantheon
+				religion = tribunal_pantheon
 			}
 			add_unrest = 5
 		}
@@ -58,10 +58,10 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		religion = chimer_pantheon
+		religion = tribunal_pantheon
 		NOT = { tag = RED }
 		any_owned_province = {
-			religion = chimer_pantheon
+			religion = tribunal_pantheon
 		}
 	}
 	
@@ -79,7 +79,7 @@ country_event = {
 		add_reform_desire = -0.01
 		random_owned_province = {
 			limit = {
-				religion = chimer_pantheon
+				religion = tribunal_pantheon
 			}
 			add_unrest = 5
 		}
@@ -96,7 +96,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		religion = chimer_pantheon
+		religion = tribunal_pantheon
 		NOT = { tag = RED }
 		reform_desire = 0.5
 	}
