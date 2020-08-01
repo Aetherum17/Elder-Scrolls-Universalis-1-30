@@ -6,6 +6,7 @@ country_event = {
 	title = "EVTNAME3091"
 	desc = "EVTDESC3091"
 	picture = CIVIL_WAR_eventPicture
+	goto = rebel_province
 	
 	major = yes
 	
@@ -16,6 +17,12 @@ country_event = {
 	}
 	
 	immediate = {
+		hidden_effect = {
+			set_saved_name = {
+				key = upstart_pretender
+				type = leader
+			}
+		}
 		random_owned_province = {
 			limit = {
 				is_core = ROOT 
@@ -24,11 +31,14 @@ country_event = {
 			}
 			spawn_rebels = {
 				type = 	pretender_rebels
+				leader = upstart_pretender
 				religion = ROOT
 				size = 2
 				win = yes
 			}
 			add_local_autonomy = 25
+
+			hidden_effect = { save_event_target_as = rebel_province }
 		}
 		set_country_flag = had_civil_war
 	}
@@ -37,6 +47,9 @@ country_event = {
 	option = {
 		name = "EVTOPTA3091"			# Crush them!
 		add_prestige = -10
+	}
+	after = {
+		clear_saved_name = upstart_pretender
 	}
 }
 
@@ -58,87 +71,12 @@ country_event = {
 	option = {
 		name = "EVTOPTA3096"
 		clr_country_flag = civilwar_on_capital
-		add_legitimacy = 10
-		add_horde_unity = 10
+		clr_country_flag = total_war_peak
+		clr_country_flag = favoured_faction
+		clr_country_flag = dominant_faction
+		clr_country_flag = civil_war_knees_event
+		add_mandate_large_effect = yes
 		add_stability = 3
-	}
-}
-
-#Support in capital
-country_event = {
-	id = civil_war.6
-	title = civil_war.6.t
-	desc = civil_war.6.d
-	picture = LAND_MILITARY_eventPicture
-	
-	trigger = {
-		NOT = { 
-			has_country_flag = civilwar_on_capital
-		}
-		capital_scope = {
-			controlled_by = owner
-			has_siege = no		
-		}
-	}
-	
-	
-	is_triggered_only = yes
-	
-	mean_time_to_happen = {
-		days = 1
-	}
-	
-	
-	immediate = {
-		set_country_flag = civilwar_on_capital
-	}
-	option = {
-		name = civil_war.6.a
-		capital_scope = {
-			pretender_rebels = 2
-		}
-	
-	}	
-}
-
-# Civil war brings our nation to its knees
-country_event = {
-	id = civil_war.7
-	title = "EVTNAME6018"
-	desc = "EVTDESC6018"
-	picture = CIVIL_WAR_eventPicture
-	
-
-	
-	is_triggered_only = yes
-	
-	mean_time_to_happen = {
-		days = 1
-	}
-	
-	
-	option = {
-		name = "EVTOPTA6018"				# There is nothing we can do.
-		every_owned_province = {
-			limit = {
-				is_capital = no
-				is_core = ROOT
-			}
-			add_local_autonomy = 15
-		}
-	}
-	option = {
-		name = "EVTOPTB6018"				# Support one of the factions
-		add_adm_power = -100
-		add_legitimacy = 10
-		add_horde_unity = 10
-	}
-	option = {
-		name = "EVTOPTC6018"				# Start negotiations to minimize the damage
-		add_years_of_income = -0.25
-		add_prestige = -25
-		add_legitimacy = 5
-		add_horde_unity = 5
 	}
 }
 
@@ -169,39 +107,11 @@ country_event = {
 		ai_chance = { factor = 80 }		
 		add_years_of_income = -0.25
 		add_prestige = -25
-		add_legitimacy = 5
-		add_horde_unity = 5
+		increase_legitimacy_medium_effect = yes
+		add_mandate_effect = yes
 	}
 }
 
-# Factional powers emerge from the chaos
-country_event = {
-	id = civil_war.9
-	title = "EVTNAME6020"
-	desc = "EVTDESC6020"
-	picture = CONQUEST_eventPicture
-	
-	is_triggered_only = yes
-	
-	mean_time_to_happen = {
-		days = 1
-	}
-	
-	option = {
-		name = "EVTOPTA6020"			# Support one side
-		random_owned_province = {
-			limit = { is_core = ROOT }
-			pretender_rebels = 1
-		}
-		set_country_flag = favoured_faction
-		add_legitimacy = 5
-		add_horde_unity = 5
-	}
-	option = {
-		name = "EVTOPTB6020"			# Don't support any faction
-		add_stability = -1
-	}
-}
 
 # Faction requests financial aid
 country_event = {
@@ -223,56 +133,15 @@ country_event = {
 	option = {
 		name = "EVTOPTA6021"			# Lend support
 		add_years_of_income = -0.5
-		add_legitimacy = 5
-		add_horde_unity = 5
+		increase_legitimacy_medium_effect = yes
+		add_mandate_effect = yes
 	}
 	option = {
 		name = "EVTOPTB6021"			# Ignore their pleas
 		add_prestige = -10
-		add_legitimacy = -5
-		add_horde_unity = -5
+		reduce_legitimacy_medium_effect = yes
+		reduce_mandate_effect = yes
 		ai_chance = { factor = 0 }
-	}
-}
-
-# Favoured faction threatens to splinter
-country_event = {
-	id = civil_war.11
-	title = "EVTNAME6022"
-	desc = "EVTDESC6022"
-	picture = DEBATE_REPUBLICAN_eventPicture
-	
-	trigger = {
-		has_country_flag = favoured_faction
-		any_owned_province = {
-			has_owner_culture = no
-			is_capital = no
-		}
-	}
-	
-	is_triggered_only = yes
-	
-	mean_time_to_happen = {
-		days = 1
-	}
-	
-	option = {
-		name = "EVTOPTA6022"		# Let them splinter
-		random_owned_province = {
-			limit = {
-				has_owner_culture = no
-				is_capital = no
-			}
-			add_local_autonomy = 50
-		}
-		add_legitimacy = 10
-		add_horde_unity = 10
-	}
-	option = {
-		name = "EVTOPTC6022"		# Summon the faction leaders to begin negotiations
-		add_prestige = -50
-		add_legitimacy = 5
-		add_horde_unity = 5
 	}
 }
 
@@ -300,8 +169,8 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTA6023"			# We can't do anything about it
-		add_legitimacy = -5
-		add_horde_unity = -5
+		reduce_legitimacy_medium_effect = yes
+		reduce_mandate_effect = yes
 		every_core_province = {
 			limit = {
 				is_capital = no
@@ -315,47 +184,7 @@ country_event = {
 		add_adm_power = -100
 		add_dip_power = -100
 		add_mil_power = -100
-		add_legitimacy = 5
-		add_horde_unity = 5
+		increase_legitimacy_medium_effect = yes
+		add_mandate_effect = yes
 	}
 }
-
-# A Dominant factions emerge
-country_event = {
-	id = civil_war.13
-	title = "EVTNAME6026"
-	desc = "EVTDESC6026"
-	picture = DEBATE_REPUBLICAN_eventPicture
-	
-	trigger = {
-		has_country_flag = total_war_peak
-		has_country_flag = favoured_faction
-		NOT = { has_country_flag = dominant_faction }
-		
-	}
-	
-	is_triggered_only = yes
-	
-	mean_time_to_happen = {
-		days = 1
-	}
-	
-	
-	option = {
-		name = "EVTOPTA6026"			# Fight it out
-		set_country_flag = dominant_faction
-		random_owned_province = {
-			limit = { is_core = ROOT }
-			pretender_rebels = 1
-		}
-		add_legitimacy = 1
-		add_horde_unity = 1
-	}
-	option = {
-		name = "EVTOPTB6026"			# Negotiate a settlement between all major factions
-		add_years_of_income = -0.50
-		add_legitimacy = 5
-		add_horde_unity = 5
-	}
-}
-

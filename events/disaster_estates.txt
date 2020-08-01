@@ -24,8 +24,8 @@ country_event = {
 		name = estate_disasters.1.a	
 		add_stability = -1
 		add_country_modifier = {
-				name = "noble_power_monarchy"
-				duration = -1
+			name = "noble_power_monarchy"
+			duration = -1
 		}
 		custom_tooltip = estate_disasters.1.a.tt
 	}
@@ -154,6 +154,41 @@ country_event = {
 	}
 }
 
+# The Dhimmi break free!
+country_event = {
+	id = estate_disasters.9
+	title = estate_disasters.9.t
+	desc = estate_disasters.9.d
+	picture = DHIMMI_ESTATE_UPSET_eventPicture
+	
+	major = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		set_country_flag = dhimmi_estate_triggered
+	}	
+	
+	option = {
+		name = estate_disasters.9.a	
+		create_independent_estate = {
+			estate = estate_dhimmi
+			play_as = no
+		}
+	}
+	
+	option = {
+		name = estate_disasters.11.b
+		trigger = { 
+			ai = no 
+			has_dlc = "The Cossacks"
+		}
+		create_independent_estate = {
+			estate = estate_dhimmi
+			play_as = yes
+		}
+	}
+}
+
 # The Cossacks break free!
 country_event = {
 	id = estate_disasters.10
@@ -177,6 +212,8 @@ country_event = {
 		create_independent_estate = {
 			estate = estate_cossacks
 			government = republic
+			government_reform = cossacks_reform
+			custom_national_ideas = cossack_ideas
 			play_as = no
 		}
 	}
@@ -194,7 +231,193 @@ country_event = {
 		create_independent_estate = {
 			estate = estate_cossacks
 			government = republic
+			government_reform = cossacks_reform
+			custom_national_ideas = cossack_ideas
 			play_as = yes
 		}
+	}
+}
+
+###########################################################
+# Disaster Events for Indian Estates
+#
+# written by Daniel Tolman
+###########################################################
+
+# The Marathas break free!
+country_event = {
+	id = estate_disasters.11
+	title = estate_disasters.11.t
+	desc = estate_disasters.11.d
+	picture = 13_Maratha_Estate_eventPicture
+	
+	major = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		set_country_flag = estate_maratha_triggered
+	}
+	
+	option = {
+		name = estate_disasters.11.a
+		create_independent_estate = {
+			estate = estate_maratha
+			play_as = no
+		}
+	}
+	
+	option = {
+		name = estate_disasters.11.b
+		trigger = { 
+			ai = no 
+			has_dlc = "The Cossacks"
+		}
+		create_independent_estate = {
+			estate = estate_maratha
+			play_as = yes
+		}
+	}
+}
+
+# The Brahmins takes control
+country_event = {
+	id = estate_disasters.12
+	title = estate_disasters.12.t
+	desc = estate_disasters.12.d
+	picture = 2_Brahmin_Estate_eventPicture
+	
+	major = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		set_country_flag = brahmin_estate_in_power
+	}
+	
+	option = {
+		name = estate_disasters.12.a	
+		add_stability = -1
+		custom_tooltip = estate_disasters.12.a.tt
+	}
+}
+
+# Brahmins brought to heel
+country_event = {
+	id = estate_disasters.13
+	title = estate_disasters.13.t
+	desc = estate_disasters.13.d
+	picture = 2_Brahmin_Estate_eventPicture
+	
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = estate_disasters.13.a
+	}
+}
+
+# The Vaisyas take control
+country_event = {
+	id = estate_disasters.14
+	title = estate_disasters.14.t
+	desc = estate_disasters.14.d
+	picture = 7_Vaisya_Estate_eventPicture
+	
+	major = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		set_country_flag = vaisyas_estate_in_power
+	}
+	
+	option = {
+		name = estate_disasters.14.a	
+		add_stability = -1
+		custom_tooltip = estate_disasters.14.a.tt
+	}
+}
+
+# Vaisyas brought to heel
+country_event = {
+	id = estate_disasters.15
+	title = estate_disasters.15.t
+	desc = estate_disasters.15.d
+	picture = 8_Vaisya_Estate_eventPicture
+	
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = estate_disasters.15.a
+	}
+}
+
+# The Rajputs break free!
+country_event = {
+	id = estate_disasters.16
+	title = estate_disasters.16.t
+	desc = estate_disasters.16.d
+	picture = 3_Rajput_Estate__eventPicture
+	
+	major = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		set_country_flag = estate_rajput_triggered
+	}
+	
+	option = {
+		name = estate_disasters.16.a	
+		create_independent_estate = {
+			estate = estate_rajput
+			play_as = no
+		}
+	}
+	
+	option = {
+		name = estate_disasters.11.b
+		trigger = { 
+			ai = no 
+			has_dlc = "The Cossacks"
+		}
+		create_independent_estate = {
+			estate = estate_rajput
+			play_as = yes
+		}
+	}
+}
+
+# Powerful Jain Society
+country_event = {
+	id = estate_disasters.17
+	title = estate_disasters.17.t
+	desc = estate_disasters.17.d
+	picture = 11_Jain_Estate_eventPicture
+	
+	major = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		set_country_flag = jains_estate_in_power
+	}
+	
+	option = {
+		name = estate_disasters.17.a	
+		add_stability = -1
+		custom_tooltip = estate_disasters.17.a.tt
+	}
+}
+
+# Jains brought to heel
+country_event = {
+	id = estate_disasters.18
+	title = estate_disasters.18.t
+	desc = estate_disasters.18.d
+	picture = 10_Jain_Estate_eventPicture
+	
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = estate_disasters.18.a
 	}
 }

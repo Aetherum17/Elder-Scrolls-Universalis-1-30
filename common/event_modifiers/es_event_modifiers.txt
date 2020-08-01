@@ -44,6 +44,16 @@ points_2 = {
 points_3 = {
 }
 
+intolerant_society_1 = {
+    global_missionary_strength = 0.025
+}
+
+tolerant_society_1 = {
+    tolerance_heathen = 2.5
+	tolerance_heretic = 2.5
+	stability_cost_modifier = 0.5
+}
+
 dev = {
    local_culture_conversion_cost = -0.15
 }
@@ -108,26 +118,6 @@ crisis_time = {
 }
 
 rise_time = {
-}
-
-harmonized_polytheistic_group = {
-   religious_unity = 0.10
-   religion = yes
-}
-
-harmonized_occult_group = {
-   global_missionary_strength = 0.01
-   religion = yes
-}
-
-harmonized_elemental_group = {
-   defensiveness = 0.10
-   religion = yes
-}
-
-harmonized_daedric_group_1 = {
-   free_leader_pool = 1
-   religion = yes
 }
 
 post_office_area_modifier = {
@@ -1113,4 +1103,223 @@ married_consort_ruler = {
     prestige = 0.10
 	improve_relation_modifier = 0.10
 	stability_cost_modifier = -0.10
+}
+
+#######################################################################
+
+harmonized_altmeri_pantheon = {
+	tolerance_own = 1.0
+	religion = yes
+}
+
+harmonized_snow_elves_pantheon = {
+	province_warscore_cost = -0.10
+	religion = yes
+}
+
+harmonized_nordic_pantheon = {
+	land_forcelimit_modifier  = 0.10
+	religion = yes
+}
+
+harmonized_bosmer_pantheon = {
+	land_attrition = -0.10
+    religion = yes
+}
+
+harmonized_eight_divines = {
+	core_creation = -0.10
+	religion = yes
+}
+
+harmonized_nine_divines = {
+	prestige_decay = -0.01
+	religion = yes
+}
+
+harmonized_twelve_divines = {
+	global_unrest = -1.0
+	religion = yes
+}
+
+harmonized_khajiiti_pantheon = {
+	dip_tech_cost_modifier = -0.05
+	religion = yes
+}
+
+harmonized_yokudan_pantheon = {
+	trade_efficiency = 0.10
+	religion = yes
+}
+
+harmonized_redguard_pantheon = {
+	infantry_power = 0.10
+	religion = yes
+}
+
+harmonized_malacath_cult = {
+	defensiveness = 0.10
+	religion = yes
+}
+
+harmonized_kothri_pantheon = {
+	global_trade_power = 0.10
+	religion = yes
+}
+
+harmonized_chimer_pantheon = {
+	global_missionary_strength = 0.01
+	religion = yes
+}
+
+harmonized_tribunal_pantheon = {
+	discipline = 0.05
+	religion = yes
+}
+
+harmonized_reclamations_pantheon = {
+	years_of_nationalism = -5
+	religion = yes
+}
+
+harmonized_serpant_king = {
+	land_morale = 0.10
+	religion = yes
+}
+	
+harmonized_dragon_cult = {
+	stability_cost_modifier = -0.10
+	religion = yes
+}
+
+harmonized_marukhism = {
+	culture_conversion_cost = -0.10
+	religion = yes
+}
+
+harmonized_reason_and_logic_cult = {
+	siege_ability = 0.10
+	religion = yes
+}
+
+harmonized_all-maker_cult = {
+	production_efficiency = 0.10
+	religion = yes
+}
+
+harmonized_dremora_pantheon = {
+	global_regiment_cost = -0.10
+	religion = yes
+}
+
+harmonized_cult_of_black_worm = {
+	mil_tech_cost_modifier = -0.05
+	religion = yes
+}
+
+harmonized_hist = {
+	tolerance_heathen = 1.0
+	religion = yes
+}
+	
+harmonized_sload_faith = {
+	sunk_ship_morale_hit_recieved = -0.10
+	religion = yes
+}
+
+harmonized_old_gods_cult = {
+	advisor_cost = -0.10
+	religion = yes
+}
+
+harmonized_tsaesci_pantheon = {
+	naval_forcelimit_modifier = 0.10
+	religion = yes
+}
+
+harmonized_tang_mo_pantheon = {
+	ship_durability = 0.10
+	religion = yes
+}
+
+harmonized_kamal_pantheon = {
+	institution_spread_from_true_faith = 0.10
+	religion = yes
+}
+
+harmonized_cult_of_the_moth = {
+	idea_cost = -0.10
+	religion = yes
+}
+
+harmonized_molog_bal_cult = {
+	free_leader_pool = 1
+	religion = yes
+}
+
+harmonized_meridia_cult = {
+	global_manpower_modifier = 0.10
+	religion = yes
+}
+
+harmonized_mehrunes_dagon_cult = {
+	fire_damage = 0.10
+	religion = yes
+}
+
+harmonized_hermeus_mora_cult = {
+	technology_cost = -0.05
+	religion = yes
+}
+	
+harmonized_sheogorath_cult = {
+	shock_damage = 0.10
+	religion = yes
+}
+
+harmonized_hircine_cult = {
+	cavalry_power = 0.10
+	religion = yes
+}
+	
+harmonized_nocturnal_cult = {
+	spy_offence = 0.10
+	religion = yes
+}
+
+#######################################################################
+
+harmonized_po_tun_pantheon = {
+	adm_tech_cost_modifier = -0.10
+	religion = yes
+}
+
+harmonized_unknown_pantheon = {
+	harmonization_speed = 0.1
+	religion = yes
+}
+
+harmonized_cult_of_lorelia = {
+	ae_impact = -0.10
+	religion = yes
+}
+
+harmonized_polytheistic_group = {
+   dip_tech_cost_modifier = -0.10
+   religion = yes
+}
+
+harmonized_occult_group = {
+   global_institution_spread = 0.10
+   religion = yes
+}
+
+harmonized_elemental_group = {
+   idea_cost = -0.10
+   religion = yes
+}
+
+harmonized_daedric_group_1 = {
+   mil_tech_cost_modifier = -0.10
+   religion = yes
 }

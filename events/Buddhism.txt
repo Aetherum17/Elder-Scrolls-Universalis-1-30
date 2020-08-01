@@ -21,10 +21,7 @@ country_event = {
 	
 	trigger = {
 		has_dlc = "Common Sense"
-		religion = hist #theravada
-		government = monarchy
-		has_regency = no
-		num_of_cities = 3
+		uses_karma = yes
 		karma = 50
 	}
 	
@@ -59,13 +56,13 @@ country_event = {
 		trigger = {
 			any_ally = {
 				is_neighbor_of = ROOT
-				religion = hist
+				religion = root
 			}
 		}
 		random_ally = {
 			limit = {
 				is_neighbor_of = ROOT
-				religion = hist
+				religion = root
 			}
 			country_event = { id = buddhism_events.7 }
 			add_opinion = {
@@ -118,9 +115,6 @@ country_event = {
 		has_dlc = "Common Sense"
 		uses_karma = yes
 		is_at_war = yes
-		government = monarchy
-		has_regency = no
-		num_of_cities = 3
 		war_exhaustion = 2
 	}
 	
@@ -195,8 +189,7 @@ country_event = {
 	
 	trigger = {
 		has_dlc = "Common Sense"
-		religion = hist
-		has_regency = no
+		uses_karma = yes
 	}
 	
 	mean_time_to_happen = {
@@ -240,7 +233,6 @@ country_event = {
 		uses_karma = yes
 		NOT = { has_country_modifier = grain_for_the_poor }
 		NOT = { has_country_modifier = grain_reserves }
-		has_regency = no
 		stability = 1
 		is_at_war = no
 		NOT = { num_of_rebel_armies = 1 }
@@ -291,8 +283,7 @@ country_event = {
 	
 	trigger = {
 		has_dlc = "Common Sense"
-		religion = hist
-		has_regency = no
+		uses_karma = yes
 		NOT = { has_ruler_flag = had_tapa }
 	}
 	
@@ -339,8 +330,7 @@ country_event = {
 	
 	trigger = {
 		has_dlc = "Common Sense"
-		religion = hist
-		has_regency = no
+		uses_karma = yes
 		any_owned_province = {
 			is_capital = no
 			NOT = { has_province_modifier = hostile_monastery }
@@ -438,12 +428,11 @@ country_event = {
 	
 	trigger = {
 		has_dlc = "Common Sense"
-		religion = hist
+		uses_karma = yes
 		OR = {
 			karma = 25
 			NOT = { karma = -25 }
 		}
-		has_regency = no
 		NOT = { has_ruler_flag = pali_law_collection }
 	}
 
@@ -500,11 +489,11 @@ country_event = {
 	
 	trigger = {
 		has_dlc = "Common Sense"
-		religion = hist
+        uses_karma = yes
 		has_country_modifier = vajrayana_lama
 		NOT = { has_country_flag = burned_figures }
 		any_owned_province = {
-			religion_group = daedric_group_1
+			NOT = { religion_group = elemental_group }
 		}
 	}
 

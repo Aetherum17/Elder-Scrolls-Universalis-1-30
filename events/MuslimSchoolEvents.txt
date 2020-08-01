@@ -643,7 +643,7 @@ country_event = {
 
 	trigger = {
 		has_dlc = "Cradle of Civilization"
-		religion = shiite
+		religion_group = elemental_group
 		any_owned_province = {
 			is_capital = no
 			nationalism = 1
@@ -842,15 +842,48 @@ country_event = {
 		religion_group = elemental_group
 		has_religious_school = no
 	}
+	
+	hidden = yes
 
 	is_triggered_only = yes
 	
 	option = {
-		name = muslim_school_events.20.a #Gives areas historical school of region
-		    #set_religious_school = {
-				#group = muslim
-				#school = shafii_school
-				#}
-			#}
+		name = muslim_school_events.20.a 
+		
+		if = {
+	    limit = { religion = old_gods_cult }
+		random_list = {
+     		16 = { set_religious_school = { group = elemental_group school = alrabeg_school } }
+			16 = { set_religious_school = { group = elemental_group school = storihbeg_school } }
+			16 = { set_religious_school = { group = elemental_group school = uricanbeg_school } }
+			16 = { set_religious_school = { group = elemental_group school = gulibeg_school } }
+			16 = { set_religious_school = { group = elemental_group school = hrokkibeg_school } }
+			16 = { set_religious_school = { group = elemental_group school = hagraven_school } }
+		}
+		}
+		
+		if = {
+	    limit = { OR = { religion = tsaesci_pantheon religion = tang_mo_pantheon religion = kamal_pantheon } }
+		random_list = {
+     		16 = { set_religious_school = { group = elemental_group school = dragon_school } }
+			16 = { set_religious_school = { group = elemental_group school = lizard_school } }
+			16 = { set_religious_school = { group = elemental_group school = tortoise_school } }
+			16 = { set_religious_school = { group = elemental_group school = crocodile_school } }
+			16 = { set_religious_school = { group = elemental_group school = viper_school } }
+			16 = { set_religious_school = { group = elemental_group school = tuatara_school } }
+		}
+	    }
+		
+		if = {
+	    limit = { OR = { religion = hist religion = sload_faith religion = cult_of_the_moth } }
+		random_list = {
+     		16 = { set_religious_school = { group = elemental_group school = lotus_school } }
+			16 = { set_religious_school = { group = elemental_group school = magnolia_school } }
+			16 = { set_religious_school = { group = elemental_group school = rose_school } }
+			16 = { set_religious_school = { group = elemental_group school = orchid_school } }
+			16 = { set_religious_school = { group = elemental_group school = tulip_school } }
+			16 = { set_religious_school = { group = elemental_group school = carnation_school } }
+		}
+	    }
 	}
 }

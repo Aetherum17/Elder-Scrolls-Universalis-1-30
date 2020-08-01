@@ -30,10 +30,29 @@ estate_church_disaster = {
 	}
 	
 	down_progress = {
-		factor = 1
+		factor = 0
+		modifier = {
+			factor = 1
+			NOT = {
+				estate_influence = {
+					estate = estate_church
+					influence = 100
+				}
+			}
+		}
 	}
 	
 	progress = {
+		modifier = {
+			factor = 0.5
+			NOT = {
+				estate_loyalty = {
+					estate = estate_church
+					loyalty = 50
+				}
+			}
+			is_at_war = no
+		}
 		modifier = {
 			factor = 0.5
 			NOT = {
@@ -77,10 +96,9 @@ estate_church_disaster = {
 	}
 	
 	modifier = {	
-		technology_cost = 0.2
-		idea_cost = 0.2
-		tolerance_heretic = -2
-		tolerance_heathen = -2
+		technology_cost = 0.25
+		idea_cost = 0.25
+		tolerance_heathen = -2.5
 	}
 
 	on_start = estate_disasters.3

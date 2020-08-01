@@ -53,7 +53,7 @@ country_event = {
     }
 	
 	mean_time_to_happen = {
-		months = 90
+		months = 180
 	}
 
     option = {
@@ -78,6 +78,7 @@ country_event = {
     title = monsoon_events.3.t
     desc = monsoon_events.3.d
     picture = 19_Monsoon_eventPicture
+	goto = good_monsoon_province						 
    
     trigger = {
 		any_owned_province = {
@@ -150,6 +151,7 @@ country_event = {
     title = monsoon_events.5.t
     desc = monsoon_events.5.d
     picture = 19_Monsoon_eventPicture
+	goto = plum_rains_province					   
     
     trigger = {
 		any_owned_province = {

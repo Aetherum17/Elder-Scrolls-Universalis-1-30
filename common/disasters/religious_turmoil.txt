@@ -1,0 +1,83 @@
+religious_turmoil = {
+	potential = {
+		is_free_or_tributary_trigger = yes
+		NOT = { has_country_flag = had_religious_turmoil } 
+	}
+	
+	can_start = {
+		has_any_disaster = no
+		NOT = { religious_unity = 0.50 }
+		NOT = { full_idea_group = humanist_ideas }
+		any_owned_province = { has_owner_religion = no }
+	}
+	
+	can_stop = {
+		OR = {
+			has_any_disaster = yes
+			religious_unity = 0.75
+			full_idea_group = humanist_ideas
+		}
+	}
+	
+	progress = {
+		modifier = {
+			factor = 2.5
+			NOT = { religious_unity = 0.5 }
+		} 
+		modifier = {
+			factor = 1
+			has_idea_group = religious_ideas
+		}
+		modifier = {
+			factor = 1
+			NOT = { stability = 0 }
+		}
+		modifier = {
+			factor = 2.5
+			has_hostile_reformation_center = yes
+		}
+		modifier = {
+			factor = -1
+			has_friendly_reformation_center = yes
+		}
+	}
+	
+	can_end = {
+		OR = {
+			AND = {
+				NOT = { num_of_rebel_controlled_provinces = 1 }
+				OR = {
+					is_force_converted = yes
+					religious_unity = 0.95
+					full_idea_group = humanist_ideas
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = religious_turmoil_timelimit_tt
+				had_country_flag = { flag = active_religious_turmoil days = 9125 }
+			}
+		}
+	}
+	
+	modifier = {
+		tolerance_own = -10
+		tolerance_heathen = -10
+		tolerance_heretic = -10
+	}
+	
+	on_start = religious_turmoil.1
+	on_end = religious_turmoil.2
+	
+	on_monthly = {
+		events = {
+		}
+		
+		random_events = { 
+			1200 = 0
+			10 = religious_turmoil.3
+			10 = religious_turmoil.4
+			10 = religious_turmoil.5
+		}
+	}
+}
+

@@ -28,6 +28,8 @@ polytheistic_group = {
 		personal_deity = yes
 		
 		heretic = { ALTMERI_PANTHEON_HERETIC }	
+		
+		harmonized_modifier = harmonized_altmeri_pantheon
 	}
 	
 	snow_elves_pantheon = {
@@ -50,6 +52,8 @@ polytheistic_group = {
 		heretic = { SNOW_ELVES_PANTHEON_HERETIC }	
 		
 		misguided_heretic = yes
+		
+		harmonized_modifier = harmonized_snow_elves_pantheon
 	}
 	
 	nordic_pantheon = {
@@ -70,6 +74,8 @@ polytheistic_group = {
 		personal_deity = yes
 		
 		heretic = { NORDIC_PANTHEON_HERETIC }	
+		
+		harmonized_modifier = harmonized_nordic_pantheon
 	}
 	
 	bosmer_pantheon = {
@@ -90,6 +96,8 @@ polytheistic_group = {
 		personal_deity = yes
 		
 		heretic = { BOSMER_HERETIC }	
+		
+		harmonized_modifier = harmonized_bosmer_pantheon
 	}
 	
 	eight_divines = {
@@ -135,6 +143,8 @@ polytheistic_group = {
 		personal_deity = yes
 		
 		heretic = { EIGHT_DIVINES_HERETIC }	
+		
+		harmonized_modifier = harmonized_eight_divines
 	}
 	
 	nine_divines = {
@@ -155,6 +165,8 @@ polytheistic_group = {
 		personal_deity = yes
 		
 		heretic = { NINE_DIVINES_HERETIC }	
+		
+		harmonized_modifier = harmonized_nine_divines
 	}
 	
 	twelve_divines = {
@@ -164,6 +176,16 @@ polytheistic_group = {
 		    global_unrest = -2.5
 			num_accepted_cultures = 1
 		}
+		allowed_center_conversion = {
+			altmeri_pantheon
+		}
+		will_get_center = {
+            any_owned_province = {
+                religion = altmeri_pantheon
+                is_in_capital_area = yes
+                is_reformation_center = no
+            }
+        }
 		country_as_secondary = {
 			global_unrest = -2.5
 			num_accepted_cultures = 1
@@ -177,6 +199,8 @@ polytheistic_group = {
 		heretic = { TWELVE_DIVINES_HERETIC }	
 		
 		misguided_heretic = yes
+		
+		harmonized_modifier = harmonized_twelve_divines
 	}
 	
 	khajiiti_pantheon = {
@@ -197,6 +221,8 @@ polytheistic_group = {
 		personal_deity = yes
 		
 		heretic = { KHAJIITI_HERETIC }	
+		
+		harmonized_modifier = harmonized_khajiiti_pantheon
 	}
 	
 	yokudan_pantheon = {
@@ -217,6 +243,8 @@ polytheistic_group = {
 		personal_deity = yes
 		
 		heretic = { YOKUDAN_PANTHEON_HERETIC }	
+		
+		harmonized_modifier = harmonized_yokudan_pantheon
 	}
 	
 	redguard_pantheon = {
@@ -239,6 +267,8 @@ polytheistic_group = {
 		heretic = { REDGUARD_PANTHEON_HERETIC }
 		
 		misguided_heretic = yes
+		
+		harmonized_modifier = harmonized_redguard_pantheon
 	}
 	
 	malacath_cult = {
@@ -259,6 +289,8 @@ polytheistic_group = {
 		personal_deity = yes
 		
 		heretic = { MALACATH_HERETIC }	
+		
+		harmonized_modifier = harmonized_malacath_cult
 	}
 	
 	kothri_pantheon = {
@@ -279,11 +311,12 @@ polytheistic_group = {
 		personal_deity = yes
 		
 		heretic = { KOTHRI_HERETIC }	
+		
+		harmonized_modifier = harmonized_kothri_pantheon
 	}
 	
 	crusade_name = CRUSADE
 	harmonized_modifier = harmonized_polytheistic_group
-	
 }
 
 occult_group = {
@@ -315,17 +348,19 @@ occult_group = {
 		fetishist_cult = yes
 		
 		heretic = { CHIMER_HERETIC }	
+		
+		harmonized_modifier = harmonized_chimer_pantheon
 	}
 	
 	tribunal_pantheon = {
 		color = { 170 11 202 }
 		icon = 14
 		country = {
-		    papal_influence = 1
+		    governing_capacity_modifier = 0.25
 			discipline = 0.10
 		}
 		country_as_secondary = {
-			papal_influence = 1
+		    governing_capacity_modifier = 0.25
 			discipline = 0.10
 		}
 		province = {
@@ -339,61 +374,71 @@ occult_group = {
 			
 			#Council of Trent Positions
 			harsh = {
-				relation_with_heretics = -20
+				relation_with_heretics = -50
 				global_religious_conversion_resistance = 0.25
 				global_institution_spread = -0.25
-				global_missionary_strength = 0.02
+				global_missionary_strength = 0.025
+				tolerance_heretic = -5
 			}
 			neutral = {
-				global_religious_conversion_resistance = -0.33
+				global_religious_conversion_resistance = -0.35
 			}
 			concilatory = {
-				relation_with_heretics = 10
-				global_religious_conversion_resistance = 0.25
+				relation_with_heretics = 25
+				global_religious_conversion_resistance = -0.15
 				global_heretic_missionary_strength = -0.05
 				improve_relation_modifier = 0.25
+				tolerance_heretic = 3
 			}
 			
 			#Council of Trent Concessions
 			concessions = {
 				first_concession = {
 					harsh = {
-						relation_with_heretics = -20
-						global_heretic_missionary_strength  = 0.02
+						relation_with_heretics = -25
+						global_heretic_missionary_strength  = 0.01
+						harsh_treatment_cost = -0.10
 					}	
 					concilatory = {
-						relation_with_heretics = 10
-						tolerance_heretic = 2
+						relation_with_heretics = 15
+						tolerance_heretic = 1
+						diplomatic_reputation = 0.5
 					}
 				}
 				second_concession = {
 					harsh = {
-						relation_with_heretics = -20
-						institution_spread_from_true_faith = 0.30
+						relation_with_heretics = -25
+						institution_spread_from_true_faith = 0.25
+						tolerance_heretic = -1.5
 					}	
 					concilatory = {
-						relation_with_heretics = 10
+						relation_with_heretics = 15
 						global_institution_spread = 0.10
+						global_religious_conversion_resistance = -0.15
 					}
 				}
 				third_concession = {
 					harsh = {
-						relation_with_heretics = -20
-						manpower_in_true_faith_provinces  = 0.1
+						relation_with_heretics = -25
+						manpower_in_true_faith_provinces = 0.25
+						tolerance_own = 1
 					}	
 					concilatory = {
-						relation_with_heretics = 10
-						global_manpower_modifier = 0.05
+						relation_with_heretics = 15
+						global_manpower_modifier = 0.10
+						religious_unity = 0.10
 					}
 				}
 				fourth_concession = {
 					harsh = {
-						relation_with_heretics = -20
+						relation_with_heretics = -25
 						warscore_cost_vs_other_religion  = -0.10
+						diplomatic_annexation_cost = -0.10
 					}	
 					concilatory = {
-						relation_with_heretics = 10
+						relation_with_heretics = 15
 						curia_powers_cost = -0.10
+						tolerance_heretic = 1
 					}
 				}
 			}
@@ -403,7 +448,8 @@ occult_group = {
 			levy_church_tax = {
 				cost = 50
 				potential = {
-					NOT = { tag = RED }
+					NOT = { has_reform = papacy_reform }
+					NOT = { has_reform = tribunal_reform }
 				}
 				allow = {
 					NOT = { war_with = RED }
@@ -422,7 +468,8 @@ occult_group = {
 			bless_monarch = {
 				cost = 50
 				potential = {
-					NOT = { tag = RED }
+					NOT = { has_reform = papacy_reform }
+					NOT = { has_reform = tribunal_reform }
 				}
 				allow = {
 					NOT = { war_with = RED }
@@ -442,7 +489,8 @@ occult_group = {
 			indulgence_for_sins = {
 				cost = 50
 				potential = {
-					NOT = { tag = RED }
+					NOT = { has_reform = papacy_reform }
+					NOT = { has_reform = tribunal_reform }
 				}
 				allow = {
 					NOT = { war_with = RED }
@@ -462,7 +510,8 @@ occult_group = {
 			local_saint = {
 				cost = 100
 				potential = {
-					NOT = { tag = RED }
+					NOT = { has_reform = papacy_reform }
+					NOT = { has_reform = tribunal_reform }
 				}
 				allow = {
 					NOT = { war_with = RED }
@@ -482,7 +531,8 @@ occult_group = {
 			forgiveness_for_usury = {
 				cost = 50
 				potential = {
-					NOT = { tag = RED }
+					NOT = { has_reform = papacy_reform }
+					NOT = { has_reform = tribunal_reform }
 				}
 				allow = {
 					NOT = { war_with = RED }
@@ -505,7 +555,8 @@ occult_group = {
 			proclaim_holy_war = {
 				cost = 50
 				potential = {
-					NOT = { tag = RED }
+					NOT = { has_reform = papacy_reform }
+					NOT = { has_reform = tribunal_reform }
 				}
 				allow = {
 					is_at_war = yes
@@ -529,7 +580,8 @@ occult_group = {
 			send_papal_legate = {
 				cost = 50
 				potential = {
-					NOT = { tag = RED }
+					NOT = { has_reform = papacy_reform }
+					NOT = { has_reform = tribunal_reform }
 				}
 				allow = {
 					NOT = { war_with = RED }
@@ -548,7 +600,8 @@ occult_group = {
 			sanction_commercial_monopoly = {
 				cost = 50
 				potential = {
-					NOT = { tag = RED }
+					NOT = { has_reform = papacy_reform }
+					NOT = { has_reform = tribunal_reform }
 				}
 				allow = {
 					NOT = { war_with = RED }
@@ -564,10 +617,33 @@ occult_group = {
 						NOT = { has_idea_group = trade_ideas }
 					}
 				}
+			}
+            investigate_heresy = {
+				curia_treasury_cost = 500
+				potential = {
+					has_dlc = "Emperor"
+					OR = {
+					    has_reform = papacy_reform
+						has_reform = tribunal_reform
+					}
+				}
+				allow = {
+					is_papal_controller = yes
+					reform_desire = 0.05
+				}
+				effect = {
+					add_reform_desire = -0.05
+					add_reform_desire_scale = 0.5
+				}
+				ai_will_do = {
+					factor = 0
+				}
 			}			
 		}
 		
 		heretic = { TRIBUNAL_HERETIC }	
+		
+		harmonized_modifier = harmonized_tribunal_pantheon
 	}
 	
 	reclamations_pantheon = {
@@ -577,6 +653,16 @@ occult_group = {
 			years_of_nationalism = -10
 			same_culture_advisor_cost = -0.25
 		}
+		allowed_center_conversion = {
+			tribunal_pantheon
+		}
+		will_get_center = {
+            any_owned_province = {
+                religion = tribunal_pantheon
+                is_in_capital_area = yes
+                is_reformation_center = no
+            }
+        }
 		country_as_secondary = {
 			years_of_nationalism = -10
 			same_culture_advisor_cost = -0.25
@@ -588,6 +674,8 @@ occult_group = {
 		personal_deity = yes
 		
 		heretic = { RECLAMATIONS_HERETIC }	
+		
+		harmonized_modifier = harmonized_reclamations_pantheon
 	}
 	
 	serpant_king = {
@@ -611,6 +699,8 @@ occult_group = {
 		reform_tooltip = NAHUATL_REFORM_TOOLTIP
 		
 		heretic = { SERPANT_KING_HERETIC }	
+		
+		harmonized_modifier = harmonized_serpant_king
 	}
 	
 	dragon_cult = {
@@ -629,6 +719,8 @@ occult_group = {
 		}
 		
 		heretic = { DRAGON_CULT_HERETIC }	
+		
+		harmonized_modifier = harmonized_dragon_cult
 		
 		has_patriarchs = yes
 		
@@ -827,6 +919,8 @@ occult_group = {
 		heretic = { MARUKHISM_HERETIC }	
 		
 		fervor = yes
+		
+		harmonized_modifier = harmonized_marukhism
 	}
 	
 	reason_and_logic_cult = {
@@ -855,6 +949,8 @@ occult_group = {
 			aethereal_research_hub
 			western_research_hub
 		}
+		
+		harmonized_modifier = harmonized_reason_and_logic_cult
 	}
 	
 	all-maker_cult = {
@@ -874,7 +970,9 @@ occult_group = {
 		
 		heretic = { ALL-MAKER_HERETIC }	
 		
-		fervor = yes
+		uses_karma = yes
+		
+		harmonized_modifier = harmonized_all-maker_cult
 	}
 	
 	dremora_pantheon = {
@@ -895,6 +993,8 @@ occult_group = {
 		can_have_secondary_religion = yes
 		
 		heretic = { DREMORA_HERETIC }	
+		
+		harmonized_modifier = harmonized_dremora_pantheon
 	}
 	
 	cult_of_black_worm = {
@@ -923,6 +1023,8 @@ occult_group = {
 		aspects_name = PROTESTANT_ASPECTS
 		
 		heretic = { CULT_OF_BLACK_WORM_HERETIC }	
+		
+		harmonized_modifier = harmonized_cult_of_black_worm
 	}
 	
 	crusade_name = CRUSADE
@@ -1199,6 +1301,8 @@ elemental_group = {
 		heretic = { HIST_HERETIC }	
 		
 		uses_karma = yes
+		
+		harmonized_modifier = harmonized_hist
 	}
 	
 	sload_faith = {
@@ -1228,6 +1332,7 @@ elemental_group = {
 		
 		heretic = { SLOAD_HERETIC }	
 		
+		harmonized_modifier = harmonized_sload_faith
 	}
 	
 	old_gods_cult = {
@@ -1248,6 +1353,8 @@ elemental_group = {
 		heretic = { OLD_GODS_CULT_HERETIC }	
 		
 		uses_piety = yes
+		
+		harmonized_modifier = harmonized_old_gods_cult
 	}
 	
 	tsaesci_pantheon = {
@@ -1268,6 +1375,8 @@ elemental_group = {
 		heretic = { TSAESCI_HERETIC }	
 		
 		uses_isolationism = yes
+		
+		harmonized_modifier = harmonized_tsaesci_pantheon
 	}
 	
 	tang_mo_pantheon = {
@@ -1290,6 +1399,7 @@ elemental_group = {
 		
 		heretic = { TANG_MO_HERETIC }	
 		
+		harmonized_modifier = harmonized_tang_mo_pantheon
 	}
 	
 	kamal_pantheon = {
@@ -1312,6 +1422,8 @@ elemental_group = {
 		reform_tooltip = INTI_REFORM_TOOLTIP
 		
 		heretic = { KAMAL_HERETIC }	
+		
+		harmonized_modifier = harmonized_kamal_pantheon
 	}
 	
 	cult_of_the_moth = {
@@ -1329,9 +1441,11 @@ elemental_group = {
 			local_missionary_strength = -0.010
 		}
 		
-		#Karma
+		uses_karma = yes
 		
 		heretic = { CULT_OF_THE_MOTH_HERETIC }	
+		
+		harmonized_modifier = harmonized_cult_of_the_moth
 	}
 	
 	crusade_name = CRUSADE
@@ -1376,6 +1490,8 @@ daedric_group_1 = {
 		aspects_name = PROTESTANT_ASPECTS
 		
 		heretic = { MOLOG_BAL_HERETIC }	
+		
+		harmonized_modifier = harmonized_molog_bal_cult
 	}
 	
 	meridia_cult = {
@@ -1405,6 +1521,8 @@ daedric_group_1 = {
 		aspects_name = PROTESTANT_ASPECTS
 		
 		heretic = { MERIDIA_HERETIC }	
+		
+		harmonized_modifier = harmonized_meridia_cult
 	}
 	
 	mehrunes_dagon_cult = {
@@ -1434,6 +1552,8 @@ daedric_group_1 = {
 		aspects_name = PROTESTANT_ASPECTS
 		
 		heretic = { MEHRUNES_DAGON_HERETIC }	
+		
+		harmonized_modifier = harmonized_mehrunes_dagon_cult
 	}
 	
 	hermeus_mora_cult = {
@@ -1463,6 +1583,8 @@ daedric_group_1 = {
 		aspects_name = PROTESTANT_ASPECTS
 		
 		heretic = { HERMEUS_MORA_HERETIC }	
+		
+		harmonized_modifier = harmonized_hermeus_mora_cult
 	}
 	
 	sheogorath_cult = {
@@ -1492,6 +1614,8 @@ daedric_group_1 = {
 		aspects_name = PROTESTANT_ASPECTS
 		
 		heretic = { SHEOGORATH_HERETIC }	
+		
+		harmonized_modifier = harmonized_sheogorath_cult
 	}
 	
 	hircine_cult = {
@@ -1521,6 +1645,8 @@ daedric_group_1 = {
 		aspects_name = PROTESTANT_ASPECTS
 		
 		heretic = { HIRCINE_HERETIC }	
+		
+		harmonized_modifier = harmonized_hircine_cult
 	}
 	
 	nocturnal_cult = {
@@ -1550,6 +1676,8 @@ daedric_group_1 = {
 		aspects_name = PROTESTANT_ASPECTS
 		
 		heretic = { NOCTURNAL_HERETIC }	
+		
+		harmonized_modifier = harmonized_nocturnal_cult
 	}
 	
 	crusade_name = CRUSADE
@@ -1583,6 +1711,8 @@ harmony_group = {
 		heretic = { PO_TUN_HERETIC }	
 		
 		uses_harmony = yes
+		
+		harmonized_modifier = harmonized_po_tun_pantheon
 	}
 	
 	unknown_pantheon = {
@@ -1605,6 +1735,8 @@ harmony_group = {
 		uses_harmony = yes
 		
 		hre_religion = yes
+		
+		harmonized_modifier = harmonized_unknown_pantheon
 	}
 	
 	cult_of_lorelia = {
@@ -1625,6 +1757,8 @@ harmony_group = {
 		uses_harmony = yes
 		
 		heretic = { CULT_OF_LORELIA_HERETIC }	
+		
+		harmonized_modifier = harmonized_cult_of_lorelia
 	}
 	
 	crusade_name = CRUSADE

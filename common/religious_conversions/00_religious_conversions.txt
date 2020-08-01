@@ -53,7 +53,7 @@ propagate_religion_policy = {
 			has_province_modifier = muslim_sailor_community
 		}
 		modifier = {
-			factor = 2
+			factor = 2.5
 			OR = {
 				any_neighbor_province = {
 					religion = FROM
@@ -90,7 +90,7 @@ eight_divines_center_of_reformation = {
 	base_conversion_speed = 5.0
 
 	target_province_weights = {
-		factor = 2
+		factor = 2.5
 		
 		modifier = {
 			factor = 0.25
@@ -114,7 +114,7 @@ eight_divines_center_of_reformation = {
 			NOT = { region = valus_mountains_lr }
 		}
 		modifier = {
-			factor = 2
+			factor = 2.5
 			culture_group = FROM
 		}
 		modifier = {
@@ -124,7 +124,7 @@ eight_divines_center_of_reformation = {
 			}
 		}
 		modifier = {
-			factor = 2
+			factor = 2.5
 			culture = FROM
 		}
 	}
@@ -140,7 +140,7 @@ marukhism_center_of_reformation = {
 	base_conversion_speed = 5.0
 
 	target_province_weights = {
-		factor = 2
+		factor = 2.5
 		
 		modifier = {
 			factor = 0.25
@@ -160,7 +160,7 @@ marukhism_center_of_reformation = {
 			NOT = { religion = nine_divines }
 		}
 		modifier = {
-			factor = 2
+			factor = 2.5
 			culture_group = FROM
 		}
 		modifier = {
@@ -170,8 +170,110 @@ marukhism_center_of_reformation = {
 			}
 		}
 		modifier = {
-			factor = 2
+			factor = 2.5
 			culture = FROM
+		}
+	}
+}
+
+reclamations_pantheon_of_reformation = {
+
+    religion = reclamations_pantheon
+
+	map_icon = GFX_religious_conversion_center_protestant
+
+	max_distance = 500.0 # From Center of Reformation center province (default is NDefines::NReligion::MAX_RELIGIOUS_CENTER_SPREAD_DISTANCE).
+	base_conversion_speed = 5.0
+
+	target_province_weights = {
+		factor = 2.5
+		
+		modifier = {
+			factor = 0.25
+			is_empty = yes
+		}
+		modifier = {
+			factor = 0
+			has_missionary = yes
+		}
+		modifier = {
+			factor = 0
+			has_province_modifier = religious_zeal_at_conv
+		}
+		modifier = {
+			factor = 0
+			NOT = { superregion = morrowind_superregion }
+		}
+		modifier = {
+			factor = 2.5
+			culture_group = FROM
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {
+				culture_group = FROM
+			}
+		}
+		modifier = {
+			factor = 2.5
+			culture = FROM
+		}
+		modifier = {
+			factor = 2.5
+			religion = tribunal_pantheon
+		}
+	}
+}
+
+twelve_divines_of_reformation = {
+
+    religion = twelve_divines
+	
+	map_icon = GFX_religious_conversion_center_protestant
+
+	max_distance = 500.0 # From Center of Reformation center province (default is NDefines::NReligion::MAX_RELIGIOUS_CENTER_SPREAD_DISTANCE).
+	base_conversion_speed = 5.0
+
+	target_province_weights = {
+		factor = 2.5
+		
+		modifier = {
+			factor = 0.25
+			is_empty = yes
+		}
+		modifier = {
+			factor = 0
+			has_missionary = yes
+		}
+		modifier = {
+			factor = 0
+			has_province_modifier = religious_zeal_at_conv
+		}
+		modifier = {
+			factor = 0
+			NOT = { superregion = high_rock_superregion }
+		}
+		modifier = {
+			factor = 0
+			religion = malacath_cult
+		}
+		modifier = {
+			factor = 2.5
+			culture_group = FROM
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {
+				culture_group = FROM
+			}
+		}
+		modifier = {
+			factor = 2.5
+			culture = FROM
+		}
+		modifier = {
+			factor = 2.5
+			religion = altmeri_pantheon
 		}
 	}
 }

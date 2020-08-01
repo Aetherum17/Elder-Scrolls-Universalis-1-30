@@ -1,21 +1,19 @@
 revolution = {
+	ended_by_country_breaking_to_rebels = no									 
 	potential = {
 		NOT = { has_country_flag = had_revolution }
 		NOT = { tag = RED }
 		NOT = { has_reform = celestial_empire }
 		is_free_or_tributary_trigger = yes
-		uses_doom = no
-		num_of_cities = 30
 		NOT = { revolution_target_exists = yes }
 		current_age = age_of_revolutions
 		is_revolutionary = no
-
 		if = {
 			limit = {
 				has_dlc = "Emperor"
 			}
 			is_great_power = yes
-			revolution_spread = 0.2
+			revolution_spread = 0.50
 			capital_scope = {
 				OR = {
 					continent = Tamriel
@@ -25,7 +23,7 @@ revolution = {
 		}
 		else = {
 			num_of_cities = 30
-			capital_scope = { continent = europe }
+			capital_scope = { continent = Tamriel }
 			NOT = { revolution_target_exists = yes }
 		}
 	}
@@ -33,6 +31,7 @@ revolution = {
 	
 	can_start = {
 		current_age = age_of_revolutions
+		num_of_cities = 50
 		has_any_disaster = no
 		NOT = { stability = 2 }
 		OR = {
@@ -44,11 +43,11 @@ revolution = {
 			war_exhaustion = 10
 			NOT = { prestige = 0 }
 			custom_trigger_tooltip = {
-				tooltip = root_is_most_powerful_in_europe
-				capital_scope = { continent = europe }
+				tooltip = root_is_most_powerful_in_Tamriel
+				capital_scope = { continent = Tamriel }
 				NOT = {
 					any_country = {
-						capital_scope = { continent = europe }
+						capital_scope = { continent = Tamriel }
 						OR = {
 							army_size = root
 							total_own_and_non_tributary_subject_development = root
@@ -114,7 +113,7 @@ revolution = {
         modifier = {
 			factor = 0.5
 			custom_trigger_tooltip = {
-				tooltip = root_is_most_powerful_in_europe_2
+				tooltip = root_is_most_powerful_in_Tamriel_2
 				capital_scope = { continent = Tamriel }
 				NOT = {
 					any_country = {
@@ -126,9 +125,11 @@ revolution = {
 					}
 				}
 			}
-	}
+	    }
+    }
 	
 	can_end = {
+        if = {
 			limit = {
 				has_dlc = "Emperor"
 			}
@@ -172,13 +173,10 @@ revolution = {
 			}
 		}
 	}
-	
 
 	modifier = {
 		global_unrest = 10
-		stability_cost_modifier = 0.1
 	}	
-	
 	
 	on_start = revolution.1
 	on_end = revolution.9
@@ -192,11 +190,6 @@ revolution = {
 			100 = revolution.2
 			100 = revolution.3
 			100 = revolution.4
-			100 = revolution.5
-			100 = revolution.6
-			100 = revolution.7
-			100 = revolution.8
-		
 		}
 	}
 }

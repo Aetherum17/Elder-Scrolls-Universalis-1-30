@@ -4,6 +4,7 @@ estate_burghers_disaster = {
 		estate_influence = {
 			estate = estate_burghers
 			influence = 80
+		}
 	}
 
 
@@ -13,7 +14,7 @@ estate_burghers_disaster = {
 			estate = estate_burghers
 			influence = 100
 		}
-		is_at_war = no		
+		is_at_war = no
 	}
 	
 	can_stop = {
@@ -29,10 +30,29 @@ estate_burghers_disaster = {
 	}
 	
 	down_progress = {
-		factor = 1
+		factor = 0
+		modifier = {
+			factor = 1
+			NOT = {
+				estate_influence = {
+					estate = estate_burghers
+					influence = 100
+				}
+			}
+		}
 	}
 	
 	progress = {
+		modifier = {
+			factor = 0.5
+			NOT = {
+				estate_loyalty = {
+					estate = estate_burghers
+					loyalty = 50
+				}
+			}
+			is_at_war = no
+		}
 		modifier = {
 			factor = 0.5
 			NOT = {
@@ -64,7 +84,6 @@ estate_burghers_disaster = {
 			is_at_war = no
 		}
 	}
-	}
 	
 	can_end = {
 		custom_trigger_tooltip = {
@@ -78,10 +97,9 @@ estate_burghers_disaster = {
 	}
 	
 	modifier = {	
-		land_morale = -0.1
+		land_morale = -0.15
 		global_manpower_modifier = -0.25
 		land_forcelimit_modifier = -0.25
-		prestige = -1
 	}
 
 	on_start = estate_disasters.5

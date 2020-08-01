@@ -1,18 +1,11 @@
 es_country_collapse = {
 	potential = {
-		always = yes
+		is_free_or_tributary_trigger = yes
 	}
 
 	can_start = {
-		OR = {
-		AND = {
-		ai = no
+		OR = { 
 		NOT = { stability = 0 }
-		}
-		AND = {
-		ai = yes
-		NOT = { stability = -2 }
-		}
 		war_exhaustion = 15
 		}
 		is_free_or_tributary_trigger = yes
@@ -20,17 +13,10 @@ es_country_collapse = {
 	
 	can_stop = {
 	    OR = {
-		AND = {
-		ai = no
 		stability = 2
-		}
-		AND = {
-		ai = yes
-		stability = 0
-		}
-		}
 		is_at_war = no
 		NOT = { war_exhaustion = 1 }
+		}
 	}
 		
 	progress = {
@@ -58,17 +44,8 @@ es_country_collapse = {
 	
 	can_end = {
 	    OR = {
-	    AND = {
-	    OR = {
 		AND = {
-		ai = no
-		stability = 3
-		}
-		AND = {
-		ai = yes
-		stability = 0
-		}
-		}
+	    stability = 2
 		is_at_war = no
 		NOT = { war_exhaustion = 1 }
 		}
@@ -78,7 +55,8 @@ es_country_collapse = {
 
 	modifier = {
 	    stability_cost_modifier = 1.0
-		global_unrest = 10
+		harsh_treatment_cost = 1.0
+		reduced_liberty_desire = -100
 	}	
 	
 	on_start = es_collapse.1

@@ -15,7 +15,7 @@ country_event = {
 	
 	trigger = {
 		has_dlc = "Common Sense"
-		tag = RED
+		OR = { AND = { has_reform = papacy_reform NOT = { exists = TRI } } has_reform = tribunal_reform }
 		NOT = {
 			total_number_of_cardinals = 49
 		}
@@ -108,6 +108,20 @@ province_event = {
 					tooltip = papacy_events.8.t
 				}
 			}
+			TRI = {
+				add_opinion = {
+					who = ROOT
+					modifier = opinion_cardinal_nephew
+				}
+				reverse_add_opinion = {
+					who = ROOT
+					modifier = opinion_cardinal_nephew
+				}
+				country_event = {
+					id = papacy_events.8
+					tooltip = papacy_events.8.t
+				}
+			}
 		}
 	}
 	
@@ -116,6 +130,12 @@ province_event = {
 		owner = {
 			add_prestige = -5
 			RED = {
+				country_event = {
+					id = papacy_events.9
+					tooltip = papacy_events.9.t
+				}
+			}
+			TRI = {
 				country_event = {
 					id = papacy_events.9
 					tooltip = papacy_events.9.t
@@ -177,7 +197,7 @@ country_event = {
 	
 	trigger = {
 		has_dlc = "Common Sense"
-		tag = RED
+		OR = { AND = { has_reform = papacy_reform NOT = { exists = TRI } } has_reform = tribunal_reform }
 		NOT = {
 			has_country_modifier = pap_indulgences
 		}
@@ -206,7 +226,7 @@ country_event = {
 		add_reform_desire = -0.1
 		add_devotion = 10
 		custom_tooltip = disables_indulgences
-		set_global_flag = RED_disables_indulgences_flag
+		set_global_flag = pap_disables_indulgences_flag
 	}
 	
 	option = {
@@ -233,7 +253,7 @@ country_event = {
 	
 	trigger = {
 		has_dlc = "Common Sense"
-		tag = RED
+		OR = { AND = { has_reform = papacy_reform NOT = { exists = TRI } } has_reform = tribunal_reform }
 		NOT = {
 			has_country_modifier = pap_simony
 		}
@@ -289,7 +309,7 @@ country_event = {
 	
 	trigger = {
 		has_dlc = "Common Sense"
-		tag = RED
+		OR = { AND = { has_reform = papacy_reform NOT = { exists = TRI } } has_reform = tribunal_reform }
 		NOT = {
 			has_country_modifier = pap_veneration_relics
 		}
@@ -343,7 +363,7 @@ country_event = {
 	
 	trigger = {
 		has_dlc = "Common Sense"
-		tag = RED
+		OR = { AND = { has_reform = papacy_reform NOT = { exists = TRI } } has_reform = tribunal_reform }
 		NOT = { has_country_flag = pap_condemned_slavery }
 		any_known_country = {
 			religion = tribunal_pantheon 
@@ -413,12 +433,32 @@ country_event = {
 				tooltip = papacy_events.20.t
 			}
 		}
+		TRI = {
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_condemn_slavery
+			}
+			country_event = {
+				id = papacy_events.20
+				tooltip = papacy_events.20.t
+			}
+		}
 	}
 	
 	option = {
 		name = papacy_events.19.b #Refuse and Continue the practice
 		add_papal_influence = -5
 		RED = {
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_allows_slavery
+			}
+			country_event = {
+				id = papacy_events.21
+				tooltip = papacy_events.21.t
+			}
+		}
+		TRI = {
 			add_opinion = {
 				who = ROOT
 				modifier = opinion_allows_slavery
@@ -495,6 +535,18 @@ country_event = {
 				}
 			}
 			AND = {
+				tag = TRI
+				any_known_country = {
+					religion = tribunal_pantheon
+					OR = {
+						any_owned_province = {
+							has_province_modifier = local_witch_hunts
+						}
+						has_country_modifier = nationwide_witch_hunts
+					}
+				}
+			}
+			AND = {
 				religion = tribunal_pantheon
 				OR = {
 					any_owned_province = {
@@ -516,7 +568,7 @@ country_event = {
 	option = {
 		name = papacy_events.22.a
 		trigger = {
-			tag = RED
+			OR = { AND = { tag = RED NOT = { exists = TRI } } tag = TRI }
 		}
 		random_known_country = {
 			limit = {
@@ -538,7 +590,7 @@ country_event = {
 	option = {
 		name = papacy_events.22.b
 		trigger = {
-			tag = RED
+			OR = { AND = { tag = RED NOT = { exists = TRI } } tag = TRI }
 		}
 		add_stability_or_adm_power = yes
 	}
@@ -546,10 +598,15 @@ country_event = {
 		name = papacy_events.22.c
 		trigger = {
 			NOT = {
-				tag = RED
+				OR = { AND = { NOT ={ tag = RED } exists = TRI } NOT = { tag = TRI } }
 			}
 		}
 		RED = {
+			country_event = {
+				id = papacy_events.26
+			}
+		}
+		TRI = {
 			country_event = {
 				id = papacy_events.26
 			}
@@ -559,7 +616,7 @@ country_event = {
 		name = papacy_events.22.e
 		trigger = {
 			NOT = {
-				tag = RED
+				OR = { AND = { NOT ={ tag = RED } exists = TRI } NOT = { tag = TRI } }
 			}
 		}
 		add_stability_or_adm_power = yes
@@ -607,11 +664,32 @@ country_event = {
 				id = papacy_events.24
 			}
 		}
+		TRI = {
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_condemn_witchtrials_good
+			}
+			set_global_flag = pap_condemn_witchtrials_good_flag
+			country_event = {
+				id = papacy_events.24
+			}
+		}
 	}
 	
 	option = {
 		name = papacy_events.23.b
 		RED = {
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_allows_witchtrials_bad
+			}
+			set_global_flag = pap_allows_witchtrials_bad_flag
+			country_event = {
+				id = papacy_events.25
+				tooltip = papacy_events.25.tooltip
+			}
+		}
+		TRI = {
 			add_opinion = {
 				who = ROOT
 				modifier = opinion_allows_witchtrials_bad
@@ -786,11 +864,33 @@ country_event = {
 				tooltip = papacy_events.24.tooltip
 			}
 		}
+		TRI = {
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_condemn_witchtrials_good
+			}
+			set_global_flag = pap_condemn_witchtrials_good_flag
+			country_event = {
+				id = papacy_events.24
+				tooltip = papacy_events.24.tooltip
+			}
+		}
 	}
 	
 	option = {
 		name = papacy_events.27.b # Refuse
 		RED = {
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_allows_witchtrials_bad
+			}
+			set_global_flag = pap_allows_witchtrials_bad_flag
+			country_event = {
+				id = papacy_events.25
+				tooltip = papacy_events.25.tooltip
+			}
+		}
+		TRI = {
 			add_opinion = {
 				who = ROOT
 				modifier = opinion_allows_witchtrials_bad
@@ -826,11 +926,32 @@ country_event = {
 				tooltip = papacy_events.25.tooltip
 			}
 		}
+		TRI = {
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_allows_witchtrials_good
+			}
+			set_global_flag = pap_allows_witchtrials_good_flag
+			country_event = {
+				id = papacy_events.25
+				tooltip = papacy_events.25.tooltip
+			}
+		}
 	}
 	option = {
 		name = papacy_events.28.b #No, we refuse
 		add_papal_influence = 5
 		RED = {
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_condemn_witchtrials_bad
+			}
+			set_global_flag = pap_condemn_witchtrials_bad_flag
+			country_event = {
+				id = papacy_events.24
+			}
+		}
+		TRI = {
 			add_opinion = {
 				who = ROOT
 				modifier = opinion_condemn_witchtrials_bad

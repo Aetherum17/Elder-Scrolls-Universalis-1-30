@@ -6,6 +6,7 @@ classical_age = {
 	}
 	
 	religious_conflicts = yes
+	papacy = 0.15
 
 	objectives = {
 		obj_classical_empire = {
@@ -148,6 +149,7 @@ late_classical_age = {
 	}
 	
 	religious_conflicts = yes
+	papacy = 0.35
 	
 	objectives = {
 		obj_lateclassical_unite_culture = {
@@ -284,6 +286,7 @@ age_of_migrations = {
 	}
 	
 	religious_conflicts = yes
+	papacy = 0.50
 	
 	objectives = {
 		obj_migration_christianity = {
@@ -425,6 +428,7 @@ dark_age = {
 	}
 	
 	religious_conflicts = yes
+	papacy = 0.75
 	
 	objectives = {
 		obj_darkage_no_devastation = {
@@ -563,6 +567,7 @@ feudal_age = {
 	}
 	
 	religious_conflicts = yes
+	papacy = 1.0
 	
 	objectives = {
 		obj_feudal_horde_in_europe = {
@@ -696,6 +701,7 @@ high_middle_ages = {
 	}
 	
 	religious_conflicts = yes
+	papacy = 1.15
 	
 	objectives = {
 		obj_highmiddle_vassals = {
@@ -840,6 +846,7 @@ late_middle_ages = {
 	}
 	
 	religious_conflicts = yes
+	papacy = 1.25
 	
 	objectives = {
 		obj_latemiddle_pu = {
@@ -976,6 +983,7 @@ age_of_discovery = {
 	}
 	
 	religious_conflicts = yes
+	papacy = 1.35
 	
 	absolutism = {
 		harsh_treatment = 1
@@ -998,13 +1006,13 @@ age_of_discovery = {
 			calc_true_if = {
 				all_owned_province = {
 					OR = {
-						has_province_modifier = center_of_trade_modifier
-						has_province_modifier = inland_center_of_trade_modifier
+						province_has_center_of_trade_of_level = 2
+						province_has_center_of_trade_of_level = 3
 					}
 					controlled_by = owner
 					is_core = ROOT
 				}
-				amount = 10
+				amount = 5
 			}
 		}
 	obj_30_development_city = {
@@ -1139,6 +1147,7 @@ age_of_reformation = {
 	}
 	
 	religious_conflicts = yes
+	papacy = 1.5
 	
 	absolutism = {
 		harsh_treatment = 1
@@ -1308,6 +1317,7 @@ age_of_absolutism = {
 	}
 	
 	religious_conflicts = yes
+	papacy = 1.75
 	
 	absolutism = {
 		harsh_treatment = 1
@@ -1451,6 +1461,7 @@ age_of_revolutions = {
 	}
 	
 	religious_conflicts = yes
+	papacy = 2.0
 	
 	absolutism = {
 		harsh_treatment = 1
@@ -1601,6 +1612,7 @@ industrial_age = {
 	}
 	
 	religious_conflicts = yes
+	papacy = 2.15
 	
 	absolutism = {
 		harsh_treatment = 1
@@ -1773,6 +1785,7 @@ great_war_age = {
 	}
 	
 	religious_conflicts = yes
+	papacy = 2.25
 	
 	absolutism = {
 		harsh_treatment = 1
@@ -1933,6 +1946,7 @@ information_age = {
 	}
 	
 	religious_conflicts = yes
+	papacy = 2.35
 	
 	absolutism = {
 		harsh_treatment = 1

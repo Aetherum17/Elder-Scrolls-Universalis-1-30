@@ -1,0 +1,63 @@
+﻿l_english:
+ # Curia
+ MODIFIER_CURIA_POWERS_COST:0 "Curia Powers cost"
+ MODIFIER_APPOINT_CARDINAL_COST:0 "Appoint Priest cost"
+ MODIFIER_UNREST_CATHOLIC_PROVINCES:0 "Unrest in Tribunal provinces"
+ MODIFIER_IMPERIAL_REFORM_CATHOLIC_APPROVAL:0 "Approval of Imperial Reforms"
+ apostolicae_servitutis:0 "Eternal Service"
+ apostolicae_servitutis_DESC:0 ""
+ dei_gratia_rex:0 "The Blessed Regnum"
+ dei_gratia_rex_DESC:2 ""
+ illius_qui_se_pro_divini:0 "Sacred Wars"
+ illius_qui_se_pro_divini_DESC:1 ""
+ crusades_after_age_limit:0 "Crusades After Age Limit"
+ praeclara_carissimi:1 "Benison of Lands"
+ praeclara_carissimi_DESC:1 ""
+ appointed_cardinal:0 "Appointed Priest"
+ 
+ libertas_ecclesiae:0 "Church of Freedom"
+ libertas_ecclesiae_DESC:0 " "
+ immensa_aeterni_dei:0 "Infinite Knowledge"
+ immensa_aeterni_dei_DESC:0 " "
+ cardinals_spread_institution:0 "Priests Spread Institutions"
+ 
+ papacy_events.7.d:2 "[From.Monarch.GetTitle] [From.Monarch.GetName] is asking us to appoint his relative to [Root.GetName] as Priest. Though it is a common practice, many see it as blatant nepotism."
+ 
+ # Appoint Cardinal diplomatic action
+ APPOINT_CARDINAL_COST_WHY:0 "The $VAL|2Y$¤ cost of appointing this Priest is due to:\n$WHY$"
+ CARDINAL_BASE_COST:0 "Base Cost: $VAL|+=$¤\n"
+ CARDINAL_TOTAL_CARDINAL:0 "Total of $NUM$ Priests in Curia: $VAL|+=$¤\n"
+ CARDINAL_TARGET_CARDINAL:0 "$NUM$ Priests from $NAME$: $VAL|+=$¤\n"
+ APPOINT_CARDINALTITLE:0 "Appoint Priest"
+ APPOINT_CARDINALDESC:0 "Appoint a Priest in the target Country, increasing their opinion of us and increasing the Invested Influence for the next Curia Controller election."
+ APPOINT_CARDINAL_DESCRIPTION:0 "Invest $COST|Y$¤ to Appoint a Priest in $RECIPIENT$ land. This is a great honor and they will owe us a debt of gratitude, increasing their opinion of us by $OPINION|G$.\n\nOur Invested influence towards becoming the next Curia Controller will be increased by $INFLUENCE|Y$."
+ APPOINT_CARDINAL_NOT_IN_SUBJECTS_DIEING:0 "§R- Priests cannot be appointed in Countries that we are about to annex.§!"
+ APPOINT_CARDINAL_ONLY_CATHOLICS:0 "§Priests can only be appointed in Countries that follow the true faith.§!"
+ APPOINT_CARDINAL_TOO_MANY_IN_COUNTRY:0 "§RNo more than $MAX$ Priests can be appointed in the same country.§!"
+ APPOINT_CARDINAL_TOO_MANY_IN_WORLD:0 "§RThere are already enough Priests in the World, Appointing one more would destabilize our authority.§!"
+ APPOINT_CARDINAL_NO_PROVINCE_AVAILABLE:0 "§RThere are no suitable Provinces for us to Appoint a Priest.§!"
+ APPOINT_CARDINAL_NEED_MORE_CASH:0 "§RAppointing a Priest will cost $REQUIRED$¤ but you only have $AVAILABLE$¤.§!"
+ CURIA_APPOINT_CARDINAL:2 "Spend $COST|Y$¤ of your own money to Appoint one of your loyalists as Priest. This will give us $CORRUPTION|R$ Corruption and increase our Invested influence towards becoming the next Curia Controller by $INFLUENCE|Y$ every year."
+ CURIA_APPOINT_CARDINAL_SELF_TITLE:0 "Appoint loyalist Priest"
+ CURIA_APPOINT_CARDINAL_SELF_DESC:1 "Do you want to spend $COST|Y$¤ to Appoint one of your loyalists as Priest? This will give us $CORRUPTION|R$ Corruption and increase our Invested influence towards becoming the next Curia Controller by $INFLUENCE|Y$ every year."
+ 
+ CURIA_TREASURY_DESC:1 "Every month, as a demonstration of faith, the Tribunal countries all around the World will offer a Tithe to the Curia to fill the Treasury. The estimate Tithe for this month is $INCREMENT|Y$¤, depending on the amount of land the Clergy has in the Tribunal Countries:\n$WHY$"
+ PAPAL_INVEST:0 "Spend §Y$MOD_COST$§W Holy Influence to gain §Y$COST$§W Invested influence towards becoming the next Curia Controller."
+ 
+ CURIA_CALL_ECUMENICAL_COUNCIL:0 "Spend $COST|Y$¤ to call the Ecumenical Council. $TREASURY|Y$¤ will enrich the Curia coffers, and you will gain §Y$INFLUENCE$§W Invested influence towards becoming the next Curia Controller."
+ CURIA_CALL_ECUMENICAL_COUNCIL_NOT_ENOUGH_MONEY:0 "§RYou need $COST|Y$¤ to call the Ecumenical Council, but you only have $AVAILABLE|Y$¤§!"
+ CURIA_CALL_ECUMENICAL_COUNCIL_TITLE:0 "Call Ecumenical Council"
+ CURIA_CALL_ECUMENICAL_COUNCIL_DESC:0 "Do you want to spend $COST|Y$¤ to call the Ecumenical Council? $TREASURY|Y$¤ will enrich the Curia coffers, and you will gain §Y$INFLUENCE$§W Invested influence towards becoming the next Curia Controller."
+ 
+ PAPAL_BULL_EXPLANATION:1 "Golden Bulls are bonuses that the Curia Controller can enact using the Curia Coffers that benefits all Tribunal Countries! They last until the current High Priest dies."
+ 
+ PAPAL_INVEST:0 "Spend §Y$MOD_COST$§W Papal Influence to gain §Y$COST$§W Invested influence towards becoming the next Curia Controller."
+ 
+ first_concession_harsh:0 "Heresy Trials"
+ second_concession_harsh:0 "Tribunal Catechism"
+ third_concession_harsh:0 "Soldiers of Tribunal"
+ fourth_concession_harsh:0 "Tribunal Mysticism"
+ first_concession_concilatory:0 "Secret Confessions"
+ second_concession_concilatory:0 "Non-Tribunal Scrolls"
+ third_concession_concilatory:0 "Rescinding of Rituals"
+ fourth_concession_concilatory:0 "Reclamation Spirit"

@@ -1,19 +1,16 @@
 internal_conflicts = {
 	potential = {
-		num_of_cities = 10
 		is_free_or_tributary_trigger = yes
-		uses_doom = no
-		NOT = {
-			has_country_flag = had_internal_conflicts
-		}
-		is_year = 1500
+		NOT = { has_country_flag = had_internal_conflicts }
 	}
-
 
 	can_start = {
 		has_any_disaster = no
 		unrest = 1
+		OR = {
 		NOT = { stability = 0 }
+		AND = { NOT = { adm = 3 } NOT = { dip = 3 } NOT = { mil = 3 } }
+		}
 	}
 	
 	can_stop = {
@@ -22,7 +19,6 @@ internal_conflicts = {
 			NOT = { unrest = 0 }
 		}
 	}
-	
 	
 	progress = {
 		modifier = {
@@ -43,10 +39,6 @@ internal_conflicts = {
 		}
 	}
 
-
-
-
-	
 	can_end = {
 		NOT = { num_of_rebel_controlled_provinces = 1 }
 		NOT = { num_of_rebel_armies = 1 }
@@ -54,14 +46,11 @@ internal_conflicts = {
 		stability = 1
 	}
 	
-
-	
-
 	modifier = {
 		stability_cost_modifier = 0.5
-		global_trade_goods_size_modifier = -0.33
-	}	
-	
+		global_trade_power = -0.25
+		trade_efficiency = -0.25
+	}		
 	
 	on_start = internal_conflicts.1
 	on_end = internal_conflicts.8
@@ -71,14 +60,9 @@ internal_conflicts = {
 		}
 		random_events = { 
 			1000 = 0
-			100 = internal_conflicts.2
-			100 = internal_conflicts.3
 			100 = internal_conflicts.4
 			100 = internal_conflicts.5
-			100 = internal_conflicts.6
 			100 = internal_conflicts.7
-		
 		}
 	}
 }
-

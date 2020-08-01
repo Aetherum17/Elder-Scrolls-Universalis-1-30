@@ -4,6 +4,9 @@ forbidden_rituals_aspect = {
 	    discipline = 0.05
 		cav_to_inf_ratio = 0.1
 	}
+	ai_will_do = {
+		factor = 1
+	}
 }
 
 forgotten_deities_aspect = {
@@ -11,6 +14,9 @@ forgotten_deities_aspect = {
 	modifier = {
 	    stability_cost_to_declare_war = -1
 		yearly_corruption = -0.07
+	}
+	ai_will_do = {
+		factor = 1
 	}
 }
 
@@ -20,6 +26,9 @@ ecstasy_of_suffering_aspect = {
 	    global_unrest = -1
 		prestige = 0.25
 	}
+	ai_will_do = {
+		factor = 1
+	}
 }
 
 summon_the_dead_aspect = {
@@ -28,6 +37,9 @@ summon_the_dead_aspect = {
 	    infantry_power = 0.1
 		possible_condottieri = 0.25
 	}
+	ai_will_do = {
+		factor = 1
+	}
 }
 
 curse_the_ghosts_aspect = {
@@ -35,5 +47,8 @@ curse_the_ghosts_aspect = {
 	modifier = {
 	    cavalry_power = 0.1
 		caravan_power = 0.10
+	}
+	ai_will_do = {
+		factor = 1
 	}
 }

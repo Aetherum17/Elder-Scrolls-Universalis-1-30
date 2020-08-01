@@ -17,6 +17,9 @@ country_event = {
 	
 	immediate = {
 		hidden_effect = {
+			random_neighbor_country = {
+				save_event_target_as = saved_neighbor
+			}
 			random_known_country = { #Worst fit
 				limit = {
 					num_of_ports = 1
@@ -99,6 +102,24 @@ country_event = {
 	picture = WOKOU_INCIDENT_eventPicture
 	
 	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					has_port = yes
+				}
+				save_event_target_as = pirate_coast_province
+			}
+			random_owned_province = { #Better
+				limit = {
+					has_port = yes
+					is_capital = no
+				}
+				save_event_target_as = pirate_coast_province
+			}
+		}
+	}
 	
 	option = {
 		name = "shinto_events.2.a" #We should seek funding from foreign investors.
@@ -199,11 +220,35 @@ country_event = {
 	
 	is_triggered_only = yes
 	
+	immediate = {
+		hidden_effect = {
+			random_owned_province = { #fallback
+				limit = {
+					has_port = yes
+					is_in_capital_area = yes
+				}
+				save_event_target_as = save_wokou_target
+			}
+			random_owned_province = {
+				limit = {
+					has_port = yes
+					is_in_capital_area = yes
+					is_capital = no
+				}
+				save_event_target_as = save_wokou_target
+			}
+		}
+	}
+	
 	option = {
 		name = "shinto_events.3.a" #What do we care if he lives of the wealth of foreigners?
 		custom_tooltip = shinto_events.open.tt
 		
 		event_target:save_wokou_target = {
+			add_province_modifier = {
+				name = wokou_pirate_stronghold_indifferent
+				duration = 3650
+			}
 		}
 		add_incident_variable_value = {
 			incident = incident_wokou
@@ -220,6 +265,10 @@ country_event = {
 			tradition = 50
 		}
 		event_target:save_wokou_target = {
+			add_province_modifier = {
+				name = wokou_pirate_stronghold_friendly
+				duration = 3650
+			}
 		}
 		add_incident_variable_value = {
 			incident = incident_wokou
@@ -233,6 +282,10 @@ country_event = {
 		custom_tooltip = shinto_events.much.isolation.tt
 		add_stability = -1
 		event_target:save_wokou_target = {
+			add_province_modifier = {
+				name = wokou_pirate_stronghold_hostile
+				duration = 3650
+			}
 		}
 		add_incident_variable_value = {
 			incident = incident_wokou
@@ -263,6 +316,9 @@ country_event = { #The Kaizokushu turn to Suigun.
 	
 	immediate = {
 		hidden_effect = {
+			random_neighbor_country = {
+				save_event_target_as = saved_neighbor
+			}
 			random_known_country = { #Worst fit
 				limit = {
 					num_of_ports = 1
@@ -1910,9 +1966,11 @@ country_event = {
 	trigger = {
 		is_incident_active = incident_firearms
 		has_country_flag = end_of_incident_firearms_chain
-		incident_variable_value = {
-			incident = incident_firearms
-			value = 3
+		NOT = {
+			incident_variable_value = {
+				incident = incident_firearms
+				value = 3
+			}
 		}
 	}
 	
@@ -2000,13 +2058,11 @@ country_event = {
 	trigger = {
 		is_incident_active = incident_firearms
 		has_country_flag = end_of_incident_firearms_chain
-		NOT = {
 			incident_variable_value = {
 				incident = incident_firearms
 				value = 1
-			}
-		}
-	}
+		    }
+	    }
 	
 	mean_time_to_happen = {
 		months = 12
@@ -2472,15 +2528,7 @@ country_event = {
 	desc = "shinto_events.46.d"
 	picture = SHOGUNATE_AUTHORITY_INCIDENT_eventPicture
 	
-	trigger = {
-		NOT = { has_country_flag = decided_on_christianity_flag }
-		has_country_flag = a_kirishitan_realm
-		religion = tsaesci_pantheon
-	}
-	
-	mean_time_to_happen = {
-		months = 120
-	}
+	is_triggered_only = yes
 	
 	immediate = {
 		hidden_effect = {
@@ -3038,15 +3086,7 @@ country_event = {
 	desc = "shinto_events.58.d"
 	picture = SHOGUNATE_AUTHORITY_INCIDENT_eventPicture
 	
-	trigger = {
-		NOT = { has_country_flag = decided_on_mahayana_flag }
-		has_country_flag = supporters_in_the_ikko_iki
-		religion = tsaesci_pantheon
-	}
-	
-	mean_time_to_happen = {
-		months = 120
-	}
+	is_triggered_only = yes
 	
 	immediate = {
 		hidden_effect = {
@@ -3094,5 +3134,38 @@ country_event = {
 			name = "shinto_converted_to_mahayana"
 			duration = 3650
 		}
+	}
+}
+
+#Convert to Confuciansim
+country_event = {
+	id = shinto_events.59
+	title = "shinto_events.59.t"
+	desc = "shinto_events.59.d"
+	picture = SHOGUNATE_AUTHORITY_INCIDENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = decided_on_confucian_flag
+		}
+	}
+	
+	option = {
+		name = "shinto_events.46.a" #No, we could never turn our back on tradition entirely!
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 10
+	}
+	
+	option = {
+		name = "shinto_events.46.b" #
+		ai_chance = {
+			factor = 20
+		}
+		change_religion = po_tun_pantheon
+		add_harmonized_religion = tsaesci_pantheon
 	}
 }
