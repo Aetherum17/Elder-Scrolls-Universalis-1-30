@@ -1,0 +1,90 @@
+country_decisions = {
+
+    form_janissary_forces_1 = {
+	    major = yes
+	    potential = {
+		    has_reform = ottoman_government
+			NOT = { has_country_modifier = xxx_provincial_system }
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+		}
+		allow = {
+			MIL = 5
+			mil_power = 250
+			years_of_income = 1.0
+		}
+		effect = {
+			add_country_modifier = {
+				name = "xxx_janissary"
+				duration = -1
+			}
+			add_mil_power = -250
+			add_years_of_income = -1.0
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	provincial_system_1 = {
+	    major = yes
+		potential = {
+		    has_reform = ottoman_government
+			NOT = { has_country_modifier = xxx_provincial_system }
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+		}
+		allow = {
+			ADM = 5
+			adm_power = 500
+		}
+		effect = {
+			add_country_modifier = {
+				name = "xxx_provincial_system"
+				duration = -1
+			}
+			add_adm_power = -500
+			set_country_flag = the_provincial_system
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	disband_the_janissaries_1 = {
+		major = yes
+		potential = {
+			has_disaster = janissary_decadence
+		}
+		allow = {
+			has_disaster = janissary_decadence
+			if = {
+				limit = { has_dlc = "Cradle of Civilization" }
+				OR = {
+					NOT = { janissary_percentage = 0.05 }
+					NOT = { num_of_janissaries = 3 }
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					has_country_modifier = xxx_janissary
+				}
+				remove_country_modifier = xxx_janissary
+			}
+			end_disaster = janissary_decadence
+			country_event = { id = janissary_decadence.100 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

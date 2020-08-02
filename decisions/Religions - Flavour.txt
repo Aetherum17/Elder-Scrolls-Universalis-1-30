@@ -1,0 +1,338 @@
+country_decisions = {
+
+	### Politheitic - 3
+	
+	church_tax_1 = {
+		potential = {
+			NOT = { has_country_modifier = church_taxes_1 }
+			religion_group = polytheistic_group
+		}
+		allow = {
+			advisor = theologian
+			adm = 5
+		}
+		effect = {	
+			add_country_modifier = {
+				name = "church_taxes_1"
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	animism_ritual_education_1 = {
+		potential = {
+			NOT = { has_country_modifier = ritual_education_modifier_1 }
+			religion_group = polytheistic_group
+		}
+		allow = {
+			stability = 1
+			DIP = 5
+			any_owned_province = {
+				NOT = { religion_group = ROOT }
+			}
+		}
+		effect = {
+		    add_stability = -1
+			add_country_modifier = {
+				name = "ritual_education_modifier_1"
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	divination_1 = {
+		potential = {
+			NOT = { has_country_modifier = godly_inspiration_1 }
+			religion_group = polytheistic_group
+		}
+		allow = {
+			is_at_war = no
+			prestige = 35
+			MIL = 5
+		}
+		effect = {	
+		    add_prestige = -35
+			add_country_modifier = {
+				name = "godly_inspiration_1"
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	### Occult - 3
+	
+	institute_the_societas_jesu_1 = {
+		potential = {
+			religion_group = occult_group
+			NOT = { has_country_modifier = the_societas_jesu_1 }
+		}
+		allow = {
+			manpower = 50
+			ADM = 5
+		}
+		effect = {	
+		    add_manpower = -50
+			add_country_modifier = {
+				name = "the_societas_jesu_1"
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}	
+	}
+	
+	de_heretico_comburendo_act_1 = {
+		potential = {
+			NOT = { has_country_modifier = de_heretico_comburendo_1 }
+			religion_group = occult_group
+		}
+		allow = {
+			num_of_owned_provinces_with = {
+				value = 10
+				NOT = { religion = ROOT }
+			}
+			DIP = 5
+		}
+		effect = {	 
+		    add_years_of_income = -0.5
+			add_country_modifier = {
+				name = "de_heretico_comburendo_1"
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	inti_obligatory_religious_festivals_1 = {
+		potential = {
+			NOT = { has_country_modifier = great_inti_festivals_1 }
+			religion_group = occult_group
+		}
+		allow = {
+			stability = 2
+			MIL = 5
+			any_owned_province = {
+				NOT = { religion_group = root }
+			}
+		}
+		effect = {
+			add_stability = -2
+			add_country_modifier = {
+				name = "great_inti_festivals_1"
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	### Environment - 3
+	
+	superintendents_1 = {
+		potential = {
+			NOT = { has_country_modifier = superintendent_office_1 }
+			religion_group = elemental_group
+		}
+		allow = {
+			num_of_owned_provinces_with = {
+				value = 25
+				NOT = { culture = ROOT }
+			}
+			ADM = 5
+		}
+		effect = {	
+			add_country_modifier = {
+				name = "superintendent_office_1"
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	islamic_centre_of_scholarly_1 = {
+		potential = {
+			NOT = { has_country_modifier = islamic_scholarly_centre_1 }
+			religion_group = elemental_group
+		}
+		allow = {
+			DIP = 5
+			years_of_income = 1.0
+		}
+		effect = {	
+		    add_years_of_income = -1.0
+			add_country_modifier = {
+				name = "islamic_scholarly_centre_1"
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1		
+		}
+	}
+	
+	totemism_purification_movement_1 = {
+		potential = {
+			NOT = { has_country_modifier = purification_movement_modifier_1 }
+			religion_group = elemental_group
+		}
+		allow = {
+			MIL = 5
+			stability = 3
+		}
+		effect = {
+			add_stability = -3
+			add_country_modifier = {
+				name = "purification_movement_modifier_1"
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	### Daedric - 3
+	
+	conventicle_act_1 = {
+		potential = {
+			NOT = { has_country_modifier = the_conventicle_act_1 }
+			religion_group = daedric_group_1
+		}
+		allow = {
+			ADM = 5
+			num_accepted_cultures = 2
+		}
+		effect = {	
+			add_country_modifier = {
+				name = "the_conventicle_act_1"
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	ibadat_khana_1 = {
+		potential = {
+			NOT = { has_country_modifier = house_of_worship_1 }
+			religion_group = daedric_group_1
+		}
+		allow = {
+			full_idea_group = innovativeness_ideas
+			DIP = 5
+		}
+		effect = {
+			add_country_modifier = {
+				name = "house_of_worship_1"
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	religious_sacrifice_1 = {
+		potential = {
+			NOT = { has_country_modifier = religious_sacrifices_1 }
+			religion_group = daedric_group_1
+		}
+		allow = {
+			MIL = 5
+			num_of_rebel_armies = 3
+		}
+		effect = {	
+			add_country_modifier = {
+				name = "religious_sacrifices_1"
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	### Harmony - 2
+	
+	test_act_1 = {
+		potential = {
+			NOT = { has_country_modifier = the_test_act_1 }
+			religion_group = harmony_group
+		}
+		allow = {
+			ADM = 5
+			num_of_harmonized = 1
+		}
+		effect = {	
+			add_country_modifier = {
+				name = "the_test_act_1"
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	harmony_act_1 = {
+		potential = {
+			NOT = { has_country_modifier = the_harmony_act_1 }
+			religion_group = harmony_group
+		}
+		allow = {
+			DIP = 5
+			num_of_owned_provinces_with = {
+				value = 100
+				NOT = { religion_group = ROOT }
+			}
+		}
+		effect = {	
+			add_country_modifier = {
+				name = "the_harmony_act_1"
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	vision_quest_1 = {
+		potential = {
+			NOT = { has_country_modifier = rite_of_passage_1 }
+			religion_group = harmony_group
+		}
+		allow = {
+			MIL = 5
+			any_neighbor_country = {
+			    religion_group = harmony_group
+			}
+		}
+		effect = {	
+			add_country_modifier = {
+				name = "rite_of_passage_1"
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+}

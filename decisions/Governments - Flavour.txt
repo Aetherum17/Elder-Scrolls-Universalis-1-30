@@ -1,0 +1,192 @@
+country_decisions = {
+
+    ### Monarchy - 2
+	
+	enforce_heritage_1 = {
+		potential = {
+			NOT = { has_country_modifier = enforcing_heritage_1 }
+			government = monarchy
+		}
+		allow = {
+			any_neighbor_country = {
+				NOT = { religion_group = ROOT }
+			}
+			ADM = 5
+		}
+		effect = {
+			add_country_modifier = {
+				name = "enforcing_heritage_1"
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	zoroastrian_rites_of_admission_1 = {
+		potential = {
+			NOT = { has_country_modifier = rites_of_admission_modifier_1 }
+			government = monarchy
+		}
+		allow = {
+			stability = 3
+			DIP = 3
+			adm_power = 250
+		}
+		effect = {
+		    add_stability = -3
+			add_adm_power = -250
+			add_country_modifier = {
+				name = "rites_of_admission_modifier_1"
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	### Republic - 2
+	
+	restrict_government_offices_1 = {
+		potential = {
+			NOT = { has_country_modifier = restricted_offices_1 }
+			government = republic
+		}
+		allow = {
+			DIP = 3
+			republican_tradition = 90
+			years_of_income = 0.5
+		}
+		effect = {
+		    add_republican_tradition = -35
+			add_years_of_income = -0.5
+			add_country_modifier = {
+				name = "restricted_offices_1"
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	tengri_yellow_shamanism_1 = {
+		potential = {
+			NOT = { has_country_modifier = yellow_shamanism_modifier_1 }
+			government = republic
+		}
+		allow = {
+			ADM = 5
+			stability = 1
+		}
+		effect = {	
+		    add_stability = -1
+			add_country_modifier = {
+				name = "yellow_shamanism_modifier_1"
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	### theocracy - 2
+	
+	save_the_burning_world_1 = {
+		potential = {
+			NOT = { has_country_modifier = saving_the_burning_world_1 }
+			government = theocracy
+		}
+		allow = {
+			ADM = 5
+			prestige = 35
+		}
+		effect = {	
+		    add_prestige = -35
+			add_country_modifier = {
+				name = "saving_the_burning_world_1"
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	nahuatl_conversion_ceremonies_1 = {
+		potential = {
+			NOT = { has_country_modifier = nahuatl_sacrificial_stones_1 }
+			government = theocracy
+		}
+		allow = {
+		    MIL = 3
+			mil_power = 500
+			any_owned_province = {
+				NOT = { religion_group = owner }
+			}
+		}
+		effect = {
+			add_mil_power = -500
+			add_country_modifier = {
+				name = "nahuatl_sacrificial_stones_1"
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	### tribal - 2
+	
+	spreading_of_norse_rituals_1 = {
+		potential = {
+			NOT = { has_country_modifier = spreading_norse_rituals_1 }
+			government = tribal
+		}
+		allow = {
+			DIP = 3
+			stability = 2
+		}
+		effect = {	
+		    add_stability = -2
+			add_country_modifier = {
+				name = "spreading_norse_rituals_1"
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	shamanism_wondering_shamans_1 = {
+		potential = {
+			NOT = { has_country_modifier = wandering_shamans_modifier_1 }
+			government = tribal
+		}
+		allow = {
+		    ADM = 5
+			adm_power = 250
+			prestige = 15
+			any_owned_province = {
+				NOT = { religion_group = owner }
+			}
+		}
+		effect = {
+			add_adm_power = -250
+			add_prestige = -15
+			add_country_modifier = {
+				name = "wandering_shamans_modifier_1"
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+}
