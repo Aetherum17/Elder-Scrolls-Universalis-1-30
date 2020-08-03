@@ -18,7 +18,6 @@ country_event = {
 		has_dlc = "Common Sense"
 		NOT = { num_of_aspects = 3 }
 		NOT = { church_power = 200 }
-		has_church_aspect = allow_usury_aspect_1
 		any_owned_province = {
 			NOT = { has_province_modifier = prot_economic_downturn }
 		}
@@ -199,8 +198,6 @@ country_event = {
 		has_dlc = "Common Sense"
 		NOT = { num_of_aspects = 3 }
 		NOT = { church_power = 200 }
-		NOT = { had_country_flag = { flag = converted_to_protestantism days = 7300 } }
-		NOT = { has_country_flag = troublesome_theologian_1 }
 		advisor = theologian
 	}
 	
@@ -417,7 +414,6 @@ country_event = {
 		has_dlc = "Common Sense"
 		NOT = { num_of_aspects = 3 }
 		NOT = { church_power = 200 }
-		has_church_aspect = parish_registers_aspect_1
 		any_owned_province = {
 			NOT = { months_since_defection = 60 }
 			NOT = { has_province_flag = parish_register_new }

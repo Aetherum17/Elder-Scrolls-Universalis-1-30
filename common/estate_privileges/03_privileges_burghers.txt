@@ -121,18 +121,6 @@ estate_burghers_new_world_charter = {
 	ai_will_do = {
 		factor = 1
 		modifier = {
-			factor = 10
-			OR = {
-				tag = POR
-				tag = CAS
-				tag = SPA
-				tag = ENG
-				tag = GBR
-				tag = SCO
-				tag = FRA
-			}
-		}
-		modifier = {
 			factor = 0
 			is_absolutism_active = yes
 		}

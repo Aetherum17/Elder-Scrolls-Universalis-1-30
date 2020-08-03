@@ -121,6 +121,7 @@ estate_dhimmi_develop_x = {
 			}
 		}
 		random_owned_province = {
+			limit = {
 				NOT = { religion_group = root }
 				is_state_core = root
 			}

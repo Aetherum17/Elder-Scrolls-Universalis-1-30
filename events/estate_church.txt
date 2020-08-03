@@ -17,7 +17,6 @@ country_event = {
 	
 	trigger = {
 		has_estate = estate_church
-		religion_group = christian
 		estate_influence = {
 			estate = estate_church
 			influence = 25
@@ -137,7 +136,6 @@ country_event = {
 	
 	trigger = {
 		has_estate = estate_church
-		religion = hinduism
 		estate_influence = {
 			estate = estate_church
 			influence = 25
@@ -254,7 +252,6 @@ country_event = {
 	
 	trigger = {
 		has_estate = estate_church
-		religion_group = pagan
 		estate_influence = {
 			estate = estate_church
 			influence = 25
@@ -373,7 +370,6 @@ country_event = {
 	
 	trigger = {
 		has_estate = estate_church
-		religion_group = muslim
 		estate_influence = {
 			estate = estate_church
 			influence = 25
@@ -491,13 +487,6 @@ country_event = {
 	
 	trigger = {
 		has_estate = estate_church
-		NOT = { religion_group = muslim }
-		NOT = { religion_group = christian }
-		NOT = { religion_group = pagan }
-		NOT = { religion = hinduism }
-		NOT = { religion = buddhism }
-		NOT = { religion = mahayana }
-		NOT = { religion = vajrayana }
 		estate_influence = {
 			estate = estate_church
 			influence = 25
@@ -614,11 +603,6 @@ country_event = {
 	
 	trigger = {
 		has_estate = estate_church
-		OR = {
-			religion = buddhism
-			religion = mahayana
-			religion = vajrayana
-		}
 		estate_influence = {
 			estate = estate_church
 			influence = 25
@@ -1520,7 +1504,6 @@ country_event = {
 	trigger = {
 		has_estate = estate_church
 		has_estate = estate_nobles
-		NOT = { religion = confucianism }
 		any_owned_province = {
 			has_owner_religion = no
 			is_city = yes

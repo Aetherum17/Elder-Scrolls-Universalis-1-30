@@ -287,8 +287,6 @@ on_startup = {
 	
 	every_country = { limit = { ai = no NOT = { has_country_flag = es_1_start_flag } } country_event = { id = es_start.1 days = 0 tooltip = es_collapse.2.a.tt } set_country_flag = es_1_start_flag }
 	
-	if = { limit = { NOT = { has_dlc = "Dharma" } is_emperor_of_china = yes } set_legacy_government = celestial_empire_legacy }
-	
 	if = { limit = { culture_group = orsimer_cg }
 		add_country_modifier = { name = "orcish_fury" duration = 3650 }	
 		add_country_modifier = { name = "orcish_fury_timer" duration = 9125 hidden = yes }
@@ -466,9 +464,6 @@ on_secondary_religion_change = {
 	remove_country_modifier = tengri_ibadi_scholars
 	remove_country_modifier = tengri_clergy_conflicts
 	remove_country_modifier = tengri_shamans_spurned
-	clr_country_flag = khojas_established
-	clr_country_flag = tengri_christian_devout_court
-	clr_ruler_flag = tengri_muslim_ruler_questioned
 	if = {
 		limit = {
 			check_variable = { which = khojas_retained value = 1 }
@@ -515,8 +510,6 @@ on_peace_recipient = {
 # country
 # root = winning country, from = loser country
 on_war_won = {
-    FROM = { country_event = { id = flavor_cri.6 } }
-	ROOT = { country_event = { id = tributary_events.32 } }
     if = {
 		limit = { 
 			ROOT = { is_rival = FROM }  
@@ -574,7 +567,6 @@ on_war_won = {
 # root = loser country, from = winner country
 on_war_lost = {
     ROOT = { country_event = { id = flavor_cri.6 } }
-	ROOT = { country_event = { id = tributary_events.32 } }
 	if = {
         limit = {
             government = republic
@@ -841,10 +833,7 @@ on_new_monarch = {
 	}
 	ambrosian_republic_effect = yes
 	succession_culture_religion_effect = yes
-	sheik_ul_islam_effect = yes
-	hab_remove_mission_mods_if_not_emperor_effect = yes
-	thu_remain_von_wettin_effect = yes
-	ladislaus_postumus_union_effect = yes								  
+	sheik_ul_islam_effect = yes						  
 	events = {
 		tribal_succession.1		# Harsh anti-tribals.
 		9492 					# Remove some event modifiers
@@ -881,9 +870,6 @@ on_monarch_death = {
 		remove_country_modifier = sought_after_bachelor
 	}  
 	burgundian_inheritance_start_effect = yes
-	ladislaus_postumus_king_died_effect = yes	   
-	events = {
-	}
 }
 
 # country
@@ -908,10 +894,6 @@ on_death_election = {
 	if = {
 		limit = { has_reform = presidential_despot_reform }
 		remove_government_reform = presidential_despot_reform
-		if = {
-			limit = { NOT = { has_dlc = "Dharma" } }
-			set_legacy_government = oligarchic_republic
-		}
 	}
 	if = {
 		limit = {
@@ -972,45 +954,13 @@ on_heir_death = {
 		clr_country_flag = heir_adm_education
 	}
 	if = {
-		limit = { has_ruler_flag = well_advised_tutored_heir }
-		clr_ruler_flag = well_advised_tutored_heir
-	}
-	if = {
-		limit = { has_ruler_flag = heir_went_on_grand_tour }
-		clr_ruler_flag = heir_went_on_grand_tour
-	}
-	if = {
 		limit = { has_country_flag = albrecht_achilles_flag }
 		clr_country_flag = albrecht_achilles_flag #Death of original Albrecht Achilles
-	}
-	if = {
-		limit = { has_ruler_flag = sancaga_cikma }
-		clr_ruler_flag = sancaga_cikma
-		every_owned_province = {
-			limit = {
-				has_province_modifier = heir_in_training
-			}
-			remove_province_modifier = heir_in_training
-		}
-	}
-	if = {
-		limit = { has_ruler_flag = returned_from_sancaga_sikma_province }
-		clr_ruler_flag = returned_from_sancaga_sikma_province
-	}
-	ladislaus_postumus_heir_died_effect = yes									  
+	}				  
 }
 
 # country
 on_queen_death = {
-
-	if = {
-		limit = { has_consort_flag = 10_years_anniversary }
-		set_ruler_flag = had_10_years_anniversary
-	}
-	if = {
-		limit = { has_consort_flag = 20_years_anniversary }
-		set_ruler_flag = had_20_years_anniversary
-	}
 	if = {
 		limit = { has_consort_flag = consort_has_affection_of_ruler }
 		set_ruler_flag = consort_had_affection_of_ruler
@@ -1029,29 +979,6 @@ on_queen_death = {
 			limit = { has_province_modifier = domain_of_spouses_family }
 			remove_province_modifier = domain_of_spouses_family
 		}
-	}
-	if = {
-		limit = { has_ruler_flag = accepted_help_from_spouses_family }
-		clr_ruler_flag = accepted_help_from_spouses_family
-	}
-	if = {
-		limit = { has_ruler_flag = helped_spouses_family }
-		clr_ruler_flag = helped_spouses_family
-	}
-	if = {
-		limit = { has_ruler_flag = refused_to_help_spouses_family }
-		clr_ruler_flag = refused_to_help_spouses_family
-	}
-	if = {
-		limit = { has_ruler_flag = has_lowborn_consort }
-		random_owned_province = {
-			limit = { has_province_modifier = home_of_consort }
-			remove_province_modifier = home_of_consort
-		}
-	}
-	if = {
-		limit = { has_ruler_flag = has_lowborn_consort }
-		clr_ruler_flag = has_lowborn_consort
 	}
 	if = {
 		limit = { has_country_modifier = consort_adm_advice }
@@ -1081,7 +1008,6 @@ on_queen_death = {
 		limit = { has_ruler_modifier = bav_building_wife_church }
 		remove_country_modifier = bav_building_wife_church
 	}
-	clr_ruler_flag = marriage_length
 }
 
 # country
@@ -1257,9 +1183,7 @@ on_hre_religion_white_peace = {
 }
 
 # When a non-native changes government type
-on_government_change = {
-	clr_country_flag = pirate_mutineer_council
-	clr_country_flag = caretaker_revolutionary_government												  
+on_government_change = {										  
 	if = {
 		limit = {
 			NOT = { government = monarchy }
@@ -1401,15 +1325,7 @@ on_mandate_of_heaven_gained = {
 # When a nation loses the Mandate of Heaven
 # FROM = New Emperor, ROOT = Old Emperor
 on_mandate_of_heaven_lost = {
-	if = {
-		limit = {
-			has_dlc = "Dharma"
-		}
-		remove_government_reform = celestial_empire
-	}
-	else = {
-		set_legacy_government = despotic_monarchy
-	}
+	remove_government_reform = celestial_empire
 	set_government_rank = 2
 	add_country_modifier = {
 		name = lost_mandate_of_heaven
@@ -1462,10 +1378,6 @@ on_embrace_revolution = {
 	}
 	else = {
 		add_government_reform = junior_revolutionary_republic_reform
-	}
-	if = {
-		limit = { has_reform = parliamentary_reform }
-		remove_government_reform = parliamentary_reform
 	}
 	kill_ruler = yes
 	set_country_flag = revolutionary_republic_flag
@@ -1962,6 +1874,20 @@ on_thri_yearly_pulse = {
 		75 = meritocracy_events.2
 		75 = meritocracy_events.3
 		75 = meritocracy_events.4
+		
+		#Center of Revolution - post-spawn (higher weighting than others as they are only relevant briefly)
+		200 = center_of_revolution.1
+		150 = center_of_revolution.2
+		200 = center_of_revolution.3
+		200 = center_of_revolution.8
+		250 = center_of_revolution.9
+		250 = center_of_revolution.10
+		200 = center_of_revolution.12
+		#Center of Revolution - pre-spawn
+		100 = center_of_revolution.2000
+		100 = center_of_revolution.2002
+		100 = center_of_revolution.2003
+		100 = center_of_revolution.2010
 
 		5000 = 0
 	}
@@ -2511,7 +2437,6 @@ on_select_heir_from_harem = {
 }
 
 on_fetishist_cult_change = {
-	country_event = { id = fetishist_flavor.302 days = 10 } #removing tomb if incompatible cult is picked
 	country_event = { id = fetishist_flavor.304 days = 10 } #rebuilding tomb if lost
 }
 
@@ -2561,18 +2486,6 @@ on_province_owner_change = {
 			which = provinces_gained
 			value = 1
 		}
-	if = {
-		limit = {
-			OR = {
-				has_province_modifier = wine_bonus_prod
-				has_province_modifier = grain_bonus_prod
-			}
-			FROM = { has_reform = monastic_breweries_reform }
-			NOT = { owner = { has_reform = monastic_breweries_reform } }
-		}
-		remove_province_modifier = wine_bonus_prod
-		remove_province_modifier = grain_bonus_prod
-	}   
 	}
 	if = {
 		limit = {
@@ -2932,18 +2845,6 @@ on_country_released = {
 # ROOT = province, FROM = country
 on_trade_good_changed = {
 	on_trade_good_changed_estate_privileges_effect = yes
-	if = {
-		limit = {
-			OR = {
-				has_province_modifier = wine_bonus_prod
-				has_province_modifier = grain_bonus_prod
-			}
-			FROM = { has_reform = monastic_breweries_reform }
-			NOT = { owner = { has_reform = monastic_breweries_reform } }
-		}
-		remove_province_modifier = wine_bonus_prod
-		remove_province_modifier = grain_bonus_prod
-	}
 	hidden_effect = {
 		if = {
 			limit = {
@@ -3069,23 +2970,5 @@ on_conquest = {
 }
 
 on_country_creation = {
-	if = {
-		limit = {
-			tag = RED
-			OR = {
-				NOT = {
-					religion = chimer_pantheon
-				}
-				NOT = {
-					has_reform = papacy_reform
-				}
-				NOT = {
-					government = theocracy
-				}
-			}
-		}
-		change_religion = chimer_pantheon
-		change_government = theocracy
-		add_government_reform = papacy_reform
-	}
+
 }

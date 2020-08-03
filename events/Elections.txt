@@ -5,16 +5,7 @@ country_event = {
 	id = 700
 	title = "EVTNAME700"
 	picture = ELECTION_REPUBLICAN_eventPicture
-	
-	desc = {
-		trigger = { NOT = { has_ruler_flag = leader_has_been_pushed_out } }
-		desc = EVTDESC700
-	}
-	
-	desc = {
-		trigger = { has_ruler_flag = leader_has_been_pushed_out }
-		desc = elections.700.d
-	}
+	desc = EVTDESC700
 	
 	is_triggered_only = yes
 	
@@ -26,10 +17,6 @@ country_event = {
 
 	option = {
 		name = "EVTOPTA700"	# Current ruler stays
-		trigger = {
-			has_regency = no
-			NOT = { has_ruler_flag = leader_has_been_pushed_out }
-		}
 		ai_chance = { 
 			factor = 60
 			modifier = {
@@ -60,15 +47,6 @@ country_event = {
 			random_list = { 33 = { change_adm = 1 } 33 = { change_dip = 1 } 33 = { change_mil = 1 } }
 		}
 		if = {
-			limit = { 
-				is_tribal = yes
-				government = republic
-				NOT = { has_dlc = "Dharma" }
-				NOT = { republican_tradition = 20 }	
-			}	
-			set_legacy_government = tribal_despotism_legacy
-		}
-		else_if = {
 			limit = {
 				is_tribal = no 
 				government = republic
@@ -93,7 +71,6 @@ country_event = {
 				NOT = { has_dlc = "Res Publica" }
 			}
 			change_government = monarchy
-			set_legacy_government = despotic_monarchy
 		}
 		add_scaled_republican_tradition = -7.5
 		random_list = {

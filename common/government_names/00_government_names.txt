@@ -1310,8 +1310,8 @@ gov_papal_government = {
 	
 	trigger = {
 		OR = {
-			has_reform = papal_government
 			has_reform = papacy_reform
+			has_reform = tribunal_reform
 		}
 	}
 }
@@ -1640,10 +1640,7 @@ gov_free_city = {
 	}
 
 	trigger = {
-	    OR = {
-		has_reform = free_city
-		has_reform = imperial_city_legacy
-		}
+	    has_reform = free_city
 	}
 }
 
@@ -1688,10 +1685,7 @@ gov_colonial_government = {
 	}
 	
 	trigger = {
-		OR = {
-			has_reform = colonial_government
-			has_reform = colonial_government_legacy
-		}
+		has_reform = colonial_government
 	}
 }
 
@@ -1736,10 +1730,7 @@ noble_republic = {
 	}
 	
 	trigger = {
-		OR = {
-			has_reform = noble_elite_reform
-			has_reform = noble_republic
-		}
+		has_reform = noble_elite_reform
 	}
 }
 

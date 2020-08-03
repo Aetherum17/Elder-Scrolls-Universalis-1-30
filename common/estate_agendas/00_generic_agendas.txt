@@ -6204,13 +6204,6 @@ estate_nobles_build_manufactory_in_y = {
 		factor = 1
 		modifier = {
 			factor = 0.5
-			OR = {
-				current_age = age_of_discovery
-				current_age = age_of_reformation
-			}
-		}
-		modifier = {
-			factor = 0.5
 			NOT = { monthly_income = 40 }
 		}
 		modifier = {
@@ -6385,13 +6378,6 @@ estate_rajput_build_manufactory_in_y = {
 		factor = 1
 		modifier = {
 			factor = 0.5
-			OR = {
-				current_age = age_of_discovery
-				current_age = age_of_reformation
-			}
-		}
-		modifier = {
-			factor = 0.5
 			NOT = { monthly_income = 40 }
 		}
 		modifier = {
@@ -6564,13 +6550,6 @@ estate_maratha_build_manufactory_in_y = {
 	}
 	selection_weight = {
 		factor = 1
-		modifier = {
-			factor = 0.5
-			OR = {
-				current_age = age_of_discovery
-				current_age = age_of_reformation
-			}
-		}
 		modifier = {
 			factor = 0.5
 			NOT = { monthly_income = 40 }
@@ -6748,13 +6727,6 @@ estate_burghers_build_manufactory_in_y = {
 		factor = 2
 		modifier = {
 			factor = 0.5
-			OR = {
-				current_age = age_of_discovery
-				current_age = age_of_reformation
-			}
-		}
-		modifier = {
-			factor = 0.5
 			NOT = { monthly_income = 40 }
 		}
 		modifier = {
@@ -6929,13 +6901,6 @@ estate_vaisyas_build_manufactory_in_y = {
 		factor = 2
 		modifier = {
 			factor = 0.5
-			OR = {
-				current_age = age_of_discovery
-				current_age = age_of_reformation
-			}
-		}
-		modifier = {
-			factor = 0.5
 			NOT = { monthly_income = 40 }
 		}
 		modifier = {
@@ -7108,13 +7073,6 @@ estate_jains_build_manufactory_in_y = {
 	}
 	selection_weight = {
 		factor = 2
-		modifier = {
-			factor = 0.5
-			OR = {
-				current_age = age_of_discovery
-				current_age = age_of_reformation
-			}
-		}
 		modifier = {
 			factor = 0.5
 			NOT = { monthly_income = 40 }
@@ -7295,13 +7253,6 @@ estate_church_build_manufactory_in_y = {
 		}
 		modifier = {
 			factor = 0.5
-			OR = {
-				current_age = age_of_discovery
-				current_age = age_of_reformation
-			}
-		}
-		modifier = {
-			factor = 0.5
 			NOT = { monthly_income = 40 }
 		}
 		modifier = {
@@ -7477,13 +7428,6 @@ estate_brahmins_build_manufactory_in_y = {
 		modifier = {
 			factor = 0.75
 			always = yes
-		}
-		modifier = {
-			factor = 0.5
-			OR = {
-				current_age = age_of_discovery
-				current_age = age_of_reformation
-			}
 		}
 		modifier = {
 			factor = 0.5
@@ -9926,7 +9870,6 @@ estate_cossacks_develop_x = {
 		random_owned_province = {
 			limit = {
 				is_state_core = root
-				culture_group = east_slavic
 			}
 			save_event_target_as = agenda_province
 		}
@@ -9941,7 +9884,6 @@ estate_cossacks_develop_x = {
 			limit = {
 				is_state_core = root
 				has_terrain = steppe
-				culture_group = east_slavic
 			}
 			save_event_target_as = agenda_province
 		}

@@ -155,7 +155,6 @@ country_event = {
 		kill_ruler = yes
 		if = { limit = { NOT = { government = republic } } change_government = republic }
 		add_government_reform = noble_elite_reform
-        set_legacy_government = noble_republic
 		
 		event_target:820_owner = { add_casus_belli = { target = ROOT type = cb_restore_personal_union months = 120 } }
 		

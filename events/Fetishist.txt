@@ -272,11 +272,7 @@ country_event = {
 	id = fetishist_flavor.312
 	title = fetishist_flavor.312.t
 	picture = PLAGUE_eventPicture
-
-	desc = {
-		trigger = { has_adopted_cult = waaq_cult }
-		desc = fetishist_flavor.312.d.a
-	}
+    desc = fetishist_flavor.312.d.a
 
 	trigger = {
 		#has_dlc = "Rights of Man"
@@ -502,7 +498,6 @@ country_event = {
 		add_meritocracy_effect = yes
 		define_advisor = {
 			skill = 2
-			religion = hinduism
 			type = philosopher
 			discount = yes
 		}

@@ -432,7 +432,6 @@ become_rev_empire_reform = {
 		set_country_flag = populists_in_government
 		change_government = monarchy
 		add_government_reform = revolutionary_empire_reform
-		if = { limit = { has_country_flag = had_states_general_mechanic } country_event = { id = dutch_republic.33 } clr_country_flag = had_states_general_mechanic }
 	}
 	
 	ai = {
@@ -1145,8 +1144,6 @@ dutch_republic = {
 	}
 	
 	duration = 7
-
-	removed_effect = { if = { limit = { government = monarchy } country_event = { id = dutch_republic.33 } } }
 
 	custom_attributes = {
 		enables_plutocratic_idea_group = yes

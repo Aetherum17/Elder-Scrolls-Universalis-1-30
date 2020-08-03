@@ -211,7 +211,6 @@ country_event = {
 	trigger = {
 		has_estate = estate_rajput
 		any_owned_province = {
-			religion = hinduism
 			is_state_core = ROOT
 			NOT = {
 				development = 10
@@ -237,7 +236,6 @@ country_event = {
 		hidden_effect = {
 			random_owned_province = {
 				limit = {
-					religion = hinduism
 					is_state_core = ROOT
 					NOT = {
 						development = 10
@@ -362,7 +360,7 @@ country_event = {
 			duration = 5475
 		}
 		every_owned_province = {
-			limit = { religion = hinduism }
+			limit = { religion = root }
 			add_local_autonomy = 33
 		}
 	}
@@ -397,9 +395,6 @@ country_event = {
 	
 	trigger = {
 		has_estate = estate_rajput
-		NOT = {
-			primary_culture = rajput
-		}
 		NOT = {
 			has_estate_influence_modifier = {
 				estate = estate_rajput
@@ -532,7 +527,6 @@ country_event = {
 			}
 		}
 		any_owned_province = {
-			religion = hinduism
 			is_capital = no
 			is_city = yes
 		}
@@ -550,7 +544,6 @@ country_event = {
 						}
 					}
 					any_owned_province = {
-						religion = hinduism
 						is_capital = no
 						is_city = yes
 						NOT = { has_province_flag = rajput_estate_revolt }
@@ -561,7 +554,6 @@ country_event = {
 				}
 				random_owned_province = {
 					limit = {
-						religion = hinduism
 						is_capital = no
 						is_city = yes
 						NOT = { has_province_flag = rajput_estate_revolt }
@@ -673,7 +665,6 @@ country_event = {
 	trigger = {
 		has_estate = estate_rajput
 		has_estate = estate_church
-		religion_group = muslim
 		NOT = {
 			has_estate_influence_modifier = {
 				estate = estate_church
@@ -840,7 +831,6 @@ country_event = {
 			}
 			any_owned_province = {
 				is_territory = no
-				religion = hinduism
 				is_city = yes
 			}
 		}
@@ -867,7 +857,6 @@ country_event = {
 				random_owned_province = {
 					limit = {
 						is_territory = no
-						religion = hinduism
 						is_city = yes
 					}
 					save_event_target_as = rajput_connection_province

@@ -80,7 +80,6 @@ country_event = {
 			if = {
 				limit = { is_tribal = yes }
 				change_government = monarchy
-				set_legacy_government = despotic_monarchy
 			}
 			if = {
 				limit = {
@@ -95,7 +94,6 @@ country_event = {
 					NOT = { has_dlc = "Res Publica" }
 				}
 				change_government = monarchy
-				set_legacy_government = despotic_monarchy
 			}
 		}
 	}
@@ -106,7 +104,6 @@ country_event = {
 			if = {
 				limit = { is_tribal = yes }
 				change_government = monarchy
-				set_legacy_government = despotic_monarchy
 			}
 			if = {
 				limit = {
@@ -121,7 +118,6 @@ country_event = {
 					NOT = { has_dlc = "Res Publica" }
 				}
 				change_government = monarchy
-				set_legacy_government = despotic_monarchy
 			}
 		}
 	}

@@ -1020,7 +1020,6 @@ country_event = {
 		is_year = 939
 		NOT = { is_year = 990 }
 		owns = 1117
-		government = republic
     }
 
 	mean_time_to_happen = {
@@ -1034,11 +1033,8 @@ country_event = {
 	option = {
 		name = "es_21_scenario.10.a"
 		ai_chance = { factor = 33 }
-		change_government = monarchy
-		if = {
-		limit = { has_reform = pirate_republic_reform }
-		add_government_reform = pirate_kingdom
-		}
+		if = { limit = { NOT = { government = republic } change_government = republic } }
+		add_government_reform = pirate_king_reform
 		define_ruler = {
         name = "Bramman"
         dynasty = "Red"

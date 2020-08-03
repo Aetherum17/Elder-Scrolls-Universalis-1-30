@@ -57,13 +57,11 @@ country_event = {
 		random_country = {
 			limit = {
 				religion = tribunal_pantheon
-					NOT = { war_with = ROOT }
-					NOT = { is_rival = ROOT }
-					NOT = { has_country_flag = wont_bank_for_pope }
-				}
-				save_event_target_as = REDal_banker_country
-				}
+				NOT = { war_with = ROOT }
+				NOT = { is_rival = ROOT }
+				NOT = { has_country_flag = wont_bank_for_pope }
 			}
+			save_event_target_as = REDal_banker_country
 		}
 	}
 	

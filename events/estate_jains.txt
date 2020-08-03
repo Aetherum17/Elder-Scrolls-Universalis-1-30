@@ -125,12 +125,6 @@ country_event = {
 		}
 		any_owned_province = {
 			NOT = { has_province_modifier = passive_resistance }
-			OR = {
-				religion_group = dharmic
-				religion = buddhism
-				religion = vajrayana
-				religion = mahayana
-			}
 			is_capital = no
 			is_city = yes
 		}
@@ -153,12 +147,6 @@ country_event = {
 					}
 					any_owned_province = {
 						NOT = { has_province_modifier = passive_resistance }
-						OR = {
-							religion_group = dharmic
-							religion = buddhism
-							religion = vajrayana
-							religion = mahayana
-						}
 						is_capital = no
 						is_city = yes
 						NOT = { has_province_flag = jain_passive_resistance }
@@ -167,12 +155,6 @@ country_event = {
 				random_owned_province = {
 					limit = {
 						NOT = { has_province_modifier = passive_resistance }
-						OR = {
-							religion_group = dharmic
-							religion = buddhism
-							religion = vajrayana
-							religion = mahayana
-						}
 						is_capital = no
 						is_city = yes
 						NOT = { has_province_flag = jain_passive_resistance }
@@ -406,7 +388,6 @@ country_event = {
 	trigger = {
 		has_estate = estate_jains
 		has_estate = estate_brahmins
-		religion = hinduism
 		NOT = {
 			has_country_modifier = preferred_jain_bankers
 		}
@@ -615,12 +596,6 @@ country_event = {
 		}
 		any_owned_province = {
 			is_territory = no
-			OR = {
-				religion_group = dharmic
-				religion = buddhism
-				religion = vajrayana
-				religion = mahayana
-			}
 			is_capital = no
 			is_city = yes
 		}
@@ -647,12 +622,6 @@ country_event = {
 					}
 					any_owned_province = {
 						is_territory = no
-						OR = {
-							religion_group = dharmic
-							religion = buddhism
-							religion = vajrayana
-							religion = mahayana
-						}
 						is_capital = no
 						is_city = yes
 						NOT = { has_province_flag = paryushana_prov_flag }
@@ -661,12 +630,6 @@ country_event = {
 				random_owned_province = {
 					limit = {
 						is_territory = no
-						OR = {
-							religion_group = dharmic
-							religion = buddhism
-							religion = vajrayana
-							religion = mahayana
-						}
 						is_capital = no
 						is_city = yes
 						NOT = { has_province_flag = paryushana_prov_flag }
@@ -802,7 +765,6 @@ country_event = {
 	trigger = {
 		has_estate = estate_jains
 		has_estate = estate_church
-		religion_group = muslim
 		NOT = {
 			has_country_modifier = jain_theological_debates
 		}

@@ -118,8 +118,6 @@ country_event = {
 		}
 		define_advisor = {
 			type = philosopher
-			culture = marathi
-			religion = hinduism
 			skill = 2
 			female = no
 			discount = yes
@@ -342,7 +340,6 @@ country_event = {
 			}
 		}
 		any_owned_province = {
-			religion = hinduism
 			is_capital = no
 			is_city = yes
 			NOT = { has_province_flag = marathi_militarized_province }
@@ -365,7 +362,6 @@ country_event = {
 		}
 		random_owned_province = {
 			limit = {
-				religion = hinduism
 				is_capital = no
 				is_city = yes
 				NOT = { has_province_flag = marathi_militarized_province }
@@ -392,10 +388,6 @@ country_event = {
 			influence = 10
 		}
 		any_owned_province = {
-			OR = {
-				religion = hinduism
-				culture = marathi
-			}
 			is_city = yes
 			has_province_flag = marathi_militarized_province
 			base_tax = 2
@@ -423,10 +415,6 @@ country_event = {
 		hidden_effect = {
 			random_owned_province = {
 				limit = {
-					OR = {
-						religion = hinduism
-						culture = marathi
-					}
 					is_city = yes
 					base_production = 2
 					base_tax = 2
@@ -628,8 +616,6 @@ country_event = {
 		has_estate = estate_maratha
 		has_estate = estate_brahmins
 		any_owned_province = {
-			religion = hinduism
-			culture = marathi
 			is_city = yes
 		}
 		NOT = {
@@ -654,13 +640,11 @@ country_event = {
 			if = {
 				limit = {
 					any_owned_province = {
-						culture = marathi
 						is_city = yes
 					}
 				}
 				every_owned_province = {
 					limit = {
-						culture = marathi
 						is_city = yes
 					}
 					set_province_flag = palkhis_flag
@@ -676,7 +660,6 @@ country_event = {
 						}
 					}
 					any_owned_province = {
-						religion = hinduism
 						is_capital = no
 						is_city = yes
 						NOT = { has_province_flag = palkhis_flag }
@@ -693,7 +676,6 @@ country_event = {
 							}
 						}
 						any_owned_province = {
-							religion = hinduism
 							is_capital = no
 							is_city = yes
 							NOT = { has_province_flag = palkhis_flag }
@@ -701,7 +683,6 @@ country_event = {
 					}
 					random_owned_province = {
 						limit = {
-							religion = hinduism
 							is_capital = no
 							is_city = yes
 							NOT = { has_province_flag = palkhis_flag }
@@ -793,20 +774,9 @@ country_event = {
 			desc = EST_VAL_BRAHMIN_PALKHIS
 			duration = 7300
 		}
-		if = {
-			limit = {
-				religion = hinduism
-			}
-			add_country_modifier = {
-				name = organized_palkhis
-				duration = 7300
-			}
-		}
-		else = {
-			add_country_modifier = {
-				name = organized_palkhis_nonhindu
-				duration = 7300
-			}
+		add_country_modifier = {
+			name = organized_palkhis_nonhindu
+			duration = 7300
 		}
 	}
 }
@@ -939,7 +909,6 @@ country_event = {
 			}
 		}
 		any_owned_province = {
-			religion = hinduism
 			is_capital = no
 			is_city = yes
 		}
@@ -959,7 +928,6 @@ country_event = {
 						}
 					}
 					any_owned_province = {
-						religion = hinduism
 						is_capital = no
 						is_city = yes
 						NOT = { has_province_flag = maratha_estate_revolt }
@@ -970,7 +938,6 @@ country_event = {
 				}
 				random_owned_province = {
 					limit = {
-						religion = hinduism
 						is_capital = no
 						is_city = yes
 						NOT = { has_province_flag = maratha_estate_revolt }

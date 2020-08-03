@@ -31,13 +31,6 @@ estate_cossacks_exploration_expedition = {
 	ai_will_do = {
 		factor = 1
 		modifier = {
-			factor = 10
-			OR = {
-				tag = MOS
-				tag = RUS
-			}
-		}
-		modifier = {
 			factor = 0
 			OR = {
 				NOT = { crown_land_share = 25 }

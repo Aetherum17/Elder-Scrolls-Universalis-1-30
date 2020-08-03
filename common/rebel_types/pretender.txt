@@ -333,7 +333,6 @@ pretender_rebels = {
 		if = {
 			limit = { has_disaster = civil_war }
 			end_disaster = civil_war
-			clr_country_flag = civilwar_on_capital
 		}
 		if = {
 			limit = { has_disaster = internal_conflicts }

@@ -18,7 +18,7 @@ country_event = {
 		has_estate = estate_dhimmi
 		has_estate = estate_church
 		any_owned_province = {
-			NOT = { religion_group = muslim }
+			NOT = { religion = root }
 		}
 		NOT = {
 			has_estate_influence_modifier = {
@@ -199,7 +199,7 @@ country_event = {
 			influence = 70
 		}
 		any_owned_province = {
-			NOT = { religion_group = muslim }
+			NOT = { religion = root }
 			is_city = yes
 		}
 	}
@@ -335,7 +335,7 @@ country_event = {
 	trigger = {
 		has_estate = estate_dhimmi
 		any_owned_province = {
-			NOT = { religion_group = muslim }
+			NOT = { religion = root }
 		}
 		NOT = {
 			has_estate_influence_modifier = {
@@ -383,7 +383,7 @@ country_event = {
 	trigger = {
 		has_estate = estate_dhimmi
 		any_owned_province = {
-			NOT = { religion_group = muslim }
+			NOT = { religion = root }
 		}
 		estate_influence = {
 			estate = estate_dhimmi
@@ -438,7 +438,7 @@ country_event = {
 		has_estate = estate_nobles
 		has_estate = estate_church
 		any_owned_province = {
-			NOT = { religion_group = muslim }
+			NOT = { religion = root }
 		}
 		NOT = {
 			has_estate_influence_modifier = {
@@ -510,7 +510,7 @@ country_event = {
 		scaled_estate_dhimmi_negative_land_share_effect = yes
 		random_owned_province = {
 			limit = {
-				NOT = { religion_group = muslim }
+				NOT = { religion = root }
 				is_city = yes
 			}
 			add_province_modifier = {
@@ -607,7 +607,7 @@ country_event = {
 	trigger = {
 		has_estate = estate_dhimmi
 		any_owned_province = {
-			NOT = { religion_group = muslim }
+			NOT = { religion = root }
 		}
 	}
 	
@@ -684,7 +684,7 @@ country_event = {
 	trigger = {
 		has_estate = estate_dhimmi
 		any_owned_province = {
-			NOT = { religion_group = muslim }
+			NOT = { religion = root }
 			is_capital = no
 			is_city = yes
 		}
@@ -727,7 +727,7 @@ country_event = {
 		add_devotion = -7
 		random_owned_province = {
 			limit = {
-				NOT = { religion_group = muslim }
+				NOT = { religion = root }
 				is_capital = no
 				is_city = yes
 			}
@@ -775,7 +775,7 @@ country_event = {
 	trigger = {
 		has_estate = estate_dhimmi
 		any_owned_province = {
-			NOT = { religion_group = muslim }
+			NOT = { religion = root }
 		}
 		OR = {
 			war_exhaustion = 4

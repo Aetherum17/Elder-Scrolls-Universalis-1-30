@@ -183,15 +183,7 @@ country_event = {
 country_event = {
 	id = janissary_decadence.100
 	title = janissary_decadence.100.t
-	
-	desc = {
-		desc = janissary_decadence.100.d
-		trigger = { has_country_flag = yoklama }
-	}
-	desc = {
-		desc = janissary_decadence.100.da
-		trigger = { NOT = { has_country_flag = yoklama } }
-	}
+	desc = janissary_decadence.100.da
 	picture = REVOLUTION_eventPicture
 	
 	major = yes
@@ -292,26 +284,21 @@ country_event = {
 	
 	option = {		# Disband the Janissaries
 		name = janissary_decadence.100.a
-		if = {
-			limit = { has_country_flag = yoklama }
-			event_target:janissary_revolt_second_origin = {
-				spawn_rebels = {
-					size = 3
-					type = pretender_rebels
-					religion = ROOT
-				}
+		event_target:janissary_revolt_second_origin = {
+			spawn_rebels = {
+				size = 3
+				type = pretender_rebels
+				religion = ROOT
 			}
-			event_target:janissary_revolt_origin = {
-				spawn_rebels = {
-					size = 2
-					type = pretender_rebels
-					religion = ROOT
-				}
+	    }
+		event_target:janissary_revolt_origin = {
+			spawn_rebels = {
+				size = 2
+				type = pretender_rebels
+				religion = ROOT
 			}
 		}
-		else = {
-			add_stability = 1
-		}
+		add_stability = 1
 	}
 }
 

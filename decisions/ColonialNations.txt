@@ -5,10 +5,6 @@ country_decisions = {
 		potential = {
 			has_reform = colonial_government
 			NOT = { has_country_flag = colonial_assembly }
-			OR = {
-				current_age = age_of_absolutism
-				current_age = age_of_revolutions
-			}
 		}
 		allow = {
 			adm_power = 100

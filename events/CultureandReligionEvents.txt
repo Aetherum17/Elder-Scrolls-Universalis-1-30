@@ -1829,7 +1829,6 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		NOT = { has_ruler_flag = culture_question }
 		government = monarchy
 		NOT = { ruler_culture = ROOT }
 		heir_culture = new_variable:ruler_culture

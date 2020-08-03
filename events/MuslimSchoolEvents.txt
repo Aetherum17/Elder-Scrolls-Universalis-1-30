@@ -586,17 +586,6 @@ country_event = {
 		name = muslim_school_events.17.a #Let us seek guidance at this holy place.
 		ai_chance = {
 			factor = 50
-			modifier = {
-				factor = 1.5
-				NOT = { has_global_flag = neo_sufism }
-				capital_scope = {
-					continent = asia
-				}
-			}
-			modifier = {
-				factor = 0.25
-				has_global_flag = neo_sufism
-			}
 		}
 		add_piety = -0.15
 		add_ruler_modifier = {
@@ -614,10 +603,6 @@ country_event = {
 		name = muslim_school_events.17.b #We must not feed into local superstition.
 		ai_chance = {
 			factor = 50
-			modifier = {
-				factor = 1.5
-				has_global_flag = neo_sufism
-			}
 		}
 		add_piety = 0.15
 		add_country_modifier = {
@@ -760,10 +745,6 @@ country_event = {
 	trigger = {
 		has_dlc = "Cradle of Civilization"
 		religion_group = elemental_group
-		OR = {
-			has_pious_sheikh_ul_islam_trigger = yes
-			has_global_flag = neo_sufism
-		}
 		any_owned_province = {
 			has_province_modifier = sufi_shrine
 		}

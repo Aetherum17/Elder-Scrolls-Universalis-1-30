@@ -693,10 +693,7 @@ has_nobles_trade_good_trigger = {
 		trade_goods = livestock
 		trade_goods = grain
 		trade_goods = gems
-		AND = {
-			trade_goods = slaves
-			ROOT = { NOT = { religion = nahuatl } }
-		}
+		trade_goods = slaves
 	}
 }
 
@@ -720,10 +717,7 @@ has_burghers_trade_good_trigger = {
 		trade_goods = chinaware
 		trade_goods = paper
 		trade_goods = ivory
-		AND = {
-			trade_goods = fish
-			ROOT = { NOT = { religion_group = christian } }
-		}
+		trade_goods = fish
 	}
 }
 
@@ -731,19 +725,10 @@ has_church_trade_good_trigger = {
 	OR = {
 		trade_goods = wool
 		trade_goods = fur
-		AND = {
-			trade_goods = wine
-			ROOT = { NOT = { religion_group = muslim } }
-		}
-		AND = {
-			trade_goods = slaves
-			ROOT = { religion = nahuatl }
-		}
+		trade_goods = wine
+		trade_goods = slaves
 		trade_goods = incense
-		AND = {
-			trade_goods = fish
-			ROOT = { religion_group = christian }
-		}
+		trade_goods = fish
 	}
 }
 has_dharma_elephants_trigger = {
@@ -759,12 +744,18 @@ has_holy_order_trigger = {
 	custom_trigger_tooltip = {
 		tooltip = "has_holy_order_trigger_tooltip"
 		OR = {
-			holy_order = jesuit_order
-			holy_order = dominican_order
-			holy_order = franciscan_order
-			holy_order = shadhili_order
-			holy_order = qadiri_order
-			holy_order = aissawa_order
+			holy_order = order_of_the_lamp
+			holy_order = vampyrum_order
+			holy_order = order_of_the_hour
+			holy_order = order_of_doctrine_and_ordination
+			holy_order = order_of_the_watch
+			holy_order = order_of_inquisition
+			holy_order = baldama_wyrd_order 
+			holy_order = order_of_the_raven
+			holy_order = order_of_saint_pelin
+			holy_order = sapiarchs_order
+			holy_order = order_of_the_candle
+			holy_order = order_of_diagna
 		}
 	}
 }
@@ -910,7 +901,6 @@ is_shadow_kingdom_eligible_trigger = {
 will_leave_for_shadow_kingdom_trigger = {
 	NOT = {
 		OR = {
-			has_country_flag = reined_in_for_shadow_kingdom
 			emperor = {
 				alliance_with = PREV
 			}
@@ -1147,7 +1137,6 @@ revolution_event_can_happen_trigger = {
 #country scope, used in election events to check whether generated rulers may be female
 republic_with_female_rulers_trigger = {
 	OR = {
-		has_active_policy = mandatory_service
 		has_country_modifier = sister_suffragettes
 		has_country_modifier = mary_inheritance_reforms
 	}

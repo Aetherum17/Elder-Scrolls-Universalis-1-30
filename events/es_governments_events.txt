@@ -27,7 +27,6 @@ country_event = {
         ai_chance = { factor = 0 }
 		if = { limit = { NOT = { government = republic } } change_government = republic }
 		add_government_reform = protectorate_parliament_reform
-        set_legacy_government = oligarchic_republic
         kill_ruler = yes
         add_stability = -5
     }

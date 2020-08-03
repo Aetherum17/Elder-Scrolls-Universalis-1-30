@@ -190,14 +190,6 @@ revolutionary_rebels = {
 				change_government_to_republic = yes
 				#set_legacy_government = constitutional_republic
 			}
-			if = {
-				limit = {
-					NOT = {
-						is_revolutionary_republic_trigger = yes
-					}
-				}
-				add_government_reform = parliamentary_reform
-			}
 			define_ruler = {
 				rebel = yes
 			}
@@ -205,7 +197,6 @@ revolutionary_rebels = {
 		if = {
 			limit = { has_disaster = aspiration_for_liberty }
 			end_disaster = aspiration_for_liberty
-			clr_country_flag = liberalism
 			remove_country_modifier = reduceed_war_expenditures
 			remove_country_modifier = decreased_morale
 		}

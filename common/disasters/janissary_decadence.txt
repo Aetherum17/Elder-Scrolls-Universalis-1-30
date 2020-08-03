@@ -82,21 +82,13 @@ janissary_decadence = {
 	}
 
 	can_end = {
-		OR = {
-			custom_trigger_tooltip = {
-				tooltip = force_janissaries_to_undergo_yoklama
-				has_country_flag = yoklama
-			}
-			AND = {
-				custom_trigger_tooltip = {
-					tooltip = had_disaster_for_five_years
-					had_country_flag = { flag = had_janissary_decadence days = 1825 }
-				}
-				stability = 2
-				NOT = { num_of_rebel_controlled_provinces = 1 }
-				NOT = { num_of_rebel_armies = 1 }
-			}
+		custom_trigger_tooltip = {
+			tooltip = had_disaster_for_five_years
+			had_country_flag = { flag = had_janissary_decadence days = 1825 }
 		}
+		stability = 2
+		NOT = { num_of_rebel_controlled_provinces = 1 }
+		NOT = { num_of_rebel_armies = 1 }
 	}
 
 	modifier = {

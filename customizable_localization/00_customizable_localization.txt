@@ -192,49 +192,6 @@ defined_text = {
 defined_text = {
 	name = GetReligiousScholars
 	random = no
-	
-	text = {
-		localisation_key = ismaili_school
-		trigger = {
-			has_country_modifier = ismaili_scholar_modifier
-		}
-	}
-	text = {
-		localisation_key = zaidi_school
-		trigger = {
-			has_country_modifier = zaidi_scholar_modifier
-		}
-	}
-	text = {
-		localisation_key = jafari_school
-		trigger = {
-			has_country_modifier = jafari_scholar_modifier
-		}
-	}
-	text = {
-		localisation_key = shafii_school
-		trigger = {
-			has_country_modifier = shafii_scholar_modifier
-		}
-	}
-	text = {
-		localisation_key = hanafi_school
-		trigger = {
-			has_country_modifier = hanafi_scholar_modifier
-		}
-	}
-	text = {
-		localisation_key = maliki_school
-		trigger = {
-			has_country_modifier = maliki_scholar_modifier
-		}
-	}
-	text = {
-		localisation_key = hanbali_school
-		trigger = {
-			has_country_modifier = hanbali_scholar_modifier
-		}
-	}
 }
 
 #Will produce fancy trade goods for all provinces in the world.

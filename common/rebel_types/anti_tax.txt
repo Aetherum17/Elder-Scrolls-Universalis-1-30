@@ -147,9 +147,7 @@ anti_tax_rebels = {
 			limit = { has_disaster = peasant_war }
 			end_disaster = peasant_war
 			clr_country_flag = peasant_protests
-			clr_country_flag = religious_revolt
 			clr_country_flag = obsolete_forces
-			clr_country_flag = peasants_war_can_end
 			
 			remove_country_modifier = enforce_serfdom	
 			remove_country_modifier = restrict_serfdom
@@ -169,7 +167,6 @@ anti_tax_rebels = {
 				is_part_of_hre = yes
 				NOT = { has_reform = peasants_republic }
 			}
-			country_event = { id = great_peasant_war.2 }
 			hidden_effect = {
 				1 = {
 					change_variable = {

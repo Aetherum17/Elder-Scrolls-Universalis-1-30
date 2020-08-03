@@ -347,7 +347,7 @@ estate_burghers_the_great_privilege = {
 		custom_tooltip = estate_burghers_the_great_privilege_effect_tooltip
 		hidden_effect = {
 			every_owned_province = {
-				limit = { region = low_countries_region }
+				limit = { development = 21 }
 				add_province_modifier = {
 					name = estate_burghers_the_great_privilege_mod
 					duration = -1

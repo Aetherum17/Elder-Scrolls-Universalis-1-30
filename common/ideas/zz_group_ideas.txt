@@ -2368,3 +2368,43 @@ PRO_ideas = {
 		production_efficiency = 0.1
 	}
 }
+
+cossack_ideas = {
+	start = {
+		global_unrest = -2.5
+		loot_amount = 0.5
+	}
+	bonus = {
+		shock_damage = 0.15
+	}
+	trigger = {
+		has_reform = cossacks_reform
+	}
+	free = yes
+	
+	cossacks_escaped_serfs = {
+		manpower_recovery_speed = 0.10
+	}
+	cossacks_hetmanate = {
+		legitimacy = 0.25
+		republican_tradition = 0.25
+		devotion = 0.25							
+        horde_unity = 0.25
+        meritocracy = 0.25
+	}
+	zaz_steppe_riders = {
+		land_attrition = -0.10
+	}
+	cossacks_insults = {
+		power_projection_from_insults = 1
+	}
+	cossacks_military_society = {
+		army_tradition = 0.25
+	}
+	cossacks_free_the_serfs = {
+		years_of_nationalism = -5
+	}
+	cossacks_registered = {
+		free_leader_pool = 1
+	}
+}

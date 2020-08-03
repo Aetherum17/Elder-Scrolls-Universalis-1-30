@@ -7,7 +7,7 @@ country_event = {
 	
 	trigger = {
 		NOT = { has_global_flag = japan_has_encountered_the_west }
-		technology_group = tamriel_tg
+		capital_scope = { continent = Tamriel }
 		Akavir = {
 			has_discovered = ROOT
 		}

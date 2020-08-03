@@ -256,7 +256,7 @@ estate_maratha_special_privilege = {
 	loyalty = 0.05
 	influence = 0.05
 	is_valid = {
-		has_reform = permanent_marathas_council_reform
+	    always = yes
 	}
 	modifier_by_land_ownership = {
 		discipline = 0.1

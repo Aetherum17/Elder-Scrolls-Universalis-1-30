@@ -138,11 +138,7 @@ add_estate_church_loyalty_effect = {
 			loyalty = 10
 		}
 	}
-	else_if = {
-		limit = {
-			religion = hinduism
-			has_estate = estate_brahmins
-		}
+	else = {
 		add_estate_loyalty = {
 			estate = estate_brahmins
 			loyalty = 10
@@ -159,11 +155,7 @@ reduce_estate_church_loyalty_effect = {
 			loyalty = -10
 		}
 	}
-	else_if = {
-		limit = {
-			religion = hinduism
-			has_estate = estate_brahmins
-		}
+	else = {
 		add_estate_loyalty = {
 			estate = estate_brahmins
 			loyalty = -10
@@ -182,11 +174,7 @@ add_estate_dhimmi_loyalty_effect = {
 			loyalty = 10
 		}
 	}
-	else_if = {
-		limit = {
-			religion_group = muslim
-			has_estate = estate_brahmins
-		}
+	else = {
 		add_estate_loyalty = {
 			estate = estate_brahmins
 			loyalty = 10
@@ -203,11 +191,7 @@ reduce_estate_dhimmi_loyalty_effect = {
 			loyalty = -10
 		}
 	}
-	else_if = {
-		limit = {
-			religion_group = muslim
-			has_estate = estate_brahmins
-		}
+	else = {
 		add_estate_loyalty = {
 			estate = estate_brahmins
 			loyalty = -10
@@ -458,22 +442,9 @@ on_province_religion_converted_estate_privileges_effect = {
 				has_estate_privilege = estate_dhimmi_lighter_dhimmi_taxes
 			}
 		}
-		if = {
-			limit = {
-				NOT = { religion_group = muslim }
-				NOT = { has_province_modifier = estate_dhimmi_lighter_dhimmi_taxes_privilege_mod }
-			}
-			add_province_modifier = {
-				name = estate_dhimmi_lighter_dhimmi_taxes_privilege_mod
-				duration = -1
-			}
-		}
-		else_if = {
-			limit = {
-				religion_group = muslim
-				has_province_modifier = estate_dhimmi_lighter_dhimmi_taxes_privilege_mod
-			}
-			remove_province_modifier = estate_dhimmi_lighter_dhimmi_taxes_privilege_mod
+		add_province_modifier = {
+			name = estate_dhimmi_lighter_dhimmi_taxes_privilege_mod
+			duration = -1
 		}
 	}
 	if = {
@@ -482,22 +453,9 @@ on_province_religion_converted_estate_privileges_effect = {
 				has_estate_privilege = estate_dhimmi_manpower
 			}
 		}
-		if = {
-			limit = {
-				NOT = { religion_group = muslim }
-				NOT = { has_province_modifier = estate_dhimmi_manpower_mod }
-			}
-			add_province_modifier = {
-				name = estate_dhimmi_manpower_mod
-				duration = -1
-			}
-		}
-		else_if = {
-			limit = {
-				religion_group = muslim
-				has_province_modifier = estate_dhimmi_manpower_mod
-			}
-			remove_province_modifier = estate_dhimmi_manpower_mod
+		add_province_modifier = {
+			name = estate_dhimmi_manpower_mod
+			duration = -1
 		}
 	}
 	if = {
@@ -506,22 +464,9 @@ on_province_religion_converted_estate_privileges_effect = {
 				has_estate_privilege = estate_dhimmi_guaranteed_autonomy
 			}
 		}
-		if = {
-			limit = {
-				NOT = { religion_group = muslim }
-				NOT = { has_province_modifier = estate_dhimmi_guaranteed_autonomy_mod }
-			}
-			add_province_modifier = {
-				name = estate_dhimmi_guaranteed_autonomy_mod
-				duration = -1
-			}
-		}
-		else_if = {
-			limit = {
-				religion_group = muslim
-				has_province_modifier = estate_dhimmi_guaranteed_autonomy_mod
-			}
-			remove_province_modifier = estate_dhimmi_guaranteed_autonomy_mod
+		add_province_modifier = {
+			name = estate_dhimmi_guaranteed_autonomy_mod
+			duration = -1
 		}
 	}
 	if = {
@@ -530,37 +475,15 @@ on_province_religion_converted_estate_privileges_effect = {
 				has_estate_privilege = estate_brahmins_guaranteed_autonomy
 			}
 		}
-		if = {
-			limit = {
-				NOT = { religion_group = muslim }
-				NOT = { has_province_modifier = estate_brahmins_guaranteed_autonomy_mod }
-			}
-			add_province_modifier = {
-				name = estate_brahmins_guaranteed_autonomy_mod
-				duration = -1
-			}
-		}
-		else_if = {
-			limit = {
-				religion_group = muslim
-				has_province_modifier = estate_brahmins_guaranteed_autonomy_mod
-			}
-			remove_province_modifier = estate_brahmins_guaranteed_autonomy_mod
+		add_province_modifier = {
+			name = estate_brahmins_guaranteed_autonomy_mod
+			duration = -1
 		}
 	}
 	if = {
 		limit = {
 			owner = {
 				has_estate_privilege = estate_maratha_levies_for_muslims
-			}
-		}
-		if = {
-			limit = {
-				religion = hinduism
-			}
-			add_province_modifier = {
-				name = estate_maratha_levies_for_muslims_mod
-				duration = -1
 			}
 		}
 		else_if = {
@@ -615,7 +538,6 @@ on_province_owner_change_estate_privileges_effect = {
 			owner = {
 				has_estate_privilege = estate_dhimmi_lighter_dhimmi_taxes
 			}
-			NOT = { religion_group = muslim }
 		}
 		add_province_modifier = {
 			name = estate_dhimmi_lighter_dhimmi_taxes_privilege_mod
@@ -627,7 +549,6 @@ on_province_owner_change_estate_privileges_effect = {
 			owner = {
 				has_estate_privilege = estate_dhimmi_manpower
 			}
-			NOT = { religion_group = muslim }
 		}
 		add_province_modifier = {
 			name = estate_dhimmi_manpower_mod
@@ -639,7 +560,6 @@ on_province_owner_change_estate_privileges_effect = {
 			owner = {
 				has_estate_privilege = estate_dhimmi_guaranteed_autonomy
 			}
-			NOT = { religion_group = muslim }
 		}
 		add_province_modifier = {
 			name = estate_dhimmi_guaranteed_autonomy_mod
@@ -651,7 +571,6 @@ on_province_owner_change_estate_privileges_effect = {
 			owner = {
 				has_estate_privilege = estate_brahmins_guaranteed_autonomy
 			}
-			NOT = { religion_group = muslim }
 		}
 		add_province_modifier = {
 			name = estate_brahmins_guaranteed_autonomy_mod
@@ -663,7 +582,6 @@ on_province_owner_change_estate_privileges_effect = {
 			owner = {
 				has_estate_privilege = estate_burghers_the_great_privilege
 			}
-			region = low_countries_region
 		}
 		add_province_modifier = {
 			name = estate_burghers_the_great_privilege_mod
@@ -1710,24 +1628,11 @@ spawn_rebels_from_unhappy_estate = {
 					}
 				}
 			}
-			if = {
-				limit = {
-					owner = { primary_culture = polish }
-				}
-				spawn_rebels = {
-					type = polish_noble_rebels
-					size = $size$
-					estate = estate_nobles
-					as_if_faction = yes
-				}
-			}
-			else = {
-				spawn_rebels = {
-					type = noble_rebels
-					size = $size$
-					estate = estate_nobles
-					as_if_faction = yes
-				}
+			spawn_rebels = {
+				type = noble_rebels
+				size = $size$
+				estate = estate_nobles
+				as_if_faction = yes
 			}
 		}
 		1 = {

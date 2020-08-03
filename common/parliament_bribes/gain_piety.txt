@@ -1,6 +1,6 @@
 gain_piety = {
 	trigger = {
-		religion_group = muslim
+		uses_piety = yes
 		NOT = {
 			piety = -0.25
 		}

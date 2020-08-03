@@ -235,7 +235,6 @@ country_event = {
 			}
 		}
 		any_owned_province = {
-			religion = hinduism
 			is_capital = no
 			is_city = yes
 		}
@@ -257,7 +256,6 @@ country_event = {
 						}
 					}
 					any_owned_province = {
-						religion = hinduism
 						is_capital = no
 						is_city = yes
 						NOT = { has_province_flag = peasant_brahmins_revolt }
@@ -268,7 +266,6 @@ country_event = {
 				}
 				random_owned_province = {
 					limit = {
-						religion = hinduism
 						is_capital = no
 						is_city = yes
 						NOT = { has_province_flag = peasant_brahmins_revolt }
@@ -286,17 +283,6 @@ country_event = {
 	option = {
 		name = brahmins_estate_events.6.a #Ok
 		add_stability = -1
-		if = {
-			limit = { any_owned_province = { religion = hinduism } } #Prevents faulty tooltip.
-			every_owned_province = {
-				limit = { has_province_flag = peasant_brahmins_revolt }
-				clr_province_flag = peasant_brahmins_revolt
-				spawn_rebels = {
-					type = anti_tax_rebels
-					size = 1
-				}
-			}
-		}
 	}
 }
 
@@ -448,7 +434,6 @@ country_event = {
 			estate = estate_brahmins
 			influence = 40
 		}
-		technology_group = indian
 		NOT = {
 			has_estate_influence_modifier = {
 				estate = estate_brahmins
@@ -474,12 +459,6 @@ country_event = {
 
 	mean_time_to_happen = {
 		days = 1
-		modifier = {
-			factor = 2
-			NOT = {
-				religion = hinduism
-			}
-		}
 	}
 
 	option = {
@@ -496,7 +475,6 @@ country_event = {
 			modifier = {
 				factor = 1.5
 				has_estate = estate_nobles
-				NOT = { religion = hinduism }
 				estate_loyalty = {
 					estate = estate_nobles
 					loyalty = 30
@@ -505,7 +483,6 @@ country_event = {
 			modifier = {
 				factor = 1.5
 				has_estate = estate_church
-				NOT = { religion = hinduism }
 				estate_loyalty = {
 					estate = estate_church
 					loyalty = 30
@@ -518,15 +495,10 @@ country_event = {
 			influence = 15
 			duration = 7300
 		}
-		if = {
-			limit = {
-				religion = hinduism
-			}
-			add_country_modifier = {
-				name = "brahmin_peshwa"
-				duration = 7300
-			}
-		}		
+		add_country_modifier = {
+			name = "brahmin_peshwa"
+			duration = 7300
+		}	
 		else = {
 			add_country_modifier = {
 				name = "brahmin_peshwa_nonhindu"
@@ -536,9 +508,6 @@ country_event = {
 		# Non-Hindu estates won't like this
 		if = {
 			limit = {
-				NOT = {
-					religion = hinduism
-				}
 				has_estate = estate_nobles
 			}
 			add_estate_loyalty = {
@@ -548,9 +517,6 @@ country_event = {
 		}
 		if = {
 			limit = {
-				NOT = {
-					religion = hinduism
-				}
 				has_estate = estate_church
 			}
 			add_estate_loyalty = {
@@ -636,7 +602,6 @@ country_event = {
 			}
 		}
 		any_owned_province = {
-			religion = hinduism
 			is_city = yes
 		}
 	}
@@ -688,14 +653,12 @@ country_event = {
 						}
 					}
 					any_owned_province = {
-						religion = hinduism
 						is_city = yes
 						NOT = { has_province_flag = add_brahmin_orthodoxy_enforced }
 					}
 				}
 				random_owned_province = {
 					limit = {
-						religion = hinduism
 						is_city = yes
 						NOT = { has_province_flag = add_brahmin_orthodoxy_enforced }
 					}
@@ -752,14 +715,12 @@ country_event = {
 						}
 					}
 					any_owned_province = {
-						religion = hinduism
 						is_city = yes
 						NOT = { has_province_flag = add_nonbrahmin_movements }
 					}
 				}
 				random_owned_province = {
 					limit = {
-						religion = hinduism
 						is_city = yes
 						NOT = { has_province_flag = add_nonbrahmin_movements }
 					}
@@ -812,7 +773,6 @@ country_event = {
 					territory = 5
 				}
 				any_owned_province = {
-					religion = hinduism
 					fort_level = 2
 				}
 			}
@@ -829,7 +789,6 @@ country_event = {
 					territory = 5
 				}
 				any_owned_province = {
-					religion = hinduism
 					fort_level = 2
 				}
 			}
@@ -846,7 +805,6 @@ country_event = {
 					territory = 5
 				}
 				any_owned_province = {
-					religion = hinduism
 					fort_level = 2
 				}
 			}
@@ -885,14 +843,12 @@ country_event = {
 					any_owned_province = {
 						is_capital = no
 						fort_level = 2
-						religion = hinduism
 					}
 				}
 				random_owned_province = {
 					limit = { 
 						is_capital = no
 						fort_level = 2
-						religion = hinduism
 					}
 					set_province_flag = brahmin_fort_flag
 					save_event_target_as = brahmin_fort_province
@@ -910,7 +866,6 @@ country_event = {
 					any_owned_province = {
 						is_capital = no
 						fort_level = 2
-						religion = hinduism
 					}
 					NOT = {
 						any_owned_province = {
@@ -922,7 +877,6 @@ country_event = {
 					limit = { 
 						is_capital = no
 						fort_level = 2
-						religion = hinduism
 					}
 					set_province_flag = brahmin_fort_flag
 					save_event_target_as = brahmin_fort_province
@@ -938,7 +892,6 @@ country_event = {
 						}
 					}
 					any_owned_province = {
-						religion = hinduism
 						is_capital = no
 						fort_level = 2
 					}
@@ -952,7 +905,6 @@ country_event = {
 					limit = { 
 						is_capital = no
 						fort_level = 2
-						religion = hinduism
 					}
 					set_province_flag = brahmin_fort_flag
 					save_event_target_as = brahmin_fort_province
@@ -1206,7 +1158,6 @@ country_event = {
 	trigger = {
 		has_estate = estate_brahmins
 		has_estate = estate_church
-		religion_group = muslim
 		NOT = {
 			has_estate_influence_modifier = {
 				estate = estate_brahmins
@@ -1377,14 +1328,6 @@ country_event = {
 				}
 			}
 			custom_tooltip = every_hindu_province_2_unrest
-			hidden_effect = {
-				every_owned_province = {
-					limit = {
-						religion = hinduism
-					}
-					add_unrest = 2
-				}
-			}
 		}
 		if = {
 			limit = {
@@ -1400,14 +1343,6 @@ country_event = {
 				}
 			}
 			custom_tooltip = every_hindu_province_4_unrest
-			hidden_effect = {
-				every_owned_province = {
-					limit = {
-						religion = hinduism
-					}
-					add_unrest = 4
-				}
-			}
 		}
 		if = {
 			limit = {
@@ -1417,14 +1352,6 @@ country_event = {
 				}
 			}
 			custom_tooltip = every_hindu_province_5_unrest
-			hidden_effect = {
-				every_owned_province = {
-					limit = {
-						religion = hinduism
-					}
-					add_unrest = 5
-				}
-			}
 		}
 	}
 }

@@ -1051,7 +1051,6 @@ country_event = {
 		trigger = {
 			OR = {
 				AND = {
-					religion_group = muslim
 					has_estate = estate_brahmins
 					estate_loyalty = {
 						estate = estate_brahmins
@@ -1118,7 +1117,6 @@ country_event = {
 			OR = {
 				AND = {
 					has_estate = estate_church
-					religion = hinduism
 					estate_loyalty = {
 						estate = estate_church
 						loyalty = 60
@@ -1126,7 +1124,6 @@ country_event = {
 				}
 				AND = {
 					has_estate = estate_brahmins
-					religion = hinduism
 					estate_loyalty = {
 						estate = estate_brahmins
 						loyalty = 60
@@ -1457,7 +1454,6 @@ country_event = {
 			has_estate = estate_church
 			NOT = {
 				AND = {
-					religion = hinduism
 					has_estate = estate_brahmins
 				}
 			}
@@ -1525,7 +1521,6 @@ country_event = {
 		name = nobles_estate_events.10.c.2 # Brahmins
 		trigger = {
 			has_estate = estate_brahmins
-			religion = hinduism
 		}
 		ai_chance = {
 			factor = 25
@@ -1590,7 +1585,6 @@ country_event = {
 		name = nobles_estate_events.10.c.2 # Brahmins dhimmi
 		trigger = { 
 			has_estate = estate_brahmins
-			religion_group = muslim
 		}
 		ai_chance = {
 			factor = 25

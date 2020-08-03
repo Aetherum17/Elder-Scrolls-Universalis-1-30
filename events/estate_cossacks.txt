@@ -1046,11 +1046,6 @@ country_event = {
 		has_estate = estate_cossacks
 		num_of_colonists = 1
 		any_owned_province = {
-			OR = {
-				region = central_asia_region
-				region = west_siberia_region
-				region = east_siberia_region
-			}
 			has_terrain = steppe
 			is_territory = no
 		}
@@ -1079,11 +1074,6 @@ country_event = {
 			random_owned_province = {
 				limit = {
 					has_terrain = steppe
-					OR = {
-						region = west_siberia_region
-						region = east_siberia_region
-						region = central_asia_region
-					}
 					is_territory = no
 				}
 				save_event_target_as = cossack_settlers_province
