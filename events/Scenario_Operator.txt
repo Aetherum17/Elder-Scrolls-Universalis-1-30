@@ -673,3 +673,61 @@ country_event = {
 	}
 	
 }
+
+country_event = {
+	id = es_scenario_operator.11
+	title = es_1_scenario.1.t
+	desc = es_1_scenario.1.d
+	picture = ES_THRONEROOM_1_eventPicture	
+	
+	fire_only_once = yes
+	
+	trigger = {
+	    tag = RED
+		NOT = { is_year = 420 }
+		OR = {
+		is_year = 369
+		AND = {
+		any_country = {
+			owns_or_subject_of = 1275
+			owns_or_subject_of = 7745
+			owns_or_subject_of = 970
+			owns_or_subject_of = 1342
+			owns_or_subject_of = 1369
+		}
+		}
+		}
+    }
+
+	mean_time_to_happen = {
+		days = 3650		
+	}
+	
+	immediate = {
+	    if = { limit = { exists = OLD }
+		    OLD = { country_event = { id = es_11_scenario.1 days = 3650 tooltip = es_collapse.2.a.tt } }
+		}
+		else = { every_country = { limit = { culture_group = northern_cg owns = 1275 } country_event = { id = es_11_scenario.1 days = 3650 tooltip = es_collapse.2.a.tt } } }
+		###
+		if = { limit = { 970 = { owner = { NOT = { culture_group = dwemer_cg } } } }
+		every_country = { limit = { culture_group = dwemer_cg is_free_or_tributary_trigger = yes capital_scope = { superregion = morrowind_superregion } country_event = { id = es_11_scenario.2 days = 3650 tooltip = es_collapse.2.a.tt } }
+		}
+		###
+		every_country = { limit = { culture_group = yokudan-redguardian_cg capital_scope = { region = yokuda_lr } } country_event = { id = es_11_scenario.3 days = 3650 tooltip = es_collapse.2.a.tt } }
+		###
+		every_country = { limit = { culture_group = northern_cg OR = { owns = 1342 owns = 1275 } } country_event = { id = es_11_scenario.6 days = 3650 tooltip = es_collapse.2.a.tt } }
+		###
+		every_country = { limit = { culture_group = high_elves_cg owns = 1382 } country_event = { id = es_11_scenario.8 days = 3650 tooltip = es_collapse.2.a.tt } }
+		###
+		if = { limit = { NOT = { exists = REA } }
+		every_country = { limit = { owns = 1355 NOT = { culture_group = half_blood_cg } NOT = { government_rank = 7 } } country_event = { id = es_11_scenario.9 days = 3650 tooltip = es_collapse.2.a.tt } }
+		}
+		###
+		every_country = { limit = { owns = 1206 } country_event = { id = es_11_scenario.10 days = 3650 tooltip = es_collapse.2.a.tt } }
+	}
+
+	option = {
+		name = "es_1_scenario.1.a"
+	}
+	
+}

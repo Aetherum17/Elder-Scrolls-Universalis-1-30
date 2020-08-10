@@ -520,6 +520,79 @@ country_decisions = {
 		ai_importance = 300
 	}
 	
+	es_11_take_windhelm = {
+	    major = yes
+		potential = {
+		    NOT = { is_core = 1275 }
+			NOT = { has_country_flag = es_11_take_windhelm_flag }
+			any_country = { has_country_modifier = skyrim_succession_war }
+		}
+		allow = {
+		    1275 = { OR = { owned_by = ROOT controlled_by = ROOT } }
+		}
+		effect = {
+		    set_country_flag = es_11_take_windhelm_flag
+			create_subject = { subject_type = personal_union subject = event_target:capital_city }
+			add_prestige = 25
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+	es_11_true_ruler_of_karthwastern = {
+	    major = yes
+		potential = {
+		    tag = REA
+			NOT = { has_country_flag = es_11_true_ruler_of_karthwastern_flag }
+            exists = NC5
+		}
+		allow = {
+		    NC5 = { capital_scope = { controlled_by = ROOT } }
+		}
+		effect = {
+		    set_country_flag = es_11_true_ruler_of_karthwastern_flag
+			create_subject = { subject_type = personal_union subject = NC5 }
+			add_prestige = 25
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+	es_11_release_bruma = {
+	    major = yes
+		potential = {
+			NOT = { has_country_flag = es_11_release_bruma_flag }
+			has_global_flag = marukhism_flag
+			NOT = { exists = CB6 }
+			owns = 1206
+		}
+		allow = {
+		    cyrodiil_16_la = { type = all owned_by = ROOT }
+			cyrodiil_68_la = { type = all owned_by = ROOT }
+			cyrodiil_69_la = { type = all owned_by = ROOT }
+		}
+		effect = {
+		    set_country_flag = es_11_release_bruma_flag
+			create_subject = { subject_type = personal_union subject = NC5 }
+			every_owned_province = {
+			    limit = { OR = { area = cyrodiil_16_la area = cyrodiil_68_la area = cyrodiil_69_la } }
+				cede_province = CB6
+				add_core = CB6
+			}
+			create_subject = { subject_type = march subject = CB6 }
+			CB6 = { change_government_reform_progress = -99999 }
+			add_prestige = 35
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
 	es_12_purification = {
 	    major = yes
 		potential = {

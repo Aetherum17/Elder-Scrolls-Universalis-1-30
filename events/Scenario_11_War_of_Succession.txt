@@ -6,48 +6,23 @@ country_event = {
 	desc = es_11_scenario.1.d
 	picture = BATTLE_3_eventPicture
 	
-	trigger = {
-	    NOT = { has_country_flag = es_11_scenario.1_flag }
-		is_year = 369
-		NOT = { is_year = 420 }
-		culture_group = northern_cg
-		owns = 1342
-		owns = 1275
-    }
-
-	mean_time_to_happen = {
-		days = 9125		
-	}
+	is_triggered_only = yes
 	
 	immediate = {
-	    set_country_flag = es_11_scenario.1_flag
+	    every_country = {
+		    limit = { capital_scope = { superregion = skyrim_superregion } }
+			add_country_modifier = { name = "skyrim_succession_war" duration = 9125 }
+		}
 	}
 
 	option = {
 		name = "es_11_scenario.1.a"
-		ai_chance = { factor = 25 }
-		change_tag = WSK
+		ai_chance = { factor = 50 }
+		change_tag = SKY
 		
 		every_owned_province = {
 		limit = {
-		region = great_planes_lr
-		}
-		cede_province = ESK
-		add_core = ESK
-		add_core = WSK
-		}
-		
-		every_owned_province = {
-		limit = {
-		region = nordic_coast_lr
-		}
-		add_core = ESK
-		}
-		
-		every_owned_province = {
-		limit = {
-		NOT = { region = nordic_coast_lr }
-		NOT = { region = great_planes_lr }
+		NOT = { superregion = skyrim_superregion }
 		}
 		cede_province = OLD
 		add_core = OLD
@@ -56,28 +31,13 @@ country_event = {
 		kill_ruler = yes
 		kill_heir = yes
 		
-        define_ruler = {
-        name = "Olaf"
-        dynasty = "Whitehold"
-        adm = 2
-        dip = 5
-        mil = 3
-        age = 30
-        claim = 100
-		fixed = yes
-        }
-		
-		ESK = {
 		define_ruler = {
-        name = "Hanse"
-        dynasty = "Winterhold"
-        adm = 5
-        dip = 3
-        mil = 2
-        age = 30
-        claim = 100
-		fixed = yes
-        }
+		    name = "(Regency Council)"
+			ADM = 0
+			DIP = 0
+			MIL = 0
+			fixed = yes
+			regency = yes
 		}
 		
 		OLD = {
@@ -93,230 +53,15 @@ country_event = {
         }
 		}
 		
-		if = {
-		limit = {
-		exists = OLD
-		NOT = { alliance_with = OLD }
-		NOT = { overlord_of = OLD }
-		}
-		declare_war_with_cb = {
-			who = OLD
-			casus_belli = cb_es_scenario
-		}
-		}
-		
-		if = {
-		limit = {
-		exists = ESK
-		NOT = { alliance_with = ESK }
-		NOT = { overlord_of = ESK }
-		}
-		declare_war_with_cb = {
-			who = ESK
-			casus_belli = cb_es_scenario
-		}
-		}
-		
 		if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
 		if = { limit = { NOT = { government_rank = 5 } } set_government_rank = 5 }
 	}
 	
 	option = {
 		name = "es_11_scenario.1.b"
-		ai_chance = { factor = 25 }
-		change_tag = ESK
-		
-		every_owned_province = {
-		limit = {
-		region = nordic_coast_lr
-		}
-		cede_province = WSK
-		add_core = WSK
-		add_core = ESK
-		}
-		
-		every_owned_province = {
-		limit = {
-		region = great_planes_lr
-		}
-		add_core = WSK
-		}
-		
-		every_owned_province = {
-		limit = {
-		NOT = { region = nordic_coast_lr }
-		NOT = { region = great_planes_lr }
-		}
-		cede_province = OLD
-		add_core = OLD
-		}
+		ai_chance = { factor = 50 }
 		
 		kill_ruler = yes
-		kill_heir = yes
-		
-		WSK = {
-        define_ruler = {
-        name = "Olaf"
-        dynasty = "Whitehold"
-        adm = 2
-        dip = 5
-        mil = 3
-        age = 30
-        claim = 100
-		fixed = yes
-        }
-		}
-		
-		define_ruler = {
-        name = "Hanse"
-        dynasty = "Winterhold"
-        adm = 5
-        dip = 3
-        mil = 2
-        age = 30
-        claim = 100
-		fixed = yes
-        }
-		
-		OLD = {
-		change_government = republic
-		define_ruler = {
-        name = "Vulard"
-        adm = 3
-        dip = 2
-        mil = 5
-        age = 30
-        claim = 100
-		fixed = yes
-        }
-		}
-		
-		if = {
-		limit = {
-		exists = OLD
-		NOT = { alliance_with = OLD }
-		NOT = { overlord_of = OLD }
-		}
-		declare_war_with_cb = {
-			who = OLD
-			casus_belli = cb_es_scenario
-		}
-		}
-		
-		if = {
-		limit = {
-		exists = WSK
-		NOT = { alliance_with = WSK }
-		NOT = { overlord_of = WSK }
-		}
-		declare_war_with_cb = {
-			who = WSK
-			casus_belli = cb_es_scenario
-		}
-		}
-		
-		if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
-		if = { limit = { NOT = { government_rank = 5 } } set_government_rank = 5 }
-	}
-	
-	option = {
-		name = "es_11_scenario.1.c"
-		ai_chance = { factor = 25 }
-		
-		trigger = {
-		any_owned_province = {
-		NOT = { region = nordic_coast_lr }
-		NOT = { region = great_planes_lr }
-		}
-		}
-		
-		every_owned_province = {
-		limit = {
-		region = nordic_coast_lr
-		}
-		cede_province = WSK
-		add_core = WSK
-		add_core = ESK
-		}
-		
-		every_owned_province = {
-		limit = {
-		region = great_planes_lr
-		}
-		cede_province = ESK
-		add_core = ESK
-		add_core = WSK
-		}
-		
-		kill_ruler = yes
-		kill_heir = yes
-		
-		WSK = {
-        define_ruler = {
-        name = "Olaf"
-        dynasty = "Whitehold"
-        adm = 2
-        dip = 5
-        mil = 3
-        age = 30
-        claim = 100
-		fixed = yes
-        }
-		}
-		
-		ESK = {
-		define_ruler = {
-        name = "Hanse"
-        dynasty = "Winterhold"
-        adm = 5
-        dip = 3
-        mil = 2
-        age = 30
-        claim = 100
-		fixed = yes
-        }
-		}
-		
-		change_government = republic
-		define_ruler = {
-        name = "Vulard"
-        adm = 3
-        dip = 2
-        mil = 5
-        age = 30
-        claim = 100
-		fixed = yes
-        }
-		
-		if = {
-		limit = {
-		exists = WSK
-		NOT = { alliance_with = WSK }
-		NOT = { overlord_of = WSK }
-		}
-		declare_war_with_cb = {
-			who = WSK
-			casus_belli = cb_es_scenario
-		}
-		}
-		
-		if = {
-		limit = {
-		exists = ESK
-		NOT = { alliance_with = ESK }
-		NOT = { overlord_of = ESK }
-		}
-		declare_war_with_cb = {
-			who = ESK
-			casus_belli = cb_es_scenario
-		}
-		}
-		
-	}
-	
-	option = {
-		name = "es_11_scenario.1.e"
-		ai_chance = { factor = 25 }
 		
 		add_stability = -3
 		add_country_modifier = {
@@ -324,109 +69,415 @@ country_event = {
 		duration = 9125
 		}
 		
-		random_owned_province = {
-		limit = {
-		region = nordic_coast_lr
-		}
-		spawn_rebels = {
-				type = nationalist_rebels
-				size = 3.5
-				win = yes
-				unrest = 25
-			}
-		}
-		
-		random_owned_province = {
-		limit = {
-		region = nordic_coast_lr
-		}
-		spawn_rebels = {
-				type = nationalist_rebels
-				size = 3.5
-				win = yes
-				unrest = 25
-			}
-		}
-		
-		random_owned_province = {
-		limit = {
-		region = nordic_coast_lr
-		}
-		spawn_rebels = {
-				type = nationalist_rebels
-				size = 3.5
-				win = yes
-				unrest = 25
-			}
-		}
-		
-		random_owned_province = {
-		limit = {
-		region = great_planes_lr
-		}
-		spawn_rebels = {
-				type = nationalist_rebels
-				size = 3.5
-				win = yes
-				unrest = 25
-			}
-		}
-		
-		random_owned_province = {
-		limit = {
-		region = great_planes_lr
-		}
-		spawn_rebels = {
-				type = nationalist_rebels
-				size = 3.5
-				win = yes
-				unrest = 25
-			}
-		}
-		
-		random_owned_province = {
-		limit = {
-		region = great_planes_lr
-		}
-		spawn_rebels = {
-				type = nationalist_rebels
-				size = 3.5
-				win = yes
-				unrest = 25
-			}
-		}
-		
-		random_owned_province = {
-		spawn_rebels = {
-				type = noble_rebels
-				size = 3.5
-				win = yes
-				unrest = 25
-			}
-		}
-		
 		every_owned_province = {
 		limit = {
-		region = great_planes_lr
+		superregion = skyrim_superregion
 		}
-		add_core = ESK
-		}
-		
-		every_owned_province = {
-		limit = {
-		region = nordic_coast_lr
-		}
-		add_core = WSK
+		cede_province = SKY
+		add_core = SKY
 		}
 		
-		add_legitimacy = -100
-		add_republican_tradition = -100
-		add_devotion = -100
-		add_horde_unity = -100
-		add_meritocracy = -100
+		set_country_flag = general_vulard_flag
+		
+		SKY = {
+		random_owned_province = { spawn_rebels = { type = pretender_rebels size = 3.5 win = yes unrest = 25 } }
+		random_owned_province = { spawn_rebels = { type = particularist_rebels size = 3.5 win = yes unrest = 25 } }
+		random_owned_province = { spawn_rebels = { type = pretender_rebels size = 3.5 win = yes unrest = 25 } }
+		random_owned_province = { spawn_rebels = { type = anti_tax_rebels size = 3.5 win = yes unrest = 25 } }
+		random_owned_province = { spawn_rebels = { type = nationalist_rebels size = 3.5 win = yes unrest = 25 } }
+		random_owned_province = { spawn_rebels = { type = nationalist_rebels size = 3.5 win = yes unrest = 25 } }
+		random_owned_province = { spawn_rebels = { type = nationalist_rebels size = 3.5 win = yes unrest = 25 } }
+		}
+		
+		add_legitimacy = -50
+		add_republican_tradition = -50
+		add_devotion = -50
+		add_horde_unity = -50
+		add_meritocracy = -50
+	}
 	
+	after = {
+	    1275 = { owner = { save_event_target_as = capital_city } }
+	    if = { limit = { OR = { owns = 1319 owns = 1299 } } country_event = { id = es_11_scenario.11 days = 3650 tooltip = es_collapse.2.a.tt } }
+		else = {
+		1319 = { owner = { country_event = { id = es_11_scenario.12 days = 3650 tooltip = es_collapse.2.a.tt } } }
+		1299 = { owner = { country_event = { id = es_11_scenario.13 days = 3650 tooltip = es_collapse.2.a.tt } } }
+		}
 	}
 }
+
+### If you Own Whiterun or Winterhold
+
+country_event = {
+	id = es_11_scenario.11
+	title = es_11_scenario.11.t
+	desc = es_11_scenario.11.d
+	picture = BATTLE_3_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = { set_country_flag = winterhold_owns_cities_flag }
+
+	option = {
+		name = "es_11_scenario.11.a"
+		trigger = { owns = 1319 }
+		ai_chance = { factor = 33 }
+		
+		add_stability = -1
+		
+		define_ruler = {
+        name = "Olaf"
+        dynasty = "Whitehold"
+        adm = 2
+        dip = 5
+        mil = 3
+        age = 30
+        claim = 100
+		fixed = yes
+        }
+		
+		save_event_target_as = supports_olaf
+		set_country_flag = supports_olaf_flag
+	}
+	
+	option = {
+		name = "es_11_scenario.11.b"
+		trigger = { owns = 1299 }
+		ai_chance = { factor = 33 }
+		
+		add_stability = -1
+		
+		define_ruler = {
+        name = "Hanse"
+        dynasty = "Winterhold"
+        adm = 5
+        dip = 3
+        mil = 2
+        age = 30
+        claim = 100
+		fixed = yes
+        }
+		
+		save_event_target_as = supports_hense
+		set_country_flag = supports_hense_flag
+	}
+	
+	option = {
+		name = "es_11_scenario.11.c"
+		ai_chance = { factor = 33 }
+		
+		add_stability = -1
+		
+		add_country_modifier = {
+		name = "11_succesion_war"
+		duration = 9125
+		}
+		
+		add_legitimacy = -50
+		add_republican_tradition = -50
+		add_devotion = -50
+		add_horde_unity = -50
+		add_meritocracy = -50
+	}
+}
+
+### Olaf in Whiterun
+
+country_event = {
+	id = es_11_scenario.12
+	title = es_11_scenario.12.t
+	desc = es_11_scenario.12.d
+	picture = BATTLE_3_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "es_11_scenario.12.a"
+		ai_chance = { factor = 50 }
+		
+		add_stability = -1
+		
+		define_ruler = {
+        name = "Olaf"
+        dynasty = "Whitehold"
+        adm = 2
+        dip = 5
+        mil = 3
+        age = 30
+        claim = 100
+		fixed = yes
+        }
+		
+		save_event_target_as = supports_olaf
+		set_country_flag = supports_olaf_flag
+	}
+	
+	option = {
+		name = "es_11_scenario.12.b"
+		ai_chance = { factor = 50 }
+		
+		add_stability = -1
+		
+		1319 = { spawn_rebels = { type = nationalist_rebels size = 3.5 win = yes unrest = 25 leader = "Olaf" leader_dynasty = "Whitehold" } }
+	}
+}
+
+### Hense in Winterhold
+
+country_event = {
+	id = es_11_scenario.13
+	title = es_11_scenario.13.t
+	desc = es_11_scenario.13.d
+	picture = BATTLE_3_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "es_11_scenario.13.a"
+		ai_chance = { factor = 50 }
+		
+		add_stability = -1
+		
+		define_ruler = {
+        name = "Hanse"
+        dynasty = "Winterhold"
+        adm = 2
+        dip = 5
+        mil = 3
+        age = 30
+        claim = 100
+		fixed = yes
+        }
+		
+		save_event_target_as = supports_hense
+		set_country_flag = supports_hense_flag
+	}
+	
+	option = {
+		name = "es_11_scenario.13.b"
+		ai_chance = { factor = 50 }
+		
+		add_stability = -1
+		
+		1299 = { spawn_rebels = { type = nationalist_rebels size = 3.5 win = yes unrest = 25 leader = "Hanse" leader_dynasty = "Winterhold" } }
+	}
+}
+
+### Olaf&Hense Takes Windhelm
+
+country_event = {
+	id = es_11_scenario.14
+	title = es_11_scenario.14.t
+	desc = es_11_scenario.14.d
+	picture = BATTLE_3_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_11_scenario.14_flag }
+		OR = {
+		    has_country_flag = supports_olaf_flag
+		    has_country_flag = supports_hense_flag
+		}
+		NOT = { has_country_flag = winterhold_owns_cities_flag }
+		NOT = { owns = 1275 }
+    }
+
+	mean_time_to_happen = {
+		days = 3650		
+	}
+	
+	immediate = {
+	    set_country_flag = es_11_scenario.14_flag
+	}
+
+	option = {
+		name = "es_11_scenario.14.a"
+		ai_chance = { factor = 50 }
+		
+		declare_war_with_cb = { who = event_target:capital_city casus_belli = cb_es_scenario } 
+	}
+	
+	option = {
+		name = "es_11_scenario.14.b"
+		ai_chance = { factor = 50 }
+		
+		add_prestige = -25
+	}
+}
+
+### Crush Pretenders
+
+country_event = {
+	id = es_11_scenario.15
+	title = es_11_scenario.15.t
+	desc = es_11_scenario.15.d
+	picture = BATTLE_3_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_11_scenario.15_flag }
+		OR = {
+		    has_country_flag = supports_olaf_flag
+		    has_country_flag = supports_hense_flag
+		}
+		has_country_flag = winterhold_owns_cities_flag
+		NOT = { owns = 1275 }
+    }
+
+	mean_time_to_happen = {
+		days = 3650		
+	}
+	
+	immediate = {
+	    set_country_flag = es_11_scenario.15_flag
+	}
+
+	option = {
+		name = "es_11_scenario.15.a"
+		ai_chance = { factor = 50 }
+		
+		if = { limit = { has_country_flag = supports_hense_flag }
+		declare_war_with_cb = { who = event_target:supports_olaf casus_belli = cb_es_scenario } 
+		}
+		
+		if = { limit = { has_country_flag = supports_olaf_flag }
+		declare_war_with_cb = { who = event_target:supports_hense casus_belli = cb_es_scenario } 
+		}
+	}
+	
+	option = {
+		name = "es_11_scenario.15.b"
+		ai_chance = { factor = 50 }
+		
+		add_prestige = -25
+	}
+}
+	
+### Subjects Support Olaf/Hense/Start Independence War
+
+country_event = {
+	id = es_11_scenario.16
+	title = es_11_scenario.16.t
+	desc = es_11_scenario.16.d
+	picture = BATTLE_3_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_11_scenario.16_flag }
+		any_country = {
+		OR = {
+		    has_country_flag = supports_olaf_flag
+		    has_country_flag = supports_hense_flag
+		}
+		}
+		NOT = { has_country_flag = supports_olaf_flag }
+		NOT = { has_country_flag = supports_hense_flag }
+		NOT = { has_country_flag = winterhold_owns_cities_flag }
+		NOT = { owns = 1275 }
+		NOT = { owns = 1299 }
+		NOT = { owns = 1319 }
+		capital_scope = { superregion = skyrim_superregion }
+    }
+
+	mean_time_to_happen = {
+		days = 3650		
+	}
+	
+	immediate = {
+	    set_country_flag = es_11_scenario.16_flag
+	}
+
+	option = {
+		name = "es_11_scenario.16.a"
+		ai_chance = { factor = 33 }
+		
+		add_prestige = 25
+		
+		if = { limit = { NOT = { has_country_flag = supports_olaf } NOT = { truce_with = event_target:supports_olaf } NOT = { alliance_with = event_target:supports_olaf } NOT = { is_subject_of = event_target:supports_olaf } }
+		declare_war_with_cb = { who = event_target:supports_olaf casus_belli = cb_es_scenario } 
+		}
+	}
+	
+	option = {
+		name = "es_11_scenario.16.b"
+		ai_chance = { factor = 33 }
+		
+		add_prestige = 25
+		
+		if = { limit = { NOT = { has_country_flag = supports_hense } NOT = { truce_with = event_target:supports_hense } NOT = { alliance_with = event_target:supports_hense } NOT = { is_subject_of = event_target:supports_hense } }
+		declare_war_with_cb = { who = event_target:supports_hense casus_belli = cb_es_scenario } 
+		}
+	}
+	
+	option = {
+		name = "es_11_scenario.16.c"
+		ai_chance = { factor = 33 }
+		trigger = { is_free_or_tributary_trigger = no }
+		
+		add_stability = 1
+		
+		add_country_modifier = {
+			name = "war_for_independence"
+			duration = 9125
+		}
+	}
+}
+
+### General Vulard
+
+country_event = {
+	id = es_11_scenario.17
+	title = es_11_scenario.17.t
+	desc = es_11_scenario.17.d
+	picture = BATTLE_3_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_11_scenario.17_flag }
+		has_country_flag = general_vulard_flag
+    }
+
+	mean_time_to_happen = {
+		days = 3650		
+	}
+	
+	immediate = {
+	    set_country_flag = es_11_scenario.17_flag
+	}
+
+	option = {
+		name = "es_11_scenario.17.a"
+		ai_chance = { factor = 33 }
+		
+		add_stability = 3
+		
+		change_government = republic
+		add_government_reform = dutch_republic
+		define_ruler = {
+        name = "Vulard"
+        adm = 3
+        dip = 2
+        mil = 5
+        age = 48
+        claim = 100
+		fixed = yes
+        }
+	}
+	
+	option = {
+		name = "es_11_scenario.17.b"
+		ai_chance = { factor = 33 }
+		
+		define_general = {
+		name = "Vulard"
+        shock = 5
+        fire = 5
+        manuever = 5
+        siege = 5
+        }
+		
+		add_prestige = 10
+	}
+	
+}
+
+###################################################################################################
 
 country_event = {
 	id = es_11_scenario.2
@@ -434,59 +485,22 @@ country_event = {
 	desc = es_11_scenario.2.d
 	picture = ES_CITY_IN_FIRE_eventPicture
 	
-	trigger = {
-	    NOT = { has_country_flag = es_11_scenario.2_flag }
-		is_year = 369
-		NOT = { is_year = 420 }
-		culture_group = dwemer_cg
-		is_free_or_tributary_trigger = yes
-		capital_scope = { 
-		OR = {
-		region = vvardenfell_lr
-		region = morrowind_lr
-		}
-		}
-		NOT = { owns = 970 }
-		OR = {
-		exists = CHI
-		exists = MB9
-		}
-    }
-
-	mean_time_to_happen = {
-		days = 9125		
-	}
+	is_triggered_only = yes
 	
 	immediate = {
-	    set_country_flag = es_11_scenario.2_flag
+	    if = { limit = { exists = CHI } CHI = { save_event_target_as = 11_overlord } }
+		else_if = { limit = { exists = MB9 } MB9 = { save_event_target_as = 11_overlord } }
+		else_if = { limit = { 1002 = { owner = { culture_group = chimeris_cg } } } 1002 = { owner = { save_event_target_as = 11_overlord } } }
+	    else = { random_country = { limit = { culture_group = chimeris_cg } save_event_target_as = 11_overlord } }
 	}
 
 	option = {
 		name = "es_11_scenario.2.a"
 		ai_chance = { factor = 50 }
-	    if = {
-		limit = {
-		exists = MB9
-		NOT = { exists = CHI }
-		}
-		MB9 = {
-		create_subject = {
-        subject_type = vassal
-        subject = ROOT
-        }
-		}
-		}
-		if = {
-		limit = {
-		exists = CHI
-		}
-		CHI = {
-		create_subject = {
-        subject_type = vassal
-        subject = ROOT
-        }
-		}
-		}
+	  
+	    add_stability = 3
+	  
+		event_target:11_overlord = { create_subject = { subject_type = vassal subject = ROOT } }
 	}
 	
 	option = {
@@ -503,22 +517,9 @@ country_event = {
 	desc = es_11_scenario.3.d
 	picture = ES_PALACE_eventPicture
 	
-	trigger = {
-	    NOT = { has_country_flag = es_11_scenario.3_flag }
-		is_year = 369
-		NOT = { is_year = 420 }
-		culture_group = yokudan-redguardian_cg
-		capital_scope = { 
-		region = yokuda_lr
-		}
-    }
-
-	mean_time_to_happen = {
-		days = 9125		
-	}
+    is_triggered_only = yes
 	
 	immediate = {
-	    set_country_flag = es_11_scenario.3_flag
 	    add_country_modifier = {
 		name = "11_political_instability"
 		duration = 9125
@@ -565,7 +566,7 @@ country_event = {
 	
 }
 
-province_event = {
+country_event = {
 	id = es_11_scenario.4
 	title = es_11_scenario.4.t
 	desc = es_11_scenario.4.d
@@ -578,7 +579,7 @@ province_event = {
     }
 
 	mean_time_to_happen = {
-		days = 45625
+		days = 3650
 	}
 
 	option = {
@@ -602,12 +603,13 @@ country_event = {
 	
 	trigger = {
 	    NOT = { has_country_flag = es_11_scenario.5_flag }
-		is_year = 369
-		NOT = { is_year = 420 }
-		exists = WSK
-		exists = ESK
+		any_country = {
+		OR = {
+		    has_country_flag = supports_olaf_flag
+		    has_country_flag = supports_hense_flag
+		}
+		}
 		culture_group = cyrodiil_cg
-		owns = 1206
     }
 
 	mean_time_to_happen = {
@@ -621,27 +623,29 @@ country_event = {
 	option = {
 		name = "es_11_scenario.5.a"
 		ai_chance = { factor = 33 }
-		add_treasury = -500
-		add_manpower = -10
-		WSK = {
-		add_treasury = 500
-		add_manpower = 10
-		}
-	}
-	option = {
-		name = "es_11_scenario.5.b"
-		ai_chance = { factor = 33 }
-		add_treasury = -500
-		add_manpower = -10
-		ESK = {
-		add_treasury = 500
-		add_manpower = 10
-		}
-	}
-	option = {
-		name = "es_11_scenario.5.b"
-		ai_chance = { factor = 33 }
 		add_prestige = 5
+		add_treasury = -500
+		add_manpower = -10
+		event_target:supports_olaf = {
+		add_treasury = 500
+		add_manpower = 10
+		}
+	}
+	option = {
+		name = "es_11_scenario.5.b"
+		ai_chance = { factor = 33 }
+		add_treasury = -500
+		add_manpower = -10
+		event_target:supports_hense = {
+		add_treasury = 500
+		add_manpower = 10
+		}
+		add_prestige = 5
+	}
+	option = {
+		name = "es_11_scenario.5.b"
+		ai_chance = { factor = 33 }
+		add_prestige = -10
 	}
 }
 
@@ -651,25 +655,7 @@ country_event = {
 	desc = es_11_scenario.6.d
 	picture = ES_MILITARY_CAMP_eventPicture
 	
-	trigger = {
-	    NOT = { has_country_flag = es_11_scenario.6_flag }
-		is_year = 369
-		NOT = { is_year = 420 }
-		NOT = { tag = OLD }
-		culture_group = northern_cg
-		OR = {
-		owns = 1342
-		owns = 1275
-		}
-    }
-
-	mean_time_to_happen = {
-		days = 9125		
-	}
-	
-	immediate = {
-	    set_country_flag = es_11_scenario.6_flag
-	}
+	is_triggered_only = yes
 
 	option = {
 		name = "es_11_scenario.6.a"
@@ -744,3 +730,110 @@ country_event = {
 		add_stability = 1
 	}
 }
+
+### Direnii - War Against Old Kingdom
+
+country_event = {
+	id = es_11_scenario.8
+	title = es_11_scenario.8.t
+	desc = es_11_scenario.8.d
+	picture = ES_CLERGY_MEETING_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		1369 = { owner = { save_event_target_as = 1369_owner } }
+	}
+
+	option = {
+		name = "es_11_scenario.8.a"
+		ai_chance = { factor = 50 }
+		
+		every_province = {
+		    limit = { region = hgh_rock_lr NOT = { owned_by = ROOT is_city = yes } add_core = ROOT }
+		}
+		
+		if = { limit = { NOT = { truce_with = event_target:1369_owner } NOT = { alliance_with = event_target:1369_owner } NOT = { is_subject_of = event_target:1369_owner } }
+		declare_war_with_cb = { who = event_target:1369_owner casus_belli = cb_es_scenario } 
+		}
+		
+		add_years_of_income = -1.0
+	}
+	option = {
+		name = "es_11_scenario.8.b"
+		ai_chance = { factor = 50 }
+		add_prestige = -15
+	}
+}
+
+### Rise of the Reach
+
+country_event = {
+	id = es_11_scenario.9
+	title = es_11_scenario.9.t
+	desc = es_11_scenario.9.d
+	picture = ES_CLERGY_MEETING_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "es_11_scenario.9.a"
+		ai_chance = { factor = 50 }
+		
+		add_stability = -1
+		
+		change_tag = REA
+		change_primary_culture = reachmen
+		change_religion = old_gods_cult
+		
+		if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		if = { limit = { NOT = { government_rank = 5 } } set_government_rank = 5 }
+	}
+	option = {
+		name = "es_11_scenario.9.b"
+		ai_chance = { factor = 50 }
+		
+		random_owned_province = { spawn_rebels = { type = nationalist_rebels size = 3.5 win = yes unrest = 25 } }
+		random_owned_province = { spawn_rebels = { type = nationalist_rebels size = 3.5 win = yes unrest = 25 } }
+		random_owned_province = { spawn_rebels = { type = nationalist_rebels size = 3.5 win = yes unrest = 25 } }
+		random_owned_province = { spawn_rebels = { type = nationalist_rebels size = 3.5 win = yes unrest = 25 } }
+		random_owned_province = { spawn_rebels = { type = nationalist_rebels size = 3.5 win = yes unrest = 25 } }
+	}
+}
+
+### Conquest of Bruma
+country_event = {
+	id = es_11_scenario.10
+	title = es_11_scenario.10.t
+	desc = es_11_scenario.10.d
+	picture = ES_CLERGY_MEETING_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		1194 = { owner = { save_event_target_as = 1194_owner } }
+		set_global_flag = lberation_of_bruma_flag
+	}
+
+	option = {
+		name = "es_11_scenario.10.a"
+		ai_chance = { factor = 50 }
+		
+		if = { limit = { NOT = { truce_with = event_target:1194_owner } NOT = { alliance_with = event_target:1194_owner } NOT = { is_subject_of = event_target:1194_owner } }
+		declare_war_with_cb = { who = event_target:1194_owner casus_belli = cb_es_scenario } 
+		}
+		
+		add_manpower = 50
+	}
+	option = {
+		name = "es_11_scenario.10.b"
+		ai_chance = { factor = 50 }
+		
+		add_stability = -1
+	}
+}
+
+### Decisions:
+### Take Windhelm
+### True Ruler of Karthwastern
+### Release Bruma
