@@ -731,3 +731,72 @@ country_event = {
 	}
 	
 }
+
+country_event = {
+	id = es_scenario_operator.12
+	title = es_1_scenario.1.t
+	desc = es_1_scenario.1.d
+	picture = ES_THRONEROOM_1_eventPicture	
+	
+	fire_only_once = yes
+	
+	trigger = {
+	    tag = RED
+		NOT = { is_year = 478 }
+		OR = {
+		is_year = 420
+		AND = {
+		any_country = {
+			owns_or_subject_of = 1493
+			owns_or_subject_of = 1510
+			owns_or_subject_of = 6392
+			owns_or_subject_of = 6346
+			owns_or_subject_of = 1446
+		}
+		}
+		}
+    }
+
+	mean_time_to_happen = {
+		days = 3650		
+	}
+	
+	immediate = {
+	    every_province = { limit = { is_city = no OR = { area = hammerfell_38_la area = hammerfell_37_la area = hammerfell_35_la area = hammerfell_34_la area = hammerfell_33_la } } cede_province = ROU add_core = ROU }
+		###
+		every_country = { limit = { owns = 1319 } country_event = { id = es_12_scenario.1 days = 3650 tooltip = es_collapse.2.a.tt } }
+		###
+		every_country = { limit = { NOT = { exists = CA6 } any_owned_province = { area = cyrodiil_6_la } } country_event = { id = es_12_scenario.3 days = 3650 tooltip = es_collapse.2.a.tt }
+		###
+		every_country = { limit = { NOT = { exists = CA7 } any_owned_province = { area = cyrodiil_7_la } } country_event = { id = es_12_scenario.4 days = 3650 tooltip = es_collapse.2.a.tt }
+		###
+		every_country = { limit = { culture_group = cyrodiil_cg owns = 1206 NOT = { government = monarchy } } country_event = { id = es_12_scenario.5 days = 3650 tooltip = es_collapse.2.a.tt }
+		###
+		every_country = { limit = { culture_group = high_elves_cg owns = 1379 } country_event = { id = es_12_scenario.6 days = 3650 tooltip = es_collapse.2.a.tt } }
+		###
+		every_country = { limit = { culture_group = northern_cg owns = 1342 } country_event = { id = es_12_scenario.7 days = 3650 tooltip = es_collapse.2.a.tt } }
+		###
+		every_country = { limit = { capital_scope = { superregion = { high_rock_superregion } num_of_subjects = 1 } } country_event = { id = es_12_scenario.8 days = 3650 tooltip = es_collapse.2.a.tt } }
+		###
+		every_country = { limit = { culture_group = half_blood_cg owns = 1355 } country_event = { id = es_12_scenario.10 days = 3650 tooltip = es_collapse.2.a.tt } }
+		###
+		every_country = { limit = { culture_group = cyrodiil_cg owns = 1206 } country_event = { id = es_12_scenario.11 days = 9125 tooltip = es_collapse.2.a.tt } }
+		###
+		every_country = { limit = { NOT = { tag = COL } culture_group = cyrodiil_cg owns = 1206 } country_event = { id = es_12_scenario.13 days = 12775 tooltip = es_collapse.2.a.tt } }
+		###
+		every_country = { limit = { any_owned_province = { OR = { area = skyrim_27_la area = skyrim_19_la area = skyrim_24_la area = skyrim_23_la } } } country_event = { id = es_12_scenario.9 days = 12775 tooltip = es_collapse.2.a.tt } }
+		###
+		every_country = { limit = { culture_group = northern_cg any_owned_province = { superregion = skyrim_superregion } } country_event = { id = es_12_scenario.100 days = 3650 tooltip = es_collapse.2.a.tt } }
+		###
+		every_country = { limit = { culture_group = dwemer_cg is_free_or_tributary_trigger = no capital_scope = { superregion = skyrim_superregion } } country_event = { id = es_12_scenario.101 days = 3650 tooltip = es_collapse.2.a.tt } }
+		###
+		every_country = { limit = { culture_group = chimeris_cg owns = 1002 } country_event = { id = es_12_scenario.102 days = 3650 tooltip = es_collapse.2.a.tt } }
+		###
+		every_country = { limit = { culture_group = northern_cg owns = 1275 } country_event = { id = es_12_scenario.103 days = 3650 tooltip = es_collapse.2.a.tt } }
+	}
+
+	option = {
+		name = "es_1_scenario.1.a"
+	}
+	
+}

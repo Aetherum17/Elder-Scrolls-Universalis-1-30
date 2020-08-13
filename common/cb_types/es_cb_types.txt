@@ -105,3 +105,32 @@ cb_es_purification = {
 
 	war_goal = es_purification
 }
+
+cb_es_nordic_feud = {
+	valid_for_subject = no
+
+	prerequisites = {
+	    has_country_flag = es_12_nordic_feud_flag
+		culture_group = northern_cg
+		FROM = {
+		    is_neighbor_of = ROOT
+			culture_group = northern_cg
+		}
+	}
+
+	war_goal = es_nordic_feud
+}
+
+cb_es_tribal_war = {
+	valid_for_subject = no
+
+	prerequisites = {
+		culture_group = minotaur_cg
+		FROM = {
+		    is_neighbor_of = ROOT
+			culture_group = minotaur_cg
+		}
+	}
+
+	war_goal = es_nordic_feud
+}

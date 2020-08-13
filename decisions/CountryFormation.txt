@@ -4140,6 +4140,7 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { tag = DWE }
+			NOT = { tag = NCH }
 			NOT = { exists = ROU }
 			primary_culture = dwemer
 			NOT = { has_country_flag = formed_rou_flag }
@@ -5225,6 +5226,57 @@ country_decisions = {
 					NOT = { government_rank = 10 }
 				}
 				set_government_rank = 10
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 300
+	}
+	
+	nchuand_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = NCH }
+			NOT = { tag = ROU }
+			NOT = { tag = DWE }
+			primary_culture = dwemer
+			NOT = { has_country_flag = formed_nch_flag }
+		}
+		provinces_to_highlight = {
+		    OR = {
+			province_id = 1355		
+			province_id = 1331
+			province_id = 7220
+			province_id = 7200
+			province_id = 1363
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 1355		
+			owns_core_province = 1331
+			owns_core_province = 7220
+			owns_core_province = 7200
+			owns_core_province = 1363
+		}
+		effect = {
+			change_tag = NCH
+			set_country_flag = formed_nch_flag
+			#
+			if = {
+				limit = {
+					NOT = { government_rank = 5 }
+				}
+				set_government_rank = 5
 			}
 			add_country_modifier = {
 				name = "centralization_modifier"

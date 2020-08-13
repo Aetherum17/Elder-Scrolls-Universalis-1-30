@@ -130,9 +130,8 @@ country_decisions = {
 		}
 		effect = {
 		set_country_flag = es_4_riften_flag
-		1268 = { owner = { save_event_target_as = 1268_owner } }
 		
-		every_province = { limit = { area = skyrim_1_la owned_by = event_target:1268_owner } cede_province = NA1 add_core = NA1 }
+		every_province = { limit = { area = skyrim_1_la owned_by = root } cede_province = NA1 add_core = NA1 }
 		
 		ROOT = { create_subject = { subject_type = vassal subject = NA1 } }
 		NA1 = { change_religion = ROOT change_primary_culture = ROOT }
@@ -524,15 +523,15 @@ country_decisions = {
 	    major = yes
 		potential = {
 		    NOT = { is_core = 1275 }
-			NOT = { has_country_flag = es_11_take_windhelm_flag }
+			NOT = { has_global_flag = es_11_take_windhelm_flag }
 			any_country = { has_country_modifier = skyrim_succession_war }
 		}
 		allow = {
 		    1275 = { OR = { owned_by = ROOT controlled_by = ROOT } }
 		}
 		effect = {
-		    set_country_flag = es_11_take_windhelm_flag
-			create_subject = { subject_type = personal_union subject = event_target:capital_city }
+		    set_global_flag = es_11_take_windhelm_flag
+			country_event = { id = es_11_scenario.18 }
 			add_prestige = 25
 		}
 		ai_will_do = {
@@ -554,6 +553,7 @@ country_decisions = {
 		effect = {
 		    set_country_flag = es_11_true_ruler_of_karthwastern_flag
 			create_subject = { subject_type = personal_union subject = NC5 }
+			NC5 = { change_religion = ROOT change_culture = ROOT }
 			add_prestige = 25
 		}
 		ai_will_do = {
@@ -574,17 +574,19 @@ country_decisions = {
 		    cyrodiil_16_la = { type = all owned_by = ROOT }
 			cyrodiil_68_la = { type = all owned_by = ROOT }
 			cyrodiil_69_la = { type = all owned_by = ROOT }
+			cyrodiil_71_la = { type = all owned_by = ROOT }
+			cyrodiil_72_la = { type = all owned_by = ROOT }
 		}
 		effect = {
 		    set_country_flag = es_11_release_bruma_flag
 			create_subject = { subject_type = personal_union subject = NC5 }
 			every_owned_province = {
-			    limit = { OR = { area = cyrodiil_16_la area = cyrodiil_68_la area = cyrodiil_69_la } }
+			    limit = { OR = { area = cyrodiil_16_la area = cyrodiil_68_la area = cyrodiil_69_la area = cyrodiil_71_la area = cyrodiil_72_la} }
 				cede_province = CB6
 				add_core = CB6
 			}
 			create_subject = { subject_type = march subject = CB6 }
-			CB6 = { change_government_reform_progress = -99999 }
+			CB6 = { change_government_reform_progress = -99999 change_religion = ROOT change_primary_culture = ROOT }
 			add_prestige = 35
 		}
 		ai_will_do = {
@@ -1290,6 +1292,7 @@ country_decisions = {
 			is_year = 1609
 		}
 		NOT = { has_country_modifier = amulet_of_kings }
+		owns = 1206
 		}
 		allow = {
 		    treasury = 1000

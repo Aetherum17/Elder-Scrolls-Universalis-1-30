@@ -9,23 +9,30 @@ country_event = {
 	is_triggered_only = yes
 	
 	immediate = {
+	    hidden_effect = {
 	    every_country = {
 		    limit = { capital_scope = { superregion = skyrim_superregion } }
 			add_country_modifier = { name = "skyrim_succession_war" duration = 9125 }
+		}
 		}
 	}
 
 	option = {
 		name = "es_11_scenario.1.a"
 		ai_chance = { factor = 50 }
+		if = { limit = { NOT = { exists = SKY } }
 		change_tag = SKY
+		clr_country_flag = formed_old_flag
+		}
 		
+		hidden_effect = {
 		every_owned_province = {
 		limit = {
 		NOT = { superregion = skyrim_superregion }
 		}
 		cede_province = OLD
 		add_core = OLD
+		}
 		}
 		
 		kill_ruler = yes
@@ -41,16 +48,8 @@ country_event = {
 		}
 		
 		OLD = {
-		change_government = republic
-		define_ruler = {
-        name = "Vulard"
-        adm = 3
-        dip = 2
-        mil = 5
-        age = 50
-        claim = 100
-		fixed = yes
-        }
+		define_ruler = { }
+		set_country_flag = general_vulard_flag
 		}
 		
 		if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
@@ -63,18 +62,14 @@ country_event = {
 		
 		kill_ruler = yes
 		
-		add_stability = -3
-		add_country_modifier = {
-		name = "11_succesion_war"
-		duration = 9125
-		}
-		
+		hidden_effect = {
 		every_owned_province = {
 		limit = {
 		superregion = skyrim_superregion
 		}
 		cede_province = SKY
 		add_core = SKY
+		}
 		}
 		
 		set_country_flag = general_vulard_flag
@@ -88,20 +83,39 @@ country_event = {
 		random_owned_province = { spawn_rebels = { type = nationalist_rebels size = 3.5 win = yes unrest = 25 } }
 		random_owned_province = { spawn_rebels = { type = nationalist_rebels size = 3.5 win = yes unrest = 25 } }
 		}
+	}
+	
+	option = {
+		name = "es_11_scenario.1.b"
+		ai_chance = { factor = 50 }
 		
-		add_legitimacy = -50
-		add_republican_tradition = -50
-		add_devotion = -50
-		add_horde_unity = -50
-		add_meritocracy = -50
+		kill_ruler = yes
+		
+		add_stability = -5
+		add_country_modifier = {
+		name = "11_succesion_war"
+		duration = 3650
+		}
+		
+		set_country_flag = general_vulard_flag
+		
+		random_owned_province = { spawn_rebels = { type = pretender_rebels size = 3.5 win = yes unrest = 25 } }
+		random_owned_province = { spawn_rebels = { type = particularist_rebels size = 3.5 win = yes unrest = 25 } }
+		random_owned_province = { spawn_rebels = { type = pretender_rebels size = 3.5 win = yes unrest = 25 } }
+		random_owned_province = { spawn_rebels = { type = anti_tax_rebels size = 3.5 win = yes unrest = 25 } }
+		random_owned_province = { spawn_rebels = { type = nationalist_rebels size = 3.5 win = yes unrest = 25 } }
+		random_owned_province = { spawn_rebels = { type = nationalist_rebels size = 3.5 win = yes unrest = 25 } }
+		random_owned_province = { spawn_rebels = { type = nationalist_rebels size = 3.5 win = yes unrest = 25 } }
 	}
 	
 	after = {
-	    1275 = { owner = { save_event_target_as = capital_city } }
-	    if = { limit = { OR = { owns = 1319 owns = 1299 } } country_event = { id = es_11_scenario.11 days = 3650 tooltip = es_collapse.2.a.tt } }
+	    1275 = { owner = { save_global_event_target_as = capital_city } }
+		if = { limit = { any_country = { owns = 1319 owns = 1299 } }
+	    random_country = { limit = { OR = { owns = 1319 owns = 1299 } } country_event = { id = es_11_scenario.11 days = 31 tooltip = es_collapse.2.a.tt } }
+		}
 		else = {
-		1319 = { owner = { country_event = { id = es_11_scenario.12 days = 3650 tooltip = es_collapse.2.a.tt } } }
-		1299 = { owner = { country_event = { id = es_11_scenario.13 days = 3650 tooltip = es_collapse.2.a.tt } } }
+		1319 = { owner = { country_event = { id = es_11_scenario.12 days = 31 tooltip = es_collapse.2.a.tt } } }
+		1299 = { owner = { country_event = { id = es_11_scenario.13 days = 31 tooltip = es_collapse.2.a.tt } } }
 		}
 	}
 }
@@ -112,7 +126,7 @@ country_event = {
 	id = es_11_scenario.11
 	title = es_11_scenario.11.t
 	desc = es_11_scenario.11.d
-	picture = BATTLE_3_eventPicture
+	picture = ES_EMPTY_THRONE_eventPicture
 	
 	is_triggered_only = yes
 	
@@ -136,8 +150,10 @@ country_event = {
 		fixed = yes
         }
 		
-		save_event_target_as = supports_olaf
+		hidden_effect = {
+		save_global_event_target_as = supports_olaf
 		set_country_flag = supports_olaf_flag
+		}
 	}
 	
 	option = {
@@ -158,8 +174,10 @@ country_event = {
 		fixed = yes
         }
 		
-		save_event_target_as = supports_hense
+		hidden_effect = {
+		save_global_event_target_as = supports_hense
 		set_country_flag = supports_hense_flag
+		}
 	}
 	
 	option = {
@@ -187,7 +205,7 @@ country_event = {
 	id = es_11_scenario.12
 	title = es_11_scenario.12.t
 	desc = es_11_scenario.12.d
-	picture = BATTLE_3_eventPicture
+	picture = ES_WGITERUN_1_eventPicture
 	
 	is_triggered_only = yes
 
@@ -196,6 +214,8 @@ country_event = {
 		ai_chance = { factor = 50 }
 		
 		add_stability = -1
+		
+		if = { limit = { is_free_or_tributary_trigger = no } overlord = { PREV = { grant_independence = yes } } }
 		
 		define_ruler = {
         name = "Olaf"
@@ -208,8 +228,10 @@ country_event = {
 		fixed = yes
         }
 		
-		save_event_target_as = supports_olaf
+		hidden_effect = {
+		save_global_event_target_as = supports_olaf
 		set_country_flag = supports_olaf_flag
+		}
 	}
 	
 	option = {
@@ -228,7 +250,7 @@ country_event = {
 	id = es_11_scenario.13
 	title = es_11_scenario.13.t
 	desc = es_11_scenario.13.d
-	picture = BATTLE_3_eventPicture
+	picture = ES_WINTERHOLD
 	
 	is_triggered_only = yes
 
@@ -237,6 +259,8 @@ country_event = {
 		ai_chance = { factor = 50 }
 		
 		add_stability = -1
+		
+		if = { limit = { is_free_or_tributary_trigger = no } overlord = { PREV = { grant_independence = yes } } }
 		
 		define_ruler = {
         name = "Hanse"
@@ -249,8 +273,10 @@ country_event = {
 		fixed = yes
         }
 		
-		save_event_target_as = supports_hense
+		hidden_effect = {
+		save_global_event_target_as = supports_hense
 		set_country_flag = supports_hense_flag
+		}
 	}
 	
 	option = {
@@ -269,7 +295,7 @@ country_event = {
 	id = es_11_scenario.14
 	title = es_11_scenario.14.t
 	desc = es_11_scenario.14.d
-	picture = BATTLE_3_eventPicture
+	picture = ES_WINDHELM_BATTLE_eventPicture
 	
 	trigger = {
 	    NOT = { has_country_flag = es_11_scenario.14_flag }
@@ -310,7 +336,7 @@ country_event = {
 	id = es_11_scenario.15
 	title = es_11_scenario.15.t
 	desc = es_11_scenario.15.d
-	picture = BATTLE_3_eventPicture
+	picture = ES_STORMCLOCK_ARMY_eventPicture
 	
 	trigger = {
 	    NOT = { has_country_flag = es_11_scenario.15_flag }
@@ -357,7 +383,7 @@ country_event = {
 	id = es_11_scenario.16
 	title = es_11_scenario.16.t
 	desc = es_11_scenario.16.d
-	picture = BATTLE_3_eventPicture
+	picture = SKYRIM_CIVIL_WAR_eventPicture
 	
 	trigger = {
 	    NOT = { has_country_flag = es_11_scenario.16_flag }
@@ -426,7 +452,7 @@ country_event = {
 	id = es_11_scenario.17
 	title = es_11_scenario.17.t
 	desc = es_11_scenario.17.d
-	picture = BATTLE_3_eventPicture
+	picture = NORDIC_GENERAL
 	
 	trigger = {
 	    NOT = { has_country_flag = es_11_scenario.17_flag }
@@ -499,8 +525,13 @@ country_event = {
 		ai_chance = { factor = 50 }
 	  
 	    add_stability = 3
-	  
-		event_target:11_overlord = { create_subject = { subject_type = vassal subject = ROOT } }
+	    
+		if = { limit = { NOT = { num_of_cities = 25 } event_target:11_overlord = { OR = { government = monarchy government = tribal } } }
+			event_target:11_overlord = { create_subject = { subject_type = personal_union subject = ROOT } }
+		}
+		else = {
+			event_target:11_overlord = { create_subject = { subject_type = vassal subject = ROOT } }
+		}
 	}
 	
 	option = {
@@ -737,7 +768,7 @@ country_event = {
 	id = es_11_scenario.8
 	title = es_11_scenario.8.t
 	desc = es_11_scenario.8.d
-	picture = ES_CLERGY_MEETING_eventPicture
+	picture = ES_HIGH_ROCK_eventPicture
 	
 	is_triggered_only = yes
 	
@@ -772,7 +803,7 @@ country_event = {
 	id = es_11_scenario.9
 	title = es_11_scenario.9.t
 	desc = es_11_scenario.9.d
-	picture = ES_CLERGY_MEETING_eventPicture
+	picture = ES_REACH_1_eventPicture
 	
 	is_triggered_only = yes
 
@@ -806,7 +837,7 @@ country_event = {
 	id = es_11_scenario.10
 	title = es_11_scenario.10.t
 	desc = es_11_scenario.10.d
-	picture = ES_CLERGY_MEETING_eventPicture
+	picture = ES_BRUMA_1_eventPicture
 	
 	is_triggered_only = yes
 	
@@ -833,7 +864,43 @@ country_event = {
 	}
 }
 
-### Decisions:
-### Take Windhelm
-### True Ruler of Karthwastern
-### Release Bruma
+country_event = {
+	id = es_11_scenario.18
+	title = es_11_scenario.17.t
+	desc = es_11_scenario.17.d
+	picture = NORDIC_GENERAL
+	
+	hidden = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	    if = { limit = { NOT = { government = monarchy } change_government = monarchy } }
+		
+	    save_global_event_target_as = old_country
+		every_province = { limit = { owned_by = event_target:old_country } set_province_flag = owned_by_old_country_flag }
+		1275 = { clr_province_flag = owned_by_old_country_flag }
+		inherit = event_target:capital_city
+		change_tag = event_target:capital_city
+		
+		if = { limit = { overlord_of = NA1 } clr_country_flag = es_riften_con_flag }
+		if = { limit = { overlord_of = NA5 } clr_country_flag = es_ivarstead_con_flag }
+		if = { limit = { overlord_of = NA6 } clr_country_flag = es_falkreath_con_flag }
+		if = { limit = { overlord_of = NB9 } clr_country_flag = es_markarth_con_flag }
+		if = { limit = { overlord_of = NC5 } clr_country_flag = es_karthwasten_con_flag }
+		if = { limit = { overlord_of = NB6 } clr_country_flag = es_solitude_con_flag }
+		if = { limit = { overlord_of = NB5 } clr_country_flag = es_morthal_con_flag }
+		if = { limit = { overlord_of = NA9 } clr_country_flag = es_dawnstar_con_flag }
+		if = { limit = { overlord_of = NA8 } clr_country_flag = es_winterhold_con_flag }
+		
+		every_country = { limit = { is_subject_of = ROOT } overlord = { PREV = { grant_independence = yes } } }
+		every_province = { limit = { has_province_flag = owned_by_old_country_flag } cede_province = event_target:old_country add_core = event_target:old_country }
+		create_subject = { subject_type = personal_union subject = event_target:old_country }
+		event_target:old_country = { change_government_reform_progress = -99999 }
+	}
+
+	option = {
+		name = "es_11_scenario.17.a"
+	}
+	
+}

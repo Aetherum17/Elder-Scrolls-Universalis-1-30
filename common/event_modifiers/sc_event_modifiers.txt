@@ -303,6 +303,12 @@ skyrim_succession_war = {
     local_unrest = 10
 }
 
+12_nordic_feud = {
+    global_manpower_modifier = 0.25
+	manpower_recovery_speed = 0.25
+	land_maintenance_modifier = -0.25
+}
+
 13_great_plague = {
     local_unrest = 10
 	local_development_cost = 1.0

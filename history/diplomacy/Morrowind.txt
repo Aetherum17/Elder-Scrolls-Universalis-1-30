@@ -197,7 +197,7 @@ alliance = {
 	first = MF5
 	second = MB5
 	start_date = 57.1.1
-	end_date = 9999.1.1
+	end_date = 369.1.1
 }
 
 dependency = {
@@ -205,7 +205,7 @@ dependency = {
 	first = MB5
 	second = MF6
 	start_date = 57.1.1
-	end_date = 9999.1.1
+	end_date = 369.1.1
 }
 
 dependency = {
@@ -213,7 +213,7 @@ dependency = {
 	first = MB5
 	second = MB4
 	start_date = 57.1.1
-	end_date = 9999.1.1
+	end_date = 369.1.1
 }
 
 dependency = {
@@ -317,14 +317,14 @@ alliance = {
 	first = DWE
 	second = MD6
 	start_date = 242.1.1
-	end_date = 9999.1.1
+	end_date = 420.1.1
 }
 
 alliance = {
 	first = DWE
 	second = MA9
 	start_date = 242.1.1
-	end_date = 9999.1.1
+	end_date = 420.1.1
 }
 
 alliance = {
@@ -368,56 +368,56 @@ vassal = {
 	first = OLD
 	second = SKA
 	start_date = 308.1.1
-	end_date = 9999.1.1
+	end_date = 420.1.1
 }
 
 vassal = {
 	first = OLD
 	second = MA2
 	start_date = 308.1.1
-	end_date = 9999.1.1
+	end_date = 420.1.1
 }
 
 vassal = {
 	first = OLD
 	second = MC6
 	start_date = 308.1.1
-	end_date = 9999.1.1
+	end_date = 420.1.1
 }
 
 vassal = {
 	first = OLD
 	second = MC7
 	start_date = 308.1.1
-	end_date = 9999.1.1
+	end_date = 420.1.1
 }
 
 ####################################################################### 10
 
 alliance = {
 	first = ME9
-	second = RES
+	second = CHI
 	start_date = 369.1.1
 	end_date = 9999.1.1
 }
 
 alliance = {
 	first = MA8
-	second = RES
+	second = CHI
 	start_date = 369.1.1
 	end_date = 9999.1.1
 }
 
 alliance = {
 	first = MF5
-	second = RES
+	second = CHI
 	start_date = 369.1.1
 	end_date = 9999.1.1
 }
 
 dependency = {
     subject_type = alliance_member
-    first = RES
+    first = CHI
     second = MB2
     start_date = 369.1.1
 	end_date = 9999.1.1
@@ -425,7 +425,7 @@ dependency = {
 
 dependency = {
     subject_type = alliance_member
-    first = RES
+    first = CHI
     second = MF5
     start_date = 369.1.1
 	end_date = 9999.1.1
@@ -433,8 +433,31 @@ dependency = {
 
 dependency = {
     subject_type = alliance_member
-    first = RES
+    first = CHI
     second = MB4
     start_date = 369.1.1
+	end_date = 9999.1.1
+}
+
+####################################################################### 11
+
+union = {
+    first = CHI
+	second = DWE
+	start_date = 420.1.1
+	end_date = 9999.1.1
+}
+
+vassal = {
+	first = CHI
+	second = MA9
+	start_date = 420.1.1
+	end_date = 9999.1.1
+}
+
+vassal = {
+	first = CHI
+	second = MD6
+	start_date = 420.1.1
 	end_date = 9999.1.1
 }

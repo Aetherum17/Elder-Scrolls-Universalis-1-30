@@ -12,7 +12,6 @@ capital = 1275
 	set_country_flag = decentralize_skyrim_flag
 	set_country_flag = es_riften_con_flag
 	set_country_flag = es_ivarstead_con_flag
-	set_country_flag = es_falkreath_con_flag
 	set_country_flag = es_markarth_con_flag
 	set_country_flag = es_karthwasten_con_flag
 	set_country_flag = es_solitude_con_flag
@@ -29,15 +28,25 @@ capital = 1275
 	}
 }
 
-369.1.1 = {
+420.1.1 = {
     government = republic
+	add_government_reform = dutch_republic
 	monarch = {
 		name = "Vulard"
-		birth_date = 319.1.1
+		birth_date = 372.1.1
         adm = 3
         dip = 2
         mil = 5
 	}
 	
 	capital = 952
+	
+	clr_country_flag = es_riften_con_flag
+	clr_country_flag = es_ivarstead_con_flag
+	clr_country_flag = es_markarth_con_flag
+	clr_country_flag = es_karthwasten_con_flag
+	clr_country_flag = es_solitude_con_flag
+	clr_country_flag = es_morthal_con_flag
+	clr_country_flag = es_dawnstar_con_flag
+	clr_country_flag = es_winterhold_con_flag
 }

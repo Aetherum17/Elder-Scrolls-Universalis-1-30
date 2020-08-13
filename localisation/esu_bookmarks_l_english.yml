@@ -47,6 +47,7 @@
  11_alessain_selective:0 "Alessian Selective"
  skyrim_succession_war:0 "Skyrim Succesion War"
  12_local_unrest:0 "Local Unrest"
+ 12_nordic_feud:0 "Nordic Feud"
  13_great_plague:0 "Great Plague"
  13_anti-alessian_reforms:0 "Anti-Alessian Reforms"
  13_internal_instability:0 "Internal Instability"
@@ -741,6 +742,7 @@
  es_11_scenario.1.d:0 "Our ruler passed away at dawn today. The Council, which gathered a few hours after this tragic event, chose Jarl Hanse from Winterhold as the new legitimate ruler of Skyrim. However, not everyone agreed with this decision. Jarl Olaf from Whiterun declared the decision of the council invalid, and the council itself illegal, and began to gather troops to march on Windhelm. At the same time, General Vulard declared himself a ruler of the New Territories, for the sake of preserving the stability and integrity of the Old Kingdom. It looks like a civil war is inevitable. And we need to choose a side in it."
  es_11_scenario.1.a:0 "Side with the Council."
  es_11_scenario.1.b:0 "Move the Capital to the New Territories."
+ es_11_scenario.1.c:0 "Try to keep the order at any cost!"
  
  es_11_scenario.11.t:0 "Our New Ruler"
  es_11_scenario.11.d:0 "The Nordic state cannot be rulled by the Council of Jarls forever. We must elect our new High King as soons as possble to prevent further nation fragmentation. However, do we have decent and wise candidates for such position?"
@@ -766,10 +768,10 @@
  es_11_scenario.15.t:0 "The Pretenders"
  es_11_scenario.15.d:0 "There a lot of people, noble one and not, who would like to rule the Skyrim. Majority of them would rather be killed by other competitors, then became a threat for us. However, there are still rulers, who eigher start to build their own kingdom inside our lands or gather huge armies of mercenaries and peasants and prepare to attack out capital. We should deal with them as soon as possible. Othewise, our ow regnum can end."
  es_11_scenario.15.a:0 "Our mighty army is capable taking care of such threat."
- es_11_scenario.15.a:0 "They do not jeopardize our rule."
+ es_11_scenario.15.b:0 "They do not jeopardize our rule."
  
  es_11_scenario.16.t:0 "Succesion War in Skyrim"
- es_11_scenario.16.t:0 "The whole Skyrim is now in the flames of a civil war. Soon, we will also be brought into this conflict, so we need to choose the side between two Jarls. However, we could also try to use this situation to increase our influence in the region and became a new great power. Any case, we should wisely choose our move. We won't be able toange the side later."
+ es_11_scenario.16.d:0 "The whole Skyrim is now in the flames of a civil war. Soon, we will also be brought into this conflict, so we need to choose the side between two Jarls. However, we could also try to use this situation to increase our influence in the region and became a new great power. Any case, we should wisely choose our move. We won't be able toange the side later."
  es_11_scenario.16.a:0 "We will fight for Jarl Hense!"
  es_11_scenario.16.b:0 "We will fight for Jarl Olaf!"
  es_11_scenario.16.c:0 "It is the time to find our own way."
@@ -785,7 +787,7 @@
  es_11_scenario.8.b:0 "There are other things, that we should focus on." 
  
  es_11_scenario.9.t:0 "Reachmen Rebellion"
- es_11_scenario.9.t:0 "Relations with the local population in the Reach have always been tense. However, with the outbreak of the civil war in Skyrim, uprisings began to occur regularly throughout the country. If this continues further, then soon the rebels will be able to move from guerrilla warfare to open hostilities."
+ es_11_scenario.9.d:0 "Relations with the local population in the Reach have always been tense. However, with the outbreak of the civil war in Skyrim, uprisings began to occur regularly throughout the country. If this continues further, then soon the rebels will be able to move from guerrilla warfare to open hostilities."
  es_11_scenario.9.a:0 "Looks like the best we can do is to accept their demands."
  es_11_scenario.9.b:0 "If they want to fight - they will get it!"
  
@@ -862,7 +864,7 @@
  
  es_12_scenario.4.t:0 "Nationalism in Kvatch"
  es_12_scenario.4.d:0 "For many years, Kvatch was part of our country, retaining only formal independence. However, now the nobility demands to give them even more autonomy, threatening otherwise to raise the population to revolt."
- es_12_scenario.4.a:0 "Refuse to frant autonomy.."
+ es_12_scenario.4.a:0 "Refuse to frant autonomy."
  es_12_scenario.4.b:0 "Grant autonomy."
  
  es_12_scenario.5.t:0 "Rise of General Gorieus"
@@ -881,9 +883,9 @@
  es_12_scenario.7.a:0 "Prepare to invade the Reach!"
  es_12_scenario.7.b:0 "We are not ready for it yet..."
  
- es_12_scenario.9.t:0 "Rourken Clan"
+ es_12_scenario.9.t:0 "Dwemer Clan"
  es_12_scenario.9.d:0 "Thouands of dwemers, disgruntled at there own government, who ceded Dwemeret in the dirty hands of Chimers, arrive on our lands to establish a new country. There culture and religion is hostal to us, however they have advanced technologies and knowledges, which can be discovered if we agree with such neighbourhood. But the last voice in this question is after our wise ruler."
- es_12_scenario.9.a:0 "Welcome to Rourken Clan!"
+ es_12_scenario.9.a:0 "Welcome to Dwemers!"
  es_12_scenario.9.b:0 "We will never allow pagans to live near our borders!"
  
  es_12_scenario.11.t:0 "Colovian Lands"
@@ -906,6 +908,24 @@
  es_12_scenario.14.d:0 "Niryastare is important trade and military city on the border of Hammerfell. However, it is still ruled by colovian nobility. We cannot leave such important area to them, even if it can lead to serious diplomatic scandal."
  es_12_scenario.14.a:0 "Occupy Niryastare area."
  es_12_scenario.14.b:0 "Leave it to Colovian authorities."
+ 
+ es_12_scenario.100.t:0 "Nordic Feud"
+ es_12_scenario.100.d:0 "The civil war did not pass without a trace for our people. More and more states are emerging on the ruins of the former empire. Most of them quickly fall under the onslaught of neighbors or due to internal conflicts. But those who were able to withstand these difficult times begin a struggle for power throughout Skyrim."
+ es_12_scenario.100.a:0 "And we will join this fight!" 
+ 
+ es_12_scenario.101.t:0 "Dwemers Leave Morrowind"
+ es_12_scenario.101.d:0 "Today, another clan that does not agree with our policy has decided to leave Morrowind and go to the West. This is far from the first time the Dwemer have chosen to go their separate ways, so we may well be able to deal with this rift. However, our reputation in the eyes of our neighbors will undoubtedly fall."
+ es_12_scenario.101.a:0 "OK."
+ 
+ es_12_scenario.102.t:0 "Our Lands"
+ es_12_scenario.102.d:0 "Morrowind is home to many peoples, but more and more people are invading the home without the rights to these lands. We have long become a kind of defenders of Morrowind, who observe stability and order, therefore, we have the opportunity to push the population of the occupied lands to rebellion. Another question is whether we need it ourselves, because such actions will negatively affect stability in our country."
+ es_12_scenario.102.a:0 "Small revolt won't hurt us much."
+ es_12_scenario.102.b:0 "We would better resolve the situation diplomatically."
+ 
+ es_12_scenario.103.t:0 "Question of Solstheim"
+ es_12_scenario.103.d:0 "We lost Solstheim during the War of Succession in Skyrim. However, this island is still rightfully ours. We have already recovered enough from the disasters that shook us, so we can try to take this strategic island again under our control."
+ es_12_scenario.103.a:0 "Prepare the invasion!"
+ es_12_scenario.103.b:0 "We have other more important things to do."
  
  es_12_purification_title:0 "Destroy Dedric Sanctuary"
  es_12_purification_desc:0 " "

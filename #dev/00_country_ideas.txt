@@ -42,44 +42,6 @@ GOT_ideas = {
 	}
 }
 
-CHM_ideas = {
-	start = {
-		global_tax_modifier = 0.1
-		global_unrest = -1
-	}
-	
-	bonus = {
-		prestige = 1
-	}
-	
-	trigger = {
-		tag = CHM
-	}
-	free = yes
-	
-	chm_idea_1 = {
-		global_trade_goods_size_modifier = 0.1
-	}
-	chm_idea_2 = {
-		defensiveness = 0.1
-	}
-	chm_idea_3 = {
-		build_cost = -0.1
-	}
-	chm_idea_4 = {
-		global_spy_defence = 0.2
-	}
-	chm_idea_5 = {
-		advisor_pool = 1
-	}
-	chm_idea_6 = {
-		global_trade_power = 0.1
-	}
-	chm_idea_7 = {
-		global_manpower_modifier = 0.1
-	}
-}
-
 MCA_ideas = {
 	start = {
 		global_own_trade_power = 0.25

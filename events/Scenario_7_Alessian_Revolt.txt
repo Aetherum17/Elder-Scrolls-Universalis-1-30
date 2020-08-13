@@ -469,13 +469,6 @@ country_event = {
 	picture = ES_COLOVIA_eventPicture
 	
 	is_triggered_only = yes
-	
-	immediate = {
-	    random_neighbor_country = {
-		    limit = { culture_group = snow_elves_cg }
-			save_event_target_as = x_7_owner
-		}
-	}
 
 	option = {
 		name = "es_7_scenario.11.a"
@@ -502,13 +495,6 @@ country_event = {
 	picture = ES_NIBENAY_eventPicture
 	
 	is_triggered_only = yes
-	
-	immediate = {
-	    random_neighbor_country = {
-		    limit = { culture_group = snow_elves_cg }
-			save_event_target_as = x_7_owner
-		}
-	}
 
 	option = {
 		name = "es_7_scenario.12.a"
