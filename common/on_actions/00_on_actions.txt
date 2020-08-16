@@ -510,6 +510,7 @@ on_peace_recipient = {
 # country
 # root = winning country, from = loser country
 on_war_won = {
+    clr_country_flag = alliancememberinwar_flag
     if = {
 		limit = { 
 			ROOT = { is_rival = FROM }  
@@ -566,6 +567,7 @@ on_war_won = {
 # country
 # root = loser country, from = winner country
 on_war_lost = {
+    clr_country_flag = alliancememberinwar_flag
     ROOT = { country_event = { id = flavor_cri.6 } }
 	if = {
         limit = {

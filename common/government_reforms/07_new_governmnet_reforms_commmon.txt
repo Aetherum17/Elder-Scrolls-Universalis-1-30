@@ -1,0 +1,1669 @@
+#General Reforms Revised
+	#● Revised version of the original reforms
+	#● Balance out reforms without going to far from mission design
+	#● Reduce general amount to 4 reforms
+	#● General reforms are divided into three categories
+		#○ Green - Adds minor buffs
+		#○ Yellow - Adds large buffs and small consequences
+		#○ Red - Adds major buffs and even worse maluses
+		#○ Purple - Unique cultural or religious reforms (Added later?)
+		
+#General Reforms (Universal across all governments)
+
+#Law and Order (Level 2)
+#Local Law (Green)
+#● Local laws are enforced by individual communities, with each town and city having their own enforced laws and enforcement services
+local_law = {
+	icon = "local_law_icon"
+	allow_normal_conversion = yes
+	modifiers = {
+		state_maintenance_modifier = -0.10
+	}
+}
+#National Guard (Green)
+#● The nation uses a national system of law enforcement and guards to enforce its laws.
+national_council = {
+	icon = "national_council_icon"
+	allow_normal_conversion = yes
+	modifiers = {
+		stability_cost_modifier = -0.10
+	}
+}
+#Trial and Jury (Green)
+#● A system of modernized government law enforcement where a group of peers, dictated by a judge, rules over cases to decide guilt or innocence.
+trial_and_jury = {
+	icon = "trial_and_jury_icon"
+	allow_normal_conversion = yes
+	modifiers = {
+		global_unrest = -1
+	}
+}
+#Community Militia (Yellow)
+#● Laws are enforced by a small group of local armed militias, who deal out justice as they see fit on their own terms, often without full understanding of the rule of law.
+community_militia = {
+	icon = "community_militia_icon"
+	allow_normal_conversion = yes
+	modifiers = {
+		global_unrest = -2.5
+		state_maintenance_modifier = -0.10
+		global_autonomy = 0.10
+	}
+}
+
+#Labor (Level 3)
+#Commission (Green)
+#● Labor is handed out to contractors and free laborers who are paid for their commissioned work.
+commission = {
+	icon = "commission_icon"
+	allow_normal_conversion = yes
+	modifiers = {
+		build_time = -0.25
+	}
+}
+#Serfdom (Yellow)
+#● A system of labor where peasants are bound to a land as unfree laborers, and are kept on the land to serve the state, but have some rights.
+serfdom = {
+	icon = "serfdom_icon"
+	allow_normal_conversion = yes
+	modifiers = {
+		build_cost = -0.10
+		global_tax_modifier = 0.10
+		global_institution_spread = -0.15
+	}
+}
+#Corporate (Yellow)
+#● Labor contracts is handed out to a small group of construction companies who control a mix of free and unfree laborers, who’s own personal wealth motivates their benefits to the state
+unregulated_guilds = {
+	icon = "unregulated_guilds_icon"
+	allow_normal_conversion = yes
+	modifiers = {
+		trade_company_investment_cost = -0.5
+		production_efficiency = 0.10
+		mercantilism_cost = 1.0
+	}
+}
+#Slavery (Red)
+#● Slavery is an ancient system where another sentient being is owned as property to another, resulting in a system of cruelty which has large economic repercussions.
+#● Enables Slavery Mechanics
+slavery = {
+	icon = "slavery_icon"
+	allow_normal_conversion = yes
+	modifiers = {
+		capture_ship_chance = 0.5
+		loot_amount = 0.5
+		global_unrest = 2.5
+	}
+	effect = {
+		custom_tooltip = get_acess_to_new_decisions
+		custom_tooltip = get_acess_to_new_events
+	    set_country_flag = es_slavery_flag
+	}
+	removed_effect = {
+	    clr_country_flag = es_slavery_flag
+	}
+}
+
+#State Administration (Level 5)
+#Governmental Townships (Green)
+#● Local government buildings and outposts serve as state centers, often highly pending on their location. States are run as small hierarchies of local rulers, who answer to larger bureaucrats.
+governmental_townships = {
+	icon = "governmental_townships_icon"
+	allow_normal_conversion = yes
+	modifiers = {
+		expand_administration_cost = -0.25
+	}
+}
+#Urban Center (Yellow)
+#● The state relies on powerful urban centers to administer local governance, each large settlement controls their own state from within the city’s limits
+urban_centers = {
+	icon = "urban_centers_icon"
+	allow_normal_conversion = yes
+	modifiers = {
+		center_of_trade_upgrade_cost = -0.25
+		build_time = -0.15
+		development_cost = 0.15
+	}
+}
+#Rural Backwater (Yellow)
+#● Much of the country is ungovernable and is ruled by small clans and rural backwaters which cannot be truly controlled, just tolerated.
+rural_baclwater = {
+	icon = "rural_baclwater_icon"
+	allow_normal_conversion = yes
+	modifiers = {
+	    core_creation = -0.25
+		global_unrest = -1
+		min_autonomy = 10
+	}
+}
+#Nomadism (Red)
+#● Most settlements are temporary, the population moves far too often to make most settlements only temporary at best.
+nomadism = {
+	icon = "nomadism_icon"
+	allow_normal_conversion = yes
+	modifiers = {
+	    cav_to_inf_ratio = 0.25
+		cavalry_cost = -0.5
+		governing_capacity_modifier = -0.5
+	}
+}
+
+#Magic (Level 6)
+#Regulation (Green)
+#● Magic is regulated to prevent abuse by mages and to use magic in the most efficient way possible without it collapsing society
+regulation = {
+	icon = "regulation_icon"
+	allow_normal_conversion = yes
+	modifiers = {
+	    advisor_cost = 1
+	}
+	effect = {
+		custom_tooltip = get_acess_to_new_ruler_personalities
+	    set_country_flag = es_magic_regulation_flag
+	}
+	removed_effect = {
+	    clr_country_flag = es_magic_regulation_flag
+	}
+}
+
+#Reason and Logic (Red)
+#● The nation has abandoned every notion of superstition in favor of pure logic and reason, rejecting all forms of spirituality to better themselves and study the natural world.
+reason_and_logic = {
+	icon = "regulation_icon"
+	allow_normal_conversion = yes
+	modifiers = {
+	    advisor_cost = 1
+	}
+	effect = {
+		custom_tooltip = get_acess_to_new_ruler_personalities
+	    set_country_flag = es_magic_regulation_flag
+	}
+	removed_effect = {
+	    clr_country_flag = es_magic_regulation_flag
+	}
+}
+
+#● -5% Power Costs
+#● +100% Innovation Gain
+#● Has a Rationality Meter
+#○ Being ahead in time will increase the rationality meter (+0.05 Yearly)
+#○ You lose rationality from being behind in tech or having strong factions (-0.15
+#Yearly)
+#○ 0-20: +25% Power Cost, +1 Tolerance of the True Faith, +1% Missionary
+#Strength
+#○ 21-50: +15% Power Cost
+#○ 51-80: +5% Power Cost, -1 Tolerance of the True Faith, -1% Missionary Strength
+#○ 81-99: -5% Idea Cost, -2 Tolerance of the True Faith, -2% Missionary Strength
+#○ 100: -15% Idea Cost, -3 Tolerance of the True Faith, -3% Missionary Strength
+#● +33% Aggressive Expansion
+#● -100 Opinion
+#Persecution (Red)
+#● The state actively persecuted those who practice magic, witch hunters and mage slayers
+#openly haunt the fields and burn away the mages and their work.
+#● +3 Tolerance of the True Faith
+#● Gain large military bonuses vs Magical Society and Regulation government reform
+#nations
+#○ +20% Army Morale
+#○ -33% Fire Damage Taken
+#○ -33% Shock Damage Taken
+#○ +10% Discipline
+#● Military bonuses are doubled vs nations whose ruler has any magical personality
+#● +25% Tech Cost
+#● +50% Development Cost
+#Magical Society (Red)
+#● The society of this nation is ruled over by all powerful magi who control every aspect of
+#society, where those with magic are more valued than those who do not.
+#● Unlocks Magic Mechanics
+#● Unlocks Advanced Magic Mechanics
+#○ Adds new personalities to leaders, power and elite ones
+#■ Lich: Immortality, +100% Manpower Modifier, -3 Diplomatic Reputation,
+#+3 Unrest
+#■ Summoner: -15% Army Maintenance, -15% Naval Maintenance
+#■ Archmage: -5% Power Costs, +2 Leader Fire
+#■ Seer: -20% Liberty Desire, +15% Movement Speed
+#■ Sorcerer: +20% Land Fire Damage, +15% Artillery Combat Ability
+#■ Warlock: -0.30 Yearly Corruption, +25% Goods Produced
+#■ Hag: +20% Shock Damage Dealt, +50% Army Drill Gain
+#■ Guardian: -20% Shock Damage Received, -50% Army Drill Loss
+#○ Magical Society has a new pool of events
+#■ Rogue Mages Causes Trouble
+#■ Anti-Mage Revolt
+#■ Magic Monopoly Booms
+#○ New Decisions are Available
+#■ National Mage Guild
+#● -5% Idea Cost
+#● -10% National Tax Modifier
+#■ Reign In Necromancery (Only One can be Chosen)
+#● -1 Unrest
+#● Remove Lich from Leader Pool
+#■ Embrace Necromancery (Only One can be Chosen)
+#● +1 Unrest
+#● +10% Land Force Limit
+#■ Hedge Mage Roundup
+#● +1 Unrest
+#● -10% Stability Cost
+#○ New Estate Privileges are Available
+#■ Noble Privilege: Mage Generals
+#● -15 Absolutism
+#● +10% Loyalty
+#● +10% Influence
+#● +1 General Fire
+#● +1 General Movement
+#■ Burgher Privilege: Sorcerous Experimentation
+#● -15 Absolutism
+#● +10% Loyalty
+#● +10% Influence
+#● -5% Tech Cost
+#● -5% Military Tech Cost
+#■ Clergy Privilege: Mage Clergy
+#● -15 Absolutism
+#● +10% Loyalty
+#● +10% Influence
+#● +2 Tolerance of the True Faith
+#● +25 Opinion from nations of the same faith
+#○ Magical society requires a mage personality as ruler, or they will gain a malice
+#called Mage Society Questioned
+#■ +100% Idea Cost
+#■ +25% Power Cost
+#■ +33% Minimum State Autonomy
+#Culture (Level 8)
+#Tavern Life (Green)
+#● Much of the culture of the nation is displayed amongst common taverns and venues,
+#storytelling and decent drink being the backbone of social order.
+#● +10% Wine Production
+#● +0.25 Yearly Prestige
+#Tournaments (Green)
+#● Culture is displayed in violent tournaments and blood sport, where value is placed on
+#victory and personal skill.
+#● +50% Prestige from Land Battles
+#● +50% Prestige from Sea Battles
+#Art and Sciences (Green)
+#● The nation has a cultured view, taking in arts and social sciences to display the arts and
+#crafts of its people.
+#● -1% Prestige Decay
+#Raiding (Red)
+#● Raiding and looting is an important cornerstone of the culture of this land, who’s people
+#rely on raiding other nations for loot, slaves, and personal glory.
+#● +100% Prestige from Exploring Terra Ingocinta
+#● Can Raid Coasts, including those of the same faith
+#● +200% Prestige from Sea Battles
+#● +5% Prestige Decay
+#● -2 Yearly Prestige
+#Trade (Level 9)
+#Internal Market (Green)
+#● National trade is more focused on internal markets rather than outside markets.
+#● -30% Increase Mercantilism Cost
+#Free Trade (Green)
+#● The nation prefers free trade, and openly trades with other nations and peoples.
+#● +25% Trade Steering
+#Protectionism (Yellow)
+#● Protectionism is an economic practice of cutting off trade to other nations in favor of
+#promoting local production and to protect local merchants.
+#● +15% Production Efficiency
+#● +30% Local Trade Power
+#● -2 Merchant
+#Corporatism (Yellow)
+#● Corporatism is a lack of regulation in a free trade system, whose policies favor the
+#personal wealth of rich merchants and strong economic ties to the rest of the world.
+#● +25% Burgher Influence
+#● +1 Merchant
+#● +10% Global Trade Power
+#● -0.15 Trade Goods Produced
+#Religion (Level 11)
+#State Religion (Green)
+#● The state only recognizes one faith, which is intertwined with the government.
+#● +1 Missionary
+#Secularism (Green)
+#● The state is mostly secular and separates the church from the day to day happenings
+#from the government.
+#● +1 Tolerance of Heretics
+#● +1 Tolerance of Heathens
+#Theological Dominance (Green)
+#● There is no formal state religion, but the nation accepts a singular faith as dominant over
+#others.
+#● +2% Missionary Strength
+#Fanaticism (Yellow)
+#● Fanaticism is an extreme belief, often violent or unreasonable, which has become the
+#base religious policy of the nation state.
+#● -20% War Score Cost vs Other Religions
+#● -20% Cost of Enforcing Religion in War
+#● -3 Tolerance of the True Faith
+#● -3 Tolerance of Heathens
+#● -3 Tolerance of Heretics
+#Naval Doctrine (Level 12)
+#Support Fleet (Green)
+#● The main goal of the fleet is to support ongoing ground operations, transporting armies
+#across vast distances, and other menial campaigning.
+#● +1 Fleet Blockade Impact on Siege
+#● -35% Transport Cost
+#Inland Dominance (Yellow)
+#● The nation’s fleet is dedicated to dominance of inland seas rather than the open ocean,
+#focusing on manning and building galleys and inland trade
+#● +15% Galley Combat Ability
+#● +15% Ship Capture Chance
+#● +35% Light Ship Cost
+#● +35% Heavy Ship Cost
+#Open Seas Doctrine (Yellow)
+#● The nation turns its naval attention outward into the open ocean, seeking to dominate
+#and exploit the open seas with naval supremacy.
+#● +20% Navy Force Limit
+#● +10% Naval Engagement
+#● -10% Ship Durability
+#● +100% Galley Cost
+#Merchant Fleet (Yellow)
+#● The nation’s naval ambitions are more for trade than conquest, hosting a fleet of swift
+#ships used for trade or piracy.
+#● +25% Protect Trade Efficiency
+#● +25% Privateering Efficiency
+#● -25% Navy Force Limit
+#● +15% Navy Maintenance
+#Guild Favoritism (Level 14)
+#Fighter’s Guild (Green)
+#● The Fighter’s Guild is a guild of regulated mercenaries founded in the 2nd Era to aid in
+#the protection of the imperial realm and defend trade.
+#● Gain Access to the Fighter’s Guild Mercenary Group
+#○ 10 Infantry
+#○ 4 Cavalry
+#○ +10% Discipline
+#○ +10% Shock Damage
+#● +25% Mercenary Manpower
+#Mages Guild (Green)
+#● The mages guild is an elite group of mages who help in the regulation of the magical arts
+#of Tamriel as well as the general expansion of education of magic to the general
+#populace.
+#● +10% Army Land Fire Damage
+#● +1 Leader Siege
+#Thieves Guild (Yellow)
+#● Thieves guilds are not very united, but they are criminal organizations dedicated to their
+#own wealth via powerful unlawful networks. The nation tolerates their existence in return
+#for special favors.
+#● All Centers of Trade in empire get Thieves Guild Hub modifier
+#○ -10 Trade Power
+#○ +15% Development Cost
+#○ +1 Unrest
+#● Gain New Covert Options
+#○ Heist
+#■ Costs 80
+#■ Steals 10% of saved ducats from victim nation
+#○ Kidnap
+#■ Costs 80
+#■ Produces a level 2 adviser of victim’s main culture and faith at a 75%
+#reduced cost to hire
+#○ Scam
+#■ Costs 70
+#■ Reduces national taxes income of victim nation by 33% for 5 years
+#○ Intimidate
+#■ Costs 70
+#■ Increase power costs of victim nation by 10% for 5 years
+#Dark Brotherhood (Red)
+#● The Dark Brotherhood is a cult of assassins who worship a dark matron who guides the
+#assassins to murder and main. The guild is normally hunted in Tamriel but their services
+#are many. The nation tolerates them at best, in return for favors.
+#● A random province will get a Dark Sanctuary modifier, and if the province is conquered,
+#it will move to another random province.
+#○ -10 Unrest
+#○ -10% Missionary Strength
+#● Gain New Covert Options
+#○ Assassinate
+#■ Costs 80
+#■ Costs 1500 Gold
+#■ Kills current ruler of victim nation
+#● Gain New Event Pool
+#○ Dark Brotherhood Hunted
+#○ Dark Brotherhood Kills Ruler
+#○ Dark Brotherhood Kills Heir
+#● Gain New Decisions
+#○ Establish New Sanctuary
+#■ Allows another Province to get the Dark Sanctuary modifier
+#■ Dark Brotherhood Events become more common
+#○ Refurbish Sanctuary
+#■ Dark Brotherhood Sanctuaries now give -10% Development Cost
+#■ -5% National Tax Modifier
+#○ Exclusive Contracts
+#■ -25% Assassinate Cost
+#■ -10% National Tax Modifier
+#Diplomacy (Level 15)
+#Diplomatic Core (Green)
+#● The nation uses groups of diplomatic organizations and institutions to enhance it’s
+#diplomatic range across Tamriel
+#● +1 Diplomat
+#● +1 Diplomatic Reputation
+#Expanding (Green)
+#● The nation looks outward to expand into the wider world, having little to no time or
+#patience for diplomatic missions
+#● -15% Aggressive Expansion Impact
+#Supremacy (Green)
+#● The nation’s diplomatic policy is to look inward at local politics and affairs, bringing
+#smaller nations into the fold as subjects
+#● +1 Diplomatic Relations
+#● -5% Liberty Desire
+#Guardian (Yellow)
+#● The nation has taken a unique diplomatic stance as a Guardian among nations, a
+#bulwark against larger enemies to defend the realm against fierce expansion
+#● Can Intervene in war with nation’s whose capital is in another region attacking a nation
+#whose capital is in the same region as the Nation
+#● Gain Bulwark bonus during a war against nations and alliances who have 50% larger
+#army during any war with a nation whose capital is outside the Guardian’s region
+#○ +35% Fort Defense
+#○ +20% Morale
+#○ +33% Manpower Recovery Speed
+#● Declaring wars on nations who share a capital in the same region as the Guardian will
+#automatically lose 1 stability
+#Educational Edge (Level 17)
+#Schooling (Green)
+#● The nation has some of the best schooling in the world.
+#● -5% Administrative Tech Cost
+#Universities (Green)
+#● The nation has some of the best universities and colleges in the world.
+#● -5% Diplomatic Tech Cost
+#War Academies (Green)
+#● The nation has some of the best war academies and training grounds in the world.
+#● -5% Military Tech Cost
+#Libraries (Green)
+#● The nation has some of the most extensive libraries in the known world and is a bulwark
+#on study.
+#● -5% Idea Cost
+#Army Doctrine (Level 18)
+#Feudal Army (Green)
+#● The army is mostly feudal, consisting of levy soldiers and noble officers, whose main
+#goal is to overwhelm the foe with sheer numbers and traditional battle lines.
+#● +15% Land Force Limit
+#● -30% Regiment Creation Time
+#Professional Army (Green)
+#● The nation uses a professional and disciplined army, relying on battle maneuver and
+#strong battle lines to outbeat larger foes
+#● +2.5% Discipline
+#● +30% Army Drill Gain
+#Mercenary Army (Green)
+#● The nation relies heavily on mercenary armies and other professional troops who are
+#well paid by the nation to secure it’s safety and independence.
+#● +5% Mercenary Discipline
+#● -25% Mercenary Cost
+#Skilled Army (Yellow)
+#● The nation is known for training and recruiting skilled armies, legendary on the field of
+#battle and a terrifying force to deal with.
+#● +5% Cavalry Combat Ability
+#● +10% Infantry Combat Ability
+#● +10% Army Maintenance Cost
+#● -25% Army Drill Gain
+#Bans (Level 20)
+#Normalized Regulation (Green)
+#● The nation does not partake in bans on goods, but instead uses localized regulations to
+#prevent overuse.
+#● +5% Production Efficiency
+#Abolition (Yellow)
+#● The nation prohibits slavery on a national level, freeing slaves from bondage and
+#declaring it’s role in protecting the rights of all humanoid beings
+#● Changes Slaves Goods to a random Goods
+#● -2 Unrest
+#● -10% Global Trade Power
+#Prohibition (Yellow)
+#● The nation has taken a stance on drunkenness and disorder made from alcohol, banning
+#all alcoholic drinks across the nation.
+#● Changes Wine Goods to a random Goods
+#● +15% Production Efficiency
+#● -10% Navy Morale
+#● -25 Colony Growth
+#Drug Limitation (Yellow)
+#● The nation has a strict ban on drugs such as Skooma, made from Moon Sugar, along
+#with other recreational drugs.
+#● -75% Production of Moon Sugar
+#● +15% National Tax Modifier
+#● -15% Caravan Power
+#● -50 Opinion from Khajiit Culture Nations
+#Espionage (Level 21)
+#Spy Agency (Green)
+#● The nation holds a special institution which handles most affairs of intrigue, training new
+#spies and agents to serve the nation.
+#● +25% Spy Network Construction
+#● +10% Foreign Spy Detection
+#Local Scouting (Green)
+#● The nation uses a traditional form of espionage, dooling out agents to scout for corrupt
+#bureaucrats with bribes to serve temporary spies.
+#● -10% Covert Action Cost
+#Cut Throat Politik (Yellow)
+#● The nation is in a ceaseless internal war of politics and internal deception, where
+#powerful factions and ambitious characters by nature kill each other for glory and
+#dominance.
+#● +33% Covert Action Cost on Us
+#● -33% Spy Network Construction on Us
+#● -1 Diplomat
+#● Gain access to new event list
+#○ Ruler Humiliated
+#○ Ruler Murdered by Family
+#○ Ambitious Rival Raises Army
+#The Grand Game (Red)
+#● The political circles of the nation use the nation as a tool in a grand political game,
+#viewing the world as a larger game in a grand scheme of characters and alliances to
+#outbid less high minded foes.
+#● +3 Diplomats
+#● +2 Merchants
+#● +1 Colonist
+#● +25% Army Maintenance Cost
+#● +25% Naval Maintenance Cost
+#● -20% Army Morale
+#● -20% Navy Morale
+#Economics (Level 23)
+#Trading Power (Green)
+#● The nation focuses more heavily on trade income, becoming a great trading power on
+#the open world.
+#● +10% Global Trade Power
+#Efficient Taxation (Green)
+#● The nation’s taxation system is modern and highly efficient, an example to other nations
+#across the known world.
+#● +15% National Tax Modifier
+#● +10% Income from Vassals
+#Productive Society (Green)
+#● Factories and cottages can be found all across the nation, being a bulwark as Tamriel’s
+#greatest producer of materials.
+#● +15% Local Goods Produced
+#Jewel of Tamriel (Red)
+#● The nation’s great capital is a diamond in the rough that is Tamriel, a great city of
+#culture, science, trade, and sins of all kinds. From this city springs forth the nation, which
+#is more to serve the city then for the city to serve it.
+#● The Capital of the nation gains a major province modifier called Jewel of Tamriel
+#○ -50% Construction Cost
+#○ -35% Development Cost
+#○ +3 Local Goods Produced
+#● The capital of the nation is improved three times via a decision, which is highly
+#expensive.
+#○ Level 1: +100% Trade Power
+#○ Level 2: +100% Local Tax Modifier
+#○ Level 3: +100% Local Manpower
+#● Can no longer move capital
+#● If the reform is ever revoked or if the Jewel of Tamriel province is ever ransacked, the
+#nation will get a permanent stacking government modifier called Jewel of Tamriel
+#Sacked, which stacks up to max of 20 times.
+#○ -25% Local Trade Power
+#○ -0.5 Prestige
+#○ +25% Development Cost
+#● The sacking nation which takes a Jewel of Tamriel province, either via siege or during a
+#peace deal, will destroy 10 points of development each on the province and get the
+#permanent government modifier Rich Sacker
+#○ +1 Prestige
+#○ +5% Army Morale
+#○ +25% Looting Speed
+#Campaign Doctrine (Level 24)
+#Climatic Victory (Green)
+#● The main war strategy is to conclude the war in a swift battle, winning out over the
+#enemy with sheer weight of numbers and professional soldiers in large scale battles to
+#avoid long conflicts.
+#● +10% Infantry/Cavalry Ratio
+#● +25% Flanking Range
+#Guerrilla Warfare (Green)
+#● The nation relies on hit and run tactics, dealing damage where it hurts and dragging out
+#the conflict till an invading enemy expires.
+#● +1 Attrition
+#● +10% Army Movement Speed
+#Long Campaign (Green)
+#● The nation’s general policy towards campaigning is to prepare for long and drawn out
+#sieges, and is generally well prepared for long and drawn out conflicts.
+#● -35% Reduce War Exhaustion Cost
+#● -10% Fort Maintenance
+#Invader Archetype (Yellow)
+#● The nation uses an interesting form of campaigning tool, spreading terror through sheer
+#numbers and sending forth an endless host of soldiers to overwhelm the enemy. It
+#matters not how many die, only that they have succeeded.
+#● +35% Army Force Limit
+#● -10% Army Maintenance
+#● +50% Aggressive Expansion
+#● -40% Siege Ability
+#Expansion (Level 26)
+#Regional Ambitions (Green)
+#● The nation looks to expand in the local region, seeking to establish a great empire by
+#consuming local powers and absorbing them into itself.
+#● -15% Fabricate Claim Cost
+#● -15% Annexation Cost
+#Colonial Ambitions (Green)
+#● The nation looks outward to other nations, seeking to colonize beyond its borders.
+#● +1 Colonist
+#Imperial Ambitions (Yellow)
+#● The nation has high ambitions to create a global empire spanning many peoples and
+#regions, united under a single grand banner.
+#● +450 Governing Capacity
+#● -25% Core Creation Cost
+#● +33% Stability Cost
+#● Reform is lost/cannot be chosen if nation is at max government rank
+#Isolationist (Red)
+#● The nation sees no reason to expand or go beyond its borders, closing off itself to the
+#outside world entirely.
+#● Isolationist Mechanics
+#○ Can no Longer:
+#■ Declare War
+#■ Colonize
+#■ Use Diplomatic Influence Options
+#■ Use Diplomatic Alliance Options
+#○ The Nation enters a state of perpetual peace, granting it a powerful government
+#modifier called Inward Perfection
+#■ -5 Unrest
+#■ -75% Stability Cost
+#■ +40% Army Morale
+#■ -0.10 Monthly War Exhaustion
+#■ -5% Powers Cost
+#○ Gain Access to Isolationism Event Pool
+#■ Outside Merchants Run Out
+#■ Isolation Breeds Ignorance
+#■ Isolation Breeds Xenophobia
+#○ If Isolation is broken via changing the government reform, there will a significant
+#loss of -6 stability and gain the Perfection Broken government modifier for 25
+#years
+#■ +7 Unrest
+#■ +125% Stability Cost
+#■ -60% Army Morale
+#■ +0.20 Monthly War Exhaustion
+#■ +10% Powers Cost
+#Community (Level 27)
+#Typical Commoners (Green)
+#● The village community is fairly typical, with a singular family bond and strong social
+#group of close friends and family.
+#● +2 Max Accepted Cultures
+#Pompous Elitists (Yellow)
+#● The social community of the nation is one made up of hierarchies and versatile
+#friendships built more on social class then close bonds.
+#● -25% Culture Change Cost
+#● +15% Adviser Cost
+#Familial Bondage (Yellow)
+#● The cultural community of the nation has a strong, if not unhealthy, family dynamic
+#where family will always come first above all else.
+#● -15% Adviser Cost
+#● -2 Max Accepted Cultures
+#Adventurous Nomads (Yellow)
+#● The nation’s social structure lacks a strong local community, and relies heavily on social
+#bonds made at long distances. Most of the people travel long and far, with no real
+#connection to their own homeland.
+#● -50% Culture Shift Cost
+#● +35% Colonial Range
+#● +25% Development Cost
+#Administrative Edge (Level 29)
+#Absolutism (Green)
+#● The state is highly centralized around the ruler itself, whether politically or culturally, and
+#who leads the nation by highly legitimate means.
+#● +15 Absolutism
+#Advisory Board (Green)
+#● The state relies on strong and highly skilled advisers and administrators, who run the
+#major day to day operations.
+#● +2 Possible Advisers
+#● -5% Adviser Cost
+#Bureaucratic Tyranny (Red)
+#● The government of the state has an absurd amount of power, even by normal
+#government standards. The state has a great deal of statism which dominates a majority
+#of the proceedings.
+#● +30 Absolutism
+#● Get special government modifiers tied to stability
+#○ Catastrophic Government(-3 Stability)
+#■ +8 Unrest
+#■ +1 Yearly Inflation
+#■ +500% Stability Cost
+#■ -100 Absolutism
+#■ -10 Yearly Absolutism
+#○ Weak Government (-2, -1 Stability)
+#■ +3 Unrest
+#■ +0.25 Yearly Inflation
+#■ +100% Stability Cost
+#■ -30 Absolutism
+#■ -1 Yearly Absolutism
+#○ Stable Government (0 Stability)
+#■ +1 Unrest
+#○ Strong Government (1, 2 Stability)
+#■ +20 Absolutism
+#■ +0.5 Yearly Absolutism
+#○ Efficient Government (3 Stability)
+#■ +60 Absolutism
+#■ +1 Yearly Absolutism
+#■ +15% Production Efficiency
+#● Gives access to the Statism event pool
+#○ Government Agency Drags Feet
+#○ Overspending
+#○ Bureaucratic Nightmare
+#● Reforming Bureaucratic Tyranny gives the government modifier Statism Fever Dream for
+#25 years
+#○ -25 Absolutism
+#○ +33% Power Cost
+#Sanctioned Freedom (Red)
+#● The state’s administrative purpose is to provide true freedom to the people at the cost of
+#its own authority. This Autonomy keeps people happy, but keeps the government fairly
+#weak.
+#● -6 Unrest
+#● -33% Stability Cost
+#● -10% Development Cost
+#● -1000 Absolutism
+#Imperial Innovation(Level 30)
+#Imperial Guard (Green)
+#● The empire has established an elite guard that is utterly loyal to the state, skilled
+#regiments which are legendary on and off the battlefield
+#● +1 Yearly Army Tradition
+#● Gain Access to Imperial Guard Regiments
+#○ 1% of Land Force Limit can be used for Imperial Guard
+#○ +200% Drill Gain
+#○ +10% Discipline
+#○ +10% Morale
+#○ -66% Shock Damage Received
+#○ -66% Fire Damage Received
+#○ +1000% Reinforce Cost
+#National Bank (Green)
+#● A national bank has been set up to handle most national affairs related to economics,
+#loans, and interest. A universal set up which no longer needs individual moneylenders
+#and private organization.
+#● +20% National Tax Modifier
+#● -0.15 Yearly Inflation
+#● -0.5 Interest per Annum
+#Newspaper (Green)
+#● National news is a new and modern way to keep the populace well informed and
+#interested in the affairs of the nation, as well as keeping thoughts more in line with the
+#political elite.
+#● -4 Unrest
+#● +5% Administrative Efficiency
+#Connected Empire (Green)
+#● The empire is well connected by trade and amazing infrastructure, where roads and
+#hubs keep the coin of the empire constantly moving and allows the employment of
+#troops in rapid succession.
+#● +10% Army Movement Speed
+#● +25% Caravan Power
+#● -10% Construction Cost
+#Monarchy
+#Power of Nobility (Level 4)
+#Strong Nobles (Green)
+#● The nation’s nobles are relatively strong both politically and militarily, and curtail the
+#king’s power quite considerably
+#● +15% National Manpower Modifier
+#● +10% Noble Influence
+#Curtailed Nobles (Green)
+#● The nation’s noble class has been curtailed, where the local nobility exist mostly in name
+#only.
+#● +10% National Tax Modifier
+#● -10% Noble Influence
+#Estate Empowerment (Yellow)
+#● Nobles in the country have power based upon the wealth and prestige of their estates
+#and histories, rather than their privileged linages.
+#● +10% Production Efficiency
+#● -10% National Tax Modifier
+#● New Privilege Unlocked
+#○ Noble Privilege: Establish Estate Economy
+#■ -10 Absolutism
+#■ +5% Noble Lands
+#■ +15% Noble Influence
+#■ -15% State Maintenance
+#■ +5% Development Efficiency
+#Warrior Elite (Yellow)
+#● The nobility of the nation are kept in power by their strong martial traditions and warrior
+#skills, where local warlords hold immense sway via their armies.
+#● +5% Army Morale
+#● +10% Land Force Limit
+#● +10% Army Maintenance
+#● New Privileges Unlocked
+#○ Noble Privilege: Private Armies
+#■ -5 Absolutism
+#■ +10% Noble Loyalty
+#■ +10% Noble Influence
+#■ -25% Mercenary Maintenance
+#■ +5% Mercenary Discipline
+#○ Noble Privilege: Noble Officers
+#■ -5 Absolutism
+#■ +10% Noble Loyalty
+#■ +10% Noble Influence
+#■ +1 Free Leaders
+#■ +0.5 Yearly Army Tradition
+#Power of Non-Nobility (Level 7)
+#Empowered Merchants (Green)
+#● The nation’s merchants and rich non-nobles hold incredible power equal to that of
+#nobility in most respects.
+#● +1 Merchant
+#● +10% Burgher Influence
+#Empowered Clergy (Green)
+#● The clergy of the nation have incredible political power over nobles, and use that power
+#to enforce the faith of the nation.
+#● +1 Missionary
+#● +10% Clergy Influence
+#Noble Superiority (Green)
+#● The Nobles of the nation have secured the full support of the monarchy and have
+#remained the true and original power brokers over the entire nation.
+#● +1 Free Leader
+#● +10% Noble Influence
+#Bandit Alliance (Red)
+#● Bandits often are criminals who have taken to the roads and lanes of the land, and grow
+#in number as forts become abandoned and trade increases. These well armed groups
+#are approached by the state, agreeing to legitimize and pardon them in return for military
+#support.
+#● -35% Mercenary Maintenance
+#● +50% Mercenary Manpower
+#● +25% Garrison Size
+#● -100% Drill Gain
+#● -10% Army Discipline
+#Succession (Level 10)
+#Primogeniture (Green)
+#● A succession type where the eldest child inherits the entire estate.
+#● Strong Claim Heirs gain +1 random Monarch Point when they succeed the throne
+#● +0.25 Yearly Legitimacy
+#Seniority (Yellow)
+#● A form of succession where the eldest family member inherits the entire estate.
+#● +100% Heir Chance
+#● +35 Starting Years for Heirs
+#● +500 Starting Years for Long-Lived Heirs
+#Open (Yellow)
+#● A form of succession where any child of the current monarch can claim the throne, but
+#only if they have enough prestige and personal power to do so.
+#● +100% Heir Chance
+#● X25 Pretender Rebel Spawn
+#● Gain Access to Open Succession Events
+#○ Heirs Plots Against Each Other
+#○ Heir Assassinated
+#○ Rival Brother Raises Army
+#Gavelkind (Red)
+#● Gavelkind is a form of succession where each child of the monarch is given an equal
+#estate as inheritance
+#● On ruler death, there is a 25% chance to initiating Gavelkind Succession
+#○ 2/3rds of all current states are divided into 2 new states, each with 1/3rd of the
+#total realm
+#○ Each has a ruler of their current dynasty and are of random ages
+#○ These child nations have their own special rules with succession
+#■ If the ruler dies without an heir of ruling age, they are immediately
+#annexed by the parent nation
+#■ They can only escape sudden annexation by being the vassal of another
+#nation, but has a -50 penalty
+#■ Parent nation has a Personal Union CB on all child nations
+#■ They have Gavelkind Succession, but do not have access to event
+#■ Child Nations, if they remain independent for more than 50 years, remove
+#themselves as child nations and become normal nations
+#○ Event Happens only once every 250 years
+#● -33% Aggressive Expansion
+#● -60% Core Creation Cost
+#● +1 Yearly Legitimacy
+#Rights of the King (Level 13)
+#Absolutist Monarch (Green)
+#● The king is the true and unquestionable ruler of the nation, who is undoubtedly the
+#power broker of internal and external diplomacy.
+#● +5 Absolutism
+#● +0.5 Yearly Absolutism
+#Figurehead (Green)
+#● The king is little more than a figurehead of the nation’s most prominent political class.
+#● +2 Diplomatic Reputation
+#Strong Councillors (Yellow)
+#● The king rules the country, but shares power with a strong council.
+#● -45% Adviser Cost
+#● -1 Administrative Monarch Point
+#Parliamentary (Yellow)
+#● The king rules the country in name, but much of the power lies in a parliament.
+#● Parliament Mechanics
+#● -1 Unrest
+#● -1 Diplomatic Monarch Point
+#Purpose of the King (Level 16)
+#Martial Ruler (Green)
+#● The ruler of the nation is it’s defender and grand general of its armies, they are meant to
+#lead on the battlefield.
+#● +5 PIPs for King Generals
+#Traditional Heritage (Green)
+#● The king’s purpose is to rule, and the reason is because they were born into a family
+#which has ruled since the founding.
+#● +0.5 Yearly Legitimacy
+#Backbone of the Nation (Yellow)
+#● The king is the symbol of the nation, a shining beacon and moral compass for the
+#nation’s people.
+#● +10% Army Morale
+#● -1 Unrest
+#● -1 Stability on Ruler Death (Stacks with other stability effects on ruler death)
+#National Merit (Yellow)
+#● The king rules the nation for they are the best ruler for the nation, their family is charged
+#with producing the best rulers.
+#● Rulers with any skill of 5 or over gain +1 Yearly Legitimacy
+#● Rulers with all monarch points 4 or lower gain -1.5 Yearly Legitimacy
+#Courtier Influence (Level 19)
+#Courtier Politics (Green)
+#● Courtiers converse on politics within the public court, which is filled to the brim with
+#administrative figures and political manipulators
+#● +1 Free Administrative Policy
+#Ambassador’s Court (Green)
+#● The court is filled with ambassadors of many nations and peoples, of many different
+#tongues and races, who openly discuss policy within the court.
+#● +1 Free Diplomatic Policy
+#Martial Court (Green)
+#● The court of the monarch is filled with the realm’s most accomplished heroes and skilled
+#soldiers, who discuss strategy and recount their epic deeds before their ruler.
+#● +1 Free Military Policy
+#Court of Darkness (Red)
+#● The court of the nation is filled with an oppressive darkness, where the ruler brings on
+#the most skilled, and debased, Tamriel has to offer.
+#● +2 Possible Advisers
+#● Court of Darkness Mechanics
+#○ Gain access to a unique and odd pool of ‘despicable’ advisers
+#■ Admin Advisers
+#● Psychopathic Artist
+#○ -20% Stability Cost
+#○ -10% National Tax Modifier
+#● Torturer
+#○ +4% Missionary Strength
+#○ +2 Unrest
+#● Con Man
+#○ +0.2 Yearly Inflation Reduction
+#○ -1 Yearly Prestige
+#● Mad Scholar
+#○ +20% Production Efficiency
+#○ -20% Colonial Range
+#● Sadist
+#○ +2 Yearly Prestige
+#○ +0.1 Yearly Inflation
+#● Occultist
+#○ -4 Unrest
+#○ -2% Missionary Strength
+#● Criminal
+#○ +20% National Tax Modifier
+#○ +10% Stability Cost
+#■ Diplo Advisers
+#● Bandit
+#○ +20% Tariffs
+#○ -10% Trade Efficiency
+#● Vampire
+#○ +40% Improve Relations
+#○ -1 Diplomatic Reputation
+#● Corsair
+#○ +20% Morale of Navies
+#○ -25% Spy Network Construction
+#● Conqueror
+#○ +40% Colonial Range
+#○ +10% Land Maintenance Modifier
+#● Assassin
+#○ +50% Spy Network Construction
+#○ -10% Morale of Navies
+#● Hedonist
+#○ +2 Diplomatic Reputation
+#○ -20% Improve Relations
+#● Slaver
+#○ +20% Trade Efficiency
+#○ -10% Tariffs
+#■ Mil Advisers
+#● Lich
+#○ +20% Land Force Limit
+#○ -33% Reinforce Speed
+#● Pillager
+#○ +20% Morale of Armies
+#○ -20% Fort Defense
+#● Tyrant
+#○ +10% Discipline
+#○ -10% National Manpower Modifier
+#● Cheapscape
+#○ -20% Land Maintenance Modifier
+#○ -10% Production Efficiency
+#● Conscriptor
+#○ +20% National Manpower Modifier
+#○ -5% Discipline
+#● Dremora
+#○ +40% Fort Defense
+#○ -10% Army Morale
+#● Executioner
+#○ +66% Reinforce Speed
+#○ -10% Land Force Limit
+#○ Normal advisers are +100% Cost
+#○ Dark Advisers are at -50% Cost
+#○ Dark Advisers over time add to a hidden modifier by 0.1 every year called
+#Growing Darkness which gives sizable adverse effects the more this reform
+#remains
+#■ 0 - 10
+#● No Effect
+#■ 11 - 30
+#● +1 Unrest
+#● -1 Diplomatic Reputation
+#■ 31 - 60
+#● +3 Unrest
+#● -2 Diplomatic Reputation
+#● +0.1 Yearly Corruption
+#■ 61 - 70
+#● +6 Unrest
+#● -4 Diplomatic Reputation
+#● +0.2 Yearly Corruption
+#● -25% Improve Relations
+#■ 71 - 95
+#● +8 Unrest
+#● -5 Diplomatic Reputation
+#● +0.3 Yearly Corruption
+#● -50% Improve Relations
+#● +10 Years of Separatism
+#■ 95 -100
+#● +10 Unrest
+#● -7 Diplomatic Reputation
+#● +0.5 Yearly Corruption
+#● -75% Improve Relations
+#● +20 Years of Separatism
+#● All nations in range get ‘Contain Dark Court’ CB on nation, which
+#has the option to forcefully remove the dark court reform from the
+#nation
+#Legitimacy (Level 22)
+#Tradition (Green)
+#● The monarchy of the land rules by tradition, given the right to rule via their bloodline and
+#history.
+#● +0.25 Yearly Legitimacy
+#● +10% Chance of Heir
+#Strongest Land Owner (Green)
+#● The legitimacy of the monarch is based on their personal power in the kingdom, both
+#martially and politically.
+#● -20% Stability Cost
+#● +0.5 Yearly Prestige
+#Richest Landowner (Green)
+#● The legitimacy of the monarch is based entirely on their personal wealth and monopoly,
+#the richest family in the kingdom holds the true power.
+#● Grants new Decision
+#○ Buy Legitimacy (Repeatable)
+#■ 3 Years of income
+#■ +10 Legitimacy
+#● +10% National Tax Modifier
+#Divine Right (Yellow)
+#● The king is a king by the will of the gods, and has the spark of divinity in their blood. God
+#save the King.
+#● Enables Divine Blood Mechanics
+#○ Divine Blood is tied to Religious Unity and Tolerance
+#■ -3 Or More Tolerance of the True Faith
+#● -2 Yearly Absolutism
+#● -30 Maximum Absolutism
+#● +4 Unrest
+#● -3 Yearly Legitimacy
+#■ -1 - -2 Tolerance of the True Faith
+#● -1 Yearly Absolutism
+#● -15 Maximum Absolutism
+#● +2 Unrest
+#● -1 Yearly Legitimacy
+#■ 0 - 3 Tolerance of the True Faith
+#● +0.25 Yearly Legitimacy
+#■ 4 - 6 Tolerance of the True Faith
+#● +0.5 Yearly Absolutism
+#● +5 Maximum Absolutism
+#● +0.5 Yearly Legitimacy
+#■ 7 or more Tolerance of the True Faith
+#● +1 Yearly Absolutism
+#● +10 Maximum Absolutism
+#● +1 Yearly Legitimacy
+#○ Gain Access to Divine Blood Event Pool
+#■ God King Questioned
+#■ Clergy vs Monarchy
+#■ Theological Faux Pas
+#○ Changing out this reform gives a 10 year malus called Divine Blood Denied
+#■ -0.5 Yearly Legitimacy
+#■ -10 Max Absolutism
+#■ -2 Tolerance of the True Faith
+#Vassal Contribution (Level 25)
+#Tribute Focus (Green)
+#● Vassals are required to send larger cuts of their taxes to the monarch, in return for their
+#overlord’s protection.
+#● +25% Income from Vassals
+#● +1 Diplomatic Relations
+#Protection Focus (Green)
+#● Vassals are required to send chunks of their soldiers directly to their overlord to fight
+#more in the wars.
+#● +50% Vassal Force Limit Contribution
+#● +1 Diplomatic Relations
+#Trade Focus (Green)
+#● Vassals are required to provide stronger trade deals to their overlord, and colonial
+#nations must provide a larger share of their income.
+#● +10% Tariffs
+#● +10% Trade Steering
+#● +1 Diplomatic Relations
+#Legitimacy Focus (Yellow)
+#● The number of subjects adds to the legitimacy of the monarch, which makes the sole
+#purpose of the nation’s vassals is to be purely subjects of the monarch.
+#● Each vassal grants +0.25 Yearly Legitimacy, with a max of 10 vassal contributors
+#● -1 Yearly Legitimacy if there is no vassal
+#Monarchal Innovation (Level 28)
+#Legendary Advisory Council (Green)
+#● The monarchy relies on a powerful and skilled administration with councillors of various
+#fields and offices. The monarch can call upon an endless pool of legendary resources
+#and advisers to help improve the nation.
+#● +1 Administrative Monarch Point
+#● -25% Adviser Cost
+#● +3 Possible Advisers
+#Strong Familial Ties (Green)
+#● The monarchical family has strong family traditions and ties which make them a strong
+#part of the national identity, and have long tendrils across monarchies of the world.
+#● +1 Diplomatic Monarch Point
+#● +50% Chance of Heir
+#● +1 Yearly Legitimacy
+#Modernized Levies (Green)
+#● The monarchy has perfected the system of gathering armies to it’s beck and call, and it
+#is legendary for its size, strength, and discipline.
+#● +1 Military Monarch Point
+#● +20% Land Force Limit
+#● -10% Land Maintenance Modifier
+#Royal Commissions (Green)
+#● Rich royalty in the nation spend their wealth on large scale building projects, art studios,
+#and trade agreements with their personal wealth.
+#● -25% Idea Cost
+#● -15% Construction Cost
+#● +1 Yearly Prestige
+#Republic
+#Election Cycle (Level 4)
+#Long Presidency (Green)
+#● The republic believes in a longer presidency, where the ruler can further their own
+#agenda with relative ease.
+#● +1 Length of Election Cycle
+#● +10 Maximum Absolutism
+#Short Presidency (Green)
+#● The republic believes in a short presidency, granting more power to republican
+#institutions.
+#● -1 Length of Election Cycle
+#● +0.05 Yearly Republican Tradition
+#Extremely Long Presidency (Yellow)
+#● The republic believes in an extended presidency, where the ruler has a larger amount of
+#time to dish out their agenda.
+#● +3 Length of Election Cycle
+#● +25 Maximum Absolutism
+#● -0.10 Yearly Republican Tradition
+#Life Appointment (Red)
+#● The republic appoints their rulers for life.
+#● Rulers rule for Life
+#● +3 Random Candidate Bonus
+#● +40 Maximum Absolutism
+#● -1 Yearly Republican Tradition
+#Citizenship (Level 7)
+#Land Owning Citizenship (Green)
+#● Citizenship is gifted only to a small but rich group of landowners, the base of all voting
+#systems in a republic
+#● +5% Local Goods Produced
+#● -15% State Maintenance
+#Expanded Citizenship (Green)
+#● The nation considers all primary members in the nation as citizens regardless of class or
+#wealth.
+#● -1 Unrest
+#● -5% Minimum Autonomy of Territories
+#Suffrage (Yellow)
+#● Citizenship is granted to all members of society, regardless of race, sex, gender, or
+#class. All are allowed to vote, slave or free, king or poor.
+#● Non-accepted Culture provinces get the Suffrage province modifier
+#○ -3 Unrest
+#● +3 Heathen Tolerance
+#● +50% Female Adviser Chance
+#● Every main Primary Culture or State Religion adviser contributes to a modifier called
+#Societal Bias
+#○ 1 Adviser - +2 Unrest
+#○ 2 Adviser - +4 Unrest
+#○ 3 Adviser - +6 Unrest, +25% Stability Cost Modifier
+#Enforced Hierarchy (Yellow)
+#● The republic uses a hierarchy which gives special privileges to more useful members of
+#the republic, and restricts voting of those who are impoverished, uneducated, or useless.
+#● -20% Minimum Autonomy of Territories
+#● -0.05 Autonomy per month
+#● +4 Unrest
+#Democratic Tradition (Level 10)
+#Free Speech (Green)
+#● The republic believes that all forms of speech should be protected under the law,
+#regardless if it's against the government or not.
+#● +2 Diplomatic Reputation
+#● +10% Institution Spread
+#Authoritarianism (Yellow)
+#● The republic has a large authoritarian bent to it, which is quick to demolish it’s
+#democratic institutions in times of emergency
+#● -25% Strengthen Government Cost
+#● -25% Harsh Treatment Cost
+#● -0.4 Yearly Republican Tradition
+#Political Dynasties (Yellow)
+#● Politics is controlled and manipulated by a small group of powerful political families.
+#● Can re-elect from ruling family (vanilla mechanics)
+#● +1 Random Candidate Bonus
+#● -0.4 Yearly Republican Tradition
+#Triumphs (Red)
+#● Generals and famed conquerors are rewarded with large scale celebrations in the
+#capital, shedding the trappings of a republic to give a prideful celebration to a conquering
+#hero of the republic.
+#● Enables Triumph Mechanics
+#○ Conquering a new provinces with a level 2 general or higher in employment
+#enables the Triumph event
+#○ Triumph Events have 3 main options
+#■ Deny Triumph
+#● -10 Prestige
+#● -5 Republican Tradition
+#● Gain Triumph Denied modifier for 20 years
+#○ +100% Leader Cost
+#○ -1 Leader
+#○ -20% Aggressive Expansion
+#○ -2 Unrest
+#■ Grant Triumph
+#● +10 Republican Tradition
+#● +5 Years worth of Income
+#● +20 Prestige
+#● Gain Triumph modifier for 20 years
+#○ +10% Army Morale
+#○ -2 Unrest
+#○ +50% Aggressive Expansion
+#■ Fund Triumph
+#● -10 years worth of income
+#● +20 Republican Tradition
+#● +40 Prestige
+#● Gain Grand Triumph modifier for 20 years
+#○ +15% Army Morale
+#○ -3 Unrest
+#○ +100% Aggressive Expansion
+#○ Triumphs need to be held every 15 years, or the nation will get the modifier
+#Triumphless for till a new Triumph is held
+#■ -2 Yearly Republican Tradition
+#○ If the reform is changed, the nation loses 25 Republican Tradition.
+#Separation of Powers (Level 13)
+#Civil Separation (Green)
+#● The separation of powers in the nation is not encoded in law, but is rather unsaid.
+#Institutions can ultimately end up linked to one another, but are ultimately separate by
+#tradition.
+#● +25% Reform Progress
+#Lawful Separation (Green)
+#● There is a lawful separation between the powers of the republic, which keeps them far
+#apart but working with one another to keep institutions from gaining too much power.
+#● +0.10 Yearly Republican Tradition
+#Interactive Institutions (Yellow)
+#● Institutions within the republic work closely with one another, states and senates are
+#intertwined enough where they are indistinguishable.
+#● -20% State Maintenance
+#● -15% Construction Cost
+#● -0.2 Yearly Republican Tradition
+#Subservient Bureaucracy (Red)
+#● Most of the republic’s politics is mostly concentrated in a single institution, which acts as
+#a forebear over other institutions.
+#● Enables State vs Institutions Mechanics
+#○ State in Power
+#■ +25% National Tax Modifier
+#■ -5 Unrest
+#■ -1 Yearly Republican Tradition
+#○ Institutions in Power
+#■ +0.5 Yearly Republican Tradition
+#■ +3 Diplomatic Reputation
+#■ -200% Reform Progress
+#○ State gain power via peace, leader monarch points above 4, and high stability
+#○ Institutions gain power via leader monarch points below 3, high unrest, and
+#State Governorship (Level 16)
+#United States (Green)
+#● Individual states have their own republican systems and laws, each citizen of a state is
+#represented in the republic, but is also represented by their own individual state
+#● +250 Governing Capacity
+#Regionalism (Green)
+#● Each individual state in the republic is governed as a direct province of the state itself,
+#with chosen governors which are under a direct control of the republican government
+#● +10% Governing Capacity
+#● -1 Unrest
+#Confederation (Yellow)
+#● The nation is more of a confederation of states which is loosely associated with a weak
+#federal government, with individual state power being absolute
+#● +2 Diplomatic Relations
+#● -10% Liberty Desire
+#● Each state adds a -0.01 Republican Tradition modifier, with a -2 Max.
+#United Cities (Yellow)
+#● The republic is based around a number of powerful urban centers with a largely
+#subservient rural country. Each state is based around a singular city and its outlying
+#territories.
+#● Trade centers gain the Voting Center modifier
+#○ +15 Trade Power
+#○ -10% Development
+#○ +0.02 Yearly Republican Tradition
+#● -25% Governing Capacity
+#Presidential Power (Level 19)
+#Weak Presidency (Green)
+#● The presidency is structured to be fairly weak and ineffective, making sure no one man
+#or woman can hold absolute power.
+#● +0.2 Yearly Republican Tradition
+#● -25% Stability Cost Modifier
+#Strong Presidency (Green)
+#● The presidency is a strong institution which has incredible power and influence over
+#other institutions.
+#● +1 Random Candidate Bonus
+#● +25 Maximum Absolutism
+#Co-Consul (Yellow)
+#● The presidency is divided between two individuals, a Consul and a Co-Consul, who
+#share power depending on the month.
+#● At the start of each presidency, an event fires which gives the choice of a Co-Consul
+#which provides a government modifier till the end of the presidential term.
+#○ Moderate
+#■ +0.1 Yearly Republican Tradition
+#■ +2 Unrest
+#○ Reformer
+#■ +30% Government Progress Gain
+#■ +10% Institution Spread
+#■ +100% Stability Cost
+#○ Populist
+#■ -4 Unrest
+#■ +10% Army Morale
+#■ -1 Yearly Republican Tradition
+#○ Conservative
+#■ +10% National Tax Modifier
+#■ -0.5 Interest Annum
+#■ +100% Idea Cost
+#○ Ambitious Idiot
+#■ -10% Army Maintenance Modifier
+#■ -2.5% Power Costs
+#■ +8 Unrest
+#Theocratic Presidency (Yellow)
+#● The republic’s power is mostly theocratic in nature, and it is enshrined in law and culture
+#that the religion of the presidency and it’s institutions ultimately swear onto the faith.
+#● +3 Tolerance of the True Faith
+#● Each point of religious tolerance decreases republican tradition by -0.2 with a max of -2
+#● When republic tradition reaches 0, turn into a theocracy
+#● Changing this reform gives a malus called Religious Populism for 25 years
+#○ -4 Tolerance of the True Faith
+#Court Power (Level 22)
+#Efficient Court System (Green)
+#● Courts in the republic are more interested in pragmatism and efficiency than truth of law,
+#the state ultimately having a say in private and public affairs to keep the status quo.
+#● +15% National Tax Modifier
+#Hierarchical Courts (Green)
+#● The state’s courts are deeply hierarchical, with a system of courts dishing out and
+#reviewing previous court cases to best understand and enforce the law.
+#● +33% Foreign Spy Detection
+#Biased Law Offices (Yellow)
+#● The court system in the nation is deeply biased, favoring the nation’s favored cultures,
+#races, and religion over others.
+#● Every province which has an accepted culture and state religion receives the modifier
+#Biased Courts
+#○ -3 Unrest
+#○ +5% Local Goods Produced
+#● +50% Core Creation Cost
+#● -2 Diplomatic Reputation
+#Private Lawyers (Yellow)
+#● The nation’s system of law and entirely private, where most lawyers and judges are at
+#the whim of private organizations.
+#● Adds new Decisions
+#○ Business Lawyers
+#■ -10% Charter Building Cost
+#■ +1 Merchant
+#■ -15% Trade Goods Produced
+#○ Private Investigations
+#■ +0.2 Yearly Republican Tradition
+#■ -10% National Tax Modifier
+#○ Expand Law Pool
+#■ -5% Idea Cost
+#■ +5% Military Tech Cost
+#● Adds Private Lawyer Event Pool
+#○ Monopoly Sues the State
+#○ Citizens Demand Change
+#○ National Trial Humiliates Nation
+#● -25% Institution Spread
+#Institutions (Level 25)
+#Social Services (Green)
+#● The republic has a strong and innovative institution which dishes out social services and
+#welfare to its people.
+#● If Republican Tradition is 90 or more, gain +1 Administrative Monarch Point
+#Diplomatic Core (Green)
+#● The republic is famed for its extensive diplomatic core and its dedicated social status
+#amongst other nations.
+#● If Republican Tradition is 90 or more, gain +1 Diplomatic Monarch Point
+#War Department (Green)
+#● The republic relies on a powerful military organization which handles most of its military
+#affairs.
+#● If Republican Tradition is 90 or more, gain +1 Military Monarch Point
+#Presidential Cabinet (Green)
+#● The presidents surround themselves with an office of merit, where the best and brightest
+#of the nation inform the president on ongoing affairs and situations.
+#● -25% Adviser Cost
+#● -10% Idea Cost
+#Republican Innovation (Level 28)
+#Republican Zeal (Green)
+#● The republic is zealous towards the status of their republic, and will defend it to it’s bitter
+#end if need be.
+#● If rivaled to a Monarchy, gain a stacking modifier of Republican Liberty (stacks 3 times
+#with 3 rivaled monarchies)
+#○ +1 Tolerance of the True Faith
+#○ -5% Liberty Desire
+#○ +10% National Tax Modifier
+#● If at War with a Monarchy, gain the modifier Republican Zeal
+#○ +20 Maximum Revolutionary Zeal
+#○ +20% Army Morale
+#○ +25% Cavalry Combat Ability
+#○ -10% Shock Damage Received
+#Political Populace (Green)
+#● The populace of the republic is well versed in their local politics and are entirely at the
+#whims and behest of their local rulers.
+#● +1.5 Yearly Republican Tradition
+#Constitutionalism (Green)
+#● The republic relies on a codified and legendary document which lays out their purpose
+#and general laws, granting freedom and domain over their own lands.
+#● +500 Governing Capacity
+#● +3 Max Accepted Cultures
+#Manifest Destiny (Green)
+#● The republic is always expanding and looks all over, seeking to conquer and manifest
+#into new lands.
+#● +1 Colonist
+#● +35 Colonial Growth
+#● -15% Coring Cost
+#Theocracy
+#Theological Legitimacy (Level 4)
+#Theological Law (Green)
+#● The theocracy’s leaders rely on religious law and customs to legitimize their hold over
+#the theocracy.
+#● -25% Stability Cost
+#Inheritance (Green)
+#● The theocracy uses a fairly monarchical system, in which the ruler inherits the nation
+#with some religious overtones.
+#● +25 Opinion from Monarchies
+#● Heirs can come from the same dynasty
+#● Allows Royal Marriages
+#Religious Prestige (Yellow)
+#● The main religious organizations across the world hold the true legitimate power over the
+#theocracy, their support is ultimately needed to maintain control.
+#● Every Alliance with a nation of the same faith increases yearly devotion by +0.25
+#● Every Alliance with a nation of a heretic or heathen faith decreases yearly devotion by
+#-0.5
+#● +2 Diplomatic Reputation
+#Chosen by the Gods (Red)
+#● The legitimacy of the nation’s theocracy is not figuratively supported by the gods, but is
+#rather literal. The nation exists by the whim of the gods.
+#● Every time a new leader assumes power, it initiates one of two major events; The Gods
+#Approve, or The Gods Disapprove, both have a 50/50 chance. This effect last till the next
+#leader assumes power
+#○ Gods Approve
+#■ +2 Yearly Devotion
+#■ -5% Power Cost
+#■ +5 Tolerance of the True Faith
+#■ +10% Missionary Strength
+#■ Gain a religious war CB on heathen and heretic nations
+#■ Cannot declare war on nations of the same faith
+#○ Gods Disapprove
+#■ -5 Yearly Devotion
+#■ -10% Missionary Strength
+#■ -10 Tolerance of the True Faith
+#■ +500% Missionary Cost
+#■ Nations of the same faith gain a conquest CB on nation
+#Questions of Secularism (Level 7)
+#Minor Concessions (Green)
+#● The theocracy doesn’t balance out itself with secularists, but does grant them a partial
+#tolerance. In return for allowing some secularization, the theocracy makes demands of
+#their profession of faith and fealty to the church.
+#● +5% Governing Capacity
+#Clerical Bureaucracy (Green)
+#● The clergy have reigned in total control of the government, keeping those who are not
+#fully faithful to the church outside of governance.
+#● +2 Tolerance of the True Faith
+#Secular Tolerance (Yellow)
+#● The theocracy allows secularism to exist in the governance of its territories, allowing any
+#number of non-clergy to participate in local government.
+#● +10% Governing Capacity
+#● -10% Adviser Cost
+#● -2 Tolerance of the True Faith
+#War against Secularization (Red)
+#● The theocracy is violently opposed to any nation which governs without the total will of
+#the gods, and must be openly opposed.
+#● Gain a free CB against any non-theocracy nation
+#● +100% Adviser Cost
+#● Only Inquisitor and Theologian advisers can be hired as administrators
+#● -35% Governing Capacity
+#Questions of Fanaticism (Level 10)
+#Curbed Fanaticism (Green)
+#● Fanaticism is curbed via education and the watchful eye of inquisitors to prevent radical
+#beliefs and violent interpretations from soiling the faith’s true purpose.
+#● +1 Heathen Tolerance
+#● +1 Heretic Tolerance
+#Moderation (Green)
+#● Fanatics are tolerated in society, but not in government, and are left alone for the most
+#part.
+#● +0.25 Yearly Devotion
+#Militarized Fanatics (Yellow)
+#● The theocracy does not tolerate fanaticism in government positions, but actively
+#encourages it enough to make up the bulk of its armies, where fanatics and radicals turn
+#their attention on others.
+#● +10% Army Morale
+#● -20% Army Morale if at war with any enemy who is of the same faith
+#Embraced Fanaticism (Red)
+#● The theocracy has entirely embraced fanaticism, where radical religious belief, theocratic
+#populism, and violence rule the day.
+#● +4 Tolerance of the True Faith
+#● Provinces of the state’s faith gain the modifier Increasing Fanaticism
+#○ +1 Attrition
+#○ +100% Manpower
+#● Provinces of a different faith gain the modifier Fanatic Victims
+#○ +10 Unrest
+#○ +0.5 Monthly Devastation
+#● Cannot declare war on nations of the same faith
+#● Cannot have any form of diplomacy with any nation who isn’t the same faith
+#● +50% Idea Cost
+#Proselytism (Level 13)
+#Missions (Green)
+#● Missions are temporary or permanent missionary homes which allows the spreading of
+#the true faith via established holy orders.
+#● +2% Missionary Strength
+#Evangelism (Green)
+#● Evangelism is considered a ‘reckless’ form of proselytism, where much of the missionary
+#work is given to enthusiastic and nomadic missionaries to spread the word without
+#enforcing it, but is ultimately very effective.
+#● -50% Missionary Cost
+#Forced Conversion (Yellow)
+#● The state enforces conversion, those who are pagan or heretic alike must by law
+#convert.
+#● Gain the option Forced Conversion
+#○ Automatically converts a random province to the true faith
+#○ 50% chance to backfire, giving the Conversion Denied effect for 10 years
+#■ +3 Unrest
+#■ -10% Missionary Strength
+#○ Can only be done every 10 years
+#○ Costs 50 diplomatic points
+#Martyrdom (Yellow)
+#● Missionary work according to the state is more than an act of spreading the faith, but is
+#an act of faith itself, and thus dying for the spreading of that faith is seen as a true act of
+#worship.
+#● Missionaries, while they are converting a province, have 25% monthly to be interrupted
+#and killed, interrupting the process of conversion. Each event gives a +4 devotion and
+#+5 prestige as a result
+#Morality and Ethics (Level 16)
+#Religious Law (Green)
+#● The theocracy takes most of its morality and ethics from its own theological laws, which
+#is enshrined as
+#Kindness and Mercy (Green)
+#Faith Alone (Yellow)
+#Justified Atrocity (Red)
+#Debate (Level 19)
+#Encouraged Debate (Green)
+#Religious Scholarship (Green)
+#Theological Councils (Green)
+#Clerical Truth (Yellow)
+#Theocratic Finance (Level 22)
+#Tithe (Green)
+#Church Tax Brackets (Green)
+#Priesthood Pool (Yellow)
+#Pilgrim Economy (Yellow)
+#Heathenism and Heresy (Level 25)
+#Heretic Brothers (Green)
+#Heathen Neighbors (Green)
+#Tolerant Society (Yellow)
+#Crusade (Red)
+#Theocratic Innovation (Level 28)
+#Godly Administration (Green)
+#Religious Revival (Green)
+#Zealous Army (Green)
+#Heart of the Faith (Green)
+#Tribal
+#Tribal Unity (Level 4)
+#Loose Confederacy (Green)
+#● The nation is held together by a loose alliance of tribes and clans which work together
+#for the most part for a common goal
+#● -15% Stability Cost
+#● -50% Accept Culture Cost
+#Tribal Territory (Green)
+#● The tribal lands have no formal borders, but are rather lands which the tribe maneuvers
+#in and around more commonly than others, united more by culture and custom then
+#governance.
+#● -20% Core Creation Cost
+#● +20 Colonial Growth
+#Survival (Yellow)
+#● Tribal unity is based more around survival, where the nation bases much of its existence
+#on a need to survive a larger and more dangerous world.
+#● +1 Attrition
+#● +75% Core Creation Cost on Us
+#● -1 Diplomatic Relations
+#Coalition (Yellow)
+#● The tribes are united by a strong alliance against a common foe, no matter what it may
+#be, and its political and economic systems reflect this unity.
+#● -25% Change Rivalry Cost
+#● +20% Army Morale while in a Coalition War
+#● Having less than 2 rivals results in the malus Breaking Coalition
+#○ +100% Stability Cost
+#○ +0.5 Yearly Corruption
+#○ -33% Army Morale
+#Historical Record (Level 7)
+#Oral Tradition (Green)
+#● History and learning within the tribe is told via elders who remember the details of the
+#past to the best of their ability.
+#Written Record (Green)
+#● The tribe writes down its history to the best of its ability, keeping its oldest and most
+#heroic tales to pass down to their younger generations.
+#Unspoken Past (Green)
+#● The past of the tribe remains shrouded in mystery and for good reason, keeping away
+#past failures and defeats away from young and naive generations.
+#Historical Preservation (Yellow)
+#●
+#Tyranny (Level 10)
+#Tribal Council (Green)
+#Local Strongman (Green)
+#Tyrant Dictatorship (Yellow)
+#Temporary Dictatorship (Yellow)
+#Religion (Level 13)
+#Rituals (Green)
+#Formal Faith (Green)
+#Syncretism (Yellow)
+#Humanist (Yellow)
+#Tradition (Level 16)
+#Warrior Lodges (Green)
+#Partial Nomadism (Green)
+#Religious Overtones (Green)
+#Evolutionary Survival (Yellow)
+#Diversity (Level 19)
+#Clan Society (Green)
+#Accepted Outsiders (Green)
+#Clan Integration (Yellow)
+#Tribal Colonies (Yellow)
+#Survival (Level 22)
+#Hidden Holdouts (Green)
+#Emergency Magic (Yellow)
+#Long Lasting Resistance (Yellow)
+#Accepted Fate (Red)
+#Civilizing (Level 25)
+#Traditionalism (Green)
+#Curiosity (Green)
+#Copycat (Yellow)
+#Innovative Push (Red)
+#Tribal Innovation (Level 28)
+#Legendary Warriors (Green)
+#Noble Savages (Green)
+#Tribal Empire (Green)
+#Innovative Traditions (Green)
+#______________________________________________________
+#New Event Catalog
+
+#○ New Pool of Events - es_slavery_flag
+#■ Population Enslaved
+#■ Slave Population Depletes
+#■ Slave Revolution
+
+#○ New Privileges Unlocked
+#■ Noble Privilege: Hold Gladiatorial Games
+#● +5% Loyalty
+#● +5% Influence
+#● +0.25 Army Tradition
+#● +0.5 Prestige
+#■ Burgher Privilege: Establish Slave Enclaves
+#● +5% Loyalty
+#● +5% Influence
+#● Will randomly generate a slave province every 25 Years, but
+#requires at least one province to have a slave province in it
+#● +2 National Unrest
+#■ Clergy Privilege: Slave Conversion
+#● +5% Loyalty
+#● +5% Influence
+#● +15% Religion Unity
+#● +2% Missionary Strength vs Heathens
+
+#● Unlocks Magic Mechanics - es_magic_regulation_flag
+#○ Rulers are granted an advance pool of new personalities
+#■ Illusionist: +1 Diplomatic Reputation, +5% Army Movement Speed
+#■ Auger: -5% Army Shock, +5% Local Good Produced
+#■ Destroyer: +10% Army Fire Damage
+#■ Necromancer: +15% Army Manpower Modifier, -2 Diplomatic Reputation
+#■ Conjurer: -10% Land Maintenance Modifier, -10% Ship Cost
+#■ Restorer: -20% Land Attrition
+#■ Mystic: +25% Army Drill Gain, -10% Liberty Desire
+#■ Enchanter: +10% National Tax Modifier, +5% Infantry Combat Ability

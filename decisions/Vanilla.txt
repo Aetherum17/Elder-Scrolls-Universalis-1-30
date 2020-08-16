@@ -271,12 +271,14 @@ country_decisions = {
 			NOT = { has_reform = pirate_republic_reform }
 			NOT = { has_reform = war_against_the_world_doctrine_reform }
 			NOT = { overextension_percentage = 0.01 }
+			NOT = { has_country_flag = es_abolished_slavery_act_flag }
 		}
 		allow = {
 			dip = 3
 		}
 		effect = {
 			add_prestige = 10
+			set_country_flag = es_abolished_slavery_act_flag
 			add_country_modifier = {
 				name = "the_abolish_slavery_act"
 				duration = -1

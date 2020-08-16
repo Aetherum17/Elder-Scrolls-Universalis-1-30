@@ -91,7 +91,7 @@ vassal = {
 	first = NA6
 	second = NF3
 	start_date = 57.1.1
-	end_date = 420.1.1
+	end_date = 9999.1.1
 }
 
 vassal = {
@@ -523,5 +523,70 @@ alliance = {
     first = OLD
 	second = SKA
 	start_date = 420.1.1
+	end_date = 9999.1.1
+}
+
+####################################################################### 12
+
+alliance = {
+    first = NCH
+	second = ROU
+	start_date = 478.1.1
+	end_date = 9999.1.1
+}
+
+dependency = {
+    subject_type = alliance_member
+    first = SKY
+    second = NA1
+    start_date = 478.1.1
+	end_date = 9999.1.1
+}
+
+dependency = {
+    subject_type = alliance_member
+    first = SKY
+    second = NA5
+    start_date = 478.1.1
+	end_date = 9999.1.1
+}
+
+dependency = {
+    subject_type = alliance_member
+    first = SKY
+    second = NA6
+    start_date = 478.1.1
+	end_date = 9999.1.1
+}
+
+dependency = {
+    subject_type = alliance_member
+    first = SKY
+    second = NA8
+    start_date = 478.1.1
+	end_date = 9999.1.1
+}
+
+dependency = {
+    subject_type = alliance_member
+    first = SKY
+    second = NA9
+    start_date = 478.1.1
+	end_date = 9999.1.1
+}
+
+dependency = {
+    subject_type = alliance_member
+    first = SKY
+    second = NB5
+    start_date = 478.1.1
+	end_date = 9999.1.1
+}
+
+dependency = {
+    subject_type = alliance_member
+    first = SKY
+    second = NB6
+    start_date = 478.1.1
 	end_date = 9999.1.1
 }

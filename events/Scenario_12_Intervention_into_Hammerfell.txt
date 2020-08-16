@@ -523,6 +523,10 @@ country_event = {
 		RED = { has_country_flag = es_12_nordic_feud_flag }
 		RED = { NOT = { has_country_modifier = 12_nordic_feud } }
     }
+	
+	immediate = {
+	    1275 = { save_event_target_as = king_of_skyrim }
+	}
 
 	mean_time_to_happen = {
 		days = 3650
@@ -531,8 +535,10 @@ country_event = {
 	option = {
 		name = "es_12_scenario.2.a"
 		ai_chance = { factor = 50 }
-		if = { limit = { OR = { tag = SKY tag = OLD } } change_government = monarchy add_government_reform = elective_monarchy }
-		add_stability = 1
+		if = { limit = { owns = 1275 } change_government = monarchy add_government_reform = elective_monarchy }
+		else = { event_target:king_of_skyrim = { create_subject = { subject_type = alliance_member subject = ROOT } } }
+		
+		add_stability = 3
 		clr_country_flag = es_12_nordic_feud_flag
 	}
 	option = {

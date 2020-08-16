@@ -511,7 +511,7 @@ country_decisions = {
 				add_core = BA1
 			}
 			create_subject = { subject_type = personal_union subject = BA1 }
-			BA1 = { change_government_reform_progress = -99999 }
+			BA1 = { change_religion = ROOT change_primary_culture = ROOT change_government_reform_progress = -99999 }
 		}
 		ai_will_do = {
 			factor = 1

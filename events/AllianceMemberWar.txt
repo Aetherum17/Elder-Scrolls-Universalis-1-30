@@ -1,0 +1,33 @@
+namespace = alliancememberwar
+
+# Display of the Royal Arms in churches
+country_event = {
+	id = alliancememberwar.1
+	title = alliancememberwar.1.t
+	desc = alliancememberwar.1.d
+	picture = ALLIANCE_MEMBER_IN_WAR_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	    random_subject_country = {
+		    limit = {
+			    is_subject_of_type = alliance_member
+				NOT = { has_country_flag = alliancememberinwar_flag }
+				is_at_war = yes
+			}
+			save_event_target_as = alliance_member_in_war
+			set_country_flag = alliancememberinwar_flag
+		}
+	}
+	
+	option = {
+		name = "alliancememberwar.1.a"
+		add_yearly_manpower = 2.5
+		add_years_of_income = 1.0
+		hidden_effect = {
+		random_country = { limit = { NOT = { is_subject_of = ROOT } is_in_war = { attacker_leader = event_target:alliance_member_in_war defender_leader = THIS } } save_event_target_as = enemyofalliancemember }
+		}
+		declare_war_with_cb = { who = event_target:enemyofalliancemember casus_belli = cb_annex } 
+	}
+}

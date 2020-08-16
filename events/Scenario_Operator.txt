@@ -522,6 +522,14 @@ country_event = {
 		every_country = {
 		limit = { owns = 5616 culture_group = cyrodiil_cg } country_event = { id = es_8_scenario.12 days = 3650 tooltip = es_collapse.2.a.tt }
 		}
+		###
+		every_country = {
+		limit = { owns = 5616 culture_group = cyrodiil_cg } country_event = { id = es_8_scenario.13 days = 9125 tooltip = es_collapse.2.a.tt }
+		}
+		###
+		every_country = {
+		limit = { owns = 5987 culture_group = cyrodiil_cg } country_event = { id = es_8_scenario.14 days = 3650 tooltip = es_collapse.2.a.tt }
+		}
 	}
 
 	option = {
@@ -710,7 +718,7 @@ country_event = {
 		else = { every_country = { limit = { culture_group = northern_cg owns = 1275 } country_event = { id = es_11_scenario.1 days = 3650 tooltip = es_collapse.2.a.tt } } }
 		###
 		if = { limit = { 970 = { owner = { NOT = { culture_group = dwemer_cg } } } }
-		every_country = { limit = { culture_group = dwemer_cg is_free_or_tributary_trigger = yes capital_scope = { superregion = morrowind_superregion } country_event = { id = es_11_scenario.2 days = 3650 tooltip = es_collapse.2.a.tt } }
+		every_country = { limit = { culture_group = dwemer_cg is_free_or_tributary_trigger = yes capital_scope = { superregion = morrowind_superregion } country_event = { id = es_11_scenario.2 days = 3650 tooltip = es_collapse.2.a.tt } } }
 		}
 		###
 		every_country = { limit = { culture_group = yokudan-redguardian_cg capital_scope = { region = yokuda_lr } } country_event = { id = es_11_scenario.3 days = 3650 tooltip = es_collapse.2.a.tt } }
@@ -762,15 +770,15 @@ country_event = {
 	}
 	
 	immediate = {
-	    every_province = { limit = { is_city = no OR = { area = hammerfell_38_la area = hammerfell_37_la area = hammerfell_35_la area = hammerfell_34_la area = hammerfell_33_la } } cede_province = ROU add_core = ROU }
+	    every_province = { limit = { is_city = no OR = { area = hammerfell_38_la area = hammerfell_37_la area = hammerfell_35_la area = hammerfell_34_la area = hammerfell_33_la } } cede_province = ROU add_core = ROU change_culture = dwemer change_religion = reason_and_logic_cult }
 		###
 		every_country = { limit = { owns = 1319 } country_event = { id = es_12_scenario.1 days = 3650 tooltip = es_collapse.2.a.tt } }
 		###
-		every_country = { limit = { NOT = { exists = CA6 } any_owned_province = { area = cyrodiil_6_la } } country_event = { id = es_12_scenario.3 days = 3650 tooltip = es_collapse.2.a.tt }
+		every_country = { limit = { NOT = { exists = CA6 } any_owned_province = { area = cyrodiil_6_la } } country_event = { id = es_12_scenario.3 days = 3650 tooltip = es_collapse.2.a.tt } }
 		###
-		every_country = { limit = { NOT = { exists = CA7 } any_owned_province = { area = cyrodiil_7_la } } country_event = { id = es_12_scenario.4 days = 3650 tooltip = es_collapse.2.a.tt }
+		every_country = { limit = { NOT = { exists = CA7 } any_owned_province = { area = cyrodiil_7_la } } country_event = { id = es_12_scenario.4 days = 3650 tooltip = es_collapse.2.a.tt } }
 		###
-		every_country = { limit = { culture_group = cyrodiil_cg owns = 1206 NOT = { government = monarchy } } country_event = { id = es_12_scenario.5 days = 3650 tooltip = es_collapse.2.a.tt }
+		every_country = { limit = { culture_group = cyrodiil_cg owns = 1206 NOT = { government = monarchy } } country_event = { id = es_12_scenario.5 days = 3650 tooltip = es_collapse.2.a.tt } }
 		###
 		every_country = { limit = { culture_group = high_elves_cg owns = 1379 } country_event = { id = es_12_scenario.6 days = 3650 tooltip = es_collapse.2.a.tt } }
 		###
