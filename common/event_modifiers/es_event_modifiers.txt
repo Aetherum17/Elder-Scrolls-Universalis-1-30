@@ -44,6 +44,26 @@ points_2 = {
 points_3 = {
 }
 
+guarfian_at_war = {
+	land_morale = 0.10
+	global_manpower_modifier = 0.5
+	manpower_recovery_speed = 0.25
+}
+
+jewel_of_tamriel_modifier = {
+	local_development_cost = -0.5
+	trade_goods_size_modifier = 0.5
+	local_institution_spread = 0.25
+}
+
+scammed_by_enemy_thieves_guild = {
+    global_tax_modifier = -0.25
+}
+
+intimidated_by_enemy_thieves_guild = {
+	all_power_cost = 0.10
+}
+
 intolerant_society_1 = {
     global_missionary_strength = 0.025
 }

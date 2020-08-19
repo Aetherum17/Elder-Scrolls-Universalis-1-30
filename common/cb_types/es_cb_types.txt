@@ -134,3 +134,16 @@ cb_es_tribal_war = {
 
 	war_goal = es_nordic_feud
 }
+
+cb_es_witch_hunting = {
+	valid_for_subject = no
+
+	prerequisites = {
+		has_country_flag = es_magic_persecution_flag
+		FROM = {
+		    has_country_flag = es_magic_nation_flag
+		}
+	}
+
+	war_goal = es_witch_hunting
+}

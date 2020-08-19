@@ -1,6 +1,6 @@
 country_decisions = {
 
-#■ Establish Slaver Guild
+#■ Establish Slaver Guild - has_country_flag = es_slavery_flag
 #● +25% Production of Slaves
 #● +1 National Unrest
 #■ New Restraining Bolts
@@ -10,6 +10,35 @@ country_decisions = {
 #● +15% Manpower Modifier
 #● -5% Discipline
 
+#○ New Decisions are Available - has_country_flag = es_magic_nation_flag
+#■ National Mage Guild
+#● -5% Idea Cost
+#● -10% National Tax Modifier
+#■ Reign In Necromancery (Only One can be Chosen)
+#● -1 Unrest
+#● Remove Lich from Leader Pool
+#■ Embrace Necromancery (Only One can be Chosen)
+#● +1 Unrest
+#● +10% Land Force Limit
+#■ Hedge Mage Roundup
+#● +1 Unrest
+#● -10% Stability Cost
+
+#● The Capital of the nation gains a major province modifier called Jewel of Tamriel - has_country_flag = es_jewel_of_tamriel_flag
+#○ -50% Construction Cost
+#○ -35% Development Cost
+#○ +3 Local Goods Produced
+#● The capital of the nation is improved three times via a decision, which is highly
+#expensive.
+#○ Level 1: +100% Trade Power
+#○ Level 2: +100% Local Tax Modifier
+#○ Level 3: +100% Local Manpower
+
+######################################
+# Thieves Guild for Riften
+# Assasins Guild for MOrang Tong Event
+# OR for Galkreath owner?
+######################################
 
 #es_trial_by_fire = {
 #		major = yes

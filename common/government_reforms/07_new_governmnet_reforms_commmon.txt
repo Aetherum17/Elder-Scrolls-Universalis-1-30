@@ -14,7 +14,7 @@
 #Local Law (Green)
 #● Local laws are enforced by individual communities, with each town and city having their own enforced laws and enforcement services
 local_law = {
-	icon = "local_law_icon"
+	icon = "constitution"
 	allow_normal_conversion = yes
 	modifiers = {
 		state_maintenance_modifier = -0.10
@@ -23,7 +23,7 @@ local_law = {
 #National Guard (Green)
 #● The nation uses a national system of law enforcement and guards to enforce its laws.
 national_council = {
-	icon = "national_council_icon"
+	icon = "poland_sejm"
 	allow_normal_conversion = yes
 	modifiers = {
 		stability_cost_modifier = -0.10
@@ -32,7 +32,7 @@ national_council = {
 #Trial and Jury (Green)
 #● A system of modernized government law enforcement where a group of peers, dictated by a judge, rules over cases to decide guilt or innocence.
 trial_and_jury = {
-	icon = "trial_and_jury_icon"
+	icon = "tribal_council"
 	allow_normal_conversion = yes
 	modifiers = {
 		global_unrest = -1
@@ -41,7 +41,7 @@ trial_and_jury = {
 #Community Militia (Yellow)
 #● Laws are enforced by a small group of local armed militias, who deal out justice as they see fit on their own terms, often without full understanding of the rule of law.
 community_militia = {
-	icon = "community_militia_icon"
+	icon = "national_guard"
 	allow_normal_conversion = yes
 	modifiers = {
 		global_unrest = -2.5
@@ -54,7 +54,7 @@ community_militia = {
 #Commission (Green)
 #● Labor is handed out to contractors and free laborers who are paid for their commissioned work.
 commission = {
-	icon = "commission_icon"
+	icon = "vroedschap"
 	allow_normal_conversion = yes
 	modifiers = {
 		build_time = -0.25
@@ -63,7 +63,7 @@ commission = {
 #Serfdom (Yellow)
 #● A system of labor where peasants are bound to a land as unfree laborers, and are kept on the land to serve the state, but have some rights.
 serfdom = {
-	icon = "serfdom_icon"
+	icon = "dutch_flag"
 	allow_normal_conversion = yes
 	modifiers = {
 		build_cost = -0.10
@@ -74,7 +74,7 @@ serfdom = {
 #Corporate (Yellow)
 #● Labor contracts is handed out to a small group of construction companies who control a mix of free and unfree laborers, who’s own personal wealth motivates their benefits to the state
 unregulated_guilds = {
-	icon = "unregulated_guilds_icon"
+	icon = "hansa_trade"
 	allow_normal_conversion = yes
 	modifiers = {
 		trade_company_investment_cost = -0.5
@@ -86,7 +86,7 @@ unregulated_guilds = {
 #● Slavery is an ancient system where another sentient being is owned as property to another, resulting in a system of cruelty which has large economic repercussions.
 #● Enables Slavery Mechanics
 slavery = {
-	icon = "slavery_icon"
+	icon = "paper_money_map"
 	allow_normal_conversion = yes
 	modifiers = {
 		capture_ship_chance = 0.5
@@ -107,7 +107,7 @@ slavery = {
 #Governmental Townships (Green)
 #● Local government buildings and outposts serve as state centers, often highly pending on their location. States are run as small hierarchies of local rulers, who answer to larger bureaucrats.
 governmental_townships = {
-	icon = "governmental_townships_icon"
+	icon = "colonial_church"
 	allow_normal_conversion = yes
 	modifiers = {
 		expand_administration_cost = -0.25
@@ -116,7 +116,7 @@ governmental_townships = {
 #Urban Center (Yellow)
 #● The state relies on powerful urban centers to administer local governance, each large settlement controls their own state from within the city’s limits
 urban_centers = {
-	icon = "urban_centers_icon"
+	icon = "casa_de_india"
 	allow_normal_conversion = yes
 	modifiers = {
 		center_of_trade_upgrade_cost = -0.25
@@ -127,7 +127,7 @@ urban_centers = {
 #Rural Backwater (Yellow)
 #● Much of the country is ungovernable and is ruled by small clans and rural backwaters which cannot be truly controlled, just tolerated.
 rural_baclwater = {
-	icon = "rural_baclwater_icon"
+	icon = "map_2"
 	allow_normal_conversion = yes
 	modifiers = {
 	    core_creation = -0.25
@@ -138,7 +138,7 @@ rural_baclwater = {
 #Nomadism (Red)
 #● Most settlements are temporary, the population moves far too often to make most settlements only temporary at best.
 nomadism = {
-	icon = "nomadism_icon"
+	icon = "Tatar_raid"
 	allow_normal_conversion = yes
 	modifiers = {
 	    cav_to_inf_ratio = 0.25
@@ -151,10 +151,10 @@ nomadism = {
 #Regulation (Green)
 #● Magic is regulated to prevent abuse by mages and to use magic in the most efficient way possible without it collapsing society
 regulation = {
-	icon = "regulation_icon"
+	icon = "roman_law"
 	allow_normal_conversion = yes
 	modifiers = {
-	    advisor_cost = 1
+	    advisor_pool = 1
 	}
 	effect = {
 		custom_tooltip = get_acess_to_new_ruler_personalities
@@ -164,497 +164,699 @@ regulation = {
 	    clr_country_flag = es_magic_regulation_flag
 	}
 }
-
 #Reason and Logic (Red)
 #● The nation has abandoned every notion of superstition in favor of pure logic and reason, rejecting all forms of spirituality to better themselves and study the natural world.
 reason_and_logic = {
-	icon = "regulation_icon"
+	icon = "curia_decree"
+	allow_normal_conversion = yes
+	trigger = {
+	    NOT = { has_reform = oligarchy_reform }
+		NOT = { has_reform = monastic_elections_reform }
+		NOT = { has_reform = monastic_elections_reform }
+	}
+	modifiers = {
+	    innovativeness_gain = 1.0 
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+		}
+
+		states_general_mechanic = {
+			reason = {
+			    ae_impact = -0.15
+				improve_relation_modifier = 0.15
+				tolerance_own = -1.5
+			}
+
+			logic = {
+				idea_cost = -0.15
+				tolerance_heathen = 1.5
+				global_missionary_strength = -0.015
+			}
+		}
+	}
+}
+#Persecution (Red)
+#● The state actively persecuted those who practice magic, witch hunters and mage slayers openly haunt the fields and burn away the mages and their work.
+persecution = {
+	icon = "rioting_burning_2"
 	allow_normal_conversion = yes
 	modifiers = {
-	    advisor_cost = 1
+	    tolerance_own = 2.5
+		global_missionary_strength = 0.025
+		embracement_cost = 1.0
 	}
 	effect = {
-		custom_tooltip = get_acess_to_new_ruler_personalities
-	    set_country_flag = es_magic_regulation_flag
+		custom_tooltip = get_acess_to_new_casus_belli
+	    set_country_flag = es_magic_persecution_flag
 	}
 	removed_effect = {
-	    clr_country_flag = es_magic_regulation_flag
+	    clr_country_flag = es_magic_persecution_flag
+	}
+}
+#Magical Society (Red)
+#● The society of this nation is ruled over by all powerful magi who control every aspect of society, where those with magic are more valued than those who do not.
+magical_society = {
+	icon = "monks"
+	allow_normal_conversion = yes
+	modifiers = {
+	    min_autonomy = 25
+		all_power_cost = -0.10
+		global_institution_spread = 0.10
+	}
+	effect = {
+		custom_tooltip = get_acess_to_new_decisions
+		custom_tooltip = get_acess_to_new_ruler_personalities
+	    set_country_flag = es_magic_nation_flag
+	}
+	removed_effect = {
+	    clr_country_flag = es_magic_nation_flag
 	}
 }
 
-#● -5% Power Costs
-#● +100% Innovation Gain
-#● Has a Rationality Meter
-#○ Being ahead in time will increase the rationality meter (+0.05 Yearly)
-#○ You lose rationality from being behind in tech or having strong factions (-0.15
-#Yearly)
-#○ 0-20: +25% Power Cost, +1 Tolerance of the True Faith, +1% Missionary
-#Strength
-#○ 21-50: +15% Power Cost
-#○ 51-80: +5% Power Cost, -1 Tolerance of the True Faith, -1% Missionary Strength
-#○ 81-99: -5% Idea Cost, -2 Tolerance of the True Faith, -2% Missionary Strength
-#○ 100: -15% Idea Cost, -3 Tolerance of the True Faith, -3% Missionary Strength
-#● +33% Aggressive Expansion
-#● -100 Opinion
-#Persecution (Red)
-#● The state actively persecuted those who practice magic, witch hunters and mage slayers
-#openly haunt the fields and burn away the mages and their work.
-#● +3 Tolerance of the True Faith
-#● Gain large military bonuses vs Magical Society and Regulation government reform
-#nations
-#○ +20% Army Morale
-#○ -33% Fire Damage Taken
-#○ -33% Shock Damage Taken
-#○ +10% Discipline
-#● Military bonuses are doubled vs nations whose ruler has any magical personality
-#● +25% Tech Cost
-#● +50% Development Cost
-#Magical Society (Red)
-#● The society of this nation is ruled over by all powerful magi who control every aspect of
-#society, where those with magic are more valued than those who do not.
-#● Unlocks Magic Mechanics
-#● Unlocks Advanced Magic Mechanics
-#○ Adds new personalities to leaders, power and elite ones
-#■ Lich: Immortality, +100% Manpower Modifier, -3 Diplomatic Reputation,
-#+3 Unrest
-#■ Summoner: -15% Army Maintenance, -15% Naval Maintenance
-#■ Archmage: -5% Power Costs, +2 Leader Fire
-#■ Seer: -20% Liberty Desire, +15% Movement Speed
-#■ Sorcerer: +20% Land Fire Damage, +15% Artillery Combat Ability
-#■ Warlock: -0.30 Yearly Corruption, +25% Goods Produced
-#■ Hag: +20% Shock Damage Dealt, +50% Army Drill Gain
-#■ Guardian: -20% Shock Damage Received, -50% Army Drill Loss
-#○ Magical Society has a new pool of events
-#■ Rogue Mages Causes Trouble
-#■ Anti-Mage Revolt
-#■ Magic Monopoly Booms
-#○ New Decisions are Available
-#■ National Mage Guild
-#● -5% Idea Cost
-#● -10% National Tax Modifier
-#■ Reign In Necromancery (Only One can be Chosen)
-#● -1 Unrest
-#● Remove Lich from Leader Pool
-#■ Embrace Necromancery (Only One can be Chosen)
-#● +1 Unrest
-#● +10% Land Force Limit
-#■ Hedge Mage Roundup
-#● +1 Unrest
-#● -10% Stability Cost
-#○ New Estate Privileges are Available
-#■ Noble Privilege: Mage Generals
-#● -15 Absolutism
-#● +10% Loyalty
-#● +10% Influence
-#● +1 General Fire
-#● +1 General Movement
-#■ Burgher Privilege: Sorcerous Experimentation
-#● -15 Absolutism
-#● +10% Loyalty
-#● +10% Influence
-#● -5% Tech Cost
-#● -5% Military Tech Cost
-#■ Clergy Privilege: Mage Clergy
-#● -15 Absolutism
-#● +10% Loyalty
-#● +10% Influence
-#● +2 Tolerance of the True Faith
-#● +25 Opinion from nations of the same faith
-#○ Magical society requires a mage personality as ruler, or they will gain a malice
-#called Mage Society Questioned
-#■ +100% Idea Cost
-#■ +25% Power Cost
-#■ +33% Minimum State Autonomy
 #Culture (Level 8)
 #Tavern Life (Green)
-#● Much of the culture of the nation is displayed amongst common taverns and venues,
-#storytelling and decent drink being the backbone of social order.
-#● +10% Wine Production
-#● +0.25 Yearly Prestige
+#● Much of the culture of the nation is displayed amongst common taverns and venues, storytelling and decent drink being the backbone of social order.
+tavern_life = {
+	icon = "monastic_breweries_reform"
+	allow_normal_conversion = yes
+	modifiers = {
+	    prestige = 0.15
+	}
+}
 #Tournaments (Green)
-#● Culture is displayed in violent tournaments and blood sport, where value is placed on
-#victory and personal skill.
-#● +50% Prestige from Land Battles
-#● +50% Prestige from Sea Battles
+#● Culture is displayed in violent tournaments and blood sport, where value is placed on victory and personal skill.
+tournaments = {
+	icon = "blood_tax"
+	allow_normal_conversion = yes
+	modifiers = {
+	    prestige_from_land 0.35
+	}
+}
 #Art and Sciences (Green)
-#● The nation has a cultured view, taking in arts and social sciences to display the arts and
-#crafts of its people.
-#● -1% Prestige Decay
+#● The nation has a cultured view, taking in arts and social sciences to display the arts and crafts of its people.
+art_and_science = {
+	icon = "united_cantons_reform"
+	allow_normal_conversion = yes
+	modifiers = {
+	    prestige_decay = -0.01
+	}
+}
 #Raiding (Red)
-#● Raiding and looting is an important cornerstone of the culture of this land, who’s people
-#rely on raiding other nations for loot, slaves, and personal glory.
-#● +100% Prestige from Exploring Terra Ingocinta
-#● Can Raid Coasts, including those of the same faith
-#● +200% Prestige from Sea Battles
-#● +5% Prestige Decay
-#● -2 Yearly Prestige
+#● Raiding and looting is an important cornerstone of the culture of this land, who’s people rely on raiding other nations for loot, slaves, and personal glory.
+raiding = {
+	icon = "war_against_the_world"
+	allow_normal_conversion = yes
+	modifiers = {
+	    prestige_from_naval = 0.5
+		prestige_from_battles_in_fleet_modifier = 0.5
+		prestige_decay = 0.01
+	}
+}
+
 #Trade (Level 9)
 #Internal Market (Green)
 #● National trade is more focused on internal markets rather than outside markets.
-#● -30% Increase Mercantilism Cost
+internal_market = {
+	icon = "economy_trade"
+	allow_normal_conversion = yes
+	modifiers = {
+	    mercantilism_cost = -0.35
+	}
+}
 #Free Trade (Green)
 #● The nation prefers free trade, and openly trades with other nations and peoples.
-#● +25% Trade Steering
+free_trade = {
+	icon = "banker"
+	allow_normal_conversion = yes
+	modifiers = {
+	    trade_steering = 0.25
+	}
+}
 #Protectionism (Yellow)
-#● Protectionism is an economic practice of cutting off trade to other nations in favor of
-#promoting local production and to protect local merchants.
-#● +15% Production Efficiency
-#● +30% Local Trade Power
-#● -2 Merchant
+#● Protectionism is an economic practice of cutting off trade to other nations in favor of promoting local production and to protect local merchants.
+protectionism = {
+	icon = "economy_tax"
+	allow_normal_conversion = yes
+	modifiers = {
+	    production_efficiency = 0.10
+		global_own_trade_power = 0.25
+		merchants = -3
+	}
+}
 #Corporatism (Yellow)
-#● Corporatism is a lack of regulation in a free trade system, whose policies favor the
-#personal wealth of rich merchants and strong economic ties to the rest of the world.
-#● +25% Burgher Influence
-#● +1 Merchant
-#● +10% Global Trade Power
-#● -0.15 Trade Goods Produced
+#● Corporatism is a lack of regulation in a free trade system, whose policies favor the personal wealth of rich merchants and strong economic ties to the rest of the world.
+corporatism = {
+	icon = "paper_with_seal_3"
+	allow_normal_conversion = yes
+	modifiers = {
+	    vaisyas_influence_modifier = 0.25
+		burghers_influence_modifier = 0.25
+		merchants = 1
+		global_trade_power = 0.10
+		trade_goods_size_modifier = -0.10
+	}
+}
+
 #Religion (Level 11)
 #State Religion (Green)
 #● The state only recognizes one faith, which is intertwined with the government.
-#● +1 Missionary
+state_religion = {
+	icon = "church"
+	allow_normal_conversion = yes
+	modifiers = {
+	    missionaries = 1
+	}
+}
 #Secularism (Green)
-#● The state is mostly secular and separates the church from the day to day happenings
-#from the government.
-#● +1 Tolerance of Heretics
-#● +1 Tolerance of Heathens
+#● The state is mostly secular and separates the church from the day to day happenings from the government.
+secularism = {
+	icon = "harmonious_law"
+	allow_normal_conversion = yes
+	modifiers = {
+	    tolerance_heathen = 1
+		tolerance_heretic = 1
+		religious_unity = 0.05
+	}
+}
 #Theological Dominance (Green)
-#● There is no formal state religion, but the nation accepts a singular faith as dominant over
-#others.
-#● +2% Missionary Strength
+#● There is no formal state religion, but the nation accepts a singular faith as dominant over others.
+theological_dominance = {
+	icon = "pope"
+	allow_normal_conversion = yes
+	modifiers = {
+	    global_missionary_strength = 0.025
+	}
+}
 #Fanaticism (Yellow)
-#● Fanaticism is an extreme belief, often violent or unreasonable, which has become the
-#base religious policy of the nation state.
-#● -20% War Score Cost vs Other Religions
-#● -20% Cost of Enforcing Religion in War
-#● -3 Tolerance of the True Faith
-#● -3 Tolerance of Heathens
-#● -3 Tolerance of Heretics
+#● Fanaticism is an extreme belief, often violent or unreasonable, which has become the base religious policy of the nation state.
+fanaticism = {
+	icon = "magocracy"
+	allow_normal_conversion = yes
+	modifiers = {
+	    warscore_cost_vs_other_religion = -0.25
+		enforce_religion_cost = -0.5
+		tolerance_own = -3
+		tolerance_heretic = -3
+		tolerance_heathen = -3
+	}
+}
+
 #Naval Doctrine (Level 12)
 #Support Fleet (Green)
-#● The main goal of the fleet is to support ongoing ground operations, transporting armies
-#across vast distances, and other menial campaigning.
-#● +1 Fleet Blockade Impact on Siege
-#● -35% Transport Cost
+#● The main goal of the fleet is to support ongoing ground operations, transporting armies across vast distances, and other menial campaigning.
+support_fleet = {
+	icon = "casa_de_contraction"
+	allow_normal_conversion = yes
+	modifiers = {
+	    blockade_efficiency = 0.25
+		blockade_impact_on_siege_in_fleet_modifier = 0.5
+		transport_cost = -0.25
+	}
+}
 #Inland Dominance (Yellow)
-#● The nation’s fleet is dedicated to dominance of inland seas rather than the open ocean,
-#focusing on manning and building galleys and inland trade
-#● +15% Galley Combat Ability
-#● +15% Ship Capture Chance
-#● +35% Light Ship Cost
-#● +35% Heavy Ship Cost
+#● The nation’s fleet is dedicated to dominance of inland seas rather than the open ocean, focusing on manning and building galleys and inland trade
+inland_dominance = {
+	icon = "admiralty"
+	allow_normal_conversion = yes
+	modifiers = {
+		galley_power = 0.15
+		capture_ship_chance = 0.15
+		light_ship_cost = 0.35
+		heavy_ship_cost = 0.35
+		transport_cost = 0.25
+	}
+}
 #Open Seas Doctrine (Yellow)
-#● The nation turns its naval attention outward into the open ocean, seeking to dominate
-#and exploit the open seas with naval supremacy.
-#● +20% Navy Force Limit
-#● +10% Naval Engagement
-#● -10% Ship Durability
-#● +100% Galley Cost
+#● The nation turns its naval attention outward into the open ocean, seeking to dominate and exploit the open seas with naval supremacy.
+open_seas_doctrine = {
+	icon = "compass"
+	allow_normal_conversion = yes
+	modifiers = {
+		naval_forcelimit_modifier = 0.25
+		global_naval_engagement_modifier = 0.10
+		ship_durability = -0.10
+		galley_cost = 1.0
+		galley_power = -0.10
+	}
+}
 #Merchant Fleet (Yellow)
-#● The nation’s naval ambitions are more for trade than conquest, hosting a fleet of swift
-#ships used for trade or piracy.
-#● +25% Protect Trade Efficiency
-#● +25% Privateering Efficiency
-#● -25% Navy Force Limit
-#● +15% Navy Maintenance
+#● The nation’s naval ambitions are more for trade than conquest, hosting a fleet of swift ships used for trade or piracy.
+merchant_fleet = {
+	icon = "voc_ship"
+	allow_normal_conversion = yes
+	modifiers = {
+		global_ship_trade_power = 0.25
+		ship_power_propagation = 0.25
+		privateer_efficiency = 0.25
+		naval_forcelimit_modifier = -0.25
+		naval_maintenance_modifier = 0.15
+	}
+}
+
 #Guild Favoritism (Level 14)
 #Fighter’s Guild (Green)
-#● The Fighter’s Guild is a guild of regulated mercenaries founded in the 2nd Era to aid in
-#the protection of the imperial realm and defend trade.
-#● Gain Access to the Fighter’s Guild Mercenary Group
-#○ 10 Infantry
-#○ 4 Cavalry
-#○ +10% Discipline
-#○ +10% Shock Damage
-#● +25% Mercenary Manpower
+#● The Fighter’s Guild is a guild of regulated mercenaries founded in the 2nd Era to aid in the protection of the imperial realm and defend trade.
+fighters_guild = {
+	icon = "landsknecht"
+	allow_normal_conversion = yes
+	modifiers = {
+		mercenary_cost = -0.10
+		mercenary_manpower = 0.10
+		merc_maintenance_modifier = -0.10
+	}
+}
 #Mages Guild (Green)
-#● The mages guild is an elite group of mages who help in the regulation of the magical arts
-#of Tamriel as well as the general expansion of education of magic to the general
-#populace.
-#● +10% Army Land Fire Damage
-#● +1 Leader Siege
+#● The mages guild is an elite group of mages who help in the regulation of the magical arts of Tamriel as well as the general expansion of education of magic to the general populace.
+mages_guild = {
+	icon = "wow_cult"
+	allow_normal_conversion = yes
+	modifiers = {
+		fire_damage = 0.10
+		leader_siege = 1
+		leader_land_fire = 1
+	}
+}
 #Thieves Guild (Yellow)
-#● Thieves guilds are not very united, but they are criminal organizations dedicated to their
-#own wealth via powerful unlawful networks. The nation tolerates their existence in return
-#for special favors.
-#● All Centers of Trade in empire get Thieves Guild Hub modifier
-#○ -10 Trade Power
-#○ +15% Development Cost
-#○ +1 Unrest
-#● Gain New Covert Options
-#○ Heist
-#■ Costs 80
-#■ Steals 10% of saved ducats from victim nation
-#○ Kidnap
-#■ Costs 80
-#■ Produces a level 2 adviser of victim’s main culture and faith at a 75%
-#reduced cost to hire
-#○ Scam
-#■ Costs 70
-#■ Reduces national taxes income of victim nation by 33% for 5 years
-#○ Intimidate
-#■ Costs 70
-#■ Increase power costs of victim nation by 10% for 5 years
+#● Thieves guilds are not very united, but they are criminal organizations dedicated to their own wealth via powerful unlawful networks. The nation tolerates their existence in return for special favors.
+thieves_guild = {
+	icon = "wow_order"
+	allow_normal_conversion = yes
+	modifiers = {
+		development_cost = -0.15
+		leader_land_manuever = 1
+		global_own_trade_power = -0.15
+	}
+	effect = {
+		custom_tooltip = get_acess_to_new_diplomatic_actions
+	    set_country_flag = es_thieves_guild_flag
+	}
+	removed_effect = {
+	    clr_country_flag = es_thieves_guild_flag
+	}
+}
 #Dark Brotherhood (Red)
-#● The Dark Brotherhood is a cult of assassins who worship a dark matron who guides the
-#assassins to murder and main. The guild is normally hunted in Tamriel but their services
-#are many. The nation tolerates them at best, in return for favors.
-#● A random province will get a Dark Sanctuary modifier, and if the province is conquered,
-#it will move to another random province.
-#○ -10 Unrest
-#○ -10% Missionary Strength
-#● Gain New Covert Options
-#○ Assassinate
-#■ Costs 80
-#■ Costs 1500 Gold
-#■ Kills current ruler of victim nation
-#● Gain New Event Pool
-#○ Dark Brotherhood Hunted
-#○ Dark Brotherhood Kills Ruler
-#○ Dark Brotherhood Kills Heir
-#● Gain New Decisions
-#○ Establish New Sanctuary
-#■ Allows another Province to get the Dark Sanctuary modifier
-#■ Dark Brotherhood Events become more common
-#○ Refurbish Sanctuary
-#■ Dark Brotherhood Sanctuaries now give -10% Development Cost
-#■ -5% National Tax Modifier
-#○ Exclusive Contracts
-#■ -25% Assassinate Cost
-#■ -10% National Tax Modifier
+#● The Dark Brotherhood is a cult of assassins who worship a dark matron who guides the assassins to murder and main. The guild is normally hunted in Tamriel but their services are many. The nation tolerates them at best, in return for favors.
+assassins_guild = {
+	icon = "wow_council"
+	allow_normal_conversion = yes
+	modifiers = {
+		spy_offence = 0.15
+		leader_land_shock = 1
+		global_unrest = 1.5
+	}
+	effect = {
+		custom_tooltip = get_acess_to_new_diplomatic_actions
+	    set_country_flag = es_assassins_guild_flag
+	}
+	removed_effect = {
+	    clr_country_flag = es_assassins_guild_flag
+	}
+}
+
 #Diplomacy (Level 15)
 #Diplomatic Core (Green)
-#● The nation uses groups of diplomatic organizations and institutions to enhance it’s
-#diplomatic range across Tamriel
-#● +1 Diplomat
-#● +1 Diplomatic Reputation
+#● The nation uses groups of diplomatic organizations and institutions to enhance it’s diplomatic range across Tamriel
+diplomatic_core = {
+	icon = "england_bill_of_rights"
+	allow_normal_conversion = yes
+	modifiers = {
+		diplomats = 1
+		diplomatic_reputation = 0.5
+		improve_relation_modifier = 0.25
+	}
+}
 #Expanding (Green)
-#● The nation looks outward to expand into the wider world, having little to no time or
-#patience for diplomatic missions
-#● -15% Aggressive Expansion Impact
+#● The nation looks outward to expand into the wider world, having little to no time or patience for diplomatic missions
+expansion = {
+	icon = "feuillant_reform"
+	allow_normal_conversion = yes
+	modifiers = {
+		ae_impact = -0.15
+	}
+}
 #Supremacy (Green)
-#● The nation’s diplomatic policy is to look inward at local politics and affairs, bringing
-#smaller nations into the fold as subjects
+#● The nation’s diplomatic policy is to look inward at local politics and affairs, bringing smaller nations into the fold as subjects
+supremacy = {
+	icon = "soldiers"
+	allow_normal_conversion = yes
+	modifiers = {
+		reduced_liberty_desire = 10
+	}
+}
 #● +1 Diplomatic Relations
-#● -5% Liberty Desire
 #Guardian (Yellow)
-#● The nation has taken a unique diplomatic stance as a Guardian among nations, a
-#bulwark against larger enemies to defend the realm against fierce expansion
-#● Can Intervene in war with nation’s whose capital is in another region attacking a nation
-#whose capital is in the same region as the Nation
-#● Gain Bulwark bonus during a war against nations and alliances who have 50% larger
-#army during any war with a nation whose capital is outside the Guardian’s region
-#○ +35% Fort Defense
-#○ +20% Morale
-#○ +33% Manpower Recovery Speed
-#● Declaring wars on nations who share a capital in the same region as the Guardian will
-#automatically lose 1 stability
+guardian = {
+	icon = "crusaders_gov"
+	allow_normal_conversion = yes
+	modifiers = {
+		diplomatic_upkeep = 1
+		unjustified_demands = 0.5
+		prestige = 0.5
+	}
+	effect = {
+		custom_tooltip = you_will_become_a_protector_of_countries
+	}
+}
+
 #Educational Edge (Level 17)
 #Schooling (Green)
 #● The nation has some of the best schooling in the world.
-#● -5% Administrative Tech Cost
+schooling = {
+	icon = "iroquois_longhouse"
+	allow_normal_conversion = yes
+	modifiers = {
+		adm_tech_cost_modifier = -0.05
+	}
+}
 #Universities (Green)
 #● The nation has some of the best universities and colleges in the world.
-#● -5% Diplomatic Tech Cost
+universities = {
+	icon = "house_of_knights"
+	allow_normal_conversion = yes
+	modifiers = {
+		dip_tech_cost_modifier = -0.05
+	}
+}
 #War Academies (Green)
 #● The nation has some of the best war academies and training grounds in the world.
-#● -5% Military Tech Cost
+war_academies = {
+	icon = "march"
+	allow_normal_conversion = yes
+	modifiers = {
+		mil_tech_cost_modifier = -0.05
+	}
+}
 #Libraries (Green)
-#● The nation has some of the most extensive libraries in the known world and is a bulwark
-#on study.
-#● -5% Idea Cost
+#● The nation has some of the most extensive libraries in the known world and is a bulwark on study.
+libraries = {
+	icon = "arabic_scripture"
+	allow_normal_conversion = yes
+	modifiers = {
+		idea_cost = -0.05
+	}
+}
+
 #Army Doctrine (Level 18)
 #Feudal Army (Green)
-#● The army is mostly feudal, consisting of levy soldiers and noble officers, whose main
-#goal is to overwhelm the foe with sheer numbers and traditional battle lines.
-#● +15% Land Force Limit
-#● -30% Regiment Creation Time
+#● The army is mostly feudal, consisting of levy soldiers and noble officers, whose main goal is to overwhelm the foe with sheer numbers and traditional battle lines.
+feudal_army = {
+	icon = "spain_tercio"
+	allow_normal_conversion = yes
+	modifiers = {
+		land_forcelimit_modifier = 0.15
+		global_manpower_modifier = 0.15
+		fort_maintenance_modifier = 1.0
+	}
+}
 #Professional Army (Green)
-#● The nation uses a professional and disciplined army, relying on battle maneuver and
-#strong battle lines to outbeat larger foes
-#● +2.5% Discipline
-#● +30% Army Drill Gain
+#● The nation uses a professional and disciplined army, relying on battle maneuver and strong battle lines to outbeat larger foes
+professional_army = {
+	icon = "imperial_army"
+	allow_normal_conversion = yes
+	modifiers = {
+		discipline = 0.05
+		drill_gain_modifier = 0.25
+		manpower_recovery_speed = -0.25
+	}
+}
 #Mercenary Army (Green)
-#● The nation relies heavily on mercenary armies and other professional troops who are
-#well paid by the nation to secure it’s safety and independence.
-#● +5% Mercenary Discipline
-#● -25% Mercenary Cost
+#● The nation relies heavily on mercenary armies and other professional troops who are well paid by the nation to secure it’s safety and independence.
+mercenary_army = {
+	icon = "Turkish_iqta"
+	allow_normal_conversion = yes
+	modifiers = {
+		mercenary_discipline = 0.05
+		mercenary_cost = -0.25
+		army_tradition_decay = 0.01
+	}
+}
 #Skilled Army (Yellow)
-#● The nation is known for training and recruiting skilled armies, legendary on the field of
-#battle and a terrifying force to deal with.
-#● +5% Cavalry Combat Ability
-#● +10% Infantry Combat Ability
-#● +10% Army Maintenance Cost
-#● -25% Army Drill Gain
+#● The nation is known for training and recruiting skilled armies, legendary on the field of battle and a terrifying force to deal with.
+skilled_army = {
+	icon = "Teuton_2"
+	allow_normal_conversion = yes
+	modifiers = {
+		cavalry_power = 0.10
+		infantry_power = 0.10
+		land_maintenance_modifier = 0.15
+	}
+}
+
 #Bans (Level 20)
 #Normalized Regulation (Green)
-#● The nation does not partake in bans on goods, but instead uses localized regulations to
-#prevent overuse.
-#● +5% Production Efficiency
+#● The nation does not partake in bans on goods, but instead uses localized regulations to prevent overuse.
+normalized_regulation = {
+	icon = "dutch_tolerance"
+	allow_normal_conversion = yes
+	modifiers = {
+		production_efficiency = 0.05
+	}
+}
 #Abolition (Yellow)
-#● The nation prohibits slavery on a national level, freeing slaves from bondage and
-#declaring it’s role in protecting the rights of all humanoid beings
-#● Changes Slaves Goods to a random Goods
-#● -2 Unrest
-#● -10% Global Trade Power
+#● The nation prohibits slavery on a national level, freeing slaves from bondage and declaring it’s role in protecting the rights of all humanoid beings
+abolition = {
+	icon = "granada_trader"
+	allow_normal_conversion = yes
+	modifiers = {
+		global_unrest = -2.5
+		harsh_treatment_cost = -0.25
+		global_trade_power = -0.10
+	}
+}
 #Prohibition (Yellow)
-#● The nation has taken a stance on drunkenness and disorder made from alcohol, banning
-#all alcoholic drinks across the nation.
-#● Changes Wine Goods to a random Goods
-#● +15% Production Efficiency
-#● -10% Navy Morale
-#● -25 Colony Growth
+#● The nation has taken a stance on drunkenness and disorder made from alcohol, banning all alcoholic drinks across the nation.
+prohibition = {
+	icon = "GE_trader"
+	allow_normal_conversion = yes
+	modifiers = {
+		production_efficiency = 0.15
+		naval_morale = -0.10
+		global_colonial_growth = -25
+	}
+}
 #Drug Limitation (Yellow)
-#● The nation has a strict ban on drugs such as Skooma, made from Moon Sugar, along
-#with other recreational drugs.
-#● -75% Production of Moon Sugar
-#● +15% National Tax Modifier
-#● -15% Caravan Power
-#● -50 Opinion from Khajiit Culture Nations
+#● The nation has a strict ban on drugs such as Skooma, made from Moon Sugar, along with other recreational drugs.
+drug_limitation = {
+	icon = "dutch_tulip_field"
+	allow_normal_conversion = yes
+	modifiers = {
+		global_tax_modifier = 0.15
+		embargo_efficiency = 0.15
+		caravan_power = -0.15
+	}
+}
+
 #Espionage (Level 21)
 #Spy Agency (Green)
-#● The nation holds a special institution which handles most affairs of intrigue, training new
-#spies and agents to serve the nation.
-#● +25% Spy Network Construction
-#● +10% Foreign Spy Detection
+#● The nation holds a special institution which handles most affairs of intrigue, training new spies and agents to serve the nation.
+spy_agency = {
+	icon = "granada_trader"
+	allow_normal_conversion = yes
+	modifiers = {
+		spy_offence = 0.25
+	}
+}
 #Local Scouting (Green)
-#● The nation uses a traditional form of espionage, dooling out agents to scout for corrupt
-#bureaucrats with bribes to serve temporary spies.
-#● -10% Covert Action Cost
+#● The nation uses a traditional form of espionage, dooling out agents to scout for corrupt bureaucrats with bribes to serve temporary spies.
+local_scouting = {
+	icon = "granada_trader"
+	allow_normal_conversion = yes
+	modifiers = {
+		fabricate_claims_cost = -0.25
+		rebel_support_efficiency = 0.25
+		improve_relation_modifier = -0.25
+	}
+}
 #Cut Throat Politik (Yellow)
-#● The nation is in a ceaseless internal war of politics and internal deception, where
-#powerful factions and ambitious characters by nature kill each other for glory and
-#dominance.
-#● +33% Covert Action Cost on Us
-#● -33% Spy Network Construction on Us
-#● -1 Diplomat
-#● Gain access to new event list
-#○ Ruler Humiliated
-#○ Ruler Murdered by Family
-#○ Ambitious Rival Raises Army
+#● The nation is in a ceaseless internal war of politics and internal deception, where powerful factions and ambitious characters by nature kill each other for glory and dominance.
+cut_throat_politics = {
+	icon = "granada_trader"
+	allow_normal_conversion = yes
+	modifiers = {
+		global_spy_defence = 0.25
+		power_projection_from_insults = 0.5
+		diplomats = -1
+	}
+	effect = {
+	    set_country_flag = es_cut_throat_politics_flag
+	}
+	removed_effect = {
+	    clr_country_flag = es_cut_throat_politics_flag
+	}
+}
 #The Grand Game (Red)
-#● The political circles of the nation use the nation as a tool in a grand political game,
-#viewing the world as a larger game in a grand scheme of characters and alliances to
-#outbid less high minded foes.
-#● +3 Diplomats
-#● +2 Merchants
-#● +1 Colonist
-#● +25% Army Maintenance Cost
-#● +25% Naval Maintenance Cost
-#● -20% Army Morale
-#● -20% Navy Morale
+#● The political circles of the nation use the nation as a tool in a grand political game, viewing the world as a larger game in a grand scheme of characters and alliances to outbid less high minded foes.
+the_grand_game = {
+	icon = "granada_trader"
+	allow_normal_conversion = yes
+	modifiers = {
+		diplomats = 3
+		merchants = 2
+		trade_range = 0.25
+		land_maintenance_modifier = 0.25
+		naval_maintenance_modifier = 0.25
+	}
+}
+
 #Economics (Level 23)
 #Trading Power (Green)
-#● The nation focuses more heavily on trade income, becoming a great trading power on
-#the open world.
-#● +10% Global Trade Power
+#● The nation focuses more heavily on trade income, becoming a great trading power on the open world.
+trading_power = {
+	icon = "granada_trader"
+	allow_normal_conversion = yes
+	modifiers = {
+		global_trade_power = 0.10
+	}
+}
 #Efficient Taxation (Green)
-#● The nation’s taxation system is modern and highly efficient, an example to other nations
-#across the known world.
-#● +15% National Tax Modifier
-#● +10% Income from Vassals
+#● The nation’s taxation system is modern and highly efficient, an example to other nations across the known world.
+efficient_taxation = {
+	icon = "granada_trader"
+	allow_normal_conversion = yes
+	modifiers = {
+		global_tax_modifier = 0.10
+		vassal_income = 0.10
+		trade_steering = -0.10
+	}
+}
 #Productive Society (Green)
-#● Factories and cottages can be found all across the nation, being a bulwark as Tamriel’s
-#greatest producer of materials.
-#● +15% Local Goods Produced
+#● Factories and cottages can be found all across the nation, being a bulwark as Tamriel’s greatest producer of materials.
+productive_society = {
+	icon = "granada_trader"
+	allow_normal_conversion = yes
+	modifiers = {
+		global_trade_goods_size_modifier = 0.15
+	}
+}
 #Jewel of Tamriel (Red)
-#● The nation’s great capital is a diamond in the rough that is Tamriel, a great city of
-#culture, science, trade, and sins of all kinds. From this city springs forth the nation, which
-#is more to serve the city then for the city to serve it.
-#● The Capital of the nation gains a major province modifier called Jewel of Tamriel
-#○ -50% Construction Cost
-#○ -35% Development Cost
-#○ +3 Local Goods Produced
-#● The capital of the nation is improved three times via a decision, which is highly
-#expensive.
-#○ Level 1: +100% Trade Power
-#○ Level 2: +100% Local Tax Modifier
-#○ Level 3: +100% Local Manpower
-#● Can no longer move capital
-#● If the reform is ever revoked or if the Jewel of Tamriel province is ever ransacked, the
-#nation will get a permanent stacking government modifier called Jewel of Tamriel
-#Sacked, which stacks up to max of 20 times.
-#○ -25% Local Trade Power
-#○ -0.5 Prestige
-#○ +25% Development Cost
-#● The sacking nation which takes a Jewel of Tamriel province, either via siege or during a
-#peace deal, will destroy 10 points of development each on the province and get the
-#permanent government modifier Rich Sacker
-#○ +1 Prestige
-#○ +5% Army Morale
-#○ +25% Looting Speed
+#● The nation’s great capital is a diamond in the rough that is Tamriel, a great city of culture, science, trade, and sins of all kinds. From this city springs forth the nation, which is more to serve the city then for the city to serve it.
+jewel_of_tamriel = {
+	icon = "granada_trader"
+	allow_normal_conversion = yes
+	modifiers = {
+		build_cost = -0.25
+		build_time = 0.25
+		discovered_relations_impact = -0.25
+	}
+	effect = {
+		custom_tooltip = get_acess_to_new_decisions
+		set_country_flag = es_jewel_of_tamriel_flag
+		capital_scope = {
+			add_province_modifier = { name = "jewel_of_tamriel_modifier" duration = -1 }
+		}
+	}
+	removed_effect = {
+	    clr_country_flag = es_jewel_of_tamriel_flag
+	}
+}
+
 #Campaign Doctrine (Level 24)
 #Climatic Victory (Green)
-#● The main war strategy is to conclude the war in a swift battle, winning out over the
-#enemy with sheer weight of numbers and professional soldiers in large scale battles to
-#avoid long conflicts.
-#● +10% Infantry/Cavalry Ratio
-#● +25% Flanking Range
+#● The main war strategy is to conclude the war in a swift battle, winning out over the enemy with sheer weight of numbers and professional soldiers in large scale battles to avoid long conflicts.
+climatic_victory = {
+	icon = "granada_trader"
+	allow_normal_conversion = yes
+	modifiers = {
+		cav_to_inf_ratio = 0.25
+		cavalry_flanking = 0.15
+		cavalry_cost = -0.10
+	}
+}
 #Guerrilla Warfare (Green)
-#● The nation relies on hit and run tactics, dealing damage where it hurts and dragging out
-#the conflict till an invading enemy expires.
-#● +1 Attrition
-#● +10% Army Movement Speed
+#● The nation relies on hit and run tactics, dealing damage where it hurts and dragging out the conflict till an invading enemy expires.
+guerrilla_warfare = {
+	icon = "granada_trader"
+	allow_normal_conversion = yes
+	modifiers = {
+		hostile_attrition = 1
+		movement_speed = 0.10
+		land_attrition = -0.10
+	}
+}
 #Long Campaign (Green)
-#● The nation’s general policy towards campaigning is to prepare for long and drawn out
-#sieges, and is generally well prepared for long and drawn out conflicts.
-#● -35% Reduce War Exhaustion Cost
-#● -10% Fort Maintenance
+#● The nation’s general policy towards campaigning is to prepare for long and drawn out sieges, and is generally well prepared for long and drawn out conflicts.
+long_campaign = {
+	icon = "granada_trader"
+	allow_normal_conversion = yes
+	modifiers = {
+		war_exhaustion_cost = -0.25
+		fort_maintenance_modifier = -0.25
+		loot_amount = 0.25
+	}
+}
 #Invader Archetype (Yellow)
-#● The nation uses an interesting form of campaigning tool, spreading terror through sheer
-#numbers and sending forth an endless host of soldiers to overwhelm the enemy. It
-#matters not how many die, only that they have succeeded.
-#● +35% Army Force Limit
-#● -10% Army Maintenance
-#● +50% Aggressive Expansion
-#● -40% Siege Ability
+#● The nation uses an interesting form of campaigning tool, spreading terror through sheer numbers and sending forth an endless host of soldiers to overwhelm the enemy. It matters not how many die, only that they have succeeded.
+invader_archetype = {
+	icon = "granada_trader"
+	allow_normal_conversion = yes
+	modifiers = {
+		land_forcelimit_modifier = 0.35
+		land_maintenance_modifier = -0.25
+		ae_impact = 0.5
+		siege_ability = 0.15
+		harsh_treatment_cost = 1.0
+	}
+}
+
 #Expansion (Level 26)
 #Regional Ambitions (Green)
-#● The nation looks to expand in the local region, seeking to establish a great empire by
-#consuming local powers and absorbing them into itself.
-#● -15% Fabricate Claim Cost
-#● -15% Annexation Cost
+#● The nation looks to expand in the local region, seeking to establish a great empire by consuming local powers and absorbing them into itself.
+regional_ambitions = {
+	icon = "granada_trader"
+	allow_normal_conversion = yes
+	modifiers = {
+		fabricate_claims_cost = -0.15
+		diplomatic_annexation_cost = -0.15
+		rival_change_cost = -0.15
+	}
+}
 #Colonial Ambitions (Green)
 #● The nation looks outward to other nations, seeking to colonize beyond its borders.
-#● +1 Colonist
+colonial_ambitions = {
+	icon = "granada_trader"
+	allow_normal_conversion = yes
+	modifiers = {
+		colonists = 1
+		global_colonial_growth = 25
+		range = 0.25
+	}
+}
 #Imperial Ambitions (Yellow)
-#● The nation has high ambitions to create a global empire spanning many peoples and
-#regions, united under a single grand banner.
-#● +450 Governing Capacity
-#● -25% Core Creation Cost
-#● +33% Stability Cost
-#● Reform is lost/cannot be chosen if nation is at max government rank
+#● The nation has high ambitions to create a global empire spanning many peoples and regions, united under a single grand banner.
+imperial_ambitions = {
+	icon = "granada_trader"
+	allow_normal_conversion = yes
+	modifiers = {
+		governing_capacity_modifier = 1.0
+		core_creation = -0.25
+		stability_cost_modifier = 0.5
+	}
+}
 #Isolationist (Red)
-#● The nation sees no reason to expand or go beyond its borders, closing off itself to the
-#outside world entirely.
-#● Isolationist Mechanics
-#○ Can no Longer:
-#■ Declare War
-#■ Colonize
-#■ Use Diplomatic Influence Options
-#■ Use Diplomatic Alliance Options
-#○ The Nation enters a state of perpetual peace, granting it a powerful government
-#modifier called Inward Perfection
-#■ -5 Unrest
-#■ -75% Stability Cost
-#■ +40% Army Morale
-#■ -0.10 Monthly War Exhaustion
-#■ -5% Powers Cost
-#○ Gain Access to Isolationism Event Pool
-#■ Outside Merchants Run Out
-#■ Isolation Breeds Ignorance
-#■ Isolation Breeds Xenophobia
-#○ If Isolation is broken via changing the government reform, there will a significant
-#loss of -6 stability and gain the Perfection Broken government modifier for 25
-#years
-#■ +7 Unrest
-#■ +125% Stability Cost
-#■ -60% Army Morale
-#■ +0.20 Monthly War Exhaustion
-#■ +10% Powers Cost
+#● The nation sees no reason to expand or go beyond its borders, closing off itself to the outside world entirely.
+isolationist = {
+	icon = "granada_trader"
+	allow_normal_conversion = yes
+	modifiers = {
+		global_unrest = -5
+		stability_cost_modifier = -0.5
+		global_institution_spread = -0.25
+		improve_relation_modifier = -1.0
+		diplomatic_upkeep = -3
+	}
+	effect = {
+		set_country_flag = es_isolationist_flag
+	}
+	removed_effect = {
+	    clr_country_flag = es_isolationist_flag
+	}
+}
+
 #Community (Level 27)
 #Typical Commoners (Green)
-#● The village community is fairly typical, with a singular family bond and strong social
-#group of close friends and family.
+#● The village community is fairly typical, with a singular family bond and strong social group of close friends and family.
 #● +2 Max Accepted Cultures
 #Pompous Elitists (Yellow)
 #● The social community of the nation is one made up of hierarchies and versatile
@@ -673,6 +875,7 @@ reason_and_logic = {
 #● -50% Culture Shift Cost
 #● +35% Colonial Range
 #● +25% Development Cost
+
 #Administrative Edge (Level 29)
 #Absolutism (Green)
 #● The state is highly centralized around the ruler itself, whether politically or culturally, and
@@ -726,6 +929,7 @@ reason_and_logic = {
 #● -33% Stability Cost
 #● -10% Development Cost
 #● -1000 Absolutism
+
 #Imperial Innovation(Level 30)
 #Imperial Guard (Green)
 #● The empire has established an elite guard that is utterly loyal to the state, skilled
@@ -759,6 +963,9 @@ reason_and_logic = {
 #● +10% Army Movement Speed
 #● +25% Caravan Power
 #● -10% Construction Cost
+
+# GREAT REFORMS
+
 #Monarchy
 #Power of Nobility (Level 4)
 #Strong Nobles (Green)
@@ -1657,6 +1864,30 @@ reason_and_logic = {
 #● +15% Religion Unity
 #● +2% Missionary Strength vs Heathens
 
+#○ New Estate Privileges are Available
+#■ Noble Privilege: Mage Generals
+#● -15 Absolutism
+#● +10% Loyalty
+#● +10% Influence
+#● +1 General Fire
+#● +1 General Movement
+#■ Burgher Privilege: Sorcerous Experimentation
+#● -15 Absolutism
+#● +10% Loyalty
+#● +10% Influence
+#● -5% Tech Cost
+#● -5% Military Tech Cost
+#■ Clergy Privilege: Mage Clergy
+#● -15 Absolutism
+#● +10% Loyalty
+#● +10% Influence
+#● +2 Tolerance of the True Faith
+#● +25 Opinion from nations of the same faith
+
+###########################
+# NEW RULER PERSONALITIES #
+###########################
+
 #● Unlocks Magic Mechanics - es_magic_regulation_flag
 #○ Rulers are granted an advance pool of new personalities
 #■ Illusionist: +1 Diplomatic Reputation, +5% Army Movement Speed
@@ -1667,3 +1898,14 @@ reason_and_logic = {
 #■ Restorer: -20% Land Attrition
 #■ Mystic: +25% Army Drill Gain, -10% Liberty Desire
 #■ Enchanter: +10% National Tax Modifier, +5% Infantry Combat Ability
+
+#○ Adds new personalities to leaders, power and elite ones - es_magic_nation_flag
+#■ Lich: Immortality, +100% Manpower Modifier, -3 Diplomatic Reputation,
+#+3 Unrest
+#■ Summoner: -15% Army Maintenance, -15% Naval Maintenance
+#■ Archmage: -5% Power Costs, +2 Leader Fire
+#■ Seer: -20% Liberty Desire, +15% Movement Speed
+#■ Sorcerer: +20% Land Fire Damage, +15% Artillery Combat Ability
+#■ Warlock: -0.30 Yearly Corruption, +25% Goods Produced
+#■ Hag: +20% Shock Damage Dealt, +50% Army Drill Gain
+#■ Guardian: -20% Shock Damage Received, -50% Army Drill Loss

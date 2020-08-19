@@ -92,6 +92,12 @@ declarewar = {
         }
     }
 	effect = {
+		if = { 
+			limit = {
+			FROM = { capital_scope = { NOT = { superregion = ROOT } } }
+			}
+			FROM = { set_country_flag = war_with_invader_flag }
+		}
 	    if = {
 		    limit = { is_subject_of_type = alliance_member }
 			overlord = { country_event = { id = alliancememberwar.1 days = 31 } }

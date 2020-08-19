@@ -22,11 +22,7 @@ monarchy = {
 				iqta
 			}
 		}
-		law_and_order = {
-		    reforms = {
-			    local_law
-			}
-		}
+		law_and_order = { reforms = { local_law national_council trial_and_jury community_militia } }
 		citizenship_policy = {
 			reforms = {
 				11_a
@@ -35,6 +31,8 @@ monarchy = {
 				11_d
 			}
 		}
+		labour = { reforms = { commission serfdom unregulated_guilds slavery } }
+		# 4 Level GR
 		agriculture_policy = {
 			reforms = {
 				21_a
@@ -43,6 +41,8 @@ monarchy = {
 				21_d
 			}
 		}
+		state_administration = { reforms = { governmental_townships urban_centers rural_baclwater nomadism } }
+		magic = { reforms = { regulation reason_and_logic persecution magical_society } }
 		culture_policy = {
 			reforms = {
 				31_a
@@ -51,6 +51,8 @@ monarchy = {
 				31_d
 			}
 		}
+		# 7 Level GR
+		cultural_values = { reforms = { tavern_life tournaments art_and_science raiding } }
 		community_policy = {
 			reforms = {
 				41_a
@@ -59,14 +61,8 @@ monarchy = {
 				41_d
 			}
 		}
-		alchohol_policy = {
-			reforms = {
-				51_a
-				51_b
-				51_c
-				51_d
-			}
-		}
+		trade = { reforms = { internal_market free_trade protectionism corporatism } }
+		# 10 Level GR
 		centralization_policy = {
 			reforms = {
 				12_a
@@ -75,6 +71,8 @@ monarchy = {
 				12_d
 			}
 		}
+		religious_policy = { reforms = { state_religion secularism theological_dominance fanaticism } }
+		naval_doctrine = { reforms = { support_fleet inland_dominance open_seas_doctrine merchant_fleet } }
 		taxation_policy = {
 			reforms = {
 				22_a
@@ -83,22 +81,8 @@ monarchy = {
 				22_d
 			}
 		}
-		education_policy = {
-			reforms = {
-				32_a
-				32_b
-				32_c
-				32_d
-			}
-		}
-		crime_policy = {
-			reforms = {
-				42_a
-				42_b
-				42_c
-				42_d
-			}
-		}
+		# 13 Level GR
+		guild_favoritism = { reforms = { fighters_guild mages_guild thieves_guild assassins_guild } }
 		marraiage_policy = {
 			reforms = {
 				52_a
@@ -107,6 +91,8 @@ monarchy = {
 				52_d
 			}
 		}
+		diplomacy = { reforms = { diplomatic_core expansion supremacy guardian } }
+		# 16 Level GR
 		language_policy = {
 			reforms = {
 				13_a
@@ -115,60 +101,26 @@ monarchy = {
 				13_d
 			}
 		}
-		labour_policy = {
+		educational_edge = { reforms = { schooling universities war_academies libraries } }
+		army_doctrine = { reforms = { feudal_army professional_army mercenary_army skilled_army } }
+		astronomy_policy = {
 			reforms = {
-				23_a
-				23_b
-				23_c
-				23_d
+				37_a
+				37_b
+				37_c
+				37_d
 			}
 		}
-		missionary_policy = {
-			reforms = {
-				33_a
-				33_b
-				33_c
-				33_d
-			}
-		}
-		penalty_policy = {
-			reforms = {
-				43_a
-				43_b
-				43_c
-				43_d
-			}
-		}
-		homelessness_policy = {
-			reforms = {
-				53_a
-				53_b
-				53_c
-				53_d
-			}
-		}
+		# 19 Level GR
+		# 22 Level GR
+		# 25 Level GR
+		# 28 Level GR
 		embassy_policy = {
 			reforms = {
 				14_a
 				14_b
 				14_c
 				14_d
-			}
-		}
-		pollution_policy = {
-			reforms = {
-				24_a
-				24_b
-				24_c
-				24_d
-			}
-		}
-		religion_policy = {
-			reforms = {
-				34_a
-				34_b
-				34_c
-				34_d
 			}
 		}
 		court_policy = {
@@ -203,52 +155,12 @@ monarchy = {
 				25_d
 			}
 		}
-		science_policy = {
-			reforms = {
-				35_a
-				35_b
-				35_c
-				35_d
-			}
-		}
-		detention_policy = {
-			reforms = {
-				45_a
-				45_b
-				45_c
-				45_d
-			}
-		}
-		narcotics_policy = {
-			reforms = {
-				55_a
-				55_b
-				55_c
-				55_d
-			}
-		}
 		immigration_policy = {
 			reforms = {
 				16_a
 				16_b
 				16_c
 				16_d
-			}
-		}
-		sales_policy = {
-			reforms = {
-				26_a
-				26_b
-				26_c
-				26_d
-			}
-		}
-		shools_policy = {
-			reforms = {
-				36_a
-				36_b
-				36_c
-				36_d
 			}
 		}
 		army_policy = {
@@ -259,44 +171,12 @@ monarchy = {
 				46_d
 			}
 		}
-		discrimination_policy = {
-			reforms = {
-				56_a
-				56_b
-				56_c
-				56_d
-			}
-		}
 		espionage_policy = {
 			reforms = {
 				17_a
 				17_b
 				17_c
 				17_d
-			}
-		}
-		water_policy = {
-			reforms = {
-				27_a
-				27_b
-				27_c
-				27_d
-			}
-		}
-		astronomy_policy = {
-			reforms = {
-				37_a
-				37_b
-				37_c
-				37_d
-			}
-		}
-		containment_policy = {
-			reforms = {
-				47_a
-				47_b
-				47_c
-				47_d
 			}
 		}
 		health_policy = {
@@ -321,102 +201,6 @@ monarchy = {
 				28_b
 				28_c
 				28_d
-			}
-		}
-		technology_policy = {
-			reforms = {
-				38_a
-				38_b
-				38_c
-				38_d
-			}
-		}
-		prisons_policy = {
-			reforms = {
-				48_a
-				48_b
-				48_c
-				48_d
-			}
-		}
-		pensions_policy = {
-			reforms = {
-				58_a
-				58_b
-				58_c
-				58_d
-			}
-		}
-		tax_shelters_policy = {
-			reforms = {
-				19_a
-				19_b
-				19_c
-				19_d
-			}
-		}
-		working_policy = {
-			reforms = {
-				29_a
-				29_b
-				29_c
-				29_d
-			}
-		}
-		grants_policy = {
-			reforms = {
-				39_a
-				39_b
-				39_c
-				39_d
-			}
-		}
-		tortures_policy = {
-			reforms = {
-				49_a
-				49_b
-				49_c
-				49_d
-			}
-		}
-		unemployment_policy = {
-			reforms = {
-				59_a
-				59_b
-				59_c
-				59_d
-			}
-		}
-		trade_policy = {
-			reforms = {
-				110_a
-				110_b
-				110_c
-				110_d
-			}
-		}
-		safety_policy = {
-			reforms = {
-				210_a
-				210_b
-				210_c
-				210_d
-			}
-		}
-		university_policy = {
-			reforms = {
-				310_a
-				310_b
-				310_c
-				310_d
-			}
-		}
-		security_policy = {
-			reforms = {
-				410_a
-				410_b
-				410_c
-				410_d
 			}
 		}
 	}

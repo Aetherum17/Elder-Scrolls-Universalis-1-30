@@ -1,0 +1,249 @@
+heist_nation = {
+	category = covert
+	
+	require_acceptance = no
+	
+	is_visible = {
+		has_country_flag = es_thieves_guild_flag
+	}
+	is_allowed = {
+		has_country_flag = es_thieves_guild_flag
+		has_spy_network_in = {
+			who = FROM
+			value = 50
+		}
+	}
+	on_accept = {
+		add_spy_network_in = {
+			who = FROM
+			value = -50
+		}
+		FROM = { save_event_target_as = es_nation_to_heist }
+		set_variable = { which = IncomeToSteal value = 0 }
+		export_to_variable = { which = IncomeToSteal value = treasury who = FROM }
+		divide_variable = { which = IncomeToSteal value = 10 }
+		set_country_flag = heist_nation_flag
+	}
+	on_decline = { 
+	}
+	
+	ai_acceptance = { 
+	}
+
+	ai_will_do = {
+		factor = 1
+		modifier = { factor = 0 NOT = { is_enemy = FROM } }
+		modifier = { factor = 0 NOT = { prestige = 0 } }
+		modifier = { factor = 1.5 NOT = { prestige = 15 } }
+		modifier = { factor = 1.5 NOT = { prestige = 35 } }
+		modifier = { factor = 1.5 NOT = { prestige = 50 } }
+	}
+}
+
+scam_nation = {
+	category = covert
+	
+	require_acceptance = no
+	
+	is_visible = {
+		has_country_flag = es_thieves_guild_flag
+	}
+	is_allowed = {
+		has_country_flag = es_thieves_guild_flag
+		FROM = { NOT = { has_country_modifier = scammed_by_enemy_thieves_guild } }
+		has_spy_network_in = {
+			who = FROM
+			value = 75
+		}
+		years_of_income = 0.75
+	}
+	on_accept = {
+		add_spy_network_in = {
+			who = FROM
+			value = -75
+		}
+		FROM = { save_event_target_as = es_nation_to_scam }
+		set_country_flag = scam_nation_flag
+		add_years_of_income = -0.75
+	}
+	on_decline = { 
+	}
+	
+	ai_acceptance = { 
+	}
+
+	ai_will_do = {
+		factor = 1
+		modifier = { factor = 0 NOT = { is_enemy = FROM } }
+		modifier = { factor = 0 NOT = { prestige = 0 } }
+		modifier = { factor = 1.5 NOT = { prestige = 15 } }
+		modifier = { factor = 1.5 NOT = { prestige = 35 } }
+		modifier = { factor = 1.5 NOT = { prestige = 50 } }
+	}
+}
+
+intimidate_nation = {
+	category = covert
+	
+	require_acceptance = no
+	
+	is_visible = {
+		has_country_flag = es_thieves_guild_flag
+		always = yes
+	}
+	is_allowed = {
+		has_country_flag = es_thieves_guild_flag
+		FROM = { NOT = { has_country_modifier = intimidated_by_enemy_thieves_guild } }
+		has_spy_network_in = {
+			who = FROM
+			value = 100
+		}
+		years_of_income = 1.5
+	}
+	on_accept = {
+		add_spy_network_in = {
+			who = FROM
+			value = -100
+		}
+		FROM = { save_event_target_as = es_nation_to_intimidate }
+		set_country_flag = intimidate_nation_flag
+		add_years_of_income = -1.5
+	}
+	on_decline = { 
+	}
+	
+	ai_acceptance = { 
+	}
+
+	ai_will_do = {
+		factor = 1
+		modifier = { factor = 0 NOT = { is_enemy = FROM } }
+		modifier = { factor = 0 NOT = { prestige = 0 } }
+		modifier = { factor = 1.5 NOT = { prestige = 15 } }
+		modifier = { factor = 1.5 NOT = { prestige = 35 } }
+		modifier = { factor = 1.5 NOT = { prestige = 50 } }
+	}
+}
+
+###################################################################################################
+
+assasinate_ruler = {
+	category = covert
+	
+	require_acceptance = no
+	
+	is_visible = {
+		has_country_flag = es_assassins_guild_flag
+	}
+	is_allowed = {
+		has_country_flag = es_assassins_guild_flag
+		FROM = { NOT = { is_subject_of_type = personal_union } }
+		has_spy_network_in = {
+			who = FROM
+			value = 100
+		}
+		years_of_income = 10.0
+	}
+	on_accept = {
+		add_spy_network_in = {
+			who = FROM
+			value = -100
+		}
+		add_years_of_income = -10
+		FROM = { save_event_target_as = country_to_murder_ruler }
+		set_country_flag = assasinate_ruler_flag
+	}
+	on_decline = { 
+	}
+	
+	ai_acceptance = { 
+	}
+
+	ai_will_do = {
+		factor = 1
+		modifier = { factor = 0 NOT = { is_enemy = FROM } }
+		modifier = { factor = 0 NOT = { prestige = 0 } }
+		modifier = { factor = 1.5 NOT = { prestige = 15 } }
+		modifier = { factor = 1.5 NOT = { prestige = 35 } }
+		modifier = { factor = 1.5 NOT = { prestige = 50 } }
+	}
+}
+
+assasinate_heir = {
+	category = covert
+	
+	require_acceptance = no
+	
+	is_visible = {
+		has_country_flag = es_assassins_guild_flag
+	}
+	is_allowed = {
+		has_country_flag = es_assassins_guild_flag
+		FROM = { has_heir = yes }
+		FROM = { NOT = { is_subject_of_type = personal_union } }
+		has_spy_network_in = {
+			who = FROM
+			value = 75
+		}
+		years_of_income = 5.0
+	}
+	on_accept = {
+		add_spy_network_in = {
+			who = FROM
+			value = -75
+		}
+		add_years_of_income = -5.0
+		FROM = { save_event_target_as = country_to_murder_heir }
+		set_country_flag = assasinate_heir_flag
+	}
+	on_decline = { 
+	}
+	
+	ai_acceptance = { 
+	}
+
+	ai_will_do = {
+		factor = 1
+		modifier = { factor = 0 NOT = { is_enemy = FROM } }
+		modifier = { factor = 0 NOT = { prestige = 0 } }
+		modifier = { factor = 1.5 NOT = { prestige = 15 } }
+		modifier = { factor = 1.5 NOT = { prestige = 35 } }
+		modifier = { factor = 1.5 NOT = { prestige = 50 } }
+	}
+}
+
+kidnap_advisor = {
+	category = covert
+	
+	require_acceptance = no
+	
+	is_visible = {
+		has_country_flag = es_assassins_guild_flag
+	}
+	is_allowed = {
+		years_of_income = 1.0
+		has_country_flag = es_assassins_guild_flag
+		has_spy_network_in = {
+			who = FROM
+			value = 50
+		}
+	}
+	on_accept = {
+		years_of_income = -1.0
+		add_spy_network_in = {
+			who = FROM
+			value = -50
+		}
+		FROM = { save_global_event_target_as = country_to_kidnap_advisor }
+		set_country_flag = kidnap_advisor_flag
+	}
+	on_decline = { 
+	}
+	
+	ai_acceptance = { 
+	}
+
+	ai_will_do = {
+		factor = 0
+	}
+}

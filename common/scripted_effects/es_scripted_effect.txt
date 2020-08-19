@@ -1,0 +1,102 @@
+add_treasury_var = {
+    add_treasury_var_helper = { var = $var$ amount = 1048576 }
+    add_treasury_var_helper = { var = $var$ amount = 524288 }
+    add_treasury_var_helper = { var = $var$ amount = 262144 }
+    add_treasury_var_helper = { var = $var$ amount = 131072 }
+    add_treasury_var_helper = { var = $var$ amount = 65536 }
+    add_treasury_var_helper = { var = $var$ amount = 32768 }
+    add_treasury_var_helper = { var = $var$ amount = 16384 }
+    add_treasury_var_helper = { var = $var$ amount = 8192 }
+    add_treasury_var_helper = { var = $var$ amount = 4096 }
+    add_treasury_var_helper = { var = $var$ amount = 2048 }
+    add_treasury_var_helper = { var = $var$ amount = 1024 }
+    add_treasury_var_helper = { var = $var$ amount = 512 }
+    add_treasury_var_helper = { var = $var$ amount = 256 }
+    add_treasury_var_helper = { var = $var$ amount = 128 }
+    add_treasury_var_helper = { var = $var$ amount = 64 }
+    add_treasury_var_helper = { var = $var$ amount = 32 }
+    add_treasury_var_helper = { var = $var$ amount = 16 }
+    add_treasury_var_helper = { var = $var$ amount = 8 }
+    add_treasury_var_helper = { var = $var$ amount = 4 }
+    add_treasury_var_helper = { var = $var$ amount = 2 }
+    add_treasury_var_helper = { var = $var$ amount = 1 }
+    add_treasury_var_helper = { var = $var$ amount = 0.5 }
+    add_treasury_var_helper = { var = $var$ amount = 0.25 }
+}
+add_treasury_var_helper = {
+    if = {
+        limit = {
+            check_variable = { which = $var$ value = $amount$ }
+        }
+        subtract_variable = { which = $var$ value = $amount$ }
+        add_treasury = $amount$
+    }
+}
+
+define_random_advisor = {
+	random_list = {
+	2 = { define_advisor = { skill = $skill$ type = philosopher culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
+	2 = { define_advisor = { skill = $skill$ type = theorist culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
+	2 = { define_advisor = { skill = $skill$ type = savant culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
+	2 = { define_advisor = { skill = $skill$ type = natural_scientist culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
+	2 = { define_advisor = { skill = $skill$ type = scholar culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
+	2 = { define_advisor = { skill = $skill$ type = researcher culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
+	2 = { define_advisor = { skill = $skill$ type = artist culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
+	2 = { define_advisor = { skill = $skill$ type = poet culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
+	2 = { define_advisor = { skill = $skill$ type = minstrel culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
+	2 = { define_advisor = { skill = $skill$ type = treasurer culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
+	2 = { define_advisor = { skill = $skill$ type = curator culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
+	2 = { define_advisor = { skill = $skill$ type = supervisor culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
+	2 = { define_advisor = { skill = $skill$ type = master_of_mint culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
+	2 = { define_advisor = { skill = $skill$ type = inspector culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
+	2 = { define_advisor = { skill = $skill$ type = administrator culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
+	2 = { define_advisor = { skill = $skill$ type = judge culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
+	2 = { define_advisor = { skill = $skill$ type = priest culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
+	2 = { define_advisor = { skill = $skill$ type = theologian culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
+	2 = { define_advisor = { skill = $skill$ type = inquisitor culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
+	2 = { define_advisor = { skill = $skill$ type = monk culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
+	2 = { define_advisor = { skill = $skill$ type = auditor culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
+	2 = { define_advisor = { skill = $skill$ type = representative culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
+	2 = { define_advisor = { skill = $skill$ type = minister culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
+	2 = { define_advisor = { skill = $skill$ type = statesman culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
+	2 = { define_advisor = { skill = $skill$ type = colonial_governor culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
+	2 = { define_advisor = { skill = $skill$ type = colonial_administrator culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
+	2 = { define_advisor = { skill = $skill$ type = colonial_overseer culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
+	2 = { define_advisor = { skill = $skill$ type = naval_reformer culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
+	2 = { define_advisor = { skill = $skill$ type = naval_supplier culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
+	2 = { define_advisor = { skill = $skill$ type = admiral culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
+	2 = { define_advisor = { skill = $skill$ type = navigator culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
+	2 = { define_advisor = { skill = $skill$ type = adventurer culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
+	2 = { define_advisor = { skill = $skill$ type = explorer culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
+	2 = { define_advisor = { skill = $skill$ type = secretary culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
+	2 = { define_advisor = { skill = $skill$ type = diplomat culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
+	2 = { define_advisor = { skill = $skill$ type = negotiator culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
+	2 = { define_advisor = { skill = $skill$ type = trader culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
+	2 = { define_advisor = { skill = $skill$ type = merchant culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
+	2 = { define_advisor = { skill = $skill$ type = exporter culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
+	2 = { define_advisor = { skill = $skill$ type = spymaster culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
+	2 = { define_advisor = { skill = $skill$ type = investigator culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
+	2 = { define_advisor = { skill = $skill$ type = agitator culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
+	2 = { define_advisor = { skill = $skill$ type = commander culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
+	2 = { define_advisor = { skill = $skill$ type = scout culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
+	2 = { define_advisor = { skill = $skill$ type = army_reformer culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
+	2 = { define_advisor = { skill = $skill$ type = grand_captain culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
+	2 = { define_advisor = { skill = $skill$ type = grand_champion culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
+	2 = { define_advisor = { skill = $skill$ type = chief culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
+	2 = { define_advisor = { skill = $skill$ type = army_organiser culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
+	2 = { define_advisor = { skill = $skill$ type = mercenary_recruiter culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
+	2 = { define_advisor = { skill = $skill$ type = army_coordinator culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
+	2 = { define_advisor = { skill = $skill$ type = instructor culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
+	2 = { define_advisor = { skill = $skill$ type = commandant culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
+	2 = { define_advisor = { skill = $skill$ type = siege_consultant culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
+	2 = { define_advisor = { skill = $skill$ type = intendant culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
+	2 = { define_advisor = { skill = $skill$ type = quartermaster culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
+	2 = { define_advisor = { skill = $skill$ type = officer culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
+	2 = { define_advisor = { skill = $skill$ type = superintendent culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
+	2 = { define_advisor = { skill = $skill$ type = recruitmaster culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
+	2 = { define_advisor = { skill = $skill$ type = enlister culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
+	2 = { define_advisor = { skill = $skill$ type = fortification_expert culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
+	2 = { define_advisor = { skill = $skill$ type = fortification_curator culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
+	2 = { define_advisor = { skill = $skill$ type = warden culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
+	}
+}

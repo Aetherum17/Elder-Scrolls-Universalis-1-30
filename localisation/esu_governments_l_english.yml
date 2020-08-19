@@ -2,3 +2,90 @@
  get_acess_to_new_decisions:0 "Gain Access to New Decisions"
  get_acess_to_new_events:0 "Gain Access to New Events"
  get_acess_to_new_ruler_personalities:0 "Gain Access to New Ruler Personalities"
+ get_acess_to_new_casus_belli:0 "Gain Access to New Casus Belli"
+ get_acess_to_new_diplomatic_actions:0 "Gain Access to New Diplomatic Actions"
+ 
+ you_will_become_a_protector_of_countries:0 "You will become a protector of countries in Home Superregion."
+ 
+ event_new_diplomatic_actions.0.t:0 "Assasination Failed"
+ event_new_diplomatic_actions.0.d:0 "A member of the Assassins Guild contacted us and said that they were unable to eliminate the target we ordered. At the moment, they are trying to find out the reasons for their failure, which led to the death of their agent. However, the saddest thing for us is that, according to the terms of the contract, if the order is not fulfilled, the money will not be returned to us."
+ 
+ event_new_diplomatic_actions.1.t:0 "$MONARCH$ is Murdered by Assasins"
+ event_new_diplomatic_actions.1.d:0 "Terrible news comes to us from the residence of our ruler. Our popularly beloved $MONARCH$ was killed by an unknown assassin, having previously killed all the guards. We have begun to investigate to find out who sent it to us, however, it seems that our search will be unsuccessful."
+ 
+ event_new_diplomatic_actions.2.t:0 "$HEIR$ is Murdered by Assasins"
+ event_new_diplomatic_actions.2.d:0 "Terrible news comes to us from the appartments of our heir. Our popularly beloved $HEIR$ was killed by an unknown assassin, having previously killed all the guards. We have begun to investigate to find out who sent it to us, however, it seems that our search will be unsuccessful."
+ 
+ event_new_diplomatic_actions.3.t:0 "Successful Assasination"
+ event_new_diplomatic_actions.3.d:0 "A member of the Assassins Guild contacted us and said that they have eliminate the target we ordered. At the moment, they are trying to evacuate their agent. However, even if they fail to do this, it is unlikely that we will be suspected of this murder."
+ 
+ event_new_diplomatic_actions.4.t:0 "Successful Infiltration"
+ event_new_diplomatic_actions.4.d:0 "A member of the Thieves Guild contacted us and said that they were able to complete the task we ordered. At the moment, they are trying to evacuate their agent. However, even if they fail to do this, it is unlikely that we will be suspected of this crime."
+ 
+ event_new_diplomatic_actions.5.t:0 "Infiltration Failed"
+ event_new_diplomatic_actions.5.d:0 "A member of the Thieves Guild contacted us and said that they were unable to complete the task we ordered. At the moment, they are trying to find out the reasons for their failure, which led to the death of their agent. At least, according to the terms of the contract, Thieves guild promises to make everything, so we would not be suspected of his crime."
+ 
+ event_new_diplomatic_actions.6.t:0 "Treasury Raided"
+ event_new_diplomatic_actions.6.d:0 "Terrible news comes to us from the national Treasury House. Yesterday it was looted by an innown group of people. We have begun to investigate to find out who sent them to us, however, it seems that our search will be unsuccessful."
+ 
+ event_new_diplomatic_actions.7.t:0 "Financials Scammed"
+ event_new_diplomatic_actions.7.d:0 "Terrible news comes to us from the national Financial Minestry. Yesterday it occured, that we were scammed by an unknown group of people, who we supposed to be our business partners. We have begun to investigate to find out who sent them to us, however, it seems that our search will be unsuccessful."
+ 
+ event_new_diplomatic_actions.8.t:0 "Ruler's Office Intimidated"
+ event_new_diplomatic_actions.8.d:0 "Terrible news comes to us from several memebers of governmental office. They claim, that we were intimidated by an unknown group of people. We have begun to investigate to find out who sent them to us, however, it seems that our search will be unsuccessful."
+ 
+ event_new_diplomatic_actions.9.t:0 "Successful Kidnapping"
+ event_new_diplomatic_actions.9.d:0 "A member of the Assassins Guild contacted us and said that they were able to complete the task we ordered. At the moment, they are trying to evacuate their agent. However, even if they fail to do this, it is unlikely that we will be suspected of this crime."
+ 
+ event_new_diplomatic_actions.10.t:0 "Kidnapping Failed"
+ event_new_diplomatic_actions.10.d:0 "A member of the Assassins Guild contacted us and said that they were unable to complete the task we ordered. At the moment, they are trying to find out the reasons for their failure, which led to the death of their agent. At least, according to the terms of the contract, Assassins guild promises to make everything, so we would not be suspected of his crime."
+ 
+ event_new_diplomatic_actions.200.t:0 "Enemy Intervention in Homeregion"
+ event_new_diplomatic_actions.200.d:0 "The invaders led their armies to our lands. We, as guardians of peace and stability in the region, are obliged to take the side of our brothers, if not in arms or political views, then in spirit or blood. Our legions are already ready to go to battle - everyone is waiting only for the order of our commander-in-chief."
+ event_new_diplomatic_actions.200.a:0 "To the Glory!"
+ event_new_diplomatic_actions.200.b:0 "We cannot interfere in this conflict."
+ 
+ event_new_diplomatic_actions.0.a:0 "Disaster!"
+ event_new_diplomatic_actions.3.a:0 "Good."
+ 
+ guarfian_at_war:0 "Guardian at War"
+ 
+ dissolve_native_reservation_title:0 "Dissolve Native Reservation"
+ dissolve_native_reservation_desc:0 "We can Dissolve our Native Reservation."
+ dissolve_native_reservation_tooltip:0 "Cancel the Native Reservation status of §Y[From.GetName]§!.\n"
+ 
+ heist_nation_title:0 "Treasury Heist"
+ heist_nation_desc:0 "We can try to raid the treasury of §Y[From.GetName]§! in order to get 10% of its savings."
+ heist_nation_tooltip:0 "Raid the treasury of §Y[From.GetName]§!.\n"
+ kidnap_advisor_title:0 "Kidnap Advisor"
+ kidnap_advisor_desc:0 "We can try to kidnap one advisor from §Y[From.GetName]§! in order to get cheaper service."
+ kidnap_advisor_tooltip:0 "Kidnap advisor from §Y[From.GetName]§!.\n"
+ scam_nation_title:0 "Scam Financial Ministry"
+ scam_nation_desc:0 "We can try to scam Financial Minestry of §Y[From.GetName]§! in order to lower their tax income."
+ scam_nation_tooltip:0 "Scam Financial Minestry of §Y[From.GetName]§!.\n"
+ intimidate_nation_title:0 "Intimidate Office"
+ intimidate_nation_desc:0 "We can try to intimidate the ruler's office of §Y[From.GetName]§! in order to lower their efficiency."
+ intimidate_nation_tooltip:0 "Intimidate the ruler's office of §Y[From.GetName]§!.\n"
+ assasinate_ruler_title:0 "Assasinate Ruler"
+ assasinate_ruler_desc:0 "We can try to assasinate the ruler of §Y[From.GetName]§! in order to lower the stability in the country."
+ assasinate_ruler_tooltip:0 "Assasinate the ruler of §Y[From.GetName]§!.\n"
+ assasinate_heir_title:0 "Assasinate Heir"
+ assasinate_heir_desc:0 "We can try to assasinate the heir of §Y[From.GetName]§! in order to lower the stability in the country."
+ assasinate_heir_tooltip:0 "Assasinate the heir of §Y[From.GetName]§!.\n"
+ assasinate_consort_title:0 "Assasinate Consort"
+ assasinate_consort_desc:0 "We can try to assasinate the consort of §Y[From.GetName]§! in order to lower the stability in the country."
+ assasinate_consort_tooltip:0 "Assasinate the consort of §Y[From.GetName]§!.\n"
+ 
+ scammed_by_enemy_thieves_guild:0 "Scammed by Enemy Thieves Guild"
+ intimidated_by_enemy_thieves_guild:0 "Intimidated by Enemy Thieves Guild"
+ 
+ cb_es_witch_hunting:0 "Conduct Witch Hunt"
+ cb_es_witch_hunting:0 " "
+ es_witch_hunting:0 "Conduct Witch Hunt"
+ es_witch_hunting:0 " "
+ ES_WITCH_HUNT:0 "$ORDER$$FIRST$-$SECOND$ Witch Hunt"
+ 
+ reason:0 "Reasonables"
+ logic:0 "Logicians"
+ reason_MECHANIC_TOOLTIP:0 "Reasonables"
+ logic_MECHANIC_TOOLTIP:0 "Logicians"

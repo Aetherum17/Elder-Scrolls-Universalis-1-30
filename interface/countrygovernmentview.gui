@@ -345,32 +345,32 @@ guiTypes = {
 			horizontalBorder = ""
 			Orientation = "UPPER_LEFT"
 
-			iconType =
-			{
-				name ="statist_vs_orangist_overlay"
-				spriteType = "GFX_statist_vs_orangist_overlay"
-				position = { x= 16 y = 15 }
-			}
+			#iconType =
+			#{
+			#	name ="statist_vs_orangist_overlay"
+			#	spriteType = "GFX_statist_vs_orangist_overlay"
+			#	position = { x= 16 y = 15 }
+			#}
 
 			iconType =
 			{
 				name ="current_progress_bg"
 				spriteType = "GFX_piety_bar_bg"
-				position = { x= 70 y = 20 }
+				position = { x= 70 y = -107 }
 			}
 
 			iconType =
 			{
 				name ="current_progress_frame"
 				spriteType = "GFX_statist_vs_orangist_frame"
-				position = { x= 37 y = 14 }
+				position = { x= 37 y = -121 }
 			}
 
 			iconType =
 			{
 				name ="statists"
 				spriteType = "GFX_statists"
-				position = { x= 43 y = 24 }
+				position = { x= 43 y = -111 }
 				frame = 1
 			}
 
@@ -378,7 +378,7 @@ guiTypes = {
 			{
 				name ="monarchists"
 				spriteType = "GFX_monarchists"
-				position = { x= 254 y = 29 }
+				position = { x= 254 y = -115 }
 				frame = 1
 			}
 
@@ -386,7 +386,7 @@ guiTypes = {
 			{
 				name ="current_value_icon"
 				spriteType = "GFX_war_overview_indicator"
-				position = { x= 133 y = -15 }
+				position = { x= 133 y = -150 }
 			}
 
 			instantTextBoxType = {

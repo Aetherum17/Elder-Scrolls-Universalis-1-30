@@ -6,7 +6,7 @@
 #Nation Designer Cost is set to match triggers for starting institutions.
 
 groups = {
-    ### Remove
+    ### Red Montain Only, to prevent possible issues.
     tamriel_tg = {
 		start_level = 1
 		start_cost_modifier = 0
@@ -178,6 +178,7 @@ groups = {
 			value = 0
 		}
 	}
+	### Sload
 	oceanic_tg = {
 		start_level = 1
 		start_cost_modifier = 0
