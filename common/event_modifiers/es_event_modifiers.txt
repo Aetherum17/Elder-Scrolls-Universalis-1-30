@@ -56,6 +56,30 @@ jewel_of_tamriel_modifier = {
 	local_institution_spread = 0.25
 }
 
+minor_royal_family_autonomy = {
+	min_autonomy = 25
+	local_tax_modifier = -0.25
+	local_production_efficiency = -0.25
+	local_manpower_modifier = -0.25
+	local_unrest = -2.5
+}
+
+royal_family_autonomy = {
+	min_autonomy = 50
+	local_tax_modifier = -0.5
+	local_production_efficiency = -0.5
+	local_manpower_modifier = -0.5
+	local_unrest = -5
+}
+
+major_family_autonomy = {
+	min_autonomy = 75
+	local_tax_modifier = -0.75
+	local_production_efficiency = -0.75
+	local_manpower_modifier = -0.75
+	local_unrest = -7.5
+}
+
 scammed_by_enemy_thieves_guild = {
     global_tax_modifier = -0.25
 }

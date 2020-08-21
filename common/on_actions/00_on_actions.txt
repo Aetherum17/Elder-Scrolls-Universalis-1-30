@@ -774,6 +774,56 @@ on_new_monarch = {
 	crimean_succession_effect = yes #Scripted effect
 	slesvig_question_effect = yes #Scripted effect
 	
+	if = { limit = { has_reform = martial_ruler } 
+	random_list = { 
+	2 = { define_ruler_to_general = { fire = 3 shock = 3 manuever = 3 siege = 3 } }
+	2 = { define_ruler_to_general = { fire = 4 shock = 3 manuever = 3 siege = 3 } }
+	2 = { define_ruler_to_general = { fire = 3 shock = 4 manuever = 3 siege = 3 } }
+	2 = { define_ruler_to_general = { fire = 3 shock = 3 manuever = 4 siege = 3 } }
+	2 = { define_ruler_to_general = { fire = 3 shock = 3 manuever = 3 siege = 4 } }
+	2 = { define_ruler_to_general = { fire = 4 shock = 4 manuever = 3 siege = 3 } }
+	2 = { define_ruler_to_general = { fire = 4 shock = 3 manuever = 4 siege = 3 } }
+	2 = { define_ruler_to_general = { fire = 4 shock = 3 manuever = 3 siege = 4 } }
+	2 = { define_ruler_to_general = { fire = 3 shock = 4 manuever = 4 siege = 3 } }
+	2 = { define_ruler_to_general = { fire = 3 shock = 4 manuever = 3 siege = 4 } }
+	2 = { define_ruler_to_general = { fire = 3 shock = 3 manuever = 4 siege = 4 } }
+	2 = { define_ruler_to_general = { fire = 3 shock = 4 manuever = 4 siege = 4 } }
+	2 = { define_ruler_to_general = { fire = 4 shock = 3 manuever = 4 siege = 4 } }
+	2 = { define_ruler_to_general = { fire = 4 shock = 4 manuever = 3 siege = 4 } }
+	2 = { define_ruler_to_general = { fire = 4 shock = 4 manuever = 4 siege = 3 } }
+	2 = { define_ruler_to_general = { fire = 4 shock = 4 manuever = 4 siege = 4 } }
+	2 = { define_ruler_to_general = { fire = 5 shock = 3 manuever = 3 siege = 3 } }
+	2 = { define_ruler_to_general = { fire = 3 shock = 5 manuever = 3 siege = 3 } }
+	2 = { define_ruler_to_general = { fire = 3 shock = 3 manuever = 5 siege = 3 } }
+	2 = { define_ruler_to_general = { fire = 3 shock = 3 manuever = 3 siege = 5 } }
+	2 = { define_ruler_to_general = { fire = 5 shock = 5 manuever = 3 siege = 3 } }
+	2 = { define_ruler_to_general = { fire = 5 shock = 3 manuever = 5 siege = 3 } }
+	2 = { define_ruler_to_general = { fire = 5 shock = 3 manuever = 3 siege = 5 } }
+	2 = { define_ruler_to_general = { fire = 3 shock = 5 manuever = 5 siege = 3 } }
+	2 = { define_ruler_to_general = { fire = 3 shock = 5 manuever = 3 siege = 5 } }
+	2 = { define_ruler_to_general = { fire = 3 shock = 3 manuever = 5 siege = 5 } }
+	2 = { define_ruler_to_general = { fire = 3 shock = 5 manuever = 5 siege = 5 } }
+	2 = { define_ruler_to_general = { fire = 5 shock = 3 manuever = 5 siege = 5 } }
+	2 = { define_ruler_to_general = { fire = 5 shock = 5 manuever = 3 siege = 5 } }
+	2 = { define_ruler_to_general = { fire = 5 shock = 5 manuever = 5 siege = 3 } }
+	2 = { define_ruler_to_general = { fire = 5 shock = 5 manuever = 5 siege = 5 } }
+	2 = { define_ruler_to_general = { fire = 5 shock = 4 manuever = 4 siege = 4 } }
+	2 = { define_ruler_to_general = { fire = 4 shock = 5 manuever = 4 siege = 4 } }
+	2 = { define_ruler_to_general = { fire = 4 shock = 4 manuever = 5 siege = 4 } }
+	2 = { define_ruler_to_general = { fire = 4 shock = 4 manuever = 4 siege = 5 } }
+	2 = { define_ruler_to_general = { fire = 5 shock = 5 manuever = 4 siege = 4 } }
+	2 = { define_ruler_to_general = { fire = 5 shock = 4 manuever = 5 siege = 4 } }
+	2 = { define_ruler_to_general = { fire = 5 shock = 4 manuever = 4 siege = 5 } }
+	2 = { define_ruler_to_general = { fire = 4 shock = 5 manuever = 5 siege = 4 } }
+	2 = { define_ruler_to_general = { fire = 4 shock = 5 manuever = 4 siege = 5 } }
+	2 = { define_ruler_to_general = { fire = 4 shock = 4 manuever = 5 siege = 5 } }
+	2 = { define_ruler_to_general = { fire = 4 shock = 5 manuever = 5 siege = 5 } }
+	2 = { define_ruler_to_general = { fire = 5 shock = 4 manuever = 5 siege = 5 } }
+	2 = { define_ruler_to_general = { fire = 5 shock = 5 manuever = 4 siege = 5 } }
+	2 = { define_ruler_to_general = { fire = 5 shock = 5 manuever = 5 siege = 4 } }
+	}
+	}
+	
 	if = { limit = { religion_group = polytheistic_group } add_country_modifier = { name = "polytheistic_group_modifier" duration = -1 }
 	remove_country_modifier = occult_group_modifier
 	remove_country_modifier = elemental_group_modifier
@@ -871,6 +921,30 @@ on_new_consort = {
 
 # country
 on_monarch_death = {
+	if = { limit = { ai = no has_reform = backbone_of_the_nation } add_stability = -1 }
+	every_owned_province = {
+		limit = {
+		OR = { 
+			has_province_modifier = minor_royal_family_autonomy
+			has_province_modifier = royal_family_autonomy
+			has_province_modifier = major_family_autonomy 
+		} 
+		}
+		remove_province_modifier = minor_royal_family_autonomy
+		remove_province_modifier = royal_family_autonomy
+		remove_province_modifier = major_family_autonomy
+	}
+	if = {
+		limit = { ai = no has_reform = gravelkind }
+		every_owned_province = {
+			random_list = {
+				33 = { }
+				22 = { add_province_modifier = { name = "minor_royal_family_autonomy" duration = -1 } }
+				22 = { add_province_modifier = { name = "royal_family_autonomy" duration = -1 } }
+				22 = { add_province_modifier = { name = "major_family_autonomy" duration = -1 } }
+			}
+		}
+	}
 	if = {
 		limit = { has_country_modifier = sought_after_bachelor }
 		remove_country_modifier = sought_after_bachelor

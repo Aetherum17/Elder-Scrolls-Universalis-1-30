@@ -160,7 +160,7 @@ country_event = {
 			50 = {
 			add_treasury_var = { var = IncomeToSteal }
 			multiply_variable = { which = IncomeToSteal value = -1 }
-			event_target:es_nation_to_heist = { add_treasury_var = { var = IncomeToSteal country_event = { id = event_new_diplomatic_actions.6 } }
+			event_target:es_nation_to_heist = { add_treasury_var = { var = IncomeToSteal country_event = { id = event_new_diplomatic_actions.6 } } }
 			country_event = { id = event_new_diplomatic_actions.4 }
 			}
 			50 = { add_prestige = -5 country_event = { id = event_new_diplomatic_actions.5 } }
@@ -172,6 +172,7 @@ country_event = {
 		name = "event_new_diplomatic_actions.0.a"
 	}
 }
+
 # Scam Nation Chance
 country_event = {
 	id = event_new_diplomatic_actions.101
@@ -399,3 +400,18 @@ country_event = {
 #■ Outside Merchants Run Out
 #■ Isolation Breeds Ignorance
 #■ Isolation Breeds Xenophobia
+
+#● Gives access to the Statism event pool - has_country_flag = es_bureaucratic_tyranny_flag
+#○ Government Agency Drags Feet
+#○ Overspending
+#○ Bureaucratic Nightmare
+
+#● Gain Access to Open Succession Events - has_country_flag = es_open_flag
+#○ Heirs Plots Against Each Other
+#○ Heir Assassinated
+#○ Rival Brother Raises Army
+
+#○ Gain Access to Divine Blood Event Pool - has_country_flag = es_divine_right_flag
+#■ God King Questioned
+#■ Clergy vs Monarchy
+#■ Theological Faux Pas

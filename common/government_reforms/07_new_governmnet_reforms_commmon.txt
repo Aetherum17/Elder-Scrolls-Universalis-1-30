@@ -508,7 +508,7 @@ supremacy = {
 #● +1 Diplomatic Relations
 #Guardian (Yellow)
 guardian = {
-	icon = "crusaders_gov"
+	icon = "sweet_harmony"
 	allow_normal_conversion = yes
 	modifiers = {
 		diplomatic_upkeep = 1
@@ -533,7 +533,7 @@ schooling = {
 #Universities (Green)
 #● The nation has some of the best universities and colleges in the world.
 universities = {
-	icon = "house_of_knights"
+	icon = "march"
 	allow_normal_conversion = yes
 	modifiers = {
 		dip_tech_cost_modifier = -0.05
@@ -542,7 +542,7 @@ universities = {
 #War Academies (Green)
 #● The nation has some of the best war academies and training grounds in the world.
 war_academies = {
-	icon = "march"
+	icon = "fort"
 	allow_normal_conversion = yes
 	modifiers = {
 		mil_tech_cost_modifier = -0.05
@@ -551,7 +551,7 @@ war_academies = {
 #Libraries (Green)
 #● The nation has some of the most extensive libraries in the known world and is a bulwark on study.
 libraries = {
-	icon = "arabic_scripture"
+	icon = "house_of_knights"
 	allow_normal_conversion = yes
 	modifiers = {
 		idea_cost = -0.05
@@ -652,7 +652,7 @@ drug_limitation = {
 #Spy Agency (Green)
 #● The nation holds a special institution which handles most affairs of intrigue, training new spies and agents to serve the nation.
 spy_agency = {
-	icon = "granada_trader"
+	icon = "man_in_writing"
 	allow_normal_conversion = yes
 	modifiers = {
 		spy_offence = 0.25
@@ -661,7 +661,7 @@ spy_agency = {
 #Local Scouting (Green)
 #● The nation uses a traditional form of espionage, dooling out agents to scout for corrupt bureaucrats with bribes to serve temporary spies.
 local_scouting = {
-	icon = "granada_trader"
+	icon = "all_under_tengri_reform"
 	allow_normal_conversion = yes
 	modifiers = {
 		fabricate_claims_cost = -0.25
@@ -672,7 +672,7 @@ local_scouting = {
 #Cut Throat Politik (Yellow)
 #● The nation is in a ceaseless internal war of politics and internal deception, where powerful factions and ambitious characters by nature kill each other for glory and dominance.
 cut_throat_politics = {
-	icon = "granada_trader"
+	icon = "french_court"
 	allow_normal_conversion = yes
 	modifiers = {
 		global_spy_defence = 0.25
@@ -689,7 +689,7 @@ cut_throat_politics = {
 #The Grand Game (Red)
 #● The political circles of the nation use the nation as a tool in a grand political game, viewing the world as a larger game in a grand scheme of characters and alliances to outbid less high minded foes.
 the_grand_game = {
-	icon = "granada_trader"
+	icon = "diverse_estates"
 	allow_normal_conversion = yes
 	modifiers = {
 		diplomats = 3
@@ -704,7 +704,7 @@ the_grand_game = {
 #Trading Power (Green)
 #● The nation focuses more heavily on trade income, becoming a great trading power on the open world.
 trading_power = {
-	icon = "granada_trader"
+	icon = "trade_hegemon"
 	allow_normal_conversion = yes
 	modifiers = {
 		global_trade_power = 0.10
@@ -713,7 +713,7 @@ trading_power = {
 #Efficient Taxation (Green)
 #● The nation’s taxation system is modern and highly efficient, an example to other nations across the known world.
 efficient_taxation = {
-	icon = "granada_trader"
+	icon = "tax_collectors"
 	allow_normal_conversion = yes
 	modifiers = {
 		global_tax_modifier = 0.10
@@ -724,7 +724,7 @@ efficient_taxation = {
 #Productive Society (Green)
 #● Factories and cottages can be found all across the nation, being a bulwark as Tamriel’s greatest producer of materials.
 productive_society = {
-	icon = "granada_trader"
+	icon = "dutch_guilds"
 	allow_normal_conversion = yes
 	modifiers = {
 		global_trade_goods_size_modifier = 0.15
@@ -733,7 +733,7 @@ productive_society = {
 #Jewel of Tamriel (Red)
 #● The nation’s great capital is a diamond in the rough that is Tamriel, a great city of culture, science, trade, and sins of all kinds. From this city springs forth the nation, which is more to serve the city then for the city to serve it.
 jewel_of_tamriel = {
-	icon = "granada_trader"
+	icon = "cities_of_cibola"
 	allow_normal_conversion = yes
 	modifiers = {
 		build_cost = -0.25
@@ -756,7 +756,7 @@ jewel_of_tamriel = {
 #Climatic Victory (Green)
 #● The main war strategy is to conclude the war in a swift battle, winning out over the enemy with sheer weight of numbers and professional soldiers in large scale battles to avoid long conflicts.
 climatic_victory = {
-	icon = "granada_trader"
+	icon = "mamluk_army"
 	allow_normal_conversion = yes
 	modifiers = {
 		cav_to_inf_ratio = 0.25
@@ -767,7 +767,7 @@ climatic_victory = {
 #Guerrilla Warfare (Green)
 #● The nation relies on hit and run tactics, dealing damage where it hurts and dragging out the conflict till an invading enemy expires.
 guerrilla_warfare = {
-	icon = "granada_trader"
+	icon = "landscape"
 	allow_normal_conversion = yes
 	modifiers = {
 		hostile_attrition = 1
@@ -778,7 +778,7 @@ guerrilla_warfare = {
 #Long Campaign (Green)
 #● The nation’s general policy towards campaigning is to prepare for long and drawn out sieges, and is generally well prepared for long and drawn out conflicts.
 long_campaign = {
-	icon = "granada_trader"
+	icon = "religious_permanent_revolution_reform"
 	allow_normal_conversion = yes
 	modifiers = {
 		war_exhaustion_cost = -0.25
@@ -789,7 +789,7 @@ long_campaign = {
 #Invader Archetype (Yellow)
 #● The nation uses an interesting form of campaigning tool, spreading terror through sheer numbers and sending forth an endless host of soldiers to overwhelm the enemy. It matters not how many die, only that they have succeeded.
 invader_archetype = {
-	icon = "granada_trader"
+	icon = "soldiers_5"
 	allow_normal_conversion = yes
 	modifiers = {
 		land_forcelimit_modifier = 0.35
@@ -804,7 +804,7 @@ invader_archetype = {
 #Regional Ambitions (Green)
 #● The nation looks to expand in the local region, seeking to establish a great empire by consuming local powers and absorbing them into itself.
 regional_ambitions = {
-	icon = "granada_trader"
+	icon = "man_on_podium"
 	allow_normal_conversion = yes
 	modifiers = {
 		fabricate_claims_cost = -0.15
@@ -815,7 +815,7 @@ regional_ambitions = {
 #Colonial Ambitions (Green)
 #● The nation looks outward to other nations, seeking to colonize beyond its borders.
 colonial_ambitions = {
-	icon = "granada_trader"
+	icon = "articles_of_agreement"
 	allow_normal_conversion = yes
 	modifiers = {
 		colonists = 1
@@ -825,8 +825,8 @@ colonial_ambitions = {
 }
 #Imperial Ambitions (Yellow)
 #● The nation has high ambitions to create a global empire spanning many peoples and regions, united under a single grand banner.
-imperial_ambitions = {
-	icon = "granada_trader"
+es_imperial_ambitions = {
+	icon = "hereditary"
 	allow_normal_conversion = yes
 	modifiers = {
 		governing_capacity_modifier = 1.0
@@ -837,7 +837,7 @@ imperial_ambitions = {
 #Isolationist (Red)
 #● The nation sees no reason to expand or go beyond its borders, closing off itself to the outside world entirely.
 isolationist = {
-	icon = "granada_trader"
+	icon = "sakoku_law"
 	allow_normal_conversion = yes
 	modifiers = {
 		global_unrest = -5
@@ -857,480 +857,601 @@ isolationist = {
 #Community (Level 27)
 #Typical Commoners (Green)
 #● The village community is fairly typical, with a singular family bond and strong social group of close friends and family.
-#● +2 Max Accepted Cultures
+typical_commoners = {
+	icon = "generic_people"
+	allow_normal_conversion = yes
+	modifiers = {
+		num_accepted_cultures = 1
+		global_unrest = -1
+		autonomy_change_time = 0.1
+	}
+}
 #Pompous Elitists (Yellow)
-#● The social community of the nation is one made up of hierarchies and versatile
-#friendships built more on social class then close bonds.
-#● -25% Culture Change Cost
-#● +15% Adviser Cost
+#● The social community of the nation is one made up of hierarchies and versatile friendships built more on social class then close bonds.
+pompous_elitists = {
+	icon = "empowered_aristocrat_estate"
+	allow_normal_conversion = yes
+	modifiers = {
+		culture_conversion_cost = -0.25
+		harsh_treatment_cost = -0.10
+		advisor_cost = 0.15
+	}
+}
 #Familial Bondage (Yellow)
-#● The cultural community of the nation has a strong, if not unhealthy, family dynamic
-#where family will always come first above all else.
-#● -15% Adviser Cost
-#● -2 Max Accepted Cultures
+#● The cultural community of the nation has a strong, if not unhealthy, family dynamic where family will always come first above all else.
+familial_bondage = {
+	icon = "man_and_children"
+	allow_normal_conversion = yes
+	modifiers = {
+		free_leader_pool = 1
+		advisor_pool = 1
+		years_of_nationalism = 5
+	}
+}
 #Adventurous Nomads (Yellow)
-#● The nation’s social structure lacks a strong local community, and relies heavily on social
-#bonds made at long distances. Most of the people travel long and far, with no real
-#connection to their own homeland.
-#● -50% Culture Shift Cost
-#● +35% Colonial Range
-#● +25% Development Cost
+#● The nation’s social structure lacks a strong local community, and relies heavily on social bonds made at long distances. Most of the people travel long and far, with no real connection to their own homeland.
+adventurous_nomads = {
+	icon = "mamluk_horse"
+	allow_normal_conversion = yes
+	modifiers = {
+		promote_culture_cost = -0.5
+		min_autonomy_in_territories = -0.1
+		development_cost = 0.25
+	}
+}
 
 #Administrative Edge (Level 29)
 #Absolutism (Green)
-#● The state is highly centralized around the ruler itself, whether politically or culturally, and
-#who leads the nation by highly legitimate means.
-#● +15 Absolutism
+#● The state is highly centralized around the ruler itself, whether politically or culturally, and who leads the nation by highly legitimate means.
+absolute_power = {
+	icon = "king_2"
+	allow_normal_conversion = yes
+	modifiers = {
+		max_absolutism = 15
+	}
+}
 #Advisory Board (Green)
-#● The state relies on strong and highly skilled advisers and administrators, who run the
-#major day to day operations.
-#● +2 Possible Advisers
-#● -5% Adviser Cost
+#● The state relies on strong and highly skilled advisers and administrators, who run the major day to day operations.
+advisory_board = {
+	icon = "regents"
+	allow_normal_conversion = yes
+	modifiers = {
+		advisor_cost = -0.10
+	}
+}
 #Bureaucratic Tyranny (Red)
-#● The government of the state has an absurd amount of power, even by normal
-#government standards. The state has a great deal of statism which dominates a majority
-#of the proceedings.
-#● +30 Absolutism
-#● Get special government modifiers tied to stability
-#○ Catastrophic Government(-3 Stability)
-#■ +8 Unrest
-#■ +1 Yearly Inflation
-#■ +500% Stability Cost
-#■ -100 Absolutism
-#■ -10 Yearly Absolutism
-#○ Weak Government (-2, -1 Stability)
-#■ +3 Unrest
-#■ +0.25 Yearly Inflation
-#■ +100% Stability Cost
-#■ -30 Absolutism
-#■ -1 Yearly Absolutism
-#○ Stable Government (0 Stability)
-#■ +1 Unrest
-#○ Strong Government (1, 2 Stability)
-#■ +20 Absolutism
-#■ +0.5 Yearly Absolutism
-#○ Efficient Government (3 Stability)
-#■ +60 Absolutism
-#■ +1 Yearly Absolutism
-#■ +15% Production Efficiency
-#● Gives access to the Statism event pool
-#○ Government Agency Drags Feet
-#○ Overspending
-#○ Bureaucratic Nightmare
-#● Reforming Bureaucratic Tyranny gives the government modifier Statism Fever Dream for
-#25 years
-#○ -25 Absolutism
-#○ +33% Power Cost
+#● The government of the state has an absurd amount of power, even by normal government standards. The state has a great deal of statism which dominates a majority of the proceedings.
+bureaucratic_tyranny = {
+	icon = "military_dictatorship_reform"
+	allow_normal_conversion = yes
+	modifiers = {
+		absolutism = 30
+		yearly_absolutism = 0.25
+		stability_cost_modifier = -0.25
+		global_unrest = 2.5
+		all_power_cost = 0.25
+	}
+	effect = {
+		set_country_flag = es_bureaucratic_tyranny_flag
+	}
+	removed_effect = {
+	    clr_country_flag = es_bureaucratic_tyranny_flag
+	}
+}
 #Sanctioned Freedom (Red)
-#● The state’s administrative purpose is to provide true freedom to the people at the cost of
-#its own authority. This Autonomy keeps people happy, but keeps the government fairly
-#weak.
-#● -6 Unrest
-#● -33% Stability Cost
-#● -10% Development Cost
-#● -1000 Absolutism
+#● The state’s administrative purpose is to provide true freedom to the people at the cost of its own authority. This Autonomy keeps people happy, but keeps the government fairly weak.
+sanctioned_freedom = {
+	icon = "fist_in_air"
+	allow_normal_conversion = yes
+	modifiers = {
+		global_unrest = -5
+		stability_cost_modifier = -0.25
+		max_absolutism = -1000
+	}
+}
 
 #Imperial Innovation(Level 30)
 #Imperial Guard (Green)
-#● The empire has established an elite guard that is utterly loyal to the state, skilled
-#regiments which are legendary on and off the battlefield
-#● +1 Yearly Army Tradition
-#● Gain Access to Imperial Guard Regiments
-#○ 1% of Land Force Limit can be used for Imperial Guard
-#○ +200% Drill Gain
-#○ +10% Discipline
-#○ +10% Morale
-#○ -66% Shock Damage Received
-#○ -66% Fire Damage Received
-#○ +1000% Reinforce Cost
+#● The empire has established an elite guard that is utterly loyal to the state, skilled regiments which are legendary on and off the battlefield
+imperial_guard = {
+	icon = "holy_state_reform"
+	allow_normal_conversion = yes
+	modifiers = {
+		army_tradition = 0.5
+		navy_tradition = 0.5
+		drill_decay_modifier = -0.5
+	}
+}
 #National Bank (Green)
-#● A national bank has been set up to handle most national affairs related to economics,
-#loans, and interest. A universal set up which no longer needs individual moneylenders
-#and private organization.
-#● +20% National Tax Modifier
-#● -0.15 Yearly Inflation
-#● -0.5 Interest per Annum
+#● A national bank has been set up to handle most national affairs related to economics, loans, and interest. A universal set up which no longer needs individual moneylenders and private organization.
+national_bank = {
+	icon = "it's_all_money"
+	allow_normal_conversion = yes
+	modifiers = {
+		global_tax_modifier = 0.25
+		inflation_reduction = 0.15
+		interest = -0.5
+	}
+}
 #Newspaper (Green)
-#● National news is a new and modern way to keep the populace well informed and
-#interested in the affairs of the nation, as well as keeping thoughts more in line with the
-#political elite.
-#● -4 Unrest
-#● +5% Administrative Efficiency
+#● National news is a new and modern way to keep the populace well informed and interested in the affairs of the nation, as well as keeping thoughts more in line with the political elite.
+newspaper = {
+	icon = "arabic_scripture"
+	allow_normal_conversion = yes
+	modifiers = {
+		global_unrest = -2.5
+		administrative_efficiency = 0.05
+		years_of_nationalism = -2.5
+	}
+}
 #Connected Empire (Green)
-#● The empire is well connected by trade and amazing infrastructure, where roads and
-#hubs keep the coin of the empire constantly moving and allows the employment of
-#troops in rapid succession.
-#● +10% Army Movement Speed
-#● +25% Caravan Power
-#● -10% Construction Cost
+#● The empire is well connected by trade and amazing infrastructure, where roads and hubs keep the coin of the empire constantly moving and allows the employment of troops in rapid succession.
+connected_empire = {
+	icon = "chinese_palace"
+	allow_normal_conversion = yes
+	modifiers = {
+		movement_speed = 0.10
+		caravan_power = 0.25
+		build_cost = -0.10
+	}
+}
 
 # GREAT REFORMS
 
 #Monarchy
+
 #Power of Nobility (Level 4)
 #Strong Nobles (Green)
-#● The nation’s nobles are relatively strong both politically and militarily, and curtail the
-#king’s power quite considerably
-#● +15% National Manpower Modifier
-#● +10% Noble Influence
+#● The nation’s nobles are relatively strong both politically and militarily, and curtail the king’s power quite considerably
+strong_nobles = {
+	icon = "achievement_maharana_pratap"
+	allow_normal_conversion = yes
+	modifiers = {
+		global_manpower_modifier = 0.10
+		nobles_influence_modifier = 0.10
+		cavalry_power = 0.05
+	}
+}
 #Curtailed Nobles (Green)
-#● The nation’s noble class has been curtailed, where the local nobility exist mostly in name
-#only.
-#● +10% National Tax Modifier
-#● -10% Noble Influence
+#● The nation’s noble class has been curtailed, where the local nobility exist mostly in name only.
+curtailed_nobles = {
+	icon = "chinese_palace"
+	allow_normal_conversion = yes
+	modifiers = {
+		global_tax_modifier = 0.10
+		nobles_influence_modifier = -0.10
+		cavalry_cost = -0.10
+	}
+}
 #Estate Empowerment (Yellow)
-#● Nobles in the country have power based upon the wealth and prestige of their estates
-#and histories, rather than their privileged linages.
-#● +10% Production Efficiency
-#● -10% National Tax Modifier
-#● New Privilege Unlocked
-#○ Noble Privilege: Establish Estate Economy
-#■ -10 Absolutism
-#■ +5% Noble Lands
-#■ +15% Noble Influence
-#■ -15% State Maintenance
-#■ +5% Development Efficiency
+#● Nobles in the country have power based upon the wealth and prestige of their estates and histories, rather than their privileged linages.
+estate_empowerment = {
+	icon = "chinese_palace"
+	allow_normal_conversion = yes
+	modifiers = {
+		production_efficiency = 0.10
+		global_tax_modifier = -0.10
+		nobles_exclusive_loyalty_modifier = 0.10
+	}
+}
 #Warrior Elite (Yellow)
-#● The nobility of the nation are kept in power by their strong martial traditions and warrior
-#skills, where local warlords hold immense sway via their armies.
-#● +5% Army Morale
-#● +10% Land Force Limit
-#● +10% Army Maintenance
-#● New Privileges Unlocked
-#○ Noble Privilege: Private Armies
-#■ -5 Absolutism
-#■ +10% Noble Loyalty
-#■ +10% Noble Influence
-#■ -25% Mercenary Maintenance
-#■ +5% Mercenary Discipline
-#○ Noble Privilege: Noble Officers
-#■ -5 Absolutism
-#■ +10% Noble Loyalty
-#■ +10% Noble Influence
-#■ +1 Free Leaders
-#■ +0.5 Yearly Army Tradition
+#● The nobility of the nation are kept in power by their strong martial traditions and warrior skills, where local warlords hold immense sway via their armies.
+warrior_estate = {
+	icon = "chinese_palace"
+	allow_normal_conversion = yes
+	modifiers = {
+		land_morale = 0.05
+		land_forcelimit_modifier = 0.10
+		land_maintenance_modifier = 0.10
+	}
+}
+
 #Power of Non-Nobility (Level 7)
 #Empowered Merchants (Green)
-#● The nation’s merchants and rich non-nobles hold incredible power equal to that of
-#nobility in most respects.
-#● +1 Merchant
-#● +10% Burgher Influence
+#● The nation’s merchants and rich non-nobles hold incredible power equal to that of nobility in most respects.
+empowered_merchants = {
+	icon = "chinese_palace"
+	allow_normal_conversion = yes
+	modifiers = {
+		merchants = 1
+		trade_efficiency = 0.05
+		burghers_influence_modifier = 0.10
+	}
+}
 #Empowered Clergy (Green)
-#● The clergy of the nation have incredible political power over nobles, and use that power
-#to enforce the faith of the nation.
-#● +1 Missionary
-#● +10% Clergy Influence
+#● The clergy of the nation have incredible political power over nobles, and use that power to enforce the faith of the nation.
+empowered_clergy = {
+	icon = "chinese_palace"
+	allow_normal_conversion = yes
+	modifiers = {
+		missionaries = 1
+		global_missionary_strength = 0.01
+		church_influence_modifier = 0.10
+	}
+}
 #Noble Superiority (Green)
-#● The Nobles of the nation have secured the full support of the monarchy and have
-#remained the true and original power brokers over the entire nation.
-#● +1 Free Leader
-#● +10% Noble Influence
+#● The Nobles of the nation have secured the full support of the monarchy and have remained the true and original power brokers over the entire nation.
+noble_supremacy = {
+	icon = "chinese_palace"
+	allow_normal_conversion = yes
+	modifiers = {
+		free_leader_pool = 1
+		nobles_loyalty_modifier = 0.10
+		nobles_influence_modifier = 0.10
+	}
+}
 #Bandit Alliance (Red)
-#● Bandits often are criminals who have taken to the roads and lanes of the land, and grow
-#in number as forts become abandoned and trade increases. These well armed groups
-#are approached by the state, agreeing to legitimize and pardon them in return for military
-#support.
-#● -35% Mercenary Maintenance
-#● +50% Mercenary Manpower
-#● +25% Garrison Size
-#● -100% Drill Gain
-#● -10% Army Discipline
+#● Bandits often are criminals who have taken to the roads and lanes of the land, and grow in number as forts become abandoned and trade increases. These well armed groups are approached by the state, agreeing to legitimize and pardon them in return for military support.
+bandit_alliance = {
+	icon = "chinese_palace"
+	allow_normal_conversion = yes
+	modifiers = {
+		merc_maintenance_modifier = -0.25
+		mercenary_manpower = 0.50
+		garrison_size = 0.25
+		drill_gain_modifier = -1.0
+		discipline = -0.10
+	}
+}
+
 #Succession (Level 10)
 #Primogeniture (Green)
 #● A succession type where the eldest child inherits the entire estate.
-#● Strong Claim Heirs gain +1 random Monarch Point when they succeed the throne
-#● +0.25 Yearly Legitimacy
+primogeniture = {
+	icon = "chinese_palace"
+	allow_normal_conversion = yes
+	modifiers = {
+		stability_cost_modifier = -0.10
+	}
+}
 #Seniority (Yellow)
 #● A form of succession where the eldest family member inherits the entire estate.
-#● +100% Heir Chance
-#● +35 Starting Years for Heirs
-#● +500 Starting Years for Long-Lived Heirs
+seniority = {
+	icon = "chinese_palace"
+	allow_normal_conversion = yes
+	modifiers = {
+		heir_chance = 1.0
+		monarch_admin_power = -3
+		monarch_diplomatic_power = -3
+		monarch_military_power = -3
+		advisor_cost = -0.5
+	}
+}
 #Open (Yellow)
-#● A form of succession where any child of the current monarch can claim the throne, but
-#only if they have enough prestige and personal power to do so.
-#● +100% Heir Chance
-#● X25 Pretender Rebel Spawn
-#● Gain Access to Open Succession Events
-#○ Heirs Plots Against Each Other
-#○ Heir Assassinated
-#○ Rival Brother Raises Army
+#● A form of succession where any child of the current monarch can claim the throne, but only if they have enough prestige and personal power to do so.
+open = {
+	icon = "chinese_palace"
+	allow_normal_conversion = yes
+	modifiers = {
+		imperial_authority = 0.10
+		core_creation = -0.15
+		prestige = -0.35
+	}
+	conditional = {
+		allow = { ai = no has_dlc = "Res Publica" }
+		is_elective = yes
+	}
+	effect = {
+		set_country_flag = es_open_flag
+	}
+	removed_effect = {
+	    clr_country_flag = es_open_flag
+	}
+}
 #Gavelkind (Red)
-#● Gavelkind is a form of succession where each child of the monarch is given an equal
-#estate as inheritance
-#● On ruler death, there is a 25% chance to initiating Gavelkind Succession
-#○ 2/3rds of all current states are divided into 2 new states, each with 1/3rd of the
-#total realm
-#○ Each has a ruler of their current dynasty and are of random ages
-#○ These child nations have their own special rules with succession
-#■ If the ruler dies without an heir of ruling age, they are immediately
-#annexed by the parent nation
-#■ They can only escape sudden annexation by being the vassal of another
-#nation, but has a -50 penalty
-#■ Parent nation has a Personal Union CB on all child nations
-#■ They have Gavelkind Succession, but do not have access to event
-#■ Child Nations, if they remain independent for more than 50 years, remove
-#themselves as child nations and become normal nations
-#○ Event Happens only once every 250 years
-#● -33% Aggressive Expansion
-#● -60% Core Creation Cost
-#● +1 Yearly Legitimacy
+#● Gavelkind is a form of succession where each child of the monarch is given an equal estate as inheritance
+gravelkind = {
+	icon = "chinese_palace"
+	allow_normal_conversion = yes
+	modifiers = {
+		legitimacy = 1.0
+		meritocracy = 1.0
+		horde_unity = 1.0
+		devotion = 1.0
+		republican_tradition = 0.5
+		ae_impact = -0.15
+		land_forcelimit_modifier = 0.15
+	}
+	effect = {
+		custom_tooltip = gravelkind_tooltip
+	}
+	removed_effect = {
+	    every_owned_province = {
+		limit = {
+		OR = { 
+			has_province_modifier = minor_royal_family_autonomy
+			has_province_modifier = royal_family_autonomy
+			has_province_modifier = major_family_autonomy 
+		} 
+		}
+		remove_province_modifier = minor_royal_family_autonomy
+		remove_province_modifier = royal_family_autonomy
+		remove_province_modifier = major_family_autonomy
+		}
+	}
+}
+
 #Rights of the King (Level 13)
 #Absolutist Monarch (Green)
-#● The king is the true and unquestionable ruler of the nation, who is undoubtedly the
-#power broker of internal and external diplomacy.
-#● +5 Absolutism
-#● +0.5 Yearly Absolutism
+#● The king is the true and unquestionable ruler of the nation, who is undoubtedly the power broker of internal and external diplomacy.
+absolut_monarch = {
+	icon = "chinese_palace"
+	allow_normal_conversion = yes
+	modifiers = {
+		max_absolutism = 5
+		yearly_absolutism = 0.1
+		harsh_treatment_cost = 0.15
+	}
+}
 #Figurehead (Green)
 #● The king is little more than a figurehead of the nation’s most prominent political class.
-#● +2 Diplomatic Reputation
+figurehead = {
+	icon = "chinese_palace"
+	allow_normal_conversion = yes
+	modifiers = {
+		diplomatic_reputation = 1.5
+		advisor_pool = 1
+		monarch_military_power = -1
+	}
+}
 #Strong Councillors (Yellow)
 #● The king rules the country, but shares power with a strong council.
-#● -45% Adviser Cost
-#● -1 Administrative Monarch Point
+strong_councillors = {
+	icon = "chinese_palace"
+	allow_normal_conversion = yes
+	modifiers = {
+		monarch_admin_power = -1
+		advisor_cost = -0.15
+		autonomy_change_time = -0.1
+	}
+}
 #Parliamentary (Yellow)
 #● The king rules the country in name, but much of the power lies in a parliament.
-#● Parliament Mechanics
-#● -1 Unrest
-#● -1 Diplomatic Monarch Point
+parliamentary = {
+	icon = "chinese_palace"
+	allow_normal_conversion = yes
+	modifiers = {
+		global_unrest = -1.5
+		monarch_diplomatic_power = -1
+		stability_cost_modifier = -0.1
+	}
+	conditional = {
+		allow = { has_dlc = "Common Sense" }
+		has_parliament = yes
+	}
+}
+
 #Purpose of the King (Level 16)
 #Martial Ruler (Green)
-#● The ruler of the nation is it’s defender and grand general of its armies, they are meant to
-#lead on the battlefield.
+#● The ruler of the nation is it’s defender and grand general of its armies, they are meant to lead on the battlefield.
+martial_ruler = {
+	icon = "chinese_palace"
+	allow_normal_conversion = yes
+	modifiers = {
+		free_leader_pool = 1
+	}
+	effect = {
+		custom_tooltip = martial_ruler_toltip
+	} 
+}
 #● +5 PIPs for King Generals
 #Traditional Heritage (Green)
-#● The king’s purpose is to rule, and the reason is because they were born into a family
-#which has ruled since the founding.
+#● The king’s purpose is to rule, and the reason is because they were born into a family which has ruled since the founding.
+traditional_heritage = {
+	icon = "chinese_palace"
+	allow_normal_conversion = yes
+	modifiers = {
+		prestige_decay = -0.01
+	}
+}
 #● +0.5 Yearly Legitimacy
 #Backbone of the Nation (Yellow)
-#● The king is the symbol of the nation, a shining beacon and moral compass for the
-#nation’s people.
-#● +10% Army Morale
-#● -1 Unrest
-#● -1 Stability on Ruler Death (Stacks with other stability effects on ruler death)
+#● The king is the symbol of the nation, a shining beacon and moral compass for the nation’s people.
+backbone_of_the_nation = {
+	icon = "chinese_palace"
+	allow_normal_conversion = yes
+	modifiers = {
+		land_morale = 0.10
+		naval_morale = 0.10
+		global_unrest = -1
+	}
+	effect = {
+		custom_tooltip = loose_extra_stability
+	} 
+}
 #National Merit (Yellow)
-#● The king rules the nation for they are the best ruler for the nation, their family is charged
-#with producing the best rulers.
-#● Rulers with any skill of 5 or over gain +1 Yearly Legitimacy
-#● Rulers with all monarch points 4 or lower gain -1.5 Yearly Legitimacy
+#● The king rules the nation for they are the best ruler for the nation, their family is charged with producing the best rulers.
+national_merit = {
+	icon = "chinese_palace"
+	allow_normal_conversion = yes
+	modifiers = {
+		heir_chance = -0.5
+		monarch_admin_power = 1
+		monarch_diplomatic_power = 1
+	}
+}
+
 #Courtier Influence (Level 19)
 #Courtier Politics (Green)
-#● Courtiers converse on politics within the public court, which is filled to the brim with
-#administrative figures and political manipulators
-#● +1 Free Administrative Policy
+#● Courtiers converse on politics within the public court, which is filled to the brim with administrative figures and political manipulators
+courtier_politics = {
+	icon = "chinese_palace"
+	allow_normal_conversion = yes
+	modifiers = {
+		free_adm_policy = 1
+	}
+}
 #Ambassador’s Court (Green)
-#● The court is filled with ambassadors of many nations and peoples, of many different
-#tongues and races, who openly discuss policy within the court.
-#● +1 Free Diplomatic Policy
+#● The court is filled with ambassadors of many nations and peoples, of many different tongues and races, who openly discuss policy within the court.
+court_of_ambassadors = {
+	icon = "chinese_palace"
+	allow_normal_conversion = yes
+	modifiers = {
+		free_dip_policy = 1
+	}
+}
 #Martial Court (Green)
-#● The court of the monarch is filled with the realm’s most accomplished heroes and skilled
-#soldiers, who discuss strategy and recount their epic deeds before their ruler.
-#● +1 Free Military Policy
+#● The court of the monarch is filled with the realm’s most accomplished heroes and skilled soldiers, who discuss strategy and recount their epic deeds before their ruler.
+martial_court = {
+	icon = "chinese_palace"
+	allow_normal_conversion = yes
+	modifiers = {
+		free_mil_policy = 1
+	}
+}
 #Court of Darkness (Red)
-#● The court of the nation is filled with an oppressive darkness, where the ruler brings on
-#the most skilled, and debased, Tamriel has to offer.
-#● +2 Possible Advisers
-#● Court of Darkness Mechanics
-#○ Gain access to a unique and odd pool of ‘despicable’ advisers
-#■ Admin Advisers
-#● Psychopathic Artist
-#○ -20% Stability Cost
-#○ -10% National Tax Modifier
-#● Torturer
-#○ +4% Missionary Strength
-#○ +2 Unrest
-#● Con Man
-#○ +0.2 Yearly Inflation Reduction
-#○ -1 Yearly Prestige
-#● Mad Scholar
-#○ +20% Production Efficiency
-#○ -20% Colonial Range
-#● Sadist
-#○ +2 Yearly Prestige
-#○ +0.1 Yearly Inflation
-#● Occultist
-#○ -4 Unrest
-#○ -2% Missionary Strength
-#● Criminal
-#○ +20% National Tax Modifier
-#○ +10% Stability Cost
-#■ Diplo Advisers
-#● Bandit
-#○ +20% Tariffs
-#○ -10% Trade Efficiency
-#● Vampire
-#○ +40% Improve Relations
-#○ -1 Diplomatic Reputation
-#● Corsair
-#○ +20% Morale of Navies
-#○ -25% Spy Network Construction
-#● Conqueror
-#○ +40% Colonial Range
-#○ +10% Land Maintenance Modifier
-#● Assassin
-#○ +50% Spy Network Construction
-#○ -10% Morale of Navies
-#● Hedonist
-#○ +2 Diplomatic Reputation
-#○ -20% Improve Relations
-#● Slaver
-#○ +20% Trade Efficiency
-#○ -10% Tariffs
-#■ Mil Advisers
-#● Lich
-#○ +20% Land Force Limit
-#○ -33% Reinforce Speed
-#● Pillager
-#○ +20% Morale of Armies
-#○ -20% Fort Defense
-#● Tyrant
-#○ +10% Discipline
-#○ -10% National Manpower Modifier
-#● Cheapscape
-#○ -20% Land Maintenance Modifier
-#○ -10% Production Efficiency
-#● Conscriptor
-#○ +20% National Manpower Modifier
-#○ -5% Discipline
-#● Dremora
-#○ +40% Fort Defense
-#○ -10% Army Morale
-#● Executioner
-#○ +66% Reinforce Speed
-#○ -10% Land Force Limit
-#○ Normal advisers are +100% Cost
-#○ Dark Advisers are at -50% Cost
-#○ Dark Advisers over time add to a hidden modifier by 0.1 every year called
-#Growing Darkness which gives sizable adverse effects the more this reform
-#remains
-#■ 0 - 10
-#● No Effect
-#■ 11 - 30
-#● +1 Unrest
-#● -1 Diplomatic Reputation
-#■ 31 - 60
-#● +3 Unrest
-#● -2 Diplomatic Reputation
-#● +0.1 Yearly Corruption
-#■ 61 - 70
-#● +6 Unrest
-#● -4 Diplomatic Reputation
-#● +0.2 Yearly Corruption
-#● -25% Improve Relations
-#■ 71 - 95
-#● +8 Unrest
-#● -5 Diplomatic Reputation
-#● +0.3 Yearly Corruption
-#● -50% Improve Relations
-#● +10 Years of Separatism
-#■ 95 -100
-#● +10 Unrest
-#● -7 Diplomatic Reputation
-#● +0.5 Yearly Corruption
-#● -75% Improve Relations
-#● +20 Years of Separatism
-#● All nations in range get ‘Contain Dark Court’ CB on nation, which
-#has the option to forcefully remove the dark court reform from the
-#nation
+#● The court of the nation is filled with an oppressive darkness, where the ruler brings on the most skilled, and debased, Tamriel has to offer.
+court_of_darkness = {
+	icon = "chinese_palace"
+	allow_normal_conversion = yes
+	modifiers = {
+		advisor_cost = -0.50
+	}
+	effect = {
+		tooltip = dark_advisors_tooltip
+		set_country_flag = court_of_darkness_flag
+	}
+	removed_effect = {
+	    clr_country_flag = court_of_darkness_flag
+	}
+}
+
 #Legitimacy (Level 22)
 #Tradition (Green)
-#● The monarchy of the land rules by tradition, given the right to rule via their bloodline and
-#history.
+#● The monarchy of the land rules by tradition, given the right to rule via their bloodline and history.
+es_tradition = {
+	icon = "chinese_palace"
+	allow_normal_conversion = yes
+	modifiers = {
+		num_accepted_cultures = 1
+	}
+}
 #● +0.25 Yearly Legitimacy
 #● +10% Chance of Heir
 #Strongest Land Owner (Green)
-#● The legitimacy of the monarch is based on their personal power in the kingdom, both
-#martially and politically.
+#● The legitimacy of the monarch is based on their personal power in the kingdom, both martially and politically.
+strongest_land_owner = {
+	icon = "chinese_palace"
+	allow_normal_conversion = yes
+	modifiers = {
+		global_tax_modifier = 0.10
+	}
+}
 #● -20% Stability Cost
 #● +0.5 Yearly Prestige
 #Richest Landowner (Green)
-#● The legitimacy of the monarch is based entirely on their personal wealth and monopoly,
-#the richest family in the kingdom holds the true power.
-#● Grants new Decision
-#○ Buy Legitimacy (Repeatable)
-#■ 3 Years of income
-#■ +10 Legitimacy
-#● +10% National Tax Modifier
+#● The legitimacy of the monarch is based entirely on their personal wealth and monopoly, the richest family in the kingdom holds the true power.
+richest_landowner = {
+	icon = "chinese_palace"
+	allow_normal_conversion = yes
+	modifiers = {
+		interest = -1
+	}
+}
 #Divine Right (Yellow)
-#● The king is a king by the will of the gods, and has the spark of divinity in their blood. God
-#save the King.
-#● Enables Divine Blood Mechanics
-#○ Divine Blood is tied to Religious Unity and Tolerance
-#■ -3 Or More Tolerance of the True Faith
-#● -2 Yearly Absolutism
-#● -30 Maximum Absolutism
-#● +4 Unrest
-#● -3 Yearly Legitimacy
-#■ -1 - -2 Tolerance of the True Faith
-#● -1 Yearly Absolutism
-#● -15 Maximum Absolutism
-#● +2 Unrest
-#● -1 Yearly Legitimacy
-#■ 0 - 3 Tolerance of the True Faith
-#● +0.25 Yearly Legitimacy
-#■ 4 - 6 Tolerance of the True Faith
-#● +0.5 Yearly Absolutism
-#● +5 Maximum Absolutism
-#● +0.5 Yearly Legitimacy
-#■ 7 or more Tolerance of the True Faith
-#● +1 Yearly Absolutism
-#● +10 Maximum Absolutism
-#● +1 Yearly Legitimacy
-#○ Gain Access to Divine Blood Event Pool
-#■ God King Questioned
-#■ Clergy vs Monarchy
-#■ Theological Faux Pas
-#○ Changing out this reform gives a 10 year malus called Divine Blood Denied
-#■ -0.5 Yearly Legitimacy
-#■ -10 Max Absolutism
-#■ -2 Tolerance of the True Faith
+#● The king is a king by the will of the gods, and has the spark of divinity in their blood. God save the King.
+divine_right = {
+	icon = "chinese_palace"
+	allow_normal_conversion = yes
+	modifiers = {
+		tolerance_own = 1
+	}
+	effect = {
+		set_country_flag = es_divine_right_flag
+	}
+	removed_effect = {
+	    clr_country_flag = es_divine_right_flag
+	}
+}
+
 #Vassal Contribution (Level 25)
 #Tribute Focus (Green)
-#● Vassals are required to send larger cuts of their taxes to the monarch, in return for their
-#overlord’s protection.
-#● +25% Income from Vassals
-#● +1 Diplomatic Relations
+#● Vassals are required to send larger cuts of their taxes to the monarch, in return for their overlord’s protection.
+tribute_focus = {
+	icon = "chinese_palace"
+	allow_normal_conversion = yes
+	modifiers = {
+		vassal_income = 0.25
+	}
+}
 #Protection Focus (Green)
-#● Vassals are required to send chunks of their soldiers directly to their overlord to fight
-#more in the wars.
-#● +50% Vassal Force Limit Contribution
-#● +1 Diplomatic Relations
+#● Vassals are required to send chunks of their soldiers directly to their overlord to fight more in the wars.
+protection_focus = {
+	icon = "chinese_palace"
+	allow_normal_conversion = yes
+	modifiers = {
+		vassal_forcelimit_bonus = 0.25
+	}
+}
 #Trade Focus (Green)
-#● Vassals are required to provide stronger trade deals to their overlord, and colonial
-#nations must provide a larger share of their income.
-#● +10% Tariffs
-#● +10% Trade Steering
-#● +1 Diplomatic Relations
+#● Vassals are required to provide stronger trade deals to their overlord, and colonial nations must provide a larger share of their income.
+trade_focus = {
+	icon = "chinese_palace"
+	allow_normal_conversion = yes
+	modifiers = {
+		global_tariffs = 0.25
+	}
+}
 #Legitimacy Focus (Yellow)
-#● The number of subjects adds to the legitimacy of the monarch, which makes the sole
-#purpose of the nation’s vassals is to be purely subjects of the monarch.
-#● Each vassal grants +0.25 Yearly Legitimacy, with a max of 10 vassal contributors
-#● -1 Yearly Legitimacy if there is no vassal
+#● The number of subjects adds to the legitimacy of the monarch, which makes the sole purpose of the nation’s vassals is to be purely subjects of the monarch.
+legitimacy_focus = {
+	icon = "chinese_palace"
+	allow_normal_conversion = yes
+	modifiers = {
+		legitimacy = 0.25
+		meritocracy = 0.25
+		devotion = 0.25
+		horde_unity = 0.25
+		republican_tradition = 0.25
+	}
+}
+
 #Monarchal Innovation (Level 28)
 #Legendary Advisory Council (Green)
-#● The monarchy relies on a powerful and skilled administration with councillors of various
-#fields and offices. The monarch can call upon an endless pool of legendary resources
-#and advisers to help improve the nation.
-#● +1 Administrative Monarch Point
-#● -25% Adviser Cost
-#● +3 Possible Advisers
+#● The monarchy relies on a powerful and skilled administration with councillors of various fields and offices. The monarch can call upon an endless pool of legendary resources and advisers to help improve the nation.
+legendary_advisory_council = {
+	icon = "chinese_palace"
+	allow_normal_conversion = yes
+	modifiers = {
+		monarch_admin_power = 1
+		advisor_cost = -0.25
+		advisor_pool = 3
+	}
+}
 #Strong Familial Ties (Green)
-#● The monarchical family has strong family traditions and ties which make them a strong
-#part of the national identity, and have long tendrils across monarchies of the world.
-#● +1 Diplomatic Monarch Point
-#● +50% Chance of Heir
-#● +1 Yearly Legitimacy
+#● The monarchical family has strong family traditions and ties which make them a strong part of the national identity, and have long tendrils across monarchies of the world.
+strong_familiar_ties = {
+	icon = "chinese_palace"
+	allow_normal_conversion = yes
+	modifiers = {
+		monarch_diplomatic_power = 1
+		heir_chance = 0.25
+		improve_relation_modifier = 0.25
+	}
+}
 #Modernized Levies (Green)
-#● The monarchy has perfected the system of gathering armies to it’s beck and call, and it
-#is legendary for its size, strength, and discipline.
-#● +1 Military Monarch Point
-#● +20% Land Force Limit
-#● -10% Land Maintenance Modifier
+#● The monarchy has perfected the system of gathering armies to it’s beck and call, and it is legendary for its size, strength, and discipline.
+modernized_levies = {
+	icon = "chinese_palace"
+	allow_normal_conversion = yes
+	modifiers = {
+		monarch_military_power = 1
+		land_maintenance_modifier = -0.25
+		naval_maintenance_modifier = -0.25
+	}
+}
 #Royal Commissions (Green)
-#● Rich royalty in the nation spend their wealth on large scale building projects, art studios,
-#and trade agreements with their personal wealth.
-#● -25% Idea Cost
-#● -15% Construction Cost
-#● +1 Yearly Prestige
+#● Rich royalty in the nation spend their wealth on large scale building projects, art studios, and trade agreements with their personal wealth.
+royal_comissions = {
+	icon = "chinese_palace"
+	allow_normal_conversion = yes
+	modifiers = {
+		idea_cost = -0.25
+		build_cost = -0.25
+		prestige = 0.25
+	}
+}
+
 #Republic
 #Election Cycle (Level 4)
 #Long Presidency (Green)
@@ -1883,6 +2004,28 @@ isolationist = {
 #● +10% Influence
 #● +2 Tolerance of the True Faith
 #● +25 Opinion from nations of the same faith
+
+#● New Privilege Unlocked
+#○ Noble Privilege: Establish Estate Economy
+#■ -10 Absolutism
+#■ +5% Noble Lands
+#■ +15% Noble Influence
+#■ -15% State Maintenance
+#■ +5% Development Efficiency
+
+#● New Privileges Unlocked
+#○ Noble Privilege: Private Armies
+#■ -5 Absolutism
+#■ +10% Noble Loyalty
+#■ +10% Noble Influence
+#■ -25% Mercenary Maintenance
+#■ +5% Mercenary Discipline
+#○ Noble Privilege: Noble Officers
+#■ -5 Absolutism
+#■ +10% Noble Loyalty
+#■ +10% Noble Influence
+#■ +1 Free Leaders
+#■ +0.5 Yearly Army Tradition
 
 ###########################
 # NEW RULER PERSONALITIES #

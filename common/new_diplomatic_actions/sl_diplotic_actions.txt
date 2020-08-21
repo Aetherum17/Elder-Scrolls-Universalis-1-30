@@ -12,6 +12,7 @@ heist_nation = {
 			who = FROM
 			value = 50
 		}
+		adm_power = 100
 	}
 	on_accept = {
 		add_spy_network_in = {
@@ -23,6 +24,7 @@ heist_nation = {
 		export_to_variable = { which = IncomeToSteal value = treasury who = FROM }
 		divide_variable = { which = IncomeToSteal value = 10 }
 		set_country_flag = heist_nation_flag
+		add_adm_power = -100
 	}
 	on_decline = { 
 	}
@@ -55,7 +57,7 @@ scam_nation = {
 			who = FROM
 			value = 75
 		}
-		years_of_income = 0.75
+		dip_power = 100
 	}
 	on_accept = {
 		add_spy_network_in = {
@@ -64,7 +66,7 @@ scam_nation = {
 		}
 		FROM = { save_event_target_as = es_nation_to_scam }
 		set_country_flag = scam_nation_flag
-		add_years_of_income = -0.75
+		add_dip_power = -100
 	}
 	on_decline = { 
 	}
@@ -98,7 +100,7 @@ intimidate_nation = {
 			who = FROM
 			value = 100
 		}
-		years_of_income = 1.5
+		mil_power = 100
 	}
 	on_accept = {
 		add_spy_network_in = {
@@ -107,7 +109,7 @@ intimidate_nation = {
 		}
 		FROM = { save_event_target_as = es_nation_to_intimidate }
 		set_country_flag = intimidate_nation_flag
-		add_years_of_income = -1.5
+		add_mil_power = -100
 	}
 	on_decline = { 
 	}
