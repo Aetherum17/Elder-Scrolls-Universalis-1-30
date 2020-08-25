@@ -18,12 +18,12 @@ es_revolution = {
 	
 	can_stop = {
 	    OR = {
-		AND = { government = monarchy NOT = { legitimacy = 50 } }
-		AND = { government = republic NOT = { republican_tradition = 50 } }
-		AND = { government = theocracy has_dlc = "Common Sense" NOT = { devotion = 50 } }
-		AND = { is_nomad = yes has_dlc = "The Cossacks" NOT = { horde_unity = 50 } }
-		AND = { is_nomad = yes NOT = { has_dlc = "The Cossacks" } NOT = { legitimacy = 50 } }
-		AND = { is_emperor_of_china = yes has_dlc = "Mandate of Heaven" NOT = { meritocracy = 50 } } 
+		AND = { government = monarchy legitimacy = 50 }
+		AND = { government = republic republican_tradition = 50 }
+		AND = { government = theocracy has_dlc = "Common Sense" devotion = 50 }
+		AND = { is_nomad = yes has_dlc = "The Cossacks" horde_unity = 50 }
+		AND = { is_nomad = yes NOT = { has_dlc = "The Cossacks" } legitimacy = 50 }
+		AND = { is_emperor_of_china = yes has_dlc = "Mandate of Heaven" meritocracy = 50 } 
 		}
 	}
 	

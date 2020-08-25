@@ -1004,7 +1004,7 @@ connected_empire = {
 #Strong Nobles (Green)
 #● The nation’s nobles are relatively strong both politically and militarily, and curtail the king’s power quite considerably
 strong_nobles = {
-	icon = "achievement_maharana_pratap"
+	icon = "achievement_multiculturalism"
 	allow_normal_conversion = yes
 	modifiers = {
 		global_manpower_modifier = 0.10
@@ -1015,7 +1015,7 @@ strong_nobles = {
 #Curtailed Nobles (Green)
 #● The nation’s noble class has been curtailed, where the local nobility exist mostly in name only.
 curtailed_nobles = {
-	icon = "chinese_palace"
+	icon = "achievement_sworn_fealty"
 	allow_normal_conversion = yes
 	modifiers = {
 		global_tax_modifier = 0.10
@@ -1026,7 +1026,7 @@ curtailed_nobles = {
 #Estate Empowerment (Yellow)
 #● Nobles in the country have power based upon the wealth and prestige of their estates and histories, rather than their privileged linages.
 estate_empowerment = {
-	icon = "chinese_palace"
+	icon = "achievement_victorian_three"
 	allow_normal_conversion = yes
 	modifiers = {
 		production_efficiency = 0.10
@@ -1037,7 +1037,7 @@ estate_empowerment = {
 #Warrior Elite (Yellow)
 #● The nobility of the nation are kept in power by their strong martial traditions and warrior skills, where local warlords hold immense sway via their armies.
 warrior_estate = {
-	icon = "chinese_palace"
+	icon = "achievement_saladins_legacy"
 	allow_normal_conversion = yes
 	modifiers = {
 		land_morale = 0.05
@@ -1050,7 +1050,7 @@ warrior_estate = {
 #Empowered Merchants (Green)
 #● The nation’s merchants and rich non-nobles hold incredible power equal to that of nobility in most respects.
 empowered_merchants = {
-	icon = "chinese_palace"
+	icon = "achievement_with_a_little_help"
 	allow_normal_conversion = yes
 	modifiers = {
 		merchants = 1
@@ -1061,7 +1061,7 @@ empowered_merchants = {
 #Empowered Clergy (Green)
 #● The clergy of the nation have incredible political power over nobles, and use that power to enforce the faith of the nation.
 empowered_clergy = {
-	icon = "chinese_palace"
+	icon = "achievement_redecorating"
 	allow_normal_conversion = yes
 	modifiers = {
 		missionaries = 1
@@ -1072,7 +1072,7 @@ empowered_clergy = {
 #Noble Superiority (Green)
 #● The Nobles of the nation have secured the full support of the monarchy and have remained the true and original power brokers over the entire nation.
 noble_supremacy = {
-	icon = "chinese_palace"
+	icon = "achievement_true_heir_of_timor"
 	allow_normal_conversion = yes
 	modifiers = {
 		free_leader_pool = 1
@@ -1083,7 +1083,7 @@ noble_supremacy = {
 #Bandit Alliance (Red)
 #● Bandits often are criminals who have taken to the roads and lanes of the land, and grow in number as forts become abandoned and trade increases. These well armed groups are approached by the state, agreeing to legitimize and pardon them in return for military support.
 bandit_alliance = {
-	icon = "chinese_palace"
+	icon = "achievement_spaghetti_western"
 	allow_normal_conversion = yes
 	modifiers = {
 		merc_maintenance_modifier = -0.25
@@ -1098,7 +1098,7 @@ bandit_alliance = {
 #Primogeniture (Green)
 #● A succession type where the eldest child inherits the entire estate.
 primogeniture = {
-	icon = "chinese_palace"
+	icon = "achievement_the_rising_sun"
 	allow_normal_conversion = yes
 	modifiers = {
 		stability_cost_modifier = -0.10
@@ -1107,7 +1107,7 @@ primogeniture = {
 #Seniority (Yellow)
 #● A form of succession where the eldest family member inherits the entire estate.
 seniority = {
-	icon = "chinese_palace"
+	icon = "achievement_master_of_india"
 	allow_normal_conversion = yes
 	modifiers = {
 		heir_chance = 1.0
@@ -1120,7 +1120,7 @@ seniority = {
 #Open (Yellow)
 #● A form of succession where any child of the current monarch can claim the throne, but only if they have enough prestige and personal power to do so.
 open = {
-	icon = "chinese_palace"
+	icon = "achievement_populists_in_government"
 	allow_normal_conversion = yes
 	modifiers = {
 		imperial_authority = 0.10
@@ -1141,7 +1141,7 @@ open = {
 #Gavelkind (Red)
 #● Gavelkind is a form of succession where each child of the monarch is given an equal estate as inheritance
 gravelkind = {
-	icon = "chinese_palace"
+	icon = "achievement_trustworthy"
 	allow_normal_conversion = yes
 	modifiers = {
 		legitimacy = 1.0
@@ -1175,7 +1175,7 @@ gravelkind = {
 #Absolutist Monarch (Green)
 #● The king is the true and unquestionable ruler of the nation, who is undoubtedly the power broker of internal and external diplomacy.
 absolut_monarch = {
-	icon = "chinese_palace"
+	icon = "achievement_truly_divine_ruler"
 	allow_normal_conversion = yes
 	modifiers = {
 		max_absolutism = 5
@@ -1186,7 +1186,7 @@ absolut_monarch = {
 #Figurehead (Green)
 #● The king is little more than a figurehead of the nation’s most prominent political class.
 figurehead = {
-	icon = "chinese_palace"
+	icon = "achievement_strait_talk"
 	allow_normal_conversion = yes
 	modifiers = {
 		diplomatic_reputation = 1.5
@@ -1197,7 +1197,7 @@ figurehead = {
 #Strong Councillors (Yellow)
 #● The king rules the country, but shares power with a strong council.
 strong_councillors = {
-	icon = "chinese_palace"
+	icon = "achievement_colonial_management"
 	allow_normal_conversion = yes
 	modifiers = {
 		monarch_admin_power = -1
@@ -1208,7 +1208,7 @@ strong_councillors = {
 #Parliamentary (Yellow)
 #● The king rules the country in name, but much of the power lies in a parliament.
 parliamentary = {
-	icon = "chinese_palace"
+	icon = "achievement_electable"
 	allow_normal_conversion = yes
 	modifiers = {
 		global_unrest = -1.5
@@ -1225,7 +1225,7 @@ parliamentary = {
 #Martial Ruler (Green)
 #● The ruler of the nation is it’s defender and grand general of its armies, they are meant to lead on the battlefield.
 martial_ruler = {
-	icon = "chinese_palace"
+	icon = "achievement_cherrypicking"
 	allow_normal_conversion = yes
 	modifiers = {
 		free_leader_pool = 1
@@ -1238,7 +1238,7 @@ martial_ruler = {
 #Traditional Heritage (Green)
 #● The king’s purpose is to rule, and the reason is because they were born into a family which has ruled since the founding.
 traditional_heritage = {
-	icon = "chinese_palace"
+	icon = "achievement_traditional_player"
 	allow_normal_conversion = yes
 	modifiers = {
 		prestige_decay = -0.01
@@ -1248,7 +1248,7 @@ traditional_heritage = {
 #Backbone of the Nation (Yellow)
 #● The king is the symbol of the nation, a shining beacon and moral compass for the nation’s people.
 backbone_of_the_nation = {
-	icon = "chinese_palace"
+	icon = "achievement_back_in_control"
 	allow_normal_conversion = yes
 	modifiers = {
 		land_morale = 0.10
@@ -1262,7 +1262,7 @@ backbone_of_the_nation = {
 #National Merit (Yellow)
 #● The king rules the nation for they are the best ruler for the nation, their family is charged with producing the best rulers.
 national_merit = {
-	icon = "chinese_palace"
+	icon = "achievement_stern_des_sudens"
 	allow_normal_conversion = yes
 	modifiers = {
 		heir_chance = -0.5
@@ -1275,7 +1275,7 @@ national_merit = {
 #Courtier Politics (Green)
 #● Courtiers converse on politics within the public court, which is filled to the brim with administrative figures and political manipulators
 courtier_politics = {
-	icon = "chinese_palace"
+	icon = "achievement_the_navigator"
 	allow_normal_conversion = yes
 	modifiers = {
 		free_adm_policy = 1
@@ -1284,7 +1284,7 @@ courtier_politics = {
 #Ambassador’s Court (Green)
 #● The court is filled with ambassadors of many nations and peoples, of many different tongues and races, who openly discuss policy within the court.
 court_of_ambassadors = {
-	icon = "chinese_palace"
+	icon = "achievement_the_prince_of_egypt"
 	allow_normal_conversion = yes
 	modifiers = {
 		free_dip_policy = 1
@@ -1293,7 +1293,7 @@ court_of_ambassadors = {
 #Martial Court (Green)
 #● The court of the monarch is filled with the realm’s most accomplished heroes and skilled soldiers, who discuss strategy and recount their epic deeds before their ruler.
 martial_court = {
-	icon = "chinese_palace"
+	icon = "achievement_gothic_invasion"
 	allow_normal_conversion = yes
 	modifiers = {
 		free_mil_policy = 1
@@ -1302,13 +1302,13 @@ martial_court = {
 #Court of Darkness (Red)
 #● The court of the nation is filled with an oppressive darkness, where the ruler brings on the most skilled, and debased, Tamriel has to offer.
 court_of_darkness = {
-	icon = "chinese_palace"
+	icon = "achievement_one_family_to_rule_them_all"
 	allow_normal_conversion = yes
 	modifiers = {
 		advisor_cost = -0.50
 	}
 	effect = {
-		tooltip = dark_advisors_tooltip
+		custom_tooltip = dark_advisors_tooltip
 		set_country_flag = court_of_darkness_flag
 	}
 	removed_effect = {
@@ -1320,7 +1320,7 @@ court_of_darkness = {
 #Tradition (Green)
 #● The monarchy of the land rules by tradition, given the right to rule via their bloodline and history.
 es_tradition = {
-	icon = "chinese_palace"
+	icon = "where_am_i"
 	allow_normal_conversion = yes
 	modifiers = {
 		num_accepted_cultures = 1
@@ -1331,7 +1331,7 @@ es_tradition = {
 #Strongest Land Owner (Green)
 #● The legitimacy of the monarch is based on their personal power in the kingdom, both martially and politically.
 strongest_land_owner = {
-	icon = "chinese_palace"
+	icon = "achievement_the_continuation_of_diplomacy"
 	allow_normal_conversion = yes
 	modifiers = {
 		global_tax_modifier = 0.10
@@ -1342,7 +1342,7 @@ strongest_land_owner = {
 #Richest Landowner (Green)
 #● The legitimacy of the monarch is based entirely on their personal wealth and monopoly, the richest family in the kingdom holds the true power.
 richest_landowner = {
-	icon = "chinese_palace"
+	icon = "achievement_grand_duchy"
 	allow_normal_conversion = yes
 	modifiers = {
 		interest = -1
@@ -1351,7 +1351,7 @@ richest_landowner = {
 #Divine Right (Yellow)
 #● The king is a king by the will of the gods, and has the spark of divinity in their blood. God save the King.
 divine_right = {
-	icon = "chinese_palace"
+	icon = "achievement_guaranteer_of_peace"
 	allow_normal_conversion = yes
 	modifiers = {
 		tolerance_own = 1
@@ -1368,7 +1368,7 @@ divine_right = {
 #Tribute Focus (Green)
 #● Vassals are required to send larger cuts of their taxes to the monarch, in return for their overlord’s protection.
 tribute_focus = {
-	icon = "chinese_palace"
+	icon = "achievement_definitely_the_sultan_of_rum"
 	allow_normal_conversion = yes
 	modifiers = {
 		vassal_income = 0.25
@@ -1377,7 +1377,7 @@ tribute_focus = {
 #Protection Focus (Green)
 #● Vassals are required to send chunks of their soldiers directly to their overlord to fight more in the wars.
 protection_focus = {
-	icon = "chinese_palace"
+	icon = "achievement_the_princess_is_in_this_castle"
 	allow_normal_conversion = yes
 	modifiers = {
 		vassal_forcelimit_bonus = 0.25
@@ -1386,7 +1386,7 @@ protection_focus = {
 #Trade Focus (Green)
 #● Vassals are required to provide stronger trade deals to their overlord, and colonial nations must provide a larger share of their income.
 trade_focus = {
-	icon = "chinese_palace"
+	icon = "achievement_four_for_trade"
 	allow_normal_conversion = yes
 	modifiers = {
 		global_tariffs = 0.25
@@ -1395,7 +1395,7 @@ trade_focus = {
 #Legitimacy Focus (Yellow)
 #● The number of subjects adds to the legitimacy of the monarch, which makes the sole purpose of the nation’s vassals is to be purely subjects of the monarch.
 legitimacy_focus = {
-	icon = "chinese_palace"
+	icon = "achievement_respected"
 	allow_normal_conversion = yes
 	modifiers = {
 		legitimacy = 0.25
@@ -1410,7 +1410,7 @@ legitimacy_focus = {
 #Legendary Advisory Council (Green)
 #● The monarchy relies on a powerful and skilled administration with councillors of various fields and offices. The monarch can call upon an endless pool of legendary resources and advisers to help improve the nation.
 legendary_advisory_council = {
-	icon = "chinese_palace"
+	icon = "achievement_all_your_trade_are_belong_to_us"
 	allow_normal_conversion = yes
 	modifiers = {
 		monarch_admin_power = 1
@@ -1421,7 +1421,7 @@ legendary_advisory_council = {
 #Strong Familial Ties (Green)
 #● The monarchical family has strong family traditions and ties which make them a strong part of the national identity, and have long tendrils across monarchies of the world.
 strong_familiar_ties = {
-	icon = "chinese_palace"
+	icon = "achievement_double_the_love"
 	allow_normal_conversion = yes
 	modifiers = {
 		monarch_diplomatic_power = 1
@@ -1432,7 +1432,7 @@ strong_familiar_ties = {
 #Modernized Levies (Green)
 #● The monarchy has perfected the system of gathering armies to it’s beck and call, and it is legendary for its size, strength, and discipline.
 modernized_levies = {
-	icon = "chinese_palace"
+	icon = "achievement_victorious"
 	allow_normal_conversion = yes
 	modifiers = {
 		monarch_military_power = 1
@@ -1443,7 +1443,7 @@ modernized_levies = {
 #Royal Commissions (Green)
 #● Rich royalty in the nation spend their wealth on large scale building projects, art studios, and trade agreements with their personal wealth.
 royal_comissions = {
-	icon = "chinese_palace"
+	icon = "achievement_academical"
 	allow_normal_conversion = yes
 	modifiers = {
 		idea_cost = -0.25
@@ -1455,517 +1455,820 @@ royal_comissions = {
 #Republic
 #Election Cycle (Level 4)
 #Long Presidency (Green)
-#● The republic believes in a longer presidency, where the ruler can further their own
-#agenda with relative ease.
-#● +1 Length of Election Cycle
-#● +10 Maximum Absolutism
+#● The republic believes in a longer presidency, where the ruler can further their own agenda with relative ease.
+long_presidency = {
+	icon = "achievement_these_banners_need_a_saga"
+	allow_normal_conversion = yes
+	modifiers = {
+		election_cycle = 1
+		max_absolutism = 5
+		yearly_absolutism = 0.05
+	}
+}
 #Short Presidency (Green)
-#● The republic believes in a short presidency, granting more power to republican
-#institutions.
-#● -1 Length of Election Cycle
-#● +0.05 Yearly Republican Tradition
+#● The republic believes in a short presidency, granting more power to republican institutions.
+short_presidency = {
+	icon = "achievement_shahanshah"
+	allow_normal_conversion = yes
+	modifiers = {
+		election_cycle = -1
+		promote_culture_cost = -0.10
+		republican_tradition = 0.10
+	}
+}
 #Extremely Long Presidency (Yellow)
-#● The republic believes in an extended presidency, where the ruler has a larger amount of
-#time to dish out their agenda.
-#● +3 Length of Election Cycle
-#● +25 Maximum Absolutism
-#● -0.10 Yearly Republican Tradition
+#● The republic believes in an extended presidency, where the ruler has a larger amount of time to dish out their agenda.
+extremly_long_presidency = {
+	icon = "achievement_truly_divine_ruler"
+	allow_normal_conversion = yes
+	modifiers = {
+		election_cycle = 3
+		max_absolutism = 10
+		yearly_absolutism = 0.10
+	}
+}
 #Life Appointment (Red)
 #● The republic appoints their rulers for life.
-#● Rulers rule for Life
-#● +3 Random Candidate Bonus
-#● +40 Maximum Absolutism
-#● -1 Yearly Republican Tradition
+life_appointmemt = {
+	icon = "achievement_all_your_trade_are_belong_to_us"
+	allow_normal_conversion = yes
+	modifiers = {
+		candidate_random_bonus = 3
+		max_absolutism = 35
+		republican_tradition = -0.35
+	}
+	effect = {
+		custom_tooltip = on_death_elections
+	}
+	has_term_election = no
+}
 #Citizenship (Level 7)
 #Land Owning Citizenship (Green)
-#● Citizenship is gifted only to a small but rich group of landowners, the base of all voting
-#systems in a republic
-#● +5% Local Goods Produced
-#● -15% State Maintenance
+#● Citizenship is gifted only to a small but rich group of landowners, the base of all voting systems in a republic
+land_owning_citizenship = {
+	icon = "achievement_the_princess_is_in_this_castle"
+	allow_normal_conversion = yes
+	modifiers = {
+		trade_goods_size_modifier = 0.05
+		core_decay_on_your_own = -0.1
+		state_maintenance_modifier = -0.15
+	}
+}
 #Expanded Citizenship (Green)
-#● The nation considers all primary members in the nation as citizens regardless of class or
-#wealth.
-#● -1 Unrest
-#● -5% Minimum Autonomy of Territories
+#● The nation considers all primary members in the nation as citizens regardless of class or wealth.
+expanded_citizenship = {
+	icon = "achievement_turning_the_tide"
+	allow_normal_conversion = yes
+	modifiers = {
+		global_unrest = -1
+		min_autonomy_in_territories = -0.05
+		autonomy_change_time = -0.15
+	}
+}
 #Suffrage (Yellow)
-#● Citizenship is granted to all members of society, regardless of race, sex, gender, or
-#class. All are allowed to vote, slave or free, king or poor.
-#● Non-accepted Culture provinces get the Suffrage province modifier
-#○ -3 Unrest
-#● +3 Heathen Tolerance
-#● +50% Female Adviser Chance
-#● Every main Primary Culture or State Religion adviser contributes to a modifier called
-#Societal Bias
-#○ 1 Adviser - +2 Unrest
-#○ 2 Adviser - +4 Unrest
-#○ 3 Adviser - +6 Unrest, +25% Stability Cost Modifier
+#● Citizenship is granted to all members of society, regardless of race, sex, or class. All are allowed to vote, slave or free, king or poor.
+suffrage = {
+	icon = "achievement_strait_talk"
+	allow_normal_conversion = yes
+	modifiers = {
+		num_accepted_cultures = 1
+		tolerance_heathen = 0.5
+		tolerance_heretic = 1.5
+	}
+}
 #Enforced Hierarchy (Yellow)
-#● The republic uses a hierarchy which gives special privileges to more useful members of
-#the republic, and restricts voting of those who are impoverished, uneducated, or useless.
-#● -20% Minimum Autonomy of Territories
-#● -0.05 Autonomy per month
-#● +4 Unrest
+#● The republic uses a hierarchy which gives special privileges to more useful members of the republic, and restricts voting of those who are impoverished, uneducated, or useless.
+enforced_hierarchy = {
+	icon = "achievement_from_humble_origins"
+	allow_normal_conversion = yes
+	modifiers = {
+		global_unrest = 1.5
+		global_autonomy = -0.025
+		min_autonomy = -5
+	}
+}
+
 #Democratic Tradition (Level 10)
 #Free Speech (Green)
-#● The republic believes that all forms of speech should be protected under the law,
-#regardless if it's against the government or not.
-#● +2 Diplomatic Reputation
-#● +10% Institution Spread
+#● The republic believes that all forms of speech should be protected under the law, regardless if it's against the government or not.
+free_speach = {
+	icon = "achievement_voting_streak"
+	allow_normal_conversion = yes
+	modifiers = {
+		diplomatic_reputation = 0.25
+		global_institution_spread = 0.15
+		culture_conversion_cost = 0.10
+	}
+}
 #Authoritarianism (Yellow)
-#● The republic has a large authoritarian bent to it, which is quick to demolish it’s
-#democratic institutions in times of emergency
-#● -25% Strengthen Government Cost
-#● -25% Harsh Treatment Cost
-#● -0.4 Yearly Republican Tradition
+#● The republic has a large authoritarian bent to it, which is quick to demolish it’s democratic institutions in times of emergency
+authoritarism = {
+	icon = "achievement_good_king_renee"
+	allow_normal_conversion = yes
+	modifiers = {
+		stability_cost_modifier = -0.10
+		harsh_treatment_cost = -0.15
+		republican_tradition = -0.25
+	}
+}
 #Political Dynasties (Yellow)
 #● Politics is controlled and manipulated by a small group of powerful political families.
-#● Can re-elect from ruling family (vanilla mechanics)
-#● +1 Random Candidate Bonus
-#● -0.4 Yearly Republican Tradition
+political_dynasties = {
+	icon = "achievement_three_trivial_tributary_tribes"
+	allow_normal_conversion = yes
+	modifiers = {
+		candidate_random_bonus = 1
+		discovered_relations_impact = -0.25
+		reelection_cost = -0.10
+	}
+	custom_attributes = {
+	    enables_nepotism = yes
+	}
+}
 #Triumphs (Red)
-#● Generals and famed conquerors are rewarded with large scale celebrations in the
-#capital, shedding the trappings of a republic to give a prideful celebration to a conquering
-#hero of the republic.
-#● Enables Triumph Mechanics
-#○ Conquering a new provinces with a level 2 general or higher in employment
-#enables the Triumph event
-#○ Triumph Events have 3 main options
-#■ Deny Triumph
-#● -10 Prestige
-#● -5 Republican Tradition
-#● Gain Triumph Denied modifier for 20 years
-#○ +100% Leader Cost
-#○ -1 Leader
-#○ -20% Aggressive Expansion
-#○ -2 Unrest
-#■ Grant Triumph
-#● +10 Republican Tradition
-#● +5 Years worth of Income
-#● +20 Prestige
-#● Gain Triumph modifier for 20 years
-#○ +10% Army Morale
-#○ -2 Unrest
-#○ +50% Aggressive Expansion
-#■ Fund Triumph
-#● -10 years worth of income
-#● +20 Republican Tradition
-#● +40 Prestige
-#● Gain Grand Triumph modifier for 20 years
-#○ +15% Army Morale
-#○ -3 Unrest
-#○ +100% Aggressive Expansion
-#○ Triumphs need to be held every 15 years, or the nation will get the modifier
-#Triumphless for till a new Triumph is held
-#■ -2 Yearly Republican Tradition
-#○ If the reform is changed, the nation loses 25 Republican Tradition.
+#● Generals and famed conquerors are rewarded with large scale celebrations in the capital, shedding the trappings of a republic to give a prideful celebration to a conquering hero of the republic.
+triumphs = {
+	icon = "achievement_my_armies_are_invincible"
+	allow_normal_conversion = yes
+	modifiers = {
+		ae_impact = -0.15
+		free_leader_pool = 1
+		years_of_nationalism = 5
+	}
+	effect = {
+		custom_tooltip = get_acess_to_new_events
+		set_country_flag = es_triumphs_flag
+	}
+	removed_effect = {
+	    clr_country_flag = es_triumphs_flag
+		add_republican_tradition = -25
+		add_prestige = -25
+	}
+}
+
 #Separation of Powers (Level 13)
 #Civil Separation (Green)
-#● The separation of powers in the nation is not encoded in law, but is rather unsaid.
-#Institutions can ultimately end up linked to one another, but are ultimately separate by
-#tradition.
-#● +25% Reform Progress
+#● The separation of powers in the nation is not encoded in law, but is rather unsaid. Institutions can ultimately end up linked to one another, but are ultimately separate by tradition.
+civil_separation = {
+	icon = "achievement_populists_in_government"
+	allow_normal_conversion = yes
+	modifiers = {
+		reform_progress_growth = 0.10
+	}
+}
 #Lawful Separation (Green)
-#● There is a lawful separation between the powers of the republic, which keeps them far
-#apart but working with one another to keep institutions from gaining too much power.
-#● +0.10 Yearly Republican Tradition
+#● There is a lawful separation between the powers of the republic, which keeps them far apart but working with one another to keep institutions from gaining too much power.
+lawful_separation = {
+	icon = "achievement_colonial_management"
+	allow_normal_conversion = yes
+	modifiers = {
+		republican_tradition = 0.10
+	}
+}
 #Interactive Institutions (Yellow)
-#● Institutions within the republic work closely with one another, states and senates are
-#intertwined enough where they are indistinguishable.
-#● -20% State Maintenance
-#● -15% Construction Cost
-#● -0.2 Yearly Republican Tradition
+#● Institutions within the republic work closely with one another, states and senates are intertwined enough where they are indistinguishable.
+interactive_institutions = {
+	icon = "achievement_academical"
+	allow_normal_conversion = yes
+	modifiers = {
+		state_maintenance_modifier = -0.25
+		build_cost = -0.15
+		yearly_corruption = 0.10
+	}
+}
 #Subservient Bureaucracy (Red)
-#● Most of the republic’s politics is mostly concentrated in a single institution, which acts as
-#a forebear over other institutions.
-#● Enables State vs Institutions Mechanics
-#○ State in Power
-#■ +25% National Tax Modifier
-#■ -5 Unrest
-#■ -1 Yearly Republican Tradition
-#○ Institutions in Power
-#■ +0.5 Yearly Republican Tradition
-#■ +3 Diplomatic Reputation
-#■ -200% Reform Progress
-#○ State gain power via peace, leader monarch points above 4, and high stability
-#○ Institutions gain power via leader monarch points below 3, high unrest, and
+#● Most of the republic’s politics is mostly concentrated in a single institution, which acts as a forebear over other institutions.
+subservient_bureaucracy = {
+	icon = "achievement_the_navigator"
+	allow_normal_conversion = yes
+	modifiers = {
+		governing_capacity_modifier = 0.10
+	}
+}
+
 #State Governorship (Level 16)
 #United States (Green)
-#● Individual states have their own republican systems and laws, each citizen of a state is
-#represented in the republic, but is also represented by their own individual state
-#● +250 Governing Capacity
+#● Individual states have their own republican systems and laws, each citizen of a state is represented in the republic, but is also represented by their own individual state
+united_states = {
+	icon = "achievement_emperors_new_clothes"
+	allow_normal_conversion = yes
+	modifiers = {
+		governing_capacity = 100
+	}
+}
 #Regionalism (Green)
-#● Each individual state in the republic is governed as a direct province of the state itself,
-#with chosen governors which are under a direct control of the republican government
-#● +10% Governing Capacity
-#● -1 Unrest
+#● Each individual state in the republic is governed as a direct province of the state itself, with chosen governors which are under a direct control of the republican government
+regionalism = {
+	icon = "achievement_cowardly_tactics"
+	allow_normal_conversion = yes
+	modifiers = {
+		global_unrest = -1
+	}
+}
 #Confederation (Yellow)
-#● The nation is more of a confederation of states which is loosely associated with a weak
-#federal government, with individual state power being absolute
-#● +2 Diplomatic Relations
-#● -10% Liberty Desire
-#● Each state adds a -0.01 Republican Tradition modifier, with a -2 Max.
+#● The nation is more of a confederation of states which is loosely associated with a weak federal government, with individual state power being absolute
+confederation = {
+	icon = "achievement_double_the_love"
+	allow_normal_conversion = yes
+	modifiers = {
+		reduced_liberty_desire = 10
+	}
+}
 #United Cities (Yellow)
-#● The republic is based around a number of powerful urban centers with a largely
-#subservient rural country. Each state is based around a singular city and its outlying
-#territories.
-#● Trade centers gain the Voting Center modifier
-#○ +15 Trade Power
-#○ -10% Development
-#○ +0.02 Yearly Republican Tradition
-#● -25% Governing Capacity
+#● The republic is based around a number of powerful urban centers with a largely subservient rural country. Each state is based around a singular city and its outlying territories.
+united_cities = {
+	icon = "achievement_city_of_cities"
+	allow_normal_conversion = yes
+	modifiers = {
+		global_trade_power = 0.25
+		trade_efficiency = 0.10
+		governing_capacity_modifier = -0.50
+	}
+}
+
 #Presidential Power (Level 19)
 #Weak Presidency (Green)
-#● The presidency is structured to be fairly weak and ineffective, making sure no one man
-#or woman can hold absolute power.
+#● The presidency is structured to be fairly weak and ineffective, making sure no one man or woman can hold absolute power.
+weak_presidency = {
+	icon = "achievement_sworn_fealty"
+	allow_normal_conversion = yes
+	modifiers = {
+		republican_tradition = 0.15
+		stability_cost_modifier = 0.10
+		vassal_income = 0.25
+	}
+}
 #● +0.2 Yearly Republican Tradition
 #● -25% Stability Cost Modifier
 #Strong Presidency (Green)
-#● The presidency is a strong institution which has incredible power and influence over
-#other institutions.
-#● +1 Random Candidate Bonus
-#● +25 Maximum Absolutism
+#● The presidency is a strong institution which has incredible power and influence over other institutions.
+strong_presidency = {
+	icon = "achievement_saladins_legacy"
+	allow_normal_conversion = yes
+	modifiers = {
+		candidate_random_bonus = 1
+		years_of_nationalism = -2.5
+		harsh_treatment_cost = 0.15
+	}
+}
+#
 #Co-Consul (Yellow)
-#● The presidency is divided between two individuals, a Consul and a Co-Consul, who
-#share power depending on the month.
-#● At the start of each presidency, an event fires which gives the choice of a Co-Consul
-#which provides a government modifier till the end of the presidential term.
-#○ Moderate
-#■ +0.1 Yearly Republican Tradition
-#■ +2 Unrest
-#○ Reformer
-#■ +30% Government Progress Gain
-#■ +10% Institution Spread
-#■ +100% Stability Cost
-#○ Populist
-#■ -4 Unrest
-#■ +10% Army Morale
-#■ -1 Yearly Republican Tradition
-#○ Conservative
-#■ +10% National Tax Modifier
-#■ -0.5 Interest Annum
-#■ +100% Idea Cost
-#○ Ambitious Idiot
-#■ -10% Army Maintenance Modifier
-#■ -2.5% Power Costs
-#■ +8 Unrest
+#● The presidency is divided between two individuals, a Consul and a Co-Consul, who share power depending on the month.
+co-consul = {
+	icon = "achievement_the_prince_of_egypt"
+	allow_normal_conversion = yes
+	modifiers = {
+		envoy_travel_time = -0.25
+		global_tax_modifier = 0.10
+		max_absolutism = -15
+	}
+	effect = {
+		custom_tooltip = get_acess_to_new_events
+		set_country_flag = es_consul_flag
+	}
+	removed_effect = {
+	    clr_country_flag = es_consul_flag
+	}
+}
 #Theocratic Presidency (Yellow)
-#● The republic’s power is mostly theocratic in nature, and it is enshrined in law and culture
-#that the religion of the presidency and it’s institutions ultimately swear onto the faith.
-#● +3 Tolerance of the True Faith
-#● Each point of religious tolerance decreases republican tradition by -0.2 with a max of -2
-#● When republic tradition reaches 0, turn into a theocracy
-#● Changing this reform gives a malus called Religious Populism for 25 years
-#○ -4 Tolerance of the True Faith
+#● The republic’s power is mostly theocratic in nature, and it is enshrined in law and culture that the religion of the presidency and it’s institutions ultimately swear onto the faith.
+theocratic_presidency = {
+	icon = "achievement_redecorating"
+	allow_normal_conversion = yes
+	modifiers = {
+		tolerance_own = 1
+		global_missionary_strength = 0.015
+		enforce_religion_cost = 0.25
+	}
+}
+
 #Court Power (Level 22)
 #Efficient Court System (Green)
-#● Courts in the republic are more interested in pragmatism and efficiency than truth of law,
-#the state ultimately having a say in private and public affairs to keep the status quo.
-#● +15% National Tax Modifier
+#● Courts in the republic are more interested in pragmatism and efficiency than truth of law, the state ultimately having a say in private and public affairs to keep the status quo.
+efficient_court_system = {
+	icon = "achievement_czechs_and_balances"
+	allow_normal_conversion = yes
+	modifiers = {
+		production_efficiency = 0.10
+	}
+}
 #Hierarchical Courts (Green)
-#● The state’s courts are deeply hierarchical, with a system of courts dishing out and
-#reviewing previous court cases to best understand and enforce the law.
-#● +33% Foreign Spy Detection
+#● The state’s courts are deeply hierarchical, with a system of courts dishing out and reviewing previous court cases to best understand and enforce the law.
+hierarchial_courts = {
+	icon = "achievement_multiculturalism"
+	allow_normal_conversion = yes
+	modifiers = {
+		diplomatic_reputation = 0.5
+	}
+}
 #Biased Law Offices (Yellow)
-#● The court system in the nation is deeply biased, favoring the nation’s favored cultures,
-#races, and religion over others.
-#● Every province which has an accepted culture and state religion receives the modifier
-#Biased Courts
-#○ -3 Unrest
-#○ +5% Local Goods Produced
-#● +50% Core Creation Cost
-#● -2 Diplomatic Reputation
+#● The court system in the nation is deeply biased, favoring the nation’s favored cultures, races, and religion over others.
+biased_law_offices = {
+	icon = "achievement_true_heir_of_timor"
+	allow_normal_conversion = yes
+	modifiers = {
+		core_creation = -0.25
+	}
+}
 #Private Lawyers (Yellow)
-#● The nation’s system of law and entirely private, where most lawyers and judges are at
-#the whim of private organizations.
-#● Adds new Decisions
-#○ Business Lawyers
-#■ -10% Charter Building Cost
-#■ +1 Merchant
-#■ -15% Trade Goods Produced
-#○ Private Investigations
-#■ +0.2 Yearly Republican Tradition
-#■ -10% National Tax Modifier
-#○ Expand Law Pool
-#■ -5% Idea Cost
-#■ +5% Military Tech Cost
-#● Adds Private Lawyer Event Pool
-#○ Monopoly Sues the State
-#○ Citizens Demand Change
-#○ National Trial Humiliates Nation
-#● -25% Institution Spread
+#● The nation’s system of law and entirely private, where most lawyers and judges are at the whim of private organizations.
+private_lawyers = {
+	icon = "achievement_spaghetti_western"
+	allow_normal_conversion = yes
+	modifiers = {
+		state_maintenance_modifier = -0.35
+	}
+	effect = {
+		custom_tooltip = get_acess_to_new_decisions
+		set_country_flag = es_private_lawyers_flag
+	}
+	removed_effect = {
+	    clr_country_flag = es_private_lawyers_flag
+	}
+}
+
 #Institutions (Level 25)
 #Social Services (Green)
-#● The republic has a strong and innovative institution which dishes out social services and
-#welfare to its people.
-#● If Republican Tradition is 90 or more, gain +1 Administrative Monarch Point
+#● The republic has a strong and innovative institution which dishes out social services and welfare to its people.
+social_services = {
+	icon = "achievement_trustworthy"
+	allow_normal_conversion = yes
+	modifiers = {
+		adm_tech_cost_modifier = -0.10
+	}
+}
 #Diplomatic Core (Green)
-#● The republic is famed for its extensive diplomatic core and its dedicated social status
-#amongst other nations.
-#● If Republican Tradition is 90 or more, gain +1 Diplomatic Monarch Point
+#● The republic is famed for its extensive diplomatic core and its dedicated social status amongst other nations.
+diplomatic_core = {
+	icon = "achievement_for_the_glory"
+	allow_normal_conversion = yes
+	modifiers = {
+		dip_tech_cost_modifier = -0.10
+	}
+}
 #War Department (Green)
-#● The republic relies on a powerful military organization which handles most of its military
-#affairs.
-#● If Republican Tradition is 90 or more, gain +1 Military Monarch Point
+#● The republic relies on a powerful military organization which handles most of its military affairs.
+war_department = {
+	icon = "achievement_victorious"
+	allow_normal_conversion = yes
+	modifiers = {
+		mil_tech_cost_modifier = -0.10
+	}
+}
 #Presidential Cabinet (Green)
-#● The presidents surround themselves with an office of merit, where the best and brightest
-#of the nation inform the president on ongoing affairs and situations.
-#● -25% Adviser Cost
-#● -10% Idea Cost
+#● The presidents surround themselves with an office of merit, where the best and brightest of the nation inform the president on ongoing affairs and situations.
+presidential_cabinet = {
+	icon = "achievement_factionalism"
+	allow_normal_conversion = yes
+	modifiers = {
+		idea_cost = -0.10
+	}
+}
+
 #Republican Innovation (Level 28)
 #Republican Zeal (Green)
-#● The republic is zealous towards the status of their republic, and will defend it to it’s bitter
-#end if need be.
-#● If rivaled to a Monarchy, gain a stacking modifier of Republican Liberty (stacks 3 times
-#with 3 rivaled monarchies)
-#○ +1 Tolerance of the True Faith
-#○ -5% Liberty Desire
-#○ +10% National Tax Modifier
-#● If at War with a Monarchy, gain the modifier Republican Zeal
-#○ +20 Maximum Revolutionary Zeal
-#○ +20% Army Morale
-#○ +25% Cavalry Combat Ability
-#○ -10% Shock Damage Received
+#● The republic is zealous towards the status of their republic, and will defend it to it’s bitter end if need be.
+republican_zeal = {
+	icon = "achievement_stern_des_sudens"
+	allow_normal_conversion = yes
+	modifiers = {
+		tolerance_own = 1
+		reduced_liberty_desire = 10
+		global_tax_modifier = 0.10
+	}
+}
 #Political Populace (Green)
-#● The populace of the republic is well versed in their local politics and are entirely at the
-#whims and behest of their local rulers.
-#● +1.5 Yearly Republican Tradition
+#● The populace of the republic is well versed in their local politics and are entirely at the whims and behest of their local rulers.
+political_populance = {
+	icon = "achievement_electable"
+	allow_normal_conversion = yes
+	modifiers = {
+		stability_cost_modifier = -0.10
+		republican_tradition = 0.10
+		prestige_decay = -0.01
+	}
+}
 #Constitutionalism (Green)
-#● The republic relies on a codified and legendary document which lays out their purpose
-#and general laws, granting freedom and domain over their own lands.
-#● +500 Governing Capacity
-#● +3 Max Accepted Cultures
+#● The republic relies on a codified and legendary document which lays out their purpose and general laws, granting freedom and domain over their own lands.
+constitutionalism = {
+	icon = "achievement_the_chrysanthemum_throne"
+	allow_normal_conversion = yes
+	modifiers = {
+		num_accepted_cultures = 1
+		governing_capacity = 100
+		advisor_cost = -0.10
+	}
+}
 #Manifest Destiny (Green)
-#● The republic is always expanding and looks all over, seeking to conquer and manifest
-#into new lands.
-#● +1 Colonist
-#● +35 Colonial Growth
-#● -15% Coring Cost
+#● The republic is always expanding and looks all over, seeking to conquer and manifest into new lands.
+manifest_destiny = {
+	icon = "achievement_the_five_colonies"
+	allow_normal_conversion = yes
+	modifiers = {
+		core_creation = -0.10
+		range = 0.10
+		land_morale = 0.10
+	}
+}
+
 #Theocracy
+
 #Theological Legitimacy (Level 4)
 #Theological Law (Green)
-#● The theocracy’s leaders rely on religious law and customs to legitimize their hold over
-#the theocracy.
-#● -25% Stability Cost
+#The theocracy’s leaders rely on religious law and customs to legitimize their hold over the theocracy.
+theological_law = {
+	icon = "achievement_the_five_colonies"
+	allow_normal_conversion = yes
+	modifiers = {
+		stability_cost_modifier = -0.25
+	}
+}
+#-25% Stability Cost
 #Inheritance (Green)
-#● The theocracy uses a fairly monarchical system, in which the ruler inherits the nation
-#with some religious overtones.
-#● +25 Opinion from Monarchies
-#● Heirs can come from the same dynasty
-#● Allows Royal Marriages
+#The theocracy uses a fairly monarchical system, in which the ruler inherits the nation with some religious overtones.
+inheritance = {
+	icon = "achievement_the_five_colonies"
+	allow_normal_conversion = yes
+	modifiers = {
+		improve_relation_modifier = 0.5
+	}
+	royal_marriage = yes
+}
 #Religious Prestige (Yellow)
-#● The main religious organizations across the world hold the true legitimate power over the
-#theocracy, their support is ultimately needed to maintain control.
-#● Every Alliance with a nation of the same faith increases yearly devotion by +0.25
-#● Every Alliance with a nation of a heretic or heathen faith decreases yearly devotion by
-#-0.5
-#● +2 Diplomatic Reputation
+#The main religious organizations across the world hold the true legitimate power over the theocracy, their support is ultimately needed to maintain control.
+religious_prestige = {
+	icon = "achievement_the_five_colonies"
+	allow_normal_conversion = yes
+	modifiers = {
+		diplomatic_reputation = 1.0
+	}
+}
 #Chosen by the Gods (Red)
-#● The legitimacy of the nation’s theocracy is not figuratively supported by the gods, but is
-#rather literal. The nation exists by the whim of the gods.
-#● Every time a new leader assumes power, it initiates one of two major events; The Gods
-#Approve, or The Gods Disapprove, both have a 50/50 chance. This effect last till the next
-#leader assumes power
-#○ Gods Approve
-#■ +2 Yearly Devotion
-#■ -5% Power Cost
-#■ +5 Tolerance of the True Faith
-#■ +10% Missionary Strength
-#■ Gain a religious war CB on heathen and heretic nations
-#■ Cannot declare war on nations of the same faith
-#○ Gods Disapprove
-#■ -5 Yearly Devotion
-#■ -10% Missionary Strength
-#■ -10 Tolerance of the True Faith
-#■ +500% Missionary Cost
-#■ Nations of the same faith gain a conquest CB on nation
+#The legitimacy of the nation’s theocracy is not figuratively supported by the gods, but is rather literal. The nation exists by the whim of the gods.
+chosen_by_the_gods = {
+	icon = "achievement_the_five_colonies"
+	allow_normal_conversion = yes
+	modifiers = {
+		missionary_maintenance_cost = -0.25
+	}
+	effect = {
+		custom_tooltip = get_acess_to_new_events
+	}
+}
+
 #Questions of Secularism (Level 7)
 #Minor Concessions (Green)
-#● The theocracy doesn’t balance out itself with secularists, but does grant them a partial
-#tolerance. In return for allowing some secularization, the theocracy makes demands of
-#their profession of faith and fealty to the church.
-#● +5% Governing Capacity
+#The theocracy doesn’t balance out itself with secularists, but does grant them a partial tolerance. In return for allowing some secularization, the theocracy makes demands of their profession of faith and fealty to the church.
+minor_concessions = {
+	icon = "achievement_the_five_colonies"
+	allow_normal_conversion = yes
+	modifiers = {
+		governing_capacity_modifier = 0.10
+	}
+}
 #Clerical Bureaucracy (Green)
-#● The clergy have reigned in total control of the government, keeping those who are not
-#fully faithful to the church outside of governance.
-#● +2 Tolerance of the True Faith
+#The clergy have reigned in total control of the government, keeping those who are not fully faithful to the church outside of governance.
+clerical_bureaucracy = {
+	icon = "achievement_the_five_colonies"
+	allow_normal_conversion = yes
+	modifiers = {
+		tolerance_own = 1
+	}
+}
 #Secular Tolerance (Yellow)
-#● The theocracy allows secularism to exist in the governance of its territories, allowing any
-#number of non-clergy to participate in local government.
-#● +10% Governing Capacity
-#● -10% Adviser Cost
-#● -2 Tolerance of the True Faith
+#The theocracy allows secularism to exist in the governance of its territories, allowing any number of non-clergy to participate in local government.
+secular_tolerance = {
+	icon = "achievement_the_five_colonies"
+	allow_normal_conversion = yes
+	modifiers = {
+		religious_unity = 0.05
+		advisor_cost = -0.10
+		global_unrest = 1.5
+	}
+}
 #War against Secularization (Red)
-#● The theocracy is violently opposed to any nation which governs without the total will of
-#the gods, and must be openly opposed.
-#● Gain a free CB against any non-theocracy nation
-#● +100% Adviser Cost
-#● Only Inquisitor and Theologian advisers can be hired as administrators
-#● -35% Governing Capacity
+#The theocracy is violently opposed to any nation which governs without the total will of the gods, and must be openly opposed.
+war_against_secularization = {
+	icon = "achievement_the_five_colonies"
+	allow_normal_conversion = yes
+	modifiers = {
+		ae_impact = 0.15
+		land_morale = 0.10
+		naval_morale = 0.05
+	}
+	effect = {
+		custom_tooltip = get_cb_to_change_government
+	}
+}
+
 #Questions of Fanaticism (Level 10)
 #Curbed Fanaticism (Green)
-#● Fanaticism is curbed via education and the watchful eye of inquisitors to prevent radical
-#beliefs and violent interpretations from soiling the faith’s true purpose.
-#● +1 Heathen Tolerance
-#● +1 Heretic Tolerance
+#Fanaticism is curbed via education and the watchful eye of inquisitors to prevent radical beliefs and violent interpretations from soiling the faith’s true purpose.
+curbed_fanaticism = {
+	icon = "achievement_the_five_colonies"
+	allow_normal_conversion = yes
+	modifiers = {
+		tolerance_heathen = 1
+		tolerance_heretic = 1
+		missionary_maintenance_cost = 0.10
+	}
+}
 #Moderation (Green)
-#● Fanatics are tolerated in society, but not in government, and are left alone for the most
-#part.
-#● +0.25 Yearly Devotion
+#Fanatics are tolerated in society, but not in government, and are left alone for the most part.
+moderation = {
+	icon = "achievement_the_five_colonies"
+	allow_normal_conversion = yes
+	modifiers = {
+		devotion = 0.25
+		global_missionary_strength = 0.01
+		advisor_pool = -1
+	}
+}
 #Militarized Fanatics (Yellow)
-#● The theocracy does not tolerate fanaticism in government positions, but actively
-#encourages it enough to make up the bulk of its armies, where fanatics and radicals turn
-#their attention on others.
-#● +10% Army Morale
-#● -20% Army Morale if at war with any enemy who is of the same faith
+#The theocracy does not tolerate fanaticism in government positions, but actively encourages it enough to make up the bulk of its armies, where fanatics and radicals turn their attention on others.
+militarized_fanatics = {
+	icon = "achievement_the_five_colonies"
+	allow_normal_conversion = yes
+	modifiers = {
+		land_maintenance_modifier = -0.10
+		naval_maintenance_modifier = -0.10
+		advisor_cost = 0.10
+	}
+}
 #Embraced Fanaticism (Red)
-#● The theocracy has entirely embraced fanaticism, where radical religious belief, theocratic
-#populism, and violence rule the day.
-#● +4 Tolerance of the True Faith
-#● Provinces of the state’s faith gain the modifier Increasing Fanaticism
-#○ +1 Attrition
-#○ +100% Manpower
-#● Provinces of a different faith gain the modifier Fanatic Victims
-#○ +10 Unrest
-#○ +0.5 Monthly Devastation
-#● Cannot declare war on nations of the same faith
-#● Cannot have any form of diplomacy with any nation who isn’t the same faith
-#● +50% Idea Cost
+#The theocracy has entirely embraced fanaticism, where radical religious belief, theocratic populism, and violence rule the day.
+embraced_fanaticism = {
+	icon = "achievement_the_five_colonies"
+	allow_normal_conversion = yes
+	modifiers = {
+		improve_relation_modifier = -1.0
+		idea_cost = 0.25
+		hostile_attrition = 1
+		global_manpower_modifier = 1.0
+		discipline = 0.05
+	}
+}
+#
 #Proselytism (Level 13)
 #Missions (Green)
-#● Missions are temporary or permanent missionary homes which allows the spreading of
-#the true faith via established holy orders.
-#● +2% Missionary Strength
+#Missions are temporary or permanent missionary homes which allows the spreading of the true faith via established holy orders.
+missions = {
+	icon = "achievement_the_five_colonies"
+	allow_normal_conversion = yes
+	modifiers = {
+		missionaries = 1
+	}
+}
 #Evangelism (Green)
-#● Evangelism is considered a ‘reckless’ form of proselytism, where much of the missionary
-#work is given to enthusiastic and nomadic missionaries to spread the word without
-#enforcing it, but is ultimately very effective.
-#● -50% Missionary Cost
+#Evangelism is considered a ‘reckless’ form of proselytism, where much of the missionary work is given to enthusiastic and nomadic missionaries to spread the word without enforcing it, but is ultimately very effective.
+evangelism = {
+	icon = "achievement_the_five_colonies"
+	allow_normal_conversion = yes
+	modifiers = {
+		missionary_maintenance_cost = -0.25
+	}
+}
 #Forced Conversion (Yellow)
-#● The state enforces conversion, those who are pagan or heretic alike must by law
-#convert.
-#● Gain the option Forced Conversion
-#○ Automatically converts a random province to the true faith
-#○ 50% chance to backfire, giving the Conversion Denied effect for 10 years
-#■ +3 Unrest
-#■ -10% Missionary Strength
-#○ Can only be done every 10 years
-#○ Costs 50 diplomatic points
+#The state enforces conversion, those who are pagan or heretic alike must by law convert.
+forced_convertion = {
+	icon = "achievement_the_five_colonies"
+	allow_normal_conversion = yes
+	modifiers = {
+		missionary_strength = 0.01
+	}
+}
 #Martyrdom (Yellow)
-#● Missionary work according to the state is more than an act of spreading the faith, but is
-#an act of faith itself, and thus dying for the spreading of that faith is seen as a true act of
-#worship.
-#● Missionaries, while they are converting a province, have 25% monthly to be interrupted
-#and killed, interrupting the process of conversion. Each event gives a +4 devotion and
-#+5 prestige as a result
+#Missionary work according to the state is more than an act of spreading the faith, but is an act of faith itself, and thus dying for the spreading of that faith is seen as a true act of worship.
+forced_convertion = {
+	icon = "achievement_the_five_colonies"
+	allow_normal_conversion = yes
+	modifiers = {
+		prestige_per_development_from_conversion = 0.10
+	}
+}
+
 #Morality and Ethics (Level 16)
 #Religious Law (Green)
-#● The theocracy takes most of its morality and ethics from its own theological laws, which
-#is enshrined as
+#The theocracy takes most of its morality and ethics from its own theological laws, which is enshrined as traditional even if they are not theologically accurate.
+religious_law = {
+	icon = "achievement_the_five_colonies"
+	allow_normal_conversion = yes
+	modifiers = {
+		years_of_nationalism = -5
+	}
+}
 #Kindness and Mercy (Green)
+#Like most religious institutions, the theocracy tries hard to keep to edicts of kindness and mercy, its people adhere to simple moral principles.
+kindness_and_mercy = {
+	icon = "achievement_the_five_colonies"
+	allow_normal_conversion = yes
+	modifiers = {
+		global_unrest = -1
+	}
+}
 #Faith Alone (Yellow)
+#The theocracy looks deep into the religious texts, and bases its morality on what it sees and interrupts, taking out both good and bad parts for its moral guide.
+faith_alone = {
+	icon = "achievement_the_five_colonies"
+	allow_normal_conversion = yes
+	modifiers = {
+		stability_cost_modifier = -0.10
+		core_creation = 0.1
+		culture_conversion_cost = -0.1
+	}
+}
 #Justified Atrocity (Red)
+#The theocracy takes a dark path to their ethical beliefs, believing that their religion gives them reason to enslave, torture, murder, and butcher their enemies in the name of their faith.
+justified_atrocity = {
+	icon = "achievement_the_five_colonies"
+	allow_normal_conversion = yes
+	modifiers = {
+		infantry_power = 0.10
+		cavalry_power = 0.10
+		all_power_cost = 0.10
+	}
+}
+
 #Debate (Level 19)
 #Encouraged Debate (Green)
+#The Theocracy encourages debate and meeting with the priesthood in order to hammer out inconsistencies with the religion, to better understand faith as a whole.
+encouraged_debate = {
+	icon = "achievement_the_five_colonies"
+	allow_normal_conversion = yes
+	modifiers = {
+		idea_cost = -0.10
+	}
+}
 #Religious Scholarship (Green)
-#Theological Councils (Green)
+#Education is a backbone for the theocratic state, which encourages only educated debate amongst trained theocrats and philosophers.
+religious_scolarship = {
+	icon = "achievement_the_five_colonies"
+	allow_normal_conversion = yes
+	modifiers = {
+		advisor_cost = -0.10
+	}
+}
+#Theological Councils (Yellow)
+#Only priests and higher ups within the theocracy can debate the rules and regulations of religion within small councils and diets, to keep discussions focused and simple.
+technological_council = {
+	icon = "achievement_the_five_colonies"
+	allow_normal_conversion = yes
+	modifiers = {
+		technology_cost = -0.05
+	}
+}
 #Clerical Truth (Yellow)
+#The theocracy has a negative view of debate, viewing debate of any of the religious guidelines of the faith as heresy onto itself. Priests can only speak truth, and those who challenge it are apostates.
+clerical_truth = {
+	icon = "achievement_the_five_colonies"
+	allow_normal_conversion = yes
+	modifiers = {
+		global_institution_spread = -0.25
+		stability_cost_modifier = -0.25
+		harsh_treatment_cost = -0.25
+	}
+}
+
 #Theocratic Finance (Level 22)
 #Tithe (Green)
+#The theocracy gains a trickle of income from the communities they preach to, where priests gain extra income from donations which goes to the service of god.
+tithe = {
+	icon = "achievement_the_five_colonies"
+	allow_normal_conversion = yes
+	modifiers = {
+		global_tax_modifier = 0.10
+		missionary_maintenance_cost = -0.25
+		adm_advisor_cost = -0.10
+	}
+}
 #Church Tax Brackets (Green)
+#Temples and religious institutions are taxed much like any internal state in a secular kingdom, being required to give to larger churches via a fairly religious-inspired tax system.
+church_tax_brackets = {
+	icon = "achievement_the_five_colonies"
+	allow_normal_conversion = yes
+	modifiers = {
+		build_cost = -0.25
+		dip_advisor_cost = -0.10
+		interest = -1
+	}
+}
 #Priesthood Pool (Yellow)
+#The temples across the entire theocracy don’t really tax as much as they contribute to a general pool of money for which priests can give or take out of in order to better finance or improve their station.
+priesthood_pool = {
+	icon = "achievement_the_five_colonies"
+	allow_normal_conversion = yes
+	modifiers = {
+		production_efficiency = 0.10
+		prestige = 0.25
+		mil_advisor_cost = -0.10
+	}
+}
 #Pilgrim Economy (Yellow)
+#The churches don’t tax or contribute outside their local communities, but instead the state relies on holy pilgrimages through or too their lands, taking large cuts in tolls and foreigners exploring their markets. We swear it isn’t tourism by some other name!
+pilgrim_economy = {
+	icon = "achievement_the_five_colonies"
+	allow_normal_conversion = yes
+	modifiers = {
+		trade_efficiency = 0.10
+		trade_steering = 0.25
+		caravan_power = 0.15
+	}
+}
+
 #Heathenism and Heresy (Level 25)
 #Heretic Brothers (Green)
+#The theocracy may not tolerate heathens, but it can set aside its negative view of heretics to better involve them, being viewed as misguided brothers.
+heretic_brothers = {
+	icon = "achievement_the_five_colonies"
+	allow_normal_conversion = yes
+	modifiers = {
+		tolerance_heretic = 2.5
+		global_heretic_missionary_strength = -0.025
+		stability_cost_modifier = -0.10
+	}
+}
 #Heathen Neighbors (Green)
+#Heathens, according to the theocracy, are more tolerant than the heretic. Heathens are the ones who need preaching to the most, not those who misguide and lie about the true faith. 
+heathen_neighbors = {
+	icon = "achievement_the_five_colonies"
+	allow_normal_conversion = yes
+	modifiers = {
+		tolerance_heathen = 2.5
+		diplomatic_reputation = 0.25
+		enforce_religion_cost = 1.0
+	}
+}
 #Tolerant Society (Yellow)
+#The society of the theocracy is highly tolerant, accepting those of the non-true faith as equals in their society.
+tolerant_society = {
+	icon = "achievement_the_five_colonies"
+	allow_normal_conversion = yes
+	modifiers = {
+		religious_unity = 0.25
+		improve_relation_modifier = 0.25
+		global_missionary_strength = -0.1
+	}
+}
 #Crusade (Red)
+#The theocracy rejects all ideals of tolerance and demands a holy war against the heretic and heathen alike, for land or for faith. Those who refuse the one true faith are considered little more than slaves, dead, or worse.
+es_crusade = {
+	icon = "achievement_the_five_colonies"
+	allow_normal_conversion = yes
+	modifiers = {
+		global_missionary_strength = 0.025
+		global_manpower_modifier = 0.25
+		manpower_recovery_speed = 0.25
+		tolerance_heretic = -10
+		tolerance_heathen = -10
+	}
+}
+
 #Theocratic Innovation (Level 28)
 #Godly Administration (Green)
+#The theocracy’s administration is near legendary, employing legions of scribes and priests to run its territory with an efficiency that would make even the heavens envious.
+godly_administration = {
+	icon = "achievement_the_five_colonies"
+	allow_normal_conversion = yes
+	modifiers = {
+		adm_tech_cost_modifier = -0.10
+		stability_cost_modifier = -0.10
+		diplomats = 1
+	}
+}
 #Religious Revival (Green)
+#The theocracy has become the pumping heart of the one true faith, spreading to spread the message of the faith across the whole of the world.
+religious_revival = {
+	icon = "achievement_the_five_colonies"
+	allow_normal_conversion = yes
+	modifiers = {
+		missionaries = 1
+		dip_tech_cost_modifier = -0.10
+		global_regiment_cost = -0.10
+	}
+}
 #Zealous Army (Green)
+#The army of the theocracy is legendary for its zeal, unbreakable in its totality, and terrifying to its enemies. No army can match the faithful.
+zealous_army = {
+	icon = "achievement_the_five_colonies"
+	allow_normal_conversion = yes
+	modifiers = {
+		fire_damage = 0.10
+		warscore_cost_vs_other_religion = -0.1
+		mil_tech_cost_modifier = -0.10
+	}
+}
 #Heart of the Faith (Green)
-#Tribal
-#Tribal Unity (Level 4)
-#Loose Confederacy (Green)
-#● The nation is held together by a loose alliance of tribes and clans which work together
-#for the most part for a common goal
-#● -15% Stability Cost
-#● -50% Accept Culture Cost
-#Tribal Territory (Green)
-#● The tribal lands have no formal borders, but are rather lands which the tribe maneuvers
-#in and around more commonly than others, united more by culture and custom then
-#governance.
-#● -20% Core Creation Cost
-#● +20 Colonial Growth
-#Survival (Yellow)
-#● Tribal unity is based more around survival, where the nation bases much of its existence
-#on a need to survive a larger and more dangerous world.
-#● +1 Attrition
-#● +75% Core Creation Cost on Us
-#● -1 Diplomatic Relations
-#Coalition (Yellow)
-#● The tribes are united by a strong alliance against a common foe, no matter what it may
-#be, and its political and economic systems reflect this unity.
-#● -25% Change Rivalry Cost
-#● +20% Army Morale while in a Coalition War
-#● Having less than 2 rivals results in the malus Breaking Coalition
-#○ +100% Stability Cost
-#○ +0.5 Yearly Corruption
-#○ -33% Army Morale
-#Historical Record (Level 7)
-#Oral Tradition (Green)
-#● History and learning within the tribe is told via elders who remember the details of the
-#past to the best of their ability.
-#Written Record (Green)
-#● The tribe writes down its history to the best of its ability, keeping its oldest and most
-#heroic tales to pass down to their younger generations.
-#Unspoken Past (Green)
-#● The past of the tribe remains shrouded in mystery and for good reason, keeping away
-#past failures and defeats away from young and naive generations.
-#Historical Preservation (Yellow)
-#●
-#Tyranny (Level 10)
-#Tribal Council (Green)
-#Local Strongman (Green)
-#Tyrant Dictatorship (Yellow)
-#Temporary Dictatorship (Yellow)
-#Religion (Level 13)
-#Rituals (Green)
-#Formal Faith (Green)
-#Syncretism (Yellow)
-#Humanist (Yellow)
-#Tradition (Level 16)
-#Warrior Lodges (Green)
-#Partial Nomadism (Green)
-#Religious Overtones (Green)
-#Evolutionary Survival (Yellow)
-#Diversity (Level 19)
-#Clan Society (Green)
-#Accepted Outsiders (Green)
-#Clan Integration (Yellow)
-#Tribal Colonies (Yellow)
-#Survival (Level 22)
-#Hidden Holdouts (Green)
-#Emergency Magic (Yellow)
-#Long Lasting Resistance (Yellow)
-#Accepted Fate (Red)
-#Civilizing (Level 25)
-#Traditionalism (Green)
-#Curiosity (Green)
-#Copycat (Yellow)
-#Innovative Push (Red)
-#Tribal Innovation (Level 28)
-#Legendary Warriors (Green)
-#Noble Savages (Green)
-#Tribal Empire (Green)
-#Innovative Traditions (Green)
-#______________________________________________________
-#New Event Catalog
+#The theocracy claims that it comes to represent the entire faith, as a whole, and takes an active political role in the day to day operations of running a religious empire.
+heart_of_the_faith = {
+	icon = "achievement_the_five_colonies"
+	allow_normal_conversion = yes
+	modifiers = {
+		prestige_decay = -0.01
+		idea_cost = -0.10
+		ae_impact = -0.10
+	}
+}
 
-#○ New Pool of Events - es_slavery_flag
-#■ Population Enslaved
-#■ Slave Population Depletes
-#■ Slave Revolution
 
 #○ New Privileges Unlocked
 #■ Noble Privilege: Hold Gladiatorial Games

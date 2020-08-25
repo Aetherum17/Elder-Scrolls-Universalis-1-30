@@ -225,8 +225,11 @@ cb_annex = {
 cb_change_government = {
 	valid_for_subject = no
 
-	is_triggered_only = yes
-	months = 120
+	prerequisites = {
+		has_reform = war_against_secularization
+		is_neighbor_of = FROM
+		FROM = { NOT = { government = theocracy } }
+	}
 
 	war_goal = war_goal_change_government
 }
@@ -483,6 +486,8 @@ cb_crusade = {
 				religion = chimer_pantheon
 			}
 			cb_on_religious_enemies = yes
+			has_reform = chosen_by_the_gods
+			has_reform = es_crusade
 		}
 		is_revolutionary = no
 	}

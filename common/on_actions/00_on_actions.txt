@@ -2,7 +2,9 @@
 
 # country
 on_startup = {
-
+	
+	set_country_flag = no_dark_advisors_flag
+	
     set_allow_female_emperor = yes
     emperor = { save_global_event_target_as = Emperor }
 	if = { limit = { is_emperor_of_china = yes } save_global_event_target_as = EmperorOfChina }
@@ -773,6 +775,9 @@ on_abandon_colony = {
 on_new_monarch = {
 	crimean_succession_effect = yes #Scripted effect
 	slesvig_question_effect = yes #Scripted effect
+	
+	remove_country_modifier = es_gods_approve
+	remove_country_modifier = es_gods_disapprove
 	
 	if = { limit = { has_reform = martial_ruler } 
 	random_list = { 
@@ -1834,90 +1839,6 @@ on_bi_yearly_pulse_3 = {
 on_bi_yearly_pulse_4 = {
 
     random_events = { 100 = event_new_diplomatic_actions.200 }
-
-	if = { limit = { religion = eight_divines }
-	random_list = { 50 = { set_country_flag = eight_divines_1_flag } 50 = { clr_country_flag = eight_divines_1_flag } }
-	random_list = { 50 = { set_country_flag = eight_divines_2_flag } 50 = { clr_country_flag = eight_divines_2_flag } }
-	random_list = { 50 = { set_country_flag = eight_divines_3_flag } 50 = { clr_country_flag = eight_divines_3_flag } }
-	}
-	
-	if = { limit = { religion = nine_divines }
-	random_list = { 50 = { set_country_flag = nine_divines_1_flag } 50 = { clr_country_flag = nine_divines_1_flag } }
-	random_list = { 50 = { set_country_flag = nine_divines_2_flag } 50 = { clr_country_flag = nine_divines_2_flag } }
-	random_list = { 50 = { set_country_flag = nine_divines_3_flag } 50 = { clr_country_flag = nine_divines_3_flag } }
-	random_list = { 50 = { set_country_flag = nine_divines_4_flag } 50 = { clr_country_flag = nine_divines_4_flag } }
-	random_list = { 50 = { set_country_flag = nine_divines_5_flag } 50 = { clr_country_flag = nine_divines_5_flag } }
-	random_list = { 50 = { set_country_flag = nine_divines_6_flag } 50 = { clr_country_flag = nine_divines_6_flag } }
-	}
-	
-	if = { limit = { religion = twelve_divines }
-	random_list = { 50 = { set_country_flag = twelve_divines_1_flag } 50 = { clr_country_flag = twelve_divines_1_flag } }
-	random_list = { 50 = { set_country_flag = twelve_divines_2_flag } 50 = { clr_country_flag = twelve_divines_2_flag } }
-	random_list = { 50 = { set_country_flag = twelve_divines_3_flag } 50 = { clr_country_flag = twelve_divines_3_flag } }
-	random_list = { 50 = { set_country_flag = twelve_divines_4_flag } 50 = { clr_country_flag = twelve_divines_4_flag } }
-	random_list = { 50 = { set_country_flag = twelve_divines_5_flag } 50 = { clr_country_flag = twelve_divines_5_flag } }
-	random_list = { 50 = { set_country_flag = twelve_divines_6_flag } 50 = { clr_country_flag = twelve_divines_6_flag } }
-	}
-	
-	if = { limit = { religion = nordic_pantheon }
-	random_list = { 50 = { set_country_flag = nordic_pantheon_1_flag } 50 = { clr_country_flag = nordic_pantheon_1_flag } }
-	random_list = { 50 = { set_country_flag = nordic_pantheon_2_flag } 50 = { clr_country_flag = nordic_pantheon_2_flag } }
-	random_list = { 50 = { set_country_flag = nordic_pantheon_3_flag } 50 = { clr_country_flag = nordic_pantheon_3_flag } }
-	random_list = { 50 = { set_country_flag = nordic_pantheon_4_flag } 50 = { clr_country_flag = nordic_pantheon_4_flag } }
-	random_list = { 50 = { set_country_flag = nordic_pantheon_5_flag } 50 = { clr_country_flag = nordic_pantheon_5_flag } }
-	random_list = { 50 = { set_country_flag = nordic_pantheon_6_flag } 50 = { clr_country_flag = nordic_pantheon_6_flag } }
-	}
-	
-	if = { limit = { religion = khajiiti_pantheon }
-	random_list = { 50 = { set_country_flag = khajiiti_pantheon_1_flag } 50 = { clr_country_flag = khajiiti_pantheon_1_flag } }
-	random_list = { 50 = { set_country_flag = khajiiti_pantheon_2_flag } 50 = { clr_country_flag = khajiiti_pantheon_2_flag } }
-	random_list = { 50 = { set_country_flag = khajiiti_pantheon_3_flag } 50 = { clr_country_flag = khajiiti_pantheon_3_flag } }
-	random_list = { 50 = { set_country_flag = khajiiti_pantheon_4_flag } 50 = { clr_country_flag = khajiiti_pantheon_4_flag } }
-	random_list = { 50 = { set_country_flag = khajiiti_pantheon_5_flag } 50 = { clr_country_flag = khajiiti_pantheon_5_flag } }
-	random_list = { 50 = { set_country_flag = khajiiti_pantheon_6_flag } 50 = { clr_country_flag = khajiiti_pantheon_6_flag } }
-	}
-	
-	if = { limit = { religion = yokudan_pantheon }
-	random_list = { 50 = { set_country_flag = yokudan_pantheon_1_flag } 50 = { clr_country_flag = yokudan_pantheon_1_flag } }
-	random_list = { 50 = { set_country_flag = yokudan_pantheon_2_flag } 50 = { clr_country_flag = yokudan_pantheon_2_flag } }
-	random_list = { 50 = { set_country_flag = yokudan_pantheon_3_flag } 50 = { clr_country_flag = yokudan_pantheon_3_flag } }
-	}
-	
-	if = { limit = { religion = redguard_pantheon }
-	random_list = { 50 = { set_country_flag = redguard_pantheon_1_flag } 50 = { clr_country_flag = redguard_pantheon_1_flag } }
-	random_list = { 50 = { set_country_flag = redguard_pantheon_2_flag } 50 = { clr_country_flag = redguard_pantheon_2_flag } }
-	random_list = { 50 = { set_country_flag = redguard_pantheon_3_flag } 50 = { clr_country_flag = redguard_pantheon_3_flag } }
-	}
-	
-	if = { limit = { religion = bosmer_pantheon }
-	random_list = { 50 = { set_country_flag = bosmer_pantheon_1_flag } 50 = { clr_country_flag = bosmer_pantheon_1_flag } }
-	random_list = { 50 = { set_country_flag = bosmer_pantheon_2_flag } 50 = { clr_country_flag = bosmer_pantheon_2_flag } }
-	random_list = { 50 = { set_country_flag = bosmer_pantheon_3_flag } 50 = { clr_country_flag = bosmer_pantheon_3_flag } }
-	random_list = { 50 = { set_country_flag = bosmer_pantheon_4_flag } 50 = { clr_country_flag = bosmer_pantheon_4_flag } }
-	random_list = { 50 = { set_country_flag = bosmer_pantheon_5_flag } 50 = { clr_country_flag = bosmer_pantheon_5_flag } }
-	random_list = { 50 = { set_country_flag = bosmer_pantheon_6_flag } 50 = { clr_country_flag = bosmer_pantheon_6_flag } }
-	}
-	
-	if = { limit = { religion = altmeri_pantheon }
-	random_list = { 50 = { set_country_flag = altmeri_pantheon_1_flag } 50 = { clr_country_flag = altmeri_pantheon_1_flag } }
-	random_list = { 50 = { set_country_flag = altmeri_pantheon_2_flag } 50 = { clr_country_flag = altmeri_pantheon_2_flag } }
-	random_list = { 50 = { set_country_flag = altmeri_pantheon_3_flag } 50 = { clr_country_flag = altmeri_pantheon_3_flag } }
-	}
-	
-	if = { limit = { religion = snow_elves_pantheon }
-	random_list = { 50 = { set_country_flag = snow_elves_pantheon_1_flag } 50 = { clr_country_flag = snow_elves_pantheon_1_flag } }
-	random_list = { 50 = { set_country_flag = snow_elves_pantheon_2_flag } 50 = { clr_country_flag = snow_elves_pantheon_2_flag } }
-	random_list = { 50 = { set_country_flag = snow_elves_pantheon_3_flag } 50 = { clr_country_flag = snow_elves_pantheon_3_flag } }
-	}
-	
-	if = { limit = { religion = kothri_pantheon }
-	random_list = { 50 = { set_country_flag = kothri_pantheon_1_flag } 50 = { clr_country_flag = kothri_pantheon_1_flag } }
-	random_list = { 50 = { set_country_flag = kothri_pantheon_2_flag } 50 = { clr_country_flag = kothri_pantheon_2_flag } }
-	random_list = { 50 = { set_country_flag = kothri_pantheon_3_flag } 50 = { clr_country_flag = kothri_pantheon_3_flag } }
-	random_list = { 50 = { set_country_flag = kothri_pantheon_4_flag } 50 = { clr_country_flag = kothri_pantheon_4_flag } }
-	random_list = { 50 = { set_country_flag = kothri_pantheon_5_flag } 50 = { clr_country_flag = kothri_pantheon_5_flag } }
-	random_list = { 50 = { set_country_flag = kothri_pantheon_6_flag } 50 = { clr_country_flag = kothri_pantheon_6_flag } }
-	}
 	
 }
 

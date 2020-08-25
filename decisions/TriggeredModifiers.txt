@@ -17,15 +17,12 @@ country_decisions = {
 		allow = {
 			num_of_ports = 10
 		    has_idea = quest_for_the_new_world
-		    any_active_trade_node = {
-			has_merchant = ROOT
 			OR = {
-				province_id = 702
-				province_id = 611
-				province_id = 743
-				province_id = 583
-				province_id = 468
-			}
+				owns_or_subject_of = 702
+				owns_or_subject_of = 611
+				owns_or_subject_of = 743
+				owns_or_subject_of = 583
+				owns_or_subject_of = 468
 			}
 		}
 		effect = {

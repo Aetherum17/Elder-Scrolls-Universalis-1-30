@@ -80,6 +80,18 @@ major_family_autonomy = {
 	local_unrest = -7.5
 }
 
+es_gods_approve = {
+	devotion = 1.0
+	tolerance_own = 2.5
+	global_missionary_strength = 0.05
+}
+
+es_gods_disapprove = {
+	devotion = -1.0
+	tolerance_own = -2.5
+	global_missionary_strength = -0.05
+}
+
 scammed_by_enemy_thieves_guild = {
     global_tax_modifier = -0.25
 }

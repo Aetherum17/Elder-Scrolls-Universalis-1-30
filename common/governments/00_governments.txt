@@ -146,7 +146,7 @@ monarchy = {
 			}
 		}
 		espionage = { reforms = { spy_agency local_scouting cut_throat_politics the_grand_game } }
-		es_legitimacy = { reforms = { es_tradition strongest_land_owner richest_landowner divine_right} }
+		es_legitimacy = { reforms = { es_tradition strongest_land_owner richest_landowner divine_right } }
 		court_policy = {
 			reforms = {
 				44_a
@@ -173,7 +173,8 @@ monarchy = {
 				18_d
 			}
 		}
-		vassal_contribution = { reforms = { tribute_focus protection_focus trade_focus legitimacy_focus } }
+		vassal_contribution = { reforms = { tribute_focus protection_focus trade_focus  legitimacy_focus }
+		}
 		expansion = { reforms = { regional_ambitions colonial_ambitions es_imperial_ambitions isolationist } }
 		relations_policy = {
 			reforms = {
@@ -268,7 +269,7 @@ republic = {
 			}
 		}
 		labour = { reforms = { commission serfdom unregulated_guilds slavery } }
-		# 4 Level GR
+		citizenship = { reforms = { land_owning_citizenship expanded_citizenship suffrage enforced_hierarchy } }
 		agriculture_policy = {
 			reforms = {
 				21_a
@@ -295,7 +296,7 @@ republic = {
 				46_d
 			}
 		}
-		# 7 Level GR
+		democratic_traditions = { reforms = { free_speach authoritarism political_dynasties triumphs } }
 		cultural_values = { reforms = { tavern_life tournaments art_and_science raiding } }
 		community_policy = {
 			reforms = {
@@ -306,7 +307,7 @@ republic = {
 			}
 		}
 		trade = { reforms = { internal_market free_trade protectionism corporatism } }
-		# 10 Level GR
+		separation_of_powers = { reforms = { civil_separation lawful_separation interactive_institutions subservient_bureaucracy } }
 		centralization_policy = {
 			reforms = {
 				12_a
@@ -333,7 +334,7 @@ republic = {
 				17_d
 			}
 		}
-		# 13 Level GR
+		state_governorship = { reforms = { united_states regionalism confederation united_cities } }
 		guild_favoritism = { reforms = { fighters_guild mages_guild thieves_guild assassins_guild } }
 		marraiage_policy = {
 			reforms = {
@@ -344,7 +345,7 @@ republic = {
 			}
 		}
 		diplomacy = { reforms = { diplomatic_core expansion supremacy guardian } }
-		# 16 Level GR
+		presidential_power = { reforms = { weak_presidency strong_presidency co-consul theocratic_presidency } }
 		language_policy = {
 			reforms = {
 				13_a
@@ -371,7 +372,7 @@ republic = {
 				57_d
 			}
 		}
-		# 19 Level GR
+		court_power = { reforms = { efficient_court_system hierarchial_courts biased_law_offices private_lawyers } }
 		bans = { reforms = { normalized_regulation abolition prohibition drug_limitation } }
 		embassy_policy = {
 			reforms = {
@@ -382,7 +383,7 @@ republic = {
 			}
 		}
 		espionage = { reforms = { spy_agency local_scouting cut_throat_politics the_grand_game } }
-		# 22 Level GR
+		institutions = { reforms = { social_services diplomatic_core war_department presidential_cabinet } }
 		court_policy = {
 			reforms = {
 				44_a
@@ -409,7 +410,7 @@ republic = {
 				18_d
 			}
 		}
-		# 25 Level GR
+		es_election_cycle = { reforms = { long_presidency short_presidency extremly_long_presidency life_appointmemt } }
 		expansion = { reforms = { regional_ambitions colonial_ambitions es_imperial_ambitions isolationist } }
 		relations_policy = {
 			reforms = {
@@ -420,7 +421,7 @@ republic = {
 			}
 		}
 		community = { reforms = { typical_commoners pompous_elitists familial_bondage adventurous_nomads } }
-		# 28 Level GR
+		republican_innovation = { reforms = { republican_zeal political_populance constitutionalism manifest_destiny} }
 		infrastrucure_policy = {
 			reforms = {
 				25_a

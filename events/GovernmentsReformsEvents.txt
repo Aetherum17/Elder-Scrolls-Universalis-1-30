@@ -365,7 +365,39 @@ country_event = {
 	
 }
 
-#○ Taking any province in a war with more then 10 development will trigger a common but important events; - has_country_flag = es_slavery_flag
+#########################################################################################################################################################################################################################################################
+
+country_event = {
+	id = event_new_diplomatic_actions.300
+	title = "event_new_diplomatic_actions.300.t"
+	desc = "event_new_diplomatic_actions.300.d"
+	picture = BONFIRE_RITUAL_eventPicture
+	
+	trigger = {
+		has_reform = chosen_by_the_gods
+		NOT = { has_country_modifier = es_gods_approve }
+		NOT = { has_country_modifier = es_gods_disapprove }
+	}
+	
+	mean_time_to_happen = {
+		days = 1825
+	}
+	
+	option = {
+		name = "event_new_diplomatic_actions.300.a"
+		custom_tooltip = the_modifier_will_be_active_until_death_of_the_ruler
+		random_list = {
+			50 = { add_country_modifier = { name = "es_gods_approve" duration = -1 } }
+			50 = { 
+				add_country_modifier = { name = "es_gods_disapprove" duration = -1 } 
+				every_neighbor_country = {  limit = { NOT = { religion = ROOT } } add_casus_belli = { target = ROOT type = cb_crusade months = 120 }  } 
+			}
+		}
+	}
+	
+}
+
+#○ Taking any province in a war with more then 10 development will trigger a common but important events; - has_country_flag = es_slavery_flag - has_reform = Justified Atrocity
 #■ Reduces province development by 1 point each, causes 40 devastation,
 #and gives a large 10 year malus called Depopulated
 #● +30% Development Cost
@@ -380,6 +412,64 @@ country_event = {
 #■ Option 2: Sell them for 100 gold
 #■ Option 3: Conscript captives for 1000 manpower
 #○ +75% Production of Slaves
+
+#○ Conquering a new provinces with a level 2 general or higher in employment - has_country_flag = es_triumphs_flag
+#enables the Triumph event
+#○ Triumph Events have 3 main options
+#■ Deny Triumph
+#● -10 Prestige
+#● -5 Republican Tradition
+#● Gain Triumph Denied modifier for 20 years
+#○ +100% Leader Cost
+#○ -1 Leader
+#○ -20% Aggressive Expansion
+#○ -2 Unrest
+#■ Grant Triumph
+#● +10 Republican Tradition
+#● +5 Years worth of Income
+#● +20 Prestige
+#● Gain Triumph modifier for 20 years
+#○ +10% Army Morale
+#○ -2 Unrest
+#○ +50% Aggressive Expansion
+#■ Fund Triumph
+#● -10 years worth of income
+#● +20 Republican Tradition
+#● +40 Prestige
+#● Gain Grand Triumph modifier for 20 years
+#○ +15% Army Morale
+#○ -3 Unrest
+#○ +100% Aggressive Expansion
+#○ Triumphs need to be held every 15 years, or the nation will get the modifier
+#Triumphless for till a new Triumph is held
+#■ -2 Yearly Republican Tradition
+
+#● At the start of each presidency, an event fires which gives the choice of a Co-Consul - has_country_flag = es_consul_flag
+#which provides a government modifier till the end of the presidential term.
+#○ Moderate
+#■ +0.1 Yearly Republican Tradition
+#■ +2 Unrest
+#○ Reformer
+#■ +30% Government Progress Gain
+#■ +10% Institution Spread
+#■ +100% Stability Cost
+#○ Populist
+#■ -4 Unrest
+#■ +10% Army Morale
+#■ -1 Yearly Republican Tradition
+#○ Conservative
+#■ +10% National Tax Modifier
+#■ -0.5 Interest Annum
+#■ +100% Idea Cost
+#○ Ambitious Idiot
+#■ -10% Army Maintenance Modifier
+#■ -2.5% Power Costs
+#■ +8 Unrest
+
+#○ New Pool of Events - es_slavery_flag
+#■ Population Enslaved
+#■ Slave Population Depletes
+#■ Slave Revolution
 
 #○ Magical Society has a new pool of events - has_country_flag = es_magic_nation_flag
 #■ Rogue Mages Causes Trouble
@@ -415,3 +505,9 @@ country_event = {
 #■ God King Questioned
 #■ Clergy vs Monarchy
 #■ Theological Faux Pas
+
+#● Adds Private Lawyer Event Pool - has_country_flag = es_private_lawyers_flag
+#○ Monopoly Sues the State
+#○ Citizens Demand Change
+#○ National Trial Humiliates Nation
+#● -25% Institution Spread

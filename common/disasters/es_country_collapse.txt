@@ -12,17 +12,15 @@ es_country_collapse = {
 	}
 	
 	can_stop = {
-	    OR = {
 		stability = 2
 		is_at_war = no
 		NOT = { war_exhaustion = 1 }
-		}
 	}
-		
+	
 	progress = {
 		modifier = {
 			factor = 1
-			revolt_percentage = 0.10
+			revolt_percentage = 0.50
 		}	
 		modifier = {
 			factor = 1

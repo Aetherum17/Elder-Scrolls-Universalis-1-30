@@ -9,7 +9,6 @@ peasant_war = {
 	
 	
 	can_start = {				   
-		is_at_war = no
 		has_any_disaster = no
 		NOT = { manpower_percentage = 0.25 }
 		NOT = { stability = 1 }
@@ -18,7 +17,17 @@ peasant_war = {
 	can_stop = {
 		OR = {
 			has_any_disaster = yes
+			AND = {
 			manpower_percentage = 0.50
+			NOT = { war_exhaustion = 5 }
+			}
+			AND = {
+			manpower_percentage = 0.75
+			OR = {
+			war_exhaustion = 5
+			is_at_war = yes
+			}
+			}
 		}
 	}
 	

@@ -4,43 +4,50 @@
 phychopathic_artist = { monarch_power = ADM
 	stability_cost_modifier = -0.35
 	skill_scaled_modifier = { global_tax_modifier = -0.1 }
-	chance = { factor = 0.5 modifier = { factor = 10 has_country_flag = court_of_darkness_flag } }
+	chance = { factor = 1.0 modifier = { factor = 10 owner = { has_country_flag = court_of_darkness_flag } } }
+	#chance = { factor = 1.0 modifier = { factor = 10 owner = { has_country_flag = court_of_darkness_flag } } modifier = { factor = 0 owner = { has_country_flag = no_dark_advisors_flag NOT = { has_country_flag = court_of_darkness_flag } } } }
 	ai_will_do = { factor = 1 } 
 }
 torturer = { monarch_power = ADM
 	global_missionary_strength = 0.035
 	skill_scaled_modifier = { global_unrest = 1 }
-	chance = { factor = 0.5 modifier = { factor = 10 has_country_flag = court_of_darkness_flag } }
+	chance = { factor = 1.0 modifier = { factor = 10 owner = { has_country_flag = court_of_darkness_flag } } }
+	#chance = { factor = 1.0 modifier = { factor = 10 owner = { has_country_flag = court_of_darkness_flag } } modifier = { factor = 0 owner = { has_country_flag = no_dark_advisors_flag NOT = { has_country_flag = court_of_darkness_flag } } } }
 	ai_will_do = { factor = 1 } 
 }
 con_man = { monarch_power = ADM
 	inflation_action_cost = -0.35
 	skill_scaled_modifier = { prestige = -0.15 }
-	chance = { factor = 0.5 modifier = { factor = 10 has_country_flag = court_of_darkness_flag } }
+	chance = { factor = 1.0 modifier = { factor = 10 owner = { has_country_flag = court_of_darkness_flag } } }
+	#chance = { factor = 1.0 modifier = { factor = 10 owner = { has_country_flag = court_of_darkness_flag } } modifier = { factor = 0 owner = { has_country_flag = no_dark_advisors_flag NOT = { has_country_flag = court_of_darkness_flag } } } }
 	ai_will_do = { factor = 1 } 
 }
 mad_scholar = { monarch_power = ADM
 	idea_cost = -0.35
 	skill_scaled_modifier = { production_efficiency = -0.10 }
-	chance = { factor = 0.5 modifier = { factor = 10 has_country_flag = court_of_darkness_flag } }
+	chance = { factor = 1.0 modifier = { factor = 10 owner = { has_country_flag = court_of_darkness_flag } } }
+	#chance = { factor = 1.0 modifier = { factor = 10 owner = { has_country_flag = court_of_darkness_flag } } modifier = { factor = 0 owner = { has_country_flag = no_dark_advisors_flag NOT = { has_country_flag = court_of_darkness_flag } } } }
 	ai_will_do = { factor = 1 } 
 }
 sadist = { monarch_power = ADM
 	harsh_treatment_cost = -0.35
 	skill_scaled_modifier = { improve_relation_modifier = -0.15 }
-	chance = { factor = 0.5 modifier = { factor = 10 has_country_flag = court_of_darkness_flag } }
+	chance = { factor = 1.0 modifier = { factor = 10 owner = { has_country_flag = court_of_darkness_flag } } }
+	#chance = { factor = 1.0 modifier = { factor = 10 owner = { has_country_flag = court_of_darkness_flag } } modifier = { factor = 0 owner = { has_country_flag = no_dark_advisors_flag NOT = { has_country_flag = court_of_darkness_flag } } } }
 	ai_will_do = { factor = 1 } 
 }
 occultist = { monarch_power = ADM
 	warscore_cost_vs_other_religion = -0.35
 	skill_scaled_modifier = { tolerance_own = -1 }
-	chance = { factor = 0.5 modifier = { factor = 10 has_country_flag = court_of_darkness_flag } }
+	chance = { factor = 1.0 modifier = { factor = 10 owner = { has_country_flag = court_of_darkness_flag } } }
+	#chance = { factor = 1.0 modifier = { factor = 10 owner = { has_country_flag = court_of_darkness_flag } } modifier = { factor = 0 owner = { has_country_flag = no_dark_advisors_flag NOT = { has_country_flag = court_of_darkness_flag } } } }
 	ai_will_do = { factor = 1 } 
 }
 criminal = { monarch_power = ADM
 	spy_offence = 0.35
 	skill_scaled_modifier = { diplomatic_reputation = -0.50 }
-	chance = { factor = 0.5 modifier = { factor = 10 has_country_flag = court_of_darkness_flag } }
+	chance = { factor = 1.0 modifier = { factor = 10 owner = { has_country_flag = court_of_darkness_flag } } }
+	#chance = { factor = 1.0 modifier = { factor = 10 owner = { has_country_flag = court_of_darkness_flag } } modifier = { factor = 0 owner = { has_country_flag = no_dark_advisors_flag NOT = { has_country_flag = court_of_darkness_flag } } } }
 	ai_will_do = { factor = 1 } 
 }
 #######################################################################
@@ -49,43 +56,50 @@ criminal = { monarch_power = ADM
 bandit = { monarch_power = DIP
 	global_tariffs = 0.35
 	skill_scaled_modifier = { trade_efficiency = -0.10 }
-	chance = { factor = 0.5 modifier = { factor = 10 has_country_flag = court_of_darkness_flag } }
+	chance = { factor = 1.0 modifier = { factor = 10 owner = { has_country_flag = court_of_darkness_flag } } }
+	#chance = { factor = 1.0 modifier = { factor = 10 owner = { has_country_flag = court_of_darkness_flag } } modifier = { factor = 0 owner = { has_country_flag = no_dark_advisors_flag NOT = { has_country_flag = court_of_darkness_flag } } } }
 	ai_will_do = { factor = 1 } 
 }
 vampire = { monarch_power = DIP
 	culture_conversion_cost = -0.35
 	skill_scaled_modifier = { unjustified_demands = 0.10 }
-	chance = { factor = 0.5 modifier = { factor = 10 has_country_flag = court_of_darkness_flag } }
+	chance = { factor = 1.0 modifier = { factor = 10 owner = { has_country_flag = court_of_darkness_flag } } }
+	#chance = { factor = 1.0 modifier = { factor = 10 owner = { has_country_flag = court_of_darkness_flag } } modifier = { factor = 0 owner = { has_country_flag = no_dark_advisors_flag NOT = { has_country_flag = court_of_darkness_flag } } } }
 	ai_will_do = { factor = 1 } 
 }
 corsair = { monarch_power = DIP
 	naval_morale = 0.15
 	skill_scaled_modifier = { naval_maintenance_modifier = 0.10 }
-	chance = { factor = 0.5 modifier = { factor = 10 has_country_flag = court_of_darkness_flag } }
+	chance = { factor = 1.0 modifier = { factor = 10 owner = { has_country_flag = court_of_darkness_flag } } }
+	#chance = { factor = 1.0 modifier = { factor = 10 owner = { has_country_flag = court_of_darkness_flag } } modifier = { factor = 0 owner = { has_country_flag = no_dark_advisors_flag NOT = { has_country_flag = court_of_darkness_flag } } } }
 	ai_will_do = { factor = 1 } 
 }
 conqueror = { monarch_power = DIP
 	land_morale = 0.15
 	skill_scaled_modifier = { land_maintenance_modifier = 0.10 }
-	chance = { factor = 0.5 modifier = { factor = 10 has_country_flag = court_of_darkness_flag } }
+	chance = { factor = 1.0 modifier = { factor = 10 owner = { has_country_flag = court_of_darkness_flag } } }
+	#chance = { factor = 1.0 modifier = { factor = 10 owner = { has_country_flag = court_of_darkness_flag } } modifier = { factor = 0 owner = { has_country_flag = no_dark_advisors_flag NOT = { has_country_flag = court_of_darkness_flag } } } }
 	ai_will_do = { factor = 1 } 
 }
 assasin = { monarch_power = DIP
 	diplomatic_annexation_cost = -0.35
 	skill_scaled_modifier = { core_creation = 0.10 }
-	chance = { factor = 0.5 modifier = { factor = 10 has_country_flag = court_of_darkness_flag } }
+	chance = { factor = 1.0 modifier = { factor = 10 owner = { has_country_flag = court_of_darkness_flag } } }
+	#chance = { factor = 1.0 modifier = { factor = 10 owner = { has_country_flag = court_of_darkness_flag } } modifier = { factor = 0 owner = { has_country_flag = no_dark_advisors_flag NOT = { has_country_flag = court_of_darkness_flag } } } }
 	ai_will_do = { factor = 1 } 
 }
 hedonist = { monarch_power = DIP
 	build_cost = -0.35
 	skill_scaled_modifier = { diplomatic_upkeep = -1 }
-	chance = { factor = 0.5 modifier = { factor = 10 has_country_flag = court_of_darkness_flag } }
+	chance = { factor = 1.0 modifier = { factor = 10 owner = { has_country_flag = court_of_darkness_flag } } }
+	#chance = { factor = 1.0 modifier = { factor = 10 owner = { has_country_flag = court_of_darkness_flag } } modifier = { factor = 0 owner = { has_country_flag = no_dark_advisors_flag NOT = { has_country_flag = court_of_darkness_flag } } } }
 	ai_will_do = { factor = 1 } 
 }
 slaver = { monarch_power = DIP
 	global_trade_goods_size_modifier = 0.35
 	skill_scaled_modifier = { trade_steering = -0.10 }
-	chance = { factor = 0.5 modifier = { factor = 10 has_country_flag = court_of_darkness_flag } }
+	chance = { factor = 1.0 modifier = { factor = 10 owner = { has_country_flag = court_of_darkness_flag } } }
+	#chance = { factor = 1.0 modifier = { factor = 10 owner = { has_country_flag = court_of_darkness_flag } } modifier = { factor = 0 owner = { has_country_flag = no_dark_advisors_flag NOT = { has_country_flag = court_of_darkness_flag } } } }
 	ai_will_do = { factor = 1 } 
 }
 #######################################################################
@@ -94,42 +108,49 @@ slaver = { monarch_power = DIP
 lich = { monarch_power = MIL
 	global_regiment_cost = -0.35
 	skill_scaled_modifier = { reinforce_speed = -0.10 }
-	chance = { factor = 0.5 modifier = { factor = 10 has_country_flag = court_of_darkness_flag } }
+	chance = { factor = 1.0 modifier = { factor = 10 owner = { has_country_flag = court_of_darkness_flag } } }
+	#chance = { factor = 1.0 modifier = { factor = 10 owner = { has_country_flag = court_of_darkness_flag } } modifier = { factor = 0 owner = { has_country_flag = no_dark_advisors_flag NOT = { has_country_flag = court_of_darkness_flag } } } }
 	ai_will_do = { factor = 1 } 
 }
 pillager = { monarch_power = MIL
 	loot_amount = 0.35
 	skill_scaled_modifier = { defensiveness = -0.10 }
-	chance = { factor = 0.5 modifier = { factor = 10 has_country_flag = court_of_darkness_flag } }
+	chance = { factor = 1.0 modifier = { factor = 10 owner = { has_country_flag = court_of_darkness_flag } } }
+	#chance = { factor = 1.0 modifier = { factor = 10 owner = { has_country_flag = court_of_darkness_flag } } modifier = { factor = 0 owner = { has_country_flag = no_dark_advisors_flag NOT = { has_country_flag = court_of_darkness_flag } } } }
 	ai_will_do = { factor = 1 } 
 }
 tyrant = { monarch_power = MIL
 	discipline = 0.05
 	skill_scaled_modifier = { global_spy_defence = -0.1 }
-	chance = { factor = 0.5 modifier = { factor = 10 has_country_flag = court_of_darkness_flag } }
+	chance = { factor = 1.0 modifier = { factor = 10 owner = { has_country_flag = court_of_darkness_flag } } }
+	#chance = { factor = 1.0 modifier = { factor = 10 owner = { has_country_flag = court_of_darkness_flag } } modifier = { factor = 0 owner = { has_country_flag = no_dark_advisors_flag NOT = { has_country_flag = court_of_darkness_flag } } } }
 	ai_will_do = { factor = 1 } 
 }
 cheapscape = { monarch_power = MIL
 	vassal_forcelimit_bonus = 0.35
 	skill_scaled_modifier = { global_regiment_recruit_speed = 0.1 }
-	chance = { factor = 0.5 modifier = { factor = 10 has_country_flag = court_of_darkness_flag } }
+	chance = { factor = 1.0 modifier = { factor = 10 owner = { has_country_flag = court_of_darkness_flag } } }
+	#chance = { factor = 1.0 modifier = { factor = 10 owner = { has_country_flag = court_of_darkness_flag } } modifier = { factor = 0 owner = { has_country_flag = no_dark_advisors_flag NOT = { has_country_flag = court_of_darkness_flag } } } }
 	ai_will_do = { factor = 1 } 
 }
 conscriptor = { monarch_power = MIL
 	global_manpower_modifier = 0.25
 	skill_scaled_modifier = { years_of_nationalism = 2.5 }
-	chance = { factor = 0.5 modifier = { factor = 10 has_country_flag = court_of_darkness_flag } }
+	chance = { factor = 1.0 modifier = { factor = 10 owner = { has_country_flag = court_of_darkness_flag } } }
+	#chance = { factor = 1.0 modifier = { factor = 10 owner = { has_country_flag = court_of_darkness_flag } } modifier = { factor = 0 owner = { has_country_flag = no_dark_advisors_flag NOT = { has_country_flag = court_of_darkness_flag } } } }
 	ai_will_do = { factor = 1 } 
 }
 dremora = { monarch_power = MIL
 	fort_maintenance_modifier = -0.35
 	skill_scaled_modifier = { manpower_recovery_speed = -0.10 }
-	chance = { factor = 0.5 modifier = { factor = 10 has_country_flag = court_of_darkness_flag } }
+	chance = { factor = 1.0 modifier = { factor = 10 owner = { has_country_flag = court_of_darkness_flag } } }
+	#chance = { factor = 1.0 modifier = { factor = 10 owner = { has_country_flag = court_of_darkness_flag } } modifier = { factor = 0 owner = { has_country_flag = no_dark_advisors_flag NOT = { has_country_flag = court_of_darkness_flag } } } }
 	ai_will_do = { factor = 1 } 
 }
 executioner = { monarch_power = MIL
 	liberty_desire_from_subject_development = -0.35
 	skill_scaled_modifier = { vassal_income = -0.10 }
-	chance = { factor = 0.5 modifier = { factor = 10 has_country_flag = court_of_darkness_flag } }
+	chance = { factor = 1.0 modifier = { factor = 10 owner = { has_country_flag = court_of_darkness_flag } } }
+	#chance = { factor = 1.0 modifier = { factor = 10 owner = { has_country_flag = court_of_darkness_flag } } modifier = { factor = 0 owner = { has_country_flag = no_dark_advisors_flag NOT = { has_country_flag = court_of_darkness_flag } } } }
 	ai_will_do = { factor = 1 } 
 }
