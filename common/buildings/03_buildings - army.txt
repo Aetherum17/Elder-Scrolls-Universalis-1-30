@@ -95,7 +95,7 @@ regimental_camp = {
 	cost = 75			
 	time = 12
 	modifier = {
-		land_forcelimit = 0.5
+		land_forcelimit = 0.25
 		local_regiment_cost = -0.10			
 		regiment_recruit_speed = -0.15
 	}
@@ -153,7 +153,7 @@ conscription_center = {
 	make_obsolete = regimental_camp
 	
 	modifier = {
-		land_forcelimit = 1.5
+		land_forcelimit = 0.5
 		local_regiment_cost = -0.25		
 		regiment_recruit_speed = -0.35	
 	}

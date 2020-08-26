@@ -226,7 +226,6 @@ blockaded = {
 	trade_goods_size_modifier = -0.5
 	province_trade_power_modifier = -0.75
 	local_monthly_devastation = 0.1
-
 }
 
 no_adjacent_controlled = {
@@ -247,7 +246,7 @@ knowledge_sharing = {
 }
 
 cardinals_spread_institution = {
-	institution_growth = 20
+	institution_growth = 25
 }
 
 manpower = {
@@ -274,8 +273,8 @@ province_razed = {
 development = {
 	supply_limit_modifier = 0.025
 	local_missionary_strength = -0.001
-	land_forcelimit	= 0.1			
-	naval_forcelimit = 0.1			
+	land_forcelimit	= 0.025			
+	naval_forcelimit = 0.05		
 	local_sailors = 35
 	province_trade_power_value = 0.25
 	local_amount_of_banners = 0.1

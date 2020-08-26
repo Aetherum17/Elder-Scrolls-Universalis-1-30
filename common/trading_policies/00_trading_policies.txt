@@ -8,8 +8,10 @@ maximize_profit =
 		}
 	}
 
-	countries_with_merchant_modifier = {
-		global_foreign_trade_power = 0.10
+	trade_power = {
+		duration = -1
+		power_modifier = 0.10
+		key = maximize_profits
 	}
 	
 	button_gfx = GFX_Trading_Policy_Max_Profit
@@ -25,7 +27,7 @@ hostile_trading =
 
 	# Also applied versus countries with the node as their home node
 	countries_with_merchant_modifier = {
-		spy_offence = 0.10
+		spy_offence = 0.25
 	}
 	
 	button_gfx = GFX_Trading_Policy_Hostile_Trading
@@ -55,6 +57,8 @@ improve_inland_routes =
 	
 	node_province_modifier = {
 		siege_ability = 0.10
+		siege_blockade_progress = 1
+		artillery_bonus_vs_fort = 1
 	}	
 	button_gfx = GFX_Trading_Policy_Improve_Routes
 }
@@ -75,6 +79,7 @@ establish_communities =
 
 propagate_religion =
 {
+	unique = yes															   
 
 	can_select = {		
 		dominant_religion = ROOT
@@ -101,5 +106,6 @@ propagate_religion =
 	}
 
 	show_alert = yes
+	center_of_reformation = yes						
 	button_gfx = GFX_Trading_Policy_Propagate_Religion
 }

@@ -91,7 +91,6 @@ intimidate_nation = {
 	
 	is_visible = {
 		has_country_flag = es_thieves_guild_flag
-		always = yes
 	}
 	is_allowed = {
 		has_country_flag = es_thieves_guild_flag
@@ -250,26 +249,113 @@ kidnap_advisor = {
 	}
 }
 
-#OR own ELDENROOT
-#Gain several new Diplomatic Options
-#Bless
-#Gain instant +25 Opinion
-#Only for those of the True Faith
-#Costs 50 Admin Points
-#Receiving nation gets Blessed for 25 Years
-#-5% Power Costs
-#Dismiss
-#Gain -25 Opinion
-#Only for those of the True Faith
-#Costs 100 Diplo Points
-#Receiving Nations gets Cursed for 25 Years
-#+5% Power Costs
-#Encourage
-#Gain +35 Opinion
-#Only for those of the True Faith
-#Cost 150 Mil Points
-#Receiving Nations get Encouraged for 10 Years
-#+15% Army Morale
-#-10% Army Maintenance
-#-15% Military Tech Cost
-#+3 Diplomatic Reputation
+#########################################################################################################################################################################################################################################################
+
+bless_nation = {
+	category = relation
+	
+	require_acceptance = no
+	
+	is_visible = {
+		OR = {
+			owns = 834
+			has_reform = heart_of_the_faith
+		}
+	}
+	is_allowed = {
+		FROM = { religion = ROOT }
+		FROM = { NOT = { has_country_modifier = es_you_are_blessed } }
+		adm_power = 50
+	}
+	on_accept = {
+		add_adm_power = -50
+		FROM = { 
+		add_opinion = { who = ROOT modifier = es_blessed_nation_modifier }
+		add_country_modifier = { name = "es_you_are_blessed" duration = 9125 }
+		}
+		
+	}
+	on_decline = { 
+	}
+	
+	ai_acceptance = { 
+	}
+
+	ai_will_do = {
+		factor = 1
+		modifier = { factor = 0 is_enemy = FROM }
+	}
+}
+
+dismiss_nation = {
+	category = relation
+	
+	require_acceptance = no
+	
+	is_visible = {
+		OR = {
+			owns = 834
+			has_reform = heart_of_the_faith
+		}
+	}
+	is_allowed = {
+		FROM = { NOT = { religion = ROOT } }
+		FROM = { NOT = { has_country_modifier = es_you_are_dismissed } }
+		dip_power = 50
+	}
+	on_accept = {
+		add_dip_power = -50
+		FROM = { 
+		add_opinion = { who = ROOT modifier = es_dismissed_nation_modifier }
+		add_country_modifier = { name = "es_you_are_dismissed" duration = 9125 }
+		}
+		
+	}
+	on_decline = { 
+	}
+	
+	ai_acceptance = { 
+	}
+
+	ai_will_do = {
+		factor = 1
+		modifier = { factor = 0 NOT = { is_enemy = FROM } }
+	}
+}
+
+encourage_nation = {
+	category = relation
+	
+	require_acceptance = no
+	
+	is_visible = {
+		OR = {
+			owns = 834
+			has_reform = heart_of_the_faith
+		}
+	}
+	is_allowed = {
+		FROM = { religion = ROOT }
+		FROM = { NOT = { has_country_modifier = es_you_are_encouraged } }
+		mil_power = 100
+	}
+	on_accept = {
+		add_mil_power = -100
+		FROM = { 
+		add_opinion = { who = ROOT modifier = es_encouraged_nation_modifier }
+		add_country_modifier = { name = "es_you_are_encouraged" duration = 3650 }
+		}
+		
+	}
+	on_decline = { 
+	}
+	
+	ai_acceptance = { 
+	}
+
+	ai_will_do = {
+		factor = 1
+		modifier = { factor = 0 is_enemy = FROM }
+		modifier = { factor = 0 FROM = { is_at_war = no } }
+	}
+}

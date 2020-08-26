@@ -1,6 +1,5 @@
 es_1_triumvirate = {
 	opinion = 200
-	years = 10
 	yearly_decay = 1
 }
 
@@ -13,4 +12,22 @@ es_friendly_nation = {
     opinion = 200
 	years = 10
 	yearly_decay = 1
+}
+
+es_blessed_nation_modifier = {
+	opinion = 25
+	yearly_decay = 1
+	max = 100
+}
+
+es_dismissed_nation_modifier = {
+	opinion = -25
+	yearly_decay = 1
+	min = -100
+}
+
+es_encouraged_nation_modifier = {
+	opinion = 50
+	yearly_decay = 1
+	max = 100
 }
