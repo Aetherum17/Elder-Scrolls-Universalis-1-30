@@ -397,6 +397,46 @@ country_event = {
 	
 }
 
+#########################################################################################################################################################################################################################################################
+
+country_event = {
+	id = event_new_diplomatic_actions.400
+	title = "event_new_diplomatic_actions.400.t"
+	desc = "event_new_diplomatic_actions.400.d"
+	picture = ES_MAD_KING_eventPicture
+	
+	trigger = {
+		has_reform = temprorary_dictatorship
+	}
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "event_new_diplomatic_actions.400.a"
+		add_stability = -1
+		add_ruler_modifier = {
+			name = "permanent_dictatorship"
+			duration = -1
+		}
+	}
+	option = {
+		name = "event_new_diplomatic_actions.400.a"
+		exile_ruler_as = es_exiled_ruler
+		add_legitimacy = -50
+		add_horde_unity = -50
+		random_owned_province = { 
+			spawn_rebels = {
+				type = pretender_rebels
+				size = 3.5
+				win = yes
+				leader = es_exiled_ruler
+				unrest = 25
+			}
+		}
+	}
+	
+}
+
 #○ Taking any province in a war with more then 10 development will trigger a common but important events; - has_country_flag = es_slavery_flag - has_reform = Justified Atrocity
 #■ Reduces province development by 1 point each, causes 40 devastation,
 #and gives a large 10 year malus called Depopulated

@@ -479,7 +479,7 @@ tribal = {
 			}
 		}
 		labour = { reforms = { commission serfdom unregulated_guilds slavery } }
-		# 4 Level GR
+		tribal_unity = { reforms = { loose_confederacy tribal_territory survival coalition } }
 		agriculture_policy = {
 			reforms = {
 				21_a
@@ -506,7 +506,7 @@ tribal = {
 				46_d
 			}
 		}
-		# 7 Level GR
+		historical_record = { reforms = { oral_tradition written_record unspoken_past historical_preservation } }
 		cultural_values = { reforms = { tavern_life tournaments art_and_science raiding } }
 		community_policy = {
 			reforms = {
@@ -517,7 +517,7 @@ tribal = {
 			}
 		}
 		trade = { reforms = { internal_market free_trade protectionism corporatism } }
-		# 10 Level GR
+		tyranny = { reforms = { tribal_council local_strongman tribal_dictatorship temprorary_dictatorship } }
 		centralization_policy = {
 			reforms = {
 				12_a
@@ -544,7 +544,7 @@ tribal = {
 				17_d
 			}
 		}
-		# 13 Level GR
+		es_religion = { reforms = { rituals formal_faith syncretism humanist } }
 		guild_favoritism = { reforms = { fighters_guild mages_guild thieves_guild assassins_guild } }
 		marraiage_policy = {
 			reforms = {
@@ -555,7 +555,7 @@ tribal = {
 			}
 		}
 		diplomacy = { reforms = { diplomatic_core expansion supremacy guardian } }
-		# 16 Level GR
+		es_tradition = { reforms = { warrior_lodges partial_nomadism religious_overtones evolutionary_survival } }
 		language_policy = {
 			reforms = {
 				13_a
@@ -582,7 +582,7 @@ tribal = {
 				57_d
 			}
 		}
-		# 19 Level GR
+		diversity = { reforms = { clan_society accepted_outsiders clan_immigration tribal_colonies } }
 		bans = { reforms = { normalized_regulation abolition prohibition drug_limitation } }
 		embassy_policy = {
 			reforms = {
@@ -593,7 +593,7 @@ tribal = {
 			}
 		}
 		espionage = { reforms = { spy_agency local_scouting cut_throat_politics the_grand_game } }
-		# 22 Level GR
+		survival = { reforms = { hidden_holdouts emergency_magic long_lasting_resistance accepted_fate } }
 		court_policy = {
 			reforms = {
 				44_a
@@ -620,7 +620,7 @@ tribal = {
 				18_d
 			}
 		}
-		# 25 Level GR
+		civilizing = { reforms = { traditionalism curiosity copycat innovative_push } }
 		expansion = { reforms = { regional_ambitions colonial_ambitions es_imperial_ambitions isolationist } }
 		relations_policy = {
 			reforms = {
@@ -631,7 +631,7 @@ tribal = {
 			}
 		}
 		community = { reforms = { typical_commoners pompous_elitists familial_bondage adventurous_nomads } }
-		# 28 Level GR
+		tribal_innovation = { reforms = { legendary_warriors noble_savages tribal_empire innovative_traditions } }
 		infrastrucure_policy = {
 			reforms = {
 				25_a
@@ -780,7 +780,7 @@ theocracy = {
 				17_d
 			}
 		}
-		proselytism = { reforms = { missions evangelism forced_convertion forced_convertion } }
+		proselytism = { reforms = { missions evangelism forced_convertion martyrdom } }
 		guild_favoritism = { reforms = { fighters_guild mages_guild thieves_guild assassins_guild } }
 		marraiage_policy = {
 			reforms = {
@@ -791,7 +791,7 @@ theocracy = {
 			}
 		}
 		diplomacy = { reforms = { diplomatic_core expansion supremacy guardian } }
-		# 16 Level GR
+		morality_and_ethics = { reforms = { religious_law kindness_and_mercy faith_alone justified_atrocity } }
 		language_policy = {
 			reforms = {
 				13_a
@@ -818,7 +818,7 @@ theocracy = {
 				57_d
 			}
 		}
-		morality_and_ethics = { reforms = { religious_law kindness_and_mercy faith_alone justified_atrocity } }
+		debate = { reforms = { encouraged_debate religious_scolarship technological_council clerical_truth } }
 		bans = { reforms = { normalized_regulation abolition prohibition drug_limitation } }
 		embassy_policy = {
 			reforms = {
@@ -829,7 +829,7 @@ theocracy = {
 			}
 		}
 		espionage = { reforms = { spy_agency local_scouting cut_throat_politics the_grand_game } }
-		debate = { reforms = { encouraged_debate religious_scolarship technological_council clerical_truth } }
+		theocratic_finance = { reforms = { tithe church_tax_brackets priesthood_pool pilgrim_economy } }
 		court_policy = {
 			reforms = {
 				44_a
@@ -856,7 +856,7 @@ theocracy = {
 				18_d
 			}
 		}
-		theocratic_finance = { reforms = { tithe church_tax_brackets priesthood_pool pilgrim_economy} }
+		heathenism_and_heresy = { reforms = { heretic_brothers heathen_neighbors tolerant_society es_crusade } }
 		expansion = { reforms = { regional_ambitions colonial_ambitions es_imperial_ambitions isolationist } }
 		relations_policy = {
 			reforms = {
@@ -867,7 +867,7 @@ theocracy = {
 			}
 		}
 		community = { reforms = { typical_commoners pompous_elitists familial_bondage adventurous_nomads } }
-		heathenism_and_heresy = { reforms = { heretic_brothers heathen_neighbors tolerant_society es_crusade } }
+		theocratic_innovation = { reforms = { godly_administration religious_revival zealous_army heart_of_the_faith } }
 		infrastrucure_policy = {
 			reforms = {
 				25_a
