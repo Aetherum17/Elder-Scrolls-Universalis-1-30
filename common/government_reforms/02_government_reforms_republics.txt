@@ -42,6 +42,15 @@ oligarchy_reform = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
 	
+	trigger = {
+		NOT = { has_reform = reason_and_logic }
+		NOT = { has_reform = bureaucratic_tyranny }
+		NOT = { has_reform = court_of_darkness }
+		NOT = { has_reform = divine_right }
+		NOT = { has_reform = subservient_bureaucracy }
+		NOT = { has_reform = justified_atrocity }
+	}
+	
 	factions = {
 		mr_aristocrats
 		mr_traders
@@ -66,7 +75,7 @@ oligarchy_reform = {
 		states_general_mechanic = {
 			partic = {
 			    vassal_income = 0.25
-				state_maintenance_modifier = -0.15
+				state_maintenance_modifier = 0.15
 				republican_tradition = 1
 			}
 
@@ -1123,6 +1132,12 @@ dutch_republic = {
 		NOT = { average_unrest = 1 }
 		}
 		}
+		NOT = { has_reform = reason_and_logic }
+		NOT = { has_reform = bureaucratic_tyranny }
+		NOT = { has_reform = court_of_darkness }
+		NOT = { has_reform = divine_right }
+		NOT = { has_reform = subservient_bureaucracy }
+		NOT = { has_reform = justified_atrocity }
 	}
 	legacy_equivalent = oligarchic_republic
 	valid_for_nation_designer = yes
@@ -1158,7 +1173,7 @@ dutch_republic = {
 		states_general_mechanic = {
 			statists = {
 				naval_forcelimit_modifier = 0.25
-				global_trade_power = 0.15
+				global_trade_power = -0.15
 				republican_tradition = 1
 			}
 

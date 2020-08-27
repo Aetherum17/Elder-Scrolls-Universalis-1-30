@@ -526,6 +526,12 @@ monastic_elections_reform = {
 		army_size = 100
 		}
 		}
+		NOT = { has_reform = reason_and_logic }
+		NOT = { has_reform = bureaucratic_tyranny }
+		NOT = { has_reform = court_of_darkness }
+		NOT = { has_reform = divine_right }
+		NOT = { has_reform = subservient_bureaucracy }
+		NOT = { has_reform = justified_atrocity }
 	}
 	legacy_equivalent = theocratic_government
 	valid_for_nation_designer = yes
@@ -556,15 +562,15 @@ monastic_elections_reform = {
 		election_on_death = yes
 		states_general_mechanic = {
 			militarists = {
-				manpower_recovery_speed = 0.25
-				warscore_cost_vs_other_religion = -0.15
-				army_tradition_from_battle = 0.5
+				warscore_cost_vs_other_religion = -0.25
+				army_tradition_from_battle = 0.50
+				devotion = -1.0
 			}
-
+			
 			theocrats = {
 				tolerance_own = 2.5
-				global_missionary_strength = 0.015
-				devotion = 0.5
+				missionary_maintenance_cost = 0.50
+				devotion = 1.0
 			}
 		}
 	}
