@@ -100,6 +100,10 @@ slavery = {
 	}
 	removed_effect = {
 	    clr_country_flag = es_slavery_flag
+		remove_country_modifier = slave_guild_modifier
+		remove_country_modifier = new_restraining_bolts_modifier 
+		remove_country_modifier = slave_army_modifier
+		every_owned_province = { limit = { has_province_modifier = es_enslaved_population } remove_province_modifier = es_enslaved_population }
 	}
 }
 
@@ -237,6 +241,10 @@ magical_society = {
 	}
 	removed_effect = {
 	    clr_country_flag = es_magic_nation_flag
+		remove_country_modifier = national_mage_college_modifier
+		remove_country_modifier = ban_necromacy_modifer
+		remove_country_modifier = allow_necromacy_modifier
+		remove_country_modifier = hedge_mage_roundup_modifier
 	}
 }
 
@@ -256,7 +264,7 @@ tournaments = {
 	icon = "blood_tax"
 	allow_normal_conversion = yes
 	modifiers = {
-	    prestige_from_land 0.35
+	    prestige_from_land = 0.35
 	}
 }
 #Art and Sciences (Green)
@@ -362,7 +370,7 @@ fanaticism = {
 	modifiers = {
 	    warscore_cost_vs_other_religion = -0.25
 		enforce_religion_cost = -0.5
-		tolerance_own = -3
+		tolerance_own = 3
 		tolerance_heretic = -3
 		tolerance_heathen = -3
 	}
@@ -754,6 +762,19 @@ jewel_of_tamriel = {
 	}
 	removed_effect = {
 	    clr_country_flag = es_jewel_of_tamriel_flag
+		every_owned_province = { limit = {
+		OR = { 
+		has_province_modifier = jewel_of_tamriel_modifier
+		has_province_modifier = merchant_quarter_modifier
+		has_province_modifier = handicraft_quarter_modifier
+		has_province_modifier = military_quarter_modifier
+		}
+		}
+		remove_province_modifier = jewel_of_tamriel_modifier
+		remove_province_modifier = merchant_quarter_modifier
+		remove_province_modifier = handicraft_quarter_modifier
+		remove_province_modifier = military_quarter_modifier
+		}
 	}
 }
 
@@ -1697,6 +1718,9 @@ triumphs = {
 	    clr_country_flag = es_triumphs_flag
 		add_republican_tradition = -25
 		add_prestige = -25
+		remove_country_modifier = es_grant_triumph
+		remove_country_modifier = es_denied_triuph
+		remove_country_modifier = es_fund_triumph
 	}
 }
 
@@ -1851,6 +1875,11 @@ co-consul = {
 	}
 	removed_effect = {
 	    clr_country_flag = es_consul_flag
+		remove_country_modifier = moderate
+		remove_country_modifier = reformer
+		remove_country_modifier = populist
+		remove_country_modifier = conservative
+		remove_country_modifier = ambitious_idiot
 	}
 }
 #Theocratic Presidency (Yellow)
@@ -2817,89 +2846,3 @@ innovative_traditions = {
 		idea_cost = -0.10
 	}
 }
-
-#○ New Privileges Unlocked
-#■ Noble Privilege: Hold Gladiatorial Games
-#● +5% Loyalty
-#● +5% Influence
-#● +0.25 Army Tradition
-#● +0.5 Prestige
-#■ Burgher Privilege: Establish Slave Enclaves
-#● +5% Loyalty
-#● +5% Influence
-#● Will randomly generate a slave province every 25 Years, but
-#requires at least one province to have a slave province in it
-#● +2 National Unrest
-#■ Clergy Privilege: Slave Conversion
-#● +5% Loyalty
-#● +5% Influence
-#● +15% Religion Unity
-#● +2% Missionary Strength vs Heathens
-
-#○ New Estate Privileges are Available
-#■ Noble Privilege: Mage Generals
-#● -15 Absolutism
-#● +10% Loyalty
-#● +10% Influence
-#● +1 General Fire
-#● +1 General Movement
-#■ Burgher Privilege: Sorcerous Experimentation
-#● -15 Absolutism
-#● +10% Loyalty
-#● +10% Influence
-#● -5% Tech Cost
-#● -5% Military Tech Cost
-#■ Clergy Privilege: Mage Clergy
-#● -15 Absolutism
-#● +10% Loyalty
-#● +10% Influence
-#● +2 Tolerance of the True Faith
-#● +25 Opinion from nations of the same faith
-
-#● New Privilege Unlocked
-#○ Noble Privilege: Establish Estate Economy
-#■ -10 Absolutism
-#■ +5% Noble Lands
-#■ +15% Noble Influence
-#■ -15% State Maintenance
-#■ +5% Development Efficiency
-
-#● New Privileges Unlocked
-#○ Noble Privilege: Private Armies
-#■ -5 Absolutism
-#■ +10% Noble Loyalty
-#■ +10% Noble Influence
-#■ -25% Mercenary Maintenance
-#■ +5% Mercenary Discipline
-#○ Noble Privilege: Noble Officers
-#■ -5 Absolutism
-#■ +10% Noble Loyalty
-#■ +10% Noble Influence
-#■ +1 Free Leaders
-#■ +0.5 Yearly Army Tradition
-
-###########################
-# NEW RULER PERSONALITIES #
-###########################
-
-#● Unlocks Magic Mechanics - es_magic_regulation_flag
-#○ Rulers are granted an advance pool of new personalities
-#■ Illusionist: +1 Diplomatic Reputation, +5% Army Movement Speed
-#■ Auger: -5% Army Shock, +5% Local Good Produced
-#■ Destroyer: +10% Army Fire Damage
-#■ Necromancer: +15% Army Manpower Modifier, -2 Diplomatic Reputation
-#■ Conjurer: -10% Land Maintenance Modifier, -10% Ship Cost
-#■ Restorer: -20% Land Attrition
-#■ Mystic: +25% Army Drill Gain, -10% Liberty Desire
-#■ Enchanter: +10% National Tax Modifier, +5% Infantry Combat Ability
-
-#○ Adds new personalities to leaders, power and elite ones - es_magic_nation_flag
-#■ Lich: Immortality, +100% Manpower Modifier, -3 Diplomatic Reputation,
-#+3 Unrest
-#■ Summoner: -15% Army Maintenance, -15% Naval Maintenance
-#■ Archmage: -5% Power Costs, +2 Leader Fire
-#■ Seer: -20% Liberty Desire, +15% Movement Speed
-#■ Sorcerer: +20% Land Fire Damage, +15% Artillery Combat Ability
-#■ Warlock: -0.30 Yearly Corruption, +25% Goods Produced
-#■ Hag: +20% Shock Damage Dealt, +50% Army Drill Gain
-#■ Guardian: -20% Shock Damage Received, -50% Army Drill Loss

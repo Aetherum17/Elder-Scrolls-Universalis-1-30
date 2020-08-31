@@ -1,0 +1,15 @@
+knights_of_the_nine = {
+    regiments_per_development = 0.075
+	cost_modifier = 0.5
+    home_province = 1206
+	cavalry_weight = 0.35
+	artillery_weight = 0.15
+	sprites = { westerngfx_sprite_pack }
+    trigger = {
+		religion = nine_divines
+	}
+	modifier = { 
+	    cavalry_power = 0.15
+		infantry_power = 0.15
+	}
+}

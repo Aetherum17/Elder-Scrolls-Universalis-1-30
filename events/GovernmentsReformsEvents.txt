@@ -437,117 +437,111 @@ country_event = {
 	
 }
 
-#○ Taking any province in a war with more then 10 development will trigger a common but important events; - has_country_flag = es_slavery_flag - has_reform = Justified Atrocity
-#■ Reduces province development by 1 point each, causes 40 devastation,
-#and gives a large 10 year malus called Depopulated
-#● +30% Development Cost
-#● +0.40 Monthly Autonomy
-#● -33% Local Goods Produced
-#■ Option 1: Takes slaves to a random province and deploy them for 100
-#years giving a large bonus
-#● -15% Development Cost
-#● +10% Local Goods Produced
-#● +15% Production Efficiency
-#● +3 Unrest
-#■ Option 2: Sell them for 100 gold
-#■ Option 3: Conscript captives for 1000 manpower
-#○ +75% Production of Slaves
+#########################################################################################################################################################################################################################################################
 
-#○ Conquering a new provinces with a level 2 general or higher in employment - has_country_flag = es_triumphs_flag
-#enables the Triumph event
-#○ Triumph Events have 3 main options
-#■ Deny Triumph
-#● -10 Prestige
-#● -5 Republican Tradition
-#● Gain Triumph Denied modifier for 20 years
-#○ +100% Leader Cost
-#○ -1 Leader
-#○ -20% Aggressive Expansion
-#○ -2 Unrest
-#■ Grant Triumph
-#● +10 Republican Tradition
-#● +5 Years worth of Income
-#● +20 Prestige
-#● Gain Triumph modifier for 20 years
-#○ +10% Army Morale
-#○ -2 Unrest
-#○ +50% Aggressive Expansion
-#■ Fund Triumph
-#● -10 years worth of income
-#● +20 Republican Tradition
-#● +40 Prestige
-#● Gain Grand Triumph modifier for 20 years
-#○ +15% Army Morale
-#○ -3 Unrest
-#○ +100% Aggressive Expansion
-#○ Triumphs need to be held every 15 years, or the nation will get the modifier
-#Triumphless for till a new Triumph is held
-#■ -2 Yearly Republican Tradition
+country_event = {
+	id = event_new_diplomatic_actions.500
+	title = "event_new_diplomatic_actions.500.t"
+	desc = "event_new_diplomatic_actions.500.d"
+	picture = ES_SLAVERY_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		random_owned_province = {
+		limit = { has_province_flag = es_province_to_slave_flag } 
+		save_event_target_as = es_province_to_slave
+		}
+	}
+	
+	option = {
+		name = "event_new_diplomatic_actions.500.a"
+		event_target:es_province_to_slave = {
+			add_devastation = 75
+			add_province_modifier = { name = "es_enslaved_population" duration = -1 }
+			clr_province_flag = es_province_to_slave_flag
+		}
+	}
+	option = {
+		name = "event_new_diplomatic_actions.500.b"
+		event_target:es_province_to_slave = {
+			add_nationalism = 10
+			add_scaled_local_adm_power = 10
+			add_scaled_local_dip_power = 10
+			add_scaled_local_mil_power = 10
+			clr_province_flag = es_province_to_slave_flag
+		}
+	}
+	option = {
+		name = "event_new_diplomatic_actions.500.c"
+		event_target:es_province_to_slave = {
+			add_yearly_manpower = 1.0
+			add_years_of_income = 0.50
+			add_base_tax = -5
+			add_base_production = -5
+			add_base_manpower = -5
+			clr_province_flag = es_province_to_slave_flag
+		}
+	}
+	
+}
 
-#● At the start of each presidency, an event fires which gives the choice of a Co-Consul - has_country_flag = es_consul_flag
-#which provides a government modifier till the end of the presidential term.
-#○ Moderate
-#■ +0.1 Yearly Republican Tradition
-#■ +2 Unrest
-#○ Reformer
-#■ +30% Government Progress Gain
-#■ +10% Institution Spread
-#■ +100% Stability Cost
-#○ Populist
-#■ -4 Unrest
-#■ +10% Army Morale
-#■ -1 Yearly Republican Tradition
-#○ Conservative
-#■ +10% National Tax Modifier
-#■ -0.5 Interest Annum
-#■ +100% Idea Cost
-#○ Ambitious Idiot
-#■ -10% Army Maintenance Modifier
-#■ -2.5% Power Costs
-#■ +8 Unrest
+country_event = {
+	id = event_new_diplomatic_actions.600
+	title = "event_new_diplomatic_actions.600.t"
+	desc = "event_new_diplomatic_actions.600.d"
+	picture = ES_TRIUMPH_1_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		# Grant Triumph
+		name = "event_new_diplomatic_actions.600.a"
+		add_republican_tradition = -10
+		add_country_modifier = { name = "es_grant_triumph" duration = 3650 }
+	}
+	option = {
+		# Fund Triump
+		name = "event_new_diplomatic_actions.600.b"
+		add_years_of_income = -1.0
+		add_country_modifier = { name = "es_fund_triumph" duration = 3650 }
+	}
+	option = {
+		# Deny Triump
+		name = "event_new_diplomatic_actions.600.c"
+		add_prestige = -10
+		add_country_modifier = { name = "es_denied_triuph" duration = 3650 }
+	}
+	
+}
 
-#○ New Pool of Events - es_slavery_flag
-#■ Population Enslaved
-#■ Slave Population Depletes
-#■ Slave Revolution
-
-#○ Magical Society has a new pool of events - has_country_flag = es_magic_nation_flag
-#■ Rogue Mages Causes Trouble
-#■ Anti-Mage Revolt
-#■ Magic Monopoly Booms
-
-#● Gain New Event Pool - has_country_flag = es_assassins_guild_flag
-#○ Dark Brotherhood Hunted
-#○ Dark Brotherhood Kills Ruler
-#○ Dark Brotherhood Kills Heir
-
-#● Gain access to new event list - has_country_flag = es_cut_throat_politics_flag
-#○ Ruler Humiliated
-#○ Ruler Murdered by Family
-#○ Ambitious Rival Raises Army
-
-#○ Gain Access to Isolationism Event Pool - has_country_flag = es_isolationist_flag
-#■ Outside Merchants Run Out
-#■ Isolation Breeds Ignorance
-#■ Isolation Breeds Xenophobia
-
-#● Gives access to the Statism event pool - has_country_flag = es_bureaucratic_tyranny_flag
-#○ Government Agency Drags Feet
-#○ Overspending
-#○ Bureaucratic Nightmare
-
-#● Gain Access to Open Succession Events - has_country_flag = es_open_flag
-#○ Heirs Plots Against Each Other
-#○ Heir Assassinated
-#○ Rival Brother Raises Army
-
-#○ Gain Access to Divine Blood Event Pool - has_country_flag = es_divine_right_flag
-#■ God King Questioned
-#■ Clergy vs Monarchy
-#■ Theological Faux Pas
-
-#● Adds Private Lawyer Event Pool - has_country_flag = es_private_lawyers_flag
-#○ Monopoly Sues the State
-#○ Citizens Demand Change
-#○ National Trial Humiliates Nation
-#● -25% Institution Spread
+country_event = {
+	id = event_new_diplomatic_actions.700
+	title = "event_new_diplomatic_actions.700.t"
+	desc = "event_new_diplomatic_actions.700.d"
+	picture = ES_OFFICE_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "event_new_diplomatic_actions.700.a"
+		add_country_modifier = { name = "moderate" duration = -1 }
+	}
+	option = {
+		name = "event_new_diplomatic_actions.700.b"
+		add_country_modifier = { name = "reformer" duration = -1 }
+	}
+	option = {
+		name = "event_new_diplomatic_actions.700.c"
+		add_country_modifier = { name = "populist" duration = -1 }
+	}
+	option = {
+		name = "event_new_diplomatic_actions.700.e"
+		add_country_modifier = { name = "conservative" duration = -1 }
+	}
+	option = {
+		name = "event_new_diplomatic_actions.700.f"
+		add_country_modifier = { name = "ambitious_idiot" duration = -1 }
+	}
+	
+}

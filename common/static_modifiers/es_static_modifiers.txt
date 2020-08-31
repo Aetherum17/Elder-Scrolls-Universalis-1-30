@@ -123,10 +123,10 @@ coastal = {
 }
 
 seat_in_parliament = {
-	local_manpower_modifier = 0.1
+	local_manpower_modifier = 0.05
 	local_sailors_modifier = 0.05
-	local_tax_modifier = 0.1
-	local_production_efficiency = 0.1
+	local_tax_modifier = 0.05
+	local_production_efficiency = 0.05
 }
 
 non_coastal = {
@@ -172,7 +172,7 @@ sea_zone = {
 
 land_province = {
 	max_attrition = 5
-	local_manpower_modifier = 0.25
+	local_manpower_modifier = 0.10
 }
 
 mild_winter = {
@@ -298,7 +298,7 @@ patriarch_state = {
 
 patriarch_authority_local = {
 	local_unrest = -2.5
-	local_manpower_modifier = 0.33
+	local_manpower_modifier = 0.25
 }
 
 patriarch_authority_global = {
@@ -327,9 +327,9 @@ native_aggressiveness = {
 }
 
 core = {
-	local_tax_modifier = 0.75				
-	local_manpower_modifier = 0.75	
-	local_sailors_modifier = 0.75
+	local_tax_modifier = 0.5		
+	local_manpower_modifier = 0.5
+	local_sailors_modifier = 0.5
 }
 
 non_core = {
@@ -337,12 +337,12 @@ non_core = {
 }
 
 territory_core = {
-	local_tax_modifier = 0.5				
-	local_manpower_modifier = 0.5
-	local_sailors_modifier = 0.5
-	local_missionary_strength = -0.015
+	local_tax_modifier = 0.25				
+	local_manpower_modifier = 0.25
+	local_sailors_modifier = 0.25
+	local_missionary_strength = -0.025
 	min_local_autonomy = 90
-	local_governing_cost = -0.5									 
+	local_governing_cost = -0.25									 
 }
 
 territory_non_core = {
@@ -369,11 +369,11 @@ same_culture_group = {
 }
 
 non_accepted_culture = {
-	local_tax_modifier = -0.33
-	local_missionary_strength = -0.025
-	local_manpower_modifier = -0.33
-	local_sailors_modifier = -0.33
-	local_unrest = 2.5
+	local_tax_modifier = -0.35
+	local_missionary_strength = -0.035
+	local_manpower_modifier = -0.35
+	local_sailors_modifier = -0.35
+	local_unrest = 3.5
 }
 
 accepted_culture_demoted = {
@@ -381,8 +381,8 @@ accepted_culture_demoted = {
 }
 
 non_accepted_culture_republic = {
-	local_tax_modifier = 0.1
-	local_manpower_modifier = 0.1
+	local_tax_modifier = 0.05
+	local_manpower_modifier = 0.05
 	local_sailors_modifier = 0.05
 	local_unrest = -0.5
 }
@@ -456,7 +456,7 @@ local_autonomy_multiplicative = {
 	local_sailors_modifier = -1.0
 	local_tax_modifier = -1.0
 	local_production_efficiency = -1.0
-	province_trade_power_modifier = -0.5
+	province_trade_power_modifier = -1.0
 	land_forcelimit_modifier = -1.0
 	naval_forcelimit_modifier = -1.0 
 }
@@ -468,7 +468,7 @@ local_autonomy_trade_company_multiplicative = {
 	local_manpower_modifier = -1.0
 	local_sailors_modifier = -1.0
 	local_tax_modifier = -1.0
-	local_production_efficiency = -0.5
+	local_production_efficiency = -1.0
 	land_forcelimit_modifier = -1.0
 }
 

@@ -1,80 +1,495 @@
 country_decisions = {
 
-#■ Establish Slaver Guild - has_country_flag = es_slavery_flag
-#● +25% Production of Slaves
-#● +1 National Unrest
-#■ New Restraining Bolts
-#● -1 National Unrest
-#● +2% Prestige Decay
-#■ Establish Slave Armies
-#● +15% Manpower Modifier
-#● -5% Discipline
+	esteblish_slave_guild = {
+		major = yes
+		potential = {
+			has_country_flag = es_slavery_flag
+			NOT ={ has_country_modifier = slave_guild_modifier }
+		}
+		allow =  {
+			years_of_income = 1.0
+			num_of_ports = 25
+			adm = 5
+		}
+		effect = {
+			add_years_of_income = -1.0
+			add_country_modifier = { name = "slave_guild_modifier" duration = -1 }
 
-#○ New Decisions are Available - has_country_flag = es_magic_nation_flag
-#■ National Mage Guild
-#● -5% Idea Cost
-#● -10% National Tax Modifier
-#■ Reign In Necromancery (Only One can be Chosen)
-#● -1 Unrest
-#● Remove Lich from Leader Pool
-#■ Embrace Necromancery (Only One can be Chosen)
-#● +1 Unrest
-#● +10% Land Force Limit
-#■ Hedge Mage Roundup
-#● +1 Unrest
-#● -10% Stability Cost
-
-#● The Capital of the nation gains a major province modifier called Jewel of Tamriel - has_country_flag = es_jewel_of_tamriel_flag
-#○ -50% Construction Cost
-#○ -35% Development Cost
-#○ +3 Local Goods Produced
-#● The capital of the nation is improved three times via a decision, which is highly
-#expensive.
-#○ Level 1: +100% Trade Power
-#○ Level 2: +100% Local Tax Modifier
-#○ Level 3: +100% Local Manpower
-
-#● Adds new Decisions - has_country_flag = es_private_lawyers_flag
-#○ Business Lawyers
-#■ -10% Charter Building Cost
-#■ +1 Merchant
-#■ -15% Trade Goods Produced
-#○ Private Investigations
-#■ +0.2 Yearly Republican Tradition
-#■ -10% National Tax Modifier
-#○ Expand Law Pool
-#■ -5% Idea Cost
-#■ +5% Military Tech Cost
-
-#Unlocks Decision: Emergency Magical Pact - has_reform = emergency_magic
-#Only can be activated during war
-#Costs 500 Military Monarch Points
-#+40% Fort Defense
-#+25% Artillery Combat Ability
-#+3 Attrition
-#Lasts 10 Years
-
-#Gain 5 major decisions, but these decisions can ultimately reflect back some major issues - has_reform = justified_atrocity
-#Enslave Enemies
-#+20% Production Efficiency
-#Butcher Enemies
-#+15% Artillery Combat Ability
-#Torture Enemies
-#-5 Unrest
-#Murder Enemies
-#-50% Stability Cost
-#Oppress Enemies
-#-5 Unrest
-
-######################################
-# Thieves Guild for Riften
-# Assasins Guild for MOrang Tong Event
-# OR for Falkreath owner?
-######################################
-
-#Atrius Building Commission - United Cyrodiil
-#Census and Excise - United Cyrodiil
-#Office of Introductory Studies - United Cyrodiil
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	introduce_restraining_bolts_modifier = {
+		major = yes
+		potential = {
+			has_country_flag = es_slavery_flag
+			NOT = { has_country_modifier = new_restraining_bolts_modifier }
+		}
+		allow =  {
+			prestige = 25
+			total_development = 1000
+			dip = 5
+		}
+		effect = {
+			add_prestige = -25
+			add_country_modifier = { name = "new_restraining_bolts_modifier" duration = -1 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	gather_slave_army_modifier = {
+		major = yes
+		potential = {
+			has_country_flag = es_slavery_flag
+			NOT = { has_country_modifier = slave_army_modifier }
+		}
+		allow =  {
+			num_of_subjects = 5
+			stability = 1
+			mil = 5
+		}
+		effect = {
+			add_stability = -1
+			add_country_modifier = { name = "slave_army_modifier" duration = -1 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	found_national_mage_college = {
+		major = yes
+		potential = {
+			has_country_flag = es_magic_nation_flag
+			NOT = { has_country_modifier = national_mage_college_modifier }
+		}
+		allow =  {
+			adm = 5
+			years_of_income = 1.5
+			prestige = 25
+		}
+		effect = {
+			add_years_of_income = -1.5
+			add_prestige = -25
+			add_country_modifier = { name = "national_mage_college_modifier" duration = -1 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	ban_necromacy = {
+		major = yes
+		potential = {
+			has_country_flag = es_magic_nation_flag
+			NOT = { has_country_modifier = ban_necromacy_modifer }
+			NOT = { has_country_modifier = allow_necromacy_modifier }
+		}
+		allow =  {
+			dip = 5
+			NOT = { prestige = 90 }
+		}
+		effect = {
+			add_prestige = 10
+			add_country_modifier = { name = "ban_necromacy_modifer" duration = -1 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	allow_necromacy = {
+		major = yes
+		potential = {
+			has_country_flag = es_magic_nation_flag
+			NOT = { has_country_modifier = ban_necromacy_modifer }
+			NOT = { has_country_modifier = allow_necromacy_modifier }
+		}
+		allow =  {
+			dip = 5
+			stability = 3
+		}
+		effect = {
+			add_stability = -3
+			add_country_modifier = { name = "allow_necromacy_modifier" duration = -1 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	build_mage_roundup = {
+		major = yes
+		potential = {
+			has_country_flag = es_magic_nation_flag
+			NOT = { has_country_modifier = hedge_mage_roundup_modifier }
+		}
+		allow =  {
+			mil = 5
+			manpower = 25
+			years_of_income = 10
+		}
+		effect = {
+			add_manpower = -25
+			add_years_of_income = -10
+			add_country_modifier = { name = "hedge_mage_roundup_modifier" duration = -1 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	build_jewel_of_tamriel = {
+		major = yes
+		potential = {
+			has_country_flag = es_jewel_of_tamriel_flag
+			capital_scope = { NOT = { has_province_modifier = jewel_of_tamriel_modifier } }
+		}
+		allow =  {
+			years_of_income = 1.0
+		}
+		effect = {
+			add_years_of_income = -1.0
+			capital_scope = { add_country_modifier = { name = "jewel_of_tamriel_modifier" duration = -1 } }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	build_merchant_quarter = {
+		major = yes
+		potential = {
+			has_country_flag = es_jewel_of_tamriel_flag
+			capital_scope = { NOT = { has_province_modifier = merchant_quarter_modifier } }
+			capital_scope = { has_province_modifier = jewel_of_tamriel_modifier }
+		}
+		allow =  {
+			years_of_income = 5.0
+			dip = 5
+		}
+		effect = {
+			add_years_of_income = -5.0
+			capital_scope = { add_country_modifier = { name = "merchant_quarter_modifier" duration = -1 } }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	build_handicraft_quarter = {
+		major = yes
+		potential = {
+			has_country_flag = es_jewel_of_tamriel_flag
+			capital_scope = { NOT = { has_province_modifier = handicraft_quarter_modifier } }
+			capital_scope = { has_province_modifier = jewel_of_tamriel_modifier }
+		}
+		allow =  {
+			years_of_income = 5.0
+			adm = 5
+		}
+		effect = {
+			add_years_of_income = -5.0
+			capital_scope = { add_country_modifier = { name = "handicraft_quarter_modifier" duration = -1 } }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	build_military_quarter = {
+		major = yes
+		potential = {
+			has_country_flag = es_jewel_of_tamriel_flag
+			capital_scope = { NOT = { has_province_modifier = military_quarter_modifier } }
+			capital_scope = { has_province_modifier = jewel_of_tamriel_modifier }
+		}
+		allow =  {
+			years_of_income = 5.0
+			mil = 5
+		}
+		effect = {
+			add_years_of_income = -5.0
+			capital_scope = { add_country_modifier = { name = "military_quarter_modifier" duration = -1 } }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	introduce_business_lawyers = {
+		major = yes
+		potential = {
+			has_country_flag = es_private_lawyers_flag
+			NOT = { has_country_modifier = business_lawyers_modifier }
+		}
+		allow =  {
+			adm = 5
+			capital_scope = { trade_share = { country = ROOT share = 75 } }
+		}
+		effect = {
+			add_country_modifier = { name = "business_lawyers_modifier" duration = -1 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	introduce_private_investigators = {
+		major = yes
+		potential = {
+			has_country_flag = es_private_lawyers_flag
+			NOT = { has_country_modifier = private_investigators_modifier }
+		}
+		allow =  {
+			mil = 5
+			num_of_cities = 250
+		}
+		effect = {
+			add_country_modifier = { name = "private_investigators_modifier" duration = -1 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	expand_law_pool_decision = {
+		major = yes
+		potential = {
+			has_country_flag = es_private_lawyers_flag
+			NOT = { has_country_modifier = expand_law_pool }
+		}
+		allow =  {
+			dip = 5
+			num_of_trusted_allies = 3
+		}
+		effect = {
+			add_country_modifier = { name = "expand_law_pool" duration = -1 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	magical_pact = {
+		major = yes
+		potential = {
+			has_reform = emergency_magic
+			NOT = { has_country_modifier = magical_pact_modifier }
+		}
+		allow =  {
+			mil_power = 500
+		}
+		effect = {
+			add_mil_power = -500
+			add_country_modifier = { name = "magical_pact_modifier" duration = 3650 }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_at_war = no
+			}
+		}
+	}
+	
+	enslave_enemies = {
+		major = yes
+		potential = {
+			has_country_flag = justified_atrocity
+			NOT = { has_country_modifier = enslave_enemies_modfier }
+		}
+		allow =  {
+			adm_power = 250
+		}
+		effect = {
+			add_mil_power = -250
+			add_country_modifier = { name = "enslave_enemies_modfier" duration = 3650 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	torture_enemies = {
+		major = yes
+		potential = {
+			has_country_flag = justified_atrocity
+			NOT = { has_country_modifier = torture_enemies_modfier }
+		}
+		allow =  {
+			dip_power = 250
+		}
+		effect = {
+			add_dip_power = -250
+			add_country_modifier = { name = "torture_enemies_modfier" duration = 3650 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	murder_enemies = {
+		major = yes
+		potential = {
+			has_country_flag = justified_atrocity
+			NOT = { has_country_modifier = murder_enemies_modifier }
+		}
+		allow =  {
+			mil_power = 250
+		}
+		effect = {
+			add_mil_power = -250
+			add_country_modifier = { name = "murder_enemies_modifier" duration = 3650 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	found_atrius_building_comission = {
+		major = yes
+		potential = {
+			OR = {
+				owns = 1120
+				owns = 1206
+				owns = 1251
+				owns = 5616
+				owns = 1161
+			}
+			NOT = { has_country_modifier = atrius_building_comission }
+		}
+		provinces_to_highlight = {
+		    OR = {
+			province_id = 1120		
+			province_id = 1206
+			province_id = 1251
+			province_id = 5616
+			province_id = 1161
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow =  {
+			adm = 7
+		}
+		effect = {
+			add_country_modifier = { name = "atrius_building_comission" duration = -1 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	found_census_and_excise_comission = {
+		major = yes
+		potential = {
+			OR = {
+				owns = 1120
+				owns = 1206
+				owns = 1251
+				owns = 5616
+				owns = 1161
+			}
+			NOT = { has_country_modifier = census_and_excise_comission }
+		}
+		provinces_to_highlight = {
+		    OR = {
+			province_id = 1120		
+			province_id = 1206
+			province_id = 1251
+			province_id = 5616
+			province_id = 1161
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow =  {
+			dip = 7
+		}
+		effect = {
+			add_country_modifier = { name = "census_and_excise_comission" duration = -1 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	found_office_of_introductory_studies = {
+		major = yes
+		potential = {
+			OR = {
+				owns = 1120
+				owns = 1206
+				owns = 1251
+				owns = 5616
+				owns = 1161
+			}
+			NOT = { has_country_modifier = office_of_introductory_studies }
+		}
+		provinces_to_highlight = {
+		    OR = {
+			province_id = 1120		
+			province_id = 1206
+			province_id = 1251
+			province_id = 5616
+			province_id = 1161
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow =  {
+			mil = 7
+		}
+		effect = {
+			add_country_modifier = { name = "office_of_introductory_studies" duration = -1 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	invite_thieves_guild = {
+		major = yes
+		potential = {
+			owns = 1268
+			NOT = { has_country_flag = es_thieves_guild_flag }
+		}
+		allow =  {
+			years_of_income = 10
+		}
+		effect = {
+			add_years_of_income = -10
+			set_country_flag = es_thieves_guild_flag
+			custom_tooltip = get_acess_to_new_diplomatic_actions
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	invite_assasins_guild = {
+		major = yes
+		potential = {
+			NOT = { prestige = 50 }
+		}
+		allow =  {
+			NOT = { prestige = 75 }
+			stability = 3
+			years_of_income = 5
+		}
+		effect = {
+			add_stability = -3
+			add_prestige = -25
+			add_years_of_income = -5
+			set_country_flag = es_assassins_guild_flag
+			custom_tooltip = get_acess_to_new_diplomatic_actions
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
 
 #es_trial_by_fire = {
 #		major = yes
