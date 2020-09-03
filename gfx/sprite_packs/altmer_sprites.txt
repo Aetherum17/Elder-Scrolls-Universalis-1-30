@@ -1,0 +1,36 @@
+altmer_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		OR = {
+			culture_group = high_elves_cg
+			
+			# Remove once Maorner units are complete
+			culture_group = maorner_cg
+		}
+		NOT = {
+			#primary_culture = ayleid
+		}
+	}
+	
+	sprite_infantry = {
+		0 = ALTMER_INFANTRY_1
+		1 = ALTMER_INFANTRY_1
+		2 = ALTMER_INFANTRY_1
+		3 = ALTMER_INFANTRY_1
+	}
+	
+	sprite_cavalry = {
+		0 = ALTMER_INFANTRY_1
+		1 = ALTMER_INFANTRY_1
+		2 = ALTMER_INFANTRY_1
+		3 = ALTMER_INFANTRY_1
+	}
+	
+	sprite_artillery = {
+		0 = ALTMER_INFANTRY_1
+		1 = ALTMER_INFANTRY_1
+		2 = ALTMER_INFANTRY_1
+		3 = ALTMER_INFANTRY_1
+	}
+
+}
