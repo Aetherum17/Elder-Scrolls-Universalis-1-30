@@ -1,90 +1,8 @@
 # base_price = X			base price in $. (default is 1.0 if not specified
 # goldtype = yes/no			This resource works like 'gold' if yes, using prices from mine-value in province instead of supply/demand and baseprice. Also creates gold-inflation
 
-### Food ###############
-
-fish = {
-	base_price = 1.5
-}
-
-grain = {
-	base_price = 2.5
-}
-
-algae = {
-    base_price = 3.0
-}
-
-livestock = {
-	base_price = 3.5
-}
-
-salt = {
-	base_price = 4.5
-}
-
-wine = {
-	base_price = 5
-}
-
-lobsters = {
-    base_price = 5
-}
-
-### Clothes ############
-
-wool = {
-	base_price = 1.5
-}
-
-fur = {
-	base_price = 2.5
-}
-
-dyes = {
-	base_price = 3.5 
-}
-
-silk = {
-	base_price = 4
-}
-
-cloth = {
-	base_price = 5
-}
-
-### Earth Resources ####
-
-iron = {
-	base_price = 2.5
-}
-
-copper = {
-	base_price = 3
-}
-
-manganates = {
-    base_price = 3.5
-}
-
-light_metals = {
-    base_price = 4
-}
-
-coal = {
-	base_price = 5
-}
-
-aluminum = {
-	base_price = 6
-}
-
-gems = {
-	base_price = 7
-}
-
-rare_metals = {
-    base_price = 7
+ebony = {
+	base_price = 5.5
 }
 
 gold = {
@@ -92,106 +10,166 @@ gold = {
 	goldtype = yes
 }
 
-uranium = {
-	base_price = 10
-}
-
-### High Tech ##########
-
-silicates = {
-    base_price = 1.5
-}
-
-glass = {
-	base_price = 5
-}
-
-paper = {
-	base_price = 5
-}
-
-electronics = {
-	base_price = 7.5
-}
-
-cars = {
-	base_price = 10
-}
-
-### Gen Production #####
-
-unknown = {
-	base_price = 0
-}
-
-wood = {
-    base_price = 1.0
-}
-
-wood_coal = {
-    base_price = 1.5
-}
-
-tropical_wood = {
-	base_price = 2.5
-}
-
-naval_supplies = {
-	base_price = 3.5
-}
-
-slaves = {
-	base_price = 7
-}
-
-oil = {
-	base_price = 12
-}
-
-### Lux Production #####
-
-corals = {
-    base_price = 3.5
-}
-
-incense = {
-	base_price = 4.5
-}
-
-ivory = {
-	base_price = 5
-}
-
-chinaware = {
-	base_price = 7
-}
-
-### Plantation #########
-
-cotton = {
+iron = {
 	base_price = 1.5
 }
 
-sugar = {
-	base_price = 5
+orichalcum = {
+	base_price = 4.0
 }
 
-tea = {
-	base_price = 5
+quicksilver  = {
+	base_price = 4.5
 }
 
-spices = {
-	base_price = 5
+malachite = {
+	base_price = 3.5
 }
 
-coffee = {
-	base_price = 5
+moonstone = {
+	base_price = 5.0
 }
 
-tobacco = {
-	base_price = 5
+silver = {
+	base_price = 6.0
 }
 
-cocoa = {
-	base_price = 5
+copper = {
+	base_price = 2.0
+}
+
+corundum  = {
+	base_price = 2.5
+}
+
+coal = {
+	base_price = 3.0
+}
+
+stalhrim = {
+	base_price = 6.5
+}
+
+###################################################################################################
+
+crops = {
+	base_price = 2.5
+}
+
+fruits_and_vegetables = {
+	base_price = 3.0
+}
+
+mushrooms = {
+	base_price = 5.0
+}
+
+moon_sugar = {
+	base_price = 7.0
+}
+
+herbs = {
+	base_price = 5.5
+}
+
+wine = {
+	base_price = 6.5
+}
+
+beer = {
+	base_price = 4.5
+}
+
+livestock = {
+	base_price = 3.5
+}
+
+salt = {
+	base_price = 4.0
+}
+
+fish = {
+	base_price = 1.5
+}
+
+crabs = {
+	base_price = 6.0
+}
+
+algae = {
+	base_price = 2.0
+}
+
+###################################################################################################
+
+fur = {
+	base_price = 2.5
+}
+
+wool = {
+	base_price = 1.5
+}
+
+cloth = {
+	base_price = 4.5
+}
+
+silk = {
+	base_price = 5.5
+}
+
+leather = {
+	base_price = 3.5
+}
+
+weapons_and_armor = {
+	base_price = 7.5
+}
+
+potions = {
+	base_price = 6.5
+}
+
+###################################################################################################
+
+ivory = {
+	base_price = 4.5
+}
+
+corals = {
+	base_price = 1.5
+}
+
+pearls = {
+	base_price = 6.0
+}
+
+gems = {
+	base_price = 7.5
+}
+
+dyes = {
+	base_price = 3.0
+}
+
+###################################################################################################
+
+glass = {
+	base_price = 6.0
+}
+
+paper = {
+	base_price = 7.5
+}
+
+wood = {
+	base_price = 1.5
+}
+
+naval_supplies = {
+	base_price = 3.0
+}
+
+slaves = {
+	base_price = 4.5
 }

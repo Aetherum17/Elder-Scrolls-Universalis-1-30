@@ -1,0 +1,626 @@
+ebony = {
+	color = { 0.23 0.27 0.29 }
+	modifier = { reduced_liberty_desire = 15 }
+	province = { local_defensiveness = 0.15 }
+	chance = {
+		factor = 5
+		
+	modifier = {
+		factor = 0
+		OR = {
+			has_terrain = farmlands
+			has_terrain = grasslands
+			has_terrain = steppe
+			has_terrain = savannah
+			has_terrain = jungle
+ 		    has_terrain = marsh
+ 		    has_terrain = desert
+ 		    has_terrain = coastal_desert
+ 		    has_terrain = coastline
+		}
+	}
+	
+	modifier = {
+		factor = 0.5
+		OR = {
+			has_terrain = glacier
+		    has_terrain = drylands
+			has_terrain = forest 
+ 		    has_terrain = woods
+		}
+	}
+	
+	modifier = {
+		factor = 1.5
+		OR = {
+			has_terrain = hills 
+ 		    has_terrain = mountain
+ 		    has_terrain = highlands 
+		}
+	}
+	
+	}
+}
+
+gold = {
+	color = { 1.0 0.84 0.19 }
+	modifier = { diplomatic_annexation_cost = -0.15 }
+	province = { local_hostile_movement_speed = -0.15 }
+	chance = {
+		factor = 2.5
+		modifier = {
+			factor = 0
+			OR = {
+				has_terrain = grasslands
+				has_terrain = coastline
+				has_terrain = marsh
+			}
+		}
+		
+	modifier = {
+		factor = 0
+		OR = {
+			has_terrain = farmlands
+			has_terrain = grasslands
+			has_terrain = steppe
+			has_terrain = savannah
+			has_terrain = jungle
+ 		    has_terrain = marsh
+ 		    has_terrain = desert
+ 		    has_terrain = coastal_desert
+ 		    has_terrain = coastline
+		}
+	}
+	
+	modifier = {
+		factor = 0.5
+		OR = {
+			has_terrain = glacier
+		    has_terrain = drylands
+			has_terrain = forest 
+ 		    has_terrain = woods
+		}
+	}
+	
+	modifier = {
+		factor = 1.5
+		OR = {
+			has_terrain = hills 
+ 		    has_terrain = mountain
+ 		    has_terrain = highlands 
+		}
+	}
+		
+	}
+}
+
+iron = {
+	color = { 0.2 0.2 0.2 }
+	modifier = { defensiveness = 0.15 }
+	province = { local_development_cost = -0.15 }
+	chance = {
+		factor = 30
+		modifier = {
+			factor = 1.5
+			has_terrain = mountain
+		}
+		
+	modifier = {
+		factor = 0
+		OR = {
+			has_terrain = farmlands
+			has_terrain = grasslands
+			has_terrain = steppe
+			has_terrain = savannah
+			has_terrain = jungle
+ 		    has_terrain = marsh
+ 		    has_terrain = desert
+ 		    has_terrain = coastal_desert
+ 		    has_terrain = coastline
+		}
+	}
+	
+	modifier = {
+		factor = 0.5
+		OR = {
+			has_terrain = glacier
+		    has_terrain = drylands
+			has_terrain = forest 
+ 		    has_terrain = woods
+		}
+	}
+	
+	modifier = {
+		factor = 1.5
+		OR = {
+			has_terrain = hills 
+ 		    has_terrain = mountain
+ 		    has_terrain = highlands 
+		}
+	}
+	
+	}
+}
+
+orichalcum = {
+	color = { 0.8 0.33 0.0 }
+	modifier = { state_maintenance_modifier = -0.15 }
+	province = { regiment_recruit_speed = -0.15 }
+	chance = {
+		factor = 15
+		modifier = {
+			factor = 2.5
+			OR = {
+				region = southern_coldharbour_lr
+				region = corten_heights_lr
+			}
+		}
+		
+	modifier = {
+		factor = 0
+		OR = {
+			has_terrain = farmlands
+			has_terrain = grasslands
+			has_terrain = steppe
+			has_terrain = savannah
+			has_terrain = jungle
+ 		    has_terrain = marsh
+ 		    has_terrain = desert
+ 		    has_terrain = coastal_desert
+ 		    has_terrain = coastline
+		}
+	}
+	
+	modifier = {
+		factor = 0.5
+		OR = {
+			has_terrain = glacier
+		    has_terrain = drylands
+			has_terrain = forest 
+ 		    has_terrain = woods
+		}
+	}
+	
+	modifier = {
+		factor = 1.5
+		OR = {
+			has_terrain = hills 
+ 		    has_terrain = mountain
+ 		    has_terrain = highlands 
+		}
+	}
+		
+	}
+}
+
+quicksilver = {
+	color = { 0.57 0.64 0.69 }
+	modifier = { global_institution_spread = 0.15 }
+	province = { regiment_recruit_speed = -0.15 }
+	chance = {
+		factor = 17.5
+		modifier = {
+			factor = 2.5
+			OR = {
+				region = northern_deadlands_lr
+				region = western_coldharbour_lr
+			}
+		}
+		
+	modifier = {
+		factor = 0
+		OR = {
+			has_terrain = farmlands
+			has_terrain = grasslands
+			has_terrain = steppe
+			has_terrain = savannah
+			has_terrain = jungle
+ 		    has_terrain = marsh
+ 		    has_terrain = desert
+ 		    has_terrain = coastal_desert
+ 		    has_terrain = coastline
+		}
+	}
+	
+	modifier = {
+		factor = 0.5
+		OR = {
+			has_terrain = glacier
+		    has_terrain = drylands
+			has_terrain = forest 
+ 		    has_terrain = woods
+		}
+	}
+	
+	modifier = {
+		factor = 1.5
+		OR = {
+			has_terrain = hills 
+ 		    has_terrain = mountain
+ 		    has_terrain = highlands 
+		}
+	}
+		
+	}
+}
+
+malachite = {
+	color = { 0.2 0.8 0.2 }
+	modifier = { army_tradition_decay = -0.015 }
+	province = { province_trade_power_modifier = 0.15 }
+	chance = {
+		factor = 20
+		modifier = {
+			factor = 2.5
+			OR = {
+				region = wrothgar_lr
+				region = upper_tsakara_lr
+			}
+		}
+		
+	modifier = {
+		factor = 0
+		OR = {
+			has_terrain = farmlands
+			has_terrain = grasslands
+			has_terrain = steppe
+			has_terrain = savannah
+			has_terrain = jungle
+ 		    has_terrain = marsh
+ 		    has_terrain = desert
+ 		    has_terrain = coastal_desert
+ 		    has_terrain = coastline
+		}
+	}
+	
+	modifier = {
+		factor = 0.5
+		OR = {
+			has_terrain = glacier
+		    has_terrain = drylands
+			has_terrain = forest 
+ 		    has_terrain = woods
+		}
+	}
+	
+	modifier = {
+		factor = 1.5
+		OR = {
+			has_terrain = hills 
+ 		    has_terrain = mountain
+ 		    has_terrain = highlands 
+		}
+	}
+		
+	}
+}
+
+moonstone = {
+	color = { 0.93 0.92 0.74 }
+	modifier = { fort_maintenance_modifier = -0.15 }
+	province = { local_hostile_movement_speed = -0.15 }
+	chance = {
+		factor = 12.5
+		modifier = {
+			factor = 2.5
+			OR = {
+				region = eastern_deadlands_lr
+				region = eastern_coldharbour_lr
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {
+			OR = {
+				region = eastern_deadlands_lr
+				region = eastern_coldharbour_lr
+			}
+			}
+		}
+		
+	modifier = {
+		factor = 0
+		OR = {
+			has_terrain = farmlands
+			has_terrain = grasslands
+			has_terrain = steppe
+			has_terrain = savannah
+			has_terrain = jungle
+ 		    has_terrain = marsh
+ 		    has_terrain = desert
+ 		    has_terrain = coastal_desert
+ 		    has_terrain = coastline
+		}
+	}
+	
+	modifier = {
+		factor = 0.5
+		OR = {
+			has_terrain = glacier
+		    has_terrain = drylands
+			has_terrain = forest 
+ 		    has_terrain = woods
+		}
+	}
+	
+	modifier = {
+		factor = 1.5
+		OR = {
+			has_terrain = hills 
+ 		    has_terrain = mountain
+ 		    has_terrain = highlands 
+		}
+	}
+		
+	}
+}
+
+silver = {
+	color = { 0.75 0.75 0.75 }
+	modifier = { unjustified_demands = -0.15 }
+	province = { local_tax_modifier = 0.15 }
+	chance = {
+		factor = 10
+		modifier = {
+			factor = 2.5
+			OR = {
+				region = southern_deadlands_lr
+				region = reach_lr
+			}
+		}
+		
+	modifier = {
+		factor = 0
+		OR = {
+			has_terrain = farmlands
+			has_terrain = grasslands
+			has_terrain = steppe
+			has_terrain = savannah
+			has_terrain = jungle
+ 		    has_terrain = marsh
+ 		    has_terrain = desert
+ 		    has_terrain = coastal_desert
+ 		    has_terrain = coastline
+		}
+	}
+	
+	modifier = {
+		factor = 0.5
+		OR = {
+			has_terrain = glacier
+		    has_terrain = drylands
+			has_terrain = forest 
+ 		    has_terrain = woods
+		}
+	}
+	
+	modifier = {
+		factor = 1.5
+		OR = {
+			has_terrain = hills 
+ 		    has_terrain = mountain
+ 		    has_terrain = highlands 
+		}
+	}
+		
+	}
+}
+
+copper = {
+	color = { 0.85 0.46 0.15 }
+	modifier = {
+		siege_ability = 0.15
+	}
+	province = {
+		local_build_cost = -0.15
+	}
+	chance = {
+		factor = 27.5
+		modifier = {
+			factor = 0
+			OR = {
+				has_terrain = steppe
+				has_terrain = desert
+				has_terrain = coastal_desert
+				has_terrain = drylands
+				has_terrain = grasslands
+				has_terrain = savannah
+				has_terrain = coastline
+				has_terrain = glacier
+				has_terrain = jungle
+				has_terrain = farmlands
+				has_terrain = woods
+			}
+		}
+		
+	modifier = {
+		factor = 0
+		OR = {
+			has_terrain = farmlands
+			has_terrain = grasslands
+			has_terrain = steppe
+			has_terrain = savannah
+			has_terrain = jungle
+ 		    has_terrain = marsh
+ 		    has_terrain = desert
+ 		    has_terrain = coastal_desert
+ 		    has_terrain = coastline
+		}
+	}
+	
+	modifier = {
+		factor = 0.5
+		OR = {
+			has_terrain = glacier
+		    has_terrain = drylands
+			has_terrain = forest 
+ 		    has_terrain = woods
+		}
+	}
+	
+	modifier = {
+		factor = 1.5
+		OR = {
+			has_terrain = hills 
+ 		    has_terrain = mountain
+ 		    has_terrain = highlands 
+		}
+	}
+	
+	}
+}
+
+corundum = {
+	color = { 0.81 0.44 0.69 }
+	modifier = { reinforce_cost_modifier = -0.15 }
+	province = { local_build_time = -0.15 }
+	chance = {
+		factor = 22.5
+		modifier = {
+			factor = 2.5
+			OR = {
+				region = western_deadlands_lr
+				region = dragontail_mountains_lr
+			}
+		}
+		
+	modifier = {
+		factor = 0
+		OR = {
+			has_terrain = farmlands
+			has_terrain = grasslands
+			has_terrain = steppe
+			has_terrain = savannah
+			has_terrain = jungle
+ 		    has_terrain = marsh
+ 		    has_terrain = desert
+ 		    has_terrain = coastal_desert
+ 		    has_terrain = coastline
+		}
+	}
+	
+	modifier = {
+		factor = 0.5
+		OR = {
+			has_terrain = glacier
+		    has_terrain = drylands
+			has_terrain = forest 
+ 		    has_terrain = woods
+		}
+	}
+	
+	modifier = {
+		factor = 1.5
+		OR = {
+			has_terrain = hills 
+ 		    has_terrain = mountain
+ 		    has_terrain = highlands 
+		}
+	}
+		
+	}
+}
+
+coal = {
+	color = { 0.21 0.27 0.31 }
+	modifier = { production_efficiency = 0.15 }
+	province = { local_production_efficiency = 0.15 }
+	chance = {
+		factor = 25
+		modifier = {
+			factor = 2.5
+			OR = {
+				region = western_deadlands_lr
+				region = dragontail_mountains_lr
+			}
+		}
+		
+	modifier = {
+		factor = 0
+		OR = {
+			has_terrain = farmlands
+			has_terrain = grasslands
+			has_terrain = steppe
+			has_terrain = savannah
+			has_terrain = jungle
+ 		    has_terrain = marsh
+ 		    has_terrain = desert
+ 		    has_terrain = coastal_desert
+ 		    has_terrain = coastline
+		}
+	}
+	
+	modifier = {
+		factor = 0.5
+		OR = {
+			has_terrain = glacier
+		    has_terrain = drylands
+		}
+	}
+	
+	modifier = {
+		factor = 1.5
+		OR = {
+			has_terrain = hills 
+ 		    has_terrain = mountain
+ 		    has_terrain = highlands 
+			has_terrain = forest 
+ 		    has_terrain = woods
+		}
+	}
+		
+	}
+}
+
+stalhrim = {
+	color = { 0.29 0.59 0.82 }
+	modifier = { tolerance_own = 1.5 }
+	province = { local_defensiveness = 0.15 }
+	chance = {
+		factor = 7.5
+		modifier = {
+			factor = 2.5
+			OR = {
+				region = western_atmora_lr
+				region = eastern_atmora_lr
+				area = morrowind_1_la
+				area = morrowind_23_la
+			}
+		}
+		
+	modifier = {
+		factor = 0
+		OR = {
+			has_terrain = farmlands
+			has_terrain = grasslands
+			has_terrain = steppe
+			has_terrain = savannah
+			has_terrain = jungle
+ 		    has_terrain = marsh
+ 		    has_terrain = desert
+ 		    has_terrain = coastal_desert
+ 		    has_terrain = coastline
+		}
+	}
+	
+	modifier = {
+		factor = 0.5
+		OR = {
+		    has_terrain = drylands
+			has_terrain = forest 
+ 		    has_terrain = woods
+		}
+	}
+	
+	modifier = {
+		factor = 1.5
+		OR = {
+			has_terrain = glacier
+			has_terrain = hills 
+ 		    has_terrain = mountain
+ 		    has_terrain = highlands 
+		}
+	}
+	
+	}
+}  

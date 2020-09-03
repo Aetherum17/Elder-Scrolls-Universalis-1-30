@@ -1,0 +1,221 @@
+ivory = {
+	color = { 0.75 0.7 0.63 }
+	modifier = {
+		ae_impact = -0.15
+	}
+	province = {
+		trade_value_modifier = 0.15
+	}
+	chance = {
+		factor = 15
+		modifier = {
+			factor = 2.5
+			OR = {
+			region = southern_kamal_lr
+			region = northern_kamal_lr
+			}
+		}
+		
+	modifier = {
+		factor = 0
+		OR = {
+			has_terrain = jungle
+ 		    has_terrain = marsh
+		    has_terrain = drylands
+			has_terrain = hills 
+ 		    has_terrain = mountain
+			has_terrain = desert
+ 		    has_terrain = coastal_desert
+		}
+	}
+	
+	modifier = {
+		factor = 0.5
+		OR = {
+			has_terrain = forest 
+ 		    has_terrain = woods
+			has_terrain = coastline
+			has_terrain = farmlands
+ 		    has_terrain = grasslands
+ 		    has_terrain = steppe
+		}
+	}
+	
+	modifier = {
+		factor = 1.5
+		OR = {
+			
+		    has_terrain = savannah
+			has_terrain = glacier
+			 has_terrain = highlands 
+		}
+	}
+		
+	}
+}
+
+crabs = {
+	color = { 0.85 0.41 0.41 }
+	modifier = {
+		sailors_recovery_speed = 0.15
+	}
+	province = {
+		local_sailors_modifier = 0.15
+	}
+	chance = {
+		factor = 10
+		modifier = {
+			factor = 0
+			NOT = { has_port = yes }
+		}
+		modifier = {
+			factor = 2.5
+			OR = {
+			region = hgh_rock_lr
+			region = auridon_lr
+			}
+		}
+	
+	modifier = {
+		factor = 1.5
+		OR = {
+			has_terrain = desert
+ 		    has_terrain = coastal_desert
+ 		    has_terrain = coastline
+		}
+	}
+	
+	}
+}
+
+pearls = {
+	color = { 0.94 0.92 0.84 }
+	modifier = {
+		navy_tradition_decay = -0.015
+	}
+	province = {
+		ship_recruit_speed = -0.15
+	}
+	chance = {
+		factor = 10
+		modifier = {
+			factor = 0
+			NOT = { has_port = yes }
+		}
+		modifier = {
+			factor = 2.5
+			OR = {
+			region = yokuda_lr
+			region = northern_islands_lr
+			}
+		}
+		
+	modifier = {
+		factor = 1.5
+		OR = {
+			has_terrain = desert
+ 		    has_terrain = coastal_desert
+ 		    has_terrain = coastline
+		}
+	}	
+	
+	}
+}
+
+gems = {
+	color = { 0.96 0.78 0.78 }
+	modifier = {
+		interest = -1.5
+	}
+	province = {
+		local_build_time = -0.15
+	}
+	chance = {
+		factor = 12.5
+		modifier = {
+			factor = 2.5
+			OR = {
+			region = vvardenfell_lr
+			region = central_coldharbour_lr
+			}
+		}
+		
+	modifier = {
+		factor = 0
+		OR = {
+			has_terrain = farmlands
+			has_terrain = grasslands
+			has_terrain = steppe
+			has_terrain = savannah
+			has_terrain = jungle
+ 		    has_terrain = marsh
+ 		    has_terrain = desert
+ 		    has_terrain = coastal_desert
+ 		    has_terrain = coastline
+		}
+	}
+	
+	modifier = {
+		factor = 0.5
+		OR = {
+			has_terrain = glacier
+		    has_terrain = drylands
+			has_terrain = forest 
+ 		    has_terrain = woods
+		}
+	}
+	
+	modifier = {
+		factor = 1.5
+		OR = {
+			has_terrain = hills 
+ 		    has_terrain = mountain
+ 		    has_terrain = highlands 
+		}
+	}
+	}
+}
+
+dyes = {
+	color = { 0.63 0.17 0.50 }
+	modifier = {
+		global_missionary_strength = 0.015
+	}
+	province = {
+		local_institution_spread = 0.15
+	}
+	chance = {
+		factor = 20
+		modifier = {
+			factor = 2.5
+			OR = {
+			region = black_marsh_lr
+			region = murkmire_lr
+			}
+		}
+		
+	modifier = {
+		factor = 0
+		OR = {
+			has_terrain = glacier
+		    has_terrain = drylands
+ 		    has_terrain = mountain
+			has_terrain = desert
+ 		    has_terrain = coastal_desert
+		}
+	}
+	
+	modifier = {
+		factor = 0.5
+		OR = {
+			has_terrain = farmlands
+ 		    has_terrain = grasslands
+ 		    has_terrain = steppe
+		    has_terrain = savannah
+			has_terrain = jungle
+ 		    has_terrain = marsh
+			has_terrain = coastline
+		}
+	}
+	}
+}

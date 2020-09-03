@@ -451,13 +451,7 @@ country_event = {
 		has_privateers = yes
 		any_active_trade_node = {
 			any_trade_node_member_province = {
-				OR = {
-					trade_goods = slaves
-					trade_goods = sugar
-					trade_goods = cotton
-					trade_goods = tobacco
-					trade_goods = cocoa
-				}
+				development = 10
 			}
 		}
 	}
