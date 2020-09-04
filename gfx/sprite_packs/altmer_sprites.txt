@@ -2,13 +2,8 @@ altmer_sprite_pack = {
 	# Tests against every tag in game
 	country_trigger = {
 		OR = {
-			culture_group = high_elves_cg
-			
-			# Remove once Maorner units are complete
-			culture_group = maorner_cg
-		}
-		NOT = {
-			#primary_culture = ayleid
+			primary_culture = altmer
+			primary_culture = corelanyan
 		}
 	}
 	

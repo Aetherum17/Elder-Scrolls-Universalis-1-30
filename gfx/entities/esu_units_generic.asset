@@ -40,7 +40,7 @@ entity = {
 	#state = { name = "extra_state_3"		animation = "extra_state_3" }
 
 	attach = { 
-		Right_hand_node = "north_american_spear" 
+		Right_hand_node = "asian_spear_01" 
 	}
 }
 
@@ -59,7 +59,7 @@ entity = {
 	#state = { name = "extra_state_3"		animation = "extra_state_3" }
 
 	attach = { 
-		Right_hand_node = "north_american_spear" 
+		Right_hand_node = "asian_spear_01" 
 	}
 }
 
@@ -184,6 +184,66 @@ entity = {
 }
 
 entity = {
+	name = "AYLEID_INFANTRY_1"
+	pdxmesh = "ayleid_generic_infantry_01_mesh"
+        version = 10
+
+	state = { name = "idle" 		animation = "idle" }
+	state = { name = "walk" 		animation = "walk" animation_speed = 0.7}
+	state = { name = "attack"		animation = "attack" }
+	state = { name = "retreat"		animation = "retreat" }
+	#state = { name = "death"		animation = "death" }
+	#state = { name = "extra_state_1"		animation = "extra_state_1" }
+	#state = { name = "extra_state_2"		animation = "extra_state_2" }
+	#state = { name = "extra_state_3"		animation = "extra_state_3" }
+
+	attach = { 
+		Right_hand_node = "Dali_spear" 
+                Left_hand_node = "Qi_heavyshield"
+	}
+}
+
+entity = {
+	name = "MAORMER_INFANTRY_1"
+	pdxmesh = "maormer_generic_infantry_01_mesh"
+        version = 10
+
+	state = { name = "idle" 		animation = "idle" }
+	state = { name = "walk" 		animation = "walk" animation_speed = 0.7}
+	state = { name = "attack"		animation = "attack" }
+	state = { name = "retreat"		animation = "retreat" }
+	#state = { name = "death"		animation = "death" }
+	#state = { name = "extra_state_1"		animation = "extra_state_1" }
+	#state = { name = "extra_state_2"		animation = "extra_state_2" }
+	#state = { name = "extra_state_3"		animation = "extra_state_3" }
+
+	attach = { 
+		Right_hand_node = "Dali_spear" 
+                Left_hand_node = "Qi_heavyshield"
+	}
+}
+
+entity = {
+	name = "SNOW_ELF_INFANTRY_1"
+	pdxmesh = "snow_elf_generic_infantry_01_mesh"
+        version = 10
+
+	state = { name = "idle" 		animation = "idle" }
+	state = { name = "walk" 		animation = "walk" animation_speed = 0.7}
+	state = { name = "attack"		animation = "attack" }
+	state = { name = "retreat"		animation = "retreat" }
+	#state = { name = "death"		animation = "death" }
+	#state = { name = "extra_state_1"		animation = "extra_state_1" }
+	#state = { name = "extra_state_2"		animation = "extra_state_2" }
+	#state = { name = "extra_state_3"		animation = "extra_state_3" }
+
+	attach = { 
+		Right_hand_node = "Dali_spear" 
+                Left_hand_node = "Qi_heavyshield"
+	}
+}
+
+entity = {
 	name = "REACHMEN_INFANTRY_1"
 	pdxmesh = "reachmen_generic_infantry_01_mesh"
         version = 10
@@ -218,7 +278,7 @@ entity = {
 	#state = { name = "extra_state_3"		animation = "extra_state_3" }
 
 	attach = { 
-		#Right_hand_node = "cradle_spear" 
-		#Left_hand_node = "Arabian_shield_02" 
+		Right_hand_node = "akaviri_spear" 
+		Left_hand_node = "vampire_shield" 
 	}
 }

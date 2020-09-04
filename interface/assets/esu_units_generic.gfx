@@ -120,6 +120,45 @@ objectTypes = {
 
 		scale = 0.5
 	}
+	
+	pdxmesh = {
+		name = "ayleid_generic_infantry_01_mesh"
+		file = "gfx/models/Units/ayleid_generic_infantry_01.mesh"			
+
+		animation = { id = "attack"				type = "jdup_pikeman_attack_animation" }
+		animation = { id = "idle"				type = "jdup_pikeman_idle_animation" }
+		animation = { id = "walk"				type = "jdup_pikeman_moving_animation" }
+		animation = { id = "death"				type = "polearm_twohanded_death_animation" }
+		animation = { id = "retreat"			type = "jdup_pikeman_moving_animation" }
+
+		scale = 0.5
+	}
+	
+	pdxmesh = {
+		name = "maormer_generic_infantry_01_mesh"
+		file = "gfx/models/Units/maormer_generic_infantry_01.mesh"			
+
+		animation = { id = "attack"				type = "jdup_pikeman_attack_animation" }
+		animation = { id = "idle"				type = "jdup_pikeman_idle_animation" }
+		animation = { id = "walk"				type = "jdup_pikeman_moving_animation" }
+		animation = { id = "death"				type = "polearm_twohanded_death_animation" }
+		animation = { id = "retreat"			type = "jdup_pikeman_moving_animation" }
+
+		scale = 0.5
+	}
+	
+	pdxmesh = {
+		name = "snow_elf_generic_infantry_01_mesh"
+		file = "gfx/models/Units/snow_elf_generic_infantry_01.mesh"			
+
+		animation = { id = "attack"				type = "jdup_pikeman_attack_animation" }
+		animation = { id = "idle"				type = "jdup_pikeman_idle_animation" }
+		animation = { id = "walk"				type = "jdup_pikeman_moving_animation" }
+		animation = { id = "death"				type = "polearm_twohanded_death_animation" }
+		animation = { id = "retreat"			type = "jdup_pikeman_moving_animation" }
+
+		scale = 0.5
+	}
 
 	pdxmesh = {
 		name = "reachmen_generic_infantry_01_mesh"
@@ -143,7 +182,7 @@ objectTypes = {
 
 	pdxmesh = {
 		name = "vampire_generic_infantry_01_mesh"
-		file = "gfx/models/Units/test_environment/vampire_generic_infantry_01.mesh"
+		file = "gfx/models/Units/vampire_generic_infantry_01.mesh"
 
 		animation = { id = "attack"				type = "spear_shield_attack_animation" }
 		animation = { id = "death"				type = "rifleman_death_animation" }		
