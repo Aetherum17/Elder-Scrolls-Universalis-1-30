@@ -707,7 +707,7 @@ the_grand_game = {
 	modifiers = {
 		diplomats = 3
 		merchants = 2
-		trade_range = 0.25
+		trade_range_modifier = 0.25
 		land_maintenance_modifier = 0.25
 		naval_maintenance_modifier = 0.25
 	}
@@ -951,7 +951,7 @@ bureaucratic_tyranny = {
 	icon = "military_dictatorship_reform"
 	allow_normal_conversion = yes
 	modifiers = {
-		absolutism = 30
+		max_absolutism = 30
 		yearly_absolutism = 0.25
 		stability_cost_modifier = -0.25
 		global_unrest = 2.5

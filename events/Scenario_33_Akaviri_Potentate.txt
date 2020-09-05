@@ -44,13 +44,7 @@ country_event = {
 		if = { limit = { NOT = { government_rank = 10 } } set_government_rank = 10 }
 		add_stability = 1
 		change_government = republic
-		if = {
-		    limit = { has_dlc = "Dharma" }
-			add_government_reform = bureaucratic_despotism_reform
-		}
-		else = {
-		    set_legacy_government = bureaucratic_despotism
-		}
+		add_government_reform = venice_merchants_reform
 		define_ruler = {
         name = "Versidue"
         dynasty = "Shaie"
@@ -1349,7 +1343,8 @@ country_event = {
 		name = "es_33_scenario.20.c"
 		ai_chance = { factor = 33 }
 		add_stability = 1
-		if = { limit = { NOT = { government = republic } } change_government = republic add_government_reform = merchants_reform if = { limit = { NOT = { has_dlc = "Dharma" } } set_legacy_government = merchant_republic } }
+		change_government = republic
+		add_government_reform = merchants_reform
 		change_tag = ELS
 		if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
 		if = {

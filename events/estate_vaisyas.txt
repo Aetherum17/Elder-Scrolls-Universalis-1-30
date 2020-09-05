@@ -559,7 +559,6 @@ country_event = {
 			}
 			OR = {
 				trade_goods = silk
-				trade_goods = spices
 				trade_goods = gems
 			}
 		}
@@ -567,7 +566,6 @@ country_event = {
 			any_owned_province = {
 				OR = {
 					has_province_modifier = vaisya_gem_production
-					has_province_modifier = vaisya_spices_trade
 					has_province_modifier = vaisya_silk_goods
 				}
 			}
@@ -613,40 +611,6 @@ country_event = {
 		}
 	}
 	
-	option = {
-		trigger = {
-			any_owned_province = {
-				OR = {
-					owner = { government = republic }
-					development = 7
-					province_trade_power = 5
-				}
-				trade_goods = spices
-			}
-		}
-		name = vaisyas_estate_events.8.b
-		add_years_of_income = -0.25
-		add_estate_influence_modifier = {
-			estate = estate_vaisyas
-			desc = VAISYA_GUILDS_PROMOTED
-			influence = 10
-			duration = 7300
-		}
-		every_owned_province = {
-			limit = {
-				OR = {
-					owner = { government = republic }
-					development = 7
-					province_trade_power = 5
-				}
-				trade_goods = spices
-			}
-			add_province_modifier = {
-				name = vaisya_spices_trade # province trade value
-				duration = 7300
-			}
-		}
-	}
 	option = {
 		trigger = {
 			any_owned_province = {

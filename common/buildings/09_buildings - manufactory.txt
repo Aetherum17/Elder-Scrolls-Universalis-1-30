@@ -12,7 +12,7 @@ wharf = {
 		fish
 		salt
 		algae
-        lobsters
+		crabs
 	}
 	modifier = {
 		trade_goods_size = 0.5
@@ -66,9 +66,9 @@ weapons = {
 	manufactory = {
 		copper
 		iron
-		rare_metals
-        manganates
-        light_metals
+		weapons_and_armor
+		corundum
+		orichalcum
 	}
 	modifier = {
 		trade_goods_size = 0.5	
@@ -124,6 +124,7 @@ textile = {
 		cloth
 		silk
 		dyes
+		leather
 	}
 	modifier = {
 		trade_goods_size = 0.5	
@@ -175,7 +176,9 @@ textile = {
 
 plantations = {
 	manufactory = {
-		
+		moon_sugar
+		herbs
+		beer
 	}
 	modifier = {
 		trade_goods_size = 0.5		
@@ -229,10 +232,9 @@ tradecompany = {
 	manufactory = {
 		ivory
 		slaves
-		spices
 		fur
-		incense
 		corals
+		pearls
 	}
 	modifier = {
 		trade_goods_size = 0.5		
@@ -284,9 +286,11 @@ tradecompany = {
 
 farm_estate = {
 	manufactory = {
-		grain
 		livestock
 		wine
+		crops
+		fruits_and_vegetables
+		mushrooms
 	}
 	modifier = {
 		trade_goods_size = 0.5		
@@ -341,11 +345,9 @@ mills = {
 	manufactory = {
 		paper
 		gems
-		tropical_wood
 		glass
-		chinaware
-		silicates
-		wood_coal
+		wood
+		potions
 	}
 	modifier = {
 		trade_goods_size = 0.5			
@@ -398,11 +400,12 @@ mills = {
 furnace = {
 	manufactory = {
 		coal
-		oil
-        uranium
-        aluminum
-        cars
-        electronics
+		ebony
+		stalhrim
+		moonstone
+		quicksilver 
+		malachite
+		silver 
 	}
 
 	potential = {

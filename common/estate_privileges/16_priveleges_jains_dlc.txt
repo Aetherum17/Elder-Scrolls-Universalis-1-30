@@ -174,10 +174,7 @@ estate_jains_monopoly_of_glass = {
 	is_valid = {
 		has_dlc = "Emperor"
 		any_owned_province = {
-			OR = {
 			trade_goods = glass
-			trade_goods = silicates
-			}
 			NOT = { has_province_modifier = estate_burghers_monopoly_of_glass_mod }
 			NOT = { has_province_modifier = estate_vaisyas_monopoly_of_glass_mod }
 			NOT = { has_province_modifier = estate_jains_monopoly_of_glass_mod }
@@ -194,10 +191,7 @@ estate_jains_monopoly_of_glass = {
 		add_years_of_owned_provinces_production_income = {
 			years = 8
 			trigger = {
-				OR = {
-			    trade_goods = glass
-			    trade_goods = silicates
-			    }
+				trade_goods = glass
 			}
 			custom_tooltip = MONOPOLY_INCOME_GLASS_DESC
 		}
@@ -205,10 +199,7 @@ estate_jains_monopoly_of_glass = {
 		hidden_effect = {
 			every_owned_province = {
 				limit = {
-					OR = {
-			        trade_goods = glass
-			        trade_goods = silicates
-			        }
+					trade_goods = glass
 			        NOT = { has_province_modifier = estate_burghers_monopoly_of_glass_mod }
 			        NOT = { has_province_modifier = estate_vaisyas_monopoly_of_glass_mod }
 			        NOT = { has_province_modifier = estate_jains_monopoly_of_glass_mod }

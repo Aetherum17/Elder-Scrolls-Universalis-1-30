@@ -176,14 +176,14 @@ country_decisions = {
 	
 	es_5_remove_slaves = {
 		potential = {
+		NOT = { culture_group = dwemer_cg }
         any_owned_province = {
 		has_province_modifier = 05_elven_slaves
 		}
 		}
 		allow = {
 		OR = {
-		has_reform = 23_a
-		has_reform = 23_b
+		NOT = { has_reform = slavery }
 		culture_group = high_elves_cg
 		}
 		any_owned_province = {
@@ -553,7 +553,7 @@ country_decisions = {
 		effect = {
 		    set_country_flag = es_11_true_ruler_of_karthwastern_flag
 			create_subject = { subject_type = personal_union subject = NC5 }
-			NC5 = { change_religion = ROOT change_culture = ROOT }
+			NC5 = { change_religion = ROOT change_primary_culture = ROOT }
 			add_prestige = 25
 		}
 		ai_will_do = {

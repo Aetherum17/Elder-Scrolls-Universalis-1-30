@@ -1,0 +1,233 @@
+estate_nobles_hold_gladiatorial_games = {
+	icon = privilege_promote_purbias
+	influence = 0.05
+	loyalty = 0.05
+	is_valid = {
+		always = yes
+	}
+	can_select = {
+		NOT = { army_tradition = 25 }
+	}
+	on_granted = {
+	}
+	penalties = {
+		prestige = -0.25
+	}
+	benefits = {
+		army_tradition = 0.25
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+estate_burghers_establish_slave_enclaves = {
+	icon = privilege_promote_purbias
+	influence = 0.05
+	loyalty = 0.05
+	is_valid = {
+		always = yes
+	}
+	can_select = {
+		NOT = { has_reform = abolition }
+		NOT = { num_of_owned_provinces_with = { value = 10 trade_goods = slaves } }
+	}
+	on_granted = {
+		random_owned_province = { limit = { NOT = { trade_goods = slaves } } change_trade_goods = slaves }
+	}
+	penalties = {
+		global_unrest = 1.0
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+estate_church_convert_heretics = {
+	icon = privilege_promote_purbias
+	influence = 0.05
+	loyalty = 0.05
+	is_valid = {
+		always = yes
+	}
+	can_select = {
+		NOT = { religious_unity = 75 }
+	}
+	on_granted = {
+	}
+	penalties = {
+		missionary_maintenance_cost = 0.15
+	}
+	benefits = {
+		global_missionary_strength = 0.01
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+estate_brahmins_mage_generals = {
+	icon = privilege_promote_purbias
+	max_absolutism = -10
+	influence = 0.10
+	loyalty = 0.10
+	is_valid = {
+		always = yes
+	}
+	can_select = {
+		estate_influence = {
+			estate = estate_brahmins
+			influence = 50
+		}
+	}
+	on_granted = {
+	}
+	penalties = {
+		free_leader_pool = -1
+	}
+	benefits = {
+		leader_land_fire = 1
+		leader_land_shock = 1
+		leader_siege = 1
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+estate_vaisyas_sorcerous_experimentation = {
+	icon = privilege_promote_purbias
+	max_absolutism = -10
+	influence = 0.10
+	loyalty = 0.10
+	is_valid = {
+		always = yes
+	}
+	can_select = {
+		estate_influence = {
+			estate = estate_vaisyas
+			influence = 50
+		}
+	}
+	on_granted = {
+	}
+	penalties = {
+		idea_cost = 0.10
+	}
+	benefits = {
+		technology_cost = -0.05
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+estate_rajput_warrior_monks = {
+	icon = privilege_promote_purbias
+	max_absolutism = -10
+	influence = 0.10
+	loyalty = 0.10
+	is_valid = {
+		always = yes
+	}
+	can_select = {
+		estate_influence = {
+			estate = estate_rajput
+			influence = 50
+		}
+	}
+	on_granted = {
+	}
+	penalties = {
+		tolerance_heathen = -1
+		tolerance_heretic = -1
+	}
+	benefits = {
+		tolerance_own = 1
+		warscore_cost_vs_other_religion = -0.1
+		global_heretic_missionary_strength = 0.01
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+estate_maratha_estate_economy = {
+	icon = privilege_promote_purbias
+	max_absolutism = -5
+	land_share = 5
+	influence = 0.15
+	loyalty = 0.10
+	is_valid = {
+		always = yes
+	}
+	can_select = {
+		num_of_cities = 100
+	}
+	on_granted = {
+	}
+	penalties = {
+	}
+	benefits = {
+		development_cost = -0.10
+		production_efficiency = 0.10
+		state_maintenance_modifier = -0.10
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+estate_cossacks_private_armies = {
+	icon = privilege_promote_purbias
+	max_absolutism = -5
+	land_share = 5
+	influence = 0.15
+	loyalty = 0.10
+	is_valid = {
+		always = yes
+	}
+	can_select = {
+		num_of_mercenaries = 25
+	}
+	on_granted = {
+	}
+	penalties = {
+	}
+	benefits = {
+		mercenary_cost = -0.10
+		merc_maintenance_modifier = -0.10
+		mercenary_manpower = 0.10
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+estate_jains_local_officers = {
+	icon = privilege_promote_purbias
+	max_absolutism = -5
+	land_share = 5
+	influence = 0.15
+	loyalty = 0.10
+	is_valid = {
+		always = yes
+	}
+	can_select = {
+		manpower = 100
+	}
+	on_granted = {
+	}
+	penalties = {
+	}
+	benefits = {
+		drill_gain_modifier = 0.10
+		drill_decay_modifier = -0.10
+		reinforce_cost_modifier = -0.10
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}

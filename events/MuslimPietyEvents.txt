@@ -714,112 +714,112 @@ country_event = {
 }
 
 # Coffee and Tobacco
-country_event = {
-	id = muslim_piety.14
-	title = muslim_piety.14.t
-	desc = muslim_piety.14.d
-	picture = CORRUPTION_eventPicture
-	
-	is_triggered_only = yes
-
-	trigger = {
-		uses_piety = yes
-		piety = 0.5
-		OR = {
-			has_global_flag = triangle_happened
-			tobacco = 1
-		}
-		any_owned_province = {
-			NOT = { has_province_modifier = coffee_house_turmoil }
-			is_capital = no
-			is_state = yes
-			NOT = {
-				any_neighbor_province = {
-					is_capital = yes
-				}
-			}
-		}
-	}
-	
-	mean_time_to_happen = {
-		days = 1
-	}
-	
-	immediate = {
-		hidden_effect = {
-			random_owned_province = {
-				limit = {
-					NOT = { has_province_modifier = coffee_house_turmoil }
-					is_capital = no
-					is_state = yes
-					NOT = {
-						any_neighbor_province = {
-							is_capital = yes
-						}
-					}
-				}
-				save_event_target_as = coffee_province
-			}
-		}
-	}
-	
-	option = {
-		name = muslim_piety.14.a
-		ai_chance = {
-			factor = 50
-			modifier = {
-				factor = 2
-				piety = 0.1
-			}
-			modifier = {
-				factor = 1.5
-				num_of_cities = 35
-			}
-			modifier = {
-				factor = 1.5
-				num_of_cities = 50
-			}
-			modifier = {
-				factor = 1.25
-				is_year = 1650
-			}
-		}
-		add_piety = 0.1
-		event_target:coffee_province = {
-			area = {
-				limit = {
-					NOT = { has_province_modifier = coffee_house_turmoil }
-					is_capital = no
-					owned_by = ROOT
-				}
-				add_province_modifier = {
-					name = "coffee_house_turmoil"
-					duration = 1825
-				}
-			}
-		}
-		
-	}
-	option = {
-		name = muslim_piety.14.b
-		ai_chance = {
-			factor = 50
-			modifier = {
-				factor = 2
-				NOT = { piety = -0.1 }
-			}
-			modifier = {
-				factor = 0.75
-				is_year = 1650
-			}
-			modifier = {
-				factor = 1.5
-				NOT = { dominant_religion = ROOT }
-			}
-		}
-		add_piety = -0.25
-	}
-}
+#country_event = {
+#	id = muslim_piety.14
+#	title = muslim_piety.14.t
+#	desc = muslim_piety.14.d
+#	picture = CORRUPTION_eventPicture
+#	
+#	is_triggered_only = yes
+#
+#	trigger = {
+#		uses_piety = yes
+#		piety = 0.5
+#		OR = {
+#			has_global_flag = triangle_happened
+#			tobacco = 1
+#		}
+#		any_owned_province = {
+#			NOT = { has_province_modifier = coffee_house_turmoil }
+#			is_capital = no
+#			is_state = yes
+#			NOT = {
+#				any_neighbor_province = {
+#					is_capital = yes
+#				}
+#			}
+#		}
+#	}
+#	
+#	mean_time_to_happen = {
+#		days = 1
+#	}
+#	
+#	immediate = {
+#		hidden_effect = {
+#			random_owned_province = {
+#				limit = {
+#					NOT = { has_province_modifier = coffee_house_turmoil }
+#					is_capital = no
+#					is_state = yes
+#					NOT = {
+#						any_neighbor_province = {
+#							is_capital = yes
+#						}
+#					}
+#				}
+#				save_event_target_as = coffee_province
+#			}
+#		}
+#	}
+#	
+#	option = {
+#		name = muslim_piety.14.a
+#		ai_chance = {
+#			factor = 50
+#			modifier = {
+#				factor = 2
+#				piety = 0.1
+#			}
+#			modifier = {
+#				factor = 1.5
+#				num_of_cities = 35
+#			}
+#			modifier = {
+#				factor = 1.5
+#				num_of_cities = 50
+#			}
+#			modifier = {
+#				factor = 1.25
+#				is_year = 1650
+#			}
+#		}
+#		add_piety = 0.1
+#		event_target:coffee_province = {
+#			area = {
+#				limit = {
+#					NOT = { has_province_modifier = coffee_house_turmoil }
+#					is_capital = no
+#					owned_by = ROOT
+#				}
+#				add_province_modifier = {
+#					name = "coffee_house_turmoil"
+#					duration = 1825
+#				}
+#			}
+#		}
+#		
+#	}
+#	option = {
+#		name = muslim_piety.14.b
+#		ai_chance = {
+#			factor = 50
+#			modifier = {
+#				factor = 2
+#				NOT = { piety = -0.1 }
+#			}
+#			modifier = {
+#				factor = 0.75
+#				is_year = 1650
+#			}
+#			modifier = {
+#				factor = 1.5
+#				NOT = { dominant_religion = ROOT }
+#			}
+#		}
+#		add_piety = -0.25
+#	}
+#}
 
 # Sufi Orders growing in popularity in [new_province.GetName]
 country_event = {

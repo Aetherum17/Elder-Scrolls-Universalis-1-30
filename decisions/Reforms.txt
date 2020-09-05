@@ -2,11 +2,11 @@ country_decisions = {
 
 	enslave_population = {
 		potential = {
-		    OR = { has_reform = 23_c has_reform = 23_d }
+			has_reform = slavery
+			NOT = { has_reform = abolition }
 			any_owned_province = { NOT = { has_province_modifier = enslaved_province } trade_goods = slaves NOT = { has_province_flag = enslaved_province_flag } }
 		}
 		allow =  {
-		    OR = { has_reform = 23_c has_reform = 23_d }
 			any_owned_province = { NOT = { has_province_modifier = enslaved_province } trade_goods = slaves NOT = { has_province_flag = enslaved_province_flag } }
 		}
 		effect = {
@@ -23,12 +23,11 @@ country_decisions = {
 	
 	liberate_population = {
 		potential = {
-			OR = { has_reform = 23_a has_reform = 23_b }
+			NOT = { has_reform = slavery }
 			any_owned_province = { has_province_flag = enslaved_province_flag }
 		}
 		allow =  {
 		    treasury = 0
-		    OR = { has_reform = 23_a has_reform = 23_b }
 			any_owned_province = { has_province_flag = enslaved_province_flag }
 		}
 		effect = {
@@ -44,67 +43,25 @@ country_decisions = {
 		}
 	}
 	
-	bannes_alcohol_production = {
+	es_bannes_production = {
 		potential = {
-		    OR = { has_reform = 51_c has_reform = 51_d }
-			any_owned_province = { trade_goods = wine NOT = { has_province_flag = banned_wine_production_flag } }
-		}
-		allow =  {
-		    OR = { has_reform = 51_c has_reform = 51_d }
-			any_owned_province = { trade_goods = wine NOT = { has_province_flag = banned_wine_production_flag } }
-		}
-		effect = {
-		    add_manpower = 5
-		    random_owned_province = { limit = { trade_goods = wine NOT = { has_province_flag = banned_wine_production_flag } }
-			set_province_flag = banned_wine_production_flag
-		    change_trade_goods = unknown
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	remove_alcohol_ban = {
-		potential = {
-		    OR = { has_reform = 51_a has_reform = 51_b }
-			any_owned_province = { has_province_flag = banned_wine_production_flag }
-		}
-		allow =  {
-		    manpower = 5
-		    OR = { has_reform = 51_a has_reform = 51_b }
-		    any_owned_province = { has_province_flag = banned_wine_production_flag }
-		}
-		effect = {
-		    add_manpower = -5
-		    random_owned_province = { limit = { has_province_flag = banned_wine_production_flag }
-			clr_province_flag = banned_wine_production_flag
-			change_trade_goods = wine
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	bannes_narcotics_production = {
-		potential = {
-		    OR = { has_reform = 55_c has_reform = 55_d }
+		    OR = { has_reform = drug_limitation has_reform = prohibition }
 			any_owned_province = {
 			OR = { 
-			AND = { trade_goods = sugar NOT = { has_province_flag = banned_sugar_production_flag } }
-			AND = { trade_goods = tobacco NOT = { has_province_flag = banned_tobacco_production_flag } } 
+			AND = { trade_goods = wine NOT = { has_province_flag = banned_wine_production_flag } }
+			AND = { trade_goods = beer NOT = { has_province_flag = banned_tobacco_production_flag } } 
+			AND = { trade_goods = moon_sugar NOT = { has_province_flag = banned_sugar_production_flag } } 
 			}
 			}
 		}
 		allow =  {
 		    NOT = { prestige = 95 }
-		    OR = { has_reform = 55_c has_reform = 55_d }
 			any_owned_province = {
-			OR = {
-			AND = { trade_goods = sugar NOT = { has_province_flag = banned_sugar_production_flag } }
-			AND = { trade_goods = tobacco NOT = { has_province_flag = banned_tobacco_production_flag } }
-			}
+				OR = { 
+					AND = { trade_goods = wine NOT = { has_province_flag = banned_wine_production_flag } }
+					AND = { trade_goods = beer NOT = { has_province_flag = banned_tobacco_production_flag } } 
+					AND = { trade_goods = moon_sugar NOT = { has_province_flag = banned_sugar_production_flag } } 
+				}
 			}
 		}
 		effect = {
@@ -112,12 +69,14 @@ country_decisions = {
 		    random_owned_province = {
 			limit = {
 			OR = {
-			AND = { trade_goods = sugar NOT = { has_province_flag = banned_sugar_production_flag } }
-			AND = { trade_goods = tobacco NOT = { has_province_flag = banned_tobacco_production_flag } }
+				AND = { trade_goods = wine NOT = { has_province_flag = banned_wine_production_flag } }
+				AND = { trade_goods = beer NOT = { has_province_flag = banned_tobacco_production_flag } } 
+				AND = { trade_goods = moon_sugar NOT = { has_province_flag = banned_sugar_production_flag } } 
 			}
 			}
-			if = { limit = { trade_goods = sugar } set_province_flag = banned_sugar_production_flag }
-			if = { limit = { trade_goods = tobacco } set_province_flag = banned_tobacco_production_flag }
+			if = { limit = { trade_goods = wine } set_province_flag = banned_wine_production_flag }
+			if = { limit = { trade_goods = beer } set_province_flag = banned_tobacco_production_flag }
+			if = { limit = { trade_goods = moon_sugar } set_province_flag = banned_sugar_production_flag }
 			change_trade_goods = unknown
 			}
 		}
@@ -126,23 +85,41 @@ country_decisions = {
 		}
 	}
 	
-	remove_narcotics_ban = {
+	es_remove_ban = {
 		potential = {
-		    OR = { has_reform = 55_a has_reform = 55_b }
-			any_owned_province = { OR = { has_province_flag = banned_sugar_production_flag has_province_flag = banned_tobacco_production_flag }
+			NOT = { has_reform = drug_limitation }
+			NOT = { has_reform = prohibition }
+			any_owned_province = {
+				 OR = {
+					has_province_flag = banned_sugar_production_flag 
+					has_province_flag = banned_tobacco_production_flag
+					has_province_flag = banned_wine_production_flag
+				}
 			}
 		}
 		allow =  {
 		    prestige = 0 
-		    OR = { has_reform = 55_a has_reform = 55_b }
-			any_owned_province = { OR = { has_province_flag = banned_sugar_production_flag has_province_flag = banned_tobacco_production_flag }
-			}
+			any_owned_province = {
+				OR = {
+				   has_province_flag = banned_sugar_production_flag 
+				   has_province_flag = banned_tobacco_production_flag
+				   has_province_flag = banned_wine_production_flag
+			    }
+		   }
 		}
 		effect = {
 		    add_prestige = -5
-		    random_owned_province = { limit = { OR = { has_province_flag = banned_sugar_production_flag has_province_flag = banned_tobacco_production_flag } }
-			if = { limit = { has_province_flag = banned_sugar_production_flag } clr_province_flag = banned_sugar_production_flag change_trade_goods = sugar }
-			if = { limit = { has_province_flag = banned_tobacco_production_flag } clr_province_flag = banned_tobacco_production_flag change_trade_goods = tobacco }
+		    random_owned_province = { 
+				limit = {
+					OR = {
+						has_province_flag = banned_sugar_production_flag 
+						has_province_flag = banned_tobacco_production_flag
+						has_province_flag = banned_wine_production_flag
+					}
+				}
+			if = { limit = { has_province_flag = banned_sugar_production_flag } clr_province_flag = banned_sugar_production_flag change_trade_goods = moon_sugar }
+			if = { limit = { has_province_flag = banned_tobacco_production_flag } clr_province_flag = banned_tobacco_production_flag change_trade_goods = beer }
+			if = { limit = { has_province_flag = banned_wine_production_flag } clr_province_flag = banned_tobacco_production_flag change_trade_goods = wine }
 			}
 		}
 		ai_will_do = {

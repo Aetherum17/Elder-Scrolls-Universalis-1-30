@@ -8,8 +8,6 @@ estate_rajput_monopoly_of_metals = {
 			OR = {
 				trade_goods = iron
 				trade_goods = copper
-				trade_goods = rare_metals
-				trade_goods = light_metals
 			}
 			NOT = { has_province_modifier = estate_nobles_monopoly_of_metals_mod }
 			NOT = { has_province_modifier = estate_rajput_monopoly_of_metals_mod }
@@ -30,8 +28,6 @@ estate_rajput_monopoly_of_metals = {
 				OR = {
 					trade_goods = iron
 					trade_goods = copper
-					trade_goods = rare_metals
-				    trade_goods = light_metals
 				}
 			}
 			custom_tooltip = MONOPOLY_INCOME_IRON_DESC
@@ -43,8 +39,6 @@ estate_rajput_monopoly_of_metals = {
 					OR = {
 						trade_goods = iron
 						trade_goods = copper
-						trade_goods = rare_metals
-				        trade_goods = light_metals
 					}
 					NOT = { has_province_modifier = estate_nobles_monopoly_of_metals_mod }
 			        NOT = { has_province_modifier = estate_rajput_monopoly_of_metals_mod }

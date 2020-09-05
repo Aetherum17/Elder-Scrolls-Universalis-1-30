@@ -433,15 +433,6 @@ country_event = {
 		add_army_tradition = 10
 		event_target:maratha_farming_province = {
 			add_base_production = -1
-			if = {
-				limit = {
-					OR = {
-						trade_goods = grain
-						trade_goods = cotton
-					}
-				}
-				change_trade_goods = livestock
-			}
 		}
 	}
 	option = {

@@ -1193,20 +1193,9 @@ age_of_reformation = {
 			}
 		}
 		obj_asian_trade = {
-			OR = {
-				trading_bonus = {
-					trade_goods = spices
-					value = yes
-				}
-				trading_bonus = {
-					trade_goods = chinaware
-					value = yes
-				}
-				trading_bonus = {
-					trade_goods = silk
-					value = yes
-				}
-			
+			trading_bonus = {
+				trade_goods = silk
+				value = yes
 			}
 		}
 		obj_unify_culture = {	
@@ -1819,7 +1808,7 @@ great_war_age = {
 		}
 		obj_greatwar_oil = {
 			trading_bonus = {
-				trade_goods = oil
+				trade_goods = ebony
 				value = yes
 			}
 		}

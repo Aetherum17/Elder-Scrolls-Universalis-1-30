@@ -160,13 +160,6 @@ country_event = {
 				has_monsoon = normal_monsoon
 				has_monsoon = mild_monsoon
 			}
-
-			OR = {
-				trade_goods = grain
-				trade_goods = wine
-				trade_goods = tea
-				trade_goods = spices
-			}
 		}
 		NOT = {
 			any_owned_province = {
@@ -199,12 +192,6 @@ country_event = {
 						has_monsoon = normal_monsoon
 						has_monsoon = mild_monsoon
 					}
-					OR = {
-						trade_goods = grain
-						trade_goods = wine
-						trade_goods = tea
-						trade_goods = spices
-					}
 				}
 				save_event_target_as = plum_rains_province
 			}
@@ -223,12 +210,6 @@ country_event = {
 				area = {
 					limit = {
 						owned_by = ROOT
-						OR = {
-							trade_goods = grain
-							trade_goods = wine
-							trade_goods = tea
-							trade_goods = spices
-						}
 					}
 					add_province_modifier = {
 						name = plum_rains

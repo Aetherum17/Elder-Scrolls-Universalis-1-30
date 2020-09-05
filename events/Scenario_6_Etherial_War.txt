@@ -246,10 +246,7 @@ country_event = {
 		OR = {
 		has_global_flag = es_6_skyrim_path_flag
 		tag = OLD 
-		OR = {
-		    has_reform = elective_monarchy
-			has_reform = elective_monarchy_legacy
-		}
+		has_reform = elective_monarchy
 		}
 		government_rank = 5
     }

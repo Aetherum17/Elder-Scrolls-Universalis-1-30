@@ -875,7 +875,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-	    if = { limit = { NOT = { government = monarchy } change_government = monarchy } }
+	    change_government = monarchy
 		
 	    save_global_event_target_as = old_country
 		every_province = { limit = { owned_by = event_target:old_country } set_province_flag = owned_by_old_country_flag }

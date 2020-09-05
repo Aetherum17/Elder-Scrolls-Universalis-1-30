@@ -499,7 +499,7 @@ has_manufactory_no_custom_tooltip_trigger = { #Province Scope
 				trade_goods = fish
 				trade_goods = salt
 				trade_goods = algae
-				trade_goods = lobsters
+				trade_goods = crabs
 			}
 		}
 		has_building = wharf
@@ -509,9 +509,9 @@ has_manufactory_no_custom_tooltip_trigger = { #Province Scope
 			OR = {
 				trade_goods = copper
 				trade_goods = iron
-				trade_goods = rare_metals
-				trade_goods = manganates
-				trade_goods = light_metals
+				trade_goods = weapons_and_armor
+				trade_goods = corundum
+				trade_goods = orichalcum
 			}
 		}
 		has_building = weapons
@@ -523,6 +523,7 @@ has_manufactory_no_custom_tooltip_trigger = { #Province Scope
 				trade_goods = cloth
 				trade_goods = silk
 				trade_goods = dyes
+				trade_goods = leather
 			}
 		}
 		has_building = textile
@@ -532,10 +533,10 @@ has_manufactory_no_custom_tooltip_trigger = { #Province Scope
 			OR = {
 				trade_goods = ivory
 				trade_goods = slaves
-				trade_goods = spices
 				trade_goods = fur
-				trade_goods = incense
 				trade_goods = corals
+				trade_goods = pearls
+				trade_goods = slaves
 			}
 		}
 		has_building = tradecompany
@@ -543,9 +544,11 @@ has_manufactory_no_custom_tooltip_trigger = { #Province Scope
 	else_if = {
 		limit = {
 			OR = {
-				trade_goods = grain
 				trade_goods = livestock
 				trade_goods = wine
+				trade_goods = crops
+				trade_goods = fruits_and_vegetables
+				trade_goods = mushrooms
 			}
 		}
 		has_building = farm_estate
@@ -555,11 +558,9 @@ has_manufactory_no_custom_tooltip_trigger = { #Province Scope
 			OR = {
 				trade_goods = paper
 				trade_goods = gems
-				trade_goods = tropical_wood
-				trade_goods = glass
-				trade_goods = chinaware
-				trade_goods = silicates
-				trade_goods = wood_coal
+				trade_goods = 	glass
+				trade_goods = 	wood
+				trade_goods = potions
 			}
 		}
 		has_building = mills
@@ -567,12 +568,13 @@ has_manufactory_no_custom_tooltip_trigger = { #Province Scope
 	else_if = {
 		limit = {
 			OR = {
-			trade_goods = coal
-			trade_goods = oil
-			trade_goods = uranium
-			trade_goods = aluminum
-			trade_goods = cars
-			trade_goods = electronics
+				trade_goods = coal
+				trade_goods = ebony
+				trade_goods = stalhrim
+				trade_goods = moonstone
+				trade_goods = quicksilver 
+				trade_goods = malachite
+				trade_goods = silver 
 			}
 		}
 		has_building = furnace
@@ -605,83 +607,94 @@ root_can_build_manufactory_here_trigger = {
         limit = {
             OR = {
                 trade_goods = naval_supplies
-                trade_goods = fish
-                trade_goods = salt
+				trade_goods = fish
+				trade_goods = salt
+				trade_goods = algae
+				trade_goods = crabs
             }
         }
-        ROOT = { dip_tech = 11 }
+        ROOT = { dip_tech = 15 }
     }
     else_if = {
         limit = {
             OR = {
                 trade_goods = copper
-                trade_goods = iron
-            }
+				trade_goods = iron
+				trade_goods = weapons_and_armor
+				trade_goods = corundum
+				trade_goods = orichalcum
+			}
         }
-        ROOT = { mil_tech = 11 }
+        ROOT = { mil_tech = 25 }
     }
     else_if = {
         limit = {
             OR = {
                 trade_goods = wool
-                trade_goods = cloth
-                trade_goods = silk
-                trade_goods = dyes
+				trade_goods = cloth
+				trade_goods = silk
+				trade_goods = dyes
+				trade_goods = leather
             }
         }
-        ROOT = { adm_tech = 11 }
+        ROOT = { adm_tech = 10 }
     }
     else_if = {
         limit = {
             OR = {
-                trade_goods = coffee
-                trade_goods = cotton
-                trade_goods = sugar
-                trade_goods = tobacco
-                trade_goods = tea
+                trade_goods = coal
+				trade_goods = ebony
+				trade_goods = stalhrim
+				trade_goods = moonstone
+				trade_goods = quicksilver 
+				trade_goods = malachite
+				trade_goods = silver 
             }
         }
-        ROOT = { adm_tech = 14 }
+        ROOT = { adm_tech = 20 }
     }
     else_if = {
         limit = {
             OR = {
                 trade_goods = ivory
-                trade_goods = slaves
-                trade_goods = spices
-                trade_goods = fur
-                trade_goods = incense
+				trade_goods = slaves
+				trade_goods = fur
+				trade_goods = corals
+				trade_goods = pearls
+				trade_goods = slaves
             }
         }
-        ROOT = { dip_tech = 14 }
+        ROOT = { dip_tech = 35 }
     }
     else_if = {
         limit = {
             OR = {
-                trade_goods = grain
                 trade_goods = livestock
-                trade_goods = wine
+				trade_goods = wine
+				trade_goods = crops
+				trade_goods = fruits_and_vegetables
+				trade_goods = mushrooms
             }
         }
-        ROOT = { adm_tech = 6 }
+        ROOT = { adm_tech = 30 }
     }
     else_if = {
         limit = {
             OR = {
-                trade_goods = paper
-                trade_goods = gems
-                trade_goods = tropical_wood
-                trade_goods = glass
-                trade_goods = chinaware
+				trade_goods = paper
+				trade_goods = gems
+				trade_goods = 	glass
+				trade_goods = 	wood
+				trade_goods = potions
             }
         }
-        ROOT = { adm_tech = 16 }
+        ROOT = { adm_tech = 40 }
     }
     else_if = {
         limit = {
             trade_goods = coal
         }
-        ROOT = { adm_tech = 21 }
+        ROOT = { adm_tech = 50 }
     }
 }
 
@@ -690,7 +703,6 @@ has_nobles_trade_good_trigger = {
 		trade_goods = copper
 		trade_goods = iron
 		trade_goods = livestock
-		trade_goods = grain
 		trade_goods = gems
 		trade_goods = slaves
 	}
@@ -700,19 +712,11 @@ has_burghers_trade_good_trigger = {
 	OR = {
 		trade_goods = naval_supplies
 		trade_goods = salt
-		trade_goods = coffee
-		trade_goods = cotton
-		trade_goods = sugar
-		trade_goods = tobacco
-		trade_goods = tea
 		trade_goods = cloth
 		trade_goods = silk
 		trade_goods = dyes
 		trade_goods = coal
-		trade_goods = spices
-		trade_goods = tropical_wood
 		trade_goods = glass
-		trade_goods = chinaware
 		trade_goods = paper
 		trade_goods = ivory
 		trade_goods = fish
@@ -725,7 +729,6 @@ has_church_trade_good_trigger = {
 		trade_goods = fur
 		trade_goods = wine
 		trade_goods = slaves
-		trade_goods = incense
 		trade_goods = fish
 	}
 }

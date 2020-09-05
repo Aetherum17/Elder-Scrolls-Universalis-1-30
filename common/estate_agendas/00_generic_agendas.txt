@@ -219,6 +219,7 @@ estate_brahmins_build_temple_in_y = {
 	can_select = {
 		adm_tech = 4
 		if = {
+			limit = {
 			any_owned_province = {
 				is_state_core = root
 				NOT = { has_building = cathedral }
@@ -233,6 +234,7 @@ estate_brahmins_build_temple_in_y = {
 					}
 				}
 			}
+		}
 		}
 		else = {
 			any_owned_province = {
@@ -6292,9 +6294,7 @@ estate_nobles_build_manufactory_in_y = {
 						OR = {
 							trade_goods = ivory
 							trade_goods = slaves
-							trade_goods = spices
 							trade_goods = fur
-							trade_goods = incense
 						}
 					}
 					has_building = tradecompany
@@ -6302,7 +6302,6 @@ estate_nobles_build_manufactory_in_y = {
 				else_if = {
 					limit = {
 						OR = {
-							trade_goods = grain
 							trade_goods = livestock
 							trade_goods = wine
 						}
@@ -6314,9 +6313,7 @@ estate_nobles_build_manufactory_in_y = {
 						OR = {
 							trade_goods = paper
 							trade_goods = gems
-							trade_goods = tropical_wood
 							trade_goods = glass
-							trade_goods = chinaware
 						}
 					}
 					has_building = mills
@@ -6466,9 +6463,7 @@ estate_rajput_build_manufactory_in_y = {
 						OR = {
 							trade_goods = ivory
 							trade_goods = slaves
-							trade_goods = spices
 							trade_goods = fur
-							trade_goods = incense
 						}
 					}
 					has_building = tradecompany
@@ -6476,7 +6471,6 @@ estate_rajput_build_manufactory_in_y = {
 				else_if = {
 					limit = {
 						OR = {
-							trade_goods = grain
 							trade_goods = livestock
 							trade_goods = wine
 						}
@@ -6488,9 +6482,7 @@ estate_rajput_build_manufactory_in_y = {
 						OR = {
 							trade_goods = paper
 							trade_goods = gems
-							trade_goods = tropical_wood
 							trade_goods = glass
-							trade_goods = chinaware
 						}
 					}
 					has_building = mills
@@ -6640,9 +6632,7 @@ estate_maratha_build_manufactory_in_y = {
 						OR = {
 							trade_goods = ivory
 							trade_goods = slaves
-							trade_goods = spices
 							trade_goods = fur
-							trade_goods = incense
 						}
 					}
 					has_building = tradecompany
@@ -6650,7 +6640,6 @@ estate_maratha_build_manufactory_in_y = {
 				else_if = {
 					limit = {
 						OR = {
-							trade_goods = grain
 							trade_goods = livestock
 							trade_goods = wine
 						}
@@ -6662,9 +6651,7 @@ estate_maratha_build_manufactory_in_y = {
 						OR = {
 							trade_goods = paper
 							trade_goods = gems
-							trade_goods = tropical_wood
 							trade_goods = glass
-							trade_goods = chinaware
 						}
 					}
 					has_building = mills
@@ -6815,9 +6802,7 @@ estate_burghers_build_manufactory_in_y = {
 						OR = {
 							trade_goods = ivory
 							trade_goods = slaves
-							trade_goods = spices
 							trade_goods = fur
-							trade_goods = incense
 						}
 					}
 					has_building = tradecompany
@@ -6825,7 +6810,6 @@ estate_burghers_build_manufactory_in_y = {
 				else_if = {
 					limit = {
 						OR = {
-							trade_goods = grain
 							trade_goods = livestock
 							trade_goods = wine
 						}
@@ -6837,9 +6821,7 @@ estate_burghers_build_manufactory_in_y = {
 						OR = {
 							trade_goods = paper
 							trade_goods = gems
-							trade_goods = tropical_wood
 							trade_goods = glass
-							trade_goods = chinaware
 						}
 					}
 					has_building = mills
@@ -6989,9 +6971,7 @@ estate_vaisyas_build_manufactory_in_y = {
 						OR = {
 							trade_goods = ivory
 							trade_goods = slaves
-							trade_goods = spices
 							trade_goods = fur
-							trade_goods = incense
 						}
 					}
 					has_building = tradecompany
@@ -6999,7 +6979,6 @@ estate_vaisyas_build_manufactory_in_y = {
 				else_if = {
 					limit = {
 						OR = {
-							trade_goods = grain
 							trade_goods = livestock
 							trade_goods = wine
 						}
@@ -7011,9 +6990,7 @@ estate_vaisyas_build_manufactory_in_y = {
 						OR = {
 							trade_goods = paper
 							trade_goods = gems
-							trade_goods = tropical_wood
 							trade_goods = glass
-							trade_goods = chinaware
 						}
 					}
 					has_building = mills
@@ -7163,9 +7140,7 @@ estate_jains_build_manufactory_in_y = {
 						OR = {
 							trade_goods = ivory
 							trade_goods = slaves
-							trade_goods = spices
 							trade_goods = fur
-							trade_goods = incense
 						}
 					}
 					has_building = tradecompany
@@ -7173,7 +7148,6 @@ estate_jains_build_manufactory_in_y = {
 				else_if = {
 					limit = {
 						OR = {
-							trade_goods = grain
 							trade_goods = livestock
 							trade_goods = wine
 						}
@@ -7185,9 +7159,7 @@ estate_jains_build_manufactory_in_y = {
 						OR = {
 							trade_goods = paper
 							trade_goods = gems
-							trade_goods = tropical_wood
 							trade_goods = glass
-							trade_goods = chinaware
 						}
 					}
 					has_building = mills
@@ -7341,9 +7313,7 @@ estate_church_build_manufactory_in_y = {
 						OR = {
 							trade_goods = ivory
 							trade_goods = slaves
-							trade_goods = spices
 							trade_goods = fur
-							trade_goods = incense
 						}
 					}
 					has_building = tradecompany
@@ -7351,7 +7321,6 @@ estate_church_build_manufactory_in_y = {
 				else_if = {
 					limit = {
 						OR = {
-							trade_goods = grain
 							trade_goods = livestock
 							trade_goods = wine
 						}
@@ -7363,9 +7332,7 @@ estate_church_build_manufactory_in_y = {
 						OR = {
 							trade_goods = paper
 							trade_goods = gems
-							trade_goods = tropical_wood
 							trade_goods = glass
-							trade_goods = chinaware
 						}
 					}
 					has_building = mills
@@ -7519,9 +7486,7 @@ estate_brahmins_build_manufactory_in_y = {
 						OR = {
 							trade_goods = ivory
 							trade_goods = slaves
-							trade_goods = spices
 							trade_goods = fur
-							trade_goods = incense
 						}
 					}
 					has_building = tradecompany
@@ -7529,7 +7494,6 @@ estate_brahmins_build_manufactory_in_y = {
 				else_if = {
 					limit = {
 						OR = {
-							trade_goods = grain
 							trade_goods = livestock
 							trade_goods = wine
 						}
@@ -7541,9 +7505,7 @@ estate_brahmins_build_manufactory_in_y = {
 						OR = {
 							trade_goods = paper
 							trade_goods = gems
-							trade_goods = tropical_wood
 							trade_goods = glass
-							trade_goods = chinaware
 						}
 					}
 					has_building = mills

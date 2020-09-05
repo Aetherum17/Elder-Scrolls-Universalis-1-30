@@ -39,6 +39,9 @@ religious_center = {
 		else_if = { limit = { province_id = 5657 } religion = hircine_cult }
 		else_if = { limit = { province_id = 6737 } religion = nocturnal_cult }
 		else_if = { limit = { province_id = 646 } religion = unknown_pantheon }
+		else_if = { limit = { province_id = 646 } religion = cult_of_lorelia }
+		else_if = { limit = { province_id = 646 } religion = cult_of_the_moth }
+		else_if = { limit = { province_id = 646 } religion = cult_of_black_worm }
 	}
 
 	local_missionary_strength = -0.05

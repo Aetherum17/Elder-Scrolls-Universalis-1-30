@@ -3,64 +3,16 @@ estate_church_monopoly_of_incense = {
 	max_absolutism = -10
 	loyalty = 0.1
 	is_valid = {
-		has_dlc = "Emperor"
-		any_owned_province = {
-			trade_goods = incense
-			NOT = { has_province_modifier = estate_brahmins_monopoly_of_incense_mod }
-			NOT = { has_province_modifier = estate_church_monopoly_of_incense_mod }
-		}
+		always = no
 	}
 	can_select = {
-		custom_trigger_tooltip = {
-			tooltip = unavailable_during_revolution_disaster
-			NOT = { has_disaster = revolution }
-		}
+		always = no
 	}
 	on_granted = {
-		add_mercantilism = 1
-		add_years_of_owned_provinces_production_income = {
-			years = 8
-			trigger = {
-				trade_goods = incense
-			}
-			custom_tooltip = MONOPOLY_INCOME_INCENSE_DESC
-		}
-		custom_tooltip = estate_church_monopoly_of_incense_effect_tooltip
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					trade_goods = incense
-					NOT = { has_province_modifier = estate_brahmins_monopoly_of_incense_mod }
-			        NOT = { has_province_modifier = estate_church_monopoly_of_incense_mod }
-				}
-				add_province_modifier = {
-					name = estate_church_monopoly_of_incense_mod
-					duration = -1
-				}
-			}
-		}
 	}
 	on_revoked = {
-		custom_tooltip = estate_church_monopoly_of_incense_revoke_tooltip
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					has_province_modifier = estate_church_monopoly_of_incense_mod
-				}
-				remove_province_modifier = estate_church_monopoly_of_incense_mod
-			}
-		}
 	}
 	on_invalid = {
-		custom_tooltip = estate_church_monopoly_of_incense_revoke_tooltip
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					has_province_modifier = estate_church_monopoly_of_incense_mod
-				}
-				remove_province_modifier = estate_church_monopoly_of_incense_mod
-			}
-		}
 	}
 	penalties = {
 	}
@@ -68,7 +20,6 @@ estate_church_monopoly_of_incense = {
 	}
 	cooldown_years = 10
 	on_cooldown_expires = {
-		country_event = { id = monopoly_privileges.8 }
 	}
 	ai_will_do = {
 		factor = 0
