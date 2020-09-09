@@ -1,0 +1,33 @@
+owner = FOR
+controller = FOR
+#add_core = FOR
+culture = atmoran
+religion = dragon_cult
+hre = no
+base_tax = 3
+base_production = 3
+trade_goods = unknown
+base_manpower = 3
+capital = "Forelhost"
+is_city = yes
+discovered_by = tamriel_tg discovered_by = elven_tg discovered_by = exiled_tg discovered_by = northern_tg discovered_by = cyrodiil_tg
+
+center_of_trade = 1
+
+fort_15th = yes
+
+139.1.1 = {
+    add_province_modifier = {
+	    name = "03_walls_of_forelhost"
+		duration = -1
+	}
+}
+
+189.1.1 = {
+    remove_province_modifier = 03_walls_of_forelhost
+    owner = NA1
+    controller = NA1
+    #add_core = NA1
+	religion = nordic_pantheon
+	culture = nord
+}

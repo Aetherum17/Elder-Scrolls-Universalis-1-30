@@ -25,51 +25,51 @@ country_event = {
 	}
 }
 
-country_event = {
-	id = es_start.2
-	title = es_start.2.t
-	desc = es_start.2.d
-	picture = ES_MUSIC_MOD_eventPicture
-	
-	is_triggered_only = yes
-	
-	fire_only_once = yes
-	
-	hidden = yes
-	
-	immediate = {
-    if = {
-        limit = {
-            any_country = {
-                capital_scope = { continent = Oblivion }
-                ai = no
-            } 
-        }
-		add_treasury = 100
-    }
-	else = {
-	    every_country = {
-            limit = {
-                capital_scope = { continent = Oblivion }
-                ai = yes
-				NOT = { tag = CU5 }
-				NOT = { tag = DW2 }
-            }
-            every_owned_province = {
-                limit = {
-                    continent = Oblivion
-                    is_city = yes
-                }
-				cede_province = ---
-            }
-        }
-	}
-    }
-	
-	option = {
-		name = es_start.2.a	
-	}
-}
+#country_event = {
+#	id = es_start.2
+#	title = es_start.2.t
+#	desc = es_start.2.d
+#	picture = ES_MUSIC_MOD_eventPicture
+#	
+#	is_triggered_only = yes
+#	
+#	fire_only_once = yes
+#	
+#	hidden = yes
+#	
+#	immediate = {
+#    if = {
+#        limit = {
+#            any_country = {
+#                capital_scope = { continent = Oblivion }
+#                ai = no
+#            } 
+#        }
+#		add_treasury = 100
+#    }
+#	else = {
+#	    every_country = {
+#            limit = {
+#                capital_scope = { continent = Oblivion }
+#                ai = yes
+#				NOT = { tag = CU5 }
+#				NOT = { tag = DW2 }
+#            }
+#            every_owned_province = {
+#                limit = {
+#                    continent = Oblivion
+#                    is_city = yes
+#                }
+#				cede_province = ---
+#            }
+#        }
+#	}
+#    }
+#	
+#	option = {
+#		name = es_start.2.a	
+#	}
+#}
 
 country_event = {
 	id = es_start.3
