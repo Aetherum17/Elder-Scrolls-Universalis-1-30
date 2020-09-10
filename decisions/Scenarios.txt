@@ -4,21 +4,21 @@ country_decisions = {
 	    major = yes
 		potential = {
         tag = FOR
-		7549 = {
+		3119 = {
 		NOT = { has_province_modifier = 03_walls_of_forelhost }
 		}
 		}
 		allow = {
 		tag = FOR
-		owns = 7549
-		7549 = {
+		owns = 3119
+		3119 = {
 		NOT = { has_province_modifier = 03_walls_of_forelhost }
 		}
 		treasury = 500
 		}
 		effect = {
 		add_treasury = -500
-		7549 = {
+		3119 = {
 		add_permanent_province_modifier = {
 		name = "03_walls_of_forelhost"
 		duration = -1
@@ -47,7 +47,7 @@ country_decisions = {
         NOT = { tag = FOR }
 		NOT = { tag = DRA }
 		culture_group = northern_cg
-		7549 = {
+		3119 = {
 		owned_by = ROOT
 		}
 		}
@@ -57,7 +57,7 @@ country_decisions = {
 		effect = {
 		set_country_flag = forelhost_destroyd_flag
 		add_mil_power = -250
-		7549 = {
+		3119 = {
 		remove_province_modifier = 03_walls_of_forelhost
 		}
 		every_province = {

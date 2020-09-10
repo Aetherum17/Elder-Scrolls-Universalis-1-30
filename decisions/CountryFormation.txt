@@ -577,7 +577,7 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 		    OR = {
-			province_id = 7571		
+			province_id = 1313		
 			province_id = 1286
 			province_id = 1268
 			province_id = 1194
@@ -588,7 +588,7 @@ country_decisions = {
 		allow = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-			owns_core_province = 7571		
+			owns_core_province = 1313		
 			owns_core_province = 1286
 			owns_core_province = 1268
 			owns_core_province = 1194
@@ -689,8 +689,8 @@ country_decisions = {
 			province_id = 1319		
 			province_id = 1314
 			province_id = 1291
-			province_id = 7479
-			province_id = 7532
+			province_id = 3049
+			province_id = 3030
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -700,8 +700,8 @@ country_decisions = {
 			owns_core_province = 1319		
 			owns_core_province = 1314
 			owns_core_province = 1291
-			owns_core_province = 7479
-			owns_core_province = 7532
+			owns_core_province = 3049
+			owns_core_province = 3030
 		}
 		effect = {
 			change_tag = GRA
@@ -806,8 +806,8 @@ country_decisions = {
 		provinces_to_highlight = {
 		    OR = {
 			province_id = 1268		
-			province_id = 7394
-			province_id = 7571
+			province_id = 2924
+			province_id = 1313
 			province_id = 1286
 			province_id = 1280
 			}
@@ -817,8 +817,8 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			owns_core_province = 1268		
-			owns_core_province = 7394
-			owns_core_province = 7571
+			owns_core_province = 2924
+			owns_core_province = 1313
 			owns_core_province = 1286
 			owns_core_province = 1280
 		}
@@ -2898,10 +2898,10 @@ country_decisions = {
 		provinces_to_highlight = {
 		    OR = {
 			province_id = 1002		
-			province_id = 7914
-			province_id = 1018
+			province_id = 3936
+			province_id = 1017
 			province_id = 985
-			province_id = 8088
+			province_id = 1020
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -2909,10 +2909,10 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			owns_core_province = 1002		
-			owns_core_province = 7914
-			owns_core_province = 1018
+			owns_core_province = 3936
+			owns_core_province = 1017
 			owns_core_province = 985
-			owns_core_province = 8088
+			owns_core_province = 1020
 		}
 		effect = {
 			change_tag = CHI
@@ -2949,8 +2949,8 @@ country_decisions = {
 			province_id = 970		
 			province_id = 990
 			province_id = 976
-			province_id = 7753
-			province_id = 7728
+			province_id = 3373
+			province_id = 3348
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -2960,8 +2960,8 @@ country_decisions = {
 			owns_core_province = 970		
 			owns_core_province = 990
 			owns_core_province = 976
-			owns_core_province = 7753
-			owns_core_province = 7728
+			owns_core_province = 3373
+			owns_core_province = 3348
 		}
 		effect = {
 			change_tag = DWE
@@ -3003,9 +3003,9 @@ country_decisions = {
 		    OR = {
 			province_id = 970		
 			province_id = 990
-			province_id = 7829
-			province_id = 7832
-			province_id = 7886
+			province_id = 3437
+			province_id = 3779
+			province_id = 3846
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -3014,9 +3014,9 @@ country_decisions = {
 			is_at_war = no
 			owns_core_province = 970		
 			owns_core_province = 990
-			owns_core_province = 7829
-			owns_core_province = 7832
-			owns_core_province = 7886
+			owns_core_province = 3437
+			owns_core_province = 3779
+			owns_core_province = 3846
 		}
 		effect = {
 			change_tag = DES
@@ -3057,9 +3057,9 @@ country_decisions = {
 		provinces_to_highlight = {
 		    OR = {
 			province_id = 958		
-			province_id = 7728
-			province_id = 7753
-			province_id = 7796
+			province_id = 3403
+			province_id = 3356
+			province_id = 3348
 			province_id = 965
 			}
 			NOT = { owned_by = ROOT }
@@ -3068,9 +3068,9 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			owns_core_province = 958		
-			owns_core_province = 7728
-			owns_core_province = 7753
-			owns_core_province = 7796
+			owns_core_province = 3403
+			owns_core_province = 3356
+			owns_core_province = 3348
 			owns_core_province = 965
 		}
 		effect = {
@@ -3112,9 +3112,9 @@ country_decisions = {
 		provinces_to_highlight = {
 		    OR = {
 			province_id = 1018		
-			province_id = 8019
+			province_id = 4098
 			province_id = 1020
-			province_id = 8088
+			province_id = 1028
 			province_id = 1036
 			}
 			NOT = { owned_by = ROOT }
@@ -3123,9 +3123,9 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			owns_core_province = 1018		
-			owns_core_province = 8019
+			owns_core_province = 4098
 			owns_core_province = 1020
-			owns_core_province = 8088
+			owns_core_province = 1028
 			owns_core_province = 1036
 		}
 		effect = {
@@ -3162,10 +3162,10 @@ country_decisions = {
 		provinces_to_highlight = {
 		    OR = {
 			province_id = 1043		
-			province_id = 8204
+			province_id = 4274
 			province_id = 1045
-			province_id = 8126
-			province_id = 8049
+			province_id = 4136
+			province_id = 3303
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -3173,10 +3173,10 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			owns_core_province = 1043		
-			owns_core_province = 8204
+			owns_core_province = 4274
 			owns_core_province = 1045
-			owns_core_province = 8126
-			owns_core_province = 8049
+			owns_core_province = 4136
+			owns_core_province = 3303
 		}
 		effect = {
 			change_tag = ASH
@@ -3953,10 +3953,10 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-			province_id = 7549		
+			province_id = 3119		
 			province_id = 1268
 			province_id = 5899
-			province_id = 7745
+			province_id = 3365
 			province_id = 1270
 			}
 			NOT = { owned_by = ROOT }
@@ -3964,10 +3964,10 @@ country_decisions = {
 		allow = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-			owns_core_province = 7549
+			owns_core_province = 3119
 			owns_core_province = 1268
 			owns_core_province = 5899
-			owns_core_province = 7745
+			owns_core_province = 3365
 			owns_core_province = 1270
 		}
 		effect = {
@@ -4002,7 +4002,7 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 		    OR = {
-			province_id = 7695
+			province_id = 3315
 			province_id = 952
 			}
 			NOT = { owned_by = ROOT }
@@ -4010,7 +4010,7 @@ country_decisions = {
 		allow = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-			owns_core_province = 7695
+			owns_core_province = 3315
 			owns_core_province = 952
 		}
 		effect = {
@@ -4321,7 +4321,7 @@ country_decisions = {
 			province_id = 1002		
 			province_id = 970
 			province_id = 976
-			province_id = 7914
+			province_id = 3946
 			province_id = 990
 			}
 			NOT = { owned_by = ROOT }
@@ -4332,7 +4332,7 @@ country_decisions = {
 			owns_core_province = 1002		
 			owns_core_province = 970
 			owns_core_province = 976
-			owns_core_province = 7914
+			owns_core_province = 3946
 			owns_core_province = 990
 		}
 		effect = {
@@ -4483,9 +4483,9 @@ country_decisions = {
 		provinces_to_highlight = {
 		    OR = {
 			province_id = 1018	
-			province_id = 8058
-			province_id = 8028
-			province_id = 8019
+			province_id = 4018
+			province_id = 4084
+			province_id = 4009
 			province_id = 1020
 			}
 			NOT = { owned_by = ROOT }
@@ -4494,9 +4494,9 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			owns_core_province = 1018	
-			owns_core_province = 8058
-			owns_core_province = 8028
-			owns_core_province = 8019
+			owns_core_province = 4018
+			owns_core_province = 4084
+			owns_core_province = 4009
 			owns_core_province = 1020
 		}
 		effect = {
@@ -4548,22 +4548,22 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 		    OR = {
-			province_id = 7904	
-			province_id = 7886
-			province_id = 7946
-			province_id = 7896
-			province_id = 7956
+			province_id = 995	
+			province_id = 3904
+			province_id = 3936
+			province_id = 3946
+			province_id = 3846
 			}
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-			owns_core_province = 7904	
-			owns_core_province = 7886
-			owns_core_province = 7946
-			owns_core_province = 7896
-			owns_core_province = 7956
+			owns_core_province = 995	
+			owns_core_province = 3904
+			owns_core_province = 3936
+			owns_core_province = 3946
+			owns_core_province = 3846
 		}
 		effect = {
 			change_tag = DRS
@@ -4615,9 +4615,9 @@ country_decisions = {
 		provinces_to_highlight = {
 		    OR = {
 			province_id = 990	
-			province_id = 7857
-			province_id = 7864
-			province_id = 7873
+			province_id = 3836
+			province_id = 3796
+			province_id = 3782
 			province_id = 981
 			}
 			NOT = { owned_by = ROOT }
@@ -4626,9 +4626,9 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			owns_core_province = 990	
-			owns_core_province = 7857
-			owns_core_province = 7864
-			owns_core_province = 7873
+			owns_core_province = 3836
+			owns_core_province = 3796
+			owns_core_province = 3782
 			owns_core_province = 981
 		}
 		effect = {
@@ -4682,9 +4682,9 @@ country_decisions = {
 		    OR = {
 			province_id = 958	
 			province_id = 961
-			province_id = 7707
-			province_id = 7728
-			province_id = 7715
+			province_id = 3348
+			province_id = 3356
+			province_id = 3365
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -4693,9 +4693,9 @@ country_decisions = {
 			is_at_war = no
             owns_core_province = 958	
 			owns_core_province = 961
-			owns_core_province = 7707
-			owns_core_province = 7728
-			owns_core_province = 7715
+			owns_core_province = 3348
+			owns_core_province = 3356
+			owns_core_province = 3365
 		}
 		effect = {
 			change_tag = REO
@@ -4747,9 +4747,9 @@ country_decisions = {
 		provinces_to_highlight = {
 		    OR = {
 			province_id = 1028	
-			province_id = 8095
+			province_id = 4098
 			province_id = 1030
-			province_id = 8105
+			province_id = 4115
 			province_id = 1036
 			}
 			NOT = { owned_by = ROOT }
@@ -4758,9 +4758,9 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
             owns_core_province = 1028	
-			owns_core_province = 8095
+			owns_core_province = 4098
 			owns_core_province = 1030
-			owns_core_province = 8105
+			owns_core_province = 4115
 			owns_core_province = 1036
 		}
 		effect = {
@@ -4812,22 +4812,22 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 		    OR = {
-			province_id = 7745	
-			province_id = 7736
+			province_id = 3373	
+			province_id = 3403
 			province_id = 965
-			province_id = 7753
-			province_id = 7766
+			province_id = 3779
+			province_id = 976
 			}
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-            owns_core_province = 7745	
-			owns_core_province = 7736
+            owns_core_province = 3373	
+			owns_core_province = 3403
 			owns_core_province = 965
-			owns_core_province = 7753
-			owns_core_province = 7766
+			owns_core_province = 3779
+			owns_core_province = 976
 		}
 		effect = {
 			change_tag = HLA
@@ -4878,22 +4878,22 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 		    OR = {
-			province_id = 7829	
-			province_id = 976
+			province_id = 3963	
+			province_id = 3955
 			province_id = 985
-			province_id = 7832
-			province_id = 7965
+			province_id = 3975
+			province_id = 3987
 			}
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-            owns_core_province = 7829	
-			owns_core_province = 976
+            owns_core_province = 3963	
+			owns_core_province = 3955
 			owns_core_province = 985
-			owns_core_province = 7832
-			owns_core_province = 7965
+			owns_core_province = 3975
+			owns_core_province = 3987
 		}
 		effect = {
 			change_tag = SAD
@@ -4933,15 +4933,15 @@ country_decisions = {
 			province_id = 6334
 			province_id = 6316
 			province_id = 7320
-			province_id = 7350
+			province_id = 2740
 			province_id = 1314
-			province_id = 7419
-			province_id = 7333
+			province_id = 2949
+			province_id = 2713
 			province_id = 970
-			province_id = 976
+			province_id = 3426
 			province_id = 990
-			province_id = 7753
-			province_id = 7728
+			province_id = 3782
+			province_id = 3403
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -4957,17 +4957,17 @@ country_decisions = {
 			}
 			OR = {
 			owns_core_province = 7320
-			owns_core_province = 7350
+			owns_core_province = 2740
 			owns_core_province = 1314
-			owns_core_province = 7419
-			owns_core_province = 7333
+			owns_core_province = 2949
+			owns_core_province = 2713
 			}
 			OR = {
 			owns_core_province = 970
-			owns_core_province = 976
+			owns_core_province = 3426
 			owns_core_province = 990
-			owns_core_province = 7753
-			owns_core_province = 7728
+			owns_core_province = 3782
+			owns_core_province = 3403
 			}
 		}
 		effect = {
@@ -5010,7 +5010,7 @@ country_decisions = {
 		    OR = {
             province_id = 1002
 			province_id = 985
-			province_id = 7956
+			province_id = 1020
 			province_id = 995
 			province_id = 1006
 			}
@@ -5021,7 +5021,7 @@ country_decisions = {
 			is_at_war = no
 			owns_core_province = 1002
 			owns_core_province = 985
-			owns_core_province = 7956
+			owns_core_province = 1020
 			owns_core_province = 995
 			owns_core_province = 1006
 		}
@@ -5060,7 +5060,7 @@ country_decisions = {
 		    OR = {
             province_id = 1002
 			province_id = 985
-			province_id = 7956
+			province_id = 1020
 			province_id = 995
 			province_id = 1006
 			}
@@ -5071,7 +5071,7 @@ country_decisions = {
 			is_at_war = no
 			owns_core_province = 1002
 			owns_core_province = 985
-			owns_core_province = 7956
+			owns_core_province = 1020
 			owns_core_province = 995
 			owns_core_province = 1006
 		}

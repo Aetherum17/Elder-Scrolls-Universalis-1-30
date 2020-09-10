@@ -5,7 +5,7 @@ religious_center = {
 	trigger = {
 		if = { limit = { province_id = 263 } religion = altmeri_pantheon }
 		else_if = { limit = { province_id = 1286 } religion = snow_elves_pantheon }
-		else_if = { limit = { province_id = 7363 } religion = nordic_pantheon } 
+		else_if = { limit = { province_id = 2783 } religion = nordic_pantheon } 
 		else_if = { limit = { province_id = 834 } religion = bosmer_pantheon }
 		else_if = { limit = { province_id = 5627 } religion = eight_divines } 
 		else_if = { limit = { province_id = 1206 } religion = nine_divines }
@@ -23,7 +23,7 @@ religious_center = {
 		else_if = { limit = { province_id = 1572 } religion = dragon_cult }
 		else_if = { limit = { province_id = 1134 } religion = marukhism } 
 		else_if = { limit = { province_id = 1069 } religion = hist } 
-		else_if = { limit = { province_id = 7753 } religion = reason_and_logic_cult }
+		else_if = { limit = { province_id = 3373 } religion = reason_and_logic_cult }
 		else_if = { limit = { province_id = 7210 } religion = old_gods_cult }
 		else_if = { limit = { province_id = 700 } religion = tsaesci_pantheon } 
 		else_if = { limit = { province_id = 575 } religion = tang_mo_pantheon } 
@@ -31,17 +31,17 @@ religious_center = {
 		else_if = { limit = { province_id = 448 } religion = dremora_pantheon } 
 		else_if = { limit = { province_id = 1150 } religion = molog_bal_cult } 
 		else_if = { limit = { province_id = 1199 } religion = meridia_cult } 
-		else_if = { limit = { province_id = 5506 } religion = mehrunes_dagon_cult }
+		else_if = { limit = { province_id = 1230 } religion = mehrunes_dagon_cult }
 		else_if = { limit = { province_id = 6345 } religion = hermeus_mora_cult } 
 		else_if = { limit = { province_id = 631 } religion = po_tun_pantheon }
-		else_if = { limit = { province_id = 7695 } religion = all-maker_cult }
+		else_if = { limit = { province_id = 3315 } religion = all-maker_cult }
 		else_if = { limit = { province_id = 1482 } religion = sheogorath_cult }
 		else_if = { limit = { province_id = 5657 } religion = hircine_cult }
 		else_if = { limit = { province_id = 6737 } religion = nocturnal_cult }
 		else_if = { limit = { province_id = 646 } religion = unknown_pantheon }
-		else_if = { limit = { province_id = 646 } religion = cult_of_lorelia }
-		else_if = { limit = { province_id = 646 } religion = cult_of_the_moth }
-		else_if = { limit = { province_id = 646 } religion = cult_of_black_worm }
+		else_if = { limit = { province_id = 7050 } religion = cult_of_lorelia }
+		else_if = { limit = { province_id = 5506 } religion = cult_of_the_moth }
+		else_if = { limit = { province_id = 1017 } religion = cult_of_black_worm }
 	}
 
 	local_missionary_strength = -0.05
@@ -90,3 +90,6 @@ sheogorath_cult_holy_city = { potential = { } trigger = { owner = { religion = s
 hircine_cult_holy_city = { potential = { } trigger = { owner = { religion = hircine_cult } } prestige = 0.5 missionaries = 1 tolerance_own = 1 on_activation = { } on_deactivation = { } }
 nocturnal_cult_holy_city = { potential = { } trigger = { owner = { religion = nocturnal_cult } } prestige = 0.5 missionaries = 1 tolerance_own = 1 on_activation = { } on_deactivation = { } }
 unknown_pantheon_holy_city = { potential = { } trigger = { owner = { religion = unknown_pantheon } } prestige = 0.5 missionaries = 1 tolerance_own = 1 on_activation = { } on_deactivation = { } }
+cult_of_lorelia_holy_city = { potential = { } trigger = { owner = { religion = cult_of_lorelia } } prestige = 0.5 missionaries = 1 tolerance_own = 1 on_activation = { } on_deactivation = { } }
+cult_of_the_moth_holy_city = { potential = { } trigger = { owner = { religion = cult_of_the_moth } } prestige = 0.5 missionaries = 1 tolerance_own = 1 on_activation = { } on_deactivation = { } }
+cult_of_black_worm_holy_city = { potential = { } trigger = { owner = { religion = cult_of_black_worm } } prestige = 0.5 missionaries = 1 tolerance_own = 1 on_activation = { } on_deactivation = { } }
