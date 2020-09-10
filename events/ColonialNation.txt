@@ -1,0 +1,978 @@
+namespace = colonial_nation
+
+# Tariffs Too High
+country_event = {
+	id = colonial_nation.1
+	title = "colonial_nation.EVTNAME1"
+	desc = "colonial_nation.EVTDESC1"
+	picture = HARBOUR_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		any_subject_country = {
+			is_colonial_nation_of = ROOT
+			tariff_value = 0.25
+			OR = {
+				NOT = { has_country_flag = increased_tariffs }
+				had_country_flag = { flag = increased_tariffs days = 3650 }
+			}
+			OR = {
+				NOT = { has_country_flag = reduced_tariffs }
+				had_country_flag = { flag = reduced_tariffs days = 3650 }
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+		modifier = {
+			factor = 1.25
+			any_subject_country = {
+				is_colonial_nation_of = ROOT
+				tariff_value = 0.5
+			}
+			OR = {
+				NOT = { has_country_flag = increased_tariffs }
+				had_country_flag = { flag = increased_tariffs days = 3650 }
+			}
+			OR = {
+				NOT = { has_country_flag = reduced_tariffs }
+				had_country_flag = { flag = reduced_tariffs days = 3650 }
+			}
+		}
+		modifier = {
+			factor = 1.25
+			any_subject_country = {
+				is_colonial_nation_of = ROOT
+				tariff_value = 0.75
+			}
+			OR = {
+				NOT = { has_country_flag = increased_tariffs }
+				had_country_flag = { flag = increased_tariffs days = 3650 }
+			}
+			OR = {
+				NOT = { has_country_flag = reduced_tariffs }
+				had_country_flag = { flag = reduced_tariffs days = 3650 }
+			}
+		}
+		modifier = {
+			factor = 1.1
+			is_year = 1650
+		}
+		modifier = {
+			factor = 1.1
+			is_year = 1700
+		}
+		modifier = {
+			factor = 1.1
+			is_year = 1750
+		}
+		modifier = {
+			factor = 1.1
+			is_year = 1800
+		}
+	}
+	
+	option = {
+		name = "colonial_nation.EVTOPTA1"	# Better show them who rule the colonies
+		ai_chance = { factor = 50 }
+		random_country = {
+			limit = {
+				is_colonial_nation_of = ROOT
+			}
+			tooltip = {
+				add_liberty_desire = 10
+				add_tariff_value = 0.10
+			}
+			hidden_effect = {
+				set_country_flag = increased_tariffs
+				country_event = { id = colonial_nation.2 days = 1 }
+			}
+		}
+	}
+	option = {
+		name = "colonial_nation.EVTOPTB1"	# Accept to lower the tariffs
+		ai_chance = { factor = 50 }
+		random_country = {
+			limit = {
+				is_colonial_nation_of = ROOT
+			}
+			tooltip = {
+				add_liberty_desire = -10
+				add_tariff_value = -0.10
+			}
+			hidden_effect = {
+				set_country_flag = reduced_tariffs
+				country_event = { id = colonial_nation.3 days = 1 }
+			}
+		}
+	}
+}
+
+# Increased Tariffs
+country_event = {
+	id = colonial_nation.2
+	title = "colonial_nation.EVTNAME2"
+	desc = "colonial_nation.EVTDESC2"
+	picture = HARBOUR_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "colonial_nation.EVTOPTA2"	# Push us far enough...
+		add_liberty_desire = 10
+		add_tariff_value = 0.1
+	}
+}
+
+# Decreased Tariffs
+country_event = {
+	id = colonial_nation.3
+	title = "colonial_nation.EVTNAME3"
+	desc = "colonial_nation.EVTDESC3"
+	picture = HARBOUR_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "colonial_nation.EVTOPTA3"	# Good news!
+		add_liberty_desire = -10
+		add_tariff_value = -0.1
+	}
+}
+
+# Freedom Fighter or Rebel?
+country_event = {
+	id = colonial_nation.4
+	title = "colonial_nation.EVTNAME4"
+	desc = "colonial_nation.EVTDESC4"
+	picture = CONQUEST_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		is_colonial_nation = yes
+		liberty_desire = 50
+		NOT = { has_country_flag = colonial_nation_freedom_fighter }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+		modifier = {
+			factor = 1.25
+			liberty_desire = 60
+		}
+		modifier = {
+			factor = 1.25
+			liberty_desire = 70
+		}
+		modifier = {
+			factor = 1.25
+			liberty_desire = 80
+		}
+		modifier = {
+			factor = 1.25
+			liberty_desire = 90
+		}
+		modifier = {
+			factor = 1.25
+			is_year = 1650
+		}
+		modifier = {
+			factor = 1.25
+			is_year = 1700
+		}
+		modifier = {
+			factor = 1.25
+			is_year = 1750
+		}
+		modifier = {
+			factor = 1.25
+			is_year = 1800
+		}
+	}
+	
+	immediate = {
+		set_country_flag = colonial_nation_freedom_fighter
+	}
+	
+	option = {
+		name = "colonial_nation.EVTOPTA4"	# Promote him to general!
+		ai_chance = { factor = 75 }
+		create_general = { tradition = 100 }
+		add_liberty_desire = 1
+		hidden_effect = {
+			colonial_parent = {
+				country_event = { id = colonial_nation.5 days = 1 }
+			}
+		}
+	}
+	option = {
+		name = "colonial_nation.EVTOPTB4"	# He must be executed!
+		ai_chance = { factor = 25 }
+		add_liberty_desire = 10
+		hidden_effect = {
+			colonial_parent = {
+				country_event = { id = colonial_nation.6 days = 1 }
+			}
+		}
+	}
+}
+
+# Trouble in COLONYNAME
+country_event = {
+	id = colonial_nation.5
+	title = "colonial_nation.EVTNAME5"
+	desc = "colonial_nation.EVTDESC5"
+	picture = CONQUEST_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "colonial_nation.EVTOPTA5"	# How dare they?!
+		tooltip = {
+			FROM = {
+				add_liberty_desire = 1
+			}
+		}
+	}
+}
+
+# Colonial Rebel Executed
+country_event = {
+	id = colonial_nation.6
+	title = "colonial_nation.EVTNAME6"
+	desc = "colonial_nation.EVTDESC6"
+	picture = STREET_SPEECH_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "colonial_nation.EVTOPTA6"	# Perhaps a too swift solution...
+		tooltip = {
+			FROM = {
+				add_liberty_desire = 10
+			}
+		}
+	}
+}
+
+# Colonial Wars
+country_event = {
+	id = colonial_nation.10
+	title = "colonial_nation.EVTNAME10"
+	desc = "colonial_nation.EVTDESC10"
+	picture = BORDER_TENSION_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		any_subject_country = {
+			is_colonial_nation_of = ROOT
+			cb_on_primitives = yes
+			NOT = { has_country_modifier = the_proclamation_of_year_timer }
+			OR = {
+				NOT = { has_country_flag = the_proclamation_of_year }
+				had_country_flag = { flag = the_proclamation_of_year days = 10950 }
+			}
+			any_neighbor_country = {
+				primitives = yes
+				OR = {
+					alliance_with = ROOT
+					has_opinion = {
+						who = ROOT
+						value = 100
+					}
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+		modifier = {
+			factor = 1.25
+			any_country = {
+				primitives = yes
+				alliance_with = ROOT
+			}
+		}
+	}
+	
+	immediate = {
+		random_country = {
+			limit = {
+				is_colonial_nation_of = ROOT
+				cb_on_primitives = yes
+				NOT = { has_country_modifier = the_proclamation_of_year_timer }
+				OR = {
+					NOT = { has_country_flag = the_proclamation_of_year }
+					had_country_flag = { flag = the_proclamation_of_year days = 10950 }
+				}
+				any_neighbor_country = {
+					primitives = yes
+					OR = {
+						alliance_with = ROOT
+						has_opinion = {
+							who = ROOT
+							value = 100
+						}
+					}
+				}
+			}
+			set_country_flag = the_proclamation_of_year_country
+		}
+	}
+	
+	option = {
+		name = "colonial_nation.EVTOPTA10"	# Keep them on a tight leash!
+		ai_chance = { factor = 25 }
+		random_country = {
+			limit = {
+				has_country_flag = the_proclamation_of_year_country
+				is_colonial_nation_of = ROOT
+				cb_on_primitives = yes
+				NOT = { has_country_modifier = the_proclamation_of_year_timer }
+				OR = {
+					NOT = { has_country_flag = the_proclamation_of_year }
+					had_country_flag = { flag = the_proclamation_of_year days = 10950 }
+				}
+				any_neighbor_country = {
+					primitives = yes
+					OR = {
+						alliance_with = ROOT
+						has_opinion = {
+							who = ROOT
+							value = 100
+						}
+					}
+				}
+			}
+			tooltip = {
+				add_liberty_desire = 25
+				add_country_modifier = {#Proclamation of Peace
+					name = "proclamation_of_year_modifier"
+					duration = 3650
+				}
+			}
+			hidden_effect = {
+				country_event = { id = colonial_nation.11 days = 1 }
+			}
+		}
+		every_country = {
+			limit = {
+				primitives = yes
+				OR = {
+					alliance_with = ROOT
+					has_opinion = {
+						who = ROOT
+						value = 100
+					}
+				}
+				any_neighbor_country = {
+					has_country_flag = the_proclamation_of_year_country
+					is_colonial_nation_of = ROOT
+					cb_on_primitives = yes
+					NOT = { has_country_modifier = the_proclamation_of_year_timer }
+					OR = {
+						NOT = { has_country_flag = the_proclamation_of_year }
+						had_country_flag = { flag = the_proclamation_of_year days = 10950 }
+					}
+				}
+			}
+			add_opinion = { who = ROOT modifier = the_proclamation_of_year }
+		}
+	}
+	option = {
+		name = "colonial_nation.EVTOPTB10"	# It is not in our interest
+		ai_chance = {
+			factor = 75
+			modifier = {
+				factor = 0
+				any_subject_country = {
+					is_colonial_nation_of = ROOT
+					cb_on_primitives = yes
+					NOT = { has_country_modifier = the_proclamation_of_year_timer }
+					OR = {
+						NOT = { has_country_flag = the_proclamation_of_year }
+						had_country_flag = { flag = the_proclamation_of_year days = 10950 }
+					}
+					any_neighbor_country = {
+						primitives = yes
+						alliance_with = ROOT
+					}
+				}
+			}
+		}
+		every_country = {
+			limit = {
+				primitives = yes
+				OR = {
+					alliance_with = ROOT
+					has_opinion = {
+						who = ROOT
+						value = 100
+					}
+				}
+				any_neighbor_country = {
+					has_country_flag = the_proclamation_of_year_country
+					is_colonial_nation_of = ROOT
+					cb_on_primitives = yes
+					NOT = { has_country_modifier = the_proclamation_of_year_timer }
+					OR = {
+						NOT = { has_country_flag = the_proclamation_of_year }
+						had_country_flag = { flag = the_proclamation_of_year days = 10950 }
+					}
+				}
+			}
+			add_opinion = { who = ROOT modifier = non_restricted_colonial_wars }
+		}
+		hidden_effect = {
+			random_country = {
+				limit = {
+					has_country_flag = the_proclamation_of_year_country
+					is_colonial_nation_of = ROOT
+					cb_on_primitives = yes
+					NOT = { has_country_modifier = the_proclamation_of_year_timer }
+					OR = {
+						NOT = { has_country_flag = the_proclamation_of_year }
+						had_country_flag = { flag = the_proclamation_of_year days = 10950 }
+					}
+					any_neighbor_country = {
+						primitives = yes
+						OR = {
+							alliance_with = ROOT
+							has_opinion = {
+								who = ROOT
+								value = 100
+							}
+						}
+					}
+				}
+				clr_country_flag = the_proclamation_of_year_country
+			}
+		}
+	}
+}
+
+# The Proclamation of YEAR
+country_event = {
+	id = colonial_nation.11
+	title = "colonial_nation.EVTNAME11"
+	desc = "colonial_nation.EVTDESC11"
+	picture = COURT_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_nation.EVTOPTA11"	# This is an outrage!
+		add_liberty_desire = 25
+		add_country_modifier = {#Proclamation of Peace
+			name = "proclamation_of_year_modifier"
+			duration = 3650
+		}
+		clr_country_flag = the_proclamation_of_year_country
+		clr_country_flag = the_proclamation_of_year
+		set_country_flag = the_proclamation_of_year
+		add_country_modifier = {
+			name = "the_proclamation_of_year_timer"
+			duration = 3650
+			hidden = yes
+		}
+	}
+}
+
+# Colonial Expansion
+country_event = {
+	id = colonial_nation.12
+	title = "colonial_nation.EVTNAME12"
+	desc = "colonial_nation.EVTDESC12"
+	picture = COLONIZATION_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		any_subject_country = {
+			is_colonial_nation_of = ROOT
+			OR = {
+				NOT = { has_country_flag = restricted_colonial_expansion }
+				had_country_flag = { flag = restricted_colonial_expansion days = 10950 }
+			}
+			any_owned_province = {
+				is_colony = yes
+			}
+			any_neighbor_country = {
+				primitives = yes
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		random_country = {
+			limit = {
+				is_colonial_nation_of = ROOT
+				OR = {
+					NOT = { has_country_flag = restricted_colonial_expansion }
+					had_country_flag = { flag = restricted_colonial_expansion days = 10950 }
+				}
+				any_owned_province = {
+					is_colony = yes
+				}
+				any_neighbor_country = {
+					primitives = yes
+				}
+			}
+			save_event_target_as = restricted_colonial_expansion_country
+		}
+	}
+	
+	option = {
+		name = "colonial_nation.EVTOPTA12"	# Restrict it!
+		ai_chance = { factor = 75 }
+		event_target:restricted_colonial_expansion_country = {
+			tooltip = {
+				add_liberty_desire = 25
+				add_country_modifier = {
+					name = "restricted_colonial_expansion"
+					duration = 1825
+				}
+			}
+			hidden_effect = {
+				country_event = { id = colonial_nation.13 days = 1 }
+			}
+			every_neighbor_country = {
+				limit = { primitives = yes }
+				add_opinion = { who = ROOT modifier = restricted_colonial_expansion_opinion }
+			}
+		}
+	}
+	option = {
+		name = "colonial_nation.EVTOPTB12"	# Let them expand freely
+		ai_chance = { factor = 25 }
+		event_target:restricted_colonial_expansion_country = {
+			every_neighbor_country = {
+				limit = { primitives = yes }
+				add_opinion = { who = ROOT modifier = non_restricted_colonial_expansion_opinion }
+			}
+		}
+	}
+}
+
+# Restricted Colonial Expansion
+country_event = {
+	id = colonial_nation.13
+	title = "colonial_nation.EVTNAME13"
+	desc = "colonial_nation.EVTDESC13"
+	picture = COURT_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_nation.EVTOPTA13"	# Intolerable!
+		add_liberty_desire = 25
+		set_country_flag = restricted_colonial_expansion
+		add_country_modifier = {
+			name = "restricted_colonial_expansion"
+			duration = 1825
+		}
+	}
+}
+
+# The Burden of War
+country_event = {
+	id = colonial_nation.14
+	title = "colonial_nation.EVTNAME14"
+	desc = "colonial_nation.EVTDESC14"
+	picture = WOUNDED_SOLDIERS_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		any_subject_country = {
+			is_colonial_nation_of = ROOT
+			OR = {
+				NOT = { has_country_flag = the_burden_of_war }
+				had_country_flag = { flag = the_burden_of_war days = 7300 }
+			}
+			any_neighbor_country = {
+				truce_with = ROOT
+			}
+		}
+		war_exhaustion = 4
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "colonial_nation.EVTOPTA14"	# Let the colonies pay!
+		ai_chance = { factor = 50 }
+		add_war_exhaustion = -2
+		random_country = {
+			limit = {
+				is_colonial_nation_of = ROOT
+				OR = {
+					NOT = { has_country_flag = the_burden_of_war }
+					had_country_flag = { flag = the_burden_of_war days = 7300 }
+				}
+				any_neighbor_country = {
+					truce_with = ROOT
+				}
+			}
+			tooltip = {
+				add_liberty_desire = 10
+				add_adm_power = -25
+			}
+			hidden_effect = {
+				set_country_flag = the_burden_of_war
+				country_event = { id = colonial_nation.15 days = 1 }
+			}
+		}
+	}
+	option = {
+		name = "colonial_nation.EVTOPTB14"	# We will shoulder the burden
+		ai_chance = { factor = 50 }
+		add_adm_power = -50
+	}
+}
+
+# The Burden of War
+country_event = {
+	id = colonial_nation.15
+	title = "colonial_nation.EVTNAME14"
+	desc = "colonial_nation.EVTDESC15"
+	picture = ES_WAR_IS_NEAR_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_nation.EVTOPTA13"	# Intolerable!
+		add_liberty_desire = 10
+		add_adm_power = -25
+	}
+}
+
+# Spread the Revolution
+country_event = {
+	id = colonial_nation.75
+	title = "colonial_nation.EVTNAME75"
+	desc = "colonial_nation.EVTDESC75"
+	picture = REVOLUTION_eventPicture
+	
+	trigger = {
+		is_former_colonial_nation = yes
+		is_free_or_tributary_trigger = yes
+		is_at_war = no
+		manpower_percentage = 0.75
+		any_neighbor_country = {
+			is_colonial_nation = yes
+			liberty_desire = 50
+			is_at_war = no
+			NOT = { has_country_flag = received_revolutionary_support }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 2000
+	}
+
+	option = {
+		name = "colonial_nation.EVTOPTA75"	# Viva la revolution!
+		ai_chance = { factor = 100 }
+		add_manpower = -2
+		random_neighbor_country = {
+			limit = {
+				is_colonial_nation = yes
+				liberty_desire = 50
+				is_at_war = no
+				NOT = { has_country_flag = received_revolutionary_support }
+			}
+			tooltip = {
+				add_manpower = 2
+				if = {
+					limit = {
+						ROOT = {
+							army_tradition = 25
+							NOT = { army_tradition = 50 }
+						}
+					}
+					add_army_tradition = 5
+				}
+				if = {
+					limit = {
+						ROOT = {
+							army_tradition = 50
+							NOT = { army_tradition = 75 }
+						}
+					}
+					add_army_tradition = 10
+				}
+				if = {
+					limit = {
+						ROOT = {
+							army_tradition = 75
+						}
+					}
+					add_army_tradition = 15
+				}
+				add_opinion = { who = ROOT modifier = supported_the_revolution }
+			}
+			set_country_flag = received_revolutionary_support
+			country_event = { id = colonial_nation.76 days = 1 tooltip = "viva_la_revolution" }
+		}
+	}
+	option = {
+		name = "colonial_nation.EVTOPTB75"	# Don't upset the balance
+		ai_chance = { factor = 0 }
+		add_prestige = -10
+	}
+}
+
+# The Domino Effect
+country_event = {
+	id = colonial_nation.76
+	title = "colonial_nation.EVTNAME76"
+	desc = "colonial_nation.EVTDESC76"
+	picture = REVOLUTION_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_nation.EVTOPTA76"	# Embrace these ideas and their help!
+		ai_chance = { factor = 100 }
+		add_liberty_desire = 10
+		add_manpower = 2
+		if = {
+			limit = {
+				FROM = {
+					army_tradition = 25
+					NOT = { army_tradition = 50 }
+				}
+			}
+			add_army_tradition = 5
+		}
+		if = {
+			limit = {
+				FROM = {
+					army_tradition = 50
+					NOT = { army_tradition = 75 }
+				}
+			}
+			add_army_tradition = 10
+		}
+		if = {
+			limit = {
+				FROM = {
+					army_tradition = 75
+				}
+			}
+			add_army_tradition = 15
+		}
+		add_opinion = { who = FROM modifier = supported_the_revolution }
+	}
+	option = {
+		name = "colonial_nation.EVTOPTB76"	# We will remain loyal
+		ai_chance = { factor = 0 }
+		add_liberty_desire = -5
+	}
+}
+
+# Revolutionary Spirit
+country_event = {
+	id = colonial_nation.77
+	title = "colonial_nation.EVTNAME77"
+	desc = "colonial_nation.EVTDESC77"
+	picture = REVOLUTION_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		is_colonial_nation = yes
+		liberty_desire = 75
+		is_at_war = no
+		NOT = { has_country_flag = revolutionary_spirit }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+		modifier = {
+			factor = 1.25
+			is_year = 1650
+		}
+		modifier = {
+			factor = 1.25
+			is_year = 1700
+		}
+		modifier = {
+			factor = 1.25
+			is_year = 1750
+		}
+		modifier = {
+			factor = 1.25
+			is_year = 1800
+		}
+	}
+	
+	immediate = {
+		set_country_flag = revolutionary_spirit
+	}
+
+	option = {
+		name = "colonial_nation.EVTOPTA77"	# Expand the army!
+		ai_chance = { factor = 100 }
+		add_liberty_desire = 10
+		add_country_modifier = {
+			name = "revolutionary_spirit"
+			duration = 9125
+		}
+	}
+	option = {
+		name = "colonial_nation.EVTOPTB77"	# Reject these troublemakers
+		ai_chance = { factor = 0 }
+		add_stability = -1
+	}
+}
+
+# New Government!
+country_event = {
+	id = colonial_nation.90
+	title = "colonial_nation.EVTNAME90"
+	desc = "colonial_nation.EVTDESC90"
+	picture = REFORM_eventPicture
+
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			remove_country_modifier = spa_new_colonial_reforms_subject
+			remove_country_modifier = jesuits_expelled
+			remove_country_modifier = valladolid_las_casas
+			remove_country_modifier = valladolid_sepulveda
+			remove_country_modifier = laws_of_the_burgos
+		}
+	}
+	
+	option = {
+		name = "colonial_nation.EVTOPTA90"	# Monarchy
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 2
+				colonial_parent = {
+					government = monarchy
+				}
+			}
+		}
+		change_government = monarchy
+		kill_ruler = yes
+	}
+	option = {
+		name = "colonial_nation.EVTOPTB90"	# Republic
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 2
+				colonial_parent = {
+					government = republic
+				}
+			}
+		}
+		remove_government_reform = colonial_government
+		kill_ruler = yes
+	}
+}
+
+# Treaty of CapitalName
+country_event = {
+	id = colonial_nation.91
+	title = "colonial_nation.EVTNAME91"
+	desc = "colonial_nation.EVTDESC91"
+	picture = UNIVERSITY_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "colonial_nation.EVTOPTA91"	# Off with his/her head!		
+		FROM = {
+			tooltip = {
+				if = {
+					limit = {
+						NOT = { government = republic }
+					}
+					change_government = republic
+				}
+				add_government_reform = colonial_government
+				kill_ruler = yes
+				add_liberty_desire = 10
+			}
+			hidden_effect = {
+				country_event = { id = colonial_nation.92 days = 1 }
+			}
+		}
+	}
+	option = {
+		name = "colonial_nation.EVTOPTB91"	# Show leniency
+		add_prestige = -10
+		FROM = {
+			tooltip = {
+				add_government_reform = colonial_government
+			}
+			hidden_effect = {
+				country_event = { id = colonial_nation.93 days = 1 }
+			}
+		}
+	}
+}
+
+# Independence War Fails
+country_event = {
+	id = colonial_nation.92
+	title = "colonial_nation.EVTNAME92"
+	desc = "colonial_nation.EVTDESC92"
+	picture = WOUNDED_SOLDIERS_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "colonial_nation.EVTOPTA92"	# We will bide our time...
+		if = {
+			limit = {
+				NOT = { government = republic }
+			}
+			change_government = republic
+		}
+		add_government_reform = colonial_government
+		kill_ruler = yes
+		add_liberty_desire = 10
+		add_adm_power = 25
+		add_dip_power = 25
+		add_mil_power = 25
+	}
+}
+
+# Independence War Fails
+country_event = {
+	id = colonial_nation.93
+	title = "colonial_nation.EVTNAME92"
+	desc = "colonial_nation.EVTDESC93"
+	picture = WOUNDED_SOLDIERS_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "colonial_nation.EVTOPTA93"	# I guess we should be thankful...
+		if = {
+			limit = {
+				NOT = { government = republic }
+			}
+			change_government = republic
+		}
+		add_government_reform = colonial_government
+	}
+}

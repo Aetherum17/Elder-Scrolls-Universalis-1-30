@@ -1,0 +1,1019 @@
+namespace = es_collapse
+
+country_event = {
+	id = es_collapse.14
+	title = es_collapse.14.t
+	desc = es_collapse.14.d
+	picture = ES_PROVINCE_COLLAPSE_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	    add_country_modifier = {
+			name = "vassal_autonomy"
+			duration = 9125
+		}
+	}
+	
+	option = {
+		name = es_collapse.2.a
+		ai_chance = { factor = 75 }
+		hidden_effect = {
+		
+		if = {
+		limit = {
+		NOT = { capital_scope = { region = vvardenfell_lr } }
+		}
+		every_core_province = {
+			limit = {
+				region = vvardenfell_lr
+			}
+			remove_core = ROOT
+		}
+		}
+		
+        if = {
+        limit = {
+        morrowind_19_la  = {
+        owned_by = ROOT
+        }
+        NOT = { exists = MB9 }
+        NOT = { capital_scope = { area = morrowind_19_la  } }
+        }
+        every_owned_province = {
+        limit = {
+        area = morrowind_19_la 
+        }
+        add_core = MB9
+        }
+        create_vassal = MB9
+		MB9 = {
+		    random_list = {
+			    25 = { change_government = monarchy }
+				25 = { change_government = republic }
+				25 = { change_government = theocracy }
+				25 = { change_government = tribal }
+			}
+		}
+		MB9 = {
+		    change_government_reform_progress = -99999
+		}
+        }
+
+        if = {
+        limit = {
+        morrowind_20_la  = {
+        owned_by = ROOT
+        }
+        NOT = { exists = MC0 }
+        NOT = { capital_scope = { area = morrowind_20_la  } }
+        }
+        every_owned_province = {
+        limit = {
+        area = morrowind_20_la 
+        }
+        add_core = MC0
+        }
+        create_vassal = MC0
+		MC0 = {
+		    random_list = {
+			    25 = { change_government = monarchy }
+				25 = { change_government = republic }
+				25 = { change_government = theocracy }
+				25 = { change_government = tribal }
+			}
+		}
+		MC0 = {
+		    change_government_reform_progress = -99999
+		}
+        }
+
+        if = {
+        limit = {
+        morrowind_21_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = MC1 }
+        NOT = { capital_scope = { area = morrowind_21_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = morrowind_21_la
+        }
+        add_core = MC1
+        }
+        create_vassal = MC1
+		MC1 = {
+		    random_list = {
+			    25 = { change_government = monarchy }
+				25 = { change_government = republic }
+				25 = { change_government = theocracy }
+				25 = { change_government = tribal }
+			}
+		}
+		MC1 = {
+		    change_government_reform_progress = -99999
+		}
+        }
+
+        if = {
+        limit = {
+        morrowind_22_la  = {
+        owned_by = ROOT
+        }
+        NOT = { exists = MC2 }
+        NOT = { capital_scope = { area = morrowind_22_la  } }
+        }
+        every_owned_province = {
+        limit = {
+        area = morrowind_22_la 
+        }
+        add_core = MC2
+        }
+        create_vassal = MC2
+		MC2 = {
+		    random_list = {
+			    25 = { change_government = monarchy }
+				25 = { change_government = republic }
+				25 = { change_government = theocracy }
+				25 = { change_government = tribal }
+			}
+		}
+		MC2 = {
+		    change_government_reform_progress = -99999
+		}
+        }
+
+        if = {
+        limit = {
+        morrowind_65_la  = {
+        owned_by = ROOT
+        }
+        NOT = { exists = MG5 }
+        NOT = { capital_scope = { area = morrowind_65_la  } }
+        }
+        every_owned_province = {
+        limit = {
+        area = morrowind_65_la 
+        }
+        add_core = MG5
+        }
+        create_vassal = MG5
+		MG5 = {
+		    random_list = {
+			    25 = { change_government = monarchy }
+				25 = { change_government = republic }
+				25 = { change_government = theocracy }
+				25 = { change_government = tribal }
+			}
+		}
+		MG5 = {
+		    change_government_reform_progress = -99999
+		}
+        }
+
+        if = {
+        limit = {
+        morrowind_66_la  = {
+        owned_by = ROOT
+        }
+        NOT = { exists = MG6 }
+        NOT = { capital_scope = { area = morrowind_66_la  } }
+        }
+        every_owned_province = {
+        limit = {
+        area = morrowind_66_la 
+        }
+        add_core = MG6
+        }
+        create_vassal = MG6
+		MG6 = {
+		    random_list = {
+			    25 = { change_government = monarchy }
+				25 = { change_government = republic }
+				25 = { change_government = theocracy }
+				25 = { change_government = tribal }
+			}
+		}
+		MG6 = {
+		    change_government_reform_progress = -99999
+		}
+        }
+
+        if = {
+        limit = {
+        morrowind_67_la  = {
+        owned_by = ROOT
+        }
+        NOT = { exists = MG7 }
+        NOT = { capital_scope = { area = morrowind_67_la  } }
+        }
+        every_owned_province = {
+        limit = {
+        area = morrowind_67_la 
+        }
+        add_core = MG7
+        }
+        create_vassal = MG7
+		MG7 = {
+		    random_list = {
+			    25 = { change_government = monarchy }
+				25 = { change_government = republic }
+				25 = { change_government = theocracy }
+				25 = { change_government = tribal }
+			}
+		}
+		MG7 = {
+		    change_government_reform_progress = -99999
+		}
+        }
+
+        if = {
+        limit = {
+        morrowind_68_la  = {
+        owned_by = ROOT
+        }
+        NOT = { exists = MG8 }
+        NOT = { capital_scope = { area = morrowind_68_la  } }
+        }
+        every_owned_province = {
+        limit = {
+        area = morrowind_68_la 
+        }
+        add_core = MG8
+        }
+        create_vassal = MG8
+		MG8 = {
+		    random_list = {
+			    25 = { change_government = monarchy }
+				25 = { change_government = republic }
+				25 = { change_government = theocracy }
+				25 = { change_government = tribal }
+			}
+		}
+		MG8 = {
+		    change_government_reform_progress = -99999
+		}
+        }
+
+        if = {
+        limit = {
+        morrowind_69_la  = {
+        owned_by = ROOT
+        }
+        NOT = { exists = MG9 }
+        NOT = { capital_scope = { area = morrowind_69_la  } }
+        }
+        every_owned_province = {
+        limit = {
+        area = morrowind_69_la 
+        }
+        add_core = MG9
+        }
+        create_vassal = MG9
+		MG9 = {
+		    random_list = {
+			    25 = { change_government = monarchy }
+				25 = { change_government = republic }
+				25 = { change_government = theocracy }
+				25 = { change_government = tribal }
+			}
+		}
+		MG9 = {
+		    change_government_reform_progress = -99999
+		}
+        }
+
+        if = {
+        limit = {
+        morrowind_70_la  = {
+        owned_by = ROOT
+        }
+        NOT = { exists = MH0 }
+        NOT = { capital_scope = { area = morrowind_70_la  } }
+        }
+        every_owned_province = {
+        limit = {
+        area = morrowind_70_la 
+        }
+        add_core = MH0
+        }
+        create_vassal = MH0
+		MH0 = {
+		    random_list = {
+			    25 = { change_government = monarchy }
+				25 = { change_government = republic }
+				25 = { change_government = theocracy }
+				25 = { change_government = tribal }
+			}
+		}
+		MH0 = {
+		    change_government_reform_progress = -99999
+		}
+        }
+
+        if = {
+        limit = {
+        morrowind_71_la  = {
+        owned_by = ROOT
+        }
+        NOT = { exists = MH1 }
+        NOT = { capital_scope = { area = morrowind_71_la  } }
+        }
+        every_owned_province = {
+        limit = {
+        area = morrowind_71_la 
+        }
+        add_core = MH1
+        }
+        create_vassal = MH1
+		MH1 = {
+		    random_list = {
+			    25 = { change_government = monarchy }
+				25 = { change_government = republic }
+				25 = { change_government = theocracy }
+				25 = { change_government = tribal }
+			}
+		}
+		MH1 = {
+		    change_government_reform_progress = -99999
+		}
+        }
+
+        if = {
+        limit = {
+        morrowind_72_la  = {
+        owned_by = ROOT
+        }
+        NOT = { exists = MH2 }
+        NOT = { capital_scope = { area = morrowind_72_la  } }
+        }
+        every_owned_province = {
+        limit = {
+        area = morrowind_72_la 
+        }
+        add_core = MH2
+        }
+        create_vassal = MH2
+		MH2 = {
+		    random_list = {
+			    25 = { change_government = monarchy }
+				25 = { change_government = republic }
+				25 = { change_government = theocracy }
+				25 = { change_government = tribal }
+			}
+		}
+		MH2 = {
+		    change_government_reform_progress = -99999
+		}
+        }
+
+        if = {
+        limit = {
+        morrowind_73_la  = {
+        owned_by = ROOT
+        }
+        NOT = { exists = MH3 }
+        NOT = { capital_scope = { area = morrowind_73_la  } }
+        }
+        every_owned_province = {
+        limit = {
+        area = morrowind_73_la 
+        }
+        add_core = MH3
+        }
+        create_vassal = MH3
+		MH3 = {
+		    random_list = {
+			    25 = { change_government = monarchy }
+				25 = { change_government = republic }
+				25 = { change_government = theocracy }
+				25 = { change_government = tribal }
+			}
+		}
+		MH3 = {
+		    change_government_reform_progress = -99999
+		}
+        }
+
+        if = {
+        limit = {
+        morrowind_74_la  = {
+        owned_by = ROOT
+        }
+        NOT = { exists = MH4 }
+        NOT = { capital_scope = { area = morrowind_74_la  } }
+        }
+        every_owned_province = {
+        limit = {
+        area = morrowind_74_la 
+        }
+        add_core = MH4
+        }
+        create_vassal = MH4
+		MH4 = {
+		    random_list = {
+			    25 = { change_government = monarchy }
+				25 = { change_government = republic }
+				25 = { change_government = theocracy }
+				25 = { change_government = tribal }
+			}
+		}
+		MH4 = {
+		    change_government_reform_progress = -99999
+		}
+        }
+
+        if = {
+        limit = {
+        morrowind_75_la  = {
+        owned_by = ROOT
+        }
+        NOT = { exists = MH5 }
+        NOT = { capital_scope = { area = morrowind_75_la  } }
+        }
+        every_owned_province = {
+        limit = {
+        area = morrowind_75_la 
+        }
+        add_core = MH5
+        }
+        create_vassal = MH5
+		MH5 = {
+		    random_list = {
+			    25 = { change_government = monarchy }
+				25 = { change_government = republic }
+				25 = { change_government = theocracy }
+				25 = { change_government = tribal }
+			}
+		}
+		MH5 = {
+		    change_government_reform_progress = -99999
+		}
+        }
+		
+	    }
+	}
+	
+	option = {
+		name = es_collapse.2.b
+		ai_chance = { factor = 15 }
+		
+		every_owned_province = {
+			limit = {
+				region = vvardenfell_lr
+				NOT = { any_province = { area = PREV is_capital_of = ROOT } }
+			}
+			remove_core = ROOT
+		}
+		
+	}
+	
+	option = {
+		name = es_collapse.2.c
+		ai_chance = { factor = 10 }
+		
+		trigger = {
+		NOT = { capital_scope = { region = vvardenfell_lr } }
+		NOT = { exists = ASH }
+		}
+		
+		every_core_province = {
+			limit = {
+				region = vvardenfell_lr
+			}
+			remove_core = ROOT
+		}
+		
+		every_owned_province = {
+		limit = {
+		region = vvardenfell_lr
+		}
+		add_core = ASH
+		}
+		
+		release = ASH
+		
+		if = {
+		limit = {
+		government = monarchy
+		}
+		create_union = ASH
+	    }
+		else = {
+		create_alliance = ASH
+		ASH = { add_opinion = { who = ROOT modifier = es_friendly_nation } }
+		add_opinion = { who = ASH modifier = es_friendly_nation }
+		}
+	}
+}
+
+###
+
+country_event = {
+	id = es_collapse.39
+	title = es_collapse.39.t
+	desc = es_collapse.39.d
+	picture = ES_PROVINCE_COLLAPSE_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	    add_country_modifier = {
+			name = "vassal_autonomy"
+			duration = 9125
+		}
+	}
+	
+	option = {
+		name = es_collapse.2.a
+		ai_chance = { factor = 75 }
+		hidden_effect = {
+		
+		if = {
+		limit = {
+		NOT = { capital_scope = { region = llothanis_peninsula_lr } }
+		}
+		every_core_province = {
+			limit = {
+				region = llothanis_peninsula_lr
+			}
+			remove_core = ROOT
+		}
+		}
+		
+        if = {
+        limit = {
+        morrowind_13_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = MB3 }
+        NOT = { capital_scope = { area = morrowind_13_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = morrowind_13_la
+        }
+        add_core = MB3
+        }
+        create_vassal = MB3
+		MB3 = {
+		    random_list = {
+			    25 = { change_government = monarchy }
+				25 = { change_government = republic }
+				25 = { change_government = theocracy }
+				25 = { change_government = tribal }
+			}
+		}
+		MB3 = {
+		    change_government_reform_progress = -99999
+		}
+        }
+
+        if = {
+        limit = {
+        morrowind_14_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = MB4 }
+        NOT = { capital_scope = { area = morrowind_14_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = morrowind_14_la
+        }
+        add_core = MB4
+        }
+        create_vassal = MB4
+		MB4 = {
+		    random_list = {
+			    25 = { change_government = monarchy }
+				25 = { change_government = republic }
+				25 = { change_government = theocracy }
+				25 = { change_government = tribal }
+			}
+		}
+		MB4 = {
+		    change_government_reform_progress = -99999
+		}
+        }
+
+        if = {
+        limit = {
+        morrowind_15_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = MB5 }
+        NOT = { capital_scope = { area = morrowind_15_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = morrowind_15_la
+        }
+        add_core = MB5
+        }
+        create_vassal = MB5
+		MB5 = {
+		    random_list = {
+			    25 = { change_government = monarchy }
+				25 = { change_government = republic }
+				25 = { change_government = theocracy }
+				25 = { change_government = tribal }
+			}
+		}
+		MB5 = {
+		    change_government_reform_progress = -99999
+		}
+        }
+
+        if = {
+        limit = {
+        morrowind_16_la  = {
+        owned_by = ROOT
+        }
+        NOT = { exists = MB6 }
+        NOT = { capital_scope = { area = morrowind_16_la  } }
+        }
+        every_owned_province = {
+        limit = {
+        area = morrowind_16_la 
+        }
+        add_core = MB6
+        }
+        create_vassal = MB6
+		MB6 = {
+		    random_list = {
+			    25 = { change_government = monarchy }
+				25 = { change_government = republic }
+				25 = { change_government = theocracy }
+				25 = { change_government = tribal }
+			}
+		}
+		MB6 = {
+		    change_government_reform_progress = -99999
+		}
+        }
+
+        if = {
+        limit = {
+        morrowind_17_la  = {
+        owned_by = ROOT
+        }
+        NOT = { exists = MB7 }
+        NOT = { capital_scope = { area = morrowind_17_la  } }
+        }
+        every_owned_province = {
+        limit = {
+        area = morrowind_17_la 
+        }
+        add_core = MB7
+        }
+        create_vassal = MB7
+		MB7 = {
+		    random_list = {
+			    25 = { change_government = monarchy }
+				25 = { change_government = republic }
+				25 = { change_government = theocracy }
+				25 = { change_government = tribal }
+			}
+		}
+		MB7 = {
+		    change_government_reform_progress = -99999
+		}
+        }
+
+        if = {
+        limit = {
+        morrowind_18_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = MB8 }
+        NOT = { capital_scope = { area = morrowind_18_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = morrowind_18_la
+        }
+        add_core = MB8
+        }
+        create_vassal = MB8
+		MB8 = {
+		    random_list = {
+			    25 = { change_government = monarchy }
+				25 = { change_government = republic }
+				25 = { change_government = theocracy }
+				25 = { change_government = tribal }
+			}
+		}
+		MB8 = {
+		    change_government_reform_progress = -99999
+		}
+        }
+
+        if = {
+        limit = {
+        morrowind_55_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = MF5 }
+        NOT = { capital_scope = { area = morrowind_55_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = morrowind_55_la
+        }
+        add_core = MF5
+        }
+        create_vassal = MF5
+		MF5 = {
+		    random_list = {
+			    25 = { change_government = monarchy }
+				25 = { change_government = republic }
+				25 = { change_government = theocracy }
+				25 = { change_government = tribal }
+			}
+		}
+		MF5 = {
+		    change_government_reform_progress = -99999
+		}
+        }
+
+        if = {
+        limit = {
+        morrowind_56_la  = {
+        owned_by = ROOT
+        }
+        NOT = { exists = MF6 }
+        NOT = { capital_scope = { area = morrowind_56_la  } }
+        }
+        every_owned_province = {
+        limit = {
+        area = morrowind_56_la 
+        }
+        add_core = MF6
+        }
+        create_vassal = MF6
+		MF6 = {
+		    random_list = {
+			    25 = { change_government = monarchy }
+				25 = { change_government = republic }
+				25 = { change_government = theocracy }
+				25 = { change_government = tribal }
+			}
+		}
+		MF6 = {
+		    change_government_reform_progress = -99999
+		}
+        }
+
+        if = {
+        limit = {
+        morrowind_58_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = MF8 }
+        NOT = { capital_scope = { area = morrowind_58_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = morrowind_58_la
+        }
+        add_core = MF8
+        }
+        create_vassal = MF8
+		MF8 = {
+		    random_list = {
+			    25 = { change_government = monarchy }
+				25 = { change_government = republic }
+				25 = { change_government = theocracy }
+				25 = { change_government = tribal }
+			}
+		}
+		MF8 = {
+		    change_government_reform_progress = -99999
+		}
+        }
+
+        if = {
+        limit = {
+        morrowind_59_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = MF9 }
+        NOT = { capital_scope = { area = morrowind_59_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = morrowind_59_la
+        }
+        add_core = MF9
+        }
+        create_vassal = MF9
+		MF9 = {
+		    random_list = {
+			    25 = { change_government = monarchy }
+				25 = { change_government = republic }
+				25 = { change_government = theocracy }
+				25 = { change_government = tribal }
+			}
+		}
+		MF9 = {
+		    change_government_reform_progress = -99999
+		}
+        }
+
+        if = {
+        limit = {
+        morrowind_60_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = MG0 }
+        NOT = { capital_scope = { area = morrowind_60_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = morrowind_60_la
+        }
+        add_core = MG0
+        }
+        create_vassal = MG0
+		MG0 = {
+		    random_list = {
+			    25 = { change_government = monarchy }
+				25 = { change_government = republic }
+				25 = { change_government = theocracy }
+				25 = { change_government = tribal }
+			}
+		}
+		MG0 = {
+		    change_government_reform_progress = -99999
+		}
+        }
+
+        if = {
+        limit = {
+        morrowind_61_la  = {
+        owned_by = ROOT
+        }
+        NOT = { exists = MG1 }
+        NOT = { capital_scope = { area = morrowind_61_la  } }
+        }
+        every_owned_province = {
+        limit = {
+        area = morrowind_61_la 
+        }
+        add_core = MG1
+        }
+        create_vassal = MG1
+		MG1 = {
+		    random_list = {
+			    25 = { change_government = monarchy }
+				25 = { change_government = republic }
+				25 = { change_government = theocracy }
+				25 = { change_government = tribal }
+			}
+		}
+		MG1 = {
+		    change_government_reform_progress = -99999
+		}
+        }
+
+        if = {
+        limit = {
+        morrowind_62_la  = {
+        owned_by = ROOT
+        }
+        NOT = { exists = MG2 }
+        NOT = { capital_scope = { area = morrowind_62_la  } }
+        }
+        every_owned_province = {
+        limit = {
+        area = morrowind_62_la 
+        }
+        add_core = MG2
+        }
+        create_vassal = MG2
+		MG2 = {
+		    random_list = {
+			    25 = { change_government = monarchy }
+				25 = { change_government = republic }
+				25 = { change_government = theocracy }
+				25 = { change_government = tribal }
+			}
+		}
+		MG2 = {
+		    change_government_reform_progress = -99999
+		}
+        }
+
+        if = {
+        limit = {
+        morrowind_63_la  = {
+        owned_by = ROOT
+        }
+        NOT = { exists = MG3 }
+        NOT = { capital_scope = { area = morrowind_63_la  } }
+        }
+        every_owned_province = {
+        limit = {
+        area = morrowind_63_la 
+        }
+        add_core = MG3
+        }
+        create_vassal = MG3
+		MG3 = {
+		    random_list = {
+			    25 = { change_government = monarchy }
+				25 = { change_government = republic }
+				25 = { change_government = theocracy }
+				25 = { change_government = tribal }
+			}
+		}
+		MG3 = {
+		    change_government_reform_progress = -99999
+		}
+        }
+
+        if = {
+        limit = {
+        morrowind_64_la  = {
+        owned_by = ROOT
+        }
+        NOT = { exists = MG4 }
+        NOT = { capital_scope = { area = morrowind_64_la  } }
+        }
+        every_owned_province = {
+        limit = {
+        area = morrowind_64_la 
+        }
+        add_core = MG4
+        }
+        create_vassal = MG4
+		MG4 = {
+		    random_list = {
+			    25 = { change_government = monarchy }
+				25 = { change_government = republic }
+				25 = { change_government = theocracy }
+				25 = { change_government = tribal }
+			}
+		}
+		MG4 = {
+		    change_government_reform_progress = -99999
+		}
+        }
+		
+	    }
+	}
+	
+	option = {
+		name = es_collapse.2.b
+		ai_chance = { factor = 15 }
+		
+		every_owned_province = {
+			limit = {
+				region = llothanis_peninsula_lr
+				NOT = { any_province = { area = PREV is_capital_of = ROOT } }
+			}
+			remove_core = ROOT
+		}
+		
+	}
+	
+	option = {
+		name = es_collapse.2.c
+		ai_chance = { factor = 10 }
+		
+		trigger = {
+		NOT = { capital_scope = { region = llothanis_peninsula_lr } }
+		NOT = { exists = LLO }
+		}
+		
+		every_core_province = {
+			limit = {
+				region = llothanis_peninsula_lr
+			}
+			remove_core = ROOT
+		}
+		
+		every_owned_province = {
+		limit = {
+		region = llothanis_peninsula_lr
+		}
+		add_core = LLO
+		}
+		
+		release = LLO
+		
+		if = {
+		limit = {
+		government = monarchy
+		}
+		create_union = LLO
+	    }
+		else = {
+		create_alliance = LLO
+		LLO = { add_opinion = { who = ROOT modifier = es_friendly_nation } }
+		add_opinion = { who = LLO modifier = es_friendly_nation }
+		}
+	}
+}

@@ -1,0 +1,89 @@
+namespace = es_tribunal_events
+
+country_event = {
+	id = es_tribunal_events.1
+	title = es_tribunal_events.1.t
+	desc = es_tribunal_events.1.d
+	picture = TRIBUNAL_ELECTIONS_eventPicture
+	
+	trigger = {
+	    tag = TRI
+		religion = tribunal_pantheon
+		government = theocracy
+		OR = {
+		AND = {
+		NOT = { has_ruler = "Almalexia" }
+		NOT = { has_ruler = "Sotha Sil" }
+		NOT = { has_ruler = "Vivec" }
+		}
+		AND = {
+		has_country_flag = tribunal_elections_flag 
+		NOT = { has_country_modifier = ruler_almalexia }
+		NOT = { has_country_modifier = ruler_sotha_sil }
+		NOT = { has_country_modifier = ruler_vivec }
+		}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 31	
+	}
+
+	option = {
+		name = "es_tribunal_events.1.a"
+		ai_chance = { factor = 33 }
+		trigger = { NOT = { has_country_modifier = 32_departure_of_almalexia } }
+		set_country_flag = tribunal_elections_flag
+		add_country_modifier = {
+		    name = "ruler_almalexia"
+			duration = 5475
+		}
+		define_ruler = {
+            name = "Almalexia"
+			dynasty = "the Sacred Lady"
+            adm = 1
+            dip = 1
+            mil = 1
+            age = 35
+            culture = daedra
+        }
+	}
+	
+	option = {
+		name = "es_tribunal_events.1.b"
+		ai_chance = { factor = 33 }
+		set_country_flag = tribunal_elections_flag
+		add_country_modifier = {
+		    name = "ruler_sotha_sil"
+			duration = 5475
+		}
+		define_ruler = {
+            name = "Sotha Sil"
+			dynasty = "the Lord Seht"
+            adm = 1
+            dip = 1
+            mil = 1
+            age = 35
+            culture = daedra
+        }
+	}
+	
+	option = {
+		name = "es_tribunal_events.1.c"
+		ai_chance = { factor = 33 }
+		set_country_flag = tribunal_elections_flag
+		add_country_modifier = {
+		    name = "ruler_vivec"
+			duration = 5475
+		}
+		define_ruler = {
+            name = "Vivec"
+			dynasty = "the Warrior-Poet"
+            adm = 1
+            dip = 1
+            mil = 1
+            age = 35
+            culture = daedra
+        }
+	}
+}

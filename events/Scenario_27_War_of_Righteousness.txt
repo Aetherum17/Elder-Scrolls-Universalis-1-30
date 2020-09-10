@@ -1,0 +1,992 @@
+namespace = es_27_scenario
+
+country_event = {
+	id = es_27_scenario.1
+	title = es_27_scenario.1.t
+	desc = es_27_scenario.1.d
+	picture = ES_BURNING_THEOCRATIC_PALACE_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_27_scenario.1_flag }
+		is_year = 1263
+		NOT = { is_year = 1309 }
+		religion = marukhism
+		OR = {
+		has_global_flag = middle_dawn_flag
+		tag = ORD
+		}
+    }
+
+	mean_time_to_happen = {
+		days = 8395
+	}
+	
+	immediate = {
+	    set_country_flag = es_27_scenario.1_flag
+	}
+
+	option = {
+		name = "es_27_scenario.1.a"
+		ai_chance = { factor = 33 }
+		kill_ruler = yes
+		kill_heir = yes
+		change_religion = eight_divines
+		change_government = monarchy
+		if = { limit = { capital_scope = { region = western_syrodiil_lr } } change_primary_culture = colovian }
+		if = { limit = { capital_scope = { region = eastern_syrodiil_lr } } change_primary_culture = nibenean }
+		if = { limit = { capital_scope = { region = central_syrodiil_lr } } change_primary_culture = imperial }
+		if = { limit = { NOT = { exists = CYR } owns = 1206 }
+		change_tag = CYR
+		define_ruler = {
+        name = "Tacinian"
+        dynasty = "Cyrodiil"
+        adm = 4
+        dip = 4
+        mil = 4
+        age = 42
+        claim = 100
+		fixed = yes
+        }
+		}
+		random_owned_province = { 
+			spawn_rebels = {
+				type = marukhism_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			}
+		}
+		random_owned_province = { 
+			spawn_rebels = {
+				type = marukhism_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			}
+		}
+		random_owned_province = { 
+			spawn_rebels = {
+				type = marukhism_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			}
+		}
+		add_country_modifier = {
+		    name = "27_disloyal_clergy"
+			duration = 9125
+		}
+	}
+	option = {
+		name = "es_27_scenario.1.b"
+		ai_chance = { factor = 33 }
+		every_owned_province = {
+		add_core = CYR
+		add_permanent_province_modifier = {
+		name = "10_unrest"
+		duration = 9125
+		}
+		}
+		if = {
+		    limit = { NOT = { exists = CYR } }
+			every_owned_province = {
+			limit = {
+			OR = {
+			region = western_syrodiil_lr
+			region = eastern_syrodiil_lr
+			}
+			NOT = { religion = marukhism }
+			NOT = { culture = nedic }
+			}
+			cede_province = CYR
+			}
+		}
+		if = {
+		limit = {
+		exists = CYR
+		NOT = { alliance_with = CYR }
+		NOT = { overlord_of = CYR }
+		}
+		declare_war_with_cb = {
+			who = CYR
+			casus_belli = cb_es_scenario
+		}
+		}
+	}
+	
+	option = {
+		name = "es_27_scenario.1.c"
+		ai_chance = { factor = 33 }
+		if = { limit = { ai = no }
+		add_stability = -5
+		}
+		else = {
+		add_stability = -3
+		}
+		add_country_modifier = {
+		    name = "27_disloyal_clergy"
+			duration = 9125
+		}
+		add_country_modifier = {
+		    name = "27_disloyal_nobility"
+			duration = 9125
+		}
+		add_country_modifier = {
+		    name = "09_revolution"
+			duration = 9125
+		}
+		random_owned_province = { 
+			spawn_rebels = {
+				type = heretic_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			}
+		}
+		random_owned_province = { 
+			spawn_rebels = {
+				type = noble_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			}
+		}
+		random_owned_province = { 
+			spawn_rebels = {
+				type = anti_tax_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			}
+		}
+	}
+	
+}
+
+province_event = {
+	id = es_27_scenario.2
+	title = es_5_scenario.4.t
+	desc = es_5_scenario.4.d
+	picture = ES_RELIGION_CONVERSION_eventPicture
+	
+	trigger = {
+       is_year = 1263
+	   NOT = { is_year = 1309 }
+	   religion = marukhism
+    }
+
+	mean_time_to_happen = {
+		days = 16790
+	}
+
+	option = {
+		name = "es_5_scenario.4.a"
+		ai_chance = { factor = 100 }
+		change_religion = eight_divines
+	}
+}
+
+country_event = {
+	id = es_27_scenario.3
+	title = es_27_scenario.4.t
+	desc = es_27_scenario.4.d
+	picture = ES_BURNING_MONASTERY_eventPicture
+	
+	hidden = yes
+	
+	trigger = {
+	    NOT = { has_country_flag = es_27_scenario.3_flag }
+		is_year = 1263
+		NOT = { is_year = 1309 }
+		owns = 1131
+		NOT = { controls = 1131 }
+    }
+
+	mean_time_to_happen = {
+		days = 31
+	}
+	
+	immediate = {
+	    set_country_flag = es_27_scenario.3_flag
+		hidden_effect = {
+		every_country = {
+		    limit = {
+			capital_scope = { continent = Tamriel }
+			}
+			country_event = { id = es_27_scenario.4 days = 31 tooltip = es_27_scenario.4.a.tt }
+		}
+		}
+	}
+
+	option = {
+		name = "es_27_scenario.4.a"
+		ai_chance = { factor = 100 }
+	}
+	
+}
+
+country_event = {
+	id = es_27_scenario.4
+	title = es_27_scenario.4.t
+	desc = es_27_scenario.4.d
+	picture = ES_BURNING_MONASTERY_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "es_27_scenario.4.a"
+		ai_chance = { factor = 100 }
+		add_stability = -1
+		add_country_modifier = {
+		    name = "27_desctruction_of_archives"
+			duration = 9125
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_27_scenario.5
+	title = es_27_scenario.5.t
+	desc = es_27_scenario.5.d
+	picture = ES_CONVOY_ASSAULT_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_27_scenario.5_flag }
+		is_year = 1263
+		NOT = { is_year = 1309 }
+		OR = {
+		NOT = { exists = ORD }
+		ORD = { NOT = { owns = 1206 } }
+		}
+		any_owned_province = {
+		   region = western_syrodiil_lr
+		}
+		NOT = { tag = COL }
+    }
+
+	mean_time_to_happen = {
+		days = 8395
+	}
+	
+	immediate = {
+	    set_country_flag = es_27_scenario.5_flag
+	}
+
+	option = {
+		name = "es_27_scenario.5.a"
+		ai_chance = { factor = 25 }
+		every_owned_province = {
+		    limit = { region = western_syrodiil_lr }
+			add_core = COL
+			add_permanent_province_modifier = {
+			    name = "27_provine_autonomy"
+				duration = 9125
+			}
+		}
+	}
+	option = {
+		name = "es_27_scenario.5.b"
+		ai_chance = { factor = 25 }
+		every_owned_province = {
+		    limit = { region = western_syrodiil_lr }
+			add_core = COL
+		}
+		random_owned_province = { 
+		   limit = { region = western_syrodiil_lr }
+			spawn_rebels = {
+				type = nationalist_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			}
+		}
+		random_owned_province = { 
+		   limit = { region = western_syrodiil_lr }
+			spawn_rebels = {
+				type = nationalist_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			}
+		}
+		random_owned_province = { 
+		   limit = { region = western_syrodiil_lr }
+			spawn_rebels = {
+				type = nationalist_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			}
+		}
+		random_owned_province = { 
+		   limit = { region = western_syrodiil_lr }
+			spawn_rebels = {
+				type = nationalist_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			}
+		}
+		random_owned_province = { 
+		   limit = { region = western_syrodiil_lr }
+			spawn_rebels = {
+				type = nationalist_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			}
+		}
+	}
+	option = {
+		name = "es_27_scenario.5.c"
+		ai_chance = { factor = 25 }
+		if = {
+		limit = {
+		ai = no
+		NOT = { exists = COL }
+		NOT = { tag = TAM }
+		NOT = { tag = CYR }
+		NOT = { tag = ALE }
+		NOT = { tag = ORD }
+		culture_group = cyrodiil_cg
+		}
+		change_tag = COL
+		if = {
+				limit = {
+					NOT = { government_rank = 5 }
+				}
+				set_government_rank = 5
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+		if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		}
+		else = {
+		    every_owned_province = {
+		    limit = { region = western_syrodiil_lr }
+			add_core = COL
+			cede_province = COL
+		    }
+		}
+	}
+	option = {
+		name = "es_27_scenario.5.e"
+		ai_chance = { factor = 25 }
+		trigger = {
+		NOT = { exists = COL }
+		}
+		every_owned_province = {
+		    limit = { region = western_syrodiil_lr }
+			add_core = COL
+		}
+		create_vassal = COL
+	}
+	
+}
+
+country_event = {
+	id = es_27_scenario.6
+	title = es_27_scenario.5.t
+	desc = es_27_scenario.5.d
+	picture = ES_CONVOY_ASSAULT_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_27_scenario.5_flag }
+		is_year = 1263
+		NOT = { is_year = 1309 }
+		OR = {
+		NOT = { exists = ORD }
+		ORD = { NOT = { owns = 1206 } }
+		}
+		any_owned_province = {
+		   region = eastern_syrodiil_lr
+		}
+		NOT = { tag = NIB }
+    }
+
+	mean_time_to_happen = {
+		days = 8395
+	}
+	
+	immediate = {
+	    set_country_flag = es_27_scenario.6_flag
+	}
+
+	option = {
+		name = "es_27_scenario.5.a"
+		ai_chance = { factor = 25 }
+		every_owned_province = {
+		    limit = { region = eastern_syrodiil_lr }
+			add_core = NIB
+			add_permanent_province_modifier = {
+			    name = "27_provine_autonomy"
+				duration = 9125
+			}
+		}
+	}
+	option = {
+		name = "es_27_scenario.5.b"
+		ai_chance = { factor = 25 }
+		every_owned_province = {
+		    limit = { region = eastern_syrodiil_lr }
+			add_core = NIB
+		}
+		random_owned_province = { 
+		   limit = { region = eastern_syrodiil_lr }
+			spawn_rebels = {
+				type = nationalist_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			}
+		}
+		random_owned_province = { 
+		   limit = { region = eastern_syrodiil_lr }
+			spawn_rebels = {
+				type = nationalist_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			}
+		}
+		random_owned_province = { 
+		   limit = { region = eastern_syrodiil_lr }
+			spawn_rebels = {
+				type = nationalist_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			}
+		}
+		random_owned_province = { 
+		   limit = { region = eastern_syrodiil_lr }
+			spawn_rebels = {
+				type = nationalist_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			}
+		}
+		random_owned_province = { 
+		   limit = { region = eastern_syrodiil_lr }
+			spawn_rebels = {
+				type = nationalist_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			}
+		}
+	}
+	option = {
+		name = "es_27_scenario.5.c"
+		ai_chance = { factor = 25 }
+		if = {
+		limit = {
+		ai = no
+		NOT = { exists = NIB }
+		NOT = { tag = TAM }
+		NOT = { tag = CYR }
+		NOT = { tag = ALE }
+		NOT = { tag = ORD }
+		culture_group = cyrodiil_cg
+		}
+		change_tag = NIB
+		if = {
+				limit = {
+					NOT = { government_rank = 5 }
+				}
+				set_government_rank = 5
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+		if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		}
+		else = {
+		    every_owned_province = {
+		    limit = { region = eastern_syrodiil_lr }
+			add_core = NIB
+			cede_province = NIB
+		    }
+		}
+	}
+	option = {
+		name = "es_27_scenario.5.e"
+		ai_chance = { factor = 25 }
+		trigger = {
+		NOT = { exists = NIB }
+		}
+		every_owned_province = {
+		    limit = { region = eastern_syrodiil_lr }
+			add_core = NIB
+		}
+		create_vassal = NIB
+	}
+	
+}
+
+country_event = {
+	id = es_27_scenario.7
+	title = es_27_scenario.5.t
+	desc = es_27_scenario.5.d
+	picture = ES_CONVOY_ASSAULT_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_27_scenario.5_flag }
+		is_year = 1263
+		NOT = { is_year = 1309 }
+		OR = {
+		NOT = { exists = ORD }
+		ORD = { NOT = { owns = 1206 } }
+		}
+		any_owned_province = {
+		   region = central_syrodiil_lr
+		}
+		NOT = { tag = HEA }
+    }
+
+	mean_time_to_happen = {
+		days = 8395
+	}
+	
+	immediate = {
+	    set_country_flag = es_27_scenario.7_flag
+	}
+
+	option = {
+		name = "es_27_scenario.5.a"
+		ai_chance = { factor = 25 }
+		every_owned_province = {
+		    limit = { region = central_syrodiil_lr }
+			add_core = HEA
+			add_permanent_province_modifier = {
+			    name = "27_provine_autonomy"
+				duration = 9125
+			}
+		}
+	}
+	option = {
+		name = "es_27_scenario.5.b"
+		ai_chance = { factor = 25 }
+		every_owned_province = {
+		    limit = { region = central_syrodiil_lr }
+			add_core = HEA
+		}
+		random_owned_province = { 
+		   limit = { region = central_syrodiil_lr }
+			spawn_rebels = {
+				type = nationalist_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			}
+		}
+		random_owned_province = { 
+		   limit = { region = central_syrodiil_lr }
+			spawn_rebels = {
+				type = nationalist_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			}
+		}
+		random_owned_province = { 
+		   limit = { region = central_syrodiil_lr }
+			spawn_rebels = {
+				type = nationalist_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			}
+		}
+		random_owned_province = { 
+		   limit = { region = central_syrodiil_lr }
+			spawn_rebels = {
+				type = nationalist_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			}
+		}
+		random_owned_province = { 
+		   limit = { region = central_syrodiil_lr }
+			spawn_rebels = {
+				type = nationalist_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			}
+		}
+	}
+	option = {
+		name = "es_27_scenario.5.c"
+		ai_chance = { factor = 25 }
+		if = {
+		limit = {
+		ai = no
+		NOT = { exists = HEA }
+		NOT = { tag = TAM }
+		NOT = { tag = CYR }
+		NOT = { tag = ALE }
+		NOT = { tag = ORD }
+		culture_group = cyrodiil_cg
+		}
+		change_tag = HEA
+		if = {
+				limit = {
+					NOT = { government_rank = 5 }
+				}
+				set_government_rank = 5
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+		if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		}
+		else = {
+		    every_owned_province = {
+		    limit = { region = central_syrodiil_lr }
+			add_core = HEA
+			cede_province = HEA
+		    }
+		}
+	}
+	option = {
+		name = "es_27_scenario.5.e"
+		ai_chance = { factor = 25 }
+		trigger = {
+		NOT = { exists = HEA }
+		}
+		every_owned_province = {
+		    limit = { region = central_syrodiil_lr }
+			add_core = HEA
+		}
+		create_vassal = HEA
+	}
+	
+}
+
+country_event = {
+	id = es_27_scenario.8
+	title = es_27_scenario.8.t
+	desc = es_27_scenario.8.d
+	picture = ES_BOOKS_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_27_scenario.8_flag }
+		is_year = 1263
+		NOT = { is_year = 1309 }
+		capital_scope = { continent = Tamriel }
+    }
+
+	mean_time_to_happen = {
+		days = 8395
+	}
+	
+	immediate = {
+	    set_country_flag = es_27_scenario.8_flag
+	}
+
+	option = {
+		name = "es_27_scenario.8.a"
+		ai_chance = { factor = 33 }
+		add_stability = 3
+		add_country_modifier = {
+		    name = "27_burning_books"
+			duration = 18250
+		}
+	}
+	option = {
+		name = "es_27_scenario.8.b"
+		ai_chance = { factor = 33 }
+		add_stability = 2
+		add_country_modifier = {
+		    name = "27_burning_heretics"
+			duration = 18250
+		}
+	}
+	option = {
+		name = "es_27_scenario.8.c"
+		ai_chance = { factor = 33 }
+		add_stability = 1
+	}
+	
+}
+
+country_event = {
+	id = es_27_scenario.9
+	title = es_27_scenario.9.t
+	desc = es_27_scenario.9.d
+	picture = ES_COLOVIA_1_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_27_scenario.9_flag }
+		is_year = 1263
+		NOT = { is_year = 1309 }
+		NOT = { tag = COL }
+		OR = {
+		    overlord_of = COL
+			AND = {
+			    OR = {
+			owns_core_province = 1161		
+			owns_core_province = 1163
+			owns_core_province = 1173
+			owns_core_province = 1179
+			owns_core_province = 1150
+			    }
+			NOT = { exists = COL }
+			}
+		}
+    }
+
+	mean_time_to_happen = {
+		days = 8395
+	}
+	
+	immediate = {
+	    set_country_flag = es_27_scenario.9_flag
+	}
+
+	option = {
+		name = "es_27_scenario.9.a"
+		ai_chance = { factor = 50 }
+		if = {
+		    limit = { NOT = { culture_group = cyrodiil_cg } }
+			change_primary_culture = colovian
+		}
+		if = {
+		    limit = {
+			    overlord_of = COL
+				COL = { ai = yes }
+			}
+			inherit = COL
+		    change_tag = COL
+            if = {
+				limit = {
+					NOT = { government_rank = 5 }
+				}
+				set_government_rank = 5
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }			
+		}
+		else = {
+		    change_tag = COL
+            if = {
+				limit = {
+					NOT = { government_rank = 5 }
+				}
+				set_government_rank = 5
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		}
+		add_prestige = 25
+		every_province = {
+		    limit = {
+			    region = western_syrodiil_lr
+				NOT = { owned_by = ROOT }
+			}
+			add_core = ROOT
+		}
+		
+		if = {
+		limit = {
+		exists = ORD
+		NOT = { alliance_with = ORD }
+		NOT = { overlord_of = ORD }
+		}
+		declare_war_with_cb = {
+			who = ORD
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = CYR
+		NOT = { alliance_with = CYR }
+		NOT = { overlord_of = CYR }
+		}
+		declare_war_with_cb = {
+			who = CYR
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = HEA
+		NOT = { alliance_with = HEA }
+		NOT = { overlord_of = HEA }
+		}
+		declare_war_with_cb = {
+			who = HEA
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = ALE
+		NOT = { alliance_with = ALE }
+		NOT = { overlord_of = ALE }
+		}
+		declare_war_with_cb = {
+			who = ALE
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = TAM
+		NOT = { alliance_with = TAM }
+		NOT = { overlord_of = TAM }
+		}
+		declare_war_with_cb = {
+			who = TAM
+			casus_belli = cb_es_scenario
+		}
+		}
+	}
+	option = {
+		name = "es_27_scenario.9.b"
+		ai_chance = { factor = 50 }
+		add_prestige = -15
+		add_stability = 1
+		add_country_modifier = {
+		    name = "17_neutrality"
+			duration = 9125
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_27_scenario.10
+	title = es_27_scenario.10.t
+	desc = es_27_scenario.10.d
+	picture = ES_IMPERIAL_CITY_MIDDLE_DAWN_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_27_scenario.10_flag }
+		is_year = 1263
+		NOT = { is_year = 1309 }
+		capital_scope = { region = hgh_rock_lr }
+    }
+
+	mean_time_to_happen = {
+		days = 8395
+	}
+	
+	immediate = {
+	    set_country_flag = es_27_scenario.10_flag
+	}
+
+	option = {
+		name = "es_27_scenario.10.a"
+		ai_chance = { factor = 50 }
+		add_country_modifier = {
+		    name = "27_military_intervention"
+			duration = 9125
+		}
+	}
+	option = {
+		name = "es_27_scenario.10.b"
+		ai_chance = { factor = 50 }
+		add_prestige = 10
+	}
+	
+}
+
+country_event = {
+	id = es_27_scenario.11
+	title = es_27_scenario.10.t
+	desc = es_27_scenario.10.d
+	picture = ES_IMPERIAL_CITY_MIDDLE_DAWN_eventPicture
+	
+	hidden = yes
+	
+	trigger = {
+		has_country_modifier = 27_military_intervention
+    }
+
+	mean_time_to_happen = {
+		days = 365
+	}
+	
+	immediate = {
+	    set_country_flag = es_27_scenario.10_flag
+		random_owned_province = { add_devastation = 25 }
+		random_province = { 
+		   limit = { NOT = { owned_by = ROOT } OR = { region = central_syrodiil_lr region = western_syrodiil_lr region = eastern_syrodiil_lr } }
+			spawn_rebels = {
+				type = noble_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			}
+		}
+	}
+
+	option = {
+		name = "es_27_scenario.10.a"
+		ai_chance = { factor = 100 }
+	}
+	
+}
+
+country_event = {
+	id = es_27_scenario.12
+	title = es_27_scenario.12.t
+	desc = es_27_scenario.12.d
+	picture = ES_GARDNER_ESTATE_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_27_scenario.12_flag }
+		is_year = 1263
+		NOT = { is_year = 1309 }
+		culture_group = half_blood_cg
+		owns = 1426
+    }
+
+	mean_time_to_happen = {
+		days = 8395
+	}
+	
+	immediate = {
+	    set_country_flag = es_27_scenario.12_flag
+	}
+
+	option = {
+		name = "es_27_scenario.12.a"
+		ai_chance = { factor = 50 }
+		add_stability = -1
+		add_prestige = -25
+		add_country_modifier = {
+		    name = "27_gardner_estate"
+			duration = -1
+		}
+	}
+	option = {
+		name = "es_27_scenario.12.b"
+		ai_chance = { factor = 50 }
+		add_prestige = 10
+	}
+	
+}

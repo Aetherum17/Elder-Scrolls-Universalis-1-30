@@ -1,0 +1,589 @@
+namespace = es_7_scenario
+
+country_event = {
+	id = es_7_scenario.1
+	title = es_7_scenario.1.t
+	desc = es_7_scenario.1.d
+	picture = ES_ALESSIAN_REVOLT
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	    set_country_flag = es_7_scenario.1_flag
+	}
+
+	option = {
+		name = "es_7_scenario.1.a"
+		ai_chance = { factor = 33 }
+		change_tag = ALE
+		change_religion = eight_divines
+		every_country = { limit = { vassal_of = ROOT } change_religion = eight_divines }
+		###
+		define_ruler = { name = "Alessia" dynasty = "Nedic" adm = 5 dip = 5 mil = 3 age = 21 claim = 100 female = yes fixed = yes }
+		define_consort = { name = "Morihaus" dynasty = "Man-Bull" culture = minotaur adm = 3 dip = 1 mil = 7 }
+		define_heir = { name = "Belharza" dynasty = "Man-Bull" culture = minotaur adm = 5 dip = 3 mil = 7 }
+		###
+		if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		if = { limit = { NOT = { government_rank = 10 } } set_government_rank = 10 }
+		###
+		every_country = { limit = { culture_group = cyrodiil_cg is_free_or_tributary_trigger = no } add_country_modifier = { name = "17_liberty_desire" duration = 9125 } }
+	}
+	option = {
+		name = "es_7_scenario.1.b"
+		ai_chance = { factor = 33 }
+		set_global_flag = alessian_rebellion_flag
+		add_prestige = -25
+		change_religion = eight_divines
+		every_country = { limit = { vassal_of = ROOT } change_religion = eight_divines }
+		if = { limit = { any_country = { OR = { culture_group = cyrodiil_cg religion = eight_divines } ai = no NOT = { has_country_flag = es_7_scenario.1_flag } NOT = { has_country_flag = es_7_scenario.2_flag } } }
+		random_country = { limit = { OR = { culture_group = cyrodiil_cg religion = eight_divines } ai = no NOT = { has_country_flag = es_7_scenario.1_flag } NOT = { has_country_flag = es_7_scenario.2_flag } } country_event = { id = es_7_scenario.2 days = 31 tooltip = es_collapse.2.a.tt } }
+		}
+		else = {
+		random_country = { limit = { OR = { culture_group = cyrodiil_cg religion = eight_divines } ai = yes NOT = { has_country_flag = es_7_scenario.1_flag } NOT = { has_country_flag = es_7_scenario.2_flag } } country_event = { id = es_7_scenario.21 days = 31 tooltip = es_collapse.2.a.tt } }
+		}
+		set_global_flag = es_7_scenario_2_event_global_flag
+	}
+	option = {
+		name = "es_7_scenario.1.c"
+		ai_chance = { factor = 33 }
+		set_global_flag = alessian_rebellion_flag
+		add_stability = -1
+		if = { limit = { any_country = { OR = { culture_group = cyrodiil_cg religion = eight_divines } ai = no NOT = { has_country_flag = es_7_scenario.1_flag } NOT = { has_country_flag = es_7_scenario.2_flag } } }
+		random_country = { limit = { OR = { culture_group = cyrodiil_cg religion = eight_divines } ai = no NOT = { has_country_flag = es_7_scenario.1_flag } NOT = { has_country_flag = es_7_scenario.2_flag } } country_event = { id = es_7_scenario.2 days = 31 tooltip = es_collapse.2.a.tt } }
+		}
+		else = {
+		random_country = { limit = { OR = { culture_group = cyrodiil_cg religion = eight_divines } ai = yes NOT = { has_country_flag = es_7_scenario.1_flag } NOT = { has_country_flag = es_7_scenario.2_flag } } country_event = { id = es_7_scenario.21 days = 31 tooltip = es_collapse.2.a.tt } }
+		}
+		set_global_flag = es_7_scenario_2_event_global_flag
+	}
+}
+
+country_event = {
+	id = es_7_scenario.2
+	title = es_7_scenario.2.t
+	desc = es_7_scenario.2.d
+	picture = ES_ALESSIAN_REVOLT
+	
+	trigger = {
+	    NOT = { has_country_flag = es_7_scenario.2_flag }
+		has_global_flag = alessian_rebellion_flag
+		has_global_flag = es_7_scenario_2_event_global_flag
+		culture_group = cyrodiil_cg
+		ai = no 
+    }
+
+	mean_time_to_happen = {
+		days = 31	
+	}
+	
+	immediate = {
+	    set_country_flag = es_7_scenario.2_flag
+	}
+
+	option = {
+		name = "es_7_scenario.2.a"
+		change_tag = ALE
+		change_religion = eight_divines
+		every_country = { limit = { vassal_of = ROOT } change_religion = eight_divines }
+		###
+		define_ruler = { name = "Alessia" dynasty = "Nedic" adm = 5 dip = 5 mil = 3 age = 21 claim = 100 female = yes fixed = yes }
+		define_consort = { name = "Morihaus" dynasty = "Man-Bull" culture = minotaur adm = 3 dip = 1 mil = 7 }
+		define_heir = { name = "Belharza" dynasty = "Man-Bull" culture = minotaur adm = 5 dip = 3 mil = 7 }
+		###
+		if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		if = { limit = { NOT = { government_rank = 10 } } set_government_rank = 10 }
+		hidden_effect = {
+		    if = { limit = { 1206 = { NOT = { owned_by = ROOT } owner = { OR = { NOT = { culture_group = cyrodiil_cg } NOT = { religion = eight_divines } } ai = yes } } }
+			1206 = { owner = { declare_war_with_cb = { who = ALE casus_belli = cb_es_scenario } } }
+			}
+			else = {
+			    random_country = { limit = { ai = yes OR = { NOT = { culture_group = cyrodiil_cg } NOT = { religion = eight_divines } } }
+				declare_war_with_cb = { who = ALE casus_belli = cb_es_scenario }
+				}
+			}
+		}
+		###
+		every_country = { limit = { culture_group = cyrodiil_cg is_free_or_tributary_trigger = no } add_country_modifier = { name = "17_liberty_desire" duration = 9125 } }
+	}
+	option = {
+		name = "es_7_scenario.2.b"
+		ai_chance = { factor = 50 }
+		trigger = { ai = no }
+		add_stability = -1
+		if = { limit = { any_country = { OR = { culture_group = cyrodiil_cg religion = eight_divines } ai = no NOT = { has_country_flag = es_7_scenario.1_flag } NOT = { has_country_flag = es_7_scenario.2_flag } } }
+		random_country = { limit = { OR = { culture_group = cyrodiil_cg religion = eight_divines } ai = no NOT = { has_country_flag = es_7_scenario.1_flag } NOT = { has_country_flag = es_7_scenario.2_flag } } country_event = { id = es_7_scenario.2 days = 31 tooltip = es_collapse.2.a.tt } }
+		}
+		else = {
+		random_country = { limit = { OR = { culture_group = cyrodiil_cg religion = eight_divines } ai = yes NOT = { has_country_flag = es_7_scenario.1_flag } NOT = { has_country_flag = es_7_scenario.2_flag } } country_event = { id = es_7_scenario.21 days = 31 tooltip = es_collapse.2.a.tt } }
+		}
+	}
+}
+
+country_event = {
+	id = es_7_scenario.21
+	title = es_7_scenario.2.t
+	desc = es_7_scenario.2.d
+	picture = ES_ALESSIAN_REVOLT
+	
+	is_triggered_only = yes 
+
+	option = {
+		name = "es_7_scenario.2.a"
+		change_tag = ALE
+		change_religion = eight_divines
+		every_country = { limit = { vassal_of = ROOT } change_religion = eight_divines }
+		###
+		define_ruler = { name = "Alessia" dynasty = "Nedic" adm = 5 dip = 5 mil = 3 age = 21 claim = 100 female = yes fixed = yes }
+		define_consort = { name = "Morihaus" dynasty = "Man-Bull" culture = minotaur adm = 3 dip = 1 mil = 7 }
+		define_heir = { name = "Belharza" dynasty = "Man-Bull" culture = minotaur adm = 5 dip = 3 mil = 7 }
+		###
+		if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		if = { limit = { NOT = { government_rank = 10 } } set_government_rank = 10 }
+		add_country_modifier = { name = "24_independence_war" duration = 9125 }
+		###
+		every_country = { limit = { culture_group = cyrodiil_cg is_free_or_tributary_trigger = no } add_country_modifier = { name = "17_liberty_desire" duration = 9125 } }
+	}
+}
+
+#######################################################################
+
+country_event = {
+	id = es_7_scenario.3
+	title = es_7_scenario.3.t
+	desc = es_7_scenario.3.d
+	picture = ES_MILITARY_CAMP_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_7_scenario.3_flag }
+		has_global_flag = alessian_rebellion_flag
+		exists = ALE
+		is_free_or_tributary_trigger = yes
+		capital_scope = { continent = Tamriel }
+		OR = { culture_group = dwemer_cg culture_group = bosmer_cg culture_group = northern_cg }
+    }
+
+	mean_time_to_happen = {
+		days = 3650	
+	}
+	
+	immediate = {
+	    set_country_flag = es_7_scenario.3_flag
+	}
+
+	option = {
+		name = "es_7_scenario.3.a"
+		ai_chance = { factor = 50 }
+		add_treasury = -500
+		add_manpower = -10
+		if = { limit = { OR = { tag = SKY tag = OLD tag = ESK } } create_alliance = ALE }
+		ALE = {
+		add_treasury = 500
+		add_manpower = 10
+		}
+	}
+	option = {
+		name = "es_7_scenario.3.b"
+		ai_chance = { factor = 50 }
+		add_prestige = -10
+	}
+}
+
+country_event = {
+	id = es_7_scenario.4
+	title = es_7_scenario.4.t
+	desc = es_7_scenario.4.d
+	picture = ES_THRONEROOM_1_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_7_scenario.4_flag }
+		OR ={
+		exists = ALE
+		has_global_flag = alessian_rebellion_flag
+		}
+		culture_group = high_elves_cg
+		owns = 271
+    }
+
+	mean_time_to_happen = {
+		days = 1825	
+	}
+	
+	immediate = {
+	    set_country_flag = es_7_scenario.4_flag
+		1206 = { owner = { save_event_target_as = 1206_owner } }
+	}
+
+	option = {
+		name = "es_7_scenario.4.a"
+		ai_chance = { factor = 50 }
+		every_province = { limit = { region = central_syrodiil_lr } add_core = ROOT }
+		
+		if = { limit = { NOT = { truce_with = event_target:1206_owner } NOT = { alliance_with = event_target:1206_owner } NOT = { is_subject_of = event_target:1206_owner } }
+		declare_war_with_cb = { who = event_target:1206_owner casus_belli = cb_es_scenario } 
+		}
+	}
+	option = {
+		name = "es_7_scenario.4.b"
+		ai_chance = { factor = 50 }
+		add_prestige = -25
+	}
+}
+
+country_event = {
+	id = es_7_scenario.5
+	title = es_7_scenario.5.t
+	desc = es_7_scenario.5.d
+	picture = ES_AEDRIC_TEMPLE_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_7_scenario.5_flag }
+		OR = {
+		AND = {
+		culture_group = cyrodiil_cg
+		owns = 1221
+		NOT = { exists = ALE }
+		}
+		tag = ALE
+		}
+    }
+
+	mean_time_to_happen = {
+		days = 1825	
+	}
+	
+	immediate = {
+	    set_country_flag = es_7_scenario.5_flag
+		1206 = { owner = { save_event_target_as = 1206_owner } }
+	}
+
+	option = {
+		name = "es_7_scenario.5.a"
+		ai_chance = { factor = 50 }
+		every_province = { limit = { region = central_syrodiil_lr } add_core = ROOT }
+		add_country_modifier = { name = "07_aedric_blessing" duration = 9125 }
+		
+		if = { limit = { NOT = { truce_with = event_target:1206_owner } NOT = { alliance_with = event_target:1206_owner } NOT = { is_subject_of = event_target:1206_owner } }
+		declare_war_with_cb = { who = event_target:1206_owner casus_belli = cb_es_scenario } 
+		}
+	}
+	option = {
+		name = "es_7_scenario.5.b"
+		ai_chance = { factor = 50 }
+		add_prestige = 10
+	}
+}
+
+country_event = {
+	id = es_7_scenario.6
+	title = es_7_scenario.6.t
+	desc = es_7_scenario.6.d
+	picture = ES_DWEMES_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	    7419 = { owner = { save_event_target_as = 7419_owner } }
+		7559 = { owner = { save_event_target_as = 7559_owner } }
+		7394 = { owner = { save_event_target_as = 7394_owner } }
+	}
+
+	option = {
+		name = "es_7_scenario.6.a"
+		every_province = {
+		limit = {
+		OR = {
+		region = nordic_coast_lr
+		region = great_planes_lr
+		}
+		culture = dwemer
+		}
+		add_claim = ROOT
+		}
+		
+		if = { limit = { NOT = { truce_with = event_target:7419_owner } NOT = { alliance_with = event_target:7419_owner } NOT = { is_subject_of = event_target:7419_owner } }
+		declare_war_with_cb = { who = event_target:7419_owner casus_belli = cb_es_scenario } 
+		}
+		if = { limit = { NOT = { truce_with = event_target:7559_owner } NOT = { alliance_with = event_target:7559_owner } NOT = { is_subject_of = event_target:7559_owner } }
+		declare_war_with_cb = { who = event_target:7559_owner casus_belli = cb_es_scenario } 
+		}
+		if = { limit = { NOT = { truce_with = event_target:7394_owner } NOT = { alliance_with = event_target:7394_owner } NOT = { is_subject_of = event_target:7394_owner } }
+		declare_war_with_cb = { who = event_target:7394_owner casus_belli = cb_es_scenario } 
+		}
+	}
+	option = {
+		name = "es_7_scenario.6.b"
+		ai_chance = { factor = 50 }
+		add_prestige = 10
+	}
+}
+
+### Falkreath Expansion
+
+country_event = {
+	id = es_7_scenario.7
+	title = es_7_scenario.7.t
+	desc = es_7_scenario.7.d
+	picture = ES_FALKREATH_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	    7281 = { owner = { save_event_target_as = 7281_owner } }
+		7270 = { owner = { save_event_target_as = 7270_owner } }
+		7510 = { owner = { save_event_target_as = 7510_owner } }
+	}
+
+	option = {
+		name = "es_7_scenario.7.a"
+		
+		add_country_modifier = { name = "23_grand_army" duration = 9125 }
+		
+		add_years_of_income = -0.5
+		
+		if = { limit = { NOT = { truce_with = event_target:7281_owner } NOT = { alliance_with = event_target:7281_owner } NOT = { is_subject_of = event_target:7281_owner } }
+		declare_war_with_cb = { who = event_target:7281_owner casus_belli = cb_es_scenario } 
+		}
+		if = { limit = { NOT = { truce_with = event_target:7270_owner } NOT = { alliance_with = event_target:7270_owner } NOT = { is_subject_of = event_target:7270_owner } }
+		declare_war_with_cb = { who = event_target:7270_owner casus_belli = cb_es_scenario } 
+		}
+		if = { limit = { NOT = { truce_with = event_target:7510_owner } NOT = { alliance_with = event_target:7510_owner } NOT = { is_subject_of = event_target:7510_owner } }
+		declare_war_with_cb = { who = event_target:7510_owner casus_belli = cb_es_scenario } 
+		}
+	}
+	option = {
+		name = "es_7_scenario.7.b"
+		ai_chance = { factor = 50 }
+		add_stability = 1
+	}
+}
+
+### End of Snow Elves - Skyrim
+
+country_event = {
+	id = es_7_scenario.8
+	title = es_7_scenario.8.t
+	desc = es_7_scenario.8.d
+	picture = ES_SNOW_ELVES_1_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	    random_neighbor_country = {
+		    limit = { culture_group = snow_elves_cg }
+			save_event_target_as = x_7_owner
+		}
+	}
+
+	option = {
+		name = "es_7_scenario.8.a"
+		
+		every_province = { limit = { NOT = { owned_by = ROOT } culture = snow_elven region = rift_lr }
+			add_core = ROOT
+		}
+		
+		if = { limit = { NOT = { truce_with = event_target:x_7_owner } NOT = { alliance_with = event_target:x_7_owner } NOT = { is_subject_of = event_target:x_7_owner } }
+		declare_war_with_cb = { who = event_target:x_7_owner casus_belli = cb_es_scenario }
+		}
+	}
+	option = {
+		name = "es_7_scenario.8.b"
+		ai_chance = { factor = 50 }
+		add_stability = -1
+	}
+}
+
+### End of Snow Elves - Cyrodiil
+
+country_event = {
+	id = es_7_scenario.9
+	title = es_7_scenario.9.t
+	desc = es_7_scenario.9.d
+	picture = ES_SNOW_ELVES_2_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	    random_neighbor_country = {
+		    limit = { culture_group = snow_elves_cg }
+			save_event_target_as = x_7_owner
+		}
+	}
+
+	option = {
+		name = "es_7_scenario.9.a"
+		
+		every_province = { limit = { NOT = { owned_by = ROOT } culture = snow_elven region = jerall_mountains_lr }
+			add_core = ROOT
+		}
+		
+		if = { limit = { NOT = { truce_with = event_target:x_7_owner } NOT = { alliance_with = event_target:x_7_owner } NOT = { is_subject_of = event_target:x_7_owner } }
+		declare_war_with_cb = { who = event_target:x_7_owner casus_belli = cb_es_scenario }
+		}
+	}
+	option = {
+		name = "es_7_scenario.9.b"
+		ai_chance = { factor = 50 }
+		add_prestige = -10
+	}
+}
+
+### Appearing of Minotaue State
+
+country_event = {
+	id = es_7_scenario.10
+	title = es_7_scenario.10.t
+	desc = es_7_scenario.10.d
+	picture = ES_MINOTAUR_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	    random_neighbor_country = {
+		    limit = { culture_group = snow_elves_cg }
+			save_event_target_as = x_7_owner
+		}
+	}
+
+	option = {
+		name = "es_7_scenario.10.a"
+		
+		add_prestige = -25
+		
+		change_tag = MIN
+		if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		if = { limit = { NOT = { government_rank = 5 } } set_government_rank = 5 }
+	}
+	option = {
+		name = "es_7_scenario.10.b"
+		ai_chance = { factor = 50 }
+		add_stability = 1
+	}
+}
+
+### Unification of Colovia 
+
+country_event = {
+	id = es_7_scenario.11
+	title = es_7_scenario.11.t
+	desc = es_7_scenario.11.d
+	picture = ES_COLOVIA_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "es_7_scenario.11.a"
+		
+		add_stability = -1
+		
+		change_tag = COL
+		if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		if = { limit = { NOT = { government_rank = 5 } } set_government_rank = 5 }
+	}
+	option = {
+		name = "es_7_scenario.11.b"
+		ai_chance = { factor = 50 }
+		add_prestige = 25
+	}
+}
+
+### Unification of Nibenay 
+
+country_event = {
+	id = es_7_scenario.12
+	title = es_7_scenario.12.t
+	desc = es_7_scenario.12.d
+	picture = ES_NIBENAY_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "es_7_scenario.12.a"
+		
+		add_prestige = -25
+		
+		change_tag = NIB
+		if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		if = { limit = { NOT = { government_rank = 5 } } set_government_rank = 5 }
+	}
+	option = {
+		name = "es_7_scenario.12.b"
+		ai_chance = { factor = 50 }
+		add_stability = 1
+	}
+}
+
+### AI start war against Ayleids
+
+country_event = {
+	id = es_7_scenario.13
+	title = es_7_scenario.12.t
+	desc = es_7_scenario.12.d
+	picture = ES_NIBENAY_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_7_scenario.13_flag }
+		ai = yes
+		has_global_flag = alessian_rebellion_flag
+		culture_group = cyrodiil_cg
+		1206 = { owner = { OR = { NOT = { religion = eight_divines } NOT = { culture_group = cyrodiil_cg } } } }
+    }
+
+	mean_time_to_happen = {
+		days = 3650	
+	}
+	
+	immediate = {
+	    set_country_flag = es_7_scenario.13_flag
+		1206 = { owner = { save_event_target_as = 1206_owner } }
+	}
+
+	option = {
+		name = "es_7_scenario.12.a"
+		ai_chance = { factor = 100 }
+		
+		if = { limit = { NOT = { truce_with = event_target:1206_owner } NOT = { alliance_with = event_target:1206_owner } NOT = { is_subject_of = event_target:1206_owner } }
+		declare_war_with_cb = { who = event_target:1206_owner casus_belli = cb_es_scenario } 
+		}
+	}
+
+}
+
+### Expansion of Reach
+
+country_event = {
+	id = es_7_scenario.14
+	title = es_7_scenario.14.t
+	desc = es_7_scenario.14.d
+	picture = ES_REACH_GLENMORIA_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	    7250 = { owner = { save_event_target_as = 7250_owner } }
+		1296 = { owner = { save_event_target_as = 1296_owner } }
+		7263 = { owner = { save_event_target_as = 7263_owner } }
+	}
+
+	option = {
+		name = "es_7_scenario.14.a"
+		
+		add_country_modifier = { name = "23_grand_army" duration = 9125 }
+		
+		add_years_of_income = -0.5
+		
+		if = { limit = { NOT = { truce_with = event_target:7250_owner } NOT = { alliance_with = event_target:7250_owner } NOT = { is_subject_of = event_target:7250_owner } }
+		declare_war_with_cb = { who = event_target:7250_owner casus_belli = cb_es_scenario } 
+		}
+		if = { limit = { NOT = { truce_with = event_target:1296_owner } NOT = { alliance_with = event_target:1296_owner } NOT = { is_subject_of = event_target:1296_owner } }
+		declare_war_with_cb = { who = event_target:1296_owner casus_belli = cb_es_scenario } 
+		}
+		if = { limit = { NOT = { truce_with = event_target:7263_owner } NOT = { alliance_with = event_target:7263_owner } NOT = { is_subject_of = event_target:7263_owner } }
+		declare_war_with_cb = { who = event_target:7263_owner casus_belli = cb_es_scenario } 
+		}
+	}
+	option = {
+		name = "es_7_scenario.14.b"
+		ai_chance = { factor = 50 }
+		add_stability = 1
+	}
+}

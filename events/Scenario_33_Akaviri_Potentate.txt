@@ -1,0 +1,1594 @@
+namespace = es_33_scenario
+
+country_event = {
+	id = es_33_scenario.1
+	title = es_33_scenario.1.t
+	desc = es_33_scenario.1.d
+	picture = ES_AKAVIRI_POTENTATE_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_33_scenario.1_flag }
+		is_year = 1334
+		NOT = { tag = TAM }
+		OR = {
+		tag = CYR
+		tag = HEA
+		tag = ALE
+		tag = ORD
+		AND = {
+		owns_core_province = 1206		
+		owns_core_province = 1161
+		owns_core_province = 1120
+		owns_core_province = 1251
+		owns_core_province = 1184
+		}
+		}
+		NOT = { is_year = 1555 }
+    }
+
+	mean_time_to_happen = {
+		days = 36500
+	}
+	
+	immediate = {
+	    set_country_flag = es_33_scenario.1_flag
+		set_global_flag = rise_of_akaviri_protectorate_flag
+	}
+	
+	option = {
+		name = "es_33_scenario.1.a"
+		ai_chance = { factor = 33 }
+		change_tag = POE
+		change_primary_culture = tsaesci
+		if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		if = { limit = { NOT = { government_rank = 10 } } set_government_rank = 10 }
+		add_stability = 1
+		change_government = republic
+		add_government_reform = venice_merchants_reform
+		define_ruler = {
+        name = "Versidue"
+        dynasty = "Shaie"
+        adm = 2
+        dip = 1
+        mil = 3
+        age = 48
+		culture = tsaesci
+		fixed = yes
+        }
+		kill_heir = yes
+	}
+	
+	option = {
+		name = "es_33_scenario.1.b"
+		ai_chance = { factor = 33 }
+		add_stability = -3
+		add_country_modifier = {
+		    name = "11_succesion_war"
+			duration = 9125
+		}
+	}
+	
+	option = {
+		name = "es_33_scenario.1.c"
+		ai_chance = { factor = 33 }
+		add_stability = 1
+		every_owned_province = {
+		    add_permanent_province_modifier = {
+		    name = "00_autonomy"
+			duration = 9125 
+			}
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_33_scenario.2
+	title = es_33_scenario.2.t
+	desc = es_33_scenario.2.d
+	picture = ES_NEW_ERA_eventPicture
+	
+	trigger = {
+	    OR = {
+	    any_country = {
+		    has_country_flag = es_33_scenario.1_flag
+		}
+		is_year = 1555
+		}
+		NOT = { has_country_flag = es_33_scenario.2_flag }
+    }
+
+	mean_time_to_happen = {
+		days = 31
+	}
+	
+	immediate = {
+	    set_country_flag = es_33_scenario.2_flag
+	}
+	
+	option = {
+		name = "es_33_scenario.2.a"
+		ai_chance = { factor = 33 }
+		add_stability = 1
+	}
+	
+}
+
+### Order of Black Worm ###
+
+country_event = {
+	id = es_33_scenario.3
+	title = es_33_scenario.3.t
+	desc = es_33_scenario.3.d
+	picture = ES_BLACK_WORM_1_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_33_scenario.3_flag }
+		owns = 1017
+		is_year = 750
+    }
+
+	mean_time_to_happen = {
+		days = 50000
+	}
+	
+	immediate = {
+	    set_country_flag = es_33_scenario.3_flag
+	}
+	
+	option = {
+		name = "es_33_scenario.3.a"
+		ai_chance = { factor = 50 }
+		add_stability = -1
+		add_country_modifier = {
+		    name = "33_order_of_black_worm"
+			duration = -1
+		}
+		1017 = {
+		    add_permanent_province_modifier = {
+		    name = "33_capital_of_order_of_black_worm"
+			duration = 9125 
+			}
+		}
+	}
+	
+	option = {
+		name = "es_33_scenario.3.b"
+		ai_chance = { factor = 50 }
+		1017 = {
+		    add_permanent_province_modifier = {
+		    name = "33_capital_of_order_of_black_worm"
+			duration = 9125 
+			}
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_33_scenario.4
+	title = es_33_scenario.4.t
+	desc = es_33_scenario.4.d
+	picture = ES_BLACK_WORM_2_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_33_scenario.4_flag }
+		ai = yes
+		has_country_modifier = 33_order_of_black_worm
+		calc_true_if = {
+			all_owned_province = {
+			controlled_by = owner
+			is_core = ROOT
+			}
+		amount = 100
+		}
+    }
+
+	mean_time_to_happen = {
+		days = 31
+	}
+	
+	immediate = {
+	    set_country_flag = es_33_scenario.4_flag
+		every_province = {
+		    limit = {
+			    has_province_modifier = 33_province_order_of_black_worm
+			}
+			remove_province_modifier = 33_province_order_of_black_worm
+		}
+		remove_country_modifier = 33_order_of_black_worm
+	}
+	
+	option = {
+		name = "es_33_scenario.4.a"
+		ai_chance = { factor = 50 }
+		if = { limit = { NOT = { government = monarchy } } change_government = monarchy if = { limit = { NOT = { has_dlc = "Dharma" } } set_legacy_government = despotic_monarchy } }
+		define_ruler = {
+        name = "Mannimarco"
+        dynasty = "Worm King"
+        adm = 4
+        dip = 7
+        mil = 6
+        age = 42
+		culture = soul_shriven
+		fixed = yes
+        }
+		add_country_modifier = {
+		    name = "33_reformed_order_of_black_worm"
+			duration = -1
+		}
+		if = {
+		    limit = { ai = no }
+			add_stability = -3
+		}
+		
+		random_owned_province = { 
+		    change_religion = molog_bal_cult
+			spawn_rebels = {
+				type = molog_bal_cult_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			}
+		}
+		
+		random_owned_province = { 
+		    change_religion = molog_bal_cult
+			spawn_rebels = {
+				type = molog_bal_cult_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			}
+		}
+		
+		random_owned_province = { 
+		    change_religion = molog_bal_cult
+			spawn_rebels = {
+				type = molog_bal_cult_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			}
+		}
+		
+		random_owned_province = { 
+		    change_religion = molog_bal_cult
+			spawn_rebels = {
+				type = molog_bal_cult_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			}
+		}
+		
+		random_owned_province = { 
+		    change_religion = molog_bal_cult
+			spawn_rebels = {
+				type = molog_bal_cult_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			}
+		}
+		
+	}
+	
+	option = {
+		name = "es_33_scenario.4.b"
+		ai_chance = { factor = 50 }
+		set_ruler_culture = soul_shriven
+		set_heir_culture = soul_shriven
+		set_consort_culture = soul_shriven
+		set_ruler_religion  = molog_bal_cult
+		set_heir_religion = molog_bal_cult
+		set_consort_religion = molog_bal_cult
+		change_primary_culture = soul_shriven
+		change_religion = molog_bal_cult
+		every_owned_province = {
+		    limit = {
+			    religion = ROOT
+			}
+			change_religion = molog_bal_cult
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_33_scenario.5
+	title = es_33_scenario.5.t
+	desc = es_33_scenario.5.d
+	picture = ES_BLACK_WORM_3_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_33_scenario.5_flag }
+		has_country_modifier = 33_order_of_black_worm
+		1017 = { NOT = { has_province_modifier = 33_capital_of_order_of_black_worm } }
+    }
+
+	mean_time_to_happen = {
+		days = 31
+	}
+	
+	immediate = {
+	    set_country_flag = es_33_scenario.5_flag
+		every_province = {
+		    limit = {
+			    has_province_modifier = 33_province_order_of_black_worm
+			}
+			remove_province_modifier = 33_province_order_of_black_worm
+		}
+	}
+	
+	option = {
+		name = "es_33_scenario.5.a"
+		ai_chance = { factor = 50 }
+		add_stability = -1
+		remove_country_modifier = 33_order_of_black_worm
+	}
+	
+}
+
+### Order of Black Worm -> Mages Guild ###
+
+country_event = {
+	id = es_33_scenario.6
+	title = es_33_scenario.6.t
+	desc = es_33_scenario.6.d
+	picture = ES_MAGES_GUILD_eventPicture
+	
+	trigger = {
+	    any_country = {
+		    has_country_flag = es_33_scenario.3_flag
+		}
+		NOT = { has_country_flag = es_33_scenario.6_flag }
+		1206 = { NOT = { has_province_modifier = 33_mages_guild } }
+    }
+
+	mean_time_to_happen = {
+		days = 31
+	}
+	
+	immediate = {
+	    set_country_flag = es_33_scenario.6_flag
+	}
+	
+	option = {
+		name = "es_33_scenario.6.a"
+		ai_chance = { factor = 50 }
+		add_treasury = -2500
+		1206 = {
+		    add_permanent_province_modifier = {
+			    name = "33_mages_guild"
+				duration = -1
+			}
+		}
+	}
+	
+	option = {
+		name = "es_33_scenario.6.b"
+		ai_chance = { factor = 50 }
+		define_general = {
+		name = "Vanus Galerion"
+        shock = 5
+        fire = 5
+        manuever = 3
+        siege = 1
+        }
+	}
+	
+}
+
+#################################################
+
+country_event = {
+	id = es_33_scenario.7
+	title = es_33_scenario.7.t
+	desc = es_33_scenario.7.d
+	picture = ES_PALACE_eventPicture
+	
+	trigger = {
+	    OR = {
+		    tag = POE
+			AND = {
+			    owns = 1206
+				is_year = 1503
+			}
+		}
+		NOT = { has_country_flag = es_33_scenario.7_flag }
+		NOT = { is_year = 1555 }
+    }
+
+	mean_time_to_happen = {
+		days = 3650
+	}
+	
+	immediate = {
+	    set_country_flag = es_33_scenario.7_flag
+		add_country_modifier = {
+		    name = "33_divided_nation"
+			duration = 9125
+		}
+	}
+	
+	option = {
+		name = "es_33_scenario.7.a"
+		ai_chance = { factor = 100 }
+		add_stability = -1
+	}
+	
+}
+
+country_event = {
+	id = es_33_scenario.8
+	title = es_33_scenario.8.t
+	desc = es_33_scenario.8.d
+	picture = ES_DAWNSTAR_eventPicture
+	
+	trigger = {
+		any_owned_province = {
+		    area = skyrim_9_la
+			OR = {
+			    has_building = fort_15th
+				has_building = fort_16th
+				has_building = fort_17th
+				has_building = fort_18th
+			}
+		}
+		NOT = { has_country_flag = es_33_scenario.8_flag }
+		OR = {
+		NOT = { culture_group = northern_cg }
+		NOT = { is_free_or_tributary_trigger = yes }
+		}
+    }
+
+	mean_time_to_happen = {
+		days = 36500
+	}
+	
+	immediate = {
+	    set_country_flag = es_33_scenario.8_flag
+	}
+	
+	option = {
+		name = "es_33_scenario.8.a"
+		ai_chance = { factor = 100 }
+		add_treasury = -1000
+        add_prestige = -10
+		random_owned_province = {
+		    limit = {
+			area = skyrim_9_la
+			OR = {
+			    has_building = fort_15th
+				has_building = fort_16th
+				has_building = fort_17th
+				has_building = fort_18th
+			}
+			}
+			remove_building = fort_15th
+			remove_building = fort_16th
+			remove_building = fort_17th
+			remove_building = fort_18th
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_33_scenario.9
+	title = es_33_scenario.9.t
+	desc = es_33_scenario.9.d
+	picture = ES_COUNCIL_ROOM_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_33_scenario.9_flag }
+		has_country_flag = es_33_scenario.7_flag
+    }
+
+	mean_time_to_happen = {
+		days = 3650
+	}
+	
+	immediate = {
+	    set_country_flag = es_33_scenario.3_flag
+	}
+	
+	option = {
+		name = "es_33_scenario.9.a"
+		ai_chance = { factor = 50 }
+		add_stability = 1
+		add_country_modifier = {
+		    name = "33_marital_law"
+			duration = 9125
+		}
+	}
+	
+	option = {
+		name = "es_33_scenario.9.b"
+		ai_chance = { factor = 50 }
+		add_stability = -1
+	}
+	
+}
+
+#######################################################################
+
+country_event = {
+	id = es_33_scenario.10
+	title = es_33_scenario.10.t
+	desc = es_33_scenario.10.d
+	picture = ES_REVOLUTION_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_33_scenario.10_flag }
+		OR = {
+		any_country = {
+		has_country_flag = es_33_scenario.1_flag
+		}
+		is_year = 1503
+		}
+		any_owned_province = { area = cyrodiil_1_la }
+		NOT = { tag = CA1 }
+		NOT = { is_year = 1555 }
+    }
+
+	mean_time_to_happen = {
+		days = 3650
+	}
+	
+	immediate = {
+	    set_country_flag = es_33_scenario.10_flag
+	}
+	
+	option = {
+		name = "es_33_scenario.10.a"
+		ai_chance = { factor = 33 }
+		every_owned_province = {
+		    limit = {
+			    area = cyrodiil_1_la
+			}
+			cede_province = CA1
+			add_core = CA1
+			remove_core = ROOT
+		}
+		if = { limit = { CA1 = { is_free_or_tributary_trigger = yes } } vassalize = CA1 }
+		else = { create_alliance = CA1 }
+		}
+	
+	option = {
+		name = "es_33_scenario.10.b"
+		ai_chance = { factor = 33 }
+		every_owned_province = {
+		    limit = {
+			    area = cyrodiil_1_la
+			}
+			add_core = CA1
+			add_permanent_province_modifier = {
+			    name = "00_autonomy"
+				duration = 18250
+			}
+		}
+	}
+	
+	option = {
+		name = "es_33_scenario.10.c"
+		ai_chance = { factor = 33 }
+		every_owned_province = {
+		    limit = {
+			    area = cyrodiil_1_la
+			}
+			add_core = CA1
+			add_permanent_province_modifier = {
+			    name = "00_unrest"
+				duration = 3650
+			}
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_33_scenario.11
+	title = es_33_scenario.10.t
+	desc = es_33_scenario.10.d
+	picture = ES_REVOLUTION_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_33_scenario.11_flag }
+		OR = {
+		any_country = {
+		has_country_flag = es_33_scenario.1_flag
+		}
+		is_year = 1503
+		}
+		any_owned_province = { area = cyrodiil_1_la }
+		NOT = { tag = CA2 }
+		NOT = { is_year = 1555 }
+    }
+
+	mean_time_to_happen = {
+		days = 3650
+	}
+	
+	immediate = {
+	    set_country_flag = es_33_scenario.11_flag
+	}
+	
+	option = {
+		name = "es_33_scenario.10.a"
+		ai_chance = { factor = 33 }
+		every_owned_province = {
+		    limit = {
+			    area = cyrodiil_2_la
+			}
+			cede_province = CA2
+			add_core = CA2
+			remove_core = ROOT
+		}
+		if = { limit = { CA2 = { is_free_or_tributary_trigger = yes } } vassalize = CA2 }
+		else = { create_alliance = CA2 }
+		}
+	
+	option = {
+		name = "es_33_scenario.10.b"
+		ai_chance = { factor = 33 }
+		every_owned_province = {
+		    limit = {
+			    area = cyrodiil_2_la
+			}
+			add_core = CA2
+			add_permanent_province_modifier = {
+			    name = "00_autonomy"
+				duration = 18250
+			}
+		}
+	}
+	
+	option = {
+		name = "es_33_scenario.10.c"
+		ai_chance = { factor = 33 }
+		every_owned_province = {
+		    limit = {
+			    area = cyrodiil_2_la
+			}
+			add_core = CA2
+			add_permanent_province_modifier = {
+			    name = "00_unrest"
+				duration = 3650
+			}
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_33_scenario.12
+	title = es_33_scenario.10.t
+	desc = es_33_scenario.10.d
+	picture = ES_REVOLUTION_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_33_scenario.12_flag }
+		OR = {
+		any_country = {
+		has_country_flag = es_33_scenario.1_flag
+		}
+		is_year = 1503
+		}
+		any_owned_province = { area = cyrodiil_3_la }
+		NOT = { tag = CA3 }
+		NOT = { is_year = 1555 }
+    }
+
+	mean_time_to_happen = {
+		days = 3650
+	}
+	
+	immediate = {
+	    set_country_flag = es_33_scenario.12_flag
+	}
+	
+	option = {
+		name = "es_33_scenario.10.a"
+		ai_chance = { factor = 33 }
+		every_owned_province = {
+		    limit = {
+			    area = cyrodiil_3_la
+			}
+			cede_province = CA3
+			add_core = CA3
+			remove_core = ROOT
+		}
+		if = { limit = { CA3 = { is_free_or_tributary_trigger = yes } } vassalize = CA3 }
+		else = { create_alliance = CA3 }
+		}
+	
+	option = {
+		name = "es_33_scenario.10.b"
+		ai_chance = { factor = 33 }
+		every_owned_province = {
+		    limit = {
+			    area = cyrodiil_3_la
+			}
+			add_core = CA3
+			add_permanent_province_modifier = {
+			    name = "00_autonomy"
+				duration = 18250
+			}
+		}
+	}
+	
+	option = {
+		name = "es_33_scenario.10.c"
+		ai_chance = { factor = 33 }
+		every_owned_province = {
+		    limit = {
+			    area = cyrodiil_3_la
+			}
+			add_core = CA3
+			add_permanent_province_modifier = {
+			    name = "00_unrest"
+				duration = 3650
+			}
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_33_scenario.13
+	title = es_33_scenario.10.t
+	desc = es_33_scenario.10.d
+	picture = ES_REVOLUTION_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_33_scenario.13_flag }
+		OR = {
+		any_country = {
+		has_country_flag = es_33_scenario.1_flag
+		}
+		is_year = 1503
+		}
+		any_owned_province = { area = cyrodiil_4_la }
+		NOT = { tag = CE4 }
+		NOT = { is_year = 1555 }
+    }
+
+	mean_time_to_happen = {
+		days = 3650
+	}
+	
+	immediate = {
+	    set_country_flag = es_33_scenario.13_flag
+	}
+	
+	option = {
+		name = "es_33_scenario.10.a"
+		ai_chance = { factor = 33 }
+		every_owned_province = {
+		    limit = {
+			    area = cyrodiil_4_la
+			}
+			cede_province = CE4
+			add_core = CE4
+			remove_core = ROOT
+		}
+		if = { limit = { CE4 = { is_free_or_tributary_trigger = yes } } vassalize = CE4 }
+		else = { create_alliance = CE4 }
+		}
+	
+	option = {
+		name = "es_33_scenario.10.b"
+		ai_chance = { factor = 33 }
+		every_owned_province = {
+		    limit = {
+			    area = cyrodiil_4_la
+			}
+			add_core = CE4
+			add_permanent_province_modifier = {
+			    name = "00_autonomy"
+				duration = 18250
+			}
+		}
+	}
+	
+	option = {
+		name = "es_33_scenario.10.c"
+		ai_chance = { factor = 33 }
+		every_owned_province = {
+		    limit = {
+			    area = cyrodiil_4_la
+			}
+			add_core = CE4
+			add_permanent_province_modifier = {
+			    name = "00_unrest"
+				duration = 3650
+			}
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_33_scenario.14
+	title = es_33_scenario.10.t
+	desc = es_33_scenario.10.d
+	picture = ES_REVOLUTION_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_33_scenario.14_flag }
+		OR = {
+		any_country = {
+		has_country_flag = es_33_scenario.1_flag
+		}
+		is_year = 1503
+		}
+		any_owned_province = { area = cyrodiil_6_la }
+		NOT = { tag = CE6 }
+		NOT = { is_year = 1555 }
+    }
+
+	mean_time_to_happen = {
+		days = 3650
+	}
+	
+	immediate = {
+	    set_country_flag = es_33_scenario.14_flag
+	}
+	
+	option = {
+		name = "es_33_scenario.10.a"
+		ai_chance = { factor = 33 }
+		every_owned_province = {
+		    limit = {
+			    area = cyrodiil_6_la
+			}
+			cede_province = CE6
+			add_core = CE6
+			remove_core = ROOT
+		}
+		if = { limit = { CE6 = { is_free_or_tributary_trigger = yes } } vassalize = CE6 }
+		else = { create_alliance = CE6 }
+		}
+	
+	option = {
+		name = "es_33_scenario.10.b"
+		ai_chance = { factor = 33 }
+		every_owned_province = {
+		    limit = {
+			    area = cyrodiil_6_la
+			}
+			add_core = CE6
+			add_permanent_province_modifier = {
+			    name = "00_autonomy"
+				duration = 18250
+			}
+		}
+	}
+	
+	option = {
+		name = "es_33_scenario.10.c"
+		ai_chance = { factor = 33 }
+		every_owned_province = {
+		    limit = {
+			    area = cyrodiil_6_la
+			}
+			add_core = CE6
+			add_permanent_province_modifier = {
+			    name = "00_unrest"
+				duration = 3650
+			}
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_33_scenario.15
+	title = es_33_scenario.10.t
+	desc = es_33_scenario.10.d
+	picture = ES_REVOLUTION_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_33_scenario.15_flag }
+		OR = {
+		any_country = {
+		has_country_flag = es_33_scenario.1_flag
+		}
+		is_year = 1503
+		}
+		any_owned_province = { area = cyrodiil_7_la }
+		NOT = { tag = CA7 }
+		NOT = { is_year = 1555 }
+    }
+
+	mean_time_to_happen = {
+		days = 3650
+	}
+	
+	immediate = {
+	    set_country_flag = es_33_scenario.15_flag
+	}
+	
+	option = {
+		name = "es_33_scenario.10.a"
+		ai_chance = { factor = 33 }
+		every_owned_province = {
+		    limit = {
+			    area = cyrodiil_7_la
+			}
+			cede_province = CA7
+			add_core = CA7
+			remove_core = ROOT
+		}
+		if = { limit = { CA7 = { is_free_or_tributary_trigger = yes } } vassalize = CA7 }
+		else = { create_alliance = CE6 }
+		}
+	
+	option = {
+		name = "es_33_scenario.10.b"
+		ai_chance = { factor = 33 }
+		every_owned_province = {
+		    limit = {
+			    area = cyrodiil_7_la
+			}
+			add_core = CA7
+			add_permanent_province_modifier = {
+			    name = "00_autonomy"
+				duration = 18250
+			}
+		}
+	}
+	
+	option = {
+		name = "es_33_scenario.10.c"
+		ai_chance = { factor = 33 }
+		every_owned_province = {
+		    limit = {
+			    area = cyrodiil_7_la
+			}
+			add_core = CA7
+			add_permanent_province_modifier = {
+			    name = "00_unrest"
+				duration = 3650
+			}
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_33_scenario.16
+	title = es_33_scenario.10.t
+	desc = es_33_scenario.10.d
+	picture = ES_REVOLUTION_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_33_scenario.16_flag }
+		OR = {
+		any_country = {
+		has_country_flag = es_33_scenario.1_flag
+		}
+		is_year = 1503
+		}
+		any_owned_province = { area = cyrodiil_9_la }
+		NOT = { tag = CA9 }
+		NOT = { is_year = 1555 }
+    }
+
+	mean_time_to_happen = {
+		days = 3650
+	}
+	
+	immediate = {
+	    set_country_flag = es_33_scenario.16_flag
+	}
+	
+	option = {
+		name = "es_33_scenario.10.a"
+		ai_chance = { factor = 33 }
+		every_owned_province = {
+		    limit = {
+			    area = cyrodiil_9_la
+			}
+			cede_province = CA9
+			add_core = CA9
+			remove_core = ROOT
+		}
+		if = { limit = { CA9 = { is_free_or_tributary_trigger = yes } } vassalize = CA9 }
+		else = { create_alliance = CA9 }
+		}
+	
+	option = {
+		name = "es_33_scenario.10.b"
+		ai_chance = { factor = 33 }
+		every_owned_province = {
+		    limit = {
+			    area = cyrodiil_9_la
+			}
+			add_core = CA9
+			add_permanent_province_modifier = {
+			    name = "00_autonomy"
+				duration = 18250
+			}
+		}
+	}
+	
+	option = {
+		name = "es_33_scenario.10.c"
+		ai_chance = { factor = 33 }
+		every_owned_province = {
+		    limit = {
+			    area = cyrodiil_9_la
+			}
+			add_core = CA9
+			add_permanent_province_modifier = {
+			    name = "00_unrest"
+				duration = 3650
+			}
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_33_scenario.17
+	title = es_33_scenario.10.t
+	desc = es_33_scenario.10.d
+	picture = ES_REVOLUTION_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_33_scenario.17_flag }
+		OR = {
+		any_country = {
+		has_country_flag = es_33_scenario.1_flag
+		}
+		is_year = 1503
+		}
+		any_owned_province = { area = cyrodiil_16_la }
+		NOT = { tag = CB6 }
+		NOT = { is_year = 1555 }
+    }
+
+	mean_time_to_happen = {
+		days = 3650
+	}
+	
+	immediate = {
+	    set_country_flag = es_33_scenario.17_flag
+	}
+	
+	option = {
+		name = "es_33_scenario.10.a"
+		ai_chance = { factor = 33 }
+		every_owned_province = {
+		    limit = {
+			    area = cyrodiil_16_la
+			}
+			cede_province = CB6
+			add_core = CB6
+			remove_core = ROOT
+		}
+		if = { limit = { CB6 = { is_free_or_tributary_trigger = yes } } vassalize = CB6 }
+		else = { create_alliance = CB6 }
+		}
+	
+	option = {
+		name = "es_33_scenario.10.b"
+		ai_chance = { factor = 33 }
+		every_owned_province = {
+		    limit = {
+			    area = cyrodiil_16_la
+			}
+			add_core = CB6
+			add_permanent_province_modifier = {
+			    name = "00_autonomy"
+				duration = 18250
+			}
+		}
+	}
+	
+	option = {
+		name = "es_33_scenario.10.c"
+		ai_chance = { factor = 33 }
+		every_owned_province = {
+		    limit = {
+			    area = cyrodiil_16_la
+			}
+			add_core = CB6
+			add_permanent_province_modifier = {
+			    name = "00_unrest"
+				duration = 3650
+			}
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_33_scenario.18
+	title = es_33_scenario.10.t
+	desc = es_33_scenario.10.d
+	picture = ES_REVOLUTION_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_33_scenario.18_flag }
+		OR = {
+		any_country = {
+		has_country_flag = es_33_scenario.1_flag
+		}
+		is_year = 1503
+		}
+		any_owned_province = { area = cyrodiil_21_la }
+		NOT = { tag = CC1 }
+		NOT = { is_year = 1555 }
+    }
+
+	mean_time_to_happen = {
+		days = 3650
+	}
+	
+	immediate = {
+	    set_country_flag = es_33_scenario.18_flag
+	}
+	
+	option = {
+		name = "es_33_scenario.10.a"
+		ai_chance = { factor = 33 }
+		every_owned_province = {
+		    limit = {
+			    area = cyrodiil_21_la
+			}
+			cede_province = CC1
+			add_core = CC1
+			remove_core = ROOT
+		}
+		if = { limit = { CC1 = { is_free_or_tributary_trigger = yes } } vassalize = CC1 }
+		else = { create_alliance = CC1 }
+		}
+	
+	option = {
+		name = "es_33_scenario.10.b"
+		ai_chance = { factor = 33 }
+		every_owned_province = {
+		    limit = {
+			    area = cyrodiil_21_la
+			}
+			add_core = CC1
+			add_permanent_province_modifier = {
+			    name = "00_autonomy"
+				duration = 18250
+			}
+		}
+	}
+	
+	option = {
+		name = "es_33_scenario.10.c"
+		ai_chance = { factor = 33 }
+		every_owned_province = {
+		    limit = {
+			    area = cyrodiil_21_la
+			}
+			add_core = CC1
+			add_permanent_province_modifier = {
+			    name = "00_unrest"
+				duration = 3650
+			}
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_33_scenario.19
+	title = es_33_scenario.10.t
+	desc = es_33_scenario.10.d
+	picture = ES_REVOLUTION_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_33_scenario.19_flag }
+		OR = {
+		any_country = {
+		has_country_flag = es_33_scenario.1_flag
+		}
+		is_year = 1503
+		}
+		any_owned_province = { area = cyrodiil_26_la }
+		NOT = { tag = CC6 }
+		NOT = { is_year = 1555 }
+    }
+
+	mean_time_to_happen = {
+		days = 3650
+	}
+	
+	immediate = {
+	    set_country_flag = es_33_scenario.19_flag
+	}
+	
+	option = {
+		name = "es_33_scenario.10.a"
+		ai_chance = { factor = 33 }
+		every_owned_province = {
+		    limit = {
+			    area = cyrodiil_26_la
+			}
+			cede_province = CC6
+			add_core = CC6
+			remove_core = ROOT
+		}
+		if = { limit = { CC6 = { is_free_or_tributary_trigger = yes } } vassalize = CC6 }
+		else = { create_alliance = CC6 }
+		}
+	
+	option = {
+		name = "es_33_scenario.10.b"
+		ai_chance = { factor = 33 }
+		every_owned_province = {
+		    limit = {
+			    area = cyrodiil_26_la
+			}
+			add_core = CC6
+			add_permanent_province_modifier = {
+			    name = "00_autonomy"
+				duration = 18250
+			}
+		}
+	}
+	
+	option = {
+		name = "es_33_scenario.10.c"
+		ai_chance = { factor = 33 }
+		every_owned_province = {
+		    limit = {
+			    area = cyrodiil_26_la
+			}
+			add_core = CC6
+			add_permanent_province_modifier = {
+			    name = "00_unrest"
+				duration = 3650
+			}
+		}
+	}
+	
+}
+
+### Unification of Elsweyr ###
+
+country_event = {
+	id = es_33_scenario.20
+	title = es_33_scenario.20.t
+	desc = es_33_scenario.20.d
+	picture = ES_ELSWEYR_1_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_33_scenario.20_flag }
+		is_year = 1334
+		NOT = { is_year = 1555 }
+		culture_group = khajiiti_cg
+		owns = 922
+		NOT = { exists = ELS }
+    }
+
+	mean_time_to_happen = {
+		days = 36500
+	}
+	
+	immediate = {
+	    set_country_flag = es_33_scenario.20_flag
+	}
+	
+	option = {
+		name = "es_33_scenario.20.a"
+		ai_chance = { factor = 33 }
+		set_global_flag = formation_of_wlsweyr_flag
+		if = { limit = { ai = no } add_stability = -3 }
+		if = { limit = { NOT = { government = monarchy } } change_government = monarchy if = { limit = { NOT = { has_dlc = "Dharma" } } set_legacy_government = despotic_monarchy } }
+		change_tag = ELS
+		if = {
+			limit = {
+				NOT = { government_rank = 5 }
+			}
+		set_government_rank = 5
+		}
+		add_country_modifier = {
+			name = "centralization_modifier"
+			duration = 7300
+		}
+		if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		define_ruler = {
+        name = "Eshita"
+        dynasty = "of Pellitine"
+        adm = 3
+        dip = 5
+        mil = 4
+        age = 21
+        claim = 100
+		female = yes
+		fixed = yes
+        }
+		define_consort = {
+		name = "Keirgo"
+        dynasty = "of Anequina"
+        adm = 4
+        dip = 5
+        mil = 3
+        }
+    }
+	
+	option = {
+		name = "es_33_scenario.20.b"
+		ai_chance = { factor = 33 }
+		every_province = {
+		    limit = {
+			    OR = {
+			    region = anequina_lr
+				region = pelletine_lr
+				}
+			}
+			add_permanent_claim = ROOT
+		}
+		add_country_modifier = {
+		    name = "01_focus_on_war"
+			duration = 9125
+		}
+		add_country_modifier = {
+		    name = "01_focus_on_internal_sphere"
+			duration = 9125
+		}
+	}
+	
+	option = {
+		name = "es_33_scenario.20.c"
+		ai_chance = { factor = 33 }
+		add_stability = 1
+		change_government = republic
+		add_government_reform = merchants_reform
+		change_tag = ELS
+		if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		if = {
+			limit = {
+				NOT = { government_rank = 5 }
+			}
+		set_government_rank = 5
+		}
+		add_country_modifier = {
+		    name = "01_focus_on_trade"
+			duration = 9125
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_33_scenario.21
+	title = es_33_scenario.21.t
+	desc = es_33_scenario.21.d
+	picture = ES_ELSWEYR_1_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_33_scenario.21_flag }
+		culture_group = khajiiti_cg
+		has_global_flag = formation_of_wlsweyr_flag
+		NOT = { tag = ELS }
+    }
+
+	mean_time_to_happen = {
+		days = 31
+	}
+	
+	immediate = {
+	    set_country_flag = es_33_scenario.21_flag
+	}
+	
+	option = {
+		name = "es_33_scenario.21.a"
+		ai_chance = { factor = 50 }
+		ELS = {
+		    create_subject = {
+            subject_type = personal_union
+            subject = ROOT
+            }
+		}
+    }
+	
+	option = {
+		name = "es_33_scenario.21.b"
+		ai_chance = { factor = 50 }
+		add_stability = 1
+		every_owned_province = {
+		    add_core = ELS
+		}
+	}
+	
+}
+
+#######################################################################
+
+country_event = {
+	id = es_33_scenario.22
+	title = es_33_scenario.22.t
+	desc = es_33_scenario.22.d
+	picture = ES_GUILDS_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_33_scenario.22_flag }
+		is_year = 1334
+		owns = 1206
+		NOT = { has_country_modifier = 33_guilds_act }
+    }
+
+	mean_time_to_happen = {
+		days = 36500
+	}
+	
+	immediate = {
+	    set_country_flag = es_33_scenario.22_flag
+	}
+	
+	option = {
+		name = "es_33_scenario.22.a"
+		ai_chance = { factor = 50 }
+		add_stability = -1
+		add_country_modifier = {
+		    name = "33_guilds_act"
+			duration = -1
+		}
+    }
+	
+	option = {
+		name = "es_33_scenario.22.b"
+		ai_chance = { factor = 50 }
+		add_stability = 1
+		random_owned_province = { 
+			spawn_rebels = {
+				type = particularist_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			}
+		}
+		random_owned_province = { 
+			spawn_rebels = {
+				type = particularist_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			}
+		}
+		random_owned_province = { 
+			spawn_rebels = {
+				type = particularist_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			}
+		}
+		random_owned_province = { 
+			spawn_rebels = {
+				type = particularist_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			}
+		}
+		random_owned_province = { 
+			spawn_rebels = {
+				type = particularist_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			}
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_33_scenario.23
+	title = es_33_scenario.23.t
+	desc = es_33_scenario.23.d
+	picture = ES_MORAG_TONG_eventPicture
+	
+	trigger = {
+	    has_country_flag = es_33_scenario.9_flag
+	    NOT = { has_country_flag = es_33_scenario.23_flag }
+		owns = 1206
+    }
+
+	mean_time_to_happen = {
+		days = 3650
+	}
+	
+	immediate = {
+	    set_country_flag = es_33_scenario.23_flag
+	}
+	
+	option = {
+		name = "es_33_scenario.23.a"
+		ai_chance = { factor = 50 }
+		kill_ruler = yes
+		add_stability = -1
+		every_country = {
+		limit = {
+		    capital_scope = { continent = Tamriel }
+		}
+		    country_event = { id = es_33_scenario.25 days = 31 tooltip = es_collapse.2.a.tt }
+		}
+    }
+	
+	option = {
+		name = "es_33_scenario.23.b"
+		ai_chance = { factor = 50 }
+		define_ruler = {
+        name = "Savirien"
+        dynasty = "Chorak"
+        adm = 3
+        dip = 5
+        mil = 1
+        age = 40
+		culture = tsaesci
+		fixed = yes
+        }
+		every_country = {
+		limit = {
+		    capital_scope = { continent = Tamriel }
+		}
+		    country_event = { id = es_33_scenario.25 days = 31 tooltip = es_collapse.2.a.tt }
+		}
+    }
+	
+}
+
+country_event = {
+	id = es_33_scenario.24
+	title = es_33_scenario.24.t
+	desc = es_33_scenario.24.d
+	picture = ATLAS_OF_DRAGONS_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_33_scenario.24_flag }
+		is_year = 1410
+		NOT = { is_year = 1782 }
+    }
+
+	mean_time_to_happen = {
+		days = 36500
+	}
+	
+	immediate = {
+	    set_country_flag = es_33_scenario.24_flag
+	}
+	
+	option = {
+		name = "es_33_scenario.24.a"
+		ai_chance = { factor = 100 }
+		add_prestige = 10
+		add_country_modifier = {
+		    name = "33_atlas_of_dragons"
+			duration = 9125
+		}
+    }
+	
+}
+
+country_event = {
+	id = es_33_scenario.25
+	title = es_33_scenario.23.t
+	desc = es_33_scenario.23.d
+	picture = ES_MORAG_TONG_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "es_33_scenario.23.a"
+		ai_chance = { factor = 100 }
+		add_stability = -1
+		add_country_modifier = {
+		    name = "32_fear_of_morag_tong"
+			duration = 9125
+		}
+    }
+	
+}

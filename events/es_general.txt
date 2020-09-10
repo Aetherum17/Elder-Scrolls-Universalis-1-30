@@ -1,0 +1,665 @@
+namespace = es_general
+
+country_event = {
+	id = es_general.1
+	title = es_general.1.t
+	desc = es_general.1.d
+	picture = ES_BLOOD_RITUAL_eventPicture
+	
+	hidden = yes
+	
+	trigger = {
+	    OR = {
+		AND = {
+		has_country_modifier = 23_the_crowns
+		NOT = { religion = yokudan_pantheon }
+		}
+		AND = {
+		has_country_modifier = 23_the_forebears
+		NOT = { religion = redguard_pantheon }
+		}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {
+		name = es_general.1.a
+		ai_chance = { factor = 100 }
+		if = {
+		limit = {
+		has_country_modifier = 23_the_crowns
+		NOT = { religion = yokudan_pantheon }
+		}
+		remove_country_modifier = 23_the_crowns
+		}
+		if = {
+		limit = {
+		has_country_modifier = 23_the_forebears
+		NOT = { religion = redguard_pantheon }
+		}
+		remove_country_modifier = 23_the_forebears
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_general.2
+	title = es_general.2.t
+	desc = es_general.2.d
+	picture = ES_ROYAL_BEDROOM_eventPicture
+	
+	trigger = {
+		tag = DIR
+		has_heir = no
+		has_government_attribute = heir
+		government = monarchy
+		NOT = { dynasty = "Direnii" }
+		NOT = { 
+			has_ruler_modifier = spurn_habsburgs
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	option = {
+		name =  es_general.2.a
+		ai_chance = { factor = 50 }
+		add_legitimacy = 10
+		add_prestige = -10
+		hidden_effect = {
+			add_ruler_modifier = {
+				name = spurn_habsburgs
+				hidden = yes
+			}
+		}
+	}
+	option = {
+		name =  es_general.2.b
+		ai_chance = { factor = 50 }
+		add_legitimacy = -35
+		define_heir = {
+		dynasty = "Direnii"
+		culture = altmer
+		ADM = 4
+		DIP = 4
+		MIL = 4			
+		claim = 80
+		}
+	}
+}
+
+country_event = {
+	id = es_general.3
+	title = es_general.2.t
+	desc = es_general.2.d
+	picture = ES_ROYAL_BEDROOM_eventPicture
+	
+	trigger = {
+		tag = VAL
+		has_heir = no
+		has_government_attribute = heir
+		government = monarchy
+		NOT = { dynasty = "Camoran" }
+		NOT = { 
+			has_ruler_modifier = spurn_habsburgs
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	option = {
+		name =  es_general.2.a
+		ai_chance = { factor = 50 }
+		add_legitimacy = 10
+		add_prestige = -10
+		hidden_effect = {
+			add_ruler_modifier = {
+				name = spurn_habsburgs
+				hidden = yes
+			}
+		}
+	}
+	option = {
+		name =  es_general.2.b
+		ai_chance = { factor = 50 }
+		add_legitimacy = -35
+		define_heir = {
+		dynasty = "Camoran"
+		culture = bosmer
+		ADM = 4
+		DIP = 4
+		MIL = 4			
+		claim = 80
+		}
+	}
+}
+
+country_event = {
+	id = es_general.4
+	title = es_general.2.t
+	desc = es_general.2.d
+	picture = ES_ROYAL_BEDROOM_eventPicture
+	
+	trigger = {
+		tag = SKY
+		has_heir = no
+		has_government_attribute = heir
+		government = monarchy
+		NOT = { dynasty = "Ysgramor" }
+		NOT = { dynasty = "Whitehold" }
+		NOT = { 
+			has_ruler_modifier = spurn_habsburgs
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	option = {
+		name =  es_general.2.a
+		ai_chance = { factor = 33 }
+		add_legitimacy = 10
+		add_prestige = -10
+		hidden_effect = {
+			add_ruler_modifier = {
+				name = spurn_habsburgs
+				hidden = yes
+			}
+		}
+	}
+	option = {
+		name =  es_general.2.b
+		ai_chance = { factor = 33 }
+		add_legitimacy = -35
+		define_heir = {
+		dynasty = "Ysgramor"
+		culture = nord
+		ADM = 4
+		DIP = 4
+		MIL = 4			
+		claim = 80
+		}
+	}
+	option = {
+		name =  es_general.2.b
+		ai_chance = { factor = 33 }
+		add_legitimacy = -35
+		define_heir = {
+		dynasty = "Whitehold"
+		culture = nord
+		ADM = 4
+		DIP = 4
+		MIL = 4			
+		claim = 80
+		}
+	}
+}
+
+country_event = {
+	id = es_general.5
+	title = es_general.2.t
+	desc = es_general.2.d
+	picture = ES_ROYAL_BEDROOM_eventPicture
+	
+	trigger = {
+		tag = ORD
+		has_heir = no
+		has_government_attribute = heir
+		government = monarchy
+		NOT = { dynasty = "Alessian" }
+		NOT = { 
+			has_ruler_modifier = spurn_habsburgs
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	option = {
+		name =  es_general.2.a
+		ai_chance = { factor = 50 }
+		add_legitimacy = 10
+		add_prestige = -10
+		hidden_effect = {
+			add_ruler_modifier = {
+				name = spurn_habsburgs
+				hidden = yes
+			}
+		}
+	}
+	option = {
+		name =  es_general.2.b
+		ai_chance = { factor = 50 }
+		add_legitimacy = -35
+		define_heir = {
+		dynasty = "Alessian"
+		culture = nedic
+		ADM = 4
+		DIP = 4
+		MIL = 4			
+		claim = 80
+		}
+	}
+}
+
+country_event = {
+	id = es_general.6
+	title = es_general.2.t
+	desc = es_general.2.d
+	picture = ES_ROYAL_BEDROOM_eventPicture
+	
+	trigger = {
+		tag = CA7
+		has_heir = no
+		has_government_attribute = heir
+		government = monarchy
+		NOT = { 
+			dynasty = "Larich" 
+		}
+		NOT = { 
+			has_ruler_modifier = spurn_habsburgs
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	option = {
+		name =  es_general.2.a
+		ai_chance = { factor = 50 }
+		add_legitimacy = 10
+		add_prestige = -10
+		hidden_effect = {
+			add_ruler_modifier = {
+				name = spurn_habsburgs
+				hidden = yes
+			}
+		}
+	}
+	option = {
+		name =  es_general.2.b
+		ai_chance = { factor = 50 }
+		add_legitimacy = -35
+		define_heir = {
+		dynasty = "Larich"
+		culture = nedic
+		ADM = 4
+		DIP = 4
+		MIL = 4			
+		claim = 80
+		}
+	}
+}
+
+country_event = {
+	id = es_general.7
+	title = es_general.2.t
+	desc = es_general.2.d
+	picture = ES_ROYAL_BEDROOM_eventPicture
+	
+	trigger = {
+		tag = HIG
+		has_heir = no
+		has_government_attribute = heir
+		government = monarchy
+		NOT = { dynasty = "Daggerfall" }
+		NOT = { dynasty = "Breton" }
+		NOT = { dynasty = "Cumberland" }
+		NOT = { 
+			has_ruler_modifier = spurn_habsburgs
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	option = {
+		name =  es_general.2.a
+		ai_chance = { factor = 33 }
+		add_legitimacy = 10
+		add_prestige = -10
+		hidden_effect = {
+			add_ruler_modifier = {
+				name = spurn_habsburgs
+				hidden = yes
+			}
+		}
+	}
+	option = {
+		name =  es_general.2.b
+		ai_chance = { factor = 33 }
+		add_legitimacy = -35
+		define_heir = {
+		dynasty = "Daggerfall"
+		culture = breton
+		ADM = 4
+		DIP = 4
+		MIL = 4			
+		claim = 80
+		}
+	}
+	option = {
+		name =  es_general.2.b
+		ai_chance = { factor = 33 }
+		add_legitimacy = -35
+		define_heir = {
+		dynasty = "Breton"
+		culture = breton
+		ADM = 4
+		DIP = 4
+		MIL = 4			
+		claim = 80
+		}
+	}
+	option = {
+		name =  es_general.2.b
+		ai_chance = { factor = 33 }
+		trigger = { has_global_flag = three_alliences_flag }
+		add_legitimacy = -35
+		define_heir = {
+		dynasty = "Cumberland"
+		culture = breton
+		ADM = 4
+		DIP = 4
+		MIL = 4			
+		claim = 80
+		}
+	}
+}
+
+country_event = {
+	id = es_general.8
+	title = es_general.2.t
+	desc = es_general.2.d
+	picture = ES_ROYAL_BEDROOM_eventPicture
+	
+	trigger = {
+		tag = YOK
+		has_heir = no
+		has_government_attribute = heir
+		government = monarchy
+		NOT = { dynasty = "Sesnit" }
+		NOT = { dynasty = "Torn" }
+		NOT = { 
+			has_ruler_modifier = spurn_habsburgs
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	option = {
+		name =  es_general.2.a
+		ai_chance = { factor = 33 }
+		add_legitimacy = 10
+		add_prestige = -10
+		hidden_effect = {
+			add_ruler_modifier = {
+				name = spurn_habsburgs
+				hidden = yes
+			}
+		}
+	}
+	option = {
+		name =  es_general.2.b
+		ai_chance = { factor = 33 }
+		add_legitimacy = -35
+		define_heir = {
+		dynasty = "Sesnit"
+		culture = yokudan
+		ADM = 4
+		DIP = 4
+		MIL = 4			
+		claim = 80
+		}
+	}
+	option = {
+		name =  es_general.2.b
+		ai_chance = { factor = 33 }
+		add_legitimacy = -35
+		define_heir = {
+		dynasty = "Torn"
+		culture = yokudan
+		ADM = 4
+		DIP = 4
+		MIL = 4			
+		claim = 80
+		}
+	}
+}
+
+country_event = {
+	id = es_general.9
+	title = es_general.2.t
+	desc = es_general.2.d
+	picture = ES_ROYAL_BEDROOM_eventPicture
+	
+	trigger = {
+		tag = ORS
+		has_heir = no
+		has_government_attribute = heir
+		government = monarchy
+		NOT = { dynasty = "gro-Igron" }
+		NOT = { dynasty = "gro-Bagrakh" }
+		NOT = { 
+			has_ruler_modifier = spurn_habsburgs
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	option = {
+		name =  es_general.2.a
+		ai_chance = { factor = 50 }
+		add_legitimacy = 10
+		add_prestige = -10
+		hidden_effect = {
+			add_ruler_modifier = {
+				name = spurn_habsburgs
+				hidden = yes
+			}
+		}
+	}
+	option = {
+		name =  es_general.2.b
+		ai_chance = { factor = 50 }
+		add_legitimacy = -35
+		define_heir = {
+		dynasty = "gro-Igron"
+		culture = orsimer
+		ADM = 4
+		DIP = 4
+		MIL = 4			
+		claim = 80
+		}
+	}
+	option = {
+		name =  es_general.2.b
+		ai_chance = { factor = 50 }
+		trigger = { any_country = { has_country_flag = es_21_scenario.4_flag } }
+		add_legitimacy = -35
+		define_heir = {
+		dynasty = "gro-Bagrakh"
+		culture = orsimer
+		ADM = 4
+		DIP = 4
+		MIL = 4			
+		claim = 80
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_general.10
+	title = es_general.2.t
+	desc = es_general.2.d
+	picture = ES_ROYAL_BEDROOM_eventPicture
+	
+	trigger = {
+		has_country_modifier = 23_the_crowns
+		has_heir = no
+		has_government_attribute = heir
+		government = monarchy
+		NOT = { dynasty = "Crown" }
+		NOT = { 
+			has_ruler_modifier = spurn_habsburgs
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	option = {
+		name =  es_general.2.a
+		ai_chance = { factor = 50 }
+		add_legitimacy = 10
+		add_prestige = -10
+		hidden_effect = {
+			add_ruler_modifier = {
+				name = spurn_habsburgs
+				hidden = yes
+			}
+		}
+	}
+	option = {
+		name =  es_general.2.b
+		ai_chance = { factor = 50 }
+		add_legitimacy = -35
+		define_heir = {
+		dynasty = "Crown"
+		ADM = 4
+		DIP = 4
+		MIL = 4			
+		claim = 80
+		}
+	}
+}
+
+country_event = {
+	id = es_general.11
+	title = es_general.2.t
+	desc = es_general.2.d
+	picture = ES_ROYAL_BEDROOM_eventPicture
+	
+	trigger = {
+		has_country_modifier = 23_the_forebears
+		has_heir = no
+		has_government_attribute = heir
+		government = monarchy
+		NOT = { dynasty = "Forebear" }
+		NOT = { 
+			has_ruler_modifier = spurn_habsburgs
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	option = {
+		name =  es_general.2.a
+		ai_chance = { factor = 50 }
+		add_legitimacy = 10
+		add_prestige = -10
+		hidden_effect = {
+			add_ruler_modifier = {
+				name = spurn_habsburgs
+				hidden = yes
+			}
+		}
+	}
+	option = {
+		name =  es_general.2.b
+		ai_chance = { factor = 50 }
+		add_legitimacy = -35
+		define_heir = {
+		dynasty = "Forebear"
+		ADM = 4
+		DIP = 4
+		MIL = 4			
+		claim = 80
+		}
+	}
+}
+
+country_event = {
+	id = es_general.12
+	title = es_general.2.t
+	desc = es_general.2.d
+	picture = ES_ROYAL_BEDROOM_eventPicture
+	
+	trigger = {
+		NOT = { has_global_flag = rise_of_akaviri_protectorate_flag }
+		NOT = { has_global_flag = rise_of_septim_flag }
+		has_heir = no
+		has_government_attribute = heir
+		government = monarchy
+		tag = CYR
+		NOT = { dynasty = "Cyrodiil" }
+		NOT = { 
+			has_ruler_modifier = spurn_habsburgs
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	option = {
+		name =  es_general.2.a
+		ai_chance = { factor = 50 }
+		add_legitimacy = 10
+		add_prestige = -10
+		hidden_effect = {
+			add_ruler_modifier = {
+				name = spurn_habsburgs
+				hidden = yes
+			}
+		}
+	}
+	option = {
+		name =  es_general.2.b
+		ai_chance = { factor = 50 }
+		add_legitimacy = -35
+		if = {
+		limit = {
+		    OR = {
+		    has_ruler = "Reman"
+			NOT = { has_country_flag = first_reman_flag }
+			}
+		}
+		define_heir = {
+		name = "Reman"
+		dynasty = "Cyrodiil"	
+		claim = 80
+		}
+		set_country_flag = first_reman_flag
+		}
+		else = {
+		define_heir = {
+		dynasty = "Cyrodiil"
+		ADM = 4
+		DIP = 4
+		MIL = 4			
+		claim = 80
+		}
+		}
+	}
+}

@@ -1,0 +1,115 @@
+# Japan Discovered!
+country_event = {
+	id = 9000
+	title = "EVTNAME9000"
+	desc = "EVTDESC9000"
+	picture = MERCHANTS_TALKING_eventPicture
+	
+	trigger = {
+		NOT = { has_global_flag = japan_has_encountered_the_west }
+		capital_scope = { continent = Tamriel }
+		Akavir = {
+			has_discovered = ROOT
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = "EVTOPTA9000"
+		add_prestige = 10
+		set_global_flag = japan_has_encountered_the_west
+	}
+}
+
+# The Sharpness of the Tanto
+country_event = {
+	id = 9040
+	title = "EVTNAME9040"
+	desc = "EVTDESC9040"
+	picture = BATTLE_eventPicture
+	
+	trigger = {
+		has_heir = yes
+		NOT = { stability = -2 }
+		NOT = { prestige = 0 }
+	}
+	
+	mean_time_to_happen = {
+		months = 650
+		modifier = {
+			factor = 0.8
+			NOT = { prestige = -10 }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { legitimacy = 70 }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { legitimacy = 50 }
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA9040"
+		kill_ruler = yes
+		add_stability = 3
+		add_prestige = 10
+		add_legitimacy = 10
+	}
+	option = {
+		name = "EVTOPTB9040"
+		add_legitimacy = -10
+		add_prestige = -10
+	}
+}
+
+# Rice Crops fail
+country_event = {
+	id = 9050
+	title = "EVTNAME9050"
+	desc = "EVTDESC9050"
+	picture = PLAGUE_eventPicture
+	
+	trigger = {
+		NOT = { has_country_modifier = jap_rice_fail_timer }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = jap_rice_fail_timer
+				duration = 3650
+				hidden = yes
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 450
+		modifier = {
+			factor = 0.8
+			NOT = { stability = -2 }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { stability = -1 }
+		}
+		modifier = {
+			factor = 1.5
+			stability = 1
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA9050"
+		add_stability = -1
+	}
+	option = {
+		name = "EVTOPTB9050"
+		add_years_of_income = -1
+	}
+}

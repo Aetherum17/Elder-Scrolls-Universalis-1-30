@@ -1,0 +1,41 @@
+namespace = es_flavour 
+
+country_event = {
+	id = es_flavour.1
+	title = es_flavour.1.t
+	desc = es_flavour.1.d
+	picture = ES_RIFTEN_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		owns = 1268
+		NOT = { has_country_flag = es_flavour_1_flag }
+	}
+	
+	immediate = {
+		set_country_flag = es_flavour_1_flag
+	}
+	
+	mean_time_to_happen = {
+		months = 300
+	}
+	
+	option = {
+		name = "es_flavour.1.a"
+		ai_chance = { factor = 33 }
+		add_country_modifier = { name = "black_briars_clan" duration = -1 }
+	}
+	
+	option = {
+		name = "es_flavour.1.b"
+		ai_chance = { factor = 33 }
+		add_country_modifier = { name = "snow_shodes_clan" duration = -1 }
+	}
+	
+	option = {
+		name = "es_flavour.1.c"
+		ai_chance = { factor = 33 }
+		add_stability = 1
+	}
+}

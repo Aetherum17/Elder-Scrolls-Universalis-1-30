@@ -1,0 +1,524 @@
+namespace = es_32_scenario
+
+country_event = {
+	id = es_32_scenario.1
+	title = es_32_scenario.1.t
+	desc = es_32_scenario.1.d
+	picture = ES_MORROWIND_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_32_scenario.1_flag }
+		is_year = 1472
+		NOT = { is_year = 1503 }
+		owns = 1206
+		culture_group = cyrodiil_cg
+    }
+
+	mean_time_to_happen = {
+		days = 5475
+	}
+	
+	immediate = {
+	    set_country_flag = es_32_scenario.1_flag
+	}
+	
+	option = {
+		name = "es_32_scenario.1.a"
+		ai_chance = { factor = 50 }
+		every_province = {
+		    limit = {
+			    OR = {
+				area = morrowind_1_la
+		        area = morrowind_2_la
+		        area = morrowind_3_la
+		        area = morrowind_4_la
+		        area = morrowind_5_la
+		        area = morrowind_6_la
+		        area = morrowind_7_la
+				}
+				NOT = { owned_by = ROOT }
+			}
+			add_claim = ROOT
+		}
+		
+		if = {
+		limit = {
+		exists = TRI
+		NOT = { alliance_with = TRI }
+		NOT = { overlord_of = TRI }
+		}
+		declare_war_with_cb = {
+			who = TRI
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = MOR
+		NOT = { alliance_with = MOR }
+		NOT = { overlord_of = MOR }
+		}
+		declare_war_with_cb = {
+			who = MOR
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = UNI
+		NOT = { alliance_with = UNI }
+		NOT = { overlord_of = UNI }
+		}
+		declare_war_with_cb = {
+			who = UNI
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = CHI
+		NOT = { alliance_with = CHI }
+		NOT = { overlord_of = CHI }
+		}
+		declare_war_with_cb = {
+			who = CHI
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = DWE
+		NOT = { alliance_with = DWE }
+		NOT = { overlord_of = DWE }
+		}
+		declare_war_with_cb = {
+			who = DWE
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+	}
+	
+	option = {
+		name = "es_32_scenario.1.b"
+		ai_chance = { factor = 50 }
+		add_prestige = -15
+	}
+	
+}
+
+country_event = {
+	id = es_32_scenario.2
+	title = es_32_scenario.2.t
+	desc = es_32_scenario.2.d
+	picture = ES_DRAGON_1_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_32_scenario.2_flag }
+		is_year = 1472
+		NOT = { is_year = 1503 }
+		capital_scope = { OR = { region = western_syrodiil_lr region = eastern_syrodiil_lr region = central_syrodiil_lr} }
+    }
+
+	mean_time_to_happen = {
+		days = 5475
+	}
+	
+	immediate = {
+	    set_country_flag = es_32_scenario.2_flag
+	}
+	
+	option = {
+		name = "es_32_scenario.2.a"
+		ai_chance = { factor = 100 }
+		add_stability = 1
+	}
+
+}
+
+country_event = {
+	id = es_32_scenario.3
+	title = es_32_scenario.3.t
+	desc = es_32_scenario.3.d
+	picture = ES_CONSORT_IN_PALACE_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_32_scenario.3_flag }
+		is_year = 1472
+		NOT = { is_year = 1503 }
+		owns = 1206
+		culture_group = cyrodiil_cg
+		has_consort = yes
+    }
+
+	mean_time_to_happen = {
+		days = 5475
+	}
+	
+	immediate = {
+	    set_country_flag = es_32_scenario.3_flag
+	}
+	
+	option = {
+		name = "es_32_scenario.3.a"
+		ai_chance = { factor = 50 }
+		remove_consort = yes
+		add_estate_loyalty_modifier = {
+        estate = estate_nobles
+	    desc = DISLOYAL_NOBLES
+        loyalty = -25
+        duration = 9125
+        }
+	}
+	
+	option = {
+		name = "es_32_scenario.3.b"
+		ai_chance = { factor = 50 }
+		add_country_modifier = {
+		    name = "32_ties_of_consort"
+			duration = 9125
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_32_scenario.4
+	title = es_32_scenario.4.t
+	desc = es_32_scenario.4.d
+	picture = ES_ALMALEXIA_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_32_scenario.4_flag }
+		is_year = 1472
+		NOT = { is_year = 1503 }
+		religion = tribunal_pantheon
+    }
+
+	mean_time_to_happen = {
+		days = 5475
+	}
+	
+	immediate = {
+	    set_country_flag = es_32_scenario.4_flag
+	}
+	
+	option = {
+		name = "es_32_scenario.4.a"
+		ai_chance = { factor = 100 }
+		add_stability = -1
+		if = { limit = { has_country_modifier = ruler_almalexia } remove_country_modifier = ruler_almalexia }
+		add_country_modifier = {
+		    name = "32_departure_of_almalexia"
+			duration = 36500
+		}
+	}
+
+}
+
+country_event = {
+	id = es_32_scenario.5
+	title = es_32_scenario.5.t
+	desc = es_32_scenario.5.d
+	picture = ES_SUMMERSET_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_32_scenario.5_flag }
+		is_year = 1472
+		NOT = { is_year = 1503 }
+		culture_group = sload_cg
+		owns = 320
+    }
+
+	mean_time_to_happen = {
+		days = 5475
+	}
+	
+	immediate = {
+	    set_country_flag = es_32_scenario.5_flag
+	}
+	
+	option = {
+		name = "es_32_scenario.5.a"
+		ai_chance = { factor = 33 }
+		every_province = {
+		limit = {
+		OR = {
+		area = summerset_3_la
+		area = summerset_4_la
+		area = summerset_6_la
+		area = summerset_11_la
+		area = summerset_12_la
+		}
+		}
+		add_core = ROOT
+		}
+		
+		if = {
+		limit = {
+		exists = SUM
+		NOT = { alliance_with = SUM }
+		NOT = { overlord_of = SUM }
+		}
+		declare_war_with_cb = {
+			who = SUM
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = SA6
+		NOT = { alliance_with = SA6 }
+		NOT = { overlord_of = SA6 }
+		}
+		declare_war_with_cb = {
+			who = SA6
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = SB1
+		NOT = { alliance_with = SB1 }
+		NOT = { overlord_of = SB1 }
+		}
+		declare_war_with_cb = {
+			who = SB1
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = SB2
+		NOT = { alliance_with = SB2 }
+		NOT = { overlord_of = SB2 }
+		}
+		declare_war_with_cb = {
+			who = SB2
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = SA4
+		NOT = { alliance_with = SA4 }
+		NOT = { overlord_of = SA4 }
+		}
+		declare_war_with_cb = {
+			who = SA4
+			casus_belli = cb_es_scenario
+		}
+		}
+	}
+	
+	option = {
+		name = "es_32_scenario.5.b"
+		ai_chance = { factor = 33 }
+		add_prestige = -15
+		add_country_modifier = {
+		name = "10_trade_agreement"
+		duration = 9125
+		}
+	}
+	
+	option = {
+		name = "es_32_scenario.5.c"
+		ai_chance = { factor = 33 }
+		add_treasury = -1500
+		add_country_modifier = {
+		name = "19_colonization"
+		duration = 9125
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_32_scenario.6
+	title = es_32_scenario.6.t
+	desc = es_32_scenario.6.d
+	picture = ES_MORAG_TONG_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_32_scenario.6_flag }
+		is_year = 1472
+		NOT = { is_year = 1503 }
+		owns = 1206
+    }
+
+	mean_time_to_happen = {
+		days = 5475
+	}
+	
+	immediate = {
+	    set_country_flag = es_32_scenario.6_flag
+	}
+	
+	option = {
+		name = "es_32_scenario.6.a"
+		ai_chance = { factor = 100 }
+		add_stability = -1
+		kill_ruler = yes
+		add_country_modifier = {
+		    name = "32_fear_of_morag_tong"
+			duration = 9125
+		}
+	}
+
+}
+
+country_event = {
+	id = es_32_scenario.7
+	title = es_32_scenario.7.t
+	desc = es_32_scenario.7.d
+	picture = ES_SIEGE_1_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_32_scenario.7_flag }
+		is_year = 1472
+		NOT = { is_year = 1503 }
+		owns = 1002
+    }
+
+	mean_time_to_happen = {
+		days = 5475
+	}
+	
+	immediate = {
+	    set_country_flag = es_32_scenario.7_flag
+	}
+	
+	option = {
+		name = "es_32_scenario.7.a"
+		ai_chance = { factor = 100 }
+		add_stability = -1
+		1002 = {
+		    add_base_tax = -5
+		    add_base_production = -5
+		    add_base_manpower = -5 
+			add_devastation = 100
+			change_religion = mehrunes_dagon_cult
+			spawn_rebels = {
+			type = mehrunes_dagon_cult_rebels
+			size = 3.5
+			win = yes
+			unrest = 10
+		    }
+		}
+	}
+
+}
+
+country_event = {
+	id = es_32_scenario.8
+	title = es_32_scenario.8.t
+	desc = es_32_scenario.8.d
+	picture = ALDUIN_WALL_PLAN_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_32_scenario.8_flag }
+		1352 = { has_province_flag = xx_alduin_wall_building_flag }
+    }
+
+	mean_time_to_happen = {
+		days = 5475
+	}
+	
+	immediate = {
+	    set_country_flag = es_32_scenario.8_flag
+	}
+	
+	option = {
+		name = "es_32_scenario.8.a"
+		ai_chance = { factor = 100 }
+		add_prestige = -10
+		set_country_flag = alduin_wall_audit_flag
+		1352 = {
+		add_permanent_province_modifier = {
+		    name = "xx_building_alduin_wall"
+			duration = 10950
+		}
+		}
+	}
+
+}
+
+country_event = {
+	id = es_32_scenario.9
+	title = es_32_scenario.9.t
+	desc = es_32_scenario.9.d
+	picture = ALDUIN_WALL_PLAN_1_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_32_scenario.9_flag }
+	    has_country_flag = alduin_wall_audit_flag
+    }
+
+	mean_time_to_happen = {
+		days = 5475
+	}
+	
+	immediate = {
+	    set_country_flag = es_32_scenario.9_flag
+	}
+	
+	option = {
+		name = "es_32_scenario.9.a"
+		ai_chance = { factor = 50 }
+		add_treasury = -1000
+	}
+	
+	option = {
+		name = "es_32_scenario.9.b"
+		ai_chance = { factor = 50 }
+		add_prestige = -25
+		1352 = {
+		add_permanent_province_modifier = {
+		    name = "xx_building_alduin_wall"
+			duration = 10950
+		}
+		}
+	}
+
+}
+
+country_event = {
+	id = es_32_scenario.10
+	title = es_32_scenario.10.t
+	desc = es_32_scenario.10.d
+	picture = ALDUIN_WALL_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_32_scenario.10_flag }
+	    1352 = { has_province_flag = xx_alduin_wall_building_flag NOT = { has_province_flag = xx_building_alduin_wall } }
+    }
+
+	mean_time_to_happen = {
+		days = 31
+	}
+	
+	immediate = {
+	    set_country_flag = es_32_scenario.10_flag
+	}
+	
+	option = {
+		name = "es_32_scenario.10.a"
+		ai_chance = { factor = 100 }
+		add_prestige = 10
+		1352 = {
+		add_permanent_province_modifier = {
+		    name = "xx_alduins_wall"
+			duration = -1
+		}
+		}
+	}
+
+}

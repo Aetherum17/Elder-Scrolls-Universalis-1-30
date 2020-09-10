@@ -1,0 +1,291 @@
+######################################################
+# Muslim Propagation of Religion Trade Policy Events #
+#                         							 #
+# Written by Henrik Lohmander						 #
+######################################################
+
+namespace = propagate_religion_events
+	
+#Miracle
+country_event = {
+	id = propagate_religion_events.4
+	title = propagate_religion_events.4.t
+	desc = propagate_religion_events.4.d
+	picture = MYSTIC_IN_PRAYER_eventPicture
+	
+	trigger = {
+		has_dlc = "Cradle of Civilization"
+		any_active_trade_node = {
+			any_country = {
+				trading_policy_in_node = {
+					node = PREV
+					policy = propagate_religion
+				}
+			}
+			any_trade_node_member_province = {
+				is_capital = no
+				owned_by = ROOT
+			}
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			random_active_trade_node = {
+				limit = {
+					any_country = {
+						trading_policy_in_node = {
+							node = PREV
+							policy = propagate_religion
+						}
+					}
+					any_trade_node_member_province = {
+						is_capital = no
+						owned_by = ROOT
+					}
+				}
+				random_country = {
+					limit = {
+						trading_policy_in_node = {
+							node = PREV
+							policy = propagate_religion
+						}
+					}
+					save_event_target_as = converter_country
+				}
+				random_trade_node_member_province = {
+					limit = {
+						is_capital = no
+						owned_by = ROOT
+					}
+					save_event_target_as = cured_province
+				}
+			}
+			random_list = {
+				50 = {
+					set_country_flag = theologian_flag
+				}
+				50 = {
+					set_country_flag = philosopher_flag
+				}
+			}
+			set_saved_name = {
+				key = miracle_person
+				type = advisor
+				scope = event_target:converter_country
+			}
+		}
+	}
+	
+	is_triggered_only = yes #Pulse
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = propagate_religion_events.4.a #This is a good sign
+		add_stability_or_adm_power = yes
+		event_target:cured_province = {
+			change_religion = event_target:converter_country
+		}
+	}
+	option = {
+		name = propagate_religion_events.4.b #Let us invite this man to [Root.Capital.GetCapitalName], where he can be put to good use.
+		event_target:cured_province = {
+			change_religion = event_target:converter_country
+		}
+		trigger_switch = {
+			on_trigger = has_country_flag
+			philosopher_flag = {
+				clr_country_flag = philosopher_flag
+				define_advisor = {
+					name = miracle_person
+					type = philosopher
+					culture = event_target:converter_country
+					religion = event_target:converter_country
+					skill = 2
+					discount = yes
+				}
+			}
+			theologian_flag = {
+				clr_country_flag = theologian_flag
+				define_advisor = {
+					name = miracle_person
+					type = theologian
+					culture = event_target:converter_country
+					religion = event_target:converter_country
+					skill = 2
+					discount = yes
+				}
+			}
+		}
+	}
+	after = { clear_saved_name = miracle_person }
+}
+
+#Muslim Chiefs
+#Can happen to both muslim and non-muslim countries in provinces that aren't muslim.
+#Can also happen to the tag conducting the propagation.
+country_event = {
+	id = propagate_religion_events.9
+	title = propagate_religion_events.9.t
+	desc = propagate_religion_events.9.d
+	picture = HEIR_AND_FOREIGN_ADVISOR_eventPicture
+	
+	trigger = {
+		has_dlc = "Cradle of Civilization"
+		any_active_trade_node = {
+			any_country = {
+				trading_policy_in_node = {
+					node = PREV
+					policy = propagate_religion
+				}
+			}
+			any_trade_node_member_province = {
+				owned_by = ROOT
+				is_capital = no
+				NOT = { has_province_modifier = chiefs_with_pretensions }
+			}
+		}
+	}
+	
+	is_triggered_only = yes #Pulse
+	
+	immediate = {
+		hidden_effect = {
+			random_active_trade_node = {
+				limit = {
+					any_country = {
+						trading_policy_in_node = {
+							node = PREV
+							policy = propagate_religion
+						}
+					}
+					any_trade_node_member_province = {
+						owned_by = ROOT
+						is_capital = no
+						NOT = { has_province_modifier = chiefs_with_pretensions }
+					}
+				}
+				random_country = {
+					limit = {
+						trading_policy_in_node = {
+							node = PREV
+							policy = propagate_religion
+						}
+					}
+					save_event_target_as = converter_country
+				}
+				random_trade_node_member_province = {
+					limit = {
+						is_capital = no
+						owned_by = ROOT
+						NOT = { has_province_modifier = chiefs_with_pretensions }
+					}
+					save_event_target_as = hinterland_province
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}	
+	
+	option = {
+		name = propagate_religion_events.9.a #Ridiculous  
+		event_target:hinterland_province = {
+			change_religion = event_target:converter_country
+			add_province_modifier = {
+				name = "chiefs_with_pretensions"
+				duration = 3650
+			}
+		}
+	}
+}
+
+#Islamic Syncretism
+country_event = {
+	id = propagate_religion_events.10
+	title = propagate_religion_events.10.t
+	desc = propagate_religion_events.10.d
+	picture = MYSTICS_DANCING_eventPicture
+	
+	trigger = {
+		has_dlc = "Cradle of Civilization"
+		NOT = { has_country_modifier = rejection_of_syncretism }
+		any_owned_province = {
+			has_owner_culture = yes
+			is_node_in_trade_company_region = yes
+		}
+		any_active_trade_node = {
+			any_country = {
+				trading_policy_in_node = {
+					node = PREV
+					policy = propagate_religion
+				}
+			}
+			any_trade_node_member_province = {
+				owned_by = ROOT
+				is_capital = no
+			}
+		}
+	}
+	
+	is_triggered_only = yes #Pulse
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		hidden_effect = {
+			random_active_trade_node = {
+				limit = {
+					any_country = {
+						trading_policy_in_node = {
+							node = PREV
+							policy = propagate_religion
+						}
+					}
+					any_trade_node_member_province = {
+						owned_by = ROOT
+						is_capital = no
+					}
+				}
+				random_country = {
+					limit = {
+						trading_policy_in_node = {
+							node = PREV
+							policy = propagate_religion
+						}
+					}
+					save_event_target_as = converter_country
+				}
+				random_trade_node_member_province = {
+					limit = {
+						owned_by = ROOT
+						is_capital = no
+					}
+					save_event_target_as = islamic_syncretism_province
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = propagate_religion_events.10.a #
+		add_ruler_modifier = {
+			name = "rejection_of_syncretism"
+			duration = 3650
+		}
+	}
+	option = {
+		name = propagate_religion_events.10.b #
+		add_stability_or_adm_power = yes
+		event_target:islamic_syncretism_province = {
+			change_religion = event_target:converter_country
+		}
+	}
+}

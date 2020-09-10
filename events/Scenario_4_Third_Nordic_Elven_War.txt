@@ -1,0 +1,254 @@
+namespace = es_4_scenario
+
+country_event = {
+	id = es_4_scenario.1
+	title = es_4_scenario.1.t
+	desc = es_4_scenario.1.d
+	picture = ES_SIEGE_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		7571 = { owner = { save_event_target_as = 7571_owner } }
+	}
+
+	option = {
+		name = "es_4_scenario.1.a"
+		ai_chance = { factor = 50 }
+		every_province = {
+		limit = {
+		culture = snow_elven
+		}
+		add_claim = ROOT
+		}
+		define_general = {
+		name = "Randagulf"
+        shock = 5
+        fire = 5
+        manuever = 5
+        siege = 5
+        }
+		
+		if = { limit = { NOT = { truce_with = event_target:7571_owner } NOT = { alliance_with = event_target:7571_owner } NOT = { is_subject_of = event_target:7571_owner } }
+		declare_war_with_cb = { who = event_target:7571_owner casus_belli = cb_es_scenario } 
+		}
+		
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.28 days = 31 tooltip = es_collapse.2.a.tt } }
+	}
+	option = {
+		name = "es_4_scenario.1.b"
+		ai_chance = { factor = 50 }
+		add_prestige = -10
+		
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.29 days = 31 tooltip = es_collapse.2.a.tt } }
+	}
+}
+
+country_event = {
+	id = es_4_scenario.2
+	title = es_4_scenario.2.t
+	desc = es_4_scenario.2.d
+	picture = ES_WAR_IS_NEAR_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "es_4_scenario.2.a"
+		ai_chance = { factor = 50 }
+		define_general = {
+        shock = 5
+        fire = 5
+        manuever = 5
+        siege = 5
+        }
+		
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.30 days = 31 tooltip = es_collapse.2.a.tt } }
+	}
+	option = {
+		name = "es_4_scenario.2.b"
+		ai_chance = { factor = 50 }
+		add_country_modifier = {
+		name = "04_last_stand_defence"
+		duration = 9125
+		}
+		
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.31 days = 31 tooltip = es_collapse.2.a.tt } }
+	}
+}
+
+country_event = {
+	id = es_4_scenario.3
+	title = es_4_scenario.3.t
+	desc = es_4_scenario.3.d
+	picture = ES_DRAGON_WAR_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "es_4_scenario.3.a"
+		ai_chance = { factor = 50 }
+		add_stability = -1
+		add_prestige = -25
+		add_country_modifier = {
+		name = "04_fanatics_in_the_army"
+		duration = -1
+		}
+		
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.32 days = 31 tooltip = es_collapse.2.a.tt } }
+	}
+	option = {
+		name = "es_4_scenario.3.b"
+		ai_chance = { factor = 50 }
+		
+		add_stability = -1
+		
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.33 days = 31 tooltip = es_collapse.2.a.tt } }
+	}
+}
+
+country_event = {
+	id = es_4_scenario.4
+	title = es_4_scenario.4.t
+	desc = es_4_scenario.4.d
+	picture = ES_RUINS_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		1319 = { owner = { save_event_target_as = 1319_owner } }
+	}
+
+	option = {
+		name = "es_4_scenario.4.a"
+		ai_chance = { factor = 50 }
+		every_province = {
+		limit = {
+		region = great_planes_lr
+		NOT = { owned_by = ROOT }
+		}
+		add_claim = ROOT
+		}
+		
+		if = { limit = { NOT = { truce_with = event_target:1319_owner } NOT = { alliance_with = event_target:1319_owner } NOT = { is_subject_of = event_target:1319_owner } }
+		declare_war_with_cb = { who = event_target:1319_owner casus_belli = cb_es_scenario } 
+		}
+		
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.34 days = 31 tooltip = es_collapse.2.a.tt } }
+	}
+	option = {
+		name = "es_4_scenario.4.b"
+		ai_chance = { factor = 50 }
+		
+		add_prestige = -25
+		
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.35 days = 31 tooltip = es_collapse.2.a.tt } }
+	}
+}
+
+country_event = {
+	id = es_4_scenario.5
+	title = es_4_scenario.5.t
+	desc = es_4_scenario.5.d
+	picture = BATTLE_1_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		5849 = { owner = { save_event_target_as = 5849_owner } }
+	}
+
+	option = {
+		name = "es_4_scenario.5.a"
+		ai_chance = { factor = 50 }
+		5849 = {
+		add_core = ROOT
+		}
+		
+		if = { limit = { NOT = { truce_with = event_target:5849_owner } NOT = { alliance_with = event_target:5849_owner } NOT = { is_subject_of = event_target:5849_owner } }
+		declare_war_with_cb = { who = event_target:5849_owner casus_belli = cb_es_scenario } 
+		}
+		
+		
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.36 days = 31 tooltip = es_collapse.2.a.tt } }
+	}
+	option = {
+		name = "es_4_scenario.5.b"
+		ai_chance = { factor = 50 }
+		add_prestige = -15
+		
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.37 days = 31 tooltip = es_collapse.2.a.tt } }
+	}
+}
+
+### Formation of Ayleid State
+
+country_event = {
+	id = es_4_scenario.6
+	title = es_4_scenario.6.t
+	desc = es_4_scenario.6.d
+	picture = ES_AYLEID_PALACE_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "es_4_scenario.6.a"
+		ai_chance = { factor = 50 }
+		
+		add_prestige = -25
+		
+		change_tag = AYL
+		if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		if = { limit = { NOT = { government_rank = 5 } } set_government_rank = 5 }
+		
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.52 days = 31 tooltip = es_collapse.2.a.tt } }
+	}
+	option = {
+		name = "es_4_scenario.6.b"
+		ai_chance = { factor = 50 }
+		
+		add_years_of_income = 1.0
+		
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.53 days = 31 tooltip = es_collapse.2.a.tt } }
+	}
+}
+
+### Formation of Skyrim
+
+country_event = {
+	id = es_4_scenario.7
+	title = es_4_scenario.7.t
+	desc = es_4_scenario.7.d
+	picture = ES_PALACE_OF_THE_KINGS_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "es_4_scenario.7.a"
+		ai_chance = { factor = 50 }
+		
+		add_years_of_income = -1.0
+		
+		change_tag = SKY
+		if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		if = { limit = { NOT = { government_rank = 5 } } set_government_rank = 5 }
+		
+		define_ruler = {
+		    name = "Harald"
+			dynasty = "Ysgramor"
+		    age = 25
+		    adm = 4
+		    dip = 7
+		    mil = 5
+		}
+		
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.54 days = 31 tooltip = es_collapse.2.a.tt } }
+	}
+	option = {
+		name = "es_4_scenario.7.b"
+		ai_chance = { factor = 50 }
+		
+		add_stability = 1
+		
+		every_country = { limit = { ai = no has_country_flag = esu_news_flag } country_event = { id = es_news.55 days = 31 tooltip = es_collapse.2.a.tt } }
+	}
+}

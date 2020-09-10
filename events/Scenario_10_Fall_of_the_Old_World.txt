@@ -1,0 +1,394 @@
+namespace = es_10_scenario
+
+country_event = {
+	id = es_10_scenario.1
+	title = es_10_scenario.1.t
+	desc = es_10_scenario.1.d
+	picture = ES_TRADE_GOODS_eventPicture
+	
+    is_triggered_only = yes
+
+	option = {
+		name = "es_10_scenario.1.a"
+		ai_chance = { factor = 50 }
+		add_country_modifier = {
+		name = "10_trade_agreement"
+		duration = 9125
+		}
+	}
+	option = {
+		name = "es_10_scenario.1.b"
+		ai_chance = { factor = 50 }
+		add_prestige = 15
+	}
+}
+
+country_event = {
+	id = es_10_scenario.2
+	title = es_10_scenario.2.t
+	desc = es_10_scenario.2.d
+	picture = ES_THRONEROOM_2_eventPicture
+
+    is_triggered_only = yes
+	
+	immediate = {
+	    1369 = { owner = { save_event_target_as = 1369_owner } }
+	}
+
+	option = {
+		name = "es_10_scenario.2.a"
+		ai_chance = { factor = 50 }
+		add_country_modifier = {
+		name = "10_rise_of_direnii"
+		duration = 18250
+		}
+		every_province = {
+		limit = {
+		region = hgh_rock_lr
+		}
+		add_claim = ROOT
+		}
+		
+		if = { limit = { NOT = { truce_with = event_target:1369_owner } NOT = { alliance_with = event_target:1369_owner } NOT = { is_subject_of = event_target:1369_owner } }
+		declare_war_with_cb = { who = event_target:1369_owner casus_belli = cb_es_scenario } 
+		}
+	}
+	option = {
+		name = "es_10_scenario.2.b"
+		ai_chance = { factor = 50 }
+		add_prestige = 35
+	}
+}
+
+country_event = {
+	id = es_10_scenario.3
+	title = es_10_scenario.3.t
+	desc = es_10_scenario.3.d
+	picture = ES_RELIGIOUS_ORDER_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "es_10_scenario.3.a"
+		ai_chance = { factor = 50 }
+		if = { limit = { is_emperor = yes } kill_ruler = yes capital_scope = { set_in_empire = no } }
+		if = { limit = { is_elector = yes } elector = no }
+		change_tag = ORD
+		change_religion = marukhism
+		change_government = theocracy
+		set_global_flag = marukhism_flag
+		define_ruler = {
+        name = "Marukh"
+        dynasty = "The Prophet"
+        age = 48
+        adm = 3
+        dip = 7
+        mil = 2
+		culture = imga
+        claim = 100
+		fixed = yes
+        }
+		every_owned_province = { limit = { NOT = { religion = marukhism } } change_religion = marukhism }
+		if = { limit = { NOT = { government_rank = 7 } } set_government_rank = 7 }
+		
+		if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+	}
+	option = {
+		name = "es_10_scenario.3.b"
+		ai_chance = { factor = 50 }
+		add_stability = -5
+		every_province = {
+		limit = {
+		owned_by = ROOT
+		}
+		add_claim = ORD
+		}
+		add_country_modifier = {
+		name = "10_clergy_unrest"
+		duration = 3650
+		}
+		set_global_flag = marukhism_flag
+	}
+}
+
+country_event = {
+	id = es_10_scenario.4
+	title = es_10_scenario.4.t
+	desc = es_10_scenario.4.d
+	picture = ES_RELIGION_CONVERSION_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "es_10_scenario.4.a"
+		ai_chance = { factor = 100 }
+		1206 = {
+		change_religion = marukhism
+		add_reform_center = marukhism
+		add_permanent_province_modifier = { name = "religious_zeal_at_conv" duration = 9000 }
+		}
+	}
+}
+
+#######################################################################
+
+country_event = {
+	id = es_10_scenario.51
+	title = es_10_scenario.5.t
+	desc = es_10_scenario.5.d
+	picture = ES_LABOUR_eventPicture
+	
+	trigger = {
+		has_global_flag = marukhism_flag
+		NOT = { tag = ALE }
+		NOT = { is_year = 1309 }
+		any_owned_province = { OR = { region = western_syrodiil_lr region = golden_coast_lr } culture = nedic }
+    }
+	
+	hidden = yes
+
+	mean_time_to_happen = {
+		days = 5475
+	}
+
+	option = {
+		name = "es_10_scenario.5.a"
+		ai_chance = { factor = 100 }
+		random_owned_province = {
+		    limit = { OR = { region = western_syrodiil_lr region = golden_coast_lr } culture = nedic }
+			change_culture = colovian
+		}
+	}
+}
+
+country_event = {
+	id = es_10_scenario.52
+	title = es_10_scenario.5.t
+	desc = es_10_scenario.5.d
+	picture = ES_LABOUR_eventPicture
+	
+	trigger = {
+		has_global_flag = marukhism_flag
+		NOT = { tag = ALE }
+		NOT = { is_year = 1309 }
+		any_owned_province = { OR = { region = eastern_syrodiil_lr region = valus_mountains_lr } culture = nedic }
+    }
+	
+	hidden = yes
+
+	mean_time_to_happen = {
+		days = 5475
+	}
+
+	option = {
+		name = "es_10_scenario.5.a"
+		ai_chance = { factor = 100 }
+		random_owned_province = {
+		    limit = { OR = { region = eastern_syrodiil_lr region = valus_mountains_lr } culture = nedic }
+			change_culture = nibenean
+		}
+	}
+}
+
+country_event = {
+	id = es_10_scenario.53
+	title = es_10_scenario.5.t
+	desc = es_10_scenario.5.d
+	picture = ES_LABOUR_eventPicture
+	
+	trigger = {
+		has_global_flag = marukhism_flag
+		NOT = { tag = ALE }
+		NOT = { is_year = 1309 }
+		any_owned_province = { OR = { region = central_syrodiil_lr region = golden_coast_lr region = jerall_mountains_lr } culture = nedic }
+    }
+	
+	hidden = yes
+
+	mean_time_to_happen = {
+		days = 5475
+	}
+
+	option = {
+		name = "es_10_scenario.5.a"
+		ai_chance = { factor = 100 }
+		random_owned_province = {
+		    limit = { OR = { region = central_syrodiil_lr region = golden_coast_lr region = jerall_mountains_lr } culture = nedic }
+			change_culture = imperial
+		}
+	}
+}
+
+#######################################################################
+
+country_event = {
+	id = es_10_scenario.6
+	title = es_10_scenario.6.t
+	desc = es_10_scenario.6.d
+	picture = ES_ELVEN_VILLAGE_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_10_scenario.6_flag }
+		tag = ORD
+		NOT = { has_country_flag = ord_purge_flag }
+    }
+
+	mean_time_to_happen = {
+		days = 5840
+	}
+	
+	immediate = {
+	    set_country_flag = es_10_scenario.6_flag
+	}
+
+	option = {
+		name = "es_10_scenario.6.a"
+		ai_chance = { factor = 50 }
+		set_country_flag = ord_purge_flag
+		add_country_modifier = { name = "10_not_tolerant" duration = 36500
+		}
+		every_owned_province = {
+		limit = {
+		culture = ayleid
+		}
+		change_culture = ROOT
+		add_permanent_province_modifier = { name = "10_unrest" duration = 3650 }
+		add_core = AYL
+		}
+	}
+	option = {
+		name = "es_10_scenario.6.b"
+		ai_chance = { factor = 50 }
+		set_country_flag = ord_purge_flag
+		add_country_modifier = { name = "10_tolerant" duration = 36500 }
+	}
+}
+
+### Unification of Chimeri
+
+country_event = {
+	id = es_10_scenario.7
+	title = es_10_scenario.7.t
+	desc = es_10_scenario.7.d
+	picture = ES_MORROWIND_1_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "es_10_scenario.7.a"
+		ai_chance = { factor = 50 }
+		
+		change_tag = CHI
+		if = {
+			limit = {
+				NOT = { government_rank = 5 }
+			}
+			set_government_rank = 5
+			}
+		if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+	}
+	option = {
+		name = "es_10_scenario.7.b"
+		ai_chance = { factor = 50 }
+		add_stability = 1
+	}
+}
+
+### Unification of LLothania
+
+country_event = {
+	id = es_10_scenario.8
+	title = es_10_scenario.8.t
+	desc = es_10_scenario.8.d
+	picture = ES_MORROWIND_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "es_10_scenario.8.a"
+		ai_chance = { factor = 50 }
+		
+		change_tag = LLO
+		if = {
+			limit = {
+				NOT = { government_rank = 5 }
+			}
+			set_government_rank = 5
+			}
+		if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+	}
+	option = {
+		name = "es_10_scenario.8.b"
+		ai_chance = { factor = 50 }
+		add_stability = 1
+	}
+}
+
+### Rebellion of Chimer States
+
+country_event = {
+	id = es_10_scenario.9
+	title = es_10_scenario.9.t
+	desc = es_10_scenario.9.d
+	picture = ES_MORROWIND_VILLAGE_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "es_10_scenario.9.a"
+		ai_chance = { factor = 50 }
+		
+		add_country_modifier = { name = "war_for_independence" duration = 9125 }
+		add_prestige = -15
+	}
+	option = {
+		name = "es_10_scenario.9.b"
+		ai_chance = { factor = 50 }
+		add_stability = 1
+	}
+}
+
+### Conquest of LLothania
+
+country_event = {
+	id = es_10_scenario.10
+	title = es_10_scenario.10.t
+	desc = es_10_scenario.10.d
+	picture = ES_MORROWIND_2_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	    8088 = { owner = { save_event_target_as = 8088_owner } }
+	}
+
+	option = {
+		name = "es_10_scenario.10.a"
+		ai_chance = { factor = 33 }
+		add_stability = -1
+        every_province = {
+		limit = {
+		NOT = { owned_by = ROOT }
+		region = llothanis_peninsula_lr
+		}
+		add_core = ROOT
+		}
+		
+		if = { limit = { NOT = { truce_with = event_target:8088_owner } NOT = { alliance_with = event_target:8088_owner } NOT = { is_subject_of = event_target:8088_owner } }
+		declare_war_with_cb = { who = event_target:8088_owner casus_belli = cb_es_scenario } 
+		}
+	}
+	option = {
+		name = "es_10_scenario.10.b"
+		ai_chance = { factor = 33 }
+		add_country_modifier = {
+		name = "10_diplomacy"
+		duration = 9125
+		}
+	}
+	option = {
+		name = "es_10_scenario.10.c"
+		ai_chance = { factor = 33 }
+		add_prestige = 10
+	}
+}

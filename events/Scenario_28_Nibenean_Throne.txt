@@ -1,0 +1,361 @@
+namespace = es_28_scenario
+
+country_event = {
+	id = es_28_scenario.1
+	title = es_28_scenario.1.t
+	desc = es_28_scenario.1.d
+	picture = ES_THRONEROOM_3_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_28_scenario.1_flag }
+		is_year = 1309
+		NOT = { is_year = 1334 }
+		owns = 1230
+		capital_scope = { region = eastern_syrodiil_lr }
+    }
+
+	mean_time_to_happen = {
+		days = 4380
+	}
+	
+	immediate = {
+	    set_country_flag = es_28_scenario.1_flag
+	}
+
+	option = {
+		name = "es_28_scenario.1.a"
+		ai_chance = { factor = 25 }
+		kill_ruler = yes
+		kill_heir = yes
+		add_country_modifier = {
+		    name = "nobility_in_power"
+			duration = 9125
+		}
+		define_ruler = {
+		    name = "(Regency Council)"
+			ADM = 0
+			DIP = 0
+			MIL = 0
+			fixed = yes
+			regency = yes
+		}
+	}
+	option = {
+		name = "es_28_scenario.1.b"
+		ai_chance = { factor = 25 }
+		trigger = {
+		    OR = {
+			AND = {
+		    exists = CYR
+			CYR = { government = monarchy }
+			}
+			AND = {
+		    exists = ALE
+			ALE = { government = monarchy }
+			}
+			AND = {
+		    exists = ORD
+			ORD = { government = monarchy }
+			}
+			AND = {
+		    exists = TAM
+			TAM = { government = monarchy }
+			}
+			}
+		}
+		add_stability = -1
+		kill_ruler = yes
+		kill_heir = yes
+		add_country_modifier = {
+		    name = "fall_of_nobility"
+			duration = 9125
+		}
+		if = {
+		    limit = {
+			exists = TAM
+			TAM = { government = monarchy }
+			}
+			TAM = { create_union = ROOT }
+		}
+		else_if = {
+		    limit = {
+			exists = CYR
+			CYR = { government = monarchy }
+			}
+			CYR = { create_union = ROOT }
+		}
+		else_if = {
+		    limit = {
+			exists = ALE
+			ALE = { government = monarchy }
+			}
+			ALE = { create_union = ROOT }
+		}
+		else = {
+			ORD = { create_union = ROOT }
+		}
+	}
+	option = {
+		name = "es_28_scenario.1.c"
+		ai_chance = { factor = 25 }
+		trigger = {
+		    OR = {
+			AND = {
+		    exists = SKY
+			SKY = { government = monarchy }
+			}
+			AND = {
+		    exists = MOR
+			MOR = { government = monarchy }
+			}
+			AND = {
+		    exists = ARG
+			ARG = { government = monarchy }
+			}
+			AND = {
+		    exists = DWE
+			DWE = { government = monarchy }
+			}
+			}
+		}
+		add_stability = -1
+		kill_ruler = yes
+		kill_heir = yes
+		add_country_modifier = {
+		    name = "fall_of_nobility"
+			duration = 9125
+		}
+		if = {
+		    limit = {
+			exists = SKY
+			SKY = { government = monarchy }
+			}
+			SKY = { create_union = ROOT }
+		}
+		else_if = {
+		    limit = {
+			exists = MOR
+			MOR = { government = monarchy }
+			}
+			MOR = { create_union = ROOT }
+		}
+		else_if = {
+		    limit = {
+			exists = ARG
+			ARG = { government = monarchy }
+			}
+			ARG = { create_union = ROOT }
+		}
+		else = {
+			DWE = { create_union = ROOT }
+		}
+	}
+	option = {
+		name = "es_28_scenario.1.e"
+		ai_chance = { factor = 25 }
+		kill_heir = yes
+		define_ruler = {
+        name = "Vendorel"
+        dynasty = ROOT
+        adm = 1
+        dip = 0
+        mil = 3
+        age = 42
+        claim = 100
+		fixed = yes
+        }
+		add_stability = -3
+		add_prestige = -50
+		if = {
+		    limit = {
+			    government = monarchy
+			}
+			random_owned_province = { 
+			spawn_rebels = {
+				type = pretender_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			}
+		    }
+		}
+		else = {
+		    random_owned_province = { 
+			spawn_rebels = {
+				type = noble_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			}
+		    }
+		}
+		if = {
+		    limit = {
+			    government = monarchy
+			}
+			random_owned_province = { 
+			spawn_rebels = {
+				type = pretender_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			}
+		    }
+		}
+		else = {
+		    random_owned_province = { 
+			spawn_rebels = {
+				type = noble_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			}
+		    }
+		}
+		if = {
+		    limit = {
+			    government = monarchy
+			}
+			random_owned_province = { 
+			spawn_rebels = {
+				type = pretender_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			}
+		    }
+		}
+		else = {
+		    random_owned_province = { 
+			spawn_rebels = {
+				type = noble_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			}
+		    }
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_28_scenario.2
+	title = es_28_scenario.2.t
+	desc = es_28_scenario.2.d
+	picture = ES_NIBENAY_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_28_scenario.2_flag }
+		is_year = 1309
+		NOT = { is_year = 1334 }
+		OR = {
+		    owns = 1206
+			owns = 1275
+			owns = 1002
+		}
+		any_country = {
+		    capital_scope = { region = eastern_syrodiil_lr }
+			has_ruler = "(Regency Council)"
+			NOT = { is_subject_of = ROOT }
+			NOT = { alliance_with = ROOT }
+		}
+    }
+
+	mean_time_to_happen = {
+		days = 31
+	}
+	
+	immediate = {
+	    set_country_flag = es_28_scenario.2_flag
+	}
+
+	option = {
+		name = "es_28_scenario.2.a"
+		ai_chance = { factor = 25 }
+		random_country = {
+		    limit = {
+			    capital_scope = { region = eastern_syrodiil_lr }
+			    has_ruler = "(Regency Council)"
+			    NOT = { is_subject_of = ROOT }
+			    NOT = { alliance_with = ROOT }
+			}
+			PREV = { declare_war_with_cb = { who = PREV casus_belli = cb_restore_personal_union } }
+		}
+	}
+	option = {
+		name = "es_28_scenario.2.b"
+		ai_chance = { factor = 25 }
+		add_prestige = 10
+	}
+	
+}
+
+country_event = {
+	id = es_28_scenario.3
+	title = es_28_scenario.3.t
+	desc = es_28_scenario.3.d
+	picture = ES_TRIBUNAL_CLERGY_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_28_scenario.3_flag }
+		is_year = 1309
+		NOT = { is_year = 1334 }
+		OR = {
+		    owns = 1206
+			owns = 1275
+			owns = 1002
+		}
+		culture_group = chimeris_cg
+		religion = tribunal_pantheon
+		NOT = { government = native }
+		NOT = { government = tribal }
+    }
+
+	mean_time_to_happen = {
+		days = 4380
+	}
+	
+	immediate = {
+	    set_country_flag = es_28_scenario.3_flag
+	}
+
+	option = {
+		name = "es_28_scenario.2.a"
+		ai_chance = { factor = 33 }
+		change_government = theocracy
+		if = {
+		    limit = {
+			    tag = MOR
+			}
+			change_tag = TRI
+			country_event = { id = es_17_scenario.15 days = 31 tooltip = es_17_scenario.15.a.tt }
+			if = {
+				limit = {
+					NOT = { government_rank = 7 }
+				}
+				set_government_rank = 7
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		}
+		add_stability = -1
+	}
+	option = {
+		name = "es_28_scenario.2.b"
+		ai_chance = { factor = 33 }
+		change_government = republic
+		add_stability = -2
+		add_prestige = -15
+	}
+	option = {
+		name = "es_28_scenario.2.c"
+		ai_chance = { factor = 33 }
+		add_stability = 1
+	}
+	
+}

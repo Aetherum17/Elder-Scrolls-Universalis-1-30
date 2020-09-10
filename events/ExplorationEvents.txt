@@ -1,0 +1,69 @@
+
+########################################
+# Events for Map the Coastline
+#
+# written by Sara Wendel-Örtqvist
+########################################
+
+namespace = exploration_events
+
+# Circumnavigation - Magellan's Voyage
+country_event = {
+	major = yes
+
+	id = exploration_events.16
+	title = exploration_events.16.t
+	
+	picture = COASTLINE_MAP_eventPicture
+
+	is_triggered_only = yes
+	
+	desc = {
+		trigger = {
+			always = yes
+		}
+		desc = exploration_events.16.d
+	}
+	
+	trigger = {
+		has_dlc = "El Dorado"
+		NOT = { has_global_flag = circumnavigation_completed }
+		NOT = { has_country_flag = circumnavigation_first }
+	}
+	
+	immediate = {
+		set_global_flag = circumnavigation_completed
+		set_country_flag = circumnavigation_first
+	}
+	
+	option = {
+		name = exploration_events.16.a
+		add_prestige = 100
+		add_navy_tradition = 40
+	}
+}
+
+country_event = {
+	id = exploration_events.17
+	title = exploration_events.17.t
+	desc = exploration_events.17.d
+	picture = COASTLINE_MAP_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		has_dlc = "El Dorado"
+		has_global_flag = circumnavigation_completed
+		NOT = { has_country_flag = circumnavigation_done }
+	}
+	
+	immediate = {
+		set_country_flag = circumnavigation_done
+	}
+	
+	option = {
+		name = exploration_events.17.a
+		add_prestige = 10
+		add_navy_tradition = 10
+	}
+}

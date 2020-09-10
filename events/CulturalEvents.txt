@@ -1,0 +1,141 @@
+###################
+# Cultural Events #
+###################
+
+namespace = cultural_event
+
+# The Last Jousting Tournament
+country_event = {
+	id = cultural_event.5
+	title = cultural_event.5.t
+	desc = cultural_event.5.d
+	picture = TOURNAMENT_eventPicture
+
+	trigger = {
+		has_institution = feudalism
+		government = monarchy
+		current_age = age_of_discovery
+		NOT = {
+			has_country_flag = last_jousting_tournament_held
+		}
+		army_tradition = 15
+		adm_power = 30
+		years_of_income = 0.2
+	}
+	
+	mean_time_to_happen = {
+		months = 180
+	}
+	
+	immediate = {
+		set_country_flag = last_jousting_tournament_held
+	}
+	
+	option = {
+		name = cultural_event.5.a
+		add_country_modifier = {
+			name = "the_last_joust"
+			duration = 7300
+		}
+		add_adm_power = -30
+		add_years_of_income = -0.2
+		if = {
+			limit = { has_dlc = "Mandate of Heaven" }
+			add_splendor = -30
+		}
+	}
+	option = {
+		name = cultural_event.5.b
+		add_prestige = -5
+	}
+}
+
+# Endorse Renaissance Philosophy
+country_event = {
+	id = cultural_event.10
+	title = cultural_event.10.t
+	desc = cultural_event.10.d
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		is_institution_enabled = renaissance
+		current_age = age_of_discovery
+		NOT = {
+			num_of_cities = 6
+			has_country_flag = blooming_renaissance
+		}
+		advisor = philosopher
+		adm_power = 30
+		years_of_income = 0.3
+		adm = 3
+	}
+	
+	mean_time_to_happen = {
+		months = 180
+	}
+	
+	immediate = {
+		set_country_flag = blooming_renaissance
+	}
+	
+	option = {
+		name = cultural_event.4.a
+		capital_scope = {
+			add_institution_embracement = {
+				which = "renaissance"
+				value = 100
+			}
+		}
+		add_country_modifier = {
+			name = blooming_renaissance
+			duration = 7300
+		}
+		add_years_of_income = -0.3
+		add_adm_power = -30
+	}
+	option = {
+		name = cultural_event.4.b
+		add_prestige = -10
+	}
+}
+
+# National Epic
+country_event = {
+	id = cultural_event.13
+	title = cultural_event.13.t
+	desc = cultural_event.13.d
+	picture = ECONOMY_eventPicture
+
+	trigger = {
+		government = monarchy
+		has_regency = no
+		NOT = {
+			has_country_flag = epic_to_monarch
+		}
+		prestige = 10
+		adm_power = 10
+		years_of_income = 0.1
+	}
+	
+	mean_time_to_happen = {
+		months = 180
+	}
+	
+	immediate = {
+		set_country_flag = epic_to_monarch
+	}
+	
+	option = {
+		name = cultural_event.13.a
+		add_country_modifier = {
+			name = "epic_to_monarch"
+			duration = 7300
+		}
+		add_adm_power = -10
+		add_years_of_income = -0.1
+	}
+	option = {
+		name = cultural_event.13.b
+		add_prestige = -5
+	}
+}

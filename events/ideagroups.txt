@@ -1,0 +1,1779 @@
+namespace = ideagroups
+
+#######################################
+# Aristocracy Ideas
+#######################################
+
+# Loss of Stability
+country_event = {
+	id = ideagroups.100
+	title = "EVTNAME803"
+	desc = "EVTDESC803"
+	picture = ANGRY_MOB_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_idea_group = aristocracy_ideas
+		stability = 0
+	}	
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "EVTOPTA803"
+		add_stability = -1
+		reduce_estate_burghers_loyalty_effect = yes
+	}
+}
+
+# More Nobility in the Army
+country_event = {
+	id = ideagroups.102
+	title = "EVTNAME805"
+	desc = "EVTDESC805"
+	picture = LAND_MILITARY_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		has_idea_group = aristocracy_ideas	
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}	
+	
+	option = {
+		name = "EVTOPTB805A"
+		add_army_tradition = 10
+	}
+}
+
+# Nobles support the State
+country_event = {
+	id = ideagroups.110
+	title = ideagroups.110.t
+	desc = ideagroups.110.d
+	picture = COURT_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea_group = aristocracy_ideas	
+		war_exhaustion = 5
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = ideagroups.110.a
+		add_estate_nobles_loyalty_effect = yes
+		add_war_exhaustion = -2
+	}
+}
+
+#######################################
+# Plutocracy Ideas
+#######################################
+
+# Losing control
+country_event = {
+	id = ideagroups.206
+	title = "EVTNAME816"
+	desc = "EVTDESC816"
+	picture = CITY_DEVELOPMENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea_group = plutocracy_ideas	
+	}		
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "EVTOPTB816A"
+		add_stability = -1
+	}
+}
+
+# Aristocrats concerned
+country_event = {
+	id = ideagroups.211
+	title = "EVTNAME6341"
+	desc = "EVTDESC6341"
+	picture = COURT_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea_group = plutocracy_ideas
+		NOT = {	has_country_modifier =  "aristocracy_modifier" }
+	}
+
+	option = {
+		name = "EVTOPTA6341"
+		add_prestige = -25
+	}
+
+	option = {
+		name = "EVTOPTB6341"
+		reduce_estate_nobles_loyalty_effect = yes
+		add_country_modifier = {
+			name = "aristocracy_modifier"
+			duration = 3650
+		}
+	}
+}
+
+# Agricultural Boom
+country_event = {
+	id = ideagroups.216
+	title = ideagroups.216.t
+	desc = ideagroups.216.d
+	picture = FARMING_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea_group = plutocracy_ideas
+		NOT = {	has_country_modifier =  "agricultural_boom" }
+	}
+
+	option = {
+		name = ideagroups.216.a
+		add_country_modifier = {
+			name = "agricultural_boom"
+			duration = 3650
+		}
+	}
+}
+
+#######################################
+# Innovativeness Ideas
+#######################################
+
+# Dangerous ideas are spreading!
+country_event = {
+	id = ideagroups.300
+	title = "EVTNAME818"
+	desc = "EVTDESC818"
+	picture = DEBATE_REPUBLICAN_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea_group = innovativeness_ideas	
+	}		
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "EVTOPTB818A"
+		add_stability = -1
+	}
+}
+
+# No Art worth Patronizing
+country_event = {
+	id = ideagroups.304
+	title = "EVTNAME6194"
+	desc = "EVTDESC6194"
+	picture = IMPORTANT_STATUE_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea_group = innovativeness_ideas	
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "EVTOPTA6194"
+		add_prestige = -10
+	}
+}
+
+# The Scientific Revolution Continues
+country_event = {
+	id = ideagroups.305
+	title = "EVTNAME6191"
+	desc = "EVTDESC6191"
+	picture = INVENTION_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea = scientific_revolution
+		NOT = {	has_country_modifier =  "mil_boost" }
+		NOT = {	has_country_modifier =  "adm_boost" }
+		NOT = {	has_country_modifier =  "dip_boost" }
+
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "EVTOPTA6191"
+		add_country_modifier = {
+			name = "mil_boost"
+			duration = 3650
+		}
+	}
+
+	option = {
+		name = "EVTOPTD6191"
+		add_country_modifier = {
+			name = "adm_boost"
+			duration = 3650
+		}
+	}
+	
+	option = {
+		name = "EVTOPTE6191"
+		add_country_modifier = {
+			name = "dip_boost"
+			duration = 3650
+		}
+	}
+}
+
+#######################################
+# Religious Ideas
+#######################################
+
+# Disorder
+country_event = {
+	id = ideagroups.401
+	title = "EVTNAME822"
+	desc = "EVTDESC822"
+	picture = DEBATE_REPUBLICAN_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea_group = religious_ideas	
+	}		
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "EVTOPTB822A"
+		add_stability = -1
+	}
+}
+
+# Religious Divergences
+country_event = {
+	id = ideagroups.406
+	title = "EVTNAME6159"
+	desc = "EVTDESC6159"
+	picture = DEBATE_REPUBLICAN_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea_group = religious_ideas
+		NOT = { has_country_modifier = religious_deviants }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "EVTOPTA6159"
+		ai_chance = {
+			factor = 75
+			modifier = {
+				factor = 0
+				has_estate = estate_church
+				NOT = {
+					estate_loyalty = {
+						estate = estate_church
+						loyalty = 40
+					}
+				}
+			}
+		}
+		add_piety = -0.15
+		add_corruption = 0.5
+		add_country_modifier = {
+			name = "religious_deviants"
+			duration = 3650
+		}
+		reduce_estate_church_loyalty_effect = yes
+	}
+
+	option = {
+		name = "EVTOPTB6159"
+		ai_chance = {
+			factor = 25
+		}
+		add_piety = 0.15
+		add_stability = -1
+		add_estate_church_loyalty_effect = yes
+		
+	}
+}
+
+# They See the Light
+country_event = {
+	id = ideagroups.414
+	title = ideagroups.414.t
+	desc = ideagroups.414.d
+	picture = RELIGION_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea_group = religious_ideas
+		any_owned_province = {
+			is_reformation_center = no
+			has_owner_religion = no
+			NOT = { religion_group = root }
+			has_missionary = no
+		}
+ 	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+
+	option = {
+		name = ideagroups.414.a
+		add_piety = 0.1
+		random_owned_province = {
+			limit = {
+				has_owner_religion = no
+				is_reformation_center = no
+				NOT = { religion_group = root }
+				has_missionary = no
+			}
+			change_religion = root
+		}		
+	}
+}
+
+#######################################
+# Spy Ideas
+#######################################
+
+# Spy Defections
+country_event = {
+	id = ideagroups.501
+	title = "EVTNAME6153"
+	desc = "EVTDESC6153"
+	picture = SPY_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea_group = spy_ideas
+		NOT = { has_country_modifier = enhanced_spies }
+		NOT = { has_country_modifier = spy_defections }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "EVTOPTA6153"
+		add_country_modifier = {
+			name = "spy_defections"
+			duration = 3650
+		}
+	}
+
+	option = {
+		name = "EVTOPTB6153"
+		add_corruption = 0.5
+		add_years_of_income = -0.1
+	}
+}
+
+# Diplomats Exposed
+country_event = {
+	id = ideagroups.505
+	title = ideagroups.505.t
+	desc = ideagroups.505.d
+	picture = DIPLOMACY_eventPicture
+	
+	trigger = {
+		has_idea_group = spy_ideas
+	}
+
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = ideagroups.505.a
+		add_prestige = -25
+	}
+}
+
+# Spies get you better heirs....
+country_event = {
+	id = ideagroups.506
+	title = ideagroups.506.t
+	desc = ideagroups.506.d
+	picture = SPY_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea_group = spy_ideas
+		government = monarchy
+		is_lesser_in_union = no
+		has_heir = no
+		has_regency = no
+		is_female = no
+		has_government_attribute = heir
+		NOT = {	has_ruler_modifier =  "extra_heir" }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = ideagroups.506.a
+		add_ruler_modifier = {
+			name = "extra_heir"
+			duration = -1
+		}
+	}
+	option = {
+		name = ideagroups.506.b
+		define_heir = {
+			dynasty = ROOT
+			claim = 10
+			adm = 3
+			dip = 3
+			mil = 3
+		}
+	}
+}
+
+#######################################
+# Diplomatic Ideas
+#####################################
+
+# Cabinet Dynamism
+country_event = {
+	id = ideagroups.600
+	title = "EVTNAME6154"
+	desc = "EVTDESC6154"
+	picture = ECONOMY_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea_group = diplomatic_ideas
+		NOT = {	has_country_modifier =  "cabinet_dynamism" }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "EVTOPTA6154"
+		add_country_modifier = {
+			name = "cabinet_dynamism"
+			duration = 3650
+		}
+	}
+}
+
+# Improved Reputation
+country_event = {
+	id = ideagroups.606
+	title = ideagroups.606.t
+	desc = ideagroups.606.d
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea_group = diplomatic_ideas
+		NOT = {	has_country_modifier =  "improved_dip_reputation" }
+		NOT = {	has_country_modifier =  "reduced_dip_reputation" }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = ideagroups.606.a
+		add_country_modifier = {
+			name = "improved_dip_reputation"
+			duration = 3650
+		}
+	}
+}
+
+# Bad Reputation
+country_event = {
+	id = ideagroups.607
+	title = ideagroups.607.t
+	desc = ideagroups.607.d
+	picture = DIPLOMACY_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea_group = diplomatic_ideas
+		NOT = {	has_country_modifier =  "improved_dip_reputation" }
+		NOT = {	has_country_modifier =  "reduced_dip_reputation" }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = ideagroups.607.a
+		add_country_modifier = {
+			name = "reduced_dip_reputation"
+			duration = 3650
+		}
+	}
+}
+
+#######################################
+# Offensive Ideas
+#######################################
+
+# Nobles are worried
+country_event = {
+	id = ideagroups.700
+	title = "EVTNAME830"
+	desc = "EVTDESC830"
+	picture = COURT_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea_group = offensive_ideas	
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "EVTOPTB830A"
+		add_stability = -1
+	}
+}
+
+# Glory to us
+country_event = {
+	id = ideagroups.702
+	title = "EVTNAME832"
+	desc = "EVTDESC832"
+	picture = LAND_MILITARY_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea_group = offensive_ideas	
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "EVTOPTB832A"
+		add_prestige = 5
+		add_army_professionalism = 0.01
+	}
+}
+
+# Isn't our Army Grand?
+country_event = {
+	id = ideagroups.705
+	title = "EVTNAME6114"
+	desc = "EVTDESC6114"
+	picture = MILITARY_CAMP_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea_group = offensive_ideas
+		NOT = {	has_country_modifier =  "grander_army" }
+		NOT = {	has_country_modifier =  "less_grand_army" }
+		
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "EVTOPTA6114"
+		add_country_modifier = {
+			name = "grander_army"
+			duration = 3650
+		}
+	}
+}
+
+
+#######################################
+# Defensive Ideas
+#######################################
+
+# Promising General
+country_event = {
+	id = ideagroups.803
+	title = "EVTNAME6130"
+	desc = "EVTDESC6130"
+	picture = BATTLE_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea_group = defensive_ideas	
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "EVTOPTA6130"
+		create_general = { tradition = 50 }
+	}
+}
+
+# Our Army has seen better days
+country_event = {
+	id = ideagroups.808
+	title = "EVTNAME6133"
+	desc = "EVTDESC6133"
+	picture = LAND_MILITARY_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea_group = defensive_ideas	
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "EVTOPTA6133"
+		add_stability = -1 
+	}
+	option = {
+		name = "EVTOPTB6133"
+		add_prestige = -25
+	}
+}
+
+
+# Generals Concerned by our unmanly tactics
+country_event = {
+	id = ideagroups.810
+	title = "EVTNAME6325"
+	desc = "EVTDESC6325"
+	picture = MILITARY_CAMP_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea_group = defensive_ideas	
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "EVTOPTA6325"
+		add_prestige = -25
+	}
+
+	option = {
+		name = "EVTOPTB6325"
+		add_army_tradition = -10
+	}
+}
+
+#######################################
+# Trade Ideas
+#######################################
+
+# Business is Booming
+country_event = {
+	id = ideagroups.900
+	title = "EVTNAME6140"
+	desc = "EVTDESC6140"
+	picture = MERCHANTS_TALKING_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_idea_group = trade_ideas
+		NOT = { has_country_modifier = business_booming }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "EVTOPTA6140"
+		add_country_modifier = {
+			name = "business_booming"
+			duration = 3650
+		}		
+	}
+}
+
+# Support for Mercantilist Policies
+country_event = {
+	id = ideagroups.909
+	title = ideagroups.909.t
+	desc = ideagroups.909.d
+	picture = MERCHANTS_TALKING_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_idea_group = trade_ideas
+		NOT = { mercantilism = 95 }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = ideagroups.909.a
+		add_mercantilism = 1
+	}
+}
+
+# Trade Collapse
+country_event = {
+	id = ideagroups.910
+	title = ideagroups.910.t
+	desc = ideagroups.910.d
+	picture = MERCHANTS_TALKING_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_idea_group = trade_ideas
+		NOT = { has_country_modifier = "cooperation_with_merchant_class" }
+		NOT = { has_country_modifier = "trade_collapse" }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = ideagroups.910.a
+		add_country_modifier = {
+			name = trade_collapse
+			duration = 3650
+		}		
+	}
+	option = {
+		name = ideagroups.910.b
+		add_dip_power = -100
+	}
+}
+
+#######################################
+# Maritime Ideas
+#####################################
+
+# Aristocrats concerned
+country_event = {
+	id = ideagroups.1003
+	title = "EVTNAME6103"
+	desc = "EVTDESC6103"
+	picture = NAVAL_MILITARY_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea_group = maritime_ideas
+		primitives = no
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "EVTOPTA6103"
+		ai_chance = {
+			factor = 45
+			modifier = {
+				factor = 0.25
+				NOT = { stability = 0 }
+			}
+			modifier = {
+				factor = 0
+				has_estate = estate_nobles
+				NOT = {
+					estate_loyalty = {
+						estate = estate_nobles
+						loyalty = 40
+					}
+				}
+			}
+		}
+		add_stability = -1
+		reduce_estate_nobles_loyalty_effect = yes
+	}
+	option = {
+		name = "EVTOPTB6103"
+		ai_chance = {
+			factor = 55
+		}
+		add_estate_nobles_loyalty_effect = yes
+		add_navy_tradition = -15
+	}
+}
+
+# General retires
+country_event = {
+	id = ideagroups.1013
+	title = "EVTNAME840"
+	desc = "EVTDESC840"
+	picture = NAVAL_MILITARY_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea_group = maritime_ideas
+		primitives = no
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "EVTOPTB840A"
+		add_army_tradition = -10
+	}
+}
+
+# Generals Bothered
+country_event = {
+	id = ideagroups.1016
+	title = "EVTNAME6311"
+	desc = "EVTDESC6311"
+	picture = NAVAL_MILITARY_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea_group = maritime_ideas
+		primitives = no
+		NOT = { has_country_modifier = "naval_focus" }
+		NOT = { has_country_modifier = "land_modifier" }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+
+	}
+
+	option = {
+		name = "EVTOPTA6311"
+		add_country_modifier = {
+			name = "naval_focus"
+			duration = 3650
+		}
+	}
+
+	option = {
+		name = "EVTOPTB6311"
+		add_country_modifier = {
+			name = land_modifier
+			duration = 3650
+		}
+	}
+}
+
+#######################################
+# Economic Ideas
+#######################################
+
+# Production Improvements
+country_event = {
+	id = ideagroups.1100
+	title = "EVTNAME6144"
+	desc = "EVTDESC6144"
+	picture = ECONOMY_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea = smithian_economics
+		NOT = { has_country_modifier = "production_improvements" }
+		NOT = { has_country_modifier = "production_stifled" }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "EVTOPTA6144"
+		add_country_modifier = {
+			name = "production_improvements"
+			duration = 3650
+		}
+	}
+}
+
+# Successful Bureaucracy
+country_event = {
+	id = ideagroups.1102
+	title = "EVTNAME6146"
+	desc = "EVTDESC6146"
+	picture = ECONOMY_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea_group = economic_ideas
+		NOT = { has_country_modifier = "successful_bureaucracy" }
+		NOT = { has_country_modifier = "corrupt_bureaucracy" }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "EVTOPTA6146"
+		add_country_modifier = {
+			name = "successful_bureaucracy"
+			duration = 3650
+		}
+	}
+}
+
+# Corrupt Bureaucracy
+country_event = {
+	id = ideagroups.1103
+	title = "EVTNAME6147"
+	desc = "EVTDESC6147"
+	picture = ECONOMY_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea_group = economic_ideas
+		NOT = { has_country_modifier = "successful_bureaucracy" }
+		NOT = { has_country_modifier = "corrupt_bureaucracy" }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "EVTOPTA6147"
+		add_country_modifier = {
+			name = "corrupt_bureaucracy"
+			duration = 3650
+		}
+	}
+}
+
+#######################################
+# Exploration Ideas
+#######################################
+
+# Colonist Rush
+country_event = {
+	id = ideagroups.1200
+	title = "EVTNAME6136"
+	desc = "EVTDESC6136"
+	picture = COLONIZATION_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea = quest_for_the_new_world
+		num_of_colonies = 1
+		NOT = { has_country_modifier = colonial_enthusiasm }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "EVTOPTA6136"
+		add_country_modifier = {
+			name = "colonial_enthusiasm"
+			duration = 3650
+		}
+	}
+}
+
+# People Flee to the Colonies
+country_event = {
+	id = ideagroups.1201
+	title = "EVTNAME6137"
+	desc = "EVTDESC6137"
+	picture = COLONIZATION_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea_group = exploration_ideas
+		is_at_war = yes
+		num_of_colonies = 1
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "EVTOPTA6137"
+		random_owned_province = {
+			limit = { 
+				is_colony = yes 
+			}
+			add_colonysize = 300
+		}	
+		add_dip_power = -25
+	}
+	option = {
+		name = "EVTOPTB6137"
+		add_prestige = 5
+	}
+}
+
+# Women needed
+country_event = {
+	id = ideagroups.1206
+	title = ideagroups.1206.t
+	desc = ideagroups.1206.d
+	picture = COLONIZATION_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea_group = exploration_ideas
+		num_of_colonies = 1
+		any_owned_province = {
+			is_colony = yes 
+			colonysize = 200
+			has_colonist = yes
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = ideagroups.1206.a
+		random_owned_province = {
+			limit = {
+				is_colony = yes 
+				colonysize = 200
+				has_colonist = yes			
+			}
+			add_colonysize = 200
+			add_base_manpower = 1
+		}
+	}
+}
+
+#######################################
+# Quality Ideas
+#######################################
+
+# Nobles worried
+country_event = {
+	id = ideagroups.1301
+	title = "EVTNAME843"
+	desc = "EVTDESC843"
+	picture = DEBATE_REPUBLICAN_eventPicture
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	trigger = {
+		has_idea_group = quality_ideas
+		NOT = { has_idea_group = quantity_ideas }
+	}	
+	
+	option = {
+		name = "EVTOPTB843A"
+		add_stability = -1
+		reduce_estate_nobles_loyalty_effect = yes
+	}
+}
+
+# Decline in Army Quality
+country_event = {
+	id = ideagroups.1303
+	title = "EVTNAME6305"
+	desc = "EVTDESC6305"
+	picture = MILITARY_CAMP_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		has_idea_group = quality_ideas
+		has_idea_group = quantity_ideas
+		NOT = { has_country_modifier = "quality_modifier" }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "EVTOPTA6305"
+		add_prestige = -25
+		add_army_professionalism = -0.01
+	}
+
+	option = {
+		name = "EVTOPTB6305"
+		add_army_professionalism = 0.01
+		add_country_modifier = {
+			name = quality_modifier
+			duration = 3650
+		}
+	}
+}
+
+# Steady Boys!
+country_event = {
+	id = ideagroups.1309
+	title = ideagroups.1309.t
+	desc = ideagroups.1309.d
+	picture = LAND_MILITARY_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea_group = quality_ideas
+		is_at_war = yes
+		NOT = { has_country_modifier = "good_discipline" }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = ideagroups.1309.a
+		add_country_modifier = {
+			name = good_discipline
+			duration = 3650
+		}
+	}
+}  
+
+#######################################
+# Quantity Ideas
+#######################################
+
+# Leaders harder to find
+country_event = {
+	id = ideagroups.1401
+	title = "EVTNAME846"
+	desc = "EVTDESC846"
+	picture = MILITARY_CAMP_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea_group = quantity_ideas
+		NOT = { has_idea_group = quality_ideas }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "EVTOPTB846A"
+		add_army_tradition = -5
+		add_army_professionalism = -0.01
+	}
+}
+
+# Administrative Problems
+country_event = {
+	id = ideagroups.1410
+	title = ideagroups.1410.t
+	desc = ideagroups.1410.d
+	picture = MILITARY_CAMP_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_idea_group = quantity_ideas
+		NOT = { has_country_modifier = admin_problems }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = ideagroups.1410.a
+		add_country_modifier = {
+			name = admin_problems
+			duration = 3650
+		}
+		if = {
+			limit = {
+				NOT = { has_completed_all_reforms_trigger = yes }
+			}
+			reduce_reform_progress_small_effect = yes
+		}
+		else = {
+			add_corruption = 0.5
+		}
+	}
+}
+ 
+#######################################
+# Expansion Ideas
+#######################################
+
+# Trade Success
+country_event = {
+	id = ideagroups.1506
+	title = ideagroups.1506.t
+	desc = ideagroups.1506.d
+	picture = MERCHANTS_TALKING_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea_group = expansion_ideas
+		NOT = { has_country_modifier = "trade_success" }
+		NOT = { has_country_modifier = "trade_failure" }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = ideagroups.1506.a
+		add_country_modifier = {
+			name = "trade_success"
+			duration = 3650
+		}
+	}
+} 
+
+# Colonial Disaster
+country_event = {
+	id = ideagroups.1507
+	title = ideagroups.1507.t
+	desc = ideagroups.1507.d
+	picture = COLONIZATION_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea_group = expansion_ideas
+		num_of_colonies = 1
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = ideagroups.1507.a
+		random_owned_province = {
+			limit = {
+				is_colony = yes
+			}
+			add_colonysize = -200
+		}
+	}
+	option = {
+		name = ideagroups.1507.b
+		add_dip_power = -50
+	}
+}
+
+# Diplomatic Faux Pas
+country_event = {
+	id = ideagroups.1510
+	title = ideagroups.1510.t
+	desc = ideagroups.1510.d
+	picture = DIPLOMACY_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea_group = expansion_ideas
+		NOT = { has_country_modifier = "enhanced_reputation" }
+		NOT = { has_country_modifier = "diplo_fuax_pas" }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = ideagroups.1510.a
+		add_country_modifier = {
+			name = "diplo_fuax_pas"
+			duration = 3650
+		}
+	}
+} 
+
+#######################################
+# Administrative Ideas
+#######################################
+
+# Provinces Frustrated by Lack of Autonomy
+country_event = {
+	id = ideagroups.1601
+	title = "EVTNAME6335"
+	desc = "EVTDESC6335" 
+	picture = DEBATE_REPUBLICAN_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea_group = administrative_ideas
+		any_owned_province = {
+			is_colony = no
+			is_overseas = no
+			NOT = { is_core = ROOT }
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "EVTOPTA6335"
+		random_owned_province = {
+			limit = { 
+				is_capital = no
+				is_in_capital_area = yes
+			}
+			add_unrest = 10
+		}
+
+	}
+	option = {
+		name = "EVTOPTB6335"
+		if = {
+			limit = { NOT = { has_completed_all_reforms_trigger = yes } }
+			add_prestige = -10
+			add_adm_power = -25
+		}
+		else = {
+			reduce_reform_progress_small_effect = yes
+		}
+	}
+} 
+
+# Show people our Resilience
+country_event = {
+	id = ideagroups.1607
+	title = ideagroups.1607.t
+	desc = ideagroups.1607.d
+	picture = DEBATE_REPUBLICAN_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea_group = administrative_ideas
+		NOT= { stability = 3 }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = ideagroups.1607.a
+		add_stability_or_adm_power = yes
+	}
+}
+
+# Failed Administration
+country_event = {
+	id = ideagroups.1609
+	title = ideagroups.1609.t
+	desc = ideagroups.1609.d
+	picture = LIBERUM_VETO_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea_group = administrative_ideas
+		stability = -2
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = ideagroups.1609.a
+		add_stability = -1
+	}
+	
+	option = {
+		name = ideagroups.1609.b
+		if = {
+			limit = { NOT = { has_completed_all_reforms_trigger = yes } }
+			add_corruption = 1
+		}	
+		else = {
+			reduce_reform_progress_big_effect = yes
+		}
+	}
+}
+
+#######################################
+# Naval Ideas
+#######################################
+
+# Improved Training
+country_event = {
+	id = ideagroups.1702
+	title = ideagroups.1702.t
+	desc = ideagroups.1702.d
+	picture = UNIVERSITY_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea_group = naval_ideas
+		NOT = { has_country_modifier = "patriotic_curriculum" }
+		NOT = { has_country_modifier = "maintenance_curriculum" }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = ideagroups.1702.a
+		add_country_modifier = {
+			name = "patriotic_curriculum"
+			duration = 3650
+		}
+		add_yearly_sailors = 0.75
+	}
+
+	option = {
+		name = ideagroups.1702.b
+		add_country_modifier = {
+			name = "maintenance_curriculum"
+			duration = 3650
+		}
+		add_yearly_sailors = 0.75
+	}
+}
+
+# Tactical Innovation
+country_event = {
+	id = ideagroups.1703
+	title = ideagroups.1703.t
+	desc = ideagroups.1703.d
+	picture = NAVAL_MILITARY_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea_group = naval_ideas
+		NOT = { has_country_modifier = "galley_veterans" }
+		NOT = { has_country_modifier = "heavy_ship_veterans" }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = ideagroups.1703.a
+		add_country_modifier = {
+			name = "galley_veterans"
+			duration = 3650
+		}
+	}
+
+	option = {
+		name = ideagroups.1703.b
+		add_country_modifier = {
+			name = "heavy_ship_veterans"
+			duration = 3650
+		}
+	}
+}
+
+# Rotting Wood
+country_event = {
+	id = ideagroups.1709
+	title = ideagroups.1709.t
+	desc = ideagroups.1709.d
+	picture = HARBOUR_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea_group = naval_ideas
+		NOT = { has_country_modifier = "repairing_decayed_ships" }
+		NOT = { has_country_modifier = "rotting_wood" }
+		any_owned_province = {
+			has_port = yes
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = ideagroups.1709.a
+		add_country_modifier = {
+			name = "repairing_decayed_ships"
+			duration = 3650
+		}
+	}
+
+	option = {
+		name = ideagroups.1709.b
+		add_country_modifier = {
+			name = "rotting_wood"
+			duration = 3650
+		}
+	}
+}
+
+#######################################
+# Influence Ideas
+#######################################
+
+# Skilled Diplomat
+country_event = {
+	id = ideagroups.1800
+	title = ideagroups.1800.t
+	desc = ideagroups.1800.d
+	picture = DIPLOMACY_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea_group = influence_ideas
+		NOT = { has_country_modifier = "skilled_diplomat" }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = ideagroups.1800.a
+		add_country_modifier = {
+			name = "skilled_diplomat"
+			duration = 3650
+		}
+	}
+
+	option = {
+		name = ideagroups.1800.b
+		add_dip_power = 50
+	}
+}
+
+# A Firm Hand
+country_event = {
+	id = ideagroups.1805
+	title = ideagroups.1805.t
+	desc = ideagroups.1805.d
+	picture = CONQUEST_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea_group = influence_ideas
+		vassal = 1
+		NOT = { has_country_modifier = "firm_hand" }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = ideagroups.1805.a
+		add_country_modifier = {
+			name = "firm_hand"
+			duration = 3650
+		}
+	}
+}
+
+# Spy Ring Busted
+country_event = {
+	id = ideagroups.1808
+	title = ideagroups.1808.t
+	desc = ideagroups.1808.d
+	picture = SPY_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea_group = influence_ideas
+		NOT = { has_country_modifier = "suspected_diplomats" }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = ideagroups.1808.a
+		add_country_modifier = {
+			name = "suspected_diplomats"
+			duration = 3650
+		}
+	}
+}
+
+#######################################
+# Humanist Ideas
+#######################################
+
+# Freethinkers Not Persecuted
+country_event = {
+	id = ideagroups.1900
+	title = ideagroups.1900.t
+	desc = ideagroups.1900.d
+	picture = UNIVERSITY_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea_group = humanist_ideas
+		NOT = { has_country_modifier = "free_freethinkers" }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = ideagroups.1900.a
+		add_piety = -0.05
+		if = {
+			limit = {
+				NOT = { has_completed_all_reforms_trigger = yes }
+				primitives = no
+			}
+			add_reform_progress_small_effect = yes
+		}
+		add_country_modifier = {
+			name = "free_freethinkers"
+			duration = 3650
+		}
+	}
+}
+
+# Fair Laws Embraced By All
+country_event = {
+	id = ideagroups.1901
+	title = ideagroups.1901.t
+	desc = ideagroups.1901.d
+	picture = LIBERUM_VETO_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea_group = humanist_ideas
+		NOT = { has_country_modifier = "fair_laws" }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = ideagroups.1901.a
+		add_piety = -0.05
+		add_country_modifier = {
+			name = "fair_laws"
+			duration = 3650
+		}
+	}
+}
+
+# Idea Swap?
+country_event = {
+	id = ideagroups.1
+	title = ideagroups.1.t
+	desc = ideagroups.1.d
+	picture = ADVISOR_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = ideagroups.1.a #Yes Please!
+		ai_chance = { factor = 1 }
+		trigger = { has_custom_ideas = no }
+		swap_free_idea_group = yes		#keep progress
+	}
+	option = {
+		name = ideagroups.1.b #No, we cannot abandon our roots.
+		#No Effect
+		ai_chance = { factor = 0 }
+	}
+}

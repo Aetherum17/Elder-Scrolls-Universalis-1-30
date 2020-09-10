@@ -1,0 +1,1286 @@
+namespace = es_29_scenario
+
+country_event = {
+	id = es_29_scenario.1
+	title = es_29_scenario.1.t
+	desc = es_29_scenario.1.d
+	picture = ES_HEARTLANDS_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_29_scenario.1_flag }
+		is_year = 1334
+		NOT = { is_year = 1387 }
+		owns = 724
+		culture_group = tsaesci_cg
+    }
+
+	mean_time_to_happen = {
+		days = 9490
+	}
+	
+	immediate = {
+	    set_country_flag = es_29_scenario.1_flag
+	}
+
+	option = {
+		name = "es_29_scenario.1.a"
+		ai_chance = { factor = 33 }
+		
+		set_global_flag = tsaesci_attack_tamriel_flag
+		
+		add_country_modifier = {
+		    name = "29_conquest_of_tamriel"
+			duration = 9125
+		}
+		
+		every_province = {
+		    limit = {
+		    OR = {
+			    region = great_planes_lr
+				region = central_syrodiil_lr
+			}
+			}
+			add_core = ROOT
+		}
+		
+		if = {
+		limit = {
+		exists = SKY
+		NOT = { alliance_with = SKY }
+		NOT = { overlord_of = SKY }
+		}
+		declare_war_with_cb = {
+			who = SKY
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = OLD
+		NOT = { alliance_with = OLD }
+		NOT = { overlord_of = OLD }
+		}
+		declare_war_with_cb = {
+			who = OLD
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = CYR
+		NOT = { alliance_with = CYR }
+		NOT = { overlord_of = CYR }
+		}
+		declare_war_with_cb = {
+			who = CYR
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = ORD
+		NOT = { alliance_with = ORD }
+		NOT = { overlord_of = ORD }
+		}
+		declare_war_with_cb = {
+			who = ORD
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = ALE
+		NOT = { alliance_with = ALE }
+		NOT = { overlord_of = ALE }
+		}
+		declare_war_with_cb = {
+			who = ALE
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+	}
+	
+	option = {
+		name = "es_29_scenario.1.b"
+		ai_chance = { factor = 33 }
+		add_prestige = -10
+		set_global_flag = tsaesci_settlers_flag
+		add_country_modifier = {
+		    name = "29_trade_with_tamriel"
+			duration = 9125
+		}
+	}
+	
+	option = {
+		name = "es_29_scenario.1.c"
+		ai_chance = { factor = 33 }
+		add_stability = 1
+		add_prestige = -25
+		add_country_modifier = {
+		    name = "01_focus_on_internal_sphere"
+			duration = 9125
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_29_scenario.2
+	title = es_29_scenario.2.t
+	desc = es_29_scenario.2.d
+	picture = ES_AKAVIRI_INVASION_eventPicture
+	
+	trigger = {
+	    has_global_flag = tsaesci_attack_tamriel_flag
+	    NOT = { has_country_flag = es_29_scenario.2_flag }
+		is_year = 1334
+		NOT = { is_year = 1387 }
+		capital_scope = {
+		   OR = {
+			    region = great_planes_lr
+				region = central_syrodiil_lr
+			}
+		}
+		is_in_war = {
+        participants = TSA
+		participants = ROOT
+        }
+    }
+
+	mean_time_to_happen = {
+		days = 1825
+	}
+	
+	immediate = {
+	    set_country_flag = es_29_scenario.2_flag
+	}
+
+	option = {
+		name = "es_29_scenario.2.a"
+		ai_chance = { factor = 50 }
+	    random_list = {
+		    50 = {
+			    add_country_modifier = {
+		        name = "11_offence_doctrine"
+			    duration = 9125
+		        }
+				add_prestige = 50
+			}
+			50 = {
+			    add_stability = -1
+				add_prestige = -35
+				kill_ruler = yes
+			}
+		}
+	}
+	
+	option = {
+		name = "es_29_scenario.2.b"
+		ai_chance = { factor = 50 }
+		add_prestige = -25
+		random_owned_province = {
+		    limit = {
+			    OR = {
+			    region = great_planes_lr
+				region = central_syrodiil_lr
+			    }
+			}
+			add_devastation = 50
+		}
+		random_owned_province = {
+		    limit = {
+			    OR = {
+			    region = great_planes_lr
+				region = central_syrodiil_lr
+			    }
+			}
+			add_devastation = 50
+		}
+		random_owned_province = {
+		    limit = {
+			    OR = {
+			    region = great_planes_lr
+				region = central_syrodiil_lr
+			    }
+			}
+			add_devastation = 50
+		}
+		random_owned_province = {
+		    limit = {
+			    OR = {
+			    region = great_planes_lr
+				region = central_syrodiil_lr
+			    }
+			}
+			add_devastation = 50
+		}
+		random_owned_province = {
+		    limit = {
+			    OR = {
+			    region = great_planes_lr
+				region = central_syrodiil_lr
+			    }
+			}
+			add_devastation = 50
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_29_scenario.3
+	title = es_29_scenario.3.t
+	desc = es_29_scenario.3.d
+	picture = ES_AKAVIR_CITY_eventPicture
+	
+	trigger = {
+	    OR = {
+		    has_global_flag = tsaesci_settlers_flag
+		    is_year = 1387
+		}
+		NOT = { is_year = 1555 }
+		any_owned_province = {
+		    OR = {
+			    region = great_planes_lr
+				region = central_syrodiil_lr
+			}
+		}
+    }
+
+	mean_time_to_happen = {
+		days = 1200
+	}
+
+	option = {
+		name = "es_29_scenario.3.a"
+		ai_chance = { factor = 50 }
+	    random_owned_province = {
+	        limit = {
+			    NOT = { is_capital = yes }
+				religion = ROOT
+			    OR = {
+				region = great_planes_lr
+				region = central_syrodiil_lr
+				}
+				NOT = { culture = tsaesci }
+			}
+			change_culture = tsaesci
+			add_base_tax = 3
+			add_base_production = 3
+			add_base_manpower = 3
+	   }
+	}
+	
+	option = {
+		name = "es_29_scenario.3.b"
+		ai_chance = { factor = 50 }
+		add_prestige = -5
+	}
+	
+}
+
+country_event = {
+	id = es_29_scenario.4
+	title = es_29_scenario.4.t
+	desc = es_29_scenario.4.d
+	picture = ES_THE_PRINCE_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_29_scenario.4_flag }
+		is_year = 1334
+		NOT = { is_year = 1387 }
+		owns = 1206
+	    culture_group = cyrodiil_cg
+    }
+
+	mean_time_to_happen = {
+		days = 9490
+	}
+	
+	immediate = {
+	    set_country_flag = es_29_scenario.4_flag
+	}
+
+	option = {
+		name = "es_29_scenario.4.a"
+		ai_chance = { factor = 50 }
+	    if = {
+		limit = {
+			NOT = { government_rank = 10 }
+			}
+		    set_government_rank = 10
+		}
+		define_ruler = {
+			name = "Reman"
+            dynasty = "Cyrodiil"
+            adm = 5
+			dip = 5
+            mil = 7				
+            fixed = yes
+			age = 25
+        }
+	}
+	
+	option = {
+		name = "es_29_scenario.4.b"
+		ai_chance = { factor = 50 }
+		add_stability = 1
+		define_general = {
+		name = "Reman Cyrodiil"
+        shock = 5
+        fire = 5
+        manuever = 5
+        siege = 5
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_29_scenario.5
+	title = es_29_scenario.5.t
+	desc = es_29_scenario.5.d
+	picture = ES_SKYRIM_DECAY_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_29_scenario.5_flag }
+		is_year = 1334
+		NOT = { is_year = 1387 }
+		owns = 1275
+	    culture_group = northern_cg
+		OR = {
+		    exists = TAM
+			exists = CYR
+			exists = ORD
+			exists = ALE
+			exists = HEA
+		}
+    }
+
+	mean_time_to_happen = {
+		days = 9490
+	}
+	
+	immediate = {
+	    set_country_flag = es_29_scenario.5_flag
+	}
+
+	option = {
+		name = "es_29_scenario.5.a"
+		ai_chance = { factor = 50 }
+		add_stability = 3
+		
+		if = {
+		    limit = {
+			NOT = { exists = SKY }
+			}
+			change_tag = SKY
+			set_country_flag = formed_sky_flag
+			if = {
+				limit = {
+					NOT = { government_rank = 5 }
+				}
+				set_government_rank = 5
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		}
+		
+		every_province = {
+		    limit = {
+			    NOT = { owned_by = ROOT }
+				OR = {
+	         	area = skyrim_7_la
+		        area = skyrim_14_la
+		        area = skyrim_19_la
+				}
+			}
+			add_core = ROOT
+		}
+		
+		if = {
+		limit = {
+		exists = NA7
+		NOT = { alliance_with = NA7 }
+	    NOT = { overlord_of = NA7 }
+		}
+		declare_war_with_cb = {
+			who = NA7
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = NB4
+		NOT = { alliance_with = NB4 }
+	    NOT = { overlord_of = NB4 }
+		}
+		declare_war_with_cb = {
+			who = NB4
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = NB9
+		NOT = { alliance_with = NB9 }
+	    NOT = { overlord_of = NB9 }
+		}
+		declare_war_with_cb = {
+			who = NB9
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = REA
+		NOT = { alliance_with = REA }
+	    NOT = { overlord_of = REA }
+		}
+		declare_war_with_cb = {
+			who = REA
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = WSK
+		NOT = { alliance_with = WSK }
+	    NOT = { overlord_of = WSK }
+		}
+		declare_war_with_cb = {
+			who = WSK
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+	    if = {
+		    limit = {
+			    exists = TAM
+			}
+			TAM = {
+			    create_subject = {
+                subject_type = imperial_subject
+                subject = ROOT
+                }
+				set_country_flag = skyrim_province_flag
+				if = {
+			    limit = {
+				    exists = SKY
+				}
+				create_subject = {
+                    subject_type = imperial_subject
+                    subject = SKY
+                }
+				}
+			}
+	        every_province = {
+			    limit = {
+				    OR = {
+				    region = nordic_coast_lr
+					region = great_planes_lr 
+					}
+				}
+				add_permanent_claim = TAM
+			}
+		}
+		else_if = {
+		    limit = {
+			    exists = CYR
+			}
+			CYR = {
+			    create_subject = {
+                subject_type = imperial_subject
+                subject = ROOT
+                }
+				set_country_flag = skyrim_province_flag
+				if = {
+			    limit = {
+				    exists = SKY
+				}
+				create_subject = {
+                    subject_type = imperial_subject
+                    subject = SKY
+                }
+				}
+			}
+			every_province = {
+			    limit = {
+				    OR = {
+				    region = nordic_coast_lr
+					region = great_planes_lr 
+					}
+				}
+				add_permanent_claim = CYR
+			}
+		}
+		else_if = {
+		    limit = {
+			    exists = ORD
+			}
+			ORD = {
+			    create_subject = {
+                subject_type = imperial_subject
+                subject = ROOT
+                }
+				set_country_flag = skyrim_province_flag
+				if = {
+			    limit = {
+				    exists = SKY
+				}
+				create_subject = {
+                    subject_type = imperial_subject
+                    subject = SKY
+                }
+				}
+			}
+			every_province = {
+			    limit = {
+				    OR = {
+				    region = nordic_coast_lr
+					region = great_planes_lr 
+					}
+				}
+				add_permanent_claim = ORD
+			}
+		}
+		else_if = {
+		    limit = {
+			    exists = ALE
+			}
+			ALE = {
+			    create_subject = {
+                subject_type = imperial_subject
+                subject = ROOT
+                }
+				set_country_flag = skyrim_province_flag
+				if = {
+			    limit = {
+				    exists = SKY
+				}
+				create_subject = {
+                    subject_type = imperial_subject
+                    subject = SKY
+                }
+				}
+			}
+			every_province = {
+			    limit = {
+				    OR = {
+				    region = nordic_coast_lr
+					region = great_planes_lr 
+					}
+				}
+				add_permanent_claim = ALE
+			}
+		}
+		else_if = {
+		    limit = {
+			    exists = HEA
+			}
+			HEA = {
+			    create_subject = {
+                subject_type = imperial_subject
+                subject = ROOT
+                }
+				set_country_flag = skyrim_province_flag
+				if = {
+			    limit = {
+				    exists = SKY
+				}
+				create_subject = {
+                    subject_type = imperial_subject
+                    subject = SKY
+                }
+				}
+			}
+			every_province = {
+			    limit = {
+				    OR = {
+				    region = nordic_coast_lr
+					region = great_planes_lr 
+					}
+				}
+				add_permanent_claim = HEA
+			}
+		}
+	}
+	
+	option = {
+		name = "es_29_scenario.5.b"
+		ai_chance = { factor = 50 }
+		add_prestige = 15
+	}
+	
+}
+
+country_event = {
+	id = es_29_scenario.6
+	title = es_29_scenario.5.t
+	desc = es_29_scenario.5.d
+	picture = ES_VALENWOOD_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_29_scenario.6_flag }
+		is_year = 1334
+		NOT = { is_year = 1387 }
+		owns = 820
+	    culture_group = bosmer_cg
+		OR = {
+		    exists = TAM
+			exists = CYR
+			exists = ORD
+			exists = ALE
+			exists = HEA
+		}
+    }
+
+	mean_time_to_happen = {
+		days = 9490
+	}
+	
+	immediate = {
+	    set_country_flag = es_29_scenario.6_flag
+	}
+
+	option = {
+		name = "es_29_scenario.5.a"
+		ai_chance = { factor = 50 }
+		add_stability = 3
+		
+		if = {
+		    limit = {
+			NOT = { exists = VAL }
+			}
+			change_tag = VAL
+			set_country_flag = formed_val_flag
+			if = {
+				limit = {
+					NOT = { government_rank = 5 }
+				}
+				set_government_rank = 5
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		}
+		
+		every_province = {
+		    limit = {
+			    NOT = { owned_by = ROOT }
+				OR = {
+	         	area = valenwood_2_la
+		        area = valenwood_4_la
+		        area = valenwood_5_la
+				}
+			}
+			add_core = ROOT
+		}
+		
+		if = {
+		limit = {
+		exists = VA2
+		NOT = { alliance_with = VA2 }
+	    NOT = { overlord_of = VA2 }
+		}
+		declare_war_with_cb = {
+			who = VA2
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = VA4
+		NOT = { alliance_with = VA4 }
+	    NOT = { overlord_of = VA4 }
+		}
+		declare_war_with_cb = {
+			who = VA4
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = VA5
+		NOT = { alliance_with = VA5 }
+	    NOT = { overlord_of = VA5 }
+		}
+		declare_war_with_cb = {
+			who = VA5
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = SOR
+		NOT = { alliance_with = SOR }
+	    NOT = { overlord_of = SOR }
+		}
+		declare_war_with_cb = {
+			who = SOR
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+	    if = {
+		    limit = {
+			    exists = TAM
+			}
+			TAM = {
+			    create_subject = {
+                subject_type = imperial_subject
+                subject = ROOT
+                }
+				set_country_flag = valenwood_lr_province_flag
+				if = {
+			    limit = {
+				    exists = VAL
+				}
+				create_subject = {
+                    subject_type = imperial_subject
+                    subject = VAL
+                }
+				}
+			}
+			every_province = {
+			    limit = {
+				    OR = {
+					region = northern_valenwood_lr 
+					region = southern_valenwood_lr 
+					}
+				}
+				add_permanent_claim = TAM
+			}
+		}
+		else_if = {
+		    limit = {
+			    exists = CYR
+			}
+			CYR = {
+			    create_subject = {
+                subject_type = imperial_subject
+                subject = ROOT
+                }
+				set_country_flag = valenwood_lr_province_flag
+				if = {
+			    limit = {
+				    exists = VAL
+				}
+				create_subject = {
+                    subject_type = imperial_subject
+                    subject = VAL
+                }
+				}
+			}
+			every_province = {
+			    limit = {
+				    OR = {
+					region = northern_valenwood_lr 
+					region = southern_valenwood_lr 
+					}
+				}
+				add_permanent_claim = CYR
+			}
+		}
+		else_if = {
+		    limit = {
+			    exists = ORD
+			}
+			ORD = {
+			    create_subject = {
+                subject_type = imperial_subject
+                subject = ROOT
+                }
+				set_country_flag = valenwood_lr_province_flag
+				if = {
+			    limit = {
+				    exists = VAL
+				}
+				create_subject = {
+                    subject_type = imperial_subject
+                    subject = VAL
+                }
+				}
+			}
+			every_province = {
+			    limit = {
+				    OR = {
+					region = northern_valenwood_lr 
+					region = southern_valenwood_lr 
+					}
+				}
+				add_permanent_claim = ORD
+			}
+		}
+		else_if = {
+		    limit = {
+			    exists = ALE
+			}
+			ALE = {
+			    create_subject = {
+                subject_type = imperial_subject
+                subject = ROOT
+                }
+				set_country_flag = valenwood_lr_province_flag
+				if = {
+			    limit = {
+				    exists = VAL
+				}
+				create_subject = {
+                    subject_type = imperial_subject
+                    subject = VAL
+                }
+				}
+			}
+			every_province = {
+			    limit = {
+				    OR = {
+					region = northern_valenwood_lr 
+					region = southern_valenwood_lr 
+					}
+				}
+				add_permanent_claim = ALE
+			}
+		}
+		else_if = {
+		    limit = {
+			    exists = HEA
+			}
+			HEA = {
+			    create_subject = {
+                subject_type = imperial_subject
+                subject = ROOT
+                }
+				set_country_flag = valenwood_lr_province_flag
+				if = {
+			    limit = {
+				    exists = VAL
+				}
+				create_subject = {
+                    subject_type = imperial_subject
+                    subject = VAL
+                }
+				}
+			}
+			every_province = {
+			    limit = {
+				    OR = {
+					region = northern_valenwood_lr 
+					region = southern_valenwood_lr 
+					}
+				}
+				add_permanent_claim = HEA
+			}
+		}
+	}
+	
+	option = {
+		name = "es_29_scenario.5.b"
+		ai_chance = { factor = 50 }
+		add_prestige = 15
+	}
+}
+
+country_event = {
+	id = es_29_scenario.7
+	title = es_29_scenario.7.t
+	desc = es_29_scenario.7.d
+	picture = ES_COLOVIA_1_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_29_scenario.7_flag }
+		is_year = 1334
+		NOT = { is_year = 1387 }
+		owns = 1206
+	    culture_group = cyrodiil_cg
+		any_country = {
+		    NOT = { is_subject_of = ROOT }
+			capital_scope = { OR = { region = western_syrodiil_lr region = eastern_syrodiil_lr region = central_syrodiil_lr } }
+		}
+		government = monarchy
+    }
+
+	mean_time_to_happen = {
+		days = 1825
+	}
+	
+	immediate = {
+	    set_country_flag = es_29_scenario.7_flag
+	}
+
+	option = {
+		name = "es_29_scenario.7.a"
+		ai_chance = { factor = 50 }
+	    random_country = {
+		    limit = {
+			    NOT = { is_subject_of = ROOT }
+		       	capital_scope = { OR = { region = western_syrodiil_lr region = eastern_syrodiil_lr region = central_syrodiil_lr } }
+			}
+			declare_war_with_cb = {
+			who = ROOT
+			casus_belli = cb_restore_personal_union
+		    }
+		}
+	}
+	
+	option = {
+		name = "es_29_scenario.7.b"
+		ai_chance = { factor = 50 }
+		add_prestige = -15
+	}
+	
+}
+
+country_event = {
+	id = es_29_scenario.8
+	title = es_29_scenario.8.t
+	desc = es_29_scenario.8.d
+	picture = ES_REACHMEN_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_29_scenario.8_flag }
+		is_year = 1334
+		NOT = { is_year = 1387 }
+	    primary_culture = reachmen
+    }
+
+	mean_time_to_happen = {
+		days = 9490
+	}
+	
+	immediate = {
+	    set_country_flag = es_29_scenario.8_flag
+	}
+
+	option = {
+		name = "es_29_scenario.8.a"
+		ai_chance = { factor = 50 }
+		add_prestige = -10
+	    add_stability = -1
+		add_country_modifier = {
+		    name = "29_forsworns"
+			duration = -1
+		}
+	}
+	
+	option = {
+		name = "es_29_scenario.8.b"
+		ai_chance = { factor = 50 }
+		add_stability = 1
+	}
+	
+}
+
+country_event = {
+	id = es_29_scenario.9
+	title = es_29_scenario.9.t
+	desc = es_29_scenario.9.d
+	picture = ES_SKY_HEAVEN_TEMPLE_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_29_scenario.9_flag }
+		is_year = 1334
+		NOT = { is_year = 1387 }
+		owns = 1352
+		1352 = { NOT = { has_province_modifier = 29_sky_heaven_temple } }
+    }
+
+	mean_time_to_happen = {
+		days = 9490
+	}
+	
+	immediate = {
+	    set_country_flag = es_29_scenario.9_flag
+	}
+	
+	option = {
+		name = "es_29_scenario.9.a"
+		ai_chance = { factor = 100 }
+		1352 = {
+		add_building = fort_16th
+		change_culture = tsaesci
+		change_religion = tsaesci_pantheon
+		add_permanent_province_modifier = {
+		    name = "29_sky_heaven_temple"
+			duration = 9125
+		}
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_29_scenario.10
+	title = es_29_scenario.10.t
+	desc = es_29_scenario.10.d
+	picture = ES_Vvardenfell_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_29_scenario.10_flag }
+		is_year = 1334
+		NOT = { is_year = 1387 }
+		OR = {
+		owns = 957
+		owns = 1002
+		owns = 1028
+		}
+		culture_group = chimeris_cg
+    }
+
+	mean_time_to_happen = {
+		days = 9490
+	}
+	
+	immediate = {
+	    set_country_flag = es_29_scenario.10_flag
+	}
+
+	option = {
+		name = "es_29_scenario.10.a"
+		ai_chance = { factor = 33 }
+		
+		add_country_modifier = {
+		    name = "19_colonization"
+			duration = 9125
+		}
+		
+		if = {
+		    limit = {
+			    owns = 957
+			}
+			every_province = {
+		    limit = {
+		    area = morrowind_20_la
+			}
+			add_core = ROOT
+		    }
+			
+		if = {
+		limit = {
+		exists = MC0
+		NOT = { alliance_with = MC0 }
+		NOT = { overlord_of = MC0 }
+		}
+		declare_war_with_cb = {
+			who = MC0
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = ASH
+		NOT = { alliance_with = ASH }
+		NOT = { overlord_of = ASH }
+		}
+		declare_war_with_cb = {
+			who = ASH
+			casus_belli = cb_es_scenario
+		}
+		}
+			
+		}
+		
+		if = {
+		    limit = {
+			    owns = 1002
+			}
+			every_province = {
+		    limit = {
+		    area = morrowind_19_la
+			}
+			add_core = ROOT
+		    }
+			
+		if = {
+		limit = {
+		exists = MB9
+		NOT = { alliance_with = MB9 }
+		NOT = { overlord_of = MB9 }
+		}
+		declare_war_with_cb = {
+			who = MB9
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = ASH
+		NOT = { alliance_with = ASH }
+		NOT = { overlord_of = ASH }
+		}
+		declare_war_with_cb = {
+			who = ASH
+			casus_belli = cb_es_scenario
+		}
+		}
+			
+		}
+		
+		if = {
+		    limit = {
+			    owns = 1028
+			}
+			every_province = {
+		    limit = {
+		    area = morrowind_18_la
+			}
+			add_core = ROOT
+		    }
+			
+		if = {
+		limit = {
+		exists = MB8
+		NOT = { alliance_with = MB8 }
+		NOT = { overlord_of = MB8 }
+		}
+		declare_war_with_cb = {
+			who = MB8
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = ASH
+		NOT = { alliance_with = ASH }
+		NOT = { overlord_of = ASH }
+		}
+		declare_war_with_cb = {
+			who = ASH
+			casus_belli = cb_es_scenario
+		}
+		}
+			
+		}
+		
+		
+	}
+	
+	option = {
+		name = "es_29_scenario.10.b"
+		ai_chance = { factor = 33 }
+		add_prestige = -10
+		
+		add_country_modifier = {
+		    name = "19_expansion_via_trade"
+			duration = 9125
+		}
+	}
+	
+	option = {
+		name = "es_29_scenario.10.c"
+		ai_chance = { factor = 33 }
+		add_prestige = 25
+	}
+	
+}
+
+country_event = {
+	id = es_29_scenario.11
+	title = es_29_scenario.11.t
+	desc = es_29_scenario.11.d
+	picture = ES_YOUNG_PIRATE_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_29_scenario.11_flag }
+		is_year = 1334
+		NOT = { is_year = 1387 }
+		OR = {
+		owns = 1275
+		owns = 1028
+		}
+    }
+
+	mean_time_to_happen = {
+		days = 9490
+	}
+	
+	immediate = {
+	    set_country_flag = es_29_scenario.11_flag
+	}
+
+	option = {
+		name = "es_29_scenario.11.a"
+		ai_chance = { factor = 33 }
+		
+		add_stability = -1
+		
+		if = {
+		    limit = {
+			    owns = 1275
+			}
+			add_core = 1274
+			
+		if = {
+		limit = {
+		exists = STA
+		NOT = { alliance_with = STA }
+		NOT = { overlord_of = STA }
+		}
+		declare_war_with_cb = {
+			who = STA
+			casus_belli = cb_es_scenario
+		}
+		}
+		}
+		
+		if = {
+		    limit = {
+			    owns = 1028
+			}
+			add_core = 1035
+			
+		if = {
+		limit = {
+		exists = SED
+		NOT = { alliance_with = SED }
+		NOT = { overlord_of = SED }
+		}
+		declare_war_with_cb = {
+			who = SED
+			casus_belli = cb_es_scenario
+		}
+		}
+		}
+		
+		add_country_modifier = {
+		name = "22_hunt_on_pirates"
+		duration = 9125
+		}
+		
+		
+	}
+	
+	option = {
+		name = "es_29_scenario.11.b"
+		ai_chance = { factor = 33 }
+		add_prestige = -10
+		
+		add_country_modifier = {
+		name = "22_pirate_heaven"
+		duration = 9125
+		}
+	}
+	
+}

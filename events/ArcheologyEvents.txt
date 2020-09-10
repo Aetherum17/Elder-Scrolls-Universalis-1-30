@@ -1,0 +1,1458 @@
+namespace = es_archeology
+
+country_event = {
+	id = es_archeology.2
+	title = "es_archeology.2.t"
+	desc = "es_archeology.2.d"
+	picture = EMPTY_RUINS_eventPicture
+	
+	trigger = {
+		NOT = { has_country_flag = archeology_expedition_more_funds_flag }
+		has_country_modifier = es_archeology_expedition
+	}
+	
+	mean_time_to_happen = {
+		days = 3650
+	}
+	
+	immediate = {
+		clr_country_flag = archeology_expedition_on_flag
+		remove_country_modifier = es_archeology_expedition
+	}
+	
+	option = {
+		name = "es_archeology.2.a"
+		ai_chance = { factor = 100 }
+		add_prestige = -10
+		random_owned_province = {
+		    limit = { has_province_flag = archeology_site }
+			clr_province_flag = archeology_site
+		}
+	}
+}
+
+country_event = {
+	id = es_archeology.3
+	title = "es_archeology.3.t"
+	desc = "es_archeology.3.d"
+	picture = ARCHEOLOGICAL_SITE_eventPicture
+	
+	trigger = {
+	    has_country_modifier = es_archeology_expedition
+		NOT = { has_country_flag = archeology_expedition_more_funds_flag }
+	}
+	
+	mean_time_to_happen = {
+		days = 3650
+	}
+	
+	immediate = {
+	    set_country_flag = archeology_expedition_more_funds_flag
+	}
+	
+	option = {
+		name = "es_archeology.3.a"
+		ai_chance = { factor = 50 }
+		add_treasury = -500
+		clr_country_flag = archeology_expedition_more_funds_flag
+	}
+	
+	option = {
+		name = "es_archeology.3.b"
+		ai_chance = { factor = 50 }
+		add_prestige = -5
+		clr_country_flag = archeology_expedition_on_flag
+		clr_country_flag = archeology_expedition_more_funds_flag
+		remove_country_modifier = es_archeology_expedition
+		random_owned_province = {
+		    limit = { has_province_flag = archeology_site }
+			clr_province_flag = archeology_site
+		}
+	}
+}
+
+country_event = {
+	id = es_archeology.4
+	title = "es_archeology.4.t"
+	desc = "es_archeology.4.d"
+	picture = TREASURE_ROOM_eventPicture
+	
+	trigger = {
+		has_country_modifier = es_archeology_expedition
+		NOT = { has_country_flag = archeology_expedition_more_funds_flag }
+	}
+	
+	mean_time_to_happen = {
+		days = 3650
+	}
+	
+	immediate = {
+		clr_country_flag = archeology_expedition_more_funds_flag
+		clr_country_flag = archeology_expedition_on_flag
+		remove_country_modifier = es_archeology_expedition
+	}
+	
+	option = {
+		name = "es_archeology.4.a"
+		ai_chance = { factor = 100 }
+		add_prestige = 10
+		hidden_effect = {
+			random_list = {
+				1 = { country_event = { id = es_archeology.4001 days = 0 } }	#odhma_infinium 
+				1 = { country_event = { id = es_archeology.4002 days = 0 } }	#skull_of_corruption 
+				1 = { country_event = { id = es_archeology.4003 days = 0 } }	#masque_of_clavicus_vile 
+				1 = { country_event = { id = es_archeology.4004 days = 0 } }	#azura_star 
+				1 = { country_event = { id = es_archeology.4005 days = 0 } }	#black_star 
+				1 = { country_event = { id = es_archeology.4006 days = 0 } }	#staff_of_magnus 
+				1 = { country_event = { id = es_archeology.4007 days = 0 } }	#eye_of_magnus 
+				1 = { country_event = { id = es_archeology.4008 days = 0 } }	#heart_of_lorkhan 
+				1 = { country_event = { id = es_archeology.4009 days = 0 } }	#skeleton_key 
+				1 = { country_event = { id = es_archeology.4010 days = 0 } }	#sanguine_rose 
+				1 = { country_event = { id = es_archeology.4011 days = 0 } }	#ring_of_hircine 
+				1 = { country_event = { id = es_archeology.4012 days = 0 } }	#hide_of_savior 
+				1 = { country_event = { id = es_archeology.4013 days = 0 } }	#wabbajack 
+				1 = { country_event = { id = es_archeology.4014 days = 0 } }	#brush_of_truepaint 
+				1 = { country_event = { id = es_archeology.4015 days = 0 } }	#spellbreaker 
+				1 = { country_event = { id = es_archeology.4016 days = 0 } }	#volendrung 
+				1 = { country_event = { id = es_archeology.4017 days = 0 } }	#dawnbreaker 
+				1 = { country_event = { id = es_archeology.4018 days = 0 } }	#ebony_blade 
+				1 = { country_event = { id = es_archeology.4019 days = 0 } }	#ebony_male 
+				1 = { country_event = { id = es_archeology.4020 days = 0 } }	#mace_of_molag_bal 
+				1 = { country_event = { id = es_archeology.4021 days = 0 } }	#razor_of_mehrunes 
+				1 = { country_event = { id = es_archeology.4022 days = 0 } }	#ring_of_namira 
+				1 = { country_event = { id = es_archeology.4023 days = 0 } }	#chrysamere 
+				1 = { country_event = { id = es_archeology.4024 days = 0 } }	#hammer_of_stendarr 
+				1 = { country_event = { id = es_archeology.4025 days = 0 } }	#mail_of_lord 
+				1 = { country_event = { id = es_archeology.4026 days = 0 } }	#shield_of_auriel 
+				1 = { country_event = { id = es_archeology.4027 days = 0 } }	#bow_of_auriel 
+				1 = { country_event = { id = es_archeology.4028 days = 0 } }	#keening 
+				1 = { country_event = { id = es_archeology.4029 days = 0 } }	#etherial_crown 
+				1 = { country_event = { id = es_archeology.4030 days = 0 } }	#etherial_shield 
+				1 = { country_event = { id = es_archeology.4031 days = 0 } }	#etherial_staff 
+				1 = { country_event = { id = es_archeology.4032 days = 0 } }	#bow_of_fate 
+				1 = { country_event = { id = es_archeology.4033 days = 0 } }	#visage_of_mzund 
+				1 = { country_event = { id = es_archeology.4034 days = 0 } }	#zephyr 
+				1 = { country_event = { id = es_archeology.4035 days = 0 } }	#spider_control_rod 
+				1 = { country_event = { id = es_archeology.4036 days = 0 } }	#goldbrand 
+				1 = { country_event = { id = es_archeology.4037 days = 0 } }	#epistolary_acumen 
+				1 = { country_event = { id = es_archeology.4038 days = 0 } }	#filament_and_filigree 
+				1 = { country_event = { id = es_archeology.4039 days = 0 } }	#the_hidden_twilight 
+				1 = { country_event = { id = es_archeology.4040 days = 0 } }	#the_sallow_regent 
+				1 = { country_event = { id = es_archeology.4041 days = 0 } }	#the_winds_of_change 
+				1 = { country_event = { id = es_archeology.4042 days = 0 } }	#untold_legends 
+				1 = { country_event = { id = es_archeology.4043 days = 0 } }	#waking_dreams 
+				1 = { country_event = { id = es_archeology.4044 days = 0 } }	#ring_of_kajiiti 
+				14 = { add_adm_power = 250 }
+				14 = { add_dip_power = 250 }
+				14 = { add_mil_power = 250 }
+				14 = { add_stability = 1 }
+			}
+		}
+	}
+}
+
+#odhma_infinium
+country_event = {
+	id = es_archeology.4001
+	title = "es_archeology.4001.t"
+	desc = "es_archeology.4000.d"
+	picture = odhma_infinium_eventpictures
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_modifier = odhma_infinium }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			add_country_modifier = { name = "odhma_infinium" duration = -1 }
+		}
+	}
+	
+	option = {
+		name = "es_archeology.4.a"
+		tooltip = {
+			add_country_modifier = { name = "odhma_infinium" duration = -1 }
+		}
+	}
+}
+
+
+#skull_of_corruption
+country_event = {
+	id = es_archeology.4002
+	title = "es_archeology.4002.t"
+	desc = "es_archeology.4000.d"
+	picture = skull_of_corruption_eventpictures
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_modifier = skull_of_corruption }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			add_country_modifier = { name = "skull_of_corruption" duration = -1 }
+		}
+	}
+	
+	option = {
+		name = "es_archeology.4.a"
+		tooltip = {
+			add_country_modifier = { name = "skull_of_corruption" duration = -1 }
+		}
+	}
+}
+
+
+#masque_of_clavicus_vile
+country_event = {
+	id = es_archeology.4003
+	title = "es_archeology.4003.t"
+	desc = "es_archeology.4000.d"
+	picture = clavicusvile_eventpictures
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_modifier = masque_of_clavicus_vile }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			add_country_modifier = { name = "masque_of_clavicus_vile" duration = -1 }
+		}
+	}
+	
+	option = {
+		name = "es_archeology.4.a"
+		tooltip = {
+			add_country_modifier = { name = "masque_of_clavicus_vile" duration = -1 }
+		}
+	}
+}
+
+
+#azura_star
+country_event = {
+	id = es_archeology.4004
+	title = "es_archeology.4004.t"
+	desc = "es_archeology.4000.d"
+	picture = azura_star_eventpictures
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_modifier = azura_star }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			add_country_modifier = { name = "azura_star" duration = -1 }
+		}
+	}
+	
+	option = {
+		name = "es_archeology.4.a"
+		tooltip = {
+			add_country_modifier = { name = "azura_star" duration = -1 }
+		}
+	}
+}
+
+
+#black_star
+country_event = {
+	id = es_archeology.4005
+	title = "es_archeology.4005.t"
+	desc = "es_archeology.4000.d"
+	picture = black_star_eventpictures
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_modifier = black_star }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			add_country_modifier = { name = "black_star" duration = -1 }
+		}
+	}
+	
+	option = {
+		name = "es_archeology.4.a"
+		tooltip = {
+			add_country_modifier = { name = "black_star" duration = -1 }
+		}
+	}
+}
+
+
+#staff_of_magnus
+country_event = {
+	id = es_archeology.4006
+	title = "es_archeology.4006.t"
+	desc = "es_archeology.4000.d"
+	picture = staff_of_magnus_eventpictures
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_modifier = staff_of_magnus }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			add_country_modifier = { name = "staff_of_magnus" duration = -1 }
+		}
+	}
+	
+	option = {
+		name = "es_archeology.4.a"
+		tooltip = {
+			add_country_modifier = { name = "staff_of_magnus" duration = -1 }
+		}
+	}
+}
+
+
+#eye_of_magnus
+country_event = {
+	id = es_archeology.4007
+	title = "es_archeology.4007.t"
+	desc = "es_archeology.4000.d"
+	picture = eye_of_magnus_eventpictures
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_modifier = eye_of_magnus }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			add_country_modifier = { name = "eye_of_magnus" duration = -1 }
+		}
+	}
+	
+	option = {
+		name = "es_archeology.4.a"
+		tooltip = {
+			add_country_modifier = { name = "eye_of_magnus" duration = -1 }
+		}
+	}
+}
+
+
+#heart_of_lorkhan
+country_event = {
+	id = es_archeology.4008
+	title = "es_archeology.4008.t"
+	desc = "es_archeology.4000.d"
+	picture = heart_of_lorkhan_eventpictures
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_modifier = heart_of_lorkhan }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			add_country_modifier = { name = "heart_of_lorkhan" duration = -1 }
+		}
+	}
+	
+	option = {
+		name = "es_archeology.4.a"
+		tooltip = {
+			add_country_modifier = { name = "heart_of_lorkhan" duration = -1 }
+		}
+	}
+}
+
+
+#skeleton_key
+country_event = {
+	id = es_archeology.4009
+	title = "es_archeology.4009.t"
+	desc = "es_archeology.4000.d"
+	picture = skeleton_key_eventpictures
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_modifier = skeleton_key }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			add_country_modifier = { name = "skeleton_key" duration = -1 }
+		}
+	}
+	
+	option = {
+		name = "es_archeology.4.a"
+		tooltip = {
+			add_country_modifier = { name = "skeleton_key" duration = -1 }
+		}
+	}
+}
+
+
+#sanguine_rose
+country_event = {
+	id = es_archeology.4010
+	title = "es_archeology.4010.t"
+	desc = "es_archeology.4000.d"
+	picture = sanguine_rose_eventpictures
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_modifier = sanguine_rose }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			add_country_modifier = { name = "sanguine_rose" duration = -1 }
+		}
+	}
+	
+	option = {
+		name = "es_archeology.4.a"
+		tooltip = {
+			add_country_modifier = { name = "sanguine_rose" duration = -1 }
+		}
+	}
+}
+
+
+#ring_of_hircine
+country_event = {
+	id = es_archeology.4011
+	title = "es_archeology.4011.t"
+	desc = "es_archeology.4000.d"
+	picture = ring_of_hircine_eventpictures
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_modifier = ring_of_hircine }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			add_country_modifier = { name = "ring_of_hircine" duration = -1 }
+		}
+	}
+	
+	option = {
+		name = "es_archeology.4.a"
+		tooltip = {
+			add_country_modifier = { name = "ring_of_hircine" duration = -1 }
+		}
+	}
+}
+
+
+#hide_of_savior
+country_event = {
+	id = es_archeology.4012
+	title = "es_archeology.4012.t"
+	desc = "es_archeology.4000.d"
+	picture = hide_of_savior_eventpictures
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_modifier = hide_of_savior }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			add_country_modifier = { name = "hide_of_savior" duration = -1 }
+		}
+	}
+	
+	option = {
+		name = "es_archeology.4.a"
+		tooltip = {
+			add_country_modifier = { name = "hide_of_savior" duration = -1 }
+		}
+	}
+}
+
+
+#wabbajack
+country_event = {
+	id = es_archeology.4013
+	title = "es_archeology.4013.t"
+	desc = "es_archeology.4000.d"
+	picture = wabbajack_eventpictures
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_modifier = wabbajack }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			add_country_modifier = { name = "wabbajack" duration = -1 }
+		}
+	}
+	
+	option = {
+		name = "es_archeology.4.a"
+		tooltip = {
+			add_country_modifier = { name = "wabbajack" duration = -1 }
+		}
+	}
+}
+
+
+#brush_of_truepaint
+country_event = {
+	id = es_archeology.4014
+	title = "es_archeology.4014.t"
+	desc = "es_archeology.4000.d"
+	picture = brush_of_truepaint_eventpictures
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_modifier = brush_of_truepaint }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			add_country_modifier = { name = "brush_of_truepaint" duration = -1 }
+		}
+	}
+	
+	option = {
+		name = "es_archeology.4.a"
+		tooltip = {
+			add_country_modifier = { name = "brush_of_truepaint" duration = -1 }
+		}
+	}
+}
+
+
+#spellbreaker
+country_event = {
+	id = es_archeology.4015
+	title = "es_archeology.4015.t"
+	desc = "es_archeology.4000.d"
+	picture = spellbreaker_eventpictures
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_modifier = spellbreaker }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			add_country_modifier = { name = "spellbreaker" duration = -1 }
+		}
+	}
+	
+	option = {
+		name = "es_archeology.4.a"
+		tooltip = {
+			add_country_modifier = { name = "spellbreaker" duration = -1 }
+		}
+	}
+}
+
+
+#volendrung
+country_event = {
+	id = es_archeology.4016
+	title = "es_archeology.4016.t"
+	desc = "es_archeology.4000.d"
+	picture = volendrung_eventpictures
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_modifier = volendrung }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			add_country_modifier = { name = "volendrung" duration = -1 }
+		}
+	}
+	
+	option = {
+		name = "es_archeology.4.a"
+		tooltip = {
+			add_country_modifier = { name = "volendrung" duration = -1 }
+		}
+	}
+}
+
+
+#dawnbreaker
+country_event = {
+	id = es_archeology.4017
+	title = "es_archeology.4017.t"
+	desc = "es_archeology.4000.d"
+	picture = dawnbreaker_eventpictures
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_modifier = dawnbreaker }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			add_country_modifier = { name = "dawnbreaker" duration = -1 }
+		}
+	}
+	
+	option = {
+		name = "es_archeology.4.a"
+		tooltip = {
+			add_country_modifier = { name = "dawnbreaker" duration = -1 }
+		}
+	}
+}
+
+
+#ebony_blade
+country_event = {
+	id = es_archeology.4018
+	title = "es_archeology.4018.t"
+	desc = "es_archeology.4000.d"
+	picture = ebony_blade_eventpictures
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_modifier = ebony_blade }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			add_country_modifier = { name = "ebony_blade" duration = -1 }
+		}
+	}
+	
+	option = {
+		name = "es_archeology.4.a"
+		tooltip = {
+			add_country_modifier = { name = "ebony_blade" duration = -1 }
+		}
+	}
+}
+
+
+#ebony_male
+country_event = {
+	id = es_archeology.4019
+	title = "es_archeology.4019.t"
+	desc = "es_archeology.4000.d"
+	picture = ebony_male_eventpictures
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_modifier = ebony_male }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			add_country_modifier = { name = "ebony_male" duration = -1 }
+		}
+	}
+	
+	option = {
+		name = "es_archeology.4.a"
+		tooltip = {
+			add_country_modifier = { name = "ebony_male" duration = -1 }
+		}
+	}
+}
+
+
+#mace_of_molag_bal
+country_event = {
+	id = es_archeology.4020
+	title = "es_archeology.4020.t"
+	desc = "es_archeology.4000.d"
+	picture = mace_of_molag_bal_eventpictures
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_modifier = mace_of_molag_bal }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			add_country_modifier = { name = "mace_of_molag_bal" duration = -1 }
+		}
+	}
+	
+	option = {
+		name = "es_archeology.4.a"
+		tooltip = {
+			add_country_modifier = { name = "mace_of_molag_bal" duration = -1 }
+		}
+	}
+}
+
+
+#razor_of_mehrunes
+country_event = {
+	id = es_archeology.4021
+	title = "es_archeology.4021.t"
+	desc = "es_archeology.4000.d"
+	picture = razor_of_mehrunes_eventpictures
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_modifier = razor_of_mehrunes }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			add_country_modifier = { name = "razor_of_mehrunes" duration = -1 }
+		}
+	}
+	
+	option = {
+		name = "es_archeology.4.a"
+		tooltip = {
+			add_country_modifier = { name = "razor_of_mehrunes" duration = -1 }
+		}
+	}
+}
+
+
+#ring_of_namira
+country_event = {
+	id = es_archeology.4022
+	title = "es_archeology.4022.t"
+	desc = "es_archeology.4000.d"
+	picture = ring_of_namira_eventpictures
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_modifier = ring_of_namira }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			add_country_modifier = { name = "ring_of_namira" duration = -1 }
+		}
+	}
+	
+	option = {
+		name = "es_archeology.4.a"
+		tooltip = {
+			add_country_modifier = { name = "ring_of_namira" duration = -1 }
+		}
+	}
+}
+
+
+#chrysamere
+country_event = {
+	id = es_archeology.4023
+	title = "es_archeology.4023.t"
+	desc = "es_archeology.4000.d"
+	picture = chrysamere_eventpictures
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_modifier = chrysamere }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			add_country_modifier = { name = "chrysamere" duration = -1 }
+		}
+	}
+	
+	option = {
+		name = "es_archeology.4.a"
+		tooltip = {
+			add_country_modifier = { name = "chrysamere" duration = -1 }
+		}
+	}
+}
+
+
+#hammer_of_stendarr
+country_event = {
+	id = es_archeology.4024
+	title = "es_archeology.4024.t"
+	desc = "es_archeology.4000.d"
+	picture = hammer_of_stendarr_eventpictures
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_modifier = hammer_of_stendarr }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			add_country_modifier = { name = "hammer_of_stendarr" duration = -1 }
+		}
+	}
+	
+	option = {
+		name = "es_archeology.4.a"
+		tooltip = {
+			add_country_modifier = { name = "hammer_of_stendarr" duration = -1 }
+		}
+	}
+}
+
+
+#mail_of_lord
+country_event = {
+	id = es_archeology.4025
+	title = "es_archeology.4025.t"
+	desc = "es_archeology.4000.d"
+	picture = mail_of_lord_eventpictures
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_modifier = mail_of_lord }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			add_country_modifier = { name = "mail_of_lord" duration = -1 }
+		}
+	}
+	
+	option = {
+		name = "es_archeology.4.a"
+		tooltip = {
+			add_country_modifier = { name = "mail_of_lord" duration = -1 }
+		}
+	}
+}
+
+
+#shield_of_auriel
+country_event = {
+	id = es_archeology.4026
+	title = "es_archeology.4026.t"
+	desc = "es_archeology.4000.d"
+	picture = shield_of_auriel_eventpictures
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_modifier = shield_of_auriel }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			add_country_modifier = { name = "shield_of_auriel" duration = -1 }
+		}
+	}
+	
+	option = {
+		name = "es_archeology.4.a"
+		tooltip = {
+			add_country_modifier = { name = "shield_of_auriel" duration = -1 }
+		}
+	}
+}
+
+
+#bow_of_auriel
+country_event = {
+	id = es_archeology.4027
+	title = "es_archeology.4027.t"
+	desc = "es_archeology.4000.d"
+	picture = bow_of_auriel_eventpictures
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_modifier = bow_of_auriel }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			add_country_modifier = { name = "bow_of_auriel" duration = -1 }
+		}
+	}
+	
+	option = {
+		name = "es_archeology.4.a"
+		tooltip = {
+			add_country_modifier = { name = "bow_of_auriel" duration = -1 }
+		}
+	}
+}
+
+
+#keening
+country_event = {
+	id = es_archeology.4028
+	title = "es_archeology.4028.t"
+	desc = "es_archeology.4000.d"
+	picture = keening_eventpictures
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_modifier = keening }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			add_country_modifier = { name = "keening" duration = -1 }
+		}
+	}
+	
+	option = {
+		name = "es_archeology.4.a"
+		tooltip = {
+			add_country_modifier = { name = "keening" duration = -1 }
+		}
+	}
+}
+
+
+#etherial_crown
+country_event = {
+	id = es_archeology.4029
+	title = "es_archeology.4029.t"
+	desc = "es_archeology.4000.d"
+	picture = etherial_crown_eventpictures
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_modifier = etherial_crown }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			add_country_modifier = { name = "etherial_crown" duration = -1 }
+		}
+	}
+	
+	option = {
+		name = "es_archeology.4.a"
+		tooltip = {
+			add_country_modifier = { name = "etherial_crown" duration = -1 }
+		}
+	}
+}
+
+
+#etherial_shield
+country_event = {
+	id = es_archeology.4030
+	title = "es_archeology.4030.t"
+	desc = "es_archeology.4000.d"
+	picture = etherial_shield_eventpictures
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_modifier = etherial_shield }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			add_country_modifier = { name = "etherial_shield" duration = -1 }
+		}
+	}
+	
+	option = {
+		name = "es_archeology.4.a"
+		tooltip = {
+			add_country_modifier = { name = "etherial_shield" duration = -1 }
+		}
+	}
+}
+
+
+#etherial_staff
+country_event = {
+	id = es_archeology.4031
+	title = "es_archeology.4031.t"
+	desc = "es_archeology.4000.d"
+	picture = etherial_staff_eventpictures
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_modifier = etherial_staff }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			add_country_modifier = { name = "etherial_staff" duration = -1 }
+		}
+	}
+	
+	option = {
+		name = "es_archeology.4.a"
+		tooltip = {
+			add_country_modifier = { name = "etherial_staff" duration = -1 }
+		}
+	}
+}
+
+
+#bow_of_fate
+country_event = {
+	id = es_archeology.4032
+	title = "es_archeology.4032.t"
+	desc = "es_archeology.4000.d"
+	picture = bow_of_fate_eventpictures
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_modifier = bow_of_fate }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			add_country_modifier = { name = "bow_of_fate" duration = -1 }
+		}
+	}
+	
+	option = {
+		name = "es_archeology.4.a"
+		tooltip = {
+			add_country_modifier = { name = "bow_of_fate" duration = -1 }
+		}
+	}
+}
+
+
+#visage_of_mzund
+country_event = {
+	id = es_archeology.4033
+	title = "es_archeology.4033.t"
+	desc = "es_archeology.4000.d"
+	picture = visage_of_mzund_eventpictures
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_modifier = visage_of_mzund }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			add_country_modifier = { name = "visage_of_mzund" duration = -1 }
+		}
+	}
+	
+	option = {
+		name = "es_archeology.4.a"
+		tooltip = {
+			add_country_modifier = { name = "visage_of_mzund" duration = -1 }
+		}
+	}
+}
+
+
+#zephyr
+country_event = {
+	id = es_archeology.4034
+	title = "es_archeology.4034.t"
+	desc = "es_archeology.4000.d"
+	picture = zephyr_eventpictures
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_modifier = zephyr }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			add_country_modifier = { name = "zephyr" duration = -1 }
+		}
+	}
+	
+	option = {
+		name = "es_archeology.4.a"
+		tooltip = {
+			add_country_modifier = { name = "zephyr" duration = -1 }
+		}
+	}
+}
+
+
+#spider_control_rod
+country_event = {
+	id = es_archeology.4035
+	title = "es_archeology.4035.t"
+	desc = "es_archeology.4000.d"
+	picture = spider_control_rod_eventpictures
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_modifier = spider_control_rod }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			add_country_modifier = { name = "spider_control_rod" duration = -1 }
+		}
+	}
+	
+	option = {
+		name = "es_archeology.4.a"
+		tooltip = {
+			add_country_modifier = { name = "spider_control_rod" duration = -1 }
+		}
+	}
+}
+
+
+#goldbrand
+country_event = {
+	id = es_archeology.4036
+	title = "es_archeology.4036.t"
+	desc = "es_archeology.4000.d"
+	picture = goldbrand_eventpictures
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_modifier = goldbrand }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			add_country_modifier = { name = "goldbrand" duration = -1 }
+		}
+	}
+	
+	option = {
+		name = "es_archeology.4.a"
+		tooltip = {
+			add_country_modifier = { name = "goldbrand" duration = -1 }
+		}
+	}
+}
+
+
+#epistolary_acumen
+country_event = {
+	id = es_archeology.4037
+	title = "es_archeology.4037.t"
+	desc = "es_archeology.4000.d"
+	picture = epistolaryacumen_eventpictures
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_modifier = epistolary_acumen }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			add_country_modifier = { name = "epistolary_acumen" duration = -1 }
+		}
+	}
+	
+	option = {
+		name = "es_archeology.4.a"
+		tooltip = {
+			add_country_modifier = { name = "epistolary_acumen" duration = -1 }
+		}
+	}
+}
+
+
+#filament_and_filigree
+country_event = {
+	id = es_archeology.4038
+	title = "es_archeology.4038.t"
+	desc = "es_archeology.4000.d"
+	picture = epistolaryacumen_eventpictures
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_modifier = filament_and_filigree }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			add_country_modifier = { name = "filament_and_filigree" duration = -1 }
+		}
+	}
+	
+	option = {
+		name = "es_archeology.4.a"
+		tooltip = {
+			add_country_modifier = { name = "filament_and_filigree" duration = -1 }
+		}
+	}
+}
+
+
+#the_hidden_twilight
+country_event = {
+	id = es_archeology.4039
+	title = "es_archeology.4039.t"
+	desc = "es_archeology.4000.d"
+	picture = the_hidden_twilight_eventpictures
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_modifier = the_hidden_twilight }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			add_country_modifier = { name = "the_hidden_twilight" duration = -1 }
+		}
+	}
+	
+	option = {
+		name = "es_archeology.4.a"
+		tooltip = {
+			add_country_modifier = { name = "the_hidden_twilight" duration = -1 }
+		}
+	}
+}
+
+
+#the_sallow_regent
+country_event = {
+	id = es_archeology.4040
+	title = "es_archeology.4040.t"
+	desc = "es_archeology.4000.d"
+	picture = the_sallow_regent_eventpictures
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_modifier = the_sallow_regent }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			add_country_modifier = { name = "the_sallow_regent" duration = -1 }
+		}
+	}
+	
+	option = {
+		name = "es_archeology.4.a"
+		tooltip = {
+			add_country_modifier = { name = "the_sallow_regent" duration = -1 }
+		}
+	}
+}
+
+
+#the_winds_of_change
+country_event = {
+	id = es_archeology.4041
+	title = "es_archeology.4041.t"
+	desc = "es_archeology.4000.d"
+	picture = the_winds_of_change_eventpictures
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_modifier = the_winds_of_change }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			add_country_modifier = { name = "the_winds_of_change" duration = -1 }
+		}
+	}
+	
+	option = {
+		name = "es_archeology.4.a"
+		tooltip = {
+			add_country_modifier = { name = "the_winds_of_change" duration = -1 }
+		}
+	}
+}
+
+
+#untold_legends
+country_event = {
+	id = es_archeology.4042
+	title = "es_archeology.4042.t"
+	desc = "es_archeology.4000.d"
+	picture = untold_legends_eventpictures
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_modifier = untold_legends }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			add_country_modifier = { name = "untold_legends" duration = -1 }
+		}
+	}
+	
+	option = {
+		name = "es_archeology.4.a"
+		tooltip = {
+			add_country_modifier = { name = "untold_legends" duration = -1 }
+		}
+	}
+}
+
+
+#waking_dreams
+country_event = {
+	id = es_archeology.4043
+	title = "es_archeology.4043.t"
+	desc = "es_archeology.4000.d"
+	picture = waking_dreams_eventpictures
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_modifier = waking_dreams }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			add_country_modifier = { name = "waking_dreams" duration = -1 }
+		}
+	}
+	
+	option = {
+		name = "es_archeology.4.a"
+		tooltip = {
+			add_country_modifier = { name = "waking_dreams" duration = -1 }
+		}
+	}
+}
+
+
+#ring_of_kajiiti
+country_event = {
+	id = es_archeology.4044
+	title = "es_archeology.4044.t"
+	desc = "es_archeology.4000.d"
+	picture = ring_of_kajiiti_eventpictures
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_modifier = ring_of_kajiiti }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			add_country_modifier = { name = "ring_of_kajiiti" duration = -1 }
+		}
+	}
+	
+	option = {
+		name = "es_archeology.4.a"
+		tooltip = {
+			add_country_modifier = { name = "ring_of_kajiiti" duration = -1 }
+		}
+	}
+}
+
+
+country_event = {
+	id = es_archeology.5
+	title = "es_archeology.3.t"
+	desc = "es_archeology.3.d"
+	picture = ARCHEOLOGICAL_SITE_eventPicture
+	
+	hidden = yes
+	
+	trigger = {
+		has_country_flag = epistolary_acumen_read_flag
+		has_country_flag = filament_and_filigree_read_flag
+		has_country_flag = the_hidden_twilight_read_flag
+		has_country_flag = the_sallow_regent_read_flag
+		has_country_flag = the_winds_of_change_read_flag
+		has_country_flag = untold_legends_read_flag
+		has_country_flag = waking_dreams_read_flag
+		NOT = { has_country_flag = hermaeus_mora_blessing_archeology_flag }
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	immediate = {
+	    set_country_flag = hermaeus_mora_blessing_archeology_flag
+		change_religion = hermeus_mora_cult
+		random_owned_province = { 
+			spawn_rebels = {
+				type = hermeus_mora_cult_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			}
+		}
+		random_owned_province = { 
+			spawn_rebels = {
+				type = hermeus_mora_cult_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			}
+		}
+		random_owned_province = { 
+			spawn_rebels = {
+				type = hermeus_mora_cult_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			}
+		}
+		random_owned_province = { 
+			spawn_rebels = {
+				type = hermeus_mora_cult_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			}
+		}
+		random_owned_province = { 
+			spawn_rebels = {
+				type = hermeus_mora_cult_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			}
+		}
+	}
+	
+	option = {
+		name = "es_archeology.3.a"
+		ai_chance = { factor = 100 }
+	}
+}

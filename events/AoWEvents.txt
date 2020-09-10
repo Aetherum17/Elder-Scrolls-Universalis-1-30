@@ -1,0 +1,340 @@
+########################################
+# Events for Art of War patch
+#
+# written by Rufus Tronde
+########################################
+
+namespace = aow_events
+
+# Unknown Shooter
+country_event = {
+	id = aow_events.21
+	title = "aow_events.21.t"
+	desc = "aow_events.21.d"
+	picture = ASSASSINATION_eventPicture
+
+	trigger = {
+		war_exhaustion = 10
+		war_score = 10
+		is_lesser_in_union = no
+		is_monarch_leader = yes
+		is_at_war = yes
+		any_known_country = {
+			defensive_war_with = ROOT
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 240
+		modifier = {
+			factor = 0.75
+			war_exhaustion = 15
+		}
+	}
+
+	# We may never know.
+	option = {
+		name = "aow_events.21.a"
+		kill_ruler = yes
+		add_war_exhaustion = -5
+	}
+}
+
+# Cardinal Events
+
+# Cardinal Across the Border
+country_event = {
+	id = aow_events.43
+	title = "aow_events.43.t"
+	desc = "aow_events.43.d"
+	picture = RELIGION_eventPicture
+
+	trigger = {
+		papacy_active = yes
+		religion = tribunal_pantheon
+		NOT = { tag = RED }
+		NOT = { num_of_cardinals = 7 }
+		any_owned_province = {
+			development = 10
+			has_cardinal = no
+			religion = tribunal_pantheon
+			any_neighbor_province = {
+				has_cardinal = yes
+				NOT = { owned_by = ROOT }
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 480
+		modifier = {
+			factor = 1.2
+			num_of_cardinals = 5
+		}
+	}
+
+	immediate = {
+		check_if_non_state_advisor_effect = { #Hidden, must be followed by erase_advisor_flags_effect
+			chance_of_primary = 75 #Not percentages!
+			chance_of_tertiary = 5
+			chance_of_secondary = 25
+		}
+	}
+	
+	# 
+	option = {
+		name = "aow_events.43.a"
+		add_years_of_income = -0.05
+		add_corruption = 0.5
+		random_owned_province = {
+			limit = {
+				has_cardinal = no
+				religion = tribunal_pantheon
+				development = 10
+				any_neighbor_province = {
+					has_cardinal = yes
+					NOT = { owned_by = ROOT }
+				}
+			}
+			add_cardinal = yes
+			random_neighbor_province = {
+				limit = {
+					has_cardinal = yes
+					NOT = { owned_by = ROOT }
+				}
+				remove_cardinal = yes
+				random = {
+					chance = 50
+						hidden_effect = {
+							province_event = {
+								id = aow_events.44
+								days = 7
+							}
+						}
+					owner = {
+						tooltip = {
+							add_casus_belli = {
+								target = ROOT
+								type = cb_insult
+								months = 32
+							}
+							add_opinion = {
+								who = ROOT
+								modifier = bribed_cardinal
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "aow_events.43.b"
+		generate_advisor_of_type_and_semi_random_religion_effect = {
+			advisor_type=spymaster
+			advisor_type_if_not_state=spymaster
+			scaled_skill = yes
+			discount=yes
+		}
+	}
+	after = {
+		erase_advisor_flags_effect = yes
+	}
+}
+
+# Cardinal Bribed to Move
+province_event = {
+	id = aow_events.44
+	title = "aow_events.44.t"
+	desc = "aow_events.44.d"
+	picture = CORRUPTION_eventPicture
+
+	is_triggered_only = yes
+
+	# 
+	option = {
+		name = "aow_events.44.a"
+		owner = {
+			add_casus_belli = {
+				target = FROM
+				type = cb_insult
+				months = 32
+			}
+			add_corruption = 1
+			add_opinion = {
+				who = FROM
+				modifier = bribed_cardinal
+			}
+		}
+	}
+}
+
+# Thoughts of Heresy
+province_event = {
+	id = aow_events.45
+	title = "aow_events.45.t"
+	desc = "aow_events.45.d"
+	picture = PRAYING_eventPicture
+
+	trigger = {
+		has_cardinal = yes
+		any_neighbor_province = {
+			NOT = { religion = tribunal_pantheon }
+		}
+	}
+
+	is_mtth_scaled_to_size = 1
+	
+	mean_time_to_happen = {
+		months = 480
+	}
+
+	# 
+	option = {
+		name = "aow_events.45.a"
+		owner = {
+			add_years_of_income = -0.1
+		}
+			random = {
+				chance = 40
+				province_event = {
+					id = aow_events.46
+					days = 180
+					tooltip = "aow_events.45.a.tt"
+				}
+			}
+
+	}
+
+	option = {
+		name = "aow_events.45.b"
+		remove_cardinal = yes
+	}
+}
+
+# Pope Discovers Duplicity
+province_event = {
+	id = aow_events.46
+	title = "aow_events.46.t"
+	desc = "aow_events.46.d"
+	picture = POPE_PREACHING_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		exists = RED
+	}
+
+	# 
+	option = {
+		name = "aow_events.46.a"
+		RED = {
+			add_opinion = {
+				who = ROOT
+				modifier = bribed_cardinal
+			}
+		}
+	}
+}
+
+# Contacts in the Holy See
+country_event = {
+	id = aow_events.48
+	title = "aow_events.48.t"
+	desc = "aow_events.48.d"
+	picture = RELIGION_eventPicture
+
+	trigger = {
+		papacy_active = yes
+		religion = tribunal_pantheon
+		NOT = { tag = RED }
+		OR = {
+			employed_advisor = {
+				type = theologian
+				religion = tribunal_pantheon
+			}
+			employed_advisor = {
+				type = inquisitor
+				religion = tribunal_pantheon
+			}
+		}
+		NOT = { num_of_cardinals = 7 }
+		NOT = { total_number_of_cardinals = 49 }
+		any_owned_province = {
+			development = 10
+			has_cardinal = no
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 480
+	}
+
+	# 
+	option = {
+		name = "aow_events.48.a"
+		add_adm_power = -100
+		random_owned_province = {
+			limit = {
+				development = 10
+				has_cardinal = no
+			}
+			add_cardinal = yes
+		}
+	}
+
+	option = {
+		name = "aow_events.48.b"
+		add_adm_power = 100
+	}
+}
+
+# Cardinal's Policies Upset Nobles
+country_event = {
+	id = aow_events.50
+	title = "aow_events.50.t"
+	desc = "aow_events.50.d"
+	picture = REFORM_eventPicture
+
+	trigger = {
+		has_country_modifier = cardinal_in_administration
+		NOT = { has_country_modifier = centralization_modifier }
+		num_of_cardinals = 1
+	}
+
+	mean_time_to_happen = {
+		months = 1200
+	}
+
+	# 
+	option = {
+		name = "aow_events.50.a"
+		add_country_modifier = {
+			name = "centralization_modifier"
+			duration = 3650
+		}
+		random_owned_province = {
+			limit = {
+				any_neighbor_province = {
+					is_capital = yes
+					owned_by = ROOT
+				}
+			}
+			spawn_rebels = {
+				type = noble_rebels
+				size = 2
+			}
+		}
+	}
+
+	#
+	option = {
+		name = "aow_events.50.b"
+		remove_country_modifier = cardinal_in_administration
+		random_owned_province = {
+			limit = { has_cardinal = yes }
+			remove_cardinal = yes
+		}
+	}
+}

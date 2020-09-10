@@ -1,0 +1,90 @@
+namespace = es_collapse
+
+country_event = {
+	id = es_collapse.1
+	title = es_collapse.1.t
+	desc = es_collapse.1.d
+	picture = ES_STATE_COLLAPSE_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	add_stability = -3
+	if = { limit = { ai = yes } add_stability = 5 add_war_exhaustion = -10 end_disaster = es_country_collapse }
+	}
+	
+	option = {
+		name = es_collapse.1.a
+		hidden_effect = {
+		
+		if = { limit = { any_owned_province = { region = pyandonea_lr } } country_event = { id = es_collapse.2 days = 31 tooltip = es_collapse.2.a.tt } }
+		 
+		if = { limit = { any_owned_province = { region = summerset_lr } } country_event = { id = es_collapse.53 days = 31 tooltip = es_collapse.3.a.tt } }
+		if = { limit = { any_owned_province = { region = auridon_lr } } country_event = { id = es_collapse.34 days = 31 tooltip = es_collapse.3.a.tt } }
+		 
+		if = { limit = { any_owned_province = { region = yokuda_lr } } country_event = { id = es_collapse.4 days = 31 tooltip = es_collapse.4.a.tt } }
+		 
+		if = { limit = { any_owned_province = { OR = { region = western_atmora_lr region = eastern_atmora_lr region = central_atmora_lr } } } country_event = { id = es_collapse.5 days = 31 tooltip = es_collapse.5.a.tt } }
+		 
+		if = { limit = { any_owned_province = { region = southern_kamal_lr } } country_event = { id = es_collapse.6 days = 31 tooltip = es_collapse.6.a.tt } }
+		if = { limit = { any_owned_province = { region = northern_kamal_lr } } country_event = { id = es_collapse.7 days = 31 tooltip = es_collapse.7.a.tt } }
+		 
+		if = { limit = { any_owned_province = { region = thousand_lr } } country_event = { id = es_collapse.8 days = 31 tooltip = es_collapse.8.a.tt } }
+		 
+		if = { limit = { any_owned_province = { region = po_tun_lr } } country_event = { id = es_collapse.9 days = 31 tooltip = es_collapse.9.a.tt } }
+		 
+		if = { limit = { any_owned_province = { region = tsakara_lr } } country_event = { id = es_collapse.10 days = 31 tooltip = es_collapse.10.a.tt } }
+		 
+		if = { limit = { any_owned_province = { region = upper_tsakara_lr } } country_event = { id = es_collapse.11 days = 31 tooltip = es_collapse.11.a.tt } }
+		 
+		if = { limit = { any_owned_province = { region = northern_valenwood_lr } } country_event = { id = es_collapse.56 days = 31 tooltip = es_collapse.12.a.tt } }
+		if = { limit = { any_owned_province = { region = southern_valenwood_lr } } country_event = { id = es_collapse.35 days = 31 tooltip = es_collapse.12.a.tt } }
+		 
+		if = { limit = { any_owned_province = { region = anequina_lr } } country_event = { id = es_collapse.54 days = 31 tooltip = es_collapse.13.a.tt } }
+		if = { limit = { any_owned_province = { region = pelletine_lr } } country_event = { id = es_collapse.36 days = 31 tooltip = es_collapse.13.a.tt } }
+		 
+		if = { limit = { any_owned_province = { region = vvardenfell_lr } } country_event = { id = es_collapse.14 days = 31 tooltip = es_collapse.14.a.tt } }
+		if = { limit = { any_owned_province = { region = morrowind_lr } } country_event = { id = es_collapse.15 days = 31 tooltip = es_collapse.15.a.tt } }
+		if = { limit = { any_owned_province = { region = velothi_mountains_lr } } country_event = { id = es_collapse.37 days = 31 tooltip = es_collapse.15.a.tt } }
+		if = { limit = { any_owned_province = { region = deshaan_lr } } country_event = { id = es_collapse.38 days = 31 tooltip = es_collapse.15.a.tt } }
+		if = { limit = { any_owned_province = { region = llothanis_peninsula_lr } } country_event = { id = es_collapse.39 days = 31 tooltip = es_collapse.15.a.tt } }
+		 
+		if = { limit = { any_owned_province = { region = black_marsh_lr } } country_event = { id = es_collapse.55 days = 31 tooltip = es_collapse.16.a.tt } }
+		if = { limit = { any_owned_province = { region = shadowfen_lr } } country_event = { id = es_collapse.40 days = 31 tooltip = es_collapse.16.a.tt } }
+		if = { limit = { any_owned_province = { region = murkmire_lr } } country_event = { id = es_collapse.41 days = 31 tooltip = es_collapse.16.a.tt } }
+		 
+		if = { limit = { any_owned_province = { region = western_syrodiil_lr } } country_event = { id = es_collapse.17 days = 31 tooltip = es_collapse.17.a.tt } }
+		if = { limit = { any_owned_province = { region = eastern_syrodiil_lr } } country_event = { id = es_collapse.18 days = 31 tooltip = es_collapse.18.a.tt } }
+		if = { limit = { any_owned_province = { region = central_syrodiil_lr } } country_event = { id = es_collapse.19 days = 31 tooltip = es_collapse.19.a.tt } }
+		if = { limit = { any_owned_province = { region = golden_coast_lr } } country_event = { id = es_collapse.42 days = 31 tooltip = es_collapse.19.a.tt } }
+		if = { limit = { any_owned_province = { region = jerall_mountains_lr } } country_event = { id = es_collapse.43 days = 31 tooltip = es_collapse.19.a.tt } }
+		if = { limit = { any_owned_province = { region = valus_mountains_lr } } country_event = { id = es_collapse.44 days = 31 tooltip = es_collapse.19.a.tt } }
+		 
+		if = { limit = { any_owned_province = { region = reach_lr } } country_event = { id = es_collapse.45 days = 31 tooltip = es_collapse.20.a.tt } }
+		if = { limit = { any_owned_province = { region = rift_lr } } country_event = { id = es_collapse.46 days = 31 tooltip = es_collapse.21.a.tt } }
+		if = { limit = { any_owned_province = { region = great_planes_lr } } country_event = { id = es_collapse.47 days = 31 tooltip = es_collapse.21.a.tt } }
+		if = { limit = { any_owned_province = { region = nordic_coast_lr } } country_event = { id = es_collapse.48 days = 31 tooltip = es_collapse.21.a.tt } }
+		 
+		if = { limit = { any_owned_province = { region = hgh_rock_lr } } country_event = { id = es_collapse.22 days = 31 tooltip = es_collapse.22.a.tt } }
+		if = { limit = { any_owned_province = { region = wrothgar_lr } } country_event = { id = es_collapse.49 days = 31 tooltip = es_collapse.22.a.tt } }
+		 
+		if = { limit = { any_owned_province = { region = alikr_desert_lr } } country_event = { id = es_collapse.50 days = 31 tooltip = es_collapse.23.a.tt } }
+		if = { limit = { any_owned_province = { region = corten_heights_lr } } country_event = { id = es_collapse.51 days = 31 tooltip = es_collapse.23.a.tt } }
+		if = { limit = { any_owned_province = { region = dragontail_mountains_lr } } country_event = { id = es_collapse.52 days = 31 tooltip = es_collapse.23.a.tt } }
+		 
+		if = { limit = { any_owned_province = { region = northern_islands_lr } } country_event = { id = es_collapse.24 days = 31 tooltip = es_collapse.24.a.tt } }
+		 
+		if = { limit = { any_owned_province = { region = central_coldharbour_lr } } country_event = { id = es_collapse.25 days = 31 tooltip = es_collapse.24.a.tt } }
+		if = { limit = { any_owned_province = { region = southern_coldharbour_lr } } country_event = { id = es_collapse.26 days = 31 tooltip = es_collapse.24.a.tt } }
+		if = { limit = { any_owned_province = { region = eastern_coldharbour_lr } } country_event = { id = es_collapse.27 days = 31 tooltip = es_collapse.24.a.tt } }
+		if = { limit = { any_owned_province = { region = western_coldharbour_lr } } country_event = { id = es_collapse.28 days = 31 tooltip = es_collapse.24.a.tt } }
+		if = { limit = { any_owned_province = { region = northern_coldharbour_lr } } country_event = { id = es_collapse.29 days = 31 tooltip = es_collapse.24.a.tt } }
+		 
+		if = { limit = { any_owned_province = { region = eastern_deadlands_lr } } country_event = { id = es_collapse.30 days = 31 tooltip = es_collapse.24.a.tt } }
+		if = { limit = { any_owned_province = { region = western_deadlands_lr } } country_event = { id = es_collapse.31 days = 31 tooltip = es_collapse.24.a.tt } }
+		if = { limit = { any_owned_province = { region = northern_deadlands_lr } } country_event = { id = es_collapse.32 days = 31 tooltip = es_collapse.24.a.tt } }
+		if = { limit = { any_owned_province = { region = southern_deadlands_lr } } country_event = { id = es_collapse.33 days = 31 tooltip = es_collapse.24.a.tt } }
+		 
+	    }
+	}
+}

@@ -1,0 +1,91 @@
+########################################
+# Flavor Events for Papal States
+#
+# Scripted by Sara Wendel-Örtqvist
+########################################
+
+namespace = flavor_pap
+
+# The Counter-Reformation and the Reformation of the Catholic Faith
+country_event = {
+	id = flavor_pap.7
+	title = "flavor_pap.EVTNAME7"
+	desc = "flavor_pap.EVTDESC7"
+	picture = REFORM_eventPicture
+	
+	fire_only_once = yes
+	
+	major = yes
+	
+	trigger = {
+		tag = RED
+		is_religion_enabled = reclamations_pantheon
+		if = {
+			limit = {
+				has_dlc = "Emperor"
+			}
+			is_council_enabled = no
+		}
+		NOT = { has_global_flag = counter_reformation }
+	}
+	
+	mean_time_to_happen = {
+		#months = 100
+		days = 31
+	}
+	
+	option = {
+		name = "flavor_pap.EVTOPTA7"
+		add_prestige = 10
+		if = {
+			limit = {
+				has_dlc = "Emperor"
+			}
+			custom_tooltip = flavor_pap.7.tt
+			hidden_effect = {
+				every_known_country = {
+					limit = {
+						religion = tribunal_pantheon
+						any_owned_province = {
+							has_cardinal = yes
+						}
+					}
+					country_event = {
+						id = flavor_pap.8
+					}
+				}
+			}
+		}
+		set_global_flag = counter_reformation
+		if = {
+			limit = {
+				has_dlc = "Emperor"
+			}
+			enable_council = yes
+		}
+	}
+}
+
+# The Council of Trent
+country_event = {
+	id = flavor_pap.8
+	title = "flavor_pap.EVTNAME8"
+	desc = "flavor_pap.EVTDESC8"
+	picture = RELIGION_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_dlc = "Emperor"
+	}
+	
+	option = {
+		name = "flavor_pap.EVTOPTA8"
+		custom_tooltip = can_join_council_of_trent_tt
+		RED = {
+			add_opinion = {
+				who = ROOT
+			}
+		}
+	}
+}

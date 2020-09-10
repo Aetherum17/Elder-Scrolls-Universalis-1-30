@@ -1,0 +1,355 @@
+namespace = es_collapse
+
+country_event = {
+	id = es_collapse.8
+	title = es_collapse.8.t
+	desc = es_collapse.8.d
+	picture = ES_PROVINCE_COLLAPSE_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	    add_country_modifier = {
+			name = "vassal_autonomy"
+			duration = 9125
+		}
+	}
+	
+	option = {
+		name = es_collapse.2.a
+		ai_chance = { factor = 75 }
+		hidden_effect = {
+		
+		if = {
+		limit = {
+		NOT = { capital_scope = { region = thousand_lr } }
+		}
+		every_core_province = {
+			limit = {
+				region = thousand_lr
+			}
+			remove_core = ROOT
+		}
+		}
+		
+		if = {
+		limit = {
+		thousand_1_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = JA1 }
+		NOT = { capital_scope = { area = thousand_1_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = thousand_1_la
+		}
+		add_core = JA1
+		}
+		create_vassal = JA1
+        JA1 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        JA1 = { change_government_reform_progress = -99999 }
+		}
+		
+		if = {
+		limit = {
+		thousand_2_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = JA2 }
+		NOT = { capital_scope = { area = thousand_2_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = thousand_2_la
+		}
+		add_core = JA2
+		}
+		create_vassal = JA2
+        JA2 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        JA2 = { change_government_reform_progress = -99999 }
+		}
+		
+		if = {
+		limit = {
+		thousand_3_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = JA3 }
+		NOT = { capital_scope = { area = thousand_3_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = thousand_3_la
+		}
+		add_core = JA3
+		}
+		create_vassal = JA3
+        JA3 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        JA3 = { change_government_reform_progress = -99999 }
+		}
+		
+		if = {
+		limit = {
+		thousand_4_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = JA4 }
+		NOT = { capital_scope = { area = thousand_4_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = thousand_4_la
+		}
+		add_core = JA4
+		}
+		create_vassal = JA4
+        JA4 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        JA4 = { change_government_reform_progress = -99999 }
+		}
+		
+		if = {
+		limit = {
+		thousand_5_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = JA5 }
+		NOT = { capital_scope = { area = thousand_5_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = thousand_5_la
+		}
+		add_core = JA5
+		}
+		create_vassal = JA5
+        JA5 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        JA5 = { change_government_reform_progress = -99999 }
+		}
+		
+		if = {
+		limit = {
+		thousand_6_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = JA6 }
+		NOT = { capital_scope = { area = thousand_6_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = thousand_6_la
+		}
+		add_core = JA6
+		}
+		create_vassal = JA6
+        JA6 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        JA6 = { change_government_reform_progress = -99999 }
+		}
+		
+		if = {
+		limit = {
+		thousand_7_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = JA7 }
+		NOT = { capital_scope = { area = thousand_7_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = thousand_7_la
+		}
+		add_core = JA7
+		}
+		create_vassal = JA7
+        JA7 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        JA7 = { change_government_reform_progress = -99999 }
+		}
+		
+		if = {
+		limit = {
+		thousand_8_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = JA8 }
+		NOT = { capital_scope = { area = thousand_8_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = thousand_8_la
+		}
+		add_core = JA8
+		}
+		create_vassal = JA8
+        JA8 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        JA8 = { change_government_reform_progress = -99999 }
+		}
+		
+		if = {
+		limit = {
+		thousand_9_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = JA9 }
+		NOT = { capital_scope = { area = thousand_9_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = thousand_9_la
+		}
+		add_core = JA9
+		}
+		create_vassal = JA9
+        JA9 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        JA9 = { change_government_reform_progress = -99999 }
+		}
+		
+		if = {
+		limit = {
+		thousand_10_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = JB0 }
+		NOT = { capital_scope = { area = thousand_10_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = thousand_10_la
+		}
+		add_core = JB0
+		}
+		create_vassal = JB0
+        JB0 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        JB0 = { change_government_reform_progress = -99999 }
+		}
+		
+		if = {
+		limit = {
+		thousand_11_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = JB1 }
+		NOT = { capital_scope = { area = thousand_11_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = thousand_11_la
+		}
+		add_core = JB1
+		}
+		create_vassal = JB1
+        JB1 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        JB1 = { change_government_reform_progress = -99999 }
+		}
+		
+		if = {
+		limit = {
+		thousand_12_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = JB2 }
+		NOT = { capital_scope = { area = thousand_12_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = thousand_12_la
+		}
+		add_core = JB2
+		}
+		create_vassal = JB2
+        JB2 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        JB2 = { change_government_reform_progress = -99999 }
+		}
+		
+		if = {
+		limit = {
+		thousand_13_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = JB3 }
+		NOT = { capital_scope = { area = thousand_13_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = thousand_13_la
+		}
+		add_core = JB3
+		}
+		create_vassal = JB3
+        JB3 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        JB3 = { change_government_reform_progress = -99999 }
+		}
+		
+		if = {
+		limit = {
+		thousand_14_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = JB4 }
+		NOT = { capital_scope = { area = thousand_14_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = thousand_14_la
+		}
+		add_core = JB4
+		}
+		create_vassal = JB4
+        JB4 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        JB4 = { change_government_reform_progress = -99999 }
+		}
+		
+	    }
+	}
+	
+	option = {
+		name = es_collapse.2.b
+		ai_chance = { factor = 15 }
+		
+		every_owned_province = {
+			limit = {
+				region = thousand_lr
+				NOT = { any_province = { area = PREV is_capital_of = ROOT } }
+			}
+			remove_core = ROOT
+		}
+		
+	}
+	
+	option = {
+		name = es_collapse.2.c
+		ai_chance = { factor = 10 }
+		
+		trigger = {
+		NOT = { capital_scope = { region = thousand_lr } }
+		NOT = { exists = TAN }
+		}
+		
+		every_core_province = {
+			limit = {
+				region = thousand_lr
+			}
+			remove_core = ROOT
+		}
+		
+		every_owned_province = {
+		limit = {
+		region = thousand_lr
+		}
+		add_core = TAN
+		}
+		
+		release = TAN
+		
+		if = {
+		limit = {
+		government = monarchy
+		}
+		create_union = TAN
+	    }
+		else = {
+		create_alliance = TAN
+		TAN = { add_opinion = { who = ROOT modifier = es_friendly_nation } }
+		add_opinion = { who = TAN modifier = es_friendly_nation }
+		}
+	}
+}

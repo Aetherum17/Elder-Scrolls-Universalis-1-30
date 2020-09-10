@@ -1,0 +1,1221 @@
+##########################################################################
+# Ruler Personality Events
+#
+# written by Henrik Lohmander, Milla Isaksson and Mathilda Bjarnehed
+##########################################################################
+
+namespace = personality_events
+
+# The many Interests of [Root.Monarch.GetName]
+country_event = {
+	id = personality_events.1
+	title = "personality_events.1.t"
+	desc = "personality_events.1.d"
+	picture = ENLIGHTENMENT_eventPicture
+	
+	trigger = {
+		has_dlc = "Rights of Man"
+		ruler_has_personality = scholar_personality
+		NOT = { has_ruler_flag = scholar_cartograph }
+		NOT = { has_ruler_flag = scholar_better_guns }
+		NOT = { has_ruler_flag = scholar_better_boats }
+		NOT = { has_ruler_flag = scholar_alchemy }
+		NOT = { has_ruler_flag = scholar_mediocrity }
+		NOT = { has_ruler_flag = scholar_new_law_collection }
+		NOT = { has_ruler_flag = scholar_theology }
+		NOT = { has_ruler_flag = scholar_international_law }
+	}
+
+	mean_time_to_happen = {
+		months = 1000
+	}
+
+	option = {
+		name = "personality_events.1.a" #Science
+		custom_tooltip = personality_events.1.a.tt 
+		hidden_effect = {
+			random_list = {
+				15 = { set_ruler_flag = scholar_cartograph } #Cartography
+				10 = { set_ruler_flag = scholar_better_guns } #Better Guns
+				15 = {  set_ruler_flag = scholar_better_boats } #Better Boats
+				10 = {  set_ruler_flag = scholar_alchemy  } #Alchemy
+				50 = {  set_ruler_flag = scholar_mediocrity  } #Mediocrity
+			}
+		}
+	}
+	option = {
+		name = "personality_events.1.b" #Law
+		custom_tooltip = personality_events.1.a.tt 
+		hidden_effect = {
+			random_list = {
+				20 = { set_ruler_flag = scholar_new_law_collection } #Creating New Law Collection
+				20 = {  set_ruler_flag = scholar_theology } #Hosting theological debate
+				10 = {  set_ruler_flag = scholar_international_law } #International Law
+				50 = {  set_ruler_flag = scholar_mediocrity } #Mediocrity
+			}
+		}
+	}
+
+	option = {
+		name = "personality_events.1.c" #This is a waste of time
+		add_prestige = -5
+	}
+}
+
+# Science -> Maps
+country_event = {
+	id = personality_events.2
+	title = "personality_events.2.t"
+	desc = "personality_events.2.d"
+	picture = ENLIGHTENMENT_eventPicture
+	
+	trigger = {
+		has_dlc = "Rights of Man"
+		ruler_has_personality = scholar_personality
+		has_ruler_flag = scholar_cartograph
+	}
+
+	mean_time_to_happen = {
+		months = 90
+	}
+
+	option = {
+		name = "personality_events.2.a" #
+		clr_ruler_flag = scholar_cartograph
+		add_dip_power = 50
+		add_years_of_income = -0.1
+		random_province = { #This part simply does nothing if there is no viable area.
+			limit = {
+				any_neighbor_province = {
+					is_sea = no
+					has_discovered = ROOT
+				}
+				is_sea = no
+				NOT = { has_discovered = ROOT }
+			}
+			area = {
+				ROOT = {
+					discover_province = PREV
+				}
+			}
+		}
+	}
+}
+
+# Science -> Better Guns
+country_event = {
+	id = personality_events.3
+	title = "personality_events.3.t"
+	desc = "personality_events.3.d"
+	picture = ENLIGHTENMENT_eventPicture
+	
+	trigger = {
+		has_dlc = "Rights of Man"
+		ruler_has_personality = scholar_personality
+		has_ruler_flag = scholar_better_guns
+	}
+
+	mean_time_to_happen = {
+		months = 90
+	}
+
+	option = {
+		name = "personality_events.3.a" #
+		clr_ruler_flag = scholar_better_guns
+		add_years_of_income = -0.1
+		add_ruler_modifier = {
+			name = gun_designer_ruler
+			duration = -1
+		}
+	}
+
+}
+
+# Science -> Alchemy
+country_event = {
+	id = personality_events.4
+	title = "personality_events.4.t"
+	desc = "personality_events.4.d"
+	picture = ENLIGHTENMENT_eventPicture
+	
+	trigger = {
+		has_dlc = "Rights of Man"
+		ruler_has_personality = scholar_personality
+		has_ruler_flag = scholar_alchemy
+	}
+
+	mean_time_to_happen = {
+		months = 90
+	}
+
+	option = {
+		name = "personality_events.4.a" #
+		ai_chance = { factor = 100 }
+		clr_ruler_flag = scholar_alchemy
+		add_years_of_income = -0.1
+		add_dip_power = 75
+	}
+	option = {
+		name = "personality_events.4.b" #
+		ai_chance = { factor = 0 }
+		trigger = { NOT = { has_country_flag = tried_to_alchemy } }
+		add_years_of_income = -0.5
+		custom_tooltip = personality_events.4.b.tt
+		hidden_effect = {
+			random_list = {
+				15 = {
+					set_country_flag = tried_to_alchemy
+				}
+				75 = { clr_ruler_flag = scholar_alchemy }
+			}
+		}
+	}
+
+}
+
+# Science -> Mediocrity
+country_event = {
+	id = personality_events.5
+	title = "personality_events.5.t"
+	desc = "personality_events.5.d"
+	picture = ENLIGHTENMENT_eventPicture
+
+	trigger = {
+		has_dlc = "Rights of Man"
+		ruler_has_personality = scholar_personality
+		has_ruler_flag = scholar_mediocrity
+	}
+
+	mean_time_to_happen = {
+		months = 90
+	}
+	
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = { ruler_has_personality = well_connected_personality }
+				}
+				random_list = {
+					50 = { }
+					50 = { set_ruler_flag = getting_well_connected }
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "personality_events.5.a" 
+		clr_ruler_flag = scholar_mediocrity
+		add_years_of_income = -0.1
+		add_prestige = 10
+		add_dip_power = 20
+	}
+	option = {
+		name = "personality_events.5.b"
+		trigger = { has_ruler_flag = getting_well_connected }
+		clr_ruler_flag = scholar_mediocrity
+		add_years_of_income = -0.1
+		remove_ruler_personality = scholar_personality
+		add_ruler_personality = well_connected_personality
+		clr_ruler_flag = getting_well_connected
+	}
+}
+
+# Law -> New Laws
+# Ex: Fatawa-e-Alamgiri
+country_event = {
+	id = personality_events.6
+	title = "personality_events.6.t"
+	desc = "personality_events.6.d"
+	picture = ECONOMICALLY_TALLANTED_RULER_eventPicture
+
+	trigger = {
+		has_dlc = "Rights of Man"
+		ruler_has_personality = scholar_personality
+		has_ruler_flag = scholar_new_law_collection
+	}
+
+	mean_time_to_happen = {
+		months = 90
+	}
+	
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = { ruler_has_personality = lawgiver_personality }
+				}
+				random_list = {
+					50 = { }
+					50 = { set_ruler_flag = can_get_lawgiver_personality }
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "personality_events.6.a"
+		clr_ruler_flag = scholar_new_law_collection
+		add_years_of_income = -0.1
+		add_prestige = 15
+		add_adm_power = 75
+	}
+	option = {
+		name = "personality_events.6.b"
+		trigger = { has_ruler_flag = can_get_lawgiver_personality }
+		clr_ruler_flag = scholar_new_law_collection
+		add_years_of_income = -0.1
+		add_ruler_personality = lawgiver_personality
+		remove_ruler_personality = scholar_personality
+	}
+
+}
+
+# Law -> Theology
+# Valladolid Debate, Ibadat Khana, etc
+country_event = {
+	id = personality_events.7
+	title = "personality_events.7.t"
+	desc = "personality_events.7.d"
+	picture = ECONOMICALLY_TALLANTED_RULER_eventPicture
+	
+	trigger = {
+		has_dlc = "Rights of Man"
+		ruler_has_personality = scholar_personality
+		has_ruler_flag = scholar_theology
+	}
+	
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = { ruler_has_personality = tolerant_personality }
+				}
+				random_list = {
+					75 = {  }
+					25 = { set_ruler_flag = gaining_tolerance }
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 90
+	}
+
+	option = {
+		name = "personality_events.7.a"
+		clr_ruler_flag = scholar_theology
+		add_years_of_income = -0.1
+		add_adm_power = 75
+		add_legitimacy = 15
+		add_devotion = 7
+		add_horde_unity = 15
+		add_republican_tradition = 7
+	}
+	
+	option = {
+		name = "personality_events.7.b"
+		trigger = { has_ruler_flag = gaining_tolerance }
+		clr_ruler_flag = scholar_theology
+		clr_ruler_flag = gaining_tolerance
+		add_years_of_income = -0.1
+		add_ruler_personality = tolerant_personality
+		remove_ruler_personality = scholar_personality
+	}
+}
+
+# Law -> International Law
+# De Iure Belli ac Pacis
+country_event = {
+	id = personality_events.8
+	title = "personality_events.8.t"
+	desc = "personality_events.8.d"
+	picture = ECONOMICALLY_TALLANTED_RULER_eventPicture
+	
+	trigger = {
+		has_dlc = "Rights of Man"
+		ruler_has_personality = scholar_personality
+		has_ruler_flag = scholar_international_law
+	}
+
+	mean_time_to_happen = {
+		months = 90
+	}
+
+	option = {
+		name = "personality_events.8.a"
+		clr_ruler_flag = scholar_international_law
+		add_dip_power = 100
+		hidden_effect = {
+			every_known_country = {
+				limit = {
+					religion_group = ROOT
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = opinion_international_law
+				}
+			}
+		}
+	}
+}
+
+#A righteous King
+country_event = {
+	id = personality_events.11
+	title = "personality_events.11.t"
+	desc = "personality_events.11.d"
+	picture = ENLIGHTENMENT_eventPicture
+	
+	trigger = {
+		has_dlc = "Rights of Man"
+		ruler_has_personality = righteous_personality
+		num_of_cities = 2
+		government = monarchy
+		any_owned_province = {
+			NOT = { has_province_modifier = chastised_governor }
+			NOT = { has_province_modifier = defended_governor }
+			is_core = ROOT
+			is_state = yes
+		}
+	}
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "personality_events.11.a" #Chastise the Governor
+		ai_chance = {
+			factor = 40
+		}
+		add_legitimacy = 10
+		random_owned_province = {
+			limit = {
+				is_capital = no
+				NOT = { has_province_modifier = chastised_governor }
+				NOT = { has_province_modifier = defended_governor }
+				is_core = ROOT
+				is_state = yes
+			}
+			area = {
+				limit = {
+					is_capital = no
+					owned_by = ROOT
+					NOT = { has_province_modifier = chastised_governor }
+					NOT = { has_province_modifier = defended_governor }
+				}
+				custom_tooltip = personality_events.11.a.tt
+				hidden_effect = {
+					add_province_modifier = {
+						name = "chastised_governor"
+						duration = 10950
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = "personality_events.11.b" #Attempt to defend the governor
+		trigger = { NOT = { ruler_has_personality = greedy_personality } }
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0
+				OR = {
+					ruler_has_personality = malevolent_personality
+					ruler_has_personality = obsessive_perfectionist_personality
+					ruler_has_personality = loose_lips_personality
+					ruler_has_personality = craven_personality
+					ruler_has_personality = naive_personality
+					ruler_has_personality = cruel_personality
+					ruler_has_personality = sinner_personality
+					ruler_has_personality = drunkard_personality
+					ruler_has_personality = infertile_personality
+					ruler_has_personality = embezzler_personality
+					ruler_has_personality = babbling_buffoon_personality
+				}
+			}
+		}
+		random_owned_province = {
+			limit = {
+				is_capital = no
+				NOT = { has_province_modifier = chastised_governor }
+				NOT = { has_province_modifier = defended_governor }
+				is_core = ROOT
+				is_state = yes
+			}
+			area = {
+				limit = {
+					is_capital = no
+					owned_by = ROOT
+					NOT = { has_province_modifier = chastised_governor }
+					NOT = { has_province_modifier = defended_governor }
+				}
+				custom_tooltip = personality_events.11.b.tt
+				hidden_effect = {
+					add_province_modifier = {
+						name = "defended_governor"
+						duration = 10950
+					}
+				}
+			}
+		}
+		random_list = {
+			10 = {
+				remove_ruler_personality = righteous_personality
+				add_ruler_personality = greedy_personality
+			}
+			90 = {
+				add_prestige = 10
+			}
+		}
+	}
+	option = {
+		name = "personality_events.11.c" #Avoid making a decision
+		ai_chance = {
+			factor = 20
+			
+		}
+		add_legitimacy = -10
+	}
+}
+
+#A Righteous Republican Ruler
+country_event = {
+	id = personality_events.12
+	title = "personality_events.12.t"
+	desc = "personality_events.12.d"
+	picture = ENLIGHTENMENT_eventPicture
+	
+	trigger = {
+		has_dlc = "Rights of Man"
+		ruler_has_personality = righteous_personality
+		government = republic
+		mercantilism = 2
+		NOT = { has_country_modifier = true_republican_virtues_modifier }
+		NOT = { mercantilism = 98 }
+	}
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "personality_events.12.a" #The Republic Comes Before Family
+		add_country_modifier = {
+			name = "true_republican_virtues_modifier"
+			duration = 3650
+		}
+		add_mercantilism = -2
+	}
+	option = {
+		name = "personality_events.12.b" #
+		trigger = {
+			OR = {
+				NOT = { has_government_attribute = is_merchant_republic }
+				NOT = { num_of_cities = 2 }
+				AND = {
+					has_government_attribute = is_merchant_republic
+					NOT = {
+						any_owned_province = {
+							is_capital = no
+							province_trade_power = 10
+						}
+					}
+				}
+			}
+		}
+		add_corruption = 2
+		add_mercantilism = 2
+	}
+	option = {
+		name = "personality_events.12.c" #
+		add_prestige = -10
+	}
+}
+
+#Don't Panic
+country_event = {
+	id = personality_events.17
+	title = "personality_events.17.t"
+	desc = "personality_events.17.d"
+	picture = KINGS_CHOICE_eventPicture
+	
+	trigger = {
+		has_dlc = "Rights of Man"
+		ruler_has_personality = calm_personality
+		NOT = { stability = 3 }
+	}
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "personality_events.17.a"
+		add_stability = 1
+	}
+}
+
+#New Cipher
+country_event = {
+	id = personality_events.19
+	title = "personality_events.19.t"
+	desc = "personality_events.19.d"
+	picture = PRINTING_PRESS_eventPicture
+	
+	trigger = {
+		has_dlc = "Rights of Man"
+		ruler_has_personality = secretive_personality
+		NOT = { has_country_modifier = secretive_new_cipher }
+	}
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "personality_events.19.a" 
+		add_country_modifier = {
+			name = "secretive_new_cipher"
+			duration = 3650
+		}
+	}
+	option = {
+		name = "personality_events.19.b"
+		add_prestige = 10
+	}
+}
+
+#Twin Birth
+country_event = {
+	id = personality_events.21
+	title = "personality_events.21.t"
+	desc = "personality_events.21.d"
+	picture = NEW_HEIR_eventPicture
+	
+	trigger = {
+		ruler_has_personality = fertile_personality
+		has_dlc = "Rights of Man"
+		is_female = yes
+		is_lesser_in_union = no
+		NOT = { ruler_age = 39 }
+		NOT = { has_heir = yes }
+		has_government_attribute = heir
+	}
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "personality_events.21.a"
+		define_heir = {
+			mil = 4
+			age = 0
+			dynasty = ROOT
+		}
+	}
+	option = {
+		name = "personality_events.21.b"
+		define_heir = {
+			adm = 4
+			age = 0
+			dynasty = ROOT
+		}
+	}
+}
+
+#Twin Birth
+country_event = {
+	id = personality_events.22
+	title = "personality_events.22.t"
+	desc = "personality_events.22.d"
+	picture = NEW_HEIR_eventPicture
+	
+	trigger = {
+		has_dlc = "Rights of Man"
+		ruler_has_personality = fertile_personality
+		is_female = no
+		is_lesser_in_union = no
+		has_heir = no
+		has_government_attribute = heir
+	}
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "personality_events.22.a"
+		define_heir = {
+			adm = 4
+			age = 0
+			dynasty = ROOT
+		}
+	}
+	option = {
+		name = "personality_events.22.b"
+		define_heir = {
+			mil = 4
+			age = 0
+			dynasty = ROOT
+		}
+	}
+}
+
+#Finding money in unexpected places
+country_event = {
+	id = personality_events.30
+	title = "personality_events.30.t"
+	desc = "personality_events.30.d"
+	picture = ECONOMICALLY_TALLANTED_RULER_eventPicture
+	
+	trigger = {
+		has_dlc = "Rights of Man"
+		ruler_has_personality = midas_touched_personality
+	}
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "personality_events.30.a" #
+		random_owned_province = {
+			limit = {
+				is_in_capital_area = yes
+			}
+			add_base_tax = 1
+		}
+	}
+}
+
+#Keeping to the Code
+country_event = {
+	id = personality_events.31
+	title = "personality_events.31.t"
+	desc = "personality_events.31.d"
+	picture = KINGS_CHOICE_eventPicture
+	
+	trigger = {
+		has_dlc = "Rights of Man"
+		ruler_has_personality = incorruptible_personality
+		NOT = { has_ruler_modifier = corrupted_incorruptible_ruler }
+	}
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+ 
+	option = {
+		name = "personality_events.31.a" 
+		add_adm_power = -75
+	}
+	option = {
+		name = "personality_events.31.b"
+		add_ruler_modifier = {
+			name = "corrupted_incorruptible_ruler"
+			duration = 3650
+		}
+	}
+}
+
+#The Lure of New Worlds
+country_event = {
+	id = personality_events.35
+	title = "personality_events.35.t"
+	desc = "personality_events.35.d"
+	picture = ENLIGHTENMENT_eventPicture
+	
+	trigger = {
+		has_dlc = "Rights of Man"
+		ruler_has_personality = expansionist_personality
+		any_owned_province = {
+			is_colony = yes
+		}
+	}
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "personality_events.35.a" 
+		trigger = { has_institution = new_world_i }
+		random_owned_province = {
+			limit = { is_colony = yes }
+			add_colonysize = 700 
+		}
+	}
+	option = {
+		name = "personality_events.35.b"
+		create_conquistador = 50
+	}
+	option = {
+		name = "personality_events.35.c"
+		create_explorer = 50
+	}
+}
+
+#Fear and Awe
+country_event = {
+	id = personality_events.37
+	title = "personality_events.37.t"
+	desc = "personality_events.37.d"
+	picture = MILITARISTICALLY_TALENTED_RULER_eventPicture
+	
+	trigger = {
+		has_dlc = "Rights of Man"
+		ruler_has_personality = conqueror_personality
+		is_at_war = yes
+		NOT = { has_ruler_modifier = conquerors_presence }
+		NOT = { has_ruler_modifier = the_beating_of_the_drums }
+	}
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "personality_events.37.a"
+		add_ruler_modifier = {
+			name = "conquerors_presence"
+			duration = 1825
+		}
+	}
+	option = {
+		name = "personality_events.37.b"
+		add_ruler_modifier = {
+			name = "the_beating_of_the_drums"
+			duration = 1825
+		}
+	}
+}
+
+#
+country_event = {
+	id = personality_events.44
+	title = "personality_events.44.t"
+	desc = "personality_events.44.d"
+	picture = ECONOMICALLY_TALLANTED_RULER_eventPicture
+	
+	trigger = {
+		has_dlc = "Rights of Man"
+		ruler_has_personality = fierce_negotiator_personality
+		num_of_loans = 1
+	}
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "personality_events.44.a" 
+
+		add_ruler_modifier = {
+			name = renegotiated_loans 
+			duration = -1
+		}
+	}
+}
+
+#Adoption
+country_event = {
+	id = personality_events.47
+	title = "personality_events.47.t"
+	desc = "personality_events.47.d"
+	picture = NEW_HEIR_eventPicture
+	
+	trigger = {
+		ruler_has_personality = infertile_personality
+		has_heir = no
+		has_government_attribute = heir
+		government = monarchy
+		is_lesser_in_union = no
+		has_dlc = "Rights of Man"
+		OR = {
+			any_country = {
+				marriage_with = ROOT
+				reverse_has_opinion = { who = ROOT value = 15 }
+			}
+			any_neighbor_country = {
+				reverse_has_opinion = { who = ROOT value = 15 }
+			}
+		}
+		
+	}
+
+	immediate = {
+		hidden_effect = {
+
+			#Find country nr 1
+			random_country = {
+				limit = { 
+					marriage_with = ROOT
+					reverse_has_opinion = { who = ROOT value = 15 }
+				}
+				save_event_target_as = adoptive_country_1
+			}
+
+			if = {
+				limit = { NOT = { has_saved_event_target = adoptive_country_1 } }
+
+				random_neighbor_country = {
+					limit = { reverse_has_opinion = { who = ROOT value = 15 } }
+					save_event_target_as = adoptive_country_1
+
+				}
+			}
+
+			#Find country nr 2
+			random_country = {
+				limit = { 
+					marriage_with = ROOT
+					reverse_has_opinion = { who = ROOT value = 15 }
+					NOT = { event_target:adoptive_country_1 = { tag = PREV } }
+				}
+				save_event_target_as = adoptive_country_2
+			}
+
+			if = {
+				limit = { NOT = { has_saved_event_target = adoptive_country_2 } }
+
+				random_neighbor_country = {
+					limit = { 
+						reverse_has_opinion = { who = ROOT value = 15 } 
+						NOT = { event_target:adoptive_country_1 = { tag = PREV } }
+					}
+					save_event_target_as = adoptive_country_2
+				}
+			}
+
+			#Find country nr 3
+			random_country = {
+				limit = { 
+					marriage_with = ROOT
+					reverse_has_opinion = { who = ROOT value = 15 }
+					NOT = { event_target:adoptive_country_1 = { tag = PREV } }
+					NOT = { event_target:adoptive_country_2 = { tag = PREV } }
+				}
+				save_event_target_as = adoptive_country_3
+			}
+
+			if = {
+				limit = { NOT = { has_saved_event_target = adoptive_country_3 } }
+
+				random_neighbor_country = {
+					limit = { 
+						reverse_has_opinion = { who = ROOT value = 15 } 
+						NOT = { event_target:adoptive_country_1 = { tag = PREV } }
+						NOT = { event_target:adoptive_country_2 = { tag = PREV } }
+					}
+					save_event_target_as = adoptive_country_3
+				}
+			}
+		}
+	}
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "personality_events.47.a" 
+
+		define_heir = {
+			claim = 25
+		   	dynasty = event_target:adoptive_country_1
+		   	name = "Maria"
+		   	adm = 4
+		   	dip = 1
+		   	mil = 2
+		   	age = 22
+		   	female = yes
+		}
+	}
+
+
+	option = {
+		trigger = { has_saved_event_target = adoptive_country_2 }
+		name = "personality_events.47.b" 
+
+		define_heir = {
+		   	claim = 25
+		   	dynasty = event_target:adoptive_country_2
+		   	name = "Alexander"
+		   	adm = 1
+		   	dip = 2
+		   	mil = 4
+		   	age = 30
+		   	female = no
+		}
+	}
+
+	option = {
+		trigger = { has_saved_event_target = adoptive_country_3 }
+		name = "personality_events.47.c" 
+
+		define_heir = {
+		   	claim = 25
+		   	dynasty = event_target:adoptive_country_3
+		   	name = "Stefanos"
+		   	adm = 2
+		   	dip = 4
+		   	mil = 1
+		   	age = 27
+		   	female = no
+		}	
+	}	
+
+	option = {
+		name = "personality_events.47.e"
+		custom_tooltip = personality_events.47.e.tooltip
+	}
+}
+
+#Cheaper advisors
+country_event = {
+	id = personality_events.52
+	title = "personality_events.52.t"
+	desc = "personality_events.52.d"
+	picture = ADVISOR_eventPicture
+	
+	trigger = {
+		has_dlc = "Rights of Man"
+		ruler_has_personality = naive_personality
+		NOT = { has_ruler_modifier = naive_employer }
+	}
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "personality_events.52.a" 
+		
+		add_ruler_modifier = {
+			name = naive_employer
+			duration = -1
+		}
+	}
+}
+
+#Perfect army
+country_event = {
+	id = personality_events.55
+	title = "personality_events.55.t"
+	desc = "personality_events.55.d"
+	picture = LAND_MILITARY_eventPicture
+	
+	trigger = {
+		has_dlc = "Rights of Man"
+		ruler_has_personality = obsessive_perfectionist_personality
+		NOT = { has_ruler_modifier = military_perfectionism }
+	}
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "personality_events.55.a" 
+
+		add_ruler_modifier = {
+			name = military_perfectionism
+			duration = -1
+		}
+		
+	}
+	option = {
+		name = "personality_events.55.b"
+		custom_tooltip = personality_events.55.b.tooltip
+
+		add_prestige = -5
+	}
+}
+
+#Female general (ruler)
+country_event = {
+	id = personality_events.57
+	title = "personality_events.57.t"
+	desc = "personality_events.57.d"
+	picture = wihgfx_FEMALE_GENERAL_eventPicture
+	
+	trigger = {
+		is_female = yes
+		is_monarch_leader = no
+		has_dlc = "Rights of Man"
+		OR = {
+			ruler_has_personality = bold_fighter_personality
+			ruler_has_personality =	tactical_genius_personality
+			ruler_has_personality = inspiring_leader_personality
+			MIL = 5
+		}
+	}
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "personality_events.57.a" 
+		custom_tooltip = personality_events.57.a.tooltip
+		if = {
+			limit = {
+				MIL = 1
+				NOT = { MIL = 2 }
+			}
+			convert_female_ruler_to_general = 10
+		}
+		if = {
+			limit = {
+				MIL = 2
+				NOT = { MIL = 3 }
+			}
+			convert_female_ruler_to_general = 20
+		}
+		if = {
+			limit = {
+				MIL = 3
+				NOT = { MIL = 4 }
+			}
+			convert_female_ruler_to_general = 30
+		}
+		if = {
+			limit = {
+				MIL = 4
+				NOT = { MIL = 5 }
+			}
+			convert_female_ruler_to_general = 40
+		}
+		if = {
+			limit = {
+				MIL = 5
+				NOT = { MIL = 6 }
+			}
+			convert_female_ruler_to_general = 50
+		}
+		if = {
+			limit = {
+				MIL = 6
+			}
+			convert_female_ruler_to_general = 70
+		}
+	}
+	option = {
+		name = "personality_events.57.b"
+		custom_tooltip = personality_events.57.b.tooltip
+	}
+}
+
+#Female general (heir)
+country_event = {
+	id = personality_events.58
+	title = "personality_events.58.t"
+	desc = "personality_events.58.d"
+	picture = wihgfx_FEMALE_GENERAL_eventPicture
+	
+	trigger = {
+		has_dlc = "Rights of Man"
+		has_female_heir = yes
+		heir_age = 15
+		is_heir_leader = no
+		OR = {
+			heir_has_personality = bold_fighter_personality
+			heir_has_personality = tactical_genius_personality
+			heir_has_personality = inspiring_leader_personality
+			heir_mil = 5
+		}
+	}
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "personality_events.58.a" 
+		custom_tooltip = personality_events.58.a.tooltip
+		if = {
+			limit = {
+				heir_mil = 1
+				NOT = { heir_mil = 2 }
+			}
+			convert_female_heir_to_general = 10
+		}
+		if = {
+			limit = {
+				heir_mil = 2
+				NOT = { heir_mil = 3 }
+			}
+			convert_female_heir_to_general = 20
+		}
+		if = {
+			limit = {
+				heir_mil = 3
+				NOT = { heir_mil = 4 }
+			}
+			convert_female_heir_to_general = 30
+		}
+		if = {
+			limit = {
+				heir_mil = 4
+				NOT = { heir_mil = 5 }
+			}
+			convert_female_heir_to_general = 40
+		}
+		if = {
+			limit = {
+				heir_mil = 5
+				NOT = { heir_mil = 6 }
+			}
+			convert_female_heir_to_general = 50
+		}
+		if = {
+			limit = {
+				heir_mil = 6
+			}
+			convert_female_heir_to_general = 70
+		}
+	}
+	option = {
+		name = "personality_events.58.b"
+		custom_tooltip = personality_events.58.b.tooltip
+		
+	}
+}

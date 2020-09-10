@@ -1,0 +1,717 @@
+namespace = es_30_scenario
+
+country_event = {
+	id = es_30_scenario.1
+	title = es_30_scenario.1.t
+	desc = es_30_scenario.1.d
+	picture = ES_05_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_30_scenario.1_flag }
+		is_year = 1387
+		NOT = { is_year = 1410 }
+		has_ruler = "Reman"
+    }
+
+	mean_time_to_happen = {
+		days = 4015
+	}
+	
+	immediate = {
+	    set_country_flag = es_30_scenario.1_flag
+	}
+	
+	option = {
+		name = "es_30_scenario.1.a"
+		ai_chance = { factor = 100 }
+		add_stability = -1
+		kill_ruler = yes
+		add_country_modifier = {
+		    name = "30_death_of_reman"
+			duration = 9125
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_30_scenario.2
+	title = es_30_scenario.2.t
+	desc = es_30_scenario.2.d
+	picture = ES_UNIVERSITY_1_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_30_scenario.2_flag }
+		is_year = 1387
+		NOT = { is_year = 1410 }
+		owns = 1139
+		1139 = { NOT = { has_province_modifier = 30_university_of_gwylim } }
+    }
+
+	mean_time_to_happen = {
+		days = 4015
+	}
+	
+	immediate = {
+	    set_country_flag = es_30_scenario.2_flag
+	}
+	
+	option = {
+		name = "es_30_scenario.2.a"
+		ai_chance = { factor = 100 }
+		add_prestige = 10
+		1139 = {
+		add_permanent_province_modifier = {
+		    name = "30_university_of_gwylim"
+			duration = -1
+		}
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_30_scenario.3
+	title = es_30_scenario.3.t
+	desc = es_30_scenario.3.d
+	picture = ES_AYLEID_ELF_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_30_scenario.3_flag }
+		is_year = 1387
+		NOT = { is_year = 1410 }
+		culture_group = high_elves_cg
+    }
+
+	mean_time_to_happen = {
+		days = 4015
+	}
+	
+	immediate = {
+	    set_country_flag = es_30_scenario.3_flag
+	}
+	
+	option = {
+		name = "es_30_scenario.3.a"
+		ai_chance = { factor = 100 }
+		add_prestige = 15
+		add_country_modifier = {
+		    name = "30_tjurhane_fyrre"
+			duration = 9125
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_30_scenario.4
+	title = es_30_scenario.4.t
+	desc = es_30_scenario.4.d
+	picture = ES_IMPERIAL_GENERAL_1_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_30_scenario.4_flag }
+		is_year = 1387
+		NOT = { is_year = 1410 }
+		culture_group = cyrodiil_cg
+		owns = 1206
+    }
+
+	mean_time_to_happen = {
+		days = 4015
+	}
+	
+	immediate = {
+	    set_country_flag = es_30_scenario.4_flag
+	}
+	
+	option = {
+		name = "es_30_scenario.4.a"
+		ai_chance = { factor = 50 }
+		kill_ruler = yes
+		define_ruler = {
+        name = "Kastav"
+        dynasty = "Cyrodiil"
+        adm = 1
+        dip = 1
+        mil = 0
+        age = 45
+        claim = 100
+		fixed = yes
+        }
+		define_heir = {
+		name = "Reman"
+        dynasty = "Cyrodiil"
+        age = 0
+        adm = 7
+        dip = 7
+        mil = 7
+        claim = 100 
+        }
+	}
+	option = {
+		name = "es_30_scenario.4.b"
+		ai_chance = { factor = 50 }
+		kill_ruler = yes
+		add_stability = -3
+		define_heir = {
+		name = "Reman"
+        dynasty = "Cyrodiil"
+        claim = 100 
+        }
+	}
+	
+}
+
+country_event = {
+	id = es_30_scenario.5
+	title = es_30_scenario.5.t
+	desc = es_30_scenario.5.d
+	picture = ES_PRISON_1_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_30_scenario.5_flag }
+		is_year = 1387
+		culture_group = cyrodiil_cg
+		owns = 1206
+		any_subject_country = {
+		    OR = {
+			    owns = 1355
+				owns = 1331
+				owns = 1296
+			}
+		}
+    }
+
+	mean_time_to_happen = {
+		days = 4015
+	}
+	
+	immediate = {
+	    set_country_flag = es_30_scenario.5_flag
+	}
+	
+	option = {
+		name = "es_30_scenario.5.a"
+		ai_chance = { factor = 50 }
+		set_country_flag = 30_seizing_of_hostages_flag
+		add_country_modifier = {
+		    name = "30_seizing_of_hostages"
+			duration = 9125
+		}
+	}
+	option = {
+		name = "es_30_scenario.5.b"
+		ai_chance = { factor = 50 }
+		add_prestige = 10
+	}
+	
+}
+
+country_event = {
+	id = es_30_scenario.6
+	title = es_30_scenario.6.t
+	desc = es_30_scenario.6.d
+	picture = ES_PRISON_1_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_30_scenario.6_flag }
+		is_year = 1387
+		overlord = { has_country_flag = 30_seizing_of_hostages_flag }
+		OR = {
+			owns = 1355
+			owns = 1331
+			owns = 1296
+		}
+    }
+
+	mean_time_to_happen = {
+		days = 4015
+	}
+	
+	immediate = {
+	    set_country_flag = es_30_scenario.6_flag
+	}
+	
+	option = {
+		name = "es_30_scenario.6.a"
+		ai_chance = { factor = 50 }
+		add_stability = -1
+		if = {
+		    limit = { owns = 1355 }
+			every_owned_province = {
+			    limit = {
+		        area = skyrim_19_la
+				}
+				add_permanent_province_modifier = {
+				    name = "00_unrest"
+					duration = 9125
+				}
+			}
+		}
+		if = {
+		    limit = { owns = 1331 }
+			every_owned_province = {
+			    limit = {
+		        area = skyrim_14_la
+				}
+				add_permanent_province_modifier = {
+				    name = "00_unrest"
+					duration = 9125
+				}
+			}
+		}
+		if = {
+		    limit = { owns = 1296 }
+			every_owned_province = {
+			    limit = {
+		        area = skyrim_7_la
+				}
+				add_permanent_province_modifier = {
+				    name = "00_unrest"
+					duration = 9125
+				}
+			}
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_30_scenario.7
+	title = es_30_scenario.7.t
+	desc = es_30_scenario.7.d
+	picture = ES_SKY_HEAVEN_TEMPLE_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_30_scenario.7_flag }
+		is_year = 1387
+		NOT = { is_year = 1410 }
+		is_free_or_tributary_trigger = yes
+		OR = {
+		owns = 1352
+		any_subject_country = { owns = 1352 }
+		}
+		1352 = { has_province_modifier = 29_sky_heaven_temple }
+    }
+
+	mean_time_to_happen = {
+		days = 4015
+	}
+	
+	immediate = {
+	    set_country_flag = es_30_scenario.7_flag
+	}
+	
+	option = {
+		name = "es_30_scenario.7.a"
+		ai_chance = { factor = 50 }
+		if = { limit = { NOT = { 1352 = { religion = tsaesci_pantheon } } } 1352 = { change_religion = ROOT } }
+		if = { limit = { NOT = { 1352 = { culture = tsaesci } } } 1352 = { change_culture = ROOT } }
+		add_country_modifier = {
+		    name = "30_dragon_guard"
+			duration = -1
+		}
+	}
+	
+	option = {
+		name = "es_30_scenario.7.b"
+		ai_chance = { factor = 50 }
+		define_general = {
+		name = "Dragonborn"
+        shock = 5
+        fire = 5
+        manuever = 5
+        siege = 5
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_30_scenario.8
+	title = es_30_scenario.8.t
+	desc = es_30_scenario.8.d
+	picture = ES_NORDIC_REBELLION_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_30_scenario.8_flag }
+		is_year = 1387
+		NOT = { is_year = 1410 }
+		NOT = { is_free_or_tributary_trigger = yes }
+		owns = 1299
+    }
+
+	mean_time_to_happen = {
+		days = 4015
+	}
+	
+	immediate = {
+	    set_country_flag = es_30_scenario.8_flag
+	}
+	
+	option = {
+		name = "es_30_scenario.8.a"
+		ai_chance = { factor = 33 }
+		add_stability = 1
+		add_country_modifier = {
+		    name = "30_winterhold_rebellion"
+			duration = 9125
+		}
+		overlord = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_independence_war } } }
+	}
+	
+	option = {
+		name = "es_30_scenario.8.b"
+		ai_chance = { factor = 33 }
+		add_stability = -1
+		every_owned_province = {
+		    limit = {
+			    OR = {
+				    area = skyrim_8_la
+					area = skyrim_9_la
+					area = skyrim_11_la
+					area = skyrim_12_la
+					area = skyrim_13_la
+				}
+			}
+			cede_province = NA8
+			add_core = NA8
+		}
+		every_province = {
+		    limit = {
+			    OR = {
+				    area = skyrim_8_la
+					area = skyrim_9_la
+					area = skyrim_11_la
+					area = skyrim_12_la
+					area = skyrim_13_la
+				}
+				NOT = { owned_by = ROOT }
+			}
+			add_permanent_province_modifier = {
+				name = "10_unrest"
+				duration = 9125
+			}
+		}
+	}
+	
+	option = {
+		name = "es_30_scenario.8.c"
+		ai_chance = { factor = 33 }
+		add_stability = -3
+		every_owned_province = {
+		    limit = {
+			    OR = {
+			    region = nordic_coast_lr
+				region = great_planes_lr
+				}
+			}
+			add_permanent_province_modifier = {
+				name = "00_unrest"
+				duration = 9125
+			}
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_30_scenario.9
+	title = es_30_scenario.9.t
+	desc = es_30_scenario.9.d
+	picture = ES_FORSWORN_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_30_scenario.7_flag }
+		is_year = 1387
+		NOT = { is_year = 1410 }
+		owns = 1352
+		1352 = { has_province_modifier = 29_sky_heaven_temple }
+    }
+
+	mean_time_to_happen = {
+		days = 4015
+	}
+	
+	immediate = {
+	    set_country_flag = es_30_scenario.7_flag
+	}
+	
+	option = {
+		name = "es_30_scenario.9.a"
+		ai_chance = { factor = 50 }
+		1352 = {
+		add_permanent_province_modifier = {
+		    name = "10_unrest"
+			duration = 9125
+		}
+		}
+	}
+	
+}
+
+province_event = {
+	id = es_30_scenario.10
+	title = es_30_scenario.9.t
+	desc = es_30_scenario.9.d
+	picture = ES_FORSWORN_eventPicture
+	
+	hidden = yes
+	
+	trigger = {
+		is_year = 1387
+	    culture = reachmen
+		region = nordic_coast_lr
+		owner = { NOT = { primary_culture = reachmen } }
+		owner = { NOT = { tag = REA } }
+		OR = {
+		NOT = { has_province_flag = es_30_scenario.10_flag }
+		is_core = REA
+		}
+    }
+
+	mean_time_to_happen = {
+		days = 9125
+	}
+	
+	immediate = {
+	    set_province_flag = es_30_scenario.10_flag
+		add_permanent_province_modifier = {
+		    name = "30_forsworn_separatism"
+			duration = 9125
+		}
+	}
+	
+	option = {
+		name = "es_30_scenario.9.a"
+		ai_chance = { factor = 50 }
+	}
+	
+}
+
+country_event = {
+	id = es_30_scenario.11
+	title = es_30_scenario.11.t
+	desc = es_30_scenario.11.d
+	picture = ES_CITY_IN_FIRE_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_30_scenario.11_flag }
+		is_year = 1387
+		NOT = { is_year = 1410 }
+		owns = 1352
+		NOT = { controls = 1352 }
+    }
+
+	mean_time_to_happen = {
+		days = 31
+	}
+	
+	immediate = {
+	    set_country_flag = es_30_scenario.11_flag
+	}
+	
+	option = {
+		name = "es_30_scenario.11.a"
+		ai_chance = { factor = 50 }
+		1352 = {
+		add_devastation = 100
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_30_scenario.12
+	title = es_30_scenario.12.t
+	desc = es_30_scenario.12.d
+	picture = ES_CITY_IN_FIRE_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_30_scenario.12_flag }
+		is_year = 1387
+		NOT = { is_year = 1410 }
+		owns = 1299
+		NOT = { controls = 1299 }
+    }
+
+	mean_time_to_happen = {
+		days = 31
+	}
+	
+	immediate = {
+	    set_country_flag = es_30_scenario.12_flag
+	}
+	
+	option = {
+		name = "es_30_scenario.12.a"
+		ai_chance = { factor = 50 }
+		1299 = {
+		add_devastation = 100
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_30_scenario.13
+	title = es_30_scenario.13.t
+	desc = es_30_scenario.13.d
+	picture = ES_DRAGON_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_30_scenario.13_flag }
+		is_year = 1387
+		NOT = { is_year = 1410 }
+		any_owned_province = { OR = { region = nordic_coast_lr region = great_planes_lr } }
+    }
+
+	mean_time_to_happen = {
+		days = 4015
+	}
+	
+	immediate = {
+	    set_country_flag = es_30_scenario.13_flag
+	}
+	
+	option = {
+		name = "es_30_scenario.13.a"
+		ai_chance = { factor = 50 }
+		add_stability = -1
+	}
+	
+	option = {
+		name = "es_30_scenario.13.b"
+		ai_chance = { factor = 50 }
+		trigger = { capital_scope = { OR = { region = nordic_coast_lr region = great_planes_lr } } }
+		random_list = {
+		    50 = {
+			define_general = {
+		    name = "Dragonborn"
+            shock = 5
+            fire = 5
+            manuever = 5
+            siege = 5
+		    }
+			}
+			50 = {
+			    capital_scope = { add_devastation = 100 }
+			}
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_30_scenario.14
+	title = es_30_scenario.14.t
+	desc = es_30_scenario.14.d
+	picture = ES_BLACK_MARSH_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_30_scenario.14_flag }
+		is_year = 1387
+		NOT = { is_year = 1410 }
+		culture_group = cyrodiil_cg
+		owns = 1206
+    }
+
+	mean_time_to_happen = {
+		days = 4015
+	}
+	
+	immediate = {
+	    set_country_flag = es_30_scenario.14_flag
+	}
+	
+	option = {
+		name = "es_30_scenario.14.a"
+		ai_chance = { factor = 50 }
+		every_province = {
+		    limit = {
+			    region = black_marsh_lr
+			}
+			add_claim = ROOT
+		}
+		
+		if = {
+		limit = {
+		exists = ARG
+		NOT = { alliance_with = ARG }
+		NOT = { overlord_of = ARG }
+		}
+		declare_war_with_cb = {
+			who = ARG
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = KOT
+		NOT = { alliance_with = KOT }
+		NOT = { overlord_of = KOT }
+		}
+		declare_war_with_cb = {
+			who = KOT
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = AA2
+		NOT = { alliance_with = AA2 }
+		NOT = { overlord_of = AA2 }
+		}
+		declare_war_with_cb = {
+			who = AA2
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = AB0
+		NOT = { alliance_with = AB0 }
+		NOT = { overlord_of = AB0 }
+		}
+		declare_war_with_cb = {
+			who = AB0
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = AA8
+		NOT = { alliance_with = AA8 }
+		NOT = { overlord_of = AA8 }
+		}
+		declare_war_with_cb = {
+			who = AA8
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+	}
+	
+	option = {
+		name = "es_30_scenario.14.b"
+		ai_chance = { factor = 50 }
+		add_prestige = -10
+	}
+	
+	option = {
+		name = "es_30_scenario.14.c"
+		ai_chance = { factor = 50 }
+		add_prestige = -25
+		add_country_modifier = {
+		    name = "01_focus_on_trade"
+			duration = 9125
+		}
+	}
+	
+}
+

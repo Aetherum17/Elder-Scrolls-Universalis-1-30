@@ -1,0 +1,108 @@
+namespace = es_culture
+
+country_event = {
+	id = es_culture.1
+	title = es_culture.1.t
+	desc = es_culture.1.d
+	picture = ES_STATE_COLLAPSE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		NOT = { exists = MA1 }
+    }
+
+	mean_time_to_happen = {
+		days = 1		
+	}
+
+	option = {
+		name = "es_culture.1.a"
+		ai_chance = { factor = 100 }
+		set_global_flag = nordic_solsteim_flag
+	}
+}
+
+country_event = {
+	id = es_culture.2
+	title = es_culture.2.t
+	desc = es_culture.2.d
+	picture = ES_STATE_COLLAPSE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		NOT = { exists = BA1 }
+		NOT = { exists = BA2 }
+		NOT = { exists = BA3 }
+		NOT = { exists = BA4 }
+		NOT = { exists = DIR }
+    }
+
+	mean_time_to_happen = {
+		days = 1		
+	}
+
+	option = {
+		name = "es_culture.1.a"
+		ai_chance = { factor = 100 }
+		set_global_flag = fall_of_direnii_flag
+	}
+}
+
+country_event = {
+	id = es_culture.3
+	title = es_culture.3.t
+	desc = es_culture.3.d
+	picture = ES_STATE_COLLAPSE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		NOT = { exists = NA1 }
+		NOT = { exists = NA4 }
+		NOT = { exists = NA5 }
+		NOT = { exists = NA6 }
+		NOT = { exists = NB0 }
+		NOT = { exists = WIN }
+    }
+
+	mean_time_to_happen = {
+		days = 1		
+	}
+
+	option = {
+		name = "es_culture.1.a"
+		ai_chance = { factor = 100 }
+		set_global_flag = fall_of_white_elves_flag
+	}
+}
+
+country_event = {
+	id = es_culture.4
+	title = es_culture.4.t
+	desc = es_culture.4.d
+	picture = ES_STATE_COLLAPSE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		NOT = { exists = CA3 }
+		NOT = { exists = CA4 }
+		NOT = { exists = CA5 }
+		NOT = { exists = CA6 }
+		NOT = { exists = CB7 }
+		NOT = { exists = CB8 }
+		NOT = { exists = AYL }
+    }
+
+	mean_time_to_happen = {
+		days = 1		
+	}
+
+	option = {
+		name = "es_culture.1.a"
+		ai_chance = { factor = 100 }
+		set_global_flag = ayleid_fall_flag
+	}
+}

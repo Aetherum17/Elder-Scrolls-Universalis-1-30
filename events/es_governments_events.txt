@@ -1,0 +1,33 @@
+namespace = es_government
+
+country_event = {
+    id = es_government.2
+    title = "EVTNAME9462"
+    desc = "EVTDESC9462"
+    picture = DEBATE_REPUBLICAN_eventPicture
+
+    trigger = {
+        government = monarchy
+        NOT = { has_reform = celestial_empire }
+        adm_power = 100
+    }
+
+    mean_time_to_happen = {
+        months = 5000
+    }
+
+    option = {
+        name = "EVTOPTA9462"
+        ai_chance = { factor = 100 }
+        add_adm_power = -100
+        add_stability = -1
+    }
+    option = {
+        name = "EVTOPTB9462"
+        ai_chance = { factor = 0 }
+		if = { limit = { NOT = { government = republic } } change_government = republic }
+		add_government_reform = protectorate_parliament_reform
+        kill_ruler = yes
+        add_stability = -5
+    }
+}

@@ -1,0 +1,291 @@
+namespace = es_19_scenario
+
+country_event = {
+	id = es_19_scenario.1
+	title = es_19_scenario.1.t
+	desc = es_19_scenario.1.d
+	picture = ES_SNOWY_CASTLE_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_19_scenario.1_flag }
+		is_year = 810
+		NOT = { is_year = 874 }
+		culture_group = daedra_cg
+		owns = 426
+    }
+
+	mean_time_to_happen = {
+		days = 11680
+	}
+	
+	immediate = {
+	    set_country_flag = es_19_scenario.1_flag
+	}
+
+	option = {
+		name = "es_19_scenario.1.a"
+		ai_chance = { factor = 25 }
+		add_country_modifier = {
+		    name = "19_integration"
+			duration = 9125
+		}
+	}
+	
+	option = {
+		name = "es_19_scenario.1.b"
+		ai_chance = { factor = 25 }
+		add_country_modifier = {
+		    name = "19_decentralization"
+			duration = 9125
+		}
+	}
+	
+	option = {
+		name = "es_19_scenario.1.c"
+		ai_chance = { factor = 25 }
+		add_country_modifier = {
+		    name = "19_colonization"
+			duration = 9125
+		}
+	}
+	
+	option = {
+		name = "es_19_scenario.1.e"
+		ai_chance = { factor = 25 }
+		add_stability = 1
+	}
+	
+}
+
+country_event = {
+	id = es_19_scenario.2
+	title = es_19_scenario.2.t
+	desc = es_19_scenario.2.d
+	picture = BATTLE_3_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_19_scenario.2_flag }
+		is_year = 810
+		NOT = { is_year = 874 }
+		culture_group = kamal_cg
+		owns = 479
+    }
+
+	mean_time_to_happen = {
+		days = 11680
+	}
+	
+	immediate = {
+	    set_country_flag = es_19_scenario.2_flag
+	}
+
+	option = {
+		name = "es_19_scenario.2.a"
+		ai_chance = { factor = 25 }
+		add_country_modifier = {
+		    name = "19_offensive_strategy"
+			duration = 9125
+		}
+	}
+	
+	option = {
+		name = "es_19_scenario.2.b"
+		ai_chance = { factor = 25 }
+		add_country_modifier = {
+		    name = "19_devensive_strategy"
+			duration = 9125
+		}
+	}
+	
+	option = {
+		name = "es_19_scenario.2.c"
+		ai_chance = { factor = 25 }
+		add_country_modifier = {
+		    name = "19_balanced_strategy"
+			duration = 9125
+		}
+	}
+	
+	option = {
+		name = "es_19_scenario.2.e"
+		ai_chance = { factor = 25 }
+		add_stability = 1
+	}
+	
+}
+
+country_event = {
+	id = es_19_scenario.3
+	title = es_19_scenario.3.t
+	desc = es_19_scenario.3.d
+	picture = ES_ICY_DESERT_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_19_scenario.3_flag }
+		is_year = 810
+		NOT = { is_year = 874 }
+		owns = 479
+    }
+
+	mean_time_to_happen = {
+		days = 11680
+	}
+	
+	immediate = {
+	    set_country_flag = es_19_scenario.3_flag
+	}
+
+	option = {
+		name = "es_19_scenario.3.a"
+		ai_chance = { factor = 100 }
+		add_stability = -1
+		every_province = {
+		limit = {
+		OR = {
+		region = southern_kamal_lr
+		region = northern_kamal_lr
+		}
+		NOT = { culture = dremora }
+		}
+		add_permanent_province_modifier = {
+		    name = "19_non-melting_ice"
+			duration = 18250
+		}
+		}
+		set_global_flag = 19_ice_flag
+	}
+	
+}
+
+country_event = {
+	id = es_19_scenario.4
+	title = es_19_scenario.4.t
+	desc = es_19_scenario.4.d
+	picture = ES_AKAVIRI_CASTLE_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_19_scenario.4_flag }
+		has_global_flag = 19_ice_flag
+		culture_group = daedra_cg
+		owns = 426
+    }
+
+	mean_time_to_happen = {
+		days = 365
+	}
+	
+	immediate = {
+	    set_country_flag = es_19_scenario.4_flag
+	}
+
+	option = {
+		name = "es_19_scenario.4.a"
+		ai_chance = { factor = 33 }
+		every_province = {
+		limit = {
+		NOT = { owned_by = ROOT }
+		has_province_modifier = 19_non-melting_ice
+		}
+		add_core = ROOT
+		}
+		add_prestige = 10
+		
+		if = {
+		limit = {
+		exists = KAM
+		NOT = { alliance_with = KAM }
+		NOT = { overlord_of = KAM }
+		}
+		declare_war_with_cb = {
+			who = KAM
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = KB3
+		NOT = { alliance_with = KB3 }
+		NOT = { overlord_of = KB3 }
+		}
+		declare_war_with_cb = {
+			who = KB3
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = KB5
+		NOT = { alliance_with = KB5 }
+		NOT = { overlord_of = KB5 }
+		}
+		declare_war_with_cb = {
+			who = KB3
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = KB7
+		NOT = { alliance_with = KB7 }
+		NOT = { overlord_of = KB7 }
+		}
+		declare_war_with_cb = {
+			who = KB7
+			casus_belli = cb_es_scenario
+		}
+		}
+	}
+	
+	option = {
+		name = "es_19_scenario.4.b"
+		ai_chance = { factor = 33 }
+		add_prestige = -10
+		add_country_modifier = {
+		    name = "19_expansion_via_trade"
+			duration = 9125
+		}
+	}
+	
+	option = {
+		name = "es_19_scenario.4.c"
+		ai_chance = { factor = 33 }
+		add_stability = -1
+	}
+	
+}
+
+country_event = {
+	id = es_19_scenario.5
+	title = es_19_scenario.4.t
+	desc = es_19_scenario.4.d
+	picture = ES_AKAVIRI_CASTLE_eventPicture
+	
+	hidden = yes
+	
+	trigger = {
+		culture_group = daedra_cg
+		any_province = {
+		has_province_modifier = 19_non-melting_ice
+	    controlled_by = ROOT
+		}
+    }
+
+	mean_time_to_happen = {
+		days = 31
+	}
+	
+	immediate = {
+		hidden_effect = {
+			remove_province_modifier = 19_non-melting_ice
+		}
+	}
+	
+	option = {
+		name = "es_19_scenario.4.a"
+		ai_chance = { factor = 100 }
+	}
+	
+}

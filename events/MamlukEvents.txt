@@ -1,0 +1,552 @@
+###########################################
+# Events for the Mamluk Government Type   #
+# Written by Henrik Lohmander			  #
+###########################################
+
+namespace = mamluk_events
+
+# Mamluk Succession
+country_event = {
+	id = mamluk_events.0
+	title = mamluk_events.0.t
+	desc = mamluk_events.0.d
+	picture = THREE_HEIRS_eventPicture
+
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					OR = {
+						has_owner_culture = yes
+						has_owner_accepted_culture = yes
+					}
+				}
+				save_event_target_as = first_ruler_alternative_province
+			}
+			random_owned_province = {
+				limit = {
+					OR = {
+						has_owner_culture = yes
+						has_owner_accepted_culture = yes
+					}
+					NOT = { culture = event_target:first_ruler_alternative_province }
+				}
+				save_event_target_as = second_ruler_alternative_province
+			}
+			random_owned_province = {
+				limit = {
+					OR = {
+						has_owner_culture = yes
+						has_owner_accepted_culture = yes
+					}
+					NOT = { culture = event_target:first_ruler_alternative_province }
+					NOT = { culture = event_target:second_ruler_alternative_province }
+				}
+				save_event_target_as = third_ruler_alternative_province
+			}
+			random_province = { #Only used if no fitting Circassian province is found below.
+				limit = {
+					NOT = { owned_by = ROOT } #We cannot own it.
+					has_discovered = ROOT #We must know of it
+					trade_goods = slaves
+					owner = { #They must be willing to sell to us
+						NOT = { war_with = ROOT }
+						NOT = { is_rival = ROOT }
+						NOT = { is_enemy = ROOT }
+					}
+					if = {
+						limit = { owner = { has_saved_event_target = first_ruler_alternative_province } }
+						NOT = { culture = event_target:first_ruler_alternative_province }
+					}
+					if = {
+						limit = {
+							owner = { has_saved_event_target = second_ruler_alternative_province }
+						}
+						NOT = { culture = event_target:second_ruler_alternative_province }
+					}
+					if = {
+						limit = { owner = { has_saved_event_target = third_ruler_alternative_province } }
+						NOT = { culture = event_target:third_ruler_alternative_province }
+					}
+				}
+				save_event_target_as = fourth_ruler_alternative_province
+			}
+			random_list = {	#Age Tombola
+				15 = { set_country_flag = age_1 }
+				15 = { set_country_flag = age_2 }
+				15 = { set_country_flag = age_3 }
+				15 = { set_country_flag = age_4 }
+				15 = { set_country_flag = age_5 }
+				15 = { set_country_flag = age_6 }
+				15 = { set_country_flag = age_7 }
+			}
+		}
+	}
+
+	option = {
+		name = "mamluk_events.0.a"	# Current ruler stays
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0.01
+				event_target:first_ruler_alternative_province = { culture = ROOT }
+			}
+		}
+		trigger = {
+			has_saved_event_target = first_ruler_alternative_province
+		}
+		trigger_switch = {
+			on_trigger = has_country_flag
+			age_1 = {
+				define_ruler = {
+					culture = event_target:first_ruler_alternative_province
+					hide_skills = yes
+					age = 30
+				}
+			}
+			age_2 = {
+				define_ruler = {
+					culture = event_target:first_ruler_alternative_province
+					hide_skills = yes
+					age = 32
+				}
+			}
+			age_3 = {
+				define_ruler = {
+					culture = event_target:first_ruler_alternative_province
+					hide_skills = yes
+					age = 35
+				}
+			}
+			age_4 = {
+				define_ruler = {
+					culture = event_target:first_ruler_alternative_province
+					hide_skills = yes
+					age = 40
+				}
+			}
+			age_5 = {
+				define_ruler = {
+					culture = event_target:first_ruler_alternative_province
+					hide_skills = yes
+					age = 42
+				}
+			}
+			age_6 = {
+				define_ruler = {
+					culture = event_target:first_ruler_alternative_province
+					hide_skills = yes
+					age = 45
+				}
+			}
+			age_7 = {
+				define_ruler = {
+					culture = event_target:first_ruler_alternative_province
+					hide_skills = yes
+					age = 50
+				}
+			}
+		}
+	}
+	option = {
+		name = "mamluk_events.0.b"	# An administrator type
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0.01
+				event_target:second_ruler_alternative_province = { culture = ROOT }
+			}
+		}
+		trigger = {
+			has_saved_event_target = second_ruler_alternative_province
+		}
+		trigger_switch = {
+			on_trigger = has_country_flag
+			age_7 = {
+				define_ruler = {
+					culture = event_target:second_ruler_alternative_province
+					hide_skills = yes
+					age = 30
+				}
+			}
+			age_6 = {
+				define_ruler = {
+					culture = event_target:second_ruler_alternative_province
+					hide_skills = yes
+					age = 32
+				}
+			}
+			age_5 = {
+				define_ruler = {
+					culture = event_target:second_ruler_alternative_province
+					hide_skills = yes
+					age = 35
+				}
+			}
+			age_3 = {
+				define_ruler = {
+					culture = event_target:second_ruler_alternative_province
+					hide_skills = yes
+					age = 40
+				}
+			}
+			age_4 = {
+				define_ruler = {
+					culture = event_target:second_ruler_alternative_province
+					hide_skills = yes
+					age = 42
+				}
+			}
+			age_2 = {
+				define_ruler = {
+					culture = event_target:second_ruler_alternative_province
+					hide_skills = yes
+					age = 45
+				}
+			}
+			age_1 = {
+				define_ruler = {
+					culture = event_target:second_ruler_alternative_province
+					hide_skills = yes
+					age = 50
+				}
+			}
+		}
+	}
+	option = {
+		name = "mamluk_events.0.c"
+		trigger = {
+			has_saved_event_target = third_ruler_alternative_province
+		}
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0.01
+				event_target:third_ruler_alternative_province = { culture = ROOT }
+			}
+		}
+		
+		trigger_switch = {
+			on_trigger = has_country_flag
+			age_6 = {
+				define_ruler = {
+					culture = event_target:third_ruler_alternative_province
+					hide_skills = yes
+					age = 30
+				}
+			}
+			age_3 = {
+				define_ruler = {
+					culture = event_target:third_ruler_alternative_province
+					hide_skills = yes
+					age = 32
+				}
+			}
+			age_2 = {
+				define_ruler = {
+					culture = event_target:third_ruler_alternative_province
+					hide_skills = yes
+					age = 35
+				}
+			}
+			age_5 = {
+				define_ruler = {
+					culture = event_target:third_ruler_alternative_province
+					hide_skills = yes
+					age = 40
+				}
+			}
+			age_1 = {
+				define_ruler = {
+					culture = event_target:third_ruler_alternative_province
+					hide_skills = yes
+					age = 42
+				}
+			}
+			age_7 = {
+				define_ruler = {
+					culture = event_target:third_ruler_alternative_province
+					hide_skills = yes
+					age = 45
+				}
+			}
+			age_4 = {
+				define_ruler = {
+					culture = event_target:third_ruler_alternative_province
+					hide_skills = yes
+					age = 50
+				}
+			}
+		}
+	}
+	option = {
+		name = "mamluk_events.0.dd"	# A circassian warrior
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0.01
+				event_target:fourth_ruler_alternative_province = { culture = ROOT }
+			}
+		}
+		trigger = {
+			has_saved_event_target = fourth_ruler_alternative_province
+		}
+		add_army_tradition = 15
+		trigger_switch = {
+			on_trigger = has_country_flag
+			age_7 = {
+				define_ruler = {
+					culture = event_target:fourth_ruler_alternative_province
+					hide_skills = yes
+					age = 30
+				}
+			}
+			age_5 = {
+				define_ruler = {
+					culture = event_target:fourth_ruler_alternative_province
+					hide_skills = yes
+					age = 32
+				}
+			}
+			age_4 = {
+				define_ruler = {
+					culture = event_target:fourth_ruler_alternative_province
+					hide_skills = yes
+					age = 35
+				}
+			}
+			age_2 = {
+				define_ruler = {
+					culture = event_target:fourth_ruler_alternative_province
+					hide_skills = yes
+					age = 40
+				}
+			}
+			age_3 = {
+				define_ruler = {
+					culture = event_target:fourth_ruler_alternative_province
+					hide_skills = yes
+					age = 42
+				}
+			}
+			age_1 = {
+				define_ruler = {
+					culture = event_target:fourth_ruler_alternative_province
+					hide_skills = yes
+					age = 45
+				}
+			}
+			age_6 = {
+				define_ruler = {
+					culture = event_target:fourth_ruler_alternative_province
+					hide_skills = yes
+					age = 50
+				}
+			}
+		}
+	}
+	after = {
+		trigger_switch = {
+			on_trigger = has_country_flag
+			age_1 = { clr_country_flag = age_1 }
+			age_3 = { clr_country_flag = age_3 }
+			age_2 = { clr_country_flag = age_2 }
+			age_5 = { clr_country_flag = age_5 }
+			age_6 = { clr_country_flag = age_6 }
+			age_7 = { clr_country_flag = age_7 }
+			age_4 = { clr_country_flag = age_4 }
+		}
+	}
+}
+
+# Revolt of [mamluk_province.Culture.GetName] Amir
+country_event = {
+	id = mamluk_events.3
+	title = mamluk_events.3.t
+	desc = mamluk_events.3.d
+	picture = MAMLUK_WARRIORS_eventPicture
+
+	trigger = {
+		has_dlc = "Cradle of Civilization"
+		has_reform = mamluk_government
+		NOT = { legitimacy = 90 }
+		any_owned_province = {
+			is_state = yes
+			is_capital = no
+			is_in_capital_area = yes
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit =  {
+					is_state = yes
+					is_capital = no
+					is_in_capital_area = yes
+				}
+				save_event_target_as = mamluk_province
+			}
+		}
+	}
+	
+	is_triggered_only = yes
+	
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = mamluk_events.3.a #What an excellent idea!
+		add_legitimacy = -5
+		event_target:mamluk_province = {
+			spawn_rebels = {
+				type = pretender_rebels
+				size = 1
+			}
+		}
+	}
+}
+
+# Factionalism
+country_event = {
+	id = mamluk_events.4
+	title = mamluk_events.4.t
+	desc = mamluk_events.4.d
+	picture = THREE_HEIRS_eventPicture
+
+	trigger = {
+		has_dlc = "Cradle of Civilization"
+		has_reform = mamluk_government
+		NOT = { has_country_modifier = factionalism }
+		NOT = { has_country_modifier = ruler_supporting_faction }
+	}
+	
+	is_triggered_only = yes
+	
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = mamluk_events.4.a #We must attempt to play them off against each other.
+		ai_chance = {
+			factor = 75
+		}
+		add_country_modifier = {
+			name = "factionalism"
+			duration = 3650
+		}
+	}
+	option = {
+		name = mamluk_events.4.b #Let us pick sides and support the stronger factions.
+		ai_chance =  {
+			factor = 25
+		}
+		add_country_modifier = {
+			name = "ruler_supporting_faction"
+			duration = 3650
+		}
+	}
+}
+
+# Palace Coup
+country_event = {
+	id = mamluk_events.5
+	title = mamluk_events.5.t
+	desc = mamluk_events.5.d
+	picture = THREE_HEIRS_eventPicture
+
+	trigger = {
+		has_dlc = "Cradle of Civilization"
+		has_reform = mamluk_government
+		NOT = { legitimacy = 60 }
+		capital_scope = {
+			controlled_by = ROOT
+		}
+	}
+	
+	is_triggered_only = yes
+	
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = mamluk_events.5.a #We will not abandon [Root.Monarch.GetName]!
+		ai_chance = {
+			factor = 75
+		}
+		add_legitimacy = 5
+		add_stability = -1
+		capital_scope = {
+			spawn_rebels = {
+				type = pretender_rebels
+				size = 2
+			}
+		}
+	}
+	option = {
+		name = mamluk_events.5.b #All men must die.
+		ai_chance =  {
+			factor = 0
+		}
+		add_stability = -1
+		kill_ruler = yes
+	}
+}
+
+# Qaranis
+country_event = {
+	id = mamluk_events.11
+	title = mamluk_events.11.t
+	desc = mamluk_events.11.d
+	picture = THREE_HEIRS_eventPicture
+
+	trigger = {
+		has_dlc = "Cradle of Civilization"
+		has_reform = mamluk_government
+		NOT = {
+			has_ruler_modifier = loyal_mamluks_in_high_positions
+		}
+		NOT = {
+			has_country_modifier = trusting_old_guard
+		}
+	}
+	
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = mamluk_events.11.a #Let us root out the Qaranis from important positions!
+		ai_chance = {
+			factor = 75
+			modifier = {
+				factor = 0
+				NOT = { legitimacy = 60 }
+			}
+		}
+		add_legitimacy = -10
+		add_ruler_modifier = {
+			name = "loyal_mamluks_in_high_positions"
+			duration = 3650
+		}
+	}
+	option = {
+		name = mamluk_events.11.b #We have no choice but to trust them, we are all Mamluks after all...
+		ai_chance = { factor = 25 }
+		add_legitimacy = 10
+		add_country_modifier = {
+			name = "trusting_old_guard"
+			duration = 3650
+		}
+	}
+}

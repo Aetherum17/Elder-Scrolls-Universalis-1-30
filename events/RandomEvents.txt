@@ -1,0 +1,3497 @@
+#########################################################
+#		Temporary insanity of Monarch	  				#
+#########################################################
+country_event = {
+	id = 5014
+	title = "EVTNAME5014"
+	desc = "EVTDESC5014"
+	picture = COURT_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		government = monarchy
+		NOT = { adm = 2 }
+		NOT = { luck = yes }
+		has_regency = no
+	}
+
+	mean_time_to_happen = {
+		days = 1
+		
+		modifier = {
+			factor = 2.0
+			NOT = { advisor = statesman }
+		}
+		modifier = {
+			factor = 0.66
+			statesman = 3
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA5014"		# Request military guidance.
+		ai_chance = { factor = 55 }
+		add_prestige = -10
+		add_years_of_income = -0.1
+		add_army_tradition = 5
+		add_navy_tradition = 5
+	}
+	option = {
+		name = "EVTOPTB5014"		# Request administrative guidance.
+		ai_chance = { factor = 45 }
+		add_prestige = -10
+		add_years_of_income = -0.1
+		add_adm_power = 25
+	}
+	option = {
+		name = "personality_options.5014.c"		# Luckily we're surrounded by people we can trust.
+		highlight = yes
+		trigger = {
+			ruler_has_personality = well_advised_personality
+		}
+		required_personality = well_advised_personality
+		ai_chance = { factor = 100 }
+		add_adm_power = 25
+	}
+}
+
+#########################################################
+#		Wave of obscurantism						  	#
+#########################################################
+country_event = {
+	id = 5018
+	title = "EVTNAME5018"
+	desc = "EVTDESC5018"
+	picture = COURT_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_modifier = obscurantism }
+		NOT = { has_institution = enlightenment }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+		
+		modifier = {
+			factor = 2.0
+			NOT = { innovativeness_ideas = 1 }
+		}
+		modifier = {
+			factor = 0.5
+			luck = yes
+		}
+		modifier = {
+			factor = 0.66
+			advisor = natural_scientist
+		}
+	}
+
+	option = {
+		name = "EVTOPTA5018"		# Knowledge is power
+		ai_chance = { factor = 45 }
+		add_country_modifier = {
+			name = "obscurantism"
+			duration = 1825
+		}
+	}
+	option = {
+		name = "EVTOPTB5018"		# Ignorance is bliss
+		ai_chance = { factor = 55 }
+		add_prestige = -10
+	}
+	option = {
+		name = "personality_options.5018.c"		# We must divert state resources to counteract this dark trend
+		highlight = yes
+		trigger = {
+			OR = {
+				ruler_has_personality = free_thinker_personality
+				ruler_has_personality = scholar_personality
+			}
+		}
+		required_personality = free_thinker_personality
+		required_personality = scholar_personality
+		add_adm_power = -5
+	}
+	option = {
+		name = "personality_options.5018.dd"	#Let us take advantage of their ignorance.
+		highlight = yes
+		trigger = {
+			ruler_has_personality = greedy_personality
+		}
+		required_personality = greedy_personality
+		add_years_of_income = 0.05
+	}
+	option = {
+		name = "personality_options.5018.f"	#
+		highlight = yes
+		trigger = {
+			ruler_has_personality = secretive_personality
+		}
+		required_personality = secretive_personality
+		add_prestige = 5
+	}
+}
+
+#########################################################
+#		Exceptional year								#
+#########################################################
+country_event = {
+	id = 5019
+	title = "EVTNAME5019"
+	desc = "EVTDESC5019"
+	picture = TRADEGOODS_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			advisor = treasurer
+			advisor = trader
+			advisor = statesman
+			advisor = natural_scientist
+			ruler_has_personality = midas_touched_personality
+			ruler_has_personality = industrious_personality
+			ruler_has_personality = entrepreneur_personality
+		}
+		is_year = 1450
+		NOT = { is_year = 1550 }
+		NOT = { has_country_modifier = exceptional_year }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+		
+		modifier = {
+			factor = 2.0
+			production_efficiency = 0.5
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { stability = 0 }
+		}
+		modifier = {
+			factor = 1.25
+			stability = 1
+		}
+		modifier = {
+			factor = 2.0
+			luck = yes
+		}
+		modifier = {
+			factor = 0.66
+			is_bankrupt = yes
+		}
+	}
+
+	option = {
+		name = "EVTOPTA5019"		# Collect the benefits over time
+		ai_chance = {
+			factor = 45
+			modifier = {
+				factor = 2
+				NOT = { num_of_cities = 8 }
+			}
+		}
+		add_country_modifier = {
+			name = "exceptional_year"
+			duration = 365
+		}
+	}
+	option = {
+		name = "EVTOPTB5019"		# Take advantage of the benefits at once
+		ai_chance = {
+			factor = 55
+			modifier = {
+				factor = 0
+				NOT = { num_of_cities = 8 }
+			}
+		}
+		add_years_of_income = 0.1
+	}
+	option = {
+		name = "personality_options.5019.c" #Invest the money in new projects
+		highlight = yes
+		trigger = {
+			OR = {
+				ruler_has_personality = entrepreneur_personality
+				ruler_has_personality = industrious_personality
+				ruler_has_personality = midas_touched_personality
+			}
+		}
+		required_personality = entrepreneur_personality
+		required_personality = industrious_personality
+		required_personality = midas_touched_personality
+		if = { #if you have more than one of these you get more than one reward
+			limit = {
+				ruler_has_personality = entrepreneur_personality
+			}
+			random_owned_province = {
+				limit = {
+					is_in_capital_area = yes
+				}
+				add_base_production = 2
+			}
+		}
+		if = {
+			limit = {
+				ruler_has_personality = industrious_personality
+			}
+			random_owned_province = {
+				limit = {
+					is_in_capital_area = yes
+				}
+				add_base_production = 2
+			}
+		}
+		if = {
+			limit = {
+				ruler_has_personality = midas_touched_personality
+			}
+			random_owned_province = {
+				limit = {
+					is_in_capital_area = yes
+				}
+				add_base_tax = 2
+			}
+		}
+	}
+}
+
+#########################################################
+#		Rush of colonists								#
+#########################################################
+country_event = {
+	id = 5022
+	title = "EVTNAME5022"
+	desc = "EVTDESC5022"
+	picture = COLONIZATION_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		has_idea = quest_for_the_new_world
+		num_of_ports = 1
+		NOT =  { has_country_modifier = monetary_benefits }
+		colony = 1
+	}
+
+	mean_time_to_happen = {
+		days = 1
+		
+		modifier = {
+			factor = 2.0
+			has_idea = colonial_ventures
+		}
+		modifier = {
+			factor = 2.0
+			luck = yes
+		}
+		modifier = {
+			factor = 0.66
+			offensive_ideas = 5
+		}
+	}
+
+	option = {
+		name = "EVTOPTA5022"		# Gain extra colonists
+		ai_chance = { factor = 45 }	
+		add_country_modifier = {
+			name = "colonial_enthusiasm"
+			duration = 1825
+		}
+	}
+	option = {
+		name = "EVTOPTB5022"		# Receive monetary benefits
+		ai_chance = { factor = 55 }
+		add_country_modifier = {
+			name = "monetary_benefits"
+			duration = 1825
+		}
+	}
+	option = {
+		name = "personality_options.5022.c"		# Gain more extra colonists
+		highlight = yes
+		trigger = {
+			ruler_has_personality = expansionist_personality
+			NOT = { has_country_modifier = colonial_enthusiasm }
+		}
+		required_personality = expansionist_personality
+		ai_chance = { factor = 100 }
+		add_country_modifier = {
+			name = "colonial_enthusiasm"
+			duration = 3650
+		}
+	}
+}
+
+#########################################################
+#		Rush of merchants								#
+#########################################################
+country_event = {
+	id = 5023
+	title = "EVTNAME5023"
+	desc = "EVTDESC5023"
+	picture = MERCHANTS_TALKING_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		advisor = trader
+		NOT = {
+			has_country_modifier = rush_of_merchants
+		}
+		NOT = {
+			has_country_modifier = monetary_benefits
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+		
+		modifier = {
+			factor = 2.0
+			trade_efficiency = 0.5
+			
+		}
+		modifier = {
+			factor = 2.0
+			luck = yes
+		}
+		modifier = {
+			factor = 0.66
+			is_bankrupt = yes
+		}
+	}
+
+	option = {
+		name = "EVTOPTA5023" # Gain extra merchants
+		ai_chance = { factor = 45 }	
+		add_country_modifier = {
+			name = rush_of_merchants
+			duration = 1825
+		}
+	}
+	option = {
+		name = "EVTOPTB5023" # Receive monetary benefits
+		ai_chance = { factor = 55 }
+		add_country_modifier = {
+			name = "monetary_benefits"
+			duration = 1825
+		}
+	}
+	option = {
+		name = "personality_options.5023.c" # Let us see if we can negotiate good terms for them
+		ai_chance = { factor = 100 }
+		highlight = yes
+		trigger = {
+			ruler_has_personality = charismatic_negotiator_personality
+		}
+		required_personality = charismatic_negotiator_personality
+		add_country_modifier = {
+			name = "monetary_benefits"
+			duration = 3650
+		}
+	}
+	option = {
+		name = "personality_options.5023.dd" # We can support them by investing in better ships
+		ai_chance = { factor = 100 }
+		highlight = yes
+		trigger = {
+			ruler_has_personality = navigator_personality
+		}
+		required_personality = navigator_personality
+		add_country_modifier = {
+			name = rush_of_merchants
+			duration = 3650
+		}
+	}
+}
+
+#########################################################
+#		Good government policies					  	#
+#########################################################
+
+country_event = {
+	id = 5040
+	title = "EVTNAME5040"
+	desc = "EVTDESC5040"
+	picture = REFORM_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		adm = 5
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+		
+		modifier = {
+			factor = 2.0
+			advisor = statesman
+		}
+		modifier = {
+			factor = 2.0
+			luck = yes
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA5040"		# Use the money to bring stability to our nation
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 2
+				NOT = { stability = 0 }
+			}
+		}
+		add_stability_or_adm_power = yes
+	}
+	option = {
+		name = "EVTOPTB5040"		# Invest the money in our government
+		ai_chance = { factor = 30 }
+		if = {
+			limit = { 
+				OR = {
+					NOT = { has_dlc = "Dharma" } 
+					has_completed_all_reforms_trigger = yes
+					primitives = yes
+				}
+			}
+			add_adm_power = 25
+			add_dip_power = 25
+			add_mil_power = 25
+		}
+		else = {
+			add_reform_progress_small_effect = yes
+		}
+	}
+	option = {
+		name = "EVTOPTC5040"		# Let's fill our treasury while we have their support
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 2
+				num_of_cities = 30
+			}
+		}
+		add_years_of_income = 0.20
+	}
+	option = {
+		name = "personality_options.5040.a"		# Root out the corruption in our government
+		highlight = yes
+		trigger = {
+			ruler_has_personality = incorruptible_personality
+			corruption = 1
+		}
+		required_personality = incorruptible_personality
+		add_corruption = -1
+	}
+	option = {
+		name = "personality_options.5040.b"		# Improve the Officer Curriculum
+		highlight = yes
+		trigger = {
+			ruler_has_personality = martial_educator_personality
+		}
+		required_personality = martial_educator_personality
+		add_army_tradition = 10
+		
+	}
+	option = {
+		name = "personality_options.5040.c"		# Allow monarch to hold a grand feast
+		highlight = yes
+		trigger = {
+			ruler_has_personality = drunkard_personality
+			any_neighbor_country = {
+				NOT = { war_with = ROOT }
+			}
+		}
+		required_personality = drunkard_personality
+		random_neighbor_country = {
+			limit = { NOT = { war_with = ROOT } }
+			add_opinion = {
+				who = ROOT
+				modifier = indulgent_feast
+			}
+			random_neighbor_country = {
+				limit = {
+					NOT = { war_with = ROOT }
+					NOT = { tag = ROOT }
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = indulgent_feast
+				}
+			}
+		}
+	}
+	option = {
+		name = "personality_options.5040.d"		# Allow Monarch to find more ways to diver funds
+		highlight = yes
+		trigger = {
+			ruler_has_personality = embezzler_personality
+		}
+		required_personality = embezzler_personality
+		add_years_of_income = 0.25
+	}
+	option = {
+		name = "personality_options.5040.e"		# This is perfect for a little project of mine...
+		highlight = yes
+		trigger = { ruler_has_personality = obsessive_perfectionist_personality }
+		required_personality = obsessive_perfectionist_personality
+		add_prestige = 10
+	}
+}
+
+
+#########################################################
+#		Poor government policies	 				 	#
+#########################################################
+
+country_event = {
+	id = 5045
+	title = "EVTNAME5045"
+	desc = "EVTDESC5045"
+	picture = REFORM_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { adm = 5 }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+		
+		modifier = {
+			factor = 0.5
+			luck = yes
+		}
+		modifier = {
+			factor = 0.66
+			advisor = statesman
+		}
+	}
+
+	option = {
+		name = "EVTOPTA5045"		# We have chosen the right path
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0.5
+				NOT = { stability = 0 }
+			}
+		}
+		if = {
+			limit = { NOT = { stability = -2 } }
+			add_adm_power = -100
+		}		
+		if = {
+			limit = { stability = -2 }
+			add_stability = -1
+		}
+	}
+	option = {
+		name = "EVTOPTB5045"		# Attempt to improve the situation
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0.5
+				NOT = { years_of_income = 0.3 }
+			}
+		}
+		if = {
+			limit = { 
+				OR = {
+					NOT = { has_dlc = "Dharma" } 
+					has_completed_all_reforms_trigger = yes
+				}
+			}
+			add_years_of_income = -0.25
+		}
+		else = {
+			reduce_reform_progress_small_effect = yes
+		}
+	}
+	option = {
+		name = "personality_options.5045.a"		# The fault lies with others
+		highlight = yes
+		trigger = { ruler_has_personality = naive_personality }
+		required_personality = naive_personality
+		add_prestige = -10
+	}
+}
+
+#########################################################
+#		Political Crisis							  	#
+#########################################################
+country_event = {
+	id = 5054
+	title = "EVTNAME5054"
+	desc = "EVTDESC5054"
+	picture = LIBERUM_VETO_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		or = {
+			government = monarchy
+			government = republic
+			government = dictatorship
+		}
+		is_lesser_in_union = no
+	}
+
+	mean_time_to_happen = {
+		days = 1
+		
+		modifier = {
+			factor = 2.0
+			revolt_percentage = 0.1
+		}
+		modifier = {
+			factor = 0.5
+			luck = yes
+		}
+		modifier = {
+			factor = 0.66
+			advisor = statesman
+		}
+	}
+
+	option = {
+		name = "EVTOPTA5054"		# Given time, a solution will present itself.
+		ai_chance = {
+			factor = 55
+			modifier = {
+				factor = 0.5
+				NOT = { stability = 1 }
+			}
+		}
+		if = {
+			limit = { NOT = { stability = -2 } }
+			add_adm_power = -100
+		}		
+		if = {
+			limit = { stability = -2 }
+			add_stability = -1
+		}
+	}
+	option = {
+		name = "EVTOPTB5054"		# Reputation isn't everything.
+		ai_chance = {
+			factor = 45 
+			modifier = {
+				factor = 0.5
+				government = republic
+				NOT = { republican_tradition = 80 }
+			}
+			modifier = {
+				factor = 0.5
+				government = monarchy
+				NOT = { legitimacy_or_horde_unity = 80 }
+			}
+		}
+		add_republican_tradition = -10
+		add_horde_unity = -25
+		add_legitimacy = -25
+		reduce_mandate_large_effect = yes
+	}
+	option = {
+		name = "personality_options.5054.a"		# 
+		highlight = yes
+		trigger = { ruler_has_personality = righteous_personality }
+		required_personality = righteous_personality
+		add_legitimacy = -10
+		add_republican_tradition = -5
+		add_horde_unity = -10
+		reduce_mandate_effect = yes
+	}
+	option = {
+		name = "personality_options.5054.b"		# 
+		highlight = yes
+		trigger = { ruler_has_personality = just_personality }
+		required_personality = just_personality
+		random_list = {
+			50 = {
+				add_prestige = 5
+			}
+			50 = {
+				add_republican_tradition = -10
+				add_horde_unity = -25
+				add_legitimacy = -25
+				reduce_mandate_large_effect = yes
+			}
+		}
+	}
+}
+
+#########################################################
+#			Corruption								 	#
+#########################################################
+country_event = {
+	id = 5055
+	title = "EVTNAME5055"
+	desc = "EVTDESC5055"
+	picture = ELECTION_REPUBLICAN_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {}
+
+	mean_time_to_happen = {
+		days = 1
+		
+		modifier = {
+			factor = 2.0
+			num_of_loans = 1
+		}
+		modifier = {
+			factor = 0.5
+			luck = yes
+		}
+		modifier = {
+			factor = 0.66
+			advisor = treasurer
+		}
+	}
+
+	option = {
+		name = "EVTOPTA5055"		# Try to eradicate the problems.
+		ai_chance = {
+			factor = 55
+			modifier = {
+				factor = 0.5
+				NOT = { stability = 1 }
+			}
+		}
+		if = {
+			limit = { NOT = { stability = -2 } }
+			add_adm_power = -100
+		}		
+		if = {
+			limit = { stability = -2 }
+			add_stability = -1
+		}
+	}
+	option = {
+		name = "EVTOPTB5055"		# Ignore them.
+		ai_chance = {
+			factor = 45
+			modifier = {
+				factor = 0.5
+				corruption = 10
+			}
+		}
+		if = {
+			limit = { 
+				OR = {
+					NOT = { has_dlc = "Dharma" } 
+					has_completed_all_reforms_trigger = yes
+				}
+			}
+			add_corruption = 1
+		}
+		else = {
+			reduce_reform_progress_small_effect = yes
+		}
+	}
+	option = {
+		name = "personality_options.5055.a"		# Deal with any visible signs of this
+		highlight = yes
+		trigger = {
+			ruler_has_personality = embezzler_personality
+		}
+		required_personality = embezzler_personality
+		add_prestige = 5
+	}
+	option = {
+		name = "personality_options.5055.b"		# Replace certain high-ranking officials
+		highlight = yes
+		trigger = { ruler_has_personality = incorruptible_personality }
+		required_personality = incorruptible_personality
+		add_adm_power = -25
+	}
+}
+
+
+#########################################################
+#		Diplomatic insult		 					 	#
+#########################################################
+country_event = {
+	id = 5056
+	title = "EVTNAME5056"
+	desc = "EVTDESC5056"
+	picture = DIPLOMACY_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_neighbor_country = {
+			is_at_war = no
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+		
+		modifier = {
+			factor = 0.66
+			dip = 5
+		}
+	}
+
+	option = {
+		name = "EVTOPTA5056" # We won't forget this.
+		ai_chance = { factor = 55 }
+		random_country = {
+			limit = { is_neighbor_of = ROOT  }
+			reverse_add_casus_belli = {	
+				target = ROOT
+				type = cb_insult
+				months = 12
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB5056" # Try to ease the tension.
+		ai_chance = { factor = 45 }
+		every_neighbor_country = {
+			limit = { is_at_war = no }
+			add_opinion = { who = ROOT modifier = opinion_eased_tension }
+		}
+	}
+	option = {
+		name = "personality_options.5056.a" # Try to ease the tension.
+		highlight = yes
+		trigger = { ruler_has_personality = silver_tongue_personality }
+		required_personality = silver_tongue_personality
+		add_estate_burghers_loyalty_effect = yes
+		add_prestige = 5
+		every_neighbor_country = {
+			limit = { is_at_war = no }
+			add_opinion = { who = ROOT modifier = opinion_more_eased_tension }
+		}
+	}
+}
+
+#########################################################
+#			Meteor sighted							  	#
+#########################################################
+country_event = {
+	id = 5060
+	title = "EVTNAME5060"
+	desc = "EVTDESC5060"
+	picture = COMET_SIGHTED_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {}
+
+	mean_time_to_happen = {
+		days = 1
+		
+		modifier = {
+			factor = 0.1
+			ruler_has_personality = scholar_personality
+		}
+		
+		modifier = {
+			factor = 0.5
+			natural_scientist = 1
+		}
+		modifier = {
+			factor = 0.5
+			luck = yes
+		}
+		modifier = {
+			factor = 1.1
+			stability = 2
+		}
+		modifier = {
+			factor = 1.1
+			stability = 3
+		}
+	}
+	
+	option = {
+		name = "personality_options.5060.a"		# Fascinating!
+		ai_chance = {
+			factor = 1
+		}
+		highlight = yes
+		trigger = {
+			ruler_has_personality = scholar_personality
+		}
+		required_personality = scholar_personality
+		add_adm_power = 20
+	}
+	
+	option = {
+		name = "EVTOPTA5060"		# It's an omen
+		if = {
+			limit = { NOT = { stability = -2 } }
+			add_adm_power = -100
+		}		
+		if = {
+			limit = { stability = -2 }
+			add_stability = -1
+		}
+	}
+	option = {
+		name = "EVTOPTB5060"		# The end is nigh!
+		if = {
+			limit = { NOT = { stability = -2 } }
+			add_adm_power = -100
+		}		
+		if = {
+			limit = { stability = -2 }
+			add_stability = -1
+		}
+	}
+	option = {
+		name = "EVTOPTC5060"		# The economy, fools!
+		if = {
+			limit = { NOT = { stability = -2 } }
+			add_adm_power = -100
+		}		
+		if = {
+			limit = { stability = -2 }
+			add_stability = -1
+		}
+	}
+	option = {
+		name = "EVTOPTE5060"		# I wish I lived in more enlightened times.
+		if = {
+			limit = { NOT = { stability = -2 } }
+			add_adm_power = -100
+		}		
+		if = {
+			limit = { stability = -2 }
+			add_stability = -1
+		}
+	}
+	option = {
+		name = "EVTOPTG5060"		# if only we had comet sense!
+		if = {
+			limit = { NOT = { stability = -2 } }
+			add_adm_power = -100
+		}		
+		if = {
+			limit = { stability = -2 }
+			add_stability = -1
+		}
+	}
+}
+
+#########################################################
+#		Sale of offices									#
+#########################################################
+country_event = {
+	id = 5068
+	title = "EVTNAME5068"
+	desc = "EVTDESC5068"
+	picture = ECONOMY_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			num_of_loans = 25
+			is_bankrupt = yes
+		}
+		NOT = { has_country_modifier = reduced_taxes_off }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+		
+		modifier = {
+			factor = 2.0
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 0.5
+			luck = yes
+		}
+		modifier = {
+			factor = 0.66
+			advisor = treasurer
+		}
+	}
+
+	option = {
+		name = "EVTOPTA5068"		# Accept
+		ai_chance = {
+			factor = 65
+			modifier = {
+				factor = 1.5
+				NOT = {
+					years_of_income = 0.2
+				}
+			}
+		}
+		add_years_of_income = 1
+		add_country_modifier = {
+			name = "reduced_taxes_off"	
+			duration = 7300
+		}
+	}
+	option = {
+		name = "EVTOPTB5068"		# Decline
+		ai_chance = {
+			factor = 35
+			modifier = {
+				factor = 2
+				NOT = { stability = 1 }
+			}
+		}
+		add_stability_or_adm_power = yes
+		add_prestige = 10
+	}
+	option = {
+		name = "personality_options.5068.a"		# We must be better at hiding our tracks
+		highlight = yes
+		trigger = {
+			ruler_has_personality = embezzler_personality
+		}
+		required_personality = embezzler_personality
+		add_years_of_income = 1
+	}
+}
+
+#########################################################
+#		Monopoly company formed							#
+#########################################################
+country_event = {
+	id = 5070
+	title = "EVTNAME5070"
+	desc = "EVTDESC5070"
+	picture = MERCHANTS_TALKING_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = {mercantilism = 50 }
+		NOT = { has_country_modifier = trade_income_increase }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+		
+		modifier = {
+			factor = 2.0
+			trade_efficiency = 0.6
+		}
+		modifier = {
+			factor = 2.0
+			luck = yes
+		}
+		modifier = {
+			factor = 0.66
+			NOT = { trade_efficiency = 0.5 }
+		}
+	}
+
+	option = {
+		name = "EVTOPTA5070"		# Make a long-term investment
+		ai_chance = { factor = 55 }
+		add_country_modifier = {
+			name = "trade_income_increase"
+			duration = 3650
+		}		
+		add_dip_power = 50
+	}
+	option = {
+		name = "EVTOPTB5070"		# Demand payment in full
+		ai_chance = { factor = 45 }
+		add_years_of_income = 1
+	}
+	option = {
+		name = "personality_options.5068.a"		# We must be better at hiding our tracks
+		highlight = yes
+		trigger = {
+			ruler_has_personality = embezzler_personality
+		}
+		required_personality = embezzler_personality
+		add_years_of_income = 1.5
+	}
+}
+
+#########################################################
+#	Nobles demand increased pensions					#
+#########################################################
+country_event = {
+	id = 5071
+	title = "EVTNAME5071"
+	desc = "EVTDESC5071"
+	picture = ECONOMY_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			government = monarchy
+			has_reform = noble_republic
+		}
+		NOT = {
+			has_country_modifier = tax_income_loss
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+		
+		modifier = {
+			factor = 2.0
+			NOT = { stability = 0 }
+		}
+		modifier = {
+			factor = 0.5
+			luck = yes
+		}
+		modifier = {
+			factor = 0.66
+			stability = 3
+		}
+	}
+
+	option = {
+		name = "EVTOPTA5071"		# Accept their demands.
+		ai_chance = { factor = 55 }
+		add_country_modifier = {
+			name = "tax_income_loss"
+			duration = 7300
+		}
+		add_estate_nobles_loyalty_effect = yes
+	}
+	option = {
+		name = "EVTOPTB5071"		# Refuse their demands.
+		ai_chance = {
+			factor = 45
+			modifier = {
+				factor = 1.5
+				NOT = { stability = 1 }
+			}
+			modifier = {
+				factor = 0
+				has_estate = estate_nobles
+				NOT = {
+					estate_loyalty = {
+						estate = estate_nobles
+						loyalty = 40
+					}
+				}
+			}
+		}
+		if = {
+			limit = { NOT = { stability = -2 } }
+			add_adm_power = -100
+		}		
+		if = {
+			limit = { stability = -2 }
+			add_stability = -1
+		}
+		reduce_estate_nobles_loyalty_effect = yes
+	}
+	option = {
+		name = "personality_options.5071.a"		# Negotiate a better deal
+		highlight = yes
+		trigger = { ruler_has_personality = charismatic_negotiator_personality }
+		required_personality = charismatic_negotiator_personality
+		add_country_modifier = {
+			name = "tax_income_loss"
+			duration = 5475
+		}
+		add_estate_nobles_loyalty_effect = yes
+	}
+}
+
+#########################################################
+#		Nobles demand old rights						#
+#########################################################
+country_event = {
+	id = 5075
+	title = "EVTNAME5075"
+	desc = "EVTDESC5075"
+	picture = COURT_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		government = monarchy
+		num_of_cities = 2
+		NOT = { has_country_modifier = old_rights_granted_to_nobility }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+		
+		modifier = {
+			factor = 2.0
+			NOT = { adm = 1 }
+		}
+		modifier = {
+			factor = 0.5
+			luck = yes
+		}
+		modifier = {
+			factor = 0.66
+			adm = 5
+		}
+	}
+
+	option = {
+		name = "EVTOPTA5075"		# Accept demands.
+		ai_chance = {
+			factor = 50
+		}
+		if = {
+			limit = { 
+				OR = {
+					NOT = { has_dlc = "Dharma" } 
+					has_completed_all_reforms_trigger = yes
+				}
+			}
+			add_country_modifier = {
+				name = "old_rights_granted_to_nobility"
+				duration = 3650
+			}
+		}
+		else = {
+			reduce_reform_progress_small_effect = yes
+		}
+		add_estate_nobles_loyalty_effect = yes
+	}
+	option = {
+		name = "EVTOPTB5075"		# Reject demands.
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.5
+				NOT = { stability = 1 }
+			}
+			modifier = {
+				factor = 0
+				has_estate = estate_nobles
+				NOT = {
+					estate_loyalty = {
+						estate = estate_nobles
+						loyalty = 40
+					}
+				}
+			}
+		}
+		if = {
+			limit = { stability = -2 }
+			add_stability = -1
+		}
+		if = {
+			limit = { NOT = { stability = -2 } }
+			add_adm_power = -100
+		}
+	}
+	option = {
+		name = "personality_options.5075.a"		# create a new set of rights
+		highlight = yes
+		trigger = { ruler_has_personality = lawgiver_personality }
+		required_personality = lawgiver_personality
+		add_adm_power = -25
+	}
+}
+
+#########################################################
+#		Cities demand old rights						#
+#########################################################
+country_event = {
+	id = 5076
+	title = "EVTNAME5076"
+	desc = "EVTDESC5076"
+	picture = COURT_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			government = monarchy
+			government = republic
+			government = theocracy
+		}
+		is_lesser_in_union = no
+	}
+
+	mean_time_to_happen = {
+		days = 1
+		
+		modifier = {
+			factor = 2.0
+			revolt_percentage = 0.1
+		}
+		modifier = {
+			factor = 0.5
+			luck = yes
+		}
+		modifier = {
+			factor = 0.66
+			stability = 3
+		}
+	}
+
+	option = {
+		name = "EVTOPTA5076"		# Deny old rights
+		ai_chance = {
+			factor = 55
+			modifier = {
+				factor = 0.5
+				NOT = { stability = 1 }
+			}
+			modifier = {
+				factor = 0
+				has_estate = estate_burghers
+				NOT = {
+					estate_loyalty = {
+						estate = estate_burghers
+						loyalty = 40
+					}
+				}
+			}
+		}
+		reduce_estate_burghers_loyalty_effect = yes
+		if = {
+			limit = { NOT = { stability = -2 } }
+			add_adm_power = -100
+		}		
+		if = {
+			limit = { stability = -2 }
+			add_stability = -1
+		}
+	}
+	option = {
+		name = "EVTOPTB5076"		# Accept
+		ai_chance = {
+			factor = 45
+			modifier = {
+				factor = 0.5
+				government = monarchy
+				NOT = { legitimacy_or_horde_unity = 70 }
+			}
+			modifier = {
+				factor = 0.5
+				government = republic
+				NOT = { republican_tradition = 70 }
+			}
+			modifier = {
+				factor = 0.5
+				government = theocracy
+				NOT = { prestige = 25 }
+			}
+		}
+		add_estate_burghers_loyalty_effect = yes
+		if = {
+			limit = { 
+				OR = {
+					NOT = { has_dlc = "Dharma" } 
+					has_completed_all_reforms_trigger = yes
+				}
+			}
+			add_legitimacy = -20
+			add_horde_unity = -20
+			add_republican_tradition = -10
+			add_devotion = -10
+		}
+		else = {
+			reduce_reform_progress_small_effect = yes
+		}
+		reduce_mandate_effect = yes
+	}
+	option = {
+		name = "personality_options.5075.a"		# create a new set of rights
+		highlight = yes
+		trigger = { ruler_has_personality = lawgiver_personality }
+		required_personality = lawgiver_personality
+		add_adm_power = -25
+	}
+}
+
+#########################################################
+#		Build a great palace							#
+#########################################################
+country_event = {
+	id = 5085
+	title = "EVTNAME5085"
+	desc = "EVTDESC5085"
+	picture = FORT_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		government = monarchy
+		is_lesser_in_union = no
+	}
+
+	mean_time_to_happen = {
+		days = 1
+		
+		modifier = {
+			factor = 2.0
+			artist = 3
+		}
+		modifier = {
+			factor = 0.5
+			luck = yes
+		}
+		modifier = {
+			factor = 0.66
+			NOT = { advisor = artist }
+		}
+	}
+
+	option = {
+		name = "EVTOPTA5085" # Build the Palace
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0.5
+				NOT = { years_of_income = 0.3 }
+			}
+			modifier = {
+				factor = 1.5
+				NOT = { legitimacy_or_horde_unity = 60 }
+			}
+		}
+		add_prestige = 10
+		add_legitimacy = 20
+		add_horde_unity = 20
+		add_mandate_effect = yes
+		add_years_of_income = -0.25
+	}
+	option = {
+		name = "EVTOPTB5085" # Don't build it
+		ai_chance = {
+			factor = 60
+			modifier = {
+				factor = 0.5
+				prestige = 90
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { legitimacy = 40 }
+			}
+		}
+		add_prestige = -10
+	}
+	option = {
+		name = "personality_options.5085.a"		#It's not ambitious enough
+		highlight = yes
+		trigger = {
+			ruler_has_personality = obsessive_perfectionist_personality
+		}
+		required_personality = obsessive_perfectionist_personality
+		add_prestige = 15
+		add_legitimacy = 25
+		add_horde_unity = 25
+		add_mandate_large_effect = yes
+		add_years_of_income = -0.35
+	}
+	option = {
+		name = "personality_options.5085.b"		#Let ruler try out new construction techniques
+		highlight = yes
+		trigger = {
+			ruler_has_personality = architectural_visionary_personality
+		}
+		required_personality = architectural_visionary_personality
+		add_prestige = 10
+		add_legitimacy = 20
+		add_horde_unity = 20
+		add_mandate_large_effect = yes
+		add_years_of_income = -0.15
+	}
+}
+
+#########################################################
+#		Petition for redress							#
+#########################################################
+country_event = {
+	id = 5089
+	title = "EVTNAME5089"
+	desc = "EVTDESC5089"
+	picture = COURT_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		always = yes
+	}
+	mean_time_to_happen = {
+		days = 1
+		
+		modifier = {
+			factor = 2.0
+			NOT = { stability = 0 }
+		}
+		modifier = {
+			factor = 0.5
+			luck = yes
+		}
+		modifier = {
+			factor = 0.66
+			adm = 5
+		}
+	}
+
+	option = {
+		name = "EVTOPTA5089"		# Accept petition
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0.5
+				NOT = { prestige = 30 }
+			}
+			modifier = {
+				factor = 0
+				has_estate = estate_nobles
+				NOT = {
+					estate_loyalty = {
+						estate = estate_nobles
+						loyalty = 40
+					}
+				}
+			}
+		}
+		add_prestige = -10
+		reduce_estate_nobles_loyalty_effect = yes
+	}
+	option = {
+		name = "EVTOPTB5089"		# Deny petition
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 1.5
+				is_at_war = no
+			}
+		}
+		random_owned_province = {
+			limit = {
+				NOT = { is_colony = yes }
+				NOT = { is_overseas = yes }
+			}
+			anti_tax_rebels = 1
+		}
+		add_estate_nobles_loyalty_effect = yes
+	}
+}
+
+#########################################################
+#		Grant nobles aid								#
+#########################################################
+country_event = {
+	id = 5090
+	title = "EVTNAME5090"
+	desc = "EVTDESC5090"
+	picture = COURT_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		government = monarchy
+	}
+
+	mean_time_to_happen = {
+		days = 1
+		
+		modifier = {
+			factor = 2.0
+			treasury = 300
+		}
+		modifier = {
+			factor = 0.5
+			luck = yes
+		}
+	}
+
+	option = {
+		name = "EVTOPTA5090"		# Grant aid
+		ai_chance = {
+			factor = 55
+			modifier = {
+				factor = 0.5
+				NOT = { years_of_income = 0.7 }
+			}
+		}
+		add_years_of_income = -0.5
+		add_estate_nobles_loyalty_effect = yes
+	}
+	option = {
+		name = "EVTOPTB5090"		# Deny aid
+		ai_chance = {
+			factor = 45
+			modifier = {
+				factor = 0
+				has_estate = estate_nobles
+				NOT = {
+					estate_loyalty = {
+						estate = estate_nobles
+						loyalty = 40
+					}
+				}
+			}
+		}
+		add_adm_power = -50
+		reduce_estate_nobles_loyalty_effect = yes
+	}
+}
+
+#########################################################
+#		Corruption in the church						#
+#########################################################
+country_event = {
+	id = 5098
+	title = "EVTNAME5098"
+	desc = "EVTDESC5098"
+	picture = RELIGION_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { stability = -1 }
+		government = theocracy
+	}
+
+	mean_time_to_happen = {
+		days = 1
+		
+		modifier = {
+			factor = 2.0
+			luck = yes
+		}
+		modifier = {
+			factor = 0.66
+			advisor = treasurer
+		}
+	}
+
+	option = {
+		name = "EVTOPTA5098"		# Cleanse the temple
+		ai_chance = {
+			factor = 55
+			modifier = {
+				factor = 0
+				has_estate = estate_church
+				NOT = {
+					estate_loyalty = {
+						estate = estate_church
+						loyalty = 40
+					}
+				}
+			}
+		}
+		add_devotion = 10
+		add_stability_or_adm_power = yes
+		reduce_estate_church_loyalty_effect = yes
+	}
+	option = {
+		name = "EVTOPTB5098"		# Fine the sinners
+		ai_chance = { factor = 45 }
+		add_devotion = -10
+		add_years_of_income = 0.75
+		add_corruption = 0.5
+		add_estate_church_loyalty_effect = yes
+	}
+	option = {
+		name = "personality_options.5098.a"		# 
+		highlight = yes
+		trigger = {
+			ruler_has_personality = embezzler_personality
+		}
+		required_personality = embezzler_personality
+		add_devotion = -15
+		add_years_of_income = 1
+		add_corruption = 1
+		add_estate_church_loyalty_effect = yes
+	}
+	option = {
+		name = "personality_options.5098.b"		# 
+		highlight = yes
+		trigger = { ruler_has_personality = incorruptible_personality }
+		required_personality = incorruptible_personality
+		add_devotion = 15
+		add_stability_or_adm_power = yes
+		add_corruption = -2
+	}
+}
+
+#########################################################
+#		Military traditions scorned						#
+#########################################################
+
+# Naval traditions scorned
+country_event = {
+	id = 6000
+	title = "EVTNAME6000"
+	desc = "EVTDESC6000"
+	picture = NAVAL_MILITARY_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		navy_tradition = 10
+		NOT = { navy_tradition = 40 }
+		army_tradition = 40
+	}
+
+	mean_time_to_happen = {
+		days = 1
+				
+		modifier = {
+			factor = 2.0
+			offensive_ideas = 6
+		}
+		modifier = {
+			factor = 0.5
+			luck = yes
+		}
+		modifier = {
+			factor = 0.66
+			maritime_ideas = 3
+		}
+	}
+
+	option = {
+		name = "EVTOPTA6000"		# This is well, land is where its at
+		ai_chance = { factor = 60 }
+		add_navy_tradition = -20
+		add_army_tradition = 10
+	}
+	option = {
+		name = "EVTOPTB6000"		# We must stop this deterioration
+		ai_chance = { factor = 40 }
+		add_navy_tradition = -5
+	}
+	option = {
+		name = "personality_options.6000.a"		# We must stop this deterioration
+		highlight = yes
+		trigger = { ruler_has_personality = navigator_personality }
+		required_personality = navigator_personality
+		add_navy_tradition = 5
+	}
+}
+
+# Land traditions scorned
+country_event = {
+	id = 6001
+	title = "EVTNAME6001"
+	desc = "EVTDESC6001"
+	picture = MILITARY_CAMP_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		num_of_ports = 1
+		army_tradition = 10
+		NOT = { army_tradition = 40 }
+		navy_tradition = 40
+		primitives = no
+	}
+
+	mean_time_to_happen = {
+		days = 1
+				
+		modifier = {
+			factor = 5.0
+			has_idea_group = maritime_ideas
+		}
+		modifier = {
+			factor = 0.5
+			luck = yes
+		}
+		modifier = {
+			factor = 0.66
+			has_idea = grand_army
+		}
+	}
+
+	option = {
+		name = "EVTOPTA6001"		# The fleet is our wooden wall!
+		ai_chance = { factor = 60 }
+		add_army_tradition = -20
+		add_navy_tradition = 10
+	}
+	option = {
+		name = "EVTOPTB6001"		# We must stop this deterioration
+		ai_chance = { factor = 40 }
+		add_army_tradition = -5
+	}
+	option = {
+		name = "personality_options.6001.a"		# We must stop this deterioration
+		highlight = yes
+		trigger = { ruler_has_personality = strict_personality }
+		required_personality = strict_personality
+		add_army_tradition = 5
+	}
+}
+
+#########################################################
+#		Exceptional Court Painter						#
+#########################################################
+
+country_event = {
+	id = 6012
+	title = "EVTNAME6012"
+	desc = "EVTDESC6012"
+	picture = PAINTER_ARTIST_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { overextension_percentage = 0.01 }
+		is_at_war = no
+	}
+
+	mean_time_to_happen = {
+		days = 1
+		
+		modifier = {
+			factor = 2.0
+			prestige = 10
+		}
+		modifier = {
+			factor = 2.0
+			ruler_has_personality = well_connected_personality
+		}
+		modifier = {
+			factor = 0.66
+			advisor = artist
+		}
+	}
+
+	option = {
+		name = "EVTOPTA6012"		# Hire him
+		ai_chance = {
+			factor = 65
+			modifier = {
+				factor = 0
+				stability = 3
+			}
+		}
+		add_years_of_income = -0.25
+		add_prestige = 10
+		add_stability_or_adm_power = yes
+	}
+	option = {
+		name = "EVTOPTB6012"		# Decline his services
+		ai_chance = { factor = 35 }
+		add_prestige = -5
+	}
+	option = {
+		name = "personality_options.5083.a"		# Hire him
+		highlight = yes
+		trigger = { ruler_has_personality = fierce_negotiator_personality }
+		required_personality = fierce_negotiator_personality
+		add_years_of_income = -0.15
+		add_prestige = 10
+		add_stability_or_adm_power = yes
+	}
+}
+
+#########################################################
+#			Grand Ball									#
+#########################################################
+country_event = {
+	id = 6013
+	title = "EVTNAME6013"
+	desc = "EVTDESC6013"
+	picture = COURT_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_at_war = no
+	}
+
+	mean_time_to_happen = {
+		days = 1
+		
+		modifier = {
+			factor = 2.0
+			artist = 3
+		}
+		modifier = {
+			factor = 0.66
+			NOT = { advisor = artist }
+		}
+	}
+
+	option = {
+		name = "EVTOPTA6013"		# Arrange a ball
+		ai_chance = { factor = 60 }
+		add_prestige = 10
+		add_years_of_income = -0.10
+	}
+	option = {
+		name = "EVTOPTB6013"		# Don't arrange a ball
+		ai_chance = { factor = 40 }
+		add_prestige = -5
+	}
+	option = {
+		name = "personality_options.6013.a"		# Arrange a ball
+		highlight = yes
+		trigger = { ruler_has_personality = well_connected_personality }
+		required_personality = well_connected_personality
+		add_prestige = 15
+		add_years_of_income = -0.10
+	}
+}
+
+# Dramatic Currency Revaluation
+country_event = {
+	id = 712
+	title = "EVTNAME712"
+	desc = "EVTDESC712"
+	picture = ECONOMY_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		stability = 0
+		inflation = 5
+	}
+
+	mean_time_to_happen = {
+		days = 1
+		modifier = {
+			factor = 0.5
+			luck = yes
+		}		
+	}
+
+	option = {
+		name = "EVTOPTA712"
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0.5
+				war_exhaustion = 4
+			}
+		}
+		add_stability = -1
+	}
+	option = {
+		name = "EVTOPTB712"
+		ai_chance = {
+			factor = 75
+			modifier = {
+				factor = 0.5
+				inflation = 10
+			}
+		}
+		add_inflation = 3
+	}
+}
+
+# Decadence
+country_event = {
+	id = 713
+	title = "EVTNAME713"
+	desc = "EVTDESC713"
+	picture = COURT_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		stability = 0
+		is_at_war = no
+		NOT = { war_exhaustion = 0.1 }
+		NOT = { had_recent_war = 10 }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+		modifier = {
+			factor = 0.5
+			luck = yes
+		}		
+	}
+
+	option = {
+		name = "EVTOPTA713"
+		add_stability = -1
+	}
+}
+
+# Military Divided!
+country_event = {
+	id = 714
+	title = "EVTNAME714"
+	desc = "EVTDESC714"
+	picture = LAND_MILITARY_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { has_country_modifier = defensive_modifier }
+		NOT = { has_country_modifier = offensive_modifier }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "EVTOPTA714"
+		add_country_modifier = {
+			name = defensive_modifier
+			duration = 3650
+		}
+	}
+	option = {
+		name = "EVTOPTB714"
+		add_country_modifier = {
+			name = offensive_modifier
+			duration = 3650
+		}
+	}
+	option = {
+		name = "personality_options.714.a"
+		highlight = yes
+		trigger = {
+			ruler_has_personality = martial_educator_personality
+		}
+		required_personality = martial_educator_personality
+		add_country_modifier = {
+			name = offensive_modifier
+			duration = 1825
+		}
+		add_country_modifier = {
+			name = defensive_modifier
+			duration = 1825
+		}
+	}
+	option = {
+		name = "personality_options.714.b"
+		highlight = yes
+		trigger = {
+			ruler_has_personality = bold_fighter_personality
+		}
+		required_personality = bold_fighter_personality
+		add_country_modifier = {
+			name = offensive_modifier
+			duration = 5475
+		}
+	}
+	option = {
+		name = "personality_options.714.c"
+		highlight = yes
+		trigger = {
+			ruler_has_personality = tactical_genius_personality
+		}
+		required_personality = tactical_genius_personality
+		add_country_modifier = {
+			name = defensive_modifier
+			duration = 5475
+		}
+	}
+}
+
+# $MONARCH$ embarrasses the court
+country_event = {
+	id = 715
+	title = "EVTNAME715"
+	desc = "EVTDESC715"
+	picture = COURT_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		stability = 0
+		government = monarchy
+		has_regency = no
+		is_lesser_in_union = no
+		NOT = { DIP = 4 }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "EVTOPTA715"
+		add_stability = -1
+	}
+	option = {
+		name = "personality_options.715.a"
+		highlight = yes
+		trigger = {
+			ruler_has_personality = charismatic_negotiator_personality
+		}
+		required_personality = charismatic_negotiator_personality
+		add_prestige = -10
+	}
+}
+
+# Nobles Demand Recompensation
+country_event = {
+	id = 716
+	title = "EVTNAME716"
+	desc = "EVTDESC716"
+	picture = COURT_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		stability = 1
+	}
+
+	mean_time_to_happen = {
+		days = 1
+		modifier = {
+			factor = 0.5
+			luck = yes
+		}	
+		modifier = {
+			factor = 0.25
+			has_active_policy = noble_loyalty_act
+		}
+	}
+
+	option = {
+		name = "EVTOPTA716"
+		ai_chance = {
+			factor = 35
+			modifier = {
+				factor = 1.5
+				stability = 3
+			}
+			modifier = {
+				factor = 0
+				has_estate = estate_nobles
+				NOT = {
+					estate_loyalty = {
+						estate = estate_nobles
+						loyalty = 40
+					}
+				}
+			}
+		}
+		add_stability = -1
+		reduce_estate_nobles_loyalty_effect = yes
+	}
+	option = {
+		name = "EVTOPTB716"
+		ai_chance = {
+			factor = 75
+			modifier = {
+				factor = 0.5
+				NOT = { years_of_income = 1 }
+			}
+		}
+		add_years_of_income = -0.75
+		add_estate_nobles_loyalty_effect = yes
+	}
+}
+
+# Monetary Reforms
+country_event = {
+	id = 717
+	title = "EVTNAME717"
+	desc = "EVTDESC717"
+	picture = REFORM_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		stability = 0
+	}
+
+	mean_time_to_happen = {
+		days = 1
+		modifier = {
+			factor = 0.5
+			luck = yes
+		}		
+	}
+
+	option = {
+		name = "EVTOPTA717"
+		ai_chance = {
+			factor = 25
+		}
+		add_stability = -1
+		add_inflation = -1
+		add_mandate_effect = yes
+	}
+	option = {
+		name = "EVTOPTB717"
+		ai_chance = {
+			factor = 75
+			modifier = {
+				factor = 0.5
+				inflation = 15
+			}
+		}
+		add_inflation = 3
+		reduce_mandate_effect = yes
+	}
+	option = {
+		name = "personality_options.717.a"
+		highlight = yes
+		trigger = { ruler_has_personality = midas_touched_personality }
+		required_personality = midas_touched_personality
+		add_inflation = -1
+		add_mandate_effect = yes
+	}
+}
+
+# Strong Military Leadership
+country_event = {
+	id = 719
+	title = "EVTNAME719"
+	desc = "EVTDESC719"
+	picture = MILITARY_CAMP_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		stability = 0
+		army_tradition = 50
+	}
+
+	mean_time_to_happen = {
+		days = 1
+		modifier = {
+			factor = 0.5
+			luck = yes
+		}		
+	}
+
+	option = {
+		name = "EVTOPTA719"
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 1.5
+				stability = 2
+			}
+			modifier = {
+				factor = 0
+				has_estate = estate_nobles
+				NOT = {
+					estate_loyalty = {
+						estate = estate_nobles
+						loyalty = 40
+					}
+				}
+			}
+		}
+		add_stability = -1
+		reduce_estate_nobles_loyalty_effect = yes
+	}
+	option = {
+		name = "EVTOPTB719"
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 1.5
+				army_tradition = 90
+			}
+		}
+		add_army_tradition = -20
+		add_estate_nobles_loyalty_effect = yes
+	}
+	option = {
+		name = "personality_options.719.a"
+		highlight = yes
+		trigger = { ruler_has_personality = martial_educator_personality }
+		required_personality = martial_educator_personality
+		ai_chance = {
+			factor = 100
+		}
+		add_army_tradition = -10
+	}
+}
+
+# The Naval Tradition
+country_event = {
+	id = 720
+	title = "EVTNAME720"
+	desc = "EVTDESC720"
+	picture = NAVAL_MILITARY_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		stability = 0
+		navy_tradition = 50
+	}
+
+	mean_time_to_happen = {
+		days = 1
+		modifier = {
+			factor = 0.5
+			luck = yes
+		}		
+	}
+
+	option = {
+		name = "EVTOPTA720"
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 1.5
+				stability = 2
+			}
+			modifier = {
+				factor = 0
+				has_estate = estate_nobles
+				NOT = {
+					estate_loyalty = {
+						estate = estate_nobles
+						loyalty = 40
+					}
+				}
+			}
+		}
+		add_stability = -1
+		reduce_estate_nobles_loyalty_effect = yes
+	}
+	option = {
+		name = "EVTOPTB720"
+		ai_chance = {
+			factor = 50
+		}
+		add_estate_nobles_loyalty_effect = yes
+		add_navy_tradition = -20
+	}
+	option = {
+		name = "personality_options.720.a"
+		highlight = yes
+		trigger = { ruler_has_personality = navigator_personality }
+		required_personality = navigator_personality
+		ai_chance = {
+			factor = 50
+		}
+		add_dip_power = -25
+	}	
+}
+
+# Sickness of $MONARCHTITLE$
+country_event = {
+	id = 722
+	title = "EVTNAME722"
+	desc = "EVTDESC722"
+	picture = COURT_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		stability = 0
+		has_regency = no
+		government = monarchy
+		NOT = {	has_ruler_modifier = power_to_nobles	}
+		NOT = {	has_ruler_modifier = power_to_provinces	}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+		modifier = {
+			factor = 0.5
+			luck = yes
+		}		
+	}
+
+	option = {
+		name = "EVTOPTA722"
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				has_estate = estate_nobles
+				NOT = {
+					estate_loyalty = {
+						estate = estate_nobles
+						loyalty = 40
+					}
+				}
+			}
+		}
+		add_ruler_modifier = {
+			name = "power_to_nobles"
+			duration = 3650
+		}
+		add_estate_nobles_loyalty_effect = yes
+	}
+	option = {
+		name = "EVTOPTB722"
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				has_estate = estate_burghers
+				NOT = {
+					estate_loyalty = {
+						estate = estate_burghers
+						loyalty = 40
+					}
+				}
+			}
+		}
+		add_ruler_modifier = {
+			name = "power_to_provinces"
+			duration = 3650
+		}
+		add_estate_burghers_loyalty_effect = yes
+	}
+	option = {
+		name = "personality_options.722.a"
+		highlight = yes
+		trigger = {
+			ruler_has_personality = well_advised_personality
+		}
+		required_personality = well_advised_personality
+		ai_chance = {
+			factor = 100
+		}
+		add_ruler_modifier = {
+			name = "power_to_advisors"
+			duration = 3650
+		}
+	}
+}
+
+# $MONARCHTITLE$'s reputation tarnished!
+country_event = {
+	id = 726
+	title = "EVTNAME726"
+	desc = "EVTDESC726"
+	picture = COURT_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { dip = 5 }
+		has_regency = no
+		is_lesser_in_union = no
+		stability = -1
+	}
+
+	mean_time_to_happen = {
+		days = 1
+		modifier = {
+			factor = 0.5
+			luck = yes
+		}		
+	}
+
+	option = {
+		name = "EVTOPTA726"
+		ai_chance = {
+			factor = 50
+		}
+		add_dip_power = -100
+	}
+	option = {
+		name = "EVTOPTB726"
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.5
+				NOT = { stability = 1 }
+			}
+		}
+		if = {
+			limit = { NOT = { stability = -2 } }
+			add_adm_power = -100
+		}		
+		if = {
+			limit = { stability = -2 }
+			add_stability = -1
+		}
+	}
+	option = {
+		name = "personality_options.726.a" #Ruthles? Me?
+		highlight = yes
+		trigger = { ruler_has_personality = naive_personality }
+		required_personality = naive_personality
+		ai_chance = {
+			factor = 100
+		}
+		add_prestige = -5
+	}
+	option = {
+		name = "personality_options.726.b"
+		highlight = yes
+		trigger = { ruler_has_personality = charismatic_negotiator_personality }
+		required_personality = charismatic_negotiator_personality
+		ai_chance = {
+			factor = 100
+		}
+		add_dip_power = -25
+	}
+}
+
+# Fight the Good Fight!
+country_event = {
+	id = 727
+	title = "EVTNAME727"
+	desc = "EVTDESC727"
+	picture = BATTLE_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		any_enemy_country = {
+			war_with = ROOT
+		}
+		war_exhaustion = 5
+	}
+
+	mean_time_to_happen = {
+		days = 1
+		modifier = {
+			factor = 2.0
+			luck = yes
+		}	
+		modifier = {
+			factor = 2.0
+			war_exhaustion = 10
+		}
+	}
+
+	option = {
+		name = "EVTOPTA727"
+		add_war_exhaustion = -1
+	}
+}
+
+# Improve the Capital
+country_event = {
+	id = 729
+	title = "EVTNAME729"
+	desc = "EVTDESC729"
+	picture = CITY_DEVELOPMENT_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		is_at_war = no
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "EVTOPTA729"
+		ai_chance = {
+			factor = 50
+		}
+		capital_scope = { add_base_tax = 1 }
+		add_yearly_manpower = -0.5
+	}
+	option = {
+		name = "EVTOPTB729"
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.5
+				NOT = { years_of_income = 0.2 }
+			}
+		}
+		capital_scope = { add_base_tax = 1 }
+		add_years_of_income = -0.25
+	}
+	option = {
+		name = "personality_options.729.a"
+		highlight = yes
+		trigger = { ruler_has_personality = architectural_visionary_personality }
+		required_personality = architectural_visionary_personality
+		ai_chance = {
+			factor = 100
+		}
+		capital_scope = { add_base_tax = 1 }
+		add_years_of_income = -0.15
+	}
+	option = {
+		name = "personality_options.729.b"
+		highlight = yes
+		trigger = { ruler_has_personality = obsessive_perfectionist_personality }
+		required_personality = obsessive_perfectionist_personality
+		ai_chance = {
+			factor = 100
+		}
+		capital_scope = { add_base_tax = 2 }
+		add_years_of_income = -0.35
+	}
+}
+
+# Smugglers running rampant
+country_event = {
+	id = 740
+	title = "EVTNAME740"
+	desc = "EVTDESC740"
+	picture = SHIP_SAILING_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		stability = 0
+		NOT = { has_country_modifier = smugglers_dominating }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+		modifier = {
+			factor = 0.5
+			luck = yes
+		}		
+	}
+
+	option = {
+		name = "EVTOPTA740"
+		ai_chance = {
+			factor = 35
+			modifier = {
+				factor = 0.5
+				NOT = { years_of_income = 0.5 }
+			}
+		}
+		add_years_of_income = -0.35
+	}
+	option = {
+		name = "EVTOPTB740"
+		ai_chance = {
+			factor = 65
+		}
+		add_country_modifier = {
+			name = "smugglers_dominating"
+			duration = 3650
+		}
+	}
+	option = {
+		name = "personality_options.740.a"
+		highlight = yes
+		trigger = { ruler_has_personality = entrepreneur_personality }
+		required_personality = entrepreneur_personality
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 0.5
+				NOT = { years_of_income = 0.5 }
+			}
+		}
+		add_years_of_income = -0.2
+	}
+	option = {
+		name = "personality_options.740.b"
+		highlight = yes
+		trigger = {
+			ruler_has_personality = embezzler_personality
+		}
+		required_personality = embezzler_personality
+		ai_chance = {
+			factor = 100
+		}
+		add_country_modifier = {
+			name = "smugglers_dominating"
+			duration = 1825
+		}
+	}
+}
+
+# War Exhaustion gain or Army/Navy Tradition loss
+country_event = {
+	id = 859
+	title = "EVTNAME859"
+	desc = "EVTDESC859"
+	picture = ANGRY_MOB_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		is_at_war = yes
+		war_exhaustion = 2
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "EVTOPTA859"
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0.5
+				war_exhaustion = 5
+			}
+		}
+		add_war_exhaustion = 2
+	}
+	option = {
+		name = "EVTOPTB859"
+		ai_chance = {
+			factor = 5
+		}
+		add_army_tradition = -5
+		add_navy_tradition = -5
+	}
+	option = {
+		name = "personality_options.859.a"
+		highlight = yes
+		trigger = { ruler_has_personality = strict_personality }
+		required_personality = strict_personality
+		ai_chance = {
+			factor = 100
+		}
+		add_war_exhaustion = 1
+	}
+}
+
+# War Exhaustion loss or Army/Navy Tradition gain
+country_event = {
+	id = 860
+	title = "EVTNAME860"
+	desc = "EVTDESC860"
+	picture = MILITARY_CAMP_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		is_at_war = yes
+		war_exhaustion = 5
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "EVTOPTA860"
+		ai_chance = {
+			factor = 65
+			modifier = {
+				factor = 1.5
+				war_exhaustion = 10
+			}
+		}
+		add_war_exhaustion = -2
+	}
+	option = {
+		name = "EVTOPTB860"
+		ai_chance = {
+			factor = 35
+		}
+		add_army_tradition = 5
+		add_navy_tradition = 5
+	}
+	option = {
+		name = "personality_options.860.a"
+		highlight = yes
+		trigger = { ruler_has_personality = inspiring_leader_personality }
+		required_personality = inspiring_leader_personality
+		ai_chance = {
+			factor = 100
+		}
+		add_war_exhaustion = -1
+		add_army_tradition = 5
+		add_navy_tradition = 5
+	}
+}
+
+#Sale of Titles
+country_event = {
+	id = 871
+	title = "EVTNAME871"
+	desc = "EVTDESC871"
+	picture = COURT_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "EVTOPTA871"
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 1.5
+				NOT = { years_of_income = 0.3 }
+			}
+			modifier = {
+				factor = 0.5
+				has_estate = estate_nobles
+				NOT = {
+					estate_loyalty = {
+						estate = estate_nobles
+						loyalty = 40
+					}
+				}
+			}
+		}
+		add_years_of_income = 0.25
+		reduce_estate_nobles_loyalty_effect = yes
+		add_estate_burghers_loyalty_effect = yes
+	}
+	option = {
+		name = "EVTOPTB871"
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 1.5
+				NOT = { stability = 1 }
+			}
+			modifier = {
+				factor = 0.5
+				stability = 3
+			}
+			modifier = {
+				factor = 0.5
+				has_estate = estate_burghers
+				NOT = {
+					estate_loyalty = {
+						estate = estate_burghers
+						loyalty = 40
+					}
+				}
+			}
+		}
+		add_stability_or_adm_power = yes
+		add_estate_nobles_loyalty_effect = yes
+		reduce_estate_burghers_loyalty_effect = yes
+	}
+}
+
+# A traveling minstrel
+country_event = {
+	id = 872
+	title = "EVTNAME872"
+	desc = "EVTDESC872"
+	picture = ADVISOR_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		check_if_non_state_advisor_effect = { #Hidden, must be followed by erase_advisor_flags_effect
+			chance_of_primary = 75 #Not percentages!
+			chance_of_tertiary = 5
+			chance_of_secondary = 25
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA872"
+		add_stability_or_adm_power = yes
+	}
+	option = {
+		name = "EVTOPTB872"
+		add_prestige = 10
+		add_meritocracy_effect = yes
+		generate_advisor_of_type_and_semi_random_religion_effect = {
+			advisor_type=artist
+			advisor_type_if_not_state=artist
+			skill = 2
+			discount=no
+		}
+	}
+	option = {
+		name = "personality_options.872.a"
+		highlight = yes
+		trigger = { ruler_has_personality = well_connected_personality }
+		required_personality = well_connected_personality
+		add_prestige = 10
+		add_meritocracy_effect = yes
+		generate_advisor_of_type_and_semi_random_religion_effect = {
+			advisor_type=artist
+			advisor_type_if_not_state=artist
+			skill = 3
+			discount=yes
+		}
+	}
+	after = { erase_advisor_flags_effect = yes }
+}
+
+# A bountiful harvest
+country_event = {
+	id = 873
+	title = "EVTNAME873"
+	desc = "EVTDESC873"
+	picture = FEAST_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		is_month = 7
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "EVTOPTA873"
+		add_years_of_income = 0.25
+	}
+}
+
+# Sweating Sickness
+country_event = {
+	id = 877
+	title = "EVTNAME877"
+	desc = "EVTDESC877"
+	picture = PLAGUE_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		is_year = 1480
+		NOT = { adm_tech = 20 }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "EVTOPTA877"
+		ai_chance = {
+			factor = 33
+			modifier = {
+				factor = 0.5
+				NOT = { stability = 1 }
+			}
+		}
+		if = {
+			limit = { NOT = { stability = -2 } }
+			add_adm_power = -100
+		}		
+		if = {
+			limit = { stability = -2 }
+			add_stability = -1
+		}
+	}
+	option = {
+		name = "EVTOPTB877"
+		ai_chance = {
+			factor = 33
+			modifier = {
+				factor = 0.5
+				NOT = { years_of_income = 0.6 }
+			}
+		}
+		add_years_of_income = -0.50
+	}	
+	option = {
+		name = "EVTOPTC877"
+		ai_chance = {
+			factor = 33
+		}
+		add_dip_power = -100
+	}	
+}
+
+# Merchant Expedition
+country_event = {
+	id = 881
+	title = "EVTNAME881"
+	desc = "EVTDESC881"
+	picture = EXPLORERS_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea = quest_for_the_new_world
+		num_of_ports = 1
+		num_of_merchants = 2
+		any_active_trade_node = {
+			is_sea = yes
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "EVTOPTA881"
+		random_owned_province = {
+			limit = { has_port = yes }
+			heavy_ship = ROOT
+		}
+		create_explorer = 20
+	}
+	option = {
+		name = "personality_options.881.a"
+		highlight = yes
+		trigger = { ruler_has_personality = navigator_personality }
+		required_personality = navigator_personality
+		random_owned_province = {
+			limit = { has_port = yes }
+			heavy_ship = ROOT
+		}
+		create_explorer = 50
+	}
+}
+
+# Naval Officers are retiring
+country_event = {
+	id = 837
+	title = "EVTNAME837"
+	desc = "EVTDESC837"
+	picture = NAVAL_MILITARY_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		num_of_ports = 1
+		primitives = no
+		NOT = { has_idea_group = maritime_ideas }
+		OR = { 
+			has_idea_group = offensive_ideas
+			has_idea_group = defensive_ideas
+		}
+	}	
+	
+	option = {
+		name = "EVTOPTB837A"
+		add_navy_tradition = -10
+	}
+	option = {
+		name = "personality_options.837.a"
+		highlight = yes
+		trigger = { ruler_has_personality = navigator_personality }
+		required_personality = navigator_personality
+		add_navy_tradition = -5
+	}
+}
+
+### Scripted by Sara Wendel-Örtqvist ###
+
+namespace = random_event
+
+# Traitor in Parliament
+country_event = {
+	id = random_event.3
+	title = "random_event.EVTNAME3"
+	desc = "random_event.EVTDESC3"
+	picture = COURT_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_parliament = yes
+		is_at_war = yes
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "random_event.EVTOPTA3"
+		trigger = { 
+			stability = -2 
+		}
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0.5
+				NOT = { stability = 1 }
+			}
+		}
+		add_stability = -1
+	}
+	option = {
+		name = "random_event.EVTOPTB3"
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0.5
+				war_exhaustion = 8
+			}
+		}
+		add_war_exhaustion = 2
+	}
+	option = {
+		name = "personality_options.random.3.a"
+		highlight = yes
+		trigger = { ruler_has_personality = secretive_personality }
+		required_personality = secretive_personality
+		ai_chance = {
+			factor = 100
+		}
+		add_dip_power = -25
+	}
+}
+
+# We have a man inside!
+country_event = {
+	id = random_event.9
+	title = "random_event.EVTNAME9"
+	desc = "random_event.EVTDESC9"
+	picture = LAND_MILITARY_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		any_rival_country = {
+			advisor = fortification_expert
+			war_with = ROOT
+		}
+		has_regency = no
+		NOT = {
+			has_ruler_modifier = inside_man
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "random_event.EVTOPTB9"
+		add_ruler_modifier = {
+			name = inside_man
+		}
+	}
+}
+
+# Establish Penal Colony in COLONYNAME
+province_event = {
+	id = random_event.22
+	title = "random_event.EVTNAME22"
+	desc = "random_event.EVTDESC22"
+	picture = COLONIZATION_eventPicture
+	
+	trigger = {
+		owner = {
+			NOT = { has_country_flag = has_penal_colony }
+		}
+		is_colony = yes
+		NOT = { colonysize = 500 }
+	}
+	
+	mean_time_to_happen = {
+		months = 2000
+	}
+	
+	immediate = {
+		owner = {
+			set_country_flag = has_penal_colony
+		}
+	}
+
+	option = {
+		name = "random_event.EVTOPTA22" # Sounds good, set it up
+		add_province_modifier = {
+			name = "penal_colony"
+			duration = 9125
+		}
+	}
+	option = {
+		name = "random_event.EVTOPTB22" # We can't trust these people! Keep them in prison over here
+		owner = {
+			add_adm_power = -10
+		}
+	}
+}
+
+# Influenza!
+province_event = {
+	id = random_event.23
+	title = "random_event.EVTNAME23"
+	desc = "random_event.EVTDESC23"
+	picture = PLAGUE_eventPicture
+	
+	trigger = {
+		has_port = yes
+		is_capital = no
+		OR = {
+			NOT = { has_province_flag = province_had_influenza }
+			had_province_flag = { flag = province_had_influenza days = 10950 }
+		}
+		owner = {
+			primitives = no
+		}	
+	}
+	
+	is_mtth_scaled_to_size = 1
+	
+	mean_time_to_happen = {
+		months = 600
+		modifier = {
+			factor = 0.9
+			has_terrain = marsh
+		}
+	}
+	
+	immediate = {
+		set_province_flag = province_had_influenza
+	}
+
+	option = {
+		name = "random_event.EVTOPTA23" # Quarantine the port and let them die!
+		ai_chance = {
+			factor = 50
+		}
+		owner = { add_adm_power = -50 }
+		add_province_modifier = {
+			name = "quarantined_influenza"
+			duration = 3650
+		}
+	}
+	option = {
+		name = "random_event.EVTOPTB23" # This is not the first flu in our country, I don't care!
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				calc_true_if = {
+					all_neighbor_province = {
+						owned_by = ROOT
+						development = 12
+					}
+					amount = 3
+				}
+			}
+		}
+		add_province_modifier = {
+			name = "influenza"
+			duration = 3650
+		}
+		if = {
+			limit = {
+				any_neighbor_province = {
+					NOT = { has_province_modifier = quarantined_influenza }
+					NOT = { has_province_modifier = influenza }
+					NOT = { has_province_flag = province_had_influenza }
+				}
+			}
+			custom_tooltip = random_events.23.b.tt
+		}
+	}
+}
+
+# Influenza Spreads
+province_event = {
+	id = random_event.24
+	title = "random_event.EVTNAME24"
+	desc = "random_event.EVTDESC24"
+	picture = PLAGUE_eventPicture
+	
+	trigger = {
+		development = 8
+		OR = {
+			NOT = { has_province_flag = province_had_influenza }
+			had_province_flag = { flag = province_had_influenza days = 10950 }
+		}
+		owner = {
+			primitives = no
+		}
+		any_neighbor_province = {
+			has_province_modifier = influenza
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	immediate = {
+		set_province_flag = province_had_influenza
+	}
+	
+	option = {
+		name = "random_event.EVTOPTA24" # Quarantine the province!
+		ai_chance = {
+			factor = 50
+		}
+		add_province_modifier = {
+			name = "quarantined_influenza"
+			duration = 3650
+		}
+		every_neighbor_province = {
+			limit = {
+				owned_by = ROOT
+			}
+			add_province_modifier = {
+				name = "quarantined_influenza"
+				duration = 3650
+			}
+		}
+		owner = {
+			if = {
+				limit = {
+					any_owned_province = { has_province_modifier = influenza }
+				}
+				every_owned_province = {
+					limit = {
+						has_province_modifier = influenza
+					}
+					remove_province_modifier = influenza
+					add_province_modifier = {
+						name = "quarantined_influenza"
+						duration = 3650
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = "random_event.EVTOPTB24" # It will soon go away
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				calc_true_if = {
+					all_neighbor_province = {
+						owned_by = ROOT
+						development = 12
+					}
+					amount = 3
+				}
+			}
+		}
+		add_province_modifier = {
+			name = "influenza"
+			duration = 3650
+		}
+		if = {
+			limit = {
+				any_neighbor_province = {
+					NOT = { has_province_modifier = quarantined_influenza }
+					NOT = { has_province_modifier = influenza }
+					NOT = { has_province_flag = province_had_influenza }
+				}
+			}
+			custom_tooltip = random_events.23.b.tt
+		}
+	}
+}
+
+# Debased Currency
+country_event = {
+	id = random_event.26
+	title = "EVTNAME9478"
+	desc = "EVTDESC9478"
+	picture = ECONOMY_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		gold_income_percentage = 0.1
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "EVTOPTA9478"
+		add_inflation = 1
+		add_prestige = -5
+	}
+}
+
+country_event = {
+	id = 3097
+	title = "EVTNAME3097"
+	desc = "EVTDESC3097"
+	picture = ANGRY_MOB_eventPicture
+	
+	trigger = {
+		num_of_rebel_armies = 1
+		NOT = { religious_unity = 1.0 }
+		any_owned_province = {
+			has_owner_culture = no
+			has_owner_religion = no
+		}
+	}
+	
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}	
+	
+	option = {
+		name = "EVTOPTA3097" # Jackals! Vultures!
+		
+		random_owned_province = {
+			limit = {
+				has_owner_culture = no
+				has_owner_religion = no
+			}
+		
+			add_unrest = 15
+		}
+	}
+}
+
+# Revolt!
+country_event = {
+	id = 5005
+	title = "EVTNAME5005"
+	desc = "EVTDESC5005"
+	picture = ANGRY_MOB_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		num_of_cities = 2
+		any_owned_province = {
+			is_capital = no
+			unrest = 1
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					is_capital = no
+					unrest = 1
+				}
+				save_event_target_as = revolt_5005_province
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}	
+	
+	option = {
+		name = "EVTOPTA5005" # Ignore them
+		event_target:revolt_5005_province = {
+			add_province_modifier = {
+				name = ignored_unrest
+				duration = 1825
+			}
+		}
+
+	}
+	option = {
+		name = "EVTOPTB5005" # Lower taxes
+		event_target:revolt_5005_province = {
+			add_province_modifier = {
+				name = lower_taxes_unrest
+				duration = 1825
+			}
+			add_local_autonomy = 20
+		}			
+	}
+}

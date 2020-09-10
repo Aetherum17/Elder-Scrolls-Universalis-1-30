@@ -1,0 +1,146 @@
+namespace = trade
+
+# Respect our flag
+country_event = {
+	id = trade.1
+	title = trade.1.t
+	desc = trade.1.d
+	picture = NAVAL_MILITARY_eventPicture
+	
+	is_triggered_only = yes
+	trigger = {
+		num_of_merchants = 3
+		capital_scope = {
+			has_trader = root
+			NOT = { is_strongest_trade_power = root }
+		}
+		
+		has_idea_group = maritime_ideas
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+		modifier = {
+			factor = 1.5
+			trade_ideas = 1
+		}
+		modifier = {
+			factor = 3
+			trade_ideas = 3
+		}
+		modifier = {
+			factor = 5
+			trade_ideas = 7
+		}
+	}
+	
+	option = {
+		name = trade.1.a
+		add_prestige = -30
+		capital_scope = {
+			if = {
+				limit = { NOT = { is_strongest_trade_power = root } }
+				strongest_trade_power = { 
+					reverse_add_casus_belli = {
+						target = ROOT
+						type = cb_trade_war_triggered
+						months = 60
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = trade.1.b
+		add_stability = -1
+	}
+}
+
+# Merchants leaving
+country_event = {
+	id = trade.11
+	title = trade.11.t
+	desc = trade.11.d
+	picture = MERCHANTS_TALKING_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { mercantilism = 40 }
+		num_of_merchants = 3
+	}
+	
+	option = {
+		name = trade.11.a
+		add_country_modifier = {
+			name = bad_free_trade_merchants
+			duration = 730
+		}		
+	}
+}
+
+# Trade Expansion
+country_event = {
+	id = 6328
+	title = "EVTNAME6328"
+	desc = "EVTDESC6328"
+	picture = MERCHANTS_TALKING_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { mercantilism = 20 }
+		any_active_trade_node = {
+			is_sea = yes
+			has_merchant = PREV
+		}	
+		NOT = {
+			has_country_modifier = freetrade_modifier
+		}			
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "EVTOPTA6328"
+		add_country_modifier = {
+			name = freetrade_modifier
+			duration = 3650
+		}		
+	}
+}	
+
+#######################################
+#		SLAVES	NO MORE!      #
+#######################################
+
+country_event = {
+	id = 9520
+	title = "EVTNAME9520"
+	desc = "EVTDESC9520"
+	picture = TRADEGOODS_eventPicture
+
+	trigger = {
+		has_country_modifier = the_abolish_slavery_act
+		any_owned_province = { trade_goods = slaves }
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "EVTOPTA9520"
+		every_owned_province = {
+			limit = { trade_goods = slaves }
+			change_trade_goods = unknown
+			remove_building = tradecompany
+			if = {
+				limit = { has_province_modifier = slave_entrepot }
+				remove_province_modifier = slave_entrepot
+			}
+		}
+	}
+}

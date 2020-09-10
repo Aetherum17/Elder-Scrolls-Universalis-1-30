@@ -1,0 +1,517 @@
+########################################
+# Buddhism Events
+#
+# Written by Henrik Lohmander
+########################################
+
+namespace = buddhism_events
+
+#Low Karma - 1 pushes even lower, 2 gives higher Karma at a cost
+
+#High Karma
+#1 goes even higher, 2 lowers it for a cost.
+
+#White Elephant Captured
+
+country_event = {
+	id = buddhism_events.6
+	title = buddhism_events.6.t
+	desc = buddhism_events.6.d
+	picture = BUDDHISM_GOOD_eventPicture
+	
+	trigger = {
+		has_dlc = "Common Sense"
+		uses_karma = yes
+		karma = 50
+	}
+	
+	mean_time_to_happen = {
+		months = 300
+		modifier = {
+			factor = 0.8
+			karma = 75
+		}
+	}
+	
+	option = {
+		name = buddhism_events.6.a #Take good care of it
+		ai_chance = {
+			factor = 1
+		}
+		add_years_of_income = -0.10 #Taking care of it is expensive
+		add_prestige = 10
+		add_karma = 10
+	}
+	option = {
+		name = buddhism_events.6.b #Sell it
+		ai_chance = {
+			factor = 9
+		}
+		add_years_of_income = 0.05
+		add_prestige = -10
+		add_karma = -10
+	}
+	option = {
+		name = buddhism_events.6.c #It would make an excellent gift!
+		trigger = {
+			any_ally = {
+				is_neighbor_of = ROOT
+				religion = root
+			}
+		}
+		random_ally = {
+			limit = {
+				is_neighbor_of = ROOT
+				religion = root
+			}
+			country_event = { id = buddhism_events.7 }
+			add_opinion = {
+				who = ROOT
+				modifier = gifted_white_elephant
+			}
+		}
+	}
+}
+
+country_event = {
+	id = buddhism_events.7
+	title = buddhism_events.7.t
+	desc = buddhism_events.7.d
+	picture = BUDDHISM_GOOD_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = buddhism_events.6.a #Let us take good care of it.
+		add_years_of_income = -0.1
+		add_karma = 10
+		add_prestige = 10
+	}
+	option = {
+		name = buddhism_events.6.b #Sell it
+		add_years_of_income = 0.05
+		add_prestige = -10
+		add_karma = -10
+		FROM = {
+			add_opinion = {
+				who = ROOT
+				modifier = sold_our_elephant
+			}
+		}
+	}
+}
+
+#Choices to affect Karma
+#Choices to go higher or lower with added aspects that may or may not be tempting.
+
+#Soldiers fleeing their military service to join Monasteries
+country_event = {
+	id = buddhism_events.9
+	title = buddhism_events.9.t
+	desc = buddhism_events.9.d
+	picture = BUDDHISM_MONASTERY_eventPicture
+	
+	trigger = {
+		has_dlc = "Common Sense"
+		uses_karma = yes
+		is_at_war = yes
+		war_exhaustion = 2
+	}
+	
+	mean_time_to_happen = {
+		months = 400
+		modifier = {
+			factor = 0.9
+			war_exhaustion = 5
+		}
+	}
+	
+	option = {
+		name = buddhism_events.9.a #We must remember to be gentle.
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				NOT = { karma = -50 }
+			}
+		}
+		if = {
+			limit = {
+				has_estate = estate_church
+			}
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = 10
+			}
+		}
+		add_karma = 10
+		add_war_exhaustion = -1
+	}
+	option = {
+		name = buddhism_events.9.b #Demand that the Monasteries release these 'Monks' to us.
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				karma = 50
+			}
+			modifier = {
+				factor = 0
+				has_estate = estate_church
+				NOT = {
+					estate_loyalty = {
+						estate = estate_church
+						loyalty = 40
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_estate = estate_church
+			}
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = -10
+			}
+		}
+		add_karma = -10
+		add_yearly_manpower = 0.5
+	}
+}
+
+#Dishonoring the "Hay Sacrifice"
+country_event = {
+	id = buddhism_events.14
+	title = buddhism_events.14.t
+	desc = buddhism_events.14.d
+	picture = BUDDHISM_GOOD_eventPicture
+	
+	trigger = {
+		has_dlc = "Common Sense"
+		uses_karma = yes
+	}
+	
+	mean_time_to_happen = {
+		months = 360
+	}
+	
+	option = {
+		name = buddhism_events.14.a #Levy the tax.
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				karma = 50
+			}
+		}
+		add_karma = -10
+		add_years_of_income = 0.1
+	}
+	option = {
+		name = buddhism_events.14.b #Let us not steal the fruits of their labor.
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				NOT = { karma = -50 }
+			}
+		}
+		add_karma = 10
+	}
+}
+
+# Dana / Charity 
+country_event = {
+	id = buddhism_events.15
+	title = buddhism_events.15.t
+	desc = buddhism_events.15.d
+	picture = BUDDHISM_GOOD_eventPicture
+	
+	trigger = {
+		has_dlc = "Common Sense"
+		uses_karma = yes
+		NOT = { has_country_modifier = grain_for_the_poor }
+		NOT = { has_country_modifier = grain_reserves }
+		stability = 1
+		is_at_war = no
+		NOT = { num_of_rebel_armies = 1 }
+	}
+	
+	mean_time_to_happen = {
+		months = 400
+	}
+	
+	option = {
+		name = buddhism_events.15.a #
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				NOT = { karma = -50 }
+			}
+		}
+		add_karma = 15
+		add_country_modifier = {
+			name = "grain_for_the_poor"
+			duration = 3650
+		}
+	}
+	option = {
+		name = buddhism_events.15.b #
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				karma = 50
+			}
+		}
+		add_country_modifier = {
+			name = "grain_reserves"
+			duration = 3650
+		}
+		add_karma = -15
+	}
+}
+
+#Personal Austerity
+country_event = {
+	id = buddhism_events.18
+	title = buddhism_events.18.t
+	desc = buddhism_events.18.d
+	picture = BUDDHISM_LAMA_eventPicture
+	
+	trigger = {
+		has_dlc = "Common Sense"
+		uses_karma = yes
+		NOT = { has_ruler_flag = had_tapa }
+	}
+	
+	
+	mean_time_to_happen = {
+		months = 360
+	}
+	
+	option = {
+		name = buddhism_events.18.a #Ok.
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				NOT = { karma = -50 }
+			}
+		}
+		add_karma = 10
+		add_prestige = -10
+		set_ruler_flag = had_tapa
+	}
+	option = {
+		name = buddhism_events.18.b #Ok.
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				karma = 50
+			}
+		}
+		add_karma = -10
+		add_legitimacy = -10
+		add_horde_unity = -10
+		set_ruler_flag = had_tapa
+	}
+}
+
+#Inheritance of a Monk
+country_event = {
+	id = buddhism_events.23
+	title = buddhism_events.23.t
+	desc = buddhism_events.23.d
+	picture = BUDDHISM_MONASTERY_eventPicture
+	
+	trigger = {
+		has_dlc = "Common Sense"
+		uses_karma = yes
+		any_owned_province = {
+			is_capital = no
+			NOT = { has_province_modifier = hostile_monastery }
+		}
+	}
+	
+
+	mean_time_to_happen = {
+		months = 600
+	}
+	
+	option = {
+		name = buddhism_events.23.a #Rule in favor of the disciple.
+		ai_chance = {
+			factor = 33
+			modifier = {
+				factor = 2
+				NOT = { karma = -50 }
+			}
+		}
+		add_karma = 10
+		add_prestige = 5
+	}
+	option = {
+		name = buddhism_events.23.b #Rule in favor of the Monastery
+		ai_chance = {
+			factor = 33
+			modifier = {
+				factor = 2
+				karma = 50
+			}
+		}
+		if = {
+			limit = {
+				has_estate = estate_church
+			}
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = 10
+			}
+		}
+		add_karma = -10
+		add_legitimacy = 5
+		add_horde_unity = 5
+		add_republican_tradition = 5
+	}
+	option = {
+		name = buddhism_events.23.c #Support the lay family of the monk.
+		ai_chance = {
+			factor = 33
+			modifier = {
+				factor = 2
+				karma = 75
+			}
+			modifier = {
+				factor = 0
+				has_estate = estate_church
+				NOT = {
+					estate_loyalty = {
+						estate = estate_church
+						loyalty = 40
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_estate = estate_church
+			}
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = -10
+			}
+		}
+		add_karma = -15
+		add_years_of_income = 0.25
+		random_owned_area = {
+			limit = {
+				is_capital = no
+			}
+			add_province_modifier = {
+				name = "hostile_monastery"
+				duration = 3650
+			}
+		}
+	}
+}
+
+#Pali Law Collection
+country_event = {
+	id = buddhism_events.31
+	title = buddhism_events.31.t
+	desc = buddhism_events.31.d
+	picture = BUDDHISM_LAMA_eventPicture
+	
+	trigger = {
+		has_dlc = "Common Sense"
+		uses_karma = yes
+		OR = {
+			karma = 25
+			NOT = { karma = -25 }
+		}
+		NOT = { has_ruler_flag = pali_law_collection }
+	}
+
+	mean_time_to_happen = {
+		months = 500
+	}
+	
+	option = {
+		name = buddhism_events.31.a #Excellent! Promote these laws.
+		set_ruler_flag = pali_law_collection
+		ai_chance = {
+			factor = 50
+		}
+		trigger = {
+			NOT = { karma = -25 }
+		}
+		add_karma = 10
+		add_prestige = -5
+		custom_tooltip = buddhism_events.31.a.tt1
+	}
+	option = {
+		name = buddhism_events.31.a #Promote these laws.
+		set_ruler_flag = pali_law_collection
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			karma = 25
+		}
+		add_karma = 10
+		add_prestige = 5
+		custom_tooltip = buddhism_events.31.a.tt2
+	}
+	option = {
+		name = buddhism_events.31.b #Let us do what we can to stop this from spreading.
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				karma = 50
+			}
+		}
+		set_ruler_flag = pali_law_collection
+		add_karma = -10
+	}
+}
+
+#Shamanic Figures
+country_event = {
+	id = buddhism_events.35
+	title = buddhism_events.35.t
+	desc = buddhism_events.35.d
+	picture = BUDDHISM_LAMA_eventPicture
+	
+	trigger = {
+		has_dlc = "Common Sense"
+        uses_karma = yes
+		has_country_modifier = vajrayana_lama
+		NOT = { has_country_flag = burned_figures }
+		any_owned_province = {
+			NOT = { religion_group = elemental_group }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 260
+	}
+	
+	option = {
+		name = buddhism_events.35.a #
+		set_country_flag = burned_figures
+		add_country_modifier = {
+			name = "destruction_of_idols"
+			duration = 3650
+		}
+	}
+	option = {
+		name = buddhism_events.35.b #
+		set_country_flag = burned_figures
+		add_stability = -1 #For going against the Lama, probably a bad idea unless you really want to play a tolerant country.
+	}
+}

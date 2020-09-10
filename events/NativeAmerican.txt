@@ -1,0 +1,163 @@
+namespace = native_americans
+
+# Counting Coup - retaining or rejecting traditions of proving courage
+country_event = {
+	id = native_americans.5
+	title = "native_americans.5.t"
+	desc = "native_americans.5.d"
+	picture = DEBATE_REPUBLICAN_eventPicture
+
+	trigger = {
+		has_dlc = "Conquest of Paradise"
+		government = native
+		NOT = { has_country_flag = natives_discounting_coup }
+		advisor = army_reformer
+	}
+
+	mean_time_to_happen = {
+		months = 480
+	}
+	
+	# Stop counting coup
+	option = {
+		name = "native_americans.5.a"
+		add_mil_power = 100
+		add_prestige = -20
+		set_country_flag = natives_discounting_coup
+	}
+
+	# Continue counting coup
+	option = {
+		name = "native_americans.5.b"
+		add_ruler_modifier = {
+			name = "counting_coup"
+		}
+	}
+}
+
+# Appointing a War Chief - select mil-strong leader during times of war
+country_event = {
+	id = native_americans.6
+	title = "native_americans.6.t"
+	desc = "native_americans.6.d"
+	picture = LAND_MILITARY_eventPicture
+	
+	trigger= {
+		has_dlc = "Conquest of Paradise"
+		government = native
+		is_at_war = yes
+		NOT = { has_country_flag = appointed_war_chief }
+		army_tradition = 20
+	}
+
+	mean_time_to_happen = {
+		months = 96
+		modifier = {
+			factor = 0.5
+			has_ruler_modifier = "counting_coup"
+		}
+	}
+
+	# Appoint a war chief
+	option = {
+		name = "native_americans.6.a"
+		set_country_flag = appointed_war_chief
+		define_ruler = {
+			adm = 0
+			dip = 1
+			mil = 5
+			fixed = yes
+		}
+	}
+
+	# Retain peace chief
+	option = {
+		name = "native_americans.6.b"
+		add_dip_power = 10
+	}
+}
+
+# Appointing a Peace Chief - removing the War Chief from previous event on peace
+country_event = {
+	id = native_americans.7
+	title = "native_americans.7.t"
+	desc = "native_americans.7.d"
+	picture = CONQUEST_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_dlc = "Conquest of Paradise"
+		has_country_flag = appointed_war_chief
+	}
+
+	# Peace Chief appointed, random traits but decent adm/dip
+	option = {
+		name = "native_americans.7.a"
+		define_ruler = {
+			adm = 2
+			dip = 2
+		}
+		clr_country_flag = appointed_war_chief
+	}
+
+	# War Chief remains in power, military coup
+	option = {
+		name = "native_americans.7.b"
+		add_stability = -1
+	}
+}
+
+# Preparing for the Sun Dance - Great Plains nation prepares for the ceremonial dance
+country_event = {
+	id = native_americans.14
+	title = "native_americans.14.t"
+	desc = "native_americans.14.d"
+	picture = PRAYING_eventPicture
+
+	trigger = {
+		has_dlc = "Conquest of Paradise"
+		government = native
+		is_at_war = no
+		is_month = 3
+		NOT = { is_month = 8 }
+		NOT = { has_country_flag = preparing_sundance }
+	}
+
+	mean_time_to_happen = {
+		months = 120
+	}
+
+	# Prepare for the Sun Dance, setting aside manpower
+	option = {
+		name = "native_americans.14.a"
+		country_event = { id = native_americans.15 days = 60 tooltip = native_americans.14.a.tt }
+		add_manpower = -3
+		add_treasury = -20
+		add_prestige = 5
+		set_country_flag = preparing_sundance
+	}
+
+	# Skip the sundance this year, losing prestige
+	option = {
+		name = "native_americans.14.b"
+		add_prestige = -5
+	}
+}
+
+# The Sun Dance
+country_event = {
+	id = native_americans.15
+	title = "native_americans.15.t"
+	desc = "native_americans.15.d"
+	picture = RELIGION_eventPicture
+
+	is_triggered_only = yes
+
+	# The Sun Dance is performed, giving a stability boost
+	option = {
+		name = "native_americans.15.a"
+		add_stability_or_adm_power = yes
+		clr_country_flag = preparing_sundance
+	}
+}

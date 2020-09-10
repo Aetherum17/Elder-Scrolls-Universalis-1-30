@@ -1,0 +1,1648 @@
+namespace = es_34_scenario
+
+country_event = {
+	id = es_34_scenario.100
+	title = es_34_scenario.100.t
+	desc = es_34_scenario.100.d
+	picture = THREE_ALLIENCES_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_34_scenario.100_flag }
+		tag = RED
+		NOT = { is_year = 1609 }
+		OR = {
+		AND = {
+		OR = {
+		    AND = {
+		    NOT = { exists = AYL }
+			NOT = { exists = ALE }
+			NOT = { exists = ORD }
+			NOT = { exists = CYR }
+			NOT = { exists = TAM }
+			any_country = {
+			    owns = 1206
+				NOT = { stability = 0 }
+				OR = {
+		        AND = {
+		        government = monarchy
+		        NOT = { legitimacy = 35 }
+		        }
+		        AND = {
+		        government = republic
+		        NOT = { republican_tradition = 35 }
+		        }
+		        AND = {
+		        government = theocracy
+		        has_dlc = "Common Sense"
+		        NOT = { devotion = 35 }
+		        }
+		        AND = {
+		        is_nomad = yes
+		        has_dlc = "The Cossacks"
+		        NOT = { horde_unity = 35 }
+		        }
+		        AND = {
+		        is_nomad = yes
+		        NOT = { has_dlc = "The Cossacks" }
+		        NOT = { legitimacy = 35 }
+		        }
+		        AND = {
+		        is_emperor_of_china = yes
+		        NOT = { meritocracy = 35 }
+		        }
+		        }
+		    }
+		    }
+		exists = POE
+		}
+		any_country = {
+		    owns_or_subject_of = 271		
+			owns_or_subject_of = 284
+			owns_or_subject_of = 263
+			owns_or_subject_of = 250
+			owns_or_subject_of = 299
+		}
+		any_country = {
+		    owns_or_subject_of = 1369		
+			owns_or_subject_of = 1379
+			owns_or_subject_of = 1394
+			owns_or_subject_of = 1400
+			owns_or_subject_of = 1426
+		}
+		any_country = {
+		    owns_or_subject_of = 1002
+			owns_or_subject_of = 970
+			owns_or_subject_of = 990
+			owns_or_subject_of = 1028
+			owns_or_subject_of = 1043		
+		}
+		}
+		is_year = 1555
+		}
+    }
+
+	mean_time_to_happen = {
+		days = 31
+	}
+	
+	immediate = {
+	    set_country_flag = es_34_scenario.100_flag
+	}
+	
+	option = {
+		name = "es_34_scenario.100.a"
+		ai_chance = { factor = 100 }
+		set_global_flag = three_alliences_flag
+		every_country = {
+		    limit = {
+			    ai = no
+			}
+			country_event = { id = es_34_scenario.101 days = 31 tooltip = ge_revolution.12.a.tt }
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_34_scenario.101
+	title = es_34_scenario.100.t
+	desc = es_34_scenario.100.d
+	picture = THREE_ALLIENCES_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "es_34_scenario.100.a"
+		ai_chance = { factor = 100 }
+	}
+	
+}
+
+########################
+### Alliences Set Up ###
+
+### Code:
+
+### Daggerfall Covenant Led by Wayrest!
+
+########################
+
+country_event = {
+	id = es_34_scenario.1
+	title = es_34_scenario.1.t
+	desc = es_34_scenario.1.d
+	picture = ES_REVOLUTION_1_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_34_scenario.1_flag }
+		OR = {
+		AND = {
+		tag = POE
+		OR = {
+		has_country_flag = es_33_scenario.9_flag
+		is_year = 1555
+		}
+		any_country = { has_country_modifier = 32_fear_of_morag_tong }
+		}
+		AND = {
+		is_year = 1555
+		NOT = { is_year = 1609 }
+		owns = 1206
+		culture_group = cyrodiil_cg
+		NOT = { government = republic }
+		}
+		}
+    }
+
+	mean_time_to_happen = {
+		days = 9125
+	}
+	
+	immediate = {
+	    set_country_flag = es_34_scenario.1_flag
+	}
+	
+	option = {
+		name = "es_34_scenario.1.a"
+		ai_chance = { factor = 33 }
+		change_tag = HEA
+		change_primary_culture = imperial
+		if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+		if = { limit = { NOT = { government_rank = 10 } } set_government_rank = 10 }
+		add_stability = 3
+		change_government = republic
+		add_government_reform = noble_elite_reform
+		kill_ruler = yes
+		kill_heir = yes
+	}
+	
+	option = {
+		name = "es_34_scenario.1.b"
+		ai_chance = { factor = 33 }
+		if = { limit = { ai = no } add_stability = -1 add_legitimacy = -75 add_republican_tradition = -75 add_devotion = -75 add_horde_unity = -75 add_meritocracy = -75 }
+		random_owned_province = { 
+			spawn_rebels = {
+				type = noble_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			}
+		}
+		random_owned_province = { 
+			spawn_rebels = {
+				type = noble_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			}
+		}
+		random_owned_province = { 
+			spawn_rebels = {
+				type = noble_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			}
+		}
+		random_owned_province = { 
+			spawn_rebels = {
+				type = noble_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			}
+		}
+		random_owned_province = { 
+			spawn_rebels = {
+				type = noble_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			}
+		}
+		random_owned_province = { 
+			spawn_rebels = {
+				type = noble_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			}
+		}
+		random_owned_province = { 
+			spawn_rebels = {
+				type = noble_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			}
+		}
+		random_owned_province = { 
+			spawn_rebels = {
+				type = noble_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			}
+		}
+		random_owned_province = { 
+			spawn_rebels = {
+				type = noble_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			}
+		}
+		random_owned_province = { 
+			spawn_rebels = {
+				type = noble_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			}
+		}
+	}
+	
+	option = {
+		name = "es_34_scenario.1.c"
+		ai_chance = { factor = 33 }
+		every_owned_province = {
+		    add_permanent_province_modifier = {
+		    name = "00_autonomy"
+			duration = 9125 
+			}
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_34_scenario.2
+	title = es_34_scenario.2.t
+	desc = es_34_scenario.2.d
+	picture = ES_THRONEROOM_4_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_34_scenario.2_flag }
+		OR = {
+		any_country = { has_country_flag = es_34_scenario.1_flag }
+		is_year = 1555
+		}
+		NOT = { is_year = 1609 }
+		owns = 1206
+    }
+
+	mean_time_to_happen = {
+		days = 9125
+	}
+	
+	immediate = {
+	    set_country_flag = es_34_scenario.2_flag
+	}
+	
+	option = {
+		name = "es_34_scenario.2.a"
+		ai_chance = { factor = 100 }
+		every_country = {
+		limit = {
+		    is_free_or_tributary_trigger = yes
+		    OR = {
+			    owns = 1206
+				capital_scope = { region = western_syrodiil_lr }
+				capital_scope = { region = eastern_syrodiil_lr }
+				capital_scope = { region = central_syrodiil_lr }
+			}
+		}
+		add_stability = -1
+		add_country_modifier = {
+		    name = "34_interregnum"
+			duration = 9125
+		}
+		}
+		every_country = {
+		limit = {
+		    NOT = { is_free_or_tributary_trigger = yes }
+		    OR = {
+			    owns = 1206
+				capital_scope = { region = western_syrodiil_lr }
+				capital_scope = { region = eastern_syrodiil_lr }
+				capital_scope = { region = central_syrodiil_lr }
+			}
+		}
+		add_country_modifier = {
+		    name = "34_interregnum_free"
+			duration = 9125
+		}
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_34_scenario.3
+	title = es_34_scenario.3.t
+	desc = es_34_scenario.3.d
+	picture = ES_ORCISH_VILLAGE_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_34_scenario.3_flag }
+		culture_group = orsimer_cg
+		owns = 1391
+		NOT = { is_free_or_tributary_trigger = yes }
+    }
+
+	mean_time_to_happen = {
+		days = 18250
+		modifier = {
+			factor = 0.01
+			is_year = 1555
+			NOT = { is_year = 1609 }
+		}
+	}
+	
+	immediate = {
+	    set_country_flag = es_34_scenario.3_flag
+	}
+	
+	option = {
+		name = "es_34_scenario.3.a"
+		ai_chance = { factor = 50 }
+		add_country_modifier = {
+		    name = "34_rebirth_of_orsinium"
+			duration = 9125
+		}
+	}
+	
+	option = {
+		name = "es_34_scenario.3.b"
+		ai_chance = { factor = 50 }
+		add_prestige = -25
+		add_country_modifier = {
+		    name = "34_loyalty_to_overlord"
+			duration = 36500
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_34_scenario.4
+	title = es_34_scenario.4.t
+	desc = es_34_scenario.4.d
+	picture = FLAVOUR_ORCS_VICTORY_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_34_scenario.4_flag }
+		NOT = { culture_group = orsimer_cg }
+		any_owned_province = {
+		    OR = {
+			area = high_5_la
+		    area = high_8_la
+		    area = high_13_la
+			}
+		}
+		is_year = 939
+    }
+
+	mean_time_to_happen = {
+		days = 18250
+		modifier = {
+			factor = 0.01
+			is_year = 1555
+			NOT = { is_year = 1609 }
+		}
+	}
+	
+	immediate = {
+	    set_country_flag = es_34_scenario.4_flag
+	}
+	
+	option = {
+		name = "es_34_scenario.4.a"
+		ai_chance = { factor = 50 }
+		add_stability = 1
+		every_owned_province = {
+		limit = {
+		    OR = {
+			area = high_5_la
+		    area = high_8_la
+		    area = high_13_la
+			}
+		}
+		cede_province = ORS
+		add_core = ORS
+		}
+	}
+	
+	option = {
+		name = "es_34_scenario.4.b"
+		ai_chance = { factor = 50 }
+		every_owned_province = {
+		limit = {
+		    OR = {
+			area = high_5_la
+		    area = high_8_la
+		    area = high_13_la
+			}
+		}
+		add_core = ORS
+		add_permanent_province_modifier = {
+		    name = "00_unrest"
+			duration = 9125
+		}
+		}
+	}
+}
+
+### Pale Watch ###
+
+country_event = {
+	id = es_34_scenario.5
+	title = es_34_scenario.5.t
+	desc = es_34_scenario.5.d
+	picture = ES_BORDER_CASTLE_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_34_scenario.5_flag }
+		NOT = { culture_group = half_blood_cg }
+		government_rank = 5
+		owns = 1369
+		NOT = { has_country_modifier = 34_pale_watch }
+		OR = {
+		any_subject_country = {
+		    culture_group = orsimer_cg
+		}
+		any_owned_province = { culture = orsimer }
+		any_owned_province = { culture = wood_orsimer }
+		}
+    }
+
+	mean_time_to_happen = {
+		days = 18250
+		modifier = {
+			factor = 0.01
+			is_year = 1555
+			NOT = { is_year = 1609 }
+		}
+	}
+	
+	immediate = {
+	    set_country_flag = es_34_scenario.5_flag
+	}
+	
+	option = {
+		name = "es_34_scenario.5.a"
+		ai_chance = { factor = 50 }
+		add_country_modifier = {
+		    name = "34_pale_watch"
+			duration = -1
+		}
+	}
+	
+	option = {
+		name = "es_34_scenario.5.b"
+		ai_chance = { factor = 50 }
+		add_stability = 1
+	}
+}
+
+country_event = {
+	id = es_34_scenario.6
+	title = es_34_scenario.6.t
+	desc = es_34_scenario.6.d
+	picture = ES_REVOLT_IN_VILLAGE_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_34_scenario.6_flag }
+		has_country_modifier = 34_pale_watch
+    }
+
+	mean_time_to_happen = {
+		days = 9125
+	}
+	
+	immediate = {
+	    set_country_flag = es_34_scenario.6_flag
+	}
+	
+	option = {
+		name = "es_34_scenario.6.a"
+		ai_chance = { factor = 100 }
+		add_stability = -1
+		add_country_modifier = {
+		    name = "34_pale_watch_unrest"
+			duration = 9125
+		}
+	}
+	
+}
+
+#######################################################################
+
+province_event = {
+	id = es_34_scenario.7
+	title = es_34_scenario.6.t
+	desc = es_34_scenario.6.d
+	picture = ES_AKAVIRI_POTENTATE_eventPicture
+	
+	hidden = yes
+	
+	trigger = {
+	    NOT = { has_province_flag = es_34_scenario.7_flag }
+		is_year = 1555
+		NOT = { is_year = 1782 }
+		NOT = { religion = owner }
+		continent = Tamriel
+		owner = { NOT = { has_country_modifier = 34_order_of_hour } }
+    }
+
+	mean_time_to_happen = {
+		days = 9125
+	}
+	
+	immediate = {
+	    set_province_flag = es_34_scenario.7_flag
+	}
+	
+	option = {
+		name = "es_34_scenario.6.a"
+		ai_chance = { factor = 100 }
+		add_permanent_province_modifier = {
+		    name = "34_order_of_hour_province"
+			duration = 36500
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_34_scenario.8
+	title = es_34_scenario.8.t
+	desc = es_34_scenario.8.d
+	picture = ES_CITY_IN_FIRE_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_34_scenario.8_flag }
+		is_year = 1555
+		NOT = { is_year = 1609 }
+		owns = 1150
+    }
+
+	mean_time_to_happen = {
+		days = 9125
+	}
+	
+	immediate = {
+	    set_country_flag = es_34_scenario.8_flag
+	}
+	
+	option = {
+		name = "es_34_scenario.8.a"
+		ai_chance = { factor = 100 }
+		add_treasury = -1000
+		1150 = {
+		add_permanent_province_modifier = {
+		    name = "00_unrest"
+			duration = 9125
+		}
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_34_scenario.9
+	title = es_34_scenario.9.t
+	desc = es_34_scenario.9.d
+	picture = ES_VALENWOOD_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_34_scenario.9_flag }
+		is_year = 939
+		NOT = { is_year = 1609 }
+		any_owned_province = {
+		    OR = {
+			region = northern_valenwood_lr 
+			region = southern_valenwood_lr 
+			}
+		}
+		NOT = { culture_group = bosmer_cg }
+		NOT = { primary_culture = hollow }
+		NOT = { culture_group = orsimer_cg } 
+		NOT = { culture_group = imga_cg } 
+    }
+
+	mean_time_to_happen = {
+		days = 36500
+		modifier = {
+			factor = 0.01
+			is_year = 1555
+			NOT = { is_year = 1609 }
+		}
+	}
+	
+	immediate = {
+	    set_country_flag = es_34_scenario.9_flag
+	}
+	
+	option = {
+		name = "es_34_scenario.9.a"
+		ai_chance = { factor = 100 }
+		add_stability = -1
+		add_country_modifier = {
+		    name = "34_blacksap_rebellion"
+			duration = 9125
+		}
+		every_owned_province = {
+		    limit = {
+			    OR = {
+			    region = northern_valenwood_lr 
+			    region = southern_valenwood_lr 
+			    }
+			}
+			add_core = VAL
+			add_permanent_province_modifier = {
+		    name = "10_unrest"
+			duration = 9125
+		    }
+		}
+	}
+	
+}
+
+### Future Rulers ###
+
+country_event = {
+	id = es_34_scenario.10
+	title = es_general.2.t
+	desc = es_general.2.d
+	picture = ES_EMERIC_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_34_scenario.10_flag }
+		has_global_flag = three_alliences_flag
+		has_heir = no
+		has_government_attribute = heir
+		owns = 1426
+    }
+
+	mean_time_to_happen = {
+		months = 24
+	}
+	
+	immediate = {
+	    set_country_flag = es_34_scenario.10_flag
+	}
+	
+	option = {
+		name =  "es_general.2.a"
+		ai_chance = { factor = 50 }
+		define_heir = {
+		name = "Emeric"
+		dynasty = "Cumberland"
+		culture = breton
+		ADM = 5
+		DIP = 4
+		MIL = 6		
+		claim = 80
+		}
+	}
+	
+	option = {
+		name =  "es_general.2.b"
+		ai_chance = { factor = 50 }
+		add_legitimacy = 25
+	}
+	
+}
+
+country_event = {
+	id = es_34_scenario.11
+	title = es_general.2.t
+	desc = es_general.2.d
+	picture = ES_ORCISH_KNIG_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_34_scenario.11_flag }
+		has_global_flag = three_alliences_flag
+		has_heir = no
+		has_government_attribute = heir
+		owns = 1391
+    }
+
+	mean_time_to_happen = {
+		months = 24
+	}
+	
+	immediate = {
+	    set_country_flag = es_34_scenario.11_flag
+	}
+	
+	option = {
+		name =  "es_general.2.a"
+		trigger = { owns = 1369 }
+		ai_chance = { factor = 50 }
+		define_heir = {
+		name = "Kurog"
+		dynasty = "gro-Bagrakh"
+		ADM = 5
+		DIP = 4
+		MIL = 7	
+		claim = 80
+		}
+	}
+	
+	option = {
+		name =  "es_general.2.b"
+		ai_chance = { factor = 50 }
+		add_legitimacy = 25
+	}
+	
+}
+
+country_event = {
+	id = es_34_scenario.12
+	title = es_general.2.t
+	desc = es_general.2.d
+	picture = ES_NORDIC_KNIG_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_34_scenario.12_flag }
+		has_global_flag = three_alliences_flag
+		has_heir = no
+		has_government_attribute = heir
+		owns = 1279
+    }
+
+	mean_time_to_happen = {
+		months = 24
+	}
+	
+	immediate = {
+	    set_country_flag = es_34_scenario.12_flag
+	}
+	
+	option = {
+		name =  "es_general.2.a"
+		trigger = { owns = 1369 }
+		ai_chance = { factor = 50 }
+		define_heir = {
+		name = "Jorunn"
+		dynasty = "Whitehold"
+		ADM = 6
+		DIP = 5
+		MIL = 6
+		claim = 80
+		}
+	}
+	
+	option = {
+		name =  "es_general.2.b"
+		ai_chance = { factor = 50 }
+		add_legitimacy = 25
+	}
+	
+}
+
+country_event = {
+	id = es_34_scenario.13
+	title = es_general.2.t
+	desc = es_general.2.d
+	picture = ES_AYRENN_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_34_scenario.13_flag }
+		has_global_flag = three_alliences_flag
+		has_heir = no
+		has_government_attribute = heir
+		owns = 271
+    }
+
+	mean_time_to_happen = {
+		months = 24
+	}
+	
+	immediate = {
+	    set_country_flag = es_34_scenario.13_flag
+	}
+	
+	option = {
+		name =  "es_general.2.a"
+		trigger = { owns = 1369 }
+		ai_chance = { factor = 50 }
+		define_heir = {
+		name = "Ayrenn"
+		dynasty = "Summerset"
+		ADM = 6
+		DIP = 7
+		MIL = 5
+		claim = 80
+		}
+	}
+	
+	option = {
+		name =  "es_general.2.b"
+		ai_chance = { factor = 50 }
+		add_legitimacy = 25
+	}
+	
+}
+
+### Knahaten Flu ###
+
+country_event = {
+	id = es_34_scenario.14
+	title = es_34_scenario.14.t
+	desc = es_34_scenario.14.d
+	picture = KHANATAN_FLU_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_34_scenario.14_flag }
+		tag = RED
+        is_year = 1334
+        NOT = { is_year = 1782 }	
+    }
+
+	mean_time_to_happen = {
+		days = 36500
+	}
+	
+	immediate = {
+	    set_country_flag = es_34_scenario.14_flag
+		1069 = {
+		add_permanent_province_modifier = {
+			name = "34_knahaten_flu"
+			duration = 9125
+		}
+		}
+		1069 = {
+		if = {
+		    limit = {
+			    OR = {
+				    culture = archein
+					culture = agaceph
+					culture = naga
+					culture = kothringi
+				}
+			}
+			change_culture = argonian
+			change_religion = ROOT
+		}
+		if = {
+            limit = {
+			    OR = {
+					culture = imga
+					culture = wood_orsimer
+				}
+			}
+			change_culture = bosmer
+			change_religion = ROOT
+		}
+		}
+		every_province = {
+		    limit = {
+			    OR = {
+				    area = valenwood_14_la
+					is_island = yes
+				}
+				OR = {
+					culture = imga
+					culture = wood_orsimer
+				}
+			}
+			change_culture = bosmer
+			change_religion = ROOT
+		}
+		every_province = {
+		    limit = {
+				is_island = yes
+				OR = {
+				    culture = archein
+					culture = agaceph
+					culture = naga
+					culture = kothringi
+				}
+			}
+			change_culture = argonian
+			change_religion = ROOT
+		}
+	}
+	
+	option = {
+		name =  "es_34_scenario.14.a"
+		set_global_flag = knahate_flu_flag
+		every_country = {
+		    limit = {
+			    ai = no
+			}
+			country_event = { id = es_34_scenario.15 days = 31 tooltip = ge_revolution.12.a.tt }
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_34_scenario.15
+	title = es_34_scenario.14.t
+	desc = es_34_scenario.14.d
+	picture = KHANATAN_FLU_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "es_34_scenario.14.a"
+		ai_chance = { factor = 100 }
+	}
+	
+}
+
+province_event = {
+	id = es_34_scenario.16
+	title = es_34_scenario.14.t
+	desc = es_34_scenario.14.d
+	picture = KHANATAN_FLU_eventPicture
+	
+	hidden = yes
+	
+	trigger = {
+	    NOT = { has_province_flag = es_34_scenario.16_flag }
+		any_neighbor_province = { has_province_modifier = 34_knahaten_flu }	
+    }
+
+	mean_time_to_happen = {
+		days = 1825
+	}
+	
+	immediate = {
+	    set_province_flag = es_34_scenario.16_flag
+		add_permanent_province_modifier = {
+			name = "34_knahaten_flu"
+			duration = 9125
+		}
+		if = {
+		    limit = {
+			    OR = {
+				    culture = archein
+					culture = agaceph
+					culture = naga
+					culture = kothringi
+				}
+			}
+			change_culture = argonian
+			change_religion = ROOT
+		}
+		if = {
+            limit = {
+			    OR = {
+					culture = imga
+					culture = wood_orsimer
+				}
+			}
+			change_culture = bosmer
+			change_religion = ROOT
+		}
+	}
+	
+	option = {
+		name =  "es_34_scenario.14.a"
+	}
+	
+}
+
+### Anvil ###
+
+country_event = {
+	id = es_34_scenario.17
+	title = es_34_scenario.17.t
+	desc = es_34_scenario.17.d
+	picture = ES_PLAGUED_PORT_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_34_scenario.17_flag }
+		owns = 1161
+		has_global_flag = knahate_flu_flag
+    }
+
+	mean_time_to_happen = {
+		days = 3650
+	}
+	
+	immediate = {
+	    set_country_flag = es_34_scenario.17_flag
+		1161 = {
+		add_permanent_province_modifier = {
+			name = "34_knahaten_flu"
+			duration = 9125
+		}
+		}
+		1161 = {
+		if = {
+		    limit = {
+			    OR = {
+				    culture = archein
+					culture = agaceph
+					culture = naga
+					culture = kothringi
+				}
+			}
+			change_culture = argonian
+			change_religion = ROOT
+		}
+		if = {
+            limit = {
+			    OR = {
+					culture = imga
+					culture = wood_orsimer
+				}
+			}
+			change_culture = bosmer
+			change_religion = ROOT
+		}
+		}
+	}
+	
+	option = {
+		name =  "es_34_scenario.17.a"
+	}
+	
+}
+
+### Alinor ###
+
+country_event = {
+	id = es_34_scenario.18
+	title = es_34_scenario.18.t
+	desc = es_34_scenario.18.d
+	picture = ES_PLAGUED_PORT_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_34_scenario.18_flag }
+		owns = 271
+		has_global_flag = knahate_flu_flag
+    }
+
+	mean_time_to_happen = {
+		days = 3650
+	}
+	
+	immediate = {
+	    set_country_flag = es_34_scenario.18_flag
+		271 = {
+		add_permanent_province_modifier = {
+			name = "34_knahaten_flu"
+			duration = 9125
+		}
+		}
+		271 = {
+		if = {
+		    limit = {
+			    OR = {
+				    culture = archein
+					culture = agaceph
+					culture = naga
+					culture = kothringi
+				}
+			}
+			change_culture = argonian
+			change_religion = ROOT
+		}
+		if = {
+		    limit = {
+			    OR = {
+					culture = imga
+					culture = wood_orsimer
+				}
+			}
+			change_culture = bosmer
+			change_religion = ROOT
+		}
+		}
+	}
+	
+	option = {
+		name =  "es_34_scenario.17.a"
+	}
+	
+}
+
+### Sentinel - Day of Shame ###
+
+country_event = {
+	id = es_34_scenario.19
+	title = es_34_scenario.19.t
+	desc = es_34_scenario.19.d
+	picture = ES_PLAGUED_SHIP_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_34_scenario.19_flag }
+		owns = 1510
+		has_global_flag = knahate_flu_flag
+    }
+
+	mean_time_to_happen = {
+		days = 3650
+	}
+	
+	immediate = {
+	    set_country_flag = es_34_scenario.19_flag
+	}
+	
+	option = {
+		name =  "es_34_scenario.19.a"
+		add_prestige = -20
+	}
+	
+	option = {
+		name =  "es_34_scenario.19.b"
+		1510 = {
+		add_permanent_province_modifier = {
+			name = "34_knahaten_flu"
+			duration = 9125
+		}
+		}
+		1510 = {
+		if = {
+		    limit = {
+			    OR = {
+				    culture = archein
+					culture = agaceph
+					culture = naga
+					culture = kothringi
+				}
+			}
+			change_culture = argonian
+			change_religion = ROOT
+		}
+		if = {
+            limit = {
+			    OR = {
+					culture = imga
+					culture = wood_orsimer
+				}
+			}
+			change_culture = bosmer
+			change_religion = ROOT
+		}
+		}
+	}
+	
+}
+
+#######################################################################
+
+country_event = {
+	id = es_34_scenario.20
+	title = es_34_scenario.20.t
+	desc = es_34_scenario.20.d
+	picture = ES_WEDDING_CEREMONY_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_34_scenario.20_flag }
+		government = monarchy
+		has_consort = no
+		owns = 1426
+		culture_group = half_blood_cg
+		is_year = 810
+    }
+
+	mean_time_to_happen = {
+		days = 9125
+	}
+	
+	immediate = {
+	    set_country_flag = es_34_scenario.20_flag
+	}
+	
+	option = {
+		name =  "es_34_scenario.20.a"
+		trigger = {  NOT = { owns = 1510 } }
+		define_consort = {
+        culture = redguard
+		}
+		random_country = {
+		    limit = {
+			    primary_culture = redguard
+				government = monarchy
+			}
+			add_opinion = { who = ROOT modifier = es_friendly_nation }
+			reverse_add_opinion = { who = ROOT modifier = es_friendly_nation }
+		}
+		random_list = {
+		    33 = {
+			    random_country = {
+				    limit = {
+					    primary_culture = nord
+						NOT = { alliance_with = ROOT }
+		                NOT = { overlord_of = ROOT }
+					}
+					declare_war_with_cb = {
+			        who = ROOT
+			        casus_belli = cb_es_scenario
+		            }
+				}
+			}
+			33 = {
+				random_country = {
+				    limit = {
+					    primary_culture = altmer
+						NOT = { alliance_with = ROOT }
+		                NOT = { overlord_of = ROOT }
+					}
+					declare_war_with_cb = {
+			        who = ROOT
+			        casus_belli = cb_es_scenario
+		            }
+				}
+			}
+			33 = {
+				random_owned_province = { 
+		     	spawn_rebels = {
+				type = noble_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			    }
+		        }
+			}	
+		}
+	}
+	
+	option = {
+		name =  "es_34_scenario.20.b"
+		trigger = {  NOT = { owns = 1275 } }
+		define_consort = {
+        culture = nord
+		}
+		random_country = {
+		    limit = {
+			    primary_culture = nord
+				government = monarchy
+			}
+			add_opinion = { who = ROOT modifier = es_friendly_nation }
+			reverse_add_opinion = { who = ROOT modifier = es_friendly_nation }
+		}
+		random_list = {
+		    33 = {
+			    random_country = {
+				    limit = {
+					    primary_culture = redguard
+						NOT = { alliance_with = ROOT }
+		                NOT = { overlord_of = ROOT }
+					}
+					declare_war_with_cb = {
+			        who = ROOT
+			        casus_belli = cb_es_scenario
+		            }
+				}
+			}
+			33 = {
+				random_country = {
+				    limit = {
+					    primary_culture = altmer
+						NOT = { alliance_with = ROOT }
+		                NOT = { overlord_of = ROOT }
+					}
+					declare_war_with_cb = {
+			        who = ROOT
+			        casus_belli = cb_es_scenario
+		            }
+				}
+			}
+			33 = {
+				random_owned_province = { 
+		     	spawn_rebels = {
+				type = noble_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			    }
+		        }
+				
+		    }
+		}
+	}
+	
+	option = {
+		name =  "es_34_scenario.20.c"
+		trigger = {  NOT = { owns = 271 } }
+		define_consort = {
+        culture = altmer
+		}
+		random_country = {
+		    limit = {
+			    primary_culture = altmer
+				government = monarchy
+			}
+			add_opinion = { who = ROOT modifier = es_friendly_nation }
+			reverse_add_opinion = { who = ROOT modifier = es_friendly_nation }
+		}
+		random_list = {
+		    33 = {
+			    random_country = {
+				    limit = {
+					    primary_culture = redguard
+						NOT = { alliance_with = ROOT }
+		                NOT = { overlord_of = ROOT }
+					}
+					declare_war_with_cb = {
+			        who = ROOT
+			        casus_belli = cb_es_scenario
+		            }
+				}
+			}
+			33 = {
+				random_country = {
+				    limit = {
+					    primary_culture = nord
+						NOT = { alliance_with = ROOT }
+		                NOT = { overlord_of = ROOT }
+					}
+					declare_war_with_cb = {
+			        who = ROOT
+			        casus_belli = cb_es_scenario
+		            }
+				}
+			}
+			33 = {
+				random_owned_province = { 
+		     	spawn_rebels = {
+				type = noble_rebels
+				size = 3.5
+				win = yes
+				unrest = 25
+			    }
+		        }
+				
+		    }
+	    }
+	}
+	
+	option = {
+		name =  "es_34_scenario.20.e"
+		define_consort = {
+        culture = breton
+		}
+		add_prestige = 10
+		random_list = {
+		    33 = {
+			    random_country = {
+				    limit = {
+					    primary_culture = redguard
+						NOT = { alliance_with = ROOT }
+		                NOT = { overlord_of = ROOT }
+					}
+					declare_war_with_cb = {
+			        who = ROOT
+			        casus_belli = cb_es_scenario
+		            }
+				}
+			}
+			33 = {
+				random_country = {
+				    limit = {
+					    primary_culture = nord
+						NOT = { alliance_with = ROOT }
+		                NOT = { overlord_of = ROOT }
+					}
+					declare_war_with_cb = {
+			        who = ROOT
+			        casus_belli = cb_es_scenario
+		            }
+				}
+			}
+			33 = {
+				random_country = {
+				    limit = {
+					    primary_culture = altmer
+						NOT = { alliance_with = ROOT }
+		                NOT = { overlord_of = ROOT }
+					}
+					declare_war_with_cb = {
+			        who = ROOT
+			        casus_belli = cb_es_scenario
+		            }
+				}
+			}
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_34_scenario.21
+	title = es_34_scenario.21.t
+	desc = es_34_scenario.21.d
+	picture = ES_IMPERIAL_CITY_1_eventPicture
+	
+	trigger = {
+	    NOT = { has_country_flag = es_34_scenario.21_flag }
+		is_year = 1503
+		NOT = { is_year = 1555 }
+		owns = 426
+		culture_group = daedra_cg
+    }
+
+	mean_time_to_happen = {
+		days = 3650
+	}
+	
+	immediate = {
+	    set_country_flag = es_34_scenario.21_flag
+	}
+	
+	option = {
+		name =  "es_34_scenario.21.a"
+		
+		define_general = {
+		name = "Ada'Soom Dir-Kamal"
+        shock = 5
+        fire = 5
+        manuever = 5
+        siege = 5
+        }
+		
+		add_country_modifier = {
+		    name = "29_conquest_of_tamriel"
+			duration = 9125
+		}
+		
+		every_province = {
+		    limit = {
+		    OR = {
+			    region = great_planes_lr
+				region = vvardenfell_lr
+				region = morrowind_lr
+			}
+			}
+			add_core = ROOT
+		}
+		
+		if = {
+		limit = {
+		exists = SKY
+		NOT = { alliance_with = SKY }
+		NOT = { overlord_of = SKY }
+		}
+		declare_war_with_cb = {
+			who = SKY
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = OLD
+		NOT = { alliance_with = OLD }
+		NOT = { overlord_of = OLD }
+		}
+		declare_war_with_cb = {
+			who = OLD
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = MOR
+		NOT = { alliance_with = MOR }
+		NOT = { overlord_of = MOR }
+		}
+		declare_war_with_cb = {
+			who = MOR
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = TRI
+		NOT = { alliance_with = TRI }
+		NOT = { overlord_of = TRI }
+		}
+		declare_war_with_cb = {
+			who = TRI
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+		if = {
+		limit = {
+		exists = DWE
+		NOT = { alliance_with = DWE }
+		NOT = { overlord_of = DWE }
+		}
+		declare_war_with_cb = {
+			who = DWE
+			casus_belli = cb_es_scenario
+		}
+		}
+		
+	}
+	
+	option = {
+		name =  "es_34_scenario.21.b"
+		add_prestige = -10
+		add_country_modifier = {
+		    name = "29_trade_with_tamriel"
+			duration = 9125
+		}
+	}
+	
+	option = {
+		name =  "es_34_scenario.21.c"
+		add_stability = 1
+		add_prestige = -25
+		add_country_modifier = {
+		    name = "01_focus_on_internal_sphere"
+			duration = 9125
+		}
+	}
+	
+}
+
+country_event = {
+	id = es_34_scenario.22
+	title = es_34_scenario.22.t
+	desc = es_34_scenario.22.d
+	picture = ES_STATE_COLLAPSE_eventPicture
+	
+	trigger = {
+		OR = {
+		AND = {
+		government = monarchy
+		NOT = { legitimacy = 25 }
+		}
+		AND = {
+		government = republic
+		NOT = { republican_tradition = 25 }
+		}
+		AND = {
+		government = theocracy
+		has_dlc = "Common Sense"
+		NOT = { devotion = 25 }
+		}
+		AND = {
+		is_nomad = yes
+		has_dlc = "The Cossacks"
+		NOT = { horde_unity = 25 }
+		}
+		AND = {
+		is_nomad = yes
+		NOT = { has_dlc = "The Cossacks" }
+		NOT = { legitimacy = 25 }
+		}
+		AND = {
+		is_emperor_of_china = yes
+		NOT = { meritocracy = 25 }
+		}
+		}
+		any_subject_country = {
+		    is_subject_of_type = imperial_subject
+		}
+		NOT = { has_country_modifier = 13_internal_instability }
+    }
+
+	mean_time_to_happen = {
+		days = 1825
+	}
+	
+	immediate = {
+	    add_country_modifier = {
+		    name = "13_internal_instability"
+			duration = 9125
+		}
+	}
+	
+	option = {
+		name = "es_34_scenario.22.a"
+		ai_chance = { factor = 50 }
+		add_prestige = 25
+		add_stability = 3
+		every_subject_country = {
+        limit = { is_subject_of_type = imperial_subject }
+        overlord = {
+        PREV = { grant_independence = yes }
+        }
+        }
+		clr_country_flag = summerset_lr_province_flag
+		clr_country_flag = valenwood_lr_province_flag
+		clr_country_flag = eldweyr_lr_province_flag
+		clr_country_flag = morrowind_lr_province_flag
+		clr_country_flag = black_marsh_lr_province_flag
+		clr_country_flag = skyrim_province_flag
+		clr_country_flag = hgh_rock_lr_province_flag
+		clr_country_flag = alikr_desert_lr_province_flag 
+	}
+	
+	option = {
+		name = "es_34_scenario.22.b"
+		ai_chance = { factor = 50 }
+		every_subject_country = {
+        limit = { is_subject_of_type = imperial_subject }
+        add_country_modifier = {
+		    name = "24_independence_war"
+			duration = 9125
+		}
+        } 
+	}
+	
+}

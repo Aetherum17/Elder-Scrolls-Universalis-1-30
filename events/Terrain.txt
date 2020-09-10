@@ -1,0 +1,265 @@
+namespace = es_terrain
+
+### Sand Storm ###
+
+country_event = {
+	id = es_terrain.101
+	title = "es_terrain.1.t"
+	desc = "es_terrain.1.d"
+	picture = TERRAIN_SANDSTORM_eventPicture
+	
+	trigger = {
+	    tag = RED
+	    NOT = { has_country_modifier = sand_storm_1 }
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {
+		name = "es_terrain.1.a"
+		ai_chance = { factor = 100 }
+		random_list = {
+			16 = { every_province = { limit = { region = po_tun_lr } add_province_modifier = { name = sand_storm duration = 1825 } } every_country = { limit = { any_owned_province = { region = po_tun_lr } } country_event = { id = es_terrain.2 days = 31 tooltip = es_terrain.2.a.tt } } } 
+			16 = { every_province = { limit = { region = anequina_lr } add_province_modifier = { name = sand_storm duration = 1825 } } every_country = { limit = { any_owned_province = { region = anequina_lr } } country_event = { id = es_terrain.2 days = 31 tooltip = es_terrain.2.a.tt } } } 
+			16 = { every_province = { limit = { region = pelletine_lr } add_province_modifier = { name = sand_storm duration = 1825 } } every_country = { limit = { any_owned_province = { region = pelletine_lr } } country_event = { id = es_terrain.2 days = 31 tooltip = es_terrain.2.a.tt } } }
+			16 = { every_province = { limit = { region = alikr_desert_lr } add_province_modifier = { name = sand_storm duration = 1825 } } every_country = { limit = { any_owned_province = { region = alikr_desert_lr } } country_event = { id = es_terrain.2 days = 31 tooltip = es_terrain.2.a.tt } } }
+			16 = { every_province = { limit = { region = dragontail_mountains_lr } add_province_modifier = { name = sand_storm duration = 1825 } } every_country = { limit = { any_owned_province = { region = dragontail_mountains_lr } } country_event = { id = es_terrain.2 days = 31 tooltip = es_terrain.2.a.tt } } }
+			16 = { every_province = { limit = { region = corten_heights_lr } add_province_modifier = { name = sand_storm duration = 1825 } } every_country = { limit = { any_owned_province = { region = corten_heights_lr } } country_event = { id = es_terrain.2 days = 31 tooltip = es_terrain.2.a.tt } } }
+		}
+		add_country_modifier = {
+			name = sand_storm_1
+			duration = 3650
+		}
+	}
+}
+
+country_event = {
+	id = es_terrain.2
+	title = "es_terrain.1.t"
+	desc = "es_terrain.1.d"
+	picture = TERRAIN_SANDSTORM_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "es_terrain.1.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+### Tropical Storm ###
+
+country_event = {
+	id = es_terrain.102
+	title = "es_terrain.1.t"
+	desc = "es_terrain.1.d"
+	picture = TERRAIN_TROPICALSTORM_eventPicture
+	
+	trigger = {
+	    tag = RED
+	    NOT = { has_country_modifier = tropical_storm_1 }
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {
+		name = "es_terrain.1.a"
+		ai_chance = { factor = 100 }
+		random_list = {
+			25 = { every_province = { limit = { region = thousand_lr } add_province_modifier = { name = tropical_storm duration = 1825 } } every_country = { limit = { any_owned_province = { region = thousand_lr } } country_event = { id = es_terrain.8 days = 31 tooltip = es_terrain.2.a.tt } } } 
+			25 = { every_province = { limit = { region = pyandonea_lr } add_province_modifier = { name = tropical_storm duration = 1825 } } every_country = { limit = { any_owned_province = { region = pyandonea_lr } } country_event = { id = es_terrain.8 days = 31 tooltip = es_terrain.2.a.tt } } } 
+			25 = { every_province = { limit = { region = summerset_lr } add_province_modifier = { name = tropical_storm duration = 1825 } } every_country = { limit = { any_owned_province = { region = summerset_lr } } country_event = { id = es_terrain.8 days = 31 tooltip = es_terrain.2.a.tt } } }
+			25 = { every_province = { limit = { region = auridon_lr } add_province_modifier = { name = tropical_storm duration = 1825 } } every_country = { limit = { any_owned_province = { region = auridon_lr } } country_event = { id = es_terrain.8 days = 31 tooltip = es_terrain.2.a.tt } } }
+		}
+		add_country_modifier = {
+			name = tropical_storm_1
+			duration = 3650
+		}
+	}
+}
+
+country_event = {
+	id = es_terrain.8
+	title = "es_terrain.7.t"
+	desc = "es_terrain.7.d"
+	picture = TERRAIN_TROPICALSTORM_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "es_terrain.7.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+### Floods ###
+
+country_event = {
+	id = es_terrain.103
+	title = "es_terrain.1.t"
+	desc = "es_terrain.1.d"
+	picture = TERRAIN_FLOOD_eventPicture
+	
+	trigger = {
+	    tag = RED
+	    NOT = { has_country_modifier = floods_1 }
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {
+		name = "es_terrain.1.a"
+		ai_chance = { factor = 100 }
+		random_list = {
+			16 = { every_province = { limit = { region = tsakara_lr } add_province_modifier = { name = floods duration = 1825 } } every_country = { limit = { any_owned_province = { region = tsakara_lr } } country_event = { id = es_terrain.12 days = 31 tooltip = es_terrain.2.a.tt } } } 
+			16 = { every_province = { limit = { region = southern_valenwood_lr } add_province_modifier = { name = floods duration = 1825 } } every_country = { limit = { any_owned_province = { region = southern_valenwood_lr } } country_event = { id = es_terrain.12 days = 31 tooltip = es_terrain.2.a.tt } } } 
+			16 = { every_province = { limit = { region = northern_valenwood_lr } add_province_modifier = { name = floods duration = 1825 } } every_country = { limit = { any_owned_province = { region = northern_valenwood_lr } } country_event = { id = es_terrain.12 days = 31 tooltip = es_terrain.2.a.tt } } }
+			16 = { every_province = { limit = { region = shadowfen_lr } add_province_modifier = { name = floods duration = 1825 } } every_country = { limit = { any_owned_province = { region = shadowfen_lr } } country_event = { id = es_terrain.12 days = 31 tooltip = es_terrain.2.a.tt } } }
+			16 = { every_province = { limit = { region = murkmire_lr } add_province_modifier = { name = floods duration = 1825 } } every_country = { limit = { any_owned_province = { region = murkmire_lr } } country_event = { id = es_terrain.12 days = 31 tooltip = es_terrain.2.a.tt } } }
+			16 = { every_province = { limit = { region = black_marsh_lr } add_province_modifier = { name = floods duration = 1825 } } every_country = { limit = { any_owned_province = { region = black_marsh_lr } } country_event = { id = es_terrain.12 days = 31 tooltip = es_terrain.2.a.tt } } }
+		}
+		add_country_modifier = {
+			name = floods_1
+			duration = 3650
+		}
+	}
+}
+
+country_event = {
+	id = es_terrain.12
+	title = "es_terrain.1.t"
+	desc = "es_terrain.1.d"
+	picture = TERRAIN_SANDSTORM_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "es_terrain.1.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+### Ice Age ###
+
+country_event = {
+	id = es_terrain.104
+	title = "es_terrain.1.t"
+	desc = "es_terrain.1.d"
+	picture = TERRAIN_FLOOD_eventPicture
+	
+	trigger = {
+	    tag = RED
+	    NOT = { has_country_modifier = ice_age_1 }
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {
+		name = "es_terrain.1.a"
+		ai_chance = { factor = 100 }
+		random_list = {
+			14 = { every_province = { limit = { region = western_atmora_lr } add_province_modifier = { name = ice_age duration = 1825 } } every_country = { limit = { any_owned_province = { region = western_atmora_lr } } country_event = { id = es_terrain.18 days = 31 tooltip = es_terrain.2.a.tt } } } 
+			14 = { every_province = { limit = { region = eastern_atmora_lr } add_province_modifier = { name = ice_age duration = 1825 } } every_country = { limit = { any_owned_province = { region = eastern_atmora_lr } } country_event = { id = es_terrain.18 days = 31 tooltip = es_terrain.2.a.tt } } } 
+			14 = { every_province = { limit = { region = central_atmora_lr } add_province_modifier = { name = ice_age duration = 1825 } } every_country = { limit = { any_owned_province = { region = central_atmora_lr } } country_event = { id = es_terrain.18 days = 31 tooltip = es_terrain.2.a.tt } } }
+			14 = { every_province = { limit = { region = southern_kamal_lr } add_province_modifier = { name = ice_age duration = 1825 } } every_country = { limit = { any_owned_province = { region = southern_kamal_lr } } country_event = { id = es_terrain.18 days = 31 tooltip = es_terrain.2.a.tt } } }
+			14 = { every_province = { limit = { region = northern_kamal_lr } add_province_modifier = { name = ice_age duration = 1825 } } every_country = { limit = { any_owned_province = { region = northern_kamal_lr } } country_event = { id = es_terrain.18 days = 31 tooltip = es_terrain.2.a.tt } } }
+			14 = { every_province = { limit = { region = upper_tsakara_lr } add_province_modifier = { name = ice_age duration = 1825 } } every_country = { limit = { any_owned_province = { region = upper_tsakara_lr } } country_event = { id = es_terrain.18 days = 31 tooltip = es_terrain.2.a.tt } } }
+			14 = { every_province = { limit = { region = northern_islands_lr } add_province_modifier = { name = ice_age duration = 1825 } } every_country = { limit = { any_owned_province = { region = northern_islands_lr } } country_event = { id = es_terrain.18 days = 31 tooltip = es_terrain.2.a.tt } } }
+		}
+		add_country_modifier = {
+			name = ice_age_1
+			duration = 3650
+		}
+	}
+}
+
+country_event = {
+	id = es_terrain.18
+	title = "es_terrain.16.t"
+	desc = "es_terrain.16.d"
+	picture = TERRAIN_ICE_AGE_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "es_terrain.16.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+### Red Mountain Eruption ###
+
+country_event = {
+	id = es_terrain.105
+	title = "es_terrain.3.t"
+	desc = "es_terrain.3.d"
+	picture = ES_RED_MOUNTAIN_eventPicture
+	
+	trigger = {
+	    tag = RED
+	    NOT = { has_country_modifier = red_mountain_eruption }
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {
+		name = "es_terrain.3.a"
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+		random_list = {
+		    50 = {
+			    every_province = { limit = { OR = { region = morrowind_lr region = vvardenfell_lr region = velothi_mountains_lr region = deshaan_lr region = llothanis_peninsula_lr } }
+			    add_permanent_province_modifier = { name = temp-ashland duration = 1825 }
+		        }
+			    every_country = {limit = { capital_scope = { OR = { region = morrowind_lr region = vvardenfell_lr region = velothi_mountains_lr region = deshaan_lr region = llothanis_peninsula_lr } } } add_manpower = -100 country_event = { id = es_terrain.4 days = 31 tooltip = es_terrain.4.a.tt } }
+			}
+			25 = {
+			    every_province = { limit = { OR = { region = morrowind_lr region = vvardenfell_lr region = velothi_mountains_lr region = deshaan_lr region = llothanis_peninsula_lr region = reach_lr region = rift_lr region = great_planes_lr region = nordic_coast_lr region = black_marsh_lr region = shadowfen_lr region = murkmire_lr } }
+			    add_permanent_province_modifier = { name = temp-ashland duration = 3650 }
+			    }
+			    every_country = { limit = { capital_scope = { OR = { region = morrowind_lr region = vvardenfell_lr region = velothi_mountains_lr region = deshaan_lr region = llothanis_peninsula_lr region = reach_lr region = rift_lr region = great_planes_lr region = nordic_coast_lr region = black_marsh_lr region = shadowfen_lr region = murkmire_lr } } } add_manpower = -250 country_event = { id = es_terrain.4 days = 31 tooltip = es_terrain.4.a.tt } }
+			}
+			15 = {
+			    every_province = { limit = { continent = Tamriel } 
+				add_permanent_province_modifier = { name = temp-ashland duration = 5475 }
+			    }
+			    every_country = { limit = { capital_scope = { continent = Tamriel } } add_manpower = -350 country_event = { id = es_terrain.4 days = 31 tooltip = es_terrain.4.a.tt } }
+			}
+			10 = {
+			    every_province = { limit = { is_city = yes }
+				add_permanent_province_modifier = { name = temp-ashland duration = 9125 }
+			    }
+			    every_country = { limit = { always = yes } add_manpower = -500 country_event = { id = es_terrain.4 days = 31 tooltip = es_terrain.4.a.tt } } 
+			}
+		}
+		}
+		add_country_modifier = {
+		name = "red_mountain_eruption"
+		duration = 9125
+		}
+	}
+}
+
+country_event = {
+	id = es_terrain.4
+	title = "es_terrain.3.t"
+	desc = "es_terrain.3.d"
+	picture = ES_RED_MOUNTAIN_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "es_terrain.3.a"
+		ai_chance = { factor = 100 }
+	}
+}

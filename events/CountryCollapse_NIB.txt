@@ -1,0 +1,749 @@
+namespace = es_collapse
+
+country_event = {
+	id = es_collapse.18
+	title = es_collapse.18.t
+	desc = es_collapse.18.d
+	picture = ES_PROVINCE_COLLAPSE_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	    add_country_modifier = {
+			name = "vassal_autonomy"
+			duration = 9125
+		}
+	}
+	
+	option = {
+		name = es_collapse.2.a
+		ai_chance = { factor = 75 }
+		hidden_effect = {
+		
+		if = {
+		limit = {
+		NOT = { capital_scope = { region = eastern_syrodiil_lr } }
+		}
+		every_core_province = {
+			limit = {
+				region = eastern_syrodiil_lr
+			}
+			remove_core = ROOT
+		}
+		}
+		
+		if = {
+        limit = {
+        cyrodiil_1_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = CA1 }
+        NOT = { capital_scope = { area = cyrodiil_1_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = cyrodiil_1_la
+        }
+        add_core = CA1
+        }
+        create_vassal = CA1
+        CA1 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        CA1 = { change_government_reform_progress = -99999 }
+        }
+
+        if = {
+        limit = {
+        cyrodiil_2_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = CA2 }
+        NOT = { capital_scope = { area = cyrodiil_2_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = cyrodiil_2_la
+        }
+        add_core = CA2
+        }
+        create_vassal = CA2
+        CA2 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        CA2 = { change_government_reform_progress = -99999 }
+        }
+
+        if = {
+        limit = {
+        cyrodiil_20_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = CC0 }
+        NOT = { capital_scope = { area = cyrodiil_20_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = cyrodiil_20_la
+        }
+        add_core = CC0
+        }
+        create_vassal = CC0
+        CC0 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        CC0 = { change_government_reform_progress = -99999 }
+        }
+
+        if = {
+        limit = {
+        cyrodiil_21_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = CC1 }
+        NOT = { capital_scope = { area = cyrodiil_21_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = cyrodiil_21_la
+        }
+        add_core = CC1
+        }
+        create_vassal = CC1
+        CC1 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        CC1 = { change_government_reform_progress = -99999 }
+        }
+
+        if = {
+        limit = {
+        cyrodiil_22_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = CC2 }
+        NOT = { capital_scope = { area = cyrodiil_22_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = cyrodiil_22_la
+        }
+        add_core = CC2
+        }
+        create_vassal = CC2
+        CC2 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        CC2 = { change_government_reform_progress = -99999 }
+        }
+
+        if = {
+        limit = {
+        cyrodiil_23_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = CC3 }
+        NOT = { capital_scope = { area = cyrodiil_23_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = cyrodiil_23_la
+        }
+        add_core = CC3
+        }
+        create_vassal = CC3
+        CC3 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        CC3 = { change_government_reform_progress = -99999 }
+        }
+
+        if = {
+        limit = {
+        cyrodiil_29_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = CC9 }
+        NOT = { capital_scope = { area = cyrodiil_29_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = cyrodiil_29_la
+        }
+        add_core = CC9
+        }
+        create_vassal = CC9
+        CC9 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        CC9 = { change_government_reform_progress = -99999 }
+        }
+
+        if = {
+        limit = {
+        cyrodiil_30_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = CD0 }
+        NOT = { capital_scope = { area = cyrodiil_30_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = cyrodiil_30_la
+        }
+        add_core = CD0
+        }
+        create_vassal = CD0
+        CD0 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        CD0 = { change_government_reform_progress = -99999 }
+        }
+
+        if = {
+        limit = {
+        cyrodiil_31_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = CD1 }
+        NOT = { capital_scope = { area = cyrodiil_31_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = cyrodiil_31_la
+        }
+        add_core = CD1
+        }
+        create_vassal = CD1
+        CD1 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        CD1 = { change_government_reform_progress = -99999 }
+        }
+
+        if = {
+        limit = {
+        cyrodiil_32_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = CD2 }
+        NOT = { capital_scope = { area = cyrodiil_32_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = cyrodiil_32_la
+        }
+        add_core = CD2
+        }
+        create_vassal = CD2
+        CD2 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        CD2 = { change_government_reform_progress = -99999 }
+        }
+
+        if = {
+        limit = {
+        cyrodiil_33_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = CD3 }
+        NOT = { capital_scope = { area = cyrodiil_33_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = cyrodiil_33_la
+        }
+        add_core = CD3
+        }
+        create_vassal = CD3
+        CD3 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        CD3 = { change_government_reform_progress = -99999 }
+        }
+
+        if = {
+        limit = {
+        cyrodiil_34_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = CD4 }
+        NOT = { capital_scope = { area = cyrodiil_34_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = cyrodiil_34_la
+        }
+        add_core = CD4
+        }
+        create_vassal = CD4
+        CD4 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        CD4 = { change_government_reform_progress = -99999 }
+        }
+
+        if = {
+        limit = {
+        cyrodiil_35_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = CD5 }
+        NOT = { capital_scope = { area = cyrodiil_35_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = cyrodiil_35_la
+        }
+        add_core = CD5
+        }
+        create_vassal = CD5
+        CD5 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        CD5 = { change_government_reform_progress = -99999 }
+        }
+
+        if = {
+        limit = {
+        cyrodiil_36_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = CD6 }
+        NOT = { capital_scope = { area = cyrodiil_36_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = cyrodiil_36_la
+        }
+        add_core = CD6
+        }
+        create_vassal = CD6
+        CD6 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        CD6 = { change_government_reform_progress = -99999 }
+        }
+
+        if = {
+        limit = {
+        cyrodiil_90_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = CJ0 }
+        NOT = { capital_scope = { area = cyrodiil_90_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = cyrodiil_90_la
+        }
+        add_core = CJ0
+        }
+        create_vassal = CJ0
+        CJ0 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        CJ0 = { change_government_reform_progress = -99999 }
+        }
+		
+	    }
+	}
+	
+	option = {
+		name = es_collapse.2.b
+		ai_chance = { factor = 15 }
+		
+		every_owned_province = {
+			limit = {
+				region = eastern_syrodiil_lr
+				NOT = { any_province = { area = PREV is_capital_of = ROOT } }
+			}
+			remove_core = ROOT
+		}
+		
+	}
+	
+	option = {
+		name = es_collapse.2.c
+		ai_chance = { factor = 10 }
+		
+		trigger = {
+		NOT = { capital_scope = { region = eastern_syrodiil_lr } }
+		NOT = { exists = NIB }
+		}
+		
+		every_core_province = {
+			limit = {
+				region = eastern_syrodiil_lr
+			}
+			remove_core = ROOT
+		}
+		
+		every_owned_province = {
+		limit = {
+		region = eastern_syrodiil_lr
+		}
+		add_core = NIB
+		}
+		
+		release = NIB
+		
+		if = {
+		limit = {
+		government = monarchy
+		}
+		create_union = NIB
+	    }
+		else = {
+		create_alliance = NIB
+		NIB = { add_opinion = { who = ROOT modifier = es_friendly_nation } }
+		add_opinion = { who = NIB modifier = es_friendly_nation }
+		}
+	}
+}
+
+###
+
+country_event = {
+	id = es_collapse.44
+	title = es_collapse.44.t
+	desc = es_collapse.44.d
+	picture = ES_PROVINCE_COLLAPSE_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	    add_country_modifier = {
+			name = "vassal_autonomy"
+			duration = 9125
+		}
+	}
+	
+	option = {
+		name = es_collapse.2.a
+		ai_chance = { factor = 75 }
+		hidden_effect = {
+		
+		if = {
+		limit = {
+		NOT = { capital_scope = { region = valus_mountains_lr } }
+		}
+		every_core_province = {
+			limit = {
+				region = valus_mountains_lr
+			}
+			remove_core = ROOT
+		}
+		}
+		
+		if = {
+        limit = {
+        cyrodiil_25_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = CC5 }
+        NOT = { capital_scope = { area = cyrodiil_25_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = cyrodiil_25_la
+        }
+        add_core = CC5
+        }
+        create_vassal = CC5
+        CC5 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        CC5 = { change_government_reform_progress = -99999 }
+        }
+
+        if = {
+        limit = {
+        cyrodiil_24_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = CC4 }
+        NOT = { capital_scope = { area = cyrodiil_24_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = cyrodiil_24_la
+        }
+        add_core = CC4
+        }
+        create_vassal = CC4
+        CC4 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        CC4 = { change_government_reform_progress = -99999 }
+        }
+
+        if = {
+        limit = {
+        cyrodiil_26_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = CC6 }
+        NOT = { capital_scope = { area = cyrodiil_26_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = cyrodiil_26_la
+        }
+        add_core = CC6
+        }
+        create_vassal = CC6
+        CC6 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        CC6 = { change_government_reform_progress = -99999 }
+        }
+
+        if = {
+        limit = {
+        cyrodiil_27_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = CC7 }
+        NOT = { capital_scope = { area = cyrodiil_27_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = cyrodiil_27_la
+        }
+        add_core = CC7
+        }
+        create_vassal = CC7
+        CC7 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        CC7 = { change_government_reform_progress = -99999 }
+        }
+
+        if = {
+        limit = {
+        cyrodiil_28_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = CC8 }
+        NOT = { capital_scope = { area = cyrodiil_28_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = cyrodiil_28_la
+        }
+        add_core = CC8
+        }
+        create_vassal = CC8
+        CC8 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        CC8 = { change_government_reform_progress = -99999 }
+        }
+
+        if = {
+        limit = {
+        cyrodiil_77_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = CH7 }
+        NOT = { capital_scope = { area = cyrodiil_77_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = cyrodiil_77_la
+        }
+        add_core = CH7
+        }
+        create_vassal = CH7
+        CH7 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        CH7 = { change_government_reform_progress = -99999 }
+        }
+
+        if = {
+        limit = {
+        cyrodiil_78_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = CH8 }
+        NOT = { capital_scope = { area = cyrodiil_78_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = cyrodiil_78_la
+        }
+        add_core = CH8
+        }
+        create_vassal = CH8
+        CH8 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        CH8 = { change_government_reform_progress = -99999 }
+        }
+
+        if = {
+        limit = {
+        cyrodiil_79_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = CH9 }
+        NOT = { capital_scope = { area = cyrodiil_79_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = cyrodiil_79_la
+        }
+        add_core = CH9
+        }
+        create_vassal = CH9
+        CH9 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        CH9 = { change_government_reform_progress = -99999 }
+        }
+
+        if = {
+        limit = {
+        cyrodiil_82_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = CI2 }
+        NOT = { capital_scope = { area = cyrodiil_82_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = cyrodiil_82_la
+        }
+        add_core = CI2
+        }
+        create_vassal = CI2
+        CI2 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        CI2 = { change_government_reform_progress = -99999 }
+        }
+
+        if = {
+        limit = {
+        cyrodiil_83_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = CI3 }
+        NOT = { capital_scope = { area = cyrodiil_83_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = cyrodiil_83_la
+        }
+        add_core = CI3
+        }
+        create_vassal = CI3
+        CI3 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        CI3 = { change_government_reform_progress = -99999 }
+        }
+
+        if = {
+        limit = {
+        cyrodiil_85_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = CI5 }
+        NOT = { capital_scope = { area = cyrodiil_85_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = cyrodiil_85_la
+        }
+        add_core = CI5
+        }
+        create_vassal = CI5
+        CI5 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        CI5 = { change_government_reform_progress = -99999 }
+        }
+
+        if = {
+        limit = {
+        cyrodiil_86_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = CI6 }
+        NOT = { capital_scope = { area = cyrodiil_86_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = cyrodiil_86_la
+        }
+        add_core = CI6
+        }
+        create_vassal = CI6
+        CI6 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        CI6 = { change_government_reform_progress = -99999 }
+        }
+
+        if = {
+        limit = {
+        cyrodiil_87_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = CI7 }
+        NOT = { capital_scope = { area = cyrodiil_87_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = cyrodiil_87_la
+        }
+        add_core = CI7
+        }
+        create_vassal = CI7
+        CI7 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        CI7 = { change_government_reform_progress = -99999 }
+        }
+
+        if = {
+        limit = {
+        cyrodiil_88_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = CI8 }
+        NOT = { capital_scope = { area = cyrodiil_88_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = cyrodiil_88_la
+        }
+        add_core = CI8
+        }
+        create_vassal = CI8
+        CI8 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        CI8 = { change_government_reform_progress = -99999 }
+        }
+
+        if = {
+        limit = {
+        cyrodiil_89_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = CI9 }
+        NOT = { capital_scope = { area = cyrodiil_89_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = cyrodiil_89_la
+        }
+        add_core = CI9
+        }
+        create_vassal = CI9
+        CI9 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        CI9 = { change_government_reform_progress = -99999 }
+        }
+		
+	    }
+	}
+	
+	option = {
+		name = es_collapse.2.b
+		ai_chance = { factor = 15 }
+		
+        every_owned_province = {
+			limit = {
+				region = valus_mountains_lr
+				NOT = { any_province = { area = PREV is_capital_of = ROOT } }
+			}
+			remove_core = ROOT
+		}
+		
+	}
+	
+	option = {
+		name = es_collapse.2.c
+		ai_chance = { factor = 10 }
+		
+		trigger = {
+		NOT = { capital_scope = { region = valus_mountains_lr } }
+		NOT = { exists = VAL }
+		}
+		
+		every_core_province = {
+			limit = {
+				region = valus_mountains_lr
+			}
+			remove_core = ROOT
+		}
+		
+		every_owned_province = {
+		limit = {
+		region = valus_mountains_lr
+		}
+		add_core = VAL
+		}
+		
+		release = VAL
+		
+		if = {
+		limit = {
+		government = monarchy
+		}
+		create_union = VAL
+	    }
+		else = {
+		create_alliance = VAL
+		VAL = { add_opinion = { who = ROOT modifier = es_friendly_nation } }
+		add_opinion = { who = VAL modifier = es_friendly_nation }
+		}
+	}
+}

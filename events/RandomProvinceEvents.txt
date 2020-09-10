@@ -1,0 +1,54 @@
+#########################################################
+#		Fortification efforts		  	#
+#########################################################
+
+province_event = {
+	id = 5057
+	title = "EVTNAME5057"
+	desc = "EVTDESC5057"
+	picture = FORT_eventPicture
+
+	trigger = {
+		fort_level = 1
+		owner = {
+			mil = 4
+			mil_tech = 8
+			treasury = 100
+		}
+		NOT = { has_province_modifier = improved_fortifications }
+	}
+
+	is_mtth_scaled_to_size = 1
+	
+	mean_time_to_happen = {
+		months = 600
+		
+		modifier = {
+			factor = 0.8
+			owner = {
+				fortification_expert = 3
+			}
+		}
+		modifier = {
+			factor = 1.5
+			owner = {
+				NOT = { advisor = fortification_expert }
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTA5057"		# It's of the utmost importance
+		ai_chance = { factor = 55 }
+		add_province_modifier = {
+			name = "improved_fortifications"
+			duration = -1
+		}
+		owner = { add_treasury = -50 }
+	}
+	option = {
+		name = "EVTOPTB5057"		# It's too expensive
+		ai_chance = { factor = 45 }
+		owner = { add_prestige = -1 }
+	}
+}

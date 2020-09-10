@@ -1,0 +1,164 @@
+namespace = es_start
+
+country_event = {
+	id = es_start.1
+	title = es_start.1.t
+	desc = es_start.1.d
+	picture = ES_START_eventPicture
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	immediate = {
+		set_country_flag = es_start_ai_no_flag
+	}
+	
+	option = {
+		name = es_start.1.a	
+		set_country_flag = esu_news_flag
+	}
+	option = {
+		name = es_start.1.b
+	}
+}
+
+#country_event = {
+#	id = es_start.2
+#	title = es_start.2.t
+#	desc = es_start.2.d
+#	picture = ES_MUSIC_MOD_eventPicture
+#	
+#	is_triggered_only = yes
+#	
+#	fire_only_once = yes
+#	
+#	hidden = yes
+#	
+#	immediate = {
+#    if = {
+#        limit = {
+#            any_country = {
+#                capital_scope = { continent = Oblivion }
+#                ai = no
+#            } 
+#        }
+#		add_treasury = 100
+#    }
+#	else = {
+#	    every_country = {
+#            limit = {
+#                capital_scope = { continent = Oblivion }
+#                ai = yes
+#				NOT = { tag = CU5 }
+#				NOT = { tag = DW2 }
+#            }
+#            every_owned_province = {
+#                limit = {
+#                    continent = Oblivion
+#                    is_city = yes
+#                }
+#				cede_province = ---
+#            }
+#        }
+#	}
+#    }
+#	
+#	option = {
+#		name = es_start.2.a	
+#	}
+#}
+
+country_event = {
+	id = es_start.3
+	title = es_start.2.t
+	desc = es_start.2.d
+	picture = ES_MUSIC_MOD_eventPicture
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	hidden = yes
+	
+	immediate = {
+    if = {
+        limit = {
+            any_country = {
+                capital_scope = { continent = Pyandonea }
+                ai = no
+            } 
+        }
+		add_treasury = 100
+    }
+	else = {
+	    every_country = {
+            limit = {
+                capital_scope = { continent = Pyandonea }
+                ai = yes
+				NOT = { tag = PA4 }
+            }
+            every_owned_province = {
+                limit = {
+                    continent = Pyandonea
+                    is_city = yes
+                }
+                cede_province = ---
+            }
+        }
+	}
+    }
+	
+	option = {
+		name = es_start.2.a	
+	}
+}
+
+country_event = {
+	id = es_start.4
+	title = es_start.2.t
+	desc = es_start.2.d
+	picture = ES_MUSIC_MOD_eventPicture
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	hidden = yes
+	
+	immediate = {
+    if = {
+        limit = {
+            any_country = {
+                capital_scope = { continent = Yokuda }
+                ai = no
+            } 
+        }
+		add_treasury = 100
+    }
+	else = {
+	    every_country = {
+            limit = {
+                capital_scope = { continent = Yokuda }
+                ai = yes
+				NOT = { tag = THR }
+				NOT = { tag = SIN }
+				NOT = { tag = YA7 }
+            }
+            every_owned_province = {
+                limit = {
+                    continent = Yokuda
+                    is_city = yes
+                }
+                cede_province = ---
+            }
+        }
+	}
+    }
+	
+	option = {
+		name = es_start.2.a	
+	}
+}

@@ -1,0 +1,262 @@
+namespace = privateers
+
+# A Reckless Privateer
+country_event = {
+	id = privateers.4
+	title = "privateers.4.t"
+	desc = "privateers.4.d"
+	picture = BORDER_TENSION_eventPicture
+
+	trigger = {
+		has_privateers = yes
+		NOT = { has_country_modifier = reckless_privateer }
+		NOT = { has_country_modifier = curtailed_privateer }
+	}
+
+	mean_time_to_happen = {
+		months = 720
+	}
+
+	# Allow the privateer to continue skirting rules
+	option = {
+		name = "privateers.4.a"
+		add_country_modifier = {
+			name = "reckless_privateer"
+			duration = 3650
+		}
+		set_country_flag = has_reckless_privateer
+	}
+
+	# Revoke his letter of marque
+	option = {
+		name = "privateers.4.b"
+		add_country_modifier = {
+			name = "curtailed_privateer"
+			duration = 3650
+		}
+	}
+}
+
+# Pirates Seeking Allegiance - first event, triggers second if declined.
+country_event = {
+	id = privateers.7
+	title = "privateers.7.t"
+	desc = "privateers.7.d"
+	picture = SHIP_SAILING_eventPicture
+
+	trigger = {
+		has_privateers = yes
+		NOT = { has_country_modifier = employed_pirates }
+		any_active_trade_node = {
+			privateer_power = {
+				share = 10
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 600
+	}
+
+	option = {
+		name = "privateers.7.a"
+		add_country_modifier = {
+			name = "employed_pirates"
+			duration = 1825
+		}
+	}
+
+	option = {
+		name = "privateers.7.b"
+		add_prestige = 10
+		random_active_trade_node = {
+			random_privateering_country = {
+				limit = {
+					NOT = { tag = ROOT }
+				}
+				country_event = {
+					id = privateers.8
+					days = 7
+					tooltip = privateers.7.b.tt
+				}
+			}
+		}
+	}
+}
+
+# Pirates Seeking Allegiance - second event, triggers when first country  declines.
+country_event = {
+	id = privateers.8
+	title = "privateers.8.t"
+	desc = "privateers.8.d"
+	picture = SHIP_SAILING_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "privateers.8.a"
+		add_country_modifier = {
+			name = "employed_pirates"
+			duration = 1825
+		}
+	}
+
+	option = {
+		name = "privateers.8.b"
+		add_prestige = 10
+	}
+}
+
+# Merchants call for Trade Protection War
+country_event = {
+	id = privateers.12
+	title = "privateers.12.t"
+	desc = "privateers.12.d"
+	picture = DEBATE_REPUBLICAN_eventPicture
+
+	trigger = {
+		trade_income_percentage = 0.50
+		any_active_trade_node = {
+			trade_share = {
+				country = ROOT
+				share = 10
+			}
+			privateer_power = {
+				share = 10
+			}
+		}
+		NOT = { has_country_modifier = merchants_prepare_war }
+		NOT = { has_country_modifier = merchants_ignored }
+	}
+
+	mean_time_to_happen = {
+		months = 1200
+	}
+
+	option = {
+		name = "privateers.12.a"
+		add_country_modifier = {
+			name = "merchants_prepare_war"
+			duration = 1835
+		}
+		custom_tooltip = "privateers.12.a.tt"
+		hidden_effect = {
+			country_event = {
+				id = privateers.13
+				days = 1095
+			}
+			set_country_flag = promised_merchants_war
+		}
+	}
+
+	option = {
+		name = "privateers.12.b"
+		add_prestige = -10
+		add_country_modifier = {
+			name = "merchants_ignored"
+			duration = 1835
+		}
+	}
+}
+
+# Merchants remind us of Commitments to War
+country_event = {
+	id = privateers.13
+	title = "privateers.13.t"
+	desc = "privateers.13.d"
+	picture = ACCUSATION_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = promised_merchants_war
+	}
+
+	option = {
+		name = "privateers.13.a"
+		add_prestige = 5
+		hidden_effect = {
+			country_event = {
+				id = privateers.14
+				days = 730
+			}
+		}
+	}
+
+	option = {
+		name = "privateers.13.b"
+		add_stability = -1
+		remove_country_modifier = merchants_prepare_war
+		clr_country_flag = promised_merchants_war
+	}
+
+	option = {
+		trigger = {
+			NOT = {
+				any_active_trade_node = {
+					trade_share = {
+						country = ROOT
+						share = 10
+					}
+					privateer_power = {
+						share = 1
+					}
+				}
+			}
+		}
+		name = "privateers.13.c"
+		remove_country_modifier = merchants_prepare_war
+		clr_country_flag = promised_merchants_war
+	}
+}
+
+# Merchants Outraged at our Broken Promise
+country_event = {
+	id = privateers.14
+	title = "privateers.14.t"
+	desc = "privateers.14.d"
+	picture = ANGRY_MOB_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = promised_merchants_war
+	}
+
+	option = {
+		name = "privateers.14.a"
+		add_stability = -1
+	}
+}
+
+# Undeclared Trade War Now Declared
+country_event = {
+	id = privateers.15
+	title = "privateers.15.t"
+	desc = "privateers.15.d"
+	picture = NAVAL_MILITARY_eventPicture
+
+	trigger = {
+		has_country_modifier = merchants_prepare_war
+		has_country_flag = promised_merchants_war
+		is_at_war = yes
+		any_country = {
+			ROOT = {
+				has_casus_belli = {
+					type = cb_privateers
+					target = PREV
+				}
+				war_with = PREV
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "privateers.15.a"
+		clr_country_flag = promised_merchants_war
+	}
+}

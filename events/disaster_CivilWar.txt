@@ -1,0 +1,181 @@
+namespace = civil_war
+
+# Civil war
+country_event = {
+	id = civil_war.1
+	title = "EVTNAME3091"
+	desc = "EVTDESC3091"
+	picture = CIVIL_WAR_eventPicture
+	goto = rebel_province
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_saved_name = {
+				key = upstart_pretender
+				type = leader
+			}
+		}
+		random_owned_province = {
+			limit = {
+				is_core = ROOT 
+				development = 10
+				is_capital = no
+			}
+			spawn_rebels = {
+				type = 	pretender_rebels
+				leader = upstart_pretender
+				religion = ROOT
+				size = 2
+				win = yes
+			}
+			add_local_autonomy = 25
+
+			hidden_effect = { save_event_target_as = rebel_province }
+		}
+		set_country_flag = had_civil_war
+	}
+	
+	
+	option = {
+		name = "EVTOPTA3091"			# Crush them!
+		add_prestige = -10
+	}
+	after = {
+		clear_saved_name = upstart_pretender
+	}
+}
+
+# End of Civil War
+country_event = {
+	id = civil_war.100
+	title = "EVTNAME3096"
+	desc = "EVTDESC3096"
+	picture = ANGRY_MOB_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	
+	option = {
+		name = "EVTOPTA3096"
+		add_mandate_large_effect = yes
+		add_stability = 3
+	}
+}
+
+# Civil Disorder about to Devolve into Chaos
+country_event = {
+	id = civil_war.8
+	title = "EVTNAME6019"
+	desc = "EVTDESC6019"
+	picture = CIVIL_WAR_eventPicture
+
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "EVTOPTA6019"			# There is nothing we can do
+		ai_chance = { factor = 20 }
+		add_stability = -1
+		random_owned_province = {
+			limit = { is_core = ROOT }
+			pretender_rebels = 1
+		}
+	}
+	option = {
+		name = "EVTOPTB6019"			# We will stop this at any cost
+		ai_chance = { factor = 80 }		
+		add_years_of_income = -0.25
+		add_prestige = -25
+		increase_legitimacy_medium_effect = yes
+		add_mandate_effect = yes
+	}
+}
+
+
+# Faction requests financial aid
+country_event = {
+	id = civil_war.10
+	title = "EVTNAME6021"
+	desc = "EVTDESC6021"
+	picture = CONQUEST_eventPicture
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "EVTOPTA6021"			# Lend support
+		add_years_of_income = -0.5
+		increase_legitimacy_medium_effect = yes
+		add_mandate_effect = yes
+	}
+	option = {
+		name = "EVTOPTB6021"			# Ignore their pleas
+		add_prestige = -10
+		reduce_legitimacy_medium_effect = yes
+		reduce_mandate_effect = yes
+		ai_chance = { factor = 0 }
+	}
+}
+
+# Total war emerges internally
+country_event = {
+	id = civil_war.12
+	title = "EVTNAME6023"
+	desc = "EVTDESC6023"
+	picture = BATTLE_eventPicture
+		
+	trigger = {
+		NOT = { has_country_flag = total_war_peak }
+		revolt_percentage = 0.20
+	}
+	
+	immediate = {
+		set_country_flag = total_war_peak
+
+	}
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "EVTOPTA6023"			# We can't do anything about it
+		reduce_legitimacy_medium_effect = yes
+		reduce_mandate_effect = yes
+		every_core_province = {
+			limit = {
+				is_capital = no
+				is_core = ROOT
+			}
+			add_local_autonomy = 15
+		}
+	}
+	option = {
+		name = "EVTOPTB6023"			# Try to suppress the worst spots
+		add_adm_power = -100
+		add_dip_power = -100
+		add_mil_power = -100
+		increase_legitimacy_medium_effect = yes
+		add_mandate_effect = yes
+	}
+}

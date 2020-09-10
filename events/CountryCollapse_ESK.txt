@@ -1,0 +1,749 @@
+namespace = es_collapse
+
+country_event = {
+	id = es_collapse.45
+	title = es_collapse.45.t
+	desc = es_collapse.45.d
+	picture = ES_PROVINCE_COLLAPSE_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	    add_country_modifier = {
+			name = "vassal_autonomy"
+			duration = 9125
+		}
+	}
+	
+	option = {
+		name = es_collapse.2.a
+		ai_chance = { factor = 75 }
+		hidden_effect = {
+		
+		if = {
+		limit = {
+		NOT = { capital_scope = { region = reach_lr } }
+		}
+		every_core_province = {
+			limit = {
+				region = reach_lr
+			}
+			remove_core = ROOT
+		}
+		}
+		
+        if = {
+        limit = {
+        skyrim_7_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = NA7 }
+        NOT = { capital_scope = { area = skyrim_7_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = skyrim_7_la
+        }
+        add_core = NA7
+        }
+        create_vassal = NA7
+        NA7 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        NA7 = { change_government_reform_progress = -99999 }
+        }
+
+        if = {
+        limit = {
+        skyrim_14_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = NB4 }
+        NOT = { capital_scope = { area = skyrim_14_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = skyrim_14_la
+        }
+        add_core = NB4
+        }
+        create_vassal = NB4
+        NB4 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        NB4 = { change_government_reform_progress = -99999 }
+        }
+
+        if = {
+        limit = {
+        skyrim_17_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = VOL }
+        NOT = { capital_scope = { area = skyrim_17_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = skyrim_17_la
+        }
+        add_core = VOL
+        }
+        create_vassal = VOL
+        VOL = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        VOL = { change_government_reform_progress = -99999 }
+        }
+
+        if = {
+        limit = {
+        skyrim_18_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = NB8 }
+        NOT = { capital_scope = { area = skyrim_18_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = skyrim_18_la
+        }
+        add_core = NB8
+        }
+        create_vassal = NB8
+        NB8 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        NB8 = { change_government_reform_progress = -99999 }
+        }
+
+        if = {
+        limit = {
+        skyrim_19_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = NB9 }
+        NOT = { capital_scope = { area = skyrim_19_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = skyrim_19_la
+        }
+        add_core = NB9
+        }
+        create_vassal = NB9
+        NB9 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        NB9 = { change_government_reform_progress = -99999 }
+        }
+
+        if = {
+        limit = {
+        skyrim_20_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = NC0 }
+        NOT = { capital_scope = { area = skyrim_20_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = skyrim_20_la
+        }
+        add_core = NC0
+        }
+        create_vassal = NC0
+        NC0 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        NC0 = { change_government_reform_progress = -99999 }
+        }
+
+        if = {
+        limit = {
+        skyrim_21_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = NC1 }
+        NOT = { capital_scope = { area = skyrim_21_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = skyrim_21_la
+        }
+        add_core = NC1
+        }
+        create_vassal = NC1
+        NC1 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        NC1 = { change_government_reform_progress = -99999 }
+        }
+
+        if = {
+        limit = {
+        skyrim_23_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = NC3 }
+        NOT = { capital_scope = { area = skyrim_23_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = skyrim_23_la
+        }
+        add_core = NC3
+        }
+        create_vassal = NC3
+        NC3 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        NC3 = { change_government_reform_progress = -99999 }
+        }
+
+        if = {
+        limit = {
+        skyrim_24_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = NC4 }
+        NOT = { capital_scope = { area = skyrim_24_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = skyrim_24_la
+        }
+        add_core = NC4
+        }
+        create_vassal = NC4
+        NC4 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        NC4 = { change_government_reform_progress = -99999 }
+        }
+
+        if = {
+        limit = {
+        skyrim_25_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = NC5 }
+        NOT = { capital_scope = { area = skyrim_25_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = skyrim_25_la
+        }
+        add_core = NC5
+        }
+        create_vassal = NC5
+        NC5 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        NC5 = { change_government_reform_progress = -99999 }
+        }
+
+        if = {
+        limit = {
+        skyrim_26_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = NC6 }
+        NOT = { capital_scope = { area = skyrim_26_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = skyrim_26_la
+        }
+        add_core = NC6
+        }
+        create_vassal = NC6
+        NC6 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        NC6 = { change_government_reform_progress = -99999 }
+        }
+
+        if = {
+        limit = {
+        skyrim_27_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = NC7 }
+        NOT = { capital_scope = { area = skyrim_27_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = skyrim_27_la
+        }
+        add_core = NC7
+        }
+        create_vassal = NC7
+        NC7 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        NC7 = { change_government_reform_progress = -99999 }
+        }
+
+        if = {
+        limit = {
+        skyrim_28_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = NC8 }
+        NOT = { capital_scope = { area = skyrim_28_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = skyrim_28_la
+        }
+        add_core = NC8
+        }
+        create_vassal = NC8
+        NC8 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        NC8 = { change_government_reform_progress = -99999 }
+        }
+
+        if = {
+        limit = {
+        skyrim_29_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = NC9 }
+        NOT = { capital_scope = { area = skyrim_29_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = skyrim_29_la
+        }
+        add_core = NC9
+        }
+        create_vassal = NC9
+        NC9 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        NC9 = { change_government_reform_progress = -99999 }
+        }
+
+        if = {
+        limit = {
+        skyrim_32_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = ND2 }
+        NOT = { capital_scope = { area = skyrim_32_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = skyrim_32_la
+        }
+        add_core = ND2
+        }
+        create_vassal = ND2
+        ND2 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        ND2 = { change_government_reform_progress = -99999 }
+        }
+		
+	    }
+	}
+	
+	option = {
+		name = es_collapse.2.b
+		ai_chance = { factor = 15 }
+		
+		every_owned_province = {
+			limit = {
+				region = reach_lr
+				NOT = { any_province = { area = PREV is_capital_of = ROOT } }
+			}
+			remove_core = ROOT
+		}
+		
+	}
+	
+	option = {
+		name = es_collapse.2.c
+		ai_chance = { factor = 10 }
+		
+		trigger = {
+		NOT = { capital_scope = { region = reach_lr } }
+		NOT = { exists = REA }
+		}
+		
+		every_core_province = {
+			limit = {
+				region = reach_lr
+			}
+			remove_core = ROOT
+		}
+		
+		every_owned_province = {
+		limit = {
+		region = reach_lr
+		}
+		add_core = REA
+		}
+		
+		release = REA
+		
+		if = {
+		limit = {
+		government = monarchy
+		}
+		create_union = REA
+	    }
+		else = {
+		create_alliance = REA
+		REA = { add_opinion = { who = ROOT modifier = es_friendly_nation } }
+		add_opinion = { who = REA modifier = es_friendly_nation }
+		}
+	}
+}
+
+###
+
+country_event = {
+	id = es_collapse.46
+	title = es_collapse.46.t
+	desc = es_collapse.46.d
+	picture = ES_PROVINCE_COLLAPSE_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	    add_country_modifier = {
+			name = "vassal_autonomy"
+			duration = 9125
+		}
+	}
+	
+	option = {
+		name = es_collapse.2.a
+		ai_chance = { factor = 75 }
+		hidden_effect = {
+		
+		if = {
+		limit = {
+		NOT = { capital_scope = { region = rift_lr } }
+		}
+		every_core_province = {
+			limit = {
+				region = rift_lr
+			}
+			remove_core = ROOT
+		}
+		}
+		
+        if = {
+        limit = {
+        skyrim_1_la  = {
+        owned_by = ROOT
+        }
+        NOT = { exists = NA1 }
+        NOT = { capital_scope = { area = skyrim_1_la  } }
+        }
+        every_owned_province = {
+        limit = {
+        area = skyrim_1_la 
+        }
+        add_core = NA1
+        }
+        create_vassal = NA1
+        NA1 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        NA1 = { change_government_reform_progress = -99999 }
+        }
+
+        if = {
+        limit = {
+        skyrim_2_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = NA2 }
+        NOT = { capital_scope = { area = skyrim_2_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = skyrim_2_la
+        }
+        add_core = NA2
+        }
+        create_vassal = NA2
+        NA2 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        NA2 = { change_government_reform_progress = -99999 }
+        }
+
+        if = {
+        limit = {
+        skyrim_4_la  = {
+        owned_by = ROOT
+        }
+        NOT = { exists = NA4 }
+        NOT = { capital_scope = { area = skyrim_4_la  } }
+        }
+        every_owned_province = {
+        limit = {
+        area = skyrim_4_la 
+        }
+        add_core = NA4
+        }
+        create_vassal = NA4
+        NA4 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        NA4 = { change_government_reform_progress = -99999 }
+        }
+
+        if = {
+        limit = {
+        skyrim_5_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = NA5 }
+        NOT = { capital_scope = { area = skyrim_5_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = skyrim_5_la
+        }
+        add_core = NA5
+        }
+        create_vassal = NA5
+        NA5 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        NA5 = { change_government_reform_progress = -99999 }
+        }
+
+        if = {
+        limit = {
+        skyrim_10_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = NB0 }
+        NOT = { capital_scope = { area = skyrim_10_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = skyrim_10_la
+        }
+        add_core = NB0
+        }
+        create_vassal = NB0
+        NB0 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        NB0 = { change_government_reform_progress = -99999 }
+        }
+
+        if = {
+        limit = {
+        skyrim_41_la  = {
+        owned_by = ROOT
+        }
+        NOT = { exists = NE1 }
+        NOT = { capital_scope = { area = skyrim_41_la  } }
+        }
+        every_owned_province = {
+        limit = {
+        area = skyrim_41_la 
+        }
+        add_core = NE1
+        }
+        create_vassal = NE1
+        NE1 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        NE1 = { change_government_reform_progress = -99999 }
+        }
+
+        if = {
+        limit = {
+        skyrim_42_la  = {
+        owned_by = ROOT
+        }
+        NOT = { exists = NE2 }
+        NOT = { capital_scope = { area = skyrim_42_la  } }
+        }
+        every_owned_province = {
+        limit = {
+        area = skyrim_42_la 
+        }
+        add_core = NE2
+        }
+        create_vassal = NE2
+        NE2 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        NE2 = { change_government_reform_progress = -99999 }
+        }
+
+        if = {
+        limit = {
+        skyrim_43_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = NE3 }
+        NOT = { capital_scope = { area = skyrim_43_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = skyrim_43_la
+        }
+        add_core = NE3
+        }
+        create_vassal = NE3
+        NE3 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        NE3 = { change_government_reform_progress = -99999 }
+        }
+
+        if = {
+        limit = {
+        skyrim_46_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = NE6 }
+        NOT = { capital_scope = { area = skyrim_46_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = skyrim_46_la
+        }
+        add_core = NE6
+        }
+        create_vassal = NE6
+        NE6 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        NE6 = { change_government_reform_progress = -99999 }
+        }
+
+        if = {
+        limit = {
+        skyrim_54_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = NF4 }
+        NOT = { capital_scope = { area = skyrim_54_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = skyrim_54_la
+        }
+        add_core = NF4
+        }
+        create_vassal = NF4
+        NF4 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        NF4 = { change_government_reform_progress = -99999 }
+        }
+
+        if = {
+        limit = {
+        skyrim_55_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = NF5 }
+        NOT = { capital_scope = { area = skyrim_55_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = skyrim_55_la
+        }
+        add_core = NF5
+        }
+        create_vassal = NF5
+        NF5 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        NF5 = { change_government_reform_progress = -99999 }
+        }
+
+        if = {
+        limit = {
+        skyrim_57_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = NF7 }
+        NOT = { capital_scope = { area = skyrim_57_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = skyrim_57_la
+        }
+        add_core = NF7
+        }
+        create_vassal = NF7
+        NF7 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        NF7 = { change_government_reform_progress = -99999 }
+        }
+
+        if = {
+        limit = {
+        skyrim_58_la  = {
+        owned_by = ROOT
+        }
+        NOT = { exists = FOR }
+        NOT = { capital_scope = { area = skyrim_58_la  } }
+        }
+        every_owned_province = {
+        limit = {
+        area = skyrim_58_la 
+        }
+        add_core = FOR
+        }
+        create_vassal = FOR
+        FOR = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        FOR = { change_government_reform_progress = -99999 }
+        }
+
+        if = {
+        limit = {
+        skyrim_59_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = NF9 }
+        NOT = { capital_scope = { area = skyrim_59_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = skyrim_59_la
+        }
+        add_core = NF9
+        }
+        create_vassal = NF9
+        NF9 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        NF9 = { change_government_reform_progress = -99999 }
+        }
+
+        if = {
+        limit = {
+        skyrim_60_la = {
+        owned_by = ROOT
+        }
+        NOT = { exists = NG0 }
+        NOT = { capital_scope = { area = skyrim_60_la } }
+        }
+        every_owned_province = {
+        limit = {
+        area = skyrim_60_la
+        }
+        add_core = NG0
+        }
+        create_vassal = NG0
+        NG0 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        NG0 = { change_government_reform_progress = -99999 }
+        }
+		
+	    }
+	}
+	
+	option = {
+		name = es_collapse.2.b
+		ai_chance = { factor = 15 }
+		
+		every_owned_province = {
+			limit = {
+				region = rift_lr
+				NOT = { any_province = { area = PREV is_capital_of = ROOT } }
+			}
+			remove_core = ROOT
+		}
+		
+	}
+	
+	option = {
+		name = es_collapse.2.c
+		ai_chance = { factor = 10 }
+		
+		trigger = {
+		NOT = { capital_scope = { region = rift_lr } }
+		NOT = { exists = RIF }
+		}
+		
+		every_core_province = {
+			limit = {
+				region = rift_lr
+			}
+			remove_core = ROOT
+		}
+		
+		every_owned_province = {
+		limit = {
+		region = rift_lr
+		}
+		add_core = RIF
+		}
+		
+		release = RIF
+		
+		if = {
+		limit = {
+		government = monarchy
+		}
+		create_union = RIF
+	    }
+		else = {
+		create_alliance = RIF
+		RIF = { add_opinion = { who = ROOT modifier = es_friendly_nation } }
+		add_opinion = { who = RIF modifier = es_friendly_nation }
+		}
+	}
+}

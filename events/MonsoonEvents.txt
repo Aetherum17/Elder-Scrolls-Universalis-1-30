@@ -1,0 +1,222 @@
+namespace = monsoon_events
+
+# Monsoon fails. Drought.
+country_event = {
+    id = monsoon_events.2
+    title = monsoon_events.2.t
+    desc = monsoon_events.2.d
+    picture = 20_Monsoon_eventPicture
+	
+    trigger = {
+		any_owned_province = {
+			OR = {
+				has_monsoon = severe_monsoon
+				has_monsoon = normal_monsoon
+				has_monsoon = mild_monsoon
+			}
+		}
+		NOT = {
+			any_owned_province = {
+				has_province_modifier = failed_monsoon
+			}
+		}
+		NOT = {
+			any_owned_province = {
+				has_province_modifier = good_monsoon_modifier
+			}
+		}
+		NOT = {
+			any_owned_province = {
+				has_province_modifier = company_drought
+			}
+		}
+		NOT = {
+			any_owned_province = {
+				has_province_modifier = plum_rains
+			}
+		}
+    }
+
+    immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					OR = {
+						has_monsoon = severe_monsoon
+						has_monsoon = normal_monsoon
+						has_monsoon = mild_monsoon
+					}
+				}
+				save_event_target_as = monsoon_failure_province
+			}
+		}
+    }
+	
+	mean_time_to_happen = {
+		months = 180
+	}
+
+    option = {
+        name = monsoon_events.2.a
+		event_target:monsoon_failure_province = {
+			area = {
+				limit = {
+					owned_by = ROOT
+				}
+				add_province_modifier = {
+					name = "failed_monsoon"
+					duration = 1825
+				}
+			}
+		}
+    }
+}
+
+# Monsoon rains bring fertility
+country_event = {
+    id = monsoon_events.3
+    title = monsoon_events.3.t
+    desc = monsoon_events.3.d
+    picture = 19_Monsoon_eventPicture
+	goto = good_monsoon_province						 
+   
+    trigger = {
+		any_owned_province = {
+			OR = {
+				has_monsoon = severe_monsoon
+				has_monsoon = normal_monsoon
+				has_monsoon = mild_monsoon
+			}
+		}
+		NOT = {
+			any_owned_province = {
+				has_province_modifier = failed_monsoon
+			}
+		}
+		NOT = {
+			any_owned_province = {
+				has_province_modifier = good_monsoon_modifier
+			}
+		}
+		NOT = {
+			any_owned_province = {
+				has_province_modifier = company_drought
+			}
+		}
+		NOT = {
+			any_owned_province = {
+				has_province_modifier = plum_rains
+			}
+		}
+    }
+
+    immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					OR = {
+						has_monsoon = severe_monsoon
+						has_monsoon = normal_monsoon
+						has_monsoon = mild_monsoon
+					}
+				}
+				save_event_target_as = good_monsoon_province
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 90
+	}
+
+    option = {      
+        name = EXCELLENT
+		event_target:good_monsoon_province = {
+			area = {
+				limit = {
+					owned_by = ROOT
+				}
+				add_province_modifier = {
+					name = "good_monsoon_modifier"
+					duration = 1825
+				}
+			}
+		}
+    }
+}
+
+# Plum Rains
+country_event = {
+    id = monsoon_events.5
+    title = monsoon_events.5.t
+    desc = monsoon_events.5.d
+    picture = 19_Monsoon_eventPicture
+	goto = plum_rains_province					   
+    
+    trigger = {
+		any_owned_province = {
+			OR = {
+				has_monsoon = severe_monsoon
+				has_monsoon = normal_monsoon
+				has_monsoon = mild_monsoon
+			}
+		}
+		NOT = {
+			any_owned_province = {
+				has_province_modifier = failed_monsoon
+			}
+		}
+		NOT = {
+			any_owned_province = {
+				has_province_modifier = good_monsoon_modifier
+			}
+		}
+		NOT = {
+			any_owned_province = {
+				has_province_modifier = company_drought
+			}
+		}
+		NOT = {
+			any_owned_province = {
+				has_province_modifier = plum_rains
+			}
+		}
+    }
+
+    immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					OR = {
+						has_monsoon = severe_monsoon
+						has_monsoon = normal_monsoon
+						has_monsoon = mild_monsoon
+					}
+				}
+				save_event_target_as = plum_rains_province
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 180
+	}
+
+    option = {      
+        name = EXCELLENT
+		custom_tooltip = plum_rain_tooltip
+		hidden_effect = {
+			event_target:plum_rains_province = {
+				area = {
+					limit = {
+						owned_by = ROOT
+					}
+					add_province_modifier = {
+						name = plum_rains
+						duration = 1825
+					}
+				}
+			}
+		}
+    }
+}

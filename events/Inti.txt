@@ -1,0 +1,768 @@
+########################################
+# Events for countries of the Inti Religion
+#
+# written by Henrik Lohmander
+########################################
+
+namespace = inti_events
+
+#Great Feast
+country_event = {
+	id = inti_events.11
+	title = inti_events.11.t
+	desc = inti_events.11.d
+	picture = COURT_eventPicture
+	
+	trigger = {
+		religion = kamal_pantheon
+		has_dlc = "El Dorado"
+		is_religion_reformed = no
+		is_at_war = no
+		NOT = { authority = 50 }
+	}
+	
+	mean_time_to_happen = {
+		months = 260
+	}
+	
+	option = {
+		name = inti_events.11.a #Let us hold a lavish feast.
+		add_authority = 5
+		add_years_of_income = -0.4
+		add_adm_power = -25
+	}
+	option = {
+		name = inti_events.11.b #We cannot afford more than a moderate feast.
+		add_years_of_income = -0.1
+		add_adm_power = -25
+	}
+	option = {
+		name = inti_events.11.c #I can see no need for such extravagance.
+		add_authority = -5
+	}
+}
+
+#Consulting an Oracle - General Event
+country_event = {
+	id = inti_events.14
+	title = inti_events.14.t
+	desc = inti_events.14.d
+	picture = INCAN_GODS_eventPicture
+	
+	trigger = {
+		religion = kamal_pantheon
+		has_dlc = "El Dorado"
+		has_regency = no
+		NOT = { government = theocracy } #Makes no sense if your ruler IS an Oracle.
+	}
+	
+	mean_time_to_happen = {
+		months = 260
+	}
+	
+	option = {
+		name = inti_events.14.a #Consult the oracle of our local Huaca
+		add_years_of_income = -0.05
+		random_list = {
+			25 = {
+				country_event = { id = inti_events.15 }
+			}
+			75 = {
+				country_event = { id = inti_events.16 }
+			}
+		}
+	}
+	option = {
+		name = inti_events.14.b #Travel to the great Oracle of Pachacamac.
+		trigger = {
+			479 = {
+				has_province_modifier = inti_pachamac_oracle
+				OR = {
+					owned_by = ROOT
+					owner = {
+						has_opinion = {
+							who = ROOT
+							value = 25
+						}
+					}
+				}
+			}
+		}
+		add_years_of_income = -0.15
+		add_prestige = 5
+		random_list = {
+			80 = {
+				country_event = { id = inti_events.15 }
+			}
+			20 = {
+				country_event = { id = inti_events.16 }
+			}
+		}
+	}
+	option = {
+		name = inti_events.14.c #We must go to the Oracle of Apurímac.
+		trigger = {
+			479 = {
+				OR = {
+					owned_by = ROOT
+					owner = {
+						has_opinion = {
+							who = ROOT
+							value = 25
+						}
+					}
+				}
+			}
+		}
+		add_years_of_income = -0.15
+		add_prestige = 5
+		random_list = {
+			80 = {
+				country_event = { id = inti_events.15 }
+			}
+			20 = {
+				country_event = { id = inti_events.16 }
+			}
+		}
+	}
+	option = {
+		name = inti_events.14.dd #Best not to dwell on the future.
+		add_prestige = -5
+	}
+}
+
+#The Answer of the Huatuc & Hamurpa - Good
+country_event = {
+	id = inti_events.15
+	title = inti_events.15.t
+	desc = inti_events.15.d
+	picture = INCAN_GODS_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = inti_events.15.a #Ok.
+		add_stability_or_adm_power = yes
+		add_prestige = 5
+	}
+}
+
+#The Answer of the Huatuc & Hamurpa - Worse
+country_event = {
+	id = inti_events.16
+	title = inti_events.16.t
+	desc = inti_events.16.d
+	picture = INCAN_GODS_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = inti_events.16.a #Ok.
+		add_prestige = 5
+	}
+}
+
+#Inti Raymi, the Festival of the Sun
+country_event = {
+	id = inti_events.20
+	title = inti_events.20.t
+	desc = inti_events.20.d
+	picture = FEAST_eventPicture
+	
+	trigger = {
+		religion = kamal_pantheon
+		has_dlc = "El Dorado"
+		num_of_cities = 10
+		is_at_war = no
+		is_month = 4 #Really celebrated during the winter solstice in June
+		NOT = { is_month = 9 }
+		NOT = { has_ruler_flag = inti_raymi_in_lifetime }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_ruler_flag = inti_raymi_in_lifetime
+			every_owned_province = {
+				limit = { is_capital = no }
+				random_list = {
+					90 = {
+						#Nothing
+					}
+					10 = {
+						set_province_flag = inti_insubordinate_chief
+					}
+				}
+			}
+			every_owned_province = {
+				limit = {
+					is_capital = no
+					NOT = { has_province_flag = inti_insubordinate_chief }
+				}
+				random_list = {
+					90 = {
+						#Nothing
+					}
+					10 = {
+						set_province_flag = inti_huacas_kept
+					}
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 300
+	}
+	
+	option = {
+		name = inti_events.20.a #The population will participate
+		trigger = { is_religion_reformed = no }
+		country_event = { id = inti_events.25 days = 14 }
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						has_province_flag = inti_huacas_kept
+						has_province_flag = inti_insubordinate_chief
+					}
+				}
+				clr_province_flag = inti_huacas_kept
+				clr_province_flag = inti_insubordinate_chief
+			}
+		}
+	}
+	option = {
+		name = inti_events.20.b #Call upon all of the Chiefs of the Empire.
+		trigger = { is_religion_reformed = no }
+		add_authority = 10
+		hidden_effect = {
+			if = {
+				limit = {
+					any_owned_province = {
+						has_province_flag = inti_insubordinate_chief
+					}
+				}
+				country_event = { id = inti_events.21 }
+			}
+			if = {
+				limit = {
+					vassal = 1
+				}
+				every_subject_country = {
+					country_event = { id = inti_events.23 }
+				}
+			}
+		}
+		country_event = { id = inti_events.26 days = 14 }
+	}
+	option = {
+		name = inti_events.20.c #All chiefs and all Huaca gods must attend the ceremony.
+		trigger = { is_religion_reformed = no }
+		add_authority = 15
+		hidden_effect = {
+			if = {
+				limit = {
+					any_owned_province = {
+						OR = {
+							has_province_flag = inti_huacas_kept
+							has_province_flag = inti_insubordinate_chief
+						}
+					}
+				}
+				country_event = { id = inti_events.22 }
+			}
+			if = {
+				limit = {
+					vassal = 1
+				}
+				every_subject_country = {
+					country_event = { id = inti_events.23 }
+				}
+			}
+		}
+		country_event = { id = inti_events.27 days = 14 }
+	}
+	option = {
+		name = inti_events.23.a #
+		trigger = { is_religion_reformed = yes }
+		country_event = { id = inti_events.28 days = 14 }
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						has_province_flag = inti_huacas_kept
+						has_province_flag = inti_insubordinate_chief
+					}
+				}
+				clr_province_flag = inti_huacas_kept
+				clr_province_flag = inti_insubordinate_chief
+			}
+		}
+	}
+}
+
+#Insubordinate Chiefs
+country_event = {
+	id = inti_events.21
+	title = inti_events.21.t
+	desc = inti_events.21.d
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = inti_events.21.a #Bribe them with expensive goods and promises.
+		add_authority = -5
+		add_years_of_income = -0.1
+	}
+	option = {
+		name = inti_events.21.b #We will have to make do (lose all authority that was gained from this gesture)
+		add_authority = -10
+		every_owned_province = {
+			limit = {
+				OR = {
+					has_province_flag = inti_huacas_kept
+					has_province_flag = inti_insubordinate_chief
+				}
+			}
+			clr_province_flag = inti_huacas_kept
+			clr_province_flag = inti_insubordinate_chief
+		}
+	}
+	option = {
+		name = inti_events.21.c #if they do not come willingly we will force them.
+		every_owned_province = {
+			limit = {
+				has_province_flag = inti_insubordinate_chief
+			}
+			spawn_rebels = {
+				type = nationalist_rebels
+				size = 1
+			}
+			clr_province_flag = inti_insubordinate_chief
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_flag = inti_huacas_kept
+				}
+				clr_province_flag = inti_huacas_kept
+			}
+		}
+	}
+}
+
+#Insubordinate Chiefs and Priests
+country_event = {
+	id = inti_events.22
+	title = inti_events.22.t
+	desc = inti_events.22.d
+	picture = GUARDED_TREASURE_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = inti_events.22.a #We will make do without them.
+		add_authority = -15
+		every_owned_province = {
+			limit = {
+				OR = {
+					has_province_flag = inti_huacas_kept
+					has_province_flag = inti_insubordinate_chief
+				}
+			}
+			clr_province_flag = inti_huacas_kept
+			clr_province_flag = inti_insubordinate_chief
+		}
+	}
+	option = {
+		name = inti_events.22.b #Force them to comply
+		every_owned_province = {
+			limit = {
+				OR = {
+					has_province_flag = inti_huacas_kept
+					has_province_flag = inti_insubordinate_chief
+				}
+			}
+			spawn_rebels = {
+				type = nationalist_rebels
+				size = 1
+			}
+			clr_province_flag = inti_huacas_kept
+			clr_province_flag = inti_insubordinate_chief
+		}
+	}
+}
+
+#Invitation to the festival of Inti Raymi (for a vassal ruler)
+country_event = {
+	id = inti_events.23
+	title = inti_events.23.t
+	desc = inti_events.23.d
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = inti_events.23.a #Then we must go to celebrate the sun!
+		add_years_of_income = -0.05
+		hidden_effect = {
+			add_opinion = {
+				who = FROM
+				modifier = inti_attended_inti_raymi
+			}
+		}
+		FROM = {
+			add_opinion = {
+				who = ROOT
+				modifier = inti_attended_inti_raymi
+			}
+		}
+	}
+	option = {
+		name = inti_events.23.b #Let's stay home and honor the sun in our own way.
+		FROM = {
+			country_event = { id = inti_events.24 }
+			add_opinion = {
+				who = ROOT
+				modifier = inti_refused_to_attend_inti_raymi
+			}
+		}
+	}
+}
+
+#The ruler of [From.GetName] declines to join.
+country_event = {
+	id = inti_events.24
+	title = inti_events.24.t
+	desc = inti_events.24.d
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = inti_events.24.a #We will have make do without them.
+		add_prestige = -5
+		tooltip = {
+			add_opinion = {
+				who = FROM
+				modifier = inti_refused_to_attend_inti_raymi
+			}
+		}
+	}
+}
+
+#Festival of Inti Raymi (Only capital population)
+country_event = {
+	id = inti_events.25
+	title = inti_events.25.t
+	desc = inti_events.25.d
+	picture = FEAST_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = inti_events.25.a #
+		add_prestige = 10
+	}
+}
+
+#Festival of Inti Raymi (with rural chiefs)
+country_event = {
+	id = inti_events.26
+	title = inti_events.26.t
+	desc = inti_events.26.d
+	picture = FEAST_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = inti_events.26.a #We will have make do without them.
+		add_prestige = 10
+	}
+}
+
+#Festival of Inti Raymi (with rural chiefs and Huacas)
+country_event = {
+	id = inti_events.27
+	title = inti_events.27.t
+	desc = inti_events.27.d
+	picture = FEAST_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = inti_events.27.a #We will have make do without them.
+		add_prestige = 10
+	}
+}
+
+#Festival of Inti Raymi (For Reformed Inti Countries)
+country_event = {
+	id = inti_events.28
+	title = inti_events.28.t
+	desc = inti_events.28.d
+	picture = FEAST_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = inti_events.28.a #
+		add_prestige = 15
+	}
+}
+
+#Itu Celebration
+country_event = {
+	id = inti_events.29
+	title = inti_events.29.t
+	desc = inti_events.29.d
+	picture = FEAST_eventPicture
+	
+	trigger = {
+		religion = kamal_pantheon
+		has_dlc = "El Dorado"
+		OR = {
+			NOT = { stability = 0 }
+			war_exhaustion = 4
+			unrest = 4
+		}
+		num_of_cities = 6
+		NOT = { has_ruler_flag = inti_itu_celebrated }
+	}
+	
+	mean_time_to_happen = {
+		months = 400
+		modifier = {
+			factor = 0.9
+			NOT = { stability = -2 }
+		}
+		modifier = {
+			factor = 0.9
+			war_exhaustion = 6
+		}
+		modifier = {
+			factor = 0.9
+			unrest = 6
+		}
+	}
+	
+	option = {
+		name = inti_events.29.a #Celebrate with Customary Sacrifices
+		custom_tooltip = inti_events.29.a.tt
+		country_event = { id = inti_events.30 days = 7 }
+		set_ruler_flag = inti_itu_celebrated
+	}
+	option = {
+		name = inti_events.29.b #Celebrate with Human Sacrifices
+		custom_tooltip = inti_events.29.b.tt
+		add_dip_power = -75
+		country_event = { id = inti_events.31 days = 14 }
+		set_ruler_flag = inti_itu_celebrated
+	}
+	option = {
+		name = inti_events.29.c #We must focus on the here and now.
+		
+	}
+}
+
+#Celebrating the Itu (animal sacrifices)
+country_event = {
+	id = inti_events.30
+	title = inti_events.30.t
+	desc = inti_events.30.d
+	picture = FEAST_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = inti_events.30.a #
+		if = {
+			limit = { NOT = { stability = 3 } }
+			add_stability_or_adm_power = yes
+		}
+		if = {
+			limit = { war_exhaustion = 1 }
+			add_war_exhaustion = -1
+		}
+		add_prestige = 5
+	}
+}
+
+#Celebrating the Itu (human sacrifices)
+country_event = {
+	id = inti_events.31
+	title = inti_events.31.t
+	desc = inti_events.31.d
+	picture = HUMAN_SACRIFICE_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = inti_events.31.a #
+		if = {
+			limit = { NOT = { stability = 3 } }
+			add_stability_or_adm_power = yes
+		}
+		if = {
+			limit = { war_exhaustion = 1 }
+			add_war_exhaustion = -2
+		}
+		add_prestige = 10
+	}
+}
+
+#The Royal Guard
+country_event = {
+	id = inti_events.32
+	title = inti_events.32.t
+	desc = inti_events.32.d
+	picture = MILITARY_CAMP_eventPicture
+	
+	trigger = {
+		religion = kamal_pantheon
+		has_dlc = "El Dorado"
+		has_regency = no
+		any_owned_province = {
+			NOT = { culture = root }
+		}
+		NOT = { has_ruler_modifier = inti_royal_guard }
+		NOT = { has_ruler_flag = inti_turned_down_royal_guard }
+		OR = {
+			NOT = { has_country_flag = had_inti_royal_guard }
+			had_country_flag = { flag = had_inti_royal_guard days = 7300 }
+		}
+	}
+
+	
+	mean_time_to_happen = {
+		months = 400
+	}
+	
+	option = {
+		name = inti_events.32.a #Bring in new blood.
+		add_ruler_modifier = {
+			name = inti_royal_guard
+		}
+		set_country_flag = had_inti_royal_guard
+	}
+	option = {
+		name = inti_events.32.b #Let them keep their privilege.
+		add_prestige = 5
+		set_ruler_flag = inti_turned_down_royal_guard
+	}
+}
+
+#The Royal Guard
+country_event = {
+	id = inti_events.33
+	title = inti_events.33.t
+	desc = inti_events.33.d
+	picture = MILITARY_CAMP_eventPicture
+	
+	trigger = {
+		religion = kamal_pantheon
+		has_dlc = "El Dorado"
+		has_regency = no
+		has_ruler_modifier = inti_royal_guard
+		NOT = { has_ruler_flag = inti_nobles_alarmed }
+	}
+
+	
+	mean_time_to_happen = {
+		months = 90
+	}
+	
+	option = {
+		name = inti_events.33.a #Revert the decision to expand the Guard
+		remove_country_modifier = inti_royal_guard
+		add_stability_or_adm_power = yes
+	}
+	option = {
+		name = inti_events.33.b #Give it a generation or two.
+		add_authority = 5
+		set_ruler_flag = inti_nobles_alarmed
+		add_ruler_modifier = {
+			name = inti_alarmed_nobles
+		}
+	}
+}
+
+#Attack on the royal litter
+country_event = {
+	id = inti_events.34
+	title = inti_events.34.t
+	desc = inti_events.34.d
+	picture = BATTLE_eventPicture
+	
+	trigger = {
+		religion = kamal_pantheon
+		has_dlc = "El Dorado"
+		has_regency = no
+		has_ruler_modifier = inti_royal_guard
+		NOT = { has_ruler_flag = litter_attacked }
+	}
+
+	
+	mean_time_to_happen = {
+		months = 90
+	}
+	
+	option = {
+		name = inti_events.34.a #Revert the decision to expand the Guard
+		remove_country_modifier = inti_royal_guard
+		add_stability_or_adm_power = yes
+		set_ruler_flag = litter_attacked
+	}
+	option = {
+		name = inti_events.34.b #This was orchestrated by the nobles
+		custom_tooltip = inti_events.34.b.tt
+		add_prestige = 5
+		set_ruler_flag = litter_attacked
+		hidden_effect = {
+			random_list = {
+				50 = {
+					country_event = { id = inti_events.35 days = 60 }
+				}
+				50 = {
+					country_event = { id = inti_events.36 days = 60 }
+				}
+			}
+		}
+	}
+}
+
+#Investigation Stalled
+country_event = {
+	id = inti_events.35
+	title = inti_events.35.t
+	desc = inti_events.35.d
+	picture = MILITARY_CAMP_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = inti_events.35.a #Ok.
+		add_prestige = -5
+	}
+}
+
+#Plot Uncovered
+country_event = {
+	id = inti_events.36
+	title = inti_events.36.t
+	desc = inti_events.36.d
+	picture = MILITARY_CAMP_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = inti_events.36.a #To the Sankacancha Pit.
+		add_prestige = 5
+	}
+	option = {
+		name = inti_events.36.b #Forgive the Nobles.
+		add_authority = -5
+		remove_country_modifier = inti_alarmed_nobles
+	}
+}

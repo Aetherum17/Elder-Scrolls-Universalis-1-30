@@ -1,0 +1,540 @@
+########################################
+# Events for Tributaries
+#
+# written by Henrik Lohmander
+########################################
+
+namespace = tributary_events
+
+#Beneficial Effects of the Tributary Relationship:
+
+# Diffusion of knowledge
+# Subject
+country_event = {
+	id = tributary_events.1
+	title = tributary_events.1.t
+	desc = tributary_events.1.d
+	picture = MERITOCRACY_eventPicture
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	trigger = {
+		has_dlc = "Mandate of Heaven"
+		is_subject_of_type = tributary_state
+		NOT = { has_country_modifier = tributary_diplomatic_influence }
+		NOT = { has_country_modifier = tributary_institution_influence }
+		overlord = {
+			can_be_overlord = tributary_state #Block when it doesn't make sense.
+			OR = { #More Advanced Overlord
+				institution_difference = { who = ROOT value = 1 }
+				tech_difference = 4
+			}
+			NOT = {
+				ai_attitude = {
+					who = ROOT
+					attitude = attitude_hostile
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			random_list = {
+				25 = { set_country_flag = overlord_inspired_official }
+				25 = { set_country_flag = overlord_inspired_trader }
+				25 = { set_country_flag = overlord_inspired_institutions_spread }
+				25 = { set_country_flag = overlord_inspired_dip_rep }
+			}
+			overlord = {
+				save_event_target_as = overlord_country
+			}
+		}
+	}
+
+	option = {
+		name = "tributary_events.1.a"
+		trigger_switch = {
+			on_trigger = has_country_flag
+			overlord_inspired_official = {
+				define_advisor = {
+					type = philosopher
+					skill = 2
+					discount = yes
+					religion = event_target:overlord_country
+				}
+				add_estate_church_loyalty_effect = yes
+				clr_country_flag = overlord_inspired_official
+			}
+			overlord_inspired_trader = {
+				define_advisor = {
+					type = trader
+					skill = 2
+					discount = yes
+					religion = event_target:overlord_country
+				}
+				add_estate_burghers_loyalty_effect = yes
+				clr_country_flag = overlord_inspired_trader
+			}
+			overlord_inspired_institutions_spread = {
+				clr_country_flag = overlord_inspired_institutions_spread
+				add_country_modifier = {
+					name = "tributary_institution_influence"
+					duration = 5475
+				}
+			}
+			overlord_inspired_dip_rep = {
+				add_country_modifier = {
+					name = "tributary_diplomatic_influence"
+					duration = 5475
+				}
+				add_estate_nobles_loyalty_effect = yes
+				clr_country_flag = overlord_inspired_dip_rep
+			}
+		}
+	}
+	option = {
+		name = "tributary_events.1.b"
+		increase_legitimacy_medium_effect = yes
+		add_stability_or_adm_power = yes
+	}
+}
+
+# Diplomatic Influence
+country_event = {
+	id = tributary_events.4
+	title = tributary_events.4.t
+	desc = tributary_events.4.d
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		has_dlc = "Mandate of Heaven"
+		can_be_overlord = tributary_state #Block when it doesn't make sense.
+		OR = {
+			AND = {
+				government_rank = 2
+				calc_true_if = {
+					any_subject_country = {
+						is_subject_of_type = tributary_state
+					}
+					amount = 6
+				}
+			}
+			AND = {
+				government_rank = 3
+				calc_true_if = {
+					any_subject_country = {
+						is_subject_of_type = tributary_state
+					}
+					amount = 10
+				}
+			}
+		}
+		NOT = { has_country_modifier = influential_tributary_network }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "tributary_events.4.a"
+		add_country_modifier = {
+			name = influential_tributary_network
+			duration = 3650
+		}
+	}
+	option = {
+		name = "tributary_events.4.b"
+		add_dip_power = 50
+	}
+}
+
+# X trading colony
+country_event = {
+	id = tributary_events.6
+	title = tributary_events.6.t
+	desc = tributary_events.6.d
+	picture = TRIBUTARY_FLEET_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		has_dlc = "Mandate of Heaven"
+		is_subject_of_type = tributary_state
+		num_of_ports = 1
+		overlord = {
+			can_be_overlord = tributary_state #Block when it doesn't make sense.
+			num_of_ports = 1
+			NOT = {
+				has_reform = steppe_horde
+			}
+		}
+		any_owned_province = {
+			has_port = yes
+			is_in_capital_area = yes
+		}
+		NOT = {
+			any_owned_province = {
+				has_province_modifier = tributary_overlord_trading_port
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		hidden_effect = {
+			random_owned_province = { #Worst case
+				limit = {
+					has_port = yes
+					is_in_capital_area = yes
+				}
+				save_event_target_as = tributary_trader_port
+			}
+			random_owned_province = { #Better
+				limit = {
+					has_port = yes
+					is_in_capital_area = yes
+					province_trade_power = 6
+				}
+				save_event_target_as = tributary_trader_port
+			}
+			random_owned_province = { #Best
+				limit = {
+					has_port = yes
+					is_in_capital_area = yes
+					OR = {
+						development = 15
+						province_trade_power = 10
+					}
+				}
+				save_event_target_as = tributary_trader_port
+			}
+		}
+	}
+
+	option = {
+		name = "tributary_events.6.a"
+		custom_tooltip = tributary_events.6.a.tt
+		add_corruption = 1
+		event_target:tributary_trader_port = {
+			add_base_production = 1
+			add_province_modifier = { #Destroyed on Conquest
+				name = "tributary_overlord_trading_port"
+				duration = 10950
+			}
+		}
+		set_country_flag = tributary_harbored_criminals #Detection Risk
+	}
+	option = {
+		name = "tributary_events.6.b"
+		event_target:tributary_trader_port = {
+			add_province_modifier = { #Destroyed on Conquest
+				name = "tributary_overlord_trading_port"
+				duration = 1825
+			}
+		}
+	}
+}
+
+# The X Incident
+# Loosely Based on the Ningbo Incident
+country_event = {
+	id = tributary_events.10
+	title = tributary_events.10.t
+	desc = tributary_events.10.d
+	picture = WOKOU_INCIDENT_eventPicture
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {	
+			random_subject_country = {
+				limit = {
+					is_subject_of_type = tributary_state
+					OR = {
+						AND = {
+							government = monarchy
+							NOT = { legitimacy_or_horde_unity = 80 }
+						}
+						AND = {
+							government = republic
+							NOT = { republican_tradition = 80 }
+						}
+					}
+				}
+				save_event_target_as = ningbo_country
+			}
+		}
+	}
+	
+	trigger = {
+		has_dlc = "Mandate of Heaven"
+		can_be_overlord = tributary_state #Block when it doesn't make sense.
+		any_subject_country = {
+			is_subject_of_type = tributary_state
+			OR = {
+				AND = {
+					government = monarchy
+					NOT = { legitimacy_or_horde_unity = 80 }
+				}
+				AND = {
+					government = republic
+					NOT = { republican_tradition = 80 }
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "tributary_events.10.a"
+		add_adm_power = 15
+		event_target:ningbo_country = {
+			country_event = { id = tributary_events.11 }
+		}
+	}
+	option = {
+		name = "tributary_events.10.b"
+		add_dip_power = 50
+	}
+}
+
+
+country_event = {
+	id = tributary_events.11
+	title = tributary_events.11.t
+	desc = tributary_events.11.d
+	picture = WOKOU_INCIDENT_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "tributary_events.11.a" #Unfortunate
+		FROM = {
+			random_active_trade_node = {
+				limit = {
+					NOT = {
+						has_trade_modifier = {
+							who = ROOT
+							name = tributary_soured_relations
+						}
+					}
+				}
+				add_trade_modifier = {
+					who = ROOT
+					duration = 5475
+					power = -10
+					key = tributary_soured_relations
+				}
+			}
+		}
+		reduce_estate_burghers_loyalty_effect = yes
+		add_estate_nobles_loyalty_effect = yes
+	}
+	option = {
+		name = "tributary_events.11.b" #Compensate overlord
+		add_years_of_income = -1
+		hidden_effect = {
+			export_to_variable = { which = money_to_give value = years_of_income who = ROOT }
+		}
+		FROM = {
+			country_event = { id = tributary_events.12 }
+		}
+		add_estate_burghers_loyalty_effect = yes
+		reduce_estate_nobles_loyalty_effect = yes
+	}
+}
+
+#Apology from X
+country_event = {
+	id = tributary_events.12
+	title = tributary_events.12.t
+	desc = tributary_events.12.d
+	picture = WOKOU_INCIDENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "tributary_events.12.a"
+		custom_tooltip = tributary_events.12.a.tt
+		
+		FROM = {
+			while = {
+				limit = {
+					check_variable = { which = money_to_give value = 1 }
+				}
+				subtract_variable = { which = money_to_give value = 1 }
+				ROOT = { add_treasury = 1 }
+			}
+		}
+	}
+}
+
+# Piracy
+country_event = {
+	id = tributary_events.18
+	title = tributary_events.18.t
+	desc = tributary_events.18.d
+	picture = WOKOU_INCIDENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_dlc = "Mandate of Heaven"
+		num_of_ports = 1
+		can_be_overlord = tributary_state #Block when it doesn't make sense.
+		NOT = {
+			has_country_modifier = tributary_mission_piracy
+		}
+		any_subject_country = {
+			is_subject_of_type = tributary_state
+			num_of_ports = 1
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "tributary_events.18.a"
+		add_years_of_income = -0.5
+		add_country_modifier = {
+			name = tributary_mission_piracy
+			duration = 1825
+		}
+	}
+	option = {
+		name = "tributary_events.18.b"
+		add_country_modifier = {
+			name = tributary_mission_piracy
+			duration = 3650
+		}
+	}
+}
+
+# Fortune Seekers (Because non-eastern hordes don't demand Eunuchs).
+country_event = {
+	id = tributary_events.23
+	title = tributary_events.23.t
+	desc = tributary_events.23.d
+	picture = CHINESE_GENERAL_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_dlc = "Mandate of Heaven"
+		can_be_overlord = tributary_state #Block when it doesn't make sense.
+		any_subject_country = {
+			is_subject_of_type = tributary_state
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = { num_of_ports = 1 }
+				random_list = {
+					25 = { set_country_flag = fortune_seekers_officers }
+					25 = { set_country_flag = fortune_seekers_general }
+					25 = { set_country_flag = fortune_seekers_advisor }
+					25 = { set_country_flag = fortune_seekers_admiral }
+				}
+				else = {
+					random_list = {
+						33 = { set_country_flag = fortune_seekers_officers }
+						33 = { set_country_flag = fortune_seekers_general }
+						33 = { set_country_flag = fortune_seekers_advisor }
+					}
+				}
+			}
+			random_subject_country = {
+				limit = { is_subject_of_type = tributary_state }
+				save_event_target_as = tributary_country
+			}
+		}
+	}
+
+	option = {
+		name = "tributary_events.23.a"
+		add_meritocracy_effect = yes
+		trigger_switch = {
+			on_trigger = has_country_flag
+			fortune_seekers_officers = {
+				add_yearly_manpower = 1
+				clr_country_flag = fortune_seekers_officers
+			}
+			fortune_seekers_general = {
+				create_general = { tradition = 40 }
+				clr_country_flag = fortune_seekers_general
+			}
+			fortune_seekers_advisor = {
+				define_advisor = {
+					type = grand_captain
+					skill = 2
+					discount = yes
+					culture = event_target:tributary_country
+					religion = event_target:tributary_country
+				}
+				clr_country_flag = fortune_seekers_advisor
+			}
+			fortune_seekers_admiral = {
+				create_admiral = {
+					tradition = 40
+				}
+				clr_country_flag = fortune_seekers_admiral
+			}
+		}
+	}
+}
+
+# Slave Raid
+country_event = {
+	id = tributary_events.26
+	title = tributary_events.26.t
+	desc = tributary_events.26.d
+	picture = BORDER_TENSION_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_dlc = "Mandate of Heaven"
+		is_subject_of_type = tributary_state
+		overlord = {
+			can_be_overlord = tributary_state #Block when it doesn't make sense.
+			has_reform = steppe_horde
+			is_neighbor_of = ROOT
+		}
+		NOT = { has_country_modifier = horde_slave_raid }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "tributary_events.26.a" #
+		add_prestige = -10
+		add_country_modifier = {
+			name = "horde_slave_raid"
+			duration = 1850
+		}
+	}
+}

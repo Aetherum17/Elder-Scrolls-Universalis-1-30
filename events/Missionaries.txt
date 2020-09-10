@@ -1,0 +1,54 @@
+# Religious Resistance
+province_event = {
+	id = 2061
+	title = "EVTNAME2061"
+	desc = "EVTDESC2061"
+	picture = RELIGION_eventPicture
+
+	trigger = {
+		has_missionary = yes
+		is_core = ROOT
+		any_neighbor_province = {
+			owned_by = ROOT
+			has_owner_religion = no
+		}
+		NOT = { has_province_modifier = missionary_failure }
+	}
+
+	mean_time_to_happen = {
+		months = 4000
+
+		modifier = {
+			factor = 1.4
+			owner = { num_of_cities = 20 }
+		}
+		modifier = {
+			factor = 1.4
+			owner = { num_of_cities = 40 }
+		}
+		modifier = {
+			factor = 1.4
+			owner = { num_of_cities = 60 }
+		}
+	}
+
+	option = {
+		name = "EVTOPTA2061"		# Increase your efforts
+		ai_chance = { factor = 55 }
+		heretic_rebels = 1
+		owner = {
+			add_piety = 0.05
+		}
+	}
+	option = {
+		name = "EVTOPTB2061"		# It's a waste of time
+		ai_chance = { factor = 45 }
+		add_province_modifier = {
+			name = "missionary_failure"
+			duration = 1825
+		}
+		owner = {
+			add_piety = -0.05
+		}
+	}
+}

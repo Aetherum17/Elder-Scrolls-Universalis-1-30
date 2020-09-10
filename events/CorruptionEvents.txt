@@ -1,0 +1,163 @@
+########################################
+# Events about Sailors
+#
+# written by Rufus Tronde
+########################################
+
+namespace = corruption_event
+
+### No Corruption, Positive Events
+
+# The Honest Merchants of [Root.GetName]
+country_event = {
+	id = corruption_event.1
+	title = "corruption_event.1.t"
+	desc = "corruption_event.1.d"
+	picture = MERCHANTS_TALKING_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { corruption = 1 }
+		NOT = { yearly_corruption_increase = 0.001 }
+		NOT = { has_country_modifier = trusted_merchants }
+		stability = 3
+	}
+	
+	option = {
+		name = "corruption_event.1.a"
+		add_country_modifier = {
+			name = "trusted_merchants"
+			duration = 3650
+		}
+	}
+}
+
+# Trust Your Neighbor
+country_event = {
+	id = corruption_event.2
+	title = "corruption_event.2.t"
+	desc = "corruption_event.2.d"
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { corruption = 1 }
+		NOT = { yearly_corruption_increase = 0.001 }
+		NOT = { has_country_modifier = honest_administrators }
+		stability = 3
+	}
+	
+	option = {
+		name = "corruption_event.2.a"
+		add_country_modifier = {
+			name = "honest_administrators"
+			duration = 3650
+		}
+	}
+}
+
+# An Honorable People
+country_event = {
+	id = corruption_event.4
+	title = "corruption_event.4.t"
+	desc = "corruption_event.4.d"
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { corruption = 1 }
+		NOT = { yearly_corruption_increase = 0.001 }
+		stability = 3
+	}
+	
+	option = {
+		name = "corruption_event.4.a"
+		add_prestige = 20
+	}
+}
+
+# Incorruptible
+country_event = {
+	id = corruption_event.5
+	title = "corruption_event.5.t"
+	desc = "corruption_event.5.d"
+	picture = ADVISOR_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { corruption = 1 }
+		NOT = { yearly_corruption_increase = 0.001 }
+		stability = 3
+		any_known_country = {
+			has_spy_network_in = {
+				who = ROOT
+				value = 25
+			}
+		}
+		
+	}
+	
+	option = {
+		name = "corruption_event.5.a"
+		
+		random_known_country = {
+			limit = {
+				has_spy_network_in = {
+					who = ROOT
+					value = 25
+				}
+			}
+			add_spy_network_in = {
+				who = ROOT
+				value = -25
+			}
+		}
+	}
+}
+
+### Some Corruption, Dilemma Events
+
+# [Root.Culture.GetName] Community Distrusts Us
+country_event = {
+	id = corruption_event.9
+	title = "corruption_event.9.t"
+	desc = "corruption_event.9.d"
+	picture = ACCUSATION_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		corruption = 25
+		NOT = { corruption = 50 }
+		any_known_country = {
+			primary_culture = ROOT
+			NOT = { corruption = 0.25 }
+		}
+		any_owned_province = {
+			has_owner_culture = no
+		}
+	}
+	
+	# Apologize, promise to improve
+	option = {
+		name = "corruption_event.9.a"
+		add_prestige = -10
+		every_owned_province = {
+			limit = { culture = ROOT }
+			add_local_autonomy = 10
+		}
+	}
+
+	# Reject it as prejudice
+	option = {
+		name = "corruption_event.9.b"
+		every_owned_province = {
+			limit = { culture = ROOT }
+			add_unrest = 4
+		}
+	}
+}
