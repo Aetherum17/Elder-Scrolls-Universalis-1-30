@@ -781,7 +781,8 @@ country_event = {
 		ai_chance = { factor = 50 }
 		
 		every_province = {
-		    limit = { region = hgh_rock_lr NOT = { owned_by = ROOT is_city = yes } add_core = ROOT }
+		    limit = { region = hgh_rock_lr NOT = { owned_by = ROOT is_city = yes } }
+			add_core = ROOT
 		}
 		
 		if = { limit = { NOT = { truce_with = event_target:1369_owner } NOT = { alliance_with = event_target:1369_owner } NOT = { is_subject_of = event_target:1369_owner } }

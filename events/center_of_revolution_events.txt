@@ -812,7 +812,7 @@ country_event = {
 		is_free_or_tributary_trigger = yes
 		num_of_owned_provinces_with = {
 			value = 2
-			trade_goods = grain
+			trade_goods = crops
 			culture_group = root
 		}
 		any_owned_province = {
@@ -848,7 +848,7 @@ country_event = {
 			}
 			every_owned_province = {
 				limit = {
-					trade_goods = grain
+					trade_goods = crops
 					culture_group = root
 				}
 				add_province_modifier = {

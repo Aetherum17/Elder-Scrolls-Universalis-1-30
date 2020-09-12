@@ -359,7 +359,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-	    8088 = { owner = { save_event_target_as = 8088_owner } }
+	    4098 = { owner = { save_event_target_as = 4098_owner } }
 	}
 
 	option = {
@@ -374,8 +374,8 @@ country_event = {
 		add_core = ROOT
 		}
 		
-		if = { limit = { NOT = { truce_with = event_target:8088_owner } NOT = { alliance_with = event_target:8088_owner } NOT = { is_subject_of = event_target:8088_owner } }
-		declare_war_with_cb = { who = event_target:8088_owner casus_belli = cb_es_scenario } 
+		if = { limit = { NOT = { truce_with = event_target:4098_owner } NOT = { alliance_with = event_target:4098_owner } NOT = { is_subject_of = event_target:4098_owner } }
+		declare_war_with_cb = { who = event_target:4098_owner casus_belli = cb_es_scenario } 
 		}
 	}
 	option = {

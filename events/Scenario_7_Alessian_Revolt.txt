@@ -282,9 +282,9 @@ country_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-	    7419 = { owner = { save_event_target_as = 7419_owner } }
-		7559 = { owner = { save_event_target_as = 7559_owner } }
-		7394 = { owner = { save_event_target_as = 7394_owner } }
+	    2949 = { owner = { save_event_target_as = 2949_owner } }
+		1314 = { owner = { save_event_target_as = 1314_owner } }
+		2740 = { owner = { save_event_target_as = 2740_owner } }
 	}
 
 	option = {
@@ -300,14 +300,14 @@ country_event = {
 		add_claim = ROOT
 		}
 		
-		if = { limit = { NOT = { truce_with = event_target:7419_owner } NOT = { alliance_with = event_target:7419_owner } NOT = { is_subject_of = event_target:7419_owner } }
-		declare_war_with_cb = { who = event_target:7419_owner casus_belli = cb_es_scenario } 
+		if = { limit = { NOT = { truce_with = event_target:2949_owner } NOT = { alliance_with = event_target:2949_owner } NOT = { is_subject_of = event_target:2949_owner } }
+		declare_war_with_cb = { who = event_target:2949_owner casus_belli = cb_es_scenario } 
 		}
-		if = { limit = { NOT = { truce_with = event_target:7559_owner } NOT = { alliance_with = event_target:7559_owner } NOT = { is_subject_of = event_target:7559_owner } }
-		declare_war_with_cb = { who = event_target:7559_owner casus_belli = cb_es_scenario } 
+		if = { limit = { NOT = { truce_with = event_target:1314_owner } NOT = { alliance_with = event_target:1314_owner } NOT = { is_subject_of = event_target:1314_owner } }
+		declare_war_with_cb = { who = event_target:1314_owner casus_belli = cb_es_scenario } 
 		}
-		if = { limit = { NOT = { truce_with = event_target:7394_owner } NOT = { alliance_with = event_target:7394_owner } NOT = { is_subject_of = event_target:7394_owner } }
-		declare_war_with_cb = { who = event_target:7394_owner casus_belli = cb_es_scenario } 
+		if = { limit = { NOT = { truce_with = event_target:2740_owner } NOT = { alliance_with = event_target:2740_owner } NOT = { is_subject_of = event_target:2740_owner } }
+		declare_war_with_cb = { who = event_target:2740_owner casus_belli = cb_es_scenario } 
 		}
 	}
 	option = {
@@ -330,7 +330,7 @@ country_event = {
 	immediate = {
 	    7281 = { owner = { save_event_target_as = 7281_owner } }
 		7270 = { owner = { save_event_target_as = 7270_owner } }
-		7510 = { owner = { save_event_target_as = 7510_owner } }
+		3080 = { owner = { save_event_target_as = 3080_owner } }
 	}
 
 	option = {
@@ -346,8 +346,8 @@ country_event = {
 		if = { limit = { NOT = { truce_with = event_target:7270_owner } NOT = { alliance_with = event_target:7270_owner } NOT = { is_subject_of = event_target:7270_owner } }
 		declare_war_with_cb = { who = event_target:7270_owner casus_belli = cb_es_scenario } 
 		}
-		if = { limit = { NOT = { truce_with = event_target:7510_owner } NOT = { alliance_with = event_target:7510_owner } NOT = { is_subject_of = event_target:7510_owner } }
-		declare_war_with_cb = { who = event_target:7510_owner casus_belli = cb_es_scenario } 
+		if = { limit = { NOT = { truce_with = event_target:3080_owner } NOT = { alliance_with = event_target:3080_owner } NOT = { is_subject_of = event_target:3080_owner } }
+		declare_war_with_cb = { who = event_target:3080_owner casus_belli = cb_es_scenario } 
 		}
 	}
 	option = {

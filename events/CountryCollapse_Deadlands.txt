@@ -25,196 +25,7 @@ country_event = {
 		}
 		}
 		
-		if = {
-		limit = {
-		eastern_deadlands_1_la = {
-		owned_by = ROOT
-		}
-		NOT = { exists = DS1 }
-		NOT = { capital_scope = { area = eastern_deadlands_1_la } }
-		}
-		every_owned_province = {
-		limit = {
-		area = eastern_deadlands_1_la
-		}
-		add_core = DS1
-		}
-		create_vassal = DS1
-        DS1 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        DS1 = { change_government_reform_progress = -99999 }
-		}
-		
-		if = {
-		limit = {
-		eastern_deadlands_2_la = {
-		owned_by = ROOT
-		}
-		NOT = { exists = DS2 }
-		NOT = { capital_scope = { area = eastern_deadlands_2_la } }
-		}
-		every_owned_province = {
-		limit = {
-		area = eastern_deadlands_2_la
-		}
-		add_core = DS2
-		}
-		create_vassal = DS2
-        DS2 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        DS2 = { change_government_reform_progress = -99999 }
-		}
-		
-		if = {
-		limit = {
-		eastern_deadlands_3_la = {
-		owned_by = ROOT
-		}
-		NOT = { exists = DS3 }
-		NOT = { capital_scope = { area = eastern_deadlands_3_la } }
-		}
-		every_owned_province = {
-		limit = {
-		area = eastern_deadlands_3_la
-		}
-		add_core = DS3
-		}
-		create_vassal = DS3
-        DS3 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        DS3 = { change_government_reform_progress = -99999 }
-		}
-		
-		if = {
-		limit = {
-		eastern_deadlands_4_la = {
-		owned_by = ROOT
-		}
-		NOT = { exists = DS4 }
-		NOT = { capital_scope = { area = eastern_deadlands_4_la } }
-		}
-		every_owned_province = {
-		limit = {
-		area = eastern_deadlands_4_la
-		}
-		add_core = DS4
-		}
-		create_vassal = DS4
-        DS4 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        DS4 = { change_government_reform_progress = -99999 }
-		}
-		
-		if = {
-		limit = {
-		eastern_deadlands_5_la = {
-		owned_by = ROOT
-		}
-		NOT = { exists = DS5 }
-		NOT = { capital_scope = { area = eastern_deadlands_5_la } }
-		}
-		every_owned_province = {
-		limit = {
-		area = eastern_deadlands_5_la
-		}
-		add_core = DS5
-		}
-		create_vassal = DS5
-        DS5 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        DS5 = { change_government_reform_progress = -99999 }
-		}
-		
-		if = {
-		limit = {
-		eastern_deadlands_6_la = {
-		owned_by = ROOT
-		}
-		NOT = { exists = DS6 }
-		NOT = { capital_scope = { area = eastern_deadlands_6_la } }
-		}
-		every_owned_province = {
-		limit = {
-		area = eastern_deadlands_6_la
-		}
-		add_core = DS6
-		}
-		create_vassal = DS6
-        DS6 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        DS6 = { change_government_reform_progress = -99999 }
-		}
-		
-		if = {
-		limit = {
-		eastern_deadlands_7_la = {
-		owned_by = ROOT
-		}
-		NOT = { exists = DS7 }
-		NOT = { capital_scope = { area = eastern_deadlands_7_la } }
-		}
-		every_owned_province = {
-		limit = {
-		area = eastern_deadlands_7_la
-		}
-		add_core = DS7
-		}
-		create_vassal = DS7
-        DS7 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        DS7 = { change_government_reform_progress = -99999 }
-		}
-		
-		if = {
-		limit = {
-		eastern_deadlands_8_la = {
-		owned_by = ROOT
-		}
-		NOT = { exists = DS8 }
-		NOT = { capital_scope = { area = eastern_deadlands_8_la } }
-		}
-		every_owned_province = {
-		limit = {
-		area = eastern_deadlands_8_la
-		}
-		add_core = DS8
-		}
-		create_vassal = DS8
-        DS8 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        DS8 = { change_government_reform_progress = -99999 }
-		}
-		
-		if = {
-		limit = {
-		eastern_deadlands_9_la = {
-		owned_by = ROOT
-		}
-		NOT = { exists = DS9 }
-		NOT = { capital_scope = { area = eastern_deadlands_9_la } }
-		}
-		every_owned_province = {
-		limit = {
-		area = eastern_deadlands_9_la
-		}
-		add_core = DS9
-		}
-		create_vassal = DS9
-        DS9 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        DS9 = { change_government_reform_progress = -99999 }
-		}
-		
-		if = {
-		limit = {
-		eastern_deadlands_10_la = {
-		owned_by = ROOT
-		}
-		NOT = { exists = DT0 }
-		NOT = { capital_scope = { area = eastern_deadlands_10_la } }
-		}
-		every_owned_province = {
-		limit = {
-		area = eastern_deadlands_10_la
-		}
-		add_core = DT0
-		}
-		create_vassal = DT0
-        DT0 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        DT0 = { change_government_reform_progress = -99999 }
-		}
-		
+		# Clanfear
 		if = {
 		limit = {
 		eastern_deadlands_11_la = {
@@ -293,21 +104,21 @@ country_event = {
 		
 		if = {
 		limit = {
-		eastern_deadlands_15_la = {
+		northern_deadlands_10_la = {
 		owned_by = ROOT
 		}
-		NOT = { exists = DT4 }
-		NOT = { capital_scope = { area = eastern_deadlands_15_la } }
+		NOT = { exists = DX0 }
+		NOT = { capital_scope = { area = northern_deadlands_10_la } }
 		}
 		every_owned_province = {
 		limit = {
-		area = eastern_deadlands_15_la
+		area = northern_deadlands_10_la
 		}
-		add_core = DT5
+		add_core = DX0
 		}
-		create_vassal = DT5
-        DT5 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        DT5 = { change_government_reform_progress = -99999 }
+		create_vassal = DX0
+        DX0 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        DX0 = { change_government_reform_progress = -99999 }
 		}
 		
 	    }
@@ -393,289 +204,100 @@ country_event = {
 		}
 		}
 		
+		# Daedroth
 		if = {
 		limit = {
-		western_deadlands_1_la = {
+		northern_deadlands_9_la = {
 		owned_by = ROOT
 		}
-		NOT = { exists = DU1 }
-		NOT = { capital_scope = { area = western_deadlands_1_la } }
+		NOT = { exists = DW9 }
+		NOT = { capital_scope = { area = northern_deadlands_9_la } }
 		}
 		every_owned_province = {
 		limit = {
-		area = western_deadlands_1_la
+		area = northern_deadlands_9_la
 		}
-		add_core = DU1
+		add_core = DW9
 		}
-		create_vassal = DU1
-        DU1 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        DU1 = { change_government_reform_progress = -99999 }
+		create_vassal = DW9
+        DW9 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        DW9 = { change_government_reform_progress = -99999 }
 		}
 		
 		if = {
 		limit = {
-		western_deadlands_2_la = {
+		northern_deadlands_13_la = {
 		owned_by = ROOT
 		}
-		NOT = { exists = DU2 }
-		NOT = { capital_scope = { area = western_deadlands_2_la } }
+		NOT = { exists = DX3 }
+		NOT = { capital_scope = { area = northern_deadlands_13_la } }
 		}
 		every_owned_province = {
 		limit = {
-		area = western_deadlands_2_la
+		area = northern_deadlands_13_la
 		}
-		add_core = DU2
+		add_core = DX3
 		}
-		create_vassal = DU2
-        DU2 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        DU2 = { change_government_reform_progress = -99999 }
+		create_vassal = DX3
+        DX3 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        DX3 = { change_government_reform_progress = -99999 }
 		}
 		
 		if = {
 		limit = {
-		western_deadlands_3_la = {
+		northern_deadlands_14_la = {
 		owned_by = ROOT
 		}
-		NOT = { exists = DU3 }
-		NOT = { capital_scope = { area = western_deadlands_3_la } }
+		NOT = { exists = DX4 }
+		NOT = { capital_scope = { area = northern_deadlands_14_la } }
 		}
 		every_owned_province = {
 		limit = {
-		area = western_deadlands_3_la
+		area = northern_deadlands_14_la
 		}
-		add_core = DU3
+		add_core = DX4
 		}
-		create_vassal = DU3
-        DU3 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        DU3 = { change_government_reform_progress = -99999 }
+		create_vassal = DX4
+        DX4 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        DX4 = { change_government_reform_progress = -99999 }
 		}
 		
 		if = {
 		limit = {
-		western_deadlands_4_la = {
+		northern_deadlands_15_la = {
 		owned_by = ROOT
 		}
-		NOT = { exists = DU4 }
-		NOT = { capital_scope = { area = western_deadlands_4_la } }
+		NOT = { exists = DX5 }
+		NOT = { capital_scope = { area = northern_deadlands_15_la } }
 		}
 		every_owned_province = {
 		limit = {
-		area = western_deadlands_4_la
+		area = northern_deadlands_15_la
 		}
-		add_core = DU4
+		add_core = DX5
 		}
-		create_vassal = DU4
-        DU4 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        DU4 = { change_government_reform_progress = -99999 }
+		create_vassal = DX5
+        DX5 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        DX5 = { change_government_reform_progress = -99999 }
 		}
 		
 		if = {
 		limit = {
-		western_deadlands_5_la = {
+		southern_deadlands_9_la = {
 		owned_by = ROOT
 		}
-		NOT = { exists = DU5 }
-		NOT = { capital_scope = { area = western_deadlands_5_la } }
+		NOT = { exists = DY9 }
+		NOT = { capital_scope = { area = southern_deadlands_9_la } }
 		}
 		every_owned_province = {
 		limit = {
-		area = western_deadlands_5_la
+		area = southern_deadlands_9_la
 		}
-		add_core = DU5
+		add_core = DY9
 		}
-		create_vassal = DU5
-        DU5 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        DU5 = { change_government_reform_progress = -99999 }
-		}
-		
-		if = {
-		limit = {
-		western_deadlands_6_la = {
-		owned_by = ROOT
-		}
-		NOT = { exists = DU6 }
-		NOT = { capital_scope = { area = western_deadlands_6_la } }
-		}
-		every_owned_province = {
-		limit = {
-		area = western_deadlands_6_la
-		}
-		add_core = DU6
-		}
-		create_vassal = DU6
-        DU6 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        DU6 = { change_government_reform_progress = -99999 }
-		}
-		
-		if = {
-		limit = {
-		western_deadlands_7_la = {
-		owned_by = ROOT
-		}
-		NOT = { exists = DU7 }
-		NOT = { capital_scope = { area = western_deadlands_7_la } }
-		}
-		every_owned_province = {
-		limit = {
-		area = western_deadlands_7_la
-		}
-		add_core = DU7
-		}
-		create_vassal = DU7
-        DU7 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        DU7 = { change_government_reform_progress = -99999 }
-		}
-		
-		if = {
-		limit = {
-		western_deadlands_8_la = {
-		owned_by = ROOT
-		}
-		NOT = { exists = DU8 }
-		NOT = { capital_scope = { area = western_deadlands_8_la } }
-		}
-		every_owned_province = {
-		limit = {
-		area = western_deadlands_8_la
-		}
-		add_core = DU8
-		}
-		create_vassal = DU8
-        DU8 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        DU8 = { change_government_reform_progress = -99999 }
-		}
-		
-		if = {
-		limit = {
-		western_deadlands_9_la = {
-		owned_by = ROOT
-		}
-		NOT = { exists = DU9 }
-		NOT = { capital_scope = { area = western_deadlands_9_la } }
-		}
-		every_owned_province = {
-		limit = {
-		area = western_deadlands_9_la
-		}
-		add_core = DU9
-		}
-		create_vassal = DU9
-        DU9 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        DU9 = { change_government_reform_progress = -99999 }
-		}
-		
-		if = {
-		limit = {
-		western_deadlands_10_la = {
-		owned_by = ROOT
-		}
-		NOT = { exists = DV0 }
-		NOT = { capital_scope = { area = western_deadlands_10_la } }
-		}
-		every_owned_province = {
-		limit = {
-		area = western_deadlands_10_la
-		}
-		add_core = DV0
-		}
-		create_vassal = DV0
-        DV0 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        DV0 = { change_government_reform_progress = -99999 }
-		}
-		
-		if = {
-		limit = {
-		western_deadlands_11_la = {
-		owned_by = ROOT
-		}
-		NOT = { exists = DV1 }
-		NOT = { capital_scope = { area = western_deadlands_11_la } }
-		}
-		every_owned_province = {
-		limit = {
-		area = western_deadlands_11_la
-		}
-		add_core = DV1
-		}
-		create_vassal = DV1
-        DV1 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        DV1 = { change_government_reform_progress = -99999 }
-		}
-		
-		if = {
-		limit = {
-		western_deadlands_12_la = {
-		owned_by = ROOT
-		}
-		NOT = { exists = DV2 }
-		NOT = { capital_scope = { area = western_deadlands_12_la } }
-		}
-		every_owned_province = {
-		limit = {
-		area = western_deadlands_12_la
-		}
-		add_core = DV2
-		}
-		create_vassal = DV2
-        DV2 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        DV2 = { change_government_reform_progress = -99999 }
-		}
-		
-		if = {
-		limit = {
-		western_deadlands_13_la = {
-		owned_by = ROOT
-		}
-		NOT = { exists = DV3 }
-		NOT = { capital_scope = { area = western_deadlands_13_la } }
-		}
-		every_owned_province = {
-		limit = {
-		area = western_deadlands_13_la
-		}
-		add_core = DV3
-		}
-		create_vassal = DV3
-        DV3 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        DV3 = { change_government_reform_progress = -99999 }
-		}
-		
-		if = {
-		limit = {
-		western_deadlands_14_la = {
-		owned_by = ROOT
-		}
-		NOT = { exists = DV4 }
-		NOT = { capital_scope = { area = western_deadlands_14_la } }
-		}
-		every_owned_province = {
-		limit = {
-		area = western_deadlands_14_la
-		}
-		add_core = DV4
-		}
-		create_vassal = DV4
-        DV4 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        DV4 = { change_government_reform_progress = -99999 }
-		}
-		
-		if = {
-		limit = {
-		western_deadlands_15_la = {
-		owned_by = ROOT
-		}
-		NOT = { exists = DV4 }
-		NOT = { capital_scope = { area = western_deadlands_15_la } }
-		}
-		every_owned_province = {
-		limit = {
-		area = western_deadlands_15_la
-		}
-		add_core = DV5
-		}
-		create_vassal = DV5
-        DV5 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        DV5 = { change_government_reform_progress = -99999 }
+		create_vassal = DY9
+        DY9 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        DY9 = { change_government_reform_progress = -99999 }
 		}
 		
 	    }
@@ -761,196 +383,7 @@ country_event = {
 		}
 		}
 		
-		if = {
-		limit = {
-		northern_deadlands_1_la = {
-		owned_by = ROOT
-		}
-		NOT = { exists = DW1 }
-		NOT = { capital_scope = { area = northern_deadlands_1_la } }
-		}
-		every_owned_province = {
-		limit = {
-		area = northern_deadlands_1_la
-		}
-		add_core = DW1
-		}
-		create_vassal = DW1
-        DW1 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        DW1 = { change_government_reform_progress = -99999 }
-		}
-		
-		if = {
-		limit = {
-		northern_deadlands_2_la = {
-		owned_by = ROOT
-		}
-		NOT = { exists = DW2 }
-		NOT = { capital_scope = { area = northern_deadlands_2_la } }
-		}
-		every_owned_province = {
-		limit = {
-		area = northern_deadlands_2_la
-		}
-		add_core = DW2
-		}
-		create_vassal = DW2
-        DW2 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        DW2 = { change_government_reform_progress = -99999 }
-		}
-		
-		if = {
-		limit = {
-		northern_deadlands_3_la = {
-		owned_by = ROOT
-		}
-		NOT = { exists = DW3 }
-		NOT = { capital_scope = { area = northern_deadlands_3_la } }
-		}
-		every_owned_province = {
-		limit = {
-		area = northern_deadlands_3_la
-		}
-		add_core = DW3
-		}
-		create_vassal = DW3
-        DW3 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        DW3 = { change_government_reform_progress = -99999 }
-		}
-		
-		if = {
-		limit = {
-		northern_deadlands_4_la = {
-		owned_by = ROOT
-		}
-		NOT = { exists = DW4 }
-		NOT = { capital_scope = { area = northern_deadlands_4_la } }
-		}
-		every_owned_province = {
-		limit = {
-		area = northern_deadlands_4_la
-		}
-		add_core = DW4
-		}
-		create_vassal = DW4
-        DW4 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        DW4 = { change_government_reform_progress = -99999 }
-		}
-		
-		if = {
-		limit = {
-		northern_deadlands_5_la = {
-		owned_by = ROOT
-		}
-		NOT = { exists = DW5 }
-		NOT = { capital_scope = { area = northern_deadlands_5_la } }
-		}
-		every_owned_province = {
-		limit = {
-		area = northern_deadlands_5_la
-		}
-		add_core = DW5
-		}
-		create_vassal = DW5
-        DW5 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        DW5 = { change_government_reform_progress = -99999 }
-		}
-		
-		if = {
-		limit = {
-		northern_deadlands_6_la = {
-		owned_by = ROOT
-		}
-		NOT = { exists = DW6 }
-		NOT = { capital_scope = { area = northern_deadlands_6_la } }
-		}
-		every_owned_province = {
-		limit = {
-		area = northern_deadlands_6_la
-		}
-		add_core = DW6
-		}
-		create_vassal = DW6
-        DW6 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        DW6 = { change_government_reform_progress = -99999 }
-		}
-		
-		if = {
-		limit = {
-		northern_deadlands_7_la = {
-		owned_by = ROOT
-		}
-		NOT = { exists = DW7 }
-		NOT = { capital_scope = { area = northern_deadlands_7_la } }
-		}
-		every_owned_province = {
-		limit = {
-		area = northern_deadlands_7_la
-		}
-		add_core = DW7
-		}
-		create_vassal = DW7
-        DW7 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        DW7 = { change_government_reform_progress = -99999 }
-		}
-		
-		if = {
-		limit = {
-		northern_deadlands_8_la = {
-		owned_by = ROOT
-		}
-		NOT = { exists = DW8 }
-		NOT = { capital_scope = { area = northern_deadlands_8_la } }
-		}
-		every_owned_province = {
-		limit = {
-		area = northern_deadlands_8_la
-		}
-		add_core = DW8
-		}
-		create_vassal = DW8
-        DW8 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        DW8 = { change_government_reform_progress = -99999 }
-		}
-		
-		if = {
-		limit = {
-		northern_deadlands_9_la = {
-		owned_by = ROOT
-		}
-		NOT = { exists = DW9 }
-		NOT = { capital_scope = { area = northern_deadlands_9_la } }
-		}
-		every_owned_province = {
-		limit = {
-		area = northern_deadlands_9_la
-		}
-		add_core = DW9
-		}
-		create_vassal = DW9
-        DW9 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        DW9 = { change_government_reform_progress = -99999 }
-		}
-		
-		if = {
-		limit = {
-		northern_deadlands_10_la = {
-		owned_by = ROOT
-		}
-		NOT = { exists = DX0 }
-		NOT = { capital_scope = { area = northern_deadlands_10_la } }
-		}
-		every_owned_province = {
-		limit = {
-		area = northern_deadlands_10_la
-		}
-		add_core = DX0
-		}
-		create_vassal = DX0
-        DX0 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        DX0 = { change_government_reform_progress = -99999 }
-		}
-		
+		# Xivilai
 		if = {
 		limit = {
 		northern_deadlands_11_la = {
@@ -991,59 +424,59 @@ country_event = {
 		
 		if = {
 		limit = {
-		northern_deadlands_13_la = {
+		eastern_deadlands_1_la = {
 		owned_by = ROOT
 		}
-		NOT = { exists = DX3 }
-		NOT = { capital_scope = { area = northern_deadlands_13_la } }
+		NOT = { exists = DS1 }
+		NOT = { capital_scope = { area = eastern_deadlands_1_la } }
 		}
 		every_owned_province = {
 		limit = {
-		area = northern_deadlands_13_la
+		area = eastern_deadlands_1_la
 		}
-		add_core = DX3
+		add_core = DS1
 		}
-		create_vassal = DX3
-        DX3 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        DX3 = { change_government_reform_progress = -99999 }
+		create_vassal = DS1
+        DS1 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        DS1 = { change_government_reform_progress = -99999 }
 		}
 		
 		if = {
 		limit = {
-		northern_deadlands_14_la = {
+		northern_deadlands_1_la = {
 		owned_by = ROOT
 		}
-		NOT = { exists = DX4 }
-		NOT = { capital_scope = { area = northern_deadlands_14_la } }
+		NOT = { exists = DW1 }
+		NOT = { capital_scope = { area = northern_deadlands_1_la } }
 		}
 		every_owned_province = {
 		limit = {
-		area = northern_deadlands_14_la
+		area = northern_deadlands_1_la
 		}
-		add_core = DX4
+		add_core = DW1
 		}
-		create_vassal = DX4
-        DX4 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        DX4 = { change_government_reform_progress = -99999 }
+		create_vassal = DW1
+        DW1 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        DW1 = { change_government_reform_progress = -99999 }
 		}
 		
 		if = {
 		limit = {
-		northern_deadlands_15_la = {
+		northern_deadlands_2_la = {
 		owned_by = ROOT
 		}
-		NOT = { exists = DX4 }
-		NOT = { capital_scope = { area = northern_deadlands_15_la } }
+		NOT = { exists = DW2 }
+		NOT = { capital_scope = { area = northern_deadlands_2_la } }
 		}
 		every_owned_province = {
 		limit = {
-		area = northern_deadlands_15_la
+		area = northern_deadlands_2_la
 		}
-		add_core = DX5
+		add_core = DW2
 		}
-		create_vassal = DX5
-        DX5 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        DX5 = { change_government_reform_progress = -99999 }
+		create_vassal = DW2
+        DW2 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        DW2 = { change_government_reform_progress = -99999 }
 		}
 		
 	    }
@@ -1129,196 +562,7 @@ country_event = {
 		}
 		}
 		
-		if = {
-		limit = {
-		southern_deadlands_1_la = {
-		owned_by = ROOT
-		}
-		NOT = { exists = DY1 }
-		NOT = { capital_scope = { area = southern_deadlands_1_la } }
-		}
-		every_owned_province = {
-		limit = {
-		area = southern_deadlands_1_la
-		}
-		add_core = DY1
-		}
-		create_vassal = DY1
-        DY1 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        DY1 = { change_government_reform_progress = -99999 }
-		}
-		
-		if = {
-		limit = {
-		southern_deadlands_2_la = {
-		owned_by = ROOT
-		}
-		NOT = { exists = DY2 }
-		NOT = { capital_scope = { area = southern_deadlands_2_la } }
-		}
-		every_owned_province = {
-		limit = {
-		area = southern_deadlands_2_la
-		}
-		add_core = DY2
-		}
-		create_vassal = DY2
-        DY2 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        DY2 = { change_government_reform_progress = -99999 }
-		}
-		
-		if = {
-		limit = {
-		southern_deadlands_3_la = {
-		owned_by = ROOT
-		}
-		NOT = { exists = DY3 }
-		NOT = { capital_scope = { area = southern_deadlands_3_la } }
-		}
-		every_owned_province = {
-		limit = {
-		area = southern_deadlands_3_la
-		}
-		add_core = DY3
-		}
-		create_vassal = DY3
-        DY3 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        DY3 = { change_government_reform_progress = -99999 }
-		}
-		
-		if = {
-		limit = {
-		southern_deadlands_4_la = {
-		owned_by = ROOT
-		}
-		NOT = { exists = DY4 }
-		NOT = { capital_scope = { area = southern_deadlands_4_la } }
-		}
-		every_owned_province = {
-		limit = {
-		area = southern_deadlands_4_la
-		}
-		add_core = DY4
-		}
-		create_vassal = DY4
-        DY4 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        DY4 = { change_government_reform_progress = -99999 }
-		}
-		
-		if = {
-		limit = {
-		southern_deadlands_5_la = {
-		owned_by = ROOT
-		}
-		NOT = { exists = DY5 }
-		NOT = { capital_scope = { area = southern_deadlands_5_la } }
-		}
-		every_owned_province = {
-		limit = {
-		area = southern_deadlands_5_la
-		}
-		add_core = DY5
-		}
-		create_vassal = DY5
-        DY5 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        DY5 = { change_government_reform_progress = -99999 }
-		}
-		
-		if = {
-		limit = {
-		southern_deadlands_6_la = {
-		owned_by = ROOT
-		}
-		NOT = { exists = DY6 }
-		NOT = { capital_scope = { area = southern_deadlands_6_la } }
-		}
-		every_owned_province = {
-		limit = {
-		area = southern_deadlands_6_la
-		}
-		add_core = DY6
-		}
-		create_vassal = DY6
-        DY6 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        DY6 = { change_government_reform_progress = -99999 }
-		}
-		
-		if = {
-		limit = {
-		southern_deadlands_7_la = {
-		owned_by = ROOT
-		}
-		NOT = { exists = DY7 }
-		NOT = { capital_scope = { area = southern_deadlands_7_la } }
-		}
-		every_owned_province = {
-		limit = {
-		area = southern_deadlands_7_la
-		}
-		add_core = DY7
-		}
-		create_vassal = DY7
-        DY7 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        DY7 = { change_government_reform_progress = -99999 }
-		}
-		
-		if = {
-		limit = {
-		southern_deadlands_8_la = {
-		owned_by = ROOT
-		}
-		NOT = { exists = DY8 }
-		NOT = { capital_scope = { area = southern_deadlands_8_la } }
-		}
-		every_owned_province = {
-		limit = {
-		area = southern_deadlands_8_la
-		}
-		add_core = DY8
-		}
-		create_vassal = DY8
-        DY8 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        DY8 = { change_government_reform_progress = -99999 }
-		}
-		
-		if = {
-		limit = {
-		southern_deadlands_9_la = {
-		owned_by = ROOT
-		}
-		NOT = { exists = DY9 }
-		NOT = { capital_scope = { area = southern_deadlands_9_la } }
-		}
-		every_owned_province = {
-		limit = {
-		area = southern_deadlands_9_la
-		}
-		add_core = DY9
-		}
-		create_vassal = DY9
-        DY9 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        DY9 = { change_government_reform_progress = -99999 }
-		}
-		
-		if = {
-		limit = {
-		southern_deadlands_10_la = {
-		owned_by = ROOT
-		}
-		NOT = { exists = DZ0 }
-		NOT = { capital_scope = { area = southern_deadlands_10_la } }
-		}
-		every_owned_province = {
-		limit = {
-		area = southern_deadlands_10_la
-		}
-		add_core = DZ0
-		}
-		create_vassal = DZ0
-        DZ0 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        DZ0 = { change_government_reform_progress = -99999 }
-		}
-		
+		#Arachnid
 		if = {
 		limit = {
 		southern_deadlands_11_la = {
@@ -1400,7 +644,7 @@ country_event = {
 		southern_deadlands_15_la = {
 		owned_by = ROOT
 		}
-		NOT = { exists = DZ4 }
+		NOT = { exists = DZ5 }
 		NOT = { capital_scope = { area = southern_deadlands_15_la } }
 		}
 		every_owned_province = {

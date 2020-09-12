@@ -93,7 +93,7 @@ country_event = {
 	trigger = {
 		religion = chimer_pantheon
 		NOT = { has_country_flag = chimer_fetish_cults_3_flag }
-		owns = 8019
+		owns = 4009
 	}
 	
 	mean_time_to_happen = {
@@ -102,8 +102,8 @@ country_event = {
 	
 	immediate = {
 	    set_country_flag = chimer_fetish_cults_3_flag
-		if = { limit = { 8019 = { num_free_building_slots = 1 NOT = { has_building = cathedral } } }}
-		8019 = {
+		if = { limit = { 4009 = { num_free_building_slots = 1 NOT = { has_building = cathedral } } }}
+		4009 = {
 		add_building = cathedral
 		}
 	}
@@ -135,7 +135,7 @@ country_event = {
 	trigger = {
 		religion = chimer_pantheon
 		NOT = { has_country_flag = chimer_fetish_cults_4_flag }
-		owns = 7946
+		owns = 3936
 	}
 	
 	mean_time_to_happen = {
@@ -144,8 +144,8 @@ country_event = {
 	
 	immediate = {
 	    set_country_flag = chimer_fetish_cults_4_flag
-		if = { limit = { 7946 = { num_free_building_slots = 1 NOT = { has_building = cathedral } } }}
-		7946 = {
+		if = { limit = { 3936 = { num_free_building_slots = 1 NOT = { has_building = cathedral } } }}
+		3936 = {
 		add_building = cathedral
 		}
 	}

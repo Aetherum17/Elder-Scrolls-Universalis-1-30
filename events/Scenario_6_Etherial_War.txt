@@ -48,7 +48,7 @@ country_event = {
 	    NOT = { has_country_flag = es_6_scenario.3_flag }
         culture_group = dwemer_cg
 		has_global_flag = etherial_crisis_flag
-		NOT = { owns = 7419 }
+		NOT = { owns = 2949 }
 		has_country_modifier = 06_etherial_crisis
     }
 
@@ -63,7 +63,7 @@ country_event = {
 	option = {
 		name = "es_6_scenario.3.a"
 		ai_chance = { factor = 50 }
-		add_core = 7419
+		add_core = 2949
 	}
 	option = {
 		name = "es_6_scenario.3.b"
@@ -83,8 +83,8 @@ country_event = {
 	     NOT = { has_country_flag = es_6_scenario.4_flag }
         culture_group = dwemer_cg
 		has_global_flag = etherial_crisis_flag
-		NOT = { owns = 7419 }
-		is_core = 7419
+		NOT = { owns = 2949 }
+		is_core = 2949
 		any_neighbor_country = {
 		is_at_war = no
 		}
@@ -116,7 +116,7 @@ country_event = {
 		name = "es_6_scenario.4.b"
 		ai_chance = { factor = 50 }
 		add_prestige = -50
-		remove_core = 7419
+		remove_core = 2949
 	}
 }
 
@@ -284,14 +284,14 @@ country_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-	    7695 = { owner = { save_event_target_as = 7695_owner } }
+	    3315 = { owner = { save_event_target_as = 3315_owner } }
 	}
 
 	option = {
 		name = "es_6_scenario.10.a"
-		7695 = { add_core = ROOT }
-		if = { limit = { NOT = { truce_with = event_target:7695_owner } NOT = { alliance_with = event_target:7695_owner } NOT = { is_subject_of = event_target:7695_owner } }
-		declare_war_with_cb = { who = event_target:7695_owner casus_belli = cb_es_scenario } 
+		3315 = { add_core = ROOT }
+		if = { limit = { NOT = { truce_with = event_target:3315_owner } NOT = { alliance_with = event_target:3315_owner } NOT = { is_subject_of = event_target:3315_owner } }
+		declare_war_with_cb = { who = event_target:3315_owner casus_belli = cb_es_scenario } 
 		}
 	}
 	option = {
