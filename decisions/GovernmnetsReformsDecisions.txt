@@ -374,6 +374,11 @@ country_decisions = {
 			NOT = { owned_by = ROOT }
 		}
 		allow =  {
+			owns = 1120
+			owns = 1206
+			owns = 1251
+			owns = 5616
+			owns = 1161
 			adm = 7
 		}
 		effect = {
@@ -382,6 +387,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	found_census_and_excise_comission = {
@@ -407,6 +413,11 @@ country_decisions = {
 			NOT = { owned_by = ROOT }
 		}
 		allow =  {
+			owns = 1120
+			owns = 1206
+			owns = 1251
+			owns = 5616
+			owns = 1161
 			dip = 7
 		}
 		effect = {
@@ -415,6 +426,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	found_office_of_introductory_studies = {
@@ -440,6 +452,11 @@ country_decisions = {
 			NOT = { owned_by = ROOT }
 		}
 		allow =  {
+			owns = 1120
+			owns = 1206
+			owns = 1251
+			owns = 5616
+			owns = 1161
 			mil = 7
 		}
 		effect = {
@@ -448,6 +465,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 300
 	}
 	
 	invite_thieves_guild = {
@@ -472,10 +490,10 @@ country_decisions = {
 	invite_assasins_guild = {
 		major = yes
 		potential = {
-			NOT = { prestige = 50 }
+			NOT = { prestige = -50 }
 		}
 		allow =  {
-			NOT = { prestige = 75 }
+			NOT = { prestige = -75 }
 			stability = 3
 			years_of_income = 5
 		}
