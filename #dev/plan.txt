@@ -1,3 +1,5 @@
+@ESU Newswire @WWU Newswire @GE Newswire @TGE Newswire @LoE Newswire 
+
 chimer_group = {
     chimer_pantheon - Catholic
 }
@@ -318,6 +320,60 @@ Colonial Hammerfell: native_size = 15 native_ferocity = 5 native_hostileness = 7
 	2: harmony_group
 	po_tun_pantheon
 	unknown_pantheon
+	
+#Trade Node:
+rift_lr
+nordic_coast_lr
+central_coldharbour_lr
+golden_coast_lr
+western_syrodiil_lr
+eastern_syrodiil_lr
+central_syrodiil_lr
+jerall_mountains_lr
+valus_mountains_lr
+hgh_rock_lr
+wrothgar_lr
+central_atmora_lr
+northern_valenwood_lr
+southern_valenwood_lr 
+great_planes_lr
+summerset_lr
+auridon_lr
+northern_islands_lr
+velothi_mountains_lr
+deshaan_lr 
+corten_heights_lr
+morrowind_lr
+dragontail_mountains_lr
+llothanis_peninsula_lr
+tsakara_lr
+
+#Colonial:
+vvardenfell_lr
+anequina_lr
+pelletine_lr
+alikr_desert_lr
+upper_tsakara_lr
+c!southern_coldharbour_lr
+c!eastern_coldharbour_lr
+c!western_coldharbour_lr
+c!northern_coldharbour_lr
+c!eastern_deadlands_lr 
+c!western_deadlands_lr
+c!northern_deadlands_lr 
+c!southern_deadlands_lr
+c!western_atmora_lr
+c!eastern_atmora_lr
+c!yokuda_lr
+c!pyandonea_lr
+black_marsh_lr
+shadowfen_lr
+murkmire_lr
+reach_lr
+southern_kamal_lr
+northern_kamal_lr
+thousand_lr
+po_tun_lr   
 
 	
 ######################################################
@@ -1057,14 +1113,37 @@ Tribal:
 Nomad:
 1) Tribes
 
-1) Nobility - 127 0 110
-2) Mages - 255 106 0
-3) Burgers - 0 19 127
-4) Mercenaries - 0 127 14
-5) Peasants - 128 128 128
-2) Merchants - 0 148 255
-3) Minorities - 0 255 255
-4) Citizens - 76 255 0
-1) Clergy - 255 216 0
-5) Warriors - 255 0 0
-1) Tribes - 0 0 0
+    rajput_loyalty_modifier
+    dhimmi_loyalty_modifier
+    nomadic_tribes_loyalty_modifier
+	cossacks_loyalty_modifier
+	burghers_loyalty_modifier
+	vaisyas_loyalty_modifier
+	nobles_loyalty_modifier
+	maratha_loyalty_modifier
+	church_loyalty_modifier
+	brahmins_hindu_loyalty_modifier
+	brahmins_muslim_loyalty_modifier
+	brahmins_other_loyalty_modifier
+
+    Holy Order:
+	Chimer:
+	4) Order of Doctrine and Ordination - Dunmer Mages - ADM
+	5) Order of Inquisition - Dunmer Knights - MIL
+	6) Order of the Watch - Dunmer Infantry - DIP
+	##################################################
+	ADM:
+	2) Order of the Lamp - ADM
+	7) Beldama Wyrd - Mages - ADM - capital_scope = { superregion = high_rock_superregion }
+	12) Sapiarchs - Altmer Mages - ADM - capital_scope = { superregion = summerset_islands_superregion }
+	##################################################
+	MIL:
+	1) Order of the Hour - MIL - NOT = { capital_scope = { superregion = hammerfell_superregion } } NOT = { OR = { culture_group = half_blood_cg religion_group = polytheistic_group } }
+	9) Order of Saint Pelin - MIL - NOT = { capital_scope = { superregion = hammerfell_superregion } } OR = { culture_group = half_blood_cg religion_group = polytheistic_group }
+	10) Order of Diagna - Redguard Knights - capital_scope = { superregion = hammerfell_superregion } 
+	##################################################
+	DIP:
+	3) Vampyrum Order - DIP - NOT = { culture_group = yokudan-redguardian_cg } OR = { capital_scope = { superregion = cyrodiil_superregion } religion_group = daedric_group_1 }
+	8) Order of the Raven - DIP - NOT = { culture_group = yokudan-redguardian_cg } NOT = { OR = { capital_scope = { superregion = cyrodiil_superregion } religion_group = daedric_group_1 } }
+	11) Order of the Candle - DIP - culture_group = yokudan-redguardian_cg
+

@@ -147,3 +147,32 @@ cb_es_witch_hunting = {
 
 	war_goal = es_witch_hunting
 }
+
+cb_es_daedric_invasion = {
+	valid_for_subject = no
+
+	prerequisites = {
+		has_country_modifier = daedric_invasion
+		OR = {
+		FROM = { is_neighbor_of = ROOT }
+		AND = {
+			owns = 3188
+			FROM = { owns = 1206 }
+		}
+		AND = {
+			owns = 4075
+			FROM = { owns = 6846 }
+		}
+		AND = {
+			owns = 4075
+			FROM = { owns = 1202 }
+		}
+		AND = {
+			owns = 4075
+			FROM = { owns = 6485 }
+		}
+		}
+	}
+
+	war_goal = es_daedric_invasion
+}

@@ -23,6 +23,7 @@ country_decisions = {
 			province_id = 2710
 			province_id = 2727
 			}
+			NOT = { owned_by = ROOT }
 		}
 		allow = {
 			is_free_or_tributary_trigger = yes
@@ -75,9 +76,10 @@ country_decisions = {
             province_id = 4075
 			province_id = 3877
 			province_id = 3764
-			province_id = 4196
-			province_id = 4328
+			province_id = 4143
+			province_id = 4337
 			}
+			NOT = { owned_by = ROOT }
 		}
 		allow = {
 			is_free_or_tributary_trigger = yes
@@ -85,8 +87,8 @@ country_decisions = {
 			owns_core_province = 4075
 			owns_core_province = 3877
 			owns_core_province = 3764
-			owns_core_province = 4196
-			owns_core_province = 4328
+			owns_core_province = 4143
+			owns_core_province = 4337
 		}
 		effect = {
 			change_tag = DEA
@@ -129,6 +131,7 @@ country_decisions = {
 			province_id = 2756
 			province_id = 2834
 			}
+			NOT = { owned_by = ROOT }
 		}
 		allow = {
 			is_free_or_tributary_trigger = yes
@@ -179,6 +182,7 @@ country_decisions = {
 			province_id = 4353
 			province_id = 4345
 			}
+			NOT = { owned_by = ROOT }
 		}
 		allow = {
 			is_free_or_tributary_trigger = yes
@@ -229,6 +233,7 @@ country_decisions = {
 			province_id = 4196
 			province_id = 4143
 			}
+			NOT = { owned_by = ROOT }
 		}
 		allow = {
 			is_free_or_tributary_trigger = yes
@@ -279,6 +284,7 @@ country_decisions = {
 			province_id = 4174
 			province_id = 3764
 			}
+			NOT = { owned_by = ROOT }
 		}
 		allow = {
 			is_free_or_tributary_trigger = yes
@@ -329,6 +335,7 @@ country_decisions = {
 			province_id = 4156
 			province_id = 3895
 			}
+			NOT = { owned_by = ROOT }
 		}
 		allow = {
 			is_free_or_tributary_trigger = yes
@@ -379,6 +386,7 @@ country_decisions = {
 			province_id = 2866
 			province_id = 2858
 			}
+			NOT = { owned_by = ROOT }
 		}
 		allow = {
 			is_free_or_tributary_trigger = yes
@@ -429,6 +437,7 @@ country_decisions = {
 			province_id = 2775
 			province_id = 2799
 			}
+			NOT = { owned_by = ROOT }
 		}
 		allow = {
 			is_free_or_tributary_trigger = yes
@@ -479,6 +488,7 @@ country_decisions = {
 			province_id = 3157
 			province_id = 3147
 			}
+			NOT = { owned_by = ROOT }
 		}
 		allow = {
 			is_free_or_tributary_trigger = yes
@@ -529,6 +539,7 @@ country_decisions = {
 			province_id = 2877
 			province_id = 2883
 			}
+			NOT = { owned_by = ROOT }
 		}
 		allow = {
 			is_free_or_tributary_trigger = yes
