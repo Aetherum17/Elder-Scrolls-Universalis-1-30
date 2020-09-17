@@ -1,0 +1,33 @@
+wild_hunt_flight = {
+	culture_conversion_cost = -0.25
+	tolerance_heathen = 1
+	tolerance_heretic = 1 
+}
+
+wild_hunt_fight = {
+	land_morale = 0.1
+	discipline = -0.1
+	shock_damage_received = 0.1
+	fire_damage_received = 0.1
+}
+
+wild_hunt_end = { min_autonomy_in_territories = -0.05 }
+
+wild_hunt_backlash = {
+	land_attrition = 0.25
+	hostile_attrition = 2
+}
+
+wild_hunt_retaliate = {
+	land_morale = 0.1
+	global_manpower_modifier = -0.1
+	production_efficiency = -0.1
+}
+
+wild_hunt_hide = {
+	defensiveness = 0.1
+	all_power_cost = 0.1
+	prestige_decay = 0.02
+}
+
+wild_hunt_bosmerrites = { global_missionary_strength = 0.01 }

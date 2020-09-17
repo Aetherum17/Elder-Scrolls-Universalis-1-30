@@ -33,12 +33,8 @@ heist_nation = {
 	}
 
 	ai_will_do = {
-		factor = 1
-		modifier = { factor = 0 NOT = { is_enemy = FROM } }
-		modifier = { factor = 0 NOT = { prestige = 0 } }
-		modifier = { factor = 1.5 NOT = { prestige = 15 } }
-		modifier = { factor = 1.5 NOT = { prestige = 35 } }
-		modifier = { factor = 1.5 NOT = { prestige = 50 } }
+		is_enemy = FROM 
+		prestige = 0
 	}
 }
 
@@ -75,12 +71,8 @@ scam_nation = {
 	}
 
 	ai_will_do = {
-		factor = 1
-		modifier = { factor = 0 NOT = { is_enemy = FROM } }
-		modifier = { factor = 0 NOT = { prestige = 0 } }
-		modifier = { factor = 1.5 NOT = { prestige = 15 } }
-		modifier = { factor = 1.5 NOT = { prestige = 35 } }
-		modifier = { factor = 1.5 NOT = { prestige = 50 } }
+		is_enemy = FROM 
+		prestige = 0
 	}
 }
 
@@ -117,12 +109,8 @@ intimidate_nation = {
 	}
 
 	ai_will_do = {
-		factor = 1
-		modifier = { factor = 0 NOT = { is_enemy = FROM } }
-		modifier = { factor = 0 NOT = { prestige = 0 } }
-		modifier = { factor = 1.5 NOT = { prestige = 15 } }
-		modifier = { factor = 1.5 NOT = { prestige = 35 } }
-		modifier = { factor = 1.5 NOT = { prestige = 50 } }
+		is_enemy = FROM 
+		prestige = 0
 	}
 }
 
@@ -161,12 +149,8 @@ assasinate_ruler = {
 	}
 
 	ai_will_do = {
-		factor = 1
-		modifier = { factor = 0 NOT = { is_enemy = FROM } }
-		modifier = { factor = 0 NOT = { prestige = 0 } }
-		modifier = { factor = 1.5 NOT = { prestige = 15 } }
-		modifier = { factor = 1.5 NOT = { prestige = 35 } }
-		modifier = { factor = 1.5 NOT = { prestige = 50 } }
+		is_enemy = FROM 
+		prestige = 35
 	}
 }
 
@@ -204,12 +188,8 @@ assasinate_heir = {
 	}
 
 	ai_will_do = {
-		factor = 1
-		modifier = { factor = 0 NOT = { is_enemy = FROM } }
-		modifier = { factor = 0 NOT = { prestige = 0 } }
-		modifier = { factor = 1.5 NOT = { prestige = 15 } }
-		modifier = { factor = 1.5 NOT = { prestige = 35 } }
-		modifier = { factor = 1.5 NOT = { prestige = 50 } }
+		is_enemy = FROM 
+		prestige = 25
 	}
 }
 
@@ -245,7 +225,7 @@ kidnap_advisor = {
 	}
 
 	ai_will_do = {
-		factor = 0
+		always = no 
 	}
 }
 
@@ -282,8 +262,7 @@ bless_nation = {
 	}
 
 	ai_will_do = {
-		factor = 1
-		modifier = { factor = 0 is_enemy = FROM }
+		NOT = { is_enemy = FROM }
 	}
 }
 
@@ -318,8 +297,7 @@ dismiss_nation = {
 	}
 
 	ai_will_do = {
-		factor = 1
-		modifier = { factor = 0 NOT = { is_enemy = FROM } }
+		is_enemy = FROM
 	}
 }
 
@@ -354,8 +332,6 @@ encourage_nation = {
 	}
 
 	ai_will_do = {
-		factor = 1
-		modifier = { factor = 0 is_enemy = FROM }
-		modifier = { factor = 0 FROM = { is_at_war = no } }
+		NOT = { is_enemy = FROM }
 	}
 }

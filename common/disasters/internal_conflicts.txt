@@ -7,9 +7,11 @@ internal_conflicts = {
 	can_start = {
 		has_any_disaster = no
 		unrest = 1
+		NOT = { stability = 2 }
 		OR = {
-		NOT = { stability = 0 }
-		AND = { NOT = { adm = 3 } NOT = { dip = 3 } NOT = { mil = 3 } }
+			NOT = { adm = 3 } 
+			NOT = { dip = 3 }
+			NOT = { mil = 3 }
 		}
 	}
 	
@@ -17,6 +19,7 @@ internal_conflicts = {
 		OR = {
 			has_any_disaster = yes
 			NOT = { unrest = 0 }
+			stability = 3
 		}
 	}
 	
@@ -36,6 +39,18 @@ internal_conflicts = {
 		modifier = {
 			factor = 0.5
 			NOT = { land_maintenance = 1.0 }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { adm = 3 } 
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { dip = 3 }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { mil = 3 }
 		}
 	}
 

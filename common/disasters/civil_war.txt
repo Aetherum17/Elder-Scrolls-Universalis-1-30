@@ -7,32 +7,32 @@ civil_war = {
 	can_start = {
 		has_any_disaster = no
 		average_home_autonomy = 30
-		if = {
-			limit = {
-				has_reform = celestial_empire
-				has_dlc = "Mandate of Heaven"
-			}
-			NOT = { imperial_mandate = 50 }
-			else = {
-				NOT = { legitimacy_or_horde_unity = 50 }
-			}
+		
+		OR = {
+		NOT = { stability = 0 }
+		AND = { government = monarchy NOT = { legitimacy = 50 } }
+		AND = { government = republic NOT = { republican_tradition = 50 } }
+		AND = { government = theocracy has_dlc = "Common Sense" NOT = { devotion = 50 } }
+		AND = { is_nomad = yes has_dlc = "The Cossacks" NOT = { horde_unity = 50 } }
+		AND = { is_nomad = yes NOT = { has_dlc = "The Cossacks" } NOT = { legitimacy = 50 } }
+		AND = { is_emperor_of_china = yes has_dlc = "Mandate of Heaven" NOT = { meritocracy = 50 } } 
 		}
+		
 	}
 	
 	can_stop = {
 		OR = {
 			has_any_disaster = yes
-			if = {
-				limit = {
-					has_dlc = "Mandate of Heaven"
-					has_reform = celestial_empire
-				}
-				imperial_mandate = 75
-				else = {
-					legitimacy_or_horde_unity = 75
-				}
+			OR = {
+				AND = { government = monarchy legitimacy = 75 }
+				AND = { government = republic republican_tradition = 75 }
+				AND = { government = theocracy has_dlc = "Common Sense" devotion = 75 }
+				AND = { is_nomad = yes has_dlc = "The Cossacks" horde_unity = 75 }
+				AND = { is_nomad = yes NOT = { has_dlc = "The Cossacks" } legitimacy = 75 }
+				AND = { is_emperor_of_china = yes has_dlc = "Mandate of Heaven" meritocracy = 75 } 
 			}
-			has_regency = yes
+		}
+		has_regency = yes
 		}
 	}
 	
@@ -64,16 +64,13 @@ civil_war = {
 	}
 	
 	can_end = {
-		if = {
-			limit = {
-				has_dlc = "Mandate of Heaven"
-				has_reform = celestial_empire
-			}
-			imperial_mandate = 75
-			else = {
-				legitimacy_or_horde_unity = 90
-			}
-		}
+		stability = 3
+		AND = { government = monarchy legitimacy = 95 }
+		AND = { government = republic republican_tradition = 95 }
+		AND = { government = theocracy has_dlc = "Common Sense" devotion = 95 }
+		AND = { is_nomad = yes has_dlc = "The Cossacks" horde_unity = 95 }
+		AND = { is_nomad = yes NOT = { has_dlc = "The Cossacks" } legitimacy = 95 }
+		AND = { is_emperor_of_china = yes has_dlc = "Mandate of Heaven" meritocracy = 95 } 
 	}
 	
 	modifier = {

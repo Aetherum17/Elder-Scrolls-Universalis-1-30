@@ -1,0 +1,148 @@
+namespace = wild_hunt
+
+country_event = {
+	id = wild_hunt.1
+	title = "wild_hunt.1.t"
+	desc = "wild_hunt.1.d"
+	picture = WILDHUNT.1_eventPicture
+
+	is_triggered_only = yes
+	
+	immediate = { add_stability = -3 }
+	
+	option = {
+		name = "wild_hunt.1.flight"
+		ai_chance = { factor = 1 }
+		add_prestige = -20
+		add_country_modifier = {
+			name = "wild_hunt_flight"
+			duration = 1825
+		}
+	}
+	option = {
+		name = "wild_hunt.1.fight"
+		ai_chance = { factor = 1 }
+		add_prestige = 10
+		add_country_modifier = {
+			name = "wild_hunt_fight"
+			duration = 1825
+		}
+	}
+}
+
+country_event = {
+	id = wild_hunt.2
+	title = "wild_hunt.2.t"
+	desc = "wild_hunt.2.d"
+	picture = WILDHUNT.2_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "wild_hunt.2.end"
+		ai_chance = { factor = 1 }
+		add_stability = 1
+		add_country_modifier = {
+			name = "wild_hunt_end"
+			duration = 1825
+		}
+	}
+}
+
+country_event = {
+	id = wild_hunt.3
+	title = "wild_hunt.3.t"
+	desc = "wild_hunt.3.d"
+	picture = WILDHUNT.3_eventPicture
+	
+	is_triggered_only = yes
+	trigger = {
+		primary_culture = bosmer
+		any_owned_province = {
+			OR = { 
+				region = northern_valenwood_lr  
+				region = southern_valenwood_lr
+			}
+		}
+	}
+	mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 0.8
+			NOT = { stability = 0 }
+		}
+	}
+	
+	immediate = {
+		add_country_modifier = {
+		name = "wild_hunt_backlash"
+		duration = 365
+		}
+	}
+	option = {
+		name = "wild_hunt.3.sac"
+		ai_chance = { factor = 25 }
+		add_stability = 1
+		add_prestige = -10
+		add_legitimacy = -25
+	}
+	option = {
+		name = "wild_hunt.3.ret"
+		ai_chance = { factor = 50 }
+		add_country_modifier = {
+			name = "wild_hunt_retaliate"
+			duration = 365
+		}
+	}
+	option = {
+		name = "wild_hunt.3.hid"
+		ai_chance = { factor = 25 }
+		add_country_modifier = {
+			name = "wild_hunt_hide"
+			duration = 365
+		}
+	}
+}		
+
+country_event = {
+	id = wild_hunt.4
+	title = "wild_hunt.4.t"
+	desc = "wild_hunt.4.d"
+	picture = WILDHUNT.4_eventPicture
+
+	is_triggered_only = yes
+	trigger = {
+		religion = bosmer_pantheon
+		any_owned_province = {
+			OR = {
+				region = northern_valenwood_lr  
+				region = southern_valenwood_lr
+			}
+		}
+	}
+	mean_time_to_happen = {
+		months = 24
+		modifier = {
+		factor = 0.8
+		stability = 1
+		}
+	}
+	
+	immediate = {
+		add_country_modifier = {
+			name = "wild_hunt_bosmerrites"
+			duration = 365
+		}
+	}
+	option = {
+		name = "wild_hunt.4.stab"
+		ai_chance = { factor = 1 }
+		add_stability = 1
+		add_prestige = 5
+	}
+	option = {
+		name = "wild_hunt.4.cash"
+		ai_chance = { factor = 1 }
+		add_years_of_income = 0.75
+	}
+}
