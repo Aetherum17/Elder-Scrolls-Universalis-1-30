@@ -5,13 +5,7 @@ estate_jains_monopoly_of_textiles = {
 	is_valid = {
 		has_dlc = "Emperor"
 		any_owned_province = {
-			OR = {
-				trade_goods = cloth
-				trade_goods = silk
-			}
-			NOT = { has_province_modifier = estate_burghers_monopoly_of_textiles_mod }
-			NOT = { has_province_modifier = estate_vaisyas_monopoly_of_textiles_mod }
-			NOT = { has_province_modifier = estate_jains_monopoly_of_textiles_mod }
+			trade_goods = salt
 		}
 	}
 	can_select = {
@@ -25,10 +19,7 @@ estate_jains_monopoly_of_textiles = {
 		add_years_of_owned_provinces_production_income = {
 			years = 8
 			trigger = {
-				OR = {
-					trade_goods = cloth
-					trade_goods = silk
-				}
+				trade_goods = salt
 			}
 			custom_tooltip = MONOPOLY_INCOME_CLOTH_DESC
 		}
@@ -36,13 +27,7 @@ estate_jains_monopoly_of_textiles = {
 		hidden_effect = {
 			every_owned_province = {
 				limit = {
-					OR = {
-						trade_goods = cloth
-						trade_goods = silk
-					}
-					NOT = { has_province_modifier = estate_burghers_monopoly_of_textiles_mod }
-			        NOT = { has_province_modifier = estate_vaisyas_monopoly_of_textiles_mod }
-			        NOT = { has_province_modifier = estate_jains_monopoly_of_textiles_mod }
+					trade_goods = salt
 				}
 				add_province_modifier = {
 					name = estate_jains_monopoly_of_textiles_mod
@@ -94,10 +79,7 @@ estate_jains_monopoly_of_dyes = {
 	is_valid = {
 		has_dlc = "Emperor"
 		any_owned_province = {
-			trade_goods = dyes
-			NOT = { has_province_modifier = estate_burghers_monopoly_of_dyes_mod }
-			NOT = { has_province_modifier = estate_vaisyas_monopoly_of_dyes_mod }
-			NOT = { has_province_modifier = estate_jains_monopoly_of_dyes_mod }
+			trade_goods = herbs
 		}
 	}
 	can_select = {
@@ -111,7 +93,7 @@ estate_jains_monopoly_of_dyes = {
 		add_years_of_owned_provinces_production_income = {
 			years = 8
 			trigger = {
-				trade_goods = dyes
+				trade_goods = herbs
 			}
 			custom_tooltip = MONOPOLY_INCOME_DYE_DESC
 		}
@@ -119,10 +101,7 @@ estate_jains_monopoly_of_dyes = {
 		hidden_effect = {
 			every_owned_province = {
 				limit = {
-					trade_goods = dyes
-					NOT = { has_province_modifier = estate_burghers_monopoly_of_dyes_mod }
-			        NOT = { has_province_modifier = estate_vaisyas_monopoly_of_dyes_mod }
-			        NOT = { has_province_modifier = estate_jains_monopoly_of_dyes_mod }
+					trade_goods = herbs
 				}
 				add_province_modifier = {
 					name = estate_jains_monopoly_of_dyes_mod
@@ -174,10 +153,7 @@ estate_jains_monopoly_of_glass = {
 	is_valid = {
 		has_dlc = "Emperor"
 		any_owned_province = {
-			trade_goods = glass
-			NOT = { has_province_modifier = estate_burghers_monopoly_of_glass_mod }
-			NOT = { has_province_modifier = estate_vaisyas_monopoly_of_glass_mod }
-			NOT = { has_province_modifier = estate_jains_monopoly_of_glass_mod }
+			trade_goods = mushrooms
 		}
 	}
 	can_select = {
@@ -191,7 +167,7 @@ estate_jains_monopoly_of_glass = {
 		add_years_of_owned_provinces_production_income = {
 			years = 8
 			trigger = {
-				trade_goods = glass
+				trade_goods = mushrooms
 			}
 			custom_tooltip = MONOPOLY_INCOME_GLASS_DESC
 		}
@@ -199,10 +175,7 @@ estate_jains_monopoly_of_glass = {
 		hidden_effect = {
 			every_owned_province = {
 				limit = {
-					trade_goods = glass
-			        NOT = { has_province_modifier = estate_burghers_monopoly_of_glass_mod }
-			        NOT = { has_province_modifier = estate_vaisyas_monopoly_of_glass_mod }
-			        NOT = { has_province_modifier = estate_jains_monopoly_of_glass_mod }
+					trade_goods = mushrooms
 				}
 				add_province_modifier = {
 					name = estate_jains_monopoly_of_glass_mod
@@ -254,10 +227,7 @@ estate_jains_monopoly_of_paper = {
 	is_valid = {
 		has_dlc = "Emperor"
 		any_owned_province = {
-			trade_goods = paper
-			NOT = { has_province_modifier = estate_burghers_monopoly_of_paper_mod }
-			NOT = { has_province_modifier = estate_vaisyas_monopoly_of_paper_mod }
-			NOT = { has_province_modifier = estate_jains_monopoly_of_paper_mod }
+			trade_goods = wood
 		}
 	}
 	can_select = {
@@ -271,7 +241,7 @@ estate_jains_monopoly_of_paper = {
 		add_years_of_owned_provinces_production_income = {
 			years = 8
 			trigger = {
-				trade_goods = paper
+				trade_goods = wood
 			}
 			custom_tooltip = MONOPOLY_INCOME_PAPER_DESC
 		}
@@ -279,10 +249,7 @@ estate_jains_monopoly_of_paper = {
 		hidden_effect = {
 			every_owned_province = {
 				limit = {
-					trade_goods = paper
-					NOT = { has_province_modifier = estate_burghers_monopoly_of_paper_mod }
-			        NOT = { has_province_modifier = estate_vaisyas_monopoly_of_paper_mod }
-			        NOT = { has_province_modifier = estate_jains_monopoly_of_paper_mod }
+					trade_goods = wood
 				}
 				add_province_modifier = {
 					name = estate_jains_monopoly_of_paper_mod

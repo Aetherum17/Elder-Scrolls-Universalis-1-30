@@ -72,12 +72,6 @@ revolutionary_rebels = {
 		}
 		modifier = {
 			factor = 5.0
-			owner = {
-				has_disaster = aspiration_for_liberty
-			}
-		}
-		modifier = {
-			factor = 5.0
 			owner = { has_disaster = revolution }
 		}		
 		
@@ -173,10 +167,6 @@ revolutionary_rebels = {
 				}
 			}
 		}
-		else_if = {
-			limit = { has_disaster = french_revolution }
-			country_event = { id = french_revolution.2 }
-		}
 		else = {
 			if = {
 				limit = {
@@ -193,12 +183,6 @@ revolutionary_rebels = {
 			define_ruler = {
 				rebel = yes
 			}
-		}
-		if = {
-			limit = { has_disaster = aspiration_for_liberty }
-			end_disaster = aspiration_for_liberty
-			remove_country_modifier = reduceed_war_expenditures
-			remove_country_modifier = decreased_morale
 		}
 		if = {
 			limit = {

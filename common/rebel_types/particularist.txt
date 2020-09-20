@@ -49,13 +49,7 @@ particularist_rebels = {
 					has_country_modifier = lost_mandate_of_heaven
 				}
 			}
-		}	
-		modifier = {
-			factor = 20.0
-			owner = { 
-				has_disaster = the_dacke_feud
-			}
-		}	
+		}		
 		modifier = {
 			factor = 0.2
 			is_core = owner
@@ -143,12 +137,6 @@ particularist_rebels = {
 					estate = estate_burghers
 					territory = 40
 				}
-			}
-		}
-		modifier = {
-			factor = 5
-			owner = {
-				has_disaster = court_and_country
 			}
 		}
 	}
@@ -273,15 +261,6 @@ particularist_rebels = {
 				influence = 15
 				desc = EST_VAL_SUCCESFUL_PARTICULARISTS
 			}
-		}
-		if = {
-			limit = {
-				has_disaster = court_and_country
-			}
-			custom_tooltip = bad_ending_court_and_country_tooltip
-			set_country_flag = court_and_country_surrendered_to_rebels
-			hidden_effect = { country_event = { id = court_and_country_events.100 } }
-			end_disaster = court_and_country
 		}
 		if = {
 			limit = { has_estate = estate_dhimmi }

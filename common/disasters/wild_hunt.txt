@@ -4,6 +4,7 @@ wild_hunt = {
 		NOT = { primary_culture = bosmer }
 		NOT = { primary_culture = imga } 
 		NOT = { primary_culture = wood_orsimer }
+		NOT = { has_country_flag = had_wild_hunt_flag }
 		any_owned_province = {
 			OR = { 
 				region = northern_valenwood_lr
@@ -14,32 +15,18 @@ wild_hunt = {
 	
 	can_start = {
 		NOT = { accepted_culture = bosmer } 
-		NOT = { accepted_culture = imga } 
-		NOT = { accepted_culture = wood_orsimer }
 		num_of_owned_provinces_with = {
 			value = 25
-			OR = {
-				culture = bosmer
-				culture = imga
-				culture = wood_orsimer
-			}	
+			culture = bosmer	
 		}
 	}
 	
 	can_stop = { 
-		OR = {
-			accepted_culture = bosmer
-			accepted_culture = imga
-			accepted_culture = wood_orsimer
-		}
+		accepted_culture = bosmer
 		NOT = { 
 			num_of_owned_provinces_with = { 
 				value = 25
-				OR = {
-					culture = bosmer
-					culture = imga
-					culture = wood_orsimer
-				}
+				culture = bosmer
 			}
 		}
 	}
@@ -76,21 +63,17 @@ wild_hunt = {
 	}
 	
 	can_end = {
-		stability = 3
+		stability = 2
 		OR = {
-			OR = {
-				accepted_culture = bosmer
-				accepted_culture = imga
-				accepted_culture = wood_orsimer
+			AND = {
+				NOT = { has_country_modifier = wild_hunt_flight }
+				NOT = { has_country_modifier = wild_hunt_fight }
 			}
+			accepted_culture = bosmer
 			NOT = { 
 				num_of_owned_provinces_with = { 
 					value = 1
-					OR = {
-						culture = bosmer
-						culture = imga
-						culture = wood_orsimer
-					}
+					culture = bosmer
 				}
 			}
 		}

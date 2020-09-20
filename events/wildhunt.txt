@@ -8,7 +8,12 @@ country_event = {
 
 	is_triggered_only = yes
 	
-	immediate = { add_stability = -3 }
+	immediate = {
+		add_stability = -3
+		hidden_effect = {
+			set_country_flag = had_wild_hunt_flag
+		}
+	}
 	
 	option = {
 		name = "wild_hunt.1.flight"
@@ -16,7 +21,7 @@ country_event = {
 		add_prestige = -20
 		add_country_modifier = {
 			name = "wild_hunt_flight"
-			duration = 1825
+			duration = 5475
 		}
 	}
 	option = {
@@ -25,7 +30,7 @@ country_event = {
 		add_prestige = 10
 		add_country_modifier = {
 			name = "wild_hunt_fight"
-			duration = 1825
+			duration = 5475
 		}
 	}
 }
@@ -44,7 +49,7 @@ country_event = {
 		add_stability = 1
 		add_country_modifier = {
 			name = "wild_hunt_end"
-			duration = 1825
+			duration = 3650
 		}
 	}
 }

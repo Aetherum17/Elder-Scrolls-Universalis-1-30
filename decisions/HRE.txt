@@ -110,7 +110,7 @@ country_decisions = {
 				OR = {
 				is_in_trade_league = yes 
 				emperor = { NOT = { reverse_has_opinion  = { who = ROOT value = 0 } } }
-				revolutionary = yes
+				is_revolutionary = yes
 				}
 			}
 			modifier = {

@@ -93,3 +93,36 @@ unknown_pantheon_holy_city = { potential = { } trigger = { owner = { religion = 
 cult_of_lorelia_holy_city = { potential = { } trigger = { owner = { religion = cult_of_lorelia } } prestige = 0.5 missionaries = 1 tolerance_own = 1 on_activation = { } on_deactivation = { } }
 cult_of_the_moth_holy_city = { potential = { } trigger = { owner = { religion = cult_of_the_moth } } prestige = 0.5 missionaries = 1 tolerance_own = 1 on_activation = { } on_deactivation = { } }
 cult_of_black_worm_holy_city = { potential = { } trigger = { owner = { religion = cult_of_black_worm } } prestige = 0.5 missionaries = 1 tolerance_own = 1 on_activation = { } on_deactivation = { } }
+
+perpetual_diet = {
+	potential = {
+	}
+	
+	trigger = {
+		owner = {
+			is_part_of_hre = yes
+		}
+		controller = {
+			OR = {
+				is_part_of_hre = yes
+				NOT = { war_with = emperor }
+			}
+		}
+	}
+
+	prestige = 0.5
+	local_development_cost = -0.05
+	is_imperial_modifier = yes
+
+	on_activation = {
+		emperor = {
+			remove_country_modifier = diet_occupied
+		}
+	}
+	
+	on_deactivation = {
+		emperor = {
+			add_country_modifier = { name = diet_occupied duration = -1 }
+		}
+	}
+}

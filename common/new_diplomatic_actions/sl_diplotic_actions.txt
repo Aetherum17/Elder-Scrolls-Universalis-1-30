@@ -210,7 +210,7 @@ kidnap_advisor = {
 		}
 	}
 	on_accept = {
-		years_of_income = -1.0
+		add_years_of_income = -1.0
 		add_spy_network_in = {
 			who = FROM
 			value = -50

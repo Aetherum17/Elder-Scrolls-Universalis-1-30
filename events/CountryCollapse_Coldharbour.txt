@@ -801,15 +801,15 @@ country_event = {
 		
 		if = {
 		limit = {
-		central_coldlarbour_11_la = {
+		central_coldlarbour_12_la = {
 		owned_by = ROOT
 		}
 		NOT = { exists = CR1 }
-		NOT = { capital_scope = { area = central_coldlarbour_11_la } }
+		NOT = { capital_scope = { area = central_coldlarbour_12_la } }
 		}
 		every_owned_province = {
 		limit = {
-		area = central_coldlarbour_11_la
+		area = central_coldlarbour_12_la
 		}
 		add_core = CR1
 		}

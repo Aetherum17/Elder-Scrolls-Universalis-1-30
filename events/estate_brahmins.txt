@@ -496,15 +496,9 @@ country_event = {
 			duration = 7300
 		}
 		add_country_modifier = {
-			name = "brahmin_peshwa"
+			name = "brahmin_peshwa_nonhindu"
 			duration = 7300
 		}	
-		else = {
-			add_country_modifier = {
-				name = "brahmin_peshwa_nonhindu"
-				duration = 7300
-			}
-		}
 		# Non-Hindu estates won't like this
 		if = {
 			limit = {

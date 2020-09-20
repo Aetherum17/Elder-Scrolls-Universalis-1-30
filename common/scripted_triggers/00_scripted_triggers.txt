@@ -741,6 +741,33 @@ has_dharma_elephants_trigger = {
 	culture_group = tangmo_cg
 }
 
+# This is for when we want to award government reform progress and need to check if that's useful to the player based on dlc ownership
+has_completed_all_reforms_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = has_completed_all_reforms_trigger_tooltip
+		NOT = { has_dlc = "Emperor" }
+		OR = {
+			has_reform = 28_a
+			has_reform = 28_b
+			has_reform = 28_c
+			has_reform = 28_d
+		}
+	}
+}
+
+# This is for all other situations
+has_final_tier_reforms_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = has_completed_all_reforms_trigger_tooltip
+		OR = {
+			has_reform = 28_a
+			has_reform = 28_b
+			has_reform = 28_c
+			has_reform = 28_d
+		}
+	}
+}
+
 has_holy_order_trigger = {
 	custom_trigger_tooltip = {
 		tooltip = "has_holy_order_trigger_tooltip"

@@ -1,14 +1,14 @@
 edict_religion_enforced = {
 	potential = {
-		is_year = 1440
+		is_religion_enabled = reclamations_pantheon
 	}
 	
 	allow = {
-		is_year = 1440
+		is_religion_enabled = reclamations_pantheon
 	}
 	
 	modifier = {
-		religious_conversion_resistance = 0.90
+		local_religious_conversion_resistance = 0.75
 	}
 	
 	color = {  116 198 240  }
