@@ -163,7 +163,7 @@ on_startup = {
 	if = { limit = { NOT = { has_global_flag = on_action_set_up_global_flag } }
 	
 	RED = {
-	    country_event = { id = es_start.2 days = 0 tooltip = es_collapse.2.a.tt }
+	    #country_event = { id = es_start.2 days = 0 tooltip = es_collapse.2.a.tt }
 		country_event = { id = es_start.3 days = 0 tooltip = es_collapse.2.a.tt }
 		country_event = { id = es_start.4 days = 0 tooltip = es_collapse.2.a.tt }
 		add_country_modifier = { name = "red_mountain_eruption" duration = 3650 }
@@ -574,7 +574,6 @@ on_war_lost = {
     clr_country_flag = alliancememberinwar_flag
 	remove_country_modifier = guarfian_at_war
 	
-    ROOT = { country_event = { id = flavor_cri.6 } }
 	if = {
         limit = {
             government = republic
@@ -1408,10 +1407,6 @@ on_mandate_of_heaven_gained = {
 		id = china_events.32 #Records of the last Empire
 		days = 183
 	}
-	country_event = {
-		id = celestial_empire_events.2
-		days = 1825
-	}
 }
 
 # When a nation loses the Mandate of Heaven
@@ -1525,9 +1520,7 @@ on_colonial_pulse = {
 		100 = colonial.5
 		100 = colonial.8
 		100 = colonial.12
-		100 = colonial.13
 		100 = colonial.16
-		100 = colonial.18
 
 		10000 = 0
 	}
@@ -1923,7 +1916,6 @@ on_thri_yearly_pulse_2 = {
 		40 = muslim_piety.11
 		40 = muslim_piety.12
 		40 = muslim_piety.13
-		40 = muslim_piety.14
 		40 = muslim_piety.15
 		40 = muslim_piety.16
 		300 = 0
@@ -2208,8 +2200,13 @@ on_five_year_pulse_2 = {
 		50 = nobles_estate_events.10
 		100 = nobles_estate_events.11 #Bonus
 		# Clergy
+		100 = church_estate_events.1
 			#Regional Variations:
+			100 = church_estate_events.101
+			100 = church_estate_events.102
+			100 = church_estate_events.103
 			100 = church_estate_events.104
+			100 = church_estate_events.105
 		100 = church_estate_events.2
 		100 = church_estate_events.3
 		100 = church_estate_events.4
@@ -2219,6 +2216,15 @@ on_five_year_pulse_2 = {
 		100 = church_estate_events.8
 		100 = church_estate_events.9
 		100 = church_estate_events.10
+		# Dhimmi
+		100 = dhimmi_estate_events.1
+		400 = dhimmi_estate_events.2 #Demands
+		100 = dhimmi_estate_events.3
+		100 = dhimmi_estate_events.4
+		100 = dhimmi_estate_events.5
+		100 = dhimmi_estate_events.6
+		400 = dhimmi_estate_events.7 #Disloyal
+		100 = dhimmi_estate_events.8
 		# Cossacks
 		100 = cossack_estate_events.1
 		#100 = cossack_estate_events.2 (triggers in neighbor country)
@@ -2245,6 +2251,62 @@ on_five_year_pulse_2 = {
 		150 = tribal_estate_events.12 #Demands
 		150 = tribal_estate_events.13 #Demands
 		150 = tribal_estate_events.14 #Demands
+		# Marathas
+		100 = marathas_estate_events.2
+		100 = marathas_estate_events.3
+		100 = marathas_estate_events.4
+		100 = marathas_estate_events.5
+		100 = marathas_estate_events.6
+		400 = marathas_estate_events.7 # Demands
+		100 = marathas_estate_events.8
+		100 = marathas_estate_events.9
+		100 = marathas_estate_events.10
+		400 = marathas_estate_events.11 # Disloyal
+		# Brahmins
+		400 = brahmins_estate_events.2 # demands
+		100 = brahmins_estate_events.3
+		100 = brahmins_estate_events.4
+		100 = brahmins_estate_events.5
+		400 = brahmins_estate_events.6 # disloyal
+		100 = brahmins_estate_events.7
+		100 = brahmins_estate_events.8
+		100 = brahmins_estate_events.9
+		100 = brahmins_estate_events.10
+		100 = brahmins_estate_events.11
+		# Jains
+		100 = jains_estate_events.2
+		100 = jains_estate_events.3
+		100 = jains_estate_events.4
+		100 = jains_estate_events.5
+		100 = jains_estate_events.6
+		100 = jains_estate_events.7
+		400 = jains_estate_events.8 # Disloyal
+		100 = jains_estate_events.9
+		400 = jains_estate_events.10 # Demands
+		100 = jains_estate_events.11
+		# Vaishyas
+		100 = vaisyas_estate_events.2
+		100 = vaisyas_estate_events.3
+		100 = vaisyas_estate_events.4
+		100 = vaisyas_estate_events.5
+		100 = vaisyas_estate_events.6
+		100 = vaisyas_estate_events.7
+		100 = vaisyas_estate_events.8
+		400 = vaisyas_estate_events.9
+		100 = vaisyas_estate_events.10
+		100 = vaisyas_estate_events.11
+		# Rajputs
+		100 = rajputs_estate_events.2
+		100 = rajputs_estate_events.3
+		100 = rajputs_estate_events.4
+		100 = rajputs_estate_events.5
+		400 = rajputs_estate_events.6
+		100 = rajputs_estate_events.7
+		400 = rajputs_estate_events.8
+		100 = rajputs_estate_events.9
+		100 = rajputs_estate_events.10
+		100 = rajputs_estate_events.11
+		1000 = 0
 	}
 }
 
@@ -2536,7 +2598,7 @@ on_province_owner_change = {
 			}
 			if = {
 				limit = {
-					trade_goods = grain
+					trade_goods = crops
 				}
 				add_province_modifier = { 
 					name = grain_bonus_prod
@@ -2850,7 +2912,7 @@ on_trade_good_changed = {
 		}
 		if = {
 			limit = {
-				trade_goods = grain
+				trade_goods = crops
 			}
 			remove_province_modifier = wine_bonus_prod
 			add_province_modifier = { 

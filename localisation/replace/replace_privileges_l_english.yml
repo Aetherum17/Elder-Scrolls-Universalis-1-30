@@ -1,4 +1,30 @@
 ﻿l_english:
+
+ ### File 12
+
+ estate_nobles_monopoly_of_metals:0 "Monopoly on Mining and Smelting"
+ estate_nobles_monopoly_of_metals_effect_tooltip:2 "§RNo income from §YIron§! or §YEbony§! or §YMoonstone§§!"
+ estate_nobles_monopoly_of_metals_mod:1 "Monopoly on Mining and Smelting"
+ desc_estate_nobles_monopoly_of_metals_mod:1 "The state has granted the [Root.Owner.GetNobilityName] monopoly rights over iron, ebony and moonstone production."
+ estate_nobles_monology_of_metals_desc:0 "Without iron, ebony, or moonstone our armies would be toothless. Only the [Root.GetNobilityName] can be trusted with administering its revenues, for it is they who make the greatest contribution to our nation's armies."
+ estate_nobles_monopoly_of_metals_revoke_tooltip:0 "Production income from §YIron§! and §YEbony§! and §YMoonstone§§! is restored"
+
+ estate_nobles_monopoly_of_livestock:0 "Monopoly on Livestock"
+ estate_nobles_monopoly_of_livestock_effect_tooltip:2 "§RNo income from §YLivestock§! or §YCrabs§§!"
+ estate_nobles_monopoly_of_livestock_mod:1 "Monopoly on Livestock"
+ desc_estate_nobles_monopoly_of_livestock_mod:1 "The state has granted the [Root.Owner.GetNobilityName] monopoly rights over livestock and crab farming."
+ estate_nobles_monology_of_livestock_desc:0 "Our livestock farmers do valuable work feeding our great nation. Who better to administer their incomes than the [Root.GetNobilityName], who already own much of the land in the rural areas where the farmers operate?"
+ estate_nobles_monopoly_of_livestock_revoke_tooltip:0 "Production income from §YLivestock§! and §YCrabs§§! is restored"
+
+ estate_nobles_monopoly_of_gems:0 "Monopoly on Gemstones"
+ estate_nobles_monopoly_of_gems_effect_tooltip:4 "§RNo income from §YGems§!§!."
+ estate_nobles_monopoly_of_gems_mod:1 "Monopoly on Gemstones"
+ desc_estate_nobles_monopoly_of_gems_mod:1 "The state has granted the [Root.Owner.GetNobilityName] monopoly rights over gem mining and crafting operations."
+ estate_nobles_monology_of_gems_desc:0 "A beautiful gemstone can be worth more than its weight in gold. It is no wonder then that the [Root.GetNobilityName] wish to control the revenues from their trade."
+ estate_nobles_monopoly_of_gems_revoke_tooltip:0 "Production income from §YGems§! is restored"
+
+ ### File 13
+
  estate_brahmins_monopoly_of_incense:0 "Monopoly on Beer"
  estate_brahmins_monopoly_of_incense_effect_tooltip:2 "§RNo income from §Beer§!§!"
  estate_brahmins_monopoly_of_incense_mod:1 "Monopoly on Beer"
@@ -7,11 +33,13 @@
  estate_brahmins_monopoly_of_incense_desc:0 "The beer and other fragrant spices that are so popular for our religious practices are expensive. The [Root.GetBrahminsName] desire to control their production so that they may be a boon rather than a drain to their resources."
  
  estate_brahmins_monopoly_of_wool:0 "Monopoly on Cloth"
- estate_brahmins_monopoly_of_wool_effect_tooltip:2 "§RNo income from §Cloth§!§!"
+ estate_brahmins_monopoly_of_wool_effect_tooltip:2 "§RNo income from §YCloth§!§!"
  estate_brahmins_monopoly_of_wool_mod:1 "Monopoly on Cloth"
  desc_estate_brahmins_monopoly_of_wool_mod:0 "The state has granted the Mages monopoly rights over cloth production."
  estate_brahmins_monopoly_of_wool_desc:0 "Humble cloth is a vital good that is indispensable to the common people. Rather than leave its supply to chance, the [Root.GetBrahminsName] would administer its production to ensure that their flock need never fear for clothing."
  estate_brahmins_monopoly_of_wool_revoke_tooltip:0 "Production income from §Cloth§! is restored"
+
+ ### File 14
  
  estate_burghers_monopoly_of_textiles:1 "Monopoly on Silk"
  estate_burghers_monopoly_of_textiles_effect_tooltip:2 "§RNo income from §YSilk§!§!"
@@ -20,7 +48,28 @@
  estate_burghers_monopoly_of_textiles_desc:0 "The silk industry is the natural domain of the entrepreneurial classes. It is only right that they should be given full control over it."
  estate_burghers_monopoly_of_textiles_revoke_tooltip:0 "Production income from §YSilk§! is restored"
  
- ### Vaisyas DLC
+ estate_burghers_monopoly_of_dyes:0 "Monopoly on Dyes"
+ estate_burghers_monopoly_of_dyes_effect_tooltip:2 "§RNo income from §YDyes§!§!"
+ estate_burghers_monopoly_of_dyes_mod:1 "Monopoly on Dyes"
+ desc_estate_burghers_monopoly_of_dyes_mod:1 "The state has granted the [Root.Owner.GetBurghersName] monopoly rights over dye production."
+ estate_burghers_monopoly_of_dyes_desc:0 "There is considerable money to be made from dyes, the luxury good that does more than any other to make the world more pleasing on the eye. To the [Root.GetBurghersName], the revenues from this trade are to dye for."
+ estate_burghers_monopoly_of_dyes_revoke_tooltip:0 "Production income from §YDyes§! is restored"
+
+ estate_burghers_monopoly_of_glass:0 "Monopoly on Glass"
+ estate_burghers_monopoly_of_glass_effect_tooltip:2 "§RNo income from §YGlass§!§!"
+ estate_burghers_monopoly_of_glass_mod:1 "Monopoly on Glass"
+ desc_estate_burghers_monopoly_of_glass_mod:1 "The state has granted the [Root.Owner.GetBurghersName] monopoly rights over glass production."
+ estate_burghers_monopoly_of_glass_desc:0 "Glass ornaments make a fine luxury goods that are highly lucrative to those versed in the arts of making them. Among the [Root.GetBurghersName] are expert glassmakers who desire above all else to have a monopoly on the production of their ware."
+ estate_burghers_monopoly_of_glass_revoke_tooltip:0 "Production income from §YGlass§! is restored"
+
+ estate_burghers_monopoly_of_paper:0 "Monopoly on Paper"
+ estate_burghers_monopoly_of_paper_effect_tooltip:2 "§RNo income from §YPaper§!§!"
+ estate_burghers_monopoly_of_paper_mod:1 "Monopoly on Paper"
+ desc_estate_burghers_monopoly_of_paper_mod:1 "The state has granted the [Root.Owner.GetBurghersName] monopoly rights over paper production."
+ estate_burghers_monopoly_of_paper_desc:0 "In our newly literate society, there is greater need for paper. So much so, in fact, that entrepreneurs among the [Root.GetBurghersName] covet direct control over the revenues associated with its production."
+ estate_burghers_monopoly_of_paper_revoke_tooltip:0 "Production income from §YPaper§! is restored"
+
+ ### (File 15) Vaisyas DLC
  
  estate_vaisyas_monopoly_of_textiles:0 "Monopoly on Weapons and Armor"
  estate_vaisyas_monopoly_of_textiles_effect_tooltip:2 "§RNo income from §YWeapons and Armor§!"
@@ -30,66 +79,158 @@
  estate_vaisyas_monopoly_of_textiles_revoke_tooltip:0 "Production income from §Weapons and Armor§! is restored"
  
  estate_vaisyas_monopoly_of_dyes:0 "Monopoly on Moon Sugar"
- estate_vaisyas_monopoly_of_dyes_effect_tooltip:2 "§RNo income from §Moon Sugar§!§!"
+ estate_vaisyas_monopoly_of_dyes_effect_tooltip:2 "§RNo income from §YMoon Sugar§!§!"
  estate_vaisyas_monopoly_of_dyes_mod:1 "Monopoly on Moon Sugar"
  desc_estate_vaisyas_monopoly_of_dyes_mod:0 "The state has granted the Merchants monopoly rights over moon sugar production."
  estate_vaisyas_monopoly_of_dyes_desc:0 "There is considerable money to be made from moon sugar, the luxury good that does more than any other to make the world more pleasing on the eye."
  estate_vaisyas_monopoly_of_dyes_revoke_tooltip:0 "Production income from §Moon Sugar§! is restored"
  
  estate_vaisyas_monopoly_of_glass:0 "Monopoly on Potions"
- estate_vaisyas_monopoly_of_glass_effect_tooltip:2 "§RNo income from §Potions§!§!"
+ estate_vaisyas_monopoly_of_glass_effect_tooltip:2 "§RNo income from §YPotions§!§!"
  estate_vaisyas_monopoly_of_glass_mod:1 "Monopoly on Potions"
  desc_estate_vaisyas_monopoly_of_glass_mod:0 "The state has granted the Merchants monopoly rights over potions production."
  estate_vaisyas_monopoly_of_glass_desc:0 "Potions make a fine luxury goods that are highly lucrative to those versed in the arts of making them. Among the [Root.GetVaishyasName] are expert potionmakers who desire above all else to have a monopoly on the production of their ware."
  estate_vaisyas_monopoly_of_glass_revoke_tooltip:0 "Production income from §Potions§! is restored"
  
  estate_vaisyas_monopoly_of_paper:0 "Monopoly on Naval Supplies"
- estate_vaisyas_monopoly_of_paper_effect_tooltip:2 "§RNo income from §Naval Supplies§!§!"
+ estate_vaisyas_monopoly_of_paper_effect_tooltip:2 "§RNo income from §YNaval Supplies§!§!"
  estate_vaisyas_monopoly_of_paper_mod:1 "Monopoly on Naval Supplies"
  desc_estate_vaisyas_monopoly_of_paper_mod:0 "The state has granted the Merchants monopoly rights over naval supplies production."
  estate_vaisyas_monopoly_of_paper_desc:0 "In our newly literate society, there is greater need for naval supplies. So much so, in fact, that entrepreneurs among the [Root.GetVaishyasName] covet direct control over the revenues associated with its production."
  estate_vaisyas_monopoly_of_paper_revoke_tooltip:0 "Production income from §Naval Supplies§! is restored"
  
- ### Jains DLC
+ ### (File 16) Jains DLC
  
  estate_jains_monopoly_of_textiles:0 "Monopoly on Salt"
- estate_jains_monopoly_of_textiles_effect_tooltip:2 "§RNo income from §Salt§! or §YSilk§!§!"
+ estate_jains_monopoly_of_textiles_effect_tooltip:2 "§RNo income from §YSalt§! or §YSilk§!§!"
  estate_jains_monopoly_of_textiles_mod:1 "Monopoly on Salt"
  desc_estate_jains_monopoly_of_textiles_mod:0 "The state has granted the Peasants monopoly rights over salt production."
  estate_jains_monopoly_of_textiles_desc:0 "The salt industry is the natural domain of the entrepreneurial classes. It is only right that they should be given full control over it."
  estate_jains_monopoly_of_textiles_revoke_tooltip:0 "Production income from §Salt§! and §YSilk§! is restored"
  
  estate_jains_monopoly_of_dyes:0 "Monopoly on Herbs"
- estate_jains_monopoly_of_dyes_effect_tooltip:2 "§RNo income from §Herbs§!§!"
+ estate_jains_monopoly_of_dyes_effect_tooltip:2 "§RNo income from §YHerbs§!§!"
  estate_jains_monopoly_of_dyes_mod:1 "Monopoly on Herbs"
  desc_estate_jains_monopoly_of_dyes_mod:0 "The state has granted the Peasants monopoly rights over herbs production."
  estate_jains_monopoly_of_dyes_desc:0 "There is considerable money to be made from herbs, the luxury good that does more than any other to make the world more pleasing on the eye."
  estate_jains_monopoly_of_dyes_revoke_tooltip:0 "Production income from §Herbs§! is restored"
  
  estate_jains_monopoly_of_glass:0 "Monopoly on Mushrooms"
- estate_jains_monopoly_of_glass_effect_tooltip:2 "§RNo income from §Mushrooms§!§!"
+ estate_jains_monopoly_of_glass_effect_tooltip:2 "§RNo income from §YMushrooms§!§!"
  estate_jains_monopoly_of_glass_mod:1 "Monopoly on Mushrooms"
  desc_estate_jains_monopoly_of_glass_mod:0 "The state has granted the Peasants monopoly rights over mushrooms production."
  estate_jains_monopoly_of_glass_desc:0 "Mushrooms make a fine luxury goods that are highly lucrative to those versed in the arts of making them. Among the [Root.GetJainsName] are expert glassmakers who desire above all else to have a monopoly on the production of their ware."
  estate_jains_monopoly_of_glass_revoke_tooltip:0 "Production income from §Mushrooms§! is restored"
  
  estate_jains_monopoly_of_paper:0 "Monopoly on Wood"
- estate_jains_monopoly_of_paper_effect_tooltip:2 "§RNo income from §Wood§!§!"
+ estate_jains_monopoly_of_paper_effect_tooltip:2 "§RNo income from §YWood§!§!"
  estate_jains_monopoly_of_paper_mod:1 "Monopoly on Wood"
  desc_estate_jains_monopoly_of_paper_mod:0 "The state has granted the Peasants monopoly rights over wood production."
  estate_jains_monopoly_of_paper_desc:0 "In our newly literate society, there is greater need for wood. So much so, in fact, that entrepreneurs among the [Root.GetJainsName] covet direct control over the revenues associated with its production."
  estate_jains_monopoly_of_paper_revoke_tooltip:0 "Production income from §Wood§! is restored"
 
- ###
+ ### File 17
+
+ estate_rajput_monopoly_of_metals:0 "Monopoly on Mining and Smelting"
+ estate_rajput_monopoly_of_metals_effect_tooltip:2 "§RNo income from §YIron§! or §YSilver§! or §YOrichalcum§!§!"
+ estate_rajput_monopoly_of_metals_mod:1 "Monopoly on Mining and Smelting"
+ desc_estate_rajput_monopoly_of_metals_mod:0 "The state has granted the Warriors monopoly rights over iron, silver and orichalcum production."
+ estate_rajput_monopoly_of_metals_desc:0 "Without iron, silver or orichalcum our armies would be toothless. Only the [Root.GetRajputsName] can be trusted with administering its revenues, for it is their own livelihood that would be at stake were supply to be disrupted."
+ estate_rajput_monopoly_of_metals_revoke_tooltip:0 "Production income from §YIron§! and §YSilver§! and §YOrichalcum§! is restored"
+
+ estate_rajput_monopoly_of_livestock:0 "Monopoly on Fur and Fish"
+ estate_rajput_monopoly_of_livestock_effect_tooltip:2 "§RNo income from §YFur§! or §YFish§!§!"
+ estate_rajput_monopoly_of_livestock_mod:1 "Monopoly on Fur and Fish"
+ desc_estate_rajput_monopoly_of_livestock_mod:0 "The state has granted the Warriors monopoly rights over fishing and fur pelting."
+ estate_rajput_monopoly_of_livestock_desc:0 "Our fishermen do valuable work feeding our great nation. Who better to administer their incomes than the [Root.GetRajputsName], who are well-versed in controlling the peasant pelters as the fishermen control of fish."
+ estate_rajput_monopoly_of_livestock_revoke_tooltip:0 "Production income from §YFur§! and §YFish§! is restored"
+
+ estate_rajput_monopoly_of_gems:0 "Monopoly on Corals"
+ estate_rajput_monopoly_of_gems_effect_tooltip:2 "§RNo income from §YCorals§!§!"
+ estate_rajput_monopoly_of_gems_mod:1 "Monopoly on Corals"
+ desc_estate_rajput_monopoly_of_gems_mod:0 "The state has granted the Warriors monopoly rights over coral mining and crafting operations."
+ estate_rajput_monopoly_of_gems_desc:1 "A beautiful coral can be worth more than its weight in gold. It is no wonder then that the [Root.GetRajputsName] wish to control the revenues from their trade."
+ estate_rajput_monopoly_of_gems_revoke_tooltip:0 "Production income from §YCorals§! is restored"
+
+ ### File 18
  
- MONOPOLY_INCOME_CLOTH_DESC:0 "from silk production."
+ estate_maratha_monopoly_of_metals:0 "Monopoly on Mining and Smelting"
+ estate_maratha_monopoly_of_metals_effect_tooltip:2 "§RNo income from §YQuicksilver§! or §YMalachite§! or §YCorundum§!§!"
+ estate_maratha_monopoly_of_metals_mod:1 "Monopoly on Mining and Smelting"
+ desc_estate_maratha_monopoly_of_metals_mod:0 "The state has granted the Citizens monopoly rights over quicksilver, malachite, and corundum production."
+ estate_maratha_monopoly_of_metals_desc:0 "Without quicksilver, malachite, and corundum our armies would be toothless. Only the [Root.GetMarathasName] can be trusted with administering its revenues, for it is their own livelihood that would be at stake were supply to be disrupted."
+ estate_maratha_monopoly_of_metals_revoke_tooltip:0 "Production income from §YQuicksilver§! and §YMalachite§! and §YCorundum§! is restored"
+
+ estate_maratha_monopoly_of_livestock:0 "Monopoly on Leather and Ivory"
+ estate_maratha_monopoly_of_livestock_effect_tooltip:2 "§RNo income from §YLeather§! or §YIvory§!§!"
+ estate_maratha_monopoly_of_livestock_mod:1 "Monopoly on Leather and Ivory"
+ desc_estate_maratha_monopoly_of_livestock_mod:0 "The state has granted the Citizens monopoly rights over leather tanning and ivory hunting."
+ estate_maratha_monopoly_of_livestock_desc:0 "Our hunters and tanners do valuable work nourishing our great nation. Who better to administer their salaries than the [Root.GetMarathasName], who above all need their income to feed and provide mounts for their armies for our wars?"
+ estate_maratha_monopoly_of_livestock_revoke_tooltip:0 "Production income from §YLeather§! and §YIvory§! is restored"
+
+ estate_maratha_monopoly_of_gems:0 "Monopoly on Pearls"
+ estate_maratha_monopoly_of_gems_effect_tooltip:2 "§RNo income from §YPearls§!§!"
+ estate_maratha_monopoly_of_gems_mod:1 "Monopoly on Pearls"
+ desc_estate_maratha_monopoly_of_gems_mod:0 "The state has granted the Citizens monopoly rights over pearl farming and crafting operations."
+ estate_maratha_monopoly_of_gems_desc:0 "A beautiful pearl can be worth more than its weight in gold. It is no wonder then that the [Root.GetMarathasName] wish to control the revenues from their trade."
+ estate_maratha_monopoly_of_gems_revoke_tooltip:0 "Production income from §YPearls§! is restored"
+
+ ### File 19
+
+ estate_church_monopoly_of_wool:0 "Monopoly on Wool"
+ estate_church_monopoly_of_wool_effect_tooltip:2 "§RNo income from §YWool§!§!"
+ estate_church_monopoly_of_wool_mod:1 "Monopoly on Wool"
+ desc_estate_church_monopoly_of_wool_mod:1 "The state has granted the [Root.Owner.GetClergyName] monopoly rights over wool production."
+ estate_church_monopoly_of_wool_desc:0 "Humble wool is a vital good that is indispensable to the common people. Rather than leave its supply to chance, the [Root.GetClergyName] would administer its production to ensure that their flock need never fear for clothing."
+ estate_church_monopoly_of_wool_revoke_tooltip:0 "Production income from §YWool§! is restored"
+
+ estate_church_monopoly_of_wine:0 "Monopoly on Wine"
+ estate_church_monopoly_of_wine_effect_tooltip:2 "§RNo income from §YWine§!§!"
+ estate_church_monopoly_of_wine_mod:1 "Monopoly on Wine"
+ desc_estate_church_monopoly_of_wine_mod:1 "The state has granted the [Root.Owner.GetClergyName] monopoly rights over wine production."
+ estate_church_monopoly_of_wine_desc:0 "Beer is made by men, wine by God, or so the saying goes. Certainly, the [Root.GetClergyName] are most eager to control its revenues. Let us just hope they spare enough of the produce for the rest of us!"
+ estate_church_monopoly_of_wine_revoke_tooltip:0 "Production income from §YWine§! is restored"
+
+ estate_church_monopoly_of_slaves:0 "Monopoly on Slaves"
+ estate_church_monopoly_of_slaves_effect_tooltip:2 "§RNo income from §YSlaves§!§!"
+ estate_church_monopoly_of_slaves_mod:1 "Monopoly on Slaves"
+ desc_estate_church_monopoly_of_slaves_mod:1 "The state has granted the [Root.Owner.GetClergyName] monopoly rights over the slave trade to ensure that there are always sufficient victims available for sacrifice."
+ estate_church_monopoly_of_slaves_desc:0 "Our Gods demand regular sacrifices to stave off their fury. Giving the [Root.GetClergyName] full control over the trade in slaves is a sensible precaution to ensure that a ready supply of souls may be maintained."
+ estate_church_monopoly_of_slaves_revoke_tooltip:0 "Production income from §YSlaves§! is restored"
+
+ ### Custom Tooltips Monopoly Priveleges
+
+ #12: Nobles
+ MONOPOLY_INCOME_IRON_ME_DESC:0 "from iron, ebony or moonstone production."
+ MONOPOLY_INCOME_LIVESTOCK_DESC:0 "from livestock or crab production."
+ MONOPOLY_INCOME_GEMS_DESC:0 "from gems production."
+ #13: Brahmins
+ MONOPOLY_INCOME_BEER_DESC:0 "from beer production."
+ MONOPOLY_INCOME_CLOTH_DESC:0 "from cloth production."
+ #14: Burghers
+ MONOPOLY_INCOME_SILK_DESC:0 "from silk production."
  MONOPOLY_INCOME_DYE_DESC:0 "from dyes production."
  MONOPOLY_INCOME_GLASS_DESC:0 "from glass production."
  MONOPOLY_INCOME_PAPER_DESC:0 "from paper production."
- MONOPOLY_INCOME_IRON_DESC:0 "from iron or copper production."
- MONOPOLY_INCOME_LIVESTOCK_DESC:0 "from livestock production."
- MONOPOLY_INCOME_GEMS_DESC:0 "from gems production."
- MONOPOLY_INCOME_INCENSE_DESC:0 "from beer production."
- MONOPOLY_INCOME_WOOL_DESC:0 "from cloth production."
+ #15: Vaisyas
+ MONOPOLY_INCOME_WEAPONS_DESC:0 "from weapons and armor production."
+ MONOPOLY_INCOME_MOON_SUGAR_DESC:0 "from moon sugar production."
+ MONOPOLY_INCOME_POTIONS_DESC:0 "from potion production."
+ MONOPOLY_INCOME_NAVAL_SUPPLIES_DESC:0 "from naval supply production."
+ #16: Jains
+ MONOPOLY_INCOME_SALT_DESC:0 "from salt production."
+ MONOPOLY_INCOME_HERB_DESC:0 "from herb production."
+ MONOPOLY_INCOME_MUSHROOMS_DESC:0 "from mushroom production."
+ MONOPOLY_INCOME_WOOD_DESC:0 "from wood production."
+ #17: Rajputs
+ MONOPOLY_INCOME_IRON_SO_DESC:0 "from iron, silver or orichalcum production."
+ MONOPOLY_INCOME_FUR_FISH_DESC:0 "from fur or fish production."
+ MONOPOLY_INCOME_CORALS_DESC:0 "from coral production."
+ #18 Marathas
+ MONOPOLY_INCOME_QS_MC_DESC:0 "from quicksilver, malachite or corundum production."
+ MONOPOLY_INCOME_LEATHER_IVORY_DESC:0 "from leather or ivory production."
+ MONOPOLY_INCOME_PEARLS_DESC:0 "from pearl production."
+ #19 Church
+ MONOPOLY_INCOME_WOOL_DESC:0 "from wool production."
  MONOPOLY_INCOME_WINE_DESC:0 "from wine production."
  MONOPOLY_INCOME_SLAVES_DESC:0 "from slave production."
