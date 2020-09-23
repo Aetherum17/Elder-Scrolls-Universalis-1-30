@@ -153,19 +153,35 @@ country_event = {
 	
 	hidden = yes
 	
-	trigger = { has_country_flag = heist_nation_flag }
+	trigger = { has_country_flag = es_nation_to_heist@FROM }
 	
 	immediate = {
 		random_list = {
 			50 = {
-			add_treasury_var = { var = IncomeToSteal }
-			multiply_variable = { which = IncomeToSteal value = -1 }
-			event_target:es_nation_to_heist = { add_treasury_var = { var = IncomeToSteal country_event = { id = event_new_diplomatic_actions.6 } } }
-			country_event = { id = event_new_diplomatic_actions.4 }
+				random_country = {
+					limit = {
+						has_country_flag = es_nation_to_heist
+					}
+					add_treasury_var = { var = IncomeToSteal }
+					country_event = { id = event_new_diplomatic_actions.4 }
+					clr_country_flag = es_nation_to_heist
+				}
+				multiply_variable = { which = IncomeToSteal value = -1 }
+				add_treasury_var = { var = IncomeToSteal }
+				ountry_event = { id = event_new_diplomatic_actions.6 }
 			}
-			50 = { add_prestige = -5 country_event = { id = event_new_diplomatic_actions.5 } }
+			50 = { 
+				random_country = {
+					limit = {
+						has_country_flag = es_nation_to_heist
+					}
+					add_prestige = -5
+					clr_country_flag = es_nation_to_heist
+					country_event = { id = event_new_diplomatic_actions.5 }
+				}
+			}
 		}
-		clr_country_flag = heist_nation_flag
+		clr_country_flag = es_nation_to_heist@FROM
 	}
 	
 	option = {
@@ -182,21 +198,33 @@ country_event = {
 	
 	hidden = yes
 	
-	trigger = { has_country_flag = scam_nation_flag }
+	trigger = { has_country_flag = es_nation_to_scam@FROM }
 	
 	immediate = {
 		random_list = {
-		25 = {
-		event_target:es_nation_to_scam = { add_country_modifier = { name = scammed_by_enemy_thieves_guild duration = 1825 } country_event = { id = event_new_diplomatic_actions.7 } }
-		country_event = { id = event_new_diplomatic_actions.4 }
+			50 = {
+				random_country = {
+					limit = {
+						has_country_flag = es_nation_to_scam
+					}
+					country_event = { id = event_new_diplomatic_actions.4 }
+					clr_country_flag = es_nation_to_scam
+				}
+				add_country_modifier = { name = scammed_by_enemy_thieves_guild duration = 1825 }
+				country_event = { id = event_new_diplomatic_actions.7 }
+			}
+			50 = { 
+				random_country = {
+					limit = {
+						has_country_flag = es_nation_to_scam
+					}
+					add_prestige = -5
+					clr_country_flag = es_nation_to_scam
+					country_event = { id = event_new_diplomatic_actions.5 }
+				}
+			}
 		}
-		25 = {
-		event_target:es_nation_to_scam = { add_country_modifier = { name = scammed_by_enemy_thieves_guild duration = 3650 } country_event = { id = event_new_diplomatic_actions.7 } }
-		country_event = { id = event_new_diplomatic_actions.4 }
-		}
-		50 = { add_prestige = -5 country_event = { id = event_new_diplomatic_actions.5 } }
-		}
-		clr_country_flag = scam_nation_flag
+		clr_country_flag = es_nation_to_heist@FROM
 	}
 	
 	option = {
@@ -213,21 +241,44 @@ country_event = {
 	
 	hidden = yes
 	
-	trigger = { has_country_flag = intimidate_nation_flag }
+	trigger = { has_country_flag = es_nation_to_intimidate@FROM }
 	
 	immediate = {
 		random_list = {
-		25 = {
-		event_target:es_nation_to_intimidate = { add_country_modifier = { name = intimidated_by_enemy_thieves_guild duration = 1825 } country_event = { id = event_new_diplomatic_actions.8 } } 
-		country_event = { id = event_new_diplomatic_actions.4 }
+			25 = {
+				random_country = {
+					limit = {
+						has_country_flag = es_nation_to_intimidate
+					}
+					country_event = { id = event_new_diplomatic_actions.4 }
+					clr_country_flag = es_nation_to_intimidate
+				}
+				add_country_modifier = { name = intimidated_by_enemy_thieves_guild duration = 1825 }
+				country_event = { id = event_new_diplomatic_actions.8 }
+			}
+			25 = {
+				random_country = {
+					limit = {
+						has_country_flag = es_nation_to_intimidate
+					}
+					country_event = { id = event_new_diplomatic_actions.4 }
+					clr_country_flag = es_nation_to_intimidate
+				}
+				add_country_modifier = { name = intimidated_by_enemy_thieves_guild duration = 3650 }
+				country_event = { id = event_new_diplomatic_actions.8 }
+			}
+			50 = { 
+				random_country = {
+					limit = {
+						has_country_flag = es_nation_to_intimidate
+					}
+					add_prestige = -5
+					clr_country_flag = es_nation_to_intimidate
+					country_event = { id = event_new_diplomatic_actions.5 }
+				}
+			}
 		}
-		25 = {
-		event_target:es_nation_to_intimidate = { add_country_modifier = { name = intimidated_by_enemy_thieves_guild duration = 3650 } country_event = { id = event_new_diplomatic_actions.8 } } 
-		country_event = { id = event_new_diplomatic_actions.4 }
-		}
-		50 = { add_prestige = -5 country_event = { id = event_new_diplomatic_actions.5 } }
-		}
-		clr_country_flag = intimidate_nation_flag
+		clr_country_flag = es_nation_to_intimidate@FROM
 	}
 	
 	option = {
@@ -246,17 +297,33 @@ country_event = {
 	
 	hidden = yes
 	
-	trigger = { has_country_flag = assasinate_ruler_flag }
+	trigger = { has_country_flag = assasinate_ruler_flag@FROM }
 	
 	immediate = {
 		random_list = {
-		35 = {
-		event_target:country_to_murder_ruler = { kill_ruler = yes country_event = { id = event_new_diplomatic_actions.1 } }
-		country_event = { id = event_new_diplomatic_actions.3 }
+		50 = {
+		kill_ruler = yes
+		country_event = { id = event_new_diplomatic_actions.1 }
+			random_country = { 
+				limit = {
+					has_country_flag = assasinate_ruler_flag
+				}
+			country_event = { id = event_new_diplomatic_actions.3 }
+			clr_country_flag = assasinate_ruler_flag
+			}
 		}
-		65 = { add_prestige = -10 country_event = { id = event_new_diplomatic_actions.0 } }
+		50 = {
+			random_country = { 
+				limit = {
+					has_country_flag = assasinate_ruler_flag
+				}
+			country_event = { id = event_new_diplomatic_actions.0 }
+			add_prestige = -10
+			clr_country_flag = assasinate_ruler_flag
+			}
 		}
-		clr_country_flag = assasinate_ruler_flag
+		}
+		clr_country_flag = assasinate_ruler_flag@FROM
 	}
 	
 	option = {
@@ -273,16 +340,33 @@ country_event = {
 	
 	hidden = yes
 	
-	trigger = { has_country_flag = assasinate_heir_flag }
+	trigger = { has_country_flag = assasinate_heir_flag@FROM }
 	
 	immediate = {
 		random_list = {
-		35 = { event_target:country_to_murder_heir = { kill_heir = yes country_event = { id = event_new_diplomatic_actions.2 } }
-		country_event = { id = event_new_diplomatic_actions.3 }
+		50 = {
+		kill_heir = yes
+		country_event = { id = event_new_diplomatic_actions.2 }
+			random_country = { 
+				limit = {
+					has_country_flag = assasinate_heir_flag
+				}
+			country_event = { id = event_new_diplomatic_actions.3 }
+			clr_country_flag = assasinate_heir_flag
+			}
 		}
-		65 = { add_prestige = -10 country_event = { id = event_new_diplomatic_actions.0 } }
+		50 = {
+			random_country = { 
+				limit = {
+					has_country_flag = assasinate_heir_flag
+				}
+			country_event = { id = event_new_diplomatic_actions.0 }
+			add_prestige = -10
+			clr_country_flag = assasinate_heir_flag
+			}
 		}
-		clr_country_flag = assasinate_heir_flag
+		}
+		clr_country_flag = assasinate_ruler_flag@FROM
 	}
 	
 	option = {
@@ -292,7 +376,7 @@ country_event = {
 
 # Kidnap advisor Chance
 country_event = {
-	id = event_new_diplomatic_actions.104
+	id = event_new_diplomatic_actions.105
 	title = "event_new_diplomatic_actions.3.t"
 	desc = "event_new_diplomatic_actions.3.d"
 	picture = ES_MURDER_eventPicture

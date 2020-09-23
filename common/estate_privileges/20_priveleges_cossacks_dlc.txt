@@ -1,3 +1,56 @@
+estate_cossacks_supremacy_over_crown = {
+	icon = privilege_conscript_cossack_elite
+	max_absolutism = -5
+	influence = 0.1
+	loyalty = 0.1
+	is_valid = {
+		has_dlc = "Emperor"
+	}
+	can_select = {
+		NOT = { has_estate_privilege = estate_nobles_supremacy_over_crown }
+		NOT = { has_estate_privilege = estate_brahmins_supremacy_over_crown }
+		NOT = { has_estate_privilege = estate_burghers_supremacy_over_crown }
+		NOT = { has_estate_privilege = estate_vaisyas_supremacy_over_crown }
+		NOT = { has_estate_privilege = estate_jains_supremacy_over_crown }
+		NOT = { has_estate_privilege = estate_rajput_supremacy_over_crown }
+		NOT = { has_estate_privilege = estate_maratha_supremacy_over_crown }
+		NOT = { has_estate_privilege = estate_church_supremacy_over_crown }
+	}
+	penalties = {
+		global_manpower_modifier = -0.15
+	}
+	benefits = {
+		burghers_loyalty_modifier = 0.1
+		church_loyalty_modifier = 0.1
+		dhimmi_loyalty_modifier = 0.1
+		cossacks_loyalty_modifier = 0.1
+		rajput_loyalty_modifier = 0.1
+		brahmins_other_loyalty_modifier = 0.1
+		maratha_loyalty_modifier = 0.1
+		jains_loyalty_modifier = 0.1
+		vaisyas_loyalty_modifier = 0.1
+		nomadic_tribes_loyalty_modifier = 0.1
+		burghers_influence_modifier = 0.1
+		church_influence_modifier = 0.1
+		dhimmi_influence_modifier = 0.1
+		cossacks_influence_modifier = 0.1
+		rajput_influence_modifier = 0.1
+		brahmins_other_influence_modifier = 0.1
+		maratha_influence_modifier = 0.1
+		jains_influence_modifier = 0.1
+		vaisyas_influence_modifier = 0.1
+		nomadic_tribes_influence_modifier = 0.1
+		caravan_power = 0.1
+		embargo_efficiency = -0.1
+		merc_maintenance_modifier = -0.10
+	}
+	mechanics = {
+		can_give_agendas_without_interaction
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
 estate_cossacks_recruit_cossack_generals = {
 	icon = privilege_conscript_cossack_elite
 	max_absolutism = -5
