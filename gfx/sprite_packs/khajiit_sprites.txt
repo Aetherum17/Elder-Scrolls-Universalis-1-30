@@ -1,0 +1,28 @@
+khajiit_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		culture_group = khajiiti_cg
+		NOT = { primary_culture = anequinan }
+	}
+	
+	sprite_infantry = {
+		0 = KHAJIIT_INFANTRY_1
+		1 = KHAJIIT_INFANTRY_1
+		2 = KHAJIIT_INFANTRY_1
+		3 = KHAJIIT_INFANTRY_1
+	}
+	
+	sprite_cavalry = {
+		0 = KHAJIIT_INFANTRY_1
+		1 = KHAJIIT_INFANTRY_1
+		2 = KHAJIIT_INFANTRY_1
+		3 = KHAJIIT_INFANTRY_1
+	}
+	sprite_artillery = {
+		0 = KHAJIIT_INFANTRY_1
+		1 = KHAJIIT_INFANTRY_1
+		2 = KHAJIIT_INFANTRY_1
+		3 = KHAJIIT_INFANTRY_1
+	}
+
+}

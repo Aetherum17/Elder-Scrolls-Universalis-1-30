@@ -31,6 +31,19 @@ objectTypes = {
 		}
 		
 	pdxmesh = {
+		name = "chimer_generic_infantry_01_mesh"
+		file = "gfx/models/Units/chimer_generic_infantry_01.mesh"			
+		
+		animation = { id = "attack"				type = "polearm_twohanded_attack_animation" }
+		animation = { id = "death"				type = "rifleman_death_animation" }		
+		animation = { id = "idle"				type = "polearm_twohanded_idle_animation" }
+		animation = { id = "walk"				type = "polearm_twohanded_moving_animation" }
+		animation = { id = "retreat"			type = "polearm_twohanded_retreat_animation" }
+
+		scale = 0.5
+	}
+		
+	pdxmesh = {
 			name = "orc_generic_infantry_01_mesh"
 			file = "gfx/models/Units/orc_generic_infantry_01.mesh"			
 			
@@ -190,6 +203,45 @@ objectTypes = {
 		animation = { id = "walk"				type = "spear_shield_moving_animation" }
 		animation = { id = "retreat"			type = "polearm_twohanded_retreat_animation" }
 
+		scale = 0.5
+	}
+	
+	pdxmesh = {
+		name = "khajiit_generic_infantry_01_mesh"
+		file = "gfx/models/Units/khajiit_generic_infantry_01.mesh"			
+
+		animation = { id = "attack"				type = "medieval_club_and_shield_attack_animation" }
+		animation = { id = "death"				type = "rifleman_death_animation" }		
+		animation = { id = "idle"				type = "medieval_club_and_shield_idle_animation" }
+		animation = { id = "walk"				type = "medieval_club_and_shield_moving_animation" }
+		animation = { id = "retreat"			type = "polearm_twohanded_retreat_animation" }
+		
+		scale = 0.5
+	}
+	
+	pdxmesh = {
+		name = "anequina_infantry_01_mesh"
+		file = "gfx/models/Units/anequina_infantry_01.mesh"			
+
+		animation = { id = "attack"				type = "medieval_club_and_shield_attack_animation" }
+		animation = { id = "death"				type = "rifleman_death_animation" }		
+		animation = { id = "idle"				type = "medieval_club_and_shield_idle_animation" }
+		animation = { id = "walk"				type = "medieval_club_and_shield_moving_animation" }
+		animation = { id = "retreat"			type = "polearm_twohanded_retreat_animation" }
+		
+		scale = 0.5
+	}
+	
+	pdxmesh = {
+		name = "lilmothiit_generic_infantry_01_mesh"
+		file = "gfx/models/Units/lilmothiit_generic_infantry_01.mesh"			
+
+		animation = { id = "attack"				type = "medieval_club_and_shield_attack_animation" }
+		animation = { id = "death"				type = "rifleman_death_animation" }		
+		animation = { id = "idle"				type = "medieval_club_and_shield_idle_animation" }
+		animation = { id = "walk"				type = "medieval_club_and_shield_moving_animation" }
+		animation = { id = "retreat"			type = "polearm_twohanded_retreat_animation" }
+		
 		scale = 0.5
 	}
 }

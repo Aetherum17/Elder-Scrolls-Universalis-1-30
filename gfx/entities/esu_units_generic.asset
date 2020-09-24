@@ -45,6 +45,25 @@ entity = {
 }
 
 entity = {
+	name = "CHIMER_INFANTRY_1"
+	pdxmesh = "chimer_generic_infantry_01_mesh"
+	version = 1
+	
+	state = { name = "idle" 		animation = "idle" }
+	state = { name = "walk" 		animation = "walk" }
+	state = { name = "attack"		animation = "attack" }
+	state = { name = "retreat"		animation = "retreat" }
+	#state = { name = "death"		animation = "death" }
+	#state = { name = "extra_state_1"		animation = "extra_state_1" }
+	#state = { name = "extra_state_2"		animation = "extra_state_2" }
+	#state = { name = "extra_state_3"		animation = "extra_state_3" }
+
+	attach = { 
+		Right_hand_node = "asian_spear_01" 
+	}
+}
+
+entity = {
 	name = "ORC_INFANTRY_1"
 	pdxmesh = "orc_generic_infantry_01_mesh"
 	version = 1
@@ -280,5 +299,65 @@ entity = {
 	attach = { 
 		Right_hand_node = "akaviri_spear" 
 		Left_hand_node = "vampire_shield" 
+	}
+}
+
+entity = {
+	name = "KHAJIIT_INFANTRY_1"
+	pdxmesh = "khajiit_generic_infantry_01_mesh"
+        version = 10
+
+	state = { name = "idle" 		animation = "idle" }
+	state = { name = "walk" 		animation = "walk" }
+	state = { name = "attack"		animation = "attack" }
+	state = { name = "retreat"		animation = "retreat" }
+	#state = { name = "death"		animation = "death" }
+	#state = { name = "extra_state_1"		animation = "extra_state_1" }
+	#state = { name = "extra_state_2"		animation = "extra_state_2" }
+	#state = { name = "extra_state_3"		animation = "extra_state_3" }
+
+	attach = { 
+		Right_hand_node = "nord_falchion" 
+        Left_hand_node = "khajiit_shield"
+	}
+}
+
+entity = {
+	name = "ANEQUINA_INFANTRY_1"
+	pdxmesh = "anequina_infantry_01_mesh"
+        version = 10
+
+	state = { name = "idle" 		animation = "idle" }
+	state = { name = "walk" 		animation = "walk" }
+	state = { name = "attack"		animation = "attack" }
+	state = { name = "retreat"		animation = "retreat" }
+	#state = { name = "death"		animation = "death" }
+	#state = { name = "extra_state_1"		animation = "extra_state_1" }
+	#state = { name = "extra_state_2"		animation = "extra_state_2" }
+	#state = { name = "extra_state_3"		animation = "extra_state_3" }
+
+	attach = { 
+		Right_hand_node = "nord_falchion" 
+        Left_hand_node = "khajiit_shield"
+	}
+}
+
+entity = {
+	name = "LILMOTHIIT_INFANTRY_1"
+	pdxmesh = "lilmothiit_generic_infantry_01_mesh"
+        version = 10
+
+	state = { name = "idle" 		animation = "idle" }
+	state = { name = "walk" 		animation = "walk" }
+	state = { name = "attack"		animation = "attack" }
+	state = { name = "retreat"		animation = "retreat" }
+	#state = { name = "death"		animation = "death" }
+	#state = { name = "extra_state_1"		animation = "extra_state_1" }
+	#state = { name = "extra_state_2"		animation = "extra_state_2" }
+	#state = { name = "extra_state_3"		animation = "extra_state_3" }
+
+	attach = { 
+		Right_hand_node = "nord_falchion" 
+        Left_hand_node = "khajiit_shield"
 	}
 }
