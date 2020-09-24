@@ -471,11 +471,17 @@ guiTypes = {
 					position = { x = 9999 y = 27 }
 					quadTextureSprite ="GFX_frontend_panel_button_left"
 				}
+				
+				iconType = {
+					name = "esu_version_background"
+					position = { x = 287 y = 38 }
+					quadTextureSprite = "GFX_esu_version_background"
+				}
+				
 				instantTextBoxType = {
 
 					name ="tutorial_button_text"
-					position = { x = 290 y = 42 }
-
+					position = { x = 280 y = 45 }
 					font = "vic_22"
 					borderSize = {x = 0 y = 0}
 					text = "FE_TUTORIAL"
@@ -483,13 +489,13 @@ guiTypes = {
 					maxWidth = 125
 					maxHeight = 20
 					fixedsize = yes
-					alwaystransparent = yes
+					alwaystransparent = no
 				}
 
 				guiButtonType = {
 					name = "credits_button"
 					position = { x = 413 y = 27	 }
-					quadTextureSprite ="GFX_frontend_panel_button_center"
+					quadTextureSprite ="GFX_frontend_panel_button_left"
 					buttonText = "FE_CREDITS"
 					buttonFont = "vic_22"
 				}

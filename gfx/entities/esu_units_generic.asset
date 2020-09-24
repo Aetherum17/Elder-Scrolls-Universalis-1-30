@@ -278,13 +278,33 @@ entity = {
 
 	attach = { 
 		Right_hand_node = "nord_falchion"
-		#head = "reachmen_helmet"
+		head = "reachmen_helmet"
 	}
 }
 
 entity = {
 	name = "VAMPIRE_INFANTRY_1"
 	pdxmesh = "vampire_generic_infantry_01_mesh"
+        version = 10
+
+	state = { name = "idle" 		animation = "idle" }
+	state = { name = "walk" 		animation = "walk" }
+	state = { name = "attack"		animation = "attack" }
+	state = { name = "retreat"		animation = "retreat" }
+	#state = { name = "death"		animation = "death" }
+	#state = { name = "extra_state_1"		animation = "extra_state_1" }
+	#state = { name = "extra_state_2"		animation = "extra_state_2" }
+	#state = { name = "extra_state_3"		animation = "extra_state_3" }
+
+	attach = { 
+		Right_hand_node = "akaviri_spear" 
+		Left_hand_node = "vampire_shield" 
+	}
+}
+
+entity = {
+	name = "SOUL_SHRIVEN_INFANTRY_1"
+	pdxmesh = "soul_shriven_generic_infantry_01_mesh"
         version = 10
 
 	state = { name = "idle" 		animation = "idle" }
