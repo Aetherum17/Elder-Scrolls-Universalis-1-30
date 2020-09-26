@@ -1,0 +1,31 @@
+atmora_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		OR = {
+			primary_culture = atmoran
+			primary_culture = skaal
+		}
+	}
+	
+	sprite_infantry = {
+		0 = ATMORAN_INFANTRY_01
+		1 = ATMORAN_INFANTRY_01
+		2 = ATMORAN_INFANTRY_01
+		3 = ATMORAN_INFANTRY_01
+	}
+	
+	sprite_cavalry = {
+		0 = ATMORAN_INFANTRY_01
+		1 = ATMORAN_INFANTRY_01
+		2 = ATMORAN_INFANTRY_01
+		3 = ATMORAN_INFANTRY_01
+	}
+	
+	sprite_artillery = {
+		0 = ATMORAN_INFANTRY_01
+		1 = ATMORAN_INFANTRY_01
+		2 = ATMORAN_INFANTRY_01
+		3 = ATMORAN_INFANTRY_01
+	}
+
+}

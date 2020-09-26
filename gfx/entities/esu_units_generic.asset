@@ -381,3 +381,21 @@ entity = {
         Left_hand_node = "khajiit_shield"
 	}
 }
+
+entity = {
+	name = "ATMORAN_INFANTRY_01"
+	pdxmesh = "atmoran_generic_infantry_01_mesh"
+
+	state = { name = "idle" 		animation = "idle" }
+	state = { name = "walk" 		animation = "walk" }
+	state = { name = "attack"		animation = "attack" }
+	state = { name = "retreat"		animation = "retreat" }
+	#state = { name = "death"		animation = "death" }
+	#state = { name = "extra_state_1"		animation = "extra_state_1" }
+	#state = { name = "extra_state_2"		animation = "extra_state_2" }
+	#state = { name = "extra_state_3"		animation = "extra_state_3" }
+
+	attach = { 
+		Right_hand_node = "african_spear" 
+	}
+}
