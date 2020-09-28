@@ -52,9 +52,9 @@ oligarchy_reform = {
 	}
 	
 	factions = {
-		mr_aristocrats
-		mr_traders
-		mr_guilds
+		es_aristocrats 
+		es_merchants 
+		es_generals
 	}
 	
 	modifiers = {
@@ -112,9 +112,9 @@ merchants_reform = {
 	nation_designer_cost = 0
 	
 	factions = {
-		mr_aristocrats
-		mr_traders
-		mr_guilds
+		es_clergy 
+		es_guilds 
+		es_knights
 	}
 	
 	modifiers = {
@@ -182,9 +182,9 @@ colonial_government = {
 	nation_designer_cost = 0
 	
 	factions = {
-		mr_aristocrats
-		mr_traders
-		mr_guilds
+		es_clergy 
+		es_traders 
+		es_militarists
 	}
 	
 	modifiers = {
@@ -233,9 +233,9 @@ presidential_despot_reform = {
 	valid_for_nation_designer = no
 	
 	factions = {
-		mr_aristocrats
-		mr_traders
-		mr_guilds
+		es_governors 
+		es_traders 
+		es_generals
 	}
 
 	modifiers = {
@@ -284,6 +284,12 @@ revolutionary_republic_reform = {
 	royal_marriage = no
 	uses_revolutionary_zeal = yes
 	revolutionary = yes
+	
+	factions = {
+		es_governors 
+		es_traders 
+		es_generals
+	}
 
 	modifiers = {
 		yearly_revolutionary_zeal = 1
@@ -300,17 +306,7 @@ revolutionary_republic_reform = {
 		enables_aristocratic_idea_group = no
 		locked_government_type = yes
 	}
-
-	conditional = {
-		allow = {
-			has_dlc = "Rights of Man"
-		}
-		factions = {
-			rr_jacobins
-			rr_royalists
-			rr_girondists
-		}
-	}
+		
 	conditional = {
 		allow = { has_dlc = "Cradle of Civilization" }
 		government_abilities = {
@@ -355,6 +351,12 @@ junior_revolutionary_republic_reform = {
 	uses_revolutionary_zeal = yes
 	revolutionary = yes
 	revolutionary_client_state = yes # Used By Revolutionary Client State
+	
+	factions = {
+		es_governors 
+		es_traders 
+		es_generals
+	}
 
 	modifiers = {
 		global_manpower_modifier = 0.25
@@ -389,17 +391,6 @@ junior_revolutionary_republic_reform = {
 		allow = { has_dlc = "Cradle of Civilization" }
 		government_abilities = {
 			feudal_theocracy_mechanic
-		}
-	}
-
-	conditional = {
-		allow = {
-			has_dlc = "Rights of Man"
-		}
-		factions = {
-			rr_jacobins
-			rr_royalists
-			rr_girondists
 		}
 	}
 	
@@ -465,9 +456,9 @@ trading_city = {
 	is_trading_city = yes
 	
 	factions = {
-		mr_aristocrats
-		mr_traders
-		mr_guilds
+		es_aristocrats 
+		es_merchants 
+		es_generals
 	}
 	
 	modifiers = {
@@ -532,9 +523,9 @@ free_city = {
 	free_city = yes
 	
 	factions = {
-		mr_aristocrats
-		mr_traders
-		mr_guilds
+		es_bureaucrats 
+		es_guilds 
+		es_militarists
 	}
 	
 	modifiers = {
@@ -789,9 +780,9 @@ noble_elite_reform = {
 	nation_designer_cost = 0
 	
 	factions = {
-		mr_aristocrats
-		mr_traders
-		mr_guilds
+		es_clergy
+		es_traders
+		es_militarists
 	}
 	
 	modifiers = {
@@ -843,15 +834,10 @@ peasants_republic = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
 	
-	conditional = {
-		allow = {
-			has_dlc = "Rights of Man"
-		}
-		factions = {
-			rr_jacobins
-			rr_royalists
-			rr_girondists
-		}
+	factions = {
+		es_bureaucrats
+		es_guilds 
+		es_militarists
 	}
 	
 	modifiers = {
@@ -903,9 +889,9 @@ protectorate_parliament_reform = {
 	nation_designer_cost = 0
 	
 	factions = {
-		mr_aristocrats
-		mr_traders
-		mr_guilds
+		es_bureaucrats
+		es_guilds 
+		es_militarists
 	}
 	
 	modifiers = {
@@ -965,9 +951,9 @@ veche_republic = {
 	nation_designer_cost = 0
 
 	factions = {
-		mr_aristocrats
-		mr_traders
-		mr_guilds
+		es_aristocrats 
+		es_merchants 
+		es_generals
 	}
 	
 	boost_income = yes
@@ -1085,9 +1071,9 @@ ambrosian_republic = {
 	nation_designer_cost = 0
 	
 	factions = {
-		mr_aristocrats
-		mr_traders
-		mr_guilds
+		es_clergy 
+		es_guilds 
+		es_knights
 	}
 	
 	modifiers = {
@@ -1145,9 +1131,9 @@ dutch_republic = {
 	royal_marriage = yes
 	
 	factions = {
-		mr_aristocrats
-		mr_traders
-		mr_guilds
+		es_clergy 
+		es_guilds 
+		es_knights
 	}
 
 	modifiers = {
@@ -1210,9 +1196,9 @@ venice_merchants_reform = {
 	legacy_equivalent = oligarchic_republic
 	
 	factions = {
-		mr_aristocrats
-		mr_traders
-		mr_guilds
+		es_aristocrats 
+		es_merchants 
+		es_generals
 	}
 	
 	modifiers = {
@@ -1286,9 +1272,9 @@ federal_republic = {
 	nation_designer_cost = 0
 	
 	factions = {
-		mr_aristocrats
-		mr_traders
-		mr_guilds
+		es_bureaucrats 
+		es_artisans
+		es_traditionalists
 	}
 	
 	modifiers = {
@@ -1344,8 +1330,8 @@ cossacks_reform = {
 	nation_designer_cost = 0
 	
 	factions = {
-		es_clergy
-		es_merchants
+		es_monks 
+		es_merchants 
 		es_warriors
 	}
 	
@@ -1397,9 +1383,9 @@ american_republic = {
 	nation_designer_cost = 0
 	
 	factions = {
-		mr_aristocrats
-		mr_traders
-		mr_guilds
+		es_bureaucrats 
+		es_guilds
+		es_militarists
 	}
 	
 	modifiers = {
@@ -1450,9 +1436,9 @@ prussian_republic_reform = {
 	nation_designer_cost = 100
 	
 	factions = {
-		mr_aristocrats
-		mr_traders
-		mr_guilds
+		es_bureaucrats 
+		es_artisans
+		es_traditionalists
 	}
 	
 	modifiers = {
@@ -1503,9 +1489,9 @@ signoria_reform = {
 	royal_marriage = yes
 	
 	factions = {
-		mr_aristocrats
-		mr_traders
-		mr_guilds
+		es_aristocrats 
+		es_merchants 
+		es_generals
 	}
 	
 	modifiers = {
@@ -1555,9 +1541,9 @@ military_dictatorship_reform = {
 	nation_designer_cost = 0
 	
 	factions = {
-		mr_aristocrats
-		mr_traders
-		mr_guilds
+		es_governors 
+		es_traders 
+		es_generals
 	}
 	
 	modifiers = {

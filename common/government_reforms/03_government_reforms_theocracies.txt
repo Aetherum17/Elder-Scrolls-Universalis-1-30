@@ -33,9 +33,9 @@ leading_clergy_reform = {
 	nation_designer_cost = 0
 	
 	factions = {
-		es_clergy
-		es_merchants
-		es_warriors
+		es_monks 
+		es_monopolists 
+		es_knights
 	}
 	
 	modifiers = {
@@ -72,9 +72,9 @@ monastic_order_reform = {
 	monastic = yes
 	
 	factions = {
-		es_clergy
-		es_merchants
-		es_warriors
+		es_monks 
+		es_monopolists 
+		es_knights
 	}
 	
 	modifiers = {
@@ -111,9 +111,9 @@ papacy_reform = {
 	allow_convert = no
 	
 	factions = {
-		es_clergy
-		es_merchants
-		es_warriors
+		es_monks
+		es_monopolists
+		es_knights
 	}
 
 	modifiers = {
@@ -156,9 +156,9 @@ tribunal_reform = {
 	papacy = yes
 	
 	factions = {
-		es_clergy
-		es_merchants
-		es_warriors
+		es_monks
+		es_monopolists
+		es_knights
 	}
 
 	modifiers = {
@@ -208,9 +208,9 @@ guru_advisors_reform = {
 	nation_designer_cost = 0
 	
 	factions = {
-		mr_aristocrats
-		mr_traders
-		mr_guilds
+		es_clergy 
+		es_traders 
+		es_militarists
 	}
 	
 	modifiers = {
@@ -253,9 +253,9 @@ warrior_monks_reform = {
 	monastic = yes
 	
 	factions = {
-		es_clergy
-		es_merchants
-		es_warriors
+		es_clergy 
+		es_traders 
+		es_militarists
 	}
 	
 	modifiers = {
@@ -293,9 +293,9 @@ pious_merchants_reform = {
 	nation_designer_cost = 0
 	
 	factions = {
-		mr_aristocrats
-		mr_traders
-		mr_guilds
+		es_clergy
+		es_guilds 
+		es_knights
 	}
 	
 	modifiers = {
@@ -354,9 +354,9 @@ loyal_nobility_reform = {
 	allow_vassal_alliance = yes
 	
 	factions = {
-		es_clergy
-		es_merchants
-		es_warriors
+		es_clergy 
+		es_traders 
+		es_militarists
 	}
 	
 	modifiers = {
@@ -389,9 +389,9 @@ kingdom_of_god_reform = {
 	nation_designer_cost = 0
 	
 	factions = {
-		es_clergy
-		es_merchants
-		es_warriors
+		es_monks 
+		es_monopolists 
+		es_knights
 	}
 	
 	modifiers = {
@@ -436,9 +436,9 @@ theocratic_democracy_reform = {
 	nation_designer_cost = 0
 	
 	factions = {
-		mr_aristocrats
-		mr_traders
-		mr_guilds
+		es_bureaucrats 
+		es_guilds 
+		es_militarists
 	}
 	
 	modifiers = {
@@ -486,9 +486,9 @@ divine_guidance_reform = {
 	nation_designer_cost = 0
 	
 	factions = {
-		es_clergy
-		es_merchants
-		es_warriors
+		es_monks
+		es_monopolists 
+		es_knights
 	}
 	
 	modifiers = {
@@ -536,9 +536,9 @@ monastic_elections_reform = {
 	nation_designer_cost = 0
 	
 	factions = {
-		mr_aristocrats
-		mr_traders
-		mr_guilds
+		es_bureaucrats 
+		es_guilds 
+		es_militarists
 	}
 	
 	modifiers = {
@@ -601,8 +601,8 @@ battle_pope_reform = {
 	rulers_can_be_generals = yes
 	
 	factions = {
-		es_clergy
-		es_merchants
+		es_aristocrats 
+		es_artisans 
 		es_warriors
 	}
 
@@ -723,8 +723,8 @@ religious_harmony_reform = {
 	
 	factions = {
 		es_clergy
-		es_merchants
-		es_warriors
+		es_traders 
+		es_militarists
 	}
 	
 	modifiers = {
@@ -768,9 +768,9 @@ proclaim_religious_head_reform = {
 	nation_designer_cost = 0
 	
 	factions = {
-		es_clergy
-		es_merchants
-		es_warriors
+		es_monks 
+		es_monopolists 
+		es_knights
 	}
 	
 	modifiers = {
@@ -814,9 +814,9 @@ admiral_king_reform = {
 	heir = no
 	
 	factions = {
-		es_clergy
-		es_merchants
-		es_warriors
+		es_governors 
+		es_traders
+		es_generals
 	}
 	
 	modifiers = {
@@ -887,9 +887,9 @@ commander_king_reform = {
 	heir = no
 	
 	factions = {
-		es_clergy
-		es_merchants
-		es_warriors
+		es_governors 
+		es_traders
+		es_generals
 	}
 	
 	modifiers = {
@@ -935,9 +935,9 @@ religious_permanent_revolution_reform = {
 	different_religion_group_acceptance = -250
 	
 	factions = {
-		es_clergy
-		es_merchants
-		es_warriors
+		es_monks 
+		es_monopolists 
+		es_knights
 	}
 	
 	modifiers = {

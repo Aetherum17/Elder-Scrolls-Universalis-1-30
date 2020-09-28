@@ -33,8 +33,8 @@ autocracy_reform = {
 	
 	factions = {
 		es_clergy
-		es_merchants
-		es_warriors
+		es_guilds 
+		es_knights
 	}
 	
 	modifiers = {
@@ -69,9 +69,9 @@ elective_monarchy = {
 	nation_designer_cost = 0
 	
 	factions = {
-		es_clergy
-		es_merchants
-		es_warriors
+		es_clergy 
+		es_traders 
+		es_militarists
 	}
 	
 	modifiers = {
@@ -124,9 +124,9 @@ celestial_empire = {
 	fixed_rank = 10
 	
 	factions = {
-		temples
-		enuchs
-		bureaucrats
+		es_monks 
+		es_monopolists 
+		es_knights
 	}
 
 	modifiers = {
@@ -174,15 +174,10 @@ revolutionary_empire_reform = {
 	lock_level_when_selected = yes
 	fixed_rank = 10
 	
-	conditional = {
-		allow = {
-			has_dlc = "Rights of Man"
-		}
-		factions = {
-			rr_jacobins
-			rr_royalists
-			rr_girondists
-		}
+	factions = {
+		es_governors 
+		es_traders 
+		es_generals
 	}
 	
 	modifiers = {
@@ -243,9 +238,9 @@ feudalism_reform = {
 	allow_vassal_alliance = yes
 	
 	factions = {
-		es_clergy
-		es_merchants
-		es_warriors
+		es_bureaucrats 
+		es_artisans 
+		es_traditionalists
 	}
 	
 	modifiers = {
@@ -284,8 +279,8 @@ austrian_archduchy_reform = {
 	
 	factions = {
 		es_clergy
-		es_merchants
-		es_warriors
+		es_guilds 
+		es_knights
 	}
 	
 	modifiers = {
@@ -335,9 +330,9 @@ grand_duchy_reform = {
 	nation_designer_cost = 0
 	
 	factions = {
-		es_clergy
-		es_merchants
-		es_warriors
+		es_bureaucrats
+		es_artisans 
+		es_traditionalists
 	}
 	
 	modifiers = {
@@ -387,9 +382,9 @@ austrian_dual_monarchy = {
 	nation_designer_cost = 0
 	
 	factions = {
-		es_clergy
-		es_merchants
-		es_warriors
+		es_bureaucrats 
+		es_artisans
+		es_traditionalists
 	}
 	
 	conditional = {
@@ -454,8 +449,8 @@ mamluk_government = {
 	
 	factions = {
 		es_clergy
-		es_merchants
-		es_warriors
+		es_guilds
+		es_knights
 	}
 
 	modifiers = {
@@ -497,9 +492,9 @@ english_monarchy = {
 	nation_designer_cost = 0
 	
 	factions = {
-		es_clergy
-		es_merchants
-		es_warriors
+		es_governors 
+		es_monopolists 
+		es_traditionalists
 	}
 	
 	modifiers = {
@@ -562,9 +557,9 @@ prussian_monarchy = {
 	legacy_equivalent = despotic_monarchy
 	
 	factions = {
-		es_clergy
-		es_merchants
-		es_warriors
+		es_governors 
+		es_monopolists 
+		es_traditionalists
 	}
 
 	modifiers = {
@@ -607,9 +602,9 @@ ottoman_government = {
 	maintain_dynasty = yes
 	
 	factions = {
-		temples
-		enuchs
-		bureaucrats
+		es_clergy 
+		es_guilds
+		es_knights
 	}
 	
 	modifiers = {
@@ -656,9 +651,9 @@ shogunate = {
 	allow_vassal_alliance = yes
 	
 	factions = {
-		temples
-		enuchs
-		bureaucrats
+		es_bureaucrats 
+		es_artisans 
+		es_traditionalists
 	}
 
 	modifiers = {
@@ -698,6 +693,12 @@ feudal_theocracy = {
 	legacy_equivalent = despotic_monarchy
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
+	
+	factions = {
+		es_monks 
+		es_monopolists 
+		es_knights
+	}
 	
 	modifiers = {
 		missionaries = 1
@@ -744,9 +745,9 @@ mughal_government = {
 	nation_designer_cost = 0
 	
 	factions = {
-		es_clergy
-		es_merchants
-		es_warriors
+		es_governors 
+		es_monopolists 
+		es_traditionalists
 	}
 
 	modifiers = {
@@ -867,9 +868,9 @@ plutocratic_reform = {
 	nation_designer_cost = 0
 	
 	factions = {
-		mr_aristocrats
-		mr_traders
-		mr_guilds
+		es_aristocrats 
+		es_merchants 
+		es_generals
 	}
 	
 	modifiers = {
@@ -943,6 +944,12 @@ principality = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
 	
+	factions = {
+		es_governors 
+		es_monopolists
+		es_traditionalists
+	}
+	
 	modifiers = {
 		manpower_recovery_speed = 0.25
 		global_tax_modifier = 0.10
@@ -983,6 +990,12 @@ iqta = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
 	queen = no
+	
+	factions = {
+		es_governors 
+		es_monopolists
+		es_traditionalists
+	}
 	
 	modifiers = {
 		vassal_income = 0.10

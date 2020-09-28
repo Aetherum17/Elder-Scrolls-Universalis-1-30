@@ -41,6 +41,12 @@ siberian_tribe = {
 	nation_designer_cost = 0
 	legacy_equivalent = steppe_horde_legacy
 	
+	factions = {
+		es_monks 
+		es_merchants
+		es_warriors
+	}
+	
 	modifiers = {
 		stability_cost_modifier = -0.25
 	    global_manpower_modifier = 0.15
@@ -77,6 +83,12 @@ steppe_horde = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
 	nomad = yes
+	
+	factions = {
+		es_aristocrats 
+		es_artisans 
+		es_warriors
+	}
 
 	modifiers = {
 		land_forcelimit_modifier = 0.25
@@ -111,6 +123,12 @@ tribal_federation = {
 	legacy_equivalent = steppe_horde_legacy
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
+	
+	factions = {
+		es_monks 
+		es_merchants 
+		es_warriors
+	}
 
 	modifiers = {
 	    mercenary_manpower = 0.25
@@ -149,6 +167,13 @@ tribal_despotism = {
 	legacy_equivalent = steppe_horde_legacy
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
+	
+	factions = {
+		es_aristocrats 
+		es_artisans 
+		es_warriors
+	}
+	
 	modifiers = {
 		core_creation = -0.25
 		global_unrest = -1.5
@@ -184,6 +209,12 @@ tribal_kingdom = {
 	legacy_equivalent = steppe_horde_legacy
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
+	
+	factions = {
+		es_aristocrats 
+		es_artisans 
+		es_warriors
+	}
 	
 	modifiers = {
 		vassal_income = 0.25
@@ -226,6 +257,12 @@ great_mongol_state_reform = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
 	nomad = yes
+	
+	factions = {
+		es_aristocrats 
+		es_artisans 
+		es_warriors
+	}
 	
 	modifiers = {
 	    manpower_recovery_speed = 0.25
@@ -273,6 +310,12 @@ martial_society_reform = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
 	
+	factions = {
+		es_aristocrats 
+		es_artisans 
+		es_warriors
+	}
+	
 	modifiers = {
 		land_maintenance_modifier = -0.25
 		naval_maintenance_modifier = -0.15
@@ -319,6 +362,12 @@ civil_society_reform = {
 	legacy_equivalent = steppe_horde_legacy
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
+	
+	factions = {
+		es_bureaucrats 
+		es_guilds 
+		es_militarists
+	}
 	
 	modifiers = {
 		global_tax_modifier = 0.10
@@ -372,6 +421,12 @@ religious_societies_reform = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
 	
+	factions = {
+		es_monks 
+		es_merchants
+		es_warriors
+	}
+	
 	modifiers = {
 		global_missionary_strength = 0.025
 		religious_unity = 0.15
@@ -418,6 +473,12 @@ retain_tribal_hierarchy_reform = {
 	legacy_equivalent = steppe_horde_legacy
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
+	
+	factions = {
+		es_bureaucrats 
+		es_artisans 
+		es_traditionalists
+	}
 	
 	modifiers = {
 	    global_unrest = -2.5
