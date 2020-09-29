@@ -78,7 +78,8 @@ entity = {
 	#state = { name = "extra_state_3"		animation = "extra_state_3" }
 
 	attach = { 
-		Right_hand_node = "asian_spear_01" 
+		Right_hand_node = "orc_sword" 
+		attack_L_hand = "orc_shield"
 	}
 }
 
@@ -378,7 +379,7 @@ entity = {
 
 	attach = { 
 		Right_hand_node = "nord_falchion" 
-        Left_hand_node = "khajiit_shield"
+        Left_hand_node = "indian_generic_01_type1_shield"
 	}
 }
 

@@ -47,10 +47,10 @@ objectTypes = {
 			name = "orc_generic_infantry_01_mesh"
 			file = "gfx/models/Units/orc_generic_infantry_01.mesh"			
 			
-			animation = { id = "attack"				type = "polearm_twohanded_attack_animation" }
+			animation = { id = "attack"				type = "medieval_club_and_shield_attack_animation" }
 			animation = { id = "death"				type = "rifleman_death_animation" }		
-			animation = { id = "idle"				type = "polearm_twohanded_idle_animation" }
-			animation = { id = "walk"				type = "polearm_twohanded_moving_animation" }
+			animation = { id = "idle"				type = "medieval_club_and_shield_idle_animation" }
+			animation = { id = "walk"				type = "medieval_club_and_shield_moving_animation" }
 			animation = { id = "retreat"			type = "polearm_twohanded_retreat_animation" }
 
 			scale = 0.5
