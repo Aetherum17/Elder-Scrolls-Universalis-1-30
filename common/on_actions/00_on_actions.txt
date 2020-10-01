@@ -936,7 +936,6 @@ on_new_consort = {
 on_new_heir = {
 	
 }
-
 # country
 on_monarch_death = {
 	if = { limit = { ai = no has_reform = backbone_of_the_nation } add_stability = -1 }

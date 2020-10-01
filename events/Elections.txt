@@ -109,11 +109,47 @@ country_event = {
 		}
 		if = {
 			limit = { 
-				has_faction = mr_guilds 
+				has_faction = es_monks 
 			}
 			add_faction_influence = {
-				faction = mr_guilds
-				influence = 20
+				faction = es_monks
+				influence = 15
+			}				
+		}
+		if = {
+			limit = { 
+				has_faction = es_governors 
+			}
+			add_faction_influence = {
+				faction = es_governors
+				influence = 15
+			}				
+		}
+		if = {
+			limit = { 
+				has_faction = es_bureaucrats 
+			}
+			add_faction_influence = {
+				faction = es_bureaucrats
+				influence = 15
+			}				
+		}
+		if = {
+			limit = { 
+				has_faction = es_aristocrats 
+			}
+			add_faction_influence = {
+				faction = es_aristocrats
+				influence = 15
+			}				
+		}
+		if = {
+			limit = { 
+				has_faction = es_clergy 
+			}
+			add_faction_influence = {
+				faction = es_clergy
+				influence = 15
 			}				
 		}
 		add_karma = 10
@@ -141,11 +177,47 @@ country_event = {
 		}
 		if = {
 			limit = { 
-				has_faction = mr_traders 
+				has_faction = es_monopolists 
 			}
 			add_faction_influence = {
-				faction = mr_traders
-				influence = 20
+				faction = es_monopolists
+				influence = 15
+			}				
+		}
+		if = {
+			limit = { 
+				has_faction = es_traders 
+			}
+			add_faction_influence = {
+				faction = es_traders
+				influence = 15
+			}				
+		}
+		if = {
+			limit = { 
+				has_faction = es_guilds 
+			}
+			add_faction_influence = {
+				faction = es_guilds
+				influence = 15
+			}				
+		}
+		if = {
+			limit = { 
+				has_faction = es_merchants 
+			}
+			add_faction_influence = {
+				faction = es_merchants
+				influence = 15
+			}				
+		}
+		if = {
+			limit = { 
+				has_faction = es_artisans 
+			}
+			add_faction_influence = {
+				faction = es_artisans
+				influence = 15
 			}				
 		}
 		add_karma = 10		
@@ -173,11 +245,47 @@ country_event = {
 		}
 		if = {
 			limit = { 
-				has_faction = mr_aristocrats 
+				has_faction = es_knights 
 			}
 			add_faction_influence = {
-				faction = mr_aristocrats
-				influence = 20
+				faction = es_knights
+				influence = 15
+			}				
+		}
+		if = {
+			limit = { 
+				has_faction = es_traditionalists 
+			}
+			add_faction_influence = {
+				faction = es_traditionalists
+				influence = 15
+			}				
+		}
+		if = {
+			limit = { 
+				has_faction = es_generals 
+			}
+			add_faction_influence = {
+				faction = es_generals
+				influence = 15
+			}				
+		}
+		if = {
+			limit = { 
+				has_faction = es_militarists 
+			}
+			add_faction_influence = {
+				faction = es_militarists
+				influence = 15
+			}				
+		}
+		if = {
+			limit = { 
+				has_faction = es_warriors 
+			}
+			add_faction_influence = {
+				faction = es_warriors
+				influence = 15
 			}				
 		}
 		add_karma = 10
@@ -211,15 +319,6 @@ country_event = {
 				max_age = 50
 				name = "lastname"
 			}
-		}
-		if = {
-			limit = { 
-				has_faction = mr_aristocrats 
-			}
-			add_faction_influence = {
-				faction = mr_aristocrats
-				influence = 10
-			}				
 		}
 	}
 }
@@ -262,11 +361,47 @@ country_event = {
 		}
 		if = {
 			limit = { 
-				has_faction = mr_guilds 
+				has_faction = es_monks 
 			}
 			add_faction_influence = {
-				faction = mr_guilds
-				influence = 20
+				faction = es_monks
+				influence = 15
+			}				
+		}
+		if = {
+			limit = { 
+				has_faction = es_governors 
+			}
+			add_faction_influence = {
+				faction = es_governors
+				influence = 15
+			}				
+		}
+		if = {
+			limit = { 
+				has_faction = es_bureaucrats 
+			}
+			add_faction_influence = {
+				faction = es_bureaucrats
+				influence = 15
+			}				
+		}
+		if = {
+			limit = { 
+				has_faction = es_aristocrats 
+			}
+			add_faction_influence = {
+				faction = es_aristocrats
+				influence = 15
+			}				
+		}
+		if = {
+			limit = { 
+				has_faction = es_clergy 
+			}
+			add_faction_influence = {
+				faction = es_clergy
+				influence = 15
 			}				
 		}
 	}
@@ -293,13 +428,49 @@ country_event = {
 		}
 		if = {
 			limit = { 
-				has_faction = mr_traders 
+				has_faction = es_monopolists 
 			}
 			add_faction_influence = {
-				faction = mr_traders
-				influence = 20
+				faction = es_monopolists
+				influence = 15
 			}				
-		}			
+		}
+		if = {
+			limit = { 
+				has_faction = es_traders 
+			}
+			add_faction_influence = {
+				faction = es_traders
+				influence = 15
+			}				
+		}
+		if = {
+			limit = { 
+				has_faction = es_guilds 
+			}
+			add_faction_influence = {
+				faction = es_guilds
+				influence = 15
+			}				
+		}
+		if = {
+			limit = { 
+				has_faction = es_merchants 
+			}
+			add_faction_influence = {
+				faction = es_merchants
+				influence = 15
+			}				
+		}
+		if = {
+			limit = { 
+				has_faction = es_artisans 
+			}
+			add_faction_influence = {
+				faction = es_artisans
+				influence = 15
+			}				
+		}	
 	}
 	option = {
 		name = "EVTOPTD700"	# A military man
@@ -324,13 +495,49 @@ country_event = {
 		}
 		if = {
 			limit = { 
-				has_faction = mr_aristocrats 
+				has_faction = es_knights 
 			}
 			add_faction_influence = {
-				faction = mr_aristocrats
-				influence = 20
+				faction = es_knights
+				influence = 15
 			}				
-		}		
+		}
+		if = {
+			limit = { 
+				has_faction = es_traditionalists 
+			}
+			add_faction_influence = {
+				faction = es_traditionalists
+				influence = 15
+			}				
+		}
+		if = {
+			limit = { 
+				has_faction = es_generals 
+			}
+			add_faction_influence = {
+				faction = es_generals
+				influence = 15
+			}				
+		}
+		if = {
+			limit = { 
+				has_faction = es_militarists 
+			}
+			add_faction_influence = {
+				faction = es_militarists
+				influence = 15
+			}				
+		}
+		if = {
+			limit = { 
+				has_faction = es_warriors 
+			}
+			add_faction_influence = {
+				faction = es_warriors
+				influence = 15
+			}				
+		}
 	}
 	option = { # Nepotism choice, re-electing within dynasty
 		name = "EVTOPTE700"
@@ -358,15 +565,6 @@ country_event = {
 				age = 30
 				name = "lastname"
 			}
-		}
-		if = {
-			limit = { 
-				has_faction = mr_aristocrats 
-			}
-			add_faction_influence = {
-				faction = mr_aristocrats
-				influence = 10
-			}				
 		}
 	}
 }
@@ -669,11 +867,47 @@ country_event = {
 		add_republican_tradition = -25
 		if = {
 			limit = { 
-				has_faction = mr_guilds 
+				has_faction = es_monks 
 			}
 			add_faction_influence = {
-				faction = mr_guilds
-				influence = 20
+				faction = es_monks
+				influence = 15
+			}				
+		}
+		if = {
+			limit = { 
+				has_faction = es_governors 
+			}
+			add_faction_influence = {
+				faction = es_governors
+				influence = 15
+			}				
+		}
+		if = {
+			limit = { 
+				has_faction = es_bureaucrats 
+			}
+			add_faction_influence = {
+				faction = es_bureaucrats
+				influence = 15
+			}				
+		}
+		if = {
+			limit = { 
+				has_faction = es_aristocrats 
+			}
+			add_faction_influence = {
+				faction = es_aristocrats
+				influence = 15
+			}				
+		}
+		if = {
+			limit = { 
+				has_faction = es_clergy 
+			}
+			add_faction_influence = {
+				faction = es_clergy
+				influence = 15
 			}				
 		}
 		custom_tooltip = lottery_candidate_bonus_one
@@ -687,11 +921,47 @@ country_event = {
 		add_republican_tradition = -25
 		if = {
 			limit = { 
-				has_faction = mr_traders 
+				has_faction = es_monopolists 
 			}
 			add_faction_influence = {
-				faction = mr_traders
-				influence = 20
+				faction = es_monopolists
+				influence = 15
+			}				
+		}
+		if = {
+			limit = { 
+				has_faction = es_traders 
+			}
+			add_faction_influence = {
+				faction = es_traders
+				influence = 15
+			}				
+		}
+		if = {
+			limit = { 
+				has_faction = es_guilds 
+			}
+			add_faction_influence = {
+				faction = es_guilds
+				influence = 15
+			}				
+		}
+		if = {
+			limit = { 
+				has_faction = es_merchants 
+			}
+			add_faction_influence = {
+				faction = es_merchants
+				influence = 15
+			}				
+		}
+		if = {
+			limit = { 
+				has_faction = es_artisans 
+			}
+			add_faction_influence = {
+				faction = es_artisans
+				influence = 15
 			}				
 		}
 		custom_tooltip = lottery_candidate_bonus_one
@@ -705,11 +975,47 @@ country_event = {
 		add_republican_tradition = -25
 		if = {
 			limit = { 
-				has_faction = mr_aristocrats 
+				has_faction = es_knights 
 			}
 			add_faction_influence = {
-				faction = mr_aristocrats
-				influence = 20
+				faction = es_knights
+				influence = 15
+			}				
+		}
+		if = {
+			limit = { 
+				has_faction = es_traditionalists 
+			}
+			add_faction_influence = {
+				faction = es_traditionalists
+				influence = 15
+			}				
+		}
+		if = {
+			limit = { 
+				has_faction = es_generals 
+			}
+			add_faction_influence = {
+				faction = es_generals
+				influence = 15
+			}				
+		}
+		if = {
+			limit = { 
+				has_faction = es_militarists 
+			}
+			add_faction_influence = {
+				faction = es_militarists
+				influence = 15
+			}				
+		}
+		if = {
+			limit = { 
+				has_faction = es_warriors 
+			}
+			add_faction_influence = {
+				faction = es_warriors
+				influence = 15
 			}				
 		}
 		custom_tooltip = lottery_candidate_bonus_one
@@ -722,66 +1028,147 @@ country_event = {
 		random_list = {
 			33 = { 
 				set_ruler = lottery_candidate_a_@ROOT 
-				if = {
-					limit = { 
-						has_faction = mr_guilds 
-					}
-					add_faction_influence = {
-						faction = mr_guilds
-						influence = 20
-					}				
-				}
-				if = {
-					limit = { 
-						has_faction = rr_jacobins 
-					}
-					add_faction_influence = {
-						faction = rr_jacobins
-						influence = 20
-					}				
-				}
+		if = {
+			limit = { 
+				has_faction = es_monks 
+			}
+			add_faction_influence = {
+				faction = es_monks
+				influence = 15
+			}				
+		}
+		if = {
+			limit = { 
+				has_faction = es_governors 
+			}
+			add_faction_influence = {
+				faction = es_governors
+				influence = 15
+			}				
+		}
+		if = {
+			limit = { 
+				has_faction = es_bureaucrats 
+			}
+			add_faction_influence = {
+				faction = es_bureaucrats
+				influence = 15
+			}				
+		}
+		if = {
+			limit = { 
+				has_faction = es_aristocrats 
+			}
+			add_faction_influence = {
+				faction = es_aristocrats
+				influence = 15
+			}				
+		}
+		if = {
+			limit = { 
+				has_faction = es_clergy 
+			}
+			add_faction_influence = {
+				faction = es_clergy
+				influence = 15
+			}				
+		}
 			}
 			33 = { 
 				set_ruler = lottery_candidate_b_@ROOT 
-				if = {
-					limit = { 
-						has_faction = mr_traders 
-					}
-					add_faction_influence = {
-						faction = mr_traders
-						influence = 20
-					}				
-				}
-				if = {
-					limit = { 
-						has_faction = rr_royalists 
-					}
-					add_faction_influence = {
-						faction = rr_royalists
-						influence = 20
-					}				
-				}
+		if = {
+			limit = { 
+				has_faction = es_monopolists 
+			}
+			add_faction_influence = {
+				faction = es_monopolists
+				influence = 15
+			}				
+		}
+		if = {
+			limit = { 
+				has_faction = es_traders 
+			}
+			add_faction_influence = {
+				faction = es_traders
+				influence = 15
+			}				
+		}
+		if = {
+			limit = { 
+				has_faction = es_guilds 
+			}
+			add_faction_influence = {
+				faction = es_guilds
+				influence = 15
+			}				
+		}
+		if = {
+			limit = { 
+				has_faction = es_merchants 
+			}
+			add_faction_influence = {
+				faction = es_merchants
+				influence = 15
+			}				
+		}
+		if = {
+			limit = { 
+				has_faction = es_artisans 
+			}
+			add_faction_influence = {
+				faction = es_artisans
+				influence = 15
+			}				
+		}
 			}
 			33 = { 
 				set_ruler = lottery_candidate_c_@ROOT 
-				if = {
-					limit = { 
-						has_faction = mr_aristocrats 
-					}
-					add_faction_influence = {
-						faction = mr_aristocrats
-						influence = 20
-					}				
-				}
-				if = {
-					limit = { 
-						has_faction = rr_girondists 
-					}
-					add_faction_influence = {
-						faction = rr_girondists
-						influence = 20
-					}				
-				}
+		if = {
+			limit = { 
+				has_faction = es_knights 
+			}
+			add_faction_influence = {
+				faction = es_knights
+				influence = 15
+			}				
+		}
+		if = {
+			limit = { 
+				has_faction = es_traditionalists 
+			}
+			add_faction_influence = {
+				faction = es_traditionalists
+				influence = 15
+			}				
+		}
+		if = {
+			limit = { 
+				has_faction = es_generals 
+			}
+			add_faction_influence = {
+				faction = es_generals
+				influence = 15
+			}				
+		}
+		if = {
+			limit = { 
+				has_faction = es_militarists 
+			}
+			add_faction_influence = {
+				faction = es_militarists
+				influence = 15
+			}				
+		}
+		if = {
+			limit = { 
+				has_faction = es_warriors 
+			}
+			add_faction_influence = {
+				faction = es_warriors
+				influence = 15
+			}				
+		}
 			}
 		}
 		custom_tooltip = lottery_candidate_bonus_plural
@@ -816,15 +1203,6 @@ country_event = {
 				age = 30
 				name = "lastname"
 			}
-		}
-		if = {
-			limit = { 
-				has_faction = mr_aristocrats 
-			}
-			add_faction_influence = {
-				faction = mr_aristocrats
-				influence = 10
-			}				
 		}
 	}
 }

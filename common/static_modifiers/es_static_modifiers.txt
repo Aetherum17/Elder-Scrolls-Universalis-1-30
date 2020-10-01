@@ -303,7 +303,7 @@ patriarch_authority_local = {
 
 patriarch_authority_global = {
 	global_missionary_strength = 0.025
-	church_influence_modifier = 0.10							 
+	church_influence_modifier = 0.10			
 }
 
 pasha_state = {
@@ -589,9 +589,6 @@ positive_stability = {
 	global_unrest = -1.75					
 	global_tax_modifier = 0.05
 	global_missionary_strength = 0.005
-	temples_influence = 0.025
-	mr_aristocrats_influence = 0.025
-	rr_jacobins_influence = 0.025
 	stability_cost_modifier = 0.50
 	monthly_fervor_increase = 1
 	yearly_corruption = -0.015
@@ -599,8 +596,11 @@ positive_stability = {
 	yearly_harmony = 0.25
 	caravan_power = 0.05
 	
-	es_warriors_influence = 0.025
-	es_knights_influence = 0.025
+	es_monks_influence = 0.025
+	es_governors_influence = 0.025
+	es_bureaucrats_influence = 0.025
+	es_aristocrats_influence = 0.025
+	es_clergy_influence = 0.025
 	
 	legitimacy = 0.25
 	republican_tradition = 0.25
@@ -618,8 +618,6 @@ negative_stability = {
 	global_tax_modifier = 0.10
 	global_missionary_strength = 0.010
 	temples_influence = 0.025
-	mr_aristocrats_influence = 0.025
-	rr_jacobins_influence = 0.025
 	monthly_fervor_increase = 1
 	yearly_corruption = -0.035
 	interest = -2.5
@@ -629,8 +627,11 @@ negative_stability = {
 	global_institution_spread = 0.15
 	yearly_harmony = 0.25
 	
-	es_warriors_influence = 0.025
 	es_knights_influence = 0.025
+	es_traditionalists_influence = 0.025
+	es_generals_influence = 0.025
+	es_militarists_influence = 0.025
+	es_warriors_influence = 0.025
 	
 	legitimacy = 1.5
 	republican_tradition = 1.5
@@ -697,8 +698,6 @@ bankruptcy = {
 	land_morale = -0.5
 	naval_morale = -0.5
 	reinforce_speed = -0.50					#Slower reinforce
-	bureaucrats_influence = 0.25
-	mr_guilds_influence = 0.25
 	manpower_recovery_speed = -1.0
 	sailors_recovery_speed = -1.0
 	advisor_cost = 1.0
@@ -711,15 +710,17 @@ bankruptcy = {
 	technology_cost = 1.0
 	idea_cost = 1.0
 	
-	es_clergy_influence = 0.25
-	es_monks_influence = 0.25
+	es_monopolists_influence = 0.25
+	es_traders_influence = 0.25
+	es_guilds_influence = 0.25
+	es_merchants_influence = 0.25
+	es_artisans_influence = 0.25
 }
 
 
 war = {
 	war_exhaustion = 0.01
 	war_exhaustion_cost = 0.25
-	rr_girondists_influence = 0.1
 	global_autonomy = 0.1
 	stability_cost_modifier = 1
 	build_time = 1.0
@@ -749,8 +750,11 @@ war = {
 	production_efficiency = -0.25
 	monthly_militarized_society = 0.1
 	
-	es_warriors_influence = 0.1
-	es_knights_influence = 0.1
+	es_knights_influence = 0.10
+	es_traditionalists_influence = 0.10
+	es_generals_influence = 0.10
+	es_militarists_influence = 0.10
+	es_warriors_influence = 0.10
 }
 
 peace = {
@@ -764,8 +768,11 @@ peace = {
 	
 	horde_unity = -1.5
 	
-	es_warriors_influence = -0.1
-	es_knights_influence = -0.1
+	es_knights_influence = -0.05
+	es_traditionalists_influence = -0.05
+	es_generals_influence = -0.05
+	es_militarists_influence = -0.05
+	es_warriors_influence = -0.05
 }
 
 unconditional_surrender = {
@@ -783,10 +790,6 @@ war_exhaustion = {
 	global_regiment_recruit_speed = 0.025
 	global_ship_recruit_speed = 0.025
 	core_creation = 0.025
-	temples_influence = -0.05
-	mr_aristocrats_influence = -0.05
-	rr_girondists_influence = -0.05
-	rr_royalists_influence = 0.05
 	manpower_recovery_speed = -0.025
 	sailors_recovery_speed = -0.025
 	siege_ability = -0.025
@@ -801,10 +804,11 @@ war_exhaustion = {
 	meritocracy = -0.25
 	defensiveness = -0.05
 	
-	es_warriors_influence = -0.05
-	es_merchants_influence = 0.05
-	es_knights_influence = -0.05
-	es_priests_influence = 0.05
+	es_monks_influence = -0.05
+	es_governors_influence = -0.05
+	es_bureaucrats_influence = -0.05
+	es_aristocrats_influence = -0.05
+	es_clergy_influence = -0.05
 }
 
 doom = {
@@ -846,17 +850,17 @@ army_tradition = {
 	land_morale = 0.25
 	manpower_recovery_speed = 0.1
 	siege_ability = 0.05
-	temples_influence = 0.1
-	mr_aristocrats_influence = 0.1
-	rr_girondists_influence = 0.1
 	monthly_militarized_society = 0.1
 	
 	nobles_loyalty_modifier = 0.05
 	maratha_loyalty_modifier = 0.05
 	rajput_loyalty_modifier = 0.05
-	
-	es_warriors_influence = 0.1
+
 	es_knights_influence = 0.1
+	es_traditionalists_influence = 0.1
+	es_generals_influence = 0.1
+	es_militarists_influence = 0.1
+	es_warriors_influence = 0.1
 }
 
 navy_tradition = {
@@ -864,16 +868,17 @@ navy_tradition = {
 	naval_morale = 0.25
 	trade_steering = 1.0
 	privateer_efficiency = 0.25
-	enuchs_influence = 0.1
-	mr_traders_influence = 0.1
 	blockade_efficiency = 1
 	sailors_recovery_speed = 0.2
 	
 	burghers_loyalty_modifier = 0.05
 	vaisyas_loyalty_modifier = 0.05
 	
+	es_monopolists_influence = 0.1
+	es_traders_influence = 0.1
+	es_guilds_influence = 0.1
 	es_merchants_influence = 0.1
-	es_priests_influence = 0.1
+	es_artisans_influence = 0.1
 }
 
 positive_piety = {
@@ -1037,7 +1042,13 @@ corruption = {
 	nomadic_tribes_loyalty_modifier = 0.1
 	dhimmi_loyalty_modifier = 0.1
 	jains_loyalty_modifier = 0.1
-	rajput_loyalty_modifier = 0.1		   
+	rajput_loyalty_modifier = 0.1	
+
+	es_monopolists_influence = 0.1
+	es_traders_influence = 0.1
+	es_guilds_influence = 0.1
+	es_merchants_influence = 0.1
+	es_artisans_influence = 0.1
 }
 
 root_out_corruption = {
@@ -1080,11 +1091,12 @@ over_extension = {
 	republican_tradition = -1
 	meritocracy = -1
 	harsh_treatment_cost = 1.0
-	bureaucrats_influence = 0.5
-	mr_guilds_influence = 0.5
 	
-	es_clergy_influence = 0.5
-	es_monks_influence = 0.5
+	es_monks_influence = 0.15
+	es_governors_influence = 0.15
+	es_bureaucrats_influence = 0.15
+	es_aristocrats_influence = 0.15
+	es_clergy_influence = 0.15
 }
 
 territory_very_easy_difficulty = { 
@@ -1152,18 +1164,22 @@ republican_tradition = {
 	tolerance_heretic = 1
 	diplomatic_reputation = 1
 	vassal_income = 0.25
-	rr_jacobins_influence = 0.1
 	
+	es_monopolists_influence = 0.1
+	es_traders_influence = 0.1
+	es_guilds_influence = 0.1
 	es_merchants_influence = 0.1
-	es_priests_influence = 0.1
+	es_artisans_influence = 0.1
 }
 
 inverse_republican_tradition = {
 	stability_cost_modifier = 2.5
-	rr_jacobins_influence = -0.1
 	
+	es_monopolists_influence = -0.1
+	es_traders_influence = -0.1
+	es_guilds_influence = -0.1
 	es_merchants_influence = -0.1
-	es_priests_influence = -0.1
+	es_artisans_influence = -0.1
 }
 
 
