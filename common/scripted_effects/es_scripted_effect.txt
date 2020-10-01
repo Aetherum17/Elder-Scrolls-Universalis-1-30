@@ -100,3 +100,19 @@ define_random_advisor = {
 	2 = { define_advisor = { skill = $skill$ type = warden culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
 	}
 }
+
+clear_birthsigns = {
+	clr_ruler_flag = birthsign_ritual
+	clr_ruler_flag = birthsign_lover
+	clr_ruler_flag = birthsign_lord
+	clr_ruler_flag = birthsign_mage
+	clr_ruler_flag = birthsign_shadow
+	clr_ruler_flag = birthsign_steed
+	clr_ruler_flag = birthsign_apprentice
+	clr_ruler_flag = birthsign_warrior
+	clr_ruler_flag = birthsign_lady
+	clr_ruler_flag = birthsign_tower
+	clr_ruler_flag = birthsign_atronoch
+	clr_ruler_flag = birthsign_thief
+	clr_ruler_flag = birthsign_serpant
+}

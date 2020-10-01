@@ -911,6 +911,9 @@ on_new_monarch = {
 		50 = dynastic_events.5
 		25 = harem_events.7
 	}
+	country_event = {
+		# id = es_birthsigns.0	# Assign Ruler Birthsign
+	}
 }
 
 on_new_consort = {
@@ -928,6 +931,10 @@ on_new_consort = {
 		limit = { has_ruler_flag = consort_had_affection_of_ruler }
 		clr_ruler_flag = consort_had_affection_of_ruler
 	}
+}
+
+on_new_heir = {
+	
 }
 
 # country

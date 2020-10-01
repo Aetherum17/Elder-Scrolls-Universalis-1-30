@@ -1,0 +1,201 @@
+namespace = es_birthsigns
+
+country_event = {
+	id = es_birthsigns.0
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		clear_birthsigns = yes
+		random_list = {
+			97 = {
+				country_event = {
+					id = es_birthsigns.1
+					days = 0
+				}
+			}
+			3 = {
+				country_event = {
+					id = es_birthsigns.2
+					days = 0
+				}
+			}
+		}
+	}
+	option = {
+		name = es_birthsigns.0.o.a
+	}
+}
+
+# Regular Signs
+country_event = {
+	id = es_birthsigns.1
+	title = es_birthsigns.1.t
+	is_triggered_only = yes
+
+	picture = {
+		trigger = { is_month = 0 NOT = { is_month = 1 } }
+		picture = BIRTHSIGN_RITUAL_eventPicture
+	}
+	picture = {
+		trigger = { is_month = 1 NOT = { is_month = 2 } }
+		picture = BIRTHSIGN_LOVER_eventPicture
+	}
+	picture = {
+		trigger = { is_month = 2 NOT = { is_month = 3 } }
+		picture = BIRTHSIGN_LORD_eventPicture
+	}
+	picture = {
+		trigger = { is_month = 3 NOT = { is_month = 4 } }
+		picture = BIRTHSIGN_MAGE_eventPicture
+	}
+	picture = {
+		trigger = { is_month = 4 NOT = { is_month = 5 } }
+		picture = BIRTHSIGN_SHADOW_eventPicture
+	}
+	picture = {
+		trigger = { is_month = 5 NOT = { is_month = 6 } }
+		picture = BIRTHSIGN_STEED_eventPicture
+	}
+	picture = {
+		trigger = { is_month = 6 NOT = { is_month = 7 } }
+		picture = BIRTHSIGN_APPRENTICE_eventPicture
+	}
+	picture = {
+		trigger = { is_month = 7 NOT = { is_month = 8 } }
+		picture = BIRTHSIGN_WARRIOR_eventPicture
+	}
+	picture = {
+		trigger = { is_month = 8 NOT = { is_month = 9 } }
+		picture = BIRTHSIGN_LADY_eventPicture
+	}
+	picture = {
+		trigger = { is_month = 9 NOT = { is_month = 10 } }
+		picture = BIRTHSIGN_TOWER_eventPicture
+	}
+	picture = {
+		trigger = { is_month = 10 NOT = { is_month = 11 } }
+		picture = BIRTHSIGN_ATRONOCH_eventPicture
+	}
+	picture = {
+		trigger = { is_month = 11 }
+		picture = BIRTHSIGN_THIEF_eventPicture
+	}
+	
+	desc = {
+		trigger = { is_month = 0 NOT = { is_month = 1 } }
+		desc = birthsign_ritual_event_desc
+	}
+	desc = {
+		trigger = { is_month = 1 NOT = { is_month = 2 } }
+		desc = birthsign_lover_event_desc
+	}
+	desc = {
+		trigger = { is_month = 2 NOT = { is_month = 3 } }
+		desc = birthsign_lord_event_desc
+	}
+	desc = {
+		trigger = { is_month = 3 NOT = { is_month = 4 } }
+		desc = birthsign_mage_event_desc
+	}
+	desc = {
+		trigger = { is_month = 4 NOT = { is_month = 5 } }
+		desc = birthsign_shadow_event_desc
+	}
+	desc = {
+		trigger = { is_month = 5 NOT = { is_month = 6 } }
+		desc = birthsign_steed_event_desc
+	}
+	desc = {
+		trigger = { is_month = 6 NOT = { is_month = 7 } }
+		desc = birthsign_apprentice_event_desc
+	}
+	desc = {
+		trigger = { is_month = 7 NOT = { is_month = 8 } }
+		desc = birthsign_warrior_event_desc
+	}
+	desc = {
+		trigger = { is_month = 8 NOT = { is_month = 9 } }
+		desc = birthsign_lady_event_desc
+	}
+	desc = {
+		trigger = { is_month = 9 NOT = { is_month = 10 } }
+		desc = birthsign_tower_event_desc
+	}
+	desc = {
+		trigger = { is_month = 10 NOT = { is_month = 11 } }
+		desc = birthsign_atronoch_event_desc
+	}
+	desc = {
+		trigger = { is_month = 11 }
+		desc = birthsign_thief_event_desc
+	}
+	
+	immediate = {
+		if = {
+			limit = { is_month = 0 NOT = { is_month = 1 } }
+			set_ruler_flag = birthsign_ritual
+		}
+		if = {
+			limit = { is_month = 1 NOT = { is_month = 2 } }
+			set_ruler_flag = birthsign_lover
+		}
+		if = {
+			limit = { is_month = 2 NOT = { is_month = 3 } }
+			set_ruler_flag = birthsign_lord
+		}
+		if = {
+			limit = { is_month = 3 NOT = { is_month = 4 } }
+			set_ruler_flag = birthsign_mage
+		}
+		if = {
+			limit = { is_month = 4 NOT = { is_month = 5 } }
+			set_ruler_flag = birthsign_shadow
+		}
+		if = {
+			limit = { is_month = 5 NOT = { is_month = 6 } }
+			set_ruler_flag = birthsign_steed
+		}
+		if = {
+			limit = { is_month = 6 NOT = { is_month = 7 } }
+			set_ruler_flag = birthsign_apprentice
+		}
+		if = {
+			limit = { is_month = 7 NOT = { is_month = 8 } }
+			set_ruler_flag = birthsign_warrior
+		}
+		if = {
+			limit = { is_month = 8 NOT = { is_month = 9 } }
+			set_ruler_flag = birthsign_lady
+		}
+		if = {
+			limit = { is_month = 9 NOT = { is_month = 10 } }
+			set_ruler_flag = birthsign_tower
+		}
+		if = {
+			limit = { is_month = 10 NOT = { is_month = 11 } }
+			set_ruler_flag = birthsign_atronoch
+		}
+		if = {
+			limit = { is_month = 11 }
+			set_ruler_flag = birthsign_thief
+		}
+	}
+	
+	option = {
+		name = es_birthsigns.1.o.a
+	}
+	
+}
+
+# Sign of the Serpant
+country_event = {
+	id = es_birthsigns.2
+	title = es_birthsigns.2.t
+	desc = es_birthsigns.2.d
+	picture = BIRTHSIGN_SERPANT_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = es_birthsigns.2.o.a
+		set_ruler_flag = birthsign_serpant
+	}
+}

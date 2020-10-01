@@ -120,6 +120,19 @@ objectTypes = {
 
 	scale = 0.5
 	}
+	
+	pdxmesh = {
+		name = "breton_generic_infantry_02_mesh"
+		file = "gfx/models/Units/breton_generic_infantry_02.mesh"			
+
+		animation = { id = "attack"		type = "medieval_club_and_shield_attack_animation" }
+		animation = { id = "idle"		type = "medieval_club_and_shield_idle_animation" }
+		animation = { id = "walk"		type = "medieval_club_and_shield_moving_animation" }
+		animation = { id = "death"		type = "2h_idle" }
+		animation = { id = "retreat"	type = "2h_retreat" }
+
+	scale = 0.5
+	}
 
 	pdxmesh = {
 		name = "altmer_generic_infantry_01_mesh"
