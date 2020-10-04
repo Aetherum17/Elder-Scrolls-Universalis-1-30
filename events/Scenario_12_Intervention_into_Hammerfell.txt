@@ -519,13 +519,15 @@ country_event = {
 	picture = ES_MOOT_eventPicture
 	
 	trigger = {
-	    NOT = { has_country_flag = es_12_scenario.2_flag }
+		NOT = { has_country_flag = es_12_scenario.2_flag }
+	    has_country_flag = es_12_nordic_feud_flag
 		RED = { has_country_flag = es_12_nordic_feud_flag }
 		RED = { NOT = { has_country_modifier = 12_nordic_feud } }
     }
 	
 	immediate = {
 	    1275 = { save_event_target_as = king_of_skyrim }
+		set_country_flag = es_12_scenario.2_flag
 	}
 
 	mean_time_to_happen = {
@@ -547,7 +549,7 @@ country_event = {
 		add_stability = -1
 		add_legitimacy = -35
 		add_republican_tradition = -35
-		add_devastation = -35
+		add_devotion = -35
 		add_horde_unity = -35
 		add_meritocracy = -35
 	}

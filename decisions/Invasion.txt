@@ -18,11 +18,16 @@ country_decisions = {
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
+			OR = {
+			AND = {
 			owns = 3188
 			owns = 2970
 			owns = 2903
 			owns = 2710
 			owns = 2727
+			}
+			is_year = 1600
+			}
 		}
 		effect = {
 			add_stability = 5
@@ -141,12 +146,16 @@ country_decisions = {
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
-			ai = no
+			OR = {
+			AND = {
 			owns = 4075
 			owns = 3877
 			owns = 3764
 			owns = 4143
 			owns = 4337
+			}
+			is_year = 1600
+			}
 		}
 		effect = {
 			add_stability = 5
