@@ -55,11 +55,11 @@ country_decisions = {
 		allow = {
 			is_at_war = no
 			OR = {
-				statesman = 3
+				esu_steward = 3
 				adm = 3
 			}
 			OR = {
-				faction_in_power = bureaucrats
+				faction_in_power = es_monks
 				has_factions = no
 			}
 			stability = 3

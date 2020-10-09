@@ -1448,14 +1448,6 @@ on_mandate_of_heaven_gained = {
 	}
 	if = {
 		limit = {
-			has_dlc = "Mandate of Heaven"
-		}
-		remove_faction = temples
-		remove_faction = enuchs
-		remove_faction = bureaucrats
-	}
-	if = {
-		limit = {
 			has_country_modifier = lost_mandate_of_heaven
 		}
 		remove_country_modifier = lost_mandate_of_heaven
@@ -1784,117 +1776,6 @@ on_bi_yearly_pulse_2 = {
 }
 
 on_bi_yearly_pulse_3 = {
-	
-	if = {
-	limit = {
-	is_at_war = yes
-	}
-	add_faction_influence = {
-    faction = es_warriors
-    influence = 0.05
-    }
-	}
-	
-	if = {
-	limit = {
-	is_at_war = no
-	}
-	add_faction_influence = {
-    faction = es_merchants
-    influence = 0.05
-    }
-	}
-	
-	if = {
-	limit = {
-	stability = 1
-	}
-	add_faction_influence = {
-    faction = es_clergy
-    influence = 0.05
-    }
-	}
-	
-	if = {
-	limit = {
-	NOT = { stability = 0 }
-	}
-	add_faction_influence = {
-    faction = es_merchants
-    influence = -0.03
-    }
-	}
-	
-	if = {
-	limit = {
-	average_unrest = 10
-	}
-	add_faction_influence = {
-    faction = es_warriors
-    influence = -0.03
-    }
-	}
-	
-	if = {
-	limit = {
-	NOT = { religious_unity = 0.95 }
-	}
-	add_faction_influence = {
-    faction = es_clergy
-    influence = -0.03
-    }
-	}
-	
-	if = {
-	limit = {
-	government = republic
-	}
-	add_faction_influence = {
-    faction = es_merchants
-    influence = 0.03
-    }
-	}
-	
-	if = {
-	limit = {
-	government = monarchy
-	}
-	add_faction_influence = {
-    faction = es_warriors
-    influence = 0.03
-    }
-	}
-	
-	if = {
-	limit = {
-	government = theocracy
-	}
-	add_faction_influence = {
-    faction = es_clergy
-    influence = 0.03
-    }
-	}
-	
-	if = {
-	limit = {
-	army_tradition = 50
-	}
-	add_faction_influence = {
-    faction = es_warriors
-    influence = 0.05
-    }
-	}
-	
-	if = {
-	limit = {
-	navy_tradition = 50
-	}
-	add_faction_influence = {
-    faction = es_merchants
-    influence = 0.05
-    }
-	}
-	
 }
 
 on_bi_yearly_pulse_4 = {

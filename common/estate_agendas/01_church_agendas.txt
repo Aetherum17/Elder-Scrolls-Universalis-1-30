@@ -48,16 +48,16 @@ estate_church_fire_advisor = {
 		modifier = {
 			factor = 0.5
 			employed_advisor = {
-				type = theologian
+				type = esu_priest
 				religion = root
 			}
 		}
 		modifier = {
 			factor = 2
-			advisor = theologian
+			advisor = esu_priest
 			NOT = {
 				employed_advisor = {
-					type = theologian
+					type = esu_priest
 					religion = root
 				}
 			}

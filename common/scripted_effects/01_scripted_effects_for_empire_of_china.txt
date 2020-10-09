@@ -6,7 +6,7 @@ boost_eunuchs_effect = {
 			NOT = { has_dlc = "Mandate of Heaven" }
 		}
 		add_faction_influence = {
-			faction = enuchs
+			faction = es_monks
 			influence = 10
 		}
 	}
@@ -17,7 +17,7 @@ boost_eunuchs_large_effect = {
 			NOT = { has_dlc = "Mandate of Heaven" }
 		}
 		add_faction_influence = {
-			faction = enuchs
+			faction = es_monks
 			influence = 15
 		}
 	}
@@ -28,7 +28,7 @@ reduce_eunuchs_effect = {
 			NOT = { has_dlc = "Mandate of Heaven" }
 		}
 		add_faction_influence = {
-			faction = enuchs
+			faction = es_monks
 			influence = -10
 		}
 	}
@@ -39,7 +39,7 @@ reduce_eunuchs_large_effect = {
 			NOT = { has_dlc = "Mandate of Heaven" }
 		}
 		add_faction_influence = {
-			faction = enuchs
+			faction = es_monks
 			influence = -15
 		}
 	}
@@ -51,7 +51,7 @@ boost_bureaucrats_effect = {
 			NOT = { has_dlc = "Mandate of Heaven" }
 		}
 		add_faction_influence = {
-			faction = bureaucrats
+			faction = es_monopolists
 			influence = 10
 		}
 	}
@@ -62,7 +62,7 @@ boost_bureaucrats_large_effect = {
 			NOT = { has_dlc = "Mandate of Heaven" }
 		}
 		add_faction_influence = {
-			faction = bureaucrats
+			faction = es_monopolists
 			influence = 15
 		}
 	}
@@ -73,7 +73,7 @@ reduce_bureaucrats_effect = {
 			NOT = { has_dlc = "Mandate of Heaven" }
 		}
 		add_faction_influence = {
-			faction = bureaucrats
+			faction = es_monopolists
 			influence = -10
 		}
 	}
@@ -84,7 +84,7 @@ boost_temples_effect = {
 			NOT = { has_dlc = "Mandate of Heaven" }
 		}
 		add_faction_influence = {
-			faction = temples
+			faction = es_knights
 			influence = 10
 		}
 	}
@@ -95,7 +95,7 @@ boost_temples_large_effect = {
 			NOT = { has_dlc = "Mandate of Heaven" }
 		}
 		add_faction_influence = {
-			faction = temples
+			faction = es_knights
 			influence = 15
 		}
 	}
@@ -107,7 +107,7 @@ reduce_temples_effect = {
 			NOT = { has_dlc = "Mandate of Heaven" }
 		}
 		add_faction_influence = {
-			faction = temples
+			faction = es_knights
 			influence = -10
 		}
 	}
@@ -118,7 +118,7 @@ reduce_temples_large_effect = {
 			NOT = { has_dlc = "Mandate of Heaven" }
 		}
 		add_faction_influence = {
-			faction = temples
+			faction = es_knights
 			influence = -15
 		}
 	}

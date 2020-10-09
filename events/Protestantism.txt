@@ -198,7 +198,7 @@ country_event = {
 		has_dlc = "Common Sense"
 		NOT = { num_of_aspects = 3 }
 		NOT = { church_power = 200 }
-		advisor = theologian
+		advisor = esu_monk
 	}
 	
 	mean_time_to_happen = {
@@ -220,7 +220,7 @@ country_event = {
 			}
 		}
 		add_prestige = -10
-		remove_advisor = theologian
+		remove_advisor = esu_monk
 		reduce_meritocracy_effect = yes
 	}
 	
@@ -231,7 +231,7 @@ country_event = {
 		}
 		add_church_power = 25
 		add_prestige = -15
-		remove_advisor = theologian
+		remove_advisor = esu_monk
 		reduce_meritocracy_effect = yes
 	}
 	

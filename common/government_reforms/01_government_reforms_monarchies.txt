@@ -149,11 +149,6 @@ celestial_empire = {
 		allow_banners = yes
 	}
 	
-	conditional = {
-		allow = { has_dlc = "Cradle of Civilization" }
-		has_pashas = yes
-	}
-	
 	ai = {
 		factor = 1000 # should always be picked if available
 	}
@@ -510,11 +505,6 @@ english_monarchy = {
 	conditional = {
 		allow = { has_dlc = "Common Sense" }
 		has_parliament = yes
-	}
-	
-	conditional = {
-		allow = { has_dlc = "Mandate of Heaven" }
-		allow_banners = yes
 	}
 	
 	conditional = {

@@ -128,7 +128,7 @@ country_event = {
 		add_adm_power = -50
 		define_advisor = {
 			name = capital_noble
-			type = statesman
+			type = esu_steward
 			skill = 2
 			discount = yes
 		}
@@ -362,7 +362,7 @@ country_event = {
 				else_if = {
 					limit = { monthly_income = 30 }
 					define_advisor = {
-						type = recruitmaster
+						type = esu_recruiter
 						skill = 3
 						discount = yes
 						culture = variable:new_ruler_culture
@@ -370,7 +370,7 @@ country_event = {
 				}
 				else = {
 					define_advisor = {
-						type = recruitmaster
+						type = esu_recruiter
 						skill = 2
 						discount = yes
 						culture = variable:new_ruler_culture
@@ -413,7 +413,7 @@ country_event = {
 				else_if = {
 					limit = { monthly_income = 30 }
 					define_advisor = {
-						type = recruitmaster
+						type = esu_recruiter
 						skill = 2
 						discount = yes
 						culture = variable:new_ruler_culture
@@ -421,7 +421,7 @@ country_event = {
 				}
 				else = {
 					define_advisor = {
-						type = recruitmaster
+						type = esu_recruiter
 						skill = 1
 						discount = yes
 						culture = variable:new_ruler_culture
@@ -464,7 +464,7 @@ country_event = {
 				else_if = {
 					limit = { monthly_income = 30 }
 					define_advisor = {
-						type = grand_captain
+						type = esu_officer
 						skill = 3
 						discount = yes
 						culture = variable:new_ruler_culture
@@ -472,7 +472,7 @@ country_event = {
 				}
 				else = {
 					define_advisor = {
-						type = grand_captain
+						type = esu_officer
 						skill = 2
 						discount = yes
 						culture = variable:new_ruler_culture
@@ -530,7 +530,7 @@ country_event = {
 				if = {
 					limit = { monthly_income = 30 }
 					define_advisor = {
-						type = theologian
+						type = esu_monk
 						skill = 3
 						discount = yes
 						religion = variable:new_ruler_religion
@@ -538,7 +538,7 @@ country_event = {
 				}
 				else = {
 					define_advisor = {
-						type = theologian
+						type = esu_monk
 						skill = 2
 						discount = yes
 						religion = variable:new_ruler_religion
@@ -591,7 +591,7 @@ country_event = {
 				if = {
 					limit = { monthly_income = 30 }
 					define_advisor = {
-						type = theologian
+						type = esu_monk
 						skill = 3
 						discount = yes
 						religion = variable:new_ruler_religion
@@ -599,7 +599,7 @@ country_event = {
 				}
 				else = {
 					define_advisor = {
-						type = theologian
+						type = esu_monk
 						skill = 2
 						discount = yes
 						religion = variable:new_ruler_religion
@@ -652,7 +652,7 @@ country_event = {
 				if = {
 					limit = { monthly_income = 30 }
 					define_advisor = {
-						type = theologian
+						type = esu_monk
 						skill = 2
 						discount = yes
 						religion = variable:new_ruler_religion
@@ -660,7 +660,7 @@ country_event = {
 				}
 				else = {
 					define_advisor = {
-						type = theologian
+						type = esu_monk
 						skill = 1
 						discount = yes
 						religion = variable:new_ruler_religion
@@ -759,7 +759,7 @@ country_event = {
 				if = {
 					limit = { monthly_income = 30 }
 					define_advisor = {
-						type = theologian
+						type = esu_monk
 						skill = 3
 						discount = yes
 						religion = variable:new_ruler_religion
@@ -767,7 +767,7 @@ country_event = {
 				}
 				else = {
 					define_advisor = {
-						type = theologian
+						type = esu_monk
 						skill = 2
 						discount = yes
 						religion = variable:new_ruler_religion
@@ -810,7 +810,7 @@ country_event = {
 				if = {
 					limit = { monthly_income = 30 }
 					define_advisor = {
-						type = theologian
+						type = esu_monk
 						skill = 3
 						discount = yes
 						religion = variable:new_ruler_religion
@@ -818,7 +818,7 @@ country_event = {
 				}
 				else = {
 					define_advisor = {
-						type = theologian
+						type = esu_monk
 						skill = 2
 						discount = yes
 						religion = variable:new_ruler_religion
@@ -861,7 +861,7 @@ country_event = {
 				if = {
 					limit = { monthly_income = 30 }
 					define_advisor = {
-						type = theologian
+						type = esu_monk
 						skill = 2
 						discount = yes
 						religion = variable:new_ruler_religion
@@ -869,7 +869,7 @@ country_event = {
 				}
 				else = {
 					define_advisor = {
-						type = theologian
+						type = esu_monk
 						skill = 1
 						discount = yes
 						religion = variable:new_ruler_religion

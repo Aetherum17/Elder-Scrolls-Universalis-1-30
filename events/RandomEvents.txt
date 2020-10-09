@@ -21,11 +21,11 @@ country_event = {
 		
 		modifier = {
 			factor = 2.0
-			NOT = { advisor = statesman }
+			NOT = { advisor = esu_steward }
 		}
 		modifier = {
 			factor = 0.66
-			statesman = 3
+			esu_steward = 3
 		}
 	}
 	
@@ -85,7 +85,7 @@ country_event = {
 		}
 		modifier = {
 			factor = 0.66
-			advisor = natural_scientist
+			advisor = esu_researcher
 		}
 	}
 
@@ -148,10 +148,10 @@ country_event = {
 
 	trigger = {
 		OR = {
-			advisor = treasurer
-			advisor = trader
-			advisor = statesman
-			advisor = natural_scientist
+			advisor = esu_inspector
+			advisor = esu_merchant
+			advisor = esu_steward
+			advisor = esu_researcher
 			ruler_has_personality = midas_touched_personality
 			ruler_has_personality = industrious_personality
 			ruler_has_personality = entrepreneur_personality
@@ -339,7 +339,7 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		advisor = trader
+		advisor = esu_merchant
 		NOT = {
 			has_country_modifier = rush_of_merchants
 		}
@@ -431,7 +431,7 @@ country_event = {
 		
 		modifier = {
 			factor = 2.0
-			advisor = statesman
+			advisor = esu_steward
 		}
 		modifier = {
 			factor = 2.0
@@ -572,7 +572,7 @@ country_event = {
 		}
 		modifier = {
 			factor = 0.66
-			advisor = statesman
+			advisor = esu_steward
 		}
 	}
 
@@ -658,7 +658,7 @@ country_event = {
 		}
 		modifier = {
 			factor = 0.66
-			advisor = statesman
+			advisor = esu_steward
 		}
 	}
 
@@ -755,7 +755,7 @@ country_event = {
 		}
 		modifier = {
 			factor = 0.66
-			advisor = treasurer
+			advisor = esu_inspector
 		}
 	}
 
@@ -901,7 +901,7 @@ country_event = {
 		
 		modifier = {
 			factor = 0.5
-			natural_scientist = 1
+			esu_researcher = 1
 		}
 		modifier = {
 			factor = 0.5
@@ -1019,7 +1019,7 @@ country_event = {
 		}
 		modifier = {
 			factor = 0.66
-			advisor = treasurer
+			advisor = esu_inspector
 		}
 	}
 
@@ -1437,7 +1437,7 @@ country_event = {
 		
 		modifier = {
 			factor = 2.0
-			artist = 3
+			esu_bard = 3
 		}
 		modifier = {
 			factor = 0.5
@@ -1445,7 +1445,7 @@ country_event = {
 		}
 		modifier = {
 			factor = 0.66
-			NOT = { advisor = artist }
+			NOT = { advisor = esu_bard }
 		}
 	}
 
@@ -1863,7 +1863,7 @@ country_event = {
 		}
 		modifier = {
 			factor = 0.66
-			advisor = artist
+			advisor = esu_bard
 		}
 	}
 
@@ -1916,11 +1916,11 @@ country_event = {
 		
 		modifier = {
 			factor = 2.0
-			artist = 3
+			esu_bard = 3
 		}
 		modifier = {
 			factor = 0.66
-			NOT = { advisor = artist }
+			NOT = { advisor = esu_bard }
 		}
 	}
 
@@ -3148,7 +3148,7 @@ country_event = {
 	
 	trigger = {
 		any_rival_country = {
-			advisor = fortification_expert
+			advisor = esu_officer
 			war_with = ROOT
 		}
 		has_regency = no

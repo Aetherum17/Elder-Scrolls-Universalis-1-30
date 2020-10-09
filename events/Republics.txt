@@ -521,27 +521,27 @@ country_event = {
 		}
 		modifier = {
 			factor = 0.9
-			advisor = army_reformer
+			advisor = esu_trainer
 		}
 		modifier = {
 			factor = 0.9
-			advisor = army_organiser
+			advisor = esu_blacksmith
 		}
 		modifier = {
 			factor = 0.9
-			advisor = fortification_expert
+			advisor = esu_officer
 		}
 		modifier = {
 			factor = 0.9
-			advisor = naval_reformer
+			advisor = esu_navarch
 		}
 		modifier = {
 			factor = 1.2
-			advisor = natural_scientist
+			advisor = esu_researcher
 		}
 		modifier = {
 			factor = 1.2
-			advisor = trader
+			advisor = esu_merchant
 		}
 	}
 	
@@ -607,23 +607,27 @@ country_event = {
 		}
 		modifier = {
 			factor = 0.9
-			advisor = naval_reformer
+			advisor = esu_trainer
 		}
 		modifier = {
 			factor = 0.9
-			advisor = navigator
+			advisor = esu_blacksmith
 		}
 		modifier = {
-			factor = 1.1
-			advisor = army_reformer
+			factor = 0.9
+			advisor = esu_officer
 		}
 		modifier = {
-			factor = 1.1
-			advisor = grand_captain
+			factor = 0.9
+			advisor = esu_navarch
 		}
 		modifier = {
-			factor = 1.1
-			advisor = army_organiser
+			factor = 1.2
+			advisor = esu_researcher
+		}
+		modifier = {
+			factor = 1.2
+			advisor = esu_merchant
 		}
 	}
 	
@@ -712,7 +716,7 @@ country_event = {
 		}
 		modifier = {
 			factor = 1.1
-			statesman = 3
+			esu_steward = 3
 		}
 	}
 	

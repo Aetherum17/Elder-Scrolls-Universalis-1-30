@@ -277,11 +277,6 @@ great_mongol_state_reform = {
 		allow_banners = yes
 	}
 	
-	conditional = {
-		allow = { has_dlc = "Cradle of Civilization" }
-		has_pashas = yes
-	}
-	
 	ai = {
 		factor = 1000
 	}
@@ -329,6 +324,11 @@ martial_society_reform = {
 		government_abilities = {
 			russian_mechanic
 		}
+	}
+	
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		has_pashas = yes
 	}
 	
 	ai = {

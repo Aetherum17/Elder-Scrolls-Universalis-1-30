@@ -204,49 +204,49 @@ generate_scaled_military_advisor_of_religion_effect = {
 		on_trigger = has_country_flag
 		generate_army_reformer = {
 			generate_scaled_advisor_of_type_and_religion_effect = {
-				type = army_reformer
+				type = esu_blacksmith
 				religion = $religion$
 				discount = $discount$
 			}
 		}
 		generate_army_organiser = {
 			generate_scaled_advisor_of_type_and_religion_effect = {
-				type = army_organiser
+				type = esu_trainer
 				religion = $religion$
 				discount = $discount$
 			}
 		}
 		generate_commandant = {
 			generate_scaled_advisor_of_type_and_religion_effect = {
-				type = commandant
+				type = esu_thane
 				religion = $religion$
 				discount = $discount$
 			}
 		}
 		generate_quartermaster = {
 			generate_scaled_advisor_of_type_and_religion_effect = {
-				type = quartermaster
+				type = esu_hunter
 				religion = $religion$
 				discount = $discount$
 			}
 		}
 		generate_recruitmaster = {
 			generate_scaled_advisor_of_type_and_religion_effect = {
-				type = recruitmaster
+				type = esu_recruiter
 				religion = $religion$
 				discount = $discount$
 			}
 		}
 		generate_fortification_expert = {
 			generate_scaled_advisor_of_type_and_religion_effect = {
-				type = fortification_expert
+				type = esu_officer
 				religion = $religion$
 				discount = $discount$
 			}
 		}
 		generate_grand_captain = {
 			generate_scaled_advisor_of_type_and_religion_effect = {
-				type = grand_captain
+				type = esu_grand_champion
 				religion = $religion$
 				discount = $discount$
 			}
@@ -257,45 +257,51 @@ generate_scaled_military_advisor_of_religion_effect = {
 remove_advisor_adm_effect = {
 	if = {
 		limit = {
-			advisor = inquisitor
+			advisor = esu_steward
 		}
-		remove_advisor = inquisitor
+		remove_advisor = esu_steward
 	}
 	if = {
 		limit = {
-			advisor = natural_scientist
+			advisor = esu_bard
 		}
-		remove_advisor = natural_scientist
+		remove_advisor = esu_bard
 	}
 	if = {
 		limit = {
-			advisor = master_of_mint
+			advisor = esu_mage
 		}
-		remove_advisor = master_of_mint
+		remove_advisor = esu_mage
 	}
 	if = {
 		limit = {
-			advisor = theologian
+			advisor = esu_monk
 		}
-		remove_advisor = theologian
+		remove_advisor = esu_monk
 	}
 	if = { 
 		limit = {
-			advisor = artist
+			advisor = esu_priest
 		}
-		remove_advisor = artist
+		remove_advisor = esu_priest
 	}
 	if = {
 		limit = {
-			advisor = philosopher
+			advisor = esu_researcher
 		}
-		remove_advisor = philosopher
+		remove_advisor = esu_researcher
 	}
 	if = {
 		limit = { 
-			advisor = treasurer
+			advisor = esu_inspector
 		}
-		remove_advisor = treasurer
+		remove_advisor = esu_inspector
+	}
+	if = {
+		limit = { 
+			advisor = esu_curator
+		}
+		remove_advisor = esu_curator
 	}
 }
 
@@ -312,7 +318,7 @@ generate_traitor_advisor_effect = {
 					name = advisor_traitor
 					skill = $skill_level$
 					culture = ROOT
-					type = philosopher
+					type = esu_steward
 				}
 			}
 			1 = {
@@ -320,7 +326,7 @@ generate_traitor_advisor_effect = {
 					name = advisor_traitor
 					skill = $skill_level$
 					culture = ROOT
-					type = natural_scientist
+					type = esu_bard
 				}
 			}
 			1 = {
@@ -328,7 +334,7 @@ generate_traitor_advisor_effect = {
 					name = advisor_traitor
 					skill = $skill_level$
 					culture = ROOT
-					type = artist
+					type = esu_mage
 				}
 			}
 			1 = {
@@ -336,7 +342,7 @@ generate_traitor_advisor_effect = {
 					name = advisor_traitor
 					skill = $skill_level$
 					culture = ROOT
-					type = treasurer
+					type = esu_monk
 				}
 			}
 			1 = {
@@ -345,7 +351,7 @@ generate_traitor_advisor_effect = {
 					skill = $skill_level$
 					culture = ROOT
 					religion = ROOT
-					type = theologian
+					type = esu_priest
 				}
 				trigger = {
 					from = {
@@ -359,7 +365,7 @@ generate_traitor_advisor_effect = {
 					skill = $skill_level$
 					culture = ROOT
 					religion = ROOT
-					type = inquisitor
+					type = esu_researcher
 				}
 				trigger = {
 					from = {
@@ -372,7 +378,7 @@ generate_traitor_advisor_effect = {
 					name = advisor_traitor
 					skill = $skill_level$
 					culture = ROOT
-					type = master_of_mint
+					type = esu_inspector
 				}
 			}
 		}
@@ -389,7 +395,7 @@ generate_traitor_advisor_effect = {
 					name = advisor_traitor
 					skill = $skill_level$
 					culture = ROOT
-					type = statesman
+					type = esu_merchant
 				}
 			}
 			1 = {
@@ -397,7 +403,7 @@ generate_traitor_advisor_effect = {
 					name = advisor_traitor
 					skill = $skill_level$
 					culture = ROOT
-					type = trader
+					type = esu_alchemist
 				}
 			}
 			1 = {
@@ -405,7 +411,7 @@ generate_traitor_advisor_effect = {
 					name = advisor_traitor
 					skill = $skill_level$
 					culture = ROOT
-					type = spymaster
+					type = esu_negotiator
 				}
 			}
 			1 = {
@@ -413,7 +419,7 @@ generate_traitor_advisor_effect = {
 					name = advisor_traitor
 					skill = $skill_level$
 					culture = ROOT
-					type = diplomat
+					type = esu_governor
 				}
 			}
 			1 = {
@@ -421,7 +427,7 @@ generate_traitor_advisor_effect = {
 					name = advisor_traitor
 					skill = $skill_level$
 					culture = ROOT
-					type = naval_reformer
+					type = esu_spy
 				}
 				trigger = {
 					navy_size = 1
@@ -435,7 +441,7 @@ generate_traitor_advisor_effect = {
 					name = advisor_traitor
 					skill = $skill_level$
 					culture = ROOT
-					type = colonial_governor
+					type = esu_colonial_overseer
 				}
 				trigger = {
 					num_of_colonists = 1
@@ -451,7 +457,7 @@ generate_traitor_advisor_effect = {
 					name = advisor_traitor
 					skill = $skill_level$
 					culture = ROOT
-					type = navigator
+					type = esu_adventurer
 				}
 				trigger = {
 					num_of_colonists = 1
@@ -469,7 +475,7 @@ generate_traitor_advisor_effect = {
 					name = advisor_traitor
 					skill = $skill_level$
 					culture = ROOT
-					type = army_reformer
+					type = esu_blacksmith
 				}
 			}
 			1 = {
@@ -477,7 +483,7 @@ generate_traitor_advisor_effect = {
 					name = advisor_traitor
 					skill = $skill_level$
 					culture = ROOT
-					type = army_organiser
+					type = esu_trainer
 				}
 			}
 			1 = {
@@ -485,7 +491,7 @@ generate_traitor_advisor_effect = {
 					name = advisor_traitor
 					skill = $skill_level$
 					culture = ROOT
-					type = commandant
+					type = esu_hunter
 				}
 			}
 			1 = {
@@ -493,7 +499,7 @@ generate_traitor_advisor_effect = {
 					name = advisor_traitor
 					skill = $skill_level$
 					culture = ROOT
-					type = quartermaster
+					type = esu_thane
 				}
 			}
 			1 = {
@@ -501,7 +507,7 @@ generate_traitor_advisor_effect = {
 					name = advisor_traitor
 					skill = $skill_level$
 					culture = ROOT
-					type = recruitmaster
+					type = esu_officer
 				}
 			}
 			1 = {
@@ -509,7 +515,7 @@ generate_traitor_advisor_effect = {
 					name = advisor_traitor
 					skill = $skill_level$
 					culture = ROOT
-					type = fortification_expert
+					type = esu_scout
 				}
 			}
 			1 = {
@@ -517,7 +523,7 @@ generate_traitor_advisor_effect = {
 					name = advisor_traitor
 					skill = $skill_level$
 					culture = ROOT
-					type = grand_captain
+					type = esu_grand_champion
 				}
 			}
 		}
@@ -568,37 +574,40 @@ kill_advisor_by_category_effect = {
 	[[ADM]
 		trigger_switch = {
 			on_trigger = advisor
-			philosopher = { kill_advisor = philosopher }
-			natural_scientist = { kill_advisor = natural_scientist }
-			artist = { kill_advisor = artist }
-			treasurer = { kill_advisor = treasurer }
-			theologian = { kill_advisor = theologian }
-			master_of_mint = { kill_advisor = master_of_mint }
-			inquisitor = { kill_advisor = inquisitor }
+			esu_steward = { kill_advisor = esu_steward }
+			esu_bard = { kill_advisor = esu_bard }
+			esu_mage = { kill_advisor = esu_mage }
+			esu_monk = { kill_advisor = esu_monk }
+			esu_priest = { kill_advisor = esu_priest }
+			esu_researcher = { kill_advisor = esu_researcher }
+			esu_inspector = { kill_advisor = esu_inspector }
+			esu_curator = { kill_advisor = esu_curator }
 		}
 	]
 	[[DIP]
 		trigger_switch = {
 			on_trigger = advisor
-			statesman = { kill_advisor = statesman }
-			naval_reformer = { kill_advisor = naval_reformer }
-			trader = { kill_advisor = trader }
-			spymaster = { kill_advisor = spymaster }
-			colonial_governor = { kill_advisor = colonial_governor }
-			diplomat = { kill_advisor = diplomat }
-			navigator = { kill_advisor = navigator }
+			esu_merchant = { kill_advisor = esu_merchant }
+			esu_alchemist = { kill_advisor = esu_alchemist }
+			esu_governor = { kill_advisor = esu_governor }
+			esu_negotiator = { kill_advisor = esu_negotiator }
+			esu_spy = { kill_advisor = esu_spy }
+			esu_colonial_overseer = { kill_advisor = esu_colonial_overseer }
+			esu_adventurer = { kill_advisor = esu_adventurer }
+			esu_navarch = { kill_advisor = esu_navarch }
 		}
 	]
 	[[MIL]
 		trigger_switch = {
 			on_trigger = advisor
-			army_reformer = { kill_advisor = army_reformer }
-			army_organiser = { kill_advisor = army_organiser }
-			commandant = { kill_advisor = commandant }
-			quartermaster = { kill_advisor = quartermaster }
-			recruitmaster = { kill_advisor = recruitmaster }
-			fortification_expert = { kill_advisor = fortification_expert }
-			grand_captain = { kill_advisor = grand_captain }
+			esu_blacksmith = { kill_advisor = esu_blacksmith }
+			esu_trainer = { kill_advisor = esu_trainer }
+			esu_hunter = { kill_advisor = esu_hunter }
+			esu_thane = { kill_advisor = esu_thane }
+			esu_officer = { kill_advisor = esu_officer }
+			esu_scout = { kill_advisor = esu_scout }
+			esu_grand_champion = { kill_advisor = esu_grand_champion }
+			esu_recruiter = { kill_advisor = esu_recruiter }
 		}
 	]
 }

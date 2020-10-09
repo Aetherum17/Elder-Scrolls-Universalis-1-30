@@ -1742,7 +1742,7 @@ country_event = {
 						monthly_income = 25
 					}
 					define_advisor = {
-						type = statesman
+						type = esu_steward
 						culture = event_target:noble_province
 						religion = event_target:noble_province
 						skill = 3
@@ -1752,7 +1752,7 @@ country_event = {
 				if = {
 					limit = { NOT = { monthly_income = 25} }
 					define_advisor = {
-						type = statesman
+						type = esu_steward
 						culture = event_target:noble_province
 						religion = event_target:noble_province
 						skill = 2
@@ -1767,7 +1767,7 @@ country_event = {
 						monthly_income = 25
 					}
 					define_advisor = {
-						type = army_reformer
+						type = esu_grand_champion
 						culture = event_target:noble_province
 						religion = event_target:noble_province
 						skill = 3
@@ -1777,7 +1777,7 @@ country_event = {
 				if = {
 					limit = { NOT = { monthly_income = 25 } }
 					define_advisor = {
-						type = army_reformer
+						type = esu_grand_champion
 						culture = event_target:noble_province
 						religion = event_target:noble_province
 						skill = 2

@@ -131,11 +131,6 @@ papacy_reform = {
 	}
 	
 	conditional = {
-		allow = { has_dlc = "Mandate of Heaven" }
-		allow_banners = yes
-	}
-	
-	conditional = {
 		allow = { has_dlc = "Cradle of Civilization" }
 		has_pashas = yes
 	}
@@ -174,11 +169,6 @@ tribunal_reform = {
 	conditional = {
 		allow = { has_dlc = "Mandate of Heaven" }
 		allow_banners = yes
-	}
-	
-	conditional = {
-		allow = { has_dlc = "Cradle of Civilization" }
-		has_pashas = yes
 	}
 	
 	ai = {
@@ -407,11 +397,6 @@ kingdom_of_god_reform = {
 		allow_banners = yes
 	}
 	
-	conditional = {
-		allow = { has_dlc = "Cradle of Civilization" }
-		has_pashas = yes
-	}
-	
 	ai = {
 		factor = 1000
 	}
@@ -462,6 +447,11 @@ theocratic_democracy_reform = {
 	}
 	custom_attributes = {
 		blocked_call_diet = yes
+	}
+	
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		has_pashas = yes
 	}
 	
 	ai = {

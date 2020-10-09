@@ -19,6 +19,40 @@
  gravelkind_tooltip:0 "§RSome of your provinces will get an increase in autonomy, along with other negative bonuses due to being owned by other members of the Royal Family.§!"
  loose_extra_stability:0 "§RDeath of the Monarch Additionally Reduces Stability.§!"
  
+ esu_steward:0 "Steward" 
+ esu_steward_desc:0 "This advisor is charged with protecting our homeland and values, keeping them to the highest standard. Additionally the steward provides minor services and management of the monarch's homestead or castle."
+ esu_bard:0 "Bard" 
+ esu_bard_desc:0 "The bard is essential to providing culture and current events to the citizens of our nation. Travelling across the countryside, this advisor brings joy to our people through the power of song and story."
+ esu_mage:0 "Mage"
+ esu_mage_desc:0 "This individual advises the court in matters of magic and management, providing the ruler with invaluable information. Typically specializing in a core area of spellcraft most court-mages are required to have at least minor proficiency in all fields of magic."
+ esu_monk:0 "Monk"
+ esu_monk_desc:0 "The monk is an imperative addition for anxious or unpredictable rulers in need of mental discipline and supreme calm. While religiocentric to a degree the primary goal of this advisor is achievening enlightenment of body and mind, thus emanating contentment and stability to the court."
+ esu_priest:0 "Priest"
+ esu_priest_desc:0 "This advisor is proficient in many matters of knowledge including tamrielic religions, daedra, history and lore. Additionally priests are known to spend significant time in study, prayer, and upkeep of temples."
+ esu_researcher:0 "Researcher"
+ esu_researcher_desc:0 "The researcher is necessary for any regent aiming to stay ahead of the technological curve. While not as interactive as other advisors this member of the court only speaks when they have something worth saying."
+ esu_inspector:0 "Inspector"
+ esu_inspector_desc:0 "Despite not being the most well-liked advisor this member of the court will ensure matters of national security are handled with a firm resolve. The inspector is outright necessary in times of national distress."
+ esu_curator:0 "Curator"
+ esu_curator_desc:0 "This advisor is tasked with the uncovery and preservation of priceless cultural, scientific, and religious artifacts uncovered through expeditions or national breakthroughs. The curator is imperative in maintaining our national culture and heritage."
+ 
+ esu_merchant:0 "Merchant"
+ esu_merchant_desc:0 "The merchant is involved in all things trade and commerce. While crucial for rulers looking to expand their economic interests one must be weary of this advisor seeking out their own financial interests."
+ esu_alchemist:0 "Alchemist"
+ esu_alchemist_desc:0 "This advisor is proficient not only in potions but in the entire fields of horticulture, herbology, and the synergies of woven ingredients. Alchemists, while somewhat reserved, are masters of natural science and essential to the balance of the court."
+ esu_governor:0 "Governor"
+ esu_governor_desc:0 "While a head regent is the sole guiding force of any country, the governor is a necessary advisor for issues of state and diplomacy. By allocating the administrative tasks of running the country among various states this advisor saves time and energy for exascerbated rulers."
+ esu_negotiator:0 "Negotiator"
+ esu_negotiator_desc:0 "This advisor is in charge of maintaining the complex web of diplomatic relations and the country's leading diplomats. In times of aggressive expansion or procuring a key alliance the negotiator is needed."
+ esu_spy:0 "Spy:
+ esu_spy_desc:0 "The spymaster oversees the nation's efforts of espionage and foreign sabotage. Operating in the dark this advisor is imperative in matters of national security: both our own and in the foreign sphere."
+ esu_colonial_overseer:0 "Colonial Overseer"
+ esu_colonial_overseer_desc:0 "This advisor is in charge of administering our foreign colonies. In order to manage the colonial presence percolating overseas a Colonial Overseer is required."
+ esu_adventurer:0 "Adventurer"
+ esu_adventurer_desc:0 "The adventurer is excitably ambitious and may need to be reigned in by a weary ruler. However this advisor is known for its versatility in search of new lands, technologies, poeples and cultures of Nirn and may provide pivotal information required in dire times."
+ esu_navarch:0 "Navarch"
+ esu_navarch_desc:0 "The navarch is a master and expert of naval strategy and warfare. Whether performing an invasion on a foreign continent or migrating an entire people to new lands this advisor is essential in commanding a nation's navy."
+ 
  law_and_order:0 "Law & Order"
  labour:0 "Labour & Employment"
  power_of_nobility:0 "Power of Nobility"
@@ -80,48 +114,50 @@
  heathenism_and_heresy:0 "Heathenism & Heresy"
  theocratic_innovation:0 "Theocratic Innovations"
  
- phychopathic_artist:0 "Phychopatic Artist"
- torturer:0 "Torturer"
- con_man:0 "Con Man"
- mad_scholar:0 "Mad Schoolar"
- sadist:0 "Sadist"
- occultist:0 "Occultist"
- criminal:0 "Criminal"
- bandit:0 "Bandit"
- vampire:0 "Vampire"
- corsair:0 "Corsair"
- conqueror:0 "Conqueror"
- assasin:0 "Assasin"
- hedonist:0 "Hedonist"
- slaver:0 "Slaver"
- lich:0 "Lich"
- pillager:0 "Pillager"
- tyrant:0 "Tyrant"
- cheapscape:0 "Cheapscape"
- conscriptor:0 "Conscriptor"
- dremora:0 "Dremora"
- executioner:0 "Executioner"
- phychopathic_artist_desc:0 " "
- torturer_desc:0 " "
- con_man_desc:0 " "
- mad_scholar_desc:0 " "
- sadist_desc:0 " "
- occultist_desc:0 " "
- criminal_desc:0 " "
- bandit_desc:0 " "
- vampire_desc:0 " "
- corsair_desc:0 " "
- conqueror_desc:0 " "
- assasin_desc:0 " "
- hedonist_desc:0 " "
- slaver_desc:0 " "
- lich_desc:0 " "
- pillager_desc:0 " "
- tyrant_desc:0 " "
- cheapscape_desc:0 " "
- conscriptor_desc:0 " "
- dremora_desc:0 " "
- executioner_desc:0 " "
+ #######################################################################
+ # ADM Advisors
+ #######################################################################
+ esu_psychopathic_artist:0 "Psychopathic Artist"
+ esu_psychopathic_artist_desc:0 "While many advisors prefer to remain at court and observe the day to day affairs this advisor is konwn to spend long hours in front of a blank screen or empty canvas developing their phantasmagoria to completion. Judged for their radical ideas and ecelectic tastes a psychopath may be necessary to paint the bigger picture for more myopic individuals."
+
+ esu_occultist:0 "Occultist"
+ esu_occultist_desc:0 "Reveling outside the realms of nature and religion the occultist dwells in all things supernatural. While not as specialized as the mage or down to earth as the alchemist this advisor is an excellent resource and knowledgable not so much in individual fields but in their intersection."
+
+ esu_mad_scholar:0 "Mad Scholar"
+ esu_mad_scholar_desc:0 "Where a regular scholar fails a mad scholar excels, going into great depths to uncover the fundamental truth of things. One must be cautious not to ask to many questions, however, as this advisor may not provide the answer one seeks."
+
+ esu_torturer:0 "Torturer" 
+ esu_torturer_desc:0 "When those pesky prisoners of war seem to have trouble talking, never fear: a torturer is near. As long as one doesn't mind the constant scremaing, or has a soundproofed dungeon, this advisor is a perfect addition to any court."
+
+ #######################################################################
+ # DIP Advisors
+ #######################################################################
+ esu_hedonist:0 "Hedonist"
+ esu_hedonist_desc:0 "There are those who believe that ruling requires great virtues such as patience, bravery, discipline; not the hedonist! Recommended for rulers who only live once and prefer binging bacchanalias, drinking away their oblivion, and sublimating saturnalias over administering a nation."
+
+ esu_bandit:0 "Bandit"
+ esu_bandit_desc:0 "While still regarding matters of espionage, the bandit is much more hands on then a diplomatic spy, and in many cases is recruited from the highest tiers of the thieves guild. Knowledgable in topography, extremely punctual, and deft with the slight of hand this advisor may be needed to acquire strategic information."
+
+ esu_corsair:0 "Corsair"
+ esu_corsair_desc:0 "Whether dealing with the threat of pirates or planning a privateering expedition this advisor is an essential addition to the court. Knowledgable in the tactical position and acquisition of foreign vessels the corsair may be the economic boost the nation needs."
+
+ esu_conquistador:0 "Conquistador"
+ esu_conquistador_desc:0 "Upon establishing a home base for national operations now it is time to begin exploring deeper into the wilderness so as to transform it into order out of chaos. This task requires the conquistador, fearless adventurer of unknown lands, to charter the future path of the nation."
+
+ #######################################################################
+ # MIL Advisors
+ #######################################################################
+ esu_lich:0 "Lich"
+ esu_lich_desc:0 "Formerly a powerful wizard or necromancer the lich has discovered the ability to transcend life by cheating death, becoming undead while retaining their sentient consciousness. Although shunned in many parts of Nirn this advisor may give the country a crucial edge by allowing the resurrection of undead armies to fight in its ranks."
+ 
+ esu_pillager:0 "Pillager"
+ esu_pillager_desc:0 "Master of looting and razing alike, this advisor is ill-received by other members of the country; deemed 'unprofessional.' Despite this, in times of national chaos and prolonged warfare a pillager is the cornerstone of the court."
+
+ esu_tyrant:0 "Tyrant"
+ esu_tyrant_desc:0 "While it may serve some regents to put compassion, foresight, and the good of the poeple first for others these ideals are naive at best. For the country in despair and disrepair a Tyrant is required to give order to the people."
+
+ esu_exexutioner:0 "Executioner"
+ esu_exexutioner_desc:0 "In times of national distress and unrest often what is needed is not a permanent solution but simply an example. The executioner is the perfect addition to any court looking to set a precedent for its unruly population."
  
  event_new_diplomatic_actions.0.t:0 "Assasination Failed"
  event_new_diplomatic_actions.0.d:0 "A member of the Assassins Guild contacted us and said that they were unable to eliminate the target we ordered. At the moment, they are trying to find out the reasons for their failure, which led to the death of their agent. However, the saddest thing for us is that, according to the terms of the contract, if the order is not fulfilled, the money will not be returned to us."

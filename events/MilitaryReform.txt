@@ -23,27 +23,27 @@ country_event = {
 		}
 		modifier = {
 			factor = 0.9
-			advisor = army_reformer
+			advisor = esu_trainer
 		}
 		modifier = {
 			factor = 1.1
-			NOT = { advisor = army_reformer }
+			NOT = { advisor = esu_trainer }
 		}
 		modifier = {
 			factor = 0.9
-			advisor = naval_reformer
+			advisor = esu_navarch
 		}
 		modifier = {
 			factor = 1.1
-			NOT = { advisor = naval_reformer }
+			NOT = { advisor = esu_navarch }
 		}
 		modifier = {
 			factor = 0.95
-			army_reformer = 3
+			esu_trainer = 3
 		}
 		modifier = {
 			factor = 0.95
-			naval_reformer = 3
+			esu_navarch = 3
 		}
 		modifier = {
 			factor = 0.9

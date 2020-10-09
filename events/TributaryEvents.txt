@@ -62,7 +62,7 @@ country_event = {
 			on_trigger = has_country_flag
 			overlord_inspired_official = {
 				define_advisor = {
-					type = philosopher
+					type = esu_bard
 					skill = 2
 					discount = yes
 					religion = event_target:overlord_country
@@ -72,7 +72,7 @@ country_event = {
 			}
 			overlord_inspired_trader = {
 				define_advisor = {
-					type = trader
+					type = esu_merchant
 					skill = 2
 					discount = yes
 					religion = event_target:overlord_country
@@ -487,7 +487,7 @@ country_event = {
 			}
 			fortune_seekers_advisor = {
 				define_advisor = {
-					type = grand_captain
+					type = esu_officer
 					skill = 2
 					discount = yes
 					culture = event_target:tributary_country

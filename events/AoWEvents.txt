@@ -251,11 +251,11 @@ country_event = {
 		NOT = { tag = RED }
 		OR = {
 			employed_advisor = {
-				type = theologian
+				type = esu_monk
 				religion = tribunal_pantheon
 			}
 			employed_advisor = {
-				type = inquisitor
+				type = esu_priest
 				religion = tribunal_pantheon
 			}
 		}

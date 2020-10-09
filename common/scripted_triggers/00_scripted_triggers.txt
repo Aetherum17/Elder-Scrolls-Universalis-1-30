@@ -23,13 +23,14 @@ has_mil_advisor = {
 	custom_trigger_tooltip = {
 		tooltip = has_mil_advisor_tooltip
 		OR = {
-			advisor = army_organiser
-			advisor = army_reformer
-			advisor = commandant
-			advisor = grand_captain
-			advisor = recruitmaster
-			advisor = fortification_expert
-			advisor = quartermaster
+			advisor = esu_blacksmith
+			advisor = esu_trainer
+			advisor = esu_hunter
+			advisor = esu_thane
+			advisor = esu_officer
+			advisor = esu_scout
+			advisor = esu_grand_champion
+			advisor = esu_recruiter
 		}
 	}
 }
@@ -38,13 +39,14 @@ has_mil_advisor_2 = {
 	custom_trigger_tooltip = {
 		tooltip = has_mil_advisor_2_tooltip
 		OR = {
-			army_organiser = 2
-			army_reformer = 2
-			commandant = 2
-			grand_captain = 2
-			recruitmaster = 2
-			fortification_expert = 2
-			quartermaster = 2
+			esu_blacksmith = 2
+			esu_trainer = 2
+			esu_hunter = 2
+			esu_thane = 2
+			esu_officer = 2
+			esu_scout = 2
+			esu_grand_champion = 2
+			esu_recruiter = 2
 		}
 	}
 }
@@ -53,13 +55,14 @@ has_mil_advisor_3 = {
 	custom_trigger_tooltip = {
 		tooltip = has_mil_advisor_3_tooltip
 		OR = {
-			army_organiser = 3
-			army_reformer = 3
-			commandant = 3
-			grand_captain = 3
-			recruitmaster = 3
-			fortification_expert = 3
-			quartermaster = 3
+			esu_blacksmith = 3
+			esu_trainer = 3
+			esu_hunter = 3
+			esu_thane = 3
+			esu_officer = 3
+			esu_scout = 3
+			esu_grand_champion = 3
+			esu_recruiter = 3
 		}
 	}
 }
@@ -68,13 +71,14 @@ has_adm_advisor = {
 	custom_trigger_tooltip = {
 		tooltip = has_adm_advisor_tooltip
 		OR = {
-			advisor = treasurer
-			advisor = philosopher
-			advisor = artist
-			advisor = theologian
-			advisor = master_of_mint
-			advisor = inquisitor
-			advisor = natural_scientist
+			advisor = esu_steward
+			advisor = esu_bard
+			advisor = esu_mage
+			advisor = esu_monk
+			advisor = esu_priest
+			advisor = esu_researcher
+			advisor = esu_inspector
+			advisor = esu_curator
 		}
 	}
 }
@@ -83,13 +87,14 @@ has_adm_advisor_2 = {
 	custom_trigger_tooltip = {
 		tooltip = has_adm_advisor_2_tooltip
 		OR = {
-			treasurer = 2
-			philosopher = 2
-			artist = 2
-			theologian = 2
-			master_of_mint = 2
-			inquisitor = 2
-			natural_scientist = 2
+			esu_steward = 2
+			esu_bard = 2
+			esu_mage = 2
+			esu_monk = 2
+			esu_priest = 2
+			esu_researcher = 2
+			esu_inspector = 2
+			esu_curator = 2
 		}
 	}
 }
@@ -98,13 +103,14 @@ has_adm_advisor_3 = {
 	custom_trigger_tooltip = {
 		tooltip = has_adm_advisor_3_tooltip
 		OR = {
-			treasurer = 3
-			philosopher = 3
-			artist = 3
-			 theologian = 3
-			master_of_mint = 3
-			inquisitor = 3
-			natural_scientist = 3
+			esu_steward = 3
+			esu_bard = 3
+			esu_mage = 3
+			esu_monk = 3
+			esu_priest = 3
+			esu_researcher = 3
+			esu_inspector = 3
+			esu_curator = 3
 		}
 	}
 }
@@ -114,13 +120,14 @@ has_dip_advisor = {
 	custom_trigger_tooltip = {
 		tooltip = has_dip_advisor_tooltip
 		OR = {
-			advisor = statesman
-			advisor = diplomat
-			advisor = naval_reformer
-			advisor = trader
-			advisor = colonial_governor
-			advisor = navigator
-			advisor = spymaster
+			advisor = esu_merchant
+			advisor = esu_alchemist
+			advisor = esu_governor
+			advisor = esu_negotiator
+			advisor = esu_spy
+			advisor = esu_colonial_overseer
+			advisor = esu_adventurer
+			advisor = esu_navarch
 		}
 	}
 }
@@ -129,13 +136,14 @@ has_dip_advisor_2 = {
 	custom_trigger_tooltip = {
 		tooltip = has_dip_advisor_2_tooltip
 		OR = {
-			statesman = 2
-			diplomat = 2
-			naval_reformer = 2
-			trader = 2
-			colonial_governor = 2
-			navigator = 2
-			spymaster = 2
+			esu_merchant = 2
+			diplesu_alchemistomat = 2
+			esu_governor = 2
+			esu_negotiator = 2
+			esu_spy = 2
+			esu_colonial_overseer = 2
+			esu_adventurer = 2
+			esu_navarch = 2
 		}
 	}
 }
@@ -144,13 +152,14 @@ has_dip_advisor_3 = {
 	custom_trigger_tooltip = {
 		tooltip = has_dip_advisor_3_tooltip
 		OR = {
-			statesman = 3
-			diplomat = 3
-			naval_reformer = 3
-			trader = 3
-			colonial_governor = 3
-			navigator = 3
-			spymaster = 3
+			esu_merchant = 3
+			esu_alchemist = 3
+			esu_governor = 3
+			esu_negotiator = 3
+			esu_spy = 3
+			esu_colonial_overseer = 3
+			esu_adventurer = 3
+			esu_navarch = 3
 		}
 	}
 }

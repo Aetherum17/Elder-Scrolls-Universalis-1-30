@@ -7,84 +7,566 @@
 # Note that ai_will_do calculates a priority.
 # An advisor may be chosen over another if its random priority exceeds it. RandomPriority(advisor) := rand[1, 2[ * Priority(advisor).
 
-#######################################################################
+######################################################
 # Administrative Advisors
-#######################################################################
-philosopher = { monarch_power = ADM prestige = 1.5 skill_scaled_modifier = { meritocracy = 0.5 }	chance = { factor = 1 }  ai_will_do = { factor = 1 } }
-theorist = { monarch_power = ADM prestige_decay = -0.015 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 }  ai_will_do = { factor = 1 } }
-savant = { monarch_power = ADM embracement_cost = -0.15 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 }  ai_will_do = { factor = 1 } }
-natural_scientist = { monarch_power = ADM production_efficiency = 0.10 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 }  ai_will_do = { factor = 1 } }
-scholar = { monarch_power = ADM global_institution_spread = 0.15 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
-researcher = { monarch_power = ADM idea_cost = -0.15 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
-#######################################################################
-artist = { monarch_power = ADM stability_cost_modifier = -0.15 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
-poet = { monarch_power = ADM core_creation = -0.15 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
-minstrel = { monarch_power = ADM years_of_nationalism = -5 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
-#######################################################################
-treasurer = { monarch_power = ADM global_tax_modifier = 0.1 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
-curator = { monarch_power = ADM vassal_income = 0.15 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
-supervisor = { monarch_power = ADM build_cost = -0.15 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
-master_of_mint = { monarch_power = ADM inflation_reduction = 0.05 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
-inspector = { monarch_power = ADM yearly_corruption = -0.05 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
-administrator = { monarch_power = ADM state_maintenance_modifier = -0.1 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
-#######################################################################
-judge = { monarch_power = ADM global_unrest = -1 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
-priest = { monarch_power = ADM tolerance_heretic = 1 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
-theologian = { monarch_power = ADM tolerance_heathen = 1 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
-inquisitor = { monarch_power = ADM global_missionary_strength = 0.015 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
-monk = { monarch_power = ADM tolerance_own = 1 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
-auditor = { monarch_power = ADM religious_unity = 0.10 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
-#######################################################################
+######################################################
+#Steward
+esu_steward = {
+	monarch_power = ADM
+	build_cost = -0.15
+	skill_scaled_modifier = {
+		meritocracy = 0.25
+		legitimacy = -0.15
+		republican_tradition = -0.15
+		devotion = -0.15
+		horde_unity = -0.15
+		build_time = -0.05
+	}
+	chance = { 
+		factor = 1 
+		modifier = {
+			factor = 0
+			owner = { has_reform = court_of_darkness }
+		}
+	} 
+	ai_will_do = { 
+		factor = 1
+	} 
+}
+#Bard
+esu_bard = {
+	monarch_power = ADM
+	prestige_decay = -0.015
+	skill_scaled_modifier = {
+		meritocracy = 0.25
+		legitimacy = -0.15
+		republican_tradition = -0.15
+		devotion = -0.15
+		horde_unity = -0.15
+		prestige_from_land = 0.05
+	}
+	chance = { 
+		factor = 1 
+		modifier = {
+			factor = 0
+			owner = { has_reform = court_of_darkness }
+		}
+	} 
+	ai_will_do = { 
+		factor = 1
+	} 
+}
+#Mage
+esu_mage = {
+	monarch_power = ADM
+	global_institution_spread = 0.15
+	skill_scaled_modifier = {
+		meritocracy = 0.25
+		legitimacy = -0.15
+		republican_tradition = -0.15
+		devotion = -0.15
+		horde_unity = -0.15
+		embracement_cost = -0.05
+	}
+	chance = { 
+		factor = 1 
+		modifier = {
+			factor = 0
+			owner = { has_reform = court_of_darkness }
+		}
+	} 
+	ai_will_do = { 
+		factor = 1
+	} 
+}
+#Researcher
+esu_researcher = {
+	monarch_power = ADM
+	idea_cost = -0.15
+	skill_scaled_modifier = {
+		meritocracy = 0.25
+		legitimacy = -0.15
+		republican_tradition = -0.15
+		devotion = -0.15
+		horde_unity = -0.15
+		institution_spread_from_true_faith = 0.05
+	}
+	chance = { 
+		factor = 1 
+		modifier = {
+			factor = 0
+			owner = { has_reform = court_of_darkness }
+		}
+	} 
+	ai_will_do = { 
+		factor = 1
+	} 
+}
+#Monk
+esu_monk = {
+	monarch_power = ADM
+	global_unrest = -1.5
+	skill_scaled_modifier = {
+		meritocracy = 0.25
+		legitimacy = -0.15
+		republican_tradition = -0.15
+		devotion = -0.15
+		horde_unity = -0.15
+		global_heretic_missionary_strength = 0.005
+	}
+	chance = { 
+		factor = 1 
+		modifier = {
+			factor = 0
+			owner = { has_reform = court_of_darkness }
+		}
+	} 
+	ai_will_do = { 
+		factor = 1
+	} 
+}
+#Priest
+esu_priest = {
+	monarch_power = ADM
+	global_missionary_strength = 0.015
+	skill_scaled_modifier = {
+		meritocracy = 0.25
+		legitimacy = -0.15
+		republican_tradition = -0.15
+		devotion = -0.15
+		horde_unity = -0.15
+		warscore_cost_vs_other_religion = -0.05
+	}
+	chance = { 
+		factor = 1 
+		modifier = {
+			factor = 0
+			owner = { has_reform = court_of_darkness }
+		}
+	} 
+	ai_will_do = { 
+		factor = 1
+	} 
+}
+#Inspector
+esu_inspector = {
+	monarch_power = ADM
+	core_creation = -0.15
+	skill_scaled_modifier = {
+		meritocracy = 0.25
+		legitimacy = -0.15
+		republican_tradition = -0.15
+		devotion = -0.15
+		horde_unity = -0.15
+		yearly_corruption = -0.05
+	}
+	chance = { 
+		factor = 1 
+		modifier = {
+			factor = 0
+			owner = { has_reform = court_of_darkness }
+		}
+	} 
+	ai_will_do = { 
+		factor = 1
+	} 
+}
+#Curator
+esu_curator = {
+	monarch_power = ADM
+	stability_cost_modifier = -0.15
+	skill_scaled_modifier = {
+		meritocracy = 0.25
+		legitimacy = -0.15
+		republican_tradition = -0.15
+		devotion = -0.15
+		horde_unity = -0.15
+		inflation_action_cost = -0.05
+	}
+	chance = { 
+		factor = 1 
+		modifier = {
+			factor = 0
+			owner = { has_reform = court_of_darkness }
+		}
+	} 
+	ai_will_do = { 
+		factor = 1
+	} 
+}
+
+######################################################
 # Diplomatic Advisors
-#######################################################################
-representative = { monarch_power = DIP diplomatic_reputation = 1 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
-minister = { monarch_power = DIP diplomatic_annexation_cost = -0.15 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
-statesman = { monarch_power = DIP diplomatic_upkeep = 1 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
-colonial_governor = { monarch_power = DIP global_tariffs = 0.15 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
-colonial_administrator = { monarch_power = DIP reduced_liberty_desire = 10 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
-colonial_overseer = { monarch_power = DIP culture_conversion_cost = -0.15 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
-#######################################################################
-naval_reformer = { monarch_power = DIP naval_morale = 0.1 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
-naval_supplier = { monarch_power = DIP naval_maintenance_modifier = -0.10 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
-admiral = { monarch_power = DIP sunk_ship_morale_hit_recieved = -0.1 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
-navigator = { monarch_power = DIP range = 0.15 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
-adventurer = { monarch_power = DIP global_colonial_growth = 15 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
-explorer = { monarch_power = DIP native_assimilation = 0.15 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
-#######################################################################
-secretary = { monarch_power = DIP improve_relation_modifier = 0.15 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
-diplomat = { monarch_power = DIP unjustified_demands = -0.15 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
-negotiator = { monarch_power = DIP province_warscore_cost = -0.15 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
-trader = { monarch_power = DIP trade_efficiency = 0.10 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
-merchant = { monarch_power = DIP caravan_power = 0.1 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
-exporter = { monarch_power = DIP trade_steering = 0.1 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
-#######################################################################
-spymaster = { monarch_power = DIP spy_offence = 0.25 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
-investigator = { monarch_power = DIP global_spy_defence = 0.35 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
-agitator = { monarch_power = DIP rebel_support_efficiency = 0.50 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
-#######################################################################
+######################################################
+#Merchant
+esu_merchant = {
+	monarch_power = DIP
+	trade_steering = 0.15
+	skill_scaled_modifier = {
+		meritocracy = 0.25
+		legitimacy = -0.15
+		republican_tradition = -0.15
+		devotion = -0.15
+		horde_unity = -0.15
+		global_ship_trade_power = 0.05
+	}
+	chance = { 
+		factor = 1 
+		modifier = {
+			factor = 0
+			owner = { has_reform = court_of_darkness }
+		}
+	} 
+	ai_will_do = { 
+		factor = 1
+	} 
+}
+#Alchemist
+esu_alchemist = {
+	monarch_power = DIP
+	culture_conversion_cost = -0.15
+	skill_scaled_modifier = {
+		meritocracy = 0.25
+		legitimacy = -0.15
+		republican_tradition = -0.15
+		devotion = -0.15
+		horde_unity = -0.15
+		naval_attrition = -0.05
+	}
+	chance = { 
+		factor = 1 
+		modifier = {
+			factor = 0
+			owner = { has_reform = court_of_darkness }
+		}
+	} 
+	ai_will_do = { 
+		factor = 1
+	} 
+}
+#Negotiator
+esu_negotiator = {
+	monarch_power = DIP
+	improve_relation_modifier = 0.15
+	skill_scaled_modifier = {
+		meritocracy = 0.25
+		legitimacy = -0.15
+		republican_tradition = -0.15
+		devotion = -0.15
+		horde_unity = -0.15
+		unjustified_demands = -0.05
+	}
+	chance = { 
+		factor = 1 
+		modifier = {
+			factor = 0
+			owner = { has_reform = court_of_darkness }
+		}
+	} 
+	ai_will_do = { 
+		factor = 1
+	} 
+}
+#Governor
+esu_governor = {
+	monarch_power = DIP
+	diplomatic_annexation_cost = -0.15
+	skill_scaled_modifier = {
+		meritocracy = 0.25
+		legitimacy = -0.15
+		republican_tradition = -0.15
+		devotion = -0.15
+		horde_unity = -0.15
+		min_autonomy_in_territories = -0.05
+	}
+	chance = { 
+		factor = 1 
+		modifier = {
+			factor = 0
+			owner = { has_reform = court_of_darkness }
+		}
+	} 
+	ai_will_do = { 
+		factor = 1
+	} 
+}
+#Colonial Overseer
+esu_colonial_overseer = {
+	monarch_power = DIP
+	global_tariffs = 0.15
+	skill_scaled_modifier = {
+		meritocracy = 0.25
+		legitimacy = -0.15
+		republican_tradition = -0.15
+		devotion = -0.15
+		horde_unity = -0.15
+		global_sailors_modifier = 0.05
+	}
+	chance = { 
+		factor = 1 
+		modifier = {
+			factor = 0
+			owner = { has_reform = court_of_darkness }
+		}
+	} 
+	ai_will_do = { 
+		factor = 1
+	} 
+}
+#Navarch
+esu_navarch = {
+	monarch_power = DIP
+	navy_tradition_decay = -0.015
+	skill_scaled_modifier = {
+		meritocracy = 0.25
+		legitimacy = -0.15
+		republican_tradition = -0.15
+		devotion = -0.15
+		horde_unity = -0.15
+		global_ship_cost = -0.05
+	}
+	chance = { 
+		factor = 1 
+		modifier = {
+			factor = 0
+			owner = { has_reform = court_of_darkness }
+		}
+	} 
+	ai_will_do = { 
+		factor = 1
+	} 
+}
+#Adventurer
+esu_adventurer = {
+	monarch_power = DIP
+	global_colonial_growth = 15
+	skill_scaled_modifier = {
+		meritocracy = 0.25
+		legitimacy = -0.15
+		republican_tradition = -0.15
+		devotion = -0.15
+		horde_unity = -0.15
+		native_assimilation = 0.05
+	}
+	chance = { 
+		factor = 1 
+		modifier = {
+			factor = 0
+			owner = { has_reform = court_of_darkness }
+		}
+	} 
+	ai_will_do = { 
+		factor = 1
+	} 
+}
+#Spy
+esu_spy = {
+	monarch_power = DIP
+	spy_offence = 0.15
+	skill_scaled_modifier = {
+		meritocracy = 0.25
+		legitimacy = -0.15
+		republican_tradition = -0.15
+		devotion = -0.15
+		horde_unity = -0.15
+		global_spy_defence = 0.05
+	}
+	chance = { 
+		factor = 1 
+		modifier = {
+			factor = 0
+			owner = { has_reform = court_of_darkness }
+		}
+	} 
+	ai_will_do = { 
+		factor = 1
+	} 
+}
+
+######################################################
 # Military Advisors
-#######################################################################
-commander = { monarch_power = MIL land_morale = 0.10 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
-scout = { monarch_power = MIL movement_speed = 0.10 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
-army_reformer = { monarch_power = MIL army_tradition_decay = -0.01 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
-grand_captain = { monarch_power = MIL land_maintenance_modifier = -0.10 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
-grand_champion = { monarch_power = MIL merc_maintenance_modifier = -0.10 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
-chief = { monarch_power = MIL global_regiment_cost = -0.10 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
-#######################################################################
-army_organiser = { monarch_power = MIL  land_forcelimit_modifier = 0.10 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
-mercenary_recruiter = { monarch_power = MIL  mercenary_manpower = 0.1 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
-army_coordinator = { monarch_power = MIL  land_attrition = -0.1 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
-instructor = { monarch_power = MIL  discipline = 0.025 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
-commandant = { monarch_power = MIL  mercenary_discipline = 0.025 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
-siege_consultant = { monarch_power = MIL  siege_ability = 0.10 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
-#######################################################################
-intendant = { monarch_power = MIL  reinforce_speed = 0.10 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
-quartermaster = { monarch_power = MIL  reinforce_cost_modifier = -0.10 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
-officer = { monarch_power = MIL  mercenary_cost = -0.10 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
-superintendent = { monarch_power = MIL  global_manpower_modifier = 0.15 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
-recruitmaster = { monarch_power = MIL  manpower_recovery_speed = 0.15 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
-enlister = { monarch_power = MIL  sailors_recovery_speed = 0.15 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
-#######################################################################
-fortification_expert = { monarch_power = MIL  defensiveness = 0.15 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
-fortification_curator = { monarch_power = MIL  garrison_size = 0.15 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
-warden = { monarch_power = MIL fort_maintenance_modifier = -0.15 skill_scaled_modifier = { meritocracy = 0.5 } chance = { factor = 1 } ai_will_do = { factor = 1 } }
+######################################################
+#Blacksmith
+esu_blacksmith = {
+	monarch_power = MIL
+	global_regiment_cost = -0.15
+	skill_scaled_modifier = {
+		meritocracy = 0.25
+		legitimacy = -0.15
+		republican_tradition = -0.15
+		devotion = -0.15
+		horde_unity = -0.15
+		global_regiment_recruit_speed = -0.05
+	}
+	chance = { 
+		factor = 1 
+		modifier = {
+			factor = 0
+			owner = { has_reform = court_of_darkness }
+		}
+	} 
+	ai_will_do = { 
+		factor = 1
+	} 
+}
+#Trainer
+esu_trainer = {
+	monarch_power = MIL
+	army_tradition_decay = -0.015
+	skill_scaled_modifier = {
+		meritocracy = 0.25
+		legitimacy = -0.15
+		republican_tradition = -0.15
+		devotion = -0.15
+		horde_unity = -0.15
+		drill_decay_modifier = -0.05
+	}
+	chance = { 
+		factor = 1 
+		modifier = {
+			factor = 0
+			owner = { has_reform = court_of_darkness }
+		}
+	} 
+	ai_will_do = { 
+		factor = 1
+	} 
+}
+#Hunter
+esu_hunter = {
+	monarch_power = MIL
+	reinforce_speed = 0.15
+	skill_scaled_modifier = {
+		meritocracy = 0.25
+		legitimacy = -0.15
+		republican_tradition = -0.15
+		devotion = -0.15
+		horde_unity = -0.15
+		reinforce_cost_modifier = -0.05
+	}
+	chance = { 
+		factor = 1 
+		modifier = {
+			factor = 0
+			owner = { has_reform = court_of_darkness }
+		}
+	} 
+	ai_will_do = { 
+		factor = 1
+	} 
+}
+#Scout
+esu_scout = {
+	monarch_power = MIL
+	land_attrition = -0.15
+	skill_scaled_modifier = {
+		meritocracy = 0.25
+		legitimacy = -0.15
+		republican_tradition = -0.15
+		devotion = -0.15
+		horde_unity = -0.15
+		cav_to_inf_ratio = 0.05
+	}
+	chance = { 
+		factor = 1 
+		modifier = {
+			factor = 0
+			owner = { has_reform = court_of_darkness }
+		}
+	} 
+	ai_will_do = { 
+		factor = 1
+	} 
+}
+#Thane
+esu_thane = {
+	monarch_power = MIL
+	mercenary_cost = -0.15
+	skill_scaled_modifier = {
+		meritocracy = 0.25
+		legitimacy = -0.15
+		republican_tradition = -0.15
+		devotion = -0.15
+		horde_unity = -0.15
+		mercenary_manpower = 0.05
+	}
+	chance = { 
+		factor = 1 
+		modifier = {
+			factor = 0
+			owner = { has_reform = court_of_darkness }
+		}
+	} 
+	ai_will_do = { 
+		factor = 1
+	} 
+}
+#Officer
+esu_officer = {
+	monarch_power = MIL
+	defensiveness = 0.15
+	skill_scaled_modifier = {
+		meritocracy = 0.25
+		legitimacy = -0.15
+		republican_tradition = -0.15
+		devotion = -0.15
+		horde_unity = -0.15
+		garrison_size = 0.05
+	}
+	chance = { 
+		factor = 1 
+		modifier = {
+			factor = 0
+			owner = { has_reform = court_of_darkness }
+		}
+	} 
+	ai_will_do = { 
+		factor = 1
+	} 
+}
+#Grand Champion
+esu_grand_champion = {
+	monarch_power = MIL
+	siege_ability = 0.15
+	skill_scaled_modifier = {
+		meritocracy = 0.25
+		legitimacy = -0.15
+		republican_tradition = -0.15
+		devotion = -0.15
+		horde_unity = -0.15
+		drill_gain_modifier = 0.05
+	}
+	chance = { 
+		factor = 1 
+		modifier = {
+			factor = 0
+			owner = { has_reform = court_of_darkness }
+		}
+	} 
+	ai_will_do = { 
+		factor = 1
+	} 
+}
+#Recruiter
+esu_recruiter = {
+	monarch_power = MIL
+	manpower_recovery_speed = 0.15
+	skill_scaled_modifier = {
+		meritocracy = 0.25
+		legitimacy = -0.15
+		republican_tradition = -0.15
+		devotion = -0.15
+		horde_unity = -0.15
+		fort_maintenance_modifier = -0.05
+	}
+	chance = { 
+		factor = 1 
+		modifier = {
+			factor = 0
+			owner = { has_reform = court_of_darkness }
+		}
+	} 
+	ai_will_do = { 
+		factor = 1
+	} 
+}

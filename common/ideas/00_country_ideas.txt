@@ -4800,3 +4800,201 @@ CHM_ideas = {
 		global_manpower_modifier = 0.1
 	}
 }
+
+MCA_ideas = {
+	start = {
+		global_own_trade_power = 0.25
+		defensiveness = 0.15
+	}
+	
+	bonus = {
+		global_unrest = -2.5
+	}
+	
+	trigger = {
+		tag = MIT
+	}
+	free = yes
+	
+	mca_idea_1 = {
+		stability_cost_modifier = -0.10
+	}
+	mca_idea_2 = {
+		prestige = 0.25
+	}
+	mca_idea_3 = {
+		army_tradition = 0.25
+	}
+	mca_idea_4 = {
+		global_manpower_modifier = 0.10
+	}
+	mca_idea_5 = {
+		global_tax_modifier = 0.10
+	}
+	mca_idea_6 = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	mca_idea_7 = {
+		legitimacy = 0.25
+		republican_tradition = 0.25
+		devotion = 0.25							
+        horde_unity = 0.25
+        meritocracy = 0.25
+	}
+}
+
+CYA_ideas = {
+	start = {
+		build_cost = -0.25
+		advisor_pool = 1
+	}
+	
+	bonus = {
+		production_efficiency = 0.25
+	}
+	
+	trigger = {
+		tag = SCU
+	}
+	free = yes
+	
+	cya_idea_1 = {
+		land_morale = 0.10
+	}
+	cya_idea_2 = {
+		development_cost = -0.1	
+	}
+	cya_idea_3 = {
+		defensiveness = 0.1
+	}
+	cya_idea_4 = {
+		diplomatic_reputation = 0.5	
+	}
+	cya_idea_5 = {
+		core_creation = -0.10
+	}
+	cya_idea_6 = {
+		prestige = 0.25
+	}
+	cya_idea_7 = {
+		hostile_attrition = 1.0
+	}
+}
+
+KIE_ideas = {
+	start = {
+		global_unrest = -2.5
+		global_heretic_missionary_strength = 0.025
+	}
+	
+	bonus = {
+		land_morale = 0.15
+	}
+	
+	trigger = {
+		tag = CAU
+	}
+	free = yes
+	
+	mother_of_all_cities = {
+		prestige = 0.25
+	}
+	heritage_of_rus = {
+		diplomatic_reputation = 0.5	
+	}
+	fending_off_the_invaders = {
+		defensiveness = 0.10
+	}
+	chernozem_land = {
+		production_efficiency = 0.1
+	}
+	center_of_orthodox_church = {
+		tolerance_own = 1		
+	}
+	support_local_traders = {
+		merchants = 1
+	}
+	centralized_rule = {
+		global_tax_modifier = 0.1
+	}
+}
+
+ARM_ideas = {
+	start = {
+		war_exhaustion_cost = -0.25
+		recover_army_morale_speed = 0.10
+	}
+
+	bonus = {
+		hostile_attrition = 1
+	}
+	
+	trigger = {
+		tag = GAR
+	}
+	free = yes
+	
+	apostolic_church = {
+		global_missionary_strength = 0.01
+	}
+	land_reclamation = {
+		development_cost = -0.1
+	}
+	border_nation = {
+		diplomatic_reputation = 0.5
+	}
+	melikdom_organization = {
+		global_tax_modifier = 0.1
+	}
+	sygnakhs = {
+		global_regiment_cost = -0.1
+	}
+	nakharar_titles = {
+		army_tradition = 0.25
+	}
+	end_of_armenian_diaspora = {
+		production_efficiency = 0.1
+	}
+}
+
+BAH_ideas = {
+	start = {
+		cavalry_power = 0.15
+		army_tradition = 0.5
+	}
+
+	bonus = {
+		stability_cost_modifier = -0.25
+	}
+	
+	trigger = {
+		tag = GUA
+	}
+	free = yes
+	
+	gharbians = {
+		manpower_recovery_speed = 0.1
+	}
+	legacy_of_gisu_daraz = {
+		religious_unity = 0.10
+	}
+	dakani_language = {
+		num_accepted_cultures = 1
+	}
+	karimis = {
+		trade_efficiency = 0.1
+	}
+	takht_e_firoza = {
+		diplomatic_reputation = 0.5
+	}
+	bahmani_primogeniture = {
+		legitimacy = 0.25
+		republican_tradition = 0.25
+		devotion = 0.25							
+        horde_unity = 0.25
+        meritocracy = 0.25
+	}
+	madrasa_of_mahmud_gawan = {
+		idea_cost = -0.1
+	}
+}

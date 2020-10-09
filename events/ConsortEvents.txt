@@ -44,8 +44,6 @@ country_event = {
 			is_capital = no
 			is_state = yes
 			is_in_capital_area = yes
-			NOT = { has_estate = estate_nobles }
-			NOT = { has_estate = estate_church }
 		}
 		estate_influence = {
 				estate = estate_nobles
@@ -1223,23 +1221,35 @@ country_event = {
 				OR = {
 					employed_advisor = {
 						is_female = yes
-						type = treasurer
+						type = esu_steward
 					}
 					employed_advisor = {
 						is_female = yes
-						type = philosopher
+						type = esu_bard
 					}
 					employed_advisor = {
 						is_female = yes
-						type = artist
+						type = esu_mage
 					}
 					employed_advisor = {
 						is_female = yes
-						type = master_of_mint
+						type = esu_monk
 					}
 					employed_advisor = {
 						is_female = yes
-						type = natural_scientist
+						type = esu_priest
+					}
+					employed_advisor = {
+						is_female = yes
+						type = esu_researcher
+					}
+					employed_advisor = {
+						is_female = yes
+						type = esu_inspector
+					}
+					employed_advisor = {
+						is_female = yes
+						type = esu_curator
 					}
 				}
 			}
@@ -1249,23 +1259,35 @@ country_event = {
 	 			OR = {
 					employed_advisor = {
 						is_male = yes
-						type = treasurer
+						type = esu_steward
 					}
 					employed_advisor = {
 						is_male = yes
-						type = philosopher
+						type = esu_bard
 					}
 					employed_advisor = {
 						is_male = yes
-						type = artist
+						type = esu_mage
 					}
 					employed_advisor = {
 						is_male = yes
-						type = master_of_mint
+						type = esu_monk
 					}
 					employed_advisor = {
 						is_male = yes
-						type = natural_scientist
+						type = esu_priest
+					}
+					employed_advisor = {
+						is_male = yes
+						type = esu_researcher
+					}
+					employed_advisor = {
+						is_male = yes
+						type = esu_inspector
+					}
+					employed_advisor = {
+						is_male = yes
+						type = esu_curator
 					}
 				}
 			}
@@ -1324,24 +1346,36 @@ country_event = {
 
 		hidden_effect = {
 			if = {
-				limit = { advisor = treasurer }
-				remove_advisor = treasurer
+				limit = { advisor = esu_steward }
+				remove_advisor = esu_steward
 			}
 			if = {
-				limit = { advisor = philosopher }
-				remove_advisor = philosopher
+				limit = { advisor = esu_bard }
+				remove_advisor = esu_bard
 			}
 			if = {
-				limit = { advisor = artist }
-				remove_advisor = artist
+				limit = { advisor = esu_mage }
+				remove_advisor = esu_mage
 			}
 			if = {
-				limit = { advisor = master_of_mint }
-				remove_advisor = master_of_mint
+				limit = { advisor = esu_monk }
+				remove_advisor = esu_monk
 			}
 			if = {
-				limit = { advisor = natural_scientist }
-				remove_advisor = natural_scientist
+				limit = { advisor = esu_priest }
+				remove_advisor = esu_priest
+			}
+			if = {
+				limit = { advisor = esu_researcher }
+				remove_advisor = esu_researcher
+			}
+			if = {
+				limit = { advisor = esu_inspector }
+				remove_advisor = esu_inspector
+			}
+			if = {
+				limit = { advisor = esu_curator }
+				remove_advisor = esu_curator
 			}
 		}
 
@@ -1372,24 +1406,36 @@ country_event = {
 		reduce_meritocracy_effect = yes
 		hidden_effect = {
 			if = {
-				limit = { advisor = treasurer }
-				kill_advisor = treasurer
+				limit = { advisor = esu_steward }
+				kill_advisor = esu_steward
 			}
 			if = {
-				limit = { advisor = philosopher }
-				kill_advisor = philosopher
+				limit = { advisor = esu_bard }
+				kill_advisor = esu_bard
 			}
 			if = {
-				limit = { advisor = artist }
-				kill_advisor = artist
+				limit = { advisor = esu_mage }
+				kill_advisor = esu_mage
 			}
 			if = {
-				limit = { advisor = master_of_mint }
-				kill_advisor = master_of_mint
+				limit = { advisor = esu_monk }
+				kill_advisor = esu_monk
 			}
 			if = {
-				limit = { advisor = natural_scientist }
-				kill_advisor = natural_scientist
+				limit = { advisor = esu_priest }
+				kill_advisor = esu_priest
+			}
+			if = {
+				limit = { advisor = esu_researcher }
+				kill_advisor = esu_researcher
+			}
+			if = {
+				limit = { advisor = esu_inspector }
+				kill_advisor = esu_inspector
+			}
+			if = {
+				limit = { advisor = esu_curator }
+				kill_advisor = esu_curator
 			}
 		}
 		capital_scope = {

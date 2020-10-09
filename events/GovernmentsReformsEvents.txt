@@ -166,9 +166,11 @@ country_event = {
 					country_event = { id = event_new_diplomatic_actions.4 }
 					clr_country_flag = es_nation_to_heist
 				}
+				ROOT = {
 				multiply_variable = { which = IncomeToSteal value = -1 }
 				add_treasury_var = { var = IncomeToSteal }
-				ountry_event = { id = event_new_diplomatic_actions.6 }
+				сountry_event = { id = event_new_diplomatic_actions.6 }
+				}
 			}
 			50 = { 
 				random_country = {

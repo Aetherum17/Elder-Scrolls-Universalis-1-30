@@ -161,7 +161,7 @@ country_event = {
 		has_dlc = "Res Publica"
 		has_states_general_mechanic = yes
 		statists_vs_orangists = 0.9
-		advisor = spymaster
+		advisor = esu_spy
 	}
 
 	mean_time_to_happen = {
@@ -183,7 +183,7 @@ country_event = {
 		name = "dutch_republic.9.b"
 		ai_chance = { factor = 80 }
 		custom_tooltip = "dutch_republic.9.b.tt"
-		kill_advisor = spymaster
+		kill_advisor = esu_spy
 		add_republican_tradition = 3
 		add_legitimacy = 5
 	}
@@ -256,11 +256,14 @@ country_event = {
 		has_states_general_mechanic = yes
 		NOT = { statists_vs_orangists = 0.1 }
 		OR = {
-			advisor = army_organiser
-			advisor = commandant
-			advisor = quartermaster
-			advisor = grand_captain
-			advisor = recruitmaster
+			advisor = esu_blacksmith
+			advisor = esu_trainer
+			advisor = esu_hunter
+			advisor = esu_thane
+			advisor = esu_officer
+			advisor = esu_scout
+			advisor = esu_grand_champion
+			advisor = esu_recruiter
 		}
 	}
 
@@ -285,24 +288,36 @@ country_event = {
 		name = "dutch_republic.20.b"
 		ai_chance = { factor = 80 }
 		if = {
-			limit = { advisor = army_organiser }
-			kill_advisor = army_organiser
+			limit = { advisor = esu_blacksmith }
+			kill_advisor = esu_blacksmith
 		}
 		if = {
-			limit = { advisor = commandant }
-			kill_advisor = commandant
+			limit = { advisor = esu_trainer }
+			kill_advisor = esu_trainer
 		}
 		if = {
-			limit = { advisor = quartermaster }
-			kill_advisor = quartermaster
+			limit = { advisor = esu_hunter }
+			kill_advisor = esu_hunter
 		}
 		if = {
-			limit = { advisor = grand_captain }
-			kill_advisor = grand_captain
+			limit = { advisor = esu_thane }
+			kill_advisor = esu_thane
 		}
 		if = {
-			limit = { advisor = recruitmaster }
-			kill_advisor = recruitmaster
+			limit = { advisor = esu_officer }
+			kill_advisor = esu_officer
+		}
+		if = {
+			limit = { advisor = esu_scout }
+			kill_advisor = esu_scout
+		}
+		if = {
+			limit = { advisor = esu_grand_champion }
+			kill_advisor = esu_grand_champion
+		}
+		if = {
+			limit = { advisor = esu_recruiter }
+			kill_advisor = esu_recruiter
 		}
 		capital_scope = {
 			spawn_rebels = {
@@ -331,24 +346,36 @@ country_event = {
 		name = "dutch_republic.20.d"
 		ai_chance = { factor = 80 }
 		if = {
-			limit = { advisor = army_organiser }
-			kill_advisor = army_organiser
+			limit = { advisor = esu_blacksmith }
+			kill_advisor = esu_blacksmith
 		}
 		if = {
-			limit = { advisor = commandant }
-			kill_advisor = commandant
+			limit = { advisor = esu_trainer }
+			kill_advisor = esu_trainer
 		}
 		if = {
-			limit = { advisor = quartermaster }
-			kill_advisor = quartermaster
+			limit = { advisor = esu_hunter }
+			kill_advisor = esu_hunter
 		}
 		if = {
-			limit = { advisor = grand_captain }
-			kill_advisor = grand_captain
+			limit = { advisor = esu_thane }
+			kill_advisor = esu_thane
 		}
 		if = {
-			limit = { advisor = recruitmaster }
-			kill_advisor = recruitmaster
+			limit = { advisor = esu_officer }
+			kill_advisor = esu_officer
+		}
+		if = {
+			limit = { advisor = esu_scout }
+			kill_advisor = esu_scout
+		}
+		if = {
+			limit = { advisor = esu_grand_champion }
+			kill_advisor = esu_grand_champion
+		}
+		if = {
+			limit = { advisor = esu_recruiter }
+			kill_advisor = esu_recruiter
 		}
 		capital_scope = {
 			spawn_rebels = {

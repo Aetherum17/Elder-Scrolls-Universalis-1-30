@@ -18,7 +18,7 @@ country_event = {
 
 	trigger = {
 		OR = {
-			faction_in_power = enuchs
+			faction_in_power = es_monks
 			AND = {
 				has_dlc = "Mandate of Heaven"
 				is_emperor_of_china = yes
@@ -500,7 +500,7 @@ country_event = {
 	
 	trigger = {
 		OR = {
-			faction_in_power = bureaucrats
+			faction_in_power = es_monopolists
 			AND = {
 				has_dlc = "Mandate of Heaven"
 				is_emperor_of_china = yes
@@ -551,7 +551,7 @@ country_event = {
 	
 	trigger = {
 		OR = {
-			faction_in_power = temples
+			faction_in_power = es_knights
 			AND = {
 				has_dlc = "Mandate of Heaven"
 				is_emperor_of_china = yes
@@ -755,7 +755,7 @@ country_event = {
 	
 	trigger = {
 		OR = {
-			faction_in_power = temples
+			faction_in_power = es_knights
 			AND = {
 				has_dlc = "Mandate of Heaven"
 				is_emperor_of_china = yes

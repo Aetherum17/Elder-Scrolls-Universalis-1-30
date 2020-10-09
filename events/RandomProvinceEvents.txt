@@ -26,13 +26,13 @@ province_event = {
 		modifier = {
 			factor = 0.8
 			owner = {
-				fortification_expert = 3
+				esu_officer = 3
 			}
 		}
 		modifier = {
 			factor = 1.5
 			owner = {
-				NOT = { advisor = fortification_expert }
+				NOT = { advisor = esu_officer }
 			}
 		}
 	}

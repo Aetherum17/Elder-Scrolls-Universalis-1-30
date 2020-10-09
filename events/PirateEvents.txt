@@ -368,7 +368,7 @@ country_event = {
 			influence = 10
 		}
 		define_advisor = {
-			type = trader
+			type = esu_merchant
 			skill = 2
 			cost_multiplier = 0.5
 		}
@@ -580,7 +580,7 @@ country_event = {
 	option = { # A spokesman for the crew
 		name = "pirates.18.a"
 		define_advisor = {
-			type = quartermaster
+			type = esu_officer
 			skill = 2
 			name = crew_representative
 			cost_multiplier = 0.5
@@ -598,7 +598,7 @@ country_event = {
 	option = { # The captain's puppet
 		name = "pirates.18.b"
 		define_advisor = {
-			type = naval_reformer
+			type = esu_navarch
 			skill = 2
 			name = captains_puppet
 			cost_multiplier = 0.5
