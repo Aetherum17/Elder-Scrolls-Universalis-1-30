@@ -1,0 +1,83 @@
+namespace = py_mission_events
+
+country_event = {
+	id = py_mission_events.1
+	title = "py_mission_events.1.t"
+	desc = "py_mission_events.1.d"
+	picture = PYMISSION_1_eventPicture
+	
+	#fire_only_once = yes
+	
+	trigger = {
+		NOT = { has_country_flag = pya_mission_1_flag }
+	}
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = pya_mission_1_flag
+		}
+	}
+
+	option = {
+		name = "py_mission_events.1.yes"
+		ai_chance = { factor = 90 }
+		add_ruler_personality = immortal_personality
+	}
+	
+	option = {
+		name = "py_mission_events.1.no"
+		ai_chance = { factor = 10 }
+		add_prestige = 25
+	}
+}
+
+country_event = {
+	id = py_mission_events.2
+	title = "py_mission_events.2.t"
+	desc = "py_mission_events.2.d"
+	picture = PYMISSION_2_eventPicture
+	
+	#fire_only_once = yes
+	
+	trigger = {
+		NOT = { has_country_flag = pya_mission_2_flag }
+	}
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = pya_mission_2_flag
+		}
+	}
+
+	option = {
+		name = "py_mission_events.2.union"
+		ai_chance = { factor = 1 }
+		5155 = {
+			create_union = owner
+		}
+		add_country_modifier = {
+			name = "py_mi_events_1"
+			duration = 9125
+		}
+	}
+	
+	option = {
+		name = "py_mission_events.2.pirate"
+		ai_chance = { factor = 1 }
+		eldweyr_16_la = {			#Mistral
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		add_country_modifier = {
+			name = "py_mi_events_2"
+			duration = 9125
+		}
+	}
+}

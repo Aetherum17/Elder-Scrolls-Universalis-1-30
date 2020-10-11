@@ -10,7 +10,7 @@ namespace = republic_factions
 # Factions in conflict
 ########################################
 
-# Traders vs Guilds
+# esu_merchants vs Guilds
 
 # Guilds Push for Mercantilist Reforms
 country_event = {
@@ -211,7 +211,7 @@ country_event = {
 	}
 }
 
-# Aristocrats vs Traders
+# Aristocrats vs esu_merchants
 
 # Candidates Vie for Opportunities
 country_event = {
@@ -250,8 +250,8 @@ country_event = {
 			influence = -10
 		}
 		generate_advisor_of_type_and_semi_random_religion_effect = {
-			advisor_type=commandant
-			advisor_type_if_not_state=commandant
+			advisor_type=esu_officer
+			advisor_type_if_not_state=esu_officer
 			scaled_skill = yes
 			discount=yes
 		}
@@ -269,8 +269,8 @@ country_event = {
 			influence = -10
 		}
 		generate_advisor_of_type_and_semi_random_religion_effect = {
-			advisor_type=trader
-			advisor_type_if_not_state=trader
+			advisor_type=esu_merchant
+			advisor_type_if_not_state=esu_merchant
 			scaled_skill = yes
 			discount=yes
 		}
@@ -362,7 +362,7 @@ country_event = {
 # Corruption Events
 ########################################
 
-# Offer from $ARTIST$
+# Offer from $esu_bard$
 country_event = {
 	id = republic_factions.12
 	title = "republic_factions.12.t"
@@ -375,7 +375,7 @@ country_event = {
 		has_dlc = "Res Publica"
 		has_government_attribute = is_merchant_republic
 		faction_in_power = es_guilds
-		advisor = artist
+		advisor = esu_bard
 	}
 
 	mean_time_to_happen = {
@@ -384,7 +384,7 @@ country_event = {
 
 	option = {
 		name = "republic_factions.12.a"
-		remove_advisor = artist
+		remove_advisor = esu_bard
 		add_faction_influence = {
 			faction = es_guilds
 			influence = -15
@@ -405,7 +405,7 @@ country_event = {
 	}
 }
 
-# Offer from $TRADER$
+# Offer from $esu_merchant$
 country_event = {
 	id = republic_factions.13
 	title = "republic_factions.13.t"
@@ -418,7 +418,7 @@ country_event = {
 		has_dlc = "Res Publica"
 		has_government_attribute = is_merchant_republic
 		faction_in_power = es_clergy
-		advisor = trader
+		advisor = esu_merchant
 	}
 
 	mean_time_to_happen = {
@@ -427,7 +427,7 @@ country_event = {
 
 	option = {
 		name = "republic_factions.13.a"
-		remove_advisor = trader
+		remove_advisor = esu_merchant
 		add_faction_influence = {
 			faction = es_clergy
 			influence = -15
@@ -444,7 +444,7 @@ country_event = {
 	}
 }
 
-# Offer from $COMMANDANT$
+# Offer from $esu_officer$
 country_event = {
 	id = republic_factions.14
 	title = "republic_factions.14.t"
@@ -457,7 +457,7 @@ country_event = {
 		has_dlc = "Res Publica"
 		has_government_attribute = is_merchant_republic
 		faction_in_power = es_knights
-		advisor = commandant
+		advisor = esu_officer
 	}
 
 	mean_time_to_happen = {
@@ -466,7 +466,7 @@ country_event = {
 
 	option = {
 		name = "republic_factions.14.a"
-		remove_advisor = commandant
+		remove_advisor = esu_officer
 		add_faction_influence = {
 			faction = es_knights
 			influence = -15

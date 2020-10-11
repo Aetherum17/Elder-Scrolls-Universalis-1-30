@@ -192,17 +192,20 @@ country_decisions = {
 
 			add_country_modifier = { name = "daedric_invasion" duration = 18250 }
 			4075 = { add_province_modifier = { name = "oblivion_gate" duration = -1 } }
-			6846 = { add_province_modifier = { name = "oblivion_gate" duration = -1 } }
-			1202 = { add_province_modifier = { name = "oblivion_gate" duration = -1 } }
-			6485 = { add_province_modifier = { name = "oblivion_gate" duration = -1 } }
+			4074 = { add_province_modifier = { name = "oblivion_gate" duration = -1 } }
+			4081 = { add_province_modifier = { name = "oblivion_gate" duration = -1 } }
 			
-			4076 = {
+			1376 = { add_province_modifier = { name = "oblivion_gate" duration = -1 } }
+			1199 = { add_province_modifier = { name = "oblivion_gate" duration = -1 } }
+			1106 = { add_province_modifier = { name = "oblivion_gate" duration = -1 } }
+			
+			4073 = {
 				add_great_project = dead_hig_canal
 			}
 			4076 = {
 				add_great_project = dead_cyr_canal
 			}
-			4076 = {
+			4072 = {
 				add_great_project = dead_arg_canal
 			}
 			
@@ -218,7 +221,9 @@ country_decisions = {
 			
 			show_ambient_object = "gate_arg"
 			show_ambient_object = "gate_cyr"
-			show_ambient_object = "gate_dead"
+			show_ambient_object = "gate_dead1"
+			show_ambient_object = "gate_dead2"
+			show_ambient_object = "gate_dead3"
 			show_ambient_object = "gate_hig"
 		}
 		ai_will_do = {
@@ -238,15 +243,15 @@ country_decisions = {
 			OR = {
 				AND = {
 					owns = 4075
-					NOT = { owns = 6846 }
+					NOT = { owns = 1199 }
 				} 
 				AND = {
-					owns = 4075
-					NOT = { owns = 1202 }
+					owns = 4074
+					NOT = { owns = 1376 }
 				} 
 				AND = {
-					owns = 4075
-					NOT = { owns = 6485 }
+					owns = 4071
+					NOT = { owns = 1106 }
 				} 
 				AND = {
 				NOT = { had_recent_war = 1 }
@@ -258,25 +263,25 @@ country_decisions = {
 			if = {
 				limit = {
 					owns = 4075
-					NOT = { owns = 6846 }
+					NOT = { owns = 1199 }
 				}
-				hidden_effect = { 6846 = { owner = { save_event_target_as = invasion_target_3 } } }
+				hidden_effect = { 1199 = { owner = { save_event_target_as = invasion_target_3 } } }
 				declare_war_with_cb = { who = event_target:invasion_target_3 casus_belli = cb_es_daedric_invasion }
 			}
 			else_if = {
 				limit = {
-					owns = 4075
-					NOT = { owns = 1202 }
+					owns = 4074
+					NOT = { owns = 1376 }
 				}
-				hidden_effect = { 1202 = { owner = { save_event_target_as = invasion_target_4 } } }
+				hidden_effect = { 1376 = { owner = { save_event_target_as = invasion_target_4 } } }
 				declare_war_with_cb = { who = event_target:invasion_target_4 casus_belli = cb_es_daedric_invasion }
 			}
 			else_if = {
 				limit = {
-					owns = 4075
-					NOT = { owns = 6485 }
+					owns = 4071
+					NOT = { owns = 1106 }
 				}
-				hidden_effect = { 6485 = { owner = { save_event_target_as = invasion_target_4 } } }
+				hidden_effect = { 1106 = { owner = { save_event_target_as = invasion_target_4 } } }
 				declare_war_with_cb = { who = event_target:invasion_target_4 casus_belli = cb_es_daedric_invasion }
 			}
 			else = {

@@ -112,17 +112,7 @@ type={
 		name="gate_arg"
 		hidden_on_start=yes
 		position={
-			2074.000 23.000 1293.000 
-		}
-		rotation={
-			0.000 0.000 0.000 
-		}
-	}
-	object={
-		name="gate_cyr"
-		hidden_on_start=yes
-		position={
-			1480.000 23.000 1651.000 
+			2039.000 23.000 1269.000 
 		}
 		rotation={
 			0.000 0.000 0.000 
@@ -132,7 +122,17 @@ type={
 		name="gate_hig"
 		hidden_on_start=yes
 		position={
-			652.000 23.000 1817.000 
+			609.000 25.000 1829.000 
+		}
+		rotation={
+			0.000 30.000 0.000 
+		}
+	}
+	object={
+		name="gate_cyr"
+		hidden_on_start=yes
+		position={
+			1498.000 23.000 1683.000 
 		}
 		rotation={
 			0.000 0.000 0.000 
@@ -149,13 +149,33 @@ type={
 		}
 	}
 	object={
-		name="gate_dead"
+		name="gate_dead1"
 		hidden_on_start=yes
 		position={
 			3794.000 23.000 2499.000 
 		}
 		rotation={
 			0.000 35.000 0.000 
+		}
+	}
+	object={
+		name="gate_dead2"
+		hidden_on_start=yes
+		position={
+			3819.000 23.000 2495.000 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+	object={
+		name="gate_dead3"
+		hidden_on_start=yes
+		position={
+			3799.000 23.000 2474.000 
+		}
+		rotation={
+			0.000 -35.000 0.000 
 		}
 	}
 }

@@ -132,8 +132,8 @@ country_event = {
 	option = {
 		name = "aow_events.43.b"
 		generate_advisor_of_type_and_semi_random_religion_effect = {
-			advisor_type=spymaster
-			advisor_type_if_not_state=spymaster
+			advisor_type=esu_spy
+			advisor_type_if_not_state=esu_spy
 			scaled_skill = yes
 			discount=yes
 		}

@@ -1,0 +1,2400 @@
+piracy_missions = {
+    slot = 6                 
+    generic = no
+    ai = yes
+    has_country_shield = yes  
+    potential = { primary_culture = maorner }
+    
+    fortifying_fenna_mission = {
+        icon = mission_conquer_50_development
+        position = 3
+        required_missions = { sequestering_sealanes_mission }
+        
+        provinces_to_highlight = {
+			OR = {
+				area = pyandonea_12_la		#Trynphina
+				area = pyandonea_13_la		#Marleigh
+				area = pyandonea_14_la		#Fenna
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+        }
+    
+        trigger = {
+            2089 = { country_or_non_sovereign_subject_holds = ROOT }
+			num_of_owned_provinces_with = {
+				value = 5
+				OR = {
+				    has_building = fort_15th
+					has_building = fort_16th
+					has_building = fort_17th
+					has_building = fort_18th
+				}
+				NOT = {
+					all_known_country = {
+						army_size = ROOT
+					}
+				}
+			}
+        }
+        
+        effect = {
+            pyandonea_12_la = {
+				limit = {
+					NOT = { is_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_claim = ROOT
+			}
+			pyandonea_13_la = {
+				limit = {
+					NOT = { is_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_claim = ROOT
+			}
+			pyandonea_14_la = {
+				limit = {
+					NOT = { is_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_claim = ROOT
+			}
+			add_country_modifier = {
+				name = "py_mi_fortifying_fenna"
+				duration = 9125
+			}
+        }
+    }
+	
+	allies_anvil_mission = {
+        icon = mission_galleys_in_port
+        position = 6
+        required_missions = { voyaging_valenwood_mission }
+        
+        provinces_to_highlight = { 
+			OR = {
+				province_id = 1161			#Anvil
+				province_id = 1168			#Crowhaven
+				province_id = 5327			#Amane
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+        }
+    
+        trigger = {
+            any_ally = {
+				primary_culture = ayleid
+				num_of_owned_provinces_with = {
+					value = 20
+					region = golden_coast_lr
+				}
+				has_opinion = {
+					who = ROOT
+					value = 150
+				}
+			}
+			has_discovered = 1161
+			has_discovered = 1168
+			has_discovered = 5327
+        }
+        
+        effect = {
+			add_country_modifier = {
+				name = "py_mi_ally_anvil"
+				duration = 9125
+			}
+        }
+    }
+	
+	parlaying_pirates_mission = {
+        icon = mission_sea_battles
+        position = 7
+        required_missions = { allies_anvil_mission }
+
+        trigger = {
+           OR = {
+				alliance_with = ABE
+				alliance_with = RES
+			}
+			num_of_heavy_ship = 30
+			1161 = {
+				privateer_power = {
+					country = ROOT
+					share = 15
+				}
+			}
+			has_discovered = 5441
+			has_discovered = 5442
+			has_discovered = 5443
+			has_discovered = 5444
+			has_discovered = 5445
+		}
+        
+        effect = {
+			hammerfell_45_la = {			#Anwein
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			5441 = { add_core = ROOT }
+			5442 = { add_core = ROOT }
+			5443 = { add_core = ROOT }
+			5444 = { add_core = ROOT }
+			5445 = { add_core = ROOT }
+			add_country_modifier = {
+				name = "py_mi_pirating"
+				duration = 9125
+			}			
+        }
+    }
+	
+	harassing_hews_bane_mission = {
+        icon = mission_arabian_fort
+        position = 8
+        required_missions = { parlaying_pirates_mission }
+        
+        provinces_to_highlight = {
+            OR = {
+				area = hammerfell_45_la
+			}
+			NOT = {country_or_non_sovereign_subject_holds = ROOT }
+        }
+    
+        trigger = {
+            hammerfell_45_la = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			6436 = {
+				privateer_power = {
+					country = ROOT
+					share = 25
+				}
+			}
+			has_leader_with = {
+				admiral = yes
+				manuever = 4
+			}
+        }
+        
+        effect = {
+            hammerfell_7_la = {				#Thedell
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			hammerfell_44_la = {			#Marn
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = "py_mi_hews_bane"
+				duration = 9125
+			}
+        }
+    }
+	
+	tensions_taneth_mission = {
+        icon = mission_african_soldier
+        position = 9
+        required_missions = { harassing_hews_bane_mission }
+        
+        provinces_to_highlight = {
+            OR = {
+				area = hammerfell_7_la
+				area = hammerfell_44_la
+			}
+			NOT = {country_or_non_sovereign_subject_holds = ROOT }
+        }
+    
+        trigger = {
+            hammerfell_7_la = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+            hammerfell_44_la = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			navy_tradition = 35
+			sailors_percentage = 1
+        }
+        
+        effect = {
+			every_province = {
+				limit = {
+					region = corten_heights_lr
+					is_city = yes
+				}
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = "py_mi_slaving_hammerfell"
+				duration = -1
+			}
+        }
+    }
+es_conquest_of_pyandonea_lr = {
+		icon = mission_unite_home_region
+		position = 11
+		required_missions = { }
+		trigger = {
+			owns_core_province = 224		
+			owns_core_province = 240
+			owns_core_province = 2050
+			owns_core_province = 2089
+			owns_core_province = 209
+		}
+		effect = {
+			custom_tooltip = es_conquest_of_pyandonea_lr_tooltip
+		    add_prestige = 10
+			hidden_effect = {
+			every_province = {
+			limit = {
+			region = pyandonea_lr
+			is_city = yes
+			}
+			add_permanent_claim = ROOT
+			}
+			}
+			4740 = { add_core = ROOT }
+			if = { limit = { ai = yes 4740 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			4740 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 4740 } } } } }
+		}
+	}
+	
+	es_conquest_of_summerset_lr = {
+		icon = mission_unite_home_region
+		position = 12
+		required_missions = { }
+		trigger = {
+			owns_core_province = 271		
+			owns_core_province = 4740
+			owns_core_province = 281
+			owns_core_province = 249
+			owns_core_province = 299
+		}
+		effect = {
+		    custom_tooltip = es_conquest_of_summerset_lr_tooltip
+		    add_prestige = 10
+			hidden_effect = {
+			every_province = {
+			limit = {
+			OR = {
+			region = summerset_lr
+			region = auridon_lr
+			}
+			is_city = yes
+			}
+			add_permanent_claim = ROOT
+			}
+			}
+			337 = { add_core = ROOT }
+			if = { limit = { ai = yes 337 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			337 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 337 } } } } }
+			
+			209 = { add_core = ROOT }
+			if = { limit = { ai = yes 209 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			209 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 209 } } } } }
+		}
+	}
+	
+	es_conquest_of_continental_atmora_lr = {
+		icon = mission_unite_home_region
+		position = 13
+		required_missions = { }
+		trigger = {
+			owns_core_province = 357
+			owns_core_province = 367
+			owns_core_province = 373
+			owns_core_province = 382
+			owns_core_province = 384
+		}
+		effect = {
+		    custom_tooltip = es_conquest_of_continental_atmora_lr_tooltip
+		    add_prestige = 10
+			hidden_effect = {
+			every_province = {
+			limit = {
+			is_city = yes
+			OR = {
+			area = atmora_1_la
+			area = atmora_2_la
+			area = atmora_3_la
+			area = atmora_4_la
+			area = atmora_5_la
+			area = atmora_6_la
+			}
+			}
+			add_permanent_claim = ROOT
+			}
+			}
+			
+			1299 = { add_core = ROOT }
+			if = { limit = { ai = yes 1299 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			1299 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 1299 } } } } }
+			
+			389 = { add_core = ROOT }
+			if = { limit = { ai = yes 389 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			389 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 389 } } } } }
+			
+			415 = { add_core = ROOT }
+			if = { limit = { ai = yes 415 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			415 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 415 } } } } }
+			
+			412 = { add_core = ROOT }
+			if = { limit = { ai = yes 412 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			412 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 412 } } } } }
+		}
+	}
+	
+	es_conquest_of_islandic_atmora_lr = {
+		icon = mission_unite_home_region
+		position = 14
+		required_missions = { }
+		trigger = {
+			owns_core_province = 393
+			owns_core_province = 395
+			owns_core_province = 370
+			owns_core_province = 389
+			owns_core_province = 371
+		}
+		effect = {
+		    custom_tooltip = es_conquest_of_islandic_atmora_lr_tooltip
+		    add_prestige = 10
+			hidden_effect = {
+			every_province = {
+			limit = {
+			is_city = yes
+			OR = {
+			area = atmora_7_la
+			area = atmora_10_la
+			}
+			}
+			add_permanent_claim = ROOT
+			}
+			}
+			
+			1299 = { add_core = ROOT }
+			if = { limit = { ai = yes 1299 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			1299 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 1299 } } } } }
+			
+			373 = { add_core = ROOT }
+			if = { limit = { ai = yes 373 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			373 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 373 } } } } }
+			
+			415 = { add_core = ROOT }
+			if = { limit = { ai = yes 415 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			415 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 415 } } } } }
+			
+			412 = { add_core = ROOT }
+			if = { limit = { ai = yes 412 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			412 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 412 } } } } }
+		}
+	}
+	
+	es_conquest_of_far_atmora_lr = {
+		icon = mission_unite_home_region
+		position = 15
+		required_missions = { }
+		trigger = {
+			owns_core_province = 407
+			owns_core_province = 415
+			owns_core_province = 2211
+			owns_core_province = 2213
+			owns_core_province = 2212
+		}
+		effect = {
+		    custom_tooltip = es_conquest_of_far_atmora_lr_tooltip
+		    add_prestige = 10
+			hidden_effect = {
+			every_province = {
+			limit = {
+			is_city = yes
+			OR = {
+			area = atmora_8_la
+			area = atmora_9_la
+			}
+			}
+			add_permanent_claim = ROOT
+			}
+			}
+			
+			395 = { add_core = ROOT }
+			if = { limit = { ai = yes 395 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			395 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 395 } } } } }
+			
+			373 = { add_core = ROOT }
+			if = { limit = { ai = yes 373 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			373 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 373 } } } } }
+			
+			795 = { add_core = ROOT }
+			if = { limit = { ai = yes 795 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			795 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 795 } } } } }
+		}
+	}
+}
+
+tamriel_missions = {
+    slot = 7             
+    generic = no
+    ai = yes
+    has_country_shield = yes   
+    potential = { primary_culture = maorner }
+	
+    abolishing_abbarbas_mission = {
+        icon = mission_impaled_soldies
+        position = 3
+        required_missions = { sequestering_sealanes_mission }
+        
+        provinces_to_highlight = {
+			OR = {
+				area = pyandonea_4_la		#Abbarbas
+				area = pyandonea_7_la		#Velu
+				area = pyandonea_8_la		#Diarana
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+        }
+    
+        trigger = {
+            224 = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { average_autonomy = 5 }
+			NOT = { num_of_powerful_estates = 1 }
+        }
+        
+        effect = {
+            pyandonea_4_la = {
+				limit = {
+					NOT = { is_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_claim = ROOT
+			}
+			pyandonea_7_la = {
+				limit = {
+					NOT = { is_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_claim = ROOT
+			}
+			pyandonea_8_la = {
+				limit = {
+					NOT = { is_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_claim = ROOT
+			}
+			add_country_modifier = {
+				name = "py_mi_abolish_abbarbas"
+				duration = 9125
+			}
+        }
+    }
+	
+	voyaging_valenwood_mission = {
+        icon = mission_indian_stateman
+        position = 5
+        required_missions = { sublimation_deity_mission }
+        
+        provinces_to_highlight = {
+			OR = {
+				province_id = 857			#Tarlain Heights
+				province_id = 863			#Greenheart
+				province_id = 4941			#Southpoint
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+        }
+    
+        trigger = {
+            any_ally = {
+				primary_culture = bosmer
+				num_of_owned_provinces_with = {
+					value = 20
+					OR = {
+						region = southern_valenwood_lr
+						region = northern_valenwood_lr
+					}
+				}
+				has_opinion = {
+					who = ROOT
+					value = 150
+				}
+			}
+			has_discovered = 857
+			has_discovered = 863
+			has_discovered = 4941
+		}
+        
+        effect = {
+			add_country_modifier = {
+				name = "py_mi_voyaging_valenwood"
+				duration = 9125
+			}
+        }
+    }
+	
+	khenarthis_roost_mission = {
+        icon = mission_mosque
+        position = 6
+        required_missions = { voyaging_valenwood_mission }
+        
+        provinces_to_highlight = {
+			OR = {
+				area = eldweyr_16_la		#Mistral
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+        }
+    
+        trigger = {
+            num_of_light_ship = 100
+			OR = {
+				5155 = { 
+					owner = {
+						has_opinion = {
+							who = ROOT
+							value = 150
+						}
+					}
+				}
+				5155 = {
+					privateer_power = {
+						country = ROOT
+						share = 20
+					}
+				}
+			}
+        }
+        
+        effect = {
+			country_event = { id = py_mission_events.2 }
+            define_advisor = {
+				type = occultist
+				name = "Uldor"
+				skill = 3
+				cost_multiplier = 0.5
+			}
+        }
+    }
+	
+	search_for_topal_mission = {
+        icon = mission_war_chest
+        position = 8
+        required_missions = { 
+			khenarthis_roost_mission
+			parlaying_pirates_mission
+		}
+        
+        provinces_to_highlight = {
+            OR = {							#Topalia cores
+				province_id = 5441			#Avinka
+				province_id = 5442			#Miculeius
+				province_id = 5443			#Silalona
+				province_id = 5444			#Gloraso
+				province_id = 5445			#Gruilaine
+			}
+			NOT = {country_or_non_sovereign_subject_holds = ROOT }
+        }
+    
+        trigger = {
+			num_of_light_ship = 150
+            any_ally = {
+				primary_culture = nedic
+				num_of_owned_provinces_with = {
+					value = 20
+					region =  eastern_syrodiil_lr
+				}
+				has_opinion = {
+					who = ROOT
+					value = 150
+				}
+			}
+			owns_core_province = 5441
+			owns_core_province = 5442		
+			owns_core_province = 5443
+			owns_core_province = 5444
+			owns_core_province = 5445
+        }
+        
+        effect = {
+            cyrodiil_34_la = {			#Water's Edge
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			cyrodiil_36_la = {			#Conarnia
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = "py_mi_orgnum_coffer"
+				duration = 36500
+			}
+        }
+    }
+	
+	nedes_nibeney_mission = {
+        icon = mission_alliances
+        position = 9
+        required_missions = { search_for_topal_mission }
+        
+        provinces_to_highlight = {
+            OR = {
+				province_id = 5498			#Water's Edge
+				province_id = 5516			#Conaria
+			}
+			NOT = {country_or_non_sovereign_subject_holds = ROOT }
+        }
+    
+        trigger = {
+            owns_core_province = 5498
+			owns_core_province = 5516
+			1206 = {
+				privateer_power = {
+					country = ROOT
+					share = 35
+				}
+			}
+			any_ally = {
+				num_of_owned_provinces_with = {
+					value = 20
+					region = central_syrodiil_lr
+				}
+				has_opinion = {
+					who = ROOT
+					value = 150
+				}
+			}
+        }
+        
+        effect = {
+            add_historical_friend = ALE
+			add_historical_friend = ORD
+			ALE = { add_historical_friend = ROOT }
+			ORD = { add_historical_friend = ROOT }
+			add_country_modifier = {
+				name = "py_mi_global_trade"
+				duration = -1
+			}
+        }
+	}
+	
+	es_conquest_of_yokuda_lr = {
+		icon = mission_unite_home_region
+		position = 11
+		required_missions = { }
+		trigger = {
+			owns_core_province = 335		
+			owns_core_province = 3443
+			owns_core_province = 355
+			owns_core_province = 333
+			owns_core_province = 3467
+		}
+		effect = {
+		    custom_tooltip = es_conquest_of_yokuda_lr_tooltip
+		    add_prestige = 10
+			hidden_effect = {
+			every_province = {
+			limit = {
+			region = yokuda_lr
+			is_city = yes
+			}
+			add_permanent_claim = ROOT
+			}
+			}
+			
+			1497 = { add_core = ROOT }
+			if = { limit = { ai = yes 1497 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			1497 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 1497 } } } } }
+		}
+	}
+	
+	es_conquest_of_southern_kamal_lr = {
+		icon = mission_unite_home_region
+		position = 12
+		required_missions = { }
+		trigger = {
+			owns_core_province = 420
+			owns_core_province = 443
+			owns_core_province = 426
+			owns_core_province = 439
+			owns_core_province = 464
+		}
+		effect = {
+		    custom_tooltip = es_conquest_of_southern_kamal_lr_tooltip
+		    add_prestige = 10
+			hidden_effect = {
+			every_province = {
+			limit = {
+			region = southern_kamal_lr
+			is_city = yes
+			}
+			add_permanent_claim = ROOT
+			}
+			}
+			
+			1299 = { add_core = ROOT }
+			if = { limit = { ai = yes 1299 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			1299 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 1299 } } } } }
+		}
+	}
+	
+	es_conquest_of_northern_kamal_lr = {
+		icon = mission_unite_home_region
+		position = 13
+		required_missions = { }
+		trigger = {
+			owns_core_province = 479
+			owns_core_province = 503
+			owns_core_province = 488
+			owns_core_province = 517
+			owns_core_province = 471
+		}
+		effect = {
+		    custom_tooltip = es_conquest_of_northern_kamal_lr_tooltip
+		    add_prestige = 10
+			hidden_effect = {
+			every_province = {
+			limit = {
+			region = northern_kamal_lr
+			is_city = yes
+			}
+			add_permanent_claim = ROOT
+			}
+			}
+			
+			542 = { add_core = ROOT }
+			if = { limit = { ai = yes 542 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			542 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 542 } } } } }
+			
+			1049 = { add_core = ROOT }
+			if = { limit = { ai = yes 1049 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			1049 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 1049 } } } } }
+		}
+	}
+	
+	es_conquest_of_thousand_lr = {
+		icon = mission_unite_home_region
+		position = 14
+		required_missions = { }
+		trigger = {
+			owns_core_province = 542
+			owns_core_province = 571
+			owns_core_province = 561
+			owns_core_province = 551
+			owns_core_province = 575
+		}
+		effect = {
+		    custom_tooltip = es_conquest_of_thousand_lr_tooltip
+		    add_prestige = 10
+			hidden_effect = {
+			every_province = {
+			limit = {
+			region = thousand_lr
+			is_city = yes
+			}
+			add_permanent_claim = ROOT
+			}
+			}
+			
+			468 = { add_core = ROOT }
+			if = { limit = { ai = yes 468 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			468 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 468 } } } } }
+		}
+	}
+	
+	es_conquest_of_po_tun_lr = {
+		icon = mission_unite_home_region
+		position = 15
+		required_missions = { }
+		trigger = {
+			owns_core_province = 611
+			owns_core_province = 646
+			owns_core_province = 651
+			owns_core_province = 666
+			owns_core_province = 623
+		}
+		effect = {
+		    custom_tooltip = es_conquest_of_po_tun_lr_tooltip
+		    add_prestige = 10
+			hidden_effect = {
+			every_province = {
+			limit = {
+			region = po_tun_lr
+			is_city = yes
+			}
+			add_permanent_claim = ROOT
+			}
+			}
+		}
+	}
+}
+
+aldmeris_missions = {
+    slot = 8
+    generic = no
+    ai = yes
+    has_country_shield = yes   
+    potential = { primary_culture = maorner }
+    
+    banished_from_aldmeris_mission = {
+        icon = mission_invade_island
+        position = 1
+        required_missions = {  }
+
+        trigger = {
+            manpower_percentage = 1
+			all_owned_province = { NOT = { pure_unrest = 1 } }
+			NOT = { doom = 50 }
+        }
+        
+        effect = {
+			if = {
+				limit = { has_dlc = "El Dorado" }
+				add_doom = -10
+			}
+			add_country_modifier = {
+				name = "py_mi_veil_of_mist"   
+				duration = -1
+			}
+        }
+    }
+	
+	sequestering_sealanes_mission = {
+        icon = mission_cossack_cavalry
+        position = 2
+        required_missions = { 
+			banished_from_aldmeris_mission
+			defending_new_home_mission
+		}
+        
+        provinces_to_highlight = {
+			OR = {
+				province_id = 209			#Tiguna
+				province_id = 224			#Abbarbas
+				province_id = 240			#Vallas Bor
+				province_id = 2050			#Eilyse
+				province_id = 2089			#Fenna
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+        }
+    
+        trigger = {
+            num_of_subjects = 5
+			num_of_provinces_in_states = 20
+			adm = 1
+			dip = 1
+			mil = 1
+			NOT = { doom = 50 }
+        }
+        
+        effect = {
+			if = {
+				limit = { has_dlc = "El Dorado" }
+				add_doom = -20
+			}
+			209 = { add_permanent_claim = ROOT }
+			224 = { add_permanent_claim = ROOT }
+			240 = { add_permanent_claim = ROOT }
+			2050 = { add_permanent_claim = ROOT }
+			2089 = { add_permanent_claim = ROOT }
+			add_country_modifier = {
+				name = "py_mi_sequester_sealanes"
+				duration = 9125
+			}
+        }
+    }
+	
+	trading_in_tiguna_mission = {
+        icon = mission_dominate_home_trade_node
+        position = 3
+        required_missions = { sequestering_sealanes_mission }
+        
+        provinces_to_highlight = {
+			OR = {
+				area = pyandonea_1_la		#Atea Atoll
+				area = pyandonea_2_la		#Secula
+				area = pyandonea_15_la		#Fenyola
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+        }
+    
+        trigger = {
+            209 = { country_or_non_sovereign_subject_holds = ROOT }
+			num_of_owned_provinces_with = {
+				value = 2
+				province_has_center_of_trade_of_level = 3
+			}
+			209 = {
+				has_most_province_trade_power = ROOT
+			}
+        }
+        
+        effect = {
+            pyandonea_1_la = {
+				limit = {
+					NOT = { is_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_claim = ROOT
+			}
+			pyandonea_2_la = {
+				limit = {
+					NOT = { is_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_claim = ROOT
+			}
+			pyandonea_15_la = {
+				limit = {
+					NOT = { is_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_claim = ROOT
+			}
+			add_treasury = 200
+			add_country_modifier = {
+				name = "py_mi_trading_tiguna"
+				duration = 9125
+			}
+        }
+    }
+	
+	sublimation_deity_mission = {
+        icon = mission_empire
+        position = 4
+        required_missions = { 
+			fortifying_fenna_mission
+			abolishing_abbarbas_mission
+			trading_in_tiguna_mission
+			innovating_eilyse_mission
+			venerating_vallas_bor_mission
+		}
+        
+        provinces_to_highlight = {
+			OR = {
+				province_id = 209			#Tiguna
+				province_id = 224			#Abbarbas
+				province_id = 240			#Vallas Bor
+				province_id = 2050			#Eilyse
+				province_id = 2089			#Fenna
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+        }
+    
+        trigger = {
+			owns_core_province = 209
+			owns_core_province = 224		
+			owns_core_province = 240
+			owns_core_province = 2050
+			owns_core_province = 2089
+        }
+        
+        effect = {
+			define_ruler = {
+				name = "Sakatel"
+				dynasty = "Orgnum"
+				age = 100
+				claim = 100
+				adm = 7
+				dip = 3
+				mil = 7
+				fixed = yes
+				male = yes
+			}
+			country_event = { id = py_mission_events.1 }
+			4668 = { add_permanent_claim = ROOT }
+			4807 = { add_permanent_claim = ROOT }
+			add_country_modifier = {
+				name = "py_mi_serpent_king"
+				duration = -1
+			}
+        }
+    }
+	
+	preparing_pyandonea_mission = {
+        icon = mission_iroquois_warriors
+        position = 5
+        required_missions = { sublimation_deity_mission }
+        
+        provinces_to_highlight = {
+            region = pyandonea_lr
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+        }
+    
+        trigger = {
+            army_size_percentage = 1
+			navy_size_percentage = 1
+			pyandonea_lr = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			224 = {
+				trade_share = {
+					country = ROOT
+					share = 75
+				}
+			}
+        }
+        
+        effect = {
+			add_country_modifier = {
+				name = "py_mi_preparing_pyandonea"
+				duration = 18250
+			}
+        }
+    }
+	
+	summerset_invasion_mission = {
+        icon = mission_conquer_5_states
+        position = 6
+        required_missions = { 
+			preparing_pyandonea_mission
+			search_new_aldmeris_mission
+			}
+        
+        provinces_to_highlight = { 
+			OR = {
+				province_id = 4661		#Edala
+				province_id = 4741		#Cirane
+				province_id = 4818		#Koraire
+				province_id = 4837		#Valinalda
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+        }
+    
+        trigger = {
+            prestige = 50
+			num_of_owned_provinces_with = {
+				value = 15
+					OR = {
+						region = summerset_lr
+						region = audidon_lr
+					}
+			}
+			owns_core_province = 4661
+			owns_core_province = 4741		
+			owns_core_province = 4818
+			owns_core_province = 4837
+			NOT = {
+				all_neighbor_country = {
+					tech_difference = 1
+				}
+			}
+        }
+        
+        effect = {
+            add_prestige = 15
+			add_casus_belli = {
+				target = SA6		#Alinor
+				type = cb_restore_personal_union
+				months = 300
+			}
+			add_casus_belli = {
+				target = SB2		#Firsthold
+				type = cb_restore_personal_union
+				months = 300
+			}
+			add_country_modifier = {
+				name = "py_mi_summerset_invasion"
+				duration = 9125
+			}
+        }
+    }
+	
+	aldmeris_union_mission = {
+        icon = mission_have_two_subjects
+        position = 7
+        required_missions = { summerset_invasion_mission }
+        
+        provinces_to_highlight = { #al	ela	 fir 	grc
+            OR = {
+				area = summerset_5_la		#Elanesse
+				area = summerset_6_la		#Alinor
+				area = summerset_12_la		#Firsthold	
+				area = summerset_14_la		#Greenwater Cove	
+			}
+			NOT = {country_or_non_sovereign_subject_holds = ROOT }
+        }
+		
+        trigger = {
+            all_subject_country = {
+				NOT = { liberty_desire = 50 }
+			}
+			summerset_5_la = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			summerset_6_la = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			summerset_12_la = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			summerset_14_la = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+        }
+        
+        effect = {
+            summerset_3_la = {			#Nirae
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			summerset_7_la = {			#Kingdom Fields
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+            summerset_11_la = {			#Phaer
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+            summerset_17_la = {			#Ebon Stadmont
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+            summerset_26_la = {			#Riverfeld
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+            summerset_29_la = {			#Skywatch
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = "py_mi_aldmeris_hegenomy"
+				duration = 9125
+			}
+        }
+    }
+	
+	gathering_great_alinor_mission = {
+        icon = mission_italian_condottiere
+        position = 8
+        required_missions = { aldmeris_union_mission }
+        
+        provinces_to_highlight = {
+            OR = {
+				area = summerset_7_la		#Kingdom Fields
+				area = summerset_17_la		#Ebon Standmont
+				area = summerset_26_la		#Riverfeld
+			}
+			NOT = {country_or_non_sovereign_subject_holds = ROOT }
+        }
+    
+        trigger = {
+			summerset_7_la = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			summerset_17_la = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			summerset_26_la = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			NOT = { all_neighbor_country = { army_size = ROOT } }
+        }
+        
+        effect = {
+            summerset_1_la = {			#Lillandril
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			summerset_4_la = {			#Cloudrest
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+            summerset_19_la = {			#Elsinaerith
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+            summerset_25_la = {			#Sondline
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = "py_mi_great_alinor"
+				duration = 9125
+			}
+        }
+    }
+	
+	safe_summerset_mission = {
+        icon = mission_market_place_with_asian_traders
+        position = 9
+        required_missions = { 
+			gathering_great_alinor_mission
+			allocating_auridon_mission
+		}
+        
+        provinces_to_highlight = {
+            OR = {
+				area = summerset_1_la
+				area = summerset_2_la
+				area = summerset_4_la
+				area = summerset_8_la
+				area = summerset_15_la
+				area = summerset_19_la
+				area = summerset_20_la
+				area = summerset_25_la
+			}
+			NOT = {country_or_non_sovereign_subject_holds = ROOT }
+        }
+    
+        trigger = {
+            all_owned_province = { NOT = { pure_unrest = 1 } }
+			summerset_1_la = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			summerset_2_la = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			summerset_4_la = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			summerset_8_la = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			summerset_15_la = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			summerset_19_la = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			summerset_20_la = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			summerset_25_la = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+        }
+        
+        effect = {
+            summerset_9_la = {			#Croddlehurst
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			summerset_10_la = {			#Shimmerene
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+            summerset_16_la = {			#Miriith
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+            summerset_23_la = {			#Gaeaine
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = "py_mi_summerset_secured"
+				duration = -1
+			}
+        }
+    }
+	
+	restoring_aldmeris_mission = {
+        icon = mission_monarch_in_throne_room
+        position = 10
+        required_missions = { safe_summerset_mission }
+        
+        provinces_to_highlight = {
+            OR = { 
+				province_id = 249			#Lillandril
+				province_id = 263			#Cloudrest
+				province_id = 271			#Alinor
+				province_id = 299			#Firsthold
+				province_id = 4740			#Dusk
+			}
+			NOT = {country_or_non_sovereign_subject_holds = ROOT }
+        }
+    
+        trigger = {
+			owns_core_province = 249
+			owns_core_province = 263		
+			owns_core_province = 271
+			owns_core_province = 299
+			owns_core_province = 4740
+			NOT = { average_home_autonomy = 5 }
+        }
+        
+        effect = {
+			249 = {
+				add_base_manpower = 2
+				add_base_production = 2
+				add_base_tax = 2
+			}
+			263 = {
+				add_base_manpower = 2
+				add_base_production = 2
+				add_base_tax = 2
+			}
+			271 = {
+				add_base_manpower = 2
+				add_base_production = 2
+				add_base_tax = 2
+			}
+			299 = {
+				add_base_manpower = 2
+				add_base_production = 2
+				add_base_tax = 2
+			}
+			4740 = {
+				add_base_manpower = 2
+				add_base_production = 2
+				add_base_tax = 2
+			}
+			224 = { change_province_name = "Maormeris" }
+			271 = { change_province_name = "New Aldmeris" }
+			add_country_modifier = {
+				name = "py_mi_new_aldmeris"
+				duration = -1
+			}
+        }
+	}
+	
+	es_conquest_of_upper_tsakara_lr = {
+		icon = mission_unite_home_region
+		position = 11
+		required_missions = { }
+		trigger = {
+			owns_core_province = 741
+			owns_core_province = 750
+			owns_core_province = 772
+			owns_core_province = 761
+			owns_core_province = 757
+		}
+		effect = {
+		    custom_tooltip = es_conquest_of_upper_tsakara_lr_tooltip
+		    add_prestige = 10
+			hidden_effect = {
+			every_province = {
+			limit = {
+			region = upper_tsakara_lr
+			is_city = yes
+			}
+			add_permanent_claim = ROOT
+			}
+			}
+			
+			800 = { add_core = ROOT }
+			if = { limit = { ai = yes 800 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			800 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 800 } } } } }
+			
+			1369 = { add_core = ROOT }
+			if = { limit = { ai = yes 1369 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			1369 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 1369 } } } } }
+			
+			415 = { add_core = ROOT }
+			if = { limit = { ai = yes 415 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			415 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 415 } } } } }
+			
+			412 = { add_core = ROOT }
+			if = { limit = { ai = yes 412 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			412 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 412 } } } } }
+		}
+	}
+	
+	es_conquest_of_islandic_tsakara_lr = {
+		icon = mission_unite_home_region
+		position = 12
+		required_missions = { }
+		trigger = {
+			owns_core_province = 1541
+			owns_core_province = 800
+			owns_core_province = 806
+			owns_core_province = 795
+			owns_core_province = 415
+		}
+		effect = {
+			custom_tooltip = es_conquest_of_islandic_tsakara_lr_tooltip
+		    add_prestige = 10
+			hidden_effect = {
+			every_province = {
+			limit = {
+			region = northern_islands_lr
+			is_city = yes
+			}
+			add_permanent_claim = ROOT
+			}
+			}
+			
+			772 = { add_core = ROOT }
+			if = { limit = { ai = yes 772 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			772 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 772 } } } } }
+		}
+	}
+	
+	es_conquest_of_valenwood_lr = {
+		icon = mission_unite_home_region
+		position = 13
+		required_missions = { }
+		trigger = {
+			owns_core_province = 820		
+			owns_core_province = 812
+			owns_core_province = 868
+			owns_core_province = 4941
+			owns_core_province = 844
+		}
+		effect = {
+		    custom_tooltip = es_conquest_of_valenwood_lr_tooltip
+		    add_prestige = 10
+			hidden_effect = {
+			every_province = {
+			limit = {
+			OR = {
+			region = northern_valenwood_lr
+			region = southern_valenwood_lr
+			}
+			is_city = yes
+			}
+			add_permanent_claim = ROOT
+			}
+			}
+		}
+	}
+	
+	es_conquest_of_eldweyr_lr = {
+		icon = mission_unite_home_region
+		position = 14
+		required_missions = { }
+		trigger = {
+			owns_core_province = 922		
+			owns_core_province = 933
+			owns_core_province = 5237
+			owns_core_province = 5285
+			owns_core_province = 888
+		}
+		effect = {
+			custom_tooltip = es_conquest_of_eldweyr_lr_tooltip
+		    add_prestige = 10
+			hidden_effect = {
+			every_province = {
+			limit = {
+			OR = {
+			region = anequina_lr
+			region = pelletine_lr
+			}
+			is_city = yes
+			}
+			add_permanent_claim = ROOT
+			}
+			}
+		}
+	}
+	
+	es_conquest_of_vvardenfell_lr = {
+		icon = mission_unite_home_region
+		position = 15
+		required_missions = { }
+		trigger = {
+			owns_core_province = 1043		
+			owns_core_province = 1049
+			owns_core_province = 1018
+			owns_core_province = 4098
+			owns_core_province = 1028
+		}
+		effect = {
+			custom_tooltip = es_conquest_of_vvardenfell_lr_tooltip
+		    add_prestige = 10
+			hidden_effect = {
+			every_province = {
+			limit = {
+			OR = {
+			region = vvardenfell_lr
+			region = llothanis_peninsula_lr
+			}
+			is_city = yes
+			}
+			add_permanent_claim = ROOT
+			}
+			}
+		}
+	}
+}
+
+summerset_missions = {
+    slot = 9
+    generic = no
+    ai = yes
+    has_country_shield = yes   
+    potential = { primary_culture = maorner }
+    
+    defending_new_home_mission = {
+        icon = mission_crusade_for_varna
+        position = 1
+        required_missions = {  }
+		
+        trigger = {
+            num_of_subjects = 5
+			num_of_allies = 2
+			stability = 2
+			NOT = { Doom = 50 }
+        }
+        
+        effect = {
+			if = {
+				limit = { has_dlc = "El Dorado" }
+				add_doom = -10
+			}
+			add_country_modifier = {
+				name = "py_mi_defending_py"
+				duration = 9125
+			}
+        }
+    }
+	
+	innovating_eilyse_mission = {
+        icon = mission_early_modern_university
+        position = 3
+        required_missions = { sequestering_sealanes_mission }
+        
+        provinces_to_highlight = {
+			OR = {
+				area = pyandonea_9_la		#Ritina
+				area = pyandonea_10_la		#Eilyse
+				area = pyandonea_11_la		#Quivira
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+        }
+    
+        trigger = {
+            2050 = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { is_lacking_institutions = yes }
+			innovativeness = 5
+        }
+        
+        effect = {
+            pyandonea_9_la = {
+				limit = {
+					NOT = { is_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_claim = ROOT
+			}
+			pyandonea_10_la = {
+				limit = {
+					NOT = { is_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_claim = ROOT
+			}
+			pyandonea_11_la = {
+				limit = {
+					NOT = { is_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_claim = ROOT
+			}
+			add_country_modifier = {
+				name = "py_mi_innovating_eilyse"
+				duration = 9125
+			}
+        }
+    }
+	
+	search_new_aldmeris_mission = {
+        icon = mission_junk_boat
+        position = 5
+        required_missions = { sublimation_deity_mission  }
+        
+        provinces_to_highlight = {
+			OR = {
+				province_id = 4668
+				province_id = 4807
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+        }
+    
+        trigger = {
+            full_idea_group = exploration_ideas
+			4668 = { owned_by = ROOT }
+			4807 = { owned_by = ROOT }
+        }
+        
+        effect = {
+			summerset_13_la = {			#Spellorin
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			summerset_18_la = {			#Anaedthar
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			summerset_21_la = {			#Dawnbreak
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			summerset_24_la = {			#Curie
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			summerset_27_la = {			#Elanara
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			summerset_28_la = {			#Astlinwae
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			summerset_30_la = {			#Caemaine
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = "py_mi_colonizing_summerset"
+				duration = 9125
+			}
+        }
+    }
+	
+	sun_mer_set_mission = {
+        icon = mission_trade_company_region_abroad
+        position = 6
+        required_missions = { search_new_aldmeris_mission }
+
+        trigger = {
+            OR = { 
+				full_idea_group = trade_ideas
+				full_idea_group = early_trade_ideas
+			}
+			num_of_owned_provinces_with = {
+				value = 5
+				province_has_center_of_trade_of_level = 3
+			}
+			271 = {
+				highest_value_trade_node = yes
+				trade_share = {
+					country = ROOT
+					share = 75
+				}
+			}
+			num_of_light_ship = 250
+			num_of_heavy_ship = 50
+        }
+        
+        effect = {
+			add_country_modifier = {
+				name = "py_mi_sun_never_sets"
+				duration = -1
+			}
+        }
+    }
+	
+	righting_sinistrals_mission = {
+        icon = mission_colonial
+        position = 7
+        required_missions = { maormernifest_mission }
+        
+        provinces_to_highlight = {
+            OR = {
+				area = yokuda_9_la
+			}
+			NOT = {country_or_non_sovereign_subject_holds = ROOT }
+        }
+    
+        trigger = {
+            NOT = { exists = SIN }
+			yokuda_9_la = {
+				type = all
+				owned_by = ROOT
+			}
+			2184 = { has_owner_religion = yes }
+        }
+        
+        effect = {
+			yokuda_2_la = {			#Ravan
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			yokuda_13_la = {		#Haearon
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = "py_mi_colonizing_lower_yokuda"
+				duration = 9125
+			}
+        }
+    }
+	
+	allocating_auridon_mission = {
+        icon = mission_establish_high_seas_navy
+        position = 8
+        required_missions = { aldmeris_union_mission }
+        
+        provinces_to_highlight = {
+            OR = {
+				area = summerset_3_la		#Nirae
+				area = summerset_11_la		#Phaer
+				area = summerset_29_la		#Skywatch
+			}
+			NOT = {country_or_non_sovereign_subject_holds = ROOT }
+        }
+    
+        trigger = {
+			summerset_3_la = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			summerset_11_la = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			summerset_29_la = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			NOT = { all_neighbor_country = { navy_size = ROOT } }
+        }
+        
+        effect = {
+            summerset_2_la = {			#Kingshaven
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			summerset_8_la = {			#Sunhold
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+            summerset_15_la = {			#Old Hall
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+            summerset_20_la = {			#Dusk
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = "py_mi_auridon"
+				duration = 9125
+			}
+        }
+	}
+	
+	es_conquest_of_morrowind_lr = {
+		icon = mission_unite_home_region
+		position = 11
+		required_missions = { }
+		trigger = {
+			owns_core_province = 1002
+			owns_core_province = 990
+			owns_core_province = 3373
+			owns_core_province = 958
+			owns_core_province = 3904
+		}
+		effect = {
+		    custom_tooltip = es_conquest_of_morrowind_lr_tooltip
+		    add_prestige = 10
+			hidden_effect = {
+			every_province = {
+			limit = {
+			OR = {
+			region = morrowind_lr
+			region = deshaan_lr
+			region = velothi_mountains_lr
+			}
+			is_city = yes
+			}
+			add_permanent_claim = ROOT
+			}
+			}
+		}
+	}
+	
+	es_conquest_of_black_marsh_lr = {
+		icon = mission_unite_home_region
+		position = 12
+		required_missions = { }
+		trigger = {
+			owns_core_province = 1087		
+			owns_core_province = 1098
+			owns_core_province = 1075
+			owns_core_province = 1069
+			owns_core_province = 1064
+		}
+		effect = {
+			custom_tooltip = es_conquest_of_black_marsh_lr_tooltip
+		    add_prestige = 10
+			hidden_effect = {
+			every_province = {
+			limit = {
+			OR = {
+			region = black_marsh_lr
+			region = shadowfen_lr
+			region = murkmire_lr
+			}
+			is_city = yes
+			}
+			add_permanent_claim = ROOT
+			}
+			}
+		}
+	}
+	
+	es_conquest_of_western_syrodiil_lr = {
+		icon = mission_unite_home_region
+		position = 13
+		required_missions = { }
+		trigger = {
+			owns_core_province = 1161
+			owns_core_province = 1144
+			owns_core_province = 5657
+			owns_core_province = 5616
+			owns_core_province = 5695
+		}
+		effect = {
+			custom_tooltip = es_conquest_of_western_syrodiil_lr_tooltip
+		    add_prestige = 10
+			hidden_effect = {
+			every_province = {
+			limit = {
+			OR = {
+			region = western_syrodiil_lr
+			region = golden_coast_lr
+			}
+			is_city = yes
+			}
+			add_permanent_claim = ROOT
+			}
+			}
+		}
+	}
+	
+	es_conquest_of_eastern_syrodiil_lr = {
+		icon = mission_unite_home_region
+		position = 14
+		required_missions = { }
+		trigger = {
+			owns_core_province = 1120
+			owns_core_province = 1251
+			owns_core_province = 1238
+			owns_core_province = 6044
+			owns_core_province = 1230
+		}
+		effect = {
+			custom_tooltip = es_conquest_of_eastern_syrodiil_lr_tooltip
+		    add_prestige = 10
+			hidden_effect = {
+			every_province = {
+			limit = {
+			OR = {
+			region = eastern_syrodiil_lr
+			region = valus_mountains_lr
+			}
+			is_city = yes
+			}
+			add_permanent_claim = ROOT
+			}
+			}
+		}
+	}
+	
+	es_conquest_of_central_syrodiil_lr = {
+		icon = mission_unite_home_region
+		position = 15
+		required_missions = { }
+		trigger = {
+			owns_core_province = 1206
+			owns_core_province = 1130
+			owns_core_province = 1194
+			owns_core_province = 5905
+			owns_core_province = 1209
+		}
+		effect = {
+			custom_tooltip = es_conquest_of_central_syrodiil_lr_tooltip
+		    add_prestige = 10
+			hidden_effect = {
+			every_province = {
+			limit = {
+			OR = {
+			region = central_syrodiil_lr
+			region = jerall_mountains_lr
+			}
+			is_city = yes
+			}
+			add_permanent_claim = ROOT
+			}
+			}
+		}
+	}
+}
+
+colonization_missions = {
+    slot = 10
+    generic = no
+    ai = yes
+    has_country_shield = yes   
+    potential = { primary_culture = maorner }
+    
+    venerating_vallas_bor_mission = {
+        icon = mission_hands_praying
+        position = 3
+        required_missions = { sequestering_sealanes_mission }
+        
+        provinces_to_highlight = {
+			OR = {
+				area = pyandonea_3_la		#Etho Sul
+				area = pyandonea_5_la		#Kituna Vos
+				area = pyandonea_6_la		#Vallas Bor
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+        }
+    
+        trigger = {
+            2089 = { country_or_non_sovereign_subject_holds = ROOT }
+			num_of_owned_provinces_with = {
+				value = 25
+					OR = {
+						has_building = temple
+						has_building = cathedral
+						has_building = tax_assessor
+					}
+			}	
+			is_defender_of_faith = yes
+        }
+        
+        effect = {
+            pyandonea_3_la = {
+				limit = {
+					NOT = { is_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_claim = ROOT
+			}
+			pyandonea_5_la = {
+				limit = {
+					NOT = { is_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_claim = ROOT
+			}
+			pyandonea_6_la = {
+				limit = {
+					NOT = { is_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_claim = ROOT
+			}
+			add_country_modifier = {
+				name = "py_mi_venerating_vallas_bor"
+				duration = 9125
+			}
+        }
+    }
+	
+	maormernifest_mission = {
+        icon = mission_iberian_conquistador
+        position = 6
+        required_missions = { search_new_aldmeris_mission }
+        
+        provinces_to_highlight = { 
+			OR = {
+				province_id = 4716			#Anaedthar
+				province_id = 4746			#Dawnbreak
+				province_id = 4779			#Curie
+				province_id = 4815			#Astlinwae
+				province_id = 4834			#Caemaine
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+        }
+    
+        trigger = {
+			full_idea_group = expansion_ideas
+            4716 = { owned_by = ROOT }
+			4746 = { owned_by = ROOT }
+			4779 = { owned_by = ROOT }
+			4815 = { owned_by = ROOT }
+			4834 = { owned_by = ROOT } 
+        }
+        
+        effect = {
+			yokuda_7_la = {			#Yath
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			yokuda_9_la = {			#A'raei
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = "py_mi_colonizing_yokuda"
+				duration = 9125
+			}
+        }
+    }
+	
+	yearning_yath_mission = {
+        icon = mission_central_asian_city
+        position = 7
+        required_missions = { maormernifest_mission }
+        
+        provinces_to_highlight = {
+            OR = {
+				area = yokuda_7_la
+			}
+			NOT = {country_or_non_sovereign_subject_holds = ROOT }
+        }
+    
+        trigger = {
+            NOT = { exists = YA7 }
+			yokuda_7_la = {
+				type = all
+				owned_by = ROOT
+			}
+			335 = { has_owner_religion = yes }
+        }
+        
+        effect = {
+			yokuda_3_la = {			#Jalfaye
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			yokuda_8_la = {			#Samara
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			yokuda_15_la = {			#Toramon
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = "py_mi_colonizing_upper_yokuda"
+				duration = 9125
+			}
+        }
+    }
+	
+	yonder_yokuda_mission = {
+        icon = mission_egyptian_mamluk_soldier
+        position = 8
+        required_missions = { 
+			righting_sinistrals_mission
+			yearning_yath_mission
+			}
+        
+        provinces_to_highlight = {
+            OR = { 
+				province_id = 333			#Jalfaye
+				province_id = 335			#Yath
+				province_id = 355			#Samara
+				province_id = 3443			#Haearon
+				province_id = 3467			#Toramon
+			}
+			NOT = {country_or_non_sovereign_subject_holds = ROOT }
+        }
+    
+        trigger = {
+            full_idea_group = kolonialimperium0
+			owns_core_province = 333
+			owns_core_province = 335	
+			owns_core_province = 355
+			owns_core_province = 3443
+			owns_core_province = 3467
+        }
+        
+        effect = {
+            hammerfell_14_la = {		#Limai
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			high_14_la = {				#Adrena
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = "py_mi_colonizing_empire"
+				duration = 9125
+			}
+        }
+	}
+	
+	es_conquest_of_western_skyrim_lr = {
+		icon = mission_unite_home_region
+		position = 11
+		required_missions = { }
+		trigger = {
+			owns_core_province = 1342
+			owns_core_province = 1306
+			owns_core_province = 1355
+			owns_core_province = 1275
+			owns_core_province = 1331
+		}
+		effect = {
+			custom_tooltip = es_conquest_of_western_skyrim_lr_tooltip
+		    add_prestige = 10
+			hidden_effect = {
+			every_province = {
+			limit = {
+			OR = {
+			region = reach_lr
+			region = great_planes_lr
+			}
+			is_city = yes
+			}
+			add_permanent_claim = ROOT
+			}
+			}
+			
+			357 = { add_core = ROOT }
+			if = { limit = { ai = yes 357 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			357 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 357 } } } } }
+		}
+	}
+	
+	es_conquest_of_eastern_skyrim_lr = {
+		icon = mission_unite_home_region
+		position = 12
+		required_missions = { }
+		trigger = {
+			owns_core_province = 1319
+			owns_core_province = 1291
+			owns_core_province = 1268
+			owns_core_province = 1286
+			owns_core_province = 2924
+		}
+		effect = {
+			custom_tooltip = es_conquest_of_eastern_skyrim_lr_tooltip
+		    add_prestige = 10
+			hidden_effect = {
+			every_province = {
+			limit = {
+			OR = {
+			region = rift_lr
+			region = great_planes_lr
+			}
+			is_city = yes
+			}
+			add_permanent_claim = ROOT
+			}
+			}
+			
+			389 = { add_core = ROOT }
+			if = { limit = { ai = yes 389 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			389 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 389 } } } } }
+			
+			367 = { add_core = ROOT }
+			if = { limit = { ai = yes 367 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			367 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 367 } } } } }
+		}
+	}
+	
+	es_conquest_of_hgh_rock_lr = {
+		icon = mission_unite_home_region
+		position = 13
+		required_missions = { }
+		trigger = {
+			owns_core_province = 1369
+			owns_core_province = 1391
+			owns_core_province = 1413
+			owns_core_province = 7019
+			owns_core_province = 1379
+		}
+		effect = {
+			custom_tooltip = es_conquest_of_hgh_rock_lr_tooltip
+		    add_prestige = 10
+			hidden_effect = {
+			every_province = {
+			limit = {
+			OR = {
+			region = hgh_rock_lr
+			region = wrothgar_lr
+			}
+			is_city = yes
+			}
+			add_permanent_claim = ROOT
+			}
+			}
+		}
+	}
+	
+	es_conquest_of_hammerfell_lr = {
+		icon = mission_unite_home_region
+		position = 14
+		required_missions = { }
+		trigger = {
+			owns_core_province = 1510		
+			owns_core_province = 1446
+			owns_core_province = 1478
+			owns_core_province = 6257
+			owns_core_province = 6178
+		}
+		effect = {
+			custom_tooltip = es_conquest_of_hammerfell_lr_tooltip
+		    add_prestige = 10
+			hidden_effect = {
+			every_province = {
+			limit = {
+			OR = {
+			region = corten_heights_lr
+			region = dragontail_mountains_lr
+			region = alikr_desert_lr
+			}
+			is_city = yes
+			}
+			add_permanent_claim = ROOT
+			}
+			}
+			
+			337 = { add_core = ROOT }
+			if = { limit = { ai = yes 337 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			337 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 337 } } } } }
+		}
+	}
+	
+	es_conquest_of_tsakara_lr = {
+		icon = mission_unite_home_region
+		position = 15
+		required_missions = { }
+		trigger = {
+			owns_core_province = 724
+			owns_core_province = 702
+			owns_core_province = 730
+			owns_core_province = 685
+			owns_core_province = 679
+		}
+		effect = {
+			custom_tooltip = es_conquest_of_tsakara_lr_tooltip
+		    add_prestige = 10
+			hidden_effect = {
+			every_province = {
+			limit = {
+			region = tsakara_lr
+			is_city = yes
+			}
+			add_permanent_claim = ROOT
+			}
+			}
+			
+			1206 = { add_core = ROOT }
+			if = { limit = { ai = yes 1206 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			1206 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 1206 } } } } }
+		}
+	}
+}

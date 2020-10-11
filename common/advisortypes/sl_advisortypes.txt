@@ -21,9 +21,11 @@ esu_phychopathic_artist = {
 			factor = 0
 			owner = {
 			OR = { adm = 5 dip = 5 mil = 5 }
+			OR = {
 			NOT = { adm = 2 }
 			NOT = { dip = 2 }
 			NOT = { mil = 2 }
+			}
 			NOT = { has_reform = court_of_darkness }
 			}
 		}
@@ -52,9 +54,11 @@ esu_occultist = {
 			factor = 0
 			owner = {
 			OR = { adm = 5 dip = 5 mil = 5 }
+			OR = {
 			NOT = { adm = 2 }
 			NOT = { dip = 2 }
 			NOT = { mil = 2 }
+			}
 			NOT = { has_reform = court_of_darkness }
 			}
 		}
@@ -83,9 +87,11 @@ esu_mad_scholar = {
 			factor = 0
 			owner = {
 			OR = { adm = 5 dip = 5 mil = 5 }
+			OR = {
 			NOT = { adm = 2 }
 			NOT = { dip = 2 }
 			NOT = { mil = 2 }
+			}
 			NOT = { has_reform = court_of_darkness }
 			}
 		}
@@ -114,9 +120,11 @@ esu_torturer = {
 			factor = 0
 			owner = {
 			OR = { adm = 5 dip = 5 mil = 5 }
+			OR = {
 			NOT = { adm = 2 }
 			NOT = { dip = 2 }
 			NOT = { mil = 2 }
+			}
 			NOT = { has_reform = court_of_darkness }
 			}
 		}
