@@ -78,12 +78,6 @@ despotic_monarchy = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
 	
-	factions = {
-		es_clergy
-		es_merchants
-		es_warriors
-	}
-	
 	modifiers = {
 		unjustified_demands = -0.15
 		harsh_treatment_cost = -0.25
@@ -112,12 +106,6 @@ oligarchic_republic = {
 	legacy_government = yes
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
-	
-	factions = {
-		mr_aristocrats
-		mr_traders
-		mr_guilds
-	}
 	
 	modifiers = {
 		global_tax_modifier = 0.10
@@ -167,12 +155,6 @@ theocratic_government = {
 	legacy_government = yes
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
-	
-	factions = {
-		es_clergy
-		es_merchants
-		es_warriors
-	}
 	
 	modifiers = {
 		global_tax_modifier = 0.10

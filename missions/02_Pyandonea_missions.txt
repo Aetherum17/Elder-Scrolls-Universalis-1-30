@@ -29,10 +29,10 @@ piracy_missions = {
 					has_building = fort_17th
 					has_building = fort_18th
 				}
-				NOT = {
-					all_known_country = {
-						army_size = ROOT
-					}
+			}
+			NOT = {
+				all_known_country = {
+					army_size = ROOT
 				}
 			}
         }
@@ -155,9 +155,7 @@ piracy_missions = {
         required_missions = { parlaying_pirates_mission }
         
         provinces_to_highlight = {
-            OR = {
-				area = hammerfell_45_la
-			}
+			area = hammerfell_45_la
 			NOT = {country_or_non_sovereign_subject_holds = ROOT }
         }
     
@@ -545,9 +543,7 @@ tamriel_missions = {
         required_missions = { voyaging_valenwood_mission }
         
         provinces_to_highlight = {
-			OR = {
-				area = eldweyr_16_la		#Mistral
-			}
+			area = eldweyr_16_la		#Mistral
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
         }
     
@@ -574,7 +570,7 @@ tamriel_missions = {
         effect = {
 			country_event = { id = py_mission_events.2 }
             define_advisor = {
-				type = occultist
+				type = esu_occultist
 				name = "Uldor"
 				skill = 3
 				cost_multiplier = 0.5
@@ -1079,7 +1075,7 @@ aldmeris_missions = {
 				value = 15
 					OR = {
 						region = summerset_lr
-						region = audidon_lr
+						region = auridon_lr
 					}
 			}
 			owns_core_province = 4661
@@ -1595,7 +1591,7 @@ summerset_missions = {
             num_of_subjects = 5
 			num_of_allies = 2
 			stability = 2
-			NOT = { Doom = 50 }
+			NOT = { doom = 50 }
         }
         
         effect = {
@@ -1774,10 +1770,8 @@ summerset_missions = {
         required_missions = { maormernifest_mission }
         
         provinces_to_highlight = {
-            OR = {
-				area = yokuda_9_la
-			}
-			NOT = {country_or_non_sovereign_subject_holds = ROOT }
+			area = yokuda_9_la
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
         }
     
         trigger = {
@@ -2141,9 +2135,7 @@ colonization_missions = {
         required_missions = { maormernifest_mission }
         
         provinces_to_highlight = {
-            OR = {
-				area = yokuda_7_la
-			}
+			area = yokuda_7_la
 			NOT = {country_or_non_sovereign_subject_holds = ROOT }
         }
     
