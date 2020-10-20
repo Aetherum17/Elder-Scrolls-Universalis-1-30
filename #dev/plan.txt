@@ -1,64 +1,58 @@
 @ESU Newswire @WWU Newswire @GE Newswire @TGE Newswire @LoE Newswire 
 
-chimer_group = {
-    chimer_pantheon - Catholic
+#Remember to add Holy Sites for New Religions
+polytheistic_group = { #12
+	altmeri_pantheon - personal_deity
+	snow_elves_pantheon - personal_deity
+	nordic_pantheon - personal_deity
+	bosmer_pantheon - personal_deity
+	eight_divines - personal_deity + reformation center
+	nine_divines - personal_deity
+	twelve_divines - personal_deity + reformation center
+	khajiiti_pantheon - personal_deity
+	yokudan_pantheon - personal_deity
+	redguard_pantheon - personal_deity
+	malacath_cult - personal_deity
+	kothri_pantheon - personal_deity
 }
 
-sload_group = {
-	sload_faith - Anglicanism
+occult_group = { #10
+	chimer_pantheon - fetishism 
+	tribunal_pantheon - papacy
+	reclamations_pantheon - personal_deity + reformation center
+	serpant_king - Aztec DOOM
+	dragon_cult - Orthodox Patriarchs
+	marukhism - Calvinism Fervor + reformation center
+	reason_and_logic_cult - Holy Cites
+	all-maker_cult - Karma
+	dremora_pantheon - Secondary Religion
+	cult_of_black_worm - Hussite-Worm Aspects
 }
 
-serpant_group = {
-    serpant_king - Nahuatl
+elemental_group = { #7
+	hist - Karma + Religious Schools
+	sload_faith - Anglican-Sload Aspects + Religious Schools
+	old_gods_cult - Muslim Piety + Religious Schools
+	tsaesci_pantheon - Japanese Isolatism + Religious Schools
+	tang_mo_pantheon - Maya Reforms + Religious Schools 
+	kamal_pantheon - Incan Authority + Religious Schools 
+	cult_of_the_moth - Karma + Religious Schools 
 }
 
-dragon_group = {
-	dragon_cult - Orthodox
+daedric_group_1 = { #7
+    molog_bal_cult - Protestant-Molag Aspects
+	meridia_cult - Protestant-Meridia Aspects
+	mehrunes_dagon_cult - Protestant-Mehrunes Aspects
+	hermeus_mora_cult - Protestant-Hermeus Aspects
+	sheogorath_cult - Protestant-Sheogorath Aspects
+	hircine_cult - Protestant-Hircine Aspects
+	nocturnal_cult - Protestant-Nocturnal Aspects
 }
 
-marukhism_group = {
-	marukhism - Reformed
-}
-
-hist_group = {
-	hist - Karma Religions
-}
-
-reason_and_logic_group = {
-	reason_and_logic_cult - Coptic
-}
-
-old_group = {
-	old_gods_cult - Muslim
-}
-
-tsaesci_group = {
-	tsaesci_pantheon - Shinto
-}
-
-daedric_group = {
-	Protestant:
-	meridia_cult
-	mehrunes_dagon_cult
-	hermeus_mora_cult
-	malacath_cult
-	
-}
-
-po_tun_group = {
-	po_tun_pantheon - Confucian
-}
-
-tang_mo_group = {
-	tang_mo_pantheon - Mayan
-}
-
-kamal_group = {
-	kamal_pantheon - Inti
-}
-
-dremora_group = {
-	dremora_pantheon - Tengri
+harmony_group = { #3
+    po_tun_pantheon - Harmony
+	unknown_pantheon - Harmony
+	cult_of_lorelia - Harmony
 }
 
 nordic_solsteim_flag
@@ -67,54 +61,6 @@ ayleid_fall_flag
 fall_of_white_elves_flag
 redguard_migration_flag
 fall_of_direnii_flag
-
-#include <iostream>
-using namespace std;
-
-int main() 
-{
-	int i;
-for(i=2027;i<2096;i++)
-cout<<i<<" ";
-	return 0;
-}
-
-#include <iostream>
-using namespace std;
-
-int main() 
-{
-	int i;
-for(i=2027;i<2096;i++)
-cout<<"PROV"<<i<<":0 #"<<endl;
-	return 0;
-}
-
-#include <iostream>
-using namespace std;
-
-int main() 
-{
-	int i;
-	int k;
-	k = 1;
-    for(i=3000;i<4000;i++) {
-    cout<<i<<" ";
-    if(i%10) {
-    }
-    else {
-    cout<<endl;
-    cout<<"}";
-	cout<<endl;
-    cout<<endl;
-    cout<<"eastern_coldharbour_la_"<<k<<" = {";
-    cout<<endl;
-    cout<<"    ";
-    k = k+1;
-    }
-    }
-	return 0;
-}
 
 Dynasties: + appearence events +#Future rulers code
 - Valenwood
@@ -273,54 +219,6 @@ Colonial Hammerfell: native_size = 15 native_ferocity = 5 native_hostileness = 7
 
 ###
 	
-	#Remember to add Holy Sites for New Religions
-	
-	12: polytheistic_group
-	altmeri_pantheon
-	snow_elves_pantheon
-	nordic_pantheon
-	bosmer_pantheon
-	eight_divines
-	nine_divines
-	twelve_divines
-	khajiiti_pantheon
-	yokudan_pantheon
-	redguard_pantheon
-	malacath_cult
-	kothri_pantheon
-	
-	8: occult_group
-	chimer_pantheon
-	tribunal_pantheon
-	reclamations_pantheon
-	serpant_king
-	dragon_cult
-	marukhism
-	reason_and_logic_cult
-	all-maker_cult
-	
-	6: elemental_group
-	hist
-	sload_faith
-	old_gods_cult
-	tsaesci_pantheon
-	tang_mo_pantheon 
-	kamal_pantheon
-	
-	8: daedric_group_1
-	molog_bal_cult
-	meridia_cult
-	mehrunes_dagon_cult
-	hermeus_mora_cult
-	dremora_pantheon
-	sheogorath_cult
-	hircine_cult
-	nocturnal_cult
-	
-	2: harmony_group
-	po_tun_pantheon
-	unknown_pantheon
-	
 #Trade Node:
 rift_lr
 nordic_coast_lr
@@ -374,94 +272,6 @@ southern_kamal_lr
 northern_kamal_lr
 thousand_lr
 po_tun_lr   
-
-	
-######################################################
-# Administrative Advisors
-######################################################
-
-philosopher prestige = 1
-theorist prestige_decay = -0.01
-savant embracement_cost = -0.1
-natural_scientist production_efficiency = 0.10
-scholar global_institution_spread = 0.1
-researcher idea_cost = -0.1
-
-artist stability_cost_modifier = -0.10
-poet core_creation = -0.1
-minstrel years_of_nationalism = -5
-	
-treasurer global_tax_modifier = 0.1
-curator vassal_income = 0.1
-supervisor build_cost = -0.1	
-master_of_mint inflation_reduction = 0.05
-inspector yearly_corruption = -0.05
-administrator state_maintenance_modifier = -0.1
-	
-judge global_unrest = -1
-priest tolerance_heretic = 1
-theologian tolerance_heathen = 1
-inquisitor global_missionary_strength = 0.01
-monk tolerance_own = 1
-auditor religious_unity = 0.10
-
-######################################################
-# Diplomatic Advisors
-######################################################
-
-representative diplomatic_reputation = 1
-minister diplomatic_annexation_cost = -0.1
-statesman diplomatic_upkeep = 1
-colonial_governor global_tariffs = 0.10
-colonial_administrator reduced_liberty_desire = 10
-colonial_overseer culture_conversion_cost = -0.10
-
-naval_reformer naval_morale = 0.1 
-naval_supplier naval_maintenance_modifier = -0.10
-admiral sunk_ship_morale_hit_recieved = -0.1
-navigator range = 0.10
-adventurer global_colonial_growth = 10
-explorer native_assimilation = 0.10
-
-secretary improve_relation_modifier = 0.10
-diplomat unjustified_demands = -0.10
-negotiator province_warscore_cost = -0.10
-trader trade_efficiency = 0.10
-merchant caravan_power = 0.1
-exporter trade_steering = 0.1
-
-spymaster spy_offence = 0.10
-investigator global_spy_defence = 0.10
-agitator rebel_support_efficiency = 0.10
-
-######################################################
-# Military Advisors
-######################################################
-
-commander land_morale = 0.10
-scout movement_speed = 0.10
-army_reformer army_tradition_decay = -0.01
-grand_captain land_maintenance_modifier = -0.10
-grand_champion merc_maintenance_modifier = -0.10
-chief global_regiment_cost = -0.10
-
-army_organiser land_forcelimit_modifier = 0.10
-mercenary_recruiter possible_mercenaries = 0.1
-army_coordinator land_attrition = -0.1
-instructor discipline = 0.025
-commandant mercenary_discipline = 0.025
-siege_consultant siege_ability = 0.10
-
-intendant reinforce_speed = 0.10
-quartermaster reinforce_cost_modifier = -0.10
-officer mercenary_cost = -0.10
-superintendent global_manpower_modifier = 0.10
-recruitmaster manpower_recovery_speed = 0.10
-enlister sailors_recovery_speed = 0.10
-
-fortification_expert defensiveness = 0.10
-fortification_curator garrison_size = 0.10
-warden fort_maintenance_modifier = -0.10
 
 Diplomacy: - DIP
 #11) Citizenship Policy - diplomatic_annexation_cost = -0.43	

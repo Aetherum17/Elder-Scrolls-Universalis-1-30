@@ -1204,9 +1204,9 @@ es_walking_city_timer = {
 }
 
 es_walking_city_modifier = {
-    build_cost = -0.5
-	build_time = -0.5
-	defensiveness = 0.5
+    local_build_cost = -0.5
+	local_build_time = -0.5
+	local_defensiveness = 0.5
 	local_regiment_cost = -0.5
 	regiment_recruit_speed = -0.5
 }
