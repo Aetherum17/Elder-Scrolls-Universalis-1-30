@@ -182,18 +182,18 @@ country_event = {
         yokuda_9_la = {
         owned_by = ROOT
         }
-        NOT = { exists = SA9 }
+        NOT = { exists = SIN }
         NOT = { capital_scope = { area = yokuda_9_la } }
         }
         every_owned_province = {
         limit = {
         area = yokuda_9_la
         }
-        add_core = SA9
+        add_core = SIN
         }
-        create_vassal = SA9
-        SA9 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        SA9 = { change_government_reform_progress = -99999 }
+        create_vassal = SIN
+        SIN = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        SIN = { change_government_reform_progress = -99999 }
         }
 
         if = {
@@ -201,18 +201,18 @@ country_event = {
         yokuda_10_la = {
         owned_by = ROOT
         }
-        NOT = { exists = SB0 }
+        NOT = { exists = YB0 }
         NOT = { capital_scope = { area = yokuda_10_la } }
         }
         every_owned_province = {
         limit = {
         area = yokuda_10_la
         }
-        add_core = SB0
+        add_core = YB0
         }
-        create_vassal = SB0
-        SB0 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        SB0 = { change_government_reform_progress = -99999 }
+        create_vassal = YB0
+        YB0 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        YB0 = { change_government_reform_progress = -99999 }
         }
 
         if = {
@@ -220,18 +220,18 @@ country_event = {
         yokuda_11_la = {
         owned_by = ROOT
         }
-        NOT = { exists = SB1 }
+        NOT = { exists = YB1 }
         NOT = { capital_scope = { area = yokuda_11_la } }
         }
         every_owned_province = {
         limit = {
         area = yokuda_11_la
         }
-        add_core = SB1
+        add_core = YB1
         }
-        create_vassal = SB1
-        SB1 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        SB1 = { change_government_reform_progress = -99999 }
+        create_vassal = YB1
+        YB1 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        YB1 = { change_government_reform_progress = -99999 }
         }
 
         if = {
@@ -239,18 +239,18 @@ country_event = {
         yokuda_12_la = {
         owned_by = ROOT
         }
-        NOT = { exists = SB2 }
+        NOT = { exists = YB2 }
         NOT = { capital_scope = { area = yokuda_12_la } }
         }
         every_owned_province = {
         limit = {
         area = yokuda_12_la
         }
-        add_core = SB2
+        add_core = YB2
         }
-        create_vassal = SB2
-        SB2 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        SB2 = { change_government_reform_progress = -99999 }
+        create_vassal = YB2
+        YB2 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        YB2 = { change_government_reform_progress = -99999 }
         }
 
         if = {
@@ -258,18 +258,18 @@ country_event = {
         yokuda_13_la = {
         owned_by = ROOT
         }
-        NOT = { exists = SB3 }
+        NOT = { exists = YB3 }
         NOT = { capital_scope = { area = yokuda_13_la } }
         }
         every_owned_province = {
         limit = {
         area = yokuda_13_la
         }
-        add_core = SB3
+        add_core = YB3
         }
-        create_vassal = SB3
-        SB3 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        SB3 = { change_government_reform_progress = -99999 }
+        create_vassal = YB3
+        YB3 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        YB3 = { change_government_reform_progress = -99999 }
         }
 
         if = {
@@ -277,18 +277,18 @@ country_event = {
         yokuda_14_la = {
         owned_by = ROOT
         }
-        NOT = { exists = SB4 }
+        NOT = { exists = YB4 }
         NOT = { capital_scope = { area = yokuda_14_la } }
         }
         every_owned_province = {
         limit = {
         area = yokuda_14_la
         }
-        add_core = SB4
+        add_core = YB4
         }
-        create_vassal = SB4
-        SB4 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        SB4 = { change_government_reform_progress = -99999 }
+        create_vassal = YB4
+        YB4 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        YB4 = { change_government_reform_progress = -99999 }
         }
 
         if = {
@@ -296,18 +296,18 @@ country_event = {
         yokuda_15_la = {
         owned_by = ROOT
         }
-        NOT = { exists = SB5 }
+        NOT = { exists = YB5 }
         NOT = { capital_scope = { area = yokuda_15_la } }
         }
         every_owned_province = {
         limit = {
         area = yokuda_15_la
         }
-        add_core = SB5
+        add_core = YB5
         }
-        create_vassal = SB5
-        SB5 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        SB5 = { change_government_reform_progress = -99999 }
+        create_vassal = YB5
+        YB5 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        YB5 = { change_government_reform_progress = -99999 }
         }
 		
 	    }

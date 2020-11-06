@@ -1623,7 +1623,15 @@ summerset_missions = {
         trigger = {
             2050 = { country_or_non_sovereign_subject_holds = ROOT }
 			NOT = { is_lacking_institutions = yes }
-			innovativeness = 5
+			if = { 
+				limit = { 
+					has_dlc = "Rule Britannia" 
+				} 
+				innovativeness = 5 
+			} 
+			else = { 
+				current_institution_growth = 0.5
+			}
         }
         
         effect = {
