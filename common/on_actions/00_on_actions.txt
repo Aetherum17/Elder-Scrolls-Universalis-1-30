@@ -158,11 +158,12 @@ on_startup = {
 		es_holidays.61
 		es_holidays.62
 		es_holidays.63
+
+		es_birthsigns.0
+
 	}
 	
 	if = { limit = { NOT = { has_global_flag = on_action_set_up_global_flag } }
-	
-	country_event = { id = es_birthsigns.0 }
 	
 	every_country = {
 	
@@ -967,7 +968,7 @@ on_new_monarch = {
 		25 = harem_events.7
 	}
 	country_event = {
-		# id = es_birthsigns.0	# Assign Ruler Birthsign
+		id = es_birthsigns.1	# Assign Ruler Birthsign
 	}
 }
 

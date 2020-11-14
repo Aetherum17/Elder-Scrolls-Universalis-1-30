@@ -73,18 +73,31 @@ define_random_advisor = {
 	2 = { define_advisor = { skill = $skill$ type = esu_exexutioner culture = event_target:country_to_kidnap_advisor religion = event_target:country_to_kidnap_advisor discount = yes } }
 	}
 }
-clear_birthsigns = {
+clear_birthsigns_effect = {
 	clr_ruler_flag = birthsign_ritual
+	clear_country_modifier = ritual_birthsign_mod
 	clr_ruler_flag = birthsign_lover
+	clear_country_modifier = lover_birthsign_mod
 	clr_ruler_flag = birthsign_lord
+	clear_country_modifier = lord_birthsign_mod
 	clr_ruler_flag = birthsign_mage
+	clear_country_modifier = mage_birthsign_mod
 	clr_ruler_flag = birthsign_shadow
+	clear_country_modifier = shadow_birthsign_mod
 	clr_ruler_flag = birthsign_steed
+	clear_country_modifier = steed_birthsign_mod
 	clr_ruler_flag = birthsign_apprentice
+	clear_country_modifier = apprentice_birthsign_mod
 	clr_ruler_flag = birthsign_warrior
+	clear_country_modifier = warrior_birthsign_mod
 	clr_ruler_flag = birthsign_lady
+	clear_country_modifier = lady_birthsign_mod
 	clr_ruler_flag = birthsign_tower
+	clear_country_modifier = tower_birthsign_mod
 	clr_ruler_flag = birthsign_atronoch
+	clear_country_modifier = atronoch_birthsign_mod
 	clr_ruler_flag = birthsign_thief
+	clear_country_modifier = thief_birthsign_mod
 	clr_ruler_flag = birthsign_serpant
+	clear_country_modifier = serpant_birthsign_mod
 }
