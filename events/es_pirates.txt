@@ -675,13 +675,23 @@ country_event = {
 	picture = ES_PIRATE_CITY_eventPicture
 	
 	trigger = {
-		owns = 416
+		OR = {
+		owns = 6485
+		owns = 6483
+		owns = 6484
+		}
 		NOT = { exists = KME }
-		416 = {
-		unrest = 10
+		OR = {
+		6485 = { unrest = 10 }
+		6483 = { unrest = 10 }
+		6484 = { unrest = 10 }
 		}
 		NOT = { stability = 3 }
-		NOT = { KME = { is_core = 416 } }
+		OR = {
+		NOT = { KME = { is_core = 6485 } }
+		NOT = { KME = { is_core = 6483 } }
+		NOT = { KME = { is_core = 6484 } }
+		}
     }
 
 	mean_time_to_happen = {
@@ -691,7 +701,21 @@ country_event = {
 	option = {
 		name = "es_pirates.1.a"
 		ai_chance = { factor = 33 }
-		416 = {
+		6485 = {
+		add_core = KME
+		add_province_modifier = {
+		name = "00_unrest"
+		duration = 9125
+		}
+		}
+		6483 = {
+		add_core = KME
+		add_province_modifier = {
+		name = "00_unrest"
+		duration = 9125
+		}
+		}
+		6484 = {
 		add_core = KME
 		add_province_modifier = {
 		name = "00_unrest"
@@ -703,7 +727,17 @@ country_event = {
 	option = {
 		name = "es_pirates.1.b"
 		ai_chance = { factor = 33 }
-		416 = {
+		6485 = {
+		cede_province = KME
+		add_core = KME
+		add_claim = KME
+		}
+		6483 = {
+		cede_province = KME
+		add_core = KME
+		add_claim = KME
+		}
+		6484 = {
 		cede_province = KME
 		add_core = KME
 		add_claim = KME
@@ -714,7 +748,17 @@ country_event = {
 	option = {
 		name = "es_pirates.1.c"
 		ai_chance = { factor = 33 }
-		416 = {
+		6485 = {
+		cede_province = KME
+		add_core = KME
+		add_claim = KME
+		}
+		6483 = {
+		cede_province = KME
+		add_core = KME
+		add_claim = KME
+		}
+		6484 = {
 		cede_province = KME
 		add_core = KME
 		add_claim = KME
@@ -733,13 +777,13 @@ country_event = {
 	picture = ES_PIRATE_CITY_eventPicture
 	
 	trigger = {
-		owns = 1645
+		owns = 1629
 		NOT = { exists = ELZ }
-		1645 = {
+		1629 = {
 		unrest = 10
 		}
 		NOT = { stability = 3 }
-		NOT = { ELZ = { is_core = 1645 } }
+		NOT = { ELZ = { is_core = 1629 } }
     }
 
 	mean_time_to_happen = {
@@ -749,7 +793,7 @@ country_event = {
 	option = {
 		name = "es_pirates.1.a"
 		ai_chance = { factor = 33 }
-		1645 = {
+		1629 = {
 		add_core = ELZ
 		add_province_modifier = {
 		name = "00_unrest"
@@ -761,7 +805,7 @@ country_event = {
 	option = {
 		name = "es_pirates.1.b"
 		ai_chance = { factor = 33 }
-		1645 = {
+		1629 = {
 		cede_province = ELZ
 		add_core = ELZ
 		add_claim = ELZ
@@ -772,7 +816,7 @@ country_event = {
 	option = {
 		name = "es_pirates.1.c"
 		ai_chance = { factor = 33 }
-		1645 = {
+		1629 = {
 		cede_province = ELZ
 		add_core = ELZ
 		add_claim = ELZ
@@ -791,13 +835,23 @@ country_event = {
 	picture = ES_PIRATE_CITY_eventPicture
 	
 	trigger = {
-		owns = 1625
+		OR = {
+		owns = 1798
+		owns = 1799
+		owns = 1800
+		}
 		NOT = { exists = KHE }
-		1625 = {
-		unrest = 10
+		OR = {
+		1798 = { unrest = 10 }
+		1799 = { unrest = 10 }
+		1800 = { unrest = 10 }
 		}
 		NOT = { stability = 3 }
-		NOT = { KHE = { is_core = 1625 } }
+		OR = {
+		NOT = { KHE = { is_core = 1798 } }
+		NOT = { KHE = { is_core = 1799 } }
+		NOT = { KHE = { is_core = 1800 } }
+		}
     }
 
 	mean_time_to_happen = {
@@ -807,7 +861,21 @@ country_event = {
 	option = {
 		name = "es_pirates.1.a"
 		ai_chance = { factor = 33 }
-		1625 = {
+		1798 = {
+		add_core = KHE
+		add_province_modifier = {
+		name = "00_unrest"
+		duration = 9125
+		}
+		}
+		1799 = {
+		add_core = KHE
+		add_province_modifier = {
+		name = "00_unrest"
+		duration = 9125
+		}
+		}
+		1800 = {
 		add_core = KHE
 		add_province_modifier = {
 		name = "00_unrest"
@@ -819,7 +887,17 @@ country_event = {
 	option = {
 		name = "es_pirates.1.b"
 		ai_chance = { factor = 33 }
-		1625 = {
+		1798 = {
+		cede_province = KHE
+		add_core = KHE
+		add_claim = KHE
+		}
+		1799 = {
+		cede_province = KHE
+		add_core = KHE
+		add_claim = KHE
+		}
+		1800 = {
 		cede_province = KHE
 		add_core = KHE
 		add_claim = KHE
@@ -830,7 +908,17 @@ country_event = {
 	option = {
 		name = "es_pirates.1.c"
 		ai_chance = { factor = 33 }
-		1625 = {
+		1798 = {
+		cede_province = KHE
+		add_core = KHE
+		add_claim = KHE
+		}
+		1799 = {
+		cede_province = KHE
+		add_core = KHE
+		add_claim = KHE
+		}
+		1800 = {
 		cede_province = KHE
 		add_core = KHE
 		add_claim = KHE
@@ -849,13 +937,13 @@ country_event = {
 	picture = ES_PIRATE_CITY_eventPicture
 	
 	trigger = {
-		owns = 766
+		owns = 3495
 		NOT = { exists = KAA }
-		766 = {
+		3495 = {
 		unrest = 10
 		}
 		NOT = { stability = 3 }
-		NOT = { KAA = { is_core = 766 } }
+		NOT = { KAA = { is_core = 3495 } }
     }
 
 	mean_time_to_happen = {
@@ -865,7 +953,7 @@ country_event = {
 	option = {
 		name = "es_pirates.1.a"
 		ai_chance = { factor = 33 }
-		766 = {
+		3495 = {
 		add_core = KAA
 		add_province_modifier = {
 		name = "00_unrest"
@@ -877,7 +965,7 @@ country_event = {
 	option = {
 		name = "es_pirates.1.b"
 		ai_chance = { factor = 33 }
-		766 = {
+		3495 = {
 		cede_province = KAA
 		add_core = KAA
 		add_claim = KAA
@@ -888,7 +976,7 @@ country_event = {
 	option = {
 		name = "es_pirates.1.c"
 		ai_chance = { factor = 33 }
-		766 = {
+		3495 = {
 		cede_province = KAA
 		add_core = KAA
 		add_claim = KAA
@@ -907,13 +995,20 @@ country_event = {
 	picture = ES_PIRATE_CITY_eventPicture
 	
 	trigger = {
-		owns = 697
+		OR = {
+		owns = 1670
+		owns = 1671
+		}
 		NOT = { exists = RAL }
-		697 = {
-		unrest = 10
+		OR = {
+		1670 = { unrest = 10 }
+		1671 = { unrest = 10 }
 		}
 		NOT = { stability = 3 }
-		NOT = { RAL = { is_core = 697 } }
+		OR = {
+		NOT = { RAL = { is_core = 1670 } }
+		NOT = { RAL = { is_core = 1671 } }
+		}
     }
 
 	mean_time_to_happen = {
@@ -923,7 +1018,13 @@ country_event = {
 	option = {
 		name = "es_pirates.1.a"
 		ai_chance = { factor = 33 }
-		697 = {
+		1670 = {
+		add_core = RAL
+		add_province_modifier = {
+		name = "00_unrest"
+		duration = 9125
+		}
+		1671 = {
 		add_core = RAL
 		add_province_modifier = {
 		name = "00_unrest"
@@ -935,7 +1036,12 @@ country_event = {
 	option = {
 		name = "es_pirates.1.b"
 		ai_chance = { factor = 33 }
-		697 = {
+		1670 = {
+		cede_province = RAL
+		add_core = RAL
+		add_claim = RAL
+		}
+		1671 = {
 		cede_province = RAL
 		add_core = RAL
 		add_claim = RAL
@@ -946,7 +1052,12 @@ country_event = {
 	option = {
 		name = "es_pirates.1.c"
 		ai_chance = { factor = 33 }
-		697 = {
+		1670 = {
+		cede_province = RAL
+		add_core = RAL
+		add_claim = RAL
+		}
+		1671 = {
 		cede_province = RAL
 		add_core = RAL
 		add_claim = RAL
