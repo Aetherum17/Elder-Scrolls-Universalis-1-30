@@ -1,0 +1,152 @@
+#Sword Singers Modifiers
+
+yok_mi_spiritual_pursuit = {
+	tolerance_own = 1
+	stability_cost_modifier = -0.1
+}
+
+yok_mi_sword_singers = {
+	army_tradition_from_battle = 0.5
+	drill_gain_modifier = 0.5
+}
+
+yok_mi_sword_singers_two = {
+	army_tradition_from_battle = 1
+}
+
+yok_mi_book_circles = {
+	land_morale = 0.15
+	infantry_power = 0.15
+}
+
+yok_mi_war_of_singers = {
+	shock_damage = 0.1
+	shock_damage_received = -0.05
+	fire_damage_received = -0.05
+}
+
+yok_mi_warrior_waves = {
+	prestige_decay = -0.01
+	warscore_cost_vs_other_religion = -0.15
+}
+
+yok_mi_new_frontiers = {
+	hostile_attrition = 0.1
+	land_attrition = -0.2
+}
+
+yok_mi_new_song = {
+	army_tradition_decay = -0.02
+	army_tradition = 1
+}
+
+
+#Main Branch Modifiers
+
+yok_mi_new_home = {
+	land_forcelimit_modifier = 0.1
+	global_manpower_modifier = 0.1
+	naval_forcelimit_modifier = 0.1
+	global_sailors_modifier = 0.1
+}
+
+yok_mi_rule_totambu = {
+	autonomy_change_time = -0.25
+	global_unrest = -1
+}
+
+yok_mi_yokudan_empire = {
+	reduced_liberty_desire = 10
+}
+
+yok_mi_mansel_sesnit = {
+	administrative_efficiency = 0.05
+	harsh_treatment_cost = -0.5
+}
+
+yok_mi_hammering_hammers = {
+	tolerance_own = 1
+	global_missionary_strength = 0.01
+}
+
+yok_mi_sweet_home_hammerfell = {
+	global_unrest = -2
+	years_of_nationalism = -5
+}
+
+yok_mi_sweet_razing_rourkens = {
+	development_cost = -0.1
+	technology_cost = -0.1
+}
+
+yok_mi_landing_limai = {
+	colonists = 1
+	range = 0.25
+}
+
+yok_mi_restoring_na_totambu = {
+	native_uprising_chance = -1
+	global_colonial_growth = 25
+}
+
+yok_mi_desert_dessert = {
+	colonist_placement_chance = 0.1
+	native_assimilation = 0.2
+}
+
+#High Rock Modifiers
+
+yok_mi_memory_stones = {
+	global_institution_spread = 0.05
+	technology_cost = -0.05
+}
+
+yok_mi_settling_high_rock = {
+	range = 0.5
+}
+
+yok_mi_settling_silverhoof_vale = {
+	cavalry_power = 0.1
+	cavalry_shock = 0.05
+}
+
+yok_mi_seige_orsinium = {
+	fort_maintenance_modifier = -0.2
+	garrison_size = 0.2
+}
+
+yok_mi_brother_breton = {
+	diplomatic_reputation = 1
+	trade_efficiency = 0.1
+}
+
+yok_mi_daggerfall_covenant = {
+	improve_relation_modifier = 0.15
+	defensiveness = 0.1
+}
+
+#Yokudan Events
+
+yok_mi_events_1 = {
+	shock_damage = 0.15
+	shock_damage_received = -0.1
+}
+
+yok_mi_events_20 = {
+	stability_cost_modifier = -0.25
+	global_unrest = -2
+	development_cost = -0.1
+}
+
+yok_mi_events_21 = {
+	stability_cost_modifier = 0.5
+	global_unrest = 3
+	development_cost = 0.25
+	reduced_liberty_desire = -100
+}
+
+yok_mi_events_3 = {
+	artillery_bonus_vs_fort = 1
+	siege_ability = 0.1
+}
+

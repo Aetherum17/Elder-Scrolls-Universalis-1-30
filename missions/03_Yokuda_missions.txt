@@ -1,0 +1,1494 @@
+sword_singers_missions = {
+    slot = 6                    
+    generic = no
+    ai = yes
+    has_country_shield = yes    
+    potential = {
+		OR = {
+			primary_culture = yokudan
+			AND = { primary_culture = redguard has_country_flag = yokudan_redguard_flag }
+		}
+	}
+    
+    spiritual_pursuits_mission = {
+        icon = mission_scholar_officials
+        position = 1 
+        required_missions = {  }
+
+        trigger = {
+            advisor = esu_monk
+            all_owned_province = { NOT = { pure_unrest = 1 } }
+        }
+        
+        effect = {
+            add_country_modifier = {
+				name = "yok_mi_spiritual_pursuit"
+				duration = 9125
+			} 
+        }
+    }
+	
+    song_of_sword_mission = {
+        icon = mission_non-western_soldiers
+        position = 2
+        required_missions = { spiritual_pursuits_mission }
+        
+		trigger = {
+            army_tradition = 35
+			OR = {
+				estate_loyalty = {
+					estate = estate_rajput
+					loyalty = 50
+				}
+				estate_loyalty = {
+					estate = estate_nobles
+					loyalty = 50
+				}
+				estate_loyalty = {
+					estate = estate_cossacks
+					loyalty = 50
+				}
+			}
+        }
+        
+        effect = {
+			if = {
+				limit = { has_dlc = "Cradle of Civilization" }
+				add_country_modifier = {
+					name = "yok_mi_sword_singers"
+					duration = 9125
+				} 
+			}
+			else = {
+				limit = { NOT = { has_dlc = "Cradle of Civilization" } }
+				add_country_modifier = {
+					name = "yok_mi_sword_singers_two"
+					duration = 9125
+				} 
+			}
+        }
+    }
+	
+    rise_frandar_hunding_mission = {
+        icon = mission_persian_soldiers
+        position = 3
+        required_missions = { song_of_sword_mission }
+        
+        trigger = {
+            infantry_fraction = 0.5
+			if = { 
+				limit = { has_dlc = "Cradle of Civilization" } 
+				custom_trigger_tooltip = {
+					tooltip = rise_frandar_hunding_mission_trig_tt
+					army_professionalism = 0.5
+				}
+			}
+			else = { limit = { NOT = { has_dlc = "Cradle of Civilization" } } army_tradition = 0.5 }
+        }
+        
+        effect = {
+            add_country_modifier = {
+				name = "yok_mi_book_circles"
+				duration = 9125
+			} 
+        }
+    }
+
+    war_singers_mission = {
+        icon = mission_impaled_soldies
+        position = 4
+        required_missions = { rise_frandar_hunding_mission }
+        
+		trigger = {
+			OR = {
+				faction_in_power = es_knights
+				faction_in_power = es_traditionalists
+				faction_in_power = es_generals
+				faction_in_power = es_militarists
+				faction_in_power = es_warriors
+			}
+			has_leader_with = {
+				general = yes
+				shock = 4
+			}	
+			is_at_war = yes
+        }
+        
+        effect = {
+            add_country_modifier = {
+				name = "yok_mi_war_of_singers"
+				duration = 9125
+			} 
+        }
+    }
+	
+    ra_gada_mission = {
+        icon = mission_junk_boat
+        position = 5
+        required_missions = { war_singers_mission }
+        
+        trigger = {
+            prestige = 60
+			stability = 2
+			num_of_explorers = 1
+        }
+        
+        effect = {
+            add_country_modifier = {
+				name = "yok_mi_warrior_waves"
+				duration = 9125
+			} 
+        }
+    }
+	
+    old_traditions_new_worlds_mission = {
+        icon = mission_iberian_conquistador
+        position = 7
+        required_missions = { ra_gada_mission }
+        
+        trigger = {
+            OR = {
+				has_idea_group = quality_ideas
+				has_idea_group = waffenqualitat0	#Weapon Quality
+				has_idea_group = offensive_ideas
+			}
+			army_tradition = 70
+        }
+        
+        effect = {
+            add_country_modifier = {
+				name = "yok_mi_new_frontiers"
+				duration = 9125
+			} 
+        }
+    }
+	
+    redefining_arts_mission = {
+        icon = mission_kowtow
+        position = 8
+        required_missions = { old_traditions_new_worlds_mission }
+        
+        provinces_to_highlight = {
+			OR = {
+				province_id = 6081		#Craglorn (Dahlnda)
+				province_id = 6275		#Hallin's Stand (Saadola)
+				province_id = 6304		#Na Totambu (Umak I)
+				province_id = 6436		#Khefram (Anwein)
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+    
+        trigger = {
+            OR = { 
+				full_idea_group = quality_ideas
+				full_idea_group = waffenqualitat0  #Weapon Quality
+				full_idea_group = offensive_ideas
+			}
+			owns_core_province = 6081
+			owns_core_province = 6275
+			owns_core_province = 6304
+			owns_core_province = 6436
+        }
+        
+        effect = {
+			6081 = { add_base_manpower = 1 }
+			6275 = { add_base_manpower = 1 }
+			6304 = { add_base_manpower = 1 }
+			6436 = { add_base_manpower = 1 }
+            add_country_modifier = {
+				name = "yok_mi_new_song"
+				duration = -1
+			} 
+        }
+    }
+	
+}
+
+mansel_sesnit_missions = {
+    slot = 7                    
+    generic = no
+    ai = yes
+    has_country_shield = yes    
+    potential = {
+		OR = {
+			primary_culture = yokudan
+			AND = { primary_culture = redguard has_country_flag = yokudan_redguard_flag }
+		}
+	}
+    
+    mansel_sesnit_mission = {
+        icon = mission_conquer_50_development
+        position = 4
+        required_missions = { administering_empire_mission }
+        
+        provinces_to_highlight = {
+            region = yokuda_lr
+			limit = { culture = yokudan }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+        }
+    
+        trigger = {
+            yokuda_lr = {
+				limit = { culture = yokudan }
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+        }
+        
+        effect = {
+			custom_tooltip = yok_mi_mansel_sesnit_tt
+			hidden_effect = { every_owned_province = { add_nationalism = 5 } }
+            add_country_modifier = {
+				name = "yok_mi_mansel_sesnit"
+				duration = 9125
+			} 
+        }
+    }
+}
+
+yokudan_main_missions = {
+    slot = 8                  
+    generic = no
+    ai = yes
+    has_country_shield = yes    
+    potential = {
+		OR = {
+			primary_culture = yokudan
+			AND = { primary_culture = redguard has_country_flag = yokudan_redguard_flag }
+		}
+	}
+    
+    legacy_ehlnofey_mission = {
+        icon = mission_invade_island
+        position = 1
+        required_missions = {  }
+        
+        trigger = {
+            manpower_percentage = 1
+			sailors_percentage = 1
+			army_size_percentage = 1
+			navy_size_percentage = 1
+        }
+        
+        effect = {
+            add_country_modifier = {
+				name = "yok_mi_new_home"
+				duration = 9125
+			} 
+        }
+    }
+	
+	na_totambu_mission = {
+        icon = mission_arabian_fort
+        position = 2
+        required_missions = { legacy_ehlnofey_mission }
+        
+        trigger = {
+            OR = {
+				num_of_subjects = 3
+				AND = { 
+					num_of_subjects = 2
+					num_of_allies = 2
+				}
+				AND = {
+					num_of_subjects = 1
+					num_of_allies = 3
+				}
+				num_of_allies = 5
+			}
+        }
+        
+        effect = {
+            333 = {				#Jalfaye
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			335 = {				#Yath
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+            355 = {				#Samara
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+            3443 = {			#Haearon
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+            3467 = {			#Toramon
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = "yok_mi_rule_totambu"
+				duration = 9125
+			}
+        }
+    }
+	
+	administering_empire_mission = {
+        icon = mission_build_up_to_force_limit
+        position = 3
+        required_missions = { na_totambu_mission }
+        
+        provinces_to_highlight = {
+            OR = {							
+				province_id = 333			#Jalfaye
+				province_id = 335			#Yath
+				province_id = 355			#Samara
+				province_id = 3443			#Haearon
+				province_id = 3467			#Toramon
+			}
+			NOT = {country_or_non_sovereign_subject_holds = ROOT }
+        }
+    
+        trigger = {
+            owns_core_province = 333		
+			owns_core_province = 335
+			owns_core_province = 355
+			owns_core_province = 3443
+			owns_core_province = 3467
+			NOT = { average_home_autonomy = 5 }
+        }
+        
+        effect = {
+            set_government_rank = 10
+			country_event = {
+				id = yok_mission_events.1
+				days = 10
+				random = 30
+			}
+			yokuda_9_la = {				#Haearon
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			yokuda_13_la = {			#A'raei
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			add_historical_rival = SIN
+			SIN = { add_historical_rival = ROOT }
+			add_country_modifier = {
+				name = "yok_mi_yokudan_empire"
+				duration = 9125
+			}
+        }
+    }
+	
+	yok_righting_sinistrals_mission = {
+        icon = mission_conquer_5_states
+        position = 4
+        required_missions = { administering_empire_mission }
+        
+        provinces_to_highlight = {
+            OR = {
+				area = yokuda_9_la 			#A'raei
+				area = yokuda_13_la			#Haearon
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+        }
+    
+        trigger = {
+            NOT = { exists = SIN }
+			yokuda_9_la = {
+				type = all
+				owned_by = ROOT
+			}
+			yokuda_13_la = {
+				type = all
+				owned_by = ROOT
+			}
+			2184 = { has_owner_religion = yes }
+        }
+        
+        effect = {
+            hammerfell_11_la = {			#Pearl Islands
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			hammerfell_12_la = {			#Chain Islands
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			hammerfell_14_la = {			#Limai
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+        }
+    }
+	
+	holding_herne_mission = {
+        icon = mission_african_soldier
+        position = 5
+        required_missions = { yok_righting_sinistrals_mission }
+        
+        provinces_to_highlight = {
+            OR = {
+				area = hammerfell_11_la		#Pearl Islands
+				area = hammerfell_12_la		#Chain Islands
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+        }
+    
+        trigger = {
+            NOT = { exists = HB1 }
+			1497 = { has_owner_religion = yes }
+			hammerfell_11_la = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			hammerfell_12_la = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+        }
+        
+        effect = {
+			hammerfell_1_la = {			#Rihad
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			hammerfell_7_la = {			#Thedell
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			hammerfell_8_la = {			#Taneth
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+            hammerfell_44_la = {		#Marn
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			hammerfell_45_la = {		#Anwein
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+        }
+    }
+	
+	assailing_anwein_mission = {
+        icon = mission_steppe_warriors
+        position = 6
+        required_missions = { holding_herne_mission }
+        
+        provinces_to_highlight = {
+            OR = {
+				area = hammerfell_1_la		#Rihad
+				area = hammerfell_7_la		#Thedall
+				area = hammerfell_8_la		#Taneth
+				area = hammerfell_44_la		#Marn
+				area = hammerfell_45_la		#Anwein
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+        }
+    
+        trigger = {
+			hammerfell_1_la = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+            hammerfell_7_la = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			hammerfell_8_la = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			hammerfell_44_la = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			hammerfell_45_la = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			1446 = { has_owner_religion = yes } 	#Rihad
+			1478 = { has_owner_religion = yes }		#Thedell
+			1482 = { has_owner_religion = yes }		#Taneth
+			6422 = { has_owner_religion = yes }		#Marn
+			6436 = { has_owner_religion = yes }		#Anwein
+        }
+        
+        effect = {
+			6436 = { change_province_name = "Khefram" }
+            hammerfell_13_la = {		#Sentinel
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			hammerfell_39_la = {		#Chastown
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			hammerfell_40_la = {		#Laie
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			hammerfell_41_la = {		#Hegathe
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			hammerfell_42_la = {		#Abibon Gora
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			hammerfell_43_la = {		#Sunkeep
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			country_event = {
+				id = yok_mission_events.2
+				days = 30
+			}
+        }
+    }
+	
+	northern_alikr_mission = {
+        icon = mission_bedouins
+        position = 7
+        required_missions = { assailing_anwein_mission }
+        
+        provinces_to_highlight = {
+            OR = {
+				area = hammerfell_13_la		#Sentinel
+				area = hammerfell_39_la		#Chastown
+				area = hammerfell_40_la		#Laie
+				area = hammerfell_41_la		#Hegathe
+				area = hammerfell_42_la		#Abibon-Gora
+				area = hammerfell_43_la		#Sunkeep
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+        }
+    
+        trigger = {
+            hidden_trigger = { has_country_flag = yok_mission_2_flag }
+			hammerfell_13_la = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			hammerfell_39_la = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			hammerfell_40_la = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			hammerfell_41_la = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			hammerfell_42_la = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			hammerfell_43_la = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			1510 = { has_owner_religion = yes }		#Sentinel
+			6376 = { has_owner_religion = yes }		#Chastown
+			6385 = { has_owner_religion = yes }		#Laie
+			6392 = { has_owner_religion = yes }		#Hegathe
+			6402 = { has_owner_religion = yes }		#Abibon-Gora
+			6414 = { has_owner_religion = yes }		#Sunkeep
+        }
+        
+        effect = {
+            hammerfell_5_la = {			#Dragonstar
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			 hammerfell_27_la = {		#Bangkorai
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			hammerfell_28_la = {		#Dandeen
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			hammerfell_29_la = {		#Saadola
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			hammerfell_30_la = {		#Karlet
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = "yok_mi_hammering_hammers"
+				duration = 9125
+			}
+        }
+    }
+	
+	derailing_dragontail_mission = {
+        icon = mission_crusade_for_varna
+        position = 8
+        required_missions = { northern_alikr_mission }
+        
+        provinces_to_highlight = {
+            OR = {
+				area = hammerfell_5_la		#Dragonstar
+				area = hammerfell_27_la		#Bangkorai
+				area = hammerfell_28_la		#Dandeen
+				area = hammerfell_29_la		#Saadola
+				area = hammerfell_30_la		#Karlet
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+        }
+    
+        trigger = {
+            hammerfell_5_la = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			hammerfell_27_la = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			hammerfell_28_la = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			hammerfell_29_la = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			hammerfell_30_la = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			1470 = { has_owner_religion = yes }		#Dragonstar
+			6257 = { has_owner_religion = yes }		#Bangkorai
+			6263 = { has_owner_religion = yes }		#Dandeen
+			6275 = { has_owner_religion = yes }		#Saadola
+			6287 = { has_owner_religion = yes }		#Karlet
+        }
+        
+        effect = {
+			hidden_effect = { set_global_flag = yokudan_redguard_flag }
+            change_primary_culture = redguard
+			add_accepted_culture = yokudan
+			6081 = { change_province_name = "Hel Ra Citadel" }
+			6275 = { change_province_name = "Hallin's Stand" }
+			hammerfell_3_la = {			#Belkarth
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			hammerfell_4_la = {			#Vulkuneu
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			hammerfell_6_la = {			#Skaven
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			hammerfell_19_la = {		#Elinhir
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			hammerfell_31_la = {		#Verkarth
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = "yok_mi_sweet_home_hammerfell"
+				duration = -1
+			}
+        }
+    }
+	
+	rourken_clan_mission = {
+        icon = mission_central_asian_city
+        position = 9
+        required_missions = { 
+			derailing_dragontail_mission
+			eternal_spring_mission
+		}
+        
+        provinces_to_highlight = {
+            OR = {
+				area = hammerfell_33_la		#Sayelie
+				area = hammerfell_34_la		#Kligin
+				area = hammerfell_35_la		#Bergama
+				area = hammerfell_37_la		#Dhojrn
+				area = hammerfell_38_la		#Grith-Si
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+        }
+    
+        trigger = {
+			NOT = { exists = ROU }
+            OR = {
+				AND = {
+					all_core_province = { NOT = { culture = dwemer } }
+					owns_core_province = 6316	#Sayelie		
+					owns_core_province = 6324	#Kligin
+					owns_core_province = 6334	#Bergama
+					owns_core_province = 6356	#Dhojrn
+					owns_core_province = 6367	#Grith-Si
+				}
+				AND = {
+					accepted_culture = dwemer
+					hammerfell_33_la = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					hammerfell_34_la = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					hammerfell_35_la = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					hammerfell_37_la = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					hammerfell_38_la = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+			}
+        }
+        
+        effect = {
+            add_country_modifier = {
+				name = "yok_mi_sweet_razing_rourkens"
+				duration = -1
+			}
+        }
+    }
+}
+
+yokudan_colonization_missions = {
+    slot = 9                  
+    generic = no
+    ai = yes
+    has_country_shield = yes    
+    potential = {
+		OR = {
+			primary_culture = yokudan
+			AND = { primary_culture = redguard has_country_flag = yokudan_redguard_flag }
+		}
+	}
+    
+    landing_limai_mission = {
+        icon = mission_asian_trader
+        position = 5
+        required_missions = { yok_righting_sinistrals_mission }
+        
+        provinces_to_highlight = {
+            province_id = 1512			#Limai
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+        }
+    
+        trigger = {
+            owns_core_province = 1512
+			1512 = { 
+				has_owner_religion = yes
+				if = {
+					limit = { has_dlc = "Dharma" }
+					province_has_center_of_trade_of_level = 2
+				}
+			}
+        }
+        
+        effect = {
+            hammerfell_10_la = {			#Lainlyn
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}	
+			hammerfell_25_la = {			#Karnver
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			hammerfell_32_la = {			#Umak-I
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = "yok_mi_landing_limai"
+				duration = 10950
+			}
+        }
+    }
+	
+	uncovering_umak_mission = {
+        icon = mission_asian_city
+        position = 6
+        required_missions = { landing_limai_mission }
+        
+        provinces_to_highlight = {
+            OR = {
+				area = hammerfell_10_la		#Lainlyn
+				province_id = 6236			#Karnver Falls
+				province_id = 6304			#Umak-I
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+        }
+    
+        trigger = {
+            owns_core_province = 6236
+			owns_core_province = 6304
+			6236 = { 
+				has_owner_religion = yes
+				if = {
+					limit = { has_dlc = "Dharma" }
+					province_has_center_of_trade_of_level = 2
+				}
+			}
+			6304 = {
+				has_owner_religion = yes
+				if = {
+					limit = { has_dlc = "Dharma" }
+					province_has_center_of_trade_of_level = 2
+				}
+			}
+			hammerfell_10_la = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+        }
+        
+        effect = {
+            6304 = { change_province_name = "Nu-Na-Totambu" }
+			hammerfell_9_la = {				#Talarus
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			hammerfell_23_la = {			#Dofylen
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			hammerfell_24_la = {			#Salmah
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			hammerfell_36_la = {			#V'ofylon
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}	
+			add_country_modifier = {
+				name = "yok_mi_restoring_na_totambu"
+				duration = 10950
+			}
+        }
+    }
+	
+	heart_deserted_mission = {
+        icon = mission_rice_field
+        position = 7
+        required_missions = { uncovering_umak_mission }
+        
+        provinces_to_highlight = {
+            OR = {
+				area = hammerfell_36_la		#V'ofylon
+				province_id = 1486			#Telarus
+				province_id = 6217			#Dofylen
+				province_id = 6224			#Salmah
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+        }
+    
+        trigger = {
+            owns_core_province = 1486
+			owns_core_province = 6217
+			owns_core_province = 6224
+			1486 = { 
+				has_owner_religion = yes
+				if = {
+					limit = { has_dlc = "Dharma" }
+					province_has_center_of_trade_of_level = 2
+				}
+			}
+			6217 = {
+				has_owner_religion = yes
+				if = {
+					limit = { has_dlc = "Dharma" }
+					province_has_center_of_trade_of_level = 2
+				}
+			}
+			6224 = {
+				has_owner_religion = yes
+				if = {
+					limit = { has_dlc = "Dharma" }
+					province_has_center_of_trade_of_level = 2
+				}
+			}
+			hammerfell_36_la = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+        }
+        
+        effect = {
+            hammerfell_18_la = {			#Cairdem
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			hammerfell_20_la = {			#Helland
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			hammerfell_22_la = {			#Shalia
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = "yok_mi_desert_dessert"
+				duration = 10950
+			}
+        }
+    }
+	
+	eternal_spring_mission = {
+        icon = mission_unite_home_region
+        position = 8
+        required_missions = { heart_deserted_mission }
+        
+        provinces_to_highlight = {
+            OR = {
+				province_id = 6165			#Cairdem
+				province_id = 6184			#Helland
+				province_id = 6205			#Shalia
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+        }
+    
+        trigger = {
+            owns_core_province = 6165
+			owns_core_province = 6184
+			owns_core_province = 6205
+			6165 = { 
+				has_owner_religion = yes
+				if = {
+					limit = { has_dlc = "Dharma" }
+					province_has_center_of_trade_of_level = 2
+				}
+			}
+			6184 = {
+				has_owner_religion = yes
+				if = {
+					limit = { has_dlc = "Dharma" }
+					province_has_center_of_trade_of_level = 2
+				}
+			}
+			6205 = {
+				has_owner_religion = yes
+				if = {
+					limit = { has_dlc = "Dharma" }
+					province_has_center_of_trade_of_level = 2
+				}
+			}
+        }
+        
+        effect = {
+            hammerfell_33_la = {			#Sayelie
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT }
+			hammerfell_34_la = {			#Kligan
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			hammerfell_35_la = {			#Bergama
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			hammerfell_37_la = {			#Dhojrn
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			hammerfell_38_la = {			#Grith-Si
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+        }
+    }
+	
+}
+
+yokudan_high_rock_missions = {
+    slot = 10                    
+    generic = no
+    ai = yes
+    has_country_shield = yes    
+    potential = {
+		OR = {
+			primary_culture = yokudan
+			AND = { primary_culture = redguard has_country_flag = yokudan_redguard_flag }
+		}
+	}
+    
+    memory_stones_mission = {
+        icon = mission_war_chest
+        position = 2
+        required_missions = {  }
+        
+        trigger = {
+			if = {
+				limit = { has_dlc = "Rule Britannia" }
+				innovativeness = 30
+			}
+			else = {
+				NOT = { any_neighbor_country = { tech_difference = 1 } }
+			}
+			NOT = { is_lacking_institutions = yes }
+        }
+        
+        effect = {
+            add_country_modifier = {
+				name = "yok_mi_memory_stones"
+				duration = -1
+			} 
+        }
+    }
+	
+	high_rock_mission = {
+        icon = mission_colonial
+        position = 4
+        required_missions = {  }
+        
+        provinces_to_highlight = {
+            OR = {
+				province_id = 1369		#Daggerfall
+				province_id = 1379		#Alysinetta
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+        }
+    
+        trigger = {
+            num_of_explorers = 1
+			has_discovered = 1369
+			has_discovered = 1379
+        }
+        
+        effect = {
+            high_27_la = {				#Fell
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = "yok_mi_settling_high_rock"
+				duration = 9125
+			} 
+        }
+    }
+	
+	silverhoof_vale_mission = {
+        icon = mission_non-western_cavalry_raid
+        position = 5
+        required_missions = { high_rock_mission }
+        
+        provinces_to_highlight = {
+            province_id = 7045			#North Point
+			has_discovered = ROOT
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+        }
+    
+        trigger = {
+            7045 = {
+				owned_by = ROOT
+				if ={ limit = { OR = { has_dlc = "Wealth of Nations" has_dlc = "Dharma" } } 
+					is_owned_by_trade_company = yes
+				}
+			}
+			if = {
+				limit = { exists = BA5 }		#Orsinium
+				NOT = { 
+					BA5 = {
+						has_opinion = {
+							who = ROOT
+							value = 0
+						}	
+					}
+				}
+			}
+			else_if = {
+				limit = { NOT = { exists = BA5 } }
+				NOT = {
+					1391 = {			#Orsinium
+						owner = {
+							has_opinion = {
+								who = ROOT
+								value = 0
+							}
+						}
+					}
+				}
+			}
+        }
+        
+        effect = {
+			7045 = { change_province_name = "Silverhoof Vale" }
+            high_9_la = {				#Karthgren
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = "yok_mi_settling_silverhoof_vale"
+				duration = 9125
+			} 
+        }
+    }
+	
+	white_haven_mission = {
+        icon = mission_ottoman_harem
+        position = 6
+        required_missions = { silverhoof_vale_mission }
+        
+        provinces_to_highlight = {
+            OR = {
+				province_id = 1409		#Crypt of Hearts
+				province_id = 1411		#Karthgren
+				province_id = 1412		#Mellette
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+        }
+    
+        trigger = {
+            1409 = {
+				owned_by = ROOT
+				if ={ limit = { OR = { has_dlc = "Wealth of Nations" has_dlc = "Dharma" } } 
+					is_owned_by_trade_company = yes
+				}
+			}
+			1411 = {
+				owned_by = ROOT
+				if ={ limit = { OR = { has_dlc = "Wealth of Nations" has_dlc = "Dharma" } } 
+					is_owned_by_trade_company = yes
+				}
+			}
+			1412 = {
+				owned_by = ROOT
+				if ={ limit = { OR = { has_dlc = "Wealth of Nations" has_dlc = "Dharma" } } 
+					is_owned_by_trade_company = yes
+				}
+			}
+			any_ally = {
+				primary_culture = breton
+				num_of_owned_provinces_with = {
+					value = 15
+					OR = {
+						region = hgh_rock_lr
+						region = wrothgar_lr
+					}
+				}
+				has_opinion = {
+					who = ROOT
+					value = 100
+				}
+			}
+        }
+        
+        effect = {
+            high_5_la = {				#Orsinium
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			country_event = {
+				id = yok_mission_events.3
+				days = 30
+				random = 365
+			}
+        }
+    }
+	
+	seige_orsinium_mission = {
+        icon = mission_cannons_firing
+        position = 7
+        required_missions = { white_haven_mission }
+        
+        provinces_to_highlight = {
+            area = high_5_la
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+        }
+    
+        trigger = {
+            high_5_la = {
+				type = all
+				owned_by = ROOT
+				if ={ limit = { OR = { has_dlc = "Wealth of Nations" has_dlc = "Dharma" } } 
+					is_owned_by_trade_company = yes
+				}
+			}
+			NOT = { 
+				all_neighbor_country = { 
+					limit = {
+						OR = {
+							region = high_rock_lr
+							region = wrothgar_lr
+						}
+					}
+					army_size = ROOT 
+				} 
+			}
+		}
+        
+        effect = {
+            add_country_modifier = {
+				name = "yok_mi_seige_orsinium"
+				duration = 9125
+			} 
+        }
+    }
+	
+	brother_breton_mission = {
+        icon = mission_alliances
+        position = 8
+        required_missions = { seige_orsinium_mission }
+        
+        trigger = {
+            1391 = {
+				trade_share = {
+					country = ROOT
+					share = 25
+				}
+			}
+			any_ally = {
+				primary_culture = breton
+				trust = { 
+					who = ROOT 
+					value = 100 
+				}
+			}
+        }
+        
+        effect = {
+            1391 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = 5475
+					power = 15
+				}
+			}
+			add_country_modifier = {
+				name = "yok_mi_brother_breton"
+				duration = 9125
+			} 
+        }
+    }
+	
+	daggerfall_covenant_mission = {
+        icon = mission_assemble_an_army
+        position = 9
+        required_missions = { brother_breton_mission }
+        
+        trigger = {
+            any_ally = {
+				primary_culture = breton
+				num_of_owned_provinces_with = {
+					value = 10
+					OR =  {
+						region = hgh_rock_lr
+						region = wrothgar_lr
+					}
+				}
+				trust = {
+					who = ROOT
+					value = 90
+				}
+				has_opinion = {
+					who = ROOT
+					value = 125
+				}
+			}
+			any_ally = {
+				primary_culture = orsimer
+				num_of_owned_provinces_with = {
+					value = 10
+					OR =  {
+						region = hgh_rock_lr
+						region = wrothgar_lr
+					}
+				}
+				trust = {
+					who = ROOT
+					value = 90
+				}
+				has_opinion = {
+					who = ROOT
+					value = 125
+				}
+			}
+			any_ally = {
+				primary_culture = altmer
+				num_of_owned_provinces_with = {
+					value = 10
+					OR =  {
+						region = hgh_rock_lr
+						region = wrothgar_lr
+					}
+				}
+				trust = {
+					who = ROOT
+					value = 90
+				}
+				has_opinion = {
+					who = ROOT
+					value = 125
+				}
+			}
+        }
+        
+        effect = {
+            add_country_modifier = {
+				name = "yok_mi_daggerfall_covenant"
+				duration = -1
+			}
+        }
+    }
+	
+}
+

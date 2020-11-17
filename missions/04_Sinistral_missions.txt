@@ -1,0 +1,319 @@
+sin_elves_tall_missions = {
+    slot = 6
+    generic = no
+    ai = yes
+    has_country_shield = yes
+    potential = { tag = SIN }
+    
+    gypsum_alabaster_mission = {
+        icon = mission_arabian_fort
+        position = 3 
+        required_missions = { orichalcum_tower_mission } 
+
+        provinces_to_highlight = {
+			area = yokuda_9_la		#A'raei
+        }
+    
+        trigger = {
+            development_in_provinces = {
+				value = 150
+				area = yokuda_9_la
+			}
+			num_of_owned_provinces_with = {
+				value = 10
+				OR = {
+					has_building = temple
+					has_building = cathedral
+					has_building = tax_assessor
+				}
+			}
+			num_of_owned_provinces_with = {
+				value = 10
+				OR = {
+				    has_building = workshop
+					has_building = counting_house
+					has_building = customs_house
+				}
+			}
+			num_of_owned_provinces_with = {
+				value = 10
+				OR = {
+				    has_building = marketplace
+					has_building = trade_depot
+					has_building = stock_exchange
+				}
+			}
+			num_of_owned_provinces_with = {
+				value = 10
+				has_building = road_network
+			}
+        }
+        
+        effect = {
+            add_country_modifier = {
+				name = "sin_mi_gypsum_buildings"
+				duration = -1
+			}
+        }
+    }
+}
+
+sin_elves_mineral_missions = {
+    slot = 7
+    generic = no
+    ai = yes
+    has_country_shield = yes
+    potential = { tag = SIN }
+    
+    orichalcum_tower_mission = {
+        icon = mission_mosque
+        position = 2
+        required_missions = { all_thats_left_mission } 
+
+        provinces_to_highlight = {
+            province_id = 2184			#A'raei
+        }
+    
+        trigger = {
+            2184 = {
+				is_capital = yes
+				development = 30
+				has_owner_religion = yes
+				if = {
+					limit = { has_dlc = "Dharma" }
+					province_has_center_of_trade_of_level = 3
+				}
+			}
+			is_at_war = no
+        }
+        
+        effect = {
+			add_country_modifier = {
+				name = "sin_mi_oric_tower"
+				duration = -1
+			}
+        }
+    }
+	
+	buoyant_steel_mission = {
+        icon = mission_sea_battles
+        position = 3 
+        required_missions = { orichalcum_tower_mission } 
+
+        trigger = {
+            sailors_percentage = 1
+			navy_size_percentage = 1
+			num_of_heavy_ship = 30
+			advisor = esu_navarch
+			all_neighbor_country = {
+				NOT = { navy_size = ROOT }
+			}
+        }
+        
+        effect = {
+            add_country_modifier = {
+				name = "sin_mi_buoyant_steel"
+				duration = -1
+			}
+        }
+    }
+}
+
+sin_elves_main_missions = {
+    slot = 8
+    generic = no
+    ai = yes
+    has_country_shield = yes
+    potential = { tag = SIN }
+    
+    all_thats_left_mission = {
+        icon = mission_bedouins
+        position = 1 
+        required_missions = {  } 
+
+        trigger = {
+            stability = 3
+			manpower_percentage = 1
+			num_of_provinces_in_states = 10
+        }
+        
+        effect = {
+			yokuda_13_la = {		#Haearon
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = "sin_mi_all_left"
+				duration = 9125
+			}
+        }
+    }
+	
+	sinister_intentions_mission = {
+        icon = mission_egyptian_mamluk_soldier
+        position = 2
+        required_missions = { all_thats_left_mission } 
+
+        provinces_to_highlight = {
+            OR = {
+				area = yokuda_9_la		#A'raei
+				area = yokuda_13_la		#Haearon
+			}
+			NOT = {country_or_non_sovereign_subject_holds = ROOT }
+        }
+    
+        trigger = {
+            yokuda_9_la = {
+				type = all
+				owned_by = ROOT
+			}
+			yokuda_13_la = {
+				type = all
+				owned_by = ROOT
+			}
+			any_subject_country = { primary_culture = yokudan }
+        }
+        
+        effect = {
+			333 = { add_permanent_claim = ROOT }		#Jalfaye
+			335 = { add_permanent_claim = ROOT }		#Yath
+			355 = { add_permanent_claim = ROOT }		#Samara
+			3467 = { add_permanent_claim = ROOT }		#Toramon
+			add_country_modifier = {
+				name = "sin_mi_sin_intent"
+				duration = 9125
+			}
+        }
+    }
+	
+	sin_nothing_right__mission = {
+        icon = mission_impaled_soldies
+        position = 3 
+        required_missions = { sinister_intentions_mission } 
+
+        provinces_to_highlight = {
+            OR = { 
+				province_id = 333			#Jalfaye
+				province_id = 335			#Yath
+				province_id = 355			#Samara
+				province_id = 3467			#Toramon
+			}
+			NOT = {country_or_non_sovereign_subject_holds = ROOT }
+        }
+    
+        trigger = {
+            NOT = { exists = YA7 }
+			NOT = { exists = YB3 }
+			owns_core_province = 335		
+			owns_core_province = 3443
+			owns_core_province = 355
+			owns_core_province = 333
+			owns_core_province = 3467
+			accepted_culture = yokudan
+        }
+        
+        effect = {
+			hammerfell_11_la = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = "sin_mi_nothing_right"
+				duration = 9125
+			}
+        }
+    }
+}
+
+sin_elves_alinor_missions = {
+    slot = 9
+    generic = no
+    ai = yes
+    has_country_shield = yes
+    potential = { tag = SIN }
+    
+    out_on_limb_mission = {
+        icon = mission_build_up_to_force_limit
+        position = 2 
+        required_missions = { all_thats_left_mission } 
+
+        trigger = {
+            num_of_allies = 2
+			any_ally = {
+				primary_culture = altmer
+				num_of_owned_provinces_with = {
+					value = 20
+					OR = {
+						region = summerset_lr
+						region = auridon_lr
+					}
+				}
+				has_opinion = {
+					who = ROOT
+					value = 150
+				}
+			}
+			num_of_explorers = 1
+        }
+        
+        effect = {
+            pyandonea_14_la = {
+				limit = {
+					NOT = { is_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_claim = ROOT
+			}
+			add_country_modifier = {
+				name = "sin_mi_allies_alinor"
+				duration = 9125
+			}
+        }
+    }
+	
+	pyandonean_ports_mission = {
+        icon = mission_colonial
+        position = 3 
+        required_missions = { out_on_limb_mission } 
+
+        provinces_to_highlight = {
+            province_id = 2089			#Fenna
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+        }
+    
+        trigger = {
+            owns_core_province = 2089
+			num_of_owned_provinces_with = {
+				value = 5
+				OR = {
+						region = summerset_lr
+						region = audidon_lr
+				}
+			}
+			any_ally = {
+				primary_culture = maorner
+				num_of_owned_provinces_with = {
+					value = 10
+					region = pyandonea_lr
+				}
+				has_opinion = {
+					who = ROOT
+					value = 150
+				}
+			}
+        }
+        
+        effect = {
+            add_country_modifier = {
+				name = "sin_mi_allies_pyand"
+				duration = 9125
+			}
+        }
+    }
+}

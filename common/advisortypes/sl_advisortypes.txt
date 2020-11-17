@@ -269,7 +269,7 @@ esu_lich = {
 	global_manpower_modifier = 0.25
 	skill_scaled_modifier = { 
 		possible_condottieri = 0.05
-		leader_cost = 0.05
+		leader_cost = 0.15
 	}
 	chance = {
 		factor = 1.0
@@ -330,7 +330,7 @@ esu_tyrant = {
 	monarch_power = MIL
 	reserves_organisation = 0.25
 	skill_scaled_modifier = { 
-		yearly_army_professionalism = -0.05
+		yearly_army_professionalism = -0.015
 		movement_speed = 0.05
 	}
 	chance = {

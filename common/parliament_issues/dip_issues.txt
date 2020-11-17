@@ -1,0 +1,374 @@
+dip_issue_1 = {
+	category = 2 		
+
+	allow = {
+		always = yes
+	}
+	
+	effect = {
+	custom_tooltip = es_define_conquistador
+	hidden_effect = {
+		create_conquistador = {
+		}
+		}
+	}
+	
+	modifier = {
+		global_colonial_growth = 15
+		range = -0.15
+	}
+	
+	chance = { factor = 1 }
+
+	ai_will_do = { factor = 1 }
+}
+
+dip_issue_2 = {
+	category = 2		
+
+	allow = {
+		always = yes
+	}
+	
+	effect = {
+		custom_tooltip = es_add_mutual_trust
+		hidden_effect = {
+			random_subject_country = {
+				add_trust = { who = ROOT value = 10 mutual = yes }
+			}
+		}
+	}
+	
+	modifier = {
+		vassal_income = 0.15
+		vassal_forcelimit_bonus = -0.15
+	}
+	
+	chance = { factor = 1 }
+
+	ai_will_do = { factor = 1 }
+}
+
+dip_issue_3 = {
+	category = 2		
+
+	allow = {
+		always = yes
+	}
+	
+	effect = {
+		random_owned_province = {
+			limit = {
+				nationalism = 1
+			}
+			add_nationalism = -10
+		}
+	}
+	
+	modifier = {
+		unjustified_demands = -0.15
+		improve_relation_modifier = -0.15
+	}
+	
+	chance = { factor = 1 }
+
+	ai_will_do = { factor = 1 }
+}
+
+dip_issue_4 = {
+	category = 2		
+
+	allow = {
+		always = yes
+	}
+	
+	effect = {
+		custom_tooltip = es_core_province
+		hidden_effect = {
+			random_neighbor_province = {
+				add_core = ROOT
+			}
+		}
+	}
+	
+	modifier = {
+		ae_impact = -0.15
+		province_warscore_cost = 0.15
+	}
+	
+	chance = { factor = 1 }
+
+	ai_will_do = { factor = 1 }
+}
+
+dip_issue_5 = {
+	category = 2		
+
+	allow = {
+		always = yes
+	}
+	
+	effect = {
+		custom_tooltip = es_define_admiral
+		hidden_effect = {
+			create_admiral = {
+			}
+		}
+	}
+	
+	modifier = {
+		naval_forcelimit_modifier = 0.15
+		naval_maintenance_modifier = 0.15
+	}
+	
+	chance = { factor = 1 }
+
+	ai_will_do = { factor = 1 }
+}
+
+dip_issue_6 = {
+	category = 2		
+
+	allow = {
+		always = yes
+	}
+	
+	effect = {
+		custom_tooltip = es_define_navarch
+		hidden_effect = {
+			define_advisor = {
+			type = esu_navarch
+			skill = 3
+			culture = ROOT
+			religion = ROOT
+			}
+		}
+	}
+	
+	modifier = {
+		global_sailors_modifier = 0.15
+		privateer_efficiency = -0.15
+	}
+	
+	chance = { factor = 1 }
+
+	ai_will_do = { factor = 1 }
+}
+
+dip_issue_7 = {
+	category = 2		
+
+	allow = {
+		always = yes
+	}
+	
+	effect = {
+		add_yearly_sailors = 1.0
+	}
+	
+	modifier = {
+		global_ship_recruit_speed = -0.15
+		global_ship_cost = 0.15
+	}
+	
+	chance = { factor = 1 }
+
+	ai_will_do = { factor = 1 }
+}
+
+dip_issue_8 = {
+	category = 2		
+
+	allow = {
+		always = yes
+	}
+	
+	effect = {
+		custom_tooltip = es_define_explorer
+		hidden_effect = {
+			create_explorer = {
+			}
+		}
+	}
+	
+	modifier = {
+		naval_attrition = -0.15
+		global_ship_repair = -0.15
+	}
+	
+	chance = { factor = 1 }
+
+	ai_will_do = { factor = 1 }
+}
+
+dip_issue_9 = {
+	category = 2		
+
+	allow = {
+		always = yes
+	}
+	
+	effect = {
+		custom_tooltip = es_define_merchant
+		hidden_effect = {
+			define_advisor = {
+			type = esu_merchant
+			skill = 3
+			culture = ROOT
+			religion = ROOT
+			}
+		}
+	}
+	
+	modifier = {
+		global_ship_trade_power = 0.15
+		embargo_efficiency = -0.15
+	}
+	
+	chance = { factor = 1 }
+
+	ai_will_do = { factor = 1 }
+}
+
+dip_issue_10 = {
+	category = 2		
+
+	allow = {
+		always = yes
+	}
+	
+	effect = {
+		add_years_of_manpower_scaled_to_seats = 1.5
+	}
+	
+	modifier = {
+		blockade_efficiency = 0.15
+		capture_ship_chance = -0.15
+	}
+	
+	chance = { factor = 1 }
+
+	ai_will_do = { factor = 1 }
+}
+
+dip_issue_11 = {
+	category = 2		
+
+	allow = {
+		always = yes
+	}
+	
+	effect = {
+		add_prestige = 10
+	}
+	
+	modifier = {
+		navy_tradition_decay = -0.015
+		prestige_from_naval = -0.15
+	}
+	
+	chance = { factor = 1 }
+
+	ai_will_do = { factor = 1 }
+}
+
+dip_issue_12 = {
+	category = 2		
+
+	allow = {
+		always = yes
+	}
+	
+	effect = {
+		random_owned_province = {
+			add_base_production = 1
+		}
+	}
+	
+	modifier = {
+		caravan_power = 0.15
+		sailors_recovery_speed = -0.15
+	}
+	
+	chance = { factor = 1 }
+
+	ai_will_do = { factor = 1 }
+}
+
+dip_issue_13 = {
+	category = 2		
+
+	allow = {
+		always = yes
+	}
+	
+	effect = {
+		add_navy_tradition = 5
+	}
+	
+	modifier = {
+		sailor_maintenance_modifer = -0.15
+		ship_power_propagation = -0.15
+	}
+	
+	chance = { factor = 1 }
+
+	ai_will_do = { factor = 1 }
+}
+
+dip_issue_14 = {
+	category = 2		
+
+	allow = {
+		always = yes
+	}
+	
+	effect = {
+		custom_tooltip = es_define_alchemist
+			hidden_effect = {
+				define_advisor = {
+				type = esu_alchemist
+				skill = 3
+				culture = ROOT
+				religion = ROOT
+			}
+		}
+	}
+	
+	modifier = {
+		global_own_trade_power = 0.15
+		global_foreign_trade_power = -0.15
+	}
+	
+	chance = { factor = 1 }
+
+	ai_will_do = { factor = 1 }
+}
+
+dip_issue_15 = {
+	category = 2		
+
+	allow = {
+		always = yes
+	}
+	
+	effect = {
+		custom_tooltip = es_improve_trade_center
+		random_owned_province = {
+			limit = {
+				province_has_center_of_trade_of_level = 1
+				NOT = { province_has_center_of_trade_of_level = 3 }
+			}
+			add_center_of_trade_level = 1
+		}
+	}
+	
+	modifier = {
+		trade_steering = 0.15
+		trade_range_modifier = -0.15
+	}
+	
+	chance = { factor = 1 }
+
+	ai_will_do = { factor = 1 }
+}
