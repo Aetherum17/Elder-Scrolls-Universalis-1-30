@@ -1,0 +1,181 @@
+political_bribe_1 = {
+	trigger = {
+		always = yes
+	}
+	
+	effect = {
+		adm_power_cost = 35
+	}
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+political_bribe_2 = {
+	trigger = {
+		always = yes
+	}
+	
+	effect = {
+		dip_power_cost = 35
+	}
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+political_bribe_3 = {
+	trigger = {
+		always = yes
+	}
+	
+	effect = {
+		mil_power_cost = 35
+	}
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+#################################################
+
+political_bribe_4 = {
+	trigger = {
+		legitimacy = 5
+	}
+	
+	effect = {
+		add_legitimacy = -5
+	}
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+political_bribe_5 = {
+	trigger = {
+		devotion = 5
+	}
+	
+	effect = {
+		add_devotion = -5
+	}
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+political_bribe_6 = {
+	trigger = {
+		republican_tradition = 5
+	}
+	
+	effect = {
+		add_republican_tradition = -5
+	}
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+political_bribe_7 = {
+	trigger = {
+		horde_unity = 5
+	}
+	
+	effect = {
+		add_horde_unity = -5
+	}
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+political_bribe_8 = {
+	trigger = {
+		meritocracy = 5
+	}
+	
+	effect = {
+		add_meritocracy = -5
+	}
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+#################################################
+
+political_bribe_9 = {
+	trigger = {
+		government_reform_progress = 10
+		if = {
+			limit = {
+				NOT = { has_dlc = "Emperor" }
+			}
+			NOT = { has_completed_all_reforms_trigger = yes }
+		}
+	}
+	
+	effect = {
+		change_government_reform_progress = -10
+	}
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+#################################################
+
+political_bribe_10 = {
+	trigger = {
+		is_emperor = yes
+		imperial_influence = 5
+	}
+	
+	effect = {
+		add_imperial_influence = -5
+	}
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+political_bribe_11 = {
+	trigger = {
+		is_emperor_of_china = yes
+		imperial_mandate = 5
+	}
+	
+	effect = {
+		add_mandate = -5
+	}
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+political_bribe_12 = {
+	trigger = {
+		prestige = 2.5
+	}
+	
+	effect = {
+		add_prestige = -2.5
+	}
+	
+	ai_will_do = {
+		factor = 1
+	}
+}

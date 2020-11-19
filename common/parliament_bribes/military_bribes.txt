@@ -1,0 +1,104 @@
+military_bribe_1 = {
+	trigger = {
+		army_tradition = 2.5
+	}
+	
+	effect = {
+		add_army_tradition = -2.5
+	}
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+military_bribe_2 = {
+	trigger = {
+		FROM = { has_port = yes }
+		navy_tradition = 2.5
+	}
+	
+	effect = {
+		add_navy_tradition = -2.5
+	}
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+military_bribe_3 = {
+	trigger = {
+		has_dlc = "Cradle of Civilization"
+		army_professionalism = 0.05
+	}
+	
+	effect = {
+		add_army_professionalism = -0.05
+	}
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+military_bribe_4 = {
+	trigger = {
+		OR = {
+			has_leader_with = { admiral = yes }
+			has_leader_with = { general = yes }
+			has_leader_with = { conquistador = yes }
+			has_leader_with = { explorer = yes }
+		}
+	}
+	
+	effect = {
+		kill_leader = { type = random }
+	}
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+military_bribe_5 = {
+	trigger = {
+		manpower = 5
+	}
+	
+	effect = {
+		add_manpower = -5
+	}
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+military_bribe_6 = {
+	trigger = {
+		sailors = 2500
+	}
+	
+	effect = {
+		add_sailors = -2500
+	}
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+military_bribe_7 = {
+	trigger = {
+		NOT = { war_exhaustion = 15 }
+	}
+	
+	effect = {
+		add_war_exhaustion = 0.25
+	}
+	
+	ai_will_do = {
+		factor = 0
+	}
+}

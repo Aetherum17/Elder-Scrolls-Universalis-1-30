@@ -2,7 +2,9 @@ adm_issue_1 = {
 	category = 3 		
 
 	allow = {
-		always = yes
+		any_neighbor_country = {
+			tech_difference = 3
+		}
 	}
 	
 	effect = {
@@ -31,7 +33,9 @@ adm_issue_2 = {
 	category = 3 		
 
 	allow = {
-		always = yes
+		any_owned_province = {
+			NOT = { is_core = ROOT }
+		}
 	}
 	
 	effect = {
@@ -60,7 +64,7 @@ adm_issue_3 = {
 	category = 3 		
 
 	allow = {
-		always = yes
+		NOT = { stability = 3 }
 	}
 	
 	effect = {
@@ -81,7 +85,9 @@ adm_issue_4 = {
 	category = 3 		
 
 	allow = {
-		always = yes
+		any_owned_province = {
+			NOT = { religion = ROOT }
+		}
 	}
 	
 	effect = {
@@ -110,7 +116,7 @@ adm_issue_5 = {
 	category = 3 		
 
 	allow = {
-		always = yes
+		NOT = { adm_power = 500 }
 	}
 	
 	effect = {
@@ -131,7 +137,7 @@ adm_issue_6 = {
 	category = 3 		
 
 	allow = {
-		always = yes
+		NOT = { treasury = 5000 }
 	}
 	
 	effect = {
@@ -152,7 +158,7 @@ adm_issue_7 = {
 	category = 3 		
 
 	allow = {
-		always = yes
+		is_lacking_institutions = yes
 	}
 	
 	effect = {
@@ -181,7 +187,9 @@ adm_issue_8 = {
 	category = 3 		
 
 	allow = {
-		always = yes
+		any_owned_province = {
+			local_unrest = 1.0
+		}
 	}
 	
 	effect = {
@@ -207,7 +215,7 @@ adm_issue_9 = {
 	category = 3 		
 
 	allow = {
-		always = yes
+		NOT = { government_reform_progress = 1 }
 	}
 	
 	effect = {
@@ -236,11 +244,16 @@ adm_issue_10 = {
 	category = 3 		
 
 	allow = {
-		always = yes
+		any_owned_province = {
+			NOT = { base_tax = 5 }
+		}
 	}
 	
 	effect = {
 		random_owned_province = {
+			limit = {
+				NOT = { base_tax = 5 }
+			}
 			add_base_tax = 1
 		}
 	}
@@ -259,7 +272,9 @@ adm_issue_11 = {
 	category = 3 		
 
 	allow = {
-		always = yes
+		any_neighbor_country = {
+			NOT = { religion = ROOT }
+		}
 	}
 	
 	effect = {
@@ -288,7 +303,7 @@ adm_issue_12 = {
 	category = 3 		
 
 	allow = {
-		always = yes
+		num_of_subjects = 1
 	}
 	
 	effect = {

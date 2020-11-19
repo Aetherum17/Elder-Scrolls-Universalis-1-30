@@ -1791,3 +1791,17 @@ daedric_invasion = {
 	
 	reduced_liberty_desire = 9999
 }
+
+###################################################################################################
+
+dissatisfied_seat = {
+	local_tax_modifier = -0.10
+	local_production_efficiency = -0.10
+	local_unrest = 1
+}
+
+fight_with_corruption = {
+	advisor_cost = 0.15
+	state_maintenance_modifier = 0.10
+	yearly_corruption = -0.05
+}

@@ -1,0 +1,163 @@
+gen_issue_1 = {
+	category = 4	
+
+	allow = {
+		num_of_loans = 1
+		NOT = {
+			any_owned_province = {
+				has_province_modifier = dissatisfied_seat
+			}
+		}
+	}
+	
+	effect = {
+		add_years_of_tax_scaled_to_seats = 1
+		every_owned_province = {
+			limit = {
+				has_seat_in_parliament = yes
+			}
+			add_province_modifier = {
+				name = "dissatisfied_seat"
+				duration = 1278
+			}
+		}
+	}
+	
+	modifier = {
+	}
+	
+	chance = { factor = 1 }
+
+	ai_will_do = { factor = 1 }
+}
+
+gen_issue_2 = {
+
+	category = 4
+
+	allow = {
+		corruption = 5
+		NOT = { has_country_modifier = fight_with_corruption }
+	}
+	
+	effect = {
+		add_corruption = -5
+		add_country_modifier = {
+			name = "fight_with_corruption"
+			duration = 1825
+		}
+	}
+	
+	modifier = {
+	}
+
+	chance = {
+		factor = 1
+	}
+	
+	ai_will_do = {
+		factor = 1	
+	}	
+}
+
+gen_issue_3 = {
+
+	category = 4
+
+	allow = {
+		any_owned_province = {
+			NOT = {
+				base_manpower = 5
+			}
+		}
+		manpower = 5
+	}
+	
+	effect = {
+		random_owned_province = {
+			limit = {
+				NOT = { base_manpower = 5 }
+			}
+			add_base_manpower = 1
+		}
+		add_manpower = -5
+	}
+	
+	modifier = {
+	}
+
+	chance = {
+		factor = 1
+	}
+	
+	ai_will_do = {
+		factor = 1	
+	}	
+}
+
+gen_issue_4 = {
+
+	category = 4
+
+	allow = {
+		NOT = { mercantilism = 50 }
+		trade_income_percentage = 0.5 
+		monthly_income = 5
+	}
+	
+	effect = {
+		add_years_of_income = -1
+		add_mercantilism = 1
+	}
+	
+	modifier = {
+	}
+
+	chance = {
+		factor = 1
+	}
+	
+	ai_will_do = {
+		factor = 1	
+	}	
+}
+
+gen_issue_5 = {
+
+	category = 4
+
+	allow = {
+		OR = {
+			AND = { government = monarchy NOT = { legitimacy = 85 } }
+			AND = { government = republic NOT = { republican_tradition = 85 } }
+			AND = { government = theocracy has_dlc = "Common Sense" NOT = { devotion = 85 } }
+			AND = { government = theocracy NOT = { has_dlc = "Common Sense" } NOT = { legitimacy = 85 } }
+			AND = { is_nomad = yes has_dlc = "The Cossacks" NOT = { horde_unity = 85 } }
+			AND = { is_nomad = yes NOT = { has_dlc = "The Cossacks" } NOT = { legitimacy = 85 } }
+			AND = { is_emperor_of_china = yes has_dlc = "Mandate of Heaven" NOT = { meritocracy = 85 } } 
+		}
+		prestige = 15
+	}
+	
+	effect = {
+		add_prestige = -15
+		if = { limit = { government = monarchy } add_legitimacy = 15 }
+		if = { limit = { government = republic } add_republican_tradition = 15 }
+		if = { limit = { government = theocracy has_dlc = "Common Sense" } add_devotion = 15 }
+		if = { limit = { government = theocracy NOT = { has_dlc = "Common Sense" } } add_legitimacy = 15 }
+		if = { limit = { is_nomad = yes has_dlc = "The Cossacks" } add_horde_unity = 15 }
+		if = { limit = { is_nomad = yes NOT = { has_dlc = "The Cossacks" } } add_legitimacy = 15 }
+		if = { limit = { is_emperor_of_china = yes has_dlc = "Mandate of Heaven" } add_meritocracy = 15 } 
+	}
+	
+	modifier = {
+	}
+
+	chance = {
+		factor = 1
+	}
+	
+	ai_will_do = {
+		factor = 1	
+	}	
+}

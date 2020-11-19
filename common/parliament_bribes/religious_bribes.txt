@@ -1,0 +1,90 @@
+religious_bribe_1 = {
+	trigger = {
+		uses_piety = yes
+		NOT = { piety = -0.25 }
+	}
+	
+	effect = {
+		add_piety = 0.05
+	}
+	
+	ai_will_do = {
+		factor = 1
+	}	
+}
+
+religious_bribe_2 = {
+	trigger = {
+		uses_piety = yes
+		piety = 0.25
+	}
+	
+	effect = {
+		add_piety = -0.05
+	}
+	
+	ai_will_do = {
+		factor = 1
+	}	
+}
+
+religious_bribe_3 = {
+	trigger = {
+		OR = {
+			AND = {
+				religion_group = daedric_group_1
+				FROM = { religion_group = daedric_group_1 }
+			}
+			AND = {
+				religion = sload_faith
+				FROM = { religion = sload_faith }
+			}
+			AND = {
+				religion = cult_of_black_worm
+				FROM = { religion = cult_of_black_worm }
+			}
+		}
+		church_power = 10
+	}
+	
+	effect = {
+		add_church_power = -10
+	}
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+religious_bribe_4 = {
+	trigger = {
+		religion = marukhism
+		FROM = { religion = marukhism }
+		has_dlc = "Wealth of Nations"
+		fervor = 10
+	}
+	
+	effect = {
+		add_fervor = -10
+	}
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+religious_bribe_5 = {
+	trigger = {
+		religion = dragon_cult
+		FROM = { religion = dragon_cult }
+		patriarch_authority = 0.05
+	}
+	
+	effect = {
+		add_patriarch_authority = -0.05
+	}
+	
+	ai_will_do = {
+		factor = 1
+	}
+}

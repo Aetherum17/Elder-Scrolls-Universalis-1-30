@@ -1,4 +1,22 @@
-estate_church_bribe = {
+estate_bribe_1 = {
+	trigger = {
+		crown_land_share = 10
+		NOT = { crown_land_share = 100 }
+	}
+	
+	effect = {
+		change_estate_land_share = {
+			estate = all
+			share = 2
+		}
+	}
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+estate_bribe_2 = {
 	trigger = {
 		NOT = { has_estate_influence_modifier = { estate = estate_church modifier = EST_VAL_SEAT_BRIBED value = 30 } }
 		estate_territory = {
@@ -11,7 +29,7 @@ estate_church_bribe = {
 		add_estate_influence_modifier = {
             estate = estate_church
             desc = EST_VAL_SEAT_BRIBED
-            influence = 2
+            influence = 2.5
             duration = 9125
             add = yes
         }
@@ -19,19 +37,10 @@ estate_church_bribe = {
 	
 	ai_will_do = {
 		factor = 1
-		modifier = {
-			factor = 0.1
-			estate_influence = { estate = estate_church influence = 70 }
-		}
-
-		modifier = {
-			factor = 0
-			estate_influence = { estate = estate_church influence = 85 }
-		}
 	}
 }
 
-estate_nobles_bribe = {
+estate_bribe_3 = {
 	trigger = {
 		NOT = { has_estate_influence_modifier = { estate = estate_nobles modifier = EST_VAL_SEAT_BRIBED value = 30 } }
 		estate_territory = {
@@ -44,7 +53,7 @@ estate_nobles_bribe = {
 		add_estate_influence_modifier = {
             estate = estate_nobles
             desc = EST_VAL_SEAT_BRIBED
-            influence = 2
+            influence = 2.5
             duration = 9125
             add = yes
         }
@@ -52,19 +61,10 @@ estate_nobles_bribe = {
 	
 	ai_will_do = {
 		factor = 1
-		modifier = {
-			factor = 0.1
-			estate_influence = { estate = estate_nobles influence = 70 }
-		}
-
-		modifier = {
-			factor = 0
-			estate_influence = { estate = estate_nobles influence = 85 }
-		}
 	}
 }
 
-estate_burghers_bribe = {
+estate_bribe_4 = {
 	trigger = {
 		NOT = { has_estate_influence_modifier = { estate = estate_burghers modifier = EST_VAL_SEAT_BRIBED value = 30 } }
 		estate_territory = {
@@ -77,7 +77,7 @@ estate_burghers_bribe = {
 		add_estate_influence_modifier = {
             estate = estate_burghers
             desc = EST_VAL_SEAT_BRIBED
-            influence = 2
+            influence = 2.5
             duration = 9125
             add = yes
         }
@@ -85,19 +85,10 @@ estate_burghers_bribe = {
 	
 	ai_will_do = {
 		factor = 1
-		modifier = {
-			factor = 0.1
-			estate_influence = { estate = estate_burghers influence = 70 }
-		}
-
-		modifier = {
-			factor = 0
-			estate_influence = { estate = estate_burghers influence = 85 }
-		}
 	}
 }
 
-estate_cossacks_bribe = {
+estate_bribe_5 = {
 	trigger = {
 		NOT = { has_estate_influence_modifier = { estate = estate_cossacks modifier = EST_VAL_SEAT_BRIBED value = 30 } }
 		estate_territory = {
@@ -110,7 +101,7 @@ estate_cossacks_bribe = {
 		add_estate_influence_modifier = {
             estate = estate_cossacks
             desc = EST_VAL_SEAT_BRIBED
-            influence = 2
+            influence = 2.5
             duration = 9125
             add = yes
         }
@@ -118,19 +109,10 @@ estate_cossacks_bribe = {
 	
 	ai_will_do = {
 		factor = 1
-		modifier = {
-			factor = 0.1
-			estate_influence = { estate = estate_cossacks influence = 70 }
-		}
-
-		modifier = {
-			factor = 0
-			estate_influence = { estate = estate_cossacks influence = 85 }
-		}
 	}
 }
 
-estate_brahmins_bribe = {
+estate_bribe_6 = {
 	trigger = {
 		NOT = { has_estate_influence_modifier = { estate = estate_brahmins modifier = EST_VAL_SEAT_BRIBED value = 30 } }
 		estate_territory = {
@@ -143,7 +125,7 @@ estate_brahmins_bribe = {
 		add_estate_influence_modifier = {
             estate = estate_brahmins
             desc = EST_VAL_SEAT_BRIBED
-            influence = 2
+            influence = 2.5
             duration = 9125
             add = yes
         }
@@ -151,19 +133,10 @@ estate_brahmins_bribe = {
 	
 	ai_will_do = {
 		factor = 1
-		modifier = {
-			factor = 0.1
-			estate_influence = { estate = estate_brahmins influence = 70 }
-		}
-
-		modifier = {
-			factor = 0
-			estate_influence = { estate = estate_brahmins influence = 85 }
-		}
 	}
 }
 
-estate_maratha_bribe = {
+estate_bribe_7 = {
 	trigger = {
 		NOT = { has_estate_influence_modifier = { estate = estate_maratha modifier = EST_VAL_SEAT_BRIBED value = 30 } }
 		estate_territory = {
@@ -176,7 +149,7 @@ estate_maratha_bribe = {
 		add_estate_influence_modifier = {
             estate = estate_maratha
             desc = EST_VAL_SEAT_BRIBED
-            influence = 2
+            influence = 2.5
             duration = 9125
             add = yes
         }
@@ -184,19 +157,10 @@ estate_maratha_bribe = {
 	
 	ai_will_do = {
 		factor = 1
-		modifier = {
-			factor = 0.1
-			estate_influence = { estate = estate_maratha influence = 70 }
-		}
-
-		modifier = {
-			factor = 0
-			estate_influence = { estate = estate_maratha influence = 85 }
-		}
 	}
 }
 
-estate_vaisyas_bribe = {
+estate_bribe_8 = {
 	trigger = {
 		NOT = { has_estate_influence_modifier = { estate = estate_vaisyas modifier = EST_VAL_SEAT_BRIBED value = 30 } }
 		estate_territory = {
@@ -209,7 +173,7 @@ estate_vaisyas_bribe = {
 		add_estate_influence_modifier = {
             estate = estate_vaisyas
             desc = EST_VAL_SEAT_BRIBED
-            influence = 2
+            influence = 2.5
             duration = 9125
             add = yes
         }
@@ -217,19 +181,10 @@ estate_vaisyas_bribe = {
 	
 	ai_will_do = {
 		factor = 1
-		modifier = {
-			factor = 0.1
-			estate_influence = { estate = estate_vaisyas influence = 70 }
-		}
-
-		modifier = {
-			factor = 0
-			estate_influence = { estate = estate_vaisyas influence = 85 }
-		}
 	}
 }
 
-estate_dhimmi_bribe = {
+estate_bribe_9 = {
 	trigger = {
 		NOT = { has_estate_influence_modifier = { estate = estate_dhimmi modifier = EST_VAL_SEAT_BRIBED value = 30 } }
 		estate_territory = {
@@ -242,7 +197,7 @@ estate_dhimmi_bribe = {
 		add_estate_influence_modifier = {
             estate = estate_dhimmi
             desc = EST_VAL_SEAT_BRIBED
-            influence = 2
+            influence = 2.5
             duration = 9125
             add = yes
         }
@@ -250,19 +205,10 @@ estate_dhimmi_bribe = {
 	
 	ai_will_do = {
 		factor = 1
-		modifier = {
-			factor = 0.1
-			estate_influence = { estate = estate_dhimmi influence = 70 }
-		}
-
-		modifier = {
-			factor = 0
-			estate_influence = { estate = estate_dhimmi influence = 85 }
-		}
 	}
 }
 
-estate_jains_bribe = {
+estate_bribe_10 = {
 	trigger = {
 		NOT = { has_estate_influence_modifier = { estate = estate_jains modifier = EST_VAL_SEAT_BRIBED value = 30 } }
 		estate_territory = {
@@ -275,7 +221,7 @@ estate_jains_bribe = {
 		add_estate_influence_modifier = {
             estate = estate_jains
             desc = EST_VAL_SEAT_BRIBED
-            influence = 2
+            influence = 2.5
             duration = 9125
             add = yes
         }
@@ -283,19 +229,10 @@ estate_jains_bribe = {
 	
 	ai_will_do = {
 		factor = 1
-		modifier = {
-			factor = 0.1
-			estate_influence = { estate = estate_jains influence = 70 }
-		}
-
-		modifier = {
-			factor = 0
-			estate_influence = { estate = estate_jains influence = 85 }
-		}
 	}
 }
 
-estate_rajput_bribe = {
+estate_bribe_11 = {
 	trigger = {
 		NOT = { has_estate_influence_modifier = { estate = estate_rajput modifier = EST_VAL_SEAT_BRIBED value = 30 } }
 		estate_territory = {
@@ -308,7 +245,7 @@ estate_rajput_bribe = {
 		add_estate_influence_modifier = {
             estate = estate_rajput
             desc = EST_VAL_SEAT_BRIBED
-            influence = 2
+            influence = 2.5
             duration = 9125
             add = yes
         }
@@ -316,14 +253,5 @@ estate_rajput_bribe = {
 	
 	ai_will_do = {
 		factor = 1
-		modifier = {
-			factor = 0.1
-			estate_influence = { estate = estate_rajput influence = 70 }
-		}
-
-		modifier = {
-			factor = 0
-			estate_influence = { estate = estate_rajput influence = 85 }
-		}
 	}
 }

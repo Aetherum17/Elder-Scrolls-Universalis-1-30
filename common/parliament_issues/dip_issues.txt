@@ -2,7 +2,7 @@ dip_issue_1 = {
 	category = 2 		
 
 	allow = {
-		always = yes
+		num_of_colonies = 1
 	}
 	
 	effect = {
@@ -27,7 +27,7 @@ dip_issue_2 = {
 	category = 2		
 
 	allow = {
-		always = yes
+		vassal = 1
 	}
 	
 	effect = {
@@ -53,7 +53,9 @@ dip_issue_3 = {
 	category = 2		
 
 	allow = {
-		always = yes
+		any_owned_province = {
+			nationalism = 1
+		}
 	}
 	
 	effect = {
@@ -79,7 +81,9 @@ dip_issue_4 = {
 	category = 2		
 
 	allow = {
-		always = yes
+		any_neighbor_country = {
+			is_rival = ROOT
+		}
 	}
 	
 	effect = {
@@ -105,7 +109,7 @@ dip_issue_5 = {
 	category = 2		
 
 	allow = {
-		always = yes
+		num_of_ports = 10
 	}
 	
 	effect = {
@@ -130,7 +134,7 @@ dip_issue_6 = {
 	category = 2		
 
 	allow = {
-		always = yes
+		heavy_ship_fraction = 0.15
 	}
 	
 	effect = {
@@ -163,7 +167,7 @@ dip_issue_7 = {
 	}
 	
 	effect = {
-		add_yearly_sailors = 1.0
+		navy_size_percentage = 0.75
 	}
 	
 	modifier = {
@@ -180,7 +184,11 @@ dip_issue_8 = {
 	category = 2		
 
 	allow = {
-		always = yes
+		any_owned_province = {
+			NOT = {
+				capital_scope = ROOT
+			}
+		}
 	}
 	
 	effect = {
@@ -205,7 +213,7 @@ dip_issue_9 = {
 	category = 2		
 
 	allow = {
-		always = yes
+		trade_income_percentage = 0.25
 	}
 	
 	effect = {
@@ -234,7 +242,7 @@ dip_issue_10 = {
 	category = 2		
 
 	allow = {
-		always = yes
+		is_in_war = yes
 	}
 	
 	effect = {
@@ -255,7 +263,7 @@ dip_issue_11 = {
 	category = 2		
 
 	allow = {
-		always = yes
+		sailors_percentage = 0.75
 	}
 	
 	effect = {
@@ -276,11 +284,16 @@ dip_issue_12 = {
 	category = 2		
 
 	allow = {
-		always = yes
+		any_owned_province = {
+			NOT = { base_production = 5 }
+		}
 	}
 	
 	effect = {
 		random_owned_province = {
+			limit = {
+				NOT = { base_production = 5 }
+			}
 			add_base_production = 1
 		}
 	}
@@ -299,7 +312,7 @@ dip_issue_13 = {
 	category = 2		
 
 	allow = {
-		always = yes
+		NOT = { navy_tradition = 50 }
 	}
 	
 	effect = {
@@ -320,7 +333,9 @@ dip_issue_14 = {
 	category = 2		
 
 	allow = {
-		always = yes
+		any_owned_province = {
+			is_owned_by_trade_company = yes
+		}
 	}
 	
 	effect = {
@@ -349,7 +364,10 @@ dip_issue_15 = {
 	category = 2		
 
 	allow = {
-		always = yes
+		any_owned_province = {
+			province_has_center_of_trade_of_level = 1
+			NOT = { province_has_center_of_trade_of_level = 3 }
+		}
 	}
 	
 	effect = {

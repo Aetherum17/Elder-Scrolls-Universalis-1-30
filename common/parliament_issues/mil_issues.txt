@@ -2,7 +2,15 @@ mil_issue_1 = {
 	category = 1	
 
 	allow = {
-		always = yes
+		num_of_owned_provinces_with = {
+			value = 5
+			OR = {
+				has_building = fort_15th
+				has_building = fort_16th
+				has_building = fort_17th
+				has_building = fort_18th
+			}
+		}
 	}
 	
 	effect = {
@@ -31,7 +39,9 @@ mil_issue_2 = {
 	category = 1	
 
 	allow = {
-		always = yes
+		any_neighbor_country = {
+			defensive_war_with = ROOT
+		}
 	}
 	
 	effect = {
@@ -52,7 +62,7 @@ mil_issue_3 = {
 	category = 1	
 
 	allow = {
-		always = yes
+		NOT = { manpower_percentage = 0.75 }
 	}
 	
 	effect = {
@@ -81,7 +91,9 @@ mil_issue_4 = {
 	category = 1	
 
 	allow = {
-		always = yes
+		any_neighbor_country = {
+			offensive_war_with = ROOT
+		}
 	}
 	
 	effect = {
@@ -110,7 +122,7 @@ mil_issue_5 = {
 	category = 1	
 
 	allow = {
-		always = yes
+		NOT = { num_of_hired_mercenary_companies = 1 }
 	}
 	
 	effect = {
@@ -139,7 +151,7 @@ mil_issue_6 = {
 	category = 1	
 
 	allow = {
-		always = yes
+		num_of_hired_mercenary_companies = 1
 	}
 	
 	effect = {
@@ -168,11 +180,11 @@ mil_issue_7 = {
 	category = 1	
 
 	allow = {
-		always = yes
+		NOT = { army_professionalism = 0.5 }
 	}
 	
 	effect = {
-		add_army_professionalism = 5
+		add_army_professionalism = 0.05
 	}
 	
 	modifier = {
@@ -189,7 +201,7 @@ mil_issue_8 = {
 	category = 1	
 
 	allow = {
-		always = yes
+		army_size_percentage = 0.75
 	}
 	
 	effect = {
@@ -214,7 +226,7 @@ mil_issue_9 = {
 	category = 1	
 
 	allow = {
-		always = yes
+		NOT = { army_tradition = 50 }
 	}
 	
 	effect = {
@@ -235,7 +247,7 @@ mil_issue_10 = {
 	category = 1	
 
 	allow = {
-		always = yes
+		war_exhaustion = 2.5
 	}
 	
 	effect = {

@@ -1,0 +1,165 @@
+economical_bribe_1 = {
+	trigger = {
+		FROM = { is_capital = no }
+		FROM = { NOT = { local_autonomy = 75 } }
+	}
+	
+	effect = {
+		FROM = { add_local_autonomy = 25 }
+	}
+	
+	ai_will_do = {
+		factor = 1
+	}	
+}
+
+#################################################
+
+economical_bribe_2 = {
+	trigger = {
+		always = yes
+	}
+	
+	effect = {
+		add_years_of_income = -0.10
+	}
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+economical_bribe_3 = {
+	trigger = {
+		NOT = { corruption = 99.91 }
+	}
+	
+	effect = {
+		add_corruption = 0.1
+	}
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+economical_bribe_4 = {
+	trigger = {
+		always = yes
+	}
+	
+	effect = {
+		add_inflation = 0.10
+	}
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+#################################################
+
+economical_bribe_5 = {
+	trigger = {
+		FROM = {
+			current_institution = 10
+			NOT = { current_institution = 100 }
+		}
+	}
+	
+	effect = {
+		FROM = {
+			add_next_institution_embracement = -10
+		}
+	}
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+economical_bribe_6 = {
+	trigger = {
+		has_advisor = yes
+	}
+	
+	effect = {
+		kill_advisor = random
+	}
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+#################################################
+
+economical_bribe_7 = {
+	trigger = {
+		mercantilism = 1
+	}
+	
+	effect = {
+		add_mercantilism = -1
+	}
+	
+	ai_will_do = {
+		factor = 0
+	}	
+}
+
+#################################################
+
+economical_bribe_8 = {
+	trigger = {
+		any_owned_province = {
+			base_tax = 2
+		}
+	}
+	
+	effect = {
+		random_owned_province = {
+			add_base_tax = -1
+		}
+	}
+	
+	ai_will_do = {
+		factor = 0
+	}	
+}
+
+economical_bribe_9 = {
+	trigger = {
+		any_owned_province = {
+			base_production = 2
+		}
+	}
+	
+	effect = {
+		random_owned_province = {
+			add_base_production = -1
+		}
+	}
+	
+	ai_will_do = {
+		factor = 0
+	}	
+}
+
+economical_bribe_10 = {
+	trigger = {
+		any_owned_province = {
+			base_manpower = 2
+		}
+	}
+	
+	effect = {
+		random_owned_province = {
+			add_base_manpower = -1
+		}
+	}
+	
+	ai_will_do = {
+		factor = 0
+	}	
+}
