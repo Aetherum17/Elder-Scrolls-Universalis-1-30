@@ -400,3 +400,14 @@ entity = {
 		Right_hand_node = "african_spear" 
 	}
 }
+
+entity = {
+	name = "DWEMER_INFANTRY_1"
+	pdxmesh = "dwemer_generic_infantry_01_mesh"
+
+	state = { name = "idle" 		animation = "idle" }
+	state = { name = "walk" 		animation = "walk" }
+	state = { name = "attack"		animation = "attack" }
+	state = { name = "retreat"		animation = "retreat" }
+	
+}

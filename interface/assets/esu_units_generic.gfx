@@ -289,4 +289,17 @@ objectTypes = {
 		
 		scale = 0.5
 	}
+	
+	pdxmesh = {
+		name = "dwemer_generic_infantry_01_mesh"
+		file = "gfx/models/Units/dwarven_sphere.mesh"			
+
+		animation = { id = "attack"				type = "dwarven_sphere_attack" }
+		animation = { id = "idle"				type = "dwarven_sphere_idle" }
+		animation = { id = "walk"				type = "dwarven_sphere_moving" }
+		animation = { id = "death"				type = "dwarven_sphere_moving" }
+		animation = { id = "retreat"			type = "dwarven_sphere_moving" }		
+		
+		scale = 2
+	}
 }
