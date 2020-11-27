@@ -48,7 +48,7 @@ country_event = {
 		}
 		create_vassal = UA1
         UA1 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        UA1 = { change_government_reform_progress = -99999 }
+        UA1 = { change_government_reform_progress = -99999 change_religion = ROOT }
 		}
 		
 		if = {
@@ -67,7 +67,7 @@ country_event = {
 		}
 		create_vassal = UA2
         UA2 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        UA2 = { change_government_reform_progress = -99999 }
+        UA2 = { change_government_reform_progress = -99999 change_religion = ROOT }
 		}
 		
 		if = {
@@ -86,7 +86,7 @@ country_event = {
 		}
 		create_vassal = UA3
         UA3 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        UA3 = { change_government_reform_progress = -99999 }
+        UA3 = { change_government_reform_progress = -99999 change_religion = ROOT }
 		}
 		
 		if = {
@@ -105,7 +105,7 @@ country_event = {
 		}
 		create_vassal = UA4
         UA4 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        UA4 = { change_government_reform_progress = -99999 }
+        UA4 = { change_government_reform_progress = -99999 change_religion = ROOT }
 		}
 		
 		if = {
@@ -124,7 +124,7 @@ country_event = {
 		}
 		create_vassal = UA5
         UA5 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        UA5 = { change_government_reform_progress = -99999 }
+        UA5 = { change_government_reform_progress = -99999 change_religion = ROOT }
 		}
 		
 		if = {
@@ -143,7 +143,7 @@ country_event = {
 		}
 		create_vassal = UA6
         UA6 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        UA6 = { change_government_reform_progress = -99999 }
+        UA6 = { change_government_reform_progress = -99999 change_religion = ROOT }
 		}
 		
 		if = {
@@ -162,7 +162,7 @@ country_event = {
 		}
 		create_vassal = UA7
         UA7 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        UA7 = { change_government_reform_progress = -99999 }
+        UA7 = { change_government_reform_progress = -99999 change_religion = ROOT }
 		}
 		
 	    }
