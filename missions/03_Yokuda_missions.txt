@@ -60,7 +60,6 @@ sword_singers_missions = {
 				} 
 			}
 			else = {
-				limit = { NOT = { has_dlc = "Cradle of Civilization" } }
 				add_country_modifier = {
 					name = "yok_mi_sword_singers_two"
 					duration = 9125
@@ -83,7 +82,7 @@ sword_singers_missions = {
 					army_professionalism = 0.5
 				}
 			}
-			else = { limit = { NOT = { has_dlc = "Cradle of Civilization" } } army_tradition = 0.5 }
+			else = {  army_tradition = 0.5 }
         }
         
         effect = {
@@ -423,13 +422,13 @@ mansel_sesnit_missions = {
         
         provinces_to_highlight = {
             region = yokuda_lr
-			limit = { culture = yokudan }
+			culture = yokudan
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
         }
     
         trigger = {
             yokuda_lr = {
-				limit = { culture = yokudan }
+				culture = yokudan
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -480,24 +479,24 @@ mansel_sesnit_missions = {
 		position = 12
 		required_missions = { }
 		trigger = {
-			owns_core_province = 420
-			owns_core_province = 443
-			owns_core_province = 426
-			owns_core_province = 439
-			owns_core_province = 464
+			owns_core_province = 2668
+			owns_core_province = 3514
+			owns_core_province = 3497
+			owns_core_province = 3507
+			owns_core_province = 3487
 		}
 		effect = {
 		    custom_tooltip = es_conquest_of_southern_kamal_lr_tooltip
 		    add_prestige = 10
-			hidden_effect = {
-			every_province = {
-			limit = {
-			region = southern_kamal_lr
-			is_city = yes
-			}
-			add_permanent_claim = ROOT
-			}
-			}
+			#hidden_effect = {
+			#every_province = {
+			#limit = {
+			#region = southern_kamal_lr
+			#is_city = yes
+			#}
+			#add_permanent_claim = ROOT
+			#}
+			#}
 			
 			1299 = { add_core = ROOT }
 			if = { limit = { ai = yes 1299 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
@@ -510,11 +509,11 @@ mansel_sesnit_missions = {
 		position = 13
 		required_missions = { }
 		trigger = {
-			owns_core_province = 479
+			owns_core_province = 508
 			owns_core_province = 503
-			owns_core_province = 488
-			owns_core_province = 517
-			owns_core_province = 471
+			owns_core_province = 493
+			owns_core_province = 2607
+			owns_core_province = 2573
 		}
 		effect = {
 		    custom_tooltip = es_conquest_of_northern_kamal_lr_tooltip
@@ -522,7 +521,7 @@ mansel_sesnit_missions = {
 			hidden_effect = {
 			every_province = {
 			limit = {
-			region = northern_kamal_lr
+			region = kamal_lr
 			is_city = yes
 			}
 			add_permanent_claim = ROOT
@@ -649,40 +648,25 @@ yokudan_main_missions = {
         }
         
         effect = {
-            333 = {				#Jalfaye
-				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
+			if = { 
+				limit = { 333 = { NOT = { is_permanent_claim = ROOT } NOT = { is_core = ROOT } } }
+				333 = { add_permanent_claim = ROOT }
 			}
-			335 = {				#Yath
-				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
+			if = { 
+				limit = { 335 = { NOT = { is_permanent_claim = ROOT } NOT = { is_core = ROOT } } }
+				335 = { add_permanent_claim = ROOT }
 			}
-            355 = {				#Samara
-				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
+			if = { 
+				limit = { 355 = { NOT = { is_permanent_claim = ROOT } NOT = { is_core = ROOT } } }
+				355 = { add_permanent_claim = ROOT }
 			}
-            3443 = {			#Haearon
-				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
+			if = { 
+				limit = { 3443 = { NOT = { is_permanent_claim = ROOT } NOT = { is_core = ROOT } } }
+				3443 = { add_permanent_claim = ROOT }
 			}
-            3467 = {			#Toramon
-				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
+			if = { 
+				limit = { 3467 = { NOT = { is_permanent_claim = ROOT } NOT = { is_core = ROOT } } }
+				3467 = { add_permanent_claim = ROOT }
 			}
 			add_country_modifier = {
 				name = "yok_mi_rule_totambu"
@@ -2021,11 +2005,9 @@ yokudan_high_rock_missions = {
 			}
 			NOT = { 
 				all_neighbor_country = { 
-					limit = {
-						OR = {
-							region = high_rock_lr
-							region = wrothgar_lr
-						}
+					OR = {
+						capital_scope = { region = hgh_rock_lr }
+						capital_scope = { region = wrothgar_lr }
 					}
 					army_size = ROOT 
 				} 
