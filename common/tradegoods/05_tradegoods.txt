@@ -197,19 +197,16 @@ slaves = {
 	}
 	chance = {
 		factor = 20
-		modifier = {
+	
+	modifier = {
 		factor = 0
-			OR = {
-			NOT = { continent = Tamriel }
-			AND = {
+			continent = Tamriel
 		    NOT = { superregion = black_marsh_superregion } 
 			NOT = { superregion = hammerfell_superregion } 
 			NOT = { superregion = elsweyr_superregion } 
-			}
-			}
 		}
 		
-		 modifier = {
+		modifier = {
 		factor = 0
 		OR = {
 			has_terrain = glacier

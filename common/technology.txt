@@ -11,13 +11,11 @@ groups = {
 		start_level = 1
 		start_cost_modifier = 0
 		nation_designer_trigger = {
-				capital_scope = {
-					continent = Tamriel
-				}
+			always = no
 		}
 		nation_designer_cost = {
 		    trigger = {
-			always = yes
+				always = no
 			}
 			value = 0
 		}
