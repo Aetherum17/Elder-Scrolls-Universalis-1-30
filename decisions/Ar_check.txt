@@ -1,0 +1,110 @@
+country_decisions = {
+	dt_check_own_treasure = {
+		major = yes
+		potential = {
+			ai = no
+			OR = {
+				has_country_modifier = odhma_infinium 
+				has_country_modifier = skull_of_corruption 
+				has_country_modifier = masque_of_clavicus_vile 
+				has_country_modifier = azura_star 
+				has_country_modifier = black_star 
+				has_country_modifier = staff_of_magnus 
+				has_country_modifier = eye_of_magnus 
+				has_country_modifier = heart_of_lorkhan 
+				has_country_modifier = skeleton_key 
+				has_country_modifier = sanguine_rose 
+				has_country_modifier = ring_of_hircine 
+				has_country_modifier = hide_of_savior 
+				has_country_modifier = wabbajack 
+				has_country_modifier = brush_of_truepaint 
+				has_country_modifier = spellbreaker 
+				has_country_modifier = volendrung 
+				has_country_modifier = dawnbreaker 
+				has_country_modifier = ebony_blade 
+				has_country_modifier = ebony_male 
+				has_country_modifier = mace_of_molag_bal 
+				has_country_modifier = razor_of_mehrunes 
+				has_country_modifier = ring_of_namira 
+				has_country_modifier = chrysamere 
+				has_country_modifier = hammer_of_stendarr 
+				has_country_modifier = mail_of_lord 
+				has_country_modifier = shield_of_auriel 
+				has_country_modifier = bow_of_auriel
+				has_country_modifier = keening 
+				has_country_modifier = etherial_crown 
+				has_country_modifier = etherial_shield 
+				has_country_modifier = etherial_staff 
+				has_country_modifier = bow_of_fate 
+				has_country_modifier = visage_of_mzund 
+				has_country_modifier = zephyr 
+				has_country_modifier = spider_control_rod 
+				has_country_modifier = goldbrand 
+				has_country_modifier = epistolary_acumen 
+				has_country_modifier = filament_and_filigree 
+				has_country_modifier = the_hidden_twilight 
+				has_country_modifier = the_sallow_regent 
+				has_country_modifier = the_winds_of_change 
+				has_country_modifier = untold_legends 
+				has_country_modifier = waking_dreams 
+				has_country_modifier = ring_of_kajiiti 
+			}
+
+		}
+		allow = {	
+			custom_trigger_tooltip = {
+				tooltip = dt_check_own_treasure
+				always = no
+			}	
+		}
+		effect = {
+			if = {	limit = {	has_country_modifier = odhma_infinium 	}	custom_tooltip = dt_check_own_treasure_odhma_infinium 	}
+			if = {	limit = {	has_country_modifier = skull_of_corruption 	}	custom_tooltip = dt_check_own_treasure_skull_of_corruption 	}
+			if = {	limit = {	has_country_modifier = masque_of_clavicus_vile 	}	custom_tooltip = dt_check_own_treasure_masque_of_clavicus_vile 	}
+			if = {	limit = {	has_country_modifier = azura_star 		}	custom_tooltip = dt_check_own_treasure_azura_star 		}
+			if = {	limit = {	has_country_modifier = black_star 		}	custom_tooltip = dt_check_own_treasure_black_star 		}
+			if = {	limit = {	has_country_modifier = staff_of_magnus 	}	custom_tooltip = dt_check_own_treasure_staff_of_magnus 	}
+			if = {	limit = {	has_country_modifier = eye_of_magnus 	}	custom_tooltip = dt_check_own_treasure_eye_of_magnus 		}
+			if = {	limit = {	has_country_modifier = heart_of_lorkhan 	}	custom_tooltip = dt_check_own_treasure_heart_of_lorkhan 	}
+			if = {	limit = {	has_country_modifier = skeleton_key 		}	custom_tooltip = dt_check_own_treasure_skeleton_key 		}
+			if = {	limit = {	has_country_modifier = sanguine_rose 		}	custom_tooltip = dt_check_own_treasure_sanguine_rose 		}
+			if = {	limit = {	has_country_modifier = ring_of_hircine 	}	custom_tooltip = dt_check_own_treasure_ring_of_hircine 		}
+			if = {	limit = {	has_country_modifier = hide_of_savior 		}	custom_tooltip = dt_check_own_treasure_hide_of_savior 		}
+			if = {	limit = {	has_country_modifier = wabbajack 		}	custom_tooltip = dt_check_own_treasure_wabbajack 		}
+			if = {	limit = {	has_country_modifier = brush_of_truepaint 	}	custom_tooltip = dt_check_own_treasure_brush_of_truepaint 	}
+			if = {	limit = {	has_country_modifier = spellbreaker 		}	custom_tooltip = dt_check_own_treasure_spellbreaker 		}
+			if = {	limit = {	has_country_modifier = volendrung 		}	custom_tooltip = dt_check_own_treasure_volendrung 		}
+			if = {	limit = {	has_country_modifier = dawnbreaker 		}	custom_tooltip = dt_check_own_treasure_dawnbreaker 		}
+			if = {	limit = {	has_country_modifier = ebony_blade 		}	custom_tooltip = dt_check_own_treasure_ebony_blade 		}
+			if = {	limit = {	has_country_modifier = ebony_male 		}	custom_tooltip = dt_check_own_treasure_ebony_male 		}
+			if = {	limit = {	has_country_modifier = mace_of_molag_bal 	}	custom_tooltip = dt_check_own_treasure_mace_of_molag_bal 	}
+			if = {	limit = {	has_country_modifier = razor_of_mehrunes 	}	custom_tooltip = dt_check_own_treasure_razor_of_mehrunes 	}
+			if = {	limit = {	has_country_modifier = ring_of_namira 	}	custom_tooltip = dt_check_own_treasure_ring_of_namira 		}
+			if = {	limit = {	has_country_modifier = chrysamere 		}	custom_tooltip = dt_check_own_treasure_chrysamere 		}
+			if = {	limit = {	has_country_modifier = hammer_of_stendarr 	}	custom_tooltip = dt_check_own_treasure_hammer_of_stendarr 	}
+			if = {	limit = {	has_country_modifier = mail_of_lord 		}	custom_tooltip = dt_check_own_treasure_mail_of_lord 		}
+			if = {	limit = {	has_country_modifier = shield_of_auriel 	}	custom_tooltip = dt_check_own_treasure_shield_of_auriel 		}
+			if = {	limit = {	has_country_modifier = bow_of_auriel	 	}	custom_tooltip = dt_check_own_treasure_bow_of_auriel 		}
+			if = {	limit = {	has_country_modifier = keening 		}	custom_tooltip = dt_check_own_treasure_keening 		}
+			if = {	limit = {	has_country_modifier = etherial_crown 		}	custom_tooltip = dt_check_own_treasure_etherial_crown 		}
+			if = {	limit = {	has_country_modifier = etherial_shield 		}	custom_tooltip = dt_check_own_treasure_etherial_shield 		}
+			if = {	limit = {	has_country_modifier = etherial_staff 		}	custom_tooltip = dt_check_own_treasure_etherial_staff 		}
+			if = {	limit = {	has_country_modifier = bow_of_fate 		}	custom_tooltip = dt_check_own_treasure_bow_of_fate 		}
+			if = {	limit = {	has_country_modifier = visage_of_mzund 	}	custom_tooltip = dt_check_own_treasure_visage_of_mzund	}
+			if = {	limit = {	has_country_modifier = zephyr 		}	custom_tooltip = dt_check_own_treasure_zephyr 		}
+			if = {	limit = {	has_country_modifier = spider_control_rod 	}	custom_tooltip = dt_check_own_treasure_spider_control_rod 	}
+			if = {	limit = {	has_country_modifier = goldbrand 		}	custom_tooltip = dt_check_own_treasure_goldbrand 		}
+			if = {	limit = {	has_country_modifier = epistolary_acumen 	}	custom_tooltip = dt_check_own_treasure_epistolary_acumen 	}
+			if = {	limit = {	has_country_modifier = filament_and_filigree 	}	custom_tooltip = dt_check_own_treasure_filament_and_filigree 	}
+			if = {	limit = {	has_country_modifier = the_hidden_twilight 	}	custom_tooltip = dt_check_own_treasure_the_hidden_twilight 	}
+			if = {	limit = {	has_country_modifier = the_sallow_regent 	}	custom_tooltip = dt_check_own_treasure_the_sallow_regent 	}
+			if = {	limit = {	has_country_modifier = the_winds_of_change 	}	custom_tooltip = dt_check_own_treasure_the_winds_of_change 	}
+			if = {	limit = {	has_country_modifier = untold_legends 	}	custom_tooltip = dt_check_own_treasure_untold_legends 		}
+			if = {	limit = {	has_country_modifier = waking_dreams 	}	custom_tooltip = dt_check_own_treasure_waking_dreams 		}
+			if = {	limit = {	has_country_modifier = ring_of_kajiiti 		}	custom_tooltip = dt_check_own_treasure_ring_of_kajiiti 		}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
