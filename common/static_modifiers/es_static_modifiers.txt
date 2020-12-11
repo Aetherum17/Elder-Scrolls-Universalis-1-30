@@ -97,13 +97,16 @@ difficulty_very_hard_ai = {
 ##########################################################################
 
 city = {
-	local_tax_modifier = 0.25
-	local_production_efficiency = 1.25
+	local_tax_modifier = 0.5
+	local_production_efficiency = 0.5
 	allowed_num_of_buildings = 16
 	local_sailors_modifier = 0.25
 	garrison_growth = 0.05
 	trade_value_modifier = -0.25
 	province_trade_power_modifier = -0.25
+	trade_value = 0.15
+	trade_goods_size = 0.15
+	province_trade_power_value = 0.15
 }
 
 port = {
@@ -284,6 +287,8 @@ development = {
 	local_build_cost = 0.015
 	local_build_time = -0.01
 	local_unrest = 0.1
+	trade_value = 0.005
+	trade_goods_size = 0.005
 }
 
 development_scaled = {
