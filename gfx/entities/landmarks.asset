@@ -1,4 +1,14 @@
 entity = {
+	name = "volcano_ash_emmiter"
+	pdxmesh = "volcano_ash_emmiter"
+	
+	state = {
+		name = "idle"	
+		event = { time = 0.07	particle = "volcano_ash_particle" }
+	}
+}
+
+entity = {
 	name = "imperial_city"
 	pdxmesh = "imperial_city"
 }

@@ -1,4 +1,20 @@
 type={
+	type="volcano_ash_emmiter"
+	use_animation=no
+	always_visible=yes
+	object={
+		name="red_mountain_ash"
+		hidden_on_start=no
+		position={
+			1850.000 30.000 1927.000 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+}
+
+type={
 	type="panama_canal"
 	use_animation=no
 	scale=1.500000
@@ -243,6 +259,26 @@ type={
 		}
 	}
 }
+
+type={
+	type="netch"
+	use_animation=no
+	scale=2
+	always_visible=yes
+	object={
+		name="netch1"
+		hidden_on_start=yes
+		position={
+			1713.000 30.000 2055.000 
+		}
+		rotation={
+			0.000 40.000 0.000 
+		}
+	}
+}
+
+
+
 type={
 	type="desert_skeleton_mesh"
 	use_animation=no
