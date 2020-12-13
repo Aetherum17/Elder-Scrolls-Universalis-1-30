@@ -233,3 +233,17 @@ es_daedric_invasion = {
 	
 	war_name = ES_DAEDRIC_INVASION
 }
+
+es_become_elector_of_hre = {
+    type = take_capital
+	
+	badboy_factor = 1.0
+	prestige_factor = 1.0
+	peace_cost_factor = 1.0
+	
+	peace_options = {
+		es_new_hre_elector
+	}
+	
+	war_name = ES_BECOME_ELECTOR_OF_HRE
+}

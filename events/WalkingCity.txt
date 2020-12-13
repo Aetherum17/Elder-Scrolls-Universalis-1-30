@@ -22,9 +22,9 @@ country_event = {
 	option = {
 		name = "es_walking_city.1.a"
 		add_country_modifier = { name = "es_walking_city_timer" duration = 3650 hidden = yes }
-		add_adm_power = 100
-		add_dip_power = 100
-		add_mil_power = 100
+		add_adm_power = 50
+		add_dip_power = 50
+		add_mil_power = 50
 		if = { limit = { 820 = { is_capital = yes } } 5054 = { move_capital_effect = yes change_province_name = "Falinesti" rename_capital = "Falinesti" add_province_modifier = { name = "es_walking_city_modifier" duration = 3650 } } 820 = { change_province_name = "Old Falinesti" rename_capital = "Old Falinesti" } }
 		else_if = { limit = { 5054 = { is_capital = yes } } 4961 = { move_capital_effect = yes change_province_name = "Falinesti" rename_capital = "Falinesti" add_province_modifier = { name = "es_walking_city_modifier" duration = 3650 } } 5054 = { change_province_name = "Estdil" rename_capital = "Estdil" } }
 		else_if = { limit = { 4961 = { is_capital = yes } } 4931 = { move_capital_effect = yes change_province_name = "Falinesti" rename_capital = "Falinesti" add_province_modifier = { name = "es_walking_city_modifier" duration = 3650 } } 4961 = { change_province_name = "Rosewind" rename_capital = "Rosewind" } }

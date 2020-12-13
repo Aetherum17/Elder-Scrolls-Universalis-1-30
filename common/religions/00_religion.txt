@@ -27,6 +27,8 @@ polytheistic_group = {
 		
 		personal_deity = yes
 		
+		hre_religion = yes
+		
 		heretic = { ALTMERI_PANTHEON_HERETIC }	
 		
 		harmonized_modifier = harmonized_altmeri_pantheon
@@ -141,6 +143,8 @@ polytheistic_group = {
 		}
 		
 		personal_deity = yes
+		
+		hre_heretic_religion = yes
 		
 		heretic = { EIGHT_DIVINES_HERETIC }	
 		
@@ -1735,8 +1739,6 @@ harmony_group = {
 		heretic = { UNKNOWN_HERETIC }	
 		
 		uses_harmony = yes
-		
-		hre_religion = yes
 		
 		harmonized_modifier = harmonized_unknown_pantheon
 	}

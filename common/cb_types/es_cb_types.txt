@@ -176,3 +176,17 @@ cb_es_daedric_invasion = {
 
 	war_goal = es_daedric_invasion
 }
+
+cb_become_elector_of_hre = {
+	valid_for_subject = no
+
+	prerequisites = {
+		is_part_of_hre = yes
+		is_elector = no
+		FROM = {
+			is_elector = yes
+		}
+	}
+
+	war_goal = es_become_elector_of_hre
+}

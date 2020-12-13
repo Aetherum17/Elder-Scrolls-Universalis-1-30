@@ -42,7 +42,7 @@ country_event = {
 		limit = { capital_scope = { continent = Tamriel } } country_event = { id = es_0_scenario.1 days = 9125 tooltip = es_collapse.2.a.tt }
 		}
 		every_country = {
-		limit = { capital_scope = { continent = Tamriel } } country_event = { id = es_0_scenario.2 days = 9125 tooltip = es_collapse.2.a.tt }
+		limit = { capital_scope = { continent = Tamriel } any_owned_province = { is_capital = no has_port = yes } } country_event = { id = es_0_scenario.2 days = 9125 tooltip = es_collapse.2.a.tt }
 		}
 	}
 

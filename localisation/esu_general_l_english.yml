@@ -609,6 +609,12 @@
 
  cb_vassal_annex:0 "Annex Neigbour Vassal"
  cb_vassal_annex_desc:0 " "
+ 
+ cb_become_elector_of_hre:0 "Acquire the Imperial Elector Title"
+ cb_become_elector_of_hre_desc:0 " "
+ es_become_elector_of_hre:0 "Acquire the Title of the Imperial Elector"
+ es_become_elector_of_hre_desc:0 " "
+ ES_BECOME_ELECTOR_OF_HRE:0 "$ORDER$$FIRST$-$SECOND$ War for the Title of the Imperial Elector"
 
  cb_gn_empire:0 "Destroy the Great Nation"
  cb_gn_empire_desc:0 " "
@@ -2749,3 +2755,7 @@
  religious_bribe_5:0 "Make a Dragon Sacrifice"
  
  add_crown_land_share:0 "§YCrown Land Share is Increased§!"
+ 
+ PEACE_es_new_hre_elector: "Acquire the Title of the Imperial Elector"
+ CB_ALLOWED_es_new_hre_elector: "We will acquire the title of the Imperial Elector"
+ es_new_hre_elector_desc: "We become the new Imperial Elector."
