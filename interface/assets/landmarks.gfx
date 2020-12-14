@@ -2,8 +2,15 @@ objectTypes = {
 	
 	pdxmesh = {
 		name = "volcano_ash_emmiter"
-		file = "gfx\models\test_object.mesh"
+		file = "gfx\models\ash_emmiter.mesh"
 		scale = 0.75
+	}
+	
+	pdxmesh = {
+		name = "volcano_lava"
+		file = "gfx\models\mapitems\lava.mesh"
+		scale = 1.1
+		animation = { id = "idle"	type = "lava" }
 	}
 	
 	pdxmesh = {

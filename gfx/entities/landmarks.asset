@@ -5,7 +5,19 @@ entity = {
 	state = {
 		name = "idle"	
 		event = { time = 0.07	particle = "volcano_ash_particle" }
+		#event = { time = 0.07	particle = "volcano_lava_particle" }
 	}
+}
+
+entity = {
+	name = "volcano_lava"
+	pdxmesh = "volcano_lava"
+	
+	state = {
+		name = "idle"
+		animation = "idle"
+	}
+	
 }
 
 entity = {

@@ -15,6 +15,23 @@ type={
 }
 
 type={
+	type="volcano_lava"
+	use_animation=yes
+	always_visible=yes
+	scale = 4.000000
+	object={
+		name="red_mountain_lava"
+		hidden_on_start=no
+		position={
+			1851.000 39.000 1927.000 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+}
+
+type={
 	type="panama_canal"
 	use_animation=no
 	scale=1.500000
