@@ -1,10 +1,10 @@
 interaction = {
     key = sale_of_titles
     random_seed = crown_land_share
-	cooldown_months = 60
+	cooldown_months = 50
 
     trigger = {
-        crown_land_share = 0.1
+        crown_land_share = 0.05
         NOT = { num_of_rebel_armies = 1 }
 		NOT = { num_of_rebel_controlled_provinces = 1 }
 		hidden_trigger = { has_any_estates = yes }
@@ -68,7 +68,7 @@ interaction = {
         }
 
         custom_tooltip = ESTATES_SALE_OF_TITLES_DESC
-        give_estate_land_share_gigantic = { estate = all }
+        give_estate_land_share_massive = { estate = all }
         add_estate_loyalty = {
             estate = all
             loyalty = 10

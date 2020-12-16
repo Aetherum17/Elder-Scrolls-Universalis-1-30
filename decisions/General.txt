@@ -60,6 +60,7 @@ country_decisions = {
 		allow = {
 			dip_power = 100
             mil_power = 100
+			NOT = { adm_power = 2325 }
 		}
 		effect = {
 			add_adm_power = 175
@@ -75,6 +76,7 @@ country_decisions = {
 		allow = {
 			adm_power = 100
             mil_power = 100
+			NOT = { dip_power = 2325 }
 		}
 		effect = {
 			add_adm_power = -100
@@ -90,6 +92,7 @@ country_decisions = {
 		allow = {
 			adm_power = 100
             dip_power = 100
+			NOT = { mil_power = 2325 }
 		}
 		effect = {
 			add_adm_power = -100

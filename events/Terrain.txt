@@ -133,9 +133,9 @@ country_event = {
 
 country_event = {
 	id = es_terrain.12
-	title = "es_terrain.1.t"
-	desc = "es_terrain.1.d"
-	picture = TERRAIN_SANDSTORM_eventPicture
+	title = "es_terrain.11.t"
+	desc = "es_terrain.11.d"
+	picture = TERRAIN_FLOOD_eventPicture
 	
 	is_triggered_only = yes
 	
@@ -151,7 +151,7 @@ country_event = {
 	id = es_terrain.104
 	title = "es_terrain.1.t"
 	desc = "es_terrain.1.d"
-	picture = TERRAIN_FLOOD_eventPicture
+	picture = TERRAIN_ICE_AGE_eventPicture
 	
 	trigger = {
 	    tag = RED
@@ -166,13 +166,12 @@ country_event = {
 		name = "es_terrain.1.a"
 		ai_chance = { factor = 100 }
 		random_list = {
-			14 = { every_province = { limit = { region = western_atmora_lr } add_province_modifier = { name = ice_age duration = 1825 } } every_country = { limit = { any_owned_province = { region = western_atmora_lr } } country_event = { id = es_terrain.18 days = 31 tooltip = es_terrain.2.a.tt } } } 
-			14 = { every_province = { limit = { region = eastern_atmora_lr } add_province_modifier = { name = ice_age duration = 1825 } } every_country = { limit = { any_owned_province = { region = eastern_atmora_lr } } country_event = { id = es_terrain.18 days = 31 tooltip = es_terrain.2.a.tt } } } 
-			14 = { every_province = { limit = { region = central_atmora_lr } add_province_modifier = { name = ice_age duration = 1825 } } every_country = { limit = { any_owned_province = { region = central_atmora_lr } } country_event = { id = es_terrain.18 days = 31 tooltip = es_terrain.2.a.tt } } }
-			14 = { every_province = { limit = { region = southern_kamal_lr } add_province_modifier = { name = ice_age duration = 1825 } } every_country = { limit = { any_owned_province = { region = southern_kamal_lr } } country_event = { id = es_terrain.18 days = 31 tooltip = es_terrain.2.a.tt } } }
-			14 = { every_province = { limit = { region = northern_kamal_lr } add_province_modifier = { name = ice_age duration = 1825 } } every_country = { limit = { any_owned_province = { region = northern_kamal_lr } } country_event = { id = es_terrain.18 days = 31 tooltip = es_terrain.2.a.tt } } }
-			14 = { every_province = { limit = { region = upper_tsakara_lr } add_province_modifier = { name = ice_age duration = 1825 } } every_country = { limit = { any_owned_province = { region = upper_tsakara_lr } } country_event = { id = es_terrain.18 days = 31 tooltip = es_terrain.2.a.tt } } }
-			14 = { every_province = { limit = { region = northern_islands_lr } add_province_modifier = { name = ice_age duration = 1825 } } every_country = { limit = { any_owned_province = { region = northern_islands_lr } } country_event = { id = es_terrain.18 days = 31 tooltip = es_terrain.2.a.tt } } }
+			16 = { every_province = { limit = { region = western_atmora_lr } add_province_modifier = { name = ice_age duration = 1825 } } every_country = { limit = { any_owned_province = { region = western_atmora_lr } } country_event = { id = es_terrain.18 days = 31 tooltip = es_terrain.2.a.tt } } } 
+			16 = { every_province = { limit = { region = eastern_atmora_lr } add_province_modifier = { name = ice_age duration = 1825 } } every_country = { limit = { any_owned_province = { region = eastern_atmora_lr } } country_event = { id = es_terrain.18 days = 31 tooltip = es_terrain.2.a.tt } } } 
+			16 = { every_province = { limit = { region = central_atmora_lr } add_province_modifier = { name = ice_age duration = 1825 } } every_country = { limit = { any_owned_province = { region = central_atmora_lr } } country_event = { id = es_terrain.18 days = 31 tooltip = es_terrain.2.a.tt } } }
+			16 = { every_province = { limit = { region = kamal_lr } add_province_modifier = { name = ice_age duration = 1825 } } every_country = { limit = { any_owned_province = { region = northern_kamal_lr } } country_event = { id = es_terrain.18 days = 31 tooltip = es_terrain.2.a.tt } } }
+			16 = { every_province = { limit = { region = upper_tsakara_lr } add_province_modifier = { name = ice_age duration = 1825 } } every_country = { limit = { any_owned_province = { region = upper_tsakara_lr } } country_event = { id = es_terrain.18 days = 31 tooltip = es_terrain.2.a.tt } } }
+			16 = { every_province = { limit = { region = northern_islands_lr } add_province_modifier = { name = ice_age duration = 1825 } } every_country = { limit = { any_owned_province = { region = northern_islands_lr } } country_event = { id = es_terrain.18 days = 31 tooltip = es_terrain.2.a.tt } } }
 		}
 		add_country_modifier = {
 			name = ice_age_1

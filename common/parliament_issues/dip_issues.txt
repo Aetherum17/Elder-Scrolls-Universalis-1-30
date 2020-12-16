@@ -8,8 +8,7 @@ dip_issue_1 = {
 	effect = {
 	custom_tooltip = es_define_conquistador
 	hidden_effect = {
-		create_conquistador = {
-		}
+		create_conquistador = { tradition = 35 }
 		}
 	}
 	
@@ -116,6 +115,7 @@ dip_issue_5 = {
 		custom_tooltip = es_define_admiral
 		hidden_effect = {
 			create_admiral = {
+				tradition = 35
 			}
 		}
 	}
@@ -185,9 +185,7 @@ dip_issue_8 = {
 
 	allow = {
 		any_owned_province = {
-			NOT = {
-				capital_scope = ROOT
-			}
+			has_port = yes
 		}
 	}
 	
@@ -242,7 +240,7 @@ dip_issue_10 = {
 	category = 2		
 
 	allow = {
-		is_in_war = yes
+		is_at_war = yes
 	}
 	
 	effect = {

@@ -538,7 +538,7 @@ country_event = {
 		name = "es_12_scenario.2.a"
 		ai_chance = { factor = 50 }
 		if = { limit = { owns = 1275 } change_government = monarchy add_government_reform = elective_monarchy }
-		else = { event_target:king_of_skyrim = { create_subject = { subject_type = alliance_member subject = ROOT } } }
+		else = { event_target:king_of_skyrim = { owner = { create_subject = { subject_type = alliance_member subject = ROOT } } } }
 		
 		add_stability = 3
 		clr_country_flag = es_12_nordic_feud_flag
