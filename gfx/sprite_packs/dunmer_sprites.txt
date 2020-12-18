@@ -1,10 +1,7 @@
 dunmer_sprite_pack = {
 	# Tests against every tag in game
 	country_trigger = {
-		culture_group = chimeris_cg
-		NOT = {
-			primary_culture = chimer
-		}
+		primary_culture = dunmer
 	}
 	
 	sprite_infantry = {

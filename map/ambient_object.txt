@@ -1,4 +1,21 @@
 type={
+	type="fungi_small"
+	use_animation=no
+	always_visible=yes
+	scale = "0.5"
+	object={
+		name="fungi_small_1"
+		hidden_on_start=no
+		position={
+			1773.000 21.000 1828.000 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+}
+
+type={
 	type="volcano_ash_emmiter"
 	use_animation=no
 	always_visible=yes
