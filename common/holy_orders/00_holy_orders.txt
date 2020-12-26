@@ -3,8 +3,8 @@ order_of_the_lamp = {
     trigger = {
         any_owned_province = { continent = Tamriel } 
         NOT = { culture_group = chimeris_cg }
-        NOT = { owner = { capital_scope = { superregion = high_rock_superregion } } }
-        NOT = { owner = { capital_scope = { superregion = summerset_islands_superregion } } }
+        NOT = { capital_scope = { superregion = high_rock_superregion } }
+        NOT = { capital_scope = { superregion = summerset_islands_superregion } }
 	}
 	cost = 100 cost_type = adm_power per_province_effect = { add_base_tax = 1 } per_province_abandon_effect = { add_base_tax = -1 }
     modifier = { local_regiment_cost = -0.15 local_institution_spread = 0.10 }
@@ -16,7 +16,7 @@ vampyrum_order = {
     trigger = {
         any_owned_province = { continent = Tamriel } 
         NOT = { culture_group = chimeris_cg }
-        NOT = { culture_group = yokudan-redguardian_cg } OR = { owner = { capital_scope = { superregion = cyrodiil_superregion } } religion_group = daedric_group_1 }
+        NOT = { culture_group = yokudan-redguardian_cg } OR = { capital_scope = { superregion = cyrodiil_superregion } religion_group = daedric_group_1 }
 	}
     cost = 100 cost_type = dip_power per_province_effect = { add_base_production = 1 } per_province_abandon_effect = { add_base_production = -1 }
     modifier = { local_development_cost = -0.15 local_state_maintenance_modifier = -0.10 }
@@ -28,7 +28,7 @@ order_of_the_hour = {
     trigger = {
         any_owned_province = { continent = Tamriel } 
         NOT = { culture_group = chimeris_cg }
-        NOT = { owner = { capital_scope = { superregion = hammerfell_superregion } } } NOT = { OR = { culture_group = half_blood_cg religion_group = polytheistic_group } }
+        NOT = { capital_scope = { superregion = hammerfell_superregion } } NOT = { OR = { culture_group = half_blood_cg religion_group = polytheistic_group } }
 	}
     cost = 100 cost_type = mil_power per_province_effect = { add_base_manpower = 1 } per_province_abandon_effect = { add_base_manpower = -1 }
     modifier = { local_missionary_strength = 0.015 local_manpower_modifier = 0.10 }
@@ -77,7 +77,7 @@ baldama_wyrd_order = {
     trigger = {
         any_owned_province = { continent = Tamriel } 
         NOT = { culture_group = chimeris_cg }
-        owner = { capital_scope = { superregion = high_rock_superregion } }
+        capital_scope = { superregion = high_rock_superregion }
 	}
 	cost = 100 cost_type = adm_power per_province_effect = { add_base_tax = 1 } per_province_abandon_effect = { add_base_tax = -1 }
     modifier = { local_build_cost = -0.15 local_production_efficiency = 0.10 }
@@ -89,7 +89,7 @@ order_of_the_raven = {
     trigger = {
         any_owned_province = { continent = Tamriel } 
         NOT = { culture_group = chimeris_cg }
-        NOT = { culture_group = yokudan-redguardian_cg } NOT = { OR = { owner = { capital_scope = { superregion = cyrodiil_superregion } } religion_group = daedric_group_1 } }
+        NOT = { culture_group = yokudan-redguardian_cg } NOT = { OR = { capital_scope = { superregion = cyrodiil_superregion } religion_group = daedric_group_1 } }
 	}
     cost = 100 cost_type = dip_power per_province_effect = { add_base_production = 1 } per_province_abandon_effect = { add_base_production = -1 }
     modifier = { trade_goods_size_modifier = 0.15 local_regiment_cost = -0.10 }
@@ -101,7 +101,7 @@ order_of_saint_pelin = {
     trigger = {
         any_owned_province = { continent = Tamriel } 
         NOT = { culture_group = chimeris_cg }
-        NOT = { owner = { capital_scope = { superregion = hammerfell_superregion } } } OR = { culture_group = half_blood_cg religion_group = polytheistic_group }
+        NOT = { capital_scope = { superregion = hammerfell_superregion } } OR = { culture_group = half_blood_cg religion_group = polytheistic_group }
 	}
     cost = 100 cost_type = mil_power per_province_effect = { add_base_manpower = 1 } per_province_abandon_effect = { add_base_manpower = -1 }
     modifier = { local_defensiveness = 0.15 local_friendly_movement_speed = 0.10 }
@@ -115,7 +115,7 @@ sapiarchs_order = {
     trigger = {
         any_owned_province = { continent = Tamriel } 
         NOT = { culture_group = chimeris_cg }
-        owner = { capital_scope = { superregion = summerset_islands_superregion } }
+        capital_scope = { superregion = summerset_islands_superregion }
 	}
 	cost = 100 cost_type = adm_power per_province_effect = { add_base_tax = 1 } per_province_abandon_effect = { add_base_tax = -1 }
     modifier = { local_hostile_movement_speed = -0.15 local_tax_modifier = 0.10 }
@@ -139,7 +139,7 @@ order_of_diagna = {
     trigger = {
         any_owned_province = { continent = Tamriel } 
         NOT = { culture_group = chimeris_cg }
-        owner = { capital_scope = { superregion = hammerfell_superregion } }
+        capital_scope = { superregion = hammerfell_superregion }
 	}
     cost = 100 cost_type = mil_power per_province_effect = { add_base_manpower = 1 } per_province_abandon_effect = { add_base_manpower = -1 }
     modifier = { regiment_recruit_speed = -0.15 local_unrest = -1 }

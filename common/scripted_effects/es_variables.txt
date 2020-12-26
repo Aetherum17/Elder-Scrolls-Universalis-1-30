@@ -52,3 +52,48 @@ init_variables = {
 		value = 0
 	}
 }
+
+es_annual_price_change = {
+	random_list = {
+		10 = { change_price = { trade_goods = $tradegood$ key = ANNUAL_TRADE value = 0.25 duration = 36500 } }
+		10 = { change_price = { trade_goods = $tradegood$ key = ANNUAL_TRADE value = 0.20 duration = 36500 } }
+		10 = { change_price = { trade_goods = $tradegood$ key = ANNUAL_TRADE value = 0.15 duration = 36500 } }
+		10 = { change_price = { trade_goods = $tradegood$ key = ANNUAL_TRADE value = 0.10 duration = 36500 } }
+		10 = { change_price = { trade_goods = $tradegood$ key = ANNUAL_TRADE value = 0.05 duration = 36500 } }
+		10 = { change_price = { trade_goods = $tradegood$ key = ANNUAL_TRADE value = -0.05 duration = 36500 } }
+		10 = { change_price = { trade_goods = $tradegood$ key = ANNUAL_TRADE value = -0.10 duration = 36500 } }
+		10 = { change_price = { trade_goods = $tradegood$ key = ANNUAL_TRADE value = -0.15 duration = 36500 } }
+		10 = { change_price = { trade_goods = $tradegood$ key = ANNUAL_TRADE value = -0.20 duration = 36500 } }
+		10 = { change_price = { trade_goods = $tradegood$ key = ANNUAL_TRADE value = -0.25 duration = 36500 } }
+	}
+}
+
+es_trade_crisis = {
+	random_list = {
+		10 = { change_price = { trade_goods = $tradegood$ key = TRADE_CRISIS value = -0.50 duration = 9125 } }
+		10 = { change_price = { trade_goods = $tradegood$ key = TRADE_CRISIS value = -0.45 duration = 9125 } }
+		10 = { change_price = { trade_goods = $tradegood$ key = TRADE_CRISIS value = -0.40 duration = 9125 } }
+		10 = { change_price = { trade_goods = $tradegood$ key = TRADE_CRISIS value = -0.35 duration = 9125 } }
+		10 = { change_price = { trade_goods = $tradegood$ key = TRADE_CRISIS value = -0.30 duration = 9125 } }
+		10 = { change_price = { trade_goods = $tradegood$ key = TRADE_CRISIS value = -0.25 duration = 9125 } }
+		10 = { change_price = { trade_goods = $tradegood$ key = TRADE_CRISIS value = -0.20 duration = 9125 } }
+		10 = { change_price = { trade_goods = $tradegood$ key = TRADE_CRISIS value = -0.15 duration = 9125 } }
+		10 = { change_price = { trade_goods = $tradegood$ key = TRADE_CRISIS value = -0.10 duration = 9125 } }
+		10 = { change_price = { trade_goods = $tradegood$ key = TRADE_CRISIS value = -0.05 duration = 9125 } }
+	}
+}
+
+es_trade_rise = {
+	random_list = {
+		10 = { change_price = { trade_goods = $tradegood$ key = TRADE_RISE value = 0.50 duration = 9125 } }
+		10 = { change_price = { trade_goods = $tradegood$ key = TRADE_RISE value = 0.45 duration = 9125 } }
+		10 = { change_price = { trade_goods = $tradegood$ key = TRADE_RISE value = 0.40 duration = 9125 } }
+		10 = { change_price = { trade_goods = $tradegood$ key = TRADE_RISE value = 0.35 duration = 9125 } }
+		10 = { change_price = { trade_goods = $tradegood$ key = TRADE_RISE value = 0.30 duration = 9125 } }
+		10 = { change_price = { trade_goods = $tradegood$ key = TRADE_RISE value = 0.25 duration = 9125 } }
+		10 = { change_price = { trade_goods = $tradegood$ key = TRADE_RISE value = 0.20 duration = 9125 } }
+		10 = { change_price = { trade_goods = $tradegood$ key = TRADE_RISE value = 0.15 duration = 9125 } }
+		10 = { change_price = { trade_goods = $tradegood$ key = TRADE_RISE value = 0.10 duration = 9125 } }
+		10 = { change_price = { trade_goods = $tradegood$ key = TRADE_RISE value = 0.05 duration = 9125 } }
+	}
+}

@@ -74,30 +74,30 @@ country_decisions = {
 				ai = no
 				AND = {
 					treasury = 15000
-					owns_or_vassal_of = 619
+					owns_or_vassal_of = 1773
 				}
 			}
-			has_discovered = 619
-			619 = {
+			has_discovered = 1773
+			1773 = {
 				NOT = { has_great_project = tel_mora_canal }
 				NOT = { has_construction = canal }
 			}
 		}
 		provinces_to_highlight = {
-			province_id = 619
+			province_id = 1773
 			OR = {
 				NOT = { owned_by = ROOT }
 				NOT = { owner = { vassal_of = ROOT } }
 			}
 		}
 		allow = {
-			owns_or_vassal_of = 619
+			owns_or_vassal_of = 1773
 			is_subject = no			
 			treasury = 15000
 		}
 		effect = {
 			add_treasury = -15000
-			619 = {
+			1773 = {
 				add_great_project = tel_mora_canal
 			}
 			show_ambient_object = "mi_kin_canal"
@@ -111,20 +111,20 @@ country_decisions = {
 		major = yes
 		potential = {
 			ai = no
-			owns_or_vassal_of = 619
+			owns_or_vassal_of = 1773
 			is_subject = no
-			619 = {
+			1773 = {
 				has_construction = canal
 			}
 		}
 		allow = {
-			619 = {
+			1773 = {
 				has_construction = canal
 			}
 		}
 		effect = {
 		    add_treasury = 5000
-			619 = {
+			1773 = {
 				cancel_construction = yes
 			}
 			hide_ambient_object = "mi_kin_canal"
@@ -141,30 +141,30 @@ country_decisions = {
 				ai = no
 				AND = {
 					treasury = 15000
-					owns_or_vassal_of = 639
+					owns_or_vassal_of = 3531
 				}
 			}
-			has_discovered = 639
-			639 = {
+			has_discovered = 3531
+			3531 = {
 				NOT = { has_great_project = tel_mora_canal }
 				NOT = { has_construction = canal }
 			}
 		}
 		provinces_to_highlight = {
-			province_id = 639
+			province_id = 3531
 			OR = {
 				NOT = { owned_by = ROOT }
 				NOT = { owner = { vassal_of = ROOT } }
 			}
 		}
 		allow = {
-			owns_or_vassal_of = 639
+			owns_or_vassal_of = 3531
 			is_subject = no			
 			treasury = 15000
 		}
 		effect = {
 			add_treasury = -15000
-			639 = {
+			3531 = {
 				add_great_project = tel_mora_canal
 			}
 			show_ambient_object = "nosh_sheck_canal"
@@ -178,20 +178,20 @@ country_decisions = {
 		major = yes
 		potential = {
 			ai = no
-			owns_or_vassal_of = 639
+			owns_or_vassal_of = 3531
 			is_subject = no
-			639 = {
+			3531 = {
 				has_construction = canal
 			}
 		}
 		allow = {
-			639 = {
+			3531 = {
 				has_construction = canal
 			}
 		}
 		effect = {
 		    add_treasury = 5000
-			639 = {
+			3531 = {
 				cancel_construction = yes
 			}
 			hide_ambient_object = "nosh_sheck_canal"
