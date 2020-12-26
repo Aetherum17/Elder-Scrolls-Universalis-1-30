@@ -1,20 +1,225 @@
 type={
-	type="fungi_small"
+	type="giant_bleeding_crown"
 	use_animation=no
+	scale=2.000000
 	always_visible=yes
-	scale = "0.5"
 	object={
-		name="fungi_small_1"
+		name="giant_bleeding_crown_2"
 		hidden_on_start=no
 		position={
-			1773.000 21.000 1828.000 
+			1967.000 20.000 1785.000 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+	object={
+		name="giant_bleeding_crown_2"
+		hidden_on_start=no
+		position={
+			1916.000 23.000 1803.000 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+	object={
+		name="giant_bleeding_crown_4"
+		hidden_on_start=no
+		position={
+			1918.000 22.000 1853.000 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+	object={
+		name="giant_bleeding_crown_5"
+		hidden_on_start=no
+		position={
+			1878.000 23.000 1844.000 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+	object={
+		name="giant_bleeding_crown_6"
+		hidden_on_start=no
+		position={
+			1987.000 20.000 1830.000 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+	object={
+		name="giant_bleeding_crown_1"
+		hidden_on_start=no
+		position={
+			1960.000 20.000 1737.000 
 		}
 		rotation={
 			0.000 0.000 0.000 
 		}
 	}
 }
-
+type={
+	type="fungi_small"
+	use_animation=no
+	scale=0.500000
+	always_visible=yes
+	object={
+		name="fungi_small_11"
+		hidden_on_start=no
+		position={
+			1877.000 20.000 1769.000 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+	object={
+		name="fungi_small_12"
+		hidden_on_start=no
+		position={
+			1672.000 23.000 2048.000 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+	object={
+		name="fungi_small_13"
+		hidden_on_start=no
+		position={
+			1916.000 22.500 1966.000 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+	object={
+		name="fungi_small_14"
+		hidden_on_start=no
+		position={
+			1918.000 22.500 1912.000 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+	object={
+		name="fungi_small_15"
+		hidden_on_start=no
+		position={
+			2005.000 20.000 1883.000 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+	object={
+		name="fungi_small_1"
+		hidden_on_start=no
+		position={
+			1811.000 22.000 1865.000 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+	object={
+		name="fungi_small_2"
+		hidden_on_start=no
+		position={
+			1778.000 22.000 1891.000 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+	object={
+		name="fungi_small_3"
+		hidden_on_start=no
+		position={
+			1764.000 22.000 1942.000 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+	object={
+		name="fungi_small_4"
+		hidden_on_start=no
+		position={
+			1737.000 21.000 1899.000 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+	object={
+		name="fungi_small_5"
+		hidden_on_start=no
+		position={
+			1771.000 21.000 1831.000 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+	object={
+		name="fungi_small_6"
+		hidden_on_start=no
+		position={
+			1726.000 23.000 2038.000 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+	object={
+		name="fungi_small_7"
+		hidden_on_start=no
+		position={
+			1796.000 21.000 1781.000 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+	object={
+		name="fungi_small_8"
+		hidden_on_start=no
+		position={
+			1703.000 20.250 1960.000 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+	object={
+		name="fungi_small_9"
+		hidden_on_start=no
+		position={
+			1840.000 20.000 1813.000 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+	object={
+		name="fungi_small_10"
+		hidden_on_start=no
+		position={
+			1870.000 21.000 2019.000 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+}
 type={
 	type="volcano_ash_emmiter"
 	use_animation=no
@@ -30,12 +235,11 @@ type={
 		}
 	}
 }
-
 type={
 	type="volcano_lava"
 	use_animation=yes
+	scale=4.000000
 	always_visible=yes
-	scale = 4.000000
 	object={
 		name="red_mountain_lava"
 		hidden_on_start=no
@@ -47,7 +251,6 @@ type={
 		}
 	}
 }
-
 type={
 	type="panama_canal"
 	use_animation=no
@@ -293,11 +496,10 @@ type={
 		}
 	}
 }
-
 type={
 	type="netch"
 	use_animation=no
-	scale=2
+	scale=2.000000
 	always_visible=yes
 	object={
 		name="netch1"
@@ -310,9 +512,6 @@ type={
 		}
 	}
 }
-
-
-
 type={
 	type="desert_skeleton_mesh"
 	use_animation=no

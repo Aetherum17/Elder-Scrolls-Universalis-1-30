@@ -410,4 +410,9 @@ entity = {
 	state = { name = "attack"		animation = "attack" }
 	state = { name = "retreat"		animation = "retreat" }
 	
+	attach = { 
+		Right_hand_node = "dwemer_spear" 
+        Left_hand_node = "dwemer_shield" 
+	}
+	
 }
