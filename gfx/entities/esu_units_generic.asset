@@ -416,3 +416,18 @@ entity = {
 	}
 	
 }
+
+entity = {
+	name = "TSAESCI_INFANTRY_1"
+	pdxmesh = "tsaesci_generic_infantry_01_mesh"
+
+	state = { name = "idle" 		animation = "idle" }
+	state = { name = "walk" 		animation = "walk" }
+	state = { name = "attack"		animation = "attack" looping = no chance = 1 next_state = "attack" }
+	state = { name = "attack"		animation = "attack_2" looping = no chance = 1 next_state = "attack" }
+	state = { name = "retreat"		animation = "retreat" }
+
+	attach = { 
+		right_hand_accessory_3 = "katana"
+	}
+}

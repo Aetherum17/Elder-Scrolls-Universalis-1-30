@@ -1,7 +1,10 @@
 dunmer_sprite_pack = {
 	# Tests against every tag in game
 	country_trigger = {
-		primary_culture = dunmer
+		OR = {
+			primary_culture = dunmer
+			primary_culture = ashlander
+		}
 	}
 	
 	sprite_infantry = {

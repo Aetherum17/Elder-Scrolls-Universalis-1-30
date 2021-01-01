@@ -1,0 +1,30 @@
+tsaesci_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		OR = {
+			primary_culture = tsaesci
+			primary_culture = akaviri
+		}
+	}
+	
+	sprite_infantry = {
+		0 = TSAESCI_INFANTRY_1
+		1 = TSAESCI_INFANTRY_1
+		2 = TSAESCI_INFANTRY_1
+		3 = TSAESCI_INFANTRY_1
+	}
+	
+	sprite_cavalry = {
+		0 = TSAESCI_INFANTRY_1
+		1 = TSAESCI_INFANTRY_1
+		2 = TSAESCI_INFANTRY_1
+		3 = TSAESCI_INFANTRY_1
+	}
+	sprite_artillery = {
+		0 = TSAESCI_INFANTRY_1
+		1 = TSAESCI_INFANTRY_1
+		2 = TSAESCI_INFANTRY_1
+		3 = TSAESCI_INFANTRY_1
+	}
+
+}
