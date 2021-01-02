@@ -431,3 +431,17 @@ entity = {
 		right_hand_accessory_3 = "katana"
 	}
 }
+
+entity = {
+	name = "AKAVIRI_INFANTRY_1"
+	pdxmesh = "akaviri_generic_infantry_01_mesh"
+
+	state = { name = "idle" 		animation = "idle" }
+	state = { name = "walk" 		animation = "walk"  animation_speed = 2.2}
+    state = { name = "attack"		animation = "attack" animation_speed = 1.5 }
+	state = { name = "retreat"		animation = "retreat"  animation_speed = 2.5 }
+
+	attach = { 
+		Right_hand_node = "katana_2H"
+	}
+}

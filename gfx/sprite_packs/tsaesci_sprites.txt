@@ -1,10 +1,7 @@
 tsaesci_sprite_pack = {
 	# Tests against every tag in game
 	country_trigger = {
-		OR = {
-			primary_culture = tsaesci
-			primary_culture = akaviri
-		}
+		primary_culture = tsaesci
 	}
 	
 	sprite_infantry = {

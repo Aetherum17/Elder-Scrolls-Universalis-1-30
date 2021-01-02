@@ -316,4 +316,19 @@ objectTypes = {
 		scale = 0.5
 	}
 	
+	pdxmesh = {
+		name = "akaviri_generic_infantry_01_mesh"
+		file = "gfx/models/Units/test/xangelo_SHN_infantry_01.mesh"
+
+		animation = { id = "attack"		type = "longsword_attack" }
+		animation = { id = "idle"		type = "idle_animation_hre" }
+		animation = { id = "walk"		type = "move_with_zeihander_new" }
+		animation = { id = "death"		type = "idle_animation_hre" }
+		animation = { id = "retreat"	type = "2h_retreat" }			
+
+		animation = { id = "artillery_attack"	type = "idle_animation_hre" }
+
+		scale = 0.5
+	}
+	
 }
