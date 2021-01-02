@@ -1,0 +1,30 @@
+nedic_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		culture_group = cyrodiil_cg
+		NOT = {
+			primary_culture = imperial
+		}
+	}
+	
+	sprite_infantry = {
+		0 = NEDIC_INFANTRY_1
+		1 = NEDIC_INFANTRY_1
+		2 = NEDIC_INFANTRY_1
+		3 = NEDIC_INFANTRY_1
+	}
+	
+	sprite_cavalry = {
+		0 = NEDIC_INFANTRY_1
+		1 = NEDIC_INFANTRY_1
+		2 = NEDIC_INFANTRY_1
+		3 = NEDIC_INFANTRY_1
+	}
+	sprite_artillery = {
+		0 = NEDIC_INFANTRY_1
+		1 = NEDIC_INFANTRY_1
+		2 = NEDIC_INFANTRY_1
+		3 = NEDIC_INFANTRY_1
+	}
+
+}
