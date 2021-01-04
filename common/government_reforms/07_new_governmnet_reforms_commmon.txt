@@ -37,6 +37,9 @@ trial_and_jury = {
 	modifiers = {
 		global_unrest = -1
 	}
+	ai = {
+		factor = 2.5
+	}
 }
 #Community Militia (Yellow)
 #● Laws are enforced by a small group of local armed militias, who deal out justice as they see fit on their own terms, often without full understanding of the rule of law.
@@ -47,6 +50,9 @@ community_militia = {
 		global_unrest = -2.5
 		state_maintenance_modifier = -0.10
 		global_autonomy = 0.10
+	}
+	ai = {
+		factor = 0.5
 	}
 }
 
@@ -138,6 +144,9 @@ rural_baclwater = {
 		global_unrest = -1
 		min_autonomy = 10
 	}
+	ai = {
+		factor = 0.5
+	}
 }
 #Nomadism (Red)
 #● Most settlements are temporary, the population moves far too often to make most settlements only temporary at best.
@@ -148,6 +157,9 @@ nomadism = {
 	    cav_to_inf_ratio = 0.25
 		cavalry_cost = -0.5
 		governing_capacity_modifier = -0.5
+	}
+	ai = {
+		factor = 0.5
 	}
 }
 
@@ -246,6 +258,9 @@ magical_society = {
 		remove_country_modifier = allow_necromacy_modifier
 		remove_country_modifier = hedge_mage_roundup_modifier
 	}
+	ai = {
+		factor = 0.5
+	}
 }
 
 #Culture (Level 8)
@@ -285,6 +300,9 @@ raiding = {
 	    prestige_from_naval = 0.5
 		prestige_from_battles_in_fleet_modifier = 0.5
 		prestige_decay = 0.01
+	}
+	ai = {
+		factor = 0.5
 	}
 }
 
@@ -341,6 +359,17 @@ state_religion = {
 	modifiers = {
 	    missionaries = 1
 	}
+	ai = {
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				religion = po_tun_pantheon
+				religion = unknown_pantheon
+				religion = cult_of_lorelia
+			}
+		}
+	}
 }
 #Secularism (Green)
 #● The state is mostly secular and separates the church from the day to day happenings from the government.
@@ -360,6 +389,17 @@ theological_dominance = {
 	allow_normal_conversion = yes
 	modifiers = {
 	    global_missionary_strength = 0.025
+	}
+	ai = {
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				religion = po_tun_pantheon
+				religion = unknown_pantheon
+				religion = cult_of_lorelia
+			}
+		}
 	}
 }
 #Fanaticism (Yellow)
@@ -935,6 +975,7 @@ absolute_power = {
 	modifiers = {
 		max_absolutism = 15
 	}
+	ai = { factor = 1 }
 }
 #Advisory Board (Green)
 #● The state relies on strong and highly skilled advisers and administrators, who run the major day to day operations.
@@ -944,6 +985,7 @@ advisory_board = {
 	modifiers = {
 		advisor_cost = -0.10
 	}
+	ai = { factor = 1 }
 }
 #Bureaucratic Tyranny (Red)
 #● The government of the state has an absurd amount of power, even by normal government standards. The state has a great deal of statism which dominates a majority of the proceedings.
@@ -992,6 +1034,9 @@ bureaucratic_tyranny = {
 			}
 		}
 	}
+	ai = {
+		factor = 0.5
+	}
 }
 #Sanctioned Freedom (Red)
 #● The state’s administrative purpose is to provide true freedom to the people at the cost of its own authority. This Autonomy keeps people happy, but keeps the government fairly weak.
@@ -1003,6 +1048,7 @@ sanctioned_freedom = {
 		stability_cost_modifier = -0.25
 		max_absolutism = -1000
 	}
+	ai = { factor = 1 }
 }
 
 #Imperial Innovation(Level 30)
@@ -1123,6 +1169,17 @@ empowered_clergy = {
 		global_missionary_strength = 0.01
 		church_influence_modifier = 0.10
 	}
+	ai = {
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				religion = po_tun_pantheon
+				religion = unknown_pantheon
+				religion = cult_of_lorelia
+			}
+		}
+	}
 }
 #Noble Superiority (Green)
 #● The Nobles of the nation have secured the full support of the monarchy and have remained the true and original power brokers over the entire nation.
@@ -1147,6 +1204,9 @@ bandit_alliance = {
 		drill_gain_modifier = -1.0
 		discipline = -0.10
 	}
+	ai = {
+		factor = 0.5
+	}
 }
 
 #Succession (Level 10)
@@ -1170,6 +1230,9 @@ seniority = {
 		monarch_diplomatic_power = -3
 		monarch_military_power = -3
 		advisor_cost = -0.5
+	}
+	ai = {
+		factor = 0.5
 	}
 }
 #Open (Yellow)
@@ -1236,6 +1299,9 @@ absolut_monarch = {
 		max_absolutism = 5
 		yearly_absolutism = 0.1
 		harsh_treatment_cost = 0.15
+	}
+	ai = {
+		factor = 2.5
 	}
 }
 #Figurehead (Green)
@@ -1398,6 +1464,9 @@ court_of_darkness = {
 			}
 		}
 	}
+	ai = {
+		factor = 0.5
+	}
 }
 
 #Legitimacy (Level 22)
@@ -1475,6 +1544,9 @@ divine_right = {
 				legitimacy = 1.0
 			}
 		}
+	}
+	ai = {
+		factor = 0.5
 	}
 }
 
@@ -1601,6 +1673,7 @@ extremly_long_presidency = {
 		max_absolutism = 10
 		yearly_absolutism = 0.10
 	}
+
 }
 #Life Appointment (Red)
 #● The republic appoints their rulers for life.
@@ -1616,6 +1689,9 @@ life_appointmemt = {
 		custom_tooltip = on_death_elections
 	}
 	has_term_election = no
+	ai = {
+		factor = 0.5
+	}
 }
 #Citizenship (Level 7)
 #Land Owning Citizenship (Green)
@@ -1753,6 +1829,9 @@ interactive_institutions = {
 		build_cost = -0.15
 		yearly_corruption = 0.10
 	}
+	ai = {
+		factor = 0.5
+	}
 }
 #Subservient Bureaucracy (Red)
 #● Most of the republic’s politics is mostly concentrated in a single institution, which acts as a forebear over other institutions.
@@ -1830,6 +1909,9 @@ united_cities = {
 		global_trade_power = 0.25
 		trade_efficiency = 0.10
 		governing_capacity_modifier = -0.50
+	}
+	ai = {
+		factor = 0.5
 	}
 }
 
@@ -2271,6 +2353,9 @@ justified_atrocity = {
 			}
 		}
 	}
+	ai = {
+		factor = 0.5
+	}
 }
 
 #Debate (Level 19)
@@ -2391,6 +2476,23 @@ tolerant_society = {
 		religious_unity = 0.25
 		improve_relation_modifier = 0.25
 		global_missionary_strength = -0.1
+	}
+	ai = {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { religion = po_tun_pantheon }
+			NOT = { religion = unknown_pantheon }
+			NOT = { religion = cult_of_lorelia }
+		}
+		modifier = {
+			factor = 1000
+			OR = {
+				religion = po_tun_pantheon
+				religion = unknown_pantheon
+				religion = cult_of_lorelia
+			}
+		}
 	}
 }
 #Crusade (Red)
@@ -2597,6 +2699,23 @@ rituals = {
 	modifiers = {
 		missionaries = 1
 	}
+	ai = {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { religion = po_tun_pantheon }
+			NOT = { religion = unknown_pantheon }
+			NOT = { religion = cult_of_lorelia }
+		}
+		modifier = {
+			factor = 1000
+			OR = {
+				religion = po_tun_pantheon
+				religion = unknown_pantheon
+				religion = cult_of_lorelia
+			}
+		}
+	}
 }
 #Formal Faith (Green)
 #The tribe adopted a formal faith and adheres to the practice of that faith, forgoing any form of deviation.
@@ -2627,6 +2746,9 @@ humanist = {
 		global_tax_modifier = 0.10
 		missionary_maintenance_cost = -0.25
 		global_missionary_strength = -0.05
+	}
+	ai = {
+		factor = 0.5
 	}
 }
 
