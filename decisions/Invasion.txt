@@ -27,7 +27,10 @@ country_decisions = {
 			owns = 2710
 			owns = 2727
 			}
-			is_year = 1600
+			AND = {
+				is_year = 1600
+				owns = 3188
+			}
 			}
 		}
 		effect = {
@@ -69,6 +72,10 @@ country_decisions = {
 			
 			3187 = {
 				add_great_project = cold_heart_canal
+			}
+			
+			1206 = {
+				cede_province = ROOT
 			}
 			
 			central_syrodiil_lr = {
@@ -149,13 +156,20 @@ country_decisions = {
 		allow = {
 			OR = {
 			AND = {
-			owns = 4075
-			owns = 3877
-			owns = 3764
-			owns = 4143
-			owns = 4337
+				owns = 4075
+				owns = 3877
+				owns = 3764
+				owns = 4143
+				owns = 4337
 			}
-			is_year = 1600
+			AND = {
+				is_year = 1600
+					OR = {
+						owns = 4075
+						owns = 4074
+						owns = 4081
+					}
+				}
 			}
 		}
 		effect = {
@@ -208,6 +222,16 @@ country_decisions = {
 			}
 			4072 = {
 				add_great_project = dead_arg_canal
+			}
+			
+			1376 = {
+				cede_province = ROOT
+			}
+			1199 = {
+				cede_province = ROOT
+			}
+			1106 = {
+				cede_province = ROOT
 			}
 			
 			central_syrodiil_lr = {

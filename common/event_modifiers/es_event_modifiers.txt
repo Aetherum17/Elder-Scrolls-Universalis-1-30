@@ -57,7 +57,7 @@ jewel_of_tamriel_modifier = {
 }
 
 minor_royal_family_autonomy = {
-	min_autonomy = 25
+	min_local_autonomy = 25
 	local_tax_modifier = -0.25
 	local_production_efficiency = -0.25
 	local_manpower_modifier = -0.25
@@ -65,7 +65,7 @@ minor_royal_family_autonomy = {
 }
 
 royal_family_autonomy = {
-	min_autonomy = 50
+	min_local_autonomy = 50
 	local_tax_modifier = -0.5
 	local_production_efficiency = -0.5
 	local_manpower_modifier = -0.5
@@ -73,7 +73,7 @@ royal_family_autonomy = {
 }
 
 major_family_autonomy = {
-	min_autonomy = 75
+	min_local_autonomy = 75
 	local_tax_modifier = -0.75
 	local_production_efficiency = -0.75
 	local_manpower_modifier = -0.75

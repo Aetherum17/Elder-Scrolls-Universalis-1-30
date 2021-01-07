@@ -2327,7 +2327,7 @@ leave_native_reservation  =  {
 	ai_will_do = {
 	    OR = {
 		NOT = { government = native }
-		liberty_desire = 75
+		liberty_desire = 95
 		FROM = {
 			NOT = { has_opinion = { who = ROOT value = 0 } }
 		}
@@ -2499,7 +2499,7 @@ leave_imperial_subject  =  {
 	}
 	ai_will_do = {
 	    OR = {
-		liberty_desire = 50
+		liberty_desire = 75
 		FROM = {
 			is_emperor = no
 		}
@@ -2681,7 +2681,7 @@ leave_alliance_member  =  {
 	}
 	ai_will_do = {
 	    OR = {
-		liberty_desire = 75
+		liberty_desire = 95
 		FROM = {
 			NOT = { has_opinion = { who = ROOT value = 0 } }
 		}
@@ -2863,7 +2863,7 @@ leave_tributary_state  =  {
 	}
 	ai_will_do = {
 	    OR = {
-		liberty_desire = 75
+		liberty_desire = 95
 		FROM = {
 			NOT = { has_opinion = { who = ROOT value = 0 } }
 		}
@@ -3043,7 +3043,7 @@ leave_vassal  =  {
 	}
 	ai_will_do = {
 	    OR = {
-		liberty_desire = 75
+		liberty_desire = 95
 		FROM = {
 			NOT = { has_opinion = { who = ROOT value = 0 } }
 		}

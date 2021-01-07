@@ -195,10 +195,17 @@ on_startup = {
 	
 	}
 	
+	random_country = {
+		limit = {
+			ai = no
+		}
+		country_event = { id = es_start.3 days = 0 tooltip = es_collapse.2.a.tt }
+	}
+	
 	RED = {
 	    #country_event = { id = es_start.2 days = 0 tooltip = es_collapse.2.a.tt }
-		country_event = { id = es_start.3 days = 0 tooltip = es_collapse.2.a.tt }
-		country_event = { id = es_start.4 days = 0 tooltip = es_collapse.2.a.tt }
+		#country_event = { id = es_start.3 days = 0 tooltip = es_collapse.2.a.tt }
+		#country_event = { id = es_start.4 days = 0 tooltip = es_collapse.2.a.tt }
 		add_country_modifier = { name = "red_mountain_eruption" duration = 3650 }
         add_country_modifier = { name = "sand_storm_1" duration = 3650 }
         add_country_modifier = { name = "tropical_storm_1" duration = 3650 }	
@@ -264,6 +271,10 @@ on_startup = {
 		if = {
 			limit = { has_port = yes }
 			random_list = { 33 = { add_base_tax = 1 } 33 = { add_base_production = 1 } 33 = { add_base_manpower = 1 } }
+		}
+		if = {
+			limit = { is_capital = yes }
+			add_base_tax = 3 add_base_production = 3 add_base_manpower = 3
 		}
 		if = {
 			limit = { province_has_center_of_trade_of_level = 1 }
