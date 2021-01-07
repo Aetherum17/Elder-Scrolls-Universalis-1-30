@@ -193,6 +193,13 @@ on_startup = {
 		}
 	}
 	
+	every_owned_province = {
+		limit = {
+			NOT = { is_core = ROOT }
+			add_core = ROOT 
+		}
+	}
+	
 	}
 	
 	random_country = {
