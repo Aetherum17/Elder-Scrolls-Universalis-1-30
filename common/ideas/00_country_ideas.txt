@@ -2865,7 +2865,7 @@ CEB_ideas = {
 		global_autonomy = -0.05
 	}
 	ceb_place_for_trading = {	
-		privateer_efficiency = 0.10
+		privateer_efficiency = 0.25
 	}
 	ceb_befriend_the_europeans = {
 		global_institution_spread = 0.1
@@ -2993,7 +2993,7 @@ GEL_ideas = {
 
 EFR_ideas = {
 	start = {
-		privateer_efficiency = 0.25
+		privateer_efficiency = 0.50
 		heir_chance = 0.25
 	}
 	
@@ -3055,7 +3055,7 @@ MOR_ideas = {
 		galley_power = 0.1
 	}
 	mor_pirate_republics = {
-		privateer_efficiency = 0.10
+		privateer_efficiency = 0.25
 	}
 	mor_slave_soldiers = {
 		land_maintenance_modifier = -0.10
@@ -3085,7 +3085,7 @@ TUN_ideas = {
 		diplomatic_upkeep = 1
 	}
 	corsairs = {
-		privateer_efficiency = 0.10
+		privateer_efficiency = 0.25
 	}
 	tun_attract_foreign_pirates = {
 		global_sailors_modifier = 0.10
@@ -4996,5 +4996,237 @@ BAH_ideas = {
 	}
 	madrasa_of_mahmud_gawan = {
 		idea_cost = -0.1
+	}
+}
+
+GOT_ideas = {
+	start = {
+		privateer_efficiency = 0.50
+		core_creation = -0.25
+	}
+	
+	bonus = {
+		trade_efficiency = 0.15
+	}
+	
+	trigger = {
+		tag = SEA
+	}
+	free = yes
+	
+	rebuild_visby = {
+		development_cost = -0.1
+	}
+	invite_mercenaries_to_visby = {
+		merc_maintenance_modifier = -0.10
+	}
+	expand_visby_dockyard = {
+		global_ship_cost = -0.1
+	}
+	rebuild_the_trade = {
+		global_trade_power = 0.1
+	}
+	gutnish_merchant_adventurers = {
+		merchants = 1
+	}
+	gutnish_merchant_navy = {
+		naval_forcelimit_modifier = 0.10
+	}
+	found_visby_bank = {
+		interest = -0.25
+	}
+}
+
+POM_ideas = {
+	start = {
+		light_ship_cost = -0.25
+		land_morale = 0.15
+	}
+	
+	bonus = {
+ 		global_trade_power = 0.25
+	}
+	
+	trigger = {
+		tag = RIE
+	}
+	free = yes
+	
+	pom_idea_1 = {
+		embargo_efficiency = 0.25
+	}
+	pom_idea_2 = {
+		merchants = 1
+	}
+	pom_idea_3 = {
+		trade_steering = 0.10
+	}
+	pom_idea_4 = {
+		tolerance_heretic = 1	
+	}
+	pom_idea_5 = {
+		merc_maintenance_modifier = -0.10
+	}
+	pom_idea_6 = {
+		trade_efficiency = 0.1
+	}
+	pom_idea_7 = {
+		naval_forcelimit_modifier = 0.10
+	}
+}
+
+WLS_ideas = {
+	start = {
+		hostile_attrition = 1
+		land_morale = 0.15
+	}
+
+	bonus = {
+		land_forcelimit_modifier = 0.25
+	}
+	
+	trigger = {
+		tag = GOB
+	}
+	free = yes
+	
+	cynulliad = {
+		stability_cost_modifier = -0.1
+	}
+	bardic_literature = {
+		prestige = 0.25
+	}
+	cyfraith_hywel = {
+		global_unrest = -1
+	}
+	unbennaeth_prydain = {
+		legitimacy = 0.25
+		republican_tradition = 0.25
+		devotion = 0.25							
+        horde_unity = 0.25
+        meritocracy = 0.25
+	}
+	economic_revival = {
+		production_efficiency = 0.1
+	}
+	prifysgolion_cymru = {
+		idea_cost = -0.1
+	}
+	welsh_church = {
+		global_heretic_missionary_strength = 0.01
+	}
+}
+
+GUA_ideas = {
+	start = {
+		infantry_cost = -0.25
+		global_tax_modifier = 0.25
+	}
+	
+	bonus = {
+		global_unrest = -2.5
+	}
+	
+	trigger = {
+		tag = GEA
+	}
+	free = yes
+	
+	gua_idea_1 = {
+		stability_cost_modifier = -0.1
+	}
+	gua_idea_2 = {
+		production_efficiency = 0.1
+	}
+	gua_idea_3 = {
+		prestige = 0.25
+	}
+	gua_idea_4 = {
+		tolerance_heathen = 1
+	}
+	gua_idea_5 = {
+		global_manpower_modifier = 0.10
+	}
+	gua_idea_6 = {
+		defensiveness = 0.10
+	}
+	gua_idea_7 = {
+		infantry_power = 0.1
+	}
+}
+
+CUA_ideas = {
+	start = {
+		stability_cost_modifier = -0.10
+		migration_cooldown = -0.2
+	}
+	
+	bonus = {
+		cavalry_power = 0.10
+	}
+	
+	trigger = {
+		tag = CUA
+	}
+	free = yes
+	
+	cua_idea_1 = {
+		development_cost = -0.1
+	}
+	cua_idea_2 = {
+		land_attrition = -0.15
+	}
+	cua_idea_3 = {
+		leader_land_shock = 1
+	}
+	cua_idea_4 = {
+		cavalry_cost = -0.10
+	}
+	cua_idea_5 = {
+		hostile_attrition = 1
+	}
+	cua_idea_6 = {
+		land_morale = 0.10
+	}
+	cua_idea_7 = {
+		prestige = 1
+	}
+}
+
+CIR_ideas = {
+	start = {
+		stability_cost_modifier = -0.1
+		cavalry_power = 0.25
+	}
+	
+	bonus = {
+		land_morale = 0.15
+	}
+	
+	trigger = {
+		tag = FRO
+	}
+	free = yes
+	
+	horsemen_of_the_steppe = {
+		cavalry_cost = -0.10
+	}
+	merchants_of_genoa = {
+		global_prov_trade_power_modifier = 0.10
+	}
+	circassian_grain = {
+		trade_efficiency = 0.1
+	}
+	franciscan_missionaries = {
+		missionaries = 1
+	}
+	adyghe_beauty = {
+		prestige_decay = -0.01
+	}
+	steppe_diplomats = {
+		diplomats = 1
+	}
+	circassian_religious_flexibility = {
+		tolerance_heathen = 1
 	}
 }

@@ -1,518 +1,11 @@
-CQ1_ideas = {
-    start = {
-    global_foreign_trade_power = 0.25
-    religious_unity = 0.25
-    }
-
-    bonus = {
-    prestige_per_development_from_conversion = 0.10
-    }
-
-    trigger = {
-        tag = CQ1
-    }
-
-    free = yes
-
-    CQ1_idea_1 = {
-    naval_maintenance_modifier = -0.10
-    }
-    CQ1_idea_2 = {
-    discipline = 0.05
-    }
-    CQ1_idea_3 = {
-    interest = -0.25
-    }
-    CQ1_idea_4 = {
-    leader_cost = -0.25
-    }
-    CQ1_idea_5 = {
-    leader_naval_shock = 1
-    }
-    CQ1_idea_6 = {
-    shock_damage = 0.10
-    }
-    CQ1_idea_7 = {
-    war_exhaustion_cost = -0.10
-    }
-}
-
-CQ2_ideas = {
+CR4_ideas = {
     start = {
     sailor_maintenance_modifer = -0.25
-    yearly_corruption = -0.15
-    }
-
-    bonus = {
-    light_ship_cost = -0.25
-    }
-
-    trigger = {
-        tag = CQ2
-    }
-
-    free = yes
-
-    CQ2_idea_1 = {
-    transport_cost = -0.10
-    }
-    CQ2_idea_2 = {
-    galley_cost = -0.10
-    }
-    CQ2_idea_3 = {
-    tolerance_own = 1
-    }
-    CQ2_idea_4 = {
-    global_own_trade_power = 0.10
-    }
-    CQ2_idea_5 = {
-    infantry_power = 0.1
-    }
-    CQ2_idea_6 = {
-    land_attrition = -0.10
-    }
-    CQ2_idea_7 = {
-    light_ship_power = 0.1
-    }
-}
-
-CQ3_ideas = {
-    start = {
-    backrow_artillery_damage = 0.15
-    land_forcelimit_modifier = 0.25
-    }
-
-    bonus = {
-    loot_amount = 0.25
-    }
-
-    trigger = {
-        tag = CQ3
-    }
-
-    free = yes
-
-    CQ3_idea_1 = {
-    ship_power_propagation = 0.10
-    }
-    CQ3_idea_2 = {
-    global_ship_repair = 0.10
-    }
-    CQ3_idea_3 = {
-    global_heretic_missionary_strength = 0.01
-    }
-    CQ3_idea_4 = {
-    siege_blockade_progress = 1
-    }
-    CQ3_idea_5 = {
-    missionaries = 1
-    }
-    CQ3_idea_6 = {
-    adm_tech_cost_modifier = -0.05
-    }
-    CQ3_idea_7 = {
-    shock_damage_received = -0.1
-    }
-}
-
-CQ4_ideas = {
-    start = {
-    diplomatic_annexation_cost = -0.25
-    global_sailors_modifier = 0.25
-    }
-
-    bonus = {
-    global_institution_spread = 0.25
-    }
-
-    trigger = {
-        tag = CQ4
-    }
-
-    free = yes
-
-    CQ4_idea_1 = {
-    privateer_efficiency = 0.10
-    }
-    CQ4_idea_2 = {
-    global_prov_trade_power_modifier = 0.10
-    }
-    CQ4_idea_3 = {
-    leader_land_shock = 1
-    }
-    CQ4_idea_4 = {
-    rival_border_fort_maintenance = -0.10
-    }
-    CQ4_idea_5 = {
-    free_adm_policy = 1
-    }
-    CQ4_idea_6 = {
-    advisor_pool = 1
-    }
-    CQ4_idea_7 = {
-    global_foreign_trade_power = 0.10
-    }
-}
-
-CQ5_ideas = {
-    start = {
-    range = 0.25
-    free_policy = 1
-    }
-
-    bonus = {
-    harsh_treatment_cost = -0.25
-    }
-
-    trigger = {
-        tag = CQ5
-    }
-
-    free = yes
-
-    CQ5_idea_1 = {
-    naval_tradition_from_battle = 0.25
-    }
-    CQ5_idea_2 = {
-    dip_tech_cost_modifier = -0.05
-    }
-    CQ5_idea_3 = {
-    rival_border_fort_maintenance = -0.10
-    }
-    CQ5_idea_4 = {
-    army_tradition_from_battle = 0.25
-    }
-    CQ5_idea_5 = {
-    warscore_cost_vs_other_religion = -0.10
-    }
-    CQ5_idea_6 = {
-    province_warscore_cost = -0.10
-    }
-    CQ5_idea_7 = {
-    global_tax_modifier = 0.10
-    }
-}
-
-CQ6_ideas = {
-    start = {
-    shock_damage = 0.15
-    hostile_attrition = 1
-    }
-
-    bonus = {
-    improve_relation_modifier = 0.25
-    }
-
-    trigger = {
-        tag = CQ6
-    }
-
-    free = yes
-
-    CQ6_idea_1 = {
-    global_institution_spread = 0.10
-    }
-    CQ6_idea_2 = {
-    naval_attrition = -0.10
-    }
-    CQ6_idea_3 = {
-    sailors_recovery_speed = 0.10
-    }
-    CQ6_idea_4 = {
-    num_accepted_cultures = 1
-    }
-    CQ6_idea_5 = {
-    envoy_travel_time = -0.10
-    }
-    CQ6_idea_6 = {
-    idea_cost = -0.1
-    }
-    CQ6_idea_7 = {
-    mil_advisor_cost = -0.1
-    }
-}
-
-CQ7_ideas = {
-    start = {
-    cavalry_flanking = 0.5
-    leader_siege = 1
+    same_culture_advisor_cost = -0.25
     }
 
     bonus = {
     dip_tech_cost_modifier = -0.1
-    }
-
-    trigger = {
-        tag = CQ7
-    }
-
-    free = yes
-
-    CQ7_idea_1 = {
-    state_maintenance_modifier = -0.10
-    }
-    CQ7_idea_2 = {
-    cavalry_cost = -0.10
-    }
-    CQ7_idea_3 = {
-    monarch_admin_power = 1
-    }
-    CQ7_idea_4 = {
-    light_ship_cost = -0.10
-    }
-    CQ7_idea_5 = {
-    monarch_military_power = 1
-    }
-    CQ7_idea_6 = {
-    leader_land_fire = 1
-    }
-    CQ7_idea_7 = {
-    army_tradition_from_battle = 0.25
-    }
-}
-
-CQ8_ideas = {
-    start = {
-    province_warscore_cost = -0.15
-    naval_morale = 0.15
-    }
-
-    bonus = {
-    possible_condottieri = 0.50
-    }
-
-    trigger = {
-        tag = CQ8
-    }
-
-    free = yes
-
-    CQ8_idea_1 = {
-    core_creation = -0.10
-    }
-    CQ8_idea_2 = {
-    heavy_ship_cost = -0.10
-    }
-    CQ8_idea_3 = {
-    global_tax_modifier = 0.10
-    }
-    CQ8_idea_4 = {
-    artillery_bonus_vs_fort = 1
-    }
-    CQ8_idea_5 = {
-    recover_navy_morale_speed = 0.05
-    }
-    CQ8_idea_6 = {
-    prestige_from_land = 0.25
-    }
-    CQ8_idea_7 = {
-    movement_speed = 0.10
-    }
-}
-
-CQ9_ideas = {
-    start = {
-    hostile_attrition = 1
-    years_of_nationalism = -10
-    }
-
-    bonus = {
-    diplomatic_annexation_cost = -0.25
-    }
-
-    trigger = {
-        tag = CQ9
-    }
-
-    free = yes
-
-    CQ9_idea_1 = {
-    yearly_corruption = -0.10
-    }
-    CQ9_idea_2 = {
-    naval_tradition_from_battle = 0.25
-    }
-    CQ9_idea_3 = {
-    army_tradition_decay = -0.01
-    }
-    CQ9_idea_4 = {
-    global_heretic_missionary_strength = 0.01
-    }
-    CQ9_idea_5 = {
-    prestige_decay = -0.01
-    }
-    CQ9_idea_6 = {
-    interest = -0.25
-    }
-    CQ9_idea_7 = {
-    range = 0.10
-    }
-}
-
-CR0_ideas = {
-    start = {
-    naval_forcelimit_modifier = 0.25
-    navy_tradition = 0.5
-    }
-
-    bonus = {
-    prestige_per_development_from_conversion = 0.10
-    }
-
-    trigger = {
-        tag = CR0
-    }
-
-    free = yes
-
-    CR0_idea_1 = {
-    liberty_desire_from_subject_development = -0.10
-    }
-    CR0_idea_2 = {
-    global_institution_spread = 0.10
-    }
-    CR0_idea_3 = {
-    heavy_ship_power = 0.1
-    }
-    CR0_idea_4 = {
-    num_accepted_cultures = 1
-    }
-    CR0_idea_5 = {
-    free_policy = 1
-    }
-    CR0_idea_6 = {
-    tolerance_own = 1
-    }
-    CR0_idea_7 = {
-    idea_cost = -0.1
-    }
-}
-
-CR1_ideas = {
-    start = {
-    leader_cost = -0.50
-    fort_maintenance_modifier = -0.25
-    }
-
-    bonus = {
-    leader_naval_fire = 1
-    }
-
-    trigger = {
-        tag = CR1
-    }
-
-    free = yes
-
-    CR1_idea_1 = {
-    drill_gain_modifier = 0.25
-    }
-    CR1_idea_2 = {
-    land_maintenance_modifier = -0.1
-    }
-    CR1_idea_3 = {
-    land_forcelimit_modifier = 0.1
-    }
-    CR1_idea_4 = {
-    mercenary_cost = -0.10
-    }
-    CR1_idea_5 = {
-    leader_naval_shock = 1
-    }
-    CR1_idea_6 = {
-    global_colonial_growth = 10
-    }
-    CR1_idea_7 = {
-    province_warscore_cost = -0.10
-    }
-}
-
-CR2_ideas = {
-    start = {
-    global_ship_cost = -0.25
-    global_ship_recruit_speed = -0.25
-    }
-
-    bonus = {
-    transport_power = 0.15
-    }
-
-    trigger = {
-        tag = CR2
-    }
-
-    free = yes
-
-    CR2_idea_1 = {
-    technology_cost = -0.05
-    }
-    CR2_idea_2 = {
-    shock_damage_received = -0.1
-    }
-    CR2_idea_3 = {
-    missionaries = 1
-    }
-    CR2_idea_4 = {
-    transport_cost = -0.10
-    }
-    CR2_idea_5 = {
-    envoy_travel_time = -0.10
-    }
-    CR2_idea_6 = {
-    fire_damage_received = -0.10
-    }
-    CR2_idea_7 = {
-    diplomatic_upkeep = 1
-    }
-}
-
-CR3_ideas = {
-    start = {
-    missionaries = 1
-    leader_land_manuever = 1
-    }
-
-    bonus = {
-    improve_relation_modifier = 0.25
-    }
-
-    trigger = {
-        tag = CR3
-    }
-
-    free = yes
-
-    CR3_idea_1 = {
-    naval_morale = 0.10
-    }
-    CR3_idea_2 = {
-    global_ship_recruit_speed = -0.1
-    }
-    CR3_idea_3 = {
-    reduced_liberty_desire_on_same_continent = 10
-    }
-    CR3_idea_4 = {
-    naval_maintenance_modifier = -0.10
-    }
-    CR3_idea_5 = {
-    galley_cost = -0.10
-    }
-    CR3_idea_6 = {
-    caravan_power = 0.10
-    }
-    CR3_idea_7 = {
-    monarch_diplomatic_power = 1
-    }
-}
-
-CR4_ideas = {
-    start = {
-    stability_cost_modifier = -0.25
-    light_ship_cost = -0.25
-    }
-
-    bonus = {
-    shock_damage = 0.15
     }
 
     trigger = {
@@ -522,36 +15,270 @@ CR4_ideas = {
     free = yes
 
     CR4_idea_1 = {
-    native_assimilation = 0.25
+    native_uprising_chance = -0.25
     }
     CR4_idea_2 = {
-    global_ship_repair = 0.10
+    interest = -0.25
     }
     CR4_idea_3 = {
-    embargo_efficiency = 0.10
+    infantry_cost = -0.1
     }
     CR4_idea_4 = {
-    global_missionary_strength = 0.01
+    land_attrition = -0.10
     }
     CR4_idea_5 = {
-    reduced_liberty_desire_on_same_continent = 10
+    monarch_admin_power = 1
     }
     CR4_idea_6 = {
-    core_creation = -0.10
+    harsh_treatment_cost = -0.25
     }
     CR4_idea_7 = {
-    transport_power = 0.1
+    merc_maintenance_modifier = -0.10
+    }
+}
+
+CQ6_ideas = {
+    start = {
+    merchants = 1
+    global_unrest = -2.5
+    }
+
+    bonus = {
+    siege_ability = 0.15
+    }
+
+    trigger = {
+        tag = CQ6
+    }
+
+    free = yes
+
+    CQ6_idea_1 = {
+    cavalry_power = 0.1
+    }
+    CQ6_idea_2 = {
+    reduced_liberty_desire_on_same_continent = 7
+    }
+    CQ6_idea_3 = {
+    production_efficiency = 0.10
+    }
+    CQ6_idea_4 = {
+    army_tradition_from_battle = 0.25
+    }
+    CQ6_idea_5 = {
+    artillery_cost = -0.1
+    }
+    CQ6_idea_6 = {
+    global_manpower_modifier = 0.10
+    }
+    CQ6_idea_7 = {
+    dip_advisor_cost = -0.10
+    }
+}
+
+CQ3_ideas = {
+    start = {
+    global_own_trade_power = 0.25
+    prestige_from_naval = 0.5
+    }
+
+    bonus = {
+    dip_advisor_cost = -0.25
+    }
+
+    trigger = {
+        tag = CQ3
+    }
+
+    free = yes
+
+    CQ3_idea_1 = {
+    loot_amount = 0.25
+    }
+    CQ3_idea_2 = {
+    defensiveness = 0.10
+    }
+    CQ3_idea_3 = {
+    global_institution_spread = 0.10
+    }
+    CQ3_idea_4 = {
+    merchants = 1
+    }
+    CQ3_idea_5 = {
+    build_cost = -0.10
+    }
+    CQ3_idea_6 = {
+    global_ship_repair = 0.10
+    }
+    CQ3_idea_7 = {
+    unjustified_demands = -0.10
+    }
+}
+
+CQ9_ideas = {
+    start = {
+    yearly_absolutism = 0.15
+    vassal_forcelimit_bonus = 0.25
+    }
+
+    bonus = {
+    backrow_artillery_damage = 0.25
+    }
+
+    trigger = {
+        tag = CQ9
+    }
+
+    free = yes
+
+    CQ9_idea_1 = {
+    navy_tradition_decay = -0.01
+    }
+    CQ9_idea_2 = {
+    global_trade_goods_size_modifier = 0.1
+    }
+    CQ9_idea_3 = {
+    naval_tradition_from_battle = 0.25
+    }
+    CQ9_idea_4 = {
+    naval_morale = 0.10
+    }
+    CQ9_idea_5 = {
+    monarch_military_power = 1
+    }
+    CQ9_idea_6 = {
+    colonists = 1
+    }
+    CQ9_idea_7 = {
+    caravan_power = 0.10
+    }
+}
+
+CR1_ideas = {
+    start = {
+    global_own_trade_power = 0.25
+    general_cost = -0.50
+    }
+
+    bonus = {
+    leader_land_manuever = 1
+    }
+
+    trigger = {
+        tag = CR1
+    }
+
+    free = yes
+
+    CR1_idea_1 = {
+    free_adm_policy = 1
+    }
+    CR1_idea_2 = {
+    trade_efficiency = 0.10
+    }
+    CR1_idea_3 = {
+    trade_steering = 0.10
+    }
+    CR1_idea_4 = {
+    garrison_size = 0.10
+    }
+    CR1_idea_5 = {
+    global_ship_repair = 0.10
+    }
+    CR1_idea_6 = {
+    global_ship_cost = -0.10
+    }
+    CR1_idea_7 = {
+    navy_tradition_decay = -0.01
+    }
+}
+
+CQ1_ideas = {
+    start = {
+    rebel_support_efficiency = 0.5
+    global_ship_recruit_speed = -0.25
+    }
+
+    bonus = {
+    monarch_military_power = 1
+    }
+
+    trigger = {
+        tag = CQ1
+    }
+
+    free = yes
+
+    CQ1_idea_1 = {
+    global_ship_repair = 0.10
+    }
+    CQ1_idea_2 = {
+    global_spy_defence = 0.10
+    }
+    CQ1_idea_3 = {
+    free_leader_pool = 1
+    }
+    CQ1_idea_4 = {
+    naval_forcelimit_modifier = 0.10
+    }
+    CQ1_idea_5 = {
+    diplomats = 1
+    }
+    CQ1_idea_6 = {
+    envoy_travel_time = -0.25
+    }
+    CQ1_idea_7 = {
+    recover_navy_morale_speed = 0.05
+    }
+}
+
+CQ7_ideas = {
+    start = {
+    global_manpower_modifier = 0.25
+    yearly_absolutism = 0.15
+    }
+
+    bonus = {
+    global_regiment_recruit_speed = -0.25
+    }
+
+    trigger = {
+        tag = CQ7
+    }
+
+    free = yes
+
+    CQ7_idea_1 = {
+    army_tradition = 0.25
+    }
+    CQ7_idea_2 = {
+    loot_amount = 0.25
+    }
+    CQ7_idea_3 = {
+    mil_tech_cost_modifier = -0.05
+    }
+    CQ7_idea_4 = {
+    reinforce_cost_modifier = -0.10
+    }
+    CQ7_idea_5 = {
+    land_attrition = -0.10
+    }
+    CQ7_idea_6 = {
+    heavy_ship_power = 0.1
+    }
+    CQ7_idea_7 = {
+    sailors_recovery_speed = 0.10
     }
 }
 
 CR5_ideas = {
     start = {
-    recover_navy_morale_speed = 0.10
-    envoy_travel_time = -0.25
+    fire_damage_received = -0.15
+    artillery_cost = -0.25
     }
 
     bonus = {
-    years_of_nationalism = -10
+    naval_tradition_from_battle = 0.5
     }
 
     trigger = {
@@ -561,36 +288,36 @@ CR5_ideas = {
     free = yes
 
     CR5_idea_1 = {
-    free_adm_policy = 1
+    trade_steering = 0.10
     }
     CR5_idea_2 = {
-    culture_conversion_cost = -0.10
+    global_unrest = -1
     }
     CR5_idea_3 = {
-    technology_cost = -0.05
+    fort_maintenance_modifier = -0.1
     }
     CR5_idea_4 = {
-    mil_advisor_cost = -0.1
+    global_colonial_growth = 10
     }
     CR5_idea_5 = {
-    army_tradition_from_battle = 0.25
+    movement_speed = 0.10
     }
     CR5_idea_6 = {
-    monarch_diplomatic_power = 1
+    global_ship_cost = -0.10
     }
     CR5_idea_7 = {
-    missionaries = 1
+    tolerance_heathen = 1
     }
 }
 
 CS1_ideas = {
     start = {
-    monarch_admin_power = 1
-    naval_morale = 0.15
+    shock_damage_received = -0.15
+    galley_cost = -0.25
     }
 
     bonus = {
-    adm_tech_cost_modifier = -0.1
+    general_cost = -0.50
     }
 
     trigger = {
@@ -600,192 +327,36 @@ CS1_ideas = {
     free = yes
 
     CS1_idea_1 = {
-    dip_tech_cost_modifier = -0.05
+    mil_tech_cost_modifier = -0.05
     }
     CS1_idea_2 = {
-    adm_advisor_cost = -0.1
-    }
-    CS1_idea_3 = {
-    transport_cost = -0.10
-    }
-    CS1_idea_4 = {
-    institution_spread_from_true_faith = 0.10
-    }
-    CS1_idea_5 = {
-    sailors_recovery_speed = 0.10
-    }
-    CS1_idea_6 = {
-    discipline = 0.05
-    }
-    CS1_idea_7 = {
-   governing_capacity_modifier = 0.25
-    }
-}
-
-CS2_ideas = {
-    start = {
-    global_spy_defence = 0.25
-    army_tradition = 0.5
-    }
-
-    bonus = {
-    leader_cost = -0.50
-    }
-
-    trigger = {
-        tag = CS2
-    }
-
-    free = yes
-
-    CS2_idea_1 = {
-    galley_cost = -0.10
-    }
-    CS2_idea_2 = {
-   governing_capacity_modifier = 0.25
-    }
-    CS2_idea_3 = {
-    tolerance_heathen = 1
-    }
-    CS2_idea_4 = {
-    warscore_cost_vs_other_religion = -0.10
-    }
-    CS2_idea_5 = {
-    global_regiment_recruit_speed = -0.1
-    }
-    CS2_idea_6 = {
-    mercenary_cost = -0.10
-    }
-    CS2_idea_7 = {
-    global_trade_goods_size_modifier = 0.1
-    }
-}
-
-CS3_ideas = {
-    start = {
-    ship_durability = 0.25
-    global_tariffs = 0.25
-    }
-
-    bonus = {
-    harsh_treatment_cost = -0.25
-    }
-
-    trigger = {
-        tag = CS3
-    }
-
-    free = yes
-
-    CS3_idea_1 = {
-    heavy_ship_cost = -0.10
-    }
-    CS3_idea_2 = {
-    yearly_corruption = -0.10
-    }
-    CS3_idea_3 = {
-    leader_naval_manuever = 1
-    }
-    CS3_idea_4 = {
-    leader_land_fire = 1
-    }
-    CS3_idea_5 = {
-    reduced_liberty_desire = 10
-    }
-    CS3_idea_6 = {
-    global_regiment_cost = -0.1
-    }
-    CS3_idea_7 = {
-    fort_maintenance_modifier = -0.1
-    }
-}
-
-CS4_ideas = {
-    start = {
-    cav_to_inf_ratio = 0.25
-    ship_power_propagation = 0.25
-    }
-
-    bonus = {
-    advisor_cost = -0.25
-    }
-
-    trigger = {
-        tag = CS4
-    }
-
-    free = yes
-
-    CS4_idea_1 = {
-    reduced_liberty_desire = 10
-    }
-    CS4_idea_2 = {
-    artillery_cost = -0.1
-    }
-    CS4_idea_3 = {
-    infantry_power = 0.1
-    }
-    CS4_idea_4 = {
-    culture_conversion_cost = -0.10
-    }
-    CS4_idea_5 = {
     vassal_forcelimit_bonus = 0.10
     }
-    CS4_idea_6 = {
-    reinforce_speed = 0.10
+    CS1_idea_3 = {
+    discipline = 0.05
     }
-    CS4_idea_7 = {
-    same_culture_advisor_cost = -0.10
+    CS1_idea_4 = {
+    leader_siege = 1
     }
-}
-
-CS5_ideas = {
-    start = {
-    tolerance_own = 1
-    global_sailors_modifier = 0.25
+    CS1_idea_5 = {
+    merchants = 1
     }
-
-    bonus = {
-    advisor_cost = -0.25
+    CS1_idea_6 = {
+    recover_navy_morale_speed = 0.05
     }
-
-    trigger = {
-        tag = CS5
-    }
-
-    free = yes
-
-    CS5_idea_1 = {
-    mil_advisor_cost = -0.1
-    }
-    CS5_idea_2 = {
-    culture_conversion_cost = -0.10
-    }
-    CS5_idea_3 = {
-    stability_cost_modifier = -0.10
-    }
-    CS5_idea_4 = {
-    general_cost = -0.25
-    }
-    CS5_idea_5 = {
-    improve_relation_modifier = 0.15
-    }
-    CS5_idea_6 = {
-    siege_blockade_progress = 1
-    }
-    CS5_idea_7 = {
-    land_morale = 0.10
+    CS1_idea_7 = {
+    native_assimilation = 0.25
     }
 }
 
 CS6_ideas = {
     start = {
-    advisor_cost = -0.25
-    shock_damage_received = -0.15
+    global_trade_power = 0.25
+    ae_impact = -0.25
     }
 
     bonus = {
-    land_morale = 0.15
+    army_tradition = 0.5
     }
 
     trigger = {
@@ -795,36 +366,36 @@ CS6_ideas = {
     free = yes
 
     CS6_idea_1 = {
-    trade_range_modifier = 0.10
+    movement_speed = 0.10
     }
     CS6_idea_2 = {
-    global_sailors_modifier = 0.10
+    spy_offence = 0.10
     }
     CS6_idea_3 = {
-    administrative_efficiency = 0.05
+    drill_decay_modifier = -0.10
     }
     CS6_idea_4 = {
-    navy_tradition = 0.25
+    naval_maintenance_modifier = -0.10
     }
     CS6_idea_5 = {
-    manpower_recovery_speed = 0.10
+    global_ship_repair = 0.10
     }
     CS6_idea_6 = {
-    global_unrest = -1
+    global_ship_cost = -0.10
     }
     CS6_idea_7 = {
-    trade_steering = 0.10
+    diplomatic_upkeep = 1
     }
 }
 
 CS7_ideas = {
     start = {
-    discipline = 0.10
-    army_tradition_decay = -0.025
+    trade_steering = 0.25
+    light_ship_power = 0.15
     }
 
     bonus = {
-    galley_cost = -0.25
+    interest = -0.5
     }
 
     trigger = {
@@ -834,36 +405,36 @@ CS7_ideas = {
     free = yes
 
     CS7_idea_1 = {
-    reduced_liberty_desire_on_same_continent = 10
+    prestige_per_development_from_conversion = 0.05
     }
     CS7_idea_2 = {
-    free_dip_policy = 1
+    artillery_bonus_vs_fort = 1
     }
     CS7_idea_3 = {
-    global_colonial_growth = 10
+    galley_cost = -0.10
     }
     CS7_idea_4 = {
-    global_regiment_recruit_speed = -0.1
+    leader_land_fire = 1
     }
     CS7_idea_5 = {
-    fort_maintenance_modifier = -0.1
+    reinforce_cost_modifier = -0.10
     }
     CS7_idea_6 = {
-    monarch_admin_power = 1
+    same_culture_advisor_cost = -0.10
     }
     CS7_idea_7 = {
-    global_ship_recruit_speed = -0.1
+    yearly_absolutism = 0.07
     }
 }
 
 CS8_ideas = {
     start = {
-    vassal_forcelimit_bonus = 0.25
-    ship_power_propagation = 0.25
+    idea_cost = -0.25
+    mercenary_manpower = 0.5
     }
 
     bonus = {
-    artillery_bonus_vs_fort = 1
+    galley_power = 0.15
     }
 
     trigger = {
@@ -873,153 +444,36 @@ CS8_ideas = {
     free = yes
 
     CS8_idea_1 = {
-    free_adm_policy = 1
+    build_time = -0.10
     }
     CS8_idea_2 = {
-    leader_naval_manuever = 1
+    infantry_power = 0.1
     }
     CS8_idea_3 = {
-    province_warscore_cost = -0.10
+    discipline = 0.05
     }
     CS8_idea_4 = {
-    cavalry_flanking = 0.25
+    yearly_corruption = -0.07
     }
     CS8_idea_5 = {
-    production_efficiency = 0.10
+    range = 0.10
     }
     CS8_idea_6 = {
-    galley_power = 0.1
+    ae_impact = -0.10
     }
     CS8_idea_7 = {
-    sailor_maintenance_modifer = -0.1
-    }
-}
-
-CS9_ideas = {
-    start = {
-    global_colonial_growth = 25
-    global_missionary_strength = 0.025
-    }
-
-    bonus = {
-    global_ship_recruit_speed = -0.25
-    }
-
-    trigger = {
-        tag = CS9
-    }
-
-    free = yes
-
-    CS9_idea_1 = {
-    global_tariffs = 0.10
-    }
-    CS9_idea_2 = {
-    adm_advisor_cost = -0.1
-    }
-    CS9_idea_3 = {
-    global_ship_cost = -0.10
-    }
-    CS9_idea_4 = {
-    improve_relation_modifier = 0.15
-    }
-    CS9_idea_5 = {
-    native_uprising_chance = -0.25
-    }
-    CS9_idea_6 = {
-    range = 0.10
-    }
-    CS9_idea_7 = {
-    dip_advisor_cost = -0.10
-    }
-}
-
-CT0_ideas = {
-    start = {
-    siege_blockade_progress = 1
-    free_mil_policy = 1
-    }
-
-    bonus = {
-    leader_naval_shock = 1
-    }
-
-    trigger = {
-        tag = CT0
-    }
-
-    free = yes
-
-    CT0_idea_1 = {
-    religious_unity = 0.10
-    }
-    CT0_idea_2 = {
-    merchants = 1
-    }
-    CT0_idea_3 = {
-    light_ship_power = 0.1
-    }
-    CT0_idea_4 = {
-    galley_power = 0.1
-    }
-    CT0_idea_5 = {
-    institution_spread_from_true_faith = 0.10
-    }
-    CT0_idea_6 = {
-    drill_decay_modifier = -0.10
-    }
-    CT0_idea_7 = {
-    range = 0.10
-    }
-}
-
-CT1_ideas = {
-    start = {
-    global_heretic_missionary_strength = 0.025
-    blockade_efficiency = 0.25
-    }
-
-    bonus = {
-    ae_impact = -0.25
-    }
-
-    trigger = {
-        tag = CT1
-    }
-
-    free = yes
-
-    CT1_idea_1 = {
-    administrative_efficiency = 0.05
-    }
-    CT1_idea_2 = {
-    heavy_ship_cost = -0.10
-    }
-    CT1_idea_3 = {
-    drill_gain_modifier = 0.25
-    }
-    CT1_idea_4 = {
-    army_tradition_decay = -0.01
-    }
-    CT1_idea_5 = {
-    free_dip_policy = 1
-    }
-    CT1_idea_6 = {
-    hostile_attrition = 1
-    }
-    CT1_idea_7 = {
-    land_forcelimit_modifier = 0.1
+    trade_range_modifier = 0.10
     }
 }
 
 CT2_ideas = {
     start = {
-    core_creation = -0.25
-    fort_maintenance_modifier = -0.25
+    army_tradition = 0.5
+    reinforce_cost_modifier = -0.25
     }
 
     bonus = {
-    global_heretic_missionary_strength = 0.025
+    state_maintenance_modifier = -0.25
     }
 
     trigger = {
@@ -1029,36 +483,192 @@ CT2_ideas = {
     free = yes
 
     CT2_idea_1 = {
-    fire_damage = 0.1
+    global_trade_goods_size_modifier = 0.1
     }
     CT2_idea_2 = {
-    leader_naval_manuever = 1
+    free_leader_pool = 1
     }
     CT2_idea_3 = {
-    reinforce_cost_modifier = -0.10
+    dip_advisor_cost = -0.10
     }
     CT2_idea_4 = {
-    reinforce_speed = 0.10
+    global_regiment_cost = -0.1
     }
     CT2_idea_5 = {
-    improve_relation_modifier = 0.15
+    global_ship_trade_power = 0.10
     }
     CT2_idea_6 = {
-    cavalry_power = 0.1
+    hostile_attrition = 1
     }
     CT2_idea_7 = {
-    ship_power_propagation = 0.10
+    tolerance_heretic = 1
+    }
+}
+
+CS2_ideas = {
+    start = {
+    infantry_cost = -0.25
+    vassal_forcelimit_bonus = 0.25
+    }
+
+    bonus = {
+    prestige_per_development_from_conversion = 0.10
+    }
+
+    trigger = {
+        tag = CS2
+    }
+
+    free = yes
+
+    CS2_idea_1 = {
+    manpower_recovery_speed = 0.10
+    }
+    CS2_idea_2 = {
+    global_missionary_strength = 0.01
+    }
+    CS2_idea_3 = {
+    liberty_desire_from_subject_development = -0.10
+    }
+    CS2_idea_4 = {
+    blockade_efficiency = 0.25
+    }
+    CS2_idea_5 = {
+    heavy_ship_power = 0.1
+    }
+    CS2_idea_6 = {
+    build_cost = -0.10
+    }
+    CS2_idea_7 = {
+    artillery_power = 0.1
+    }
+}
+
+CS3_ideas = {
+    start = {
+    global_tariffs = 0.25
+    ae_impact = -0.25
+    }
+
+    bonus = {
+    culture_conversion_cost = -0.25
+    }
+
+    trigger = {
+        tag = CS3
+    }
+
+    free = yes
+
+    CS3_idea_1 = {
+    light_ship_power = 0.1
+    }
+    CS3_idea_2 = {
+    general_cost = -0.25
+    }
+    CS3_idea_3 = {
+    naval_morale = 0.10
+    }
+    CS3_idea_4 = {
+    land_attrition = -0.10
+    }
+    CS3_idea_5 = {
+    yearly_absolutism = 0.07
+    }
+    CS3_idea_6 = {
+    dip_advisor_cost = -0.10
+    }
+    CS3_idea_7 = {
+    tolerance_heathen = 1
+    }
+}
+
+CS4_ideas = {
+    start = {
+    global_prov_trade_power_modifier = 0.25
+    num_accepted_cultures = 1
+    }
+
+    bonus = {
+    global_tariffs = 0.25
+    }
+
+    trigger = {
+        tag = CS4
+    }
+
+    free = yes
+
+    CS4_idea_1 = {
+    cavalry_flanking = 0.25
+    }
+    CS4_idea_2 = {
+    free_leader_pool = 1
+    }
+    CS4_idea_3 = {
+    tolerance_heretic = 1
+    }
+    CS4_idea_4 = {
+    institution_spread_from_true_faith = 0.10
+    }
+    CS4_idea_5 = {
+    army_tradition = 0.25
+    }
+    CS4_idea_6 = {
+    prestige_per_development_from_conversion = 0.05
+    }
+    CS4_idea_7 = {
+    merc_maintenance_modifier = -0.10
+    }
+}
+
+CS5_ideas = {
+    start = {
+    shock_damage = 0.15
+    institution_spread_from_true_faith = 0.25
+    }
+
+    bonus = {
+    culture_conversion_cost = -0.25
+    }
+
+    trigger = {
+        tag = CS5
+    }
+
+    free = yes
+
+    CS5_idea_1 = {
+    heavy_ship_cost = -0.10
+    }
+    CS5_idea_2 = {
+    global_missionary_strength = 0.01
+    }
+    CS5_idea_3 = {
+    vassal_forcelimit_bonus = 0.10
+    }
+    CS5_idea_4 = {
+    loot_amount = 0.25
+    }
+    CS5_idea_5 = {
+    monarch_admin_power = 1
+    }
+    CS5_idea_6 = {
+    land_morale = 0.10
+    }
+    CS5_idea_7 = {
+    development_cost = -0.1
     }
 }
 
 CT3_ideas = {
     start = {
-    mercenary_manpower = 0.5
-    adm_advisor_cost = -0.25
+    trade_range_modifier = 0.25
+    leader_siege = 1
     }
 
     bonus = {
-    warscore_cost_vs_other_religion = -0.15
+    land_forcelimit_modifier = 0.25
     }
 
     trigger = {
@@ -1068,36 +678,36 @@ CT3_ideas = {
     free = yes
 
     CT3_idea_1 = {
-    envoy_travel_time = -0.10
+    trade_efficiency = 0.10
     }
     CT3_idea_2 = {
     idea_cost = -0.1
     }
     CT3_idea_3 = {
-    global_tax_modifier = 0.10
+    defensiveness = 0.10
     }
     CT3_idea_4 = {
-    range = 0.10
+    fire_damage_received = -0.10
     }
     CT3_idea_5 = {
-    shock_damage = 0.10
+    discipline = 0.05
     }
     CT3_idea_6 = {
-    reinforce_cost_modifier = -0.10
+    backrow_artillery_damage = 0.10
     }
     CT3_idea_7 = {
-    prestige_per_development_from_conversion = 0.05
+    same_culture_advisor_cost = -0.10
     }
 }
 
 CT4_ideas = {
     start = {
-    drill_gain_modifier = 0.5
-    galley_power = 0.15
+    free_policy = 1
+    global_manpower_modifier = 0.25
     }
 
     bonus = {
-    tolerance_heathen = 1
+    diplomatic_annexation_cost = -0.25
     }
 
     trigger = {
@@ -1107,36 +717,36 @@ CT4_ideas = {
     free = yes
 
     CT4_idea_1 = {
-    global_tax_modifier = 0.10
+    recover_army_morale_speed = 0.05
     }
     CT4_idea_2 = {
-    recover_navy_morale_speed = 0.05
+    free_mil_policy = 1
     }
     CT4_idea_3 = {
-    tolerance_heretic = 1
+    sunk_ship_morale_hit_recieved = -0.10
     }
     CT4_idea_4 = {
-    movement_speed = 0.10
+    administrative_efficiency = 0.05
     }
     CT4_idea_5 = {
-    unjustified_demands = -0.10
+    artillery_bonus_vs_fort = 1
     }
     CT4_idea_6 = {
-    heavy_ship_cost = -0.10
+    build_cost = -0.10
     }
     CT4_idea_7 = {
-    years_of_nationalism = -5
+    reinforce_speed = 0.10
     }
 }
 
 CT5_ideas = {
     start = {
-    global_spy_defence = 0.25
-    technology_cost = -0.10
+    transport_power = 0.15
+    galley_power = 0.15
     }
 
     bonus = {
-    navy_tradition_decay = -0.025
+    colonists = 1
     }
 
     trigger = {
@@ -1146,36 +756,36 @@ CT5_ideas = {
     free = yes
 
     CT5_idea_1 = {
-    land_morale = 0.10
+    yearly_corruption = -0.07
     }
     CT5_idea_2 = {
-    trade_efficiency = 0.10
+    reinforce_cost_modifier = -0.10
     }
     CT5_idea_3 = {
-    free_policy = 1
+    monarch_military_power = 1
     }
     CT5_idea_4 = {
-    leader_land_manuever = 1
+    general_cost = -0.25
     }
     CT5_idea_5 = {
-    global_sailors_modifier = 0.10
+    discipline = 0.05
     }
     CT5_idea_6 = {
-    free_dip_policy = 1
+    prestige_per_development_from_conversion = 0.05
     }
     CT5_idea_7 = {
-    culture_conversion_cost = -0.10
+    global_colonial_growth = 10
     }
 }
 
 CU1_ideas = {
     start = {
-    prestige_from_land = 0.5
-    hostile_attrition = 1
+    cavalry_power = 0.15
+    global_prov_trade_power_modifier = 0.25
     }
 
     bonus = {
-    reduced_liberty_desire_on_same_continent = 15
+    drill_decay_modifier = -0.25
     }
 
     trigger = {
@@ -1185,36 +795,36 @@ CU1_ideas = {
     free = yes
 
     CU1_idea_1 = {
-    possible_condottieri = 0.25
+    infantry_cost = -0.1
     }
     CU1_idea_2 = {
-    prestige_from_naval = 0.25
+    same_culture_advisor_cost = -0.10
     }
     CU1_idea_3 = {
-    unjustified_demands = -0.10
+    transport_power = 0.1
     }
     CU1_idea_4 = {
-    drill_gain_modifier = 0.25
+    siege_blockade_progress = 1
     }
     CU1_idea_5 = {
-    institution_spread_from_true_faith = 0.10
+    global_ship_recruit_speed = -0.1
     }
     CU1_idea_6 = {
-    naval_maintenance_modifier = -0.10
+    heavy_ship_cost = -0.10
     }
     CU1_idea_7 = {
-    leader_siege = 1
+    sailors_recovery_speed = 0.10
     }
 }
 
 CU2_ideas = {
     start = {
-    reinforce_cost_modifier = -0.25
-    liberty_desire_from_subject_development = -0.25
+    war_exhaustion_cost = -0.25
+    global_missionary_strength = 0.025
     }
 
     bonus = {
-    trade_range_modifier = 0.25
+    vassal_forcelimit_bonus = 0.25
     }
 
     trigger = {
@@ -1224,36 +834,36 @@ CU2_ideas = {
     free = yes
 
     CU2_idea_1 = {
-    naval_tradition_from_battle = 0.25
+    prestige_from_naval = 0.25
     }
     CU2_idea_2 = {
-    leader_naval_fire = 1
+    global_regiment_recruit_speed = -0.1
     }
     CU2_idea_3 = {
-    merc_maintenance_modifier = -0.10
+    culture_conversion_cost = -0.10
     }
     CU2_idea_4 = {
-    diplomatic_upkeep = 1
+    infantry_power = 0.1
     }
     CU2_idea_5 = {
-    global_tax_modifier = 0.10
+    diplomatic_upkeep = 1
     }
     CU2_idea_6 = {
-    ship_durability = 0.1
+    adm_advisor_cost = -0.1
     }
     CU2_idea_7 = {
-    transport_cost = -0.10
+    reduced_liberty_desire = 7
     }
 }
 
 CU3_ideas = {
     start = {
-    yearly_corruption = -0.15
-    range = 0.25
+    mil_tech_cost_modifier = -0.1
+    embargo_efficiency = 0.5
     }
 
     bonus = {
-    trade_range_modifier = 0.25
+    war_exhaustion_cost = -0.25
     }
 
     trigger = {
@@ -1263,36 +873,36 @@ CU3_ideas = {
     free = yes
 
     CU3_idea_1 = {
-    light_ship_cost = -0.10
+    fire_damage_received = -0.10
     }
     CU3_idea_2 = {
-    privateer_efficiency = 0.10
+    global_ship_recruit_speed = -0.1
     }
     CU3_idea_3 = {
-    reinforce_cost_modifier = -0.10
+    leader_land_manuever = 1
     }
     CU3_idea_4 = {
-    army_tradition = 0.25
+    range = 0.10
     }
     CU3_idea_5 = {
-    army_tradition_decay = -0.01
+    recover_army_morale_speed = 0.05
     }
     CU3_idea_6 = {
-    dip_advisor_cost = -0.10
+    army_tradition_decay = -0.01
     }
     CU3_idea_7 = {
-    global_tariffs = 0.10
+    advisor_cost = -0.10
     }
 }
 
 CU4_ideas = {
     start = {
-    global_prov_trade_power_modifier = 0.25
-    infantry_cost = -0.25
+    siege_ability = 0.15
+    advisor_cost = -0.25
     }
 
     bonus = {
-    global_own_trade_power = 0.25
+    development_cost = -0.25
     }
 
     trigger = {
@@ -1302,36 +912,36 @@ CU4_ideas = {
     free = yes
 
     CU4_idea_1 = {
-    mercenary_discipline = 0.05
+    prestige_per_development_from_conversion = 0.05
     }
     CU4_idea_2 = {
-    naval_maintenance_modifier = -0.10
+    transport_cost = -0.10
     }
     CU4_idea_3 = {
-    prestige_from_land = 0.25
+    global_foreign_trade_power = 0.10
     }
     CU4_idea_4 = {
-    artillery_power = 0.1
+    capture_ship_chance = 0.25
     }
     CU4_idea_5 = {
-    religious_unity = 0.10
+    siege_blockade_progress = 1
     }
     CU4_idea_6 = {
-    naval_attrition = -0.10
+    monarch_military_power = 1
     }
     CU4_idea_7 = {
-    reinforce_cost_modifier = -0.10
+    global_tax_modifier = 0.10
     }
 }
 
 CU5_ideas = {
     start = {
-    recover_army_morale_speed = 0.10
-    shock_damage_received = -0.15
+    cavalry_cost = -0.25
+    general_cost = -0.50
     }
 
     bonus = {
-    warscore_cost_vs_other_religion = -0.15
+    adm_advisor_cost = -0.25
     }
 
     trigger = {
@@ -1341,1986 +951,36 @@ CU5_ideas = {
     free = yes
 
     CU5_idea_1 = {
-    infantry_power = 0.1
+    cavalry_power = 0.1
     }
     CU5_idea_2 = {
-    native_assimilation = 0.25
+    global_sailors_modifier = 0.10
     }
     CU5_idea_3 = {
-    global_spy_defence = 0.10
-    }
-    CU5_idea_4 = {
-    rival_border_fort_maintenance = -0.10
-    }
-    CU5_idea_5 = {
-    naval_attrition = -0.10
-    }
-    CU5_idea_6 = {
-    heavy_ship_power = 0.1
-    }
-    CU5_idea_7 = {
-    num_accepted_cultures = 1
-    }
-}
-
-CU6_ideas = {
-    start = {
-    diplomatic_upkeep = 1
-    global_regiment_recruit_speed = -0.25
-    }
-
-    bonus = {
-    defensiveness = 0.25
-    }
-
-    trigger = {
-        tag = CU6
-    }
-
-    free = yes
-
-    CU6_idea_1 = {
-    colonists = 1
-    }
-    CU6_idea_2 = {
-    global_colonial_growth = 10
-    }
-    CU6_idea_3 = {
-    development_cost = -0.1
-    }
-    CU6_idea_4 = {
-    general_cost = -0.25
-    }
-    CU6_idea_5 = {
-    heavy_ship_cost = -0.10
-    }
-    CU6_idea_6 = {
-    mercenary_cost = -0.10
-    }
-    CU6_idea_7 = {
-    trade_efficiency = 0.10
-    }
-}
-
-CU7_ideas = {
-    start = {
-    artillery_bonus_vs_fort = 1
-    ae_impact = -0.25
-    }
-
-    bonus = {
-    rival_border_fort_maintenance = -0.25
-    }
-
-    trigger = {
-        tag = CU7
-    }
-
-    free = yes
-
-    CU7_idea_1 = {
-    interest = -0.25
-    }
-    CU7_idea_2 = {
-    siege_blockade_progress = 1
-    }
-    CU7_idea_3 = {
-    land_maintenance_modifier = -0.1
-    }
-    CU7_idea_4 = {
-    dip_advisor_cost = -0.10
-    }
-    CU7_idea_5 = {
-    global_colonial_growth = 10
-    }
-    CU7_idea_6 = {
-    naval_maintenance_modifier = -0.10
-    }
-    CU7_idea_7 = {
-    warscore_cost_vs_other_religion = -0.10
-    }
-}
-
-CU8_ideas = {
-    start = {
-    shock_damage = 0.15
-    army_tradition_from_battle = 0.5
-    }
-
-    bonus = {
-    mil_tech_cost_modifier = -0.1
-    }
-
-    trigger = {
-        tag = CU8
-    }
-
-    free = yes
-
-    CU8_idea_1 = {
-    ship_power_propagation = 0.10
-    }
-    CU8_idea_2 = {
-    land_maintenance_modifier = -0.1
-    }
-    CU8_idea_3 = {
-    global_ship_trade_power = 0.10
-    }
-    CU8_idea_4 = {
-    land_morale = 0.10
-    }
-    CU8_idea_5 = {
-    reduced_liberty_desire = 10
-    }
-    CU8_idea_6 = {
-    leader_siege = 1
-    }
-    CU8_idea_7 = {
-    army_tradition = 0.25
-    }
-}
-
-CU9_ideas = {
-    start = {
-    monarch_diplomatic_power = 1
-    galley_power = 0.15
-    }
-
-    bonus = {
-    backrow_artillery_damage = 0.15
-    }
-
-    trigger = {
-        tag = CU9
-    }
-
-    free = yes
-
-    CU9_idea_1 = {
-    colonists = 1
-    }
-    CU9_idea_2 = {
-   governing_capacity_modifier = 0.25
-    }
-    CU9_idea_3 = {
-    army_tradition = 0.25
-    }
-    CU9_idea_4 = {
-    sunk_ship_morale_hit_recieved = -0.10
-    }
-    CU9_idea_5 = {
-    free_mil_policy = 1
-    }
-    CU9_idea_6 = {
-    institution_spread_from_true_faith = 0.10
-    }
-    CU9_idea_7 = {
-    tolerance_heretic = 1
-    }
-}
-
-CV0_ideas = {
-    start = {
-    institution_spread_from_true_faith = 0.25
-    dip_tech_cost_modifier = -0.1
-    }
-
-    bonus = {
-    land_maintenance_modifier = -0.25
-    }
-
-    trigger = {
-        tag = CV0
-    }
-
-    free = yes
-
-    CV0_idea_1 = {
-    navy_tradition = 0.25
-    }
-    CV0_idea_2 = {
-    advisor_cost = -0.10
-    }
-    CV0_idea_3 = {
-    ae_impact = -0.10
-    }
-    CV0_idea_4 = {
-    global_foreign_trade_power = 0.10
-    }
-    CV0_idea_5 = {
-    cavalry_flanking = 0.25
-    }
-    CV0_idea_6 = {
-    siege_ability = 0.1
-    }
-    CV0_idea_7 = {
-    global_ship_repair = 0.10
-    }
-}
-
-CV1_ideas = {
-    start = {
-    yearly_absolutism = 0.15
-    monarch_admin_power = 1
-    }
-
-    bonus = {
-    leader_cost = -0.50
-    }
-
-    trigger = {
-        tag = CV1
-    }
-
-    free = yes
-
-    CV1_idea_1 = {
-    state_maintenance_modifier = -0.10
-    }
-    CV1_idea_2 = {
-    privateer_efficiency = 0.10
-    }
-    CV1_idea_3 = {
-    transport_power = 0.1
-    }
-    CV1_idea_4 = {
-    war_exhaustion_cost = -0.10
-    }
-    CV1_idea_5 = {
-    spy_offence = 0.10
-    }
-    CV1_idea_6 = {
-    interest = -0.25
-    }
-    CV1_idea_7 = {
-    trade_steering = 0.10
-    }
-}
-
-CV2_ideas = {
-    start = {
-    naval_tradition_from_battle = 0.5
-    sailors_recovery_speed = 0.25
-    }
-
-    bonus = {
-    cavalry_cost = -0.25
-    }
-
-    trigger = {
-        tag = CV2
-    }
-
-    free = yes
-
-    CV2_idea_1 = {
-    global_regiment_recruit_speed = -0.1
-    }
-    CV2_idea_2 = {
-    province_warscore_cost = -0.10
-    }
-    CV2_idea_3 = {
-    envoy_travel_time = -0.10
-    }
-    CV2_idea_4 = {
-    global_institution_spread = 0.10
-    }
-    CV2_idea_5 = {
-    ae_impact = -0.10
-    }
-    CV2_idea_6 = {
-    privateer_efficiency = 0.10
-    }
-    CV2_idea_7 = {
-    monarch_diplomatic_power = 1
-    }
-}
-
-CV3_ideas = {
-    start = {
-    stability_cost_modifier = -0.25
-    yearly_absolutism = 0.15
-    }
-
-    bonus = {
-    missionaries = 1
-    }
-
-    trigger = {
-        tag = CV3
-    }
-
-    free = yes
-
-    CV3_idea_1 = {
-    siege_blockade_progress = 1
-    }
-    CV3_idea_2 = {
-    naval_attrition = -0.10
-    }
-    CV3_idea_3 = {
-    privateer_efficiency = 0.10
-    }
-    CV3_idea_4 = {
-    spy_offence = 0.10
-    }
-    CV3_idea_5 = {
-    global_tariffs = 0.10
-    }
-    CV3_idea_6 = {
-    global_own_trade_power = 0.10
-    }
-    CV3_idea_7 = {
-    build_time = -0.10
-    }
-}
-
-CV4_ideas = {
-    start = {
-    tolerance_own = 1
-    prestige_from_land = 0.5
-    }
-
-    bonus = {
-    leader_naval_fire = 1
-    }
-
-    trigger = {
-        tag = CV4
-    }
-
-    free = yes
-
-    CV4_idea_1 = {
-    culture_conversion_cost = -0.10
-    }
-    CV4_idea_2 = {
-    warscore_cost_vs_other_religion = -0.10
-    }
-    CV4_idea_3 = {
-    siege_blockade_progress = 1
-    }
-    CV4_idea_4 = {
-    infantry_power = 0.1
-    }
-    CV4_idea_5 = {
-    infantry_cost = -0.1
-    }
-    CV4_idea_6 = {
-    leader_land_fire = 1
-    }
-    CV4_idea_7 = {
-    state_maintenance_modifier = -0.10
-    }
-}
-
-CV5_ideas = {
-    start = {
-    global_ship_cost = -0.25
-    interest = -0.5
-    }
-
-    bonus = {
-    heavy_ship_cost = -0.25
-    }
-
-    trigger = {
-        tag = CV5
-    }
-
-    free = yes
-
-    CV5_idea_1 = {
-    missionaries = 1
-    }
-    CV5_idea_2 = {
-    global_regiment_recruit_speed = -0.1
-    }
-    CV5_idea_3 = {
-    embargo_efficiency = 0.10
-    }
-    CV5_idea_4 = {
-    light_ship_power = 0.1
-    }
-    CV5_idea_5 = {
-    state_maintenance_modifier = -0.10
-    }
-    CV5_idea_6 = {
-    global_ship_trade_power = 0.10
-    }
-    CV5_idea_7 = {
-    administrative_efficiency = 0.05
-    }
-}
-
-CW1_ideas = {
-    start = {
-    global_tariffs = 0.25
-    global_foreign_trade_power = 0.25
-    }
-
-    bonus = {
-    harsh_treatment_cost = -0.25
-    }
-
-    trigger = {
-        tag = CW1
-    }
-
-    free = yes
-
-    CW1_idea_1 = {
-    hostile_attrition = 1
-    }
-    CW1_idea_2 = {
-    tolerance_heathen = 1
-    }
-    CW1_idea_3 = {
-    missionaries = 1
-    }
-    CW1_idea_4 = {
-    stability_cost_modifier = -0.10
-    }
-    CW1_idea_5 = {
-    institution_spread_from_true_faith = 0.10
-    }
-    CW1_idea_6 = {
-    province_warscore_cost = -0.10
-    }
-    CW1_idea_7 = {
-    global_prov_trade_power_modifier = 0.10
-    }
-}
-
-CW2_ideas = {
-    start = {
-    global_foreign_trade_power = 0.25
-    trade_steering = 0.25
-    }
-
-    bonus = {
-    transport_cost = -0.25
-    }
-
-    trigger = {
-        tag = CW2
-    }
-
-    free = yes
-
-    CW2_idea_1 = {
-    free_mil_policy = 1
-    }
-    CW2_idea_2 = {
-    siege_blockade_progress = 1
-    }
-    CW2_idea_3 = {
-    leader_siege = 1
-    }
-    CW2_idea_4 = {
-    light_ship_cost = -0.10
-    }
-    CW2_idea_5 = {
-    artillery_power = 0.1
-    }
-    CW2_idea_6 = {
-    drill_decay_modifier = -0.10
-    }
-    CW2_idea_7 = {
-    diplomats = 1
-    }
-}
-
-CW3_ideas = {
-    start = {
-    shock_damage_received = -0.15
-    province_warscore_cost = -0.15
-    }
-
-    bonus = {
-    army_tradition_decay = -0.025
-    }
-
-    trigger = {
-        tag = CW3
-    }
-
-    free = yes
-
-    CW3_idea_1 = {
-    production_efficiency = 0.10
-    }
-    CW3_idea_2 = {
-    reinforce_cost_modifier = -0.10
-    }
-    CW3_idea_3 = {
-    shock_damage = 0.10
-    }
-    CW3_idea_4 = {
-    unjustified_demands = -0.10
-    }
-    CW3_idea_5 = {
-    prestige_from_land = 0.25
-    }
-    CW3_idea_6 = {
-    range = 0.10
-    }
-    CW3_idea_7 = {
-    navy_tradition = 0.25
-    }
-}
-
-CW4_ideas = {
-    start = {
-    religious_unity = 0.25
-    global_tariffs = 0.25
-    }
-
-    bonus = {
-    light_ship_power = 0.15
-    }
-
-    trigger = {
-        tag = CW4
-    }
-
-    free = yes
-
-    CW4_idea_1 = {
-    advisor_pool = 1
-    }
-    CW4_idea_2 = {
-    adm_advisor_cost = -0.1
-    }
-    CW4_idea_3 = {
-   governing_capacity_modifier = 0.25
-    }
-    CW4_idea_4 = {
-    naval_tradition_from_battle = 0.25
-    }
-    CW4_idea_5 = {
-    tolerance_heathen = 1
-    }
-    CW4_idea_6 = {
-    global_own_trade_power = 0.10
-    }
-    CW4_idea_7 = {
-    liberty_desire_from_subject_development = -0.10
-    }
-}
-
-CW5_ideas = {
-    start = {
-    global_trade_goods_size_modifier = 0.25
-    army_tradition = 0.5
-    }
-
-    bonus = {
-    free_policy = 1
-    }
-
-    trigger = {
-        tag = CW5
-    }
-
-    free = yes
-
-    CW5_idea_1 = {
-    same_culture_advisor_cost = -0.10
-    }
-    CW5_idea_2 = {
-    manpower_recovery_speed = 0.10
-    }
-    CW5_idea_3 = {
-    siege_blockade_progress = 1
-    }
-    CW5_idea_4 = {
-    leader_siege = 1
-    }
-    CW5_idea_5 = {
-    light_ship_cost = -0.10
-    }
-    CW5_idea_6 = {
-    tolerance_own = 1
-    }
-    CW5_idea_7 = {
-    naval_maintenance_modifier = -0.10
-    }
-}
-
-CW6_ideas = {
-    start = {
-    mil_advisor_cost = -0.25
-    land_attrition = -0.25
-    }
-
-    bonus = {
-    drill_gain_modifier = 0.5
-    }
-
-    trigger = {
-        tag = CW6
-    }
-
-    free = yes
-
-    CW6_idea_1 = {
-    prestige = 0.25
-    }
-    CW6_idea_2 = {
-    global_prov_trade_power_modifier = 0.10
-    }
-    CW6_idea_3 = {
-    merchants = 1
-    }
-    CW6_idea_4 = {
-    vassal_income = 0.1
-    }
-    CW6_idea_5 = {
-    global_ship_cost = -0.10
-    }
-    CW6_idea_6 = {
-    army_tradition_from_battle = 0.25
-    }
-    CW6_idea_7 = {
-    heavy_ship_power = 0.1
-    }
-}
-
-CW7_ideas = {
-    start = {
-    navy_tradition = 0.5
-    reduced_liberty_desire = 15
-    }
-
-    bonus = {
-    leader_naval_shock = 1
-    }
-
-    trigger = {
-        tag = CW7
-    }
-
-    free = yes
-
-    CW7_idea_1 = {
-    blockade_efficiency = 0.1
-    }
-    CW7_idea_2 = {
-    reduced_liberty_desire_on_same_continent = 10
-    }
-    CW7_idea_3 = {
-    cavalry_flanking = 0.25
-    }
-    CW7_idea_4 = {
-    fort_maintenance_modifier = -0.1
-    }
-    CW7_idea_5 = {
-    monarch_military_power = 1
-    }
-    CW7_idea_6 = {
-    missionaries = 1
-    }
-    CW7_idea_7 = {
-    transport_power = 0.1
-    }
-}
-
-CW8_ideas = {
-    start = {
-    build_time = -0.25
-    advisor_pool = 1
-    }
-
-    bonus = {
-    free_mil_policy = 1
-    }
-
-    trigger = {
-        tag = CW8
-    }
-
-    free = yes
-
-    CW8_idea_1 = {
-    shock_damage = 0.10
-    }
-    CW8_idea_2 = {
-    global_sailors_modifier = 0.10
-    }
-    CW8_idea_3 = {
-    mercenary_manpower = 0.25
-    }
-    CW8_idea_4 = {
-    global_foreign_trade_power = 0.10
-    }
-    CW8_idea_5 = {
-    global_trade_goods_size_modifier = 0.1
-    }
-    CW8_idea_6 = {
-    recover_navy_morale_speed = 0.05
-    }
-    CW8_idea_7 = {
-    diplomatic_upkeep = 1
-    }
-}
-
-CW9_ideas = {
-    start = {
-    global_unrest = -1
-    infantry_power = 0.15
-    }
-
-    bonus = {
-    leader_siege = 1
-    }
-
-    trigger = {
-        tag = CW9
-    }
-
-    free = yes
-
-    CW9_idea_1 = {
-    reinforce_speed = 0.10
-    }
-    CW9_idea_2 = {
-    land_forcelimit_modifier = 0.1
-    }
-    CW9_idea_3 = {
-    transport_cost = -0.10
-    }
-    CW9_idea_4 = {
-    fort_maintenance_modifier = -0.1
-    }
-    CW9_idea_5 = {
-    siege_blockade_progress = 1
-    }
-    CW9_idea_6 = {
-    navy_tradition_decay = -0.01
-    }
-    CW9_idea_7 = {
-    prestige = 0.25
-    }
-}
-
-CX0_ideas = {
-    start = {
-    yearly_corruption = -0.15
-    trade_steering = 0.25
-    }
-
-    bonus = {
-    mercenary_manpower = 0.5
-    }
-
-    trigger = {
-        tag = CX0
-    }
-
-    free = yes
-
-    CX0_idea_1 = {
-    leader_cost = -0.25
-    }
-    CX0_idea_2 = {
-    global_ship_repair = 0.10
-    }
-    CX0_idea_3 = {
-    global_unrest = -1
-    }
-    CX0_idea_4 = {
-    global_sailors_modifier = 0.10
-    }
-    CX0_idea_5 = {
-    naval_maintenance_modifier = -0.10
-    }
-    CX0_idea_6 = {
-    diplomatic_reputation = 0.5
-    }
-    CX0_idea_7 = {
-    leader_land_manuever = 1
-    }
-}
-
-CX1_ideas = {
-    start = {
-    global_ship_recruit_speed = -0.25
-    colonists = 1
-    }
-
-    bonus = {
-    navy_tradition = 0.5
-    }
-
-    trigger = {
-        tag = CX1
-    }
-
-    free = yes
-
-    CX1_idea_1 = {
-    naval_attrition = -0.10
-    }
-    CX1_idea_2 = {
-    rival_border_fort_maintenance = -0.10
-    }
-    CX1_idea_3 = {
-    leader_naval_shock = 1
-    }
-    CX1_idea_4 = {
-    global_foreign_trade_power = 0.10
-    }
-    CX1_idea_5 = {
-    unjustified_demands = -0.10
-    }
-    CX1_idea_6 = {
-    tolerance_heathen = 1
-    }
-    CX1_idea_7 = {
-    army_tradition_decay = -0.01
-    }
-}
-
-CX2_ideas = {
-    start = {
-    garrison_size = 0.25
-    institution_spread_from_true_faith = 0.25
-    }
-
-    bonus = {
-    global_unrest = -1
-    }
-
-    trigger = {
-        tag = CX2
-    }
-
-    free = yes
-
-    CX2_idea_1 = {
-    same_culture_advisor_cost = -0.10
-    }
-    CX2_idea_2 = {
-    spy_offence = 0.10
-    }
-    CX2_idea_3 = {
-    administrative_efficiency = 0.05
-    }
-    CX2_idea_4 = {
-    leader_land_manuever = 1
-    }
-    CX2_idea_5 = {
-    adm_advisor_cost = -0.1
-    }
-    CX2_idea_6 = {
-    trade_range_modifier = 0.10
-    }
-    CX2_idea_7 = {
-    naval_maintenance_modifier = -0.10
-    }
-}
-
-CX3_ideas = {
-    start = {
-    sunk_ship_morale_hit_recieved = -0.25
-    administrative_efficiency = 0.10
-    }
-
-    bonus = {
-    reduced_liberty_desire = 15
-    }
-
-    trigger = {
-        tag = CX3
-    }
-
-    free = yes
-
-    CX3_idea_1 = {
-    free_mil_policy = 1
-    }
-    CX3_idea_2 = {
-    army_tradition_decay = -0.01
-    }
-    CX3_idea_3 = {
-    blockade_efficiency = 0.1
-    }
-    CX3_idea_4 = {
-    prestige_decay = -0.01
-    }
-    CX3_idea_5 = {
-    adm_tech_cost_modifier = -0.05
-    }
-    CX3_idea_6 = {
-    prestige = 0.25
-    }
-    CX3_idea_7 = {
-    free_dip_policy = 1
-    }
-}
-
-CX4_ideas = {
-    start = {
-    liberty_desire_from_subject_development = -0.25
-    diplomats = 1
-    }
-
-    bonus = {
-    rebel_support_efficiency = 0.25
-    }
-
-    trigger = {
-        tag = CX4
-    }
-
-    free = yes
-
-    CX4_idea_1 = {
-    administrative_efficiency = 0.05
-    }
-    CX4_idea_2 = {
-    naval_forcelimit_modifier = 0.10
-    }
-    CX4_idea_3 = {
-    reduced_liberty_desire = 10
-    }
-    CX4_idea_4 = {
-    tolerance_own = 1
-    }
-    CX4_idea_5 = {
-    fire_damage = 0.1
-    }
-    CX4_idea_6 = {
-    manpower_recovery_speed = 0.10
-    }
-    CX4_idea_7 = {
-    land_forcelimit_modifier = 0.1
-    }
-}
-
-CX5_ideas = {
-    start = {
-    global_regiment_recruit_speed = -0.25
-    sunk_ship_morale_hit_recieved = -0.25
-    }
-
-    bonus = {
-    merc_maintenance_modifier = -0.25
-    }
-
-    trigger = {
-        tag = CX5
-    }
-
-    free = yes
-
-    CX5_idea_1 = {
-    trade_range_modifier = 0.10
-    }
-    CX5_idea_2 = {
-    diplomatic_reputation = 0.5
-    }
-    CX5_idea_3 = {
-    core_creation = -0.10
-    }
-    CX5_idea_4 = {
-    leader_land_manuever = 1
-    }
-    CX5_idea_5 = {
-    global_ship_trade_power = 0.10
-    }
-    CX5_idea_6 = {
-    mercenary_cost = -0.10
-    }
-    CX5_idea_7 = {
-    leader_cost = -0.25
-    }
-}
-
-CY1_ideas = {
-    start = {
-    possible_condottieri = 0.50
-    leader_siege = 1
-    }
-
-    bonus = {
-    war_exhaustion_cost = -0.25
-    }
-
-    trigger = {
-        tag = CY1
-    }
-
-    free = yes
-
-    CY1_idea_1 = {
-    advisor_pool = 1
-    }
-    CY1_idea_2 = {
-    land_forcelimit_modifier = 0.1
-    }
-    CY1_idea_3 = {
-    technology_cost = -0.05
-    }
-    CY1_idea_4 = {
-    yearly_absolutism = 0.10
-    }
-    CY1_idea_5 = {
-    prestige_per_development_from_conversion = 0.05
-    }
-    CY1_idea_6 = {
-    drill_gain_modifier = 0.25
-    }
-    CY1_idea_7 = {
-    ae_impact = -0.10
-    }
-}
-
-CY2_ideas = {
-    start = {
-    possible_condottieri = 0.50
-    heavy_ship_power = 0.15
-    }
-
-    bonus = {
-    transport_power = 0.15
-    }
-
-    trigger = {
-        tag = CY2
-    }
-
-    free = yes
-
-    CY2_idea_1 = {
-    naval_forcelimit_modifier = 0.10
-    }
-    CY2_idea_2 = {
-    siege_ability = 0.1
-    }
-    CY2_idea_3 = {
-    prestige_from_naval = 0.25
-    }
-    CY2_idea_4 = {
-    global_foreign_trade_power = 0.10
-    }
-    CY2_idea_5 = {
-    reduced_liberty_desire = 10
-    }
-    CY2_idea_6 = {
-    global_prov_trade_power_modifier = 0.10
-    }
-    CY2_idea_7 = {
-    monarch_military_power = 1
-    }
-}
-
-CY3_ideas = {
-    start = {
-    merchants = 1
-    ship_power_propagation = 0.25
-    }
-
-    bonus = {
-    prestige_from_land = 0.5
-    }
-
-    trigger = {
-        tag = CY3
-    }
-
-    free = yes
-
-    CY3_idea_1 = {
-    same_culture_advisor_cost = -0.10
-    }
-    CY3_idea_2 = {
-    prestige_decay = -0.01
-    }
-    CY3_idea_3 = {
-    light_ship_power = 0.1
-    }
-    CY3_idea_4 = {
-    drill_decay_modifier = -0.10
-    }
-    CY3_idea_5 = {
-    interest = -0.25
-    }
-    CY3_idea_6 = {
-    global_own_trade_power = 0.10
-    }
-    CY3_idea_7 = {
-    global_unrest = -1
-    }
-}
-
-CY4_ideas = {
-    start = {
-    missionaries = 1
-    cavalry_flanking = 0.5
-    }
-
-    bonus = {
-    leader_cost = -0.50
-    }
-
-    trigger = {
-        tag = CY4
-    }
-
-    free = yes
-
-    CY4_idea_1 = {
-    build_time = -0.10
-    }
-    CY4_idea_2 = {
-    ae_impact = -0.10
-    }
-    CY4_idea_3 = {
-    ship_durability = 0.1
-    }
-    CY4_idea_4 = {
-    reduced_liberty_desire_on_same_continent = 10
-    }
-    CY4_idea_5 = {
-    mercenary_discipline = 0.05
-    }
-    CY4_idea_6 = {
-    idea_cost = -0.1
-    }
-    CY4_idea_7 = {
-    heavy_ship_cost = -0.10
-    }
-}
-
-CY5_ideas = {
-    start = {
-    transport_power = 0.15
-    range = 0.25
-    }
-
-    bonus = {
-    naval_forcelimit_modifier = 0.25
-    }
-
-    trigger = {
-        tag = CY5
-    }
-
-    free = yes
-
-    CY5_idea_1 = {
-    embargo_efficiency = 0.10
-    }
-    CY5_idea_2 = {
-    ship_power_propagation = 0.10
-    }
-    CY5_idea_3 = {
-    vassal_income = 0.1
-    }
-    CY5_idea_4 = {
-    same_culture_advisor_cost = -0.10
-    }
-    CY5_idea_5 = {
-    advisor_cost = -0.10
-    }
-    CY5_idea_6 = {
-    vassal_forcelimit_bonus = 0.10
-    }
-    CY5_idea_7 = {
-    global_own_trade_power = 0.10
-    }
-}
-
-CY6_ideas = {
-    start = {
-    leader_land_manuever = 1
-    liberty_desire_from_subject_development = -0.25
-    }
-
-    bonus = {
-    general_cost = -0.50
-    }
-
-    trigger = {
-        tag = CY6
-    }
-
-    free = yes
-
-    CY6_idea_1 = {
-    reinforce_speed = 0.10
-    }
-    CY6_idea_2 = {
-    global_ship_trade_power = 0.10
-    }
-    CY6_idea_3 = {
-    trade_steering = 0.10
-    }
-    CY6_idea_4 = {
-    rival_border_fort_maintenance = -0.10
-    }
-    CY6_idea_5 = {
-    culture_conversion_cost = -0.10
-    }
-    CY6_idea_6 = {
-    interest = -0.25
-    }
-    CY6_idea_7 = {
-    naval_morale = 0.10
-    }
-}
-
-CY7_ideas = {
-    start = {
-    global_regiment_recruit_speed = -0.25
-    global_unrest = -1
-    }
-
-    bonus = {
-    land_forcelimit_modifier = 0.25
-    }
-
-    trigger = {
-        tag = CY7
-    }
-
-    free = yes
-
-    CY7_idea_1 = {
-    global_ship_recruit_speed = -0.1
-    }
-    CY7_idea_2 = {
-    mercenary_discipline = 0.05
-    }
-    CY7_idea_3 = {
-    movement_speed = 0.10
-    }
-    CY7_idea_4 = {
-    leader_cost = -0.25
-    }
-    CY7_idea_5 = {
-    cav_to_inf_ratio = 0.1
-    }
-    CY7_idea_6 = {
-    artillery_cost = -0.1
-    }
-    CY7_idea_7 = {
-    reduced_liberty_desire = 10
-    }
-}
-
-CY8_ideas = {
-    start = {
-    diplomatic_reputation = 1
-    mil_tech_cost_modifier = -0.1
-    }
-
-    bonus = {
-    range = 0.25
-    }
-
-    trigger = {
-        tag = CY8
-    }
-
-    free = yes
-
-    CY8_idea_1 = {
-    global_trade_power = 0.1
-    }
-    CY8_idea_2 = {
-    free_adm_policy = 1
-    }
-    CY8_idea_3 = {
-    naval_forcelimit_modifier = 0.10
-    }
-    CY8_idea_4 = {
-    cav_to_inf_ratio = 0.1
-    }
-    CY8_idea_5 = {
-    mercenary_cost = -0.10
-    }
-    CY8_idea_6 = {
-   governing_capacity_modifier = 0.25
-    }
-    CY8_idea_7 = {
-    heavy_ship_cost = -0.10
-    }
-}
-
-CY9_ideas = {
-    start = {
-    garrison_size = 0.25
-    naval_maintenance_modifier = -0.25
-    }
-
-    bonus = {
-    idea_cost = -0.25
-    }
-
-    trigger = {
-        tag = CY9
-    }
-
-    free = yes
-
-    CY9_idea_1 = {
-    shock_damage_received = -0.1
-    }
-    CY9_idea_2 = {
-    army_tradition_decay = -0.01
-    }
-    CY9_idea_3 = {
-    naval_morale = 0.10
-    }
-    CY9_idea_4 = {
-    merc_maintenance_modifier = -0.10
-    }
-    CY9_idea_5 = {
-    leader_siege = 1
-    }
-    CY9_idea_6 = {
-    adm_tech_cost_modifier = -0.05
-    }
-    CY9_idea_7 = {
-    global_missionary_strength = 0.01
-    }
-}
-
-CZ0_ideas = {
-    start = {
-    leader_naval_manuever = 1
-    production_efficiency = 0.25
-    }
-
-    bonus = {
-    improve_relation_modifier = 0.25
-    }
-
-    trigger = {
-        tag = CZ0
-    }
-
-    free = yes
-
-    CZ0_idea_1 = {
-    harsh_treatment_cost = -0.10
-    }
-    CZ0_idea_2 = {
-    blockade_efficiency = 0.1
-    }
-    CZ0_idea_3 = {
-    artillery_power = 0.1
-    }
-    CZ0_idea_4 = {
-    recover_navy_morale_speed = 0.05
-    }
-    CZ0_idea_5 = {
-    general_cost = -0.25
-    }
-    CZ0_idea_6 = {
-    envoy_travel_time = -0.10
-    }
-    CZ0_idea_7 = {
-    build_cost = -0.10
-    }
-}
-
-CZ1_ideas = {
-    start = {
-    war_exhaustion_cost = -0.25
-    leader_siege = 1
-    }
-
-    bonus = {
-    general_cost = -0.50
-    }
-
-    trigger = {
-        tag = CZ1
-    }
-
-    free = yes
-
-    CZ1_idea_1 = {
-    global_own_trade_power = 0.10
-    }
-    CZ1_idea_2 = {
-    yearly_corruption = -0.10
-    }
-    CZ1_idea_3 = {
-    naval_tradition_from_battle = 0.25
-    }
-    CZ1_idea_4 = {
-    warscore_cost_vs_other_religion = -0.10
-    }
-    CZ1_idea_5 = {
-    diplomatic_annexation_cost = -0.10
-    }
-    CZ1_idea_6 = {
-    same_culture_advisor_cost = -0.10
-    }
-    CZ1_idea_7 = {
-    global_manpower_modifier = 0.10
-    }
-}
-
-CZ2_ideas = {
-    start = {
-    mercenary_manpower = 0.5
-    reduced_liberty_desire_on_same_continent = 15
-    }
-
-    bonus = {
-    prestige_per_development_from_conversion = 0.10
-    }
-
-    trigger = {
-        tag = CZ2
-    }
-
-    free = yes
-
-    CZ2_idea_1 = {
-    colonists = 1
-    }
-    CZ2_idea_2 = {
-    reinforce_speed = 0.10
-    }
-    CZ2_idea_3 = {
-    recover_army_morale_speed = 0.05
-    }
-    CZ2_idea_4 = {
-    advisor_cost = -0.10
-    }
-    CZ2_idea_5 = {
-    global_regiment_recruit_speed = -0.1
-    }
-    CZ2_idea_6 = {
-    heavy_ship_cost = -0.10
-    }
-    CZ2_idea_7 = {
-    mercenary_discipline = 0.05
-    }
-}
-
-CZ3_ideas = {
-    start = {
-    global_manpower_modifier = 0.25
-    rebel_support_efficiency = 0.25
-    }
-
-    bonus = {
-    leader_naval_manuever = 1
-    }
-
-    trigger = {
-        tag = CZ3
-    }
-
-    free = yes
-
-    CZ3_idea_1 = {
-    culture_conversion_cost = -0.10
-    }
-    CZ3_idea_2 = {
-    global_spy_defence = 0.10
-    }
-    CZ3_idea_3 = {
-    global_regiment_cost = -0.1
-    }
-    CZ3_idea_4 = {
-    trade_efficiency = 0.10
-    }
-    CZ3_idea_5 = {
-    range = 0.10
-    }
-    CZ3_idea_6 = {
-    infantry_cost = -0.1
-    }
-    CZ3_idea_7 = {
-    naval_maintenance_modifier = -0.10
-    }
-}
-
-CZ4_ideas = {
-    start = {
-    global_manpower_modifier = 0.25
-    tolerance_heretic = 1
-    }
-
-    bonus = {
-    dip_advisor_cost = -0.25
-    }
-
-    trigger = {
-        tag = CZ4
-    }
-
-    free = yes
-
-    CZ4_idea_1 = {
-    heavy_ship_power = 0.1
-    }
-    CZ4_idea_2 = {
-    reinforce_cost_modifier = -0.10
-    }
-    CZ4_idea_3 = {
-    global_ship_repair = 0.10
-    }
-    CZ4_idea_4 = {
-    sailor_maintenance_modifer = -0.1
-    }
-    CZ4_idea_5 = {
-    light_ship_cost = -0.10
-    }
-    CZ4_idea_6 = {
-    num_accepted_cultures = 1
-    }
-    CZ4_idea_7 = {
-    build_cost = -0.10
-    }
-}
-
-CZ5_ideas = {
-    start = {
-    yearly_corruption = -0.15
-    infantry_power = 0.15
-    }
-
-    bonus = {
-    global_tax_modifier = 0.25
-    }
-
-    trigger = {
-        tag = CZ5
-    }
-
-    free = yes
-
-    CZ5_idea_1 = {
-    leader_naval_shock = 1
-    }
-    CZ5_idea_2 = {
     religious_unity = 0.10
     }
-    CZ5_idea_3 = {
-    prestige = 0.25
+    CU5_idea_4 = {
+    prestige_per_development_from_conversion = 0.05
     }
-    CZ5_idea_4 = {
-    vassal_income = 0.1
+    CU5_idea_5 = {
+    institution_spread_from_true_faith = 0.10
     }
-    CZ5_idea_5 = {
-    navy_tradition = 0.25
+    CU5_idea_6 = {
+    drill_gain_modifier = 0.25
     }
-    CZ5_idea_6 = {
-    siege_ability = 0.1
-    }
-    CZ5_idea_7 = {
-    range = 0.10
-    }
-}
-
-DS1_ideas = {
-    start = {
-    colonists = 1
-    global_colonial_growth = 25
-    }
-
-    bonus = {
-    same_culture_advisor_cost = -0.25
-    }
-
-    trigger = {
-        tag = DS1
-    }
-
-    free = yes
-
-    DS1_idea_1 = {
-    mil_tech_cost_modifier = -0.05
-    }
-    DS1_idea_2 = {
-    global_foreign_trade_power = 0.10
-    }
-    DS1_idea_3 = {
-    global_ship_trade_power = 0.10
-    }
-    DS1_idea_4 = {
-    transport_power = 0.1
-    }
-    DS1_idea_5 = {
-    core_creation = -0.10
-    }
-    DS1_idea_6 = {
-    rebel_support_efficiency = 0.10
-    }
-    DS1_idea_7 = {
-    army_tradition_decay = -0.01
-    }
-}
-
-DS2_ideas = {
-    start = {
-    recover_army_morale_speed = 0.10
-    general_cost = -0.50
-    }
-
-    bonus = {
-    tolerance_own = 1
-    }
-
-    trigger = {
-        tag = DS2
-    }
-
-    free = yes
-
-    DS2_idea_1 = {
-    land_maintenance_modifier = -0.1
-    }
-    DS2_idea_2 = {
-    infantry_cost = -0.1
-    }
-    DS2_idea_3 = {
-    advisor_cost = -0.10
-    }
-    DS2_idea_4 = {
-    technology_cost = -0.05
-    }
-    DS2_idea_5 = {
-    privateer_efficiency = 0.10
-    }
-    DS2_idea_6 = {
-    mil_tech_cost_modifier = -0.05
-    }
-    DS2_idea_7 = {
-    global_prov_trade_power_modifier = 0.10
-    }
-}
-
-DS3_ideas = {
-    start = {
-    state_maintenance_modifier = -0.25
-    diplomatic_upkeep = 1
-    }
-
-    bonus = {
-    free_adm_policy = 1
-    }
-
-    trigger = {
-        tag = DS3
-    }
-
-    free = yes
-
-    DS3_idea_1 = {
-    leader_siege = 1
-    }
-    DS3_idea_2 = {
-    army_tradition = 0.25
-    }
-    DS3_idea_3 = {
-    global_unrest = -1
-    }
-    DS3_idea_4 = {
-    loot_amount = 0.1
-    }
-    DS3_idea_5 = {
-    movement_speed = 0.10
-    }
-    DS3_idea_6 = {
-    global_foreign_trade_power = 0.10
-    }
-    DS3_idea_7 = {
-    interest = -0.25
-    }
-}
-
-DS4_ideas = {
-    start = {
-    fire_damage_received = -0.15
-    administrative_efficiency = 0.10
-    }
-
-    bonus = {
-    free_leader_pool = 1
-    }
-
-    trigger = {
-        tag = DS4
-    }
-
-    free = yes
-
-    DS4_idea_1 = {
-    land_forcelimit_modifier = 0.1
-    }
-    DS4_idea_2 = {
-    caravan_power = 0.10
-    }
-    DS4_idea_3 = {
-    reduced_liberty_desire_on_same_continent = 10
-    }
-    DS4_idea_4 = {
-    production_efficiency = 0.10
-    }
-    DS4_idea_5 = {
-   governing_capacity_modifier = 0.25
-    }
-    DS4_idea_6 = {
-    land_attrition = -0.10
-    }
-    DS4_idea_7 = {
-    infantry_power = 0.1
-    }
-}
-
-DS5_ideas = {
-    start = {
-    build_cost = -0.25
-    diplomatic_reputation = 1
-    }
-
-    bonus = {
-    global_ship_cost = -0.25
-    }
-
-    trigger = {
-        tag = DS5
-    }
-
-    free = yes
-
-    DS5_idea_1 = {
-    vassal_forcelimit_bonus = 0.10
-    }
-    DS5_idea_2 = {
-    prestige_from_land = 0.25
-    }
-    DS5_idea_3 = {
-    infantry_power = 0.1
-    }
-    DS5_idea_4 = {
-    loot_amount = 0.1
-    }
-    DS5_idea_5 = {
-    global_foreign_trade_power = 0.10
-    }
-    DS5_idea_6 = {
-    ae_impact = -0.10
-    }
-    DS5_idea_7 = {
-    global_tariffs = 0.10
-    }
-}
-
-DS6_ideas = {
-    start = {
-    global_missionary_strength = 0.025
-    global_sailors_modifier = 0.25
-    }
-
-    bonus = {
-    reduced_liberty_desire = 15
-    }
-
-    trigger = {
-        tag = DS6
-    }
-
-    free = yes
-
-    DS6_idea_1 = {
-    leader_naval_manuever = 1
-    }
-    DS6_idea_2 = {
-    garrison_size = 0.10
-    }
-    DS6_idea_3 = {
-    privateer_efficiency = 0.10
-    }
-    DS6_idea_4 = {
-    administrative_efficiency = 0.05
-    }
-    DS6_idea_5 = {
-    leader_land_manuever = 1
-    }
-    DS6_idea_6 = {
-    production_efficiency = 0.10
-    }
-    DS6_idea_7 = {
-    trade_steering = 0.10
-    }
-}
-
-DS7_ideas = {
-    start = {
-    yearly_absolutism = 0.15
-    mercenary_manpower = 0.5
-    }
-
-    bonus = {
-    artillery_bonus_vs_fort = 1
-    }
-
-    trigger = {
-        tag = DS7
-    }
-
-    free = yes
-
-    DS7_idea_1 = {
-    galley_power = 0.1
-    }
-    DS7_idea_2 = {
-    leader_naval_manuever = 1
-    }
-    DS7_idea_3 = {
-    monarch_diplomatic_power = 1
-    }
-    DS7_idea_4 = {
-    num_accepted_cultures = 1
-    }
-    DS7_idea_5 = {
-    advisor_cost = -0.10
-    }
-    DS7_idea_6 = {
-    light_ship_cost = -0.10
-    }
-    DS7_idea_7 = {
-    leader_land_shock = 1
-    }
-}
-
-DS8_ideas = {
-    start = {
-    land_morale = 0.15
-    global_colonial_growth = 25
-    }
-
-    bonus = {
-    leader_naval_manuever = 1
-    }
-
-    trigger = {
-        tag = DS8
-    }
-
-    free = yes
-
-    DS8_idea_1 = {
-    backrow_artillery_damage = 0.10
-    }
-    DS8_idea_2 = {
-    possible_condottieri = 0.25
-    }
-    DS8_idea_3 = {
-    cav_to_inf_ratio = 0.1
-    }
-    DS8_idea_4 = {
-    siege_blockade_progress = 1
-    }
-    DS8_idea_5 = {
-    trade_efficiency = 0.10
-    }
-    DS8_idea_6 = {
-    leader_land_manuever = 1
-    }
-    DS8_idea_7 = {
-    global_ship_trade_power = 0.10
-    }
-}
-
-DS9_ideas = {
-    start = {
-    heavy_ship_power = 0.15
-    trade_range_modifier = 0.25
-    }
-
-    bonus = {
-    global_spy_defence = 0.25
-    }
-
-    trigger = {
-        tag = DS9
-    }
-
-    free = yes
-
-    DS9_idea_1 = {
-    vassal_income = 0.1
-    }
-    DS9_idea_2 = {
-    trade_steering = 0.10
-    }
-    DS9_idea_3 = {
-    mil_tech_cost_modifier = -0.05
-    }
-    DS9_idea_4 = {
-    harsh_treatment_cost = -0.10
-    }
-    DS9_idea_5 = {
-    cavalry_cost = -0.10
-    }
-    DS9_idea_6 = {
-    culture_conversion_cost = -0.10
-    }
-    DS9_idea_7 = {
-    vassal_forcelimit_bonus = 0.10
-    }
-}
-
-DT0_ideas = {
-    start = {
-    native_uprising_chance = -0.5
-    caravan_power = 0.25
-    }
-
-    bonus = {
-    diplomatic_annexation_cost = -0.25
-    }
-
-    trigger = {
-        tag = DT0
-    }
-
-    free = yes
-
-    DT0_idea_1 = {
-    global_trade_power = 0.1
-    }
-    DT0_idea_2 = {
-    tolerance_heathen = 1
-    }
-    DT0_idea_3 = {
-    global_manpower_modifier = 0.10
-    }
-    DT0_idea_4 = {
-    light_ship_power = 0.1
-    }
-    DT0_idea_5 = {
-    free_leader_pool = 1
-    }
-    DT0_idea_6 = {
-    production_efficiency = 0.10
-    }
-    DT0_idea_7 = {
-    leader_cost = -0.25
+    CU5_idea_7 = {
+    development_cost = -0.1
     }
 }
 
 DT1_ideas = {
     start = {
-    spy_offence = 0.25
-    ae_impact = -0.25
+    prestige_from_naval = 0.5
+    army_tradition = 0.5
     }
 
     bonus = {
-    global_regiment_cost = -0.25
+    embargo_efficiency = 0.5
     }
 
     trigger = {
@@ -3330,36 +990,36 @@ DT1_ideas = {
     free = yes
 
     DT1_idea_1 = {
-    fire_damage_received = -0.10
+    ae_impact = -0.10
     }
     DT1_idea_2 = {
-    reinforce_speed = 0.10
+    mil_advisor_cost = -0.1
     }
     DT1_idea_3 = {
-    army_tradition_decay = -0.01
+    light_ship_power = 0.1
     }
     DT1_idea_4 = {
-    army_tradition_from_battle = 0.25
+    movement_speed = 0.10
     }
     DT1_idea_5 = {
-    recover_army_morale_speed = 0.05
+    transport_cost = -0.10
     }
     DT1_idea_6 = {
-    free_mil_policy = 1
+    diplomats = 1
     }
     DT1_idea_7 = {
-    institution_spread_from_true_faith = 0.10
+    monarch_admin_power = 1
     }
 }
 
 DT2_ideas = {
     start = {
-    state_maintenance_modifier = -0.25
-    loot_amount = 0.25
+    colonists = 1
+    governing_capacity = 250
     }
 
     bonus = {
-    reduced_liberty_desire = 15
+    possible_condottieri = 0.50
     }
 
     trigger = {
@@ -3369,36 +1029,36 @@ DT2_ideas = {
     free = yes
 
     DT2_idea_1 = {
-    adm_advisor_cost = -0.1
+    advisor_pool = 1
     }
     DT2_idea_2 = {
-    fire_damage = 0.1
+    free_leader_pool = 1
     }
     DT2_idea_3 = {
-    global_foreign_trade_power = 0.10
+    global_own_trade_power = 0.10
     }
     DT2_idea_4 = {
-    leader_land_shock = 1
+    heavy_ship_power = 0.1
     }
     DT2_idea_5 = {
     naval_morale = 0.10
     }
     DT2_idea_6 = {
-    leader_land_fire = 1
+    infantry_power = 0.1
     }
     DT2_idea_7 = {
-    monarch_admin_power = 1
+    spy_offence = 0.10
     }
 }
 
 DT3_ideas = {
     start = {
-    ae_impact = -0.25
-    naval_attrition = -0.25
+    native_assimilation = 0.5
+    light_ship_cost = -0.25
     }
 
     bonus = {
-    spy_offence = 0.25
+    land_maintenance_modifier = -0.25
     }
 
     trigger = {
@@ -3408,1050 +1068,36 @@ DT3_ideas = {
     free = yes
 
     DT3_idea_1 = {
-    army_tradition_from_battle = 0.25
-    }
-    DT3_idea_2 = {
-    manpower_recovery_speed = 0.10
-    }
-    DT3_idea_3 = {
-    siege_blockade_progress = 1
-    }
-    DT3_idea_4 = {
-    yearly_absolutism = 0.10
-    }
-    DT3_idea_5 = {
-    interest = -0.25
-    }
-    DT3_idea_6 = {
-    free_leader_pool = 1
-    }
-    DT3_idea_7 = {
-    movement_speed = 0.10
-    }
-}
-
-DT4_ideas = {
-    start = {
-    garrison_size = 0.25
-    tolerance_heretic = 1
-    }
-
-    bonus = {
-    artillery_power = 0.15
-    }
-
-    trigger = {
-        tag = DT4
-    }
-
-    free = yes
-
-    DT4_idea_1 = {
-    possible_condottieri = 0.25
-    }
-    DT4_idea_2 = {
-    vassal_income = 0.1
-    }
-    DT4_idea_3 = {
-    reinforce_speed = 0.10
-    }
-    DT4_idea_4 = {
-    land_morale = 0.10
-    }
-    DT4_idea_5 = {
-    advisor_cost = -0.10
-    }
-    DT4_idea_6 = {
-    leader_naval_manuever = 1
-    }
-    DT4_idea_7 = {
-    state_maintenance_modifier = -0.10
-    }
-}
-
-DT5_ideas = {
-    start = {
-    land_forcelimit_modifier = 0.25
-    range = 0.25
-    }
-
-    bonus = {
-    idea_cost = -0.25
-    }
-
-    trigger = {
-        tag = DT5
-    }
-
-    free = yes
-
-    DT5_idea_1 = {
-    cavalry_flanking = 0.25
-    }
-    DT5_idea_2 = {
-    war_exhaustion_cost = -0.10
-    }
-    DT5_idea_3 = {
-    merchants = 1
-    }
-    DT5_idea_4 = {
-    global_missionary_strength = 0.01
-    }
-    DT5_idea_5 = {
-    build_time = -0.10
-    }
-    DT5_idea_6 = {
-    warscore_cost_vs_other_religion = -0.10
-    }
-    DT5_idea_7 = {
-    leader_naval_manuever = 1
-    }
-}
-
-DU1_ideas = {
-    start = {
-    transport_power = 0.15
-    harsh_treatment_cost = -0.25
-    }
-
-    bonus = {
-    shock_damage = 0.15
-    }
-
-    trigger = {
-        tag = DU1
-    }
-
-    free = yes
-
-    DU1_idea_1 = {
-    global_missionary_strength = 0.01
-    }
-    DU1_idea_2 = {
-    cav_to_inf_ratio = 0.1
-    }
-    DU1_idea_3 = {
-    native_assimilation = 0.25
-    }
-    DU1_idea_4 = {
-    backrow_artillery_damage = 0.10
-    }
-    DU1_idea_5 = {
-    siege_blockade_progress = 1
-    }
-    DU1_idea_6 = {
-    defensiveness = 0.10
-    }
-    DU1_idea_7 = {
-    land_morale = 0.10
-    }
-}
-
-DU2_ideas = {
-    start = {
-    missionaries = 1
-    infantry_cost = -0.25
-    }
-
-    bonus = {
-    mil_advisor_cost = -0.25
-    }
-
-    trigger = {
-        tag = DU2
-    }
-
-    free = yes
-
-    DU2_idea_1 = {
-    army_tradition = 0.25
-    }
-    DU2_idea_2 = {
-    leader_siege = 1
-    }
-    DU2_idea_3 = {
-    global_heretic_missionary_strength = 0.01
-    }
-    DU2_idea_4 = {
-    trade_steering = 0.10
-    }
-    DU2_idea_5 = {
-    vassal_income = 0.1
-    }
-    DU2_idea_6 = {
-    global_prov_trade_power_modifier = 0.10
-    }
-    DU2_idea_7 = {
-    privateer_efficiency = 0.10
-    }
-}
-
-DU3_ideas = {
-    start = {
-    trade_range_modifier = 0.25
-    fire_damage_received = -0.15
-    }
-
-    bonus = {
-    reduced_liberty_desire_on_same_continent = 15
-    }
-
-    trigger = {
-        tag = DU3
-    }
-
-    free = yes
-
-    DU3_idea_1 = {
-    global_regiment_cost = -0.1
-    }
-    DU3_idea_2 = {
-    dip_advisor_cost = -0.10
-    }
-    DU3_idea_3 = {
-    global_tax_modifier = 0.10
-    }
-    DU3_idea_4 = {
-    global_sailors_modifier = 0.10
-    }
-    DU3_idea_5 = {
-    drill_gain_modifier = 0.25
-    }
-    DU3_idea_6 = {
-    warscore_cost_vs_other_religion = -0.10
-    }
-    DU3_idea_7 = {
-    religious_unity = 0.10
-    }
-}
-
-DU4_ideas = {
-    start = {
-    artillery_power = 0.15
-    advisor_pool = 1
-    }
-
-    bonus = {
-    culture_conversion_cost = -0.25
-    }
-
-    trigger = {
-        tag = DU4
-    }
-
-    free = yes
-
-    DU4_idea_1 = {
-    global_missionary_strength = 0.01
-    }
-    DU4_idea_2 = {
-    core_creation = -0.10
-    }
-    DU4_idea_3 = {
-    privateer_efficiency = 0.10
-    }
-    DU4_idea_4 = {
-    free_adm_policy = 1
-    }
-    DU4_idea_5 = {
-    warscore_cost_vs_other_religion = -0.10
-    }
-    DU4_idea_6 = {
-    diplomats = 1
-    }
-    DU4_idea_7 = {
-    cavalry_cost = -0.10
-    }
-}
-
-DU5_ideas = {
-    start = {
-    merc_maintenance_modifier = -0.25
-    mil_tech_cost_modifier = -0.1
-    }
-
-    bonus = {
-    native_uprising_chance = -0.5
-    }
-
-    trigger = {
-        tag = DU5
-    }
-
-    free = yes
-
-    DU5_idea_1 = {
-    reduced_liberty_desire_on_same_continent = 10
-    }
-    DU5_idea_2 = {
-    missionaries = 1
-    }
-    DU5_idea_3 = {
-    loot_amount = 0.1
-    }
-    DU5_idea_4 = {
-    galley_cost = -0.10
-    }
-    DU5_idea_5 = {
-    vassal_forcelimit_bonus = 0.10
-    }
-    DU5_idea_6 = {
-    global_regiment_recruit_speed = -0.1
-    }
-    DU5_idea_7 = {
-    transport_cost = -0.10
-    }
-}
-
-DU6_ideas = {
-    start = {
-    unjustified_demands = -0.25
-    recover_army_morale_speed = 0.10
-    }
-
-    bonus = {
-    heavy_ship_power = 0.15
-    }
-
-    trigger = {
-        tag = DU6
-    }
-
-    free = yes
-
-    DU6_idea_1 = {
-    range = 0.10
-    }
-    DU6_idea_2 = {
-    sailors_recovery_speed = 0.10
-    }
-    DU6_idea_3 = {
-    same_culture_advisor_cost = -0.10
-    }
-    DU6_idea_4 = {
-    diplomats = 1
-    }
-    DU6_idea_5 = {
-    tolerance_heretic = 1
-    }
-    DU6_idea_6 = {
-    army_tradition_decay = -0.01
-    }
-    DU6_idea_7 = {
-    interest = -0.25
-    }
-}
-
-DU7_ideas = {
-    start = {
-    technology_cost = -0.10
-    prestige_decay = -0.025
-    }
-
-    bonus = {
-    discipline = 0.10
-    }
-
-    trigger = {
-        tag = DU7
-    }
-
-    free = yes
-
-    DU7_idea_1 = {
-    prestige_from_land = 0.25
-    }
-    DU7_idea_2 = {
-    embargo_efficiency = 0.10
-    }
-    DU7_idea_3 = {
-    trade_range_modifier = 0.10
-    }
-    DU7_idea_4 = {
-    global_ship_cost = -0.10
-    }
-    DU7_idea_5 = {
-    prestige = 0.25
-    }
-    DU7_idea_6 = {
-    global_institution_spread = 0.10
-    }
-    DU7_idea_7 = {
-    cavalry_power = 0.1
-    }
-}
-
-DU8_ideas = {
-    start = {
-    free_dip_policy = 1
-    global_prov_trade_power_modifier = 0.25
-    }
-
-    bonus = {
-    prestige = 0.5
-    }
-
-    trigger = {
-        tag = DU8
-    }
-
-    free = yes
-
-    DU8_idea_1 = {
-    general_cost = -0.25
-    }
-    DU8_idea_2 = {
-    global_trade_power = 0.1
-    }
-    DU8_idea_3 = {
-    global_heretic_missionary_strength = 0.01
-    }
-    DU8_idea_4 = {
-    idea_cost = -0.1
-    }
-    DU8_idea_5 = {
-    rebel_support_efficiency = 0.10
-    }
-    DU8_idea_6 = {
-    leader_naval_manuever = 1
-    }
-    DU8_idea_7 = {
-    transport_cost = -0.10
-    }
-}
-
-DU9_ideas = {
-    start = {
-    leader_siege = 1
-    rival_border_fort_maintenance = -0.25
-    }
-
-    bonus = {
-    native_uprising_chance = -0.5
-    }
-
-    trigger = {
-        tag = DU9
-    }
-
-    free = yes
-
-    DU9_idea_1 = {
-    general_cost = -0.25
-    }
-    DU9_idea_2 = {
-    free_leader_pool = 1
-    }
-    DU9_idea_3 = {
-    heavy_ship_cost = -0.10
-    }
-    DU9_idea_4 = {
-    shock_damage_received = -0.1
-    }
-    DU9_idea_5 = {
-    diplomats = 1
-    }
-    DU9_idea_6 = {
-    shock_damage = 0.10
-    }
-    DU9_idea_7 = {
-    leader_naval_fire = 1
-    }
-}
-
-DV0_ideas = {
-    start = {
-    rebel_support_efficiency = 0.25
-    discipline = 0.10
-    }
-
-    bonus = {
-    land_maintenance_modifier = -0.25
-    }
-
-    trigger = {
-        tag = DV0
-    }
-
-    free = yes
-
-    DV0_idea_1 = {
-    mercenary_manpower = 0.25
-    }
-    DV0_idea_2 = {
-    monarch_diplomatic_power = 1
-    }
-    DV0_idea_3 = {
-    ae_impact = -0.10
-    }
-    DV0_idea_4 = {
-    missionaries = 1
-    }
-    DV0_idea_5 = {
-    religious_unity = 0.10
-    }
-    DV0_idea_6 = {
-    backrow_artillery_damage = 0.10
-    }
-    DV0_idea_7 = {
-    global_unrest = -1
-    }
-}
-
-DV1_ideas = {
-    start = {
-    light_ship_power = 0.15
-    core_creation = -0.25
-    }
-
-    bonus = {
-    hostile_attrition = 1
-    }
-
-    trigger = {
-        tag = DV1
-    }
-
-    free = yes
-
-    DV1_idea_1 = {
-    movement_speed = 0.10
-    }
-    DV1_idea_2 = {
-    infantry_power = 0.1
-    }
-    DV1_idea_3 = {
-    capture_ship_chance = 0.1
-    }
-    DV1_idea_4 = {
-    global_trade_power = 0.1
-    }
-    DV1_idea_5 = {
-    navy_tradition_decay = -0.01
-    }
-    DV1_idea_6 = {
-    embargo_efficiency = 0.10
-    }
-    DV1_idea_7 = {
-    blockade_efficiency = 0.1
-    }
-}
-
-DV2_ideas = {
-    start = {
-    reduced_liberty_desire_on_same_continent = 15
-    naval_morale = 0.15
-    }
-
-    bonus = {
-    shock_damage = 0.15
-    }
-
-    trigger = {
-        tag = DV2
-    }
-
-    free = yes
-
-    DV2_idea_1 = {
-    transport_cost = -0.10
-    }
-    DV2_idea_2 = {
-    land_attrition = -0.10
-    }
-    DV2_idea_3 = {
-    leader_land_shock = 1
-    }
-    DV2_idea_4 = {
-    advisor_cost = -0.10
-    }
-    DV2_idea_5 = {
-    idea_cost = -0.1
-    }
-    DV2_idea_6 = {
-    manpower_recovery_speed = 0.10
-    }
-    DV2_idea_7 = {
-    mercenary_cost = -0.10
-    }
-}
-
-DV3_ideas = {
-    start = {
-    global_missionary_strength = 0.025
-    liberty_desire_from_subject_development = -0.25
-    }
-
-    bonus = {
-    reduced_liberty_desire = 15
-    }
-
-    trigger = {
-        tag = DV3
-    }
-
-    free = yes
-
-    DV3_idea_1 = {
-    rival_border_fort_maintenance = -0.10
-    }
-    DV3_idea_2 = {
-    free_dip_policy = 1
-    }
-    DV3_idea_3 = {
-    possible_condottieri = 0.25
-    }
-    DV3_idea_4 = {
-    warscore_cost_vs_other_religion = -0.10
-    }
-    DV3_idea_5 = {
-    free_adm_policy = 1
-    }
-    DV3_idea_6 = {
-    naval_morale = 0.10
-    }
-    DV3_idea_7 = {
-    global_spy_defence = 0.10
-    }
-}
-
-DV4_ideas = {
-    start = {
-    diplomatic_annexation_cost = -0.25
-    num_accepted_cultures = 1
-    }
-
-    bonus = {
-    global_ship_repair = 0.25
-    }
-
-    trigger = {
-        tag = DV4
-    }
-
-    free = yes
-
-    DV4_idea_1 = {
-    mercenary_manpower = 0.25
-    }
-    DV4_idea_2 = {
-    drill_gain_modifier = 0.25
-    }
-    DV4_idea_3 = {
-    tolerance_heretic = 1
-    }
-    DV4_idea_4 = {
-    prestige_from_naval = 0.25
-    }
-    DV4_idea_5 = {
-    culture_conversion_cost = -0.10
-    }
-    DV4_idea_6 = {
-    global_spy_defence = 0.10
-    }
-    DV4_idea_7 = {
-    unjustified_demands = -0.10
-    }
-}
-
-DV5_ideas = {
-    start = {
-    land_maintenance_modifier = -0.25
-    global_institution_spread = 0.25
-    }
-
-    bonus = {
-    fort_maintenance_modifier = -0.25
-    }
-
-    trigger = {
-        tag = DV5
-    }
-
-    free = yes
-
-    DV5_idea_1 = {
-   governing_capacity_modifier = 0.25
-    }
-    DV5_idea_2 = {
-    advisor_cost = -0.10
-    }
-    DV5_idea_3 = {
-    recover_navy_morale_speed = 0.05
-    }
-    DV5_idea_4 = {
-    envoy_travel_time = -0.10
-    }
-    DV5_idea_5 = {
-    defensiveness = 0.10
-    }
-    DV5_idea_6 = {
-    tolerance_heretic = 1
-    }
-    DV5_idea_7 = {
-    discipline = 0.05
-    }
-}
-
-DW1_ideas = {
-    start = {
-    land_forcelimit_modifier = 0.25
-    global_missionary_strength = 0.025
-    }
-
-    bonus = {
-    global_ship_recruit_speed = -0.25
-    }
-
-    trigger = {
-        tag = DW1
-    }
-
-    free = yes
-
-    DW1_idea_1 = {
-    prestige_from_land = 0.25
-    }
-    DW1_idea_2 = {
-    ship_power_propagation = 0.10
-    }
-    DW1_idea_3 = {
-    envoy_travel_time = -0.10
-    }
-    DW1_idea_4 = {
-    loot_amount = 0.1
-    }
-    DW1_idea_5 = {
-    trade_range_modifier = 0.10
-    }
-    DW1_idea_6 = {
-    reinforce_cost_modifier = -0.10
-    }
-    DW1_idea_7 = {
-    warscore_cost_vs_other_religion = -0.10
-    }
-}
-
-DW2_ideas = {
-    start = {
-    discipline = 0.10
-    monarch_diplomatic_power = 1
-    }
-
-    bonus = {
-    free_dip_policy = 1
-    }
-
-    trigger = {
-        tag = DW2
-    }
-
-    free = yes
-
-    DW2_idea_1 = {
-    tolerance_own = 1
-    }
-    DW2_idea_2 = {
-    diplomatic_reputation = 0.5
-    }
-    DW2_idea_3 = {
-    army_tradition_from_battle = 0.25
-    }
-    DW2_idea_4 = {
-    drill_decay_modifier = -0.10
-    }
-    DW2_idea_5 = {
-    advisor_pool = 1
-    }
-    DW2_idea_6 = {
-    liberty_desire_from_subject_development = -0.10
-    }
-    DW2_idea_7 = {
-    global_foreign_trade_power = 0.10
-    }
-}
-
-DW3_ideas = {
-    start = {
-    global_ship_trade_power = 0.25
-    rebel_support_efficiency = 0.25
-    }
-
-    bonus = {
-    galley_cost = -0.25
-    }
-
-    trigger = {
-        tag = DW3
-    }
-
-    free = yes
-
-    DW3_idea_1 = {
-    land_attrition = -0.10
-    }
-    DW3_idea_2 = {
-    siege_ability = 0.1
-    }
-    DW3_idea_3 = {
     adm_advisor_cost = -0.1
     }
-    DW3_idea_4 = {
-    artillery_power = 0.1
-    }
-    DW3_idea_5 = {
-    navy_tradition_decay = -0.01
-    }
-    DW3_idea_6 = {
-    mercenary_discipline = 0.05
-    }
-    DW3_idea_7 = {
-    fire_damage_received = -0.10
-    }
-}
-
-DW4_ideas = {
-    start = {
-    prestige_decay = -0.025
-    adm_tech_cost_modifier = -0.1
-    }
-
-    bonus = {
-    blockade_efficiency = 0.25
-    }
-
-    trigger = {
-        tag = DW4
-    }
-
-    free = yes
-
-    DW4_idea_1 = {
-    manpower_recovery_speed = 0.10
-    }
-    DW4_idea_2 = {
-    prestige = 0.25
-    }
-    DW4_idea_3 = {
-    global_foreign_trade_power = 0.10
-    }
-    DW4_idea_4 = {
-    capture_ship_chance = 0.1
-    }
-    DW4_idea_5 = {
-    navy_tradition = 0.25
-    }
-    DW4_idea_6 = {
-    merc_maintenance_modifier = -0.10
-    }
-    DW4_idea_7 = {
-    artillery_power = 0.1
-    }
-}
-
-DW5_ideas = {
-    start = {
-    leader_naval_shock = 1
-    dip_tech_cost_modifier = -0.1
-    }
-
-    bonus = {
-    native_uprising_chance = -0.5
-    }
-
-    trigger = {
-        tag = DW5
-    }
-
-    free = yes
-
-    DW5_idea_1 = {
-    state_maintenance_modifier = -0.10
-    }
-    DW5_idea_2 = {
-    spy_offence = 0.10
-    }
-    DW5_idea_3 = {
-    recover_army_morale_speed = 0.05
-    }
-    DW5_idea_4 = {
-    global_ship_cost = -0.10
-    }
-    DW5_idea_5 = {
-    global_own_trade_power = 0.10
-    }
-    DW5_idea_6 = {
-    global_regiment_recruit_speed = -0.1
-    }
-    DW5_idea_7 = {
-    naval_tradition_from_battle = 0.25
-    }
-}
-
-DW6_ideas = {
-    start = {
-    production_efficiency = 0.25
-    stability_cost_modifier = -0.25
-    }
-
-    bonus = {
-    shock_damage = 0.15
-    }
-
-    trigger = {
-        tag = DW6
-    }
-
-    free = yes
-
-    DW6_idea_1 = {
-    sunk_ship_morale_hit_recieved = -0.10
-    }
-    DW6_idea_2 = {
-    global_colonial_growth = 10
-    }
-    DW6_idea_3 = {
-    leader_land_fire = 1
-    }
-    DW6_idea_4 = {
-    dip_tech_cost_modifier = -0.05
-    }
-    DW6_idea_5 = {
-    naval_forcelimit_modifier = 0.10
-    }
-    DW6_idea_6 = {
-    prestige_per_development_from_conversion = 0.05
-    }
-    DW6_idea_7 = {
-    fire_damage = 0.1
-    }
-}
-
-DW7_ideas = {
-    start = {
-    num_accepted_cultures = 1
-    recover_army_morale_speed = 0.10
-    }
-
-    bonus = {
-    adm_advisor_cost = -0.25
-    }
-
-    trigger = {
-        tag = DW7
-    }
-
-    free = yes
-
-    DW7_idea_1 = {
-    global_institution_spread = 0.10
-    }
-    DW7_idea_2 = {
-    drill_gain_modifier = 0.25
-    }
-    DW7_idea_3 = {
-    native_uprising_chance = -0.25
-    }
-    DW7_idea_4 = {
-    hostile_attrition = 1
-    }
-    DW7_idea_5 = {
-    range = 0.10
-    }
-    DW7_idea_6 = {
+    DT3_idea_2 = {
     global_heretic_missionary_strength = 0.01
     }
-    DW7_idea_7 = {
-    prestige_from_land = 0.25
+    DT3_idea_3 = {
+    diplomats = 1
     }
-}
-
-DW8_ideas = {
-    start = {
-    diplomatic_annexation_cost = -0.25
-    stability_cost_modifier = -0.25
+    DT3_idea_4 = {
+    privateer_efficiency = 0.25
     }
-
-    bonus = {
-    leader_siege = 1
+    DT3_idea_5 = {
+    recover_army_morale_speed = 0.05
     }
-
-    trigger = {
-        tag = DW8
+    DT3_idea_6 = {
+    diplomatic_upkeep = 1
     }
-
-    free = yes
-
-    DW8_idea_1 = {
-    global_own_trade_power = 0.10
-    }
-    DW8_idea_2 = {
-    transport_cost = -0.10
-    }
-    DW8_idea_3 = {
-    vassal_income = 0.1
-    }
-    DW8_idea_4 = {
-    land_morale = 0.10
-    }
-    DW8_idea_5 = {
-    ship_durability = 0.1
-    }
-    DW8_idea_6 = {
-    siege_blockade_progress = 1
-    }
-    DW8_idea_7 = {
-    naval_tradition_from_battle = 0.25
-    }
-}
-
-DW9_ideas = {
-    start = {
-    rebel_support_efficiency = 0.25
-    range = 0.25
-    }
-
-    bonus = {
-    prestige = 0.5
-    }
-
-    trigger = {
-        tag = DW9
-    }
-
-    free = yes
-
-    DW9_idea_1 = {
-    free_mil_policy = 1
-    }
-    DW9_idea_2 = {
-    leader_land_fire = 1
-    }
-    DW9_idea_3 = {
-    infantry_cost = -0.1
-    }
-    DW9_idea_4 = {
-    liberty_desire_from_subject_development = -0.10
-    }
-    DW9_idea_5 = {
-    religious_unity = 0.10
-    }
-    DW9_idea_6 = {
-    capture_ship_chance = 0.1
-    }
-    DW9_idea_7 = {
-    global_own_trade_power = 0.10
+    DT3_idea_7 = {
+    administrative_efficiency = 0.05
     }
 }
 
 DX0_ideas = {
     start = {
-    backrow_artillery_damage = 0.15
-    cavalry_cost = -0.25
+    reduced_liberty_desire_on_same_continent = 15
+    mercenary_manpower = 0.5
     }
 
     bonus = {
-    shock_damage_received = -0.15
+    unjustified_demands = -0.25
     }
 
     trigger = {
@@ -4461,36 +1107,192 @@ DX0_ideas = {
     free = yes
 
     DX0_idea_1 = {
-    monarch_diplomatic_power = 1
+    light_ship_cost = -0.10
     }
     DX0_idea_2 = {
-    privateer_efficiency = 0.10
+    global_prov_trade_power_modifier = 0.10
     }
     DX0_idea_3 = {
-    development_cost = -0.1
+    rebel_support_efficiency = 0.25
     }
     DX0_idea_4 = {
-    artillery_cost = -0.1
+    monarch_admin_power = 1
     }
     DX0_idea_5 = {
-    global_regiment_cost = -0.1
+    global_own_trade_power = 0.10
     }
     DX0_idea_6 = {
-    global_tax_modifier = 0.10
+    naval_morale = 0.10
     }
     DX0_idea_7 = {
-    core_creation = -0.10
+    global_sailors_modifier = 0.10
+    }
+}
+
+DT4_ideas = {
+    start = {
+    free_dip_policy = 1
+    transport_power = 0.15
+    }
+
+    bonus = {
+    reinforce_speed = 0.25
+    }
+
+    trigger = {
+        tag = DT4
+    }
+
+    free = yes
+
+    DT4_idea_1 = {
+    range = 0.10
+    }
+    DT4_idea_2 = {
+    naval_morale = 0.10
+    }
+    DT4_idea_3 = {
+    ship_power_propagation = 0.10
+    }
+    DT4_idea_4 = {
+    trade_steering = 0.10
+    }
+    DT4_idea_5 = {
+    global_unrest = -1
+    }
+    DT4_idea_6 = {
+    prestige_decay = -0.01
+    }
+    DT4_idea_7 = {
+    navy_tradition = 0.25
+    }
+}
+
+DS1_ideas = {
+    start = {
+    galley_cost = -0.25
+    mil_tech_cost_modifier = -0.1
+    }
+
+    bonus = {
+    tolerance_heretic = 2.5
+    }
+
+    trigger = {
+        tag = DS1
+    }
+
+    free = yes
+
+    DS1_idea_1 = {
+    manpower_recovery_speed = 0.10
+    }
+    DS1_idea_2 = {
+    spy_offence = 0.10
+    }
+    DS1_idea_3 = {
+    vassal_forcelimit_bonus = 0.10
+    }
+    DS1_idea_4 = {
+    leader_land_fire = 1
+    }
+    DS1_idea_5 = {
+    free_leader_pool = 1
+    }
+    DS1_idea_6 = {
+    defensiveness = 0.10
+    }
+    DS1_idea_7 = {
+    cavalry_power = 0.1
+    }
+}
+
+DW1_ideas = {
+    start = {
+    manpower_recovery_speed = 0.25
+    tolerance_heretic = 2.5
+    }
+
+    bonus = {
+    global_colonial_growth = 25
+    }
+
+    trigger = {
+        tag = DW1
+    }
+
+    free = yes
+
+    DW1_idea_1 = {
+    reinforce_speed = 0.10
+    }
+    DW1_idea_2 = {
+    naval_tradition_from_battle = 0.25
+    }
+    DW1_idea_3 = {
+    cavalry_flanking = 0.25
+    }
+    DW1_idea_4 = {
+    trade_range_modifier = 0.10
+    }
+    DW1_idea_5 = {
+    rebel_support_efficiency = 0.25
+    }
+    DW1_idea_6 = {
+    land_maintenance_modifier = -0.1
+    }
+    DW1_idea_7 = {
+    warscore_cost_vs_other_religion = -0.10
+    }
+}
+
+DW2_ideas = {
+    start = {
+    ae_impact = -0.25
+    sailor_maintenance_modifer = -0.25
+    }
+
+    bonus = {
+    global_regiment_recruit_speed = -0.25
+    }
+
+    trigger = {
+        tag = DW2
+    }
+
+    free = yes
+
+    DW2_idea_1 = {
+    reinforce_speed = 0.10
+    }
+    DW2_idea_2 = {
+    build_time = -0.10
+    }
+    DW2_idea_3 = {
+    artillery_cost = -0.1
+    }
+    DW2_idea_4 = {
+    artillery_bonus_vs_fort = 1
+    }
+    DW2_idea_5 = {
+    transport_power = 0.1
+    }
+    DW2_idea_6 = {
+    army_tradition_decay = -0.01
+    }
+    DW2_idea_7 = {
+    dip_tech_cost_modifier = -0.05
     }
 }
 
 DX1_ideas = {
     start = {
-    global_regiment_cost = -0.25
-    advisor_pool = 1
+    years_of_nationalism = -10
+    missionaries = 1
     }
 
     bonus = {
-    dip_advisor_cost = -0.25
+    loot_amount = 0.50
     }
 
     trigger = {
@@ -4500,36 +1302,36 @@ DX1_ideas = {
     free = yes
 
     DX1_idea_1 = {
-    naval_morale = 0.10
+    war_exhaustion_cost = -0.10
     }
     DX1_idea_2 = {
-    same_culture_advisor_cost = -0.10
+    global_ship_cost = -0.10
     }
     DX1_idea_3 = {
-    backrow_artillery_damage = 0.10
+    navy_tradition_decay = -0.01
     }
     DX1_idea_4 = {
-    diplomatic_upkeep = 1
+    trade_efficiency = 0.10
     }
     DX1_idea_5 = {
-    global_tariffs = 0.10
+    adm_tech_cost_modifier = -0.05
     }
     DX1_idea_6 = {
-    global_manpower_modifier = 0.10
+    reinforce_cost_modifier = -0.10
     }
     DX1_idea_7 = {
-    monarch_diplomatic_power = 1
+    merc_maintenance_modifier = -0.10
     }
 }
 
 DX2_ideas = {
     start = {
-    manpower_recovery_speed = 0.25
-    missionaries = 1
+    land_morale = 0.15
+    fire_damage = 0.15
     }
 
     bonus = {
-    navy_tradition_decay = -0.025
+    global_sailors_modifier = 0.25
     }
 
     trigger = {
@@ -4539,36 +1341,75 @@ DX2_ideas = {
     free = yes
 
     DX2_idea_1 = {
-    range = 0.10
+    prestige_from_naval = 0.25
     }
     DX2_idea_2 = {
-    administrative_efficiency = 0.05
+    governing_capacity = 100
     }
     DX2_idea_3 = {
-    mercenary_cost = -0.10
+    transport_cost = -0.10
     }
     DX2_idea_4 = {
-    idea_cost = -0.1
+    naval_forcelimit_modifier = 0.10
     }
     DX2_idea_5 = {
-    vassal_income = 0.1
-    }
-    DX2_idea_6 = {
     global_regiment_recruit_speed = -0.1
     }
+    DX2_idea_6 = {
+    galley_cost = -0.10
+    }
     DX2_idea_7 = {
-    tolerance_heretic = 1
+    global_ship_cost = -0.10
+    }
+}
+
+DW9_ideas = {
+    start = {
+    army_tradition_decay = -0.025
+    global_tariffs = 0.25
+    }
+
+    bonus = {
+    shock_damage = 0.15
+    }
+
+    trigger = {
+        tag = DW9
+    }
+
+    free = yes
+
+    DW9_idea_1 = {
+    tolerance_own = 1
+    }
+    DW9_idea_2 = {
+    drill_decay_modifier = -0.10
+    }
+    DW9_idea_3 = {
+    naval_attrition = -0.10
+    }
+    DW9_idea_4 = {
+    ship_durability = 0.1
+    }
+    DW9_idea_5 = {
+    global_prov_trade_power_modifier = 0.10
+    }
+    DW9_idea_6 = {
+    prestige = 0.25
+    }
+    DW9_idea_7 = {
+    global_regiment_recruit_speed = -0.1
     }
 }
 
 DX3_ideas = {
     start = {
-    army_tradition_from_battle = 0.5
-    movement_speed = 0.15
+    global_spy_defence = 0.25
+    leader_naval_shock = 1
     }
 
     bonus = {
-    mil_advisor_cost = -0.25
+    siege_ability = 0.15
     }
 
     trigger = {
@@ -4578,36 +1419,36 @@ DX3_ideas = {
     free = yes
 
     DX3_idea_1 = {
-    global_regiment_recruit_speed = -0.1
+    shock_damage = 0.10
     }
     DX3_idea_2 = {
-    tolerance_heathen = 1
+    free_mil_policy = 1
     }
     DX3_idea_3 = {
-    monarch_admin_power = 1
+    global_ship_repair = 0.10
     }
     DX3_idea_4 = {
-    light_ship_power = 0.1
+    naval_attrition = -0.10
     }
     DX3_idea_5 = {
-    transport_cost = -0.10
+    ship_power_propagation = 0.10
     }
     DX3_idea_6 = {
-    galley_power = 0.1
+    diplomatic_upkeep = 1
     }
     DX3_idea_7 = {
-    yearly_absolutism = 0.10
+    global_trade_power = 0.1
     }
 }
 
 DX4_ideas = {
     start = {
-    cavalry_flanking = 0.5
-    global_tax_modifier = 0.25
+    caravan_power = 0.25
+    colonists = 1
     }
 
     bonus = {
-    hostile_attrition = 1
+    idea_cost = -0.25
     }
 
     trigger = {
@@ -4617,36 +1458,36 @@ DX4_ideas = {
     free = yes
 
     DX4_idea_1 = {
-    mercenary_cost = -0.10
+    light_ship_power = 0.1
     }
     DX4_idea_2 = {
-    manpower_recovery_speed = 0.10
+    merchants = 1
     }
     DX4_idea_3 = {
-    liberty_desire_from_subject_development = -0.10
+    leader_naval_manuever = 1
     }
     DX4_idea_4 = {
-    rebel_support_efficiency = 0.10
+    leader_land_shock = 1
     }
     DX4_idea_5 = {
-    same_culture_advisor_cost = -0.10
+    diplomatic_annexation_cost = -0.10
     }
     DX4_idea_6 = {
-    global_ship_recruit_speed = -0.1
+    prestige_from_land = 0.25
     }
     DX4_idea_7 = {
-    ship_power_propagation = 0.10
+    production_efficiency = 0.10
     }
 }
 
 DX5_ideas = {
     start = {
-    colonists = 1
-    global_ship_recruit_speed = -0.25
+    global_ship_repair = 0.25
+    naval_forcelimit_modifier = 0.25
     }
 
     bonus = {
-		governing_capacity_modifier = 0.25
+    prestige_per_development_from_conversion = 0.10
     }
 
     trigger = {
@@ -4656,348 +1497,36 @@ DX5_ideas = {
     free = yes
 
     DX5_idea_1 = {
-    siege_ability = 0.1
+    rival_border_fort_maintenance = -0.10
     }
     DX5_idea_2 = {
-    movement_speed = 0.10
+    capture_ship_chance = 0.25
     }
     DX5_idea_3 = {
-    reduced_liberty_desire = 10
+    free_dip_policy = 1
     }
     DX5_idea_4 = {
-    global_sailors_modifier = 0.10
+    core_creation = -0.10
     }
     DX5_idea_5 = {
-    hostile_attrition = 1
+    reduced_liberty_desire_on_same_continent = 7
     }
     DX5_idea_6 = {
-    light_ship_power = 0.1
+    colonists = 1
     }
     DX5_idea_7 = {
-    trade_range_modifier = 0.10
-    }
-}
-
-DY1_ideas = {
-    start = {
-    galley_cost = -0.25
-    global_own_trade_power = 0.25
-    }
-
-    bonus = {
-    global_missionary_strength = 0.025
-    }
-
-    trigger = {
-        tag = DY1
-    }
-
-    free = yes
-
-    DY1_idea_1 = {
-    cav_to_inf_ratio = 0.1
-    }
-    DY1_idea_2 = {
-    global_regiment_cost = -0.1
-    }
-    DY1_idea_3 = {
-    army_tradition_decay = -0.01
-    }
-    DY1_idea_4 = {
-    movement_speed = 0.10
-    }
-    DY1_idea_5 = {
-    naval_tradition_from_battle = 0.25
-    }
-    DY1_idea_6 = {
-    land_attrition = -0.10
-    }
-    DY1_idea_7 = {
-    drill_decay_modifier = -0.10
-    }
-}
-
-DY2_ideas = {
-    start = {
-    global_spy_defence = 0.25
-    tolerance_heretic = 1
-    }
-
-    bonus = {
-    light_ship_power = 0.15
-    }
-
-    trigger = {
-        tag = DY2
-    }
-
-    free = yes
-
-    DY2_idea_1 = {
-    advisor_cost = -0.10
-    }
-    DY2_idea_2 = {
-    leader_siege = 1
-    }
-    DY2_idea_3 = {
-    culture_conversion_cost = -0.10
-    }
-    DY2_idea_4 = {
-    institution_spread_from_true_faith = 0.10
-    }
-    DY2_idea_5 = {
-    shock_damage = 0.10
-    }
-    DY2_idea_6 = {
-    monarch_military_power = 1
-    }
-    DY2_idea_7 = {
-    rebel_support_efficiency = 0.10
-    }
-}
-
-DY3_ideas = {
-    start = {
-    global_tariffs = 0.25
-    mercenary_discipline = 0.10
-    }
-
-    bonus = {
-    ae_impact = -0.25
-    }
-
-    trigger = {
-        tag = DY3
-    }
-
-    free = yes
-
-    DY3_idea_1 = {
-    merc_maintenance_modifier = -0.10
-    }
-    DY3_idea_2 = {
-    hostile_attrition = 1
-    }
-    DY3_idea_3 = {
-    diplomatic_upkeep = 1
-    }
-    DY3_idea_4 = {
-    adm_tech_cost_modifier = -0.05
-    }
-    DY3_idea_5 = {
-    blockade_efficiency = 0.1
-    }
-    DY3_idea_6 = {
-    advisor_pool = 1
-    }
-    DY3_idea_7 = {
-    vassal_forcelimit_bonus = 0.10
-    }
-}
-
-DY4_ideas = {
-    start = {
-    advisor_pool = 1
-    leader_naval_shock = 1
-    }
-
-    bonus = {
-    free_leader_pool = 1
-    }
-
-    trigger = {
-        tag = DY4
-    }
-
-    free = yes
-
-    DY4_idea_1 = {
-    years_of_nationalism = -5
-    }
-    DY4_idea_2 = {
-    privateer_efficiency = 0.10
-    }
-    DY4_idea_3 = {
-    global_heretic_missionary_strength = 0.01
-    }
-    DY4_idea_4 = {
-    global_manpower_modifier = 0.10
-    }
-    DY4_idea_5 = {
-    sunk_ship_morale_hit_recieved = -0.10
-    }
-    DY4_idea_6 = {
-    build_cost = -0.10
-    }
-    DY4_idea_7 = {
-    drill_gain_modifier = 0.25
-    }
-}
-
-DY5_ideas = {
-    start = {
-    vassal_income = 0.25
-    unjustified_demands = -0.25
-    }
-
-    bonus = {
-    fire_damage = 0.15
-    }
-
-    trigger = {
-        tag = DY5
-    }
-
-    free = yes
-
-    DY5_idea_1 = {
-    yearly_absolutism = 0.10
-    }
-    DY5_idea_2 = {
-    global_trade_power = 0.1
-    }
-    DY5_idea_3 = {
-    prestige_decay = -0.01
-    }
-    DY5_idea_4 = {
-    religious_unity = 0.10
-    }
-    DY5_idea_5 = {
-    naval_forcelimit_modifier = 0.10
-    }
-    DY5_idea_6 = {
-    army_tradition_decay = -0.01
-    }
-    DY5_idea_7 = {
-    capture_ship_chance = 0.1
-    }
-}
-
-DY6_ideas = {
-    start = {
-    mercenary_discipline = 0.10
-    global_unrest = -1
-    }
-
-    bonus = {
-    privateer_efficiency = 0.25
-    }
-
-    trigger = {
-        tag = DY6
-    }
-
-    free = yes
-
-    DY6_idea_1 = {
-    global_tariffs = 0.10
-    }
-    DY6_idea_2 = {
-    transport_power = 0.1
-    }
-    DY6_idea_3 = {
-    liberty_desire_from_subject_development = -0.10
-    }
-    DY6_idea_4 = {
-    fire_damage_received = -0.10
-    }
-    DY6_idea_5 = {
-    adm_tech_cost_modifier = -0.05
-    }
-    DY6_idea_6 = {
-    transport_cost = -0.10
-    }
-    DY6_idea_7 = {
-    reduced_liberty_desire = 10
-    }
-}
-
-DY7_ideas = {
-    start = {
-    core_creation = -0.25
-    backrow_artillery_damage = 0.15
-    }
-
-    bonus = {
-    prestige_from_land = 0.5
-    }
-
-    trigger = {
-        tag = DY7
-    }
-
-    free = yes
-
-    DY7_idea_1 = {
-    build_cost = -0.10
-    }
-    DY7_idea_2 = {
-    mercenary_manpower = 0.25
-    }
-    DY7_idea_3 = {
-    naval_maintenance_modifier = -0.10
-    }
-    DY7_idea_4 = {
-    production_efficiency = 0.10
-    }
-    DY7_idea_5 = {
-    years_of_nationalism = -5
-    }
-    DY7_idea_6 = {
-    state_maintenance_modifier = -0.10
-    }
-    DY7_idea_7 = {
-    heavy_ship_power = 0.1
-    }
-}
-
-DY8_ideas = {
-    start = {
-    prestige_from_naval = 0.5
-    possible_condottieri = 0.50
-    }
-
-    bonus = {
-    fire_damage_received = -0.15
-    }
-
-    trigger = {
-        tag = DY8
-    }
-
-    free = yes
-
-    DY8_idea_1 = {
-    land_morale = 0.10
-    }
-    DY8_idea_2 = {
-    global_sailors_modifier = 0.10
-    }
-    DY8_idea_3 = {
-    land_forcelimit_modifier = 0.1
-    }
-    DY8_idea_4 = {
-    production_efficiency = 0.10
-    }
-    DY8_idea_5 = {
-    leader_land_manuever = 1
-    }
-    DY8_idea_6 = {
-    shock_damage_received = -0.1
-    }
-    DY8_idea_7 = {
-    general_cost = -0.25
+    diplomatic_annexation_cost = -0.10
     }
 }
 
 DY9_ideas = {
     start = {
-    artillery_bonus_vs_fort = 1
-    administrative_efficiency = 0.10
+    global_missionary_strength = 0.025
+    ae_impact = -0.25
     }
 
     bonus = {
-    leader_naval_fire = 1
+    reinforce_speed = 0.25
     }
 
     trigger = {
@@ -5007,75 +1536,36 @@ DY9_ideas = {
     free = yes
 
     DY9_idea_1 = {
-    ae_impact = -0.10
+    unjustified_demands = -0.10
     }
     DY9_idea_2 = {
-    transport_power = 0.1
+    blockade_efficiency = 0.25
     }
     DY9_idea_3 = {
-    free_dip_policy = 1
+    num_accepted_cultures = 1
     }
     DY9_idea_4 = {
-    caravan_power = 0.10
+    naval_maintenance_modifier = -0.10
     }
     DY9_idea_5 = {
-    core_creation = -0.10
+    idea_cost = -0.1
     }
     DY9_idea_6 = {
-    free_leader_pool = 1
+    range = 0.10
     }
     DY9_idea_7 = {
-    army_tradition = 0.25
-    }
-}
-
-DZ0_ideas = {
-    start = {
-    land_attrition = -0.25
-    mercenary_cost = -0.25
-    }
-
-    bonus = {
-    siege_blockade_progress = 1
-    }
-
-    trigger = {
-        tag = DZ0
-    }
-
-    free = yes
-
-    DZ0_idea_1 = {
-    infantry_power = 0.1
-    }
-    DZ0_idea_2 = {
-    global_heretic_missionary_strength = 0.01
-    }
-    DZ0_idea_3 = {
-    diplomats = 1
-    }
-    DZ0_idea_4 = {
-    recover_navy_morale_speed = 0.05
-    }
-    DZ0_idea_5 = {
-    leader_land_fire = 1
-    }
-    DZ0_idea_6 = {
-    reinforce_speed = 0.10
-    }
-    DZ0_idea_7 = {
-    reduced_liberty_desire = 10
+    army_tradition_from_battle = 0.25
     }
 }
 
 DZ1_ideas = {
     start = {
-    artillery_power = 0.15
-    global_spy_defence = 0.25
+    fire_damage = 0.15
+    global_trade_goods_size_modifier = 0.25
     }
 
     bonus = {
-    adm_advisor_cost = -0.25
+    yearly_corruption = -0.15
     }
 
     trigger = {
@@ -5085,36 +1575,36 @@ DZ1_ideas = {
     free = yes
 
     DZ1_idea_1 = {
-    global_colonial_growth = 10
+    rival_border_fort_maintenance = -0.10
     }
     DZ1_idea_2 = {
-    naval_maintenance_modifier = -0.10
+    reinforce_speed = 0.10
     }
     DZ1_idea_3 = {
-    blockade_efficiency = 0.1
+    embargo_efficiency = 0.25
     }
     DZ1_idea_4 = {
-    reduced_liberty_desire = 10
+    monarch_admin_power = 1
     }
     DZ1_idea_5 = {
-    global_tax_modifier = 0.10
+    sailor_maintenance_modifer = -0.1
     }
     DZ1_idea_6 = {
-    dip_advisor_cost = -0.10
+    free_leader_pool = 1
     }
     DZ1_idea_7 = {
-    province_warscore_cost = -0.10
+    leader_naval_manuever = 1
     }
 }
 
 DZ2_ideas = {
     start = {
-    sailors_recovery_speed = 0.25
-    hostile_attrition = 1
+    advisor_pool = 1
+    defensiveness = 0.25
     }
 
     bonus = {
-    naval_tradition_from_battle = 0.5
+    institution_spread_from_true_faith = 0.25
     }
 
     trigger = {
@@ -5124,36 +1614,36 @@ DZ2_ideas = {
     free = yes
 
     DZ2_idea_1 = {
-    general_cost = -0.25
+    land_morale = 0.10
     }
     DZ2_idea_2 = {
-    development_cost = -0.1
+    monarch_admin_power = 1
     }
     DZ2_idea_3 = {
-    native_uprising_chance = -0.25
+    galley_cost = -0.10
     }
     DZ2_idea_4 = {
-    galley_power = 0.1
+    sailors_recovery_speed = 0.10
     }
     DZ2_idea_5 = {
-    global_ship_recruit_speed = -0.1
+    infantry_cost = -0.1
     }
     DZ2_idea_6 = {
-    leader_land_shock = 1
+    yearly_absolutism = 0.07
     }
     DZ2_idea_7 = {
-    army_tradition_decay = -0.01
+    harsh_treatment_cost = -0.25
     }
 }
 
 DZ3_ideas = {
     start = {
-    siege_ability = 0.15
-    tolerance_heathen = 1
+    war_exhaustion_cost = -0.25
+    global_regiment_recruit_speed = -0.25
     }
 
     bonus = {
-    possible_condottieri = 0.50
+    land_morale = 0.15
     }
 
     trigger = {
@@ -5163,36 +1653,36 @@ DZ3_ideas = {
     free = yes
 
     DZ3_idea_1 = {
-    leader_naval_manuever = 1
+    diplomats = 1
     }
     DZ3_idea_2 = {
-    monarch_military_power = 1
+    production_efficiency = 0.10
     }
     DZ3_idea_3 = {
-    land_forcelimit_modifier = 0.1
+    heavy_ship_power = 0.1
     }
     DZ3_idea_4 = {
-    artillery_cost = -0.1
+    liberty_desire_from_subject_development = -0.10
     }
     DZ3_idea_5 = {
-    navy_tradition = 0.25
+    advisor_cost = -0.10
     }
     DZ3_idea_6 = {
-    years_of_nationalism = -5
+    leader_land_manuever = 1
     }
     DZ3_idea_7 = {
-    native_assimilation = 0.25
+    galley_cost = -0.10
     }
 }
 
 DZ4_ideas = {
     start = {
-    envoy_travel_time = -0.25
-    province_warscore_cost = -0.15
+    monarch_admin_power = 1
+    harsh_treatment_cost = -0.50
     }
 
     bonus = {
-    cavalry_power = 0.15
+    province_warscore_cost = -0.25
     }
 
     trigger = {
@@ -5202,36 +1692,36 @@ DZ4_ideas = {
     free = yes
 
     DZ4_idea_1 = {
-    mercenary_discipline = 0.05
+    global_sailors_modifier = 0.10
     }
     DZ4_idea_2 = {
-    galley_power = 0.1
+    naval_maintenance_modifier = -0.10
     }
     DZ4_idea_3 = {
-    infantry_cost = -0.1
+    sunk_ship_morale_hit_recieved = -0.10
     }
     DZ4_idea_4 = {
-    yearly_corruption = -0.10
+    mercenary_cost = -0.10
     }
     DZ4_idea_5 = {
-    tolerance_heretic = 1
+    native_assimilation = 0.25
     }
     DZ4_idea_6 = {
-    possible_condottieri = 0.25
+    global_regiment_cost = -0.1
     }
     DZ4_idea_7 = {
-    free_mil_policy = 1
+    warscore_cost_vs_other_religion = -0.10
     }
 }
 
 DZ5_ideas = {
     start = {
-    vassal_forcelimit_bonus = 0.25
-    institution_spread_from_true_faith = 0.25
+    spy_offence = 0.25
+    yearly_absolutism = 0.15
     }
 
     bonus = {
-    improve_relation_modifier = 0.25
+    rival_border_fort_maintenance = -0.25
     }
 
     trigger = {
@@ -5241,25 +1731,24 @@ DZ5_ideas = {
     free = yes
 
     DZ5_idea_1 = {
-    trade_steering = 0.10
+    free_dip_policy = 1
     }
     DZ5_idea_2 = {
-    backrow_artillery_damage = 0.10
+    ship_durability = 0.1
     }
     DZ5_idea_3 = {
-    reinforce_speed = 0.10
+    light_ship_power = 0.1
     }
     DZ5_idea_4 = {
-    stability_cost_modifier = -0.10
+    siege_ability = 0.1
     }
     DZ5_idea_5 = {
-    mil_tech_cost_modifier = -0.05
+    global_tax_modifier = 0.10
     }
     DZ5_idea_6 = {
-    global_regiment_cost = -0.1
+    navy_tradition_decay = -0.01
     }
     DZ5_idea_7 = {
-    ship_power_propagation = 0.10
+    governing_capacity = 100
     }
 }
-
