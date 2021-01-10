@@ -34,40 +34,116 @@ country_event = {
 		
 		if = {
 		limit = {
-		atmora_8_la = {
+		colonial_northern_islands_1_la = {
 		owned_by = ROOT
 		}
-		NOT = { exists = DA8 }
-		NOT = { capital_scope = { area = atmora_8_la } }
+		NOT = { exists = IA1 }
+		NOT = { capital_scope = { area = colonial_northern_islands_1_la } }
 		}
 		every_owned_province = {
 		limit = {
-		area = atmora_8_la
+		area = colonial_northern_islands_1_la
 		}
-		add_core = DA8
+		add_core = IA1
 		}
-		create_vassal = DA8
-        DA8 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        DA8 = { change_government_reform_progress = -99999 change_religion = ROOT }
+		create_vassal = IA1
+        IA1 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        IA1 = { change_government_reform_progress = -99999 change_religion = ROOT }
 		}
 		
 		if = {
 		limit = {
-		atmora_9_la = {
+		colonial_northern_islands_2_la = {
 		owned_by = ROOT
 		}
-		NOT = { exists = DA9 }
-		NOT = { capital_scope = { area = atmora_9_la } }
+		NOT = { exists = IA2 }
+		NOT = { capital_scope = { area = colonial_northern_islands_2_la } }
 		}
 		every_owned_province = {
 		limit = {
-		area = atmora_9_la
+		area = colonial_northern_islands_2_la
 		}
-		add_core = DA9
+		add_core = IA2
 		}
-		create_vassal = DA9
-        DA9 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        DA9 = { change_government_reform_progress = -99999 change_religion = ROOT }
+		create_vassal = IA2
+        IA2 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        IA2 = { change_government_reform_progress = -99999 change_religion = ROOT }
+		}
+		
+		if = {
+		limit = {
+		colonial_northern_islands_3_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = IA3 }
+		NOT = { capital_scope = { area = colonial_northern_islands_3_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = colonial_northern_islands_3_la
+		}
+		add_core = IA3
+		}
+		create_vassal = IA3
+        IA3 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        IA3 = { change_government_reform_progress = -99999 change_religion = ROOT }
+		}
+		
+		if = {
+		limit = {
+		colonial_northern_islands_4_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = IA4 }
+		NOT = { capital_scope = { area = colonial_northern_islands_4_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = colonial_northern_islands_4_la
+		}
+		add_core = IA4
+		}
+		create_vassal = IA4
+        IA4 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        IA4 = { change_government_reform_progress = -99999 change_religion = ROOT }
+		}
+		
+		if = {
+		limit = {
+		colonial_northern_islands_5_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = IA5 }
+		NOT = { capital_scope = { area = colonial_northern_islands_5_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = colonial_northern_islands_5_la
+		}
+		add_core = IA5
+		}
+		create_vassal = IA5
+        IA5 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        IA5 = { change_government_reform_progress = -99999 change_religion = ROOT }
+		}
+		
+		if = {
+		limit = {
+		colonial_northern_islands_6_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = IA6 }
+		NOT = { capital_scope = { area = colonial_northern_islands_6_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = colonial_northern_islands_6_la
+		}
+		add_core = IA6
+		}
+		create_vassal = IA6
+        IA6 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        IA6 = { change_government_reform_progress = -99999 change_religion = ROOT }
 		}
 		
 		if = {
@@ -75,18 +151,18 @@ country_event = {
 		upper_tsakara_8_la = {
 		owned_by = ROOT
 		}
-		NOT = { exists = UA8 }
+		NOT = { exists = IA7 }
 		NOT = { capital_scope = { area = upper_tsakara_8_la } }
 		}
 		every_owned_province = {
 		limit = {
 		area = upper_tsakara_8_la
 		}
-		add_core = UA8
+		add_core = IA7
 		}
-		create_vassal = UA8
-        UA8 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        UA8 = { change_government_reform_progress = -99999 change_religion = ROOT }
+		create_vassal = IA7
+        IA7 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        IA7 = { change_government_reform_progress = -99999 change_religion = ROOT }
 		}
 		
 		if = {
@@ -94,18 +170,18 @@ country_event = {
 		upper_tsakara_9_la = {
 		owned_by = ROOT
 		}
-		NOT = { exists = UA9 }
+		NOT = { exists = IA8 }
 		NOT = { capital_scope = { area = upper_tsakara_9_la } }
 		}
 		every_owned_province = {
 		limit = {
 		area = upper_tsakara_9_la
 		}
-		add_core = UA9
+		add_core = IA8
 		}
-		create_vassal = UA9
-        UA9 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        UA9 = { change_government_reform_progress = -99999 change_religion = ROOT }
+		create_vassal = IA8
+        IA8 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        IA8 = { change_government_reform_progress = -99999 change_religion = ROOT }
 		}
 		
 		if = {
@@ -113,18 +189,18 @@ country_event = {
 		upper_tsakara_10_la = {
 		owned_by = ROOT
 		}
-		NOT = { exists = UB0 }
+		NOT = { exists = IA9 }
 		NOT = { capital_scope = { area = upper_tsakara_10_la } }
 		}
 		every_owned_province = {
 		limit = {
 		area = upper_tsakara_10_la
 		}
-		add_core = UB0
+		add_core = IA9
 		}
-		create_vassal = UB0
-        UB0 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        UB0 = { change_government_reform_progress = -99999 change_religion = ROOT }
+		create_vassal = IA9
+        IA9 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        IA9 = { change_government_reform_progress = -99999 change_religion = ROOT }
 		}
 		
 		if = {
@@ -132,18 +208,18 @@ country_event = {
 		upper_tsakara_11_la = {
 		owned_by = ROOT
 		}
-		NOT = { exists = UB1 }
+		NOT = { exists = IB0 }
 		NOT = { capital_scope = { area = upper_tsakara_11_la } }
 		}
 		every_owned_province = {
 		limit = {
 		area = upper_tsakara_11_la
 		}
-		add_core = UB1
+		add_core = IB0
 		}
-		create_vassal = UB1
-        UB1 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        UB1 = { change_government_reform_progress = -99999 change_religion = ROOT }
+		create_vassal = IB0
+        IB0 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        IB0 = { change_government_reform_progress = -99999 change_religion = ROOT }
 		}
 		
 		if = {
@@ -151,18 +227,94 @@ country_event = {
 		upper_tsakara_12_la = {
 		owned_by = ROOT
 		}
-		NOT = { exists = UB2 }
+		NOT = { exists = IB1 }
 		NOT = { capital_scope = { area = upper_tsakara_12_la } }
 		}
 		every_owned_province = {
 		limit = {
 		area = upper_tsakara_12_la
 		}
-		add_core = UB2
+		add_core = IB1
 		}
-		create_vassal = UB2
-        UB2 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
-        UB2 = { change_government_reform_progress = -99999 change_religion = ROOT }
+		create_vassal = IB1
+        IB1 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        IB1 = { change_government_reform_progress = -99999 change_religion = ROOT }
+		}
+		
+		if = {
+		limit = {
+		upper_tsakara_13_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = IB2 }
+		NOT = { capital_scope = { area = upper_tsakara_13_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = upper_tsakara_13_la
+		}
+		add_core = IB2
+		}
+		create_vassal = IB2
+        IB2 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        IB2 = { change_government_reform_progress = -99999 change_religion = ROOT }
+		}
+		
+		if = {
+		limit = {
+		upper_tsakara_14_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = IB3 }
+		NOT = { capital_scope = { area = upper_tsakara_14_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = upper_tsakara_14_la
+		}
+		add_core = IB3
+		}
+		create_vassal = IB3
+        IB3 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        IB3 = { change_government_reform_progress = -99999 change_religion = ROOT }
+		}
+		
+		if = {
+		limit = {
+		atmora_8_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = IB4 }
+		NOT = { capital_scope = { area = atmora_8_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = atmora_8_la
+		}
+		add_core = IB4
+		}
+		create_vassal = IB4
+        IB4 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        IB4 = { change_government_reform_progress = -99999 change_religion = ROOT }
+		}
+		
+		if = {
+		limit = {
+		atmora_9_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = IB5 }
+		NOT = { capital_scope = { area = atmora_9_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = atmora_9_la
+		}
+		add_core = IB5
+		}
+		create_vassal = IB5
+        IB5 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        IB5 = { change_government_reform_progress = -99999 change_religion = ROOT }
 		}
 		
 	    }

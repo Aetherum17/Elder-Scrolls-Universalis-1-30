@@ -298,6 +298,25 @@ country_event = {
         JB4 = { change_government_reform_progress = -99999 change_religion = ROOT }
 		}
 		
+		if = {
+		limit = {
+		thousand_15_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = JB5 }
+		NOT = { capital_scope = { area = thousand_15_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = thousand_15_la
+		}
+		add_core = JB5
+		}
+		create_vassal = JB5
+        JB5 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        JB5 = { change_government_reform_progress = -99999 change_religion = ROOT }
+		}
+		
 	    }
 	}
 	

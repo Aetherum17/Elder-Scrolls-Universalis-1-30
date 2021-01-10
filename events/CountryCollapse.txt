@@ -24,10 +24,11 @@ country_event = {
 		 
 		if = { limit = { any_owned_province = { region = yokuda_lr } } country_event = { id = es_collapse.4 days = 31 tooltip = es_collapse.4.a.tt } }
 		 
-		if = { limit = { any_owned_province = { OR = { region = western_atmora_lr region = eastern_atmora_lr region = central_atmora_lr } } } country_event = { id = es_collapse.5 days = 31 tooltip = es_collapse.5.a.tt } }
+		if = { limit = { any_owned_province = { region = western_atmora_lr } } country_event = { id = es_collapse.51 days = 31 tooltip = es_collapse.5.a.tt } }
+		if = { limit = { any_owned_province = { region = eastern_atmora_lr } } country_event = { id = es_collapse.52 days = 31 tooltip = es_collapse.5.a.tt } }
+		if = { limit = { any_owned_province = { region = central_atmora_lr } } country_event = { id = es_collapse.53 days = 31 tooltip = es_collapse.5.a.tt } }
 		 
-		if = { limit = { any_owned_province = { region = southern_kamal_lr } } country_event = { id = es_collapse.6 days = 31 tooltip = es_collapse.6.a.tt } }
-		if = { limit = { any_owned_province = { region = northern_kamal_lr } } country_event = { id = es_collapse.7 days = 31 tooltip = es_collapse.7.a.tt } }
+		if = { limit = { any_owned_province = { region = kamal_lr } } country_event = { id = es_collapse.7 days = 31 tooltip = es_collapse.7.a.tt } }
 		 
 		if = { limit = { any_owned_province = { region = thousand_lr } } country_event = { id = es_collapse.8 days = 31 tooltip = es_collapse.8.a.tt } }
 		 

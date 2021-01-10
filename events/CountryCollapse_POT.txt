@@ -260,6 +260,63 @@ country_event = {
         OB2 = { change_government_reform_progress = -99999 change_religion = ROOT }
 		}
 		
+		if = {
+		limit = {
+		po_tun_13_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = OB3 }
+		NOT = { capital_scope = { area = po_tun_13_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = po_tun_13_la
+		}
+		add_core = OB3
+		}
+		create_vassal = OB3
+        OB3 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        OB3 = { change_government_reform_progress = -99999 change_religion = ROOT }
+		}
+		
+		if = {
+		limit = {
+		po_tun_14_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = OB4 }
+		NOT = { capital_scope = { area = po_tun_14_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = po_tun_14_la
+		}
+		add_core = OB4
+		}
+		create_vassal = OB4
+        OB4 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        OB4 = { change_government_reform_progress = -99999 change_religion = ROOT }
+		}
+		
+		if = {
+		limit = {
+		po_tun_15_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = OB5 }
+		NOT = { capital_scope = { area = po_tun_15_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = po_tun_15_la
+		}
+		add_core = OB5
+		}
+		create_vassal = OB5
+        OB5 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        OB5 = { change_government_reform_progress = -99999 change_religion = ROOT }
+		}
+		
 	    }
 	}
 	

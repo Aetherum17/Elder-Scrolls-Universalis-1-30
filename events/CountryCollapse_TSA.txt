@@ -260,6 +260,63 @@ country_event = {
         TB2 = { change_government_reform_progress = -99999 change_religion = ROOT }
 		}
 		
+		if = {
+		limit = {
+		tsakara_13_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = TB3 }
+		NOT = { capital_scope = { area = tsakara_13_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = tsakara_13_la
+		}
+		add_core = TB3
+		}
+		create_vassal = TB3
+        TB3 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        TB3 = { change_government_reform_progress = -99999 change_religion = ROOT }
+		}
+		
+		if = {
+		limit = {
+		tsakara_14_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = TB4 }
+		NOT = { capital_scope = { area = tsakara_14_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = tsakara_14_la
+		}
+		add_core = TB4
+		}
+		create_vassal = TB4
+        TB4 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        TB4 = { change_government_reform_progress = -99999 change_religion = ROOT }
+		}
+		
+		if = {
+		limit = {
+		tsakara_15_la = {
+		owned_by = ROOT
+		}
+		NOT = { exists = TB5 }
+		NOT = { capital_scope = { area = tsakara_15_la } }
+		}
+		every_owned_province = {
+		limit = {
+		area = tsakara_15_la
+		}
+		add_core = TB5
+		}
+		create_vassal = TB5
+        TB5 = { random_list = { 25 = { change_government = monarchy } 25 = { change_government = republic } 25 = { change_government = theocracy } 25 = { change_government = tribal } } }
+        TB5 = { change_government_reform_progress = -99999 change_religion = ROOT }
+		}
+		
 	    }
 	}
 	
