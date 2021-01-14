@@ -147,14 +147,14 @@ country_decisions = {
 		major = yes
 		potential = {
 			has_country_flag = es_jewel_of_tamriel_flag
-			capital_scope = { NOT = { has_province_modifier = jewel_of_tamriel_modifier } }
+			capital_scope = { NOT = { has_province_modifier = jewel_of_tamriel_modifier_city } }
 		}
 		allow =  {
 			years_of_income = 1.0
 		}
 		effect = {
 			add_years_of_income = -1.0
-			capital_scope = { add_province_modifier = { name = "jewel_of_tamriel_modifier" duration = -1 } }
+			capital_scope = { add_province_modifier = { name = "jewel_of_tamriel_modifier_city" duration = -1 } }
 		}
 		ai_will_do = {
 			factor = 1

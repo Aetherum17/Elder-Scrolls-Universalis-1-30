@@ -95,6 +95,50 @@ country_event = {
 				cede_province = ---
 			}
 		}
+		if = {
+			limit = {
+				capital_scope = {
+					NOT = { continent = Pyandonea }
+				}
+			}
+			every_country = {
+						limit = {
+							capital_scope = {
+								continent = Pyandonea 
+							}
+							NOT = { tag = PA4 }
+						}
+						every_owned_province = {
+							limit = {
+								is_city = yes
+							}
+							cede_province = ---
+						}
+					}
+		}
+		if = {
+			limit = {
+				capital_scope = {
+					NOT = { continent = Yokuda }
+				}
+			}
+			every_country = {
+						limit = {
+							capital_scope = {
+								continent = Yokuda 
+							}
+							NOT = { tag = THR }
+							NOT = { tag = SIN }
+							NOT = { tag = YA7 }
+						}
+						every_owned_province = {
+							limit = {
+								is_city = yes
+							}
+							cede_province = ---
+						}
+					}
+		}
     }
 	
 	option = {
