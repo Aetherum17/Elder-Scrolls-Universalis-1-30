@@ -167,6 +167,7 @@ on_startup = {
 	if = { limit = { NOT = { has_global_flag = on_action_set_up_global_flag } }
 	
 	set_forts_and_trade_centers = yes
+	province_religious_effects = yes
 	
 	every_country = {
 	
