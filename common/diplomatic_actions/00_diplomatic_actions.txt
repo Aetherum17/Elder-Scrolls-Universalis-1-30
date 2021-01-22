@@ -102,6 +102,41 @@ declarewar = {
 		    limit = { is_subject_of_type = alliance_member }
 			overlord = { country_event = { id = alliancememberwar.1 days = 31 } }
 		}
+		### Oblivion Invasion
+		if = {
+			limit = { owns = 3188 NOT = { owns = 1206 } FROM = { owns = 1206 } } 
+			1206 = { cede_province = ROOT }
+		}
+		if = {
+			limit = { owns = 4075 NOT = { owns = 1199 } FROM = { owns = 1199 } } 
+			1199 = { cede_province = ROOT }
+		}
+		if = {
+			limit = { owns = 4074 NOT = { owns = 1376 } FROM = { owns = 1376 } } 
+			1376 = { cede_province = ROOT }
+		}
+		if = {
+			limit = { owns = 4081 NOT = { owns = 1106 } FROM = { owns = 1106 } } 
+			1106 = { cede_province = ROOT }
+		}
+		### Oblivion Re-Invasion
+		if = {
+			limit = { owns = 1206 NOT = { owns = 3188 } FROM = { owns = 3188 } } 
+			3188 = { cede_province = ROOT }
+		}
+		if = {
+			limit = { owns = 1199 NOT = { owns = 4075 } FROM = { owns = 4075 } } 
+			4075 = { cede_province = ROOT }
+		}
+		if = {
+			limit = { owns = 1376 NOT = { owns = 4074 } FROM = { owns = 4074 } } 
+			4074 = { cede_province = ROOT }
+		}
+		if = {
+			limit = { owns = 1106 NOT = { owns = 4081 } FROM = { owns = 4081 } } 
+			4081 = { cede_province = ROOT }
+		}
+		
 	}
 }
 

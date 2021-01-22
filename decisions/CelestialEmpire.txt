@@ -89,31 +89,21 @@ country_decisions = {
 	empire_of_china_1 = {
 		major = yes
 		potential = {
-			normal_or_historical_nations = yes
 			has_dlc = "Mandate of Heaven"
-			OR = {
-				ai = no
-				is_playing_custom_nation = no
-			}
 			is_emperor_of_china = no
 			is_colonial_nation = no
-			OR = {
-				is_former_colonial_nation = no
-				AND = {
-					is_former_colonial_nation = yes
-					ai = no
-				}
+			any_owned_province = {
+				continent = Akavir
 			}
-			has_global_flag = empire_of_china_dismantled
 		}
 		allow = {
-			is_at_war = no
 			is_free_or_tributary_trigger = yes
-			po_tun_lr = {
-				owner = {
-					is_emperor_of_china = no
+			any_country = {
+				is_emperor_of_china = yes
+				capital_scope = {
+					controlled_by = ROOT
 				}
-				type = all
+				NOT = { num_of_cities = ROOT }
 			}
 			adm_power = 100
 			mil_power = 100
@@ -121,10 +111,9 @@ country_decisions = {
 		}
 		effect = {
 			set_emperor_of_china = ROOT
-			if = {
-				limit = { has_global_flag = empire_of_china_dismantled }
-				clr_global_flag = empire_of_china_dismantled
-			}
+			change_government = monarchy
+			add_government_reform = celestial_empire
+			add_meritocracy = 100
 			add_adm_power = -100
 			add_dip_power = -100
 			add_mil_power = -100

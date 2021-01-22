@@ -1,18 +1,12 @@
-owner = YA5
-controller = YA5
-add_core = YA5
+religion = yokudan_pantheon
 culture = yokudan
-religion = yokudan_pantheon native_size = 35 native_ferocity = 7 native_hostileness = 5
 hre = no
 base_tax = 1
 base_production = 1
 trade_goods = unknown
 base_manpower = 1
 capital = "Arranhu"
-is_city = yes
-discovered_by = yokudan_tg discovered_by = oceanic_tg
+is_city = no
+discovered_by = yokudan_tg
 
-add_permanent_province_modifier = {
-	name = water_trade_modifier
-	duration = -1
-}
+

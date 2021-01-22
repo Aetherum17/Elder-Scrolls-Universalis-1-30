@@ -307,8 +307,11 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { exists = KME }
-			NOT = { tag = DRE }
-			primary_culture = dremora
+			NOT = { tag = ARG }
+			NOT = { tag = MUR }
+			NOT = { tag = SHA }
+			NOT = { tag = BLC }
+			primary_culture = agaceph
 			NOT = { has_country_flag = formed_kme_flag }
 			OR = {
 		    ai = no
@@ -319,12 +322,19 @@ country_decisions = {
 			}
 		}
 		provinces_to_highlight = {
-            province_id = 416
+            OR = {
+            province_id = 6485
+			province_id = 6484
+			province_id = 6483
+			}
+			NOT = { owned_by = ROOT }
 		}
 		allow = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-			owns_core_province = 416
+			owns_core_province = 6485
+			owns_core_province = 6484
+			owns_core_province = 6483
 		}
 		effect = {
 			change_tag = KME
@@ -369,12 +379,12 @@ country_decisions = {
 			}
 		}
 		provinces_to_highlight = {
-            province_id = 1645
+            province_id = 1629
 		}
 		allow = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-			owns_core_province = 1645
+			owns_core_province = 1629
 		}
 		effect = {
 			change_tag = ELZ
@@ -419,12 +429,19 @@ country_decisions = {
 			}
 		}
 		provinces_to_highlight = {
-            province_id = 1625
+            OR = {
+            province_id = 1800
+			province_id = 1799
+			province_id = 1798
+			}
+			NOT = { owned_by = ROOT }
 		}
 		allow = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-			owns_core_province = 1625
+			owns_core_province = 1800
+			owns_core_province = 1799
+			owns_core_province = 1798
 		}
 		effect = {
 			change_tag = KHE
@@ -470,12 +487,12 @@ country_decisions = {
 			}
 		}
 		provinces_to_highlight = {
-            province_id = 766
+            province_id = 3495
 		}
 		allow = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-			owns_core_province = 766
+			owns_core_province = 3495
 		}
 		effect = {
 			change_tag = KAA
@@ -521,12 +538,17 @@ country_decisions = {
 			}
 		}
 		provinces_to_highlight = {
-            province_id = 697
+            OR = {
+            province_id = 1671
+			province_id = 1670
+			}
+			NOT = { owned_by = ROOT }
 		}
 		allow = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-			owns_core_province = 697
+			owns_core_province = 1671
+			owns_core_province = 1670
 		}
 		effect = {
 			change_tag = RAL
