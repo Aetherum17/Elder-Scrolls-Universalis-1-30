@@ -140,6 +140,23 @@ declarewar = {
 	}
 }
 
+demand_unlawful_territory_action = {
+	condition = {
+		potential = {
+			is_emperor = yes
+		}
+		allow = {
+			FROM = {
+				any_owned_province = {
+					is_part_of_hre = yes
+					NOT = { is_core = FROM }
+					is_city = yes
+				}
+			}
+		}
+	}
+}
+
 royal_marriage = {
 	condition = {
 		tooltip = MARWAR

@@ -1,3 +1,5 @@
+# ES Gov Reforms
+
 is_elven_nation_trigger = {
     custom_trigger_tooltip = {
         tooltip = has_river_estuary_tooltip
@@ -62,6 +64,320 @@ is_daedric_nation_trigger = {
 			culture_group = daedra_cg
 			culture_group = void_cg
 			culture_group = unknown_cg
+		}
+	}
+}
+
+### ES Health
+
+### Rulers ############################################################
+
+is_human_ruler_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = has_river_estuary_tooltip
+		OR = {
+			ruler_culture = yokudan
+			ruler_culture = redguard
+			ruler_culture = atmoran
+			ruler_culture = glacial
+			ruler_culture = nord
+			ruler_culture = skaal
+			ruler_culture = nedic
+			ruler_culture = imperial
+			ruler_culture = nibenean
+			ruler_culture = colovian
+			ruler_culture = akaviri
+			ruler_culture = islander
+			ruler_culture = keptu
+		}
+	}
+}
+
+is_half_blood_ruler_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = has_river_estuary_tooltip
+		OR = {
+			ruler_culture = breton
+			ruler_culture = reachmen
+			ruler_culture = orsimer
+			ruler_culture = wood_orsimer
+			ruler_culture = khajiiti
+			ruler_culture = anequinan
+			ruler_culture = pellitinian
+			ruler_culture = po_tun
+			ruler_culture = imga
+			ruler_culture = argonian
+			ruler_culture = archein
+			ruler_culture = naga
+			ruler_culture = tsaesci
+			ruler_culture = kamal
+			ruler_culture = goblin
+			ruler_culture = riekling
+			ruler_culture = frost_giant
+			ruler_culture = sea_giant
+			ruler_culture = giant
+			ruler_culture = kothringi
+			ruler_culture = arachnid
+			ruler_culture = minotaur
+			ruler_culture = lilmothiit
+		}
+	}
+}
+
+is_elven_ruler_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = has_river_estuary_tooltip
+		OR = {
+			ruler_culture = maorner
+			ruler_culture = altmer
+			ruler_culture = ayleid
+			ruler_culture = corelanyan
+			ruler_culture = sinistral
+			ruler_culture = snow_elven
+			ruler_culture = falmer
+			ruler_culture = dwemer
+			ruler_culture = bosmer
+			ruler_culture = ashlander
+			ruler_culture = dunmer
+			ruler_culture = chimer
+		}
+	}
+}
+
+is_unknown_ruler_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = has_river_estuary_tooltip
+		OR = {
+			ruler_culture = sload
+			ruler_culture = dremora
+			ruler_culture = oblivious
+			ruler_culture = xivilai
+			ruler_culture = clanfear
+			ruler_culture = daedroth
+			ruler_culture = unknown
+			ruler_culture = harvester
+			ruler_culture = scamp
+			ruler_culture = hollow
+		}
+	}
+}
+
+is_immortal_ruler_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = has_river_estuary_tooltip
+		OR = {
+			ruler_culture = vampire
+			ruler_culture = soul_shriven
+			ruler_culture = daedra
+			ruler_has_personality = immortal_personality
+		}
+	}
+}
+
+### Consort ###########################################################
+
+is_human_consort_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = has_river_estuary_tooltip
+		OR = {
+			consort_culture = yokudan
+			consort_culture = redguard
+			consort_culture = atmoran
+			consort_culture = glacial
+			consort_culture = nord
+			consort_culture = skaal
+			consort_culture = nedic
+			consort_culture = imperial
+			consort_culture = nibenean
+			consort_culture = colovian
+			consort_culture = akaviri
+			consort_culture = islander
+			consort_culture = keptu
+		}
+	}
+}
+
+is_half_blood_consort_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = has_river_estuary_tooltip
+		OR = {
+			consort_culture = breton
+			consort_culture = reachmen
+			consort_culture = orsimer
+			consort_culture = wood_orsimer
+			consort_culture = khajiiti
+			consort_culture = anequinan
+			consort_culture = pellitinian
+			consort_culture = po_tun
+			consort_culture = imga
+			consort_culture = argonian
+			consort_culture = archein
+			consort_culture = naga
+			consort_culture = tsaesci
+			consort_culture = kamal
+			consort_culture = goblin
+			consort_culture = riekling
+			consort_culture = frost_giant
+			consort_culture = sea_giant
+			consort_culture = giant
+			consort_culture = kothringi
+			consort_culture = arachnid
+			consort_culture = minotaur
+			consort_culture = lilmothiit
+		}
+	}
+}
+
+is_elven_consort_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = has_river_estuary_tooltip
+		OR = {
+			consort_culture = maorner
+			consort_culture = altmer
+			consort_culture = ayleid
+			consort_culture = corelanyan
+			consort_culture = sinistral
+			consort_culture = snow_elven
+			consort_culture = falmer
+			consort_culture = dwemer
+			consort_culture = bosmer
+			consort_culture = ashlander
+			consort_culture = dunmer
+			consort_culture = chimer
+		}
+	}
+}
+
+is_unknown_consort_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = has_river_estuary_tooltip
+		OR = {
+			consort_culture = sload
+			consort_culture = dremora
+			consort_culture = oblivious
+			consort_culture = xivilai
+			consort_culture = clanfear
+			consort_culture = daedroth
+			consort_culture = unknown
+			consort_culture = harvester
+			consort_culture = scamp
+			consort_culture = hollow
+		}
+	}
+}
+
+is_immortal_consort_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = has_river_estuary_tooltip
+		OR = {
+			consort_culture = vampire
+			consort_culture = soul_shriven
+			consort_culture = daedra
+			consort_has_personality = immortal_personality
+		}
+	}
+}
+
+### Heir ##############################################################
+
+is_human_heir_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = has_river_estuary_tooltip
+		OR = {
+			heir_culture = yokudan
+			heir_culture = redguard
+			heir_culture = atmoran
+			heir_culture = glacial
+			heir_culture = nord
+			heir_culture = skaal
+			heir_culture = nedic
+			heir_culture = imperial
+			heir_culture = nibenean
+			heir_culture = colovian
+			heir_culture = akaviri
+			heir_culture = islander
+			heir_culture = keptu
+		}
+	}
+}
+
+is_half_blood_heir_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = has_river_estuary_tooltip
+		OR = {
+			heir_culture = breton
+			heir_culture = reachmen
+			heir_culture = orsimer
+			heir_culture = wood_orsimer
+			heir_culture = khajiiti
+			heir_culture = anequinan
+			heir_culture = pellitinian
+			heir_culture = po_tun
+			heir_culture = imga
+			heir_culture = argonian
+			heir_culture = archein
+			heir_culture = naga
+			heir_culture = tsaesci
+			heir_culture = kamal
+			heir_culture = goblin
+			heir_culture = riekling
+			heir_culture = frost_giant
+			heir_culture = sea_giant
+			heir_culture = giant
+			heir_culture = kothringi
+			heir_culture = arachnid
+			heir_culture = minotaur
+			heir_culture = lilmothiit
+		}
+	}
+}
+
+is_elven_heir_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = has_river_estuary_tooltip
+		OR = {
+			heir_culture = maorner
+			heir_culture = altmer
+			heir_culture = ayleid
+			heir_culture = corelanyan
+			heir_culture = sinistral
+			heir_culture = snow_elven
+			heir_culture = falmer
+			heir_culture = dwemer
+			heir_culture = bosmer
+			heir_culture = ashlander
+			heir_culture = dunmer
+			heir_culture = chimer
+		}
+	}
+}
+
+is_unknown_heir_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = has_river_estuary_tooltip
+		OR = {
+			heir_culture = sload
+			heir_culture = dremora
+			heir_culture = oblivious
+			heir_culture = xivilai
+			heir_culture = clanfear
+			heir_culture = daedroth
+			heir_culture = unknown
+			heir_culture = harvester
+			heir_culture = scamp
+			heir_culture = hollow
+		}
+	}
+}
+
+is_immortal_heir_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = has_river_estuary_tooltip
+		OR = {
+			heir_culture = vampire
+			heir_culture = soul_shriven
+			heir_culture = daedra
+			heir_has_personality = immortal_personality
 		}
 	}
 }

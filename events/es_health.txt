@@ -11,329 +11,145 @@ country_event = { #kill ruler
 	
 	trigger = { 
 		has_regency = no
-		NOT = { ruler_culture = vampire }
-		NOT = { ruler_culture = soul_shriven }
-		NOT = { ruler_culture = daedra }
-		NOT = { ruler_has_personality = immortal_personality }
+		NOT = { is_immortal_ruler_trigger = yes }
 	}
 	
 	mean_time_to_happen = {
 		months = 1200
 		modifier = {
-		    factor = 0.5
-			is_emperor = yes
+			factor = 0.5
+			OR = {
+				government = republic
+				is_emperor = yes
+			}
+			ruler_age = 75
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				government = republic
+				is_emperor = yes
+			}
+			ruler_age = 150
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				government = republic
+				is_emperor = yes
+			}
+			ruler_age = 225
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				government = republic
+				is_emperor = yes
+			}
+			ruler_age = 300
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				government = republic
+				is_emperor = yes
+			}
+			ruler_age = 375
 		}
 		###############################################################
 		modifier = {
 			factor = 0.75
-			OR = {
-				ruler_culture = yokudan
-				ruler_culture = redguard
-				ruler_culture = atmoran
-				ruler_culture = glacial
-				ruler_culture = nord
-				ruler_culture = skaal
-				ruler_culture = nedic
-				ruler_culture = imperial
-				ruler_culture = nibenean
-				ruler_culture = colovian
-				ruler_culture = akaviri
-				ruler_culture = islander ruler_culture = keptu
-			}
+			is_human_ruler_trigger = yes
 			ruler_age = 60
 		}
 		modifier = {
 			factor = 0.50
-			OR = {
-				ruler_culture = yokudan
-				ruler_culture = redguard
-				ruler_culture = atmoran
-				ruler_culture = glacial
-				ruler_culture = nord
-				ruler_culture = skaal
-				ruler_culture = nedic
-				ruler_culture = imperial
-				ruler_culture = nibenean
-				ruler_culture = colovian
-				ruler_culture = akaviri
-				ruler_culture = islander ruler_culture = keptu
-			}
+			is_human_ruler_trigger = yes
 			ruler_age = 80
 		}
 		modifier = {
 			factor = 0.25
-			OR = {
-				ruler_culture = yokudan
-				ruler_culture = redguard
-				ruler_culture = atmoran
-				ruler_culture = glacial
-				ruler_culture = nord
-				ruler_culture = skaal
-				ruler_culture = nedic
-				ruler_culture = imperial
-				ruler_culture = nibenean
-				ruler_culture = colovian
-				ruler_culture = akaviri
-				ruler_culture = islander ruler_culture = keptu
-			}
+			is_human_ruler_trigger = yes
 			ruler_age = 120
 		}
 		modifier = {
 			factor = 0.10
-			OR = {
-				ruler_culture = yokudan
-				ruler_culture = redguard
-				ruler_culture = atmoran
-				ruler_culture = glacial
-				ruler_culture = nord
-				ruler_culture = skaal
-				ruler_culture = nedic
-				ruler_culture = imperial
-				ruler_culture = nibenean
-				ruler_culture = colovian
-				ruler_culture = akaviri
-				ruler_culture = islander ruler_culture = keptu
-			}
+			is_human_ruler_trigger = yes
 			ruler_age = 160
 		}
 		###############################################################
 		modifier = {
 			factor = 1.50
-			OR = {
-				ruler_culture = breton
-				ruler_culture = reachmen
-				ruler_culture = orsimer
-				ruler_culture = wood_orsimer
-				ruler_culture = khajiiti
-				ruler_culture = anequinan
-				ruler_culture = pellitinian
-				ruler_culture = po_tun
-				ruler_culture = imga
-				ruler_culture = argonian
-				ruler_culture = archein
-				ruler_culture = naga
-				ruler_culture = tsaesci
-				ruler_culture = kamal ruler_culture = goblin ruler_culture = riekling ruler_culture = frost_giant ruler_culture = sea_giant ruler_culture = giant
-				ruler_culture = kothringi ruler_culture = arachnid ruler_culture = minotaur ruler_culture = lilmothiit
-			}
+			is_half_blood_ruler_trigger = yes
 		}
 		modifier = {
 			factor = 0.75
-			OR = {
-				ruler_culture = breton
-				ruler_culture = reachmen
-				ruler_culture = orsimer
-				ruler_culture = wood_orsimer
-				ruler_culture = khajiiti
-				ruler_culture = anequinan
-				ruler_culture = pellitinian
-				ruler_culture = po_tun
-				ruler_culture = imga
-				ruler_culture = argonian
-				ruler_culture = archein
-				ruler_culture = naga
-				ruler_culture = tsaesci
-				ruler_culture = kamal ruler_culture = goblin ruler_culture = riekling ruler_culture = frost_giant ruler_culture = sea_giant ruler_culture = giant
-				ruler_culture = kothringi ruler_culture = arachnid ruler_culture = minotaur ruler_culture = lilmothiit
-			}
+			is_half_blood_ruler_trigger = yes
 			ruler_age = 90
 		}
 		modifier = {
 			factor = 0.50
-			OR = {
-				ruler_culture = breton
-				ruler_culture = reachmen
-				ruler_culture = orsimer
-				ruler_culture = wood_orsimer
-				ruler_culture = khajiiti
-				ruler_culture = anequinan
-				ruler_culture = pellitinian
-				ruler_culture = po_tun
-				ruler_culture = imga
-				ruler_culture = argonian
-				ruler_culture = archein
-				ruler_culture = naga
-				ruler_culture = tsaesci
-				ruler_culture = kamal ruler_culture = goblin ruler_culture = riekling ruler_culture = frost_giant ruler_culture = sea_giant ruler_culture = giant
-				ruler_culture = kothringi ruler_culture = arachnid ruler_culture = minotaur ruler_culture = lilmothiit
-			}
+			is_half_blood_ruler_trigger = yes
 			ruler_age = 120
 		}
 		modifier = {
 			factor = 0.25
-			OR = {
-				ruler_culture = breton
-				ruler_culture = reachmen
-				ruler_culture = orsimer
-				ruler_culture = wood_orsimer
-				ruler_culture = khajiiti
-				ruler_culture = anequinan
-				ruler_culture = pellitinian
-				ruler_culture = po_tun
-				ruler_culture = imga
-				ruler_culture = argonian
-				ruler_culture = archein
-				ruler_culture = naga
-				ruler_culture = tsaesci
-				ruler_culture = kamal ruler_culture = goblin ruler_culture = riekling ruler_culture = frost_giant ruler_culture = sea_giant ruler_culture = giant
-				ruler_culture = kothringi ruler_culture = arachnid ruler_culture = minotaur ruler_culture = lilmothiit
-			}
+			is_half_blood_ruler_trigger = yes
 			ruler_age = 180
 		}
 		modifier = {
 			factor = 0.10
-			OR = {
-				ruler_culture = breton
-				ruler_culture = reachmen
-				ruler_culture = orsimer
-				ruler_culture = wood_orsimer
-				ruler_culture = khajiiti
-				ruler_culture = anequinan
-				ruler_culture = pellitinian
-				ruler_culture = po_tun
-				ruler_culture = imga
-				ruler_culture = argonian
-				ruler_culture = archein
-				ruler_culture = naga
-				ruler_culture = tsaesci
-				ruler_culture = kamal ruler_culture = goblin ruler_culture = riekling ruler_culture = frost_giant ruler_culture = sea_giant ruler_culture = giant
-				ruler_culture = kothringi ruler_culture = arachnid ruler_culture = minotaur ruler_culture = lilmothiit
-			}
+			is_half_blood_ruler_trigger = yes
 			ruler_age = 240
 		}
 		###############################################################
 		modifier = {
 			factor = 2.25
-			OR = {
-			    ruler_culture = maorner
-			    ruler_culture = altmer
-			    ruler_culture = ayleid ruler_culture = corelanyan
-			    ruler_culture = sinistral
-			    ruler_culture = snow_elven
-			    ruler_culture = falmer
-			    ruler_culture = dwemer
-			    ruler_culture = bosmer
-			    ruler_culture = ashlander
-			    ruler_culture = dunmer
-			    ruler_culture = chimer
-			}
+			is_elven_ruler_trigger = yes
 		}
 		modifier = {
 			factor = 0.75
-			OR = {
-				ruler_culture = maorner
-			    ruler_culture = altmer
-			    ruler_culture = ayleid ruler_culture = corelanyan
-			    ruler_culture = sinistral
-			    ruler_culture = snow_elven
-			    ruler_culture = falmer
-			    ruler_culture = dwemer
-			    ruler_culture = bosmer
-			    ruler_culture = ashlander
-			    ruler_culture = dunmer
-			    ruler_culture = chimer
-			}
+			is_elven_ruler_trigger = yes
 			ruler_age = 135
 		}
 		modifier = {
 			factor = 0.50
-			OR = {
-				ruler_culture = maorner
-			    ruler_culture = altmer
-			    ruler_culture = ayleid ruler_culture = corelanyan
-			    ruler_culture = sinistral
-			    ruler_culture = snow_elven
-			    ruler_culture = falmer
-			    ruler_culture = dwemer
-			    ruler_culture = bosmer
-			    ruler_culture = ashlander
-			    ruler_culture = dunmer
-			    ruler_culture = chimer
-			}
+			is_elven_ruler_trigger = yes
 			ruler_age = 180
 		}
 		modifier = {
 			factor = 0.25
-			OR = {
-				ruler_culture = maorner
-			    ruler_culture = altmer
-			    ruler_culture = ayleid ruler_culture = corelanyan
-			    ruler_culture = sinistral
-			    ruler_culture = snow_elven
-			    ruler_culture = falmer
-			    ruler_culture = dwemer
-			    ruler_culture = bosmer
-			    ruler_culture = ashlander
-			    ruler_culture = dunmer
-			    ruler_culture = chimer
-			}
+			is_elven_ruler_trigger = yes
 			ruler_age = 270
 		}
 		modifier = {
 			factor = 0.10
-			OR = {
-				ruler_culture = maorner
-			    ruler_culture = altmer
-			    ruler_culture = ayleid ruler_culture = corelanyan
-			    ruler_culture = sinistral
-			    ruler_culture = snow_elven
-			    ruler_culture = falmer
-			    ruler_culture = dwemer
-			    ruler_culture = bosmer
-			    ruler_culture = ashlander
-			    ruler_culture = dunmer
-			    ruler_culture = chimer
-			}
+			is_elven_ruler_trigger = yes
 			ruler_age = 360
 		}
 		###############################################################
 		modifier = {
 			factor = 3.37
-			OR = {
-			    ruler_culture = sload
-			    ruler_culture = dremora ruler_culture = oblivious  ruler_culture = xivilai ruler_culture = clanfear ruler_culture = daedroth ruler_culture = unknown
-			    ruler_culture = harvester
-			    ruler_culture = scamp ruler_culture = hollow
-			}
+			is_unknown_ruler_trigger = yes
 		}
 		modifier = {
 			factor = 0.75
-			OR = {
-				ruler_culture = sload
-			    ruler_culture = dremora ruler_culture = oblivious  ruler_culture = xivilai ruler_culture = clanfear ruler_culture = daedroth ruler_culture = unknown
-			    ruler_culture = harvester
-			    ruler_culture = scamp ruler_culture = hollow
-			}
+			is_unknown_ruler_trigger = yes
 			ruler_age = 200
 		}
 		modifier = {
 			factor = 0.50
-			OR = {
-				ruler_culture = sload
-			    ruler_culture = dremora ruler_culture = oblivious  ruler_culture = xivilai ruler_culture = clanfear ruler_culture = daedroth ruler_culture = unknown
-			    ruler_culture = harvester
-			    ruler_culture = scamp ruler_culture = hollow
-			}
+			is_unknown_ruler_trigger = yes
 			ruler_age = 270
 		}
 		modifier = {
 			factor = 0.25
-			OR = {
-				ruler_culture = sload
-			    ruler_culture = dremora ruler_culture = oblivious  ruler_culture = xivilai ruler_culture = clanfear ruler_culture = daedroth ruler_culture = unknown
-			    ruler_culture = harvester
-			    ruler_culture = scamp ruler_culture = hollow
-			}
+			is_unknown_ruler_trigger = yes
 			ruler_age = 405
 		}
 		modifier = {
 			factor = 0.10
-			OR = {
-				ruler_culture = sload
-			    ruler_culture = dremora ruler_culture = oblivious  ruler_culture = xivilai ruler_culture = clanfear ruler_culture = daedroth ruler_culture = unknown
-			    ruler_culture = harvester
-			    ruler_culture = scamp ruler_culture = hollow
-			}
+			is_unknown_ruler_trigger = yes
 			ruler_age = 540
 		}
 	}
@@ -353,10 +169,7 @@ country_event = { #kill consort
 	
 	trigger = { 
 		has_consort = yes 
-		NOT = { consort_culture = vampire }
-		NOT = { consort_culture = soul_shriven }
-		NOT = { consort_culture = daedra }
-		NOT = { consort_has_personality = immortal_personality }
+		NOT = { is_immortal_consort_trigger = yes }
 	}
 	
 	hidden = yes
@@ -366,314 +179,97 @@ country_event = { #kill consort
 		###############################################################
 		modifier = {
 			factor = 0.75
-			OR = {
-				consort_culture = yokudan
-				consort_culture = redguard
-				consort_culture = atmoran
-				consort_culture = glacial
-				consort_culture = nord
-				consort_culture = skaal
-				consort_culture = nedic
-				consort_culture = imperial
-				consort_culture = nibenean
-				consort_culture = colovian
-				consort_culture = akaviri
-				consort_culture = islander consort_culture = keptu
-			}
+			is_human_consort_trigger = yes
 			consort_age = 60
 		}
 		modifier = {
 			factor = 0.50
-			OR = {
-				consort_culture = yokudan
-				consort_culture = redguard
-				consort_culture = atmoran
-				consort_culture = glacial
-				consort_culture = nord
-				consort_culture = skaal
-				consort_culture = nedic
-				consort_culture = imperial
-				consort_culture = nibenean
-				consort_culture = colovian
-				consort_culture = akaviri
-				consort_culture = islander consort_culture = keptu
-			}
+			is_human_consort_trigger = yes
 			consort_age = 80
 		}
 		modifier = {
 			factor = 0.25
-			OR = {
-				consort_culture = yokudan
-				consort_culture = redguard
-				consort_culture = atmoran
-				consort_culture = glacial
-				consort_culture = nord
-				consort_culture = skaal
-				consort_culture = nedic
-				consort_culture = imperial
-				consort_culture = nibenean
-				consort_culture = colovian
-				consort_culture = akaviri
-				consort_culture = islander consort_culture = keptu
-			}
+			is_human_consort_trigger = yes
 			consort_age = 120
 		}
 		modifier = {
 			factor = 0.10
-			OR = {
-				consort_culture = yokudan
-				consort_culture = redguard
-				consort_culture = atmoran
-				consort_culture = glacial
-				consort_culture = nord
-				consort_culture = skaal
-				consort_culture = nedic
-				consort_culture = imperial
-				consort_culture = nibenean
-				consort_culture = colovian
-				consort_culture = akaviri
-				consort_culture = islander consort_culture = keptu
-			}
+			is_human_consort_trigger = yes
 			consort_age = 160
 		}
 		###############################################################
 		modifier = {
 			factor = 1.50
-			OR = {
-				consort_culture = breton
-				consort_culture = reachmen
-				consort_culture = orsimer
-				consort_culture = wood_orsimer
-				consort_culture = khajiiti
-				consort_culture = anequinan
-				consort_culture = pellitinian
-				consort_culture = po_tun
-				consort_culture = imga
-				consort_culture = argonian
-				consort_culture = archein
-				consort_culture = naga
-				consort_culture = tsaesci
-				consort_culture = kamal consort_culture = goblin consort_culture = riekling consort_culture = frost_giant consort_culture = sea_giant consort_culture = giant
-				consort_culture = kothringi consort_culture = arachnid consort_culture = minotaur consort_culture = lilmothiit
-			}
+			is_half_blood_consort_trigger = yes
 		}
 		modifier = {
 			factor = 0.75
-			OR = {
-				consort_culture = breton
-				consort_culture = reachmen
-				consort_culture = orsimer
-				consort_culture = wood_orsimer
-				consort_culture = khajiiti
-				consort_culture = anequinan
-				consort_culture = pellitinian
-				consort_culture = po_tun
-				consort_culture = imga
-				consort_culture = argonian
-				consort_culture = archein
-				consort_culture = naga
-				consort_culture = tsaesci
-				consort_culture = kamal consort_culture = goblin consort_culture = riekling consort_culture = frost_giant consort_culture = sea_giant consort_culture = giant
-				consort_culture = kothringi consort_culture = arachnid consort_culture = minotaur consort_culture = lilmothiit
-			}
+			is_half_blood_consort_trigger = yes
 			consort_age = 80
 		}
 		modifier = {
 			factor = 0.50
-			OR = {
-				consort_culture = breton
-				consort_culture = reachmen
-				consort_culture = orsimer
-				consort_culture = wood_orsimer
-				consort_culture = khajiiti
-				consort_culture = anequinan
-				consort_culture = pellitinian
-				consort_culture = po_tun
-				consort_culture = imga
-				consort_culture = argonian
-				consort_culture = archein
-				consort_culture = naga
-				consort_culture = tsaesci
-				consort_culture = kamal consort_culture = goblin consort_culture = riekling consort_culture = frost_giant consort_culture = sea_giant consort_culture = giant
-				consort_culture = kothringi consort_culture = arachnid consort_culture = minotaur consort_culture = lilmothiit
-			}
+			is_half_blood_consort_trigger = yes
 			consort_age = 120
 		}
 		modifier = {
 			factor = 0.25
-			OR = {
-				consort_culture = breton
-				consort_culture = reachmen
-				consort_culture = orsimer
-				consort_culture = wood_orsimer
-				consort_culture = khajiiti
-				consort_culture = anequinan
-				consort_culture = pellitinian
-				consort_culture = po_tun
-				consort_culture = imga
-				consort_culture = argonian
-				consort_culture = archein
-				consort_culture = naga
-				consort_culture = tsaesci
-				consort_culture = kamal consort_culture = goblin consort_culture = riekling consort_culture = frost_giant consort_culture = sea_giant consort_culture = giant
-				consort_culture = kothringi consort_culture = arachnid consort_culture = minotaur consort_culture = lilmothiit
-			}
+			is_half_blood_consort_trigger = yes
 			consort_age = 180
 		}
 		modifier = {
 			factor = 0.10
-			OR = {
-				consort_culture = breton
-				consort_culture = reachmen
-				consort_culture = orsimer
-				consort_culture = wood_orsimer
-				consort_culture = khajiiti
-				consort_culture = anequinan
-				consort_culture = pellitinian
-				consort_culture = po_tun
-				consort_culture = imga
-				consort_culture = argonian
-				consort_culture = archein
-				consort_culture = naga
-				consort_culture = tsaesci
-				consort_culture = kamal consort_culture = goblin consort_culture = riekling consort_culture = frost_giant consort_culture = sea_giant consort_culture = giant
-				consort_culture = kothringi consort_culture = arachnid consort_culture = minotaur consort_culture = lilmothiit
-			}
+			is_half_blood_consort_trigger = yes
 			consort_age = 240
 		}
 		###############################################################
 		modifier = {
 			factor = 2.25
-			OR = {
-			consort_culture = maorner
-			consort_culture = altmer
-			consort_culture = ayleid consort_culture = corelanyan
-			consort_culture = sinistral
-			consort_culture = snow_elven
-			consort_culture = falmer
-			consort_culture = dwemer
-			consort_culture = bosmer
-			consort_culture = ashlander
-			consort_culture = dunmer
-			consort_culture = chimer
-			}
+			is_elven_consort_trigger = yes
 		}
 		modifier = {
 			factor = 0.75
-			OR = {
-				consort_culture = maorner
-			    consort_culture = altmer
-			    consort_culture = ayleid consort_culture = corelanyan
-			    consort_culture = sinistral
-			    consort_culture = snow_elven
-			    consort_culture = falmer
-			    consort_culture = dwemer
-			    consort_culture = bosmer
-			    consort_culture = ashlander
-			    consort_culture = dunmer
-			    consort_culture = chimer
-			}
+			is_elven_consort_trigger = yes
 			consort_age = 135
 		}
 		modifier = {
 			factor = 0.50
-			OR = {
-				consort_culture = maorner
-			    consort_culture = altmer
-			    consort_culture = ayleid consort_culture = corelanyan
-			    consort_culture = sinistral
-			    consort_culture = snow_elven
-			    consort_culture = falmer
-			    consort_culture = dwemer
-			    consort_culture = bosmer
-			    consort_culture = ashlander
-			    consort_culture = dunmer
-			    consort_culture = chimer
-			}
+			is_elven_consort_trigger = yes
 			consort_age = 180
 		}
 		modifier = {
 			factor = 0.25
-			OR = {
-				consort_culture = maorner
-			    consort_culture = altmer
-			    consort_culture = ayleid consort_culture = corelanyan
-			    consort_culture = sinistral
-			    consort_culture = snow_elven
-			    consort_culture = falmer
-			    consort_culture = dwemer
-			    consort_culture = bosmer
-			    consort_culture = ashlander
-			    consort_culture = dunmer
-			    consort_culture = chimer
-			}
+			is_elven_consort_trigger = yes
 			consort_age = 270
 		}
 		modifier = {
 			factor = 0.10
-			OR = {
-				consort_culture = maorner
-			    consort_culture = altmer
-			    consort_culture = ayleid consort_culture = corelanyan
-			    consort_culture = sinistral
-			    consort_culture = snow_elven
-			    consort_culture = falmer
-			    consort_culture = dwemer
-			    consort_culture = bosmer
-			    consort_culture = ashlander
-			    consort_culture = dunmer
-			    consort_culture = chimer
-			}
+			is_elven_consort_trigger = yes
 			consort_age = 360
 		}
 		###############################################################
 		modifier = {
 			factor = 3.37
-			OR = {
-			consort_culture = sload
-			consort_culture = dremora consort_culture = oblivious consort_culture = xivilai consort_culture = clanfear consort_culture = daedroth consort_culture = unknown
-			consort_culture = harvester
-			consort_culture = scamp consort_culture = hollow
-			}
+			is_unknown_consort_trigger = yes
 		}
 		modifier = {
 			factor = 0.75
-			OR = {
-				consort_culture = sload
-			    consort_culture = dremora consort_culture = oblivious consort_culture = xivilai consort_culture = clanfear consort_culture = daedroth consort_culture = unknown
-			    consort_culture = harvester
-			    consort_culture = scamp consort_culture = hollow
-			}
+			is_unknown_consort_trigger = yes
 			consort_age = 200
 		}
 		modifier = {
 			factor = 0.50
-			OR = {
-				consort_culture = sload
-			    consort_culture = dremora consort_culture = oblivious consort_culture = xivilai consort_culture = clanfear consort_culture = daedroth consort_culture = unknown
-			    consort_culture = harvester
-			    consort_culture = scamp consort_culture = hollow
-			}
+			is_unknown_consort_trigger = yes
 			consort_age = 270
 		}
 		modifier = {
 			factor = 0.25
-			OR = {
-				consort_culture = sload
-			    consort_culture = dremora consort_culture = oblivious consort_culture = xivilai consort_culture = clanfear consort_culture = daedroth consort_culture = unknown
-			    consort_culture = harvester
-			    consort_culture = scamp consort_culture = hollow
-			}
+			is_unknown_consort_trigger = yes
 			consort_age = 405
 		}
 		modifier = {
 			factor = 0.10
-			OR = {
-				consort_culture = sload
-			    consort_culture = dremora consort_culture = oblivious consort_culture = xivilai consort_culture = clanfear consort_culture = daedroth consort_culture = unknown
-			    consort_culture = harvester
-			    consort_culture = scamp consort_culture = hollow
-			}
+			is_unknown_consort_trigger = yes
 			consort_age = 540
 		}
 	}
@@ -695,10 +291,7 @@ country_event = { #kill heir
 	
 	trigger = { 
 		has_heir = yes 
-		NOT = { heir_culture = vampire }
-		NOT = { heir_culture = soul_shriven }
-		NOT = { heir_culture = daedra }
-		NOT = { heir_has_personality = immortal_personality }
+		NOT = { is_immortal_heir_trigger = yes }
 	}
 	
 	mean_time_to_happen = {
@@ -706,314 +299,97 @@ country_event = { #kill heir
 		###############################################################
 		modifier = {
 			factor = 0.75
-			OR = {
-				heir_culture = yokudan
-				heir_culture = redguard
-				heir_culture = atmoran
-				heir_culture = glacial
-				heir_culture = nord
-				heir_culture = skaal
-				heir_culture = nedic
-				heir_culture = imperial
-				heir_culture = nibenean
-				heir_culture = colovian
-				heir_culture = akaviri
-				heir_culture = islander heir_culture = keptu
-			}
+			is_human_heir_trigger = yes
 			heir_age = 60
 		}
 		modifier = {
 			factor = 0.50
-			OR = {
-				heir_culture = yokudan
-				heir_culture = redguard
-				heir_culture = atmoran
-				heir_culture = glacial
-				heir_culture = nord
-				heir_culture = skaal
-				heir_culture = nedic
-				heir_culture = imperial
-				heir_culture = nibenean
-				heir_culture = colovian
-				heir_culture = akaviri
-				heir_culture = islander heir_culture = keptu
-			}
+			is_human_heir_trigger = yes
 			heir_age = 80
 		}
 		modifier = {
 			factor = 0.25
-			OR = {
-				heir_culture = yokudan
-				heir_culture = redguard
-				heir_culture = atmoran
-				heir_culture = glacial
-				heir_culture = nord
-				heir_culture = skaal
-				heir_culture = nedic
-				heir_culture = imperial
-				heir_culture = nibenean
-				heir_culture = colovian
-				heir_culture = akaviri
-				heir_culture = islander heir_culture = keptu
-			}
+			is_human_heir_trigger = yes
 			heir_age = 120
 		}
 		modifier = {
 			factor = 0.10
-			OR = {
-				heir_culture = yokudan
-				heir_culture = redguard
-				heir_culture = atmoran
-				heir_culture = glacial
-				heir_culture = nord
-				heir_culture = skaal
-				heir_culture = nedic
-				heir_culture = imperial
-				heir_culture = nibenean
-				heir_culture = colovian
-				heir_culture = akaviri
-				heir_culture = islander heir_culture = keptu
-			}
+			is_human_heir_trigger = yes
 			heir_age = 160
 		}
 		###############################################################
 		modifier = {
 			factor = 1.50
-			OR = {
-				heir_culture = breton
-				heir_culture = reachmen
-				heir_culture = orsimer
-				heir_culture = wood_orsimer
-				heir_culture = khajiiti
-				heir_culture = anequinan
-				heir_culture = pellitinian
-				heir_culture = po_tun
-				heir_culture = imga
-				heir_culture = argonian
-				heir_culture = archein
-				heir_culture = naga
-				heir_culture = tsaesci
-				heir_culture = kamal heir_culture = goblin heir_culture = riekling heir_culture = frost_giant heir_culture = sea_giant heir_culture = giant
-				heir_culture = kothringi heir_culture = arachnid heir_culture = minotaur heir_culture = lilmothiit
-			}
+			is_half_blood_heir_trigger = yes
 		}
 		modifier = {
 			factor = 0.75
-			OR = {
-				heir_culture = breton
-				heir_culture = reachmen
-				heir_culture = orsimer
-				heir_culture = wood_orsimer
-				heir_culture = khajiiti
-				heir_culture = anequinan
-				heir_culture = pellitinian
-				heir_culture = po_tun
-				heir_culture = imga
-				heir_culture = argonian
-				heir_culture = archein
-				heir_culture = naga
-				heir_culture = tsaesci
-				heir_culture = kamal heir_culture = goblin heir_culture = riekling heir_culture = frost_giant heir_culture = sea_giant heir_culture = giant
-				heir_culture = kothringi heir_culture = arachnid heir_culture = minotaur heir_culture = lilmothiit
-			}
+			is_half_blood_heir_trigger = yes
 			heir_age = 80
 		}
 		modifier = {
 			factor = 0.50
-			OR = {
-				heir_culture = breton
-				heir_culture = reachmen
-				heir_culture = orsimer
-				heir_culture = wood_orsimer
-				heir_culture = khajiiti
-				heir_culture = anequinan
-				heir_culture = pellitinian
-				heir_culture = po_tun
-				heir_culture = imga
-				heir_culture = argonian
-				heir_culture = archein
-				heir_culture = naga
-				heir_culture = tsaesci
-				heir_culture = kamal heir_culture = goblin heir_culture = riekling heir_culture = frost_giant heir_culture = sea_giant heir_culture = giant
-				heir_culture = kothringi heir_culture = arachnid heir_culture = minotaur heir_culture = lilmothiit
-			}
+			is_half_blood_heir_trigger = yes
 			heir_age = 120
 		}
 		modifier = {
 			factor = 0.25
-			OR = {
-				heir_culture = breton
-				heir_culture = reachmen
-				heir_culture = orsimer
-				heir_culture = wood_orsimer
-				heir_culture = khajiiti
-				heir_culture = anequinan
-				heir_culture = pellitinian
-				heir_culture = po_tun
-				heir_culture = imga
-				heir_culture = argonian
-				heir_culture = archein
-				heir_culture = naga
-				heir_culture = tsaesci
-				heir_culture = kamal heir_culture = goblin heir_culture = riekling heir_culture = frost_giant heir_culture = sea_giant heir_culture = giant
-				heir_culture = kothringi heir_culture = arachnid heir_culture = minotaur heir_culture = lilmothiit
-			}
+			is_half_blood_heir_trigger = yes
 			heir_age = 180
 		}
 		modifier = {
 			factor = 0.10
-			OR = {
-				heir_culture = breton
-				heir_culture = reachmen
-				heir_culture = orsimer
-				heir_culture = wood_orsimer
-				heir_culture = khajiiti
-				heir_culture = anequinan
-				heir_culture = pellitinian
-				heir_culture = po_tun
-				heir_culture = imga
-				heir_culture = argonian
-				heir_culture = archein
-				heir_culture = naga
-				heir_culture = tsaesci
-				heir_culture = kamal heir_culture = goblin heir_culture = riekling heir_culture = frost_giant heir_culture = sea_giant heir_culture = giant
-				heir_culture = kothringi heir_culture = arachnid heir_culture = minotaur heir_culture = lilmothiit
-			}
+			is_half_blood_heir_trigger = yes
 			heir_age = 240
 		}
 		###############################################################
 		modifier = {
 			factor = 2.25
-			OR = {
-			heir_culture = maorner
-			heir_culture = altmer
-			heir_culture = ayleid heir_culture = corelanyan
-			heir_culture = sinistral
-			heir_culture = snow_elven
-			heir_culture = falmer
-			heir_culture = dwemer
-			heir_culture = bosmer
-			heir_culture = ashlander
-			heir_culture = dunmer
-			heir_culture = chimer
-			}
+			is_elven_heir_trigger = yes
 		}
 		modifier = {
 			factor = 0.75
-			OR = {
-				heir_culture = maorner
-			    heir_culture = altmer
-			    heir_culture = ayleid heir_culture = corelanyan
-			    heir_culture = sinistral
-			    heir_culture = snow_elven
-			    heir_culture = falmer
-			    heir_culture = dwemer
-			    heir_culture = bosmer
-			    heir_culture = ashlander
-			    heir_culture = dunmer
-			    heir_culture = chimer
-			}
+			is_elven_heir_trigger = yes
 			heir_age = 135
 		}
 		modifier = {
 			factor = 0.50
-			OR = {
-				heir_culture = maorner
-			    heir_culture = altmer
-			    heir_culture = ayleid heir_culture = corelanyan
-			    heir_culture = sinistral
-			    heir_culture = snow_elven
-			    heir_culture = falmer
-			    heir_culture = dwemer
-			    heir_culture = bosmer
-			    heir_culture = ashlander
-			    heir_culture = dunmer
-			    heir_culture = chimer
-			}
+			is_elven_heir_trigger = yes
 			heir_age = 180
 		}
 		modifier = {
 			factor = 0.25
-			OR = {
-				heir_culture = maorner
-			    heir_culture = altmer
-			    heir_culture = ayleid heir_culture = corelanyan
-			    heir_culture = sinistral
-			    heir_culture = snow_elven
-			    heir_culture = falmer
-			    heir_culture = dwemer
-			    heir_culture = bosmer
-			    heir_culture = ashlander
-			    heir_culture = dunmer
-			    heir_culture = chimer
-			}
+			is_elven_heir_trigger = yes
 			heir_age = 270
 		}
 		modifier = {
 			factor = 0.10
-			OR = {
-				heir_culture = maorner
-			    heir_culture = altmer
-			    heir_culture = ayleid heir_culture = corelanyan
-			    heir_culture = sinistral
-			    heir_culture = snow_elven
-			    heir_culture = falmer
-			    heir_culture = dwemer
-			    heir_culture = bosmer
-			    heir_culture = ashlander
-			    heir_culture = dunmer
-			    heir_culture = chimer
-			}
+			is_elven_heir_trigger = yes
 			heir_age = 360
 		}
 		###############################################################
 		modifier = {
 			factor = 3.37
-			OR = {
-			heir_culture = sload
-			heir_culture = dremora heir_culture = oblivious heir_culture = xivilai heir_culture = clanfear heir_culture = daedroth heir_culture = unknown
-			heir_culture = harvester
-			heir_culture = scamp heir_culture = hollow
-			}
+			is_unknown_heir_trigger = yes
 		}
 		modifier = {
 			factor = 0.75
-			OR = {
-				heir_culture = sload
-			    heir_culture = dremora heir_culture = oblivious heir_culture = xivilai heir_culture = clanfear heir_culture = daedroth heir_culture = unknown
-			    heir_culture = harvester
-			    heir_culture = scamp heir_culture = hollow
-			}
+			is_unknown_heir_trigger = yes
 			heir_age = 200
 		}
 		modifier = {
 			factor = 0.50
-			OR = {
-				heir_culture = sload
-			    heir_culture = dremora heir_culture = oblivious heir_culture = xivilai heir_culture = clanfear heir_culture = daedroth heir_culture = unknown
-			    heir_culture = harvester
-			    heir_culture = scamp heir_culture = hollow
-			}
+			is_unknown_heir_trigger = yes
 			heir_age = 270
 		}
 		modifier = {
 			factor = 0.25
-			OR = {
-				heir_culture = sload
-			    heir_culture = dremora heir_culture = oblivious heir_culture = xivilai heir_culture = clanfear heir_culture = daedroth heir_culture = unknown
-			    heir_culture = harvester
-			    heir_culture = scamp heir_culture = hollow
-			}
+			is_unknown_heir_trigger = yes
 			heir_age = 405
 		}
 		modifier = {
 			factor = 0.10
-			OR = {
-				heir_culture = sload
-			    heir_culture = dremora heir_culture = oblivious heir_culture = xivilai heir_culture = clanfear heir_culture = daedroth heir_culture = unknown
-			    heir_culture = harvester
-			    heir_culture = scamp heir_culture = hollow
-			}
+			is_unknown_heir_trigger = yes
 			heir_age = 540
 		}
 	}
@@ -1023,149 +399,3 @@ country_event = { #kill heir
 		kill_heir = yes
 	}
 }
-
-#######################################################################
-#
-#country_event = {
-#	id = es_health.4
-#	title = es_health.4.t
-#	desc = es_health.4.d
-#	picture = ES_MAD_KING_eventPicture
-#	
-#	hidden = yes
-#	
-#	trigger = { 
-#	    has_regency = no 
-#		ruler_age = 50
-#		NOT = { ruler_culture = vampire }
-#		NOT = { ruler_culture = soul_shriven }
-#		NOT = { ruler_culture = daedra }
-#	}
-#	
-#	mean_time_to_happen = {
-#		days = 18250
-#		modifier = {
-#			factor = 1.5
-#			ai = yes
-#		}
-#		modifier = {
-#			factor = 0.25
-#			government = republic
-#		}
-#		modifier = {
-#			factor = 0.85
-#			ruler_age = 100
-#		}
-#		modifier = {
-#			factor = 0.85
-#			ruler_age = 150
-#		}
-#		modifier = {
-#			factor = 0.85
-#			ruler_age = 200
-#		}
-#		modifier = {
-#			factor = 0.85
-#			ruler_age = 250
-#		}
-#		modifier = {
-#			factor = 0.85
-#			ruler_age = 300
-#		}
-#		modifier = {
-#			factor = 0.85
-#			ruler_age = 350
-#		}
-#		modifier = {
-#			factor = 0.85
-#			ruler_age = 400
-#		}
-#		modifier = {
-#			factor = 0.85
-#			ruler_age = 450
-#		}
-#		modifier = {
-#			factor = 0.85
-#			ruler_age = 500
-#		}
-#	}
-#	
-#	option = {
-#		name = es_health.4.a
-#		
-#		if = {
-#		    limit = { adm = 1 dip = 1 mil = 1 }
-#			random_list = {
-#			33 = { change_adm = -1 }
-#			33 = { change_dip = -1 }
-#			33 = { change_mil = -1 }
-#			}
-#		}
-#		else_if = {
-#		    limit = { dip = 1 mil = 1 }
-#			random_list = {
-#			50 = { change_dip = -1 }
-#			50 = { change_mil = -1 }
-#			}
-#		}
-#		else_if = {
-#		    limit = { adm = 1 mil = 1 }
-#			random_list = {
-#			50 = { change_adm = -1 }
-#			50 = { change_mil = -1 }
-#			}
-#		}
-#		else_if = {
-#		    limit = { adm = 1 dip = 1 }
-#			random_list = {
-#			50 = { change_adm = -1 }
-#			50 = { change_dip = -1 }
-#			}
-#		}
-#		else_if = {
-#		    limit = { adm = 1 }
-#			change_adm = -1
-#		}
-#		else_if = {
-#		    limit = { dip = 1 }
-#			change_dip = -1
-#		}
-#		else = {
-#			change_mil = -1
-#		}
-#		
-#		if = { limit = { ai = no }
-#		    random_list = {
-#			    5 = { add_ruler_modifier = { name = "arthritis" duration = -1 } if = { limit = { NOT = { has_ruler_modifier = arthritis } } country_event = { id = es_health.5 days = 31 tooltip = es_collapse.2.a.tt } } }
-#				5 = { add_ruler_modifier = { name = "insomnia" duration = -1 } if = { limit = { NOT = { has_ruler_modifier = insomnia } } country_event = { id = es_health.5 days = 31 tooltip = es_collapse.2.a.tt } } }
-#				5 = { add_ruler_modifier = { name = "tumor" duration = -1 } if = { limit = { NOT = { has_ruler_modifier = tumor } } country_event = { id = es_health.5 days = 31 tooltip = es_collapse.2.a.tt } } }
-#				5 = { add_ruler_modifier = { name = "stroke" duration = -1 } if = { limit = { NOT = { has_ruler_modifier = stroke } } country_event = { id = es_health.5 days = 31 tooltip = es_collapse.2.a.tt } } }
-#				5 = { add_ruler_modifier = { name = "blindness" duration = -1 } if = { limit = { NOT = { has_ruler_modifier = blindness } } country_event = { id = es_health.5 days = 31 tooltip = es_collapse.2.a.tt } } }
-#				5 = { add_ruler_modifier = { name = "madness" duration = -1 } if = { limit = { NOT = { has_ruler_modifier = madness } } country_event = { id = es_health.5 days = 31 tooltip = es_collapse.2.a.tt } } }
-#				5 = { add_ruler_modifier = { name = "es_influenza" duration = -1 } if = { limit = { NOT = { has_ruler_modifier = es_influenza } } country_event = { id = es_health.5 days = 31 tooltip = es_collapse.2.a.tt } } }
-#				5 = { add_ruler_modifier = { name = "pneumonia" duration = -1 } if = { limit = { NOT = { has_ruler_modifier = pneumonia } } country_event = { id = es_health.5 days = 31 tooltip = es_collapse.2.a.tt } } }
-#				5 = { add_ruler_modifier = { name = "dementia" duration = -1 } if = { limit = { NOT = { has_ruler_modifier = dementia } } country_event = { id = es_health.5 days = 31 tooltip = es_collapse.2.a.tt } } }
-#				5 = { add_ruler_modifier = { name = "depression" duration = -1 } if = { limit = { NOT = { has_ruler_modifier = depression } } country_event = { id = es_health.5 days = 31 tooltip = es_collapse.2.a.tt } } }
-#				5 = { add_ruler_modifier = { name = "ulcer" duration = -1 } if = { limit = { NOT = { has_ruler_modifier = ulcer } } country_event = { id = es_health.5 days = 31 tooltip = es_collapse.2.a.tt } } }
-#				5 = { add_ruler_modifier = { name = "gout" duration = -1 } if = { limit = { NOT = { has_ruler_modifier = gout } } country_event = { id = es_health.5 days = 31 tooltip = es_collapse.2.a.tt } } }
-#				40 = { }
-#			}
-#		}
-#		
-#	}
-#	
-#}
-#
-#country_event = {
-#	id = es_health.5
-#	title = es_health.4.t
-#	desc = es_health.4.d
-#	picture = ES_MAD_KING_eventPicture
-#	
-#	is_triggered_only = yes
-#	
-#	option = {
-#		name = es_health.4.a
-#	}
-#	
-#}

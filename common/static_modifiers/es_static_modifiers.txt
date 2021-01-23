@@ -650,17 +650,24 @@ negative_stability = {
 }
 
 positive_mandate = {	# 100% strength at 100 mandate, 0% at 50 mandate
-	global_unrest = -1.0
-	stability_cost_modifier = -0.1
+	stability_cost_modifier = -0.25
+	improve_relation_modifier = 0.25
+	mercantilism_cost = -0.25
+	mercenary_manpower = 0.25
+	vassal_forcelimit_bonus = 0.25
+	liberty_desire_from_subject_development = -0.25
+	promote_culture_cost = -0.25
 }
 
 negative_mandate = { # By default, starts at 50 mandate, 100% strength at 0 mandate
-	global_trade_goods_size_modifier = -0.5
-	fire_damage_received = 0.5
-	shock_damage_received = 0.5
-	global_unrest = 5
-	mercenary_manpower = -0.5
-}
+	stability_cost_modifier = 0.25
+	improve_relation_modifier = -0.25
+	mercantilism_cost = 0.25
+	mercenary_manpower = -0.25
+	vassal_forcelimit_bonus = -0.25
+	liberty_desire_from_subject_development = 0.25
+	promote_culture_cost = 0.25
+}		  
 
 lost_mandate_of_heaven = {
 	discipline = -0.1
