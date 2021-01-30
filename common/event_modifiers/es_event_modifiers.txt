@@ -729,37 +729,63 @@ orcish_fury = {
 orcish_fury_timer = {
 }
 
-ever-ashland = {
-    local_development_cost = 0.25
-	local_build_time = 0.25
-	regiment_recruit_speed = 0.25
-	local_defensiveness = 0.25
-	trade_goods_size_modifier = 0.25
-}
+###
 
-light-ashland = {
-	local_development_cost = 0.15
-	local_build_time = 0.15
-	regiment_recruit_speed = 0.15
+thin_ever_ashland = {
 	local_defensiveness = 0.15
-	trade_goods_size_modifier = 0.15
+	local_build_cost = 0.15
+	local_build_time = 0.15
+	local_culture_conversion_cost = 0.15
+	local_missionary_strength = 0.015
 }
 
-heavy-ashland = {
-	local_development_cost = 0.5
-	local_build_time = 0.5
-	regiment_recruit_speed = 0.5
-	local_defensiveness = 0.5
-	trade_goods_size_modifier = 0.5
+ever_ashland = {
+	local_defensiveness = 0.25
+	local_build_cost = 0.25
+	local_build_time = 0.25
+	local_culture_conversion_cost = 0.25
+	local_missionary_strength = 0.025
 }
 
-temp-ashland = {
-    local_development_cost = 0.25
+thick_ever_ashland = {
+	local_defensiveness = 0.35
+	local_build_cost = 0.35
+	local_build_time = 0.35
+	local_culture_conversion_cost = 0.35
+	local_missionary_strength = 0.035
+}
+
+thin_temporal_ashland = {
+	local_unrest = 1.5
+	local_tax_modifier = -0.15
+	local_friendly_movement_speed = -0.15
+	local_institution_spread = -0.15
+	local_hostile_movement_speed = -0.15
+	local_manpower_modifier = -0.15
+	local_regiment_cost = 0.15
+}
+
+temporal_ashland = {
+	local_unrest = 2.5
 	local_tax_modifier = -0.25
-	local_production_efficiency = -0.25
-	local_hostile_attrition = 1
-	local_monthly_devastation = 0.25
+	local_friendly_movement_speed = -0.25
+	local_institution_spread = -0.25
+	local_hostile_movement_speed = -0.25
+	local_manpower_modifier = -0.25
+	local_regiment_cost = 0.25
 }
+
+thick_temporal_ashland = {
+	local_unrest = 3.5
+	local_tax_modifier = -0.35
+	local_friendly_movement_speed = -0.35
+	local_institution_spread = -0.35
+	local_hostile_movement_speed = -0.35
+	local_manpower_modifier = -0.35
+	local_regiment_cost = 0.35
+}
+
+###
 
 sand_storm = {
     local_friendly_movement_speed = 0.25

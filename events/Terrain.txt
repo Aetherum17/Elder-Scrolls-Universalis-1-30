@@ -211,41 +211,250 @@ country_event = {
 		months = 120
 	}
 	
-	option = {
-		name = "es_terrain.3.a"
-		ai_chance = { factor = 100 }
+	immediate = {
 		hidden_effect = {
 		random_list = {
+			# Small
 		    50 = {
-			    every_province = { limit = { OR = { region = morrowind_lr region = vvardenfell_lr region = velothi_mountains_lr region = deshaan_lr region = llothanis_peninsula_lr } }
-			    add_permanent_province_modifier = { name = temp-ashland duration = 1825 }
-		        }
-			    every_country = {limit = { capital_scope = { OR = { region = morrowind_lr region = vvardenfell_lr region = velothi_mountains_lr region = deshaan_lr region = llothanis_peninsula_lr } } } add_manpower = -100 country_event = { id = es_terrain.4 days = 31 tooltip = es_terrain.4.a.tt } }
+			    every_province = {
+					limit = {
+						region = vvardenfell_lr
+					}
+					add_province_modifier = {
+						name = "thick_temporal_ashland"
+						duration = 1825
+					}
+					add_devastation = 15
+				}
+				every_province = {
+					limit = {
+						OR = {
+							region = morrowind_lr
+							region = velothi_mountains_lr
+							region = deshaan_lr
+							region = llothanis_peninsula_lr
+						}
+					}
+					add_province_modifier = {
+						name = "temporal_ashland"
+						duration = 1825
+					}
+					add_devastation = 10
+				}
+				every_province = {
+					limit = {
+						OR = {
+							 region = shadowfen_lr
+							 region = valus_mountains_lr
+							 region = jerall_mountains_lr
+						     region = rift_lr
+						}
+					}
+					add_province_modifier = {
+						name = "thin_temporal_ashland"
+						duration = 1825
+					}
+					add_devastation = 5
+				}
+				every_country = {
+					limit = {
+						capital_scope = {
+							OR = {
+								region = vvardenfell_lr
+								region = morrowind_lr
+								region = velothi_mountains_lr
+								region = deshaan_lr
+								region = llothanis_peninsula_lr
+								region = shadowfen_lr
+								region = valus_mountains_lr
+								region = jerall_mountains_lr
+								region = rift_lr
+							}
+						}
+					}
+				add_manpower = -100
+				country_event = { id = es_terrain.4 days = 31 tooltip = es_terrain.4.a.tt }
+				}
 			}
-			25 = {
-			    every_province = { limit = { OR = { region = morrowind_lr region = vvardenfell_lr region = velothi_mountains_lr region = deshaan_lr region = llothanis_peninsula_lr region = reach_lr region = rift_lr region = great_planes_lr region = nordic_coast_lr region = black_marsh_lr region = shadowfen_lr region = murkmire_lr } }
-			    add_permanent_province_modifier = { name = temp-ashland duration = 3650 }
-			    }
-			    every_country = { limit = { capital_scope = { OR = { region = morrowind_lr region = vvardenfell_lr region = velothi_mountains_lr region = deshaan_lr region = llothanis_peninsula_lr region = reach_lr region = rift_lr region = great_planes_lr region = nordic_coast_lr region = black_marsh_lr region = shadowfen_lr region = murkmire_lr } } } add_manpower = -250 country_event = { id = es_terrain.4 days = 31 tooltip = es_terrain.4.a.tt } }
+			# Medium
+		    35 = {
+			    every_province = {
+					limit = {
+						OR = {
+							region = vvardenfell_lr
+							region = morrowind_lr
+							region = velothi_mountains_lr
+      						region = deshaan_lr
+     						region = llothanis_peninsula_lr
+						}
+					}
+					add_province_modifier = {
+						name = "thick_temporal_ashland"
+						duration = 2737
+					}
+					add_devastation = 30
+				}
+				every_province = {
+					limit = {
+						OR = {
+							region = shadowfen_lr
+							region = valus_mountains_lr
+							region = jerall_mountains_lr
+						    region = rift_lr
+						}
+					}
+					add_province_modifier = {
+						name = "temporal_ashland"
+						duration = 2737
+					}
+					add_devastation = 20
+				}
+				every_province = {
+					limit = {
+						OR = {
+							region = nordic_coast_lr
+							region = great_planes_lr
+							region = western_syrodiil_lr
+							region = eastern_syrodiil_lr
+							region = central_syrodiil_lr
+							region = golden_coast_lr
+							region = black_marsh_lr
+						}
+					}
+					add_province_modifier = {
+						name = "thin_temporal_ashland"
+						duration = 2737
+					}
+					add_devastation = 10
+				}
+				every_country = {
+					limit = {
+						capital_scope = {
+							OR = {
+								region = vvardenfell_lr
+								region = morrowind_lr
+								region = velothi_mountains_lr
+								region = deshaan_lr
+								region = llothanis_peninsula_lr
+								region = shadowfen_lr
+								region = valus_mountains_lr
+								region = jerall_mountains_lr
+								region = rift_lr
+								region = nordic_coast_lr
+								region = great_planes_lr
+								region = western_syrodiil_lr
+								region = eastern_syrodiil_lr
+								region = central_syrodiil_lr
+								region = golden_coast_lr
+								region = black_marsh_lr
+							}
+						}
+					}
+				add_manpower = -225
+				country_event = { id = es_terrain.4 days = 31 tooltip = es_terrain.4.a.tt }
+				}
 			}
-			15 = {
-			    every_province = { limit = { continent = Tamriel } 
-				add_permanent_province_modifier = { name = temp-ashland duration = 5475 }
-			    }
-			    every_country = { limit = { capital_scope = { continent = Tamriel } } add_manpower = -350 country_event = { id = es_terrain.4 days = 31 tooltip = es_terrain.4.a.tt } }
-			}
-			10 = {
-			    every_province = { limit = { is_city = yes }
-				add_permanent_province_modifier = { name = temp-ashland duration = 9125 }
-			    }
-			    every_country = { limit = { always = yes } add_manpower = -500 country_event = { id = es_terrain.4 days = 31 tooltip = es_terrain.4.a.tt } } 
+			# Large
+		    15 = {
+			    every_province = {
+					limit = {
+						OR = {
+							region = vvardenfell_lr
+							region = morrowind_lr
+							region = velothi_mountains_lr
+      						region = deshaan_lr
+     						region = llothanis_peninsula_lr
+							region = shadowfen_lr
+							region = valus_mountains_lr
+							region = jerall_mountains_lr
+						    region = rift_lr
+						}
+					}
+					add_province_modifier = {
+						name = "thick_temporal_ashland"
+						duration = 3650
+					}
+					add_devastation = 35
+				}
+				every_province = {
+					limit = {
+						OR = {
+							region = nordic_coast_lr
+							region = great_planes_lr
+							region = western_syrodiil_lr
+							region = eastern_syrodiil_lr
+							region = central_syrodiil_lr
+							region = golden_coast_lr
+							region = black_marsh_lr
+						}
+					}
+					add_province_modifier = {
+						name = "temporal_ashland"
+						duration = 3650
+					}
+					add_devastation = 25
+				}
+				every_province = {
+					limit = {
+						OR = {
+							region = murkmire_lr
+							region = reach_lr
+							region = corten_heights_lr
+							region = northern_valenwood_lr
+							region = anequina_lr
+							region = pelletine_lr
+						}
+					}
+					add_province_modifier = {
+						name = "thin_temporal_ashland"
+						duration = 3650
+					}
+					add_devastation = 15
+				}
+				every_country = {
+					limit = {
+						capital_scope = {
+							OR = {
+								region = vvardenfell_lr
+								region = morrowind_lr
+								region = velothi_mountains_lr
+								region = deshaan_lr
+								region = llothanis_peninsula_lr
+								region = shadowfen_lr
+								region = valus_mountains_lr
+								region = jerall_mountains_lr
+								region = rift_lr
+								region = nordic_coast_lr
+								region = great_planes_lr
+								region = western_syrodiil_lr
+								region = eastern_syrodiil_lr
+								region = central_syrodiil_lr
+								region = golden_coast_lr
+								region = black_marsh_lr
+								region = murkmire_lr
+								region = reach_lr
+								region = corten_heights_lr
+								region = northern_valenwood_lr
+								region = anequina_lr
+								region = pelletine_lr
+							}
+						}
+					}
+				add_manpower = -350
+				country_event = { id = es_terrain.4 days = 31 tooltip = es_terrain.4.a.tt }
+				}
 			}
 		}
-		}
-		add_country_modifier = {
+	}
+	add_country_modifier = {
 		name = "red_mountain_eruption"
 		duration = 9125
 		}
+	}
+	
+	option = {
+		name = "es_terrain.3.a"
+		ai_chance = { factor = 100 }
 	}
 }
 
