@@ -1,41 +1,166 @@
 province_religious_effects = {
-		263 = { add_province_triggered_modifier = altmeri_pantheon_holy_city add_province_triggered_modifier = religious_center }
-		1280 = { add_province_triggered_modifier = snow_elves_pantheon_holy_city add_province_triggered_modifier = religious_center }
-		2783 = { add_province_triggered_modifier = nordic_pantheon_holy_city add_province_triggered_modifier = religious_center }
-		834 = { add_province_triggered_modifier = bosmer_pantheon_holy_city add_province_triggered_modifier = religious_center }
-		5627 = { add_province_triggered_modifier = eight_divines_holy_city add_province_triggered_modifier = religious_center }
-		1206 = { add_province_triggered_modifier = nine_divines_holy_city add_province_triggered_modifier = religious_center }
-		1394 = { add_province_triggered_modifier = twelve_divines_holy_city add_province_triggered_modifier = religious_center }
-		5285 = { add_province_triggered_modifier = khajiiti_pantheon_holy_city add_province_triggered_modifier = religious_center }
-		355 = { add_province_triggered_modifier = yokudan_pantheon_holy_city add_province_triggered_modifier = religious_center }
-		6392 = { add_province_triggered_modifier = redguard_pantheon_holy_city add_province_triggered_modifier = religious_center }
-		1406 = { add_province_triggered_modifier = malacath_cult_holy_city add_province_triggered_modifier = religious_center }
-		6675 = { add_province_triggered_modifier = kothri_pantheon_holy_city add_province_triggered_modifier = religious_center }
-		1043 = { add_province_triggered_modifier = chimer_pantheon_holy_city add_province_triggered_modifier = religious_center }
-		1002 = { add_province_triggered_modifier = tribunal_pantheon_holy_city add_province_triggered_modifier = religious_center }
-		985 = { add_province_triggered_modifier = reclamations_pantheon_holy_city add_province_triggered_modifier = religious_center }
-		320 = { add_province_triggered_modifier = sload_faith_holy_city add_province_triggered_modifier = religious_center }
-		240 = { add_province_triggered_modifier = serpant_king_holy_city add_province_triggered_modifier = religious_center }
-		1572 = { add_province_triggered_modifier = dragon_cult_holy_city add_province_triggered_modifier = religious_center }
-		1134 = { add_province_triggered_modifier = marukhism_holy_city add_province_triggered_modifier = religious_center }
-		1069 = { add_province_triggered_modifier = hist_holy_city add_province_triggered_modifier = religious_center }
-		3373 = { add_province_triggered_modifier = reason_and_logic_cult_holy_city add_province_triggered_modifier = religious_center }
-		7210 = { add_province_triggered_modifier = old_gods_cult_holy_city add_province_triggered_modifier = religious_center }
-		700 = { add_province_triggered_modifier = tsaesci_pantheon_holy_city add_province_triggered_modifier = religious_center }
-		575 = { add_province_triggered_modifier = tang_mo_pantheon_holy_city add_province_triggered_modifier = religious_center }
-		497 = { add_province_triggered_modifier = kamal_pantheon_holy_city add_province_triggered_modifier = religious_center }
-		2600 = { add_province_triggered_modifier = dremora_pantheon_holy_city add_province_triggered_modifier = religious_center }
-		1150 = { add_province_triggered_modifier = molog_bal_cult_holy_city add_province_triggered_modifier = religious_center }
-		1199 = { add_province_triggered_modifier = meridia_cult_holy_city add_province_triggered_modifier = religious_center }
-		1230 = { add_province_triggered_modifier = mehrunes_dagon_cult_holy_city add_province_triggered_modifier = religious_center }
-		6345 = { add_province_triggered_modifier = hermeus_mora_cult_holy_city add_province_triggered_modifier = religious_center }
-		631 = { add_province_triggered_modifier = po_tun_pantheon_holy_city add_province_triggered_modifier = religious_center }
-		3315 = { add_province_triggered_modifier = maker_cult_holy_city add_province_triggered_modifier = religious_center }
-		1482 = { add_province_triggered_modifier = sheogorath_cult_holy_city add_province_triggered_modifier = religious_center }
-		5657 = { add_province_triggered_modifier = hircine_cult_holy_city add_province_triggered_modifier = religious_center }
-		6737 = { add_province_triggered_modifier = nocturnal_cult_holy_city add_province_triggered_modifier = religious_center }
-		646 = { add_province_triggered_modifier = unknown_pantheon_holy_city add_province_triggered_modifier = religious_center }
-		7050 = { add_province_triggered_modifier = cult_of_lorelia_holy_city add_province_triggered_modifier = religious_center }
-		5506 = { add_province_triggered_modifier = cult_of_the_moth_holy_city add_province_triggered_modifier = religious_center }
-		1017 = { add_province_triggered_modifier = cult_of_black_worm_holy_city add_province_triggered_modifier = religious_center }
+	263 = { add_province_triggered_modifier = altmeri_pantheon_holy_city add_province_triggered_modifier = religious_center }
+	1280 = { add_province_triggered_modifier = snow_elves_pantheon_holy_city add_province_triggered_modifier = religious_center }
+	2783 = { add_province_triggered_modifier = nordic_pantheon_holy_city add_province_triggered_modifier = religious_center }
+	834 = { add_province_triggered_modifier = bosmer_pantheon_holy_city add_province_triggered_modifier = religious_center }
+	5627 = { add_province_triggered_modifier = eight_divines_holy_city add_province_triggered_modifier = religious_center }
+	1206 = { add_province_triggered_modifier = nine_divines_holy_city add_province_triggered_modifier = religious_center }
+	1394 = { add_province_triggered_modifier = twelve_divines_holy_city add_province_triggered_modifier = religious_center }
+	5285 = { add_province_triggered_modifier = khajiiti_pantheon_holy_city add_province_triggered_modifier = religious_center }
+	355 = { add_province_triggered_modifier = yokudan_pantheon_holy_city add_province_triggered_modifier = religious_center }
+	6392 = { add_province_triggered_modifier = redguard_pantheon_holy_city add_province_triggered_modifier = religious_center }
+	1406 = { add_province_triggered_modifier = malacath_cult_holy_city add_province_triggered_modifier = religious_center }
+	6675 = { add_province_triggered_modifier = kothri_pantheon_holy_city add_province_triggered_modifier = religious_center }
+	1043 = { add_province_triggered_modifier = chimer_pantheon_holy_city add_province_triggered_modifier = religious_center }
+	1002 = { add_province_triggered_modifier = tribunal_pantheon_holy_city add_province_triggered_modifier = religious_center }
+	985 = { add_province_triggered_modifier = reclamations_pantheon_holy_city add_province_triggered_modifier = religious_center }
+	320 = { add_province_triggered_modifier = sload_faith_holy_city add_province_triggered_modifier = religious_center }
+	240 = { add_province_triggered_modifier = serpant_king_holy_city add_province_triggered_modifier = religious_center }
+	1572 = { add_province_triggered_modifier = dragon_cult_holy_city add_province_triggered_modifier = religious_center }
+	1134 = { add_province_triggered_modifier = marukhism_holy_city add_province_triggered_modifier = religious_center }
+	1069 = { add_province_triggered_modifier = hist_holy_city add_province_triggered_modifier = religious_center }
+	3373 = { add_province_triggered_modifier = reason_and_logic_cult_holy_city add_province_triggered_modifier = religious_center }
+	7210 = { add_province_triggered_modifier = old_gods_cult_holy_city add_province_triggered_modifier = religious_center }
+	700 = { add_province_triggered_modifier = tsaesci_pantheon_holy_city add_province_triggered_modifier = religious_center }
+	575 = { add_province_triggered_modifier = tang_mo_pantheon_holy_city add_province_triggered_modifier = religious_center }
+	497 = { add_province_triggered_modifier = kamal_pantheon_holy_city add_province_triggered_modifier = religious_center }
+	2600 = { add_province_triggered_modifier = dremora_pantheon_holy_city add_province_triggered_modifier = religious_center }
+	1150 = { add_province_triggered_modifier = molog_bal_cult_holy_city add_province_triggered_modifier = religious_center }
+	1199 = { add_province_triggered_modifier = meridia_cult_holy_city add_province_triggered_modifier = religious_center }
+	1230 = { add_province_triggered_modifier = mehrunes_dagon_cult_holy_city add_province_triggered_modifier = religious_center }
+	6345 = { add_province_triggered_modifier = hermeus_mora_cult_holy_city add_province_triggered_modifier = religious_center }
+	631 = { add_province_triggered_modifier = po_tun_pantheon_holy_city add_province_triggered_modifier = religious_center }
+	3315 = { add_province_triggered_modifier = maker_cult_holy_city add_province_triggered_modifier = religious_center }
+	1482 = { add_province_triggered_modifier = sheogorath_cult_holy_city add_province_triggered_modifier = religious_center }
+	5657 = { add_province_triggered_modifier = hircine_cult_holy_city add_province_triggered_modifier = religious_center }
+	6737 = { add_province_triggered_modifier = nocturnal_cult_holy_city add_province_triggered_modifier = religious_center }
+	646 = { add_province_triggered_modifier = unknown_pantheon_holy_city add_province_triggered_modifier = religious_center }
+	7050 = { add_province_triggered_modifier = cult_of_lorelia_holy_city add_province_triggered_modifier = religious_center }
+	5506 = { add_province_triggered_modifier = cult_of_the_moth_holy_city add_province_triggered_modifier = religious_center }
+	1017 = { add_province_triggered_modifier = cult_of_black_worm_holy_city add_province_triggered_modifier = religious_center }
+}
+
+change_available_deities = {
+	if = { limit = { religion = eight_divines }
+		random_list = { 50 = { set_country_flag = eight_divines_1_flag } 50 = { clr_country_flag = eight_divines_1_flag } }
+		random_list = { 50 = { set_country_flag = eight_divines_2_flag } 50 = { clr_country_flag = eight_divines_2_flag } }
+		random_list = { 50 = { set_country_flag = eight_divines_3_flag } 50 = { clr_country_flag = eight_divines_3_flag } }
+	}
+	
+	if = { limit = { religion = nine_divines }
+		random_list = { 50 = { set_country_flag = nine_divines_1_flag } 50 = { clr_country_flag = nine_divines_1_flag } }
+		random_list = { 50 = { set_country_flag = nine_divines_2_flag } 50 = { clr_country_flag = nine_divines_2_flag } }
+		random_list = { 50 = { set_country_flag = nine_divines_3_flag } 50 = { clr_country_flag = nine_divines_3_flag } }
+		random_list = { 50 = { set_country_flag = nine_divines_4_flag } 50 = { clr_country_flag = nine_divines_4_flag } }
+		random_list = { 50 = { set_country_flag = nine_divines_5_flag } 50 = { clr_country_flag = nine_divines_5_flag } }
+		random_list = { 50 = { set_country_flag = nine_divines_6_flag } 50 = { clr_country_flag = nine_divines_6_flag } }
+	}
+	
+	if = { limit = { religion = twelve_divines }
+		random_list = { 50 = { set_country_flag = twelve_divines_1_flag } 50 = { clr_country_flag = twelve_divines_1_flag } }
+		random_list = { 50 = { set_country_flag = twelve_divines_2_flag } 50 = { clr_country_flag = twelve_divines_2_flag } }
+		random_list = { 50 = { set_country_flag = twelve_divines_3_flag } 50 = { clr_country_flag = twelve_divines_3_flag } }
+		random_list = { 50 = { set_country_flag = twelve_divines_4_flag } 50 = { clr_country_flag = twelve_divines_4_flag } }
+		random_list = { 50 = { set_country_flag = twelve_divines_5_flag } 50 = { clr_country_flag = twelve_divines_5_flag } }
+		random_list = { 50 = { set_country_flag = twelve_divines_6_flag } 50 = { clr_country_flag = twelve_divines_6_flag } }
+	}
+	
+	if = { limit = { religion = nordic_pantheon }
+		random_list = { 50 = { set_country_flag = nordic_pantheon_1_flag } 50 = { clr_country_flag = nordic_pantheon_1_flag } }
+		random_list = { 50 = { set_country_flag = nordic_pantheon_2_flag } 50 = { clr_country_flag = nordic_pantheon_2_flag } }
+		random_list = { 50 = { set_country_flag = nordic_pantheon_3_flag } 50 = { clr_country_flag = nordic_pantheon_3_flag } }
+		random_list = { 50 = { set_country_flag = nordic_pantheon_4_flag } 50 = { clr_country_flag = nordic_pantheon_4_flag } }
+		random_list = { 50 = { set_country_flag = nordic_pantheon_5_flag } 50 = { clr_country_flag = nordic_pantheon_5_flag } }
+		random_list = { 50 = { set_country_flag = nordic_pantheon_6_flag } 50 = { clr_country_flag = nordic_pantheon_6_flag } }
+	}
+	
+	if = { limit = { religion = khajiiti_pantheon }
+		random_list = { 50 = { set_country_flag = khajiiti_pantheon_1_flag } 50 = { clr_country_flag = khajiiti_pantheon_1_flag } }
+		random_list = { 50 = { set_country_flag = khajiiti_pantheon_2_flag } 50 = { clr_country_flag = khajiiti_pantheon_2_flag } }
+		random_list = { 50 = { set_country_flag = khajiiti_pantheon_3_flag } 50 = { clr_country_flag = khajiiti_pantheon_3_flag } }
+		random_list = { 50 = { set_country_flag = khajiiti_pantheon_4_flag } 50 = { clr_country_flag = khajiiti_pantheon_4_flag } }
+		random_list = { 50 = { set_country_flag = khajiiti_pantheon_5_flag } 50 = { clr_country_flag = khajiiti_pantheon_5_flag } }
+		random_list = { 50 = { set_country_flag = khajiiti_pantheon_6_flag } 50 = { clr_country_flag = khajiiti_pantheon_6_flag } }
+	}
+	
+	if = { limit = { religion = yokudan_pantheon }
+		random_list = { 50 = { set_country_flag = yokudan_pantheon_1_flag } 50 = { clr_country_flag = yokudan_pantheon_1_flag } }
+		random_list = { 50 = { set_country_flag = yokudan_pantheon_2_flag } 50 = { clr_country_flag = yokudan_pantheon_2_flag } }
+		random_list = { 50 = { set_country_flag = yokudan_pantheon_3_flag } 50 = { clr_country_flag = yokudan_pantheon_3_flag } }
+	}
+	
+	if = { limit = { religion = redguard_pantheon }
+		random_list = { 50 = { set_country_flag = redguard_pantheon_1_flag } 50 = { clr_country_flag = redguard_pantheon_1_flag } }
+		random_list = { 50 = { set_country_flag = redguard_pantheon_2_flag } 50 = { clr_country_flag = redguard_pantheon_2_flag } }
+		random_list = { 50 = { set_country_flag = redguard_pantheon_3_flag } 50 = { clr_country_flag = redguard_pantheon_3_flag } }
+	}
+	
+	if = { limit = { religion = bosmer_pantheon }
+		random_list = { 50 = { set_country_flag = bosmer_pantheon_1_flag } 50 = { clr_country_flag = bosmer_pantheon_1_flag } }
+		random_list = { 50 = { set_country_flag = bosmer_pantheon_2_flag } 50 = { clr_country_flag = bosmer_pantheon_2_flag } }
+		random_list = { 50 = { set_country_flag = bosmer_pantheon_3_flag } 50 = { clr_country_flag = bosmer_pantheon_3_flag } }
+		random_list = { 50 = { set_country_flag = bosmer_pantheon_4_flag } 50 = { clr_country_flag = bosmer_pantheon_4_flag } }
+		random_list = { 50 = { set_country_flag = bosmer_pantheon_5_flag } 50 = { clr_country_flag = bosmer_pantheon_5_flag } }
+		random_list = { 50 = { set_country_flag = bosmer_pantheon_6_flag } 50 = { clr_country_flag = bosmer_pantheon_6_flag } }
+	}
+	
+	if = { limit = { religion = altmeri_pantheon }
+		random_list = { 50 = { set_country_flag = altmeri_pantheon_1_flag } 50 = { clr_country_flag = altmeri_pantheon_1_flag } }
+		random_list = { 50 = { set_country_flag = altmeri_pantheon_2_flag } 50 = { clr_country_flag = altmeri_pantheon_2_flag } }
+		random_list = { 50 = { set_country_flag = altmeri_pantheon_3_flag } 50 = { clr_country_flag = altmeri_pantheon_3_flag } }
+	}
+	
+	if = { limit = { religion = snow_elves_pantheon }
+		random_list = { 50 = { set_country_flag = snow_elves_pantheon_1_flag } 50 = { clr_country_flag = snow_elves_pantheon_1_flag } }
+		random_list = { 50 = { set_country_flag = snow_elves_pantheon_2_flag } 50 = { clr_country_flag = snow_elves_pantheon_2_flag } }
+		random_list = { 50 = { set_country_flag = snow_elves_pantheon_3_flag } 50 = { clr_country_flag = snow_elves_pantheon_3_flag } }
+	}
+	
+	if = { limit = { religion = kothri_pantheon }
+		random_list = { 50 = { set_country_flag = kothri_pantheon_1_flag } 50 = { clr_country_flag = kothri_pantheon_1_flag } }
+		random_list = { 50 = { set_country_flag = kothri_pantheon_2_flag } 50 = { clr_country_flag = kothri_pantheon_2_flag } }
+		random_list = { 50 = { set_country_flag = kothri_pantheon_3_flag } 50 = { clr_country_flag = kothri_pantheon_3_flag } }
+		random_list = { 50 = { set_country_flag = kothri_pantheon_4_flag } 50 = { clr_country_flag = kothri_pantheon_4_flag } }
+		random_list = { 50 = { set_country_flag = kothri_pantheon_5_flag } 50 = { clr_country_flag = kothri_pantheon_5_flag } }
+		random_list = { 50 = { set_country_flag = kothri_pantheon_6_flag } 50 = { clr_country_flag = kothri_pantheon_6_flag } }
+	}
+}
+
+randomise_religious_schools = {
+	if = {
+	    limit = { has_religious_school = no religion = old_gods_cult }
+		random_list = {
+     		16 = { set_religious_school = { group = elemental_group school = alrabeg_school } }
+			16 = { set_religious_school = { group = elemental_group school = storihbeg_school } }
+			16 = { set_religious_school = { group = elemental_group school = uricanbeg_school } }
+			16 = { set_religious_school = { group = elemental_group school = gulibeg_school } }
+			16 = { set_religious_school = { group = elemental_group school = hrokkibeg_school } }
+			16 = { set_religious_school = { group = elemental_group school = hagraven_school } }
+		}
+	}
+	
+	if = {
+	    limit = { has_religious_school = no OR = { religion = tsaesci_pantheon religion = tang_mo_pantheon religion = kamal_pantheon } }
+		random_list = {
+     		16 = { set_religious_school = { group = elemental_group school = dragon_school } }
+			16 = { set_religious_school = { group = elemental_group school = lizard_school } }
+			16 = { set_religious_school = { group = elemental_group school = tortoise_school } }
+			16 = { set_religious_school = { group = elemental_group school = crocodile_school } }
+			16 = { set_religious_school = { group = elemental_group school = viper_school } }
+			16 = { set_religious_school = { group = elemental_group school = tuatara_school } }
+		}
+	}
+	
+	
+	if = {
+	    limit = { has_religious_school = no OR = { religion = hist religion = sload_faith religion = cult_of_the_moth } }
+		random_list = {
+     		16 = { set_religious_school = { group = elemental_group school = lotus_school } }
+			16 = { set_religious_school = { group = elemental_group school = magnolia_school } }
+			16 = { set_religious_school = { group = elemental_group school = rose_school } }
+			16 = { set_religious_school = { group = elemental_group school = orchid_school } }
+			16 = { set_religious_school = { group = elemental_group school = tulip_school } }
+			16 = { set_religious_school = { group = elemental_group school = carnation_school } }
+		}
+	}
 }

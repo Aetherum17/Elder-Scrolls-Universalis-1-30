@@ -166,3 +166,140 @@ province_natives = {
 		}
 	}
 }
+
+es_province_development = {
+	every_province = {
+	    limit = { is_city = yes }
+		random_list = {
+		    3 = { add_base_tax = 2 add_base_production = 2 add_base_manpower = 2 }
+			3 = { add_base_tax = 1 add_base_production = 2 add_base_manpower = 2 }
+			3 = { add_base_tax = 2 add_base_production = 1 add_base_manpower = 2 }
+			3 = { add_base_tax = 2 add_base_production = 2 add_base_manpower = 1 }
+			3 = { add_base_tax = 1 add_base_production = 1 add_base_manpower = 2 }
+			3 = { add_base_tax = 1 add_base_production = 2 add_base_manpower = 1 }
+			3 = { add_base_tax = 2 add_base_production = 1 add_base_manpower = 1 }
+			3 = { add_base_tax = 1 add_base_production = 1 add_base_manpower = 1 }
+			3 = { add_base_tax = 1 add_base_production = 1 }
+			3 = { add_base_tax = 1 add_base_manpower = 1 }
+			3 = { add_base_production = 1 add_base_manpower = 1 }
+			3 = { add_base_tax = 1 }
+			3 = { add_base_production = 1 }
+			3 = { add_base_manpower = 1 }
+			3 = { add_base_tax = 2 add_base_production = 2 }
+			3 = { add_base_tax = 2 add_base_production = 1 }
+			3 = { add_base_tax = 1 add_base_production = 2 }
+			3 = { add_base_tax = 1 add_base_production = 1 }
+			3 = { add_base_tax = 2 add_base_manpower = 2 }
+			3 = { add_base_tax = 2 add_base_manpower = 1 }
+			3 = { add_base_tax = 1 add_base_manpower = 2 }
+			3 = { add_base_tax = 1 add_base_manpower = 1 }
+			3 = { add_base_production = 2 add_base_manpower = 2 }
+			3 = { add_base_production = 2 add_base_manpower = 1 }
+			3 = { add_base_production = 1 add_base_manpower = 2 }
+			3 = { add_base_production = 1 add_base_manpower = 1 }
+			3 = { }
+		}
+		if = {
+			limit = { has_port = yes }
+			random_list = { 33 = { add_base_tax = 1 } 33 = { add_base_production = 1 } 33 = { add_base_manpower = 1 } }
+		}
+		if = {
+			limit = { is_capital = yes }
+			add_base_tax = 3 add_base_production = 3 add_base_manpower = 3
+		}
+		if = {
+			limit = { province_has_center_of_trade_of_level = 1 }
+			random_list = { 33 = { add_base_tax = 1 } 33 = { add_base_production = 1 } 33 = { add_base_manpower = 1 } }
+		}
+		if = {
+			limit = { province_has_center_of_trade_of_level = 2 }
+			random_list = { 33 = { add_base_tax = 1 } 33 = { add_base_production = 1 } 33 = { add_base_manpower = 1 } }
+		}
+		if = {
+			limit = { province_has_center_of_trade_of_level = 3 }
+			random_list = { 33 = { add_base_tax = 1 } 33 = { add_base_production = 1 } 33 = { add_base_manpower = 1 } }
+		}
+		if = {
+			limit = { OR = { has_terrain = farmlands has_terrain = grasslands } }
+			random_list = { 50 = { add_base_tax = 1 } }
+			random_list = { 50 = { add_base_production = 1 } }
+			random_list = { 50 = { add_base_manpower = 1 } }
+		}
+		if = {
+			limit = { OR = { has_terrain = coastline has_terrain = savannah } }
+			random_list = { 50 = { add_base_tax = 1 } }
+		}
+		if = {
+			limit = { OR = { has_terrain = forest has_terrain = woods } }
+			random_list = { 50 = { add_base_production = 1 } }
+		}
+		if = {
+			limit = { OR = { has_terrain = steppe has_terrain = hills } }
+			random_list = { 50 = { add_base_manpower = 1 } }
+		}
+		if = {
+			limit = { OR = { has_terrain = jungle has_terrain = mountain } }
+			random_list = { 50 = { add_base_tax = -1 } }
+		}
+		if = {
+			limit = { OR = { has_terrain = coastal_desert has_terrain = drylands } }
+			random_list = { 50 = { add_base_production = -1 } }
+		}
+		if = {
+			limit = { OR = { has_terrain = highlands has_terrain = marsh } }
+			random_list = { 50 = { add_base_manpower = -1 } }
+		}
+		if = {
+			limit = { has_terrain = glacier }
+			random_list = { 50 = { add_base_tax = -1 } }
+			random_list = { 50 = { add_base_production = -1 } }
+			random_list = { 50 = { add_base_manpower = -1 } }
+		}
+	}
+	
+	every_province = {
+	    limit = { is_city = no }
+		random_list = {
+		    3 = { add_base_tax = 2 add_base_production = 2 add_base_manpower = 2 }
+			3 = { add_base_tax = 1 add_base_production = 2 add_base_manpower = 2 }
+			3 = { add_base_tax = 2 add_base_production = 1 add_base_manpower = 2 }
+			3 = { add_base_tax = 2 add_base_production = 2 add_base_manpower = 1 }
+			3 = { add_base_tax = 1 add_base_production = 1 add_base_manpower = 2 }
+			3 = { add_base_tax = 1 add_base_production = 2 add_base_manpower = 1 }
+			3 = { add_base_tax = 2 add_base_production = 1 add_base_manpower = 1 }
+			3 = { add_base_tax = 1 add_base_production = 1 add_base_manpower = 1 }
+			3 = { add_base_tax = 1 add_base_production = 1 }
+			3 = { add_base_tax = 1 add_base_manpower = 1 }
+			3 = { add_base_production = 1 add_base_manpower = 1 }
+			3 = { add_base_tax = 1 }
+			3 = { add_base_production = 1 }
+			3 = { add_base_manpower = 1 }
+			3 = { add_base_tax = 2 add_base_production = 2 }
+			3 = { add_base_tax = 2 add_base_production = 1 }
+			3 = { add_base_tax = 1 add_base_production = 2 }
+			3 = { add_base_tax = 1 add_base_production = 1 }
+			3 = { add_base_tax = 2 add_base_manpower = 2 }
+			3 = { add_base_tax = 2 add_base_manpower = 1 }
+			3 = { add_base_tax = 1 add_base_manpower = 2 }
+			3 = { add_base_tax = 1 add_base_manpower = 1 }
+			3 = { add_base_production = 2 add_base_manpower = 2 }
+			3 = { add_base_production = 2 add_base_manpower = 1 }
+			3 = { add_base_production = 1 add_base_manpower = 2 }
+			3 = { add_base_production = 1 add_base_manpower = 1 }
+			3 = { }
+		}
+	}
+}
+
+mundus_towers = {
+	1382 = { add_permanent_province_modifier = { name = xx_the_mundus_tower duration = -1 } } 
+	1044 = { add_permanent_province_modifier = { name = xx_the_mundus_tower duration = -1 } } 
+	263 = { add_permanent_province_modifier = { name = xx_the_mundus_tower duration = -1 } } 
+	1206 = { add_permanent_province_modifier = { name = xx_the_mundus_tower duration = -1 } } 
+	340 = { add_permanent_province_modifier = { name = xx_the_mundus_tower duration = -1 } } 
+	970 = { add_permanent_province_modifier = { name = xx_the_mundus_tower duration = -1 } } 
+	834 = { add_permanent_province_modifier = { name = xx_the_mundus_tower duration = -1 } } 
+	1288 = { add_permanent_province_modifier = { name = xx_the_mundus_tower duration = -1 } } 
+	508 = { add_permanent_province_modifier = { name = xx_the_mundus_tower duration = -1 } } 
+	724 = { add_permanent_province_modifier = { name = xx_the_mundus_tower duration = -1 } } 
+}
