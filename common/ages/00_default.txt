@@ -34,50 +34,269 @@ es_age_of_elves = {
 			}
 		}
 		obj_1_5 = {
-			is_elven_nation_trigger = yes
+			calc_true_if = {
+				all_owned_province = {
+					has_building = temple
+					controlled_by = ROOT
+					is_core = ROOT
+				}
+				amount = 25
+			}
 		}
 		obj_1_6 = {
-			is_elven_nation_trigger = yes
+			allow = {
+				has_dlc = "Cradle of Civilization"
+			}
+			army_professionalism = 0.5
 		}
 		obj_1_7 = {
-			is_elven_nation_trigger = yes
+			has_foreign_consort = no
+			has_consort = yes
+		}
+		obj_1_8 = {
+			allow = {
+				NOT = { has_dlc = "Cradle of Civilization" }
+			}
+			army_tradition = 50
 		}
 	}		
 	
 	abilities = {
-		ab_classical_architecture = {
+		ab_1_1 = {
 			modifier = {
-				build_cost = -0.15
+				adm_tech_cost_modifier = -0.10
 			}
 			ai_will_do = {
-				factor = 10
+				factor = 1
+			}
+		}
+		ab_1_2 = {
+			modifier = {
+				mercenary_manpower = 0.15
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		ab_1_3 = {
+			modifier = {
+				global_trade_power = 0.15
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		ab_1_4 = {
+			modifier = {
+				vassal_income = 0.25
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		ab_1_5 = {
+			modifier = {
+				sailors_recovery_speed = 0.15
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		ab_1_6 = {
+			modifier = {
+				stability_cost_modifier = -0.15
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		ab_1_7 = {
+			modifier = {
+				same_culture_advisor_cost = -0.10
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		ab_1_8 = {
+			modifier = {
+				recover_navy_morale_speed = 0.05
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		ab_1_9 = {
+			modifier = {
+				embargo_efficiency = 0.35
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		ab_1_10 = {
+			modifier = {
+				army_tradition_from_battle = 0.25
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		ab_1_11 = {
+			modifier = {
+				power_projection_from_insults = 1.0
+			}
+			ai_will_do = {
+				factor = 1
 			}
 		}
 	}
 }
 
-#Goals:
-#1 Be in elven trigger
-#2 Discover Atmora
-#3 Land of Free Man - be independent
-#7 Colonization of High Rock - own any core province in High Rock
+es_age_of_schism = {
+	start = 115
+	
+	can_start = {
+		is_year = 115
+	}
+	
+	religious_conflicts = yes
+	papacy = 0.35
+	
+	objectives = {
+		obj_2_1 = {
+			home_trade_node = {
+				has_most_province_trade_power = ROOT
+			}
+		}
+		obj_2_2 = {
+			cavalry_fraction = 0.50
+		}
+		obj_2_3 = {
+			calc_true_if = {
+				all_owned_province = {
+					has_building = road_network
+					controlled_by = ROOT
+					is_core = ROOT
+				}
+				amount = 25
+			}
+		}
+		obj_2_4 = {
+			OR = {
+				2949 = { controlled_by = ROOT is_core = ROOT }
+				3129 = { controlled_by = ROOT is_core = ROOT }
+				2924 = { controlled_by = ROOT is_core = ROOT }
+			}
+		}
+		obj_2_5 = {
+			government = theocracy
+		}
+		obj_2_6 = {
+			has_heir = yes
+			ruler_age = 100
+		}
+		obj_2_7 = {
+			all_owned_province = {
+				religion = ROOT
+			}
+		}
+	}
+	
+	abilities = {
+		ab_2_1 = {
+			modifier = {
+				religious_unity = 0.10
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		ab_2_2 = {
+			modifier = {
+				naval_forcelimit_modifier = 0.25
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		ab_2_3 = {
+			modifier = {
+				possible_condottieri = 1.0
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		ab_2_4 = {
+			modifier = {
+				army_tradition_decay = -0.01
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		ab_2_5 = {
+			modifier = {
+				monarch_diplomatic_power = 1
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		ab_2_6 = {
+			modifier = {
+				range = 0.25
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		ab_2_7 = {
+			modifier = {
+				production_efficiency = 0.15
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		ab_2_8 = {
+			modifier = {
+				reduced_liberty_desire_on_same_continent = 15
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		ab_2_9 = {
+			modifier = {
+				land_attrition = -0.25
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		ab_2_10 = {
+			modifier = {
+				build_time = -0.25
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		ab_2_11 = {
+			modifier = {
+				core_creation = -0.15
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+}
 
-#Bonuses:
-#1 Contact Psijic Order - adm_tech_cost_modifier = -0.10
-#2 Hire Mercenaries after Elven Wars - mercenary_manpower = 0.15
-#3 Study Tamrilean Tractates - global_trade_power = 0.15
-#4 Remember Legacy of Wendelbek - army_tradition_decay = -0.01
-#5 Accpet Atmoran Refugees - sailors_recovery_speed = 0.15
-#6 Create Regency Court  - stability_cost_modifier = -0.15
-#7 Acquire Dwemer Technologies - production_efficiency = 0.15
-#8 Perform Purification Policy - reduced_liberty_desire_on_same_continent = 15
-#9 Organise Far Campaigns - land_attrition = -0.25
-#10 Hire Ayleid Architects - build_time = -0.25
-#11 Expand State - core_creation = -0.15
 
-#4 Own any Etherial Ore site
-#5 Theocratical Dominance - be a theocracy
-#6 Found Own Dynasty - Have a heir and a ruler over 100 #years old
+# has_parliament
 
 #Marketplace - 10
 #Trade Deport - 110
@@ -98,8 +317,6 @@ es_age_of_elves = {
 
 #Canal - 110
 
-#Road Network - 10
-
 #Grain Depot - 30
 
 #Courthouse - 80
@@ -110,6 +327,25 @@ es_age_of_elves = {
 
 #Barrakcs - 50
 #Training Fields - 150
+
+#Regimental Camp - 60
+#Conscription Center - 110
+
+#Armory - 70
+#Arsenal - 120
+
+#Tax Assessor - 170
+
+#Castle - 10
+#Bastion - 100
+#Star Fort - 140
+#Fortress - 180
+
+#Earthen Rampage - 80
+#Tenalielle - 130
+#Redoubt - 160
+
+
 
 	# Tech 0
 	#year = 50
