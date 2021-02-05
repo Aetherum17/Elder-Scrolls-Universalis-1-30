@@ -295,8 +295,190 @@ es_age_of_schism = {
 	}
 }
 
+es_age_of_rebellions = {
+	start = 230
+	
+	can_start = {
+		is_year = 230
+	}
+	
+	objectives = {
+		obj_3_1 = {
+			OR = {
+				owns_core_province = 1382
+				owns_core_province = 1044
+				owns_core_province = 263
+				owns_core_province = 1206
+				owns_core_province = 340
+				owns_core_province = 970
+				owns_core_province = 834
+				owns_core_province = 1288
+				owns_core_province = 508
+				owns_core_province = 724
+			}
+		}
+		obj_3_2 = {
+			NOT = { religion_group = daedric_group_1 }
+		}
+		obj_3_3 = {
+			all_owned_province = {
+				NOT = { unrest = 0.1 }
+			}
+		}
+		obj_3_4 = {
+			any_owned_province = {
+				trade_goods = slaves
+			}
+			NOT = { has_estate_privilege = estate_burghers_establish_slave_enclaves }
+		}
+		obj_3_5 = {
+			liberty_desire = 50
+		}
+		obj_3_6 = {
+			num_of_colonies = 1
+		}
+		obj_3_7 = {
+			calc_true_if = {
+				all_owned_province = {
+					has_building = workshop
+					controlled_by = ROOT
+					is_core = ROOT
+				}
+				amount = 25
+			}
+		}
+	}
+	
+	abilities = {
+		ab_3_1 = {
+			global_manpower_modifier = 0.15
+		}
+		ab_3_2 = {
+			global_colonial_growth = 25
+		}
+		ab_3_3 = {
+			leader_land_manuever = 1
+		}
+		ab_3_4 = {
+			light_ship_power = 0.10
+		}
+		ab_3_5 = {
+			rebel_support_efficiency = 0.25
+		}
+		ab_3_6 = {
+			defensiveness = 0.15
+		}
+		ab_3_7 = {
+			prestige_decay = -0.010
+		}
+		ab_3_8 = {
+			unjustified_demands = -0.15
+		}
+		ab_3_9 = {
+			vassal_forcelimit_bonus = 0.25
+		}
+		ab_3_10 = {
+			movement_speed = 0.10
+		}
+		ab_3_11 = {
+			privateer_efficiency = 0.25
+		}
+	}
+	
+	religious_conflicts = yes
+	papacy = 0.50
+}
+
+es_age_of_orthodoxy = {
+	start = 345
+	
+	can_start = {
+		is_year = 345
+	}
+	
+	religious_conflicts = yes
+	papacy = 0.75
+	
+	objectives = {
+		obj_4_1 = {
+			government_rank = 10
+		}
+		obj_4_2 = {
+			calc_true_if = {
+				all_owned_province = {
+					has_building = grain_depot
+					controlled_by = ROOT
+					is_core = ROOT
+				}
+				amount = 25
+			}
+		}
+		obj_4_3 = {
+			NOT = { corruption = 1 }
+		}
+		obj_4_4 = {
+			land_forcelimit = 100
+		}
+		obj_4_5 = {
+			any_owned_province = {
+				OR = {
+					region = northern_valenwood_lr
+					region = southern_valenwood_lr
+				}
+			}
+		}
+		obj_4_6 = {
+			all_neighbor_country = {
+				religion = ROOT
+			}
+		}
+		obj_4_7 = {
+			OR = {
+				primary_culture = dwemer
+				accepted_culture = dwemer
+			}
+		}
+	}
+	
+	abilities = {
+		ab_4_1 = {
+			monarch_admin_power = 1
+		}
+		ab_4_2 = {
+			global_unrest = -1.5
+		}
+		ab_4_4 = {
+			global_missionary_strength = 0.015
+		}
+		ab_4_3 = {
+			build_cost = -0.15
+		}
+		ab_4_5 = {
+			missionaries = 1
+		}
+		ab_4_6 = {
+			core_decay_on_your_own = -0.35
+		}
+		ab_4_7 = {
+			leader_naval_manuever = 1
+		}
+		ab_4_8 = {
+			idea_cost = -0.15
+		}
+		ab_4_9 = {
+			war_exhaustion_cost = -0.15 
+		}
+		ab_4_10 = {
+			cavalry_power = 0.10
+		}
+		ab_4_11 = {
+			fire_damage_received = -0.10
+		}
+	}
+}
 
 # has_parliament
+#Form Alliances - have at least 3 alliances
 
 #Marketplace - 10
 #Trade Deport - 110
@@ -311,13 +493,7 @@ es_age_of_schism = {
 #Coastal Defense - 40
 #Naval Batterly - 160
 
-#Workshop - 20
-#Counting House - 95
-#Customs House - 180
-
 #Canal - 110
-
-#Grain Depot - 30
 
 #Courthouse - 80
 #Townhall - 130
@@ -346,68 +522,172 @@ es_age_of_schism = {
 #Redoubt - 160
 
 
+#		obj_classical_scientist = {
+#			advisor = natural_scientist
+#		}
+#		obj_classical_prestige = {
+#			prestige = 90
+#		}
+#		obj_classical_great_cities = {
+#			calc_true_if = {
+#				all_owned_province = {
+#					development = 10
+#				}
+#				amount = 20
+#			}
+#		}
+#		obj_classical_income = {
+#			monthly_income = 50
+#		}
+#		
+#		obj_lateclassical_unite_culture = {
+#			is_subject = no
+#			has_unified_culture_group = yes
+#		}
+#		
+#		obj_lateclassical_general = {
+#			has_leader_with = { shock = 4 }
+#		}
+#		obj_lateclassical_50_years_of_peace = {
+#			NOT = { had_recent_war = 50 }
+#		}
+#		obj_lateclassical_low_autonomy = {
+#			all_owned_province = {
+#				NOT = { local_autonomy = 30 }
+#			}
+#		}
+#		obj_lateclassical_treasury = {
+#			treasury = 5000
+#		}
+#		obj_lateclassical_manpower_limit = {	
+#			manpower_percentage = 0.99
+#		}
+#	
+#		obj_migration_conquer_roman_province = {
+#			NOT = { tag = ROM }
+#			NOT = { tag = ROW }
+#			NOT = { tag = BYZ }
+#			any_owned_province = {
+#				OR = {
+#					is_core = ROM
+#					is_core = ROW
+#					is_core = BYZ
+#				}
+#			}
+#		}
+#		obj_migration_fortify_borders = {
+#			calc_true_if = {
+#				all_owned_province = {
+#					fort_level = 1
+#					any_neighbor_province = {
+#						NOT = { owned_by = ROOT }
+#					}
+#				}
+#				amount = 3
+#			}
+#		}
+#		
+#		obj_migration_cavalry = {
+#			num_of_cavalry = 30
+#		}
+#		obj_migration_army_tradition = {
+#			army_tradition = 75
+#		}
+#	
+#		obj_darkage_no_devastation = {
+#			all_owned_province = {
+#				NOT = { devastation = 1 }
+#			}
+#		}
+#		obj_darkage_win_wars = {
+#			check_variable = {
+#				which = num_of_wars_won
+#				value = 5
+#			}
+#		}
+#		obj_darkage_emperor_of_china = {
+#			is_emperor_of_china = yes
+#			imperial_mandate = 50
+#		}
+#	objectives = {
+#		obj_feudal_horde_in_europe = {
+#			is_nomad = yes
+#			any_owned_province = { continent = europe }
+#		}
+#		
+#		obj_feudal_vassals = {
+#			vassal = 3
+#		}
+#		obj_feudal_milmonarchleader = {
+#			mil = 5
+#			is_monarch_leader = yes
+#		}
+#		obj_feudal_loyal_nobles = {
+#			allow = {
+#				has_estate = estate_nobles
+#			}
+#			estate_loyalty = {
+#				estate = estate_nobles
+#				loyalty = 80
+#			}
+#		}	
+#		obj_feudal_legitimacy = {
+#			allow = {
+#				NOT = { has_estate = estate_nobles }
+#			}
+#			legitimacy = 100
+#			has_reform = feudalism_reform
+#		}	
+#		obj_feudal_ports = {
+#			num_of_total_ports = 50
+#		}
+#		obj_feudal_infantry = {
+#			num_of_infantry = 50
+#		}
+#	
+#	objectives = {
+#		obj_highmiddle_vassals = {
+#			vassal = 4
+#		}
+#	
+#		obj_highmiddle_piety = {
+#			uses_piety = yes
+#			piety = 0.8
+#		}
+#		obj_highmiddle_religious_unity = {
+#			religious_unity = 1
+#		}
+#	}
+#
+#	objectives = {
+#		obj_latemiddle_pu = {
+#			personal_union  = 1
+#		}
+#		obj_latemiddle_elector = {
+#			is_elector = yes
+#		}
+#		obj_latemiddle_large_horde = {
+#			is_nomad = yes
+#			num_of_cities = 60
+#		}
+#		obj_latemiddle_papalcontrol = {
+#			religion = catholic
+#			is_papal_controller = yes
+#		}
+#		obj_latemiddle_generals = {
+#			num_of_generals = 4
+#		}
+#		obj_latemiddle_large_trade_fleet = {
+#			all_rival_country = {
+#				NOT = {
+#					num_of_light_ship = ROOT
+#				}
+#			}
+#		}
+#	}
 
-	# Tech 0
-	#year = 50
-	# Tech 1
-	#year = 60
-	# Tech 2
-	#year = 70
-	# Tech 3
-	#year = 80
-	# Tech 4
-	#year = 90
-	# Tech 5
-	#year = 100
-	# Tech 6
-	#year = 110
-	# Tech 7
-	#year = 120
-	# Tech 8
-	#year = 130
-	# Tech 9
-	#year = 140
-	# Tech 10
-	#year = 150
-	# Tech 11
-	#year = 160
-	# Tech 12
-	#year = 170
-	# Tech 13
-	#year = 180
-	# Tech 14
-	#year = 190
-	# Tech 15
-	#year = 200
-	# Tech 16
-	#year = 210
-	# Tech 17
-	#year = 220
-	# Tech 18
-	#year = 230
-	# Tech 19
-	#year = 240
-	# Tech 20
-	#year = 250
-	# Tech 21
-	#year = 260
-#######################################################################
-	# Tech 22
-	#year = 270
-	# Tech 23
-	#year = 280
-	# Tech 24
-	#year = 290
-	# Tech 25
-	#year = 300
-	# Tech 26
-	#year = 310
-	# Tech 27
-	#year = 320
-	# Tech 28
-	#year = 330
-	# Tech 29
-	#year = 340
+	
+
 	# Tech 30
 	#year = 350
 	# Tech 31
