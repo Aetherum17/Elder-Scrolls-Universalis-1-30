@@ -477,8 +477,193 @@ es_age_of_orthodoxy = {
 	}
 }
 
-# has_parliament
-#Form Alliances - have at least 3 alliances
+es_age_of_migrations = {
+	start = 460
+	
+	can_start = {
+		is_year = 460
+	}
+	
+	religious_conflicts = yes
+	papacy = 1.0
+	
+	objectives = {
+		obj_5_1 = {
+			has_parliament = yes
+		}
+		obj_5_2 = {
+			OR = {
+				legitimacy = 95
+				republican_tradition = 95
+				devotion = 95
+				horde_unity = 95
+				meritocracy = 95
+			}
+		}
+		obj_5_3 = {
+			calc_true_if = {
+				all_owned_province = {
+					has_building = coastal_defence
+					controlled_by = ROOT
+					is_core = ROOT
+				}
+				amount = 25
+			}
+		}
+		obj_5_4 = {
+			capital_scope = {
+				NOT = { superregion = morrowind_superregion }
+			}
+		}
+		obj_5_5 = {
+			total_development = 1000
+		}
+		obj_5_6 = {
+			calc_true_if = {
+				all_owned_province = {
+					fort_level = 1
+					any_neighbor_province = {
+						NOT = { owned_by = ROOT }
+					}
+				}
+				amount = 5
+			}
+		}
+		obj_5_7 = {
+			religious_unity = 1.0
+		}
+	}
+	
+	abilities = {
+		ab_5_1 = {
+			warscore_cost_vs_other_religion = -0.15
+		}
+		ab_5_2 = {
+			leader_siege = 1
+		}
+		ab_5_3 = {
+			spy_offence = 0.25
+		}
+		ab_5_4 = {
+			mil_tech_cost_modifier = -0.10
+		}
+		ab_5_5 = {
+			naval_tradition_from_battle = 0.25
+		}
+		ab_5_6 = {
+			colonist_placement_chance = 0.05
+		}
+		ab_5_7 = {
+			tolerance_heathen = 2.5
+		}
+		ab_5_8 = {
+			development_cost = -0.25
+		}
+		ab_5_9 = {
+			merc_maintenance_modifier = -0.15
+		}
+		ab_5_10 = {
+			fort_maintenance_modifier = -0.15
+		}
+		ab_5_11 = {
+			inflation_action_cost = -0.5
+		}
+	}
+}
+
+es_age_of_hordes = {
+	start = 575
+	
+	can_start = {
+		is_year = 575
+	}
+	
+	religious_conflicts = yes
+	papacy = 1.15
+	
+	objectives = {
+		obj_6_1 = {
+			OR = {
+				num_of_allies = 3
+				calc_true_if = {
+					any_country = {
+						is_subject_of = ROOT
+						is_subject_of_type = alliance_member
+					}
+					amount = 3
+				}
+			}
+		}
+		obj_6_3 = {
+			power_projection = 50
+		}
+		obj_6_2 = {
+			government = tribal
+		}
+		obj_6_4 = {
+			all_rival_country = {
+				NOT = { prestige = ROOT }
+			}
+			any_rival_country = {
+				exists = yes
+			}
+		}
+		obj_6_5 = {
+			has_commanding_three_star = yes
+		}
+		obj_6_6 = {
+			army_tradition = 75
+		}
+		obj_6_7 = {
+			calc_true_if = {
+				all_owned_province = {
+					has_building = barracks
+					controlled_by = ROOT
+					is_core = ROOT
+				}
+				amount = 25
+			}
+		}
+	}
+	
+	abilities = {
+		ab_6_1 = {
+			raze_power_gain = 0.5
+		}
+		ab_6_2 = {
+			land_morale = 0.10
+		}
+		ab_6_3 = {
+			prestige_from_land = 0.25
+		}
+		ab_6_4 = {
+			discovered_relations_impact = -0.5
+		}
+		ab_6_5 = {	
+			leader_land_fire = 1
+		}
+		ab_6_6 = {
+			global_heretic_missionary_strength = 0.015
+		}
+		ab_6_7 = {
+			infantry_power = 0.1
+		}
+		ab_6_8 = {
+			capture_ship_chance = 0.25
+		}
+		ab_6_9 = {
+			naval_attrition = -0.25
+		}
+		ab_6_10 = {
+			rival_change_cost = -0.5
+		}
+		ab_6_11 = {
+			siege_ability = 0.15
+		}
+	}
+}
+
+#num_of_cavalry = 35
 
 #Marketplace - 10
 #Trade Deport - 110
@@ -501,9 +686,6 @@ es_age_of_orthodoxy = {
 #College - 50
 #University - 140
 
-#Barrakcs - 50
-#Training Fields - 150
-
 #Regimental Camp - 60
 #Conscription Center - 110
 
@@ -520,6 +702,121 @@ es_age_of_orthodoxy = {
 #Earthen Rampage - 80
 #Tenalielle - 130
 #Redoubt - 160
+
+#religious_conflicts = yes
+#papacy = 1.25
+
+#religious_conflicts = yes
+#	papacy = 1.35
+#	
+#	absolutism = {
+#		harsh_treatment = 1
+#		stability = 1
+#		decrease_autonomy_command = 1
+#		strengthen_government = 1
+#		
+#		increase_autonomy_command = -1
+#		debase_currency = -1
+#		execute_rebel_acceptance_command = -10
+#		seat_in_parliament = -5
+#		war_exhaustion = -1
+#	}
+#	
+#	religious_conflicts = yes
+#	papacy = 1.5
+#	
+#	absolutism = {
+#		harsh_treatment = 1
+#		stability = 1
+#		decrease_autonomy_command = 1
+#		strengthen_government = 1
+#		
+#		increase_autonomy_command = -1
+#		debase_currency = -1
+#		execute_rebel_acceptance_command = -10
+#		seat_in_parliament = -5
+#		war_exhaustion = -1
+#	}
+#	
+#	religious_conflicts = yes
+#	papacy = 1.75
+#	
+#	absolutism = {
+#		harsh_treatment = 1
+#		stability = 1
+#		decrease_autonomy_command = 1
+#		strengthen_government = 1
+#		
+#		increase_autonomy_command = -1
+#		debase_currency = -1
+#		execute_rebel_acceptance_command = -10
+#		seat_in_parliament = -5
+#		war_exhaustion = -1
+#	}
+#	
+#	religious_conflicts = yes
+#	papacy = 2.0
+#	
+#	absolutism = {
+#		harsh_treatment = 1
+#		stability = 1
+#		decrease_autonomy_command = 1
+#		strengthen_government = 1
+#		
+#		increase_autonomy_command = -1
+#		debase_currency = -1
+#		execute_rebel_acceptance_command = -10
+#		seat_in_parliament = -5
+#		war_exhaustion = -1
+#	}
+#	
+#	religious_conflicts = yes
+#	papacy = 2.15
+#	
+#	absolutism = {
+#		harsh_treatment = 1
+#		stability = 1
+#		decrease_autonomy_command = 1
+#		strengthen_government = 1
+#		
+#		increase_autonomy_command = -1
+#		debase_currency = -1
+#		execute_rebel_acceptance_command = -10
+#		seat_in_parliament = -5
+#		war_exhaustion = -1
+#	}
+#	
+#	religious_conflicts = yes
+#	papacy = 2.25
+#	
+#	absolutism = {
+#		harsh_treatment = 1
+#		stability = 1
+#		decrease_autonomy_command = 1
+#		strengthen_government = 1
+#		
+#		increase_autonomy_command = -1
+#		debase_currency = -1
+#		execute_rebel_acceptance_command = -10
+#		seat_in_parliament = -5
+#		war_exhaustion = -1
+#	}
+#	
+#	religious_conflicts = yes
+#	papacy = 2.35
+#	
+#	absolutism = {
+#		harsh_treatment = 1
+#		stability = 1
+#		decrease_autonomy_command = 1
+#		strengthen_government = 1
+#		
+#		increase_autonomy_command = -1
+#		debase_currency = -1
+#		execute_rebel_acceptance_command = -10
+#		seat_in_parliament = -5
+#		war_exhaustion = -1
+#	}
 
 
 #		obj_classical_scientist = {
@@ -561,37 +858,6 @@ es_age_of_orthodoxy = {
 #		}
 #		obj_lateclassical_manpower_limit = {	
 #			manpower_percentage = 0.99
-#		}
-#	
-#		obj_migration_conquer_roman_province = {
-#			NOT = { tag = ROM }
-#			NOT = { tag = ROW }
-#			NOT = { tag = BYZ }
-#			any_owned_province = {
-#				OR = {
-#					is_core = ROM
-#					is_core = ROW
-#					is_core = BYZ
-#				}
-#			}
-#		}
-#		obj_migration_fortify_borders = {
-#			calc_true_if = {
-#				all_owned_province = {
-#					fort_level = 1
-#					any_neighbor_province = {
-#						NOT = { owned_by = ROOT }
-#					}
-#				}
-#				amount = 3
-#			}
-#		}
-#		
-#		obj_migration_cavalry = {
-#			num_of_cavalry = 30
-#		}
-#		obj_migration_army_tradition = {
-#			army_tradition = 75
 #		}
 #	
 #		obj_darkage_no_devastation = {
@@ -685,81 +951,7 @@ es_age_of_orthodoxy = {
 #			}
 #		}
 #	}
-
 	
-
-	# Tech 30
-	#year = 350
-	# Tech 31
-	#year = 360
-	# Tech 32
-	#year = 370
-	# Tech 33
-	#year = 380
-	# Tech 34
-	#year = 390
-	# Tech 35
-	#year = 400
-	# Tech 36
-	#year = 410
-	# Tech 37
-	#year = 420
-	# Tech 38
-	#year = 430
-	# Tech 39
-	#year = 440
-	# Tech 40
-	#year = 450
-	# Tech 41
-	#year = 460
-#######################################################################
-	# Tech 42
-	#year = 470
-	# Tech 43
-	#year = 480
-	# Tech 44
-	#year = 490
-	# Tech 45
-	#year = 500
-	# Tech 46
-	#year = 510
-	# Tech 47
-	#year = 520
-	# Tech 48
-	#year = 530
-	# Tech 49
-	#year = 540
-	# Tech 50
-	#year = 550
-	# Tech 51
-	#year = 560
-	# Tech 52
-	#year = 570
-	# Tech 53
-	#year = 580
-	# Tech 54
-	#year = 590
-	# Tech 55
-	#year = 600
-	# Tech 56
-	#year = 610
-	# Tech 57
-	#year = 620
-	# Tech 58
-	#year = 630
-	# Tech 59
-	#year = 640
-	# Tech 60
-	#year = 650
-	# Tech 61
-	#year = 660
-#######################################################################
-	# Tech 62
-	#year = 670
-	# Tech 61
-	#year = 680
-	# Tech 64
-	#year = 690
 	# Tech 65
 	#year = 700
 	# Tech 66
