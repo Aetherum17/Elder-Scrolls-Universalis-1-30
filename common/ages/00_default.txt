@@ -663,6 +663,377 @@ es_age_of_hordes = {
 	}
 }
 
+es_age_of_expansion = {
+	start = 690
+	
+	can_start = {
+		is_year = 690
+	}
+	
+	religious_conflicts = yes
+	papacy = 1.25
+	
+	### Age 7 - Age of Expansion 600 - 800
+
+	#Goals:
+	#1 Unsiegable State - have 25 forts 
+	#2 Have at least one origin of Institution
+	#3 Own Metropolia - have at least one city with 50 dev
+	#4 Have at least 3 subjects
+	#5 Expand the Empire - own 250 cities
+	#6 International Acceptence - diplomatic_reputation = 3
+	#7 be part of the HRE
+
+	#Bonuses:
+	#1 Gather Memory Stones - free_leader_pool = 1
+	#2 Develop Villages - global_trade_goods_size_modifier = 0.1
+	#3 Educate Citizens - dip_tech_cost_modifier = -0.1
+	#4 Absorbtion of Subjects - diplomatic_annexation_cost = -0.15
+	#5 Honor Traditions - legitimacy = 0.25
+	#6 Find Legendary Generals - leader_land_shock = 1
+	#7 Smash Rebels - harsh_treatment_cost = -0.25
+	#8 Ensure loyalty of people - years_of_nationalism = -5
+	#9 Introduce Merchants in Court - trade_efficiency = 0.10
+	#10 Support City-States - trade_range_modifier = 0.25
+	#11 Search for Spies - global_spy_defence = 0.15
+}
+
+es_age_of_disasters = {
+	start = 805
+	
+	can_start = {
+		is_year = 805
+	}
+	
+	religious_conflicts = yes
+	papacy = 1.35
+	
+	absolutism = {
+		harsh_treatment = 1
+		stability = 1
+		decrease_autonomy_command = 1
+		strengthen_government = 1
+		
+		increase_autonomy_command = -1
+		debase_currency = -1
+		execute_rebel_acceptance_command = -10
+		seat_in_parliament = -5
+		war_exhaustion = -1
+	}
+	
+	### Age 8 - Age of Disasters 800 - 1000
+
+	#Goals:
+	#1 Win 50 Battles
+	#2 Have 3 cultures accepted
+	#3 own provinces in different superregion
+	#4 Have no devastation in all provinces
+	#5 Be in Polythiestic Religious Group
+	#6 Have an income of 100 ducats
+	#7 Have 90% manpower pool
+
+	#Bonuses:
+	#1 Publish Encyclopedia Tamrielica - global_institution_spread = 0.15
+	#2 Prepare for Plague - manpower_recovery_speed = 0.15
+	#3 Build High Walls - garrison_size = 0.25
+	#4 Organise Raids - loot_amount = 0.25
+	#5 Acknowledge Akaviri Traditions - discipline = 0.10
+	#6 Embassy to Errinorne Academy - advisor_cost = -0.15
+	#7 Understand Ayleidic Poesy - improve_relation_modifier = 0.25
+	#8 Grasp Elder Scroll - free_policy = 1
+	#9 Secure the Dragon Menace - autonomy_change_time = -0.25 
+	#10 Send expedition to Mzulft - prestige = 0.25
+	#11 Supress subjects - reduced_liberty_desire = 10
+}
+
+es_age_of_renascense = {
+	start = 920
+	
+	can_start = {
+		is_year = 920
+	}
+	
+	religious_conflicts = yes
+	papacy = 1.5
+	
+	absolutism = {
+		harsh_treatment = 1
+		stability = 1
+		decrease_autonomy_command = 1
+		strengthen_government = 1
+		
+		increase_autonomy_command = -1
+		debase_currency = -1
+		execute_rebel_acceptance_command = -10
+		seat_in_parliament = -5
+		war_exhaustion = -1
+	}
+	
+	### Age 9 - Age of Renascence 1000 - 1200
+
+	#Goals:
+	#1 Have 3 level 3 advisors
+	#2 have a personal Union
+	#3 have a global unrest of 0 level
+	#4 Use Mercenaries - hire at least 1 merc company
+	#5 Have 5 provinces that produce slaves
+	#6 have an heir and a Consort
+	#7 Tropical paraise - own 25 provinces in tropical climate
+
+	#Bonuses:
+	#1 Fund University of Gwilym - embracement_cost = -0.25
+	#2 Investigate Dwemer Ruins - technology_cost = -0.10
+	#3 Accept Embassy from Lainlyn - diplomats = 1
+	#4 Join Mages Guild - land_morale = 0.10
+	#5 Build Inns - caravan_power = 0.15
+	#6 Support Guilds - global_own_trade_power = 0.1
+	#7 Publish Atlas of Dragons - fire_damage = 0.1
+	#8 build political dynasty - diplomatic_reputation = 1
+	#9 Introduce Border Control - rival_border_fort_maintenance = -0.25
+	#10 Reform Holy Orders - tolerance_own = 1
+	#11 Expand Fleet - sailor_maintenance_modifer = -0.25
+}
+
+es_age_of_invasions = {
+	start = 1035
+	
+	can_start = {
+		is_year = 1035
+	}
+	
+	religious_conflicts = yes
+	papacy = 1.75
+	
+	absolutism = {
+		harsh_treatment = 1
+		stability = 1
+		decrease_autonomy_command = 1
+		strengthen_government = 1
+		
+		increase_autonomy_command = -1
+		debase_currency = -1
+		execute_rebel_acceptance_command = -10
+		seat_in_parliament = -5
+		war_exhaustion = -1
+	}
+	
+	### Age 10 - Age of Invasions 1200 - 1400
+
+	#Goals:
+	#1 Own 10 trade centers
+	#2 Fight 2 wars at the same time
+	#3 have an army over 100 regiments
+	#4 Be Elector of HRE
+	#5 Be Emperor of Akavir
+	#6 Have 5 Royal Marriages
+	#7 Have No War Exhaution
+
+	#Bonuses:
+	#1 Publish Pocket Guide to Mournhold - prestige_per_development_from_conversion = 0.1
+	#2 Join the Covenant - ae_impact = -0.10
+	#3 Fight the Flu - global_autonomy = -0.05
+	#4 Understand Annals of Dragonguard - global_regiment_cost = -0.15
+	#5 Gather Horde of Warriors - mercenary_cost = -0.25
+	#6 Appoint Governors - culture_conversion_cost = -0.25
+	#7 Visit College of Aldmeri Propriety - liberty_desire_from_subject_development = -0.15
+	#8 Support the Five Companions - mercenary_discipline = 0.05
+	#9 Get Altmer Forgining Secrets - shock_damage = 0.10
+	#10 Support Stros M'Kai Mages Guild - advisor_pool = 1
+	#11 Publish Ancient Tales of Dwemer - state_maintenance_modifier = -0.25
+}
+
+es_age_of_empires = {
+	start = 1150
+	
+	can_start = {
+		is_year = 1150
+	}
+	
+	religious_conflicts = yes
+	papacy = 2.0
+	
+	absolutism = {
+		harsh_treatment = 1
+		stability = 1
+		decrease_autonomy_command = 1
+		strengthen_government = 1
+		
+		increase_autonomy_command = -1
+		debase_currency = -1
+		execute_rebel_acceptance_command = -10
+		seat_in_parliament = -5
+		war_exhaustion = -1
+	}
+	
+	### Age 11 - Age of Empires 1400 - 1600
+
+	#Goals:
+	#1 Great fleet - have 100 ships
+	#2 Have 3 colonies
+	#3 Be governent rank 7
+	#4 Build Rosethorn Hall - Skingrad should have a building of ???
+	#5 Fight Vampires
+	#6 Have Regency Council
+	#7 United Tamrielic Province
+
+	#Bonuses:
+	#1 Visit island haven of Eyevea - yearly_corruption = -0.1
+	#2 Honor Legendary Admirals - leader_naval_fire = 1
+	#3 Secure Political Rivals - governing_capacity_modifier = 0.15
+	#4 Publish Pocket Guide to Empire - global_foreign_trade_power = 0.1
+	#5 Use Notes for Redguard History - num_accepted_cultures = 1
+	#6 Support Knights of Nine - diplomatic_upkeep = 1
+	#7 Invest in East Empire Company - trade_steering = 0.15
+	#8 Study the Republic of Hahd - global_ship_trade_power = 0.15
+	#9 Expand Land Rights - global_tax_modifier = 0.10
+	#10 Study Necromacy - reinforce_speed = 0.25
+	#11 Reorganise Army - yearly_army_professionalism = 0.015
+}
+
+es_age_of_internal_conflicts = {
+	start = 1265
+	
+	can_start = {
+		is_year = 1265
+	}
+	
+	religious_conflicts = yes
+	papacy = 2.15
+	
+	absolutism = {
+		harsh_treatment = 1
+		stability = 1
+		decrease_autonomy_command = 1
+		strengthen_government = 1
+		
+		increase_autonomy_command = -1
+		debase_currency = -1
+		execute_rebel_acceptance_command = -10
+		seat_in_parliament = -5
+		war_exhaustion = -1
+	}
+	
+	### Age 12 - Age of Internal Conflicts
+
+	#Goals:
+	#1 Conquest ??/ of Nortthern Islands?
+	#2 Conquer Akavir??
+	#3 Have a regent rule
+	#4 
+	#5 
+	#6 
+	#7
+
+	#Bonuses:
+	#1 Expand Rights of the Council - adm_advisor_cost = -0.25
+	#2 Curtail Minor Landowners - min_autonomy_in_territories = -0.1
+	#3 Acquire Foreign Concubine - heir_chance = 0.5
+	#4 Negotiate with Red Sabre Fleet - naval_maintenance_modifier = -0.25
+	#5 Control the Council - monarch_military_power = 1
+	#6 Publish Second Edition of Pocket Guide to the Empire - promote_culture_cost = -0.50
+	#7 Write the Dragonborn Book - artillery_power = 0.10
+	#8 Acquire Staff of Chaos - hostile_attrition = 1
+	#9 Build Harbors - global_sailors_modifier = 0.25
+	#10 Open Another Dimension - land_forcelimit_modifier = 0.25
+	#11 Study Daedric Alphabet - recover_army_morale_speed = 0.05
+}
+
+es_age_of_unification = {
+	start = 1380
+	
+	can_start = {
+		is_year = 1380
+	}
+	
+	religious_conflicts = yes
+	papacy = 2.25
+	
+	absolutism = {
+		harsh_treatment = 1
+		stability = 1
+		decrease_autonomy_command = 1
+		strengthen_government = 1
+		
+		increase_autonomy_command = -1
+		debase_currency = -1
+		execute_rebel_acceptance_command = -10
+		seat_in_parliament = -5
+		war_exhaustion = -1
+	}
+	
+	### Age 13 - Age of Unification 54 - 200
+
+	#Goals:
+	#1 Start Wars
+	#2 Have a Great City (Dev or num of buildings in a province)
+	#3 Direct Control of Vvardenfell
+	#4 
+	#5 
+	#6 
+	#7
+
+	#Bonuses:
+	#1 Organise Volunteer Army - global_regiment_recruit_speed = -0.25
+	#2 Get Vampire in Royal Court - dip_advisor_cost = -0.15
+	#3 Publish "A Social History of Cyrodiil" - tolerance_heretic = 2.5
+	#4 Make a Deal with Daedra - administrative_efficiency = 0.10
+	#5 Support Orcish Minority - shock_damage_received = -0.10
+	#6 Search for Azura's Star - institution_spread_from_true_faith = 0.15
+	#7 global_prov_trade_power_modifier = 0.1
+	#8 Negotiate with Sentinels - reinforce_cost_modifier = -0.25
+	#9 sunk_ship_morale_hit_recieved = -0.15
+	#10 Ban Levitation Magic - drill_gain_modifier = 0.25
+	#11  prestige_from_naval = 0.25
+}
+
+es_age_of_great_wars = {
+	start = 1495
+	
+	can_start = {
+		is_year = 1495
+	}
+	
+	religious_conflicts = yes
+	papacy = 2.35
+	
+	absolutism = {
+		harsh_treatment = 1
+		stability = 1
+		decrease_autonomy_command = 1
+		strengthen_government = 1
+		
+		increase_autonomy_command = -1
+		debase_currency = -1
+		execute_rebel_acceptance_command = -10
+		seat_in_parliament = -5
+		war_exhaustion = -1
+	}
+	
+	### Age 14 - Age of Great Wars
+
+	#Goals:
+	#1 Red year Eruotion?
+	#2 Argonian Invasion
+	#3 Rise of Thalmor
+	#4 
+	#5 
+	#6 
+	#7
+
+	#Bonuses:
+	#1 Negotiate with Mages Guild - artillery_bonus_vs_fort = 1
+	#2 province_warscore_cost = -0.15
+	#3 Found a Knight Order - land_maintenance_modifier = -0.25
+	#4 navy_tradition_decay = -0.01
+	#5 global_tariffs = 0.25
+	#6 naval_morale = 0.10
+	#7 Study the Nirnroot - backrow_artillery_damage = 0.25
+	#8 leader_naval_shock = 1
+	#9 mil_advisor_cost = -0.15
+	#10 Publish Thitd Edition of Pocket Guide to the Empire - merchants = 1
+	#11 Acquire Akaviri Armory - cavalry_flanking = 0.25
+}
+
 #num_of_cavalry = 35
 
 #Marketplace - 10
@@ -703,120 +1074,19 @@ es_age_of_hordes = {
 #Tenalielle - 130
 #Redoubt - 160
 
-#religious_conflicts = yes
-#papacy = 1.25
-
-#religious_conflicts = yes
-#	papacy = 1.35
-#	
-#	absolutism = {
-#		harsh_treatment = 1
-#		stability = 1
-#		decrease_autonomy_command = 1
-#		strengthen_government = 1
-#		
-#		increase_autonomy_command = -1
-#		debase_currency = -1
-#		execute_rebel_acceptance_command = -10
-#		seat_in_parliament = -5
-#		war_exhaustion = -1
-#	}
-#	
-#	religious_conflicts = yes
-#	papacy = 1.5
-#	
-#	absolutism = {
-#		harsh_treatment = 1
-#		stability = 1
-#		decrease_autonomy_command = 1
-#		strengthen_government = 1
-#		
-#		increase_autonomy_command = -1
-#		debase_currency = -1
-#		execute_rebel_acceptance_command = -10
-#		seat_in_parliament = -5
-#		war_exhaustion = -1
-#	}
-#	
-#	religious_conflicts = yes
-#	papacy = 1.75
-#	
-#	absolutism = {
-#		harsh_treatment = 1
-#		stability = 1
-#		decrease_autonomy_command = 1
-#		strengthen_government = 1
-#		
-#		increase_autonomy_command = -1
-#		debase_currency = -1
-#		execute_rebel_acceptance_command = -10
-#		seat_in_parliament = -5
-#		war_exhaustion = -1
-#	}
-#	
-#	religious_conflicts = yes
-#	papacy = 2.0
-#	
-#	absolutism = {
-#		harsh_treatment = 1
-#		stability = 1
-#		decrease_autonomy_command = 1
-#		strengthen_government = 1
-#		
-#		increase_autonomy_command = -1
-#		debase_currency = -1
-#		execute_rebel_acceptance_command = -10
-#		seat_in_parliament = -5
-#		war_exhaustion = -1
-#	}
-#	
-#	religious_conflicts = yes
-#	papacy = 2.15
-#	
-#	absolutism = {
-#		harsh_treatment = 1
-#		stability = 1
-#		decrease_autonomy_command = 1
-#		strengthen_government = 1
-#		
-#		increase_autonomy_command = -1
-#		debase_currency = -1
-#		execute_rebel_acceptance_command = -10
-#		seat_in_parliament = -5
-#		war_exhaustion = -1
-#	}
-#	
-#	religious_conflicts = yes
-#	papacy = 2.25
-#	
-#	absolutism = {
-#		harsh_treatment = 1
-#		stability = 1
-#		decrease_autonomy_command = 1
-#		strengthen_government = 1
-#		
-#		increase_autonomy_command = -1
-#		debase_currency = -1
-#		execute_rebel_acceptance_command = -10
-#		seat_in_parliament = -5
-#		war_exhaustion = -1
-#	}
-#	
-#	religious_conflicts = yes
-#	papacy = 2.35
-#	
-#	absolutism = {
-#		harsh_treatment = 1
-#		stability = 1
-#		decrease_autonomy_command = 1
-#		strengthen_government = 1
-#		
-#		increase_autonomy_command = -1
-#		debase_currency = -1
-#		execute_rebel_acceptance_command = -10
-#		seat_in_parliament = -5
-#		war_exhaustion = -1
-#	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 
 #		obj_classical_scientist = {
@@ -1226,7 +1496,3 @@ es_age_of_hordes = {
 	#year = 2020
 	# Tech 198
 	#year = 2030
-
-
-
-

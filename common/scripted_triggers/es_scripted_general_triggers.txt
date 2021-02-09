@@ -381,3 +381,52 @@ is_immortal_heir_trigger = {
 		}
 	}
 }
+
+#######################################################################
+
+is_normal_es_religion_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = has_river_estuary_tooltip
+			OR = {
+					religion = altmeri_pantheon
+					religion = snow_elves_pantheon
+					religion = nordic_pantheon 
+					religion = bosmer_pantheon
+					religion = eight_divines
+					religion = nine_divines
+					religion = twelve_divines
+					religion = khajiiti_pantheon
+					religion = yokudan_pantheon
+					religion = redguard_pantheon
+					religion = malacath_cult
+					religion = kothri_pantheon
+					religion = chimer_pantheon
+					religion = tribunal_pantheon
+					religion = reclamations_pantheon
+					religion = serpant_king
+					religion = dragon_cult
+					religion = marukhism
+					religion = reason_and_logic_cult
+					religion = all-maker_cult
+					religion = dremora_pantheon
+					religion = cult_of_black_worm
+					religion = hist
+					religion = sload_faith
+					religion = old_gods_cult
+					religion = tsaesci_pantheon
+					religion = tang_mo_pantheon
+					religion = kamal_pantheon 
+					religion = cult_of_the_moth 
+					religion = molog_bal_cult
+					religion = meridia_cult
+					religion = mehrunes_dagon_cult 
+					religion = hermeus_mora_cult
+					religion = sheogorath_cult
+					religion = hircine_cult
+					religion = nocturnal_cult
+					religion = po_tun_pantheon
+					religion = unknown_pantheon 
+					#religion = cult_of_lorelia  
+			}
+	}
+}

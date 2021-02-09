@@ -1,0 +1,60 @@
+#############################
+# Army
+#############################
+army_tradition = 1
+artillery_cost = -0.1
+cavalry_cost = -0.2
+cav_to_inf_ratio = 0.1
+drill_decay_modifier = -0.25
+general_cost = -0.25
+global_garrison_growth = 0.1
+infantry_cost = -0.1
+reserves_organisation = 0.25 #Reduced morale damage taken by reserves
+siege_blockade_progress = 1
+
+#############################
+# Colonization
+#############################
+native_uprising_chance = -0.25
+native_assimilation = 0.25
+
+#############################
+# Diplomatic
+#############################
+enemy_core_creation = 0.1
+enforce_religion_cost = 0.25
+
+#############################
+# Economy, Technology, Splender
+#############################
+inflation_reduction = 0.1
+interest = -1
+
+#############################
+# Government, Advisors, and Rulers
+#############################
+envoy_travel_time = -0.2
+
+#############################
+# Navy
+#############################
+blockade_efficiency = 0.5
+galley_cost = -0.25
+galley_power = 0.1
+global_naval_engagement_modifier = 0.5
+global_ship_cost = -0.1
+global_ship_recruit_speed = -0.1
+global_ship_repair = 0.2
+heavy_ship_cost = -0.25
+heavy_ship_power = 0.1
+light_ship_cost = -0.25
+navy_tradition = 1
+ship_durability = 0.1 #According to Johan this is the same as Military Tactics for Ships
+ship_power_propagation = 0.2
+transport_cost = -0.25
+transport_power = 0.1
+
+#############################
+# Revolts, Stability, Culture, and Spies
+#############################
+min_autonomy = 50 #Used in the overlord's scope

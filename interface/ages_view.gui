@@ -30,7 +30,7 @@ guiTypes = {
 		WindowType = {
 			name = "es_age_of_elves"
 			position = { x= 35 y = -29 }
-			upsound = age_of_reformation
+			upsound = age_of_discovery
 
 			iconType = {
 				name ="icon_late_classical_age"
@@ -121,7 +121,7 @@ guiTypes = {
 		WindowType = {
 			name = "es_age_of_schism"
 			position = { x= 35 y = -29 }
-			upsound = age_of_reformation
+			upsound = age_of_discovery
 
 			iconType = {
 				name ="icon_classical_age"
@@ -212,7 +212,7 @@ guiTypes = {
 		WindowType = {
 			name = "es_age_of_rebellions"
 			position = { x= 35 y = -29 }
-			upsound = age_of_reformation
+			upsound = age_of_discovery
 
 			iconType = {
 				name ="icon_classical_age"
@@ -303,7 +303,7 @@ guiTypes = {
 		WindowType = {
 			name = "es_age_of_orthodoxy"
 			position = { x= 35 y = -29 }
-			upsound = age_of_reformation
+			upsound = age_of_discovery
 
 			iconType = {
 				name ="icon_classical_age"
@@ -570,6 +570,734 @@ guiTypes = {
 				spriteType = "GFX_icon_age_l"
 				position = { x= -31 y = 121 }
 				frame = 6
+			}
+		}
+		
+		WindowType = {
+			name = "es_age_of_expansion"
+			position = { x= 35 y = -29 }
+			upsound = age_of_reformation
+
+			iconType = {
+				name ="icon_classical_age"
+				spriteType = "GFX_icon_age_g"
+				position = { x= 7 y = 24 }
+				frame = 1
+			}
+			iconType = {
+				name ="icon_late_classical_age"
+				spriteType = "GFX_icon_age_g"
+				position = { x= -23 y = 45 }
+				frame = 2
+			}
+			iconType = {
+				name ="icon_age_of_migrations"
+				spriteType = "GFX_icon_age_g"
+				position = { x= 7 y = 66 }
+				frame = 3
+			}
+			iconType = {
+				name ="icon_dark_age"
+				spriteType = "GFX_icon_age_g"
+				position = { x= -23 y = 87 }
+				frame = 4
+			}
+			iconType = {
+				name ="icon_feudal_age"
+				spriteType = "GFX_icon_age_g"
+				position = { x= 7 y = 108 }
+				frame = 5
+			}
+			iconType = {
+				name ="icon_high_middle_ages"
+				spriteType = "GFX_icon_age_g"
+				position = { x= -23 y = 129 }
+				frame = 6
+			}
+			iconType = {
+				name ="icon_age_of_discovery"
+				spriteType = "GFX_icon_age_s"
+				position = { x= 465 y = 24 }
+				frame = 8
+			}
+			iconType = {
+				name ="icon_age_of_reformation"
+				spriteType = "GFX_icon_age_s"
+				position = { x= 495 y = 45 }
+				frame = 9
+			}
+			iconType = {
+				name ="icon_age_of_absolutism"
+				spriteType = "GFX_icon_age_s"
+				position = { x= 465 y = 66 }
+				frame = 10
+			}
+			iconType = {
+				name ="icon_age_of_revolutions"
+				spriteType = "GFX_icon_age_s"
+				position = { x= 495 y = 87 }
+				frame = 11
+			}
+			iconType = {
+				name ="icon_industrial_age"
+				spriteType = "GFX_icon_age_s"
+				position = { x= 465 y = 108 }
+				frame = 12
+			}
+			iconType = {
+				name ="icon_great_war_age"
+				spriteType = "GFX_icon_age_s"
+				position = { x= 495 y = 129 }
+				frame = 13
+			}
+			iconType = {
+				name ="icon_information_age"
+				spriteType = "GFX_icon_age_s"
+				position = { x= 465 y = 150 }
+				frame = 14
+			}
+			iconType = {
+				name ="icon_late_middle_ages"
+				spriteType = "GFX_icon_age_l"
+				position = { x= -1 y = 142 }
+				frame = 7
+			}
+		}			
+		
+		WindowType = {
+			name = "es_age_of_disasters"
+			position = { x= 35 y = -29 }
+			upsound = age_of_reformation
+
+			iconType = {
+				name ="icon_classical_age"
+				spriteType = "GFX_icon_age_g"
+				position = { x= 7 y = 24 }
+				frame = 1
+			}
+			iconType = {
+				name ="icon_late_classical_age"
+				spriteType = "GFX_icon_age_g"
+				position = { x= -23 y = 45 }
+				frame = 2
+			}
+			iconType = {
+				name ="icon_age_of_migrations"
+				spriteType = "GFX_icon_age_g"
+				position = { x= 7 y = 66 }
+				frame = 3
+			}
+			iconType = {
+				name ="icon_dark_age"
+				spriteType = "GFX_icon_age_g"
+				position = { x= -23 y = 87 }
+				frame = 4
+			}
+			iconType = {
+				name ="icon_feudal_age"
+				spriteType = "GFX_icon_age_g"
+				position = { x= 7 y = 108 }
+				frame = 5
+			}
+			iconType = {
+				name ="icon_high_middle_ages"
+				spriteType = "GFX_icon_age_g"
+				position = { x= -23 y = 129 }
+				frame = 6
+			}
+			iconType = {
+				name ="icon_late_middle_ages"
+				spriteType = "GFX_icon_age_g"
+				position = { x= 7 y = 150 }
+				frame = 7
+			}
+			iconType = {
+				name ="icon_age_of_reformation"
+				spriteType = "GFX_icon_age_s"
+				position = { x= 495 y = 45 }
+				frame = 9
+			}
+			iconType = {
+				name ="icon_age_of_absolutism"
+				spriteType = "GFX_icon_age_s"
+				position = { x= 465 y = 66 }
+				frame = 10
+			}
+			iconType = {
+				name ="icon_age_of_revolutions"
+				spriteType = "GFX_icon_age_s"
+				position = { x= 495 y = 87 }
+				frame = 11
+			}
+			iconType = {
+				name ="icon_industrial_age"
+				spriteType = "GFX_icon_age_s"
+				position = { x= 465 y = 108 }
+				frame = 12
+			}
+			iconType = {
+				name ="icon_great_war_age"
+				spriteType = "GFX_icon_age_s"
+				position = { x= 495 y = 129 }
+				frame = 13
+			}
+			iconType = {
+				name ="icon_information_age"
+				spriteType = "GFX_icon_age_s"
+				position = { x= 465 y = 150 }
+				frame = 14
+			}
+			iconType = {
+				name ="icon_age_of_discovery"
+				spriteType = "GFX_icon_age_l"
+				position = { x= 457 y = 16 }
+				frame = 8
+			}
+		}			
+		
+		WindowType = {
+			name = "es_age_of_renascense"
+			position = { x= 35 y = -29}
+			upsound = age_of_absolutism
+
+			iconType = {
+				name ="icon_classical_age"
+				spriteType = "GFX_icon_age_g"
+				position = { x= 7 y = 24 }
+				frame = 1
+			}
+			iconType = {
+				name ="icon_late_classical_age"
+				spriteType = "GFX_icon_age_g"
+				position = { x= -23 y = 45 }
+				frame = 2
+			}
+			iconType = {
+				name ="icon_age_of_migrations"
+				spriteType = "GFX_icon_age_g"
+				position = { x= 7 y = 66 }
+				frame = 3
+			}
+			iconType = {
+				name ="icon_dark_age"
+				spriteType = "GFX_icon_age_g"
+				position = { x= -23 y = 87 }
+				frame = 4
+			}
+			iconType = {
+				name ="icon_feudal_age"
+				spriteType = "GFX_icon_age_g"
+				position = { x= 7 y = 108 }
+				frame = 5
+			}
+			iconType = {
+				name ="icon_high_middle_ages"
+				spriteType = "GFX_icon_age_g"
+				position = { x= -23 y = 129 }
+				frame = 6
+			}
+			iconType = {
+				name ="icon_late_middle_ages"
+				spriteType = "GFX_icon_age_g"
+				position = { x= 7 y = 150 }
+				frame = 7
+			}
+			iconType = {
+				name ="icon_age_of_discovery"
+				spriteType = "GFX_icon_age_g"
+				position = { x= 465 y = 24 }
+				frame = 8
+			}
+			iconType = {
+				name ="icon_age_of_absolutism"
+				spriteType = "GFX_icon_age_s"
+				position = { x= 465 y = 66 }
+				frame = 10
+			}
+			iconType = {
+				name ="icon_age_of_revolutions"
+				spriteType = "GFX_icon_age_s"
+				position = { x= 495 y = 87 }
+				frame = 11
+			}
+			iconType = {
+				name ="icon_industrial_age"
+				spriteType = "GFX_icon_age_s"
+				position = { x= 465 y = 108 }
+				frame = 12
+			}
+			iconType = {
+				name ="icon_great_war_age"
+				spriteType = "GFX_icon_age_s"
+				position = { x= 495 y = 129 }
+				frame = 13
+			}
+			iconType = {
+				name ="icon_information_age"
+				spriteType = "GFX_icon_age_s"
+				position = { x= 465 y = 150 }
+				frame = 14
+			}
+			iconType = {
+				name ="icon_age_of_reformation"
+				spriteType = "GFX_icon_age_l"
+				position = { x= 487 y = 37 }
+				frame = 9
+			}
+		}	
+		
+		WindowType = {
+			name = "es_age_of_invasions"
+			position = { x= 35 y = -29}
+			upsound = age_of_absolutism
+
+			iconType = {
+				name ="icon_classical_age"
+				spriteType = "GFX_icon_age_g"
+				position = { x= 7 y = 24 }
+				frame = 1
+			}
+			iconType = {
+				name ="icon_late_classical_age"
+				spriteType = "GFX_icon_age_g"
+				position = { x= -23 y = 45 }
+				frame = 2
+			}
+			iconType = {
+				name ="icon_age_of_migrations"
+				spriteType = "GFX_icon_age_g"
+				position = { x= 7 y = 66 }
+				frame = 3
+			}
+			iconType = {
+				name ="icon_dark_age"
+				spriteType = "GFX_icon_age_g"
+				position = { x= -23 y = 87 }
+				frame = 4
+			}
+			iconType = {
+				name ="icon_feudal_age"
+				spriteType = "GFX_icon_age_g"
+				position = { x= 7 y = 108 }
+				frame = 5
+			}
+			iconType = {
+				name ="icon_high_middle_ages"
+				spriteType = "GFX_icon_age_g"
+				position = { x= -23 y = 129 }
+				frame = 6
+			}
+			iconType = {
+				name ="icon_late_middle_ages"
+				spriteType = "GFX_icon_age_g"
+				position = { x= 7 y = 150 }
+				frame = 7
+			}
+			iconType = {
+				name ="icon_age_of_discovery"
+				spriteType = "GFX_icon_age_g"
+				position = { x= 465 y = 24 }
+				frame = 8
+			}
+			iconType = {
+				name ="icon_age_of_reformation"
+				spriteType = "GFX_icon_age_g"
+				position = { x= 495 y = 45 }
+				frame = 9
+			}
+			iconType = {
+				name ="icon_age_of_revolutions"
+				spriteType = "GFX_icon_age_s"
+				position = { x= 495 y = 87 }
+				frame = 11
+			}
+			iconType = {
+				name ="icon_industrial_age"
+				spriteType = "GFX_icon_age_s"
+				position = { x= 465 y = 108 }
+				frame = 12
+			}
+			iconType = {
+				name ="icon_great_war_age"
+				spriteType = "GFX_icon_age_s"
+				position = { x= 495 y = 129 }
+				frame = 13
+			}
+			iconType = {
+				name ="icon_information_age"
+				spriteType = "GFX_icon_age_s"
+				position = { x= 465 y = 150 }
+				frame = 14
+			}
+			iconType = {
+				name ="icon_age_of_absolutism"
+				spriteType = "GFX_icon_age_l"
+				position = { x= 457 y = 58 }
+				frame = 10
+			}
+		}		
+		
+		WindowType = {
+			name = "es_age_of_empires"
+			position = { x= 35 y = -29}
+			upsound = age_of_absolutism
+
+			iconType = {
+				name ="icon_classical_age"
+				spriteType = "GFX_icon_age_g"
+				position = { x= 7 y = 24 }
+				frame = 1
+			}
+			iconType = {
+				name ="icon_late_classical_age"
+				spriteType = "GFX_icon_age_g"
+				position = { x= -23 y = 45 }
+				frame = 2
+			}
+			iconType = {
+				name ="icon_age_of_migrations"
+				spriteType = "GFX_icon_age_g"
+				position = { x= 7 y = 66 }
+				frame = 3
+			}
+			iconType = {
+				name ="icon_dark_age"
+				spriteType = "GFX_icon_age_g"
+				position = { x= -23 y = 87 }
+				frame = 4
+			}
+			iconType = {
+				name ="icon_feudal_age"
+				spriteType = "GFX_icon_age_g"
+				position = { x= 7 y = 108 }
+				frame = 5
+			}
+			iconType = {
+				name ="icon_high_middle_ages"
+				spriteType = "GFX_icon_age_g"
+				position = { x= -23 y = 129 }
+				frame = 6
+			}
+			iconType = {
+				name ="icon_late_middle_ages"
+				spriteType = "GFX_icon_age_g"
+				position = { x= 7 y = 150 }
+				frame = 7
+			}
+			iconType = {
+				name ="icon_age_of_discovery"
+				spriteType = "GFX_icon_age_g"
+				position = { x= 465 y = 24 }
+				frame = 8
+			}
+			iconType = {
+				name ="icon_age_of_reformation"
+				spriteType = "GFX_icon_age_g"
+				position = { x= 495 y = 45 }
+				frame = 9
+			}
+			iconType = {
+				name ="icon_age_of_absolutism"
+				spriteType = "GFX_icon_age_g"
+				position = { x= 465 y = 66 }
+				frame = 10
+			}
+			iconType = {
+				name ="icon_industrial_age"
+				spriteType = "GFX_icon_age_s"
+				position = { x= 465 y = 108 }
+				frame = 12
+			}
+			iconType = {
+				name ="icon_great_war_age"
+				spriteType = "GFX_icon_age_s"
+				position = { x= 495 y = 129 }
+				frame = 13
+			}
+			iconType = {
+				name ="icon_information_age"
+				spriteType = "GFX_icon_age_s"
+				position = { x= 465 y = 150 }
+				frame = 14
+			}
+			iconType = {
+				name ="icon_age_of_revolutions"
+				spriteType = "GFX_icon_age_l"
+				position = { x= 487 y = 79 }
+				frame = 11
+			}
+		}	
+
+		WindowType = {
+			name = "es_age_of_internal_conflicts"
+			position = { x= 35 y = -29 }
+			upsound = age_of_absolutism
+
+			iconType = {
+				name ="icon_classical_age"
+				spriteType = "GFX_icon_age_g"
+				position = { x= 7 y = 24 }
+				frame = 1
+			}
+			iconType = {
+				name ="icon_late_classical_age"
+				spriteType = "GFX_icon_age_g"
+				position = { x= -23 y = 45 }
+				frame = 2
+			}
+			iconType = {
+				name ="icon_age_of_migrations"
+				spriteType = "GFX_icon_age_g"
+				position = { x= 7 y = 66 }
+				frame = 3
+			}
+			iconType = {
+				name ="icon_dark_age"
+				spriteType = "GFX_icon_age_g"
+				position = { x= -23 y = 87 }
+				frame = 4
+			}
+			iconType = {
+				name ="icon_feudal_age"
+				spriteType = "GFX_icon_age_g"
+				position = { x= 7 y = 108 }
+				frame = 5
+			}
+			iconType = {
+				name ="icon_high_middle_ages"
+				spriteType = "GFX_icon_age_g"
+				position = { x= -23 y = 129 }
+				frame = 6
+			}
+			iconType = {
+				name ="icon_late_middle_ages"
+				spriteType = "GFX_icon_age_g"
+				position = { x= 7 y = 150 }
+				frame = 7
+			}
+			iconType = {
+				name ="icon_age_of_discovery"
+				spriteType = "GFX_icon_age_g"
+				position = { x= 465 y = 24 }
+				frame = 8
+			}
+			iconType = {
+				name ="icon_age_of_reformation"
+				spriteType = "GFX_icon_age_g"
+				position = { x= 495 y = 45 }
+				frame = 9
+			}
+			iconType = {
+				name ="icon_age_of_absolutism"
+				spriteType = "GFX_icon_age_g"
+				position = { x= 465 y = 66 }
+				frame = 10
+			}
+			iconType = {
+				name ="icon_age_of_revolutions"
+				spriteType = "GFX_icon_age_g"
+				position = { x= 495 y = 87 }
+				frame = 11
+			}
+			iconType = {
+				name ="icon_great_war_age"
+				spriteType = "GFX_icon_age_s"
+				position = { x= 495 y = 129 }
+				frame = 13
+			}
+			iconType = {
+				name ="icon_information_age"
+				spriteType = "GFX_icon_age_s"
+				position = { x= 465 y = 150 }
+				frame = 14
+			}
+			iconType = {
+				name ="icon_industrial_age"
+				spriteType = "GFX_icon_age_l"
+				position = { x= 457 y = 100 }
+				frame = 12
+			}
+		}			
+		
+		WindowType = {
+			name = "es_age_of_unification"
+			position = { x= 35 y = -29 }
+			upsound = age_of_revolutions
+
+			iconType = {
+				name ="icon_classical_age"
+				spriteType = "GFX_icon_age_g"
+				position = { x= 7 y = 24 }
+				frame = 1
+			}
+			iconType = {
+				name ="icon_late_classical_age"
+				spriteType = "GFX_icon_age_g"
+				position = { x= -23 y = 45 }
+				frame = 2
+			}
+			iconType = {
+				name ="icon_age_of_migrations"
+				spriteType = "GFX_icon_age_g"
+				position = { x= 7 y = 66 }
+				frame = 3
+			}
+			iconType = {
+				name ="icon_dark_age"
+				spriteType = "GFX_icon_age_g"
+				position = { x= -23 y = 87 }
+				frame = 4
+			}
+			iconType = {
+				name ="icon_feudal_age"
+				spriteType = "GFX_icon_age_g"
+				position = { x= 7 y = 108 }
+				frame = 5
+			}
+			iconType = {
+				name ="icon_high_middle_ages"
+				spriteType = "GFX_icon_age_g"
+				position = { x= -23 y = 129 }
+				frame = 6
+			}
+			iconType = {
+				name ="icon_late_middle_ages"
+				spriteType = "GFX_icon_age_g"
+				position = { x= 7 y = 150 }
+				frame = 7
+			}
+			iconType = {
+				name ="icon_age_of_discovery"
+				spriteType = "GFX_icon_age_g"
+				position = { x= 465 y = 24 }
+				frame = 8
+			}
+			iconType = {
+				name ="icon_age_of_reformation"
+				spriteType = "GFX_icon_age_g"
+				position = { x= 495 y = 45 }
+				frame = 9
+			}
+			iconType = {
+				name ="icon_age_of_absolutism"
+				spriteType = "GFX_icon_age_g"
+				position = { x= 465 y = 66 }
+				frame = 10
+			}
+			iconType = {
+				name ="icon_age_of_revolutions"
+				spriteType = "GFX_icon_age_g"
+				position = { x= 495 y = 87 }
+				frame = 11
+			}
+			iconType = {
+				name ="icon_industrial_age"
+				spriteType = "GFX_icon_age_g"
+				position = { x= 465 y = 108 }
+				frame = 12
+			}
+			iconType = {
+				name ="icon_information_age"
+				spriteType = "GFX_icon_age_s"
+				position = { x= 465 y = 150 }
+				frame = 14
+			}
+			iconType = {
+				name ="icon_great_war_age"
+				spriteType = "GFX_icon_age_l"
+				position = { x= 487 y = 121 }
+				frame = 13
+			}
+		}		
+		
+		WindowType = {
+			name = "es_age_of_great_wars"
+			position = { x= 35 y = -29 }
+			upsound = age_of_revolutions
+
+			iconType = {
+				name ="icon_classical_age"
+				spriteType = "GFX_icon_age_g"
+				position = { x= 7 y = 24 }
+				frame = 1
+			}
+			iconType = {
+				name ="icon_late_classical_age"
+				spriteType = "GFX_icon_age_g"
+				position = { x= -23 y = 45 }
+				frame = 2
+			}
+			iconType = {
+				name ="icon_age_of_migrations"
+				spriteType = "GFX_icon_age_g"
+				position = { x= 7 y = 66 }
+				frame = 3
+			}
+			iconType = {
+				name ="icon_dark_age"
+				spriteType = "GFX_icon_age_g"
+				position = { x= -23 y = 87 }
+				frame = 4
+			}
+			iconType = {
+				name ="icon_feudal_age"
+				spriteType = "GFX_icon_age_g"
+				position = { x= 7 y = 108 }
+				frame = 5
+			}
+			iconType = {
+				name ="icon_high_middle_ages"
+				spriteType = "GFX_icon_age_g"
+				position = { x= -23 y = 129 }
+				frame = 6
+			}
+			iconType = {
+				name ="icon_late_middle_ages"
+				spriteType = "GFX_icon_age_g"
+				position = { x= 7 y = 150 }
+				frame = 7
+			}
+			iconType = {
+				name ="icon_age_of_discovery"
+				spriteType = "GFX_icon_age_g"
+				position = { x= 465 y = 24 }
+				frame = 8
+			}
+			iconType = {
+				name ="icon_age_of_reformation"
+				spriteType = "GFX_icon_age_g"
+				position = { x= 495 y = 45 }
+				frame = 9
+			}
+			iconType = {
+				name ="icon_age_of_absolutism"
+				spriteType = "GFX_icon_age_g"
+				position = { x= 465 y = 66 }
+				frame = 10
+			}
+			iconType = {
+				name ="icon_age_of_revolutions"
+				spriteType = "GFX_icon_age_g"
+				position = { x= 495 y = 87 }
+				frame = 11
+			}
+			iconType = {
+				name ="icon_industrial_age"
+				spriteType = "GFX_icon_age_g"
+				position = { x= 465 y = 108 }
+				frame = 12
+			}
+			iconType = {
+				name ="icon_great_war_age"
+				spriteType = "GFX_icon_age_g"
+				position = { x= 495 y = 129 }
+				frame = 13
+			}
+			iconType = {
+				name ="icon_information_age"
+				spriteType = "GFX_icon_age_l"
+				position = { x= 457 y = 142 }
+				frame = 14
 			}
 		}
 		

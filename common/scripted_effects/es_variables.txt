@@ -47,8 +47,12 @@ init_variables = {
 		which = num_of_battles_won
 		value = 0
 	}
-	change_variable = {
+	set_variable = {
 		which = provinces_gained
+		value = 0
+	}
+	set_variable = {
+		which = capital_scope_religion
 		value = 0
 	}
 }

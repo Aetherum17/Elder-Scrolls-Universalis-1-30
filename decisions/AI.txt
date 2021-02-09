@@ -1,0 +1,89 @@
+country_decisions = {
+
+	ai_fix_no_religion = {
+		major = yes
+		potential = {
+			NOT = { is_normal_es_religion_trigger = yes }
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			if = {
+				limit = {
+					capital_scope = {
+						is_normal_es_religion_trigger = yes
+					}
+				}
+				capital_scope = {
+					ROOT = {
+						change_religion = PREV
+					}
+				}
+				every_owned_province = {
+					limit = {
+						NOT = { is_normal_es_religion_trigger = yes }
+					}
+					change_religion = ROOT
+				}
+			}
+			else_if = {
+				limit = {
+					any_neighbor_country = {
+						is_normal_es_religion_trigger = yes
+						culture_group = ROOT
+					}
+				}
+				random_neighbor_country = {
+					limit = {
+						is_normal_es_religion_trigger = yes
+						culture_group = ROOT
+					}
+					ROOT = {
+						change_religion = PREV
+					}
+				}
+				every_owned_province = {
+					limit = {
+						NOT = { is_normal_es_religion_trigger = yes }
+					}
+					change_religion = ROOT
+				}
+			}
+			else_if = {
+				limit = {
+					any_neighbor_country = {
+						is_normal_es_religion_trigger = yes
+					}
+				}
+				random_neighbor_country = {
+					limit = {
+						is_normal_es_religion_trigger = yes
+					}
+					ROOT = {
+						change_religion = PREV
+					}
+				}
+				every_owned_province = {
+					limit = {
+						NOT = { is_normal_es_religion_trigger = yes }
+					}
+					change_religion = ROOT
+				}
+			}
+			else = {
+				change_religion = unknown_pantheon
+				every_owned_province = {
+					limit = {
+						NOT = { is_normal_es_religion_trigger = yes }
+					}
+					change_religion = unknown_pantheon
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 5000
+		}
+	}
+
+}
