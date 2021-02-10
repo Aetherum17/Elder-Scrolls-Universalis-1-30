@@ -26,18 +26,10 @@ country_decisions = {
 	blasphemy_act_1 = {
 		potential = {
 			NOT = { has_country_modifier = the_blasphemy_act }
-			OR = {
-				current_age = age_of_reformation
-				current_age = age_of_absolutism
-				current_age = age_of_revolutions
-			}
+			is_year = 805
 		}
 		allow = {
-			OR = {
-				current_age = age_of_reformation
-				current_age = age_of_absolutism
-				current_age = age_of_revolutions
-			}
+			is_year = 805
 		}
 		effect = {	
 			add_country_modifier = {

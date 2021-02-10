@@ -374,21 +374,6 @@ on_war_won = {
     clr_country_flag = alliancememberinwar_flag
 	remove_country_modifier = guarfian_at_war
 	
-    if = {
-		limit = { 
-			ROOT = { is_rival = FROM }  
-			ROOT = { NOT = { religion_group = FROM } }
-			current_age = high_middle_ages
-		}
-		set_country_flag = won_against_rival_of_other_religion_group
-	}
-	if = {
-		limit = { 
-			current_age = great_war_age
-			FROM = { is_great_power = yes }
-		}
-		set_country_flag = won_against_great_power
-	}
 	change_variable = {
 		which = war_won
 		value = 1

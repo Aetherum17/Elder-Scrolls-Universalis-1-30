@@ -6,7 +6,7 @@ revolution = {
 		NOT = { has_reform = celestial_empire }
 		is_free_or_tributary_trigger = yes
 		NOT = { revolution_target_exists = yes }
-		current_age = age_of_revolutions
+		has_institution = enlightenment
 		is_revolutionary = no
 		if = {
 			limit = {
@@ -30,7 +30,7 @@ revolution = {
 	
 	
 	can_start = {
-		current_age = age_of_revolutions
+		has_institution = enlightenment
 		num_of_cities = 50
 		has_any_disaster = no
 		NOT = { stability = 2 }

@@ -673,29 +673,79 @@ es_age_of_expansion = {
 	religious_conflicts = yes
 	papacy = 1.25
 	
-	### Age 7 - Age of Expansion 600 - 800
-
-	#Goals:
-	#1 Unsiegable State - have 25 forts 
-	#2 Have at least one origin of Institution
-	#3 Own Metropolia - have at least one city with 50 dev
-	#4 Have at least 3 subjects
-	#5 Expand the Empire - own 250 cities
-	#6 International Acceptence - diplomatic_reputation = 3
-	#7 be part of the HRE
-
-	#Bonuses:
-	#1 Gather Memory Stones - free_leader_pool = 1
-	#2 Develop Villages - global_trade_goods_size_modifier = 0.1
-	#3 Educate Citizens - dip_tech_cost_modifier = -0.1
-	#4 Absorbtion of Subjects - diplomatic_annexation_cost = -0.15
-	#5 Honor Traditions - legitimacy = 0.25
-	#6 Find Legendary Generals - leader_land_shock = 1
-	#7 Smash Rebels - harsh_treatment_cost = -0.25
-	#8 Ensure loyalty of people - years_of_nationalism = -5
-	#9 Introduce Merchants in Court - trade_efficiency = 0.10
-	#10 Support City-States - trade_range_modifier = 0.25
-	#11 Search for Spies - global_spy_defence = 0.15
+	objectives = {
+		obj_7_1 = {
+			num_of_cavalry = 35
+		}
+		obj_7_2 = {
+			calc_true_if = {
+				all_owned_province = {
+					has_building = dock
+					controlled_by = ROOT
+					is_core = ROOT
+				}
+				amount = 25
+			}
+		}
+		obj_7_3 = {
+			any_owned_province = {
+				development = 50
+			}
+		}
+		obj_7_4 = {
+			num_of_subjects = 3
+		}
+		obj_7_5 = {
+			num_of_cities = 250
+		}
+		obj_7_6 = {
+			diplomatic_reputation = 3
+		}
+		obj_7_7 = {
+			is_part_of_hre = yes
+		}
+	}
+	
+	abilities = {
+		ab_7_1 = {
+			free_leader_pool = 1
+		}
+		ab_7_2 = {
+			global_trade_goods_size_modifier = 0.1
+		}
+		ab_7_3 = {
+			dip_tech_cost_modifier = -0.1
+		}
+		ab_7_4 = {
+			diplomatic_annexation_cost = -0.15
+		}
+		ab_7_5 = {
+			legitimacy = 0.25
+			republican_tradition = 0.15
+			devotion = 0.35
+			horde_unity = 0.35
+			meritocracy = 0.25
+		}
+		ab_7_6 = {
+			leader_land_shock = 1
+		}
+		ab_7_7 = {
+			harsh_treatment_cost = -0.25
+		}
+		ab_7_8 = {
+			years_of_nationalism = -5
+		}
+		ab_7_9 = {
+			trade_efficiency = 0.10
+		}
+		ab_7_10 = {
+			trade_range_modifier = 0.25
+		}
+		ab_7_11 = {
+			global_spy_defence = 0.15
+		}
+	}
+	
 }
 
 es_age_of_disasters = {
@@ -721,29 +771,75 @@ es_age_of_disasters = {
 		war_exhaustion = -1
 	}
 	
-	### Age 8 - Age of Disasters 800 - 1000
+	objectives = {
+		ab_9_1 = {
+			NOT = { had_recent_war = 10 }
+		}
+		ab_9_2 = {
+			num_of_owned_and_controlled_institutions = 1
+		}
+		ab_9_3 = {
+			num_accepted_cultures = 3
+		}
+		ab_9_4 = {
+			all_owned_province = {
+				NOT = { devastation = 1 }
+			}
+		}
+		ab_9_5 = {
+			calc_true_if = {
+				all_owned_province = {
+					has_building = earth_rampart
+					controlled_by = ROOT
+					is_core = ROOT
+				}
+				amount = 25
+			}
+		}
+		ab_9_6 = {
+			monthly_income = 100
+		}
+		ab_9_7 = {
+			manpower_percentage = 0.9
+		}
+	}
+	
+	abilities = {
+		ab_9_1 = {
+			global_institution_spread = 0.15
+		}
+		ab_9_2 = {
+			manpower_recovery_speed = 0.15
+		}
+		ab_9_3 = {
+			garrison_size = 0.25
+		}
+		ab_9_4 = {
+			loot_amount = 0.25
+		}
+		ab_9_5 = {
+			discipline = 0.10
+		}
+		ab_9_6 = {
+			advisor_cost = -0.15
+		}
+		ab_9_7 = {
+			improve_relation_modifier = 0.25
+		}
+		ab_9_8 = {
+			free_policy = 1
+		}
+		ab_9_9 = {
+			autonomy_change_time = -0.25 
+		}
+		ab_9_10 = {
+			prestige = 0.25
+		}
+		ab_9_11 = {
+			reduced_liberty_desire = 10
+		}
+	}
 
-	#Goals:
-	#1 Win 50 Battles
-	#2 Have 3 cultures accepted
-	#3 own provinces in different superregion
-	#4 Have no devastation in all provinces
-	#5 Be in Polythiestic Religious Group
-	#6 Have an income of 100 ducats
-	#7 Have 90% manpower pool
-
-	#Bonuses:
-	#1 Publish Encyclopedia Tamrielica - global_institution_spread = 0.15
-	#2 Prepare for Plague - manpower_recovery_speed = 0.15
-	#3 Build High Walls - garrison_size = 0.25
-	#4 Organise Raids - loot_amount = 0.25
-	#5 Acknowledge Akaviri Traditions - discipline = 0.10
-	#6 Embassy to Errinorne Academy - advisor_cost = -0.15
-	#7 Understand Ayleidic Poesy - improve_relation_modifier = 0.25
-	#8 Grasp Elder Scroll - free_policy = 1
-	#9 Secure the Dragon Menace - autonomy_change_time = -0.25 
-	#10 Send expedition to Mzulft - prestige = 0.25
-	#11 Supress subjects - reduced_liberty_desire = 10
 }
 
 es_age_of_renascense = {
@@ -769,29 +865,112 @@ es_age_of_renascense = {
 		war_exhaustion = -1
 	}
 	
-	### Age 9 - Age of Renascence 1000 - 1200
-
-	#Goals:
-	#1 Have 3 level 3 advisors
-	#2 have a personal Union
-	#3 have a global unrest of 0 level
-	#4 Use Mercenaries - hire at least 1 merc company
-	#5 Have 5 provinces that produce slaves
-	#6 have an heir and a Consort
-	#7 Tropical paraise - own 25 provinces in tropical climate
-
-	#Bonuses:
-	#1 Fund University of Gwilym - embracement_cost = -0.25
-	#2 Investigate Dwemer Ruins - technology_cost = -0.10
-	#3 Accept Embassy from Lainlyn - diplomats = 1
-	#4 Join Mages Guild - land_morale = 0.10
-	#5 Build Inns - caravan_power = 0.15
-	#6 Support Guilds - global_own_trade_power = 0.1
-	#7 Publish Atlas of Dragons - fire_damage = 0.1
-	#8 build political dynasty - diplomatic_reputation = 1
-	#9 Introduce Border Control - rival_border_fort_maintenance = -0.25
-	#10 Reform Holy Orders - tolerance_own = 1
-	#11 Expand Fleet - sailor_maintenance_modifer = -0.25
+	objectives = {
+		ab_9_1 = {
+			OR = {
+				esu_steward = 3
+				esu_bard = 3
+				esu_mage = 3
+				esu_monk = 3
+				esu_priest = 3
+				esu_researcher = 3
+				esu_inspector = 3
+				esu_curator = 3
+				esu_merchant = 3
+				esu_alchemist = 3
+				esu_governor = 3
+				esu_negotiator = 3
+				esu_spy = 3
+				esu_colonial_overseer = 3
+				esu_adventurer = 3
+				esu_navarch = 3
+				esu_blacksmith = 3
+				esu_trainer = 3
+				esu_hunter = 3
+				esu_thane = 3
+				esu_officer = 3
+				esu_scout = 3
+				esu_grand_champion = 3
+				esu_recruiter = 3
+				esu_phychopathic_artist = 3
+				esu_occultist = 3
+				esu_mad_scholar = 3
+				esu_torturer = 3
+				esu_hedonist = 3
+				esu_bandit = 3
+				esu_corsair = 3
+				esu_conquistador = 3
+				esu_lich = 3
+				esu_pillager = 3
+				esu_tyrant = 3
+				esu_exexutioner = 3
+				}		
+			}
+		}
+		ab_9_2 = {
+			num_of_unions = 1
+		}
+		ab_9_3 = {
+			average_unrest = 0
+		}
+		ab_9_4 = {
+			num_of_hired_mercenary_companies = 1
+		}
+		ab_9_5 = {
+				all_owned_province = {
+					NOT = { trade_goods = slaves }
+				}
+		}
+		ab_9_6 = {
+			has_consort = yes
+			has_heir = yes
+		}
+		ab_9_7 = {
+			calc_true_if = {
+				all_owned_province = {
+					has_climate = tropical
+				}
+				amount = 25
+			}
+		}
+	}
+	
+	abilities = {
+		ab_9_1 = {
+			embracement_cost = -0.25
+		}
+		ab_9_2 = {
+			technology_cost = -0.10
+		}
+		ab_9_3 = {
+			diplomats = 1
+		}
+		ab_9_4 = {
+			land_morale = 0.10
+		}
+		ab_9_5 = {
+			caravan_power = 0.15
+		}
+		ab_9_6 = {
+			global_own_trade_power = 0.1
+		}
+		ab_9_7 = {
+			fire_damage = 0.1
+		}
+		ab_9_8 = {
+			diplomatic_reputation = 1
+		}
+		ab_9_9 = {
+			rival_border_fort_maintenance = -0.25
+		}
+		ab_9_10 = {
+			tolerance_own = 1
+		}
+		ab_9_11 = {
+			sailor_maintenance_modifer = -0.25
+		}
+	}
+	
 }
 
 es_age_of_invasions = {
@@ -840,6 +1019,9 @@ es_age_of_invasions = {
 	#9 Get Altmer Forgining Secrets - shock_damage = 0.10
 	#10 Support Stros M'Kai Mages Guild - advisor_pool = 1
 	#11 Publish Ancient Tales of Dwemer - state_maintenance_modifier = -0.25
+	
+	#4
+	#Bastion - 100
 }
 
 es_age_of_empires = {
@@ -888,6 +1070,9 @@ es_age_of_empires = {
 	#9 Expand Land Rights - global_tax_modifier = 0.10
 	#10 Study Necromacy - reinforce_speed = 0.25
 	#11 Reorganise Army - yearly_army_professionalism = 0.015
+	
+	#5
+	#Conscription Center - 110
 }
 
 es_age_of_internal_conflicts = {
@@ -919,7 +1104,7 @@ es_age_of_internal_conflicts = {
 	#1 Conquest ??/ of Nortthern Islands?
 	#2 Conquer Akavir??
 	#3 Have a regent rule
-	#4 
+	#4 hre_size
 	#5 
 	#6 
 	#7
@@ -936,6 +1121,9 @@ es_age_of_internal_conflicts = {
 	#9 Build Harbors - global_sailors_modifier = 0.25
 	#10 Open Another Dimension - land_forcelimit_modifier = 0.25
 	#11 Study Daedric Alphabet - recover_army_morale_speed = 0.05
+	
+	#6
+	#Arsenal - 120
 }
 
 es_age_of_unification = {
@@ -984,6 +1172,8 @@ es_age_of_unification = {
 	#9 sunk_ship_morale_hit_recieved = -0.15
 	#10 Ban Levitation Magic - drill_gain_modifier = 0.25
 	#11  prestige_from_naval = 0.25
+	
+	#7
 }
 
 es_age_of_great_wars = {
@@ -1019,6 +1209,8 @@ es_age_of_great_wars = {
 	#5 
 	#6 
 	#7
+	
+	#University - 140
 
 	#Bonuses:
 	#1 Negotiate with Mages Guild - artillery_bonus_vs_fort = 1
@@ -1034,45 +1226,15 @@ es_age_of_great_wars = {
 	#11 Acquire Akaviri Armory - cavalry_flanking = 0.25
 }
 
-#num_of_cavalry = 35
-
-#Marketplace - 10
-#Trade Deport - 110
 #Stock exchange - 170
 
-#Dock - 60
-#Drydock - 130
-
-#Shipyard - 30
 #Grand Shipyard - 140
-
-#Coastal Defense - 40
-#Naval Batterly - 160
 
 #Canal - 110
 
-#Courthouse - 80
 #Townhall - 130
 
-#College - 50
-#University - 140
-
-#Regimental Camp - 60
-#Conscription Center - 110
-
-#Armory - 70
-#Arsenal - 120
-
 #Tax Assessor - 170
-
-#Castle - 10
-#Bastion - 100
-#Star Fort - 140
-#Fortress - 180
-
-#Earthen Rampage - 80
-#Tenalielle - 130
-#Redoubt - 160
 
 	
 	
@@ -1202,10 +1364,6 @@ es_age_of_great_wars = {
 #		obj_latemiddle_elector = {
 #			is_elector = yes
 #		}
-#		obj_latemiddle_large_horde = {
-#			is_nomad = yes
-#			num_of_cities = 60
-#		}
 #		obj_latemiddle_papalcontrol = {
 #			religion = catholic
 #			is_papal_controller = yes
@@ -1221,278 +1379,3 @@ es_age_of_great_wars = {
 #			}
 #		}
 #	}
-	
-	# Tech 65
-	#year = 700
-	# Tech 66
-	#year = 710
-	# Tech 67
-	#year = 720
-	# Tech 68
-	#year = 730
-	# Tech 69
-	#year = 740
-	# Tech 70
-	#year = 750
-	# Tech 71
-	#year = 760
-	# Tech 72
-	#year = 770
-	# Tech 73
-	#year = 780
-	# Tech 74
-	#year = 790
-	# Tech 75
-	#year = 800
-	# Tech 76
-	#year = 810
-	# Tech 77
-	#year = 820
-	# Tech 78
-	#year = 830
-	# Tech 79
-	#year = 840
-	# Tech 80
-	#year = 850
-	# Tech 81
-	#year = 860
-#######################################################################
-	# Tech 82
-	#year = 870
-	# Tech 83
-	#year = 880
-	# Tech 84
-	#year = 890
-	# Tech 85
-	#year = 900
-	# Tech 86
-	#year = 910
-	# Tech 87
-	#year = 920
-	# Tech 88
-	#year = 930
-	# Tech 89
-	#year = 940
-	# Tech 90
-	#year = 950
-	# Tech 91
-	#year = 960
-	# Tech 92
-	#year = 970
-	# Tech 93
-	#year = 980
-	# Tech 94
-	#year = 990
-	# Tech 95
-	#year = 1000
-	# Tech 96
-	#year = 1010
-	# Tech 97
-	#year = 1020
-	# Tech 98
-	#year = 1030
-	# Tech 99
-	#year = 1040
-	# Tech 100
-	#year = 1050
-	# Tech 101
-	#year = 1060
-#######################################################################
-	# Tech 102
-	#year = 1070
-	# Tech 103
-	#year = 1080
-	# Tech 104
-	#year = 1090
-	# Tech 105
-	#year = 1100
-	# Tech 106
-	#year = 1110
-	# Tech 107
-	#year = 1120
-	# Tech 108
-	#year = 1130
-	# Tech 109
-	#year = 1140
-	# Tech 110
-	#year = 1150
-	# Tech 111
-	#year = 1160
-	# Tech 112
-	#year = 1170
-	# Tech 113
-	#year = 1180
-	# Tech 114
-	#year = 1190
-	# Tech 115
-	#year = 1200
-	# Tech 116
-	#year = 1210
-	# Tech 117
-	#year = 1220
-	# Tech 118
-	#year = 1230
-	# Tech 119
-	#year = 1240
-	# Tech 120
-	#year = 1250
-	# Tech 121
-	#year = 1260
-#######################################################################
-	# Tech 122
-	#year = 1270
-	# Tech 123
-	#year = 1280
-	# Tech 124
-	#year = 1290
-	# Tech 125
-	#year = 1300
-	# Tech 126
-	#year = 1310
-	# Tech 127
-	#year = 1320
-	# Tech 128
-	#year = 1330
-	# Tech 129
-	#year = 1340
-	# Tech 130
-	#year = 1350
-	# Tech 131
-	#year = 1360
-	# Tech 132
-	#year = 1370
-	# Tech 133
-	#year = 1380
-	# Tech 134
-	#year = 1390
-	# Tech 135
-	#year = 1400
-	# Tech 136
-	#year = 1410
-	# Tech 137
-	#year = 1420
-	# Tech 138
-	#year = 1430
-	# Tech 139
-	#year = 1440
-	# Tech 140
-	#year = 1450
-	# Tech 141
-	#year = 1460
-#######################################################################
-	# Tech 142
-	#year = 1470
-	# Tech 143
-	#year = 1480
-	# Tech 144
-	#year = 1490
-	# Tech 145
-	#year = 1500
-	# Tech 146
-	#year = 1510
-	# Tech 147
-	#year = 1520
-	# Tech 148
-	#year = 1530
-	# Tech 149
-	#year = 1540
-	# Tech 150
-	#year = 1550
-	# Tech 151
-	#year = 1560
-	# Tech 152
-	#year = 1570
-	# Tech 153
-	#year = 1580
-	# Tech 154
-	#year = 1590
-	# Tech 155
-	#year = 1600
-	# Tech 156
-	#year = 1610
-	# Tech 157
-	#year = 1620
-	# Tech 158
-	#year = 1630
-	# Tech 159
-	#year = 1640
-	# Tech 160
-	#year = 1650
-	# Tech 161
-	#year = 1660
-#######################################################################
-	# Tech 162
-	#year = 1670
-	# Tech 163
-	#year = 1680
-	# Tech 164
-	#year = 1690
-	# Tech 165
-	#year = 1700
-	# Tech 166
-	#year = 1710
-	# Tech 167
-	#year = 1720
-	# Tech 168
-	#year = 1730
-	# Tech 169
-	#year = 1740
-	# Tech 170
-	#year = 1750
-	# Tech 171
-	#year = 1760
-	# Tech 172
-	#year = 1770
-	# Tech 173
-	#year = 1780
-	# Tech 174
-	#year = 1790
-	# Tech 175
-	#year = 1800
-	# Tech 176
-	#year = 1810
-	# Tech 177
-	#year = 1820
-	# Tech 178
-	#year = 1830
-	# Tech 179
-	#year = 1840
-	# Tech 180
-	#year = 1850
-	# Tech 181
-	#year = 1860
-#######################################################################
-	# Tech 182
-	#year = 1870
-	# Tech 183
-	#year = 1880
-	# Tech 184
-	#year = 1890
-	# Tech 185
-	#year = 1900
-	# Tech 186
-	#year = 1910
-	# Tech 187
-	#year = 1920
-	# Tech 188
-	#year = 1930
-	# Tech 189
-	#year = 1940
-	# Tech 190
-	#year = 1950
-	# Tech 191
-	#year = 1960
-	# Tech 192
-	#year = 1970
-	# Tech 193
-	#year = 1980
-	# Tech 194
-	#year = 1990
-	# Tech 195
-	#year = 2000
-	# Tech 196
-	#year = 2010
-	# Tech 197
-	#year = 2020
-	# Tech 198
-	#year = 2030

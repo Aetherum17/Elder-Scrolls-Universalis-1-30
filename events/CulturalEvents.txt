@@ -14,7 +14,7 @@ country_event = {
 	trigger = {
 		has_institution = feudalism
 		government = monarchy
-		current_age = age_of_discovery
+		is_year = 805
 		NOT = {
 			has_country_flag = last_jousting_tournament_held
 		}
@@ -59,7 +59,7 @@ country_event = {
 
 	trigger = {
 		is_institution_enabled = renaissance
-		current_age = age_of_discovery
+		is_year = 805
 		NOT = {
 			num_of_cities = 6
 			has_country_flag = blooming_renaissance
