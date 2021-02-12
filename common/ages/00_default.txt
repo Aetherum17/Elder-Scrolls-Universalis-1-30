@@ -772,21 +772,21 @@ es_age_of_disasters = {
 	}
 	
 	objectives = {
-		ab_9_1 = {
+		obj_8_1 = {
 			NOT = { had_recent_war = 10 }
 		}
-		ab_9_2 = {
+		obj_8_2 = {
 			num_of_owned_and_controlled_institutions = 1
 		}
-		ab_9_3 = {
+		obj_8_3 = {
 			num_accepted_cultures = 3
 		}
-		ab_9_4 = {
+		obj_8_4 = {
 			all_owned_province = {
 				NOT = { devastation = 1 }
 			}
 		}
-		ab_9_5 = {
+		obj_8_5 = {
 			calc_true_if = {
 				all_owned_province = {
 					has_building = earth_rampart
@@ -796,46 +796,46 @@ es_age_of_disasters = {
 				amount = 25
 			}
 		}
-		ab_9_6 = {
+		obj_8_6 = {
 			monthly_income = 100
 		}
-		ab_9_7 = {
+		obj_8_7 = {
 			manpower_percentage = 0.9
 		}
 	}
 	
 	abilities = {
-		ab_9_1 = {
+		ab_8_1 = {
 			global_institution_spread = 0.15
 		}
-		ab_9_2 = {
+		ab_8_2 = {
 			manpower_recovery_speed = 0.15
 		}
-		ab_9_3 = {
+		ab_8_3 = {
 			garrison_size = 0.25
 		}
-		ab_9_4 = {
+		ab_8_4 = {
 			loot_amount = 0.25
 		}
-		ab_9_5 = {
+		ab_8_5 = {
 			discipline = 0.10
 		}
-		ab_9_6 = {
+		ab_8_6 = {
 			advisor_cost = -0.15
 		}
-		ab_9_7 = {
+		ab_8_7 = {
 			improve_relation_modifier = 0.25
 		}
-		ab_9_8 = {
+		ab_8_8 = {
 			free_policy = 1
 		}
-		ab_9_9 = {
+		ab_8_9 = {
 			autonomy_change_time = -0.25 
 		}
-		ab_9_10 = {
+		ab_8_10 = {
 			prestige = 0.25
 		}
-		ab_9_11 = {
+		ab_8_11 = {
 			reduced_liberty_desire = 10
 		}
 	}
@@ -866,7 +866,7 @@ es_age_of_renascense = {
 	}
 	
 	objectives = {
-		ab_9_1 = {
+		obj_9_1 = {
 			OR = {
 				esu_steward = 3
 				esu_bard = 3
@@ -904,28 +904,27 @@ es_age_of_renascense = {
 				esu_pillager = 3
 				esu_tyrant = 3
 				esu_exexutioner = 3
-				}		
 			}
 		}
-		ab_9_2 = {
-			num_of_unions = 1
+		obj_9_2 = {
+			personal_union = 1
 		}
-		ab_9_3 = {
+		obj_9_3 = {
 			average_unrest = 0
 		}
-		ab_9_4 = {
+		obj_9_4 = {
 			num_of_hired_mercenary_companies = 1
 		}
-		ab_9_5 = {
+		obj_9_5 = {
 				all_owned_province = {
 					NOT = { trade_goods = slaves }
 				}
 		}
-		ab_9_6 = {
+		obj_9_6 = {
 			has_consort = yes
 			has_heir = yes
 		}
-		ab_9_7 = {
+		obj_9_7 = {
 			calc_true_if = {
 				all_owned_province = {
 					has_climate = tropical
@@ -934,7 +933,7 @@ es_age_of_renascense = {
 			}
 		}
 	}
-	
+
 	abilities = {
 		ab_9_1 = {
 			embracement_cost = -0.25
@@ -996,32 +995,74 @@ es_age_of_invasions = {
 		war_exhaustion = -1
 	}
 	
-	### Age 10 - Age of Invasions 1200 - 1400
-
-	#Goals:
-	#1 Own 10 trade centers
-	#2 Fight 2 wars at the same time
-	#3 have an army over 100 regiments
-	#4 Be Elector of HRE
-	#5 Be Emperor of Akavir
-	#6 Have 5 Royal Marriages
-	#7 Have No War Exhaution
-
-	#Bonuses:
-	#1 Publish Pocket Guide to Mournhold - prestige_per_development_from_conversion = 0.1
-	#2 Join the Covenant - ae_impact = -0.10
-	#3 Fight the Flu - global_autonomy = -0.05
-	#4 Understand Annals of Dragonguard - global_regiment_cost = -0.15
-	#5 Gather Horde of Warriors - mercenary_cost = -0.25
-	#6 Appoint Governors - culture_conversion_cost = -0.25
-	#7 Visit College of Aldmeri Propriety - liberty_desire_from_subject_development = -0.15
-	#8 Support the Five Companions - mercenary_discipline = 0.05
-	#9 Get Altmer Forgining Secrets - shock_damage = 0.10
-	#10 Support Stros M'Kai Mages Guild - advisor_pool = 1
-	#11 Publish Ancient Tales of Dwemer - state_maintenance_modifier = -0.25
+	objectives = {
+		obj_10_1 = {
+			calc_true_if = {
+				province_has_center_of_trade_of_level = 2
+				amount = 10
+			}
+		}
+		obj_10_2 = {
+			calc_true_if = {
+				all_owned_province = {
+					has_building = fort_16th
+				}
+				amount = 25
+			}
+		}
+		obj_10_3 = {
+			num_of_infantry = 100
+		}
+		obj_10_4 = {
+			at_war_with_religious_enemy = yes
+		}
+		obj_10_5 = {
+			is_emperor_of_china = yes
+		}
+		obj_10_6 = {
+			num_of_royal_marriages = 5
+		}
+		obj_10_7 = {
+			war_exhaustion = 0
+		}
+	}
 	
-	#4
-	#Bastion - 100
+	abilities = {
+		ab_10_1 = {
+			prestige_per_development_from_conversion = 0.1
+		}
+		ab_10_2 = {
+			ae_impact = -0.10
+		}
+		ab_10_3 = {
+			global_autonomy = -0.05
+		}
+		ab_10_4 = {
+			global_regiment_cost = -0.15
+		}
+		ab_10_5 = {
+			mercenary_cost = -0.25
+		}
+		ab_10_6 = {
+			culture_conversion_cost = -0.25
+		}
+		ab_10_7 = {
+			liberty_desire_from_subject_development = -0.15
+		}
+		ab_10_8 = {
+			mercenary_discipline = 0.05
+		}
+		ab_10_9 = {
+			shock_damage = 0.10
+		}
+		ab_10_10 = {
+			advisor_pool = 1
+		}
+		ab_10_11 = {
+			state_maintenance_modifier = -0.25
+		}
+	}
+
 }
 
 es_age_of_empires = {
@@ -1047,16 +1088,110 @@ es_age_of_empires = {
 		war_exhaustion = -1
 	}
 	
-	### Age 11 - Age of Empires 1400 - 1600
-
-	#Goals:
-	#1 Great fleet - have 100 ships
-	#2 Have 3 colonies
-	#3 Be governent rank 7
-	#4 Build Rosethorn Hall - Skingrad should have a building of ???
-	#5 Fight Vampires
-	#6 Have Regency Council
-	#7 United Tamrielic Province
+	objectives = {
+		obj_11_1 = {
+			num_of_light_ship = 100
+		}
+		obj_11_2 = {
+			num_of_colonies = 3
+		}
+		obj_11_3 = {
+			is_elector = yes
+		}
+		obj_11_4 = {
+			calc_true_if = {
+				all_owned_province = {
+					has_building = conscription_center
+				}
+				amount = 25
+			}
+		}
+		obj_11_5 = {
+			mil = 5
+			is_monarch_leader = yes
+		}
+		obj_11_6 = {
+			OR = {
+				has_regency = yes
+				has_consort_regency = yes
+			}
+		}
+		obj_11_7 = {
+			tag = SUM
+			tag = AYL
+			tag = COE
+			tag = HAM
+			tag = SKY
+			tag = SKA
+			tag = WIN
+			tag = FAL
+			tag = DWE
+			tag = HIG
+			tag = REA
+			tag = ALE
+			tag = CYR
+			tag = NIB
+			tag = COL
+			tag = KEP
+			tag = ORS
+			tag = SOR
+			tag = ELS
+			tag = ANE
+			tag = PEL
+			tag = IMG
+			tag = VAL
+			tag = ARG
+			tag = AA2
+			tag = AB0
+			tag = AA8
+			tag = ASH
+			tag = MOR
+			tag = CHI
+			tag = HOL
+			tag = KOT
+			tag = MIN
+			tag = LIL
+			tag = GOB
+			tag = RIE
+			tag = GEA
+		}
+	}
+	
+	abilities = {
+		ab_11_1 = {
+			yearly_corruption = -0.1
+		}
+		ab_11_1 = {
+			leader_naval_fire = 1
+		}
+		ab_11_3 = {
+			governing_capacity_modifier = 0.15
+		}
+		ab_11_4 = {
+			global_foreign_trade_power = 0.1
+		}
+		ab_11_5 = {
+			num_accepted_cultures = 1
+		}
+		ab_11_6 = {
+			diplomatic_upkeep = 1
+		}
+		ab_11_7 = {
+			trade_steering = 0.15
+		}
+		ab_11_8 = {
+			global_ship_trade_power = 0.15
+		}
+		ab_11_9 = {
+			global_tax_modifier = 0.10
+		}
+		ab_11_10 = {
+			reinforce_speed = 0.25
+		}
+		ab_11_11 = {
+			yearly_army_professionalism = 0.015
+		}
+	}
 
 	#Bonuses:
 	#1 Visit island haven of Eyevea - yearly_corruption = -0.1
@@ -1071,8 +1206,6 @@ es_age_of_empires = {
 	#10 Study Necromacy - reinforce_speed = 0.25
 	#11 Reorganise Army - yearly_army_professionalism = 0.015
 	
-	#5
-	#Conscription Center - 110
 }
 
 es_age_of_internal_conflicts = {
@@ -1098,6 +1231,12 @@ es_age_of_internal_conflicts = {
 		war_exhaustion = -1
 	}
 	
+	objectives = {
+	}
+	
+	abilities = {
+	}
+	
 	### Age 12 - Age of Internal Conflicts
 
 	#Goals:
@@ -1105,7 +1244,7 @@ es_age_of_internal_conflicts = {
 	#2 Conquer Akavir??
 	#3 Have a regent rule
 	#4 hre_size
-	#5 
+	#5 is_in_coalition_war
 	#6 
 	#7
 
@@ -1147,6 +1286,12 @@ es_age_of_unification = {
 		execute_rebel_acceptance_command = -10
 		seat_in_parliament = -5
 		war_exhaustion = -1
+	}
+	
+	objectives = {
+	}
+	
+	abilities = {
 	}
 	
 	### Age 13 - Age of Unification 54 - 200
@@ -1199,6 +1344,12 @@ es_age_of_great_wars = {
 		war_exhaustion = -1
 	}
 	
+	objectives = {
+	}
+	
+	abilities = {
+	}
+	
 	### Age 14 - Age of Great Wars
 
 	#Goals:
@@ -1237,7 +1388,7 @@ es_age_of_great_wars = {
 #Tax Assessor - 170
 
 	
-	
+#num_of_continents = 2	
 	
 	
 	
@@ -1251,9 +1402,6 @@ es_age_of_great_wars = {
 	
 
 
-#		obj_classical_scientist = {
-#			advisor = natural_scientist
-#		}
 #		obj_classical_prestige = {
 #			prestige = 90
 #		}
@@ -1265,9 +1413,7 @@ es_age_of_great_wars = {
 #				amount = 20
 #			}
 #		}
-#		obj_classical_income = {
-#			monthly_income = 50
-#		}
+
 #		
 #		obj_lateclassical_unite_culture = {
 #			is_subject = no
@@ -1277,9 +1423,6 @@ es_age_of_great_wars = {
 #		obj_lateclassical_general = {
 #			has_leader_with = { shock = 4 }
 #		}
-#		obj_lateclassical_50_years_of_peace = {
-#			NOT = { had_recent_war = 50 }
-#		}
 #		obj_lateclassical_low_autonomy = {
 #			all_owned_province = {
 #				NOT = { local_autonomy = 30 }
@@ -1288,21 +1431,7 @@ es_age_of_great_wars = {
 #		obj_lateclassical_treasury = {
 #			treasury = 5000
 #		}
-#		obj_lateclassical_manpower_limit = {	
-#			manpower_percentage = 0.99
-#		}
-#	
-#		obj_darkage_no_devastation = {
-#			all_owned_province = {
-#				NOT = { devastation = 1 }
-#			}
-#		}
-#		obj_darkage_win_wars = {
-#			check_variable = {
-#				which = num_of_wars_won
-#				value = 5
-#			}
-#		}
+		
 #		obj_darkage_emperor_of_china = {
 #			is_emperor_of_china = yes
 #			imperial_mandate = 50
@@ -1313,12 +1442,7 @@ es_age_of_great_wars = {
 #			any_owned_province = { continent = europe }
 #		}
 #		
-#		obj_feudal_vassals = {
-#			vassal = 3
-#		}
 #		obj_feudal_milmonarchleader = {
-#			mil = 5
-#			is_monarch_leader = yes
 #		}
 #		obj_feudal_loyal_nobles = {
 #			allow = {
@@ -1329,45 +1453,11 @@ es_age_of_great_wars = {
 #				loyalty = 80
 #			}
 #		}	
-#		obj_feudal_legitimacy = {
-#			allow = {
-#				NOT = { has_estate = estate_nobles }
-#			}
-#			legitimacy = 100
-#			has_reform = feudalism_reform
-#		}	
 #		obj_feudal_ports = {
 #			num_of_total_ports = 50
 #		}
-#		obj_feudal_infantry = {
-#			num_of_infantry = 50
-#		}
-#	
-#	objectives = {
-#		obj_highmiddle_vassals = {
-#			vassal = 4
-#		}
-#	
-#		obj_highmiddle_piety = {
-#			uses_piety = yes
-#			piety = 0.8
-#		}
-#		obj_highmiddle_religious_unity = {
-#			religious_unity = 1
-#		}
-#	}
 #
 #	objectives = {
-#		obj_latemiddle_pu = {
-#			personal_union  = 1
-#		}
-#		obj_latemiddle_elector = {
-#			is_elector = yes
-#		}
-#		obj_latemiddle_papalcontrol = {
-#			religion = catholic
-#			is_papal_controller = yes
-#		}
 #		obj_latemiddle_generals = {
 #			num_of_generals = 4
 #		}
