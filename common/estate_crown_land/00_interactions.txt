@@ -11,59 +11,59 @@ interaction = {
     }
     effect = {
 	    if = {
-            limit = { current_age = classical_age }
+            limit = { current_age = es_age_of_elves }
             add_years_of_estate_land_income = 3.5
         }
 		else_if = {
-            limit = { current_age = late_classical_age }
+            limit = { current_age = es_age_of_schism }
             add_years_of_estate_land_income = 3.25
         }
 		else_if = {
-            limit = { current_age = age_of_migrations }
+            limit = { current_age = es_age_of_rebellions }
             add_years_of_estate_land_income = 3.0
         }
 		else_if = {
-            limit = { current_age = dark_age }
+            limit = { current_age = es_age_of_orthodoxy }
             add_years_of_estate_land_income = 2.75
         }
 		else_if = {
-            limit = { current_age = feudal_age }
+            limit = { current_age = es_age_of_migrations }
             add_years_of_estate_land_income = 2.5
         }
 		else_if = {
-            limit = { current_age = high_middle_ages }
+            limit = { current_age = es_age_of_hordes }
             add_years_of_estate_land_income = 2.25
         }
 		else_if = {
-            limit = { current_age = late_middle_ages }
+            limit = { current_age = es_age_of_expansion }
             add_years_of_estate_land_income = 2.0
         }
 		else_if = {
-            limit = { current_age = age_of_discovery }
+            limit = { current_age = es_age_of_disasters }
             add_years_of_estate_land_income = 1.75
         }
 		else_if = {
-            limit = { current_age = age_of_reformation }
+            limit = { current_age = es_age_of_renascense }
             add_years_of_estate_land_income = 1.5
         }
 		else_if = {
-            limit = { current_age = age_of_absolutism }
+            limit = { current_age = es_age_of_invasions }
             add_years_of_estate_land_income = 1.25
         }
 		else_if = {
-            limit = { current_age = age_of_revolutions }
+            limit = { current_age = es_age_of_empires }
             add_years_of_estate_land_income = 1.0
         }
         else_if = {
-            limit = { current_age = industrial_age }
+            limit = { current_age = es_age_of_internal_conflicts }
             add_years_of_estate_land_income = 0.75
         }
         else_if = {
-            limit = { current_age = great_war_age }
+            limit = { current_age = es_age_of_unification }
             add_years_of_estate_land_income = 0.5
         }
         else_if = {
-            limit = { current_age = information_age }
+            limit = { current_age = es_age_of_great_wars }
             add_years_of_estate_land_income = 0.25
         }
 

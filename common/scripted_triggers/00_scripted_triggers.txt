@@ -1182,7 +1182,11 @@ republic_with_female_rulers_trigger = {
 
 is_absolutism_active = {
 	OR = {
-		current_age = age_of_absolutism
-		current_age = age_of_revolutions
-	}
+		current_age = es_age_of_disasters
+		current_age = es_age_of_renascense
+		current_age = es_age_of_invasions
+		current_age = es_age_of_empires
+		current_age = es_age_of_internal_conflicts
+		current_age = es_age_of_unification
+		current_age = es_age_of_great_wars
 }

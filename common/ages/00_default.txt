@@ -1219,21 +1219,59 @@ es_age_of_internal_conflicts = {
 	}
 	
 	objectives = {
+		obj_12_1 = {
+			num_of_continents = 2	
+		}
+		obj_12_2 = {
+			calc_true_if = {
+				all_owned_province = {
+					has_building = arsenal
+				}
+				amount = 35
+			}
+		}
+		obj_12_3 = {
+			hre_size = 50
+		}
+		obj_12_4 = {
+			calc_true_if = {
+				all_owned_province = {
+					has_building = canal
+				}
+				amount = 50
+			}
+		}
+		obj_12_5 = {
+			owns_or_non_sovereign_subject_of = 415		
+			owns_or_non_sovereign_subject_of = 2660
+			owns_or_non_sovereign_subject_of = 3471
+			owns_or_non_sovereign_subject_of = 1541
+			owns_or_non_sovereign_subject_of = 806
+		}
+		obj_12_6 = {
+			OR = { 
+				estate_loyalty = { estate = estate_brahmins loyalty = 75 }	
+				estate_loyalty = { estate = estate_church loyalty = 75 }	
+				estate_loyalty = { estate = estate_maratha loyalty = 75 }	
+				estate_loyalty = { estate = estate_nobles loyalty = 75 }	
+				estate_loyalty = { estate = estate_vaisyas loyalty = 75 }	
+				estate_loyalty = { estate = estate_burghers loyalty = 75 }	
+				estate_loyalty = { estate = estate_cossacks loyalty = 75 }	
+				estate_loyalty = { estate = estate_nomadic_tribes loyalty = 75 }	
+				estate_loyalty = { estate = estate_dhimmi loyalty = 75 }	
+				estate_loyalty = { estate = estate_jains loyalty = 75 }	
+				estate_loyalty = { estate = estate_rajput loyalty = 75 }	
+			}
+		}
+		obj_12_7 = {
+			all_owned_province = {
+				NOT = { local_autonomy = 25 }
+			}
+		}
 	}
 	
 	abilities = {
 	}
-	
-	### Age 12 - Age of Internal Conflicts
-
-	#Goals:
-	#1 Conquest ??/ of Nortthern Islands?
-	#2 Conquer Akavir??
-	#3 Have a regent rule
-	#4 hre_size
-	#5 is_in_coalition_war
-	#6 
-	#7
 
 	#Bonuses:
 	#1 Expand Rights of the Council - adm_advisor_cost = -0.25
@@ -1248,8 +1286,6 @@ es_age_of_internal_conflicts = {
 	#10 Open Another Dimension - land_forcelimit_modifier = 0.25
 	#11 Study Daedric Alphabet - recover_army_morale_speed = 0.05
 	
-	#6
-	#Arsenal - 120
 }
 
 es_age_of_unification = {
@@ -1276,21 +1312,49 @@ es_age_of_unification = {
 	}
 	
 	objectives = {
+		obj_13_1 = {
+			calc_true_if = {
+				all_owned_province = {
+					development = 25
+				}
+				amount = 35
+			}
+		}
+		obj_13_2 = {
+			is_subject = no
+			has_unified_culture_group = yes
+		}
+		obj_13_3 = {
+			prestige = 75
+		}
+		obj_13_4 = {
+			vvardenfell_lr = {
+				owned_by = ROOT
+			}
+		}
+		obj_13_5 = {
+			all_owned_province = {
+				OR = {
+					has_owner_accepted_culture = yes
+					culture = ROOT
+				}
+			}
+		}
+		obj_13_6 = {
+			stability = 3
+		}
+		obj_13_7 = {
+			calc_true_if = {
+				all_owned_province = {
+					has_building = town_hall
+				}
+				amount = 25
+			}
+		}
 	}
 	
 	abilities = {
 	}
-	
-	### Age 13 - Age of Unification 54 - 200
-
-	#Goals:
-	#1 Start Wars
-	#2 Have a Great City (Dev or num of buildings in a province)
-	#3 Direct Control of Vvardenfell
-	#4 
-	#5 
-	#6 
-	#7
 
 	#Bonuses:
 	#1 Organise Volunteer Army - global_regiment_recruit_speed = -0.25
@@ -1305,7 +1369,6 @@ es_age_of_unification = {
 	#10 Ban Levitation Magic - drill_gain_modifier = 0.25
 	#11  prestige_from_naval = 0.25
 	
-	#7
 }
 
 es_age_of_great_wars = {
@@ -1332,23 +1395,47 @@ es_age_of_great_wars = {
 	}
 	
 	objectives = {
+		obj_14_1 = {
+			num_of_trading_bonuses = 7
+		}
+		obj_14_2 = {
+			has_leader_with = { shock = 5 }
+		}
+		obj_14_3 = {
+			all_rival_country = {
+				NOT = { mil_tech = ROOT }
+			}
+			any_rival_country = {
+				exists = yes
+			}
+		}
+		obj_14_4 = {
+			calc_true_if = {
+				all_owned_province = {
+					has_building = university
+				}
+				amount = 25
+			}
+		}
+		obj_14_5 = {
+			num_of_total_ports = 100
+		}
+		obj_14_6 = {
+			is_great_power = yes
+			NOT = { great_power_rank = 4 }
+		}
+		obj_14_7 = {
+			calc_true_if = {
+				all_owned_province = {
+					has_building = grand_shipyard
+				}
+				amount = 25
+			}
+		}
 	}
 	
 	abilities = {
 	}
-	
-	### Age 14 - Age of Great Wars
-
-	#Goals:
-	#1 Red year Eruotion?
-	#2 Argonian Invasion
-	#3 Rise of Thalmor
-	#4 
-	#5 
-	#6 
-	#7
-	
-	#University - 140
 
 	#Bonuses:
 	#1 Negotiate with Mages Guild - artillery_bonus_vs_fort = 1
@@ -1363,96 +1450,3 @@ es_age_of_great_wars = {
 	#10 Publish Thitd Edition of Pocket Guide to the Empire - merchants = 1
 	#11 Acquire Akaviri Armory - cavalry_flanking = 0.25
 }
-
-#Stock exchange - 170
-
-#Grand Shipyard - 140
-
-#Canal - 110
-
-#Townhall - 130
-
-#Tax Assessor - 170
-
-	
-#num_of_continents = 2	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-
-#		obj_classical_prestige = {
-#			prestige = 90
-#		}
-#		obj_classical_great_cities = {
-#			calc_true_if = {
-#				all_owned_province = {
-#					development = 10
-#				}
-#				amount = 20
-#			}
-#		}
-
-#		
-#		obj_lateclassical_unite_culture = {
-#			is_subject = no
-#			has_unified_culture_group = yes
-#		}
-#		
-#		obj_lateclassical_general = {
-#			has_leader_with = { shock = 4 }
-#		}
-#		obj_lateclassical_low_autonomy = {
-#			all_owned_province = {
-#				NOT = { local_autonomy = 30 }
-#			}
-#		}
-#		obj_lateclassical_treasury = {
-#			treasury = 5000
-#		}
-		
-#		obj_darkage_emperor_of_china = {
-#			is_emperor_of_china = yes
-#			imperial_mandate = 50
-#		}
-#	objectives = {
-#		obj_feudal_horde_in_europe = {
-#			is_nomad = yes
-#			any_owned_province = { continent = europe }
-#		}
-#		
-#		obj_feudal_milmonarchleader = {
-#		}
-#		obj_feudal_loyal_nobles = {
-#			allow = {
-#				has_estate = estate_nobles
-#			}
-#			estate_loyalty = {
-#				estate = estate_nobles
-#				loyalty = 80
-#			}
-#		}	
-#		obj_feudal_ports = {
-#			num_of_total_ports = 50
-#		}
-#
-#	objectives = {
-#		obj_latemiddle_generals = {
-#			num_of_generals = 4
-#		}
-#		obj_latemiddle_large_trade_fleet = {
-#			all_rival_country = {
-#				NOT = {
-#					num_of_light_ship = ROOT
-#				}
-#			}
-#		}
-#	}
