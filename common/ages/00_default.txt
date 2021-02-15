@@ -350,39 +350,39 @@ es_age_of_rebellions = {
 	}
 	
 	abilities = {
-		ab_3_1 = {
+		ab_3_1 = { modifier = {
 			global_manpower_modifier = 0.15
 		}
-		ab_3_2 = {
+		ab_3_2 = { modifier = {
 			global_colonial_growth = 25
-		}
-		ab_3_3 = {
+		} ai_will_do = { factor = 1 } }
+		ab_3_3 = { modifier = {
 			leader_land_manuever = 1
-		}
-		ab_3_4 = {
+		} ai_will_do = { factor = 1 } }
+		ab_3_4 = { modifier = {
 			light_ship_power = 0.10
-		}
-		ab_3_5 = {
+		} ai_will_do = { factor = 1 } }
+		ab_3_5 = { modifier = {
 			rebel_support_efficiency = 0.25
-		}
-		ab_3_6 = {
+		} ai_will_do = { factor = 1 } }
+		ab_3_6 = { modifier = {
 			defensiveness = 0.15
-		}
-		ab_3_7 = {
+		} ai_will_do = { factor = 1 } }
+		ab_3_7 = { modifier = {
 			prestige_decay = -0.010
-		}
-		ab_3_8 = {
+		} ai_will_do = { factor = 1 } }
+		ab_3_8 = { modifier = {
 			unjustified_demands = -0.15
-		}
-		ab_3_9 = {
+		} ai_will_do = { factor = 1 } }
+		ab_3_9 = { modifier = {
 			vassal_forcelimit_bonus = 0.25
-		}
-		ab_3_10 = {
+		} ai_will_do = { factor = 1 } }
+		ab_3_10 = { modifier = {
 			movement_speed = 0.10
-		}
-		ab_3_11 = {
+		} ai_will_do = { factor = 1 } }
+		ab_3_11 = { modifier = {
 			privateer_efficiency = 0.25
-		}
+		} ai_will_do = { factor = 1 } }
 	}
 	
 	religious_conflicts = yes
@@ -441,39 +441,39 @@ es_age_of_orthodoxy = {
 	}
 	
 	abilities = {
-		ab_4_1 = {
+		ab_4_1 = { modifier = {
 			monarch_admin_power = 1
-		}
-		ab_4_2 = {
+		} ai_will_do = { factor = 1 } }
+		ab_4_2 = { modifier = {
 			global_unrest = -1.5
-		}
-		ab_4_4 = {
+		} ai_will_do = { factor = 1 } }
+		ab_4_4 = { modifier = {
 			global_missionary_strength = 0.015
-		}
-		ab_4_3 = {
+		} ai_will_do = { factor = 1 } }
+		ab_4_3 = { modifier = {
 			build_cost = -0.15
-		}
-		ab_4_5 = {
+		} ai_will_do = { factor = 1 } }
+		ab_4_5 = { modifier = {
 			missionaries = 1
-		}
-		ab_4_6 = {
+		} ai_will_do = { factor = 1 } }
+		ab_4_6 = { modifier = {
 			core_decay_on_your_own = -0.35
-		}
-		ab_4_7 = {
+		} ai_will_do = { factor = 1 } }
+		ab_4_7 = { modifier = {
 			leader_naval_manuever = 1
-		}
-		ab_4_8 = {
+		} ai_will_do = { factor = 1 } }
+		ab_4_8 = { modifier = {
 			idea_cost = -0.15
-		}
-		ab_4_9 = {
+		} ai_will_do = { factor = 1 } }
+		ab_4_9 = { modifier = {
 			war_exhaustion_cost = -0.15 
-		}
-		ab_4_10 = {
+		} ai_will_do = { factor = 1 } }
+		ab_4_10 = { modifier = {
 			cavalry_power = 0.10
-		}
-		ab_4_11 = {
+		} ai_will_do = { factor = 1 } }
+		ab_4_11 = { modifier = {
 			fire_damage_received = -0.10
-		}
+		} ai_will_do = { factor = 1 } }
 	}
 }
 
@@ -535,39 +535,39 @@ es_age_of_migrations = {
 	}
 	
 	abilities = {
-		ab_5_1 = {
+		ab_5_1 = { modifier = {
 			warscore_cost_vs_other_religion = -0.15
-		}
-		ab_5_2 = {
+		} ai_will_do = { factor = 1 } }
+		ab_5_2 = { modifier = {
 			leader_siege = 1
-		}
-		ab_5_3 = {
+		} ai_will_do = { factor = 1 } }
+		ab_5_3 = { modifier = {
 			spy_offence = 0.25
-		}
-		ab_5_4 = {
+		} ai_will_do = { factor = 1 } }
+		ab_5_4 = { modifier = {
 			mil_tech_cost_modifier = -0.10
-		}
-		ab_5_5 = {
+		} ai_will_do = { factor = 1 } }
+		ab_5_5 = { modifier = {
 			naval_tradition_from_battle = 0.25
-		}
-		ab_5_6 = {
+		} ai_will_do = { factor = 1 } }
+		ab_5_6 = { modifier = {
 			colonist_placement_chance = 0.05
-		}
-		ab_5_7 = {
+		} ai_will_do = { factor = 1 } }
+		ab_5_7 = { modifier = {
 			tolerance_heathen = 2.5
-		}
-		ab_5_8 = {
+		} ai_will_do = { factor = 1 } }
+		ab_5_8 = { modifier = {
 			development_cost = -0.25
-		}
-		ab_5_9 = {
+		} ai_will_do = { factor = 1 } }
+		ab_5_9 = { modifier = {
 			merc_maintenance_modifier = -0.15
-		}
-		ab_5_10 = {
+		} ai_will_do = { factor = 1 } }
+		ab_5_10 = { modifier = {
 			fort_maintenance_modifier = -0.15
-		}
-		ab_5_11 = {
+		} ai_will_do = { factor = 1 } }
+		ab_5_11 = { modifier = {
 			inflation_action_cost = -0.5
-		}
+		} ai_will_do = { factor = 1 } }
 	}
 }
 
@@ -627,39 +627,39 @@ es_age_of_hordes = {
 	}
 	
 	abilities = {
-		ab_6_1 = {
+		ab_6_1 = { modifier = {
 			raze_power_gain = 0.5
-		}
-		ab_6_2 = {
+		} ai_will_do = { factor = 1 } }
+		ab_6_2 = { modifier = {
 			land_morale = 0.10
-		}
-		ab_6_3 = {
+		} ai_will_do = { factor = 1 } }
+		ab_6_3 = { modifier = {
 			prestige_from_land = 0.25
-		}
-		ab_6_4 = {
+		} ai_will_do = { factor = 1 } }
+		ab_6_4 = { modifier = {
 			discovered_relations_impact = -0.5
-		}
-		ab_6_5 = {	
+		} ai_will_do = { factor = 1 } }
+		ab_6_5 = { modifier = {
 			leader_land_fire = 1
-		}
-		ab_6_6 = {
+		} ai_will_do = { factor = 1 } }
+		ab_6_6 = { modifier = {
 			global_heretic_missionary_strength = 0.015
-		}
-		ab_6_7 = {
+		} ai_will_do = { factor = 1 } }
+		ab_6_7 = { modifier = {
 			infantry_power = 0.1
-		}
-		ab_6_8 = {
+		} ai_will_do = { factor = 1 } }
+		ab_6_8 = { modifier = {
 			capture_ship_chance = 0.25
-		}
-		ab_6_9 = {
+		} ai_will_do = { factor = 1 } }
+		ab_6_9 = { modifier = {
 			naval_attrition = -0.25
-		}
-		ab_6_10 = {
+		} ai_will_do = { factor = 1 } }
+		ab_6_10 = { modifier = {
 			rival_change_cost = -0.5
-		}
-		ab_6_11 = {
+		} ai_will_do = { factor = 1 } }
+		ab_6_11 = { modifier = {
 			siege_ability = 0.15
-		}
+		} ai_will_do = { factor = 1 } }
 	}
 }
 
@@ -707,43 +707,43 @@ es_age_of_expansion = {
 	}
 	
 	abilities = {
-		ab_7_1 = {
+		ab_7_1 = { modifier = {
 			free_leader_pool = 1
-		}
-		ab_7_2 = {
+		} ai_will_do = { factor = 1 } }
+		ab_7_2 = { modifier = {
 			global_trade_goods_size_modifier = 0.1
-		}
-		ab_7_3 = {
+		} ai_will_do = { factor = 1 } }
+		ab_7_3 = { modifier = {
 			dip_tech_cost_modifier = -0.1
-		}
-		ab_7_4 = {
+		} ai_will_do = { factor = 1 } }
+		ab_7_4 = { modifier = {
 			diplomatic_annexation_cost = -0.15
-		}
-		ab_7_5 = {
+		} ai_will_do = { factor = 1 } }
+		ab_7_5 = { modifier = {
 			legitimacy = 0.25
 			republican_tradition = 0.15
 			devotion = 0.35
 			horde_unity = 0.35
 			meritocracy = 0.25
-		}
-		ab_7_6 = {
+		} ai_will_do = { factor = 1 } }
+		ab_7_6 = { modifier = {
 			leader_land_shock = 1
-		}
-		ab_7_7 = {
+		} ai_will_do = { factor = 1 } }
+		ab_7_7 = { modifier = {
 			harsh_treatment_cost = -0.25
-		}
-		ab_7_8 = {
+		} ai_will_do = { factor = 1 } }
+		ab_7_8 = { modifier = {
 			years_of_nationalism = -5
-		}
-		ab_7_9 = {
+		} ai_will_do = { factor = 1 } }
+		ab_7_9 = { modifier = {
 			trade_efficiency = 0.10
-		}
-		ab_7_10 = {
+		} ai_will_do = { factor = 1 } }
+		ab_7_10 = { modifier = {
 			trade_range_modifier = 0.25
-		}
-		ab_7_11 = {
+		} ai_will_do = { factor = 1 } }
+		ab_7_11 = { modifier = {
 			global_spy_defence = 0.15
-		}
+		} ai_will_do = { factor = 1 } }
 	}
 	
 }
@@ -805,39 +805,39 @@ es_age_of_disasters = {
 	}
 	
 	abilities = {
-		ab_8_1 = {
+		ab_8_1 = { modifier = {
 			global_institution_spread = 0.15
-		}
-		ab_8_2 = {
+		} ai_will_do = { factor = 1 } }
+		ab_8_2 = { modifier = {
 			manpower_recovery_speed = 0.15
-		}
-		ab_8_3 = {
+		} ai_will_do = { factor = 1 } }
+		ab_8_3 = { modifier = {
 			garrison_size = 0.25
-		}
-		ab_8_4 = {
+		} ai_will_do = { factor = 1 } }
+		ab_8_4 = { modifier = {
 			loot_amount = 0.25
-		}
-		ab_8_5 = {
+		} ai_will_do = { factor = 1 } }
+		ab_8_5 = { modifier = {
 			discipline = 0.10
-		}
-		ab_8_6 = {
+		} ai_will_do = { factor = 1 } }
+		ab_8_6 = { modifier = {
 			advisor_cost = -0.15
-		}
-		ab_8_7 = {
+		} ai_will_do = { factor = 1 } }
+		ab_8_7 = { modifier = {
 			improve_relation_modifier = 0.25
-		}
-		ab_8_8 = {
+		} ai_will_do = { factor = 1 } }
+		ab_8_8 = { modifier = {
 			free_policy = 1
-		}
-		ab_8_9 = {
+		} ai_will_do = { factor = 1 } }
+		ab_8_9 = { modifier = {
 			autonomy_change_time = -0.25 
-		}
-		ab_8_10 = {
+		} ai_will_do = { factor = 1 } }
+		ab_8_10 = { modifier = {
 			prestige = 0.25
-		}
-		ab_8_11 = {
+		} ai_will_do = { factor = 1 } }
+		ab_8_11 = { modifier = {
 			reduced_liberty_desire = 10
-		}
+		} ai_will_do = { factor = 1 } }
 	}
 
 }
@@ -935,39 +935,39 @@ es_age_of_renascense = {
 	}
 
 	abilities = {
-		ab_9_1 = {
+		ab_9_1 = { modifier = {
 			embracement_cost = -0.25
-		}
-		ab_9_2 = {
+		} ai_will_do = { factor = 1 } }
+		ab_9_2 = { modifier = {
 			technology_cost = -0.10
-		}
-		ab_9_3 = {
+		} ai_will_do = { factor = 1 } }
+		ab_9_3 = { modifier = {
 			diplomats = 1
-		}
-		ab_9_4 = {
+		} ai_will_do = { factor = 1 } }
+		ab_9_4 = { modifier = {
 			land_morale = 0.10
-		}
-		ab_9_5 = {
+		} ai_will_do = { factor = 1 } }
+		ab_9_5 = { modifier = {
 			caravan_power = 0.15
-		}
-		ab_9_6 = {
+		} ai_will_do = { factor = 1 } }
+		ab_9_6 = { modifier = {
 			global_own_trade_power = 0.1
-		}
-		ab_9_7 = {
+		} ai_will_do = { factor = 1 } }
+		ab_9_7 = { modifier = {
 			fire_damage = 0.1
-		}
-		ab_9_8 = {
+		} ai_will_do = { factor = 1 } }
+		ab_9_8 = { modifier = {
 			diplomatic_reputation = 1
-		}
-		ab_9_9 = {
+		} ai_will_do = { factor = 1 } }
+		ab_9_9 = { modifier = {
 			rival_border_fort_maintenance = -0.25
-		}
-		ab_9_10 = {
+		} ai_will_do = { factor = 1 } }
+		ab_9_10 = { modifier = {
 			tolerance_own = 1
-		}
-		ab_9_11 = {
+		} ai_will_do = { factor = 1 } }
+		ab_9_11 = { modifier = {
 			sailor_maintenance_modifer = -0.25
-		}
+		} ai_will_do = { factor = 1 } }
 	}
 	
 }
@@ -1028,39 +1028,39 @@ es_age_of_invasions = {
 	}
 	
 	abilities = {
-		ab_10_1 = {
+		ab_10_1 = { modifier = {
 			prestige_per_development_from_conversion = 0.1
-		}
-		ab_10_2 = {
+		} ai_will_do = { factor = 1 } }
+		ab_10_2 = { modifier = {
 			ae_impact = -0.10
-		}
-		ab_10_3 = {
+		} ai_will_do = { factor = 1 } }
+		ab_10_3 = { modifier = {
 			global_autonomy = -0.05
-		}
-		ab_10_4 = {
+		} ai_will_do = { factor = 1 } }
+		ab_10_4 = { modifier = {
 			global_regiment_cost = -0.15
-		}
-		ab_10_5 = {
+		} ai_will_do = { factor = 1 } }
+		ab_10_5 = { modifier = {
 			mercenary_cost = -0.25
-		}
-		ab_10_6 = {
+		} ai_will_do = { factor = 1 } }
+		ab_10_6 = { modifier = {
 			culture_conversion_cost = -0.25
-		}
-		ab_10_7 = {
+		} ai_will_do = { factor = 1 } }
+		ab_10_7 = { modifier = {
 			liberty_desire_from_subject_development = -0.15
-		}
-		ab_10_8 = {
+		} ai_will_do = { factor = 1 } }
+		ab_10_8 = { modifier = {
 			mercenary_discipline = 0.05
-		}
-		ab_10_9 = {
+		} ai_will_do = { factor = 1 } }
+		ab_10_9 = { modifier = {
 			shock_damage = 0.10
-		}
-		ab_10_10 = {
+		} ai_will_do = { factor = 1 } }
+		ab_10_10 = { modifier = {
 			advisor_pool = 1
-		}
-		ab_10_11 = {
+		} ai_will_do = { factor = 1 } }
+		ab_10_11 = { modifier = {
 			state_maintenance_modifier = -0.25
-		}
+		} ai_will_do = { factor = 1 } }
 	}
 
 }
@@ -1117,80 +1117,82 @@ es_age_of_empires = {
 			}
 		}
 		obj_11_7 = {
-			tag = SUM
-			tag = AYL
-			tag = COE
-			tag = HAM
-			tag = SKY
-			tag = SKA
-			tag = WIN
-			tag = FAL
-			tag = DWE
-			tag = HIG
-			tag = REA
-			tag = ALE
-			tag = CYR
-			tag = NIB
-			tag = COL
-			tag = KEP
-			tag = ORS
-			tag = SOR
-			tag = ELS
-			tag = ANE
-			tag = PEL
-			tag = IMG
-			tag = VAL
-			tag = ARG
-			tag = AA2
-			tag = AB0
-			tag = AA8
-			tag = ASH
-			tag = MOR
-			tag = CHI
-			tag = HOL
-			tag = KOT
-			tag = MIN
-			tag = LIL
-			tag = GOB
-			tag = RIE
-			tag = GEA
+			OR = {
+				tag = SUM
+				tag = AYL
+				tag = COE
+				tag = HAM
+				tag = SKY
+				tag = SKA
+				tag = WIN
+				tag = FAL
+				tag = DWE
+				tag = HIG
+				tag = REA
+				tag = ALE
+				tag = CYR
+				tag = NIB
+				tag = COL
+				tag = KEP
+				tag = ORS
+				tag = SOR
+				tag = ELS
+				tag = ANE
+				tag = PEL
+				tag = IMG
+				tag = VAL
+				tag = ARG
+				tag = AA2
+				tag = AB0
+				tag = AA8
+				tag = ASH
+				tag = MOR
+				tag = CHI
+				tag = HOL
+				tag = KOT
+				tag = MIN
+				tag = LIL
+				tag = GOB
+				tag = RIE
+				tag = GEA
+			}
 		}
 	}
 	
 	abilities = {
-		ab_11_1 = {
+		ab_11_1 = { modifier = {
 			yearly_corruption = -0.1
-		}
-		ab_11_1 = {
+		} ai_will_do = { factor = 1 } }
+		ab_11_2 = { modifier = {
 			leader_naval_fire = 1
-		}
-		ab_11_3 = {
+		} ai_will_do = { factor = 1 } }
+		ab_11_3 = { modifier = {
 			governing_capacity_modifier = 0.15
-		}
-		ab_11_4 = {
+		} ai_will_do = { factor = 1 } }
+		ab_11_4 = { modifier = {
 			global_foreign_trade_power = 0.1
-		}
-		ab_11_5 = {
+		} ai_will_do = { factor = 1 } }
+		ab_11_5 = { modifier = {
 			num_accepted_cultures = 1
-		}
-		ab_11_6 = {
+		} ai_will_do = { factor = 1 } }
+		ab_11_6 = { modifier = {
 			diplomatic_upkeep = 1
-		}
-		ab_11_7 = {
+		} ai_will_do = { factor = 1 } }
+		ab_11_7 = { modifier = {
 			trade_steering = 0.15
-		}
-		ab_11_8 = {
+		} ai_will_do = { factor = 1 } }
+		ab_11_8 = { modifier = {
 			global_ship_trade_power = 0.15
-		}
-		ab_11_9 = {
+		} ai_will_do = { factor = 1 } }
+		ab_11_9 = { modifier = {
 			global_tax_modifier = 0.10
-		}
-		ab_11_10 = {
+		} ai_will_do = { factor = 1 } }
+		ab_11_10 = { modifier = {
 			reinforce_speed = 0.25
-		}
-		ab_11_11 = {
+		} ai_will_do = { factor = 1 } }
+		ab_11_11 = { modifier = {
 			yearly_army_professionalism = 0.015
-		}
+		} ai_will_do = { factor = 1 } }
 	}
 	
 }
@@ -1271,20 +1273,40 @@ es_age_of_internal_conflicts = {
 	}
 	
 	abilities = {
+		ab_12_1 = { modifier = {
+			adm_advisor_cost = -0.25
+		} ai_will_do = { factor = 1 } }
+		ab_12_2 = { modifier = {
+			min_autonomy_in_territories = -0.1
+		} ai_will_do = { factor = 1 } }
+		ab_12_3 = { modifier = {
+			heir_chance = 0.5
+		} ai_will_do = { factor = 1 } }
+		ab_12_4 = { modifier = {
+			naval_maintenance_modifier = -0.25
+		} ai_will_do = { factor = 1 } }
+		ab_12_5 = { modifier = {
+			monarch_military_power = 1
+		} ai_will_do = { factor = 1 } }
+		ab_12_6 = { modifier = {
+			promote_culture_cost = -0.50
+		} ai_will_do = { factor = 1 } }
+		ab_12_7 = { modifier = {
+			artillery_power = 0.10
+		} ai_will_do = { factor = 1 } }
+		ab_12_8 = { modifier = {
+			hostile_attrition = 1
+		} ai_will_do = { factor = 1 } }
+		ab_12_9 = { modifier = {
+			global_sailors_modifier = 0.25
+		} ai_will_do = { factor = 1 } }
+		ab_12_10 = { modifier = {
+			land_forcelimit_modifier = 0.25
+		} ai_will_do = { factor = 1 } }
+		ab_12_11 = { modifier = {
+			recover_army_morale_speed = 0.05
+		} ai_will_do = { factor = 1 } }
 	}
-
-	#Bonuses:
-	#1 Expand Rights of the Council - adm_advisor_cost = -0.25
-	#2 Curtail Minor Landowners - min_autonomy_in_territories = -0.1
-	#3 Acquire Foreign Concubine - heir_chance = 0.5
-	#4 Negotiate with Red Sabre Fleet - naval_maintenance_modifier = -0.25
-	#5 Control the Council - monarch_military_power = 1
-	#6 Publish Second Edition of Pocket Guide to the Empire - promote_culture_cost = -0.50
-	#7 Write the Dragonborn Book - artillery_power = 0.10
-	#8 Acquire Staff of Chaos - hostile_attrition = 1
-	#9 Build Harbors - global_sailors_modifier = 0.25
-	#10 Open Another Dimension - land_forcelimit_modifier = 0.25
-	#11 Study Daedric Alphabet - recover_army_morale_speed = 0.05
 	
 }
 
@@ -1354,20 +1376,40 @@ es_age_of_unification = {
 	}
 	
 	abilities = {
+		ab_13_1 = { modifier = {
+			global_regiment_recruit_speed = -0.25
+		} ai_will_do = { factor = 1 } }
+		ab_13_2 = { modifier = {
+			dip_advisor_cost = -0.15
+		} ai_will_do = { factor = 1 } }
+		ab_13_3 = { modifier = {
+			tolerance_heretic = 2.5
+		} ai_will_do = { factor = 1 } }
+		ab_13_4 = { modifier = {
+			administrative_efficiency = 0.10
+		} ai_will_do = { factor = 1 } }
+		ab_13_5 = { modifier = {
+			shock_damage_received = -0.10
+		} ai_will_do = { factor = 1 } }
+		ab_13_6 = { modifier = {
+			institution_spread_from_true_faith = 0.15
+		} ai_will_do = { factor = 1 } }
+		ab_13_7 = { modifier = {
+			global_prov_trade_power_modifier = 0.1
+		} ai_will_do = { factor = 1 } }
+		ab_13_8 = { modifier = {
+			reinforce_cost_modifier = -0.25
+		} ai_will_do = { factor = 1 } }
+		ab_13_9 = { modifier = {
+			sunk_ship_morale_hit_recieved = -0.15
+		} ai_will_do = { factor = 1 } }
+		ab_13_10 = { modifier = {
+			drill_gain_modifier = 0.25
+		} ai_will_do = { factor = 1 } }
+		ab_13_11 = { modifier = {
+			prestige_from_naval = 0.25
+		} ai_will_do = { factor = 1 } }
 	}
-
-	#Bonuses:
-	#1 Organise Volunteer Army - global_regiment_recruit_speed = -0.25
-	#2 Get Vampire in Royal Court - dip_advisor_cost = -0.15
-	#3 Publish "A Social History of Cyrodiil" - tolerance_heretic = 2.5
-	#4 Make a Deal with Daedra - administrative_efficiency = 0.10
-	#5 Support Orcish Minority - shock_damage_received = -0.10
-	#6 Search for Azura's Star - institution_spread_from_true_faith = 0.15
-	#7 global_prov_trade_power_modifier = 0.1
-	#8 Negotiate with Sentinels - reinforce_cost_modifier = -0.25
-	#9 sunk_ship_morale_hit_recieved = -0.15
-	#10 Ban Levitation Magic - drill_gain_modifier = 0.25
-	#11  prestige_from_naval = 0.25
 	
 }
 
@@ -1435,18 +1477,39 @@ es_age_of_great_wars = {
 	}
 	
 	abilities = {
+		ab_14_1 = { modifier = {
+			artillery_bonus_vs_fort = 1
+		} ai_will_do = { factor = 1 } }
+		ab_14_2 = { modifier = {
+			province_warscore_cost = -0.15
+		} ai_will_do = { factor = 1 } }
+		ab_14_3 = { modifier = {
+			land_maintenance_modifier = -0.25
+		} ai_will_do = { factor = 1 } }
+		ab_14_4 = { modifier = {
+			navy_tradition_decay = -0.01
+		} ai_will_do = { factor = 1 } }
+		ab_14_5 = { modifier = {
+			global_tariffs = 0.25
+		} ai_will_do = { factor = 1 } }
+		ab_14_6 = { modifier = {
+			naval_morale = 0.10
+		} ai_will_do = { factor = 1 } }
+		ab_14_7 = { modifier = {
+			backrow_artillery_damage = 0.25
+		} ai_will_do = { factor = 1 } }
+		ab_14_8 = { modifier = {
+			leader_naval_shock = 1
+		} ai_will_do = { factor = 1 } }
+		ab_14_9 = { modifier = {
+			mil_advisor_cost = -0.15
+		} ai_will_do = { factor = 1 } }
+		ab_14_10 = { modifier = {
+			merchants = 1
+		} ai_will_do = { factor = 1 } }
+		ab_14_11 = { modifier = {
+			cavalry_flanking = 0.25
+		} ai_will_do = { factor = 1 } }
 	}
 
-	#Bonuses:
-	#1 Negotiate with Mages Guild - artillery_bonus_vs_fort = 1
-	#2 province_warscore_cost = -0.15
-	#3 Found a Knight Order - land_maintenance_modifier = -0.25
-	#4 navy_tradition_decay = -0.01
-	#5 global_tariffs = 0.25
-	#6 naval_morale = 0.10
-	#7 Study the Nirnroot - backrow_artillery_damage = 0.25
-	#8 leader_naval_shock = 1
-	#9 mil_advisor_cost = -0.15
-	#10 Publish Thitd Edition of Pocket Guide to the Empire - merchants = 1
-	#11 Acquire Akaviri Armory - cavalry_flanking = 0.25
 }
