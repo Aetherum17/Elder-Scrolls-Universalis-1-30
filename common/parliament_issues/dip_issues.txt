@@ -163,11 +163,16 @@ dip_issue_7 = {
 	category = 2		
 
 	allow = {
-		always = yes
+		navy_size_percentage = 0.75
 	}
 	
 	effect = {
-		navy_size_percentage = 0.75
+		random_owned_province = {
+			limit = { has_port = yes }
+			ROOT = {
+				heavy_ship = PREV
+			}
+		}
 	}
 	
 	modifier = {

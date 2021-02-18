@@ -352,7 +352,7 @@ es_age_of_rebellions = {
 	abilities = {
 		ab_3_1 = { modifier = {
 			global_manpower_modifier = 0.15
-		}
+		} ai_will_do = { factor = 1 } }
 		ab_3_2 = { modifier = {
 			global_colonial_growth = 25
 		} ai_will_do = { factor = 1 } }
