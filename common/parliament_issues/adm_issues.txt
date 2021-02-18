@@ -188,14 +188,14 @@ adm_issue_8 = {
 
 	allow = {
 		any_owned_province = {
-			local_unrest = 1.0
+			unrest = 1.0
 		}
 	}
 	
 	effect = {
 		random_owned_province = {
 			limit = {
-				local_unrest = 1.0
+				unrest = 1.0
 			}
 			add_unrest = -10
 		}
