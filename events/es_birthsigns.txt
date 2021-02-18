@@ -8,21 +8,7 @@ country_event = {
 		if = {
 			limit = {
 				NOT = { 
-					OR = {
-						has_ruler_flag = birthsign_ritual
-						has_ruler_flag = birthsign_lover
-						has_ruler_flag = birthsign_lord
-						has_ruler_flag = birthsign_mage
-						has_ruler_flag = birthsign_shadow
-						has_ruler_flag = birthsign_steed
-						has_ruler_flag = birthsign_apprentice
-						has_ruler_flag = birthsign_warrior
-						has_ruler_flag = birthsign_lady
-						has_ruler_flag = birthsign_tower
-						has_ruler_flag = birthsign_atronoch
-						has_ruler_flag = birthsign_thief
-						has_ruler_flag = birthsign_serpant
-					}
+					has_birthsign_trigger = yes
 				 }
 			}
 			clear_birthsigns_effect = yes

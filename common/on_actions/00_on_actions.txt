@@ -75,8 +75,6 @@ on_startup = {
 		es_holidays.62
 		es_holidays.63
 
-		es_birthsigns.0
-
 	}
 	
 	if = { limit = { NOT = { has_global_flag = on_action_set_up_global_flag } }
@@ -184,6 +182,9 @@ on_startup = {
 	set_country_flag = on_action_setup_flag
 	}
 	initialize_schools_effect = yes
+	
+	country_event = { id = es_birthsigns.0 days = 1}
+	
 }
 
 # country
@@ -784,8 +785,20 @@ on_new_monarch = {
 		50 = dynastic_events.5
 		25 = harem_events.7
 	}
-	country_event = {
-		id = es_birthsigns.1	# Assign Ruler Birthsign
+	if = {
+		limit = {
+			government = republic
+		}
+		country_event = {
+			id = es_birthsigns.0	# Assign random birthsign to republic
+			days = 0
+		}
+	}
+	else = {
+		country_event = {
+			id = es_birthsigns.1	# Assign Ruler Birthsign
+			days = 0
+		}
 	}
 }
 

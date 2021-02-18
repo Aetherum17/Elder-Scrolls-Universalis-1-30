@@ -1059,11 +1059,11 @@ country_decisions = {
 			NOT = { tag = TAM }
 			NOT = { has_country_flag = formed_cyr_flag }
 			OR = {
-			primary_culture = imperial
-			AND = {
-			tag = ORD
-			NOT = { religion = marukhism }
-			}
+				primary_culture = imperial
+				AND = {
+					tag = ORD
+					NOT = { religion = marukhism }
+				}
 			}
 		}
 		provinces_to_highlight = {

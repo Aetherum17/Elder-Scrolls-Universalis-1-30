@@ -89,7 +89,7 @@ entity = {
 
 	attach = { 
 		Right_hand_node = "nord_falchion" 
-                Left_hand_node = "nord_shield" 
+		Left_hand_node = "nord_shield" 
  
 	}
 }
@@ -149,7 +149,7 @@ entity = {
 
 	attach = { 
 		Right_hand_node = "Dali_spear" 
-                Left_hand_node = "Qi_heavyshield"
+		Left_hand_node = "Qi_heavyshield"
 	}
 }
 
@@ -164,7 +164,7 @@ entity = {
 
 	attach = { 
 		Right_hand_node = "Dali_spear" 
-                Left_hand_node = "Qi_heavyshield"
+		Left_hand_node = "Qi_heavyshield"
 	}
 }
 
@@ -179,7 +179,7 @@ entity = {
 
 	attach = { 
 		Right_hand_node = "Dali_spear" 
-                Left_hand_node = "Qi_heavyshield"
+		Left_hand_node = "Qi_heavyshield"
 	}
 }
 
@@ -194,7 +194,7 @@ entity = {
 
 	attach = { 
 		Right_hand_node = "Dali_spear" 
-                Left_hand_node = "Qi_heavyshield"
+		Left_hand_node = "Qi_heavyshield"
 	}
 }
 
@@ -254,7 +254,7 @@ entity = {
 
 	attach = { 
 		Right_hand_node = "nord_falchion" 
-        Left_hand_node = "khajiit_shield"
+		Left_hand_node = "khajiit_shield"
 	}
 }
 
@@ -269,7 +269,7 @@ entity = {
 
 	attach = { 
 		Right_hand_node = "nord_falchion" 
-        Left_hand_node = "khajiit_shield"
+		Left_hand_node = "khajiit_shield"
 	}
 }
 
@@ -284,7 +284,7 @@ entity = {
 
 	attach = { 
 		Right_hand_node = "nord_falchion" 
-        Left_hand_node = "indian_generic_01_type1_shield"
+		Left_hand_node = "indian_generic_01_type1_shield"
 	}
 }
 
@@ -313,7 +313,7 @@ entity = {
 	
 	attach = { 
 		Right_hand_node = "dwemer_spear" 
-        Left_hand_node = "dwemer_shield" 
+		Left_hand_node = "dwemer_shield" 
 	}
 	
 }
@@ -339,7 +339,7 @@ entity = {
 
 	state = { name = "idle" 		animation = "idle" }
 	state = { name = "walk" 		animation = "walk"  animation_speed = 2.2}
-    state = { name = "attack"		animation = "attack" animation_speed = 1.5 }
+	state = { name = "attack"		animation = "attack" animation_speed = 1.5 }
 	state = { name = "retreat"		animation = "retreat"  animation_speed = 2.5 }
 
 	attach = { 
@@ -358,7 +358,39 @@ entity = {
 
 	attach = { 
 		Right_hand_node = "nord_falchion" 
-                attack_L_hand = "nedic_shield" 
+		attack_L_hand = "nedic_shield" 
+ 
+	}
+}
+
+entity = {
+	name = "DAEDRIC_INFANTRY_1"
+	pdxmesh = "daedric_generic_infantry_01_mesh"
+
+	state = { name = "idle" 		animation = "idle" }
+	state = { name = "walk" 		animation = "walk" }
+	state = { name = "attack"		animation = "attack" }
+	state = { name = "retreat"		animation = "retreat" }
+
+	attach = { 
+		Right_hand_node = "nord_falchion" 
+		Left_hand_node = "nedic_shield" 
+ 
+	}
+}
+
+entity = {
+	name = "KAMAL_INFANTRY_1"
+	pdxmesh = "kamal_generic_infantry_01_mesh"
+
+	state = { name = "idle" 		animation = "idle" }
+	state = { name = "walk" 		animation = "walk" }
+	state = { name = "attack"		animation = "attack" }
+	state = { name = "retreat"		animation = "retreat" }
+
+	attach = { 
+		Right_hand_node = "nord_falchion" 
+		Left_hand_node = "nedic_shield" 
  
 	}
 }

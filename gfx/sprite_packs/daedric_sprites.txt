@@ -1,0 +1,31 @@
+daedric_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		#OR = {
+		#	culture_group = daedra_cg
+		#	culture_group = void_cg
+		#}
+		always = no
+	}
+	
+	sprite_infantry = {
+		0 = DAEDRIC_INFANTRY_1
+		1 = DAEDRIC_INFANTRY_1
+		2 = DAEDRIC_INFANTRY_1
+		3 = DAEDRIC_INFANTRY_1
+	}
+	
+	sprite_cavalry = {
+		0 = DAEDRIC_INFANTRY_1
+		1 = DAEDRIC_INFANTRY_1
+		2 = DAEDRIC_INFANTRY_1
+		3 = DAEDRIC_INFANTRY_1
+	}
+	sprite_artillery = {
+		0 = DAEDRIC_INFANTRY_1
+		1 = DAEDRIC_INFANTRY_1
+		2 = DAEDRIC_INFANTRY_1
+		3 = DAEDRIC_INFANTRY_1
+	}
+
+}
