@@ -1,11 +1,17 @@
-emperor_reichsreform = {
+#1 ADM - Anchor Imperial Borders
+es_emperor_anchor_imperial_borders = {
 	empire = hre
 	potential = {
 		has_dlc = "Emperor"
 	}
 	province = {
-		local_build_cost = -0.05
-		local_development_cost = -0.05
+		local_core_creation = 0.15
+	}
+	member = {
+		core_decay_on_your_own = -0.25
+	}
+	emperor = {
+		core_creation = -0.10
 	}
 	on_effect = {
 		imperial_ban_allowed = yes
@@ -16,127 +22,118 @@ emperor_reichsreform = {
 	gui_container = mainline
 }
 
-emperor_reichsregiment = {
+#2 DIP - Sign Trade Pact
+es_emperor_sign_trade_pact = {
 	empire = hre
 	potential = {
 		has_dlc = "Emperor"
 	}
 	province = {
-		local_unrest = -2
+		trade_goods_size_modifier = 0.25
+	}
+	member = {
+		merchants = 1
 	}
 	emperor = {
-		diplomatic_reputation = 1
-		diplomats = 1
+		trade_steering = 0.15
 	}
-	required_reform = emperor_reichsreform
+	required_reform = es_emperor_anchor_imperial_borders
 	gui_container = mainline
 }
 
-emperor_reichsstabilitaet = {
+#3 MIL - Reform Martial Conscription
+es_emperor_reform_martial_conscription = {
 	empire = hre
-	required_reform = emperor_reichsregiment
-	gui_container = mainline
-
 	potential = {
 		has_dlc = "Emperor"
 	}
 	province = {
-		local_state_maintenance_modifier = -0.25
+		local_manpower_modifier = 0.25
+	}
+	member = {
+		mercenary_cost = -0.15
+	}
+	emperor = {
+		merc_maintenance_modifier = -0.10
 	}
 	on_effect = {
 		custom_tooltip = "EXPAND_EMPIRE_CB"
 	}
-}
-
-emperor_gemeinerpfennig = {
-	empire = hre
-	potential = {
-		has_dlc = "Emperor"
-	}
-	all = {
-		diplomatic_reputation = 1
-	}
-	emperor_per_prince = {
-		global_tax_income = 0.5
-	}
-	required_reform = emperor_reichsstabilitaet
+	required_reform = es_emperor_sign_trade_pact
 	gui_container = mainline
 }
 
-emperor_perpetual_diet = {
-	empire = hre
-	required_reform = emperor_gemeinerpfennig
-	gui_container = mainline
-
-	potential = {
-		has_dlc = "Emperor"
-	}
-	
-	emperor = {
-		free_city_imperial_authority = 0.5
-	}
-	on_effect = {
-		custom_tooltip = "PERPETUAL_DIET_ESTABLISHED"
-		hidden_effect = {
-			random_province = {
-				limit = {
-					is_part_of_hre = yes
-					is_capital = yes
-					OR = {
-						AND = {
-							has_dlc = "Art of War"
-							owner = { has_reform = free_city }
-						}
-						AND = {
-							owner = { is_elector = yes }
-							development = 20
-						}
-						development = 30
-						province_id = 2957 # Regensburg
-						province_id = 1868 # Augsburg
-						province_id = 1872 # Ulm
-					}
-				}
-				province_event = {
-					id = hre_event.6
-				}
-				add_province_triggered_modifier = perpetual_diet
-			}
-		}
-	}
-	off_effect = {
-		every_province = {
-			remove_province_triggered_modifier = perpetual_diet
-		}
-	}
-}
-
-emperor_landsknechtswesen = {
-	empire = hre
-	required_reform = emperor_perpetual_diet
-	gui_container = mainline
-
-	potential = {
-		has_dlc = "Emperor"
-	}
-	all = {
-		imperial_mercenary_cost = -0.25
-	}
-}
-
-emperor_landfriede = {
+#4 ADM - Standardize National Laws 
+es_emperor_standartize_national_laws = {
 	empire = hre
 	potential = {
 		has_dlc = "Emperor"
-	}
-	all = {
-		technology_cost = -0.05
-	}
-	emperor = {
-		prestige = 0.5
 	}
 	province = {
-		local_institution_spread = 0.1
+		local_unrest = -1.0
+	}
+	member = {
+		stability_cost_modifier = -0.15
+	}
+	emperor = {
+		governing_capacity_modifier = 0.25
+	}
+	required_reform = es_emperor_reform_martial_conscription
+	gui_container = mainline
+}
+
+#5 DIP - Introduce Gold Standart
+es_emperor_introduce_gold_standart = {
+	empire = hre
+	potential = {
+		has_dlc = "Emperor"
+	}
+	province = {
+		trade_value_modifier = 0.15
+	}
+	member = {
+		global_tax_modifier = 0.10
+	}
+	emperor = {
+		inflation_action_cost = -0.25
+	}
+	required_reform = es_emperor_standartize_national_laws
+	gui_container = mainline
+}
+
+#6 MIL - Consolidate Sovereign Army
+es_emperor_consolidate_sovereign_army = {
+	empire = hre
+	potential = {
+		has_dlc = "Emperor"
+	}
+	province = {
+		regiment_recruit_speed = -0.25
+	}
+	member = {
+		land_maintenance_modifier = -0.15
+	}
+	emperor = {
+		land_forcelimit_modifier = 0.10
+	}
+	required_reform = es_emperor_introduce_gold_standart
+	gui_container = mainline
+}
+
+#7 ADM - Prohibit Internal Wars
+es_emperor_prohibit_internal_wars = {
+	empire = hre
+	potential = {
+		has_dlc = "Emperor"
+	}
+	province = {
+		local_development_cost = -0.25
+	}
+	member = {
+		diplomatic_reputation = 1.5
+	}
+	emperor = {
+		legitimacy = 1.0
 	}
 	on_effect = {
 		internal_hre_cb = no
@@ -144,125 +141,195 @@ emperor_landfriede = {
 	off_effect = {
 		internal_hre_cb = yes
 	}
-	required_reform = emperor_landsknechtswesen
+	required_reform = es_emperor_consolidate_sovereign_army
 	gui_container = mainline
 }
 
-emperor_reichstag_collegia = {
-	empire = hre
-	required_reform = emperor_perpetual_diet
-	disabled_by = emperor_hofgericht
-	gui_container = left_branch
+#######################################################################
 
+#8 DIP - Proclaim Divergence Tolerance
+es_emperor_proclaim_divergence_tolerance = {
+	empire = hre
 	potential = {
 		has_dlc = "Emperor"
-	}
-	emperor = {
-		max_free_cities = 3
-	}
-}
-
-emperor_expand_gemeiner_pfennig = {
-	empire = hre
-	required_reform = emperor_reichstag_collegia
-	gui_container = left_branch
-
-	potential = {
-		has_dlc = "Emperor"
-	}
-	emperor_per_prince = {
-		global_manpower = 0.1
-	}
-	elector_per_prince = {
-		global_manpower = 0.2
 	}
 	province = {
-		local_friendly_movement_speed = 0.1
+		local_monthly_devastation = -0.025
 	}
+	member = {
+		num_accepted_cultures = 1
+	}
+	emperor = {
+		max_free_cities = 5
+	}
+	required_reform = es_emperor_prohibit_internal_wars
+	disabled_by = es_emperor_state_cultural_dominance
+	gui_container = left_branch
 }
 
-emperor_rechenschaft = {
+#9 MIL - Institute Confederative Army
+es_emperor_institute_confederative_army = {
 	empire = hre
-	required_reform = emperor_expand_gemeiner_pfennig
-	gui_container = left_branch
-
 	potential = {
 		has_dlc = "Emperor"
 	}
-	emperor_per_prince = {
-		imperial_authority = 0.01
+	province = {
+		local_manpower = 0.025
+	}
+	member = {
+		manpower_recovery_speed = 0.15
+	}
+	emperor = {
+		vassal_forcelimit_bonus = 0.10
+	}
+	required_reform = es_emperor_proclaim_divergence_tolerance
+	gui_container = left_branch
+}
+
+#10 ADM - Embrace Spiritual Syncretism
+es_emperor_embrace_spiritual_syncretism = {
+	empire = hre
+	potential = {
+		has_dlc = "Emperor"
+	}
+	province = {
+		religious_conversion_resistance = 0.25
+	}
+	member = {
+		religious_unity = 0.10
+	}
+	emperor = {
+		tolerance_heathen = 1.5
+	}
+	required_reform = es_emperor_institute_confederative_army
+	gui_container = left_branch
+}
+
+#11 DIP - Expand Governmental Concessions 
+es_emperor_expand_governmental_concessions = {
+	empire = hre
+	potential = {
+		has_dlc = "Emperor"
+	}
+	province = {
+		local_years_of_nationalism = -5
+	}
+	member = {
+		global_unrest = -2.5
 	}
 	emperor = {
 		max_electors = 1
 	}
+	elector_per_prince = {
+		global_tax_income = 0.35
+	}
+	emperor_per_prince = {
+		global_tax_income = 0.15
+	}
+	required_reform = es_emperor_embrace_spiritual_syncretism
+	gui_container = left_branch
 }
 
-emperor_geteilte_macht = {
+#12 MIL - Guarantee Political Protection
+es_emperor_guarantee_political_protection = {
 	empire = hre
-	required_reform = emperor_rechenschaft
-	gui_container = left_branch
-
 	potential = {
 		has_dlc = "Emperor"
-	}
-	elector_per_prince = {
-		global_tax_income = 0.5
 	}
 	province = {
-		local_development_cost = -0.05
+		local_defensiveness = 0.1
 	}
+	member = {
+		fort_maintenance_modifier = -0.25
+	}
+	emperor = {
+		global_spy_defence = 0.15
+	}
+	required_reform = es_emperor_expand_governmental_concessions
+	gui_container = left_branch
 }
 
-emperor_reichskrieg = {
+#13 ADM - Secure Member Autonomy 
+es_emperor_secure_member_autonomy = {
 	empire = hre
-	required_reform = emperor_geteilte_macht
-	gui_container = left_branch
-
 	potential = {
 		has_dlc = "Emperor"
+	}
+	province = {
+		local_state_maintenance_modifier = -0.15
+	}
+	member = {
+		diplomatic_upkeep = 1
+	}
+	emperor = {
+		unjustified_demands = -0.25
 	}
 	on_effect = {
 		enable_imperial_realm_war = yes
 		custom_tooltip = REICHSKRIEG_DEFENSE_OF_REALM_MODIFIER
 	}
-
 	off_effect = {
 		enable_imperial_realm_war = no
 	}
+	required_reform = es_emperor_guarantee_political_protection
+	gui_container = left_branch
 }
 
-emperor_hofgericht = { 
+#######################################################################
+
+#14 DIP - State Cultural Dominance
+es_emperor_state_cultural_dominance = { 
 	empire = hre
 	potential = {
 		has_dlc = "Emperor"
 	}
-	emperor = {
-		core_creation = -0.10
+	province = {
+		local_culture_conversion_cost = -0.25
 	}
-	required_reform = emperor_perpetual_diet
-	disabled_by = emperor_reichstag_collegia
+	member = {
+		same_culture_advisor_cost = -0.10
+	}
+	emperor = {
+		years_of_nationalism = -5
+	}
+	required_reform = es_emperor_prohibit_internal_wars
+	disabled_by = es_emperor_proclaim_divergence_tolerance
 	gui_container = right_branch
 }
 
-emperor_imperial_estates = {
+#15 MIL - Establish Royal Legions
+es_emperor_establish_royal_legions = {
 	empire = hre
-	required_reform = emperor_hofgericht
-	gui_container = right_branch
 	potential = {
 		has_dlc = "Emperor"
 	}
-	emperor = {
-		imperial_authority = 0.25
+	province = {
+		local_regiment_cost = -0.10
 	}
+	member = {
+		drill_decay_modifier = -0.25
+	}
+	emperor = {
+		reinforce_cost_modifier = -0.15
+	}
+	required_reform = es_emperor_state_cultural_dominance
+	gui_container = right_branch
 }
 
-emperor_erbkaisertum = {
+#16 ADM - Curtail Religious Heretics
+es_emperor_curtail_religious_heretics = {
 	empire = hre
 	potential = {
 		has_dlc = "Emperor"
 	}
+	province = {
+		local_missionary_strength = 0.001
+	}
+	member = {
+		tolerance_own = 1.5
+	}
 	emperor = {
-		imperial_authority = 0.25
+		warscore_cost_vs_other_religion = -0.25
 	}
 	on_effect = {
 		if = {
@@ -277,25 +344,52 @@ emperor_erbkaisertum = {
 	off_effect = {
 		hre_inheritable = no
 	}
-	required_reform = emperor_imperial_estates
+	required_reform = es_emperor_establish_royal_legions
 	gui_container = right_branch
 }
 
-emperor_privilegia_de_non_appelando = {
+#17 DIP - Revoke Former Privileges
+es_emperor_revoke_former_priveleges = {
+	empire = hre
+	potential = {
+		has_dlc = "Emperor"
+	}
+	province = {
+		local_build_cost = -0.10
+	}
+	member = {
+		state_maintenance_modifier = -0.25
+	}
+	emperor = {
+		vassal_income = 0.15
+	}
+	elector_per_prince = {
+		global_manpower = 0.1
+	}
+	emperor_per_prince = {
+		global_manpower = 0.1
+	}
+	required_reform = es_emperor_curtail_religious_heretics
+	gui_container = right_branch
+}
+
+#18 MIL - Supress Independent Opposition
+es_emperor_surpress_independent_opposition = {
 	empire = hre
 	war = yes			#this may cause a war, so special AI check needed, to not lose many.
 	potential = {
 		has_dlc = "Emperor"
 	}
-	member = {
-		stability_cost_modifier = -0.10
+	province = {
+		local_build_time = -0.15
 	}
-	
+	member = {
+		harsh_treatment_cost = -0.25
+	}
 	emperor = {
-		imperial_authority = 0.25
+		reinforce_speed = 0.10
 	}
 	on_effect = {
-	
 		emperor = {
 			country_event = { id = 9073 tooltip = vassalize_empire2 }
 		}
@@ -311,20 +405,30 @@ emperor_privilegia_de_non_appelando = {
 			}
 		}
 	}
-	required_reform = emperor_erbkaisertum
+	required_reform = es_emperor_curtail_religious_heretics
 	gui_container = right_branch
 }
 
-emperor_renovatio = {
+#19 ADM - Procalim Absolute Integrity 
+es_emperor_proclaim_absolute_integrity = {
 	empire = hre
 	potential = {
 		has_dlc = "Emperor"
+	}
+	province = {
+		supply_limit_modifier = 0.15
+	}
+	member = {
+		spy_offence = 0.25
+	}
+	emperor = {
+		free_leader_pool = 1
 	}
 	on_effect = {
 		emperor = {
 			country_event = { id = 9075 tooltip = renovatio_effect }
 		}
 	}
-	required_reform = emperor_privilegia_de_non_appelando
+	required_reform = es_emperor_surpress_independent_opposition
 	gui_container = right_branch
 }

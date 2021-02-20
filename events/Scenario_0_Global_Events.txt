@@ -280,16 +280,21 @@ country_event = {
 	trigger = {
 	   NOT = { has_country_flag = es_0_scenario.9_flag }
 	   religion = eight_divines
-	   owns = 1206
-	   owns = 1002
-	   owns = 1369
-	   owns = 271
-	   owns = 820
-	   owns = 1075
-	   owns = 922
-	   owns = 1342
-	   owns = 1275
-	   owns = 1482
+	   OR = {
+		  AND = {
+		   owns = 1206
+		   owns = 1002
+		   owns = 1369
+		   owns = 271
+		   owns = 820
+		   owns = 1075
+		   owns = 922
+		   owns = 1342
+		   owns = 1275
+		   owns = 1482
+		  }
+		  tag = TAM
+	   }
     }
 
 	mean_time_to_happen = {
