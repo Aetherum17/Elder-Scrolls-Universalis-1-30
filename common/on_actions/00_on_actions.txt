@@ -791,13 +791,13 @@ on_new_monarch = {
 		}
 		country_event = {
 			id = es_birthsigns.0	# Assign random birthsign to republic
-			days = 0
+			days = 1
 		}
 	}
 	else = {
 		country_event = {
 			id = es_birthsigns.1	# Assign Ruler Birthsign
-			days = 0
+			days = 1
 		}
 	}
 }
