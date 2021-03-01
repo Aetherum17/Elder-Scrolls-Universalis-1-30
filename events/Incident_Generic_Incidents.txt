@@ -1,0 +1,715 @@
+namespace = es_hre_incident
+
+# 100 cities 
+country_event = {
+	id = es_hre_incident.1
+	title = es_hre_incident.1.t
+	desc = es_hre_incident.1.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	trigger = {
+		has_dlc = "Emperor"
+		NOT = { active_imperial_incident = any }
+		is_part_of_hre = yes
+		num_of_cities = 100
+		NOT = { has_country_flag = es_hre_incident_2_flag }
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {
+		name = es_hre_incident.1.a
+		set_imperial_incident = incident_es_big_country
+		save_global_event_target_as = hre_incident_target
+		set_country_flag = es_hre_incident_2_flag
+	}
+}
+
+country_event = {
+	id = es_hre_incident.2
+	title = es_hre_incident.2.t
+	desc = es_hre_incident.2.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = es_hre_incident.2.a
+		event_target:hre_incident_target = {
+			add_country_modifier = {
+				name = "100_cities_1"
+				duration = 9125
+			}
+		}
+	}
+	
+	option = {
+		name = es_hre_incident.2.b
+		every_country = {
+			limit = {
+				is_part_of_hre = yes
+				is_neighbor_of = event_target:hre_incident_target
+			}
+			add_country_modifier = {
+				name = "100_cities_2"
+				duration = 5475
+			}
+		}
+	}
+	
+	option = {
+		name = es_hre_incident.2.c
+		every_country = {
+			limit = {
+				is_part_of_hre = yes
+			}
+			add_country_modifier = {
+				name = "100_cities_3"
+				duration = 3650
+			}
+		}
+	}
+}
+
+# 100 infantry regiments
+country_event = {
+	id = es_hre_incident.3
+	title = es_hre_incident.3.t
+	desc = es_hre_incident.3.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	trigger = {
+		has_dlc = "Emperor"
+		NOT = { active_imperial_incident = any }
+		is_part_of_hre = yes
+		num_of_infantry = 100
+		NOT = { has_country_flag = es_hre_incident_4_flag }
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {
+		name = es_hre_incident.3.a
+		set_imperial_incident = incident_es_big_army
+		save_global_event_target_as = hre_incident_target
+		set_country_flag = es_hre_incident_4_flag
+	}
+}
+
+country_event = {
+	id = es_hre_incident.4
+	title = es_hre_incident.4.t
+	desc = es_hre_incident.4.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = es_hre_incident.4.a
+		event_target:hre_incident_target = {
+			add_country_modifier = {
+				name = "100_army_1"
+				duration = 9125
+			}
+		}
+	}
+	
+	option = {
+		name = es_hre_incident.4.b
+		every_country = {
+			limit = {
+				is_part_of_hre = yes
+				is_neighbor_of = event_target:hre_incident_target
+			}
+			add_country_modifier = {
+				name = "100_army_2"
+				duration = 5475
+			}
+		}
+	}
+	
+	option = {
+		name = es_hre_incident.4.c
+		every_country = {
+			limit = {
+				is_part_of_hre = yes
+			}
+			add_country_modifier = {
+				name = "100_army_3"
+				duration = 3650
+			}
+		}
+	}
+}
+
+# 100 ships
+country_event = {
+	id = es_hre_incident.5
+	title = es_hre_incident.5.t
+	desc = es_hre_incident.5.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	trigger = {
+		has_dlc = "Emperor"
+		NOT = { active_imperial_incident = any }
+		is_part_of_hre = yes
+		navy_size = 100
+		NOT = { has_country_flag = es_hre_incident_6_flag }
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {
+		name = es_hre_incident.5.a
+		set_imperial_incident = incident_es_big_fleet
+		save_global_event_target_as = hre_incident_target
+		set_country_flag = es_hre_incident_6_flag
+	}
+}
+
+country_event = {
+	id = es_hre_incident.6
+	title = es_hre_incident.6.t
+	desc = es_hre_incident.6.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = es_hre_incident.6.a
+		event_target:hre_incident_target = {
+			add_country_modifier = {
+				name = "100_navy_1"
+				duration = 9125
+			}
+		}
+	}
+	
+	option = {
+		name = es_hre_incident.6.b
+		every_country = {
+			limit = {
+				is_part_of_hre = yes
+				any_owned_province = { has_port = yes }
+				NOT = { has_country_flag = es_hre_incident_6_flag } 
+			}
+			add_country_modifier = {
+				name = "100_navy_2"
+				duration = 5475
+			}
+		}
+	}
+	
+	option = {
+		name = es_hre_incident.6.c
+		every_country = {
+			limit = {
+				is_part_of_hre = yes
+			}
+			add_country_modifier = {
+				name = "100_navy_3"
+				duration = 3650
+			}
+		}
+	}
+}
+
+# 5 mercenary companies
+country_event = {
+	id = es_hre_incident.7
+	title = es_hre_incident.7.t
+	desc = es_hre_incident.7.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	trigger = {
+		has_dlc = "Emperor"
+		NOT = { active_imperial_incident = any }
+		is_part_of_hre = yes
+		num_of_hired_mercenary_companies = 5
+		NOT = { has_country_flag = es_hre_incident_8_flag }
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {
+		name = es_hre_incident.7.a
+		set_imperial_incident = incident_es_many_merc_companies
+		save_global_event_target_as = hre_incident_target
+		set_country_flag = es_hre_incident_8_flag
+	}
+}
+
+country_event = {
+	id = es_hre_incident.8
+	title = es_hre_incident.8.t
+	desc = es_hre_incident.8.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = es_hre_incident.8.a
+		event_target:hre_incident_target = {
+			add_country_modifier = {
+				name = "5_merc_1"
+				duration = 9125
+			}
+		}
+	}
+	
+	option = {
+		name = es_hre_incident.8.b
+		every_country = {
+			limit = {
+				is_part_of_hre = yes
+				NOT = { has_country_flag = es_hre_incident_6_flag } 
+			}
+			add_country_modifier = {
+				name = "5_merc_2"
+				duration = 5475
+			}
+		}
+	}
+	
+	option = {
+		name = es_hre_incident.8.c
+		every_country = {
+			limit = {
+				is_part_of_hre = yes
+			}
+			add_country_modifier = {
+				name = "5_merc_3"
+				duration = 3650
+			}
+		}
+	}
+}
+
+#Low Stability
+country_event = {
+	id = es_hre_incident.9
+	title = es_hre_incident.9.t
+	desc = es_hre_incident.9.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	trigger = {
+		has_dlc = "Emperor"
+		NOT = { active_imperial_incident = any }
+		is_part_of_hre = yes
+		NOT = { stability = -2 }
+		NOT = { has_country_flag = es_hre_incident_10_flag }
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+	}
+	
+	option = {
+		name = es_hre_incident.9.a
+		ai_chance = { factor = 100 }
+		set_imperial_incident = incident_es_low_stability
+		save_global_event_target_as = hre_incident_target
+		set_country_flag = es_hre_incident_10_flag
+	}
+	
+	option = {
+		name = es_hre_incident.9.b
+		ai_chance = { factor = 0 }
+		add_prestige = 15
+	}
+}
+
+country_event = {
+	id = es_hre_incident.10
+	title = es_hre_incident.10.t
+	desc = es_hre_incident.10.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = es_hre_incident.10.a
+		event_target:hre_incident_target = {
+			add_stability = 5
+			add_country_modifier = {
+				name = "low_stab_1"
+				duration = 9125
+			}
+		}
+	}
+	
+	option = {
+		name = es_hre_incident.10.b
+		event_target:hre_incident_target = {
+			add_country_modifier = {
+				name = "low_stab_2"
+				duration = 5475
+			}
+		}
+	}
+	
+	option = {
+		name = es_hre_incident.10.c
+		every_country = {
+			limit = {
+				is_part_of_hre = yes
+			}
+			add_country_modifier = {
+				name = "low_stab_3"
+				duration = 3650
+			}
+		}
+	}
+}
+
+#Low Legitimacy
+country_event = {
+	id = es_hre_incident.10
+	title = es_hre_incident.10.t
+	desc = es_hre_incident.10.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	trigger = {
+		has_dlc = "Emperor"
+		NOT = { active_imperial_incident = any }
+		is_part_of_hre = yes
+		OR = {
+			AND = {
+				government = monarchy
+				NOT = { legitimacy = 25 }
+			}
+			AND = {
+				government = republic
+				NOT = { republican_tradition = 25 }
+			}
+			AND = {
+				government = theocracy
+				NOT = { devotion = 25 }
+			}
+			AND = {
+				is_nomad = yes
+				NOT = { horde_unity = 25 }
+			}
+			AND = {
+				is_emperor_of_china = yes
+				NOT = { meritocracy = 25 }
+			}
+		}
+		NOT = { has_country_flag = es_hre_incident_12_flag }
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+	}
+	
+	option = {
+		name = es_hre_incident.10.a
+		ai_chance = { factor = 100 }
+		set_imperial_incident = incident_es_low_legitimacy
+		save_global_event_target_as = hre_incident_target
+		set_country_flag = es_hre_incident_12_flag
+	}
+	
+	option = {
+		name = es_hre_incident.10.b
+		ai_chance = { factor = 0 }
+		add_prestige = 15
+	}
+}
+
+country_event = {
+	id = es_hre_incident.12
+	title = es_hre_incident.12.t
+	desc = es_hre_incident.12.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = es_hre_incident.12.a
+		event_target:hre_incident_target = {
+			add_legitimacy = 100
+			add_devotion = 100
+			add_republican_tradition = 100
+			add_horde_unity = 100
+			add_meritocracy = 100
+			add_country_modifier = {
+				name = "low_legit_1"
+				duration = 9125
+			}
+		}
+	}
+	
+	option = {
+		name = es_hre_incident.12.b
+		event_target:hre_incident_target = {
+			country_event = { id = ge_revolution.2 days = 31 tooltip = es_collapse.11.a.tt }
+			add_country_modifier = {
+				name = "low_legit_2"
+				duration = 5475
+			}
+		}
+	}
+	
+	option = {
+		name = es_hre_incident.12.c
+		every_country = {
+			limit = {
+				is_part_of_hre = yes
+				is_neighbor_of = event_target:hre_incident_target
+			}
+			add_country_modifier = {
+				name = "low_legit_3"
+				duration = 3650
+			}
+		}
+	}
+}
+
+#High Liberty Desire
+country_event = {
+	id = es_hre_incident.13
+	title = es_hre_incident.13.t
+	desc = es_hre_incident.13.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	trigger = {
+		has_dlc = "Emperor"
+		NOT = { active_imperial_incident = any }
+		is_part_of_hre = yes
+		liberty_desire = 100
+		NOT = { has_country_flag = es_hre_incident_14_flag }
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+	}
+	
+	option = {
+		name = es_hre_incident.13.a
+		ai_chance = { factor = 100 }
+		set_imperial_incident = incident_es_high_liberty_desire
+		save_global_event_target_as = hre_incident_target
+		set_country_flag = es_hre_incident_14_flag
+	}
+	
+	option = {
+		name = es_hre_incident.13.b
+		ai_chance = { factor = 0 }
+		add_prestige = 15
+	}
+}
+
+country_event = {
+	id = es_hre_incident.14
+	title = es_hre_incident.14.t
+	desc = es_hre_incident.14.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = es_hre_incident.14.a
+		event_target:hre_incident_target = {
+				grant_independence = yes
+				add_country_modifier = {
+					name = "high_liberty_1"
+					duration = 9125
+				}
+			}
+	}
+	
+	option = {
+		name = es_hre_incident.14.b
+			random_country = {
+				limit = { overlord_of = event_target:hre_incident_target }
+				add_country_modifier = {
+					name = "high_liberty_2"
+					duration = 5475
+				}
+			}
+	}
+	
+	option = {
+		name = es_hre_incident.14.c
+		every_country = {
+			limit = {
+				is_part_of_hre = yes
+				is_neighbor_of = event_target:hre_incident_target
+				NOT = { overlord_of = event_target:hre_incident_target }
+			}
+			add_country_modifier = {
+				name = "high_liberty_3"
+				duration = 3650
+			}
+		}
+	}
+}
+
+#Low religious Unity
+country_event = {
+	id = es_hre_incident.15
+	title = es_hre_incident.15.t
+	desc = es_hre_incident.15.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	trigger = {
+		has_dlc = "Emperor"
+		NOT = { active_imperial_incident = any }
+		is_part_of_hre = yes
+		NOT = { religious_unity = 25 }
+		NOT = { has_country_flag = es_hre_incident_16_flag }
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+	}
+	
+	option = {
+		name = es_hre_incident.15.a
+		ai_chance = { factor = 100 }
+		set_imperial_incident = incident_es_low_religious_unity
+		save_global_event_target_as = hre_incident_target
+		set_country_flag = es_hre_incident_16_flag
+	}
+	
+	option = {
+		name = es_hre_incident.15.b
+		ai_chance = { factor = 0 }
+		add_prestige = 15
+	}
+}
+
+country_event = {
+	id = es_hre_incident.16
+	title = es_hre_incident.16.t
+	desc = es_hre_incident.16.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = es_hre_incident.16.a
+		event_target:hre_incident_target = {
+			add_country_modifier = {
+				name = "low_rel_unity_1"
+				duration = 9125
+			}
+		}
+	}
+	
+	option = {
+		name = es_hre_incident.16.b
+		event_target:hre_incident_target = {
+			add_country_modifier = {
+				name = "low_rel_unity_2"
+				duration = 9125
+			}
+		}
+	}
+	
+	option = {
+		name = es_hre_incident.16.c
+		every_country = {
+			limit = {
+				is_part_of_hre = yes
+				is_neighbor_of = event_target:hre_incident_target
+			}
+			add_country_modifier = {
+				name = "low_rel_unity_3"
+				duration = 3650
+			}
+		}
+	}
+}
+
+#Subject not in HRE
+country_event = {
+	id = es_hre_incident.17
+	title = es_hre_incident.17.t
+	desc = es_hre_incident.17.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	trigger = {
+		has_dlc = "Emperor"
+		NOT = { active_imperial_incident = any }
+		is_part_of_hre = no
+		overlord = { is_part_of_hre = yes }
+		NOT = { has_country_flag = es_hre_incident_18_flag }
+	}
+	
+	mean_time_to_happen = {
+		months = 480
+	}
+	
+	option = {
+		name = es_hre_incident.17.a
+		ai_chance = { factor = 100 }
+		set_imperial_incident = incident_es_subject_not_in_hre
+		save_global_event_target_as = hre_incident_target
+		set_country_flag = es_hre_incident_18_flag
+		add_stability = 1
+	}
+	
+}
+
+country_event = {
+	id = es_hre_incident.18
+	title = es_hre_incident.18.t
+	desc = es_hre_incident.18.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = es_hre_incident.18.a
+		event_target:hre_incident_target = {
+			every_owned_province = {
+				limit = {
+					is_part_of_hre = no
+				}
+				set_in_empire = yes
+			}
+			add_country_modifier = {
+				name = "subject_not_in_hre_1"
+				duration = 9125
+			}
+		}
+	}
+	
+	option = {
+		name = es_hre_incident.18.b
+		every_country = {
+			limit = {
+				is_part_of_hre = yes
+				is_neighbor_of = event_target:hre_incident_target
+			}
+			add_country_modifier = {
+				name = "subject_not_in_hre_2"
+				duration = 3650
+			}
+		}
+	}
+	
+	option = {
+		name = es_hre_incident.18.c
+		every_country = {
+			limit = {
+				is_part_of_hre = yes
+				overlord_of = event_target:hre_incident_target
+			}
+			add_country_modifier = {
+				name = "subject_not_in_hre_3"
+				duration = 3650
+			}
+		}
+	}
+}

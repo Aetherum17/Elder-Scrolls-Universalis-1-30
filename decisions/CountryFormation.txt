@@ -2319,8 +2319,6 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { exists = VAL }
-			NOT = { tag = MAL }
-			NOT = { tag = GRE }
 			primary_culture = bosmer
 			NOT = { has_country_flag = formed_val_flag }
 		}
@@ -2518,6 +2516,7 @@ country_decisions = {
 		potential = {
 			NOT = { exists = GRE }
 			NOT = { tag = MAL }
+			NOT = { tag = VAL }
 			primary_culture = bosmer
 			NOT = { has_country_flag = formed_gre_flag }
 		}
@@ -2568,6 +2567,7 @@ country_decisions = {
 		potential = {
 			NOT = { exists = MAL }
 			NOT = { tag = GRE }
+			NOT = { tag = VAL }
 			primary_culture = bosmer
 			NOT = { has_country_flag = formed_mal_flag }
 		}

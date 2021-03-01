@@ -5,7 +5,7 @@ es_emperor_anchor_imperial_borders = {
 		has_dlc = "Emperor"
 	}
 	province = {
-		local_core_creation = 0.15
+		local_autonomy = -0.015
 	}
 	member = {
 		core_decay_on_your_own = -0.25
@@ -245,6 +245,13 @@ es_emperor_guarantee_political_protection = {
 	emperor = {
 		global_spy_defence = 0.15
 	}
+	on_effect = {
+		enable_imperial_realm_war = yes
+		custom_tooltip = REICHSKRIEG_DEFENSE_OF_REALM_MODIFIER
+	}
+	off_effect = {
+		enable_imperial_realm_war = no
+	}
 	required_reform = es_emperor_expand_governmental_concessions
 	gui_container = left_branch
 }
@@ -262,14 +269,23 @@ es_emperor_secure_member_autonomy = {
 		diplomatic_upkeep = 1
 	}
 	emperor = {
-		unjustified_demands = -0.25
+		vassal_income = 0.25
 	}
 	on_effect = {
-		enable_imperial_realm_war = yes
-		custom_tooltip = REICHSKRIEG_DEFENSE_OF_REALM_MODIFIER
-	}
-	off_effect = {
-		enable_imperial_realm_war = no
+		custom_tooltip = "ES_EMPEROR_VASSALISE_PRINCES"
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_part_of_hre = yes
+					is_emperor = no
+					num_of_cities = 1
+					has_opinion = { who = ROOT value = 0 }
+					reverse_has_opinion = { who = ROOT value = 0 }
+					ai = yes
+				}
+				emperor = { vassalize = ROOT }
+			}
+		}
 	}
 	required_reform = es_emperor_guarantee_political_protection
 	gui_container = left_branch
@@ -331,19 +347,6 @@ es_emperor_curtail_religious_heretics = {
 	emperor = {
 		warscore_cost_vs_other_religion = -0.25
 	}
-	on_effect = {
-		if = {
-			limit = {
-				hre_religion_locked = no
-				hre_religion_treaty = no
-			}
-			set_hre_religion_treaty = yes
-		}
-		hre_inheritable = yes
-	}
-	off_effect = {
-		hre_inheritable = no
-	}
 	required_reform = es_emperor_establish_royal_legions
 	gui_container = right_branch
 }
@@ -361,7 +364,7 @@ es_emperor_revoke_former_priveleges = {
 		state_maintenance_modifier = -0.25
 	}
 	emperor = {
-		vassal_income = 0.15
+		unjustified_demands = -0.15
 	}
 	elector_per_prince = {
 		global_manpower = 0.1
@@ -390,20 +393,11 @@ es_emperor_surpress_independent_opposition = {
 		reinforce_speed = 0.10
 	}
 	on_effect = {
-		emperor = {
-			country_event = { id = 9073 tooltip = vassalize_empire2 }
-		}
-		hidden_effect = {
-			every_country = {
-				limit = {
-					is_part_of_hre = yes
-					is_emperor = no
-					num_of_cities = 1
-					NOT = { vassal_of = ROOT }
-				}
-				country_event = { id = 9074 }
-			}
-		}
+		set_hre_religion_treaty = yes
+		hre_inheritable = yes
+	}
+	off_effect = {
+		hre_inheritable = no
 	}
 	required_reform = es_emperor_curtail_religious_heretics
 	gui_container = right_branch
@@ -425,8 +419,33 @@ es_emperor_proclaim_absolute_integrity = {
 		free_leader_pool = 1
 	}
 	on_effect = {
-		emperor = {
-			country_event = { id = 9075 tooltip = renovatio_effect }
+		custom_tooltip = "ES_EMPEROR_ANNEX_PRINCES"
+		hidden_effect = {
+		change_tag = TAM 
+		if = {
+			limit = {
+				NOT = { government_rank = 10 }
+			}
+			set_government_rank = 10
+		}
+		set_country_flag = formed_tam_flag
+		add_country_modifier = {
+			name = "centralization_modifier"
+			duration = 7300
+		}
+		add_prestige = 25
+		if = { limit = { has_custom_ideas = no } country_event = { id = ideagroups.1 } }
+			every_country = {
+				limit = {
+					is_part_of_hre = yes
+					is_emperor = no
+					num_of_cities = 1
+					has_opinion = { who = ROOT value = 0 }
+					reverse_has_opinion = { who = ROOT value = 0 }
+					ai = yes
+				}
+				emperor = { inherit = ROOT }
+			}
 		}
 	}
 	required_reform = es_emperor_surpress_independent_opposition

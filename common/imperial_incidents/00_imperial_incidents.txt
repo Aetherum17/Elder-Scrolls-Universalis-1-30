@@ -1,0 +1,211 @@
+# default options are 0-based
+# In console, can use imperial_incident [key] to immediately begin an incident
+
+incident_es_big_country = {
+	event = es_hre_incident.2
+	default_option = 0
+	
+	can_stop = {
+		NOT = { 
+			any_country = {
+				is_part_of_hre = yes
+				num_of_cities = 100
+			}
+		}
+	}
+	
+	0 = {
+		factor = 1
+	}
+	
+	1 = {
+		factor = 1
+	}
+	
+	2 = {
+		factor = 1
+	}
+}
+
+incident_es_big_army = {
+	event = es_hre_incident.4
+	default_option = 0
+	
+	can_stop = {
+		NOT = { 
+			any_country = {
+				is_part_of_hre = yes
+				num_of_infantry = 100
+			}
+		}
+	}
+	
+	0 = {
+		factor = 1
+	}
+	
+	1 = {
+		factor = 1
+	}
+	
+	2 = {
+		factor = 1
+	}
+}
+
+incident_es_big_fleet = {
+	event = es_hre_incident.6
+	default_option = 0
+	
+	can_stop = {
+		NOT = { 
+			any_country = {
+				is_part_of_hre = yes
+				navy_size = 100
+			}
+		}
+	}
+	
+	0 = {
+		factor = 1
+	}
+	
+	1 = {
+		factor = 1
+	}
+	
+	2 = {
+		factor = 1
+	}
+}
+
+incident_es_many_merc_companies = {
+	event = es_hre_incident.8
+	default_option = 0
+	
+	can_stop = {
+		NOT = { 
+			any_country = {
+				is_part_of_hre = yes
+				num_of_hired_mercenary_companies = 5
+			}
+		}
+	}
+	
+	0 = {
+		factor = 1
+	}
+	
+	1 = {
+		factor = 1
+	}
+	
+	2 = {
+		factor = 1
+	}
+}
+
+incident_es_low_stability = {
+	event = es_hre_incident.10
+	default_option = 0
+	
+	can_stop = {
+		always = no
+	}
+	
+	0 = {
+		factor = 1
+	}
+	
+	1 = {
+		factor = 1
+	}
+	
+	2 = {
+		factor = 1
+	}
+}
+
+incident_es_low_legitimacy = {
+	event = es_hre_incident.12
+	default_option = 0
+	
+	can_stop = {
+		always = no
+	}
+	
+	0 = {
+		factor = 1
+	}
+	
+	1 = {
+		factor = 1
+	}
+	
+	2 = {
+		factor = 1
+	}
+}
+
+incident_es_high_liberty_desire = {
+	event = es_hre_incident.14
+	default_option = 0
+	
+	can_stop = {
+		always = no
+	}
+	
+	0 = {
+		factor = 1
+	}
+	
+	1 = {
+		factor = 1
+	}
+	
+	2 = {
+		factor = 1
+	}
+}
+
+incident_es_low_religious_unity = {
+	event = es_hre_incident.16
+	default_option = 0
+	
+	can_stop = {
+		always = no
+	}
+	
+	0 = {
+		factor = 1
+	}
+	
+	1 = {
+		factor = 1
+	}
+	
+	2 = {
+		factor = 1
+	}
+}
+
+incident_es_subject_not_in_hre = {
+	event = es_hre_incident.18
+	default_option = 0
+	
+	can_stop = {
+		always = no
+	}
+	
+	0 = {
+		factor = 1
+	}
+	
+	1 = {
+		factor = 1
+	}
+	
+	2 = {
+		factor = 1
+	}
+}

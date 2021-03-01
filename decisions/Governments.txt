@@ -80,66 +80,40 @@ country_decisions = {
 		major = yes
 		potential = {
 			government = tribal
+			NOT = { has_country_flag = es_keep_tribal_reform_flag }
 		}
 		allow =  {
 			stability = 3
-			full_idea_group = administrative_ideas
-			full_idea_group = economic_ideas
-			full_idea_group = religious_ideas
-			full_idea_group = diplomatic_ideas
-			full_idea_group = influence_ideas
-			full_idea_group = expansion_ideas
+			is_year = 150
 			is_at_war = no 
-			is_subject = no
+			NOT = { is_lacking_institutions = yes }
 			NOT = { primitives = yes }
 		}
 		effect = {
 		    add_stability = -3
 			change_government = monarchy
+			set_country_flag = es_tribal_reform_flag
 		}
 		ai_will_do = {
 			factor = 1
 		}
 	}
 	
-	formalize_separation_of_powers = {
+	es_keep_tribal_reform = {
+		major = yes
 		potential = {
-			has_parliament = yes
-			NOT = {
-				has_country_modifier = separation_of_powers
-			}
+			government = tribal
+			NOT = { has_country_flag = es_tribal_reform_flag }
 		}
-		allow = {
-			stability = 3
-			advisor = esu_governor
-			is_at_war = no
+		allow =  {
+			is_year = 150
+			is_at_war = no 
+			NOT = { is_lacking_institutions = yes }
+			NOT = { primitives = yes }
 		}
 		effect = {
-			add_country_modifier = {
-				name = "separation_of_powers"
-				duration = -1
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	go_cult_of_reason = {
-		potential = {
-			is_revolutionary_republic_trigger = yes
-			NOT = {
-				has_country_modifier = cult_of_reason
-			}
-		}
-		allow = {
-			NOT = { stability = -1 }
-		}
-		effect = {
-			add_country_modifier = {
-				name = "cult_of_reason"
-				duration = -1
-			}
+		    add_stability = 1
+			set_country_flag = es_keep_tribal_reform_flag
 		}
 		ai_will_do = {
 			factor = 1

@@ -5,8 +5,23 @@ es_country_collapse = {
 
 	can_start = {
 		OR = { 
-		NOT = { stability = 0 }
-		war_exhaustion = 15
+			AND = {
+				NOT = { stability = 0 }
+				war_exhaustion = 15
+			}
+			AND = {
+				NOT = { stability = -1 }
+				war_exhaustion = 10
+			}
+			AND = {
+				NOT = { stability = -2 }
+				war_exhaustion = 5
+			}
+			AND = {
+				NOT = { stability = -3 }
+				is_at_war = yes
+			}
+			war_exhaustion = 20
 		}
 		is_free_or_tributary_trigger = yes
 	}

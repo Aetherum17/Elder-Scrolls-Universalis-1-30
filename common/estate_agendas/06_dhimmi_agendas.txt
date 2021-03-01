@@ -454,10 +454,7 @@ estate_dhimmi_build_temple_in_y = {
 	}
 	fail_if = {
 		event_target:agenda_province = {
-			OR = {
-				religion_group = root
-				NOT = { owned_by = root }
-			}
+			NOT = { owned_by = root }
 		}
 	}
 	provinces_to_highlight = {
@@ -606,10 +603,7 @@ estate_dhimmi_build_university_in_y = {
 	}
 	fail_if = {
 		event_target:agenda_province = {
-			OR = {
-				NOT = { owned_by = root }
-				religion_group = root
-			}
+			NOT = { owned_by = root }
 		}
 	}
 	provinces_to_highlight = {
@@ -673,10 +667,7 @@ estate_dhimmi_stop_converting_province_x = {
 	}
 	fail_if = {
 		event_target:agenda_province = {
-			OR = {
-				NOT = { owned_by = root }
-				religion_group = root
-			}
+			NOT = { owned_by = root }
 		}
 	}
 	provinces_to_highlight = {
@@ -806,7 +797,6 @@ estate_dhimmi_increase_autonomy_in_province_x = {
 		event_target:agenda_province = {
 			OR = {
 				NOT = { owned_by = root }
-				religion_group = root
 				AND = {
 					root = {
 						check_variable = {
