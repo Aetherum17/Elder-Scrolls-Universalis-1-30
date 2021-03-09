@@ -6,12 +6,7 @@ incident_es_big_country = {
 	default_option = 0
 	
 	can_stop = {
-		NOT = { 
-			any_country = {
-				is_part_of_hre = yes
-				num_of_cities = 100
-			}
-		}
+		always = no
 	}
 	
 	0 = {
@@ -32,12 +27,7 @@ incident_es_big_army = {
 	default_option = 0
 	
 	can_stop = {
-		NOT = { 
-			any_country = {
-				is_part_of_hre = yes
-				num_of_infantry = 100
-			}
-		}
+		always = no
 	}
 	
 	0 = {
@@ -58,12 +48,7 @@ incident_es_big_fleet = {
 	default_option = 0
 	
 	can_stop = {
-		NOT = { 
-			any_country = {
-				is_part_of_hre = yes
-				navy_size = 100
-			}
-		}
+		always = no
 	}
 	
 	0 = {
@@ -84,12 +69,7 @@ incident_es_many_merc_companies = {
 	default_option = 0
 	
 	can_stop = {
-		NOT = { 
-			any_country = {
-				is_part_of_hre = yes
-				num_of_hired_mercenary_companies = 5
-			}
-		}
+		always = no
 	}
 	
 	0 = {
@@ -191,6 +171,69 @@ incident_es_low_religious_unity = {
 
 incident_es_subject_not_in_hre = {
 	event = es_hre_incident.18
+	default_option = 0
+	
+	can_stop = {
+		always = no
+	}
+	
+	0 = {
+		factor = 1
+	}
+	
+	1 = {
+		factor = 1
+	}
+	
+	2 = {
+		factor = 1
+	}
+}
+
+incident_es_new_trade_company = {
+	event = es_hre_incident.20
+	default_option = 1
+	
+	can_stop = {
+		always = no
+	}
+	
+	0 = {
+		factor = 1
+	}
+	
+	1 = {
+		factor = 1
+	}
+	
+	2 = {
+		factor = 1
+	}
+}
+
+incident_es_border_tribal_nation = {
+	event = es_hre_incident.22
+	default_option = 0
+	
+	can_stop = {
+		always = no
+	}
+	
+	0 = {
+		factor = 1
+	}
+	
+	1 = {
+		factor = 1
+	}
+	
+	2 = {
+		factor = 1
+	}
+}
+
+incident_es_too_many_subjects = {
+	event = es_hre_incident.24
 	default_option = 0
 	
 	can_stop = {

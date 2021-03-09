@@ -1,0 +1,667 @@
+### Destruction Ideas (Pap) -> Fire Ideas (Flo) Vs Shock Ideas (Flo)
+
+destruction_ideas = {
+	category = MIL
+
+	bonus = {
+		siege_ability = 0.1
+	}
+	trigger = {
+	}
+
+	elite_battlemages = {
+		leader_land_fire = 1
+	}
+	incineration = {
+		fire_damage = 0.05
+	}
+	mage_admirals = {
+		leader_naval_fire = 1
+	}
+	ice_balistas = {
+		artillery_bonus_vs_fort = 1
+	}
+	storm_conjuration = {
+		artillery_power = 0.05
+	}
+	unimpeded_mages = {
+		backrow_artillery_damage = 0.05
+	}
+	destroy_the_dissidents = {
+		harsh_treatment_cost = -0.125
+	}
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 50
+			always = yes
+		}
+	}
+}
+
+fire0 = {
+	category = MIL
+	
+	trigger = {
+		NOT = { has_idea_group = shock0 }
+	}
+	
+	bonus = {
+		fire_damage_received = -0.05
+	}
+		
+	fire1 = {
+		shock_damage_received = -0.05
+	}
+	fire2 = {
+		artillery_bonus_vs_fort = 1
+	}
+	fire3 = {
+		artillery_power = 0.05
+	}
+
+	fire4 = {
+		fire_damage = 0.05
+	}
+
+	fire5 = {
+		defensiveness = 0.1
+	}
+	fire6 = {
+		backrow_artillery_damage = 0.1
+	}
+	fire7 = {
+		leader_land_fire = 1
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 50
+			always = yes
+		}
+	}
+}
+
+shock0 = {
+	category = MIL
+	
+	trigger = {
+		NOT = { has_idea_group = fire0 }
+	}
+	
+	bonus = {
+		cavalry_power = 0.05
+	}
+		
+	shock2 = {
+		cavalry_flanking = 0.25
+	}
+	shock1 = {
+		fire_damage_received = -0.05
+	}
+	shock3 = {
+		cavalry_cost = -0.15
+	}
+	shock6 = {
+		cav_to_inf_ratio = 0.25
+	}
+	shock4 = {
+		shock_damage = 0.05
+	}
+	shock5 = {
+		infantry_power = 0.05
+	}
+	shock7 = {
+		leader_land_shock = 1
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 50
+			always = yes
+		}
+	}
+}
+
+### Restoration Ideas (Pap) -> Quaity ideas (Van) Vs Quantity Ideas (Van)
+
+restoration_ideas = {
+	category = MIL
+
+	bonus = {
+		diplomatic_reputation = 1
+	}
+	trigger = {
+		NOT = { has_idea_group = fire0 }
+	}
+
+	dedicated_healers = {
+		war_exhaustion = -0.01
+	}
+	grand_healing = {
+		manpower_recovery_speed = 0.1
+	}
+	auxiliary_healers = {
+		reinforce_speed = 0.15
+	}
+	benevolent_healers = {
+		liberty_desire = -7.5
+	}
+	heal_the_civilians = {
+		years_of_nationalism = -5
+	}
+	greater_wards = {
+		fire_damage_received = -0.025
+		shock_damage_received = -0.025
+	}
+	restorative_court_mages = {
+		monarch_lifespan = 0.10
+	}
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 50
+			always = yes
+		}
+	}
+}
+
+quality_ideas = {
+	category = MIL
+
+	bonus = {
+		discipline = 0.05
+	}
+	trigger = {
+		NOT = { has_idea_group = quantity_ideas }
+	}
+
+	private_to_marshal = {
+		infantry_power = 0.1
+	}
+	quality_education = {
+		army_tradition = 1
+	}
+	finest_of_horses = {
+		cavalry_power = 0.1
+	}
+	escort_ships = {
+		ship_durability = 0.10
+	}
+	naval_drill = {
+		naval_morale = 0.15
+	}
+	copper_bottoms = {
+		naval_attrition = -0.25
+	}
+	massed_battery = {
+		artillery_power = 0.1
+	}
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 50
+			always = yes
+		}
+	}
+}
+
+quantity_ideas = {
+	category = MIL
+
+	bonus = {
+		land_forcelimit_modifier = 0.25
+	}
+	trigger = {
+		NOT = { has_idea_group = quality_ideas }
+	}
+	
+	mass_army = {
+	    global_manpower_modifier = 0.25
+	}
+	the_young_can_serve = {
+		manpower_recovery_speed = 0.15
+	}
+	enforced_service = {
+		global_regiment_cost = -0.10
+	}
+	the_old_and_infirm = {
+		land_maintenance_modifier = -0.05
+	}
+	mercenary_contracts = {
+		global_supply_limit_modifier = 0.25
+	}
+	garrison_conscription = {
+		garrison_size = 0.15
+	}
+	expanded_supply_trains = {
+		land_attrition = -0.10
+	}
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 50
+			always = yes
+		}
+	}
+}
+
+### Smithing Ideas (New) -> Weapon Quality Ideas (Flo) Vs Armor Quality Ideas (NEW)
+
+smithing_ideas = {
+	category = MIL
+	bonus = {
+		
+	}
+	trigger = {
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 50
+			always = yes
+		}
+	}
+}
+
+waffenqualitat0 = {
+	category = MIL
+
+	bonus = {
+		discipline = 0.05
+	}
+	trigger = {
+		NOT = { has_idea_group = armour_quality_ideas }
+	}
+		
+	waffenqualitat1 = {
+		global_trade_goods_size_modifier = 0.15
+	}
+	waffenqualitat2 = {
+		infantry_power = 0.10
+	}
+	waffenqualitat3 = {
+		cavalry_power = 0.10
+	}
+	waffenqualitat4 = {
+		merchants = 1
+	}
+	waffenqualitat5 = {
+		siege_ability = 0.10
+	}
+	waffenqualitat6 = {
+		production_efficiency = 0.10
+	}
+	waffenqualitat7 = {
+		artillery_power = 0.10
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 50
+			always = yes
+		}
+	}
+}
+
+armour_quality_ideas = {
+	category = MIL
+	bonus = {
+		
+	}
+	trigger = {
+		NOT = { has_idea_group = waffenqualitat0 }
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 50
+			always = yes
+		}
+	}
+}
+
+### Conjuration Ideas (Pap) -> Summoning Ideas (NEW) Vs Necromacy Ideas (NEW)
+
+conjuration_ideas = {
+	category = MIL
+
+	bonus = {
+		sailors_recovery_speed = 0.1
+	}
+	trigger = {
+	}
+
+	bound_weapons = {
+		shock_damage = 0.05
+	}
+	soul_traping = {
+		global_tax_modifier = 0.05
+	}
+	daedric_conjuring = {
+		discipline = 0.025
+	}
+	summon_shaft = {
+		global_manpower_modifier = 0.15
+	}
+	conjurers_army = {
+		land_forcelimit_modifier = 0.15
+	}
+	master conjuration = {
+		manpower_recovery_speed = 0.1
+	}
+	animated_sentries = {
+		fort_maintenance_modifier = -0.125
+	}
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 50
+			always = yes
+		}
+	}
+}
+
+summoning_ideas = {
+	category = MIL
+	bonus = {
+		
+	}
+	trigger = {
+		NOT = { has_idea_group = necromacy_ideas }
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 50
+			always = yes
+		}
+	}
+}
+
+necromacy_ideas = {
+	category = MIL
+	bonus = {
+		
+	}
+	trigger = {
+		NOT = { has_idea_group = summoning_ideas }
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 50
+			always = yes
+		}
+	}
+}
+
+### Conscription Ideas (Flo) -> Standing Army Ideas (Flo) Vs Mercenray Army Ideas (Flo) 
+
+wehrpflicht0 = {
+	category = MIL
+
+	bonus = {
+		manpower_recovery_speed = 0.15
+	}
+		
+	trigger = {
+	}
+	
+	wehrpflicht3 = {
+		reinforce_speed = 0.25
+	}
+	wehrpflicht2 = {
+		land_morale = 0.10
+	}
+	wehrpflicht1 = {
+		global_manpower = 10.0
+	}
+
+	wehrpflicht4 = {
+		army_tradition = 0.35
+	}
+
+	wehrpflicht5 = {
+		mil_tech_cost_modifier = -0.05
+	}
+	wehrpflicht6 = {
+		global_manpower_modifier = 0.25
+	}
+	wehrpflicht7 = {
+		drill_gain_modifier = 0.25
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 50
+			always = yes
+		}
+	}
+}
+
+stehendesheer0 = {
+	category = MIL
+
+	bonus = {
+		drill_decay_modifier = -0.5
+	}
+		
+	trigger = {
+		NOT = { has_idea_group = soldnerheer0 }
+	}
+	
+	stehendesheer1 = {
+		infantry_power = 0.05
+	}
+	stehendesheer2 = {
+		cavalry_power = 0.05
+	}
+	stehendesheer3 = {
+		artillery_power = 0.05
+	}
+
+	stehendesheer5 = {
+		drill_gain_modifier = 0.15
+	}
+	stehendesheer6 = {
+		prestige_from_land = 0.5
+		
+	}
+	stehendesheer7 = {
+		siege_ability = 0.1
+	}
+	
+	stehendesheer4 = {
+		discipline = 0.05
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 50
+			always = yes
+		}
+	}
+}
+
+soldnerheer0 = {
+	category = MIL
+
+	bonus = {
+		possible_condottieri = 0.25
+	}
+		
+	trigger = {
+		NOT = { has_idea_group = stehendesheer0 }
+	}
+	
+	soldnerheer1 = {
+		loot_amount = 0.5
+	}
+	soldnerheer2 = {
+		mercenary_cost = -0.25
+	}
+	soldnerheer3 = {
+		war_exhaustion = -0.01
+	}
+
+	soldnerheer4 = {
+		merc_maintenance_modifier = -0.15
+	}
+
+	soldnerheer5 = {
+		free_leader_pool = 1
+	}
+	soldnerheer6 = {
+		mercenary_discipline = 0.05
+	}
+	soldnerheer7 = {
+		mercenary_manpower = 0.25
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 50
+			always = yes
+		}
+	}
+}
+
+### General Staff Ideas (Flo) -> Offensive Ideas (Van) Vs Defensive Ideas (Van)
+
+generalstab0 = {
+	category = MIL
+
+	bonus = {
+		general_cost = -0.25
+	}
+		
+	generalstab1 = {
+		leader_land_shock = 1
+	}
+	generalstab2 = {
+		leader_land_fire = 1
+	}
+	generalstab3 = {
+		leader_land_manuever = 1
+	}
+
+	generalstab4 = {
+		leader_siege = 1
+	}
+
+	generalstab5 = {
+		leader_naval_fire = 1
+	}
+	generalstab6 = {
+		leader_naval_shock = 1
+	}
+	generalstab7 = {
+		leader_naval_manuever = 1
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 50
+			always = yes
+		}
+	}
+}
+
+offensive_ideas = {
+	category = MIL
+
+	bonus = {
+		yearly_army_professionalism = 0.005 
+	}
+	trigger = {
+		NOT = { has_idea_group = defensive_ideas }
+	}
+
+	bayonet_leaders = {
+		leader_land_shock = 1
+	}
+	national_conscripts = {
+		global_regiment_recruit_speed = -0.1
+	}
+	superior_firepower = {
+		leader_land_fire = 1
+	}
+	glorious_arms = {
+		prestige_from_land = 0.5
+	}
+	engineer_corps = {
+		siege_ability = 0.10
+	}
+	grand_army = {
+		land_forcelimit_modifier = 0.10
+	}
+	napoleonic_warfare = {
+		discipline = 0.05
+	}
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 50
+			always = yes
+		}
+	}
+}
+
+defensive_ideas = {
+	category = MIL
+
+	bonus = {
+		hostile_attrition = 1
+	}
+	trigger = {
+		NOT = { has_idea_group = offensive_ideas }
+	}
+
+	battlefield_commisions = {
+		army_tradition = 0.25
+	}
+	military_drill = {
+		land_morale = 0.10
+	}
+	improved_manuever = {
+		leader_land_manuever = 1
+	}
+	regimental_system = {
+		land_maintenance_modifier = -0.1
+	}
+	defensive_mentality = {
+		defensiveness = 0.25
+	}
+	supply_trains = {
+		reinforce_speed = 0.25
+	}
+	improved_foraging = {
+		land_attrition = -0.15
+	}
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 50
+			always = yes
+		}
+	}
+}

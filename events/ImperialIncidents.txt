@@ -5,7 +5,7 @@ country_event = {
 	id = es_hre_incident.1
 	title = es_hre_incident.1.t
 	desc = es_hre_incident.1.d
-	picture = GOOD_WITH_MONARCH_eventPicture
+	picture = ES_INCIDENT_1
 
 	trigger = {
 		has_dlc = "Emperor"
@@ -31,7 +31,7 @@ country_event = {
 	id = es_hre_incident.2
 	title = es_hre_incident.2.t
 	desc = es_hre_incident.2.d
-	picture = GOOD_WITH_MONARCH_eventPicture
+	picture = ES_INCIDENT_1
 
 	is_triggered_only = yes
 	
@@ -78,7 +78,7 @@ country_event = {
 	id = es_hre_incident.3
 	title = es_hre_incident.3.t
 	desc = es_hre_incident.3.d
-	picture = GOOD_WITH_MONARCH_eventPicture
+	picture = ES_INCIDENT_2
 
 	trigger = {
 		has_dlc = "Emperor"
@@ -104,7 +104,7 @@ country_event = {
 	id = es_hre_incident.4
 	title = es_hre_incident.4.t
 	desc = es_hre_incident.4.d
-	picture = GOOD_WITH_MONARCH_eventPicture
+	picture = ES_INCIDENT_2
 
 	is_triggered_only = yes
 	
@@ -151,7 +151,7 @@ country_event = {
 	id = es_hre_incident.5
 	title = es_hre_incident.5.t
 	desc = es_hre_incident.5.d
-	picture = GOOD_WITH_MONARCH_eventPicture
+	picture = ES_INCIDENT_3
 
 	trigger = {
 		has_dlc = "Emperor"
@@ -177,7 +177,7 @@ country_event = {
 	id = es_hre_incident.6
 	title = es_hre_incident.6.t
 	desc = es_hre_incident.6.d
-	picture = GOOD_WITH_MONARCH_eventPicture
+	picture = ES_INCIDENT_3
 
 	is_triggered_only = yes
 	
@@ -225,7 +225,7 @@ country_event = {
 	id = es_hre_incident.7
 	title = es_hre_incident.7.t
 	desc = es_hre_incident.7.d
-	picture = GOOD_WITH_MONARCH_eventPicture
+	picture = ES_INCIDENT_4
 
 	trigger = {
 		has_dlc = "Emperor"
@@ -251,7 +251,7 @@ country_event = {
 	id = es_hre_incident.8
 	title = es_hre_incident.8.t
 	desc = es_hre_incident.8.d
-	picture = GOOD_WITH_MONARCH_eventPicture
+	picture = ES_INCIDENT_4
 
 	is_triggered_only = yes
 	
@@ -293,12 +293,12 @@ country_event = {
 	}
 }
 
-#Low Stability
+### Low Stability
 country_event = {
 	id = es_hre_incident.9
 	title = es_hre_incident.9.t
 	desc = es_hre_incident.9.d
-	picture = GOOD_WITH_MONARCH_eventPicture
+	picture = ES_INCIDENT_5
 
 	trigger = {
 		has_dlc = "Emperor"
@@ -324,6 +324,7 @@ country_event = {
 		name = es_hre_incident.9.b
 		ai_chance = { factor = 0 }
 		add_prestige = 15
+		set_country_flag = es_hre_incident_10_flag
 	}
 }
 
@@ -331,7 +332,7 @@ country_event = {
 	id = es_hre_incident.10
 	title = es_hre_incident.10.t
 	desc = es_hre_incident.10.d
-	picture = GOOD_WITH_MONARCH_eventPicture
+	picture = ES_INCIDENT_5
 
 	is_triggered_only = yes
 	
@@ -370,12 +371,12 @@ country_event = {
 	}
 }
 
-#Low Legitimacy
+### Low Legitimacy
 country_event = {
-	id = es_hre_incident.10
-	title = es_hre_incident.10.t
-	desc = es_hre_incident.10.d
-	picture = GOOD_WITH_MONARCH_eventPicture
+	id = es_hre_incident.11
+	title = es_hre_incident.11.t
+	desc = es_hre_incident.11.d
+	picture = ES_INCIDENT_6
 
 	trigger = {
 		has_dlc = "Emperor"
@@ -411,7 +412,7 @@ country_event = {
 	}
 	
 	option = {
-		name = es_hre_incident.10.a
+		name = es_hre_incident.11.a
 		ai_chance = { factor = 100 }
 		set_imperial_incident = incident_es_low_legitimacy
 		save_global_event_target_as = hre_incident_target
@@ -419,9 +420,10 @@ country_event = {
 	}
 	
 	option = {
-		name = es_hre_incident.10.b
+		name = es_hre_incident.11.b
 		ai_chance = { factor = 0 }
 		add_prestige = 15
+		set_country_flag = es_hre_incident_12_flag
 	}
 }
 
@@ -429,7 +431,7 @@ country_event = {
 	id = es_hre_incident.12
 	title = es_hre_incident.12.t
 	desc = es_hre_incident.12.d
-	picture = GOOD_WITH_MONARCH_eventPicture
+	picture = ES_INCIDENT_6
 
 	is_triggered_only = yes
 	
@@ -474,12 +476,12 @@ country_event = {
 	}
 }
 
-#High Liberty Desire
+### High Liberty Desire
 country_event = {
 	id = es_hre_incident.13
 	title = es_hre_incident.13.t
 	desc = es_hre_incident.13.d
-	picture = GOOD_WITH_MONARCH_eventPicture
+	picture = ES_INCIDENT_7
 
 	trigger = {
 		has_dlc = "Emperor"
@@ -505,6 +507,7 @@ country_event = {
 		name = es_hre_incident.13.b
 		ai_chance = { factor = 0 }
 		add_prestige = 15
+		set_country_flag = es_hre_incident_14_flag
 	}
 }
 
@@ -512,13 +515,18 @@ country_event = {
 	id = es_hre_incident.14
 	title = es_hre_incident.14.t
 	desc = es_hre_incident.14.d
-	picture = GOOD_WITH_MONARCH_eventPicture
+	picture = ES_INCIDENT_7
 
 	is_triggered_only = yes
 	
 	option = {
 		name = es_hre_incident.14.a
 		event_target:hre_incident_target = {
+			overlord = {
+				PREV = {
+					grant_independence = yes
+				}
+			}
 				grant_independence = yes
 				add_country_modifier = {
 					name = "high_liberty_1"
@@ -554,18 +562,18 @@ country_event = {
 	}
 }
 
-#Low religious Unity
+### Low religious Unity
 country_event = {
 	id = es_hre_incident.15
 	title = es_hre_incident.15.t
 	desc = es_hre_incident.15.d
-	picture = GOOD_WITH_MONARCH_eventPicture
+	picture = ES_INCIDENT_8
 
 	trigger = {
 		has_dlc = "Emperor"
 		NOT = { active_imperial_incident = any }
 		is_part_of_hre = yes
-		NOT = { religious_unity = 25 }
+		NOT = { religious_unity = 0.25 }
 		NOT = { has_country_flag = es_hre_incident_16_flag }
 	}
 	
@@ -585,6 +593,7 @@ country_event = {
 		name = es_hre_incident.15.b
 		ai_chance = { factor = 0 }
 		add_prestige = 15
+		set_country_flag = es_hre_incident_16_flag
 	}
 }
 
@@ -592,7 +601,7 @@ country_event = {
 	id = es_hre_incident.16
 	title = es_hre_incident.16.t
 	desc = es_hre_incident.16.d
-	picture = GOOD_WITH_MONARCH_eventPicture
+	picture = ES_INCIDENT_8
 
 	is_triggered_only = yes
 	
@@ -611,7 +620,7 @@ country_event = {
 		event_target:hre_incident_target = {
 			add_country_modifier = {
 				name = "low_rel_unity_2"
-				duration = 9125
+				duration = 5475
 			}
 		}
 	}
@@ -631,12 +640,12 @@ country_event = {
 	}
 }
 
-#Subject not in HRE
+#### Subject not in HRE
 country_event = {
 	id = es_hre_incident.17
 	title = es_hre_incident.17.t
 	desc = es_hre_incident.17.d
-	picture = GOOD_WITH_MONARCH_eventPicture
+	picture = ES_INCIDENT_9
 
 	trigger = {
 		has_dlc = "Emperor"
@@ -665,7 +674,7 @@ country_event = {
 	id = es_hre_incident.18
 	title = es_hre_incident.18.t
 	desc = es_hre_incident.18.d
-	picture = GOOD_WITH_MONARCH_eventPicture
+	picture = ES_INCIDENT_9
 
 	is_triggered_only = yes
 	
@@ -694,7 +703,7 @@ country_event = {
 			}
 			add_country_modifier = {
 				name = "subject_not_in_hre_2"
-				duration = 3650
+				duration = 5475
 			}
 		}
 	}
@@ -710,6 +719,278 @@ country_event = {
 				name = "subject_not_in_hre_3"
 				duration = 3650
 			}
+		}
+	}
+}
+
+### New Trade_cmpany
+country_event = {
+	id = es_hre_incident.19
+	title = es_hre_incident.19.t
+	desc = es_hre_incident.19.d
+	picture = ES_INCIDENT_10
+
+	trigger = {
+		has_dlc = "Emperor"
+		NOT = { active_imperial_incident = any }
+		is_part_of_hre = yes
+		num_of_strong_trade_companies = 1
+		NOT = { has_country_flag = es_hre_incident_20_flag }
+	}
+	
+	mean_time_to_happen = {
+		months = 480
+	}
+	
+	option = {
+		name = es_hre_incident.19.a
+		ai_chance = { factor = 100 }
+		set_imperial_incident = incident_es_new_trade_company
+		save_global_event_target_as = hre_incident_target
+		set_country_flag = es_hre_incident_20_flag
+		add_years_of_income = 1.0
+	}
+	
+}
+
+country_event = {
+	id = es_hre_incident.20
+	title = es_hre_incident.20.t
+	desc = es_hre_incident.20.d
+	picture = ES_INCIDENT_10
+
+	is_triggered_only = yes
+	
+	option = {
+		name = es_hre_incident.20.a
+		event_target:hre_incident_target = {
+			add_country_modifier = {
+				name = "new_trade_com_1"
+				duration = 9125
+			}
+		}
+	}
+	
+	option = {
+		name = es_hre_incident.20.b
+		every_country = {
+			limit = {
+				is_part_of_hre = yes
+				NOT = { has_country_flag = es_hre_incident_20_flag }
+			}
+			add_country_modifier = {
+				name = "new_trade_com_2"
+				duration = 5475
+			}
+		}
+	}
+	
+	option = {
+		name = es_hre_incident.20.c
+		emperor = {
+			add_country_modifier = {
+				name = "new_trade_com_3"
+				duration = 3650
+			}
+			add_imperial_influence = -15
+		}
+		event_target:hre_incident_target = {
+			every_owned_province = {
+				limit = {
+					is_part_of_hre = no
+					is_owned_by_trade_company = yes
+				}
+				set_in_empire = yes
+			}
+		}
+	}
+}
+
+### Tribal Border
+country_event = {
+	id = es_hre_incident.21
+	title = es_hre_incident.21.t
+	desc = es_hre_incident.21.d
+	picture = ES_INCIDENT_11
+
+	trigger = {
+		has_dlc = "Emperor"
+		NOT = { active_imperial_incident = any }
+		is_part_of_hre = yes
+		any_neighbor_country = {
+			government = tribal
+		}
+		NOT = { has_country_flag = es_hre_incident_22_flag }
+	}
+	
+	mean_time_to_happen = {
+		months = 480
+	}
+	
+	option = {
+		name = es_hre_incident.21.a
+		ai_chance = { factor = 100 }
+		set_imperial_incident = incident_es_border_tribal_nation
+		save_global_event_target_as = hre_incident_target
+		set_country_flag = es_hre_incident_22_flag
+		add_yearly_manpower = 1.0
+	}
+	
+}
+
+country_event = {
+	id = es_hre_incident.22
+	title = es_hre_incident.22.t
+	desc = es_hre_incident.22.d
+	picture = ES_INCIDENT_11
+
+	is_triggered_only = yes
+	
+	option = {
+		name = es_hre_incident.22.a
+		event_target:hre_incident_target = {
+			add_country_modifier = {
+				name = "tribal_border_1"
+				duration = 9125
+			}
+			add_years_of_income = -0.5
+		}
+	}
+	
+	option = {
+		name = es_hre_incident.22.b
+		event_target:hre_incident_target = {
+			add_country_modifier = {
+				name = "tribal_border_2"
+				duration = 5475
+			}
+			add_years_of_income = -1.0
+		}
+	}
+	
+	option = {
+		name = es_hre_incident.22.c
+		event_target:hre_incident_target = {
+			add_country_modifier = {
+				name = "tribal_border_3"
+				duration = 3650
+			}
+			add_years_of_income = -1.5
+			random_owned_province = {
+				limit = {
+					any_neighbor_province = {
+						owner = {
+							government = tribal
+						}
+					}
+					NOT = { has_building = fort_15th }
+					NOT = { has_building = fort_16th }
+					NOT = { has_building = fort_17th }
+					NOT = { has_building = fort_18th }
+				}
+				add_building = fort_15th
+			}
+			random_owned_province = {
+				limit = {
+					any_neighbor_province = {
+						owner = {
+							government = tribal
+						}
+					}
+					NOT = { has_building = fort_15th }
+					NOT = { has_building = fort_16th }
+					NOT = { has_building = fort_17th }
+					NOT = { has_building = fort_18th }
+				}
+				add_building = fort_15th
+			}
+			random_owned_province = {
+				limit = {
+					any_neighbor_province = {
+						owner = {
+							government = tribal
+						}
+					}
+					NOT = { has_building = fort_15th }
+					NOT = { has_building = fort_16th }
+					NOT = { has_building = fort_17th }
+					NOT = { has_building = fort_18th }
+				}
+				add_building = fort_15th
+			}
+		}
+	}
+}
+
+### Too many Subjects
+country_event = {
+	id = es_hre_incident.23
+	title = es_hre_incident.23.t
+	desc = es_hre_incident.23.d
+	picture = ES_INCIDENT_12
+
+	trigger = {
+		has_dlc = "Emperor"
+		NOT = { active_imperial_incident = any }
+		is_part_of_hre = yes
+		num_of_subjects = 10
+		NOT = { has_country_flag = es_hre_incident_22_flag }
+	}
+	
+	mean_time_to_happen = {
+		months = 480
+	}
+	
+	option = {
+		name = es_hre_incident.23.a
+		ai_chance = { factor = 100 }
+		set_imperial_incident = incident_es_too_many_subjects
+		save_global_event_target_as = hre_incident_target
+		set_country_flag = es_hre_incident_24_flag
+		add_prestige = 10
+	}
+	
+}
+
+country_event = {
+	id = es_hre_incident.24
+	title = es_hre_incident.24.t
+	desc = es_hre_incident.24.d
+	picture = ES_INCIDENT_12
+
+	is_triggered_only = yes
+	
+	option = {
+		name = es_hre_incident.24.a
+		event_target:hre_incident_target = {
+			add_country_modifier = {
+				name = "too_many_subjects_1"
+				duration = 9125
+			}
+		}
+	}
+	
+	option = {
+		name = es_hre_incident.24.b
+		every_country = {
+			limit = {
+				is_part_of_hre = yes
+			}
+			add_country_modifier = {
+				name = "too_many_subjects_2"
+				duration = 5475
+			}
+		}
+	}
+	
+	option = {
+		name = es_hre_incident.24.c
+		emperor = {
+			add_country_modifier = {
+				name = "too_many_subjects_3"
+				duration = 3650
+			}
+			add_prestige = -15
 		}
 	}
 }

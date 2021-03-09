@@ -1634,7 +1634,7 @@ guiTypes = {
 			name ="list"
 			position = { x = 40 y = 210 }
 			backGround=""
-			size = { x=205 y =600} #was y=300
+			size = { x=205 y =300} #was y=300
 			Orientation = "UPPER_LEFT"
 			horizontal = 0
 			spacing = 0
@@ -1658,7 +1658,7 @@ guiTypes = {
 
 		guiButtonType = {
 			name = "AgreeButton"
-			position = { x=280 y =856} #was y=525
+			position = { x=280 y =525 } #was y=525
 			quadTextureSprite ="button_type_4"
 			tooltip = ""
 			tooltipText =""
@@ -1673,7 +1673,7 @@ guiTypes = {
 
 		guiButtonType = {
 			name = "DeclineButton"
-			position = { x=50 y =856} #was y=525
+			position = { x=50 y =525 } #was y=525
 			quadTextureSprite ="button_type_4"
 			tooltip = ""
 			tooltipText =""
