@@ -738,14 +738,6 @@ organized_religion = {
 		modifier = {
 			factor = 5
 			scale = yes
-			is_capital = yes
-			owner = {
-				full_idea_group = early_religious_ideas
-			}
-		}
-		modifier = {
-			factor = 5
-			scale = yes
 			has_building = temple
 		}
 		modifier = {
@@ -1200,28 +1192,6 @@ early_feudalism = {
 					NOT = { owned_by = ROOT }
 					early_feudalism = 100
 				}
-			}
-		}
-		modifier = {
-			factor = 0.05
-			scale = yes
-			potential = {
-				has_dlc = "The Cossacks"
-				owner = { has_estate = estate_nobles }
-			}
-			custom_trigger_tooltip = {
-				tooltip = FEUDALISM_AND_NOBLES
-				any_neighbor_province = {
-					early_feudalism = 100
-				}
-				owner = {
-					has_estate = estate_nobles
-					estate_loyalty = {
-						estate = estate_nobles
-						loyalty = 40
-					}
-				}
-				has_estate = estate_nobles
 			}
 		}
 		modifier = {
@@ -2320,28 +2290,6 @@ feudalism = {
 			}
 		}
 		modifier = {
-			factor = 0.15
-			scale = yes
-			force_potential = yes	# Hide the this modifier when potential is false
-			potential = {
-				owner = { has_estate = estate_nobles }
-			}
-			custom_trigger_tooltip = {
-				tooltip = FEUDALISM_AND_NOBLES
-				any_neighbor_province = {
-					feudalism = 100
-				}
-				owner = {
-					has_estate = estate_nobles
-					estate_loyalty = {
-						estate = estate_nobles
-						loyalty = 40
-					}
-				}
-				has_estate = estate_nobles
-			}
-		}
-		modifier = {
 			factor = 5
 			scale = yes
 			potential = {
@@ -2776,28 +2724,6 @@ printing_press = {
 			}
 		}
 		modifier = {
-			factor = 0.1
-			scale = yes
-			force_potential = yes	# Hide the this modifier when potential is false
-			potential = {
-				owner = { has_estate = estate_church }
-			}
-			custom_trigger_tooltip = {
-				tooltip = tooltip_printing_press_clergy
-				any_neighbor_province = {
-					printing_press = 100
-				}
-				owner = {
-					has_estate = estate_church
-					estate_loyalty = {
-						estate = estate_church
-						loyalty = 40
-					}
-				}
-				has_estate = estate_church
-			}
-		}
-		modifier = {
 			factor = 1
 			custom_trigger_tooltip = {
 				tooltip = tooltip_dip_tech15_capital
@@ -2962,28 +2888,6 @@ global_trade = {
 			custom_trigger_tooltip = {
 				tooltip = tooltip_center_of_trade_spread
 				province_has_center_of_trade_of_level = 2
-			}
-		}
-		modifier = {
-			factor = 0.1
-			scale = yes
-			force_potential = yes	# Hide the this modifier when potential is false
-			potential = {
-				owner = { has_estate = estate_burghers }
-			}
-			custom_trigger_tooltip = {
-				tooltip = tooltip_global_trade_burghers
-				any_neighbor_province = {
-					global_trade = 100
-				}
-				owner = {
-					has_estate = estate_burghers
-					estate_loyalty = {
-						estate = estate_burghers
-						loyalty = 40
-					}
-				}
-				has_estate = estate_burghers
 			}
 		}
 

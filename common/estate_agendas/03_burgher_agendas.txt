@@ -565,7 +565,7 @@ estate_burghers_access_sea = {
 					}
 					OR = {
 						is_part_of_hre = no
-						NOT = { hre_reform_passed = landfriede }
+						NOT = { hre_reform_passed = es_prohibit_internal_wars }
 						ROOT = { is_part_of_hre = no }
 					}
 				}
@@ -599,7 +599,7 @@ estate_burghers_access_sea = {
 						}
 						OR = {
 							is_part_of_hre = no
-							NOT = { hre_reform_passed = landfriede }
+							NOT = { hre_reform_passed = es_prohibit_internal_wars }
 							ROOT = { is_part_of_hre = no }
 						}
 					}
@@ -621,7 +621,7 @@ estate_burghers_access_sea = {
 						}
 						OR = {
 							is_part_of_hre = no
-							NOT = { hre_reform_passed = landfriede }
+							NOT = { hre_reform_passed = es_prohibit_internal_wars }
 							ROOT = { is_part_of_hre = no }
 						}
 					}

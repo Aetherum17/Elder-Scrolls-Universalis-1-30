@@ -88,8 +88,10 @@ dip_issue_4 = {
 	effect = {
 		custom_tooltip = es_core_province
 		hidden_effect = {
-			random_neighbor_province = {
-				add_core = ROOT
+			random_owned_province = {
+				random_neighbor_province = {
+					add_core = ROOT
+				}
 			}
 		}
 	}
@@ -198,6 +200,7 @@ dip_issue_8 = {
 		custom_tooltip = es_define_explorer
 		hidden_effect = {
 			create_explorer = {
+				tradition = 25
 			}
 		}
 	}

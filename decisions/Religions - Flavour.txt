@@ -6,10 +6,10 @@ country_decisions = {
 		potential = {
 			NOT = { has_country_modifier = church_taxes_1 }
 			religion_group = polytheistic_group
+			adm = 5
 		}
 		allow = {
 			advisor = esu_monk
-			adm = 5
 		}
 		effect = {	
 			add_country_modifier = {
@@ -26,10 +26,10 @@ country_decisions = {
 		potential = {
 			NOT = { has_country_modifier = ritual_education_modifier_1 }
 			religion_group = polytheistic_group
+			DIP = 5
 		}
 		allow = {
 			stability = 1
-			DIP = 5
 			any_owned_province = {
 				NOT = { religion_group = ROOT }
 			}
@@ -50,11 +50,11 @@ country_decisions = {
 		potential = {
 			NOT = { has_country_modifier = godly_inspiration_1 }
 			religion_group = polytheistic_group
+			MIL = 5
 		}
 		allow = {
 			is_at_war = no
 			prestige = 35
-			MIL = 5
 		}
 		effect = {	
 		    add_prestige = -35
@@ -74,10 +74,10 @@ country_decisions = {
 		potential = {
 			religion_group = occult_group
 			NOT = { has_country_modifier = the_societas_jesu_1 }
+			ADM = 5
 		}
 		allow = {
 			manpower = 50
-			ADM = 5
 		}
 		effect = {	
 		    add_manpower = -50
@@ -95,13 +95,13 @@ country_decisions = {
 		potential = {
 			NOT = { has_country_modifier = de_heretico_comburendo_1 }
 			religion_group = occult_group
+			DIP = 5
 		}
 		allow = {
 			num_of_owned_provinces_with = {
 				value = 10
 				NOT = { religion = ROOT }
 			}
-			DIP = 5
 		}
 		effect = {	 
 		    add_years_of_income = -0.5
@@ -119,10 +119,10 @@ country_decisions = {
 		potential = {
 			NOT = { has_country_modifier = great_inti_festivals_1 }
 			religion_group = occult_group
+			MIL = 5
 		}
 		allow = {
 			stability = 2
-			MIL = 5
 			any_owned_province = {
 				NOT = { religion_group = root }
 			}
@@ -145,13 +145,13 @@ country_decisions = {
 		potential = {
 			NOT = { has_country_modifier = superintendent_office_1 }
 			religion_group = elemental_group
+			ADM = 5
 		}
 		allow = {
 			num_of_owned_provinces_with = {
 				value = 25
 				NOT = { culture = ROOT }
 			}
-			ADM = 5
 		}
 		effect = {	
 			add_country_modifier = {
@@ -168,9 +168,9 @@ country_decisions = {
 		potential = {
 			NOT = { has_country_modifier = islamic_scholarly_centre_1 }
 			religion_group = elemental_group
+			DIP = 5
 		}
 		allow = {
-			DIP = 5
 			years_of_income = 1.0
 		}
 		effect = {	
@@ -189,9 +189,9 @@ country_decisions = {
 		potential = {
 			NOT = { has_country_modifier = purification_movement_modifier_1 }
 			religion_group = elemental_group
+			MIL = 5
 		}
 		allow = {
-			MIL = 5
 			stability = 3
 		}
 		effect = {
@@ -212,9 +212,9 @@ country_decisions = {
 		potential = {
 			NOT = { has_country_modifier = the_conventicle_act_1 }
 			religion_group = daedric_group_1
+			ADM = 5
 		}
 		allow = {
-			ADM = 5
 			num_accepted_cultures = 2
 		}
 		effect = {	
@@ -232,10 +232,10 @@ country_decisions = {
 		potential = {
 			NOT = { has_country_modifier = house_of_worship_1 }
 			religion_group = daedric_group_1
+			DIP = 5
 		}
 		allow = {
 			full_idea_group = innovativeness_ideas
-			DIP = 5
 		}
 		effect = {
 			add_country_modifier = {
@@ -252,9 +252,9 @@ country_decisions = {
 		potential = {
 			NOT = { has_country_modifier = religious_sacrifices_1 }
 			religion_group = daedric_group_1
+			MIL = 5
 		}
 		allow = {
-			MIL = 5
 			num_of_rebel_armies = 3
 		}
 		effect = {	
@@ -274,9 +274,9 @@ country_decisions = {
 		potential = {
 			NOT = { has_country_modifier = the_test_act_1 }
 			religion_group = harmony_group
+			ADM = 5
 		}
 		allow = {
-			ADM = 5
 			num_of_harmonized = 1
 		}
 		effect = {	
@@ -294,9 +294,9 @@ country_decisions = {
 		potential = {
 			NOT = { has_country_modifier = the_harmony_act_1 }
 			religion_group = harmony_group
+			DIP = 5
 		}
 		allow = {
-			DIP = 5
 			num_of_owned_provinces_with = {
 				value = 100
 				NOT = { religion_group = ROOT }
@@ -317,9 +317,9 @@ country_decisions = {
 		potential = {
 			NOT = { has_country_modifier = rite_of_passage_1 }
 			religion_group = harmony_group
+			MIL = 5
 		}
 		allow = {
-			MIL = 5
 			any_neighbor_country = {
 			    religion_group = harmony_group
 			}

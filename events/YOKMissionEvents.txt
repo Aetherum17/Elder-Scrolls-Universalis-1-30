@@ -7,7 +7,7 @@ country_event = {
 	picture = YOKMISSION_1_eventPicture
 	
 	trigger = {
-		NOT = { has_country_flag yok_mission_1_flag }
+		NOT = { has_country_flag = yok_mission_1_flag }
 	}
 	
 	is_triggered_only = yes
@@ -46,7 +46,7 @@ country_event = {
 	picture = YOKMISSION_2_eventPicture
 	
 	trigger = {
-		NOT = { has_country_flag yok_mission_2_flag }
+		NOT = { has_country_flag = yok_mission_2_flag }
 	}
 	
 	is_triggered_only = yes
@@ -382,7 +382,7 @@ country_event = {
 	picture = YOKMISSION_3_eventPicture
 	
 	trigger = {
-		NOT = { has_country_flag yok_mission_3_flag }
+		NOT = { has_country_flag = yok_mission_3_flag }
 	}
 	
 	is_triggered_only = yes

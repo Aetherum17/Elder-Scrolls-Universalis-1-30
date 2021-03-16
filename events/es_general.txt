@@ -607,7 +607,7 @@ country_event = {
 	
 	trigger = {
 		NOT = { has_global_flag = rise_of_akaviri_protectorate_flag }
-		NOT = { has_global_flag = rise_of_septim_flag }
+		#NOT = { has_global_flag = rise_of_septim_flag }
 		has_heir = no
 		has_government_attribute = heir
 		government = monarchy

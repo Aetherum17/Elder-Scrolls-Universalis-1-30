@@ -1852,13 +1852,6 @@ country_event = {
 	
 	option = {
 		name = culture_religion_events.22.a #
-		ai_chance = {
-			factor = 5
-			modifier = {
-				factor = 5
-				dominant_religion = new_variable:ruler_culture
-			}
-		}
 		if = {
 			limit = {
 				NOT = { accepted_culture = new_variable:ruler_culture }

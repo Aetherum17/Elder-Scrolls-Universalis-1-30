@@ -63,8 +63,6 @@ country_event = {
 					is_capital = no
 					is_state = yes
 					is_in_capital_area = yes 
-					NOT = { has_estate = estate_burghers }
-					NOT = { has_estate = estate_church }
 				}
 				save_event_target_as = origin_of_queens_family
 			}
@@ -133,8 +131,6 @@ country_event = {
 					OR = {
 						is_state = yes
 						is_in_capital_area = yes 
-						NOT = { has_estate = estate_burghers }
-						NOT = { has_estate = estate_church }
 					}
 				}
 				save_event_target_as = origin_of_queens_family
@@ -146,7 +142,6 @@ country_event = {
 						is_state = yes
 						is_in_capital_area = yes 
 					}
-					has_estate = estate_nobles
 					development = 15
 				}
 				save_event_target_as = origin_of_queens_family
@@ -158,7 +153,6 @@ country_event = {
 						is_state = yes
 						is_in_capital_area = yes 
 					}
-					has_estate = estate_nobles
 					development = 20
 				}
 				save_event_target_as = origin_of_queens_family
@@ -170,7 +164,6 @@ country_event = {
 						is_state = yes
 						is_in_capital_area = yes 
 					}
-					has_estate = estate_nobles
 					development = 25
 				}
 				save_event_target_as = origin_of_queens_family

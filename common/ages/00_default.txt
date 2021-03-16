@@ -58,7 +58,7 @@ es_age_of_elves = {
 				NOT = { has_dlc = "Cradle of Civilization" }
 			}
 			army_tradition = 50
-		}
+		} 
 	}		
 	
 	abilities = {
@@ -998,7 +998,7 @@ es_age_of_invasions = {
 	objectives = {
 		obj_10_1 = {
 			calc_true_if = {
-				province_has_center_of_trade_of_level = 2
+				all_owned_province = { province_has_center_of_trade_of_level = 2 }
 				amount = 10
 			}
 		}

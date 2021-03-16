@@ -3,10 +3,10 @@
 destruction_ideas = {
 	category = MIL
 
+	trigger = {
+	}
 	bonus = {
 		siege_ability = 0.1
-	}
-	trigger = {
 	}
 
 	elite_battlemages = {
@@ -44,9 +44,9 @@ fire0 = {
 	category = MIL
 	
 	trigger = {
+		has_idea_group = destruction_ideas
 		NOT = { has_idea_group = shock0 }
 	}
-	
 	bonus = {
 		fire_damage_received = -0.05
 	}
@@ -66,7 +66,7 @@ fire0 = {
 	}
 
 	fire5 = {
-		defensiveness = 0.1
+		defensiveness = 0.15
 	}
 	fire6 = {
 		backrow_artillery_damage = 0.1
@@ -88,15 +88,15 @@ shock0 = {
 	category = MIL
 	
 	trigger = {
+		has_idea_group = destruction_ideas
 		NOT = { has_idea_group = fire0 }
 	}
-	
 	bonus = {
 		cavalry_power = 0.05
 	}
 		
 	shock2 = {
-		cavalry_flanking = 0.25
+		cavalry_flanking = 0.5
 	}
 	shock1 = {
 		fire_damage_received = -0.05
@@ -105,7 +105,7 @@ shock0 = {
 		cavalry_cost = -0.15
 	}
 	shock6 = {
-		cav_to_inf_ratio = 0.25
+		cav_to_inf_ratio = 0.5
 	}
 	shock4 = {
 		shock_damage = 0.05
@@ -131,15 +131,14 @@ shock0 = {
 restoration_ideas = {
 	category = MIL
 
+	trigger = {
+	}
 	bonus = {
 		diplomatic_reputation = 1
 	}
-	trigger = {
-		NOT = { has_idea_group = fire0 }
-	}
 
 	dedicated_healers = {
-		war_exhaustion = -0.01
+		war_exhaustion = -0.03
 	}
 	grand_healing = {
 		manpower_recovery_speed = 0.1
@@ -148,7 +147,7 @@ restoration_ideas = {
 		reinforce_speed = 0.15
 	}
 	benevolent_healers = {
-		liberty_desire = -7.5
+		reduced_liberty_desire = 7.5
 	}
 	heal_the_civilians = {
 		years_of_nationalism = -5
@@ -158,7 +157,7 @@ restoration_ideas = {
 		shock_damage_received = -0.025
 	}
 	restorative_court_mages = {
-		monarch_lifespan = 0.10
+		heir_chance = 0.15
 	}
 
 	ai_will_do = {
@@ -173,33 +172,34 @@ restoration_ideas = {
 quality_ideas = {
 	category = MIL
 
-	bonus = {
-		discipline = 0.05
-	}
 	trigger = {
+		has_idea_group = restoration_ideas
 		NOT = { has_idea_group = quantity_ideas }
+	}
+	bonus = {
+		discipline = 0.025
 	}
 
 	private_to_marshal = {
-		infantry_power = 0.1
+		infantry_power = 0.05
 	}
 	quality_education = {
-		army_tradition = 1
+		army_tradition = 0.5
 	}
 	finest_of_horses = {
-		cavalry_power = 0.1
+		cavalry_power = 0.05
 	}
 	escort_ships = {
-		ship_durability = 0.10
+		ship_durability = 0.05
 	}
 	naval_drill = {
-		naval_morale = 0.15
+		naval_morale = 0.075
 	}
 	copper_bottoms = {
 		naval_attrition = -0.25
 	}
 	massed_battery = {
-		artillery_power = 0.1
+		artillery_power = 0.05
 	}
 
 	ai_will_do = {
@@ -214,27 +214,28 @@ quality_ideas = {
 quantity_ideas = {
 	category = MIL
 
+	trigger = {
+		has_idea_group = restoration_ideas
+		NOT = { has_idea_group = quality_ideas }
+	}
 	bonus = {
 		land_forcelimit_modifier = 0.25
-	}
-	trigger = {
-		NOT = { has_idea_group = quality_ideas }
 	}
 	
 	mass_army = {
 	    global_manpower_modifier = 0.25
 	}
 	the_young_can_serve = {
-		manpower_recovery_speed = 0.15
+		manpower_recovery_speed = 0.10
 	}
 	enforced_service = {
-		global_regiment_cost = -0.10
+		global_regiment_cost = -0.05
 	}
 	the_old_and_infirm = {
-		land_maintenance_modifier = -0.05
+		land_maintenance_modifier = -0.025
 	}
 	mercenary_contracts = {
-		global_supply_limit_modifier = 0.25
+		global_supply_limit_modifier = 0.17
 	}
 	garrison_conscription = {
 		garrison_size = 0.15
@@ -256,10 +257,33 @@ quantity_ideas = {
 
 smithing_ideas = {
 	category = MIL
-	bonus = {
-		
-	}
+	
 	trigger = {
+	}
+	bonus = {
+		leader_land_shock = 1
+	}
+	
+	dragonbone_armor = {
+		shock_damage_received = -0.05
+	}
+	dragonbone_shields = {
+		fire_damage_received = -0.05
+	}
+	dragonbone_weapons = {
+		shock_damage = 0.05
+	}
+	dragonbone_bows = {
+		fire_damage = 0.05
+	}
+	arms_factories = {
+		global_trade_goods_size_modifier = 0.10
+	}
+	battle_smiths = {
+		global_supply_limit_modifier = 0.17
+	}
+	well_equiped_guards = {
+		harsh_treatment_cost = -0.20
 	}
 	
 	ai_will_do = {
@@ -274,21 +298,22 @@ smithing_ideas = {
 waffenqualitat0 = {
 	category = MIL
 
-	bonus = {
-		discipline = 0.05
-	}
 	trigger = {
+		has_idea_group = smithing_ideas
 		NOT = { has_idea_group = armour_quality_ideas }
+	}
+	bonus = {
+		discipline = 0.025
 	}
 		
 	waffenqualitat1 = {
-		global_trade_goods_size_modifier = 0.15
+		global_trade_goods_size_modifier = 0.075
 	}
 	waffenqualitat2 = {
-		infantry_power = 0.10
+		infantry_power = 0.05
 	}
 	waffenqualitat3 = {
-		cavalry_power = 0.10
+		cavalry_power = 0.05
 	}
 	waffenqualitat4 = {
 		merchants = 1
@@ -297,10 +322,10 @@ waffenqualitat0 = {
 		siege_ability = 0.10
 	}
 	waffenqualitat6 = {
-		production_efficiency = 0.10
+		production_efficiency = 0.05
 	}
 	waffenqualitat7 = {
-		artillery_power = 0.10
+		artillery_power = 0.05
 	}
 	
 	ai_will_do = {
@@ -314,11 +339,35 @@ waffenqualitat0 = {
 
 armour_quality_ideas = {
 	category = MIL
-	bonus = {
-		
-	}
+	
 	trigger = {
+		has_idea_group = smithing_ideas
 		NOT = { has_idea_group = waffenqualitat0 }
+	}
+	bonus = {
+		yearly_army_professionalism = 0.05
+	}
+	
+	shining_armors = {
+		 prestige_from_land = 0.35	
+	}
+	a_pristine_armada = {
+		 prestige = 0.35
+	}
+	royal_marines = {
+		prestige_from_naval = 0.35
+	}
+	standarized_armor_sets = {
+		 drill_gain_modifier = 0.15
+	}
+	impenetrable_armors= {
+	fire_damage_received  = -0.05
+	}
+	quality_materials = {
+		movement_speed = 0.10
+	}
+	well_equiped_troops = {
+		cavalry_power = 0.05
 	}
 	
 	ai_will_do = {
@@ -335,28 +384,28 @@ armour_quality_ideas = {
 conjuration_ideas = {
 	category = MIL
 
-	bonus = {
-		sailors_recovery_speed = 0.1
-	}
 	trigger = {
+	}
+	bonus = {
+		sailors_recovery_speed = 0.25
 	}
 
 	bound_weapons = {
 		shock_damage = 0.05
 	}
 	soul_traping = {
-		global_tax_modifier = 0.05
+		global_tax_modifier = 0.1
 	}
 	daedric_conjuring = {
 		discipline = 0.025
 	}
 	summon_shaft = {
-		global_manpower_modifier = 0.15
+		global_manpower_modifier = 0.25
 	}
 	conjurers_army = {
-		land_forcelimit_modifier = 0.15
+		land_forcelimit_modifier = 0.25
 	}
-	master conjuration = {
+	master_conjuration = {
 		manpower_recovery_speed = 0.1
 	}
 	animated_sentries = {
@@ -374,11 +423,37 @@ conjuration_ideas = {
 
 summoning_ideas = {
 	category = MIL
-	bonus = {
-		
-	}
+	
 	trigger = {
+		has_idea_group = conjuration_ideas
 		NOT = { has_idea_group = necromacy_ideas }
+	}
+	bonus = {
+		global_regiment_cost = -0.10
+	}
+	
+	summon_dremora_lords = {
+		discipline = 0.025
+	}
+	summon_dremora_generals = {
+		free_leader_pool = 1
+	}
+	unleash_dregoths = {
+		infantry_power = 0.05
+	}
+	summon_sentries = {
+		 global_spy_defence = 0.30
+	}
+	summon_servants= {
+	 	war_exhaustion_cost = -0.15
+	}
+	atronach_shock_troops = {
+		shock_damage_received = -0.025
+		shock_damage = 0.025
+	}
+	counter_summoning = {
+		fire_damage_received = -0.05
+		
 	}
 	
 	ai_will_do = {
@@ -392,11 +467,35 @@ summoning_ideas = {
 
 necromacy_ideas = {
 	category = MIL
-	bonus = {
-		
-	}
+	
 	trigger = {
+		has_idea_group = conjuration_ideas
 		NOT = { has_idea_group = summoning_ideas }
+	}
+	bonus = {
+		land_maintenance_modifier = -0.05
+	}
+	
+	army_of_the_dead = {
+		global_manpower_modifier = 0.25
+	}
+	the_dead_do_not_suffer = {
+		war_exhaustion = -0.03
+	}
+	skeletal_body_guards = {
+		land_forcelimit_modifier = 0.25
+	}
+	state_sanctioned_necromancy = {
+		manpower_in_true_faith_provinces = 0.25
+	}
+	recycle_our_dead= {
+		reinforce_speed = 0.17
+	}
+	the_dead_feel_no_fear = {
+		land_morale = 0.075
+	}
+	relentless_undead = {
+		 recover_army_morale_speed = 0.15
 	}
 	
 	ai_will_do = {
@@ -410,40 +509,38 @@ necromacy_ideas = {
 
 ### Conscription Ideas (Flo) -> Standing Army Ideas (Flo) Vs Mercenray Army Ideas (Flo) 
 
-wehrpflicht0 = {
+mobility_ideas = {
 	category = MIL
 
 	bonus = {
-		manpower_recovery_speed = 0.15
+		reserves_organisation = 0.15
 	}
-		
 	trigger = {
 	}
-	
-	wehrpflicht3 = {
-		reinforce_speed = 0.25
+
+	athletics = {
+		movement_speed = 0.10
 	}
-	wehrpflicht2 = {
-		land_morale = 0.10
+	acrobatics = {
+		land_attrition = -0.10
 	}
-	wehrpflicht1 = {
-		global_manpower = 10.0
+	sneak = {
+		spy_offence = 0.25
+	}
+	master_acrobats = {
+		leader_land_manuever = 1
+	}
+	master_athletics = {
+		leader_naval_manuever = 1
+	}
+	deft_riders = {
+		cav_to_inf_ratio = 0.25
+		cavalry_flanking = 0.5
+	}
+	deft_hands = {
+		loot_amount = 0.25
 	}
 
-	wehrpflicht4 = {
-		army_tradition = 0.35
-	}
-
-	wehrpflicht5 = {
-		mil_tech_cost_modifier = -0.05
-	}
-	wehrpflicht6 = {
-		global_manpower_modifier = 0.25
-	}
-	wehrpflicht7 = {
-		drill_gain_modifier = 0.25
-	}
-	
 	ai_will_do = {
 		factor = 1
 		modifier = {
@@ -455,13 +552,13 @@ wehrpflicht0 = {
 
 stehendesheer0 = {
 	category = MIL
-
-	bonus = {
-		drill_decay_modifier = -0.5
-	}
 		
 	trigger = {
+		has_idea_group = mobility_ideas
 		NOT = { has_idea_group = soldnerheer0 }
+	}
+	bonus = {
+		drill_decay_modifier = -0.5
 	}
 	
 	stehendesheer1 = {
@@ -486,7 +583,7 @@ stehendesheer0 = {
 	}
 	
 	stehendesheer4 = {
-		discipline = 0.05
+		discipline = 0.025
 	}
 	
 	ai_will_do = {
@@ -500,13 +597,13 @@ stehendesheer0 = {
 
 soldnerheer0 = {
 	category = MIL
-
-	bonus = {
-		possible_condottieri = 0.25
-	}
 		
 	trigger = {
+		has_idea_group = mobility_ideas
 		NOT = { has_idea_group = stehendesheer0 }
+	}
+	bonus = {
+		possible_condottieri = 0.5
 	}
 	
 	soldnerheer1 = {
@@ -516,7 +613,7 @@ soldnerheer0 = {
 		mercenary_cost = -0.25
 	}
 	soldnerheer3 = {
-		war_exhaustion = -0.01
+		war_exhaustion = -0.03
 	}
 
 	soldnerheer4 = {
@@ -547,6 +644,8 @@ soldnerheer0 = {
 generalstab0 = {
 	category = MIL
 
+	trigger = {
+	}
 	bonus = {
 		general_cost = -0.25
 	}
@@ -587,11 +686,12 @@ generalstab0 = {
 offensive_ideas = {
 	category = MIL
 
+	trigger = {
+		has_idea_group = generalstab0
+		NOT = { has_idea_group = defensive_ideas }
+	}
 	bonus = {
 		yearly_army_professionalism = 0.005 
-	}
-	trigger = {
-		NOT = { has_idea_group = defensive_ideas }
 	}
 
 	bayonet_leaders = {
@@ -628,33 +728,34 @@ offensive_ideas = {
 defensive_ideas = {
 	category = MIL
 
+	trigger = {
+		has_idea_group = generalstab0
+		NOT = { has_idea_group = offensive_ideas }
+	}
 	bonus = {
 		hostile_attrition = 1
 	}
-	trigger = {
-		NOT = { has_idea_group = offensive_ideas }
-	}
 
 	battlefield_commisions = {
-		army_tradition = 0.25
+		army_tradition = 0.5
 	}
 	military_drill = {
-		land_morale = 0.10
+		land_morale = 0.075
 	}
 	improved_manuever = {
 		leader_land_manuever = 1
 	}
 	regimental_system = {
-		land_maintenance_modifier = -0.1
+		land_maintenance_modifier = -0.05
 	}
 	defensive_mentality = {
-		defensiveness = 0.25
+		defensiveness = 0.15
 	}
 	supply_trains = {
-		reinforce_speed = 0.25
+		reinforce_speed = 0.17
 	}
 	improved_foraging = {
-		land_attrition = -0.15
+		land_attrition = -0.10
 	}
 
 	ai_will_do = {

@@ -331,7 +331,7 @@ estate_maratha_retake_core = {
 		is_free_or_tributary_trigger = yes
 		OR = {
 			is_part_of_hre = no
-			NOT = { hre_reform_passed = landfriede }
+			NOT = { hre_reform_passed = es_prohibit_internal_wars }
 		}
 		any_province = {
 			is_core = root
@@ -724,7 +724,7 @@ estate_maratha_protect_our_culture = {
 					NOT = { ROOT = { truce_with = prev } }
 					OR = {
 						is_part_of_hre = no
-						NOT = { hre_reform_passed = landfriede }
+						NOT = { hre_reform_passed = es_prohibit_internal_wars }
 						ROOT = { is_part_of_hre = no }
 					}
 				}
@@ -759,7 +759,7 @@ estate_maratha_protect_our_culture = {
 						NOT = { ROOT = { truce_with = prev } }
 						OR = {
 							is_part_of_hre = no
-							NOT = { hre_reform_passed = landfriede }
+							NOT = { hre_reform_passed = es_prohibit_internal_wars }
 							ROOT = { is_part_of_hre = no }
 						}
 					}
@@ -782,7 +782,7 @@ estate_maratha_protect_our_culture = {
 						NOT = { ROOT = { truce_with = prev } }
 						OR = {
 							is_part_of_hre = no
-							NOT = { hre_reform_passed = landfriede }
+							NOT = { hre_reform_passed = es_prohibit_internal_wars }
 							ROOT = { is_part_of_hre = no }
 						}
 					}
@@ -944,7 +944,7 @@ estate_maratha_vassalise_vulnerable_country = {
 			}
 			OR = {
 				is_part_of_hre = no
-				NOT = { hre_reform_passed = landfriede }
+				NOT = { hre_reform_passed = es_prohibit_internal_wars }
 				ROOT = { is_part_of_hre = no }
 			}
 			any_owned_province = {
@@ -1013,7 +1013,7 @@ estate_maratha_vassalise_vulnerable_country = {
 				}
 				OR = {
 					is_part_of_hre = no
-					NOT = { hre_reform_passed = landfriede }
+					NOT = { hre_reform_passed = es_prohibit_internal_wars }
 					ROOT = { is_part_of_hre = no }
 				}
 				any_owned_province = {
@@ -1148,7 +1148,7 @@ estate_maratha_expand_into_x = {
 			}
 			OR = {
 				is_part_of_hre = no
-				NOT = { hre_reform_passed = landfriede }
+				NOT = { hre_reform_passed = es_prohibit_internal_wars }
 				ROOT = { is_part_of_hre = no }
 			}
 		}
@@ -1224,7 +1224,7 @@ estate_maratha_expand_into_x = {
 				}
 				OR = {
 					is_part_of_hre = no
-					NOT = { hre_reform_passed = landfriede }
+					NOT = { hre_reform_passed = es_prohibit_internal_wars }
 					ROOT = { is_part_of_hre = no }
 				}
 			}
@@ -1388,7 +1388,7 @@ estate_maratha_complete_conquest_of_x = {
 								is_subject_of = root
 								AND = {
 									is_part_of_hre = yes
-									hre_reform_passed = landfriede
+									hre_reform_passed = es_prohibit_internal_wars
 								}
 							}
 						}
@@ -1472,7 +1472,7 @@ estate_maratha_complete_conquest_of_x = {
 									is_subject_of = root
 									AND = {
 										is_part_of_hre = yes
-										hre_reform_passed = landfriede
+										hre_reform_passed = es_prohibit_internal_wars
 									}
 								}
 							}
@@ -1497,7 +1497,7 @@ estate_maratha_complete_conquest_of_x = {
 									is_subject_of = root
 									AND = {
 										is_part_of_hre = yes
-										hre_reform_passed = landfriede
+										hre_reform_passed = es_prohibit_internal_wars
 									}
 								}
 							}

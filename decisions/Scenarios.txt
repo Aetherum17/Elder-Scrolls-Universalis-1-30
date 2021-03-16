@@ -135,7 +135,7 @@ country_decisions = {
 		
 		ROOT = { create_subject = { subject_type = vassal subject = NA1 } }
 		NA1 = { change_religion = ROOT change_primary_culture = ROOT }
-		every_province = { limit = { owned_by = NA1 } change_religion = ROOT change_culture = ROOT add_country_modifier = { name = "00_unrest" duration = 9125 } }
+		every_province = { limit = { owned_by = NA1 } change_religion = ROOT change_culture = ROOT add_province_modifier = { name = "00_unrest" duration = 9125 } }
 		}
 		ai_will_do = {
 			factor = 1

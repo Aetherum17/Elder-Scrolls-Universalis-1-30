@@ -1,5 +1,4 @@
-static_actions = # static_actions is a reserved token.
-{
+static_actions = {
 	# alert_index maps to the frame of the alert icon
 	royal_marriage = 										{ alert_index = 1 alert_tooltip = ICON_RM }
 	requestpeace = 										{ alert_index = 2 alert_tooltip = ICON_PEACE  } # alert_index will be overwritten in code for this one.

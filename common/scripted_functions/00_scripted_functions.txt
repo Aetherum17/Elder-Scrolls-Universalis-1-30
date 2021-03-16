@@ -186,7 +186,7 @@ will_demand_annexation = {
 			is_elector = yes
 		}
 		allow = {
-			NOT = { hre_reform_passed = landfriede }
+			NOT = { hre_reform_passed = es_prohibit_internal_wars }
 		}
 	}
 }

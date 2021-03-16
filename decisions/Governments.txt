@@ -11,8 +11,9 @@ country_decisions = {
 		}
 		allow =  {
 			stability = 3
-			full_idea_group = administrative_ideas
-			full_idea_group = economic_ideas
+			full_idea_group = trade_ideas
+			full_idea_group = diplomatic_ideas
+			full_idea_group = maritime_ideas
 			is_at_war = no 
 			is_subject = no
 			NOT = { primitives = yes }
@@ -37,8 +38,9 @@ country_decisions = {
 		}
 		allow =  {
 			stability = 3
-			full_idea_group = religious_ideas
-			full_idea_group = diplomatic_ideas
+			full_idea_group = mysticism_ideas
+			full_idea_group = staatsverwaltung0
+			full_idea_group = justiz0
 			is_at_war = no 
 			is_subject = no
 			NOT = { primitives = yes }
@@ -61,8 +63,9 @@ country_decisions = {
 		}
 		allow =  {
 			stability = 3
-			full_idea_group = influence_ideas
-			full_idea_group = expansion_ideas
+			full_idea_group = smithing_ideas
+			full_idea_group = mobility_ideas
+			full_idea_group = generalstab0
 			is_at_war = no 
 			is_subject = no
 			NOT = { primitives = yes }
@@ -84,7 +87,7 @@ country_decisions = {
 		}
 		allow =  {
 			stability = 3
-			is_year = 150
+			is_year = 750
 			is_at_war = no 
 			NOT = { is_lacking_institutions = yes }
 			NOT = { primitives = yes }
@@ -106,7 +109,7 @@ country_decisions = {
 			NOT = { has_country_flag = es_tribal_reform_flag }
 		}
 		allow =  {
-			is_year = 150
+			is_year = 750
 			is_at_war = no 
 			NOT = { is_lacking_institutions = yes }
 			NOT = { primitives = yes }

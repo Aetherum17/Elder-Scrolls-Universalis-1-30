@@ -6,12 +6,12 @@ country_decisions = {
 		potential = {
 			NOT = { has_country_modifier = enforcing_heritage_1 }
 			government = monarchy
+			ADM = 5
 		}
 		allow = {
 			any_neighbor_country = {
 				NOT = { religion_group = ROOT }
 			}
-			ADM = 5
 		}
 		effect = {
 			add_country_modifier = {
@@ -28,10 +28,10 @@ country_decisions = {
 		potential = {
 			NOT = { has_country_modifier = rites_of_admission_modifier_1 }
 			government = monarchy
+			DIP = 3
 		}
 		allow = {
 			stability = 3
-			DIP = 3
 			adm_power = 250
 		}
 		effect = {
@@ -53,9 +53,9 @@ country_decisions = {
 		potential = {
 			NOT = { has_country_modifier = restricted_offices_1 }
 			government = republic
+			DIP = 3
 		}
 		allow = {
-			DIP = 3
 			republican_tradition = 90
 			years_of_income = 0.5
 		}
@@ -76,9 +76,9 @@ country_decisions = {
 		potential = {
 			NOT = { has_country_modifier = yellow_shamanism_modifier_1 }
 			government = republic
+			ADM = 5
 		}
 		allow = {
-			ADM = 5
 			stability = 1
 		}
 		effect = {	
@@ -99,9 +99,9 @@ country_decisions = {
 		potential = {
 			NOT = { has_country_modifier = saving_the_burning_world_1 }
 			government = theocracy
+			ADM = 5
 		}
 		allow = {
-			ADM = 5
 			prestige = 35
 		}
 		effect = {	
@@ -120,9 +120,9 @@ country_decisions = {
 		potential = {
 			NOT = { has_country_modifier = nahuatl_sacrificial_stones_1 }
 			government = theocracy
+			MIL = 3
 		}
 		allow = {
-		    MIL = 3
 			mil_power = 500
 			any_owned_province = {
 				NOT = { religion_group = owner }
@@ -146,9 +146,9 @@ country_decisions = {
 		potential = {
 			NOT = { has_country_modifier = spreading_norse_rituals_1 }
 			government = tribal
+			DIP = 3
 		}
 		allow = {
-			DIP = 3
 			stability = 2
 		}
 		effect = {	
@@ -167,9 +167,9 @@ country_decisions = {
 		potential = {
 			NOT = { has_country_modifier = wandering_shamans_modifier_1 }
 			government = tribal
+			ADM = 5
 		}
 		allow = {
-		    ADM = 5
 			adm_power = 250
 			prestige = 15
 			any_owned_province = {

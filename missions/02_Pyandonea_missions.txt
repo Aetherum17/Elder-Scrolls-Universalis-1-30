@@ -2232,16 +2232,12 @@ colonization_missions = {
         required_missions = { sequestering_sealanes_mission }
         
         provinces_to_highlight = {
-			OR = {
-				area = pyandonea_3_la		#Etho Sul
-				area = pyandonea_5_la		#Kituna Vos
-				area = pyandonea_6_la		#Vallas Bor
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			province_id = 240
+			NOT = { owned_by = ROOT }
         }
     
         trigger = {
-            2089 = { country_or_non_sovereign_subject_holds = ROOT }
+            240 = { country_or_non_sovereign_subject_holds = ROOT }
 			num_of_owned_provinces_with = {
 				value = 25
 					OR = {

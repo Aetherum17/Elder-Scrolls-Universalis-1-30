@@ -1,0 +1,854 @@
+#Administrative Ideas (Van) -> Centralism Ideas (Flo) Vs Decentralisation Ideas (Flo)
+
+administrative_ideas = {
+	category = ADM
+
+	trigger = {
+	}
+	bonus = {
+		governing_capacity_modifier = 0.15
+	}
+
+	organised_mercenary_payment = {
+		adm_advisor_cost = -0.15
+	}
+	adaptability = {
+		core_creation = -0.15
+	}
+	benefits_for_mercenaries = {
+		expand_administration_cost = -0.25
+	}
+	bookkeeping = {
+		interest = -1
+	}
+	organised_mercenary_recruitment = {
+		min_autonomy_in_territories = -0.1
+	}
+	administrative_efficiency_idea = {
+		advisor_pool = 1
+	}
+	civil_servants = {
+		adm_tech_cost_modifier = -0.05
+	}
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 50
+			always = yes
+		}
+	}
+}
+
+zentra0 = {
+	category = ADM
+
+	trigger = {
+		has_idea_group = administrative_ideas
+		NOT = { has_idea_group = dezentra0 }	
+	}
+	bonus = {
+		defensiveness = 0.15
+	}
+		
+	zentra1 = {
+		build_time = -0.25
+	}
+	zentra2 = {
+		global_trade_goods_size_modifier = 0.05
+	}
+	zentra3 = {
+		development_cost = -0.1
+	}
+	zentra4 = {
+		autonomy_change_time = -0.5
+	}
+	zentra5 = {
+		global_autonomy = -0.025
+	}
+	zentra6 = {
+		state_maintenance_modifier = -0.15
+	}
+	zentra7 = {
+		global_tax_modifier = 0.1
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 50
+			always = yes
+		}
+	}
+}
+
+dezentra0 = {
+	category = ADM
+	
+	trigger = {
+		has_idea_group = administrative_ideas
+		NOT = { has_idea_group = zentra0 }	
+	}
+	bonus = {
+		development_cost = -0.1
+	}
+		
+	dezentra1 = {
+		build_cost = -0.1
+	}
+	dezentra2 = {
+		yearly_corruption = -0.05
+	}
+	dezentra3 = {
+		trade_efficiency = 0.1
+	}
+
+	dezentra4 = {
+		global_institution_spread = 0.20
+	}
+	dezentra5 = {
+		governing_capacity_modifier = 0.15
+	}
+	dezentra6 = {
+		global_manpower_modifier = 0.25
+	}
+	dezentra7 = {
+		global_prov_trade_power_modifier = 0.15
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 50
+			always = yes
+		}
+	}
+}
+
+#Economic Ideas (Van) -> Expansion Ideas (Van) Vs Innovative Ideas (Van)
+
+economic_ideas = {
+	category = ADM
+
+	trigger = {
+	}
+	bonus = {
+		development_cost = -0.10
+	}
+
+	bureaucracy = {
+		global_tax_modifier = 0.10
+	}
+	organised_construction = {
+		build_cost = -0.1
+	}
+	national_bank = {
+		inflation_reduction = 0.05
+	}
+	debt_and_loans = {
+		interest = -1
+	}
+	centralization = {
+		global_autonomy = -0.025
+	}
+	nationalistic_enthusiasm = {
+		land_maintenance_modifier = -0.05
+	}
+	smithian_economics = {
+		production_efficiency = 0.10
+ 	}
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 50
+			always = yes
+		}
+	}
+}
+
+expansion_ideas = {
+	category = ADM
+	important = yes
+
+	trigger = {	
+		has_idea_group = economic_ideas
+		NOT = { has_idea_group = innovativeness_ideas }	
+	}
+	bonus = {
+ 		cb_on_overseas = yes
+		colonists = 1
+	}
+
+	additional_colonists = {
+		colonists = 1
+	}
+	additional_merchants = {
+		merchants = 1
+	}
+	faster_colonists = {
+		global_colonial_growth = 20
+	}
+	factories = {
+		center_of_trade_upgrade_cost = -0.25
+		trade_company_governing_cost = -0.20
+	}
+	additional_diplomats = {
+		diplomatic_upkeep = 1
+		diplomats = 1
+	}
+	general_colonization_law  = {
+		colonist_placement_chance = 0.2
+		
+	}
+	competetive_merchants  = {
+		global_trade_power = 0.2
+	}
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 50
+			always = yes
+		}
+	}
+}
+
+innovativeness_ideas = {
+	category = ADM
+
+	trigger = {	
+		has_idea_group = economic_ideas
+		NOT = { has_idea_group = expansion_ideas }	
+	}
+	bonus = {
+		advisor_cost = -0.15
+	}
+
+	patron_of_art  = {
+		prestige_decay = -0.01
+	}
+	empiricism = {
+		innovativeness_gain = 0.5
+	}
+	scientific_revolution = {
+		technology_cost = -0.05
+	}
+	dynamic_court = {
+		advisor_pool = 1
+	}
+	print_culture = {
+		global_institution_spread = 0.20
+	}
+	optimism = {
+		war_exhaustion_cost = -0.15
+	}
+	formalized_officer_corps = {
+		free_leader_pool = 1
+	}
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 50
+			always = yes
+		}
+	}
+}
+
+#Mysticism Ideas (NEW) -> Religious Ideas (Van) Vs Humnist Ideas (Van)
+
+mysticism_ideas = {
+	category = ADM
+
+	trigger = {
+	}
+	bonus = {
+		 missionaries = 1
+	}
+
+	follow_traditions = {
+		 legitimacy = 0.5
+		 republican_tradition = 0.20
+		 devotion = 0.5
+		 horde_unity = 0.5
+		 meritocracy = 0.5
+	}
+	the_old_ways = {
+		 tolerance_own = 1
+
+	}
+	the_unenlightned = {
+		tolerance_heathen = 0.5
+		tolerance_heretic = 0.5
+	}
+	secure_traditions = {
+		religious_unity = 0.13
+	}
+	a_tame_society = {
+		stability_cost_modifier = -0.15
+	}
+	educated_preachers = {
+		global_missionary_strength = 0.015
+	}
+	a_humble_life = {
+		missionary_maintenance_cost = -0.25
+	}
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 50
+			always = yes
+		}
+	}
+}
+
+religious_ideas = {
+	category = ADM
+
+	trigger = {
+		has_idea_group = mysticism_ideas
+		NOT = { has_idea_group = expansion_ideas }	
+	}
+	bonus = {
+		prestige_per_development_from_conversion = 0.05
+	}
+
+	missionary_schools = {
+		missionaries = 1
+	}
+	church_attendance_duty = {
+		stability_cost_modifier = -0.15
+	}
+	divine_supremacy = {
+		global_missionary_strength = 0.025
+	}
+	devoutness = {
+		tolerance_own = 1
+	}
+	religious_tradition = {
+		missionary_maintenance_cost = -0.25
+	}
+	inquisition = {
+		warscore_cost_vs_other_religion = -0.1
+	}
+	deus_vult = {
+		cb_on_religious_enemies = yes
+	}
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 50
+			always = yes
+		}
+	}
+}
+
+humanist_ideas = {
+	category = ADM
+
+	trigger = {
+		has_idea_group = mysticism_ideas
+		NOT = { has_idea_group = expansion_ideas }	
+	}
+	bonus = {
+		idea_cost = -0.05
+	}
+
+	tolerance_idea = {
+		religious_unity = 0.13
+	}
+	local_traditions = {
+		global_unrest = -1
+	}
+	ecumenism = {
+		tolerance_heretic = 1
+	}
+	indirect_rule = {
+		years_of_nationalism = -5
+	}
+	cultural_ties = {
+		num_accepted_cultures = 1
+	}
+	benevolence = {
+		improve_relation_modifier = 0.20
+	}
+	humanist_tolerance = {
+		tolerance_heathen = 1
+	}
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 50
+			always = yes
+		}
+	}
+}
+
+#State Administration Ideas (Flo) -> Monarchy Ideas (Flo) Vs Republican Ideas (Flo)  Vs Theocracy Ideas (Flo) Vs Horde Ideas (Flo)
+
+staatsverwaltung0 = {
+	category = ADM
+
+	trigger = {
+	}
+	bonus = {
+		core_creation = -0.13
+	}
+		
+	staatsverwaltung1 = {
+		governing_capacity_modifier = 0.15
+	}
+	staatsverwaltung2 = {
+		state_maintenance_modifier = -0.15
+	}
+	staatsverwaltung3 = {
+		caravan_power = 0.15
+	}
+
+	staatsverwaltung4 = {
+		yearly_corruption = -0.05
+	}
+
+	staatsverwaltung5 = {
+		merchants = 1
+	}
+	staatsverwaltung6 = {
+		embracement_cost = -0.25
+	}
+	staatsverwaltung7 = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 50
+			always = yes
+		}
+	}
+}
+
+monarchie0 = {
+	category = ADM
+
+	trigger = {
+		has_idea_group = staatsverwaltung0
+		government = monarchy
+	}
+	bonus = {
+		cav_to_inf_ratio = 0.5
+	}
+	
+	monarchie1 = {
+		legitimacy = 0.5
+	}
+	monarchie2 = {
+		heir_chance = 0.5
+	}
+	monarchie3 = {
+		global_unrest = -1
+	}
+	monarchie4 = {
+		cavalry_power = 0.05
+	}
+	monarchie5 = {
+		yearly_absolutism = 0.5
+		max_absolutism = 10
+	}
+	monarchie6 = {
+		ae_impact = -0.1
+	}
+	monarchie7 = {
+		global_manpower_modifier = 0.25
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 50
+			always = yes
+		}
+	}
+}
+
+republik0 = {
+	category = ADM
+
+	trigger = {
+		has_idea_group = staatsverwaltung0
+		government = republic
+	}
+	bonus = {
+		manpower_recovery_speed = 0.1
+	}
+	
+	republik1 = {
+		diplomatic_upkeep = 1
+	}
+	republik2 = {
+		land_morale = 0.05
+	}
+	republik3 = {
+		global_unrest = -1
+	}
+	republik4 = {
+		promote_culture_cost = -0.53
+	}
+	republik5 = {
+		reform_progress_growth = 0.15
+	}
+	republik6 = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	republik7 = {
+		republican_tradition = 0.3
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 50
+			always = yes
+		}
+	}
+}
+
+aristo0 = {
+	category = ADM
+
+	trigger = {
+		has_idea_group = staatsverwaltung0
+		government = theocracy
+	}
+	bonus = {
+		war_exhaustion = -0.03
+	}
+
+	aristo1 = {
+		devotion = 0.5
+	}
+	aristo2 = {
+		shock_damage = 0.05
+	}
+	aristo3 = {
+		enforce_religion_cost = -0.25
+	}
+	aristo4 = {
+		missionaries = 1
+	}
+	aristo5 = {
+		artillery_cost = -0.15
+	}
+	aristo6 = {
+		warscore_cost_vs_other_religion = -0.10
+	}
+	aristo7 = {
+		unjustified_demands = -0.25
+	}
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 50
+			always = yes
+		}
+	}
+}
+
+horde0 = {
+	category = ADM
+
+	trigger = {
+		has_idea_group = staatsverwaltung0
+		is_nomad = yes
+	}
+	bonus = {
+		diplomatic_reputation = 1
+	}
+	
+	horde1 = {
+		raze_power_gain = 0.5
+	}
+	horde2 = {
+		cavalry_cost = -0.15
+	}
+	horde3 = {
+		claim_duration = 0.5
+	}
+	horde4 = {
+		cavalry_power = 0.05
+	}
+	horde5 = {
+		horde_unity = 0.5
+	}
+	horde6 = {
+		governing_capacity_modifier = 0.15
+	}
+	horde7 = {
+		reduced_liberty_desire = 10
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 50
+			always = yes
+		}
+	}
+}
+
+#Alteration Ideas (Pap) -> Alchemical Ideas (NEW) Vs Transmutation Ideas (NEW)
+
+alteration_ideas = {
+	category = ADM
+
+	trigger = {
+	}
+	bonus = {
+		core_creation = -0.15
+	}
+
+	mage_armor = {
+		shock_damage_received = -0.05
+	}
+	atronach = {
+		fire_damage_received = -0.05
+	}
+	detect_entities = {
+		global_spy_defence = 0.15
+	}
+	transmutation = {
+		global_tax_modifier = 0.1
+	}
+	telekinesis = {
+		production_efficiency = 0.05
+	}
+	enhance_adaptability = {
+		land_attrition = -0.15
+	}
+	magic_powered_lamps = {
+		stability_cost_modifier = -0.15
+	}
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 50
+			always = yes
+		}
+	}
+}
+
+alchemical_ideas = {
+	category = ADM
+
+	trigger = {
+		has_idea_group = alteration_ideas
+		NOT = { has_idea_group = transmutation_ideas }	
+	}
+	bonus = {
+		prestige = 0.5
+	}
+		
+	physician = {
+		manpower_recovery_speed = 0.10
+	}
+	posioners = {
+		 hostile_attrition = 1
+	}
+	benefactor = {
+		 stability_cost_modifier = -0.15
+	}
+	experimenter = {
+		 innovativeness_gain = 0.5
+	}
+	green_thumb = {
+		global_trade_goods_size_modifier = 0.05
+	}
+	snakeblood = {
+		land_attrition = -0.10
+	}
+	purity = {
+		yearly_corruption = -0.05
+	}
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 50
+			always = yes
+		}
+	}
+}
+
+transmutation_ideas = {
+	category = ADM
+
+	trigger = {
+		has_idea_group = alteration_ideas
+		NOT = { has_idea_group = alchemical_ideas }	
+	}
+	bonus = {
+		idea_cost = -0.05
+	}
+		
+	midas_touch = {
+		global_tax_modifier = 0.1
+	}
+	wandering_transmutators = {
+		merchants = 1
+	}
+	manipulate_materials = {
+		 build_cost = -0.1
+	}
+	alterate_infrastructure = {
+		 development_cost = -0.1
+	}
+	regulate_gold_transmutation = {
+		 inflation_reduction = 0.05
+	}
+	reshape_environment = {
+		core_creation = -0.15
+	}
+	transmutation_factories = {
+		production_efficiency = 0.05
+	}
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 50
+			always = yes
+		}
+	}
+}
+
+#Jurisprudence Ideas (Flo) -> Aristocratic Ideas (Van) Vs Plutocratic Ideas (Van)
+
+justiz0 = {
+	category = ADM
+
+	trigger = {
+	}
+	bonus = {
+		ae_impact = -0.10
+	}
+		
+	justiz1 = {
+		diplomatic_annexation_cost = -0.15
+	}
+	justiz2 = {
+		yearly_corruption = -0.05
+	}
+	justiz3 = {
+		idea_cost = -0.10
+	}
+	justiz4 = {
+		trade_efficiency = 0.1
+	}
+	justiz5 = {
+		interest = -1
+	}
+	justiz6 = {
+		core_creation = -0.15
+	}
+	justiz7 = {
+		enemy_core_creation = 0.15
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 50
+			always = yes
+		}
+	}
+}
+
+aristocracy_ideas = {
+	category = ADM
+
+	trigger = {
+		has_idea_group = justiz0
+		NOT = { has_idea_group = plutocracy_ideas }	
+	}
+	bonus = {
+		leader_siege = 1
+	}
+
+	noble_knights = {
+		cavalry_cost = -0.15
+	}
+	military_traditions = {
+		mil_tech_cost_modifier  = -0.05
+	}
+	local_nobility = {
+		global_autonomy = -0.025
+	}
+	serfdom = {
+		reduced_liberty_desire = 10
+	}
+	noble_officers = {
+		army_tradition_decay = -0.01
+	}
+	international_nobility = {
+		diplomats = 1
+	}
+	noble_resilience = {
+		discipline = 0.025
+	}
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 50
+			always = yes
+		}
+	}
+}
+
+plutocracy_ideas = {
+	category = ADM
+
+	trigger = {
+		has_idea_group = plutocracy_ideas
+		NOT = { has_idea_group = aristocracy_ideas }	
+	}
+	bonus = {
+		global_ship_trade_power = 0.15
+	}
+
+	tradition_of_payment = {
+		reinforce_cost_modifier = -0.15
+	}
+	abolished_serfdom = {
+		land_morale = 0.05
+	}
+	bill_of_rights = {
+		global_unrest = -1
+	}
+	free_merchants = {
+		merchants = 1
+	}
+	free_subjects = {
+		global_trade_goods_size_modifier = 0.05
+	}
+	free_cities = {
+		caravan_power = 0.15
+	}
+	emancipation = {
+		manpower_recovery_speed = 0.10
+	}
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 50
+			always = yes
+		}
+	}
+}

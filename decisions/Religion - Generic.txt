@@ -3,9 +3,10 @@ country_decisions = {
 	advancement_of_true_religion_act_1 = {
 		potential = {
 			NOT = { has_country_modifier = the_advancement_of_true_religion_act }
+			adm_tech = 15
 		}
 		allow = {
-			adm_tech = 10
+			adm_tech = 15
 		}
 		effect = {
 			add_country_modifier = {
@@ -26,10 +27,10 @@ country_decisions = {
 	blasphemy_act_1 = {
 		potential = {
 			NOT = { has_country_modifier = the_blasphemy_act }
-			is_year = 805
+			is_year = 862
 		}
 		allow = {
-			is_year = 805
+			is_year = 862
 		}
 		effect = {	
 			add_country_modifier = {
@@ -45,10 +46,11 @@ country_decisions = {
 	declaration_of_indulgence_1 = {
 		potential = {
 			NOT = { has_country_modifier = the_declaration_of_indulgence_1 }
+			adm_tech = 35
 		}
 		allow = {
 			NOT = { has_country_modifier = the_declaration_of_indulgence_1 }
-			adm_tech = 20
+			adm_tech = 35
 		}
 		effect = {	
 			add_country_modifier = {
@@ -68,9 +70,10 @@ country_decisions = {
 	act_of_uniformity_1 = {
 		potential = {
 			NOT = { has_country_modifier = the_act_of_uniformity }
+			adm_tech = 50
 		}
 		allow = {
-			adm_tech = 30
+			adm_tech = 50
 		}
 		effect = {	
 			add_country_modifier = {
@@ -91,9 +94,10 @@ country_decisions = {
  	suffragan_bishop_act_1 = {
  		potential = {
  			NOT = { has_country_modifier = the_suffragan_bishop_act_1 }
+			adm_tech = 75
  		}
  		allow = {
- 			adm_tech = 40
+ 			adm_tech = 75
  		}
  		effect = {	
  			add_country_modifier = {
@@ -109,9 +113,9 @@ country_decisions = {
 	sunday_school_1 = {
 		potential = {
 			NOT = { has_country_modifier = sunday_schools }
+			adm_tech = 100
 		}
 		allow = {
-			adm_tech = 50
 			stability = 3
 		}
 		effect = {	
@@ -128,9 +132,10 @@ country_decisions = {
 	monastic_education_1 = {
 		potential = {
 			NOT = { has_country_modifier = monastic_education_system }
+			adm_tech = 125
 		}
 		allow = {
-			adm_tech = 60
+			adm_tech = 125
 		}
 		effect = {	
 			add_country_modifier = {
@@ -150,9 +155,10 @@ country_decisions = {
 	regulate_the_monastaries_1 = {
 		potential = {
 			NOT = { has_country_modifier = regulated_monasteries }
+			adm_tech = 150
 		}
 		allow = {
-			adm_tech = 70
+			adm_tech = 150
 		}
 		effect = {	
 			add_country_modifier = {
@@ -168,9 +174,9 @@ country_decisions = {
 	acceptance_of_religious_sects_1 = {
 		potential = {
 			NOT = { has_country_modifier = religious_sect_tolerance_1 }
+			adm_tech = 175
 		}
 		allow = {
-		    adm_tech = 80
 			stability = 3
 		}
 		effect = {	
@@ -228,41 +234,41 @@ country_decisions = {
 		}
 	}
 	
-	keep_the_feriae_1 = {
-		potential = {
-			NOT = { has_country_modifier = gods_pleased }
-		}
-		allow = {
-			adm_power = 100
-			years_of_income = 1.0
-		}
-		effect = {
-			add_adm_power = -100
-			add_years_of_income = -1.0
-			add_country_modifier = {
-				name = "gods_pleased"
-				duration = 3650
-			}
-		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				religious_unity = 0.9
-			}
-			modifier = {
-				factor = 0
-				NOT = { num_of_missionaries = 1 }
-			}
-		}
-	}
+#	keep_the_feriae_1 = {
+#		potential = {
+#			NOT = { has_country_modifier = gods_pleased }
+#		}
+#		allow = {
+#			adm_power = 100
+#			years_of_income = 1.0
+#		}
+#		effect = {
+#			add_adm_power = -100
+#			add_years_of_income = -1.0
+#			add_country_modifier = {
+#				name = "gods_pleased"
+#				duration = 3650
+#			}
+#		}
+#		ai_will_do = {
+#			factor = 1
+#			modifier = {
+#				factor = 0
+#				religious_unity = 0.9
+#			}
+#			modifier = {
+#				factor = 0
+#				NOT = { num_of_missionaries = 1 }
+#			}
+#		}
+#	}
 	
 	hellenism_reform_1 = {
 		potential = {
 			NOT = { has_country_modifier = reformed_clergy }
+			adm_tech = 50
 		}
 		allow = {
-			adm_tech = 50
 			adm_power = 1000
 			calc_true_if = {
 				all_owned_province = { religion = ROOT }

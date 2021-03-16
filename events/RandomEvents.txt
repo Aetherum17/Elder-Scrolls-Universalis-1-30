@@ -1669,7 +1669,7 @@ country_event = {
 		}
 		modifier = {
 			factor = 0.66
-			advisor = treasurer
+			advisor = esu_inspector
 		}
 	}
 
@@ -3031,7 +3031,7 @@ country_event = {
 			limit = { has_port = yes }
 			heavy_ship = ROOT
 		}
-		create_explorer = 20
+		create_explorer = { tradition = 20 }
 	}
 	option = {
 		name = "personality_options.881.a"

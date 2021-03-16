@@ -482,6 +482,7 @@ local_autonomy_trade_company_multiplicative = {
 
 local_autonomy_trade_company = {
 }
+
 recent_uprising = {
 	local_unrest = -100
 }
@@ -557,6 +558,7 @@ base_values = {
 	province_warscore_cost = -0.35
 	ae_impact = -0.15
 	liberty_desire_from_subject_development = -0.5
+	culture_conversion_cost = -0.25
 }
 
 ai_nation = {
@@ -626,7 +628,6 @@ negative_stability = {
 	global_unrest = -2.5					#-1% EXTRA revolt risk each step
 	global_tax_modifier = 0.10
 	global_missionary_strength = 0.010
-	temples_influence = 0.025
 	monthly_fervor_increase = 1
 	yearly_corruption = -0.035
 	interest = -2.5
@@ -773,7 +774,6 @@ peace = {
 	monthly_fervor_increase = 1
 	global_autonomy = -0.1
 	global_institution_spread = 0.1
-	rr_girondists_influence = -0.1
 	pr_smugglers_influence = 0.1
 	global_manpower_modifier = 0.25
 	
@@ -971,6 +971,10 @@ num_of_provinces = {
 	stability_cost_modifier = 0.001
 	war_exhaustion_cost = 0.001
 	advisor_cost = 0.001
+	
+	land_maintenance_modifier = 0.001
+	naval_maintenance_modifier = 0.001
+	merc_maintenance_modifier = 0.001
 }
 
 country_development = {
@@ -1094,18 +1098,19 @@ luck = {
 over_extension = {
 	global_foreign_trade_power = -1.0
 	stability_cost_modifier = 1
-	mercenary_cost = 1
-	diplomatic_reputation = -10.0
 	improve_relation_modifier = -1.0
-	global_unrest = 10
 	yearly_corruption = 1.0
-	prestige = -10
+	harsh_treatment_cost = 1.0
+	
+	global_unrest = 5
+	prestige = -5
+	diplomatic_reputation = -5
+	
 	legitimacy = -1
 	horde_unity = -1
 	devotion = -1
 	republican_tradition = -1
 	meritocracy = -1
-	harsh_treatment_cost = 1.0
 	
 	es_monks_influence = 0.15
 	es_governors_influence = 0.15
@@ -1348,6 +1353,7 @@ large_colonial_nation = {
 	global_trade_power = 0.10
 	naval_forcelimit = 10
 	land_forcelimit = 5
+	global_colonial_growth = 10
 }
 
 march_subject = {
@@ -1718,6 +1724,7 @@ revolutionary_guard_regiment = {
 	shock_damage_received = -0.1
 	drill_gain_modifier = 1.0
 } 
+
 innovativeness = {
 	all_power_cost	= -0.1
 	army_tradition_decay = -0.01
