@@ -1,0 +1,365 @@
+namespace = moon_events
+
+#The Khajiit are the mysterious cat-like race that inhabits the deserts of Elsweyr.
+#Their appearence ranges from what might look like a normal tiger to what could almost be called a tailed, clawed human.
+#The ja-Kha'jay, the Lunar Lattice, is a mysterious force related to the phases of Nirn's twin moons, determinines which form a Khajiit will take.
+
+country_event = {
+    id = moon_events.100
+    title = moon_events.1.t
+    desc = moon_events.1.d
+    picture = Moon1
+	
+    trigger = {
+		tag = BLA
+		NOT = { has_country_modifier = moon_timer }
+    }
+
+    immediate = {
+		#1->2
+		if = {
+			limit = {
+				has_country_modifier = moon_1_event_modifier_1
+			}
+			remove_country_modifier = moon_1_event_modifier_1
+			add_country_modifier = { name = "moon_2_event_modifier_1" duration = -1 }
+			add_country_modifier = { name = "moon_timer" duration = 3650 }
+			every_country = { limit = { culture_group = khajiiti_cg } country_event = { id = moon_events.2 days = 31 } }
+		}
+		#2->3
+		else_if = {
+			limit = {
+				has_country_modifier = moon_2_event_modifier_1
+			}
+			remove_country_modifier = moon_2_event_modifier_1
+			add_country_modifier = { name = "moon_3_event_modifier_1" duration = -1 }
+			add_country_modifier = { name = "moon_timer" duration = 3650 }
+			every_country = { limit = { culture_group = khajiiti_cg } country_event = { id = moon_events.3 days = 31 } }
+		}
+		#3->4
+		else_if = {
+			limit = {
+				has_country_modifier = moon_3_event_modifier_1
+			}
+			remove_country_modifier = moon_3_event_modifier_1
+			add_country_modifier = { name = "moon_4_event_modifier_1" duration = -1 }
+			add_country_modifier = { name = "moon_timer" duration = 3650 }
+			every_country = { limit = { culture_group = khajiiti_cg } country_event = { id = moon_events.4 days = 31 } }
+		}
+    }
+	
+	mean_time_to_happen = {
+		days = 31
+	}
+
+    option = {
+        name = moon_events.1.a
+		
+    }
+}
+
+#1
+#Lunar Lattice - New Masser & Waxing Secunda
+#Ohmes-raht: Similar in size and shape to humans, but with light fur and a tail.
+
+country_event = {
+    id = moon_events.1
+    title = moon_events.1.t
+    desc = moon_events.1.d
+    picture = Moon1
+	
+    is_triggered_only = yes
+
+    option = {
+        name = moon_events.1.a
+		
+    }
+}
+
+#2
+#Lunar Lattice - New Masser & Full Secunda
+#Ohmes: Most common breed of Khajiit outside of Elsweyr.
+
+country_event = {
+    id = moon_events.2
+    title = moon_events.2.t
+    desc = moon_events.2.d
+    picture = Moon2
+	
+    is_triggered_only = yes
+
+    option = {
+        name = moon_events.2.a
+		
+    }
+}
+
+#3
+#Lunar Lattice - New Masser & Waning Secunda
+#Suthay-raht: Walk upright but are more cat-like than Ohmes-raht.
+
+country_event = {
+    id = moon_events.3
+    title = moon_events.3.t
+    desc = moon_events.3.d
+    picture = Moon3
+	
+    is_triggered_only = yes
+
+    option = {
+        name = moon_events.3.a
+		
+    }
+}
+
+#4
+#Lunar Lattice - New Masser & New Secunda
+#Suthay: Similar to Suthay-raht but smaller and weaker.
+
+country_event = {
+    id = moon_events.4
+    title = moon_events.4.t
+    desc = moon_events.4.d
+    picture = Moon4
+	
+    is_triggered_only = yes
+
+    option = {
+        name = moon_events.4.a
+		
+    }
+}
+
+#5
+#Lunar Lattice - Waxing Masser & Waxing Secunda
+#Cathay-raht: Described as looking like upright jaguars.
+
+country_event = {
+    id = moon_events.5
+    title = moon_events.5.t
+    desc = moon_events.5.d
+    picture = Moon5
+	
+    is_triggered_only = yes
+
+    option = {
+        name = moon_events.5.a
+		
+    }
+}
+
+#6
+#Lunar Lattice - Waxing Masser & Full Secunda
+#Cathay: Larger and stronger than a Suthay-raht, but smaller than a Cathay-raht.
+
+country_event = {
+    id = moon_events.6
+    title = moon_events.6.t
+    desc = moon_events.6.d
+    picture = Moon6
+	
+    is_triggered_only = yes
+
+    option = {
+        name = moon_events.6.a
+		
+    }
+}
+
+#7
+#Lunar Lattice - Waxing Masser & Waning Secunda
+#Tojay-raht: Unknown khajiiti bipedal form.
+
+country_event = {
+    id = moon_events.7
+    title = moon_events.7.t
+    desc = moon_events.7.d
+    picture = Moon7
+	
+    is_triggered_only = yes
+
+    option = {
+        name = moon_events.7.a
+		
+    }
+}
+
+#8
+#Lunar Lattice - Waxing Masser & New Secunda
+#Tojay: Unknown khajiiti bipedal form, smaller than the Tojay-raht.
+
+country_event = {
+    id = moon_events.8
+    title = moon_events.8.t
+    desc = moon_events.8.d
+    picture = Moon8
+	
+    is_triggered_only = yes
+
+    option = {
+        name = moon_events.8.a
+		
+    }
+}
+
+#9
+#Lunar Lattice - Full Masser & Waxing Secunda
+#Senche-raht: At the size of a large horse, this creatures are knwon as Battlecats.
+
+country_event = {
+    id = moon_events.9
+    title = moon_events.9.t
+    desc = moon_events.9.d
+    picture = Moon9
+	
+    is_triggered_only = yes
+
+    option = {
+        name = moon_events.9.a
+		
+    }
+}
+
+#10
+#Lunar Lattice - Full Masser & Full Secunda
+#Senche: Sprinters that are often used as mounts for by other Khajiit. 
+
+country_event = {
+    id = moon_events.10
+    title = moon_events.10.t
+    desc = moon_events.10.d
+    picture = Moon10
+	
+    is_triggered_only = yes
+
+    option = {
+        name = moon_events.10.a
+		
+    }
+}
+
+#11
+#Lunar Lattice - Full Masser & Waning Secunda
+#Pahmar-raht: Like a Pahmar, but larger, more powerful.
+
+country_event = {
+    id = moon_events.11
+    title = moon_events.11.t
+    desc = moon_events.11.d
+    picture = Moon11
+	
+    is_triggered_only = yes
+
+    option = {
+        name = moon_events.11.a
+		
+    }
+}
+
+#12
+#Lunar Lattice - Full Masser & New Secunda
+#Pahmar: Similar to a tiger.
+
+country_event = {
+    id = moon_events.12
+    title = moon_events.12.t
+    desc = moon_events.12.d
+    picture = Moon12
+	
+    is_triggered_only = yes
+
+    option = {
+        name = moon_events.12.a
+		
+    }
+}
+
+#13
+#Lunar Lattice - Waning Masser & Waxing Secunda
+#Alfiq-raht: Probably like the Alfiq but larger.
+
+country_event = {
+    id = moon_events.13
+    title = moon_events.13.t
+    desc = moon_events.13.d
+    picture = Moon13
+	
+    is_triggered_only = yes
+
+    option = {
+        name = moon_events.13.a
+		
+    }
+}
+
+#14
+#Lunar Lattice - Waning Masser & Full Secunda
+#Alfiq: Similar in appearence to domesticated cats.
+
+country_event = {
+    id = moon_events.14
+    title = moon_events.14.t
+    desc = moon_events.14.d
+    picture = Moon14
+	
+    is_triggered_only = yes
+
+    option = {
+        name = moon_events.14.a
+		
+    }
+}
+
+#15
+#Lunar Lattice - Waning Masser & Waning Secunda
+#Dagi-raht: Naturally skilled in the use of magic.
+
+country_event = {
+    id = moon_events.15
+    title = moon_events.15.t
+    desc = moon_events.15.d
+    picture = Moon15
+	
+    is_triggered_only = yes
+
+    option = {
+        name = moon_events.15.a
+		
+    }
+}
+
+#16
+#Lunar Lattice - Waning Masser & New Secunda
+#Dagi: Small and light creatures, who live in the forrest.
+
+country_event = {
+    id = moon_events.16
+    title = moon_events.16.t
+    desc = moon_events.16.d
+    picture = Moon16
+	
+    is_triggered_only = yes
+
+    option = {
+        name = moon_events.16.a
+		
+    }
+}
+
+#17
+#Lunar Lattice - The Third Moon
+#Mane: Unique form of Khajiit born when a 3rd moon appears in the sky.
+
+country_event = {
+    id = moon_events.17
+    title = moon_events.17.t
+    desc = moon_events.17.d
+    picture = Moon17
+	
+    is_triggered_only = yes
+
+    option = {
+        name = moon_events.17.a
+		
+    }
+}

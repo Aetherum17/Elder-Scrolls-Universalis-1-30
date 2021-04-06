@@ -14,19 +14,14 @@ esu_phychopathic_artist = {
 		modifier = {
 			factor = 1.5
 			owner = {
-			has_reform = court_of_darkness
+				has_reform = court_of_darkness
 			}
 		}
 		modifier = {
 			factor = 0
 			owner = {
-			OR = { adm = 5 dip = 5 mil = 5 }
-			OR = {
-			NOT = { adm = 2 }
-			NOT = { dip = 2 }
-			NOT = { mil = 2 }
-			}
-			NOT = { has_reform = court_of_darkness }
+				NOT = { has_reform = court_of_darkness }
+				adm = 3
 			}
 		}
 	}
@@ -47,19 +42,14 @@ esu_occultist = {
 		modifier = {
 			factor = 1.5
 			owner = {
-			has_reform = court_of_darkness
+				has_reform = court_of_darkness
 			}
 		}
 		modifier = {
 			factor = 0
 			owner = {
-			OR = { adm = 5 dip = 5 mil = 5 }
-			OR = {
-			NOT = { adm = 2 }
-			NOT = { dip = 2 }
-			NOT = { mil = 2 }
-			}
-			NOT = { has_reform = court_of_darkness }
+				NOT = { has_reform = court_of_darkness }
+				adm = 3
 			}
 		}
 	}
@@ -80,19 +70,14 @@ esu_mad_scholar = {
 		modifier = {
 			factor = 1.5
 			owner = {
-			has_reform = court_of_darkness
+				has_reform = court_of_darkness
 			}
 		}
 		modifier = {
 			factor = 0
 			owner = {
-			OR = { adm = 5 dip = 5 mil = 5 }
-			OR = {
-			NOT = { adm = 2 }
-			NOT = { dip = 2 }
-			NOT = { mil = 2 }
-			}
-			NOT = { has_reform = court_of_darkness }
+				NOT = { has_reform = court_of_darkness }
+				adm = 3
 			}
 		}
 	}
@@ -113,19 +98,14 @@ esu_torturer = {
 		modifier = {
 			factor = 1.5
 			owner = {
-			has_reform = court_of_darkness
+				has_reform = court_of_darkness
 			}
 		}
 		modifier = {
 			factor = 0
 			owner = {
-			OR = { adm = 5 dip = 5 mil = 5 }
-			OR = {
-			NOT = { adm = 2 }
-			NOT = { dip = 2 }
-			NOT = { mil = 2 }
-			}
-			NOT = { has_reform = court_of_darkness }
+				NOT = { has_reform = court_of_darkness }
+				adm = 3
 			}
 		}
 	}
@@ -149,17 +129,14 @@ esu_hedonist = {
 		modifier = {
 			factor = 1.5
 			owner = {
-			has_reform = court_of_darkness
+				has_reform = court_of_darkness
 			}
 		}
 		modifier = {
 			factor = 0
 			owner = {
-			OR = { adm = 5 dip = 5 mil = 5 }
-			NOT = { adm = 2 }
-			NOT = { dip = 2 }
-			NOT = { mil = 2 }
-			NOT = { has_reform = court_of_darkness }
+				NOT = { has_reform = court_of_darkness }
+				dip = 3
 			}
 		}
 	}
@@ -180,17 +157,14 @@ esu_bandit = {
 		modifier = {
 			factor = 1.5
 			owner = {
-			has_reform = court_of_darkness
+				has_reform = court_of_darkness
 			}
 		}
 		modifier = {
 			factor = 0
 			owner = {
-			OR = { adm = 5 dip = 5 mil = 5 }
-			NOT = { adm = 2 }
-			NOT = { dip = 2 }
-			NOT = { mil = 2 }
-			NOT = { has_reform = court_of_darkness }
+				NOT = { has_reform = court_of_darkness }
+				dip = 3
 			}
 		}
 	}
@@ -211,17 +185,14 @@ esu_corsair = {
 		modifier = {
 			factor = 1.5
 			owner = {
-			has_reform = court_of_darkness
+				has_reform = court_of_darkness
 			}
 		}
 		modifier = {
 			factor = 0
 			owner = {
-			OR = { adm = 5 dip = 5 mil = 5 }
-			NOT = { adm = 2 }
-			NOT = { dip = 2 }
-			NOT = { mil = 2 }
-			NOT = { has_reform = court_of_darkness }
+				NOT = { has_reform = court_of_darkness }
+				dip = 3
 			}
 		}
 	}
@@ -242,17 +213,14 @@ esu_conquistador = {
 		modifier = {
 			factor = 1.5
 			owner = {
-			has_reform = court_of_darkness
+				has_reform = court_of_darkness
 			}
 		}
 		modifier = {
 			factor = 0
 			owner = {
-			OR = { adm = 5 dip = 5 mil = 5 }
-			NOT = { adm = 2 }
-			NOT = { dip = 2 }
-			NOT = { mil = 2 }
-			NOT = { has_reform = court_of_darkness }
+				NOT = { has_reform = court_of_darkness }
+				dip = 3
 			}
 		}
 	}
@@ -276,17 +244,14 @@ esu_lich = {
 		modifier = {
 			factor = 1.5
 			owner = {
-			has_reform = court_of_darkness
+				has_reform = court_of_darkness
 			}
 		}
 		modifier = {
 			factor = 0
 			owner = {
-			OR = { adm = 5 dip = 5 mil = 5 }
-			NOT = { adm = 2 }
-			NOT = { dip = 2 }
-			NOT = { mil = 2 }
-			NOT = { has_reform = court_of_darkness }
+				NOT = { has_reform = court_of_darkness }
+				mil = 3
 			}
 		}
 	}
@@ -307,17 +272,14 @@ esu_pillager = {
 		modifier = {
 			factor = 1.5
 			owner = {
-			has_reform = court_of_darkness
+				has_reform = court_of_darkness
 			}
 		}
 		modifier = {
 			factor = 0
 			owner = {
-			OR = { adm = 5 dip = 5 mil = 5 }
-			NOT = { adm = 2 }
-			NOT = { dip = 2 }
-			NOT = { mil = 2 }
-			NOT = { has_reform = court_of_darkness }
+				NOT = { has_reform = court_of_darkness }
+				mil = 3
 			}
 		}
 	}
@@ -338,17 +300,14 @@ esu_tyrant = {
 		modifier = {
 			factor = 1.5
 			owner = {
-			has_reform = court_of_darkness
+				has_reform = court_of_darkness
 			}
 		}
 		modifier = {
 			factor = 0
 			owner = {
-			OR = { adm = 5 dip = 5 mil = 5 }
-			NOT = { adm = 2 }
-			NOT = { dip = 2 }
-			NOT = { mil = 2 }
-			NOT = { has_reform = court_of_darkness }
+				NOT = { has_reform = court_of_darkness }
+				mil = 3
 			}
 		}
 	}
@@ -369,17 +328,14 @@ esu_exexutioner = {
 		modifier = {
 			factor = 1.5
 			owner = {
-			has_reform = court_of_darkness
+				has_reform = court_of_darkness
 			}
 		}
 		modifier = {
 			factor = 0
 			owner = {
-			OR = { adm = 5 dip = 5 mil = 5 }
-			NOT = { adm = 2 }
-			NOT = { dip = 2 }
-			NOT = { mil = 2 }
-			NOT = { has_reform = court_of_darkness }
+				NOT = { has_reform = court_of_darkness }
+				mil = 3
 			}
 		}
 	}

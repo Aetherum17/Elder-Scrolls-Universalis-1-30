@@ -229,6 +229,9 @@ country_event = {
 		duration = 9125
 		}
 		every_owned_province = {
+			limit = {
+				continent = Yokuda
+			}
 		    if = { 
 			limit = { base_tax = 4 }
 			add_base_tax = -3
@@ -387,7 +390,7 @@ country_event = {
 	picture = ES_REDGUARDS_eventPicture
 	
 	trigger = {
-	    NOT = { has_country_flag = es_18_scenario.1_flag }
+	    NOT = { has_country_flag = es_18_scenario.9_flag }
 		is_year = 750
 		NOT = { is_year = 1350 }
 		OR = {

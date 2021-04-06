@@ -1,529 +1,1096 @@
-basic_idea_variation_act_10 = {
+##### Illusion school - 5
 
+# Courage
+# Forcing armies to remain on the battlefield, even if they have low morale or discipline.
+
+courage = {
 	monarch_power = ADM
 
 	potential = {
-		has_idea_group = religious_ideas
+		OR = {
+			has_idea_group = illusion_ideas
+			has_idea_group = aristocracy_ideas
+			has_idea_group = plutocracy_ideas
+		}
 	}
 	allow = {
-		full_idea_group = religious_ideas
+		full_idea_group = illusion_ideas
 		OR = {
-		full_idea_group = religious_ideas
-				
-		full_idea_group = justiz0
-		
-		full_idea_group = kolonialimperium0
-		
-		full_idea_group = gesellschaft0
-		full_idea_group = propaganda0
-		full_idea_group = flottenbasis0
-		
-		full_idea_group = generalstab0
-		
-		full_idea_group = waffenqualitat0
-		
-		full_idea_group = staatsverwaltung0
-		full_idea_group = zentra0
-		full_idea_group = dezentra0 
-		
-		
-		full_idea_group = innovativeness_ideas
-		full_idea_group = spy_ideas
-		full_idea_group = influence_ideas
-		full_idea_group = offensive_ideas
-		full_idea_group = defensive_ideas
-		full_idea_group = trade_ideas
-		full_idea_group = economic_ideas
-		full_idea_group = exploration_ideas
-		full_idea_group = maritime_ideas 
-		full_idea_group = quality_ideas
-		full_idea_group = quantity_ideas
-		full_idea_group = expansion_ideas
-		full_idea_group = administrative_ideas
-		full_idea_group = humanist_ideas
+			full_idea_group = aristocracy_ideas 
+			full_idea_group = plutocracy_ideas 
 		}
 	}
 	
-	prestige_per_development_from_conversion = 0.1
-	
+	land_morale = 0.10
+	naval_morale = 0.10
+
 	ai_will_do = {
 		factor = 1
+		modifier = {
+			factor = 0
+			is_at_war = no
+		}	
+		modifier = {
+			factor = 1.25
+			any_neighbor_country = {
+				is_rival = ROOT
+			}
+		}		
 	}
 }
 
-basic_idea_variation_act_22 = {
+# Vision of the Tenth Eye
+# Noticing the unseen things. This spell is useless for warfare, but may be usefull in diplomacy.
 
+vision_of_the_tenth_eye = {
 	monarch_power = DIP
 
 	potential = {
-		has_idea_group = kolonialimperium0
+		OR = {
+			has_idea_group = illusion_ideas
+			has_idea_group = spy_ideas
+			has_idea_group = influence_ideas
+		}
 	}
 	allow = {
-		full_idea_group = kolonialimperium0
+		full_idea_group = illusion_ideas
 		OR = {
-		full_idea_group = religious_ideas
-				
-		full_idea_group = justiz0
-		
-		full_idea_group = kolonialimperium0
-		
-		full_idea_group = gesellschaft0
-		full_idea_group = propaganda0
-		full_idea_group = flottenbasis0
-		
-		full_idea_group = generalstab0
-		
-		full_idea_group = waffenqualitat0
-		
-		full_idea_group = staatsverwaltung0
-		full_idea_group = zentra0
-		full_idea_group = dezentra0 
-		
-		
-		full_idea_group = innovativeness_ideas
-		full_idea_group = spy_ideas
-		full_idea_group = influence_ideas
-		full_idea_group = offensive_ideas
-		full_idea_group = defensive_ideas
-		full_idea_group = trade_ideas
-		full_idea_group = economic_ideas
-		full_idea_group = exploration_ideas
-		full_idea_group = maritime_ideas 
-		full_idea_group = quality_ideas
-		full_idea_group = quantity_ideas
-		full_idea_group = expansion_ideas
-		full_idea_group = administrative_ideas
-		full_idea_group = humanist_ideas
+			full_idea_group = spy_ideas 
+			full_idea_group = influence_ideas 
 		}
 	}
 	
-	build_time = -0.15
-	
+	spy_offence = 0.35
+	rebel_support_efficiency = 0.35
+
 	ai_will_do = {
 		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { 
+				any_neighbor_country = {
+					is_rival = ROOT
+				}
+			}
+		}			
 	}
 }
 
-basic_idea_variation_act_24 = {
+# Calm
+# Forcing creatures and people to stop fighting.
 
-	monarch_power = DIP
+calm = {
+	monarch_power = ADM
 
 	potential = {
-		has_idea_group = gesellschaft0
-	}
-	allow = {
-		full_idea_group = gesellschaft0
 		OR = {
-		full_idea_group = religious_ideas
-				
-		full_idea_group = justiz0
-		
-		full_idea_group = kolonialimperium0
-		
-		full_idea_group = gesellschaft0
-		full_idea_group = propaganda0
-		full_idea_group = flottenbasis0
-		
-		full_idea_group = generalstab0
-		
-		full_idea_group = waffenqualitat0
-		
-		full_idea_group = staatsverwaltung0
-		full_idea_group = zentra0
-		full_idea_group = dezentra0 
-		
-		
-		full_idea_group = innovativeness_ideas
-		full_idea_group = spy_ideas
-		full_idea_group = influence_ideas
-		full_idea_group = offensive_ideas
-		full_idea_group = defensive_ideas
-		full_idea_group = trade_ideas
-		full_idea_group = economic_ideas
-		full_idea_group = exploration_ideas
-		full_idea_group = maritime_ideas 
-		full_idea_group = quality_ideas
-		full_idea_group = quantity_ideas
-		full_idea_group = expansion_ideas
-		full_idea_group = administrative_ideas
-		full_idea_group = humanist_ideas
+			has_idea_group = illusion_ideas
+			has_idea_group = justiz0
 		}
 	}
+	allow = {
+		full_idea_group = illusion_ideas
+		full_idea_group = justiz0 
+	}
 	
-	institution_spread_from_true_faith = 0.15
-	
+	stability_cost_modifier = -0.35
+	autonomy_change_time = -0.35
+
 	ai_will_do = {
 		factor = 1
+		modifier = {
+			factor = 0
+			stability = 0
+		}			
 	}
 }
 
-basic_idea_variation_act_25 = {
+#Fear
+#Forcing creatures and people to flee.
 
-	monarch_power = DIP
-
-	potential = {
-		has_idea_group = propaganda0
-	}
-	allow = {
-		full_idea_group = propaganda0
-		OR = {
-		full_idea_group = religious_ideas
-				
-		full_idea_group = justiz0
-		
-		full_idea_group = kolonialimperium0
-		
-		full_idea_group = gesellschaft0
-		full_idea_group = propaganda0
-		full_idea_group = flottenbasis0
-		
-		full_idea_group = generalstab0
-		
-		full_idea_group = waffenqualitat0
-		
-		full_idea_group = staatsverwaltung0
-		full_idea_group = zentra0
-		full_idea_group = dezentra0 
-		
-		
-		full_idea_group = innovativeness_ideas
-		full_idea_group = spy_ideas
-		full_idea_group = influence_ideas
-		full_idea_group = offensive_ideas
-		full_idea_group = defensive_ideas
-		full_idea_group = trade_ideas
-		full_idea_group = economic_ideas
-		full_idea_group = exploration_ideas
-		full_idea_group = maritime_ideas 
-		full_idea_group = quality_ideas
-		full_idea_group = quantity_ideas
-		full_idea_group = expansion_ideas
-		full_idea_group = administrative_ideas
-		full_idea_group = humanist_ideas
-		}
-	}
-	
-	claim_duration = 0.15
-	
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-basic_idea_variation_act_26 = {
-
-	monarch_power = DIP
-
-	potential = {
-		has_idea_group = flottenbasis0
-	}
-	allow = {
-		full_idea_group = flottenbasis0
-		OR = {
-		full_idea_group = religious_ideas
-				
-		full_idea_group = justiz0
-		
-		full_idea_group = kolonialimperium0
-		
-		full_idea_group = gesellschaft0
-		full_idea_group = propaganda0
-		full_idea_group = flottenbasis0
-		
-		full_idea_group = generalstab0
-		
-		full_idea_group = waffenqualitat0
-		
-		full_idea_group = staatsverwaltung0
-		full_idea_group = zentra0
-		full_idea_group = dezentra0 
-		
-		
-		full_idea_group = innovativeness_ideas
-		full_idea_group = spy_ideas
-		full_idea_group = influence_ideas
-		full_idea_group = offensive_ideas
-		full_idea_group = defensive_ideas
-		full_idea_group = trade_ideas
-		full_idea_group = economic_ideas
-		full_idea_group = exploration_ideas
-		full_idea_group = maritime_ideas 
-		full_idea_group = quality_ideas
-		full_idea_group = quantity_ideas
-		full_idea_group = expansion_ideas
-		full_idea_group = administrative_ideas
-		full_idea_group = humanist_ideas
-		}
-	}
-	
-	range = 0.15
-	
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-basic_idea_variation_act_30 = {
-
+fear = {
 	monarch_power = MIL
 
 	potential = {
-		has_idea_group = generalstab0
+		OR = {
+			has_idea_group = illusion_ideas
+			has_idea_group = kolonialimperium0
+			has_idea_group = imperialismus0
+		}
 	}
 	allow = {
-		full_idea_group = generalstab0
+		full_idea_group = illusion_ideas
 		OR = {
-		full_idea_group = religious_ideas
-				
-		full_idea_group = justiz0
-		
-		full_idea_group = kolonialimperium0
-		
-		full_idea_group = gesellschaft0
-		full_idea_group = propaganda0
-		full_idea_group = flottenbasis0
-		
-		full_idea_group = generalstab0
-		
-		full_idea_group = waffenqualitat0
-		
-		full_idea_group = staatsverwaltung0
-		full_idea_group = zentra0
-		full_idea_group = dezentra0 
-		
-		
-		full_idea_group = innovativeness_ideas
-		full_idea_group = spy_ideas
-		full_idea_group = influence_ideas
-		full_idea_group = offensive_ideas
-		full_idea_group = defensive_ideas
-		full_idea_group = trade_ideas
-		full_idea_group = economic_ideas
-		full_idea_group = exploration_ideas
-		full_idea_group = maritime_ideas 
-		full_idea_group = quality_ideas
-		full_idea_group = quantity_ideas
-		full_idea_group = expansion_ideas
-		full_idea_group = administrative_ideas
-		full_idea_group = humanist_ideas
+			full_idea_group = kolonialimperium0 
+			full_idea_group = imperialismus0 
 		}
 	}
 	
-	drill_gain_modifier = 0.15
-	
+	harsh_treatment_cost = -0.50
+	dip_advisor_cost = -0.15
+
 	ai_will_do = {
 		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { average_unrest = 1 }
+		}			
 	}
 }
 
-basic_idea_variation_act_34 = {
+#Alluring Gaze
+#Charm leaders, merchants and mages to get the most the most advantageous offers.
 
+alluring_gase = {
+	monarch_power = DIP
+
+	potential = {
+		OR = {
+			has_idea_group = illusion_ideas
+			has_idea_group = trade_ideas
+		}
+	}
+	allow = {
+		full_idea_group = illusion_ideas
+		full_idea_group = trade_ideas 
+	}
+	
+	trade_efficiency = 0.15
+	trade_steering = 0.35
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			trade_income_percentage = 0.75
+		}			
+	}
+}
+
+##### Alteration school - 5
+
+#Equilibrium
+#Converting monarch points into manpower.
+
+equilibrium = {
+	monarch_power = DIP
+
+	potential = {
+		OR = {
+			has_idea_group = alteration_ideas
+			has_idea_group = gesellschaft0
+			has_idea_group = propaganda0
+		}
+	}
+	allow = {
+		full_idea_group = alteration_ideas
+		OR = {
+			full_idea_group = gesellschaft0 
+			full_idea_group = propaganda0 
+		}
+	}
+	
+	manpower_recovery_speed = 0.15
+	sailors_recovery_speed = 0.15
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			manpower_percentage = 0.75
+		}
+		modifier = {
+			factor = 1.25
+			any_neighbor_country = {
+				is_rival = ROOT
+			}
+		}
+		modifier = {
+			factor = 1.25
+			is_at_war = yes
+		}
+	}
+}
+
+#Oakflesh
+#Temporaly increasing armor rating of armies.
+
+oakflesh = {
 	monarch_power = MIL
 
 	potential = {
-		has_idea_group = waffenqualitat0
+		OR = {
+			has_idea_group = alteration_ideas
+			has_idea_group = waffenqualitat0
+			has_idea_group = armour_quality_ideas
+		}
 	}
 	allow = {
-		full_idea_group = waffenqualitat0
+		full_idea_group = alteration_ideas
 		OR = {
-		full_idea_group = religious_ideas
-				
-		full_idea_group = justiz0
-		
-		full_idea_group = kolonialimperium0
-		
-		full_idea_group = gesellschaft0
-		full_idea_group = propaganda0
-		full_idea_group = flottenbasis0
-		
-		full_idea_group = generalstab0
-		
-		full_idea_group = waffenqualitat0
-		
-		full_idea_group = staatsverwaltung0
-		full_idea_group = zentra0
-		full_idea_group = dezentra0 
-		
-		
-		full_idea_group = innovativeness_ideas
-		full_idea_group = spy_ideas
-		full_idea_group = influence_ideas
-		full_idea_group = offensive_ideas
-		full_idea_group = defensive_ideas
-		full_idea_group = trade_ideas
-		full_idea_group = economic_ideas
-		full_idea_group = exploration_ideas
-		full_idea_group = maritime_ideas 
-		full_idea_group = quality_ideas
-		full_idea_group = quantity_ideas
-		full_idea_group = expansion_ideas
-		full_idea_group = administrative_ideas
-		full_idea_group = humanist_ideas
+			full_idea_group = waffenqualitat0 
+			full_idea_group = armour_quality_ideas 
 		}
 	}
 	
-	shock_damage = 0.15
-	
+	fire_damage_received = -0.10
+	ship_durability = 0.1
+
 	ai_will_do = {
 		factor = 1
+		modifier = {
+			factor = 0
+			is_at_war = no
+		}
+		modifier = {
+			factor = 1.25
+			any_neighbor_country = {
+				is_rival = ROOT
+			}
+		}
 	}
 }
 
-basic_idea_variation_act_37 = {
+#Detect Life
+#Detecting living beings to improve chances of avoiding enemy units in order to surprise them.
 
+detect_life = {
 	monarch_power = ADM
 
 	potential = {
-		has_idea_group = staatsverwaltung0
-	}
-	allow = {
-		full_idea_group = staatsverwaltung0
 		OR = {
-		full_idea_group = religious_ideas
-				
-		full_idea_group = justiz0
-		
-		full_idea_group = kolonialimperium0
-		
-		full_idea_group = gesellschaft0
-		full_idea_group = propaganda0
-		full_idea_group = flottenbasis0
-		
-		full_idea_group = generalstab0
-		
-		full_idea_group = waffenqualitat0
-		
-		full_idea_group = staatsverwaltung0
-		full_idea_group = zentra0
-		full_idea_group = dezentra0 
-		
-		
-		full_idea_group = innovativeness_ideas
-		full_idea_group = spy_ideas
-		full_idea_group = influence_ideas
-		full_idea_group = offensive_ideas
-		full_idea_group = defensive_ideas
-		full_idea_group = trade_ideas
-		full_idea_group = economic_ideas
-		full_idea_group = exploration_ideas
-		full_idea_group = maritime_ideas 
-		full_idea_group = quality_ideas
-		full_idea_group = quantity_ideas
-		full_idea_group = expansion_ideas
-		full_idea_group = administrative_ideas
-		full_idea_group = humanist_ideas
+			has_idea_group = alteration_ideas
+			has_idea_group = administrative_ideas
 		}
 	}
+	allow = {
+		full_idea_group = alteration_ideas
+		full_idea_group = administrative_ideas 
+	}
 	
-	stability_cost_modifier = -0.15
-	
+	army_tradition_from_battle = 0.5
+	naval_tradition_from_battle = 0.5
+
 	ai_will_do = {
 		factor = 1
+		modifier = {
+			factor = 0
+			army_tradition = 75
+			navy_tradition = 75
+		}				
 	}
 }
 
-basic_idea_variation_act_38 = {
+#Detect Undead
+#Detecting the undead through walls. This isn't a useful spell, because you'll almost always want to eliminate the dead instead of just knowing about their presence. The only exception is if you want to increase your chances of avoiding stronger monsters.
 
-	monarch_power = ADM
+detect_undead = {
+	monarch_power = MIL
 
 	potential = {
-		has_idea_group = zentra0
-	}
-	allow = {
-		full_idea_group = zentra0
 		OR = {
-		full_idea_group = religious_ideas
-				
-		full_idea_group = justiz0
-		
-		full_idea_group = kolonialimperium0
-		
-		full_idea_group = gesellschaft0
-		full_idea_group = propaganda0
-		full_idea_group = flottenbasis0
-		
-		full_idea_group = generalstab0
-		
-		full_idea_group = waffenqualitat0
-		
-		full_idea_group = staatsverwaltung0
-		full_idea_group = zentra0
-		full_idea_group = dezentra0 
-		
-		
-		full_idea_group = innovativeness_ideas
-		full_idea_group = spy_ideas
-		full_idea_group = influence_ideas
-		full_idea_group = offensive_ideas
-		full_idea_group = defensive_ideas
-		full_idea_group = trade_ideas
-		full_idea_group = economic_ideas
-		full_idea_group = exploration_ideas
-		full_idea_group = maritime_ideas 
-		full_idea_group = quality_ideas
-		full_idea_group = quantity_ideas
-		full_idea_group = expansion_ideas
-		full_idea_group = administrative_ideas
-		full_idea_group = humanist_ideas
+			has_idea_group = alteration_ideas
+			has_idea_group = smithing_ideas
 		}
 	}
+	allow = {
+		full_idea_group = alteration_ideas
+		full_idea_group = smithing_ideas 
+	}
 	
-	culture_conversion_cost = -0.15
-	
+	mercenary_discipline = 0.05
+	mercenary_manpower = 0.15
+
 	ai_will_do = {
 		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { num_of_hired_mercenary_companies = 1 }
+		}		
+		modifier = {
+			factor = 1.25
+			is_at_war = yes
+		}
 	}
 }
 
-basic_idea_variation_act_39 = {
+#Sea Stride
+#Water walking can help to extend amount of ships, possible to maintain without extra cost.
 
-	monarch_power = ADM
+sea_stride = {
+	monarch_power = DIP
 
 	potential = {
-		has_idea_group = dezentra0 
+		OR = {
+			has_idea_group = alteration_ideas
+			has_idea_group = galle0
+			has_idea_group = handel0
+			has_idea_group = gross0
+		}
 	}
 	allow = {
-		full_idea_group = dezentra0 
+		full_idea_group = alteration_ideas
 		OR = {
-		full_idea_group = religious_ideas
-				
-		full_idea_group = justiz0
-		
-		full_idea_group = kolonialimperium0
-		
-		full_idea_group = gesellschaft0
-		full_idea_group = propaganda0
-		full_idea_group = flottenbasis0
-		
-		full_idea_group = generalstab0
-		
-		full_idea_group = waffenqualitat0
-		
-		full_idea_group = staatsverwaltung0
-		full_idea_group = zentra0
-		full_idea_group = dezentra0 
-		
-		
-		full_idea_group = innovativeness_ideas
-		full_idea_group = spy_ideas
-		full_idea_group = influence_ideas
-		full_idea_group = offensive_ideas
-		full_idea_group = defensive_ideas
-		full_idea_group = trade_ideas
-		full_idea_group = economic_ideas
-		full_idea_group = exploration_ideas
-		full_idea_group = maritime_ideas 
-		full_idea_group = quality_ideas
-		full_idea_group = quantity_ideas
-		full_idea_group = expansion_ideas
-		full_idea_group = administrative_ideas
-		full_idea_group = humanist_ideas
+			full_idea_group = galle0 
+			full_idea_group = handel0 
+			full_idea_group = gross0 
 		}
 	}
 	
+	naval_forcelimit_modifier = 0.25
+	global_sailors_modifier = 0.25
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { num_of_ports = 1 }
+		}				
+	}
+}
+
+##### Conjuration school - 5
+
+#Bound Sword
+#Creating a magical sword to eliminate enemy units in close combat.
+
+bound_sword = {
+	monarch_power = ADM
+
+	potential = {
+		OR = {
+			has_idea_group = conjuration_ideas
+			has_idea_group = monarchie0
+			has_idea_group = republik0
+			has_idea_group = aristo0
+			has_idea_group = horde0
+		}
+	}
+	allow = {
+		full_idea_group = conjuration_ideas
+		OR = {
+			full_idea_group = monarchie0 
+			full_idea_group = republik0 
+			full_idea_group = aristo0 
+			full_idea_group = horde0 
+		}
+	}
+	
+	global_regiment_cost = -0.15
+	global_regiment_recruit_speed = -0.25
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			is_at_war = no
+		}
+		modifier = {
+			factor = 1.25
+			any_neighbor_country = {
+				is_rival = ROOT
+			}
+		}
+	}
+}
+
+#Raise Zombie
+#Reanimating a weak dead bodies to fight alongside the main armies.
+
+raise_zombie = {
+	monarch_power = MIL
+
+	potential = {
+		OR = {
+			has_idea_group = conjuration_ideas
+			has_idea_group = summoning_ideas
+			has_idea_group = summoning_ideas
+		}
+	}
+	allow = {
+		full_idea_group = conjuration_ideas
+		OR = {
+			full_idea_group = summoning_ideas 
+			full_idea_group = necromacy_ideas 
+		}
+	}
+	
+	land_forcelimit_modifier = 0.15
+	global_manpower_modifier = 0.25
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			army_size = 250
+		}		
+		modifier = {
+			factor = 1.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 1.25
+			any_neighbor_country = {
+				is_rival = ROOT
+			}
+		}
+	}
+}
+
+#Summon Unbound Dremora
+#Summoning an unbound dremora. This spell is useless during war, but you may need it, while training your armies.
+
+summon_unbound_dremora = {
+	monarch_power = DIP
+
+	potential = {
+		OR = {
+			has_idea_group = conjuration_ideas
+			has_idea_group = exploration_ideas
+		}
+	}
+	allow = {
+		full_idea_group = conjuration_ideas
+		full_idea_group = exploration_ideas 
+	}
+	
+	drill_decay_modifier = -0.50
+	drill_gain_modifier = 0.25
+
+	ai_will_do = {
+		factor = 1	
+		modifier = {
+			factor = 0
+			is_at_war = yes
+		}
+	}
+}
+
+#Conjure Atronach
+#Summoning an atronach.
+
+conjure_atronach = {
+	monarch_power = ADM
+
+	potential = {
+		OR = {
+			has_idea_group = conjuration_ideas
+			has_idea_group = alchemical_ideas
+			has_idea_group = transmutation_ideas
+		}
+	}
+	allow = {
+		full_idea_group = conjuration_ideas
+		OR = {
+			full_idea_group = alchemical_ideas 
+			full_idea_group = transmutation_ideas 
+		}
+	}
+	
+	cavalry_power = 0.10
+	cavalry_cost = -0.25
+
+	ai_will_do = {
+		factor = 1	
+		modifier = {
+			factor = 1.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 0
+			NOT = { cavalry_fraction = 0.33 }
+		}
+		modifier = {
+			factor = 1.25
+			any_neighbor_country = {
+				is_rival = ROOT
+			}
+		}
+	}
+}
+
+#Soul Trap
+# Filling a soul gem if an attacked being died.
+
+soul_trap = {
+	monarch_power = DIP
+
+	potential = {
+		OR = {
+			has_idea_group = conjuration_ideas
+			has_idea_group = enchanting_ideas
+		}
+	}
+	allow = {
+		full_idea_group = conjuration_ideas
+		full_idea_group = enchanting_ideas 
+	}
+	
+	global_trade_goods_size_modifier = 0.15
+	embargo_efficiency = 0.35
+
+	ai_will_do = {
+		factor = 1	
+		modifier = {
+			factor = 0
+			production_income_percentage = 0.75
+		}
+	}
+}
+
+##### Destruction school - 5
+
+#Flames
+#Attacking the enemy units with fire damage.
+
+flames = {
+	monarch_power = ADM
+
+	potential = {
+		OR = {
+			has_idea_group = destruction_ideas
+			has_idea_group = religious_ideas
+			has_idea_group = humanist_ideas
+		}
+	}
+	allow = {
+		full_idea_group = destruction_ideas
+		OR = {
+			full_idea_group = religious_ideas 
+			full_idea_group = humanist_ideas 
+		}
+	}
+	
+	fire_damage = 0.10
+	leader_siege = 1
+
+	ai_will_do = {
+		factor = 1	
+		modifier = {
+			factor = 1.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 1.25
+			any_neighbor_country = {
+				is_rival = ROOT
+			}
+		}
+		modifier = {
+			factor = 0
+			has_commanding_three_star = yes
+		}
+	}
+}
+
+#Frostbite
+#Attacking the enemy units with frost damage.
+
+frostbite = {
+	monarch_power = DIP
+
+	potential = {
+		OR = {
+			has_idea_group = destruction_ideas
+			has_idea_group = maritime_ideas
+		}
+	}
+	allow = {
+		full_idea_group = destruction_ideas
+		full_idea_group = maritime_ideas 
+	}
+	
+	hostile_attrition = 1
+	defensiveness = 0.25
+
+	ai_will_do = {
+		factor = 1	
+		modifier = {
+			factor = 0
+			NOT = { is_at_war = yes }
+		}
+		modifier = {
+			factor = 1.25
+			any_neighbor_country = {
+				is_rival = ROOT
+			}
+		}
+	}
+}
+
+#Sparks
+#Attacking the enemy units with shock damage.
+
+sparks = {
+	monarch_power = MIL
+
+	potential = {
+		OR = {
+			has_idea_group = destruction_ideas
+			has_idea_group = offensive_ideas
+			has_idea_group = defensive_ideas
+		}
+	}
+	allow = {
+		full_idea_group = destruction_ideas
+		OR = {
+			full_idea_group = offensive_ideas 
+			full_idea_group = defensive_ideas 
+		}
+	}
+	
+	shock_damage = 0.10
+	leader_land_shock = 1
+
+	ai_will_do = {
+		factor = 1	
+		modifier = {
+			factor = 1.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 1.25
+			any_neighbor_country = {
+				is_rival = ROOT
+			}
+		}
+		modifier = {
+			factor = 0
+			has_commanding_three_star = yes
+		}
+	}
+}
+
+#Rune
+#Placing a magical rune that activates if someone gets closer to it.
+
+rune = {
+	monarch_power = MIL
+
+	potential = {
+		OR = {
+			has_idea_group = destruction_ideas
+			has_idea_group = stehendesheer0
+			has_idea_group = soldnerheer0
+		}
+	}
+	allow = {
+		full_idea_group = destruction_ideas
+		OR = {
+			full_idea_group = stehendesheer0 
+			full_idea_group = soldnerheer0 
+		}
+	}
+	
+	years_of_nationalism = -5
+	fort_maintenance_modifier = -0.25
+
+	ai_will_do = {
+		factor = 1	
+		modifier = {
+			factor = 1.25
+			any_neighbor_country = {
+				is_rival = ROOT
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = { average_unrest = 1 }
+		}
+	}
+}
+
+#Cloak
+#Causing all nearby enemies to lose points. 
+
+cloak = {
+	monarch_power = DIP
+
+	potential = {
+		OR = {
+			has_idea_group = destruction_ideas
+			has_idea_group = diplomatic_ideas
+		}
+	}
+	allow = {
+		full_idea_group = destruction_ideas
+		full_idea_group = diplomatic_ideas 
+	}
+	
+	global_spy_defence = 0.35
+	governing_capacity_modifier = 0.15
+
+	ai_will_do = {
+		factor = 1	
+		modifier = {
+			factor = 0
+			diplomatic_reputation = 5
+		}
+		modifier = {
+			factor = 1.25
+			any_neighbor_country = {
+				is_rival = ROOT
+			}
+		}
+	}
+}
+
+##### Restoration school - 5
+
+#Healing
+#Healing wounded soldiers after battles.
+
+healing = {
+	monarch_power = ADM
+
+	potential = {
+		OR = {
+			has_idea_group = restoration_ideas
+			has_idea_group = expansion_ideas
+			has_idea_group = innovativeness_ideas
+		}
+	}
+	allow = {
+		full_idea_group = restoration_ideas
+		OR = {
+			full_idea_group = expansion_ideas 
+			full_idea_group = innovativeness_ideas 
+		}
+	}
+	
+	recover_army_morale_speed = 0.05
+	recover_navy_morale_speed = 0.05
+
+	ai_will_do = {
+		factor = 1	
+		modifier = {
+			factor = 1.25
+			any_neighbor_country = {
+				is_rival = ROOT
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = { is_at_war = yes }
+		}
+	}
+}
+
+#Steadfast Ward
+#Cancelling up received magic damage.
+
+steadfast_ward = {
+	monarch_power = MIL
+
+	potential = {
+		OR = {
+			has_idea_group = restoration_ideas
+			has_idea_group = fire0
+			has_idea_group = shock0
+		}
+	}
+	allow = {
+		full_idea_group = restoration_ideas
+		OR = {
+			full_idea_group = fire0 
+			full_idea_group = shock0 
+		}
+	}
+	
+	shock_damage_received = -0.10
+	capture_ship_chance = 0.25
+
+	ai_will_do = {
+		factor = 1	
+		modifier = {
+			factor = 1.25
+			any_neighbor_country = {
+				is_rival = ROOT
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = { is_at_war = yes }
+		}
+	}
+}
+
+#Repel Lesser Undead
+#Forcing all undead units to flee.
+
+repel_lesser_undead = {
+	monarch_power = DIP
+
+	potential = {
+		OR = {
+			has_idea_group = restoration_ideas
+			has_idea_group = arcane_ideas
+			has_idea_group = soul_siphon_ideas
+		}
+	}
+	allow = {
+		full_idea_group = restoration_ideas
+		OR = {
+			full_idea_group = arcane_ideas 
+			full_idea_group = soul_siphon_ideas 
+		}
+	}
+	
+	discipline = 0.05
+	yearly_army_professionalism = 0.001
+
+	ai_will_do = {
+		factor = 1	
+		modifier = {
+			factor = 0
+			NOT = { is_at_war = yes }
+		}
+		modifier = {
+			factor = 1.25
+			any_neighbor_country = {
+				is_rival = ROOT
+			}
+		}
+	}
+}
+
+#Close Wounds
+#Regenerating health.
+
+close_wounds = {
+	monarch_power = ADM
+
+	potential = {
+		OR = {
+			has_idea_group = restoration_ideas
+			has_idea_group = economic_ideas
+		}
+	}
+	allow = {
+		full_idea_group = restoration_ideas
+		full_idea_group = economic_ideas 
+	}
+	
+	reinforce_cost_modifier = -0.5
+	reinforce_speed = 0.25
+
+	ai_will_do = {
+		factor = 1	
+		modifier = {
+			factor = 1.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 0
+			NOT = { is_at_war = yes }
+		}
+	}
+}
+
+#Circle of Protection
+#Creating a magical circle that forces all enemy units standing inside it to flee.
+
+circle_of_protection = {
+	monarch_power = DIP
+
+	potential = {
+		OR = {
+			has_idea_group = restoration_ideas
+			has_idea_group = naval_ideas
+			has_idea_group = flottenbasis0
+		}
+	}
+	allow = {
+		full_idea_group = restoration_ideas
+		OR = {
+			full_idea_group = naval_ideas 
+			full_idea_group = flottenbasis0 
+		}
+	}
+	
+	war_exhaustion = -0.015
+	global_heretic_missionary_strength = 0.015
+
+	ai_will_do = {
+		factor = 1	
+		modifier = {
+			factor = 1.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 0
+			NOT = { war_exhaustion = 1 }
+		}
+	}
+}
+
+##### Mysticism school - 5
+
+#Clairvoyance
+#Showing the path to the current destination of the army.
+
+clairvoyance = {
+	monarch_power = MIL
+
+	potential = {
+		OR = {
+			has_idea_group = mysticism_ideas
+			has_idea_group = mobility_ideas
+		}
+	}
+	allow = {
+		full_idea_group = mysticism_ideas
+		full_idea_group = mobility_ideas 
+	}
+	
+	movement_speed = 0.10
+	land_attrition = -0.25
+
+	ai_will_do = {
+		factor = 1	
+		modifier = {
+			factor = 0
+			NOT = { is_at_war = yes }
+		}
+		modifier = {
+			factor = 1.25
+			any_neighbor_country = {
+				is_rival = ROOT
+			}
+		}
+	}
+}
+
+#Candlelight
+#Creating a ball of light which follows armies in dungeons, caves and other dark locations.
+
+candllight = {
+	monarch_power = MIL
+
+	potential = {
+		OR = {
+			has_idea_group = mysticism_ideas
+			has_idea_group = quality_ideas
+			has_idea_group = quantity_ideas
+		}
+	}
+	allow = {
+		full_idea_group = mysticism_ideas
+		OR = {
+			full_idea_group = quality_ideas 
+			full_idea_group = quantity_ideas 
+		}
+	}
+	
+	siege_ability = 0.10
+	garrison_size = 0.25
+
+	ai_will_do = {
+		factor = 1	
+		modifier = {
+			factor = 0
+			NOT = { is_at_war = yes }
+		}
+		modifier = {
+			factor = 1.25
+			any_neighbor_country = {
+				is_rival = ROOT
+			}
+		}
+	}
+}
+
+#Remote Manipulation
+# Manipulating people, make them leave their homes and go to explore new lands.
+
+remote_manipulation = {
+	monarch_power = MIL
+
+	potential = {
+		OR = {
+			has_idea_group = mysticism_ideas
+			has_idea_group = generalstab0
+		}
+	}
+	allow = {
+		full_idea_group = mysticism_ideas
+		full_idea_group = generalstab0 
+	}
+	
+	global_colonial_growth = 15
+	global_tariffs = 0.15
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 1.5
+			num_of_colonies = 1
+		}	
+		modifier = {
+			factor = 0
+			NOT = { num_of_colonists = 1 }
+		}
+	}
+}
+
+#Forify Magic
+# Using magical abilities, accelerate the technological development of the country.
+
+forify_magic = {
+	monarch_power = ADM
+
+	potential = {
+		OR = {
+			has_idea_group = mysticism_ideas
+			has_idea_group = zentra0
+			has_idea_group = dezentra0
+		}
+	}
+	allow = {
+		full_idea_group = mysticism_ideas
+		OR = {
+			full_idea_group = zentra0 
+			full_idea_group = dezentra0 
+		}
+	}
+	
+	advisor_cost = -0.15
+	advisor_pool = 1
+
+	ai_will_do = {
+		factor = 1	
+		modifier = {
+			factor = 0
+			NOT = { is_lacking_institutions = yes }
+		}
+	}
+}
+
+#Pacification
+# Pacifying rebellious settlements, channel their anger towards expantion of government influence.
+
+pacification = {
+	monarch_power = ADM
+
+	potential = {
+		OR = {
+			has_idea_group = mysticism_ideas
+			has_idea_group = staatsverwaltung0
+		}
+	}
+	allow = {
+		full_idea_group = mysticism_ideas
+		full_idea_group = staatsverwaltung0 
+	}
+	
+	global_unrest = -1.5
 	core_creation = -0.15
-	
+
 	ai_will_do = {
 		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { average_unrest = 1 }
+		}
 	}
 }

@@ -2707,7 +2707,7 @@ chimer_pantheon_rebels = {
 		}
 		if = {
 			limit = {
-				NOT = { religion_group = occult_group }
+				NOT = { religion = chimer_pantheon }
 				dominant_religion = chimer_pantheon
 			}
 			change_religion = chimer_pantheon
@@ -2715,7 +2715,7 @@ chimer_pantheon_rebels = {
 		}
 		if = {
 			limit = {
-				NOT = { religion_group = occult_group }
+				NOT = { religion = chimer_pantheon }
 				NOT = { dominant_religion = chimer_pantheon }
 				religion_group = occult_group
 			}

@@ -89,7 +89,7 @@ MOS_ideas = {
 	}
 
 	bonus = {
-		land_forcelimit_modifier = 0.25
+		naval_forcelimit_modifier = 0.25
 	}
 
 	trigger = {
@@ -97,27 +97,41 @@ MOS_ideas = {
 	}
 	
 	free = yes
-
+	
+	#Origins of Men
+	#It is thought that the first pre-literate humans came to Tamriel from Atmora.
 	gatherers_of_tribute = {
-		global_tax_modifier = 0.10
-	}
-	legacy_of_dmitriy_donskoi = {
-		army_tradition = 0.25
-	}
-	seat_of_metropolitan_bishop  = {
-		tolerance_own = 1
-	}
-	pomestnoe_voisko = {
-		land_morale = 0.10
-	}
-	strength_of_the_boyars = {
-		stability_cost_modifier = -0.10
- 	}
-	zasechnaya_cherta = {
-		fort_maintenance_modifier = -0.10
-	}
-	descendants_of_byzantine_emperors = {
 		diplomatic_reputation = 0.5
+	}
+	#Survivors of Civil War
+	#Lots of people were murdered during bloody civil war between Atmoran Warlords.
+	legacy_of_dmitriy_donskoi = {
+		discipline = 0.05
+	}
+	#Founders of Saarthal
+	#The legendary city of Saarthal was the first Atmoran settlement out of homelands.
+	seat_of_metropolitan_bishop  = {
+		build_cost = -0.10
+	}
+	#Peace and Prosperous
+	#Despite the difficult living conditions, Atmors were able to build a stable societyю
+	pomestnoe_voisko = {
+		stability_cost_modifier = -0.10
+	}
+	#Five Hundread Companions
+	#The group of wraithful warriors, who protect Atmoran Lands.
+	strength_of_the_boyars = {
+		global_manpower_modifier = 0.10
+ 	}
+	#Atmoran Imigrants
+	#Deteriorating weather conditions are forcing many to leave their homes and travel to new places.
+	zasechnaya_cherta = {
+		colonists = 1
+	}
+	#A Place of Permanent Winter
+	#Little life can survive harsh climate conditions of Atmora.
+	descendants_of_byzantine_emperors = {
+		hostile_attrition = 1
 	}
 
 }
@@ -984,7 +998,7 @@ SPA_ideas = {
 	free = yes
 
 	devout_catholisism = {
-		papal_influence = 1
+		global_missionary_strength = 0.01
 	}
 	inter_caetera = {
 		idea_claim_colonies = yes

@@ -345,29 +345,19 @@ non_core = {
 }
 
 territory_core = {
-	local_tax_modifier = 0.25				
-	local_manpower_modifier = 0.25
-	local_sailors_modifier = 0.25
+	local_tax_modifier = 0.5				
+	local_manpower_modifier = 0.5
+	local_manpower_modifier = 0.5
+	local_sailors_modifier = 0.5
 	local_missionary_strength = -0.025
 	min_local_autonomy = 90
-	local_governing_cost = -0.25									 
+	local_governing_cost = -0.50									 
 }
 
 territory_non_core = {
 	local_missionary_strength = -0.025
 	min_local_autonomy = 90
 	local_governing_cost = -0.75						 
-}
-
-march_bonus = {
-	global_manpower_modifier = 0.25
-	land_forcelimit_modifier = 0.5
-	naval_forcelimit_modifier = 0.35
-	defensiveness = 0.25
-	fort_maintenance_modifier = -0.5
-	manpower_recovery_speed = 0.25
-	land_maintenance_modifier = -0.25
-	naval_maintenance_modifier = -0.25
 }
 
 same_culture_group = {
@@ -586,8 +576,8 @@ ai_nation = {
 }
 
 war_taxes = {
-	land_maintenance_modifier = -0.15
-	naval_maintenance_modifier = -0.15
+	land_maintenance_modifier = -0.35
+	naval_maintenance_modifier = -0.35
 	global_unrest = 3.5
 }
 
@@ -1272,18 +1262,6 @@ federation_leader = {
 	land_morale = 0.1
 }
 
-tributary_state_behind_overlord_tech_adm = {
-	adm_tech_cost_modifier = -0.05
-}
-
-tributary_state_behind_overlord_tech_dip = {
-	dip_tech_cost_modifier = -0.05
-}
-
-tributary_state_behind_overlord_tech_mil = {
-	mil_tech_cost_modifier = -0.05
-}
-
 liberty_desire = {
 }
 
@@ -1348,26 +1326,7 @@ trade_company_strong = {
 trade_company_dominant = {
 }
 
-large_colonial_nation = {
-	merchants = 1
-	global_trade_power = 0.10
-	naval_forcelimit = 10
-	land_forcelimit = 5
-	global_colonial_growth = 10
-}
-
-march_subject = {
-	land_forcelimit = 5
-}
-
-vassal_subject = {
-	land_forcelimit = 1
-}
-
 daimyo_subject = {
-}
-
-union_subject = {
 }
 
 all_nations = {
@@ -1379,9 +1338,142 @@ all_nations = {
 subject_nation = {
 }
 
-vassal_nation = {
-	development_cost = 0.5
+### Subjects ##########################################################
+
+#Personal Union
+union_subject = {
+	legitimacy = 0.25
+	meritocracy = 0.15
+	yearly_absolutism = 0.1
 }
+
+union_nation = {
+	stability_cost_modifier = -0.25
+	prestige_from_land = -0.25
+	prestige_from_naval = -0.25
+}
+
+#March
+march_subject = {
+	land_forcelimit = 5
+}
+
+march_nation = {
+	embracement_cost = 0.35
+	build_cost = 0.25
+	technology_cost = 0.10
+	defensiveness = 0.25
+	fort_maintenance_modifier = -0.5
+}
+
+march_bonus = {
+	land_maintenance_modifier = -0.15
+	naval_maintenance_modifier = -0.15
+	manpower_recovery_speed = 0.25
+}
+
+#Holy Order
+holy_order_subject = {
+	land_forcelimit = 3.5
+}
+
+holy_order_nation = {
+	idea_cost = 0.25
+	global_institution_spread = -0.15
+	religious_unity = 0.15
+	global_missionary_strength = 0.05
+	missionaries = 1
+}
+
+holy_order_bonus = {
+	tolerance_own = 1.5
+	tolerance_heathen = -3.5
+	tolerance_heathen = -3.5
+	land_forcelimit_modifier = 0.5
+	naval_forcelimit_modifier = 0.35
+	global_manpower_modifier = 0.25
+	prestige_per_development_from_conversion = 0.1
+}
+
+### Vassal
+vassal_subject = {
+	land_forcelimit = 1
+}
+
+vassal_nation = {
+	development_cost = -0.35
+	discipline = -0.15
+	mercenary_discipline = -0.15
+	land_morale = -0.35
+	naval_morale = -0.35
+}
+
+### Imperial Province
+imperial_subject = {
+	imperial_authority = 0.015
+}
+
+imperial_nation = {
+	prestige = 0.35
+	diplomatic_upkeep = -1
+	unjustified_demands = 0.15
+}
+
+### Colony
+large_colonial_nation = {
+	merchants = 1
+	global_trade_power = 0.10
+	naval_forcelimit = 10
+	ship_power_propagation = 0.10
+	global_colonial_growth = 10
+}
+
+colony_nation = {
+	native_assimilation = 0.15
+	naval_morale = -0.35
+	global_ship_cost = 0.25
+}
+
+### Native Reservation
+reservation_nation = {
+	global_institution_spread = 0.35
+	global_trade_power = -0.25
+	global_unrest = 1.5
+}
+
+reservation_subject = {
+	global_manpower_modifier = 0.05
+}
+
+### Tributaries
+tributary_state_behind_overlord_tech_adm = {
+	adm_tech_cost_modifier = -0.15
+}
+
+tributary_state_behind_overlord_tech_dip = {
+	dip_tech_cost_modifier = -0.15
+}
+
+tributary_state_behind_overlord_tech_mil = {
+	mil_tech_cost_modifier = -0.15
+}
+
+tributary_subject = {
+	global_manpower = 5
+}
+
+### Alliance
+alliance_subject = {
+	diplomatic_reputation = -0.5
+}
+
+alliance_nation = {
+	land_forcelimit_modifier = 0.10
+	recover_army_morale_speed = -0.10
+	recover_navy_morale_speed = -0.10
+}
+
+#######################################################################
 
 primitive_nation = {
 	development_cost = 0.5
@@ -1568,15 +1660,15 @@ invasion_nation = {
 ########################################
 
 native_policy_coexist = {
-	global_trade_goods_size_modifier = 0.10
 	num_accepted_cultures = 1
 	religious_unity = 0.10
+	native_uprising_chance = -1.0
 }
 
 native_policy_trade = {
-	native_assimilation = 0.5
-	trade_range_modifier = 0.5
 	merchants = 1
+	native_assimilation = 0.5
+	native_uprising_chance = -0.5
 }
 
 native_policy_hostile = {

@@ -1,23 +1,35 @@
 owner = SA6
 controller = SA6
 add_core = SA6
-culture = altmer
 religion = altmeri_pantheon
+culture = altmer
 hre = yes
-base_tax = 5
-base_production = 5
-trade_goods = paper
-base_manpower = 5
-capital = "Alinor" 
+base_tax = 1
+base_production = 1
+trade_goods = unknown
+base_manpower = 1
+capital = "Alinor"
 is_city = yes
 discovered_by = elven_tg discovered_by = oceanic_tg
 
-add_permanent_province_modifier = {
-	name = water_trade_modifier
-	duration = -1
+57.1.1 = {
+    owner = SA6
+    controller = SA6
+    add_core = SA6
 }
 
-center_of_trade = 3
+272.1.1 = {
+}
 
-fort_15th = yes
+535.1.1 = {
+}
+
+862.1.1 = {
+}
+
+1177.1.1 = {
+}
+
+1466.1.1 = {
+}
 

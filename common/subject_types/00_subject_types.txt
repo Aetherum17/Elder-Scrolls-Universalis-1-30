@@ -207,6 +207,9 @@ personal_union = {
 	modifier_overlord = {
 		modifier = union_subject
 	}
+	modifier_subject = {
+		modifier = union_nation
+	}
 
 	overlord_opinion_modifier = in_union
 	subject_opinion_modifier = in_union
@@ -360,16 +363,16 @@ holy_order_1 = {
 	modifier_overlord = clear #We don't want to duplicate the ones inherited from vassal
 	modifier_subject = clear #Ditto
 	modifier_subject = {
-		modifier = subject_nation
+		modifier = holy_order_nation
 	}
 	modifier_overlord = {
-		modifier = march_subject
+		modifier = holy_order_subject
 	}
 	modifier_subject = {
-		modifier = march_bonus
+		modifier = holy_order_bonus
 		trigger = {
 			NOT = {
-				development_of_overlord_fraction = 0.25
+				development_of_overlord_fraction = 0.35
 			}
 		}
 		expiration_message_overlord = MARCHTOOLARGE
@@ -529,8 +532,11 @@ imperial_subject = {
 	conscript_general = yes	
 
 	# Modifiers:
+	modifier_subject = {
+		modifier = imperial_nation
+	}
 	modifier_overlord = {
-		modifier = union_subject
+		modifier = imperial_subject
 	}
 
 	overlord_opinion_modifier = in_union
@@ -618,6 +624,9 @@ colony = {
 	conscript_general = yes	
 
 	# Modifiers:
+	modifier_subject = {
+		modifier = colony_nation
+	}
 	modifier_overlord = {
 		modifier = large_colonial_nation
 		trigger = {
@@ -710,6 +719,17 @@ native_reservation = {
 	force_isolation = yes
 	return_land = yes
 	conscript_general = yes	
+	
+	# Modifiers:
+	modifier_subject = {
+		modifier = reservation_nation
+	}
+	modifier_overlord = {
+		modifier = reservation_subject
+		trigger = {
+			num_of_cities = 5
+		}
+	}
 	
 	overlord_opinion_modifier = colonial_relation
 	subject_opinion_modifier = colonial_relation
@@ -823,6 +843,12 @@ tributary_state = {
 			}
 		}
 	}
+	modifier_overlord = {
+		modifier = tributary_subject
+		trigger = {
+			num_of_cities = 35
+		}
+	}
 }
 
 alliance_member = {
@@ -885,6 +911,14 @@ alliance_member = {
 	send_additional_troops = yes
 	press_sailors = yes
 	return_land = yes
+	
+	# Modifiers:
+	alliance_subject = {
+		modifier = alliance_nation
+	}
+	alliance_overlord = {
+		modifier = alliance_subject
+	}
 }
 
 #######################################################################

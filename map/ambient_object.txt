@@ -1,4 +1,108 @@
 type={
+	type="es_orrery"
+	use_animation=yes
+	scale=1.5
+	always_visible=yes
+	object={
+		name="es_orrery"
+		hidden_on_start=no
+		position={
+			1527.000 19.00 1193.000 
+		}
+		rotation={
+			0.000 90.000 0.000 
+		}
+	}
+}
+type={
+	type="es_bridge"
+	use_animation=no
+	scale=0.500000
+	time_duration=300.000000
+	always_visible=yes
+	visible_in_all_map_modes=yes
+	object={
+		name="bridge"
+		hidden_on_start=no
+		position={
+			1402.000 -1.000 1607.000 
+		}
+		rotation={
+			0.000 5.000 0.000 
+		}
+	}
+}
+type={
+	type="es_akaviri_temple"
+	use_animation=no
+	scale=0.300000
+	time_duration=300.000000
+	always_visible=yes
+	visible_in_all_map_modes=yes
+	object={
+		name="akaviri_temple"
+		hidden_on_start=no
+		position={
+			2770.000 0.000 1056.000 
+		}
+		rotation={
+			0.000 155.000 0.000 
+		}
+	}
+}
+type={
+	type="es_ambient_towers"
+	use_animation=no
+	scale=2.000000
+	time_duration=300.000000
+	always_visible=yes
+	visible_in_all_map_modes=yes
+	object={
+		name="ambient_tower1"
+		hidden_on_start=no
+		position={
+			1786.000 -0.700 2762.000 
+		}
+		rotation={
+			0.000 -15.000 0.000 
+		}
+	}
+}
+type={
+	type="es_masser"
+	use_animation=no
+	time_duration=300.000000
+	always_visible=yes
+	visible_in_all_map_modes=yes
+	object={
+		name="masser01"
+		hidden_on_start=no
+		position={
+			1330.000 30.000 1190.000 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+}
+type={
+	type="es_secunda"
+	use_animation=no
+	time_duration=300.000000
+	always_visible=yes
+	visible_in_all_map_modes=yes
+	object={
+		name="secunda01"
+		hidden_on_start=no
+		position={
+			1338.000 30.000 1178.000 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+}
+type={
 	type="giant_bleeding_crown"
 	use_animation=no
 	scale=2.000000
@@ -334,16 +438,32 @@ type={
 type={
 	type="crystal_tower"
 	use_animation=no
-	scale=3.240000
+	scale=1.500000
 	always_visible=yes
 	object={
 		name="crystal_tower"
 		hidden_on_start=no
 		position={
-			569.000 19.000 1307.000 
+			497.000 29.500 1316.000 
 		}
 		rotation={
 			0.000 90.000 0.000 
+		}
+	}
+}
+type={
+	type="baar_dau"
+	use_animation=no
+	scale=1.500000
+	always_visible=yes
+	object={
+		name="baar_dau"
+		hidden_on_start=no
+		position={
+			1855.000 42.000 1758.000 
+		}
+		rotation={
+			0.000 270.000 0.000 
 		}
 	}
 }
@@ -858,18 +978,38 @@ type={
 	}
 }
 type={
-	type="nammi2_stonehenge_entity"
-	use_animation=no
+	type="moose"
+	use_animation=yes
 	scale=0.750000
 	time_duration=300.000000
 	object={
-		name="stonehenge"
+		name="moose"
 		hidden_on_start=no
 		position={
-			1785.000 -0.100 2760.000 
+			1086.000 -0.100 1550.000 
 		}
 		rotation={
-			0.000 -0.800 0.000 
+			0.000 -45.000 0.000 
+		}
+	}
+	object={
+		name="moose"
+		hidden_on_start=no
+		position={
+			1305.000 -0.100 1696.000 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+	object={
+		name="moose"
+		hidden_on_start=no
+		position={
+			1284.000 -0.100 1544.000 
+		}
+		rotation={
+			0.000 -25.000 0.000 
 		}
 	}
 }
@@ -1127,17 +1267,38 @@ type={
 	}
 }
 type={
-	type="nammi_stpeters_cathedral_entity"
-	use_animation=no
+	type="giraffe"
+	use_animation=yes
+	scale=0.750000
 	time_duration=300.000000
 	object={
-		name="stpeters"
+		name="giraffe"
 		hidden_on_start=no
 		position={
-			2771.000 -0.100 1055.000 
+			643.000 -0.100 1309.000 
 		}
 		rotation={
-			0.000 -50.000 0.000 
+			0.000 -30.000 0.000 
+		}
+	}
+	object={
+		name="giraffe"
+		hidden_on_start=no
+		position={
+			796.000 -0.100 1205.000 
+		}
+		rotation={
+			0.000 -45.000 0.000 
+		}
+	}
+	object={
+		name="giraffe"
+		hidden_on_start=no
+		position={
+			585.000 -0.100 1114.000 
+		}
+		rotation={
+			0.000 30.000 0.000 
 		}
 	}
 }
@@ -1160,8 +1321,8 @@ type={
 type={
 	type="desert_skeleton_mesh"
 	use_animation=no
-	time_duration=300.000000
 	scale=0.750000
+	time_duration=300.000000
 	object={
 		name="desert_skeleton"
 		hidden_on_start=no
@@ -1364,7 +1525,6 @@ type={
 type={
 	type="elephant_indian"
 	use_animation=yes
-	scale=1.000000
 	time_duration=300.000000
 	object={
 		name="elephant_ind"
@@ -1620,20 +1780,20 @@ type={
 		name="zebra"
 		hidden_on_start=no
 		position={
-			3117.000 -0.100 1427.000 
+			1366.000 -0.100 1173.000 
 		}
 		rotation={
-			0.000 35.000 0.000 
+			0.000 -60.000 0.000 
 		}
 	}
 	object={
 		name="zebra"
 		hidden_on_start=no
 		position={
-			1366.000 -0.100 1173.000 
+			3117.000 -0.100 1427.000 
 		}
 		rotation={
-			0.000 -60.000 0.000 
+			0.000 35.000 0.000 
 		}
 	}
 }
@@ -1828,6 +1988,16 @@ type={
 		name="black"
 		hidden_on_start=no
 		position={
+			1704.000 -0.100 1365.000 
+		}
+		rotation={
+			0.000 -60.000 0.000 
+		}
+	}
+	object={
+		name="black"
+		hidden_on_start=no
+		position={
 			1619.000 -0.100 1681.000 
 		}
 		rotation={
@@ -1844,21 +2014,11 @@ type={
 			0.000 -35.000 0.000 
 		}
 	}
-	object={
-		name="black"
-		hidden_on_start=no
-		position={
-			1704.000 -0.100 1365.000 
-		}
-		rotation={
-			0.000 -60.000 0.000 
-		}
-	}
 }
 type={
 	type="brown_bear"
 	use_animation=yes
-	scale=0.7500000
+	scale=0.750000
 	time_duration=300.000000
 	object={
 		name="brown"
@@ -2051,7 +2211,7 @@ type={
 		name="whale"
 		hidden_on_start=no
 		position={
-			3040.000 -0.100 857.000 
+			2405.830 -0.100 1239.240 
 		}
 		rotation={
 			0.000 0.000 0.000 
@@ -2061,7 +2221,7 @@ type={
 		name="whale"
 		hidden_on_start=no
 		position={
-			2405.830 -0.100 1239.240 
+			3040.000 -0.100 857.000 
 		}
 		rotation={
 			0.000 0.000 0.000 
@@ -2121,7 +2281,7 @@ type={
 type={
 	type="bison"
 	use_animation=yes
-	scale=0.7500000
+	scale=0.750000
 	time_duration=300.000000
 	object={
 		name="bison"
@@ -2137,92 +2297,20 @@ type={
 		name="bison"
 		hidden_on_start=no
 		position={
-			2118.000 -0.100 1706.000 
-		}
-		rotation={
-			0.000 -35.000 0.000 
-		}
-	}
-	object={
-		name="bison"
-		hidden_on_start=no
-		position={
 			1886.000 -0.100 1488.000 
 		}
 		rotation={
 			0.000 -45.000 0.000 
 		}
 	}
-}
-type={
-	type="moose"
-	use_animation=yes
-	scale=0.750000
-	time_duration=300.000000
 	object={
-		name="moose"
+		name="bison"
 		hidden_on_start=no
 		position={
-			1086.000 -0.100 1550.000 
+			2118.000 -0.100 1706.000 
 		}
 		rotation={
-			0.000 -45.000 0.000 
-		}
-	}
-	object={
-		name="moose"
-		hidden_on_start=no
-		position={
-			1305.000 -0.100 1696.000 
-		}
-		rotation={
-			0.000 0.000 0.000 
-		}
-	}
-	object={
-		name="moose"
-		hidden_on_start=no
-		position={
-			1284.000 -0.100 1544.000 
-		}
-		rotation={
-			0.000 -25.000 0.000 
-		}
-	}
-}
-type={
-	type="giraffe"
-	use_animation=yes
-	scale=0.750000
-	time_duration=300.000000
-	object={
-		name="giraffe"
-		hidden_on_start=no
-		position={
-			643.000 -0.100 1309.000 
-		}
-		rotation={
-			0.000 -30.000 0.000 
-		}
-	}
-	object={
-		name="giraffe"
-		hidden_on_start=no
-		position={
-			796.000 -0.100 1205.000 
-		}
-		rotation={
-			0.000 -45.000 0.000 
-		}
-	}
-	object={
-		name="giraffe"
-		hidden_on_start=no
-		position={
-			585.000 -0.100 1114.000 
-		}
-		rotation={
-			0.000 30.000 0.000 
+			0.000 -35.000 0.000 
 		}
 	}
 }

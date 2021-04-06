@@ -1,8 +1,5 @@
-#owner = SC2
-#controller = SC2
-add_core = SC2
-culture = altmer
 religion = altmeri_pantheon
+culture = altmer
 hre = no
 base_tax = 1
 base_production = 1
@@ -12,7 +9,3 @@ capital = "Aniwe"
 is_city = no
 discovered_by = elven_tg discovered_by = oceanic_tg
 
-add_permanent_province_modifier = {
-	name = land_trade_modifier
-	duration = -1
-}

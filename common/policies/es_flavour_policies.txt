@@ -1,0 +1,1190 @@
+#Vampiric Drain
+#Absorbing the health of the enemy units. 
+
+vampiric_drain = {
+	monarch_power = MIL
+
+	potential = {
+		OR = {
+			has_idea_group = destruction_ideas
+			culture_group = dead_cg
+			accepted_culture = vampire
+			accepted_culture = soul_shriven
+		}
+	}
+	allow = {
+		full_idea_group = destruction_ideas
+		has_idea_group = conjuration_ideas
+		OR = {
+			culture_group = dead_cg
+			accepted_culture = vampire
+			accepted_culture = soul_shriven
+		}
+	}
+	
+	leader_land_fire = 1
+	leader_land_manuever = 1
+
+	ai_will_do = {
+		factor = 1	
+		modifier = {
+			factor = 0
+			has_commanding_three_star = yes
+		}
+	}
+}
+
+#Highborn
+#Increasing legitimacy faster by purging all foreigners from the government.
+
+highborn = {
+	monarch_power = ADM
+
+	potential = {
+		OR = {
+			has_idea_group = staatsverwaltung0
+			culture_group = high_elves_cg
+			accepted_culture = altmer
+			accepted_culture = ayleid
+			accepted_culture = sinistral
+			accepted_culture = corelanyan
+		}
+	}
+	allow = {
+		full_idea_group = staatsverwaltung0
+		has_idea_group = mysticism_ideas
+		OR = {
+			culture_group = high_elves_cg
+			accepted_culture = altmer
+			accepted_culture = ayleid
+			accepted_culture = sinistral
+			accepted_culture = corelanyan
+		}
+	}
+	
+	horde_unity = 0.5
+	legitimacy = 0.5
+	republican_tradition = 0.5
+	meritocracy = 0.5
+	devotion = 0.5
+	adm_advisor_cost = -0.15
+
+	ai_will_do = {
+		factor = 1	
+		modifier = {
+			factor = 0
+			OR = {
+				AND = {
+					government = monarchy
+					OR = {
+						legitimacy = 90
+						meritocracy = 90
+					}
+				}
+				AND = {
+					government = republic
+					republican_tradition = 90
+				}
+				AND = {
+					government = theocracy
+					devotion = 90
+				}
+				AND = {
+					government = tribal
+					OR = {
+						legitimacy = 90
+						horde_unity = 90
+					}
+				}
+			}
+		}
+	}
+}
+
+#Histskin
+#Saving maintenance of army and fleet by relying on powers of the Hist.
+
+histskin = {
+	monarch_power = MIL
+
+	potential = {
+		OR = {
+			has_idea_group = smithing_ideas
+			culture_group = marsh_cg
+			accepted_culture = argonian
+			accepted_culture = archein
+			accepted_culture = agaceph
+			accepted_culture = naga
+		}
+	}
+	allow = {
+		full_idea_group = smithing_ideas
+		has_idea_group = restoration_ideas
+		OR = {
+			culture_group = marsh_cg
+			accepted_culture = argonian
+			accepted_culture = archein
+			accepted_culture = agaceph
+			accepted_culture = naga
+		}
+	}
+	
+	land_maintenance_modifier = -0.15
+	naval_maintenance_modifier = -0.15
+
+	ai_will_do = {
+		factor = 1	
+		modifier = {
+			factor = 0
+			treasury = 10000
+		}
+	}
+}
+
+#Command Animal
+#Forming alliance with animals during martial and peaceful times.
+
+command_animal = {
+	monarch_power = DIP
+
+	potential = {
+		OR = {
+			has_idea_group = exploration_ideas
+			culture_group = bosmer_cg
+			accepted_culture = bosmer
+		}
+	}
+	allow = {
+		full_idea_group = exploration_ideas
+		has_idea_group = illusion_ideas
+		OR = {
+			culture_group = bosmer_cg
+			accepted_culture = bosmer
+		}
+	}
+	
+	envoy_travel_time = -0.50
+	artillery_power = 0.1
+
+	ai_will_do = {
+		factor = 1	
+		modifier = {
+			factor = 0
+			NOT = {
+				any_neighbor_country = {
+					is_rival = ROOT
+				}
+			}
+		}
+	}
+}
+
+#Dragonskin
+#Acquiring military experience after magical battles.
+
+dragonskin = {
+	monarch_power = DIP
+
+	potential = {
+		OR = {
+			has_idea_group = enchanting_ideas
+			culture_group = half_blood_cg
+			accepted_culture = breton
+			accepted_culture = reachmen
+		}
+	}
+	allow = {
+		full_idea_group = enchanting_ideas
+		has_idea_group = trade_ideas
+		OR = {
+			culture_group = half_blood_cg
+			accepted_culture = breton
+			accepted_culture = reachmen
+		}
+	}
+	
+	army_tradition_from_battle = 0.5
+	naval_tradition_from_battle = 0.5
+
+	ai_will_do = {
+		factor = 1	
+		modifier = {
+			factor = 0
+			is_at_war = no
+		}
+	}
+}
+
+#Ancestor's Wrath
+#Converting religious opponents, who dare to leave the path of ancestors. 
+
+ancestors_warth = {
+	monarch_power = ADM
+
+	potential = {
+		OR = {
+			has_idea_group = mysticism_ideas
+			culture_group = chimeris_cg
+			accepted_culture = ashlander
+			accepted_culture = dunmer
+			accepted_culture = chimer
+		}
+	}
+	allow = {
+		full_idea_group = mysticism_ideas
+		has_idea_group = destruction_ideas
+		OR = {
+			culture_group = chimeris_cg
+			accepted_culture = ashlander
+			accepted_culture = dunmer
+			accepted_culture = chimer
+		}
+	}
+	
+	global_missionary_strength = 0.025
+	tolerance_own = 1
+
+	ai_will_do = {
+		factor = 1	
+		modifier = {
+			factor = 0
+			all_owned_province = {
+				religion = ROOT
+			}
+		}
+	}
+}
+
+#Voice of the Emperor
+#Calming people inside the state and near the borders.
+
+voice_of_the_emperor = {
+	monarch_power = DIP
+
+	potential = {
+		OR = {
+			has_idea_group = illusion_ideas
+			culture_group = cyrodiil_cg
+			accepted_culture = nedic
+			accepted_culture = imperial
+			accepted_culture = nibenean
+			accepted_culture = colovian
+			accepted_culture = keptu
+		}
+	}
+	allow = {
+		full_idea_group = illusion_ideas
+		has_idea_group = diplomatic_ideas
+		OR = {
+			culture_group = cyrodiil_cg
+			accepted_culture = nedic
+			accepted_culture = imperial
+			accepted_culture = nibenean
+			accepted_culture = colovian
+			accepted_culture = keptu
+		}
+	}
+	
+	improve_relation_modifier = 0.50
+	ae_impact = -0.10
+
+	ai_will_do = {
+		factor = 1	
+		modifier = {
+			factor = 0
+			NOT = {
+				any_neighbor_country = {
+					is_rival = ROOT
+				}
+			}
+		}
+	}
+}
+
+#Night Eye
+#Improving the night vision to allow merchant caravans never to stop.
+
+night_eye = {
+	monarch_power = DIP
+
+	potential = {
+		OR = {
+			has_idea_group = trade_ideas
+			culture_group = khajiiti_cg
+			accepted_culture = khajiiti
+			accepted_culture = anequinan
+			accepted_culture = pellitinian
+		}
+	}
+	allow = {
+		full_idea_group = trade_ideas
+		has_idea_group = exploration_ideas
+		OR = {
+			culture_group = khajiiti_cg
+			accepted_culture = khajiiti
+			accepted_culture = anequinan
+			accepted_culture = pellitinian
+		}
+	}
+	
+	caravan_power = 0.25
+	trade_range_modifier = 0.25
+
+	ai_will_do = {
+		factor = 1	
+		modifier = {
+			factor = 0
+			trade_income_percentage = 0.75
+		}
+	}
+}
+
+#Battle Cry
+#Using wrathful soldiers to ruin enemy formations.
+
+battle_cry = {
+	monarch_power = MIL
+
+	potential = {
+		OR = {
+			has_idea_group = generalstab0
+			culture_group = northern_cg
+			accepted_culture = atmoran
+			accepted_culture = glacial
+			accepted_culture = nord
+			accepted_culture = skaal
+		}
+	}
+	allow = {
+		full_idea_group = generalstab0
+		has_idea_group = mobility_ideas
+		OR = {
+			culture_group = northern_cg
+			accepted_culture = atmoran
+			accepted_culture = glacial
+			accepted_culture = nord
+			accepted_culture = skaal
+		}
+	}
+	
+	infantry_power = 0.1
+	infantry_cost = -0.15
+
+	ai_will_do = {
+		factor = 1	
+		modifier = {
+			factor = 0
+			is_at_war = no
+		}
+	}
+}
+
+#Berserker Rage
+#Sending ferocious warrious to besiege hostile forts.
+
+berserker_rage = {
+	monarch_power = MIL
+
+	potential = {
+		OR = {
+			has_idea_group = mobility_ideas
+			culture_group = orsimer_cg
+			accepted_culture = orsimer
+			accepted_culture = wood_orsimer
+		}
+	}
+	allow = {
+		full_idea_group = mobility_ideas
+		has_idea_group = smithing_ideas
+		OR = {
+			culture_group = orsimer_cg
+			accepted_culture = orsimer
+			accepted_culture = wood_orsimer
+		}
+	}
+	
+	artillery_bonus_vs_fort = 1
+	prestige_from_land = 0.5
+
+	ai_will_do = {
+		factor = 1	
+		modifier = {
+			factor = 0
+			is_at_war = no
+		}
+	}
+}
+
+#Adrenaline Rush
+#Mobilising general staff and foreign mercenaries when tought times come.  
+
+adrenaline_rush = {
+	monarch_power = ADM
+
+	potential = {
+		OR = {
+			has_idea_group = justiz0
+			culture_group = yokudan-redguardian_cg
+			accepted_culture = yokudan
+			accepted_culture = redguard
+		}
+	}
+	allow = {
+		full_idea_group = justiz0
+		has_idea_group = economic_ideas
+		OR = {
+			culture_group = yokudan-redguardian_cg
+			accepted_culture = yokudan
+			accepted_culture = redguard
+		}
+	}
+	
+	merc_maintenance_modifier = -0.25
+	free_leader_pool = 1
+
+	ai_will_do = {
+		factor = 1	
+		modifier = {
+			factor = 0
+			OR = {
+				is_at_war = no
+				NOT = { num_of_hired_mercenary_companies = 1 }
+			}
+		}
+	}
+}
+
+#Devour Soul	
+#Consuming souls of weak leaders and disloyal subjects to maintain integrity of the state.
+
+devour_soul = {
+	monarch_power = ADM
+
+	potential = {
+		OR = {
+			has_idea_group = administrative_ideas
+			culture_group = tsaesci_cg
+			accepted_culture = tsaesci
+		}
+	}
+	allow = {
+		full_idea_group = administrative_ideas
+		has_idea_group = alteration_ideas
+		OR = {
+			culture_group = tsaesci_cg
+			accepted_culture = tsaesci
+		}
+	}
+	
+	reduced_liberty_desire = 10
+	leader_cost = -0.50
+
+	ai_will_do = {
+		factor = 1	
+		modifier = {
+			factor = 0
+			NOT = { num_of_subjects = 1 }
+		}
+	}
+}
+
+#Muffle
+#Moving your agents silently, which is perfect for assassins or a theiving. 
+	
+muffle = {
+	monarch_power = DIP
+
+	potential = {
+		OR = {
+			has_idea_group = diplomatic_ideas
+			culture_group = snow_elves_cg
+			accepted_culture = snow_elven
+			accepted_culture = falmer
+		}
+	}
+	allow = {
+		full_idea_group = diplomatic_ideas
+		has_idea_group = maritime_ideas
+		OR = {
+			culture_group = snow_elves_cg
+			accepted_culture = snow_elven
+			accepted_culture = falmer
+		}
+	}
+	
+	diplomatic_annexation_cost = -0.25
+	ship_power_propagation = 0.15
+
+	ai_will_do = {
+		factor = 1	
+		modifier = {
+			factor = 0
+			NOT = { num_of_light_ship = 10 }
+		}
+	}
+}
+
+#Frenzy
+#Misting the minds of enemies to force them to fall into madness.
+
+frenzy = {
+	monarch_power = DIP
+
+	potential = {
+		OR = {
+			has_idea_group = gesellschaft0
+			has_idea_group = propaganda0
+			culture_group = sload_cg
+			accepted_culture = sload
+		}
+	}
+	allow = {
+		OR = {
+			full_idea_group = gesellschaft0
+			full_idea_group = propaganda0
+		}
+		OR = {
+			culture_group = sload_cg
+			accepted_culture = sload
+		}
+	}
+	
+	siege_blockade_progress = 1
+	leader_naval_shock = 1
+
+	ai_will_do = {
+		factor = 1	
+		modifier = {
+			factor = 0
+			NOT = { num_of_ports = 1 }
+		}
+	}
+}
+
+#Invisibility
+#Becoming invisible to ambush foreign forces. 
+
+invinsibility = {
+	monarch_power = DIP
+	
+	potential = {
+		OR = {
+			has_idea_group = arcane_ideas
+			has_idea_group = soul_siphon_ideas
+			culture_group = transpandomaic_cg
+			accepted_culture = akaviri
+			accepted_culture = islander
+		}
+	}
+	allow = {
+		OR = {
+			full_idea_group = arcane_ideas
+			full_idea_group = soul_siphon_ideas
+		}
+		OR = {
+			culture_group = transpandomaic_cg
+			accepted_culture = maorner
+			accepted_culture = akaviri
+			accepted_culture = islander
+		}
+	}
+	
+	cavalry_flanking = 0.25
+	global_naval_engagement_modifier = 0.25
+
+	ai_will_do = {
+		factor = 1	
+		modifier = {
+			factor = 0
+			NOT = { navy_size = 10 }
+		}
+	}
+}
+
+#Telekinesis
+#Interacting with objects from a distance in order to pull or push them.
+
+telekinesis = {
+	monarch_power = DIP
+
+	potential = {
+		OR = {
+			has_idea_group = spy_ideas
+			has_idea_group = influence_ideas
+			culture_group = maorner_cg
+			accepted_culture = maorner
+		}
+	}
+	allow = {
+		OR = {
+			full_idea_group = spy_ideas
+			full_idea_group = influence_ideas
+		}
+		OR = {
+			culture_group = maorner_cg
+			accepted_culture = maorner
+		}
+	}
+	
+	idea_cost = -0.1
+	state_maintenance_modifier = -0.15
+
+	ai_will_do = {
+		factor = 1	
+		modifier = {
+			factor = 0
+			NOT = { is_lacking_institutions = yes }
+		}
+	}
+}
+
+#Transmutation
+#Transmuting one unrefined iron ore into one silver ore and transmuting one silver one into one gold ore.
+
+transmutation = {
+	monarch_power = ADM
+
+	potential = {
+		OR = {
+			has_idea_group = alchemical_ideas
+			has_idea_group = transmutation_ideas
+			culture_group = dwemer_cg
+			accepted_culture = dwemer
+		}
+	}
+	allow = {
+		OR = {
+			full_idea_group = alchemical_ideas
+			full_idea_group = transmutation_ideas
+		}
+		OR = {
+			culture_group = dwemer_cg
+			accepted_culture = dwemer
+		}
+	}
+	
+	production_efficiency = 0.1
+	build_cost = -0.15
+
+	ai_will_do = {
+		factor = 1	
+		modifier = {
+			factor = 0
+			production_income_percentage = 0.75
+		}
+	}
+}
+
+#Waterbreathing
+#Breathing underwater. A bit useless spell for argonains, do not you think so?
+
+waterbreathing = {
+	monarch_power = ADM
+
+	potential = {
+		OR = {
+			has_idea_group = alteration_ideas
+			culture_group = kothringi_cg
+			accepted_culture = kothringi
+		}
+	}
+	allow = {
+		full_idea_group = alteration_ideas
+		has_idea_group = mysticism_ideas
+		OR = {
+			culture_group = kothringi_cg
+			accepted_culture = kothringi
+		}
+	}
+	
+	sunk_ship_morale_hit_recieved = -0.15
+	privateer_efficiency = 0.25
+
+	ai_will_do = {
+		factor = 1	
+		modifier = {
+			factor = 0
+			NOT = { navy_size = 10 }
+		}
+	}
+}
+
+#Paralyze
+#Paralyzing opponents in the affected area if they fail to resist it.
+
+paralyze = {
+	monarch_power = DIP
+
+	potential = {
+		OR = {
+			has_idea_group = kolonialimperium0
+			has_idea_group = imperialismus0
+			culture_group = po_tun_cg
+			accepted_culture = po_tun
+		}
+	}
+	allow = {
+		OR = {
+			full_idea_group = kolonialimperium0
+			full_idea_group = imperialismus0
+		}
+		OR = {
+			culture_group = po_tun_cg
+			accepted_culture = po_tun
+		}
+	}
+	
+	culture_conversion_cost = -0.25
+	loot_amount = 0.25
+
+	ai_will_do = {
+		factor = 1	
+		modifier = {
+			factor = 0
+			NOT = {
+				any_owned_province = {
+					NOT = {
+						culture = ROOT
+					}
+				}
+			}
+		}
+	}
+}
+
+#Reanimate Corpses
+#Reanimating poweful dead bodies to use them in naval warfare.
+
+reanimate_corpses = {
+	monarch_power = DIP
+
+	potential = {
+		OR = {
+			has_idea_group = maritime_ideas
+			culture_group = goblin_cg
+			accepted_culture = goblin
+			accepted_culture = riekling
+		}
+	}
+	allow = {
+		full_idea_group = maritime_ideas
+		has_idea_group = enchanting_ideas
+		OR = {
+			culture_group = goblin_cg
+			accepted_culture = goblin
+			accepted_culture = riekling
+		}
+	}
+	
+	sailor_maintenance_modifer = -0.15
+	global_ship_recruit_speed = -0.15
+
+	ai_will_do = {
+		factor = 1	
+		modifier = {
+			factor = 0
+			NOT = { navy_size = 10 }
+		}
+	}
+}
+
+#Command Daedra
+#Taking control over powerful summoned or raised creatures.
+
+command_daedra = {
+	monarch_power = ADM
+
+	potential = {
+		OR = {
+			has_idea_group = monarchie0
+			has_idea_group = republik0
+			has_idea_group = aristo0
+			has_idea_group = horde0
+			culture_group = lilmothiit_cg
+			accepted_culture = lilmothiit
+		}
+	}
+	allow = {
+		OR = {
+			full_idea_group = monarchie0
+			full_idea_group = republik0
+			full_idea_group = aristo0
+			full_idea_group = horde0
+		}
+		OR = {
+			culture_group = lilmothiit_cg
+			accepted_culture = lilmothiit
+		}
+	}
+	
+	diplomats = 1
+	artillery_cost = -0.25
+
+	ai_will_do = {
+		factor = 1	
+		modifier = {
+			factor = 0
+			is_at_war = yes
+		}
+	}
+}
+
+#Heal Other
+#Regenerating health of ally units.
+
+heal_other = {
+	monarch_power = MIL
+
+	potential = {
+		OR = {
+			has_idea_group = restoration_ideas
+			culture_group = imga_cg
+			accepted_culture = imga
+		}
+	}
+	allow = {
+		full_idea_group = restoration_ideas
+		has_idea_group = conjuration_ideas
+		OR = {
+			culture_group = imga_cg
+			accepted_culture = imga
+		}
+	}
+	
+	vassal_forcelimit_bonus = 0.35
+	diplomatic_reputation = 0.5
+
+	ai_will_do = {
+		factor = 1	
+		modifier = {
+			factor = 0
+			NOT = { num_of_subjects = 1 }
+		}
+	}
+}
+
+#Banish Daedra
+#Bashining weak daedra to the Oblivion.
+
+banish_daedra = {
+	monarch_power = ADM
+
+	potential = {
+		OR = {
+			has_idea_group = expansion_ideas
+			has_idea_group = innovativeness_ideas
+			culture_group = kamal_cg
+			accepted_culture = kamal
+		}
+	}
+	allow = {
+		OR = {
+			full_idea_group = expansion_ideas
+			full_idea_group = innovativeness_ideas
+		}
+		OR = {
+			culture_group = kamal_cg
+			accepted_culture = kamal
+		}
+	}
+	
+	war_exhaustion_cost = -0.25
+	rival_border_fort_maintenance = -0.5
+
+	ai_will_do = {
+		factor = 1	
+		modifier = {
+			factor = 0
+			is_at_war = no
+		}
+	}
+}
+
+#Conjure Dremora Lord
+#Summoning a powerful dremora lord.
+	
+conjure_dremora_lord = {
+	monarch_power = MIL
+
+	potential = {
+		OR = {
+			has_idea_group = conjuration_ideas
+			culture_group = daedra_cg
+			accepted_culture = daedra
+			accepted_culture = dremora
+			accepted_culture = oblivious
+			accepted_culture = xivilai
+			accepted_culture = hollow
+		}
+	}
+	allow = {
+		full_idea_group = conjuration_ideas
+		has_idea_group = generalstab0
+		OR = {
+			culture_group = daedra_cg
+			accepted_culture = daedra
+			accepted_culture = dremora
+			accepted_culture = oblivious
+			accepted_culture = xivilai
+			accepted_culture = hollow
+		}
+	}
+	
+	army_tradition = 0.5
+	navy_tradition = 0.5
+
+	ai_will_do = {
+		factor = 1	
+		modifier = {
+			factor = 0
+			OR = {
+				army_tradition = 75
+				navy_tradition = 75
+			}
+		}
+	}
+}
+
+#Dead Thrall
+#Reanimating a dead body to permanently fight alongside armies and fleets.
+
+dead_thrall = {
+	monarch_power = MIL
+
+	potential = {
+		OR = {
+			has_idea_group = summoning_ideas
+			has_idea_group = necromacy_ideas
+			culture_group = minotaur_cg
+			accepted_culture = minotaur
+		}
+	}
+	allow = {
+		OR = {
+			full_idea_group = summoning_ideas
+			full_idea_group = necromacy_ideas
+		}
+		OR = {
+			culture_group = minotaur_cg
+			accepted_culture = minotaur
+		}
+	}
+	
+	army_tradition_decay = -0.01
+	navy_tradition_decay = -0.01
+
+	ai_will_do = {
+		factor = 1	
+		modifier = {
+			factor = 0
+			OR = {
+				army_tradition = 75
+				navy_tradition = 75
+			}
+		}
+	}
+}
+
+#Incinerate
+#Causing an explosion that inflicts fire damage to everyone standing close to epicenter of it.
+
+incinerate = {
+	monarch_power = MIL
+
+	potential = {
+		OR = {
+			has_idea_group = waffenqualitat0
+			has_idea_group = armour_quality_ideas
+			culture_group = tangmo_cg
+			accepted_culture = tangmo
+		}
+	}
+	allow = {
+		OR = {
+			full_idea_group = waffenqualitat0
+			full_idea_group = armour_quality_ideas
+		}
+		OR = {
+			culture_group = tangmo_cg
+			accepted_culture = tangmo
+		}
+	}
+	
+	backrow_artillery_damage = 0.25
+	colonist_placement_chance = 0.05
+
+	ai_will_do = {
+		factor = 1	
+		modifier = {
+			factor = 0
+			OR = {
+				army_tradition = 75
+				navy_tradition = 75
+			}
+		}
+	}
+}
+
+#Bane of the Undead
+#Setting the undead on fire and forcing them to flee.
+
+bane_of_undead = {
+	monarch_power = ADM
+
+	potential = {
+		OR = {
+			has_idea_group = religious_ideas
+			has_idea_group = humanist_ideas
+			is_great_power = yes
+		}
+	}
+	allow = {
+		OR = {
+			full_idea_group = religious_ideas
+			full_idea_group = humanist_ideas
+		}
+		is_great_power = yes
+	}
+	
+	tolerance_heathen = 1.5
+	tolerance_heretic = 1.5
+
+	ai_will_do = {
+		factor = 1	
+		modifier = {
+			factor = 0
+			NOT = {
+				any_owned_province = {
+					NOT = { religion = ROOT }
+				}
+			}
+		}
+	}
+}
+
+#Guardian Circle
+#Creating a magical circle that forces all the undead standing inside it to flee.
+
+guardian_circle = {
+	monarch_power = ADM
+
+	potential = {
+		OR = {
+			has_idea_group = aristocracy_ideas
+			has_idea_group = plutocracy_ideas
+			is_defender_of_faith = yes
+		}
+	}
+	allow = {
+		OR = {
+			full_idea_group = aristocracy_ideas
+			full_idea_group = humanist_ideas
+		}
+		is_defender_of_faith = yes
+	}
+	
+	religious_unity = 0.15
+	province_warscore_cost = -0.15
+
+	ai_will_do = {
+		factor = 1	
+		modifier = {
+			factor = 0
+			NOT = {
+				any_neighbor_country = {
+					NOT = { religion = ROOT }
+				}
+			}
+		}
+	}
+}
+
+#Wall of Fire
+#Creating a wall of flames that inflicts fire damage to everyone, who touches it.
+
+wall_of_fire = {
+	monarch_power = MIL
+
+	potential = {
+		OR = {
+			has_idea_group = fire0
+			has_idea_group = shock0
+			culture_group = void_cg
+			accepted_culture = scamp
+			accepted_culture = harvester
+			accepted_culture = clanfear
+			accepted_culture = daedroth
+			accepted_culture = arachnid
+		}
+	}
+	allow = {
+		OR = {
+			full_idea_group = fire0
+			full_idea_group = shock0
+		}
+		OR = {
+			culture_group = void_cg
+			accepted_culture = scamp
+			accepted_culture = harvester
+			accepted_culture = clanfear
+			accepted_culture = daedroth
+			accepted_culture = arachnid
+		}
+	}
+	
+	mil_advisor_cost = -0.15
+	vassal_income = 0.15
+
+	ai_will_do = {
+		factor = 1	
+		modifier = {
+			factor = 0
+			NOT = { num_of_subjects = 1 }
+		}
+	}
+}
+
+#Blizzard
+#Attacking the enemy armies with frost damageand potentially kill entire groups of them.
+
+blizzard = {
+	monarch_power = MIL
+
+	potential = {
+		OR = {
+			has_idea_group = offensive_ideas
+			has_idea_group = defensive_ideas
+			culture_group = giant_cg
+			accepted_culture = frost_giant
+			accepted_culture = sea_giant
+			accepted_culture = giant
+		}
+	}
+	allow = {
+		OR = {
+			full_idea_group = offensive_ideas
+			full_idea_group = defensive_ideas
+		}
+		OR = {
+			culture_group = giant_cg
+			accepted_culture = frost_giant
+			accepted_culture = sea_giant
+			accepted_culture = giant
+		}
+	}
+	
+	unjustified_demands = -0.15
+	enemy_core_creation = 0.25
+
+	ai_will_do = {
+		factor = 1	
+		modifier = {
+			factor = 0
+			NOT = {
+				any_neighbor_country = {
+					NOT = { is_rival = ROOT }
+				}
+			}
+		}
+	}
+}

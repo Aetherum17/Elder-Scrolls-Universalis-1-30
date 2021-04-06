@@ -309,7 +309,7 @@ religious_ideas = {
 
 	trigger = {
 		has_idea_group = mysticism_ideas
-		NOT = { has_idea_group = expansion_ideas }	
+		NOT = { has_idea_group = humanist_ideas }	
 	}
 	bonus = {
 		prestige_per_development_from_conversion = 0.05
@@ -351,7 +351,7 @@ humanist_ideas = {
 
 	trigger = {
 		has_idea_group = mysticism_ideas
-		NOT = { has_idea_group = expansion_ideas }	
+		NOT = { has_idea_group = religious_ideas }	
 	}
 	bonus = {
 		idea_cost = -0.05

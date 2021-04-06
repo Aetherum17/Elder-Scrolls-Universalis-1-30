@@ -27,36 +27,97 @@ ai_capitalist = {
 		modifier = {
 			factor = 1.5
 			adm = 4
-		}		
+		}
 		modifier = {
 			factor = 1.5
 			adm = 5
-		}		
+		}
 		modifier = {
 			factor = 1.5
 			adm = 6
 		}
 		modifier = {
-			factor = 1.1
-			administrative_ideas = 1
-		}		
+			factor = 1.5
+			adm = 7
+		}
+		modifier = {
+			factor = 1.5
+			government = theocracy
+		}
+		modifier = {
+			factor = 1.5
+			num_of_loans = 1
+		}
+		modifier = {
+			factor = 1.5
+			num_of_loans = 3
+		}
+		modifier = {
+			factor = 1.5
+			num_of_loans = 5
+		}
+		modifier = {
+			factor = 1.5
+			num_of_loans = 7
+		}
+		modifier = {
+			factor = 1.5
+			num_of_loans = 10
+		}
 		modifier = {
 			factor = 1.1
-			trade_ideas = 1
-		}			
+			administrative_ideas = 1
+		}
+		modifier = {
+			factor = 1.1
+			zentra0 = 1
+		}
 		modifier = {
 			factor = 1.1
 			economic_ideas = 1
 		}
 		modifier = {
 			factor = 1.1
-			plutocracy_ideas = 1
+			innovativeness_ideas = 1
 		}
 		modifier = {
-			factor = 1.25 
-			NOT = { total_development = 30 }
+			factor = 1.1
+			staatsverwaltung0 = 1
+		}
+		modifier = {
+			factor = 1.1
+			monarchie0 = 1
+		}
+		modifier = {
+			factor = 1.1
+			republik0 = 1
+		}
+		modifier = {
+			factor = 1.1
+			aristo0 = 1
+		}
+		modifier = {
+			factor = 1.1
+			horde0 = 1
+		}
+		modifier = {
+			factor = 1.1
+			enchanting_ideas = 1
+		}
+		modifier = {
+			factor = 1.1
+			alchemical_ideas = 1
+		}
+		modifier = {
+			factor = 1.1
+			transmutation_ideas = 1
+		}
+		modifier = {
+			factor = 1.1
+			restoration_ideas = 1
 		}
 	}
+	
 	icon = 2
 }
 
@@ -74,64 +135,103 @@ ai_diplomat = {
 		modifier = {
 			factor = 0.5
 			NOT = { dip = 3 }
-		}	
+		}
 		modifier = {
 			factor = 1.5
 			dip = 4
-		}		
+		}
 		modifier = {
 			factor = 1.5
 			dip = 5
-		}		
+		}
 		modifier = {
 			factor = 1.5
 			dip = 6
 		}
 		modifier = {
+			factor = 1.5
+			dip = 7
+		}
+		modifier = {
+			factor = 1.5
+			has_regency = yes
+		}
+		modifier = {
+			factor = 1.5
+			government = republic
+		}
+		modifier = {
+			factor = 0.5
+			government = monarchy
+		}
+		modifier = {
+			factor = 1.5
+			is_emperor = yes
+		}
+		modifier = {
 			factor = 1.1
-			aristocracy_ideas = 1
-		}			
+			humanist_ideas = 1
+		}
+		modifier = {
+			factor = 1.1
+			plutocracy_ideas = 1
+		}
+		modifier = {
+			factor = 1.1
+			maritime_ideas = 1
+		}
+		modifier = {
+			factor = 1.1
+			galle0 = 1
+		}
+		modifier = {
+			factor = 1.1
+			handel0 = 1
+		}
+		modifier = {
+			factor = 1.1
+			gross0 = 1
+		}
+		modifier = {
+			factor = 1.1
+			diplomatic_ideas = 1
+		}
 		modifier = {
 			factor = 1.1
 			spy_ideas = 1
 		}
 		modifier = {
 			factor = 1.1
-			diplomatic_ideas = 1
-		}	
+			influence_ideas = 1
+		}
 		modifier = {
 			factor = 1.1
-			innovativeness_ideas = 1
-		}		
-		modifier = {
-			factor = 1.25
-			NOT = { total_development = 30 }
-		}	
-		modifier = {
-			factor = 1.5
-			is_emperor = yes
-			total_development = 50
+			illusion_ideas = 1
 		}
 		modifier = {
-			factor = 1.5
-			is_emperor = yes
-			total_development = 100
+			factor = 1.1
+			gesellschaft0 = 1
+		}
+		modifier = {
+			factor = 1.1
+			propaganda0 = 1
+		}
+		modifier = {
+			factor = 1.1
+			soldnerheer0 = 1
+		}
+		modifier = {
+			factor = 1.1
+			summoning_ideas = 1
 		}
 	}
+	
 	icon = 3
 }
 
 ai_militarist = {
 	chance = {
-		factor = 100
-		modifier = {
-			factor = 0
-			has_regency = yes
-		}	
-		modifier = {
-			factor = 0.5
-			government = republic
-		}
+		factor = 100	
 		modifier = {
 			factor = 0.5
 			NOT = { mil = 1 }
@@ -145,65 +245,45 @@ ai_militarist = {
 			NOT = { mil = 3 }
 		}
 		modifier = {
-			factor = 0.5
-			is_emperor = yes
-			total_development = 50
-		}
-		modifier = {
-			factor = 0.5
-			is_emperor = yes
-			total_development = 100
-		}			
-		modifier = {
 			factor = 1.5
 			mil = 4
-		}		
+		}
 		modifier = {
 			factor = 1.5
 			mil = 5
-		}		
+		}
 		modifier = {
 			factor = 1.5
 			mil = 6
-		}	
-		modifier = {
-			factor = 1.1
-			offensive_ideas = 1
-		}			
-		modifier = {
-			factor = 1.1
-			defensive_ideas = 1
 		}
 		modifier = {
-			factor = 1.1
-			quality_ideas = 1
+			factor = 1.5
+			mil = 7
 		}
 		modifier = {
-			factor = 1.1
-			quantity_ideas = 1
-		}			
-		modifier = {
-			factor = 1.1
-			religious_ideas = 1
-		}		
-		modifier = {
-			factor = 1.25
-			any_neighbor_country = {
-				is_rival = ROOT
-			}
-		}
-		modifier = {
-			factor = 3
-			government = native
-		}
-		modifier = {
-			factor = 2
-			is_march = yes
+			factor = 0
+			has_regency = yes
 		}
 		modifier = {
 			factor = 100
 			religion = serpant_king
 			is_religion_reformed = no
+		}
+		modifier = {
+			factor = 0.5
+			government = republic
+		}
+		modifier = {
+			factor = 1.5
+			government = monarchy
+		}
+		modifier = {
+			factor = 3.5
+			government = native
+		}
+		modifier = {
+			factor = 2.5
+			government = tribal
 		}
 		modifier = {
 			factor = 0.5
@@ -221,17 +301,100 @@ ai_militarist = {
 			factor = 0.5
 			num_of_loans = 7
 		}
+		modifier = {
+			factor = 0.5
+			num_of_loans = 10
+		}
+		modifier = {
+			factor = 1.25
+			any_neighbor_country = {
+				is_rival = ROOT
+			}
+		}
+		modifier = {
+			factor = 0.5
+			is_emperor = yes
+		}
+		modifier = {
+			factor = 1.1
+			religious_ideas = 1
+		}
+		modifier = {
+			factor = 1.1
+			aristocracy_ideas = 1
+		}
+		modifier = {
+			factor = 1.1
+			imperialismus0 = 1
+		}
+		modifier = {
+			factor = 1.1
+			destruction_ideas = 1
+		}
+		modifier = {
+			factor = 1.1
+			fire0 = 1
+		}
+		modifier = {
+			factor = 1.1
+			shock0 = 1
+		}
+		modifier = {
+			factor = 1.1
+			waffenqualitat0 = 1
+		}
+		modifier = {
+			factor = 1.1
+			armour_quality_ideas = 1
+		}
+		modifier = {
+			factor = 1.1
+			stehendesheer0 = 1
+		}
+		modifier = {
+			factor = 1.1
+			generalstab0 = 1
+		}
+		modifier = {
+			factor = 1.1
+			offensive_ideas = 1
+		}
+		modifier = {
+			factor = 1.1
+			defensive_ideas = 1
+		}
+		modifier = {
+			factor = 1.1
+			smithing_ideas = 1
+		}
+		modifier = {
+			factor = 1.1
+			necromacy_ideas = 1
+		}
+		modifier = {
+			factor = 1.1
+			conjuration_ideas = 1
+		}
 	}
+	
 	icon = 4
 }
 
 ai_colonialist = {
 	chance = {
-		factor = 100	
+		factor = 100			
+		modifier = {
+			factor = 0
+			NOT = { num_of_colonists = 1 }
+		}
 		modifier = {
 			factor = 0.5
 			has_regency = yes
-		}		
+		}
+		modifier = {
+			factor = 0.5
+			government = theocracy
+		}
 		modifier = {
 			factor = 0.5
 			NOT = { adm = 1 }
@@ -243,40 +406,89 @@ ai_colonialist = {
 		modifier = {
 			factor = 0.5
 			NOT = { adm = 3 }
-		}	
+		}
 		modifier = {
 			factor = 1.5
-			adm = 4
+			mil = 5
 		}		
 		modifier = {
-			factor = 1.5
-			adm = 5
-		}		
+			factor = 0.5
+			mil = 6
+		}
 		modifier = {
-			factor = 1.5
-			adm = 6
-		}	
+			factor = 0.5
+			mil = 7
+		}
 		modifier = {
-			factor = 1.1
-			trade_ideas = 1
+			factor = 0.5
+			NOT = { dip = 1 }
 		}			
 		modifier = {
-			factor = 1.1
-			exploration_ideas = 1
-		}			
+			factor = 0.5
+			NOT = { dip = 2 }
+		}
 		modifier = {
-			factor = 1.1
-			maritime_ideas = 1
+			factor = 0.5
+			NOT = { dip = 3 }
+		}
+		modifier = {
+			factor = 1.5
+			dip = 4
+		}
+		modifier = {
+			factor = 1.5
+			dip = 5
+		}
+		modifier = {
+			factor = 1.5
+			dip = 6
+		}
+		modifier = {
+			factor = 1.5
+			dip = 7
 		}
 		modifier = {
 			factor = 1.1
 			expansion_ideas = 1
-		}		
+		}
 		modifier = {
-			factor = 0
-			NOT = { num_of_colonists = 1 }
+			factor = 1.1
+			trade_ideas = 1
+		}
+		modifier = {
+			factor = 1.1
+			naval_ideas = 1
+		}
+		modifier = {
+			factor = 1.1
+			flottenbasis0 = 1
+		}
+		modifier = {
+			factor = 1.1
+			exploration_ideas = 1
+		}
+		modifier = {
+			factor = 1.1
+			kolonialimperium0 = 1
+		}
+		modifier = {
+			factor = 1.1
+			mobility_ideas = 1
+		}
+		modifier = {
+			factor = 1.1
+			soul_siphon_ideas = 1
+		}
+		modifier = {
+			factor = 1.1
+			quality_ideas = 1
+		}
+		modifier = {
+			factor = 1.1
+			quantity_ideas = 1
 		}
 	}
+	
 	icon = 5
 }
 
@@ -286,15 +498,11 @@ ai_balanced = {
 		modifier = {
 			factor = 1.25
 			always = yes
-		}	
+		}
 		modifier = {
 			factor = 100
 			ai = no
 		}
-		modifier = {
-			factor = 0
-			has_regency = yes
-		}		
 		modifier = {
 			factor = 0.5
 			NOT = {
@@ -337,6 +545,33 @@ ai_balanced = {
 			dip = 6
 			mil = 6
 		}
+		modifier = {
+			factor = 1.5
+			adm = 7
+			dip = 7
+			mil = 7
+		}
+		modifier = {
+			factor = 1.1
+			dezentra0 = 1
+		}
+		modifier = {
+			factor = 1.1
+			justiz0 = 1
+		}
+		modifier = {
+			factor = 1.1
+			arcane_ideas = 1
+		}
+		modifier = {
+			factor = 1.1
+			mysticism_ideas = 1
+		}
+		modifier = {
+			factor = 1.1
+			alteration_ideas = 1
+		}
 	}
+	
 	icon = 6
 }

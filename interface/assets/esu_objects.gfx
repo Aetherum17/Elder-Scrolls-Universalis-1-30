@@ -1,0 +1,56 @@
+objectTypes = {
+	pdxmesh = {
+		name = "mesh_masser"
+		file = "gfx\models\Objects\Masser\Masser.mesh"
+		scale = 1.0
+	}
+	
+	pdxmesh = {
+		name = "mesh_secunda"
+		file = "gfx\models\Objects\Secunda\Secunda.mesh"
+		scale = 1.0
+	}
+	
+	pdxmesh = {
+		name = "mesh_masser_small"
+		file = "gfx\models\Objects\Masser\Masser.mesh"
+		scale = 0.5
+	}
+	
+	pdxmesh = {
+		name = "mesh_secunda_small"
+		file = "gfx\models\Objects\Secunda\Secunda.mesh"
+		scale = 0.5
+	}
+	
+	pdxmesh = {
+		name = "mesh_ambient_towers"
+		file = "gfx\models\Objects\AmbientTowers\Ambient_towers.mesh"
+		scale = 1.0
+	}
+	
+	pdxmesh = {
+		name = "mesh_akaviri_temple"
+		file = "gfx\models\Objects\AkaviriTemple\Akaviri_temple.mesh"
+		scale = 1.0
+	}
+	
+	pdxmesh = {
+		name = "mesh_bridge"
+		file = "gfx\models\Objects\Bridge\Bridge.mesh"
+		scale = 1.0
+	}
+	
+	pdxmesh = {
+		name = "mesh_tree"
+		file = "gfx\models\Objects\Tree\Tree.mesh"
+		scale = 1.0
+	}
+	
+	pdxmesh = {
+		name = "es_orrery_mesh"
+		file = "gfx\models\Objects\Orrery\orrery.mesh"
+		animation = { id = "idle"	type = "orrery_anim" }
+		scale = 5.0
+	}
+}

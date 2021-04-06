@@ -1,0 +1,52 @@
+entity = {
+	name = "es_masser"
+	pdxmesh = "mesh_masser"
+}
+
+entity = {
+	name = "es_secunda"
+	pdxmesh = "mesh_secunda"
+}
+
+entity = {
+	name = "es_masser_small"
+	pdxmesh = "mesh_masser_small"
+}
+
+entity = {
+	name = "es_secunda_small"
+	pdxmesh = "mesh_secunda_small"
+}
+
+entity = {
+	name = "es_ambient_towers"
+	pdxmesh = "mesh_ambient_towers"
+}
+
+entity = {
+	name = "es_akaviri_temple"
+	pdxmesh = "mesh_akaviri_temple"
+}
+
+entity = {
+	name = "es_bridge"
+	pdxmesh = "mesh_bridge"
+}
+
+entity = {
+	name = "es_tree"
+	pdxmesh = "mesh_tree"
+}
+
+entity = {
+	name = "es_orrery"
+	pdxmesh = "es_orrery_mesh"
+	
+	state = { name = "idle"	animation = "idle" }
+	
+	attach = { 
+		masser_node = "es_masser_small"
+		secunda_node = "es_secunda_small"
+	}
+	
+}

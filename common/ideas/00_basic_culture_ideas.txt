@@ -1,0 +1,162 @@
+bosmer_ideas = {
+	category = MIL
+	
+	trigger = {
+		OR = {
+			culture_group = bosmer_cg
+			accepted_culture = bosmer
+		}
+	}
+
+	bonus = {
+		diplomatic_reputation = 1
+	}
+	
+	#Bosmer adaptability:  Wood Elves, hail from the province of Valenwood. Rejecting the formalities of the civilized world, the Bosmer discarded lavish living for a life in the wilderness, among nature, the trees, and animals.
+	bosmer_ideas_1 = {
+		core_creation = -0.1
+	}
+    #Bosmeri Guerrila tactics: The Bosmer although a peaceful people are extremely agressive when defending their lands and foes willing to invade them must face heavy resistance.
+	bosmer_ideas_2 = {
+		hostile_attrition = 1
+	}
+    #Enforce the Green Pact, although the Bosmer are very Welcoming to strangers and Migrants, placating the Green is an vital part of life in Valenwood, as the forests will often turn against the residents when the Pact is broken or the Valenwood is otherwise harmed. In order to attone and stop the Green's assault, the clan responsible for that area of land must hold a trial and the party found guilty of violating the Green Pact must be sacrificed to the Green itself, regardless of how limited their involvement was or even whether they were a Bosmer.
+	bosmer_ideas_3 = {
+		culture_conversion_cost = -0.15
+	}
+    #Traders or Pirates:The Bosmer are heavily dependent on good relations and trade with other races, as the Green Pact forces them to import the timber needed to make their homes, arrows, and other wooden instruments. Their own resources for trade include hides, river pearls, and finger-bone charms made from the Magically-charged hands of their dead wizards. When they are at odds with Colovia or other trading allies, they are said to rely on piracy or banditry to get what they need.
+	bosmer_ideas_4 = {
+		global_foreign_trade_power = 0.1
+	}
+    #All are welcome : The bosmers welcome anyone that wishes to integrate themselves in their society as long as their are willing to follow their rules and customs, also he Bosmer are also relatively prone to producing offspring. As a result, they outnumber all other Mer on Tamriel.
+	bosmer_ideas_5 = {
+		manpower_recovery_speed = 0.15
+	}
+    #Tamriel's best archers : The bosmers are undoubtedly the best archers of tamriel some even say they were the ones who invented the bow, regardless of it's origin their prowess is undeniable.
+	bosmer_ideas_6 = {
+		 infantry_power = 0.10
+	}
+    # The Greenspeakers: Greenspeakers are mages who dedicate their lives to working in and alongside the Green itself. They use their spells to guide and enhance the growth of trees and plants, and can create furniture and housing for their people in doing so
+	bosmer_ideas_7 = {
+		development_cost = -0.15
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 50
+			always = yes
+		}
+	}
+}
+
+high_elves_ideas = {
+	category = ADM	
+	
+	trigger = {
+		OR = {
+			culture_group = high_elves_cg
+			accepted_culture = khajiiti
+			accepted_culture = anequinan
+			accepted_culture = pellitinian
+		}
+	}
+	
+	bonus = {
+		adm_tech_cost_modifier = -0.1
+	}
+	
+	#Bloody Shores: Most of the Altmer that live in the mainland have never seen war but those who live in the coast line are no strangers to conflict, being the Maomer or invasions from other races the aldmer will make sure no threat steps on summerset
+	altmer_ideas_1 = {
+		heavy_ship_power = 0.1
+	}
+	#Paragons of Order: The Altmer have a very strict society with strong traditions and customs as well as a very rigid hierarchy those who do not wish to dance to their tune are free to leave.
+	altmer_ideas_2 = {
+		global_autonomy = -0.05
+	}
+	#he Altmer are the most strongly gifted in the arcane arts of all the races. However, they are also somewhat vulnerable to magicka which makes them very weak against their strongest point - magic. They often become powerful magic users due to both their magical affinity and the many years they may devote to their studies.
+	altmer_ideas_3 = {
+		fire_damage = 0.10
+	}
+	#The altmer choose their rulers based on their intelligence rather than their strenght. This practice results in only the most wise among them can ever rule their people.
+	altmer_ideas_7 = {
+		monarch_admin_power = 1
+	}
+	#Altmer Supremacy: The High elves are known for their organized military corps
+	altmer_ideas_4 = {
+		discipline = 0.05
+	}
+	#The Hulkynd: The Altmer are known to abandon or outright purge those who are born with impurities in order to keep their bloodlines strong, this although ruthless ensures the purity of their race.
+	altmer_ideas_5 = {
+		yearly_corruption = -0.1
+	}
+	#Perfectionism: An Altmer is always striving for perfection yet in his mid never atains it. It is not uncommon for Altmer to surround themselves with the finest of things yet stil be unsatisfied due to the minor imperfections they see.
+	forest_nymph_ideas_6 = {
+		prestige = 0.25
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 50
+			always = yes
+		}
+	}
+}
+
+khajiit_ideas = {
+	category = DIP
+	
+	trigger = {
+		OR = {
+			culture_group = kaijiit
+			accepted_culture = khajiiti
+			accepted_culture = anequinan
+			accepted_culture = pellitinian
+		}
+	}
+	bonus = {
+		trade_steering = 0.15
+	}
+	
+	#The Mane: While the unofficial head-of-state. Khajiit tradition holds that only one Mane may be alive at any one time since the Mane is one entity reborn in different bodies with the passage of time.
+	khajiit_ideas_1 = {
+		legitimacy = 0.35
+		republican_tradition = 0.35
+		horde_unity = 0.35
+		devotion = 0.35
+		meritocracy = 0.35
+	}
+	#The senche: Nicknamed battlecats, the Senche-raht are larger and slower than the Senche, they can act as mounts if they will it and are a very mobile fighters on the battlefield
+	khajiit_ideas_2 = {
+		cavalry_power = 0.10
+	}
+	#The Alfiq : The Alfiq are a diminutive form of magically gifted Khajiit resembling typical housecats. Their resemblance to common housecats has led many to treat them as such, whether by downplaying their intelligence, cooing at them or attempting to cuddle them. While it is rumored among outsiders that Alfiq are mute, they are in fact capable of speech. The misconception that Alfiq are incapable of speech may derive from the scholarly reduction of Alfiq to the status of housecats, or from a disinclination of Alfiq to talk in the presence of outsiders. Due to the disrespect that Alfiq get as a result of their form, they rarely travel outside Elsweyr.[59] All these factors resulted in Alfiq resenting being labeled as housecats, which they consider patronizing and irritating.[61] The grave lack of knowledge outsiders have of them does allow Alfiq to pose as housecats in order to serve as information gatherers. Alfiq wear clothing, but as they are unable to naturally put it on themselves, they either have others do it for them, or they use magic to clothe themselves.
+	khajiit_ideas_3 = {
+		spy_offence = 0.15
+	}
+	#Khajiit merchants: The Khajiiti merchants are known everywhere in the world and it is not uncommon to find they caravans along all of Tamriel
+	khajiit_ideas_4 = {
+		merchants = 1
+	}
+	#Moon Sugar: The Khajiit often refer to Moon Sugar as crystallized moonlight, trapped by the glimmering waters of the Topal Sea and washed to the sugarcane groves of the Tenmar Forest by the tides, under the guidance of Hermorah. The Khajiit believe that by consuming it, they are consuming a small portion of the eternal souls of the moon gods, Jone and Jode. It drives them into fits of ecstasy and abandon, purportedly leaving the streets of Elsweyr's major cities strewn with catmen shivering in the grip of sugar-fits. Despite the extremely addictive nature of the sugar, it is an integral part of Khajiit life and the chief export of Elsweyr, where it is smuggled out in both raw and refined forms known as Skooma
+	khajiit_ideas_5 = {
+		production_efficiency = 0.10
+	}
+	#Deadly Claws: the majority of Khajiit prefer to use their razor-sharp and retractable claws as weapons in numerous forms of Khajiiti martial arts like Goutfang, Whispering Fang and Rawlith Khaj. The Khajiit also sport many monasteries dedicated to the art of unarmed combat and also meditation practices
+	khajiit_ideas_6 = {
+		shock_damage = 0.10
+	}
+	#The Ohmes: The Ohmes are a breed of Khajiit that is very similar to men and thus are seldomly confused with bosmers. Many decide to paint their faces with feline tatoos to resemble their feline kind more. Nevertheless their appearance is much more appeasing to the other races making them the perfect face for the race
+	khajiit_ideas_7 = {
+		improve_relation_modifier = 0.25
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 50
+			always = yes
+		}
+	}
+}

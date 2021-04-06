@@ -41,7 +41,7 @@ flavour_missions_1 = {
 			}
 			}
 			4740 = { add_core = ROOT }
-			if = { limit = { ai = yes 4740 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			if = { limit = { ai = yes 4740 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV } NOT = { is_overlord_of = PREV } } } } }
 			4740 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 4740 } } } } }
 		}
 	}
@@ -83,11 +83,11 @@ flavour_missions_1 = {
 			}
 			}
 			337 = { add_core = ROOT }
-			if = { limit = { ai = yes 337 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			if = { limit = { ai = yes 337 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV } NOT = { is_overlord_of = PREV } } } } }
 			337 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 337 } } } } }
 			
 			209 = { add_core = ROOT }
-			if = { limit = { ai = yes 209 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			if = { limit = { ai = yes 209 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV } NOT = { is_overlord_of = PREV } } } } }
 			209 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 209 } } } } }
 		}
 	}
@@ -134,15 +134,15 @@ flavour_missions_1 = {
 			}
 			
 			1299 = { add_core = ROOT }
-			if = { limit = { ai = yes 1299 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			if = { limit = { ai = yes 1299 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV } NOT = { is_overlord_of = PREV } } } } }
 			1299 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 1299 } } } } }
 			
 			483 = { add_core = ROOT }
-			if = { limit = { ai = yes 483 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			if = { limit = { ai = yes 483 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV } NOT = { is_overlord_of = PREV } } } } }
 			483 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 483 } } } } }
 			
 			415 = { add_core = ROOT }
-			if = { limit = { ai = yes 415 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			if = { limit = { ai = yes 415 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV } NOT = { is_overlord_of = PREV } } } } }
 			415 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 415 } } } } }
 		}
 	}
@@ -185,15 +185,15 @@ flavour_missions_1 = {
 			}
 			
 			1299 = { add_core = ROOT }
-			if = { limit = { ai = yes 1299 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			if = { limit = { ai = yes 1299 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV } NOT = { is_overlord_of = PREV } } } } }
 			1299 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 1299 } } } } }
 			
 			373 = { add_core = ROOT }
-			if = { limit = { ai = yes 373 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			if = { limit = { ai = yes 373 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV } NOT = { is_overlord_of = PREV } } } } }
 			373 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 373 } } } } }
 			
 			415 = { add_core = ROOT }
-			if = { limit = { ai = yes 415 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			if = { limit = { ai = yes 415 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV } NOT = { is_overlord_of = PREV } } } } }
 			415 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 415 } } } } }
 		}
 	}
@@ -236,15 +236,15 @@ flavour_missions_1 = {
 			}
 			
 			395 = { add_core = ROOT }
-			if = { limit = { ai = yes 395 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			if = { limit = { ai = yes 395 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV } NOT = { is_overlord_of = PREV } } } } }
 			395 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 395 } } } } }
 			
 			373 = { add_core = ROOT }
-			if = { limit = { ai = yes 373 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			if = { limit = { ai = yes 373 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV } NOT = { is_overlord_of = PREV } } } } }
 			373 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 373 } } } } }
 			
 			795 = { add_core = ROOT }
-			if = { limit = { ai = yes 795 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			if = { limit = { ai = yes 795 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV } NOT = { is_overlord_of = PREV } } } } }
 			795 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 795 } } } } }
 		}
 	}
@@ -408,7 +408,7 @@ northern_valenwood_missions = {
 			}
 			
 			1497 = { add_core = ROOT }
-			if = { limit = { ai = yes 1497 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			if = { limit = { ai = yes 1497 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV } NOT = { is_overlord_of = PREV } } } } }
 			1497 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 1497 } } } } }
 		}
 	}
@@ -438,7 +438,7 @@ northern_valenwood_missions = {
 			#}
 			
 			1299 = { add_core = ROOT }
-			if = { limit = { ai = yes 1299 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			if = { limit = { ai = yes 1299 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV } NOT = { is_overlord_of = PREV } } } } }
 			1299 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 1299 } } } } }
 		}
 	}
@@ -468,11 +468,11 @@ northern_valenwood_missions = {
 			}
 			
 			542 = { add_core = ROOT }
-			if = { limit = { ai = yes 542 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			if = { limit = { ai = yes 542 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV } NOT = { is_overlord_of = PREV } } } } }
 			542 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 542 } } } } }
 			
 			1049 = { add_core = ROOT }
-			if = { limit = { ai = yes 1049 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			if = { limit = { ai = yes 1049 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV } NOT = { is_overlord_of = PREV } } } } }
 			1049 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 1049 } } } } }
 		}
 	}
@@ -502,7 +502,7 @@ northern_valenwood_missions = {
 			}
 			
 			468 = { add_core = ROOT }
-			if = { limit = { ai = yes 468 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			if = { limit = { ai = yes 468 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV } NOT = { is_overlord_of = PREV } } } } }
 			468 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 468 } } } } }
 		}
 	}
@@ -828,19 +828,19 @@ camoran_missions = {
 			}
 			
 			800 = { add_core = ROOT }
-			if = { limit = { ai = yes 800 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			if = { limit = { ai = yes 800 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV } NOT = { is_overlord_of = PREV } } } } }
 			800 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 800 } } } } }
 			
 			1369 = { add_core = ROOT }
-			if = { limit = { ai = yes 1369 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			if = { limit = { ai = yes 1369 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV } NOT = { is_overlord_of = PREV } } } } }
 			1369 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 1369 } } } } }
 			
 			415 = { add_core = ROOT }
-			if = { limit = { ai = yes 415 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			if = { limit = { ai = yes 415 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV } NOT = { is_overlord_of = PREV } } } } }
 			415 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 415 } } } } }
 			
 			412 = { add_core = ROOT }
-			if = { limit = { ai = yes 412 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			if = { limit = { ai = yes 412 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV } NOT = { is_overlord_of = PREV } } } } }
 			412 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 412 } } } } }
 		}
 	}
@@ -854,7 +854,7 @@ camoran_missions = {
 			owns_core_province = 800
 			owns_core_province = 806
 			owns_core_province = 795
-			owns_core_province = 415
+			owns_core_province = 799
 		}
 		effect = {
 			custom_tooltip = es_conquest_of_islandic_tsakara_lr_tooltip
@@ -870,7 +870,7 @@ camoran_missions = {
 			}
 			
 			772 = { add_core = ROOT }
-			if = { limit = { ai = yes 772 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			if = { limit = { ai = yes 772 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV } NOT = { is_overlord_of = PREV } } } } }
 			772 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 772 } } } } }
 		}
 	}
@@ -1361,7 +1361,7 @@ valenwood_trade = {
 			}
 			
 			357 = { add_core = ROOT }
-			if = { limit = { ai = yes 357 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			if = { limit = { ai = yes 357 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV } NOT = { is_overlord_of = PREV } } } } }
 			357 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 357 } } } } }
 		}
 	}
@@ -1394,11 +1394,11 @@ valenwood_trade = {
 			}
 			
 			389 = { add_core = ROOT }
-			if = { limit = { ai = yes 389 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			if = { limit = { ai = yes 389 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV } NOT = { is_overlord_of = PREV } } } } }
 			389 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 389 } } } } }
 			
 			367 = { add_core = ROOT }
-			if = { limit = { ai = yes 367 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			if = { limit = { ai = yes 367 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV } NOT = { is_overlord_of = PREV } } } } }
 			367 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 367 } } } } }
 		}
 	}
@@ -1461,7 +1461,7 @@ valenwood_trade = {
 			}
 			
 			337 = { add_core = ROOT }
-			if = { limit = { ai = yes 337 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			if = { limit = { ai = yes 337 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV } NOT = { is_overlord_of = PREV } } } } }
 			337 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 337 } } } } }
 		}
 	}
@@ -1491,7 +1491,7 @@ valenwood_trade = {
 			}
 			
 			1206 = { add_core = ROOT }
-			if = { limit = { ai = yes 1206 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = ROOT } NOT = { is_subject_of = ROOT } } } } }
+			if = { limit = { ai = yes 1206 = { owner = { ROOT = { NOT = { truce_with = PREV } NOT = { alliance_with = PREV } NOT = { is_subject_of = PREV } NOT = { is_overlord_of = PREV } } } } }
 			1206 = { owner = { ROOT = { declare_war_with_cb = { who = PREV casus_belli = cb_es_scenario war_goal_province = 1206 } } } } }
 		}
 	}
