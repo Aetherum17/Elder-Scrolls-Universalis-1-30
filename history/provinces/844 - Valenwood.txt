@@ -1,23 +1,35 @@
 owner = VA8
 controller = VA8
 add_core = VA8
-culture = bosmer
 religion = bosmer_pantheon
+culture = bosmer
 hre = no
-base_tax = 3
-base_production = 3
+base_tax = 1
+base_production = 1
 trade_goods = unknown
-base_manpower = 3
-capital = "Heaven" 
+base_manpower = 1
+capital = "Heaven"
 is_city = yes
-discovered_by = elven_tg
+discovered_by = elven_tg discovered_by = orsimer_tg
 
-add_permanent_province_modifier = {
-	name = water_trade_modifier
-	duration = -1
+57.1.1 = {
+    owner = VA8
+    controller = VA8
+    add_core = VA8
 }
 
-center_of_trade = 1
+272.1.1 = {
+}
 
-fort_15th = yes
+535.1.1 = {
+}
+
+862.1.1 = {
+}
+
+1177.1.1 = {
+}
+
+1466.1.1 = {
+}
 

@@ -680,7 +680,7 @@ country_decisions = {
 			NOT = { tag = ROU }
 			OR = {
 			primary_culture = nord
-			primary_culture = dwemer
+			primary_culture = dumalacathi
 			}
 			NOT = { has_country_flag = formed_gra_flag }
 		}
@@ -799,7 +799,7 @@ country_decisions = {
 			OR = {
 			primary_culture = nord
 			primary_culture = snow_elven
-			primary_culture = dwemer
+			primary_culture = dumalacathi
 			}
 			NOT = { has_country_flag = formed_rif_flag }
 		}
@@ -1493,7 +1493,7 @@ country_decisions = {
 			NOT = { tag = ROU }
 			OR = {
 			primary_culture = nibenean
-			primary_culture = dwemer
+			primary_culture = kagrenmer
 			}
 			NOT = { has_country_flag = formed_vau_flag }
 		}
@@ -1699,7 +1699,7 @@ country_decisions = {
 			OR = {
 			primary_culture = ayleid
 			primary_culture = redguard
-			primary_culture = dwemer
+			primary_culture = rourkenid
 			}
 			NOT = { has_country_flag = formed_ali_flag }
 		}
@@ -2941,7 +2941,12 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { exists = DWE }
-			primary_culture = dwemer
+			OR = {
+				primary_culture = rourkenid
+				primary_culture = dumalacathi
+				primary_culture = kagrenmer
+				primary_culture = dwemer
+			}
 			NOT = { has_country_flag = formed_dwe_flag }
 		}
 		provinces_to_highlight = {
@@ -2996,6 +3001,7 @@ country_decisions = {
 			OR = {
 			primary_culture = dwemer
 			primary_culture = dunmer
+			primary_culture = kagrenmer
 			}
 			NOT = { has_country_flag = formed_des_flag }
 		}
@@ -3051,6 +3057,7 @@ country_decisions = {
 			OR = {
 			primary_culture = dwemer
 			primary_culture = dunmer
+			primary_culture = kagrenmer
 			}
 			NOT = { has_country_flag = formed_vel_flag }
 		}
@@ -4142,7 +4149,9 @@ country_decisions = {
 			NOT = { tag = DWE }
 			NOT = { tag = NCH }
 			NOT = { exists = ROU }
-			primary_culture = dwemer
+			OR = {
+				primary_culture = rourkenid
+			}
 			NOT = { has_country_flag = formed_rou_flag }
 		}
 		provinces_to_highlight = {
@@ -5246,7 +5255,7 @@ country_decisions = {
 			NOT = { exists = NCH }
 			NOT = { tag = ROU }
 			NOT = { tag = DWE }
-			primary_culture = dwemer
+			primary_culture = dumalacathi
 			NOT = { has_country_flag = formed_nch_flag }
 		}
 		provinces_to_highlight = {

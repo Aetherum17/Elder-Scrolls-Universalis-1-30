@@ -228,6 +228,7 @@ ancestors_warth = {
 			accepted_culture = ashlander
 			accepted_culture = dunmer
 			accepted_culture = chimer
+			accepted_culture = velothi
 		}
 	}
 	allow = {
@@ -238,6 +239,7 @@ ancestors_warth = {
 			accepted_culture = ashlander
 			accepted_culture = dunmer
 			accepted_culture = chimer
+			accepted_culture = velothi
 		}
 	}
 	
@@ -650,6 +652,9 @@ transmutation = {
 			has_idea_group = transmutation_ideas
 			culture_group = dwemer_cg
 			accepted_culture = dwemer
+			accepted_culture = rourkenid
+			accepted_culture = dumalacathi
+			accepted_culture = kagrenmer
 		}
 	}
 	allow = {
@@ -660,6 +665,9 @@ transmutation = {
 		OR = {
 			culture_group = dwemer_cg
 			accepted_culture = dwemer
+			accepted_culture = rourkenid
+			accepted_culture = dumalacathi
+			accepted_culture = kagrenmer
 		}
 	}
 	

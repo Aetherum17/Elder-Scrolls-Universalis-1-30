@@ -76,7 +76,7 @@ steppe_horde = {
 		NOT = { has_reform = great_mongol_state_reform }
 	}
 	trigger = { OR = { has_reform = steppe_horde
-	    calc_true_if = { all_owned_province = {	has_terrain = steppe } amount = 10 }
+	    capital_scope = { has_terrain = steppe }
 		}
 	}
 	legacy_equivalent = steppe_horde_legacy

@@ -1,0 +1,20 @@
+province = {
+    war = {
+        active = {
+            is_at_war = yes
+        }
+        eval_multiply = {
+            factor = 2.25
+            modifier = {
+                is_in_capital_area = yes
+                owner = { war_with = ROOT }
+                NOT = {
+                    OR = {
+                        owned_by = ROOT
+                        controlled_by = ROOT
+                    }
+                }
+            }
+        }
+    }
+}

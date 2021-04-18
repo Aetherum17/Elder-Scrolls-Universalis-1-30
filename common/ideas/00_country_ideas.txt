@@ -82,60 +82,6 @@ ENG_ideas = {
 	}
 }
 
-MOS_ideas = {
-	start = {
-		diplomatic_upkeep = 1
-		shock_damage = 0.15
-	}
-
-	bonus = {
-		naval_forcelimit_modifier = 0.25
-	}
-
-	trigger = {
-		tag = ATM
-	}
-	
-	free = yes
-	
-	#Origins of Men
-	#It is thought that the first pre-literate humans came to Tamriel from Atmora.
-	gatherers_of_tribute = {
-		diplomatic_reputation = 0.5
-	}
-	#Survivors of Civil War
-	#Lots of people were murdered during bloody civil war between Atmoran Warlords.
-	legacy_of_dmitriy_donskoi = {
-		discipline = 0.05
-	}
-	#Founders of Saarthal
-	#The legendary city of Saarthal was the first Atmoran settlement out of homelands.
-	seat_of_metropolitan_bishop  = {
-		build_cost = -0.10
-	}
-	#Peace and Prosperous
-	#Despite the difficult living conditions, Atmors were able to build a stable societyю
-	pomestnoe_voisko = {
-		stability_cost_modifier = -0.10
-	}
-	#Five Hundread Companions
-	#The group of wraithful warriors, who protect Atmoran Lands.
-	strength_of_the_boyars = {
-		global_manpower_modifier = 0.10
- 	}
-	#Atmoran Imigrants
-	#Deteriorating weather conditions are forcing many to leave their homes and travel to new places.
-	zasechnaya_cherta = {
-		colonists = 1
-	}
-	#A Place of Permanent Winter
-	#Little life can survive harsh climate conditions of Atmora.
-	descendants_of_byzantine_emperors = {
-		hostile_attrition = 1
-	}
-
-}
-
 RUS_ideas = {
 	start = {
 		land_morale = 0.15
@@ -293,49 +239,6 @@ RAG_ideas = {
 	}
 	palace_of_the_rector = {
 		global_tax_modifier = 0.1
-	}
-}
-
-SWE_ideas = {
-	start = {
-		infantry_power = 0.15
-		merc_maintenance_modifier = -0.25
-	}
-
-	bonus = {
-		leader_land_shock = 1
-	}
-	
-	trigger = {
-		tag = DRA
-	}
-	
-	free = yes
-
-	kung_och_riksdag = {
-		legitimacy = 0.25
-		republican_tradition = 0.25
-		devotion = 0.25							
-        horde_unity = 0.25
-        meritocracy = 0.25
-	}
-	swedish_steel = {
-		discipline = 0.05
-	}
-	hakkapelitta = {
-		cavalry_cost = -0.1
-	}
-	indelningsverket = {
-		manpower_recovery_speed = 0.10
-	}
-	swedish_absolutism = {
-		stability_cost_modifier = -0.10
-	}
-	produktplakatet = {
-		global_trade_goods_size_modifier = 0.1
-	}
-	union_and_security_act = {
-		global_manpower_modifier = 0.1
 	}
 }
 
@@ -612,44 +515,6 @@ BYZ_ideas = {
 	}
 }
 
-NOR_ideas = {
-	start = {
-		global_sailors_modifier = 0.25
-		ship_durability = 0.25
-	}
-	
-	bonus = {
-		trade_steering = 0.25
-	}
-	
-	trigger = {
-		tag = ROS
-	}
-	
-	free = yes
-	
-	natural_seamanship = {
-		naval_morale = 0.10
-	}
-	call_of_our_forefathers = {
-		range = 0.25
-	}
-	pioneer_spirit = {
-		colonists = 1
-	}
-	nor_shipbuilding = {
-		global_ship_cost = -0.1
-	}
-	seize_the_opportunity = {
- 		global_trade_power = 0.1
-	}
-	nor_fishing = {
-		production_efficiency = 0.1
-	}
-	write_new_sagas = {
-		discipline = 0.05
-	}
-}
 
 MCH_ideas = {
 	start = {
@@ -5013,44 +4878,6 @@ BAH_ideas = {
 	}
 }
 
-GOT_ideas = {
-	start = {
-		privateer_efficiency = 0.50
-		core_creation = -0.25
-	}
-	
-	bonus = {
-		trade_efficiency = 0.15
-	}
-	
-	trigger = {
-		tag = SEA
-	}
-	free = yes
-	
-	rebuild_visby = {
-		development_cost = -0.1
-	}
-	invite_mercenaries_to_visby = {
-		merc_maintenance_modifier = -0.10
-	}
-	expand_visby_dockyard = {
-		global_ship_cost = -0.1
-	}
-	rebuild_the_trade = {
-		global_trade_power = 0.1
-	}
-	gutnish_merchant_adventurers = {
-		merchants = 1
-	}
-	gutnish_merchant_navy = {
-		naval_forcelimit_modifier = 0.10
-	}
-	found_visby_bank = {
-		interest = -0.25
-	}
-}
-
 POM_ideas = {
 	start = {
 		light_ship_cost = -0.25
@@ -5166,43 +4993,5 @@ GUA_ideas = {
 	}
 	gua_idea_7 = {
 		infantry_power = 0.1
-	}
-}
-
-CIR_ideas = {
-	start = {
-		stability_cost_modifier = -0.1
-		cavalry_power = 0.25
-	}
-	
-	bonus = {
-		land_morale = 0.15
-	}
-	
-	trigger = {
-		tag = FRO
-	}
-	free = yes
-	
-	horsemen_of_the_steppe = {
-		cavalry_cost = -0.10
-	}
-	merchants_of_genoa = {
-		global_prov_trade_power_modifier = 0.10
-	}
-	circassian_grain = {
-		trade_efficiency = 0.1
-	}
-	franciscan_missionaries = {
-		missionaries = 1
-	}
-	adyghe_beauty = {
-		prestige_decay = -0.01
-	}
-	steppe_diplomats = {
-		diplomats = 1
-	}
-	circassian_religious_flexibility = {
-		tolerance_heathen = 1
 	}
 }

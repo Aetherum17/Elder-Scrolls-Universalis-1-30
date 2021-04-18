@@ -24,6 +24,20 @@ objectTypes = {
 	}
 	
 	pdxmesh = {
+		name = "mesh_third_moon"
+		file = "gfx\models\Objects\Third Moon\test.mesh"
+		animation = { id = "idle"	type = "third_moon_anim" }
+		scale = 1.0
+	}
+	
+	pdxmesh = {
+		name = "mesh_third_moon_small"
+		file = "gfx\models\Objects\Third Moon\test.mesh"
+		animation = { id = "idle"	type = "third_moon_anim" }
+		scale = 0.5
+	}
+	
+	pdxmesh = {
 		name = "mesh_ambient_towers"
 		file = "gfx\models\Objects\AmbientTowers\Ambient_towers.mesh"
 		scale = 1.0

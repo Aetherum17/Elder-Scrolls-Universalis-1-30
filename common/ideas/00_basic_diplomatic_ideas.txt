@@ -34,8 +34,37 @@ maritime_ideas = {
 	ai_will_do = {
 		factor = 1
 		modifier = {
-			factor = 50
-			always = yes
+			factor = 0
+			is_tribal = yes
+		}
+		modifier = {
+			factor = 0
+			primitives = yes
+		}
+		modifier = {
+			factor = 0
+			NOT = { num_of_ports = 1 }
+			NOT = { is_colonial_nation = yes }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { num_of_ports = 10 }
+		}
+		modifier = {
+			factor = 2.5
+			NOT = { num_of_ports = 25 }
+		}
+		modifier = {
+			factor = 1.5
+			is_colonial_nation = yes
+		}
+		modifier = {
+			factor = 1.5
+			num_of_colonies = 1
+		}
+		modifier = {
+			factor = 0.5
+			num_of_cities = 50
 		}
 	}
 }
@@ -79,8 +108,12 @@ galle0 = {
 	ai_will_do = {
 		factor = 1
 		modifier = {
-			factor = 50
-			always = yes
+			factor = 0
+			NOT = { num_of_ports = 5 }
+		}
+		modifier = {
+			factor = 10
+			num_of_galley = 25
 		}
 	}
 }
@@ -123,8 +156,12 @@ handel0 = {
 	ai_will_do = {
 		factor = 1
 		modifier = {
-			factor = 50
-			always = yes
+			factor = 0
+			NOT = { num_of_ports = 5 }
+		}
+		modifier = {
+			factor = 10
+			num_of_light_ship = 35
 		}
 	}
 }
@@ -167,8 +204,17 @@ gross0 = {
 	ai_will_do = {
 		factor = 1
 		modifier = {
-			factor = 50
-			always = yes
+			factor = 0
+			NOT = { num_of_ports = 5 }
+		}
+		modifier = {
+			factor = 10
+			num_of_heavy_ship = 15
+			personality = ai_militarist 
+		}
+		modifier = {
+			factor = 2.5
+			personality = ai_militarist 
 		}
 	}
 }
@@ -209,8 +255,36 @@ diplomatic_ideas = {
 	ai_will_do = {
 		factor = 1
 		modifier = {
-			factor = 50
-			always = yes
+			factor = 0.1
+			is_subject = yes
+		}
+		modifier = {
+			factor = 0.75
+			is_great_power = yes
+		}
+		modifier = {
+			factor = 0.75
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { num_of_states = 10 }
+		}
+		modifier = {
+			factor = 1.25
+			is_part_of_hre = yes
+		}
+		modifier = {
+			factor = 1.25
+			num_of_allies = 3
+		}
+		modifier = {
+			factor = 1.75
+			is_elector = yes
+		}
+		modifier = {
+			factor = 5
+			is_emperor = yes
 		}
 	}
 }
@@ -251,8 +325,16 @@ spy_ideas = {
 	ai_will_do = {
 		factor = 1
 		modifier = {
-			factor = 50
-			always = yes
+			factor = 0.5
+			num_of_states = 10
+		}
+		modifier = {
+			factor = 1.25
+			is_part_of_hre = yes
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { total_development = 100 }
 		}
 	}
 }
@@ -295,8 +377,16 @@ influence_ideas = {
 	ai_will_do = {
 		factor = 1
 		modifier = {
-			factor = 50
-			always = yes
+			factor = 0
+			is_subject = yes
+		}
+		modifier = {
+			factor = 1.15
+			num_of_subjects = 1
+		}
+		modifier = {
+			factor = 1.5
+			is_emperor = yes
 		}
 	}
 }
@@ -337,8 +427,38 @@ trade_ideas = {
 	ai_will_do = {
 		factor = 1
 		modifier = {
-			factor = 50
-			always = yes
+			factor = 0
+			NOT = { num_of_cities = 10 }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { total_development = 100 }
+		}
+		modifier = {
+			factor = 1.25
+			is_great_power = yes
+		}
+		modifier = {
+			factor = 1.5
+			highest_value_trade_node = yes
+		}
+		modifier = {
+			factor = 1.5
+			has_government_attribute = is_merchant_republic
+		}
+		modifier = {
+			factor = 1.5
+			home_trade_node = {
+				has_most_province_trade_power = ROOT
+			}
+		}
+		modifier = {
+			factor = 1.75
+			trade_income_percentage = 0.45
+		}
+		modifier = {
+			factor = 2.5
+			total_development = 1000
 		}
 	}
 }
@@ -379,8 +499,30 @@ naval_ideas = {
 	ai_will_do = {
 		factor = 1
 		modifier = {
-			factor = 50
-			always = yes
+			factor = 0
+			is_tribal = yes
+		}
+		modifier = {
+			factor = 0
+			primitives = yes
+		}
+		modifier = {
+			factor = 0
+			NOT = { num_of_ports = 1 }
+			NOT = { is_colonial_nation = yes }
+		}
+		modifier = {
+			factor = 0.35
+			NOT = { num_of_ports = 10 }
+		}
+		modifier = {
+			factor = 1.5
+			any_neighbor_country = { 
+				OR = {
+					is_rival = ROOT
+					is_enemy = ROOT
+				}
+			}
 		}
 	}
 }
@@ -422,8 +564,46 @@ flottenbasis0 = {
 	ai_will_do = {
 		factor = 1
 		modifier = {
-			factor = 50
-			always = yes
+			factor = 0
+			NOT = { num_of_ports = 1 }
+		}
+		modifier = {
+			factor = 1.5
+			num_of_ports = 15
+		}
+		modifier = {
+			factor = 2.5
+			OR = {
+				num_of_heavy_ship = 10
+				num_of_light_ship = 15
+				num_of_galley = 25
+			}
+		}
+		modifier = {			
+			factor = 1.5
+			any_neighbor_country = {
+				is_rival = yes
+			}
+		}
+		modifier = {
+			factor = 10
+			num_of_colonists = 1 
+		}
+		modifier = {
+			factor = 2.5
+			government_rank = 5
+		}
+		modifier = {
+			factor = 2.5
+			government_rank = 7
+		}
+		modifier = {
+			factor = 2.5
+			personality = ai_diplomat
+		}
+		modifier = {
+			factor = 5
+			personality = ai_militarist 
 		}
 	}
 }
@@ -464,8 +644,26 @@ exploration_ideas = {
 	ai_will_do = {
 		factor = 1
 		modifier = {
-			factor = 50
-			always = yes
+			factor = 0
+			is_colonial_nation = yes
+		}
+		modifier = {
+			factor = 0
+			is_tribal = yes
+		}
+		modifier = {
+			factor = 0
+			primitives = yes
+		}
+		modifier = {
+			factor = 1.5
+			num_of_ports = 10
+		}
+		modifier = {
+			factor = 2.5
+			any_owned_province = {
+				has_empty_adjacent_province = yes
+			}
 		}
 	}
 }
@@ -512,8 +710,38 @@ kolonialimperium0 = {
 	ai_will_do = {
 		factor = 1
 		modifier = {
-			factor = 50
-			always = yes
+			factor = 0
+			num_of_colonists = 0
+		}
+		modifier = {
+			factor = 2.5
+			personality = ai_diplomat
+		}
+		modifier = {
+			factor = 2.5
+			personality = ai_militarist 
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				is_subject = yes
+				is_vassal = yes
+				is_colonial_nation = yes
+				is_tribal = yes
+				primitives = yes
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = { num_of_ports = 0 }
+		}
+		modifier = {
+			factor = 10
+			personality = ai_colonialist
+		}
+		modifier = {
+			factor = 0.5
+			personality = ai_militarist
 		}
 	}
 }
@@ -557,8 +785,38 @@ imperialismus0 = {
 	ai_will_do = {
 		factor = 1
 		modifier = {
-			factor = 50
-			always = yes
+			factor = 2.5
+			total_development = 500
+		}
+		modifier = {
+			factor = 5
+			government = monarchy
+		}
+		modifier = {
+			factor = 2.5
+			num_of_ports = 25
+		}
+		modifier = {
+			factor = 2.5
+			OR = {
+				num_of_heavy_ship = 15
+				num_of_light_ship = 20
+				num_of_galley = 25
+			}
+		}
+		modifier = {
+			factor = 2.5
+			personality = ai_diplomat
+		}
+		modifier = {
+			factor = 2.5
+			personality = ai_militarist 
+		}
+		modifier = {			
+			factor = 5
+			any_neighbor_country = {
+				is_rival = yes
+			}
 		}
 	}
 }
@@ -600,8 +858,22 @@ illusion_ideas = {
 	ai_will_do = {
 		factor = 1
 		modifier = {
-			factor = 50
-			always = yes
+			factor = 2.5
+			personality = ai_diplomat
+		}
+		modifier = {			
+			factor = 2.5
+			any_neighbor_country = {
+				is_rival = yes
+			}
+		}
+		modifier = {
+			factor = 2.5
+			personality = ai_diplomat
+		}
+		modifier = {
+			factor = 3.5
+			personality = ai_militarist 
 		}
 	}
 }
@@ -645,8 +917,20 @@ gesellschaft0 = {
 	ai_will_do = {
 		factor = 1
 		modifier = {
-			factor = 50
-			always = yes
+			factor = 5
+			personality = ai_diplomat
+		}
+		modifier = {
+			factor = 3.5
+			personality = ai_militarist 
+		}
+		modifier = {
+			factor = 0.5
+			government = monarchy
+		}
+		modifier = {
+			factor = 2.5
+			government = republic
 		}
 	}
 }
@@ -689,8 +973,32 @@ propaganda0 = {
 	ai_will_do = {
 		factor = 1
 		modifier = {
-			factor = 50
-			always = yes
+			factor = 2
+			personality = ai_diplomat
+		}
+		modifier = {			
+			factor = 1.5
+			any_neighbor_country = {
+				is_rival = yes
+			}
+		}
+		modifier = {
+			factor = 3.5
+			government = monarchy
+		}
+		
+		modifier = {
+			factor = 3.5
+			government = republic
+		}
+		modifier = {
+			factor = 1.5
+			government_rank = 5
+		}
+		
+		modifier = {
+			factor = 2.5
+			government_rank = 7
 		}
 	}
 }
@@ -734,9 +1042,27 @@ enchanting_ideas = {
 
 	ai_will_do = {
 		factor = 1
+		modifier = {			
+			factor = 2.5
+			any_neighbor_country = {
+				is_rival = yes
+			}
+		}
 		modifier = {
-			factor = 50
-			always = yes
+			factor = 1.5
+			government_rank = 3
+		}
+		modifier = {
+			factor = 1.25
+			is_great_power = yes
+		}
+		modifier = {
+			factor = 1.15
+			government = theocracy
+		}
+		modifier = {
+			factor = 1.25
+			total_development = 300
 		}
 	}
 }
@@ -777,8 +1103,24 @@ arcane_ideas = {
 	ai_will_do = {
 		factor = 1
 		modifier = {
-			factor = 50
-			always = yes
+			factor = 1.5
+			government_rank = 5
+		}
+		modifier = {
+			factor = 2.5
+			government_rank = 7
+		}
+		modifier = {
+			factor = 2.5
+			is_emperor = yes
+		}
+		modifier = {
+			factor = 1.35
+			personality = ai_diplomat
+		}
+		modifier = {
+			factor = 0.5
+			personality = ai_militarist 
 		}
 	}
 }
@@ -819,8 +1161,24 @@ soul_siphon_ideas = {
 	ai_will_do = {
 		factor = 1
 		modifier = {
-			factor = 50
-			always = yes
+			factor = 1.35
+			num_of_subjects = 1
+		}
+		modifier = {
+			factor = 0.75
+			is_part_of_hre = yes
+		}
+		modifier = {
+			factor = 1.75
+			government = theocracy
+		}
+		modifier = {
+			factor = 1.5
+			personality = ai_militarist 
+		}
+		modifier = {
+			factor = 1.15
+			personality = ai_colonialist
 		}
 	}
 }

@@ -1,19 +1,35 @@
 owner = VB2
 controller = VB2
 add_core = VB2
-culture = bosmer
 religion = bosmer_pantheon
+culture = bosmer
 hre = no
 base_tax = 1
 base_production = 1
 trade_goods = unknown
 base_manpower = 1
-capital = "Vullen Haven" 
+capital = "Vullen Haven"
 is_city = yes
-discovered_by = elven_tg
+discovered_by = elven_tg discovered_by = orsimer_tg
 
-add_permanent_province_modifier = {
-	name = water_trade_modifier
-	duration = -1
+57.1.1 = {
+    owner = VB2
+    controller = VB2
+    add_core = VB2
+}
+
+272.1.1 = {
+}
+
+535.1.1 = {
+}
+
+862.1.1 = {
+}
+
+1177.1.1 = {
+}
+
+1466.1.1 = {
 }
 

@@ -106,12 +106,17 @@ eight_divines_center_of_reformation = {
 		}
 		modifier = {
 			factor = 0
-			NOT = { region = western_syrodiil_lr }
-			NOT = { region = golden_coast_lr }
-			NOT = { region = eastern_syrodiil_lr }
-			NOT = { region = central_syrodiil_lr }
-			NOT = { region = jerall_mountains_lr }
-			NOT = { region = valus_mountains_lr }
+			NOT = { religion = meridia_cult }
+			NOT = { religion = mehrunes_dagon_cult }
+			NOT = { religion = molog_bal_cult }
+			NOT = { religion = hermeus_mora_cult }
+			NOT = { religion = hircine_cult }
+			NOT = { religion = sheogorath_cult }
+			NOT = { religion = nocturnal_cult }
+		}
+		modifier  = {
+			factor = 0
+			NOT = { superregion = cyrodiil_superregion }
 		}
 		modifier = {
 			factor = 2.5
@@ -119,13 +124,15 @@ eight_divines_center_of_reformation = {
 		}
 		modifier = {
 			factor = 0.5
-			NOT = {
-				culture_group = FROM
-			}
+			NOT = { culture_group = FROM }
 		}
 		modifier = {
 			factor = 2.5
 			culture = FROM
+		}
+		modifier = {
+			factor = 2.5
+			religion = meridia_cult
 		}
 	}
 }
@@ -158,6 +165,18 @@ marukhism_center_of_reformation = {
 			factor = 0
 			NOT = { religion = eight_divines }
 			NOT = { religion = nine_divines }
+			NOT = { religion = snow_elves_pantheon }
+			NOT = { religion = meridia_cult }
+			NOT = { religion = mehrunes_dagon_cult }
+			NOT = { religion = molog_bal_cult }
+			NOT = { religion = hermeus_mora_cult }
+			NOT = { religion = hircine_cult }
+			NOT = { religion = sheogorath_cult }
+			NOT = { religion = nocturnal_cult }
+		}
+		modifier  = {
+			factor = 0
+			NOT = { superregion = cyrodiil_superregion }
 		}
 		modifier = {
 			factor = 2.5
@@ -165,13 +184,15 @@ marukhism_center_of_reformation = {
 		}
 		modifier = {
 			factor = 0.5
-			NOT = {
-				culture_group = FROM
-			}
+			NOT = { culture_group = FROM }
 		}
 		modifier = {
 			factor = 2.5
 			culture = FROM
+		}
+		modifier = {
+			factor = 2.5
+			religion = eight_divines
 		}
 	}
 }
@@ -202,6 +223,17 @@ reclamations_pantheon_of_reformation = {
 		}
 		modifier = {
 			factor = 0
+			NOT = { religion = tribunal_pantheon }
+			NOT = { religion = meridia_cult }
+			NOT = { religion = mehrunes_dagon_cult }
+			NOT = { religion = molog_bal_cult }
+			NOT = { religion = hermeus_mora_cult }
+			NOT = { religion = hircine_cult }
+			NOT = { religion = sheogorath_cult }
+			NOT = { religion = nocturnal_cult }
+		}
+		modifier = {
+			factor = 0
 			NOT = { superregion = morrowind_superregion }
 		}
 		modifier = {
@@ -210,9 +242,7 @@ reclamations_pantheon_of_reformation = {
 		}
 		modifier = {
 			factor = 0.5
-			NOT = {
-				culture_group = FROM
-			}
+			NOT = { culture_group = FROM }
 		}
 		modifier = {
 			factor = 2.5
@@ -251,11 +281,9 @@ twelve_divines_of_reformation = {
 		}
 		modifier = {
 			factor = 0
-			NOT = { superregion = high_rock_superregion }
-		}
-		modifier = {
-			factor = 0
-			religion = malacath_cult
+			NOT = { religion = altmeri_pantheon }
+			NOT = { religion = nordic_pantheon }
+			NOT = { religion = eight_divines }
 		}
 		modifier = {
 			factor = 2.5
@@ -274,6 +302,57 @@ twelve_divines_of_reformation = {
 		modifier = {
 			factor = 2.5
 			religion = altmeri_pantheon
+		}
+	}
+}
+
+dragon_cult_of_reformation = {
+
+    religion = dragon_cult
+	
+	map_icon = GFX_religious_conversion_center_protestant
+
+	max_distance = 500.0 # From Center of Reformation center province (default is NDefines::NReligion::MAX_RELIGIOUS_CENTER_SPREAD_DISTANCE).
+	base_conversion_speed = 5.0
+
+	target_province_weights = {
+		factor = 2.5
+		
+		modifier = {
+			factor = 0.25
+			is_empty = yes
+		}
+		modifier = {
+			factor = 0
+			has_missionary = yes
+		}
+		modifier = {
+			factor = 0
+			has_province_modifier = religious_zeal_at_conv
+		}
+		modifier = {
+			factor = 0
+			NOT = { religion = nordic_pantheon }
+		}
+		modifier = {
+			factor = 0
+			NOT = { superregion = atmora_superregion }
+		}
+		modifier = {
+			factor = 2.5
+			culture_group = FROM
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { culture_group = FROM }
+		}
+		modifier = {
+			factor = 2.5
+			culture = FROM
+		}
+		modifier = {
+			factor = 2.5
+			religion = nordic_pantheon
 		}
 	}
 }

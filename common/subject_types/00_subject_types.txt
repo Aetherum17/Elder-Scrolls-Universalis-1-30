@@ -913,10 +913,10 @@ alliance_member = {
 	return_land = yes
 	
 	# Modifiers:
-	alliance_subject = {
+	modifier_subject = {
 		modifier = alliance_nation
 	}
-	alliance_overlord = {
+	modifier_overlord = {
 		modifier = alliance_subject
 	}
 }

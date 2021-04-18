@@ -434,8 +434,11 @@ es_age_of_orthodoxy = {
 		}
 		obj_4_7 = {
 			OR = {
-				primary_culture = dwemer
+				culture_group = dwemer_cg
 				accepted_culture = dwemer
+				accepted_culture = rourkenid
+				accepted_culture = dumalacathi
+				accepted_culture = kagrenmer
 			}
 		}
 	}

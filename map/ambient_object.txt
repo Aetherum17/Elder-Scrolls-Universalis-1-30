@@ -1,13 +1,13 @@
 type={
 	type="es_orrery"
 	use_animation=yes
-	scale=1.5
+	scale=1.500000
 	always_visible=yes
 	object={
 		name="es_orrery"
 		hidden_on_start=no
 		position={
-			1527.000 19.00 1193.000 
+			1527.000 19.000 1193.000 
 		}
 		rotation={
 			0.000 90.000 0.000 
@@ -76,7 +76,7 @@ type={
 	visible_in_all_map_modes=yes
 	object={
 		name="masser01"
-		hidden_on_start=no
+		hidden_on_start=yes
 		position={
 			1330.000 30.000 1190.000 
 		}
@@ -93,9 +93,26 @@ type={
 	visible_in_all_map_modes=yes
 	object={
 		name="secunda01"
-		hidden_on_start=no
+		hidden_on_start=yes
 		position={
 			1338.000 30.000 1178.000 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+}
+type={
+	type="es_third_moon"
+	use_animation=yes
+	time_duration=300.000000
+	always_visible=yes
+	visible_in_all_map_modes=yes
+	object={
+		name="third_moon"
+		hidden_on_start=yes
+		position={
+			1315.000 30.000 1190.000 
 		}
 		rotation={
 			0.000 0.000 0.000 
@@ -444,7 +461,7 @@ type={
 		name="crystal_tower"
 		hidden_on_start=no
 		position={
-			497.000 29.500 1316.000 
+			569.000 31.000 1307.000 
 		}
 		rotation={
 			0.000 90.000 0.000 

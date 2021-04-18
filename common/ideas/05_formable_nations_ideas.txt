@@ -1,0 +1,265 @@
+ATM_ideas = {
+	start = {
+		diplomatic_upkeep = 1
+		shock_damage = 0.15
+	}
+
+	bonus = {
+		naval_forcelimit_modifier = 0.25
+	}
+
+	trigger = {
+		tag = ATM
+	}
+	
+	free = yes
+	
+	#Origins of Men
+	#It is thought that the first pre-literate humans came to Tamriel from Atmora.
+	atm_ideas_1 = {
+		diplomatic_reputation = 0.5
+	}
+	#Survivors of Civil War
+	#Lots of people were murdered during bloody civil war between Atmoran Warlords.
+	atm_ideas_2 = {
+		discipline = 0.05
+	}
+	#Founders of Saarthal
+	#The legendary city of Saarthal was the first Atmoran settlement out of homelands.
+	atm_ideas_3  = {
+		build_cost = -0.10
+	}
+	#Peace and Prosperous
+	#Despite the difficult living conditions, Atmors were able to build a stable societyю
+	atm_ideas_4 = {
+		stability_cost_modifier = -0.10
+	}
+	#Five Hundread Companions
+	#The group of wraithful warriors, who protect Atmoran Lands.
+	atm_ideas_5 = {
+		global_manpower_modifier = 0.10
+ 	}
+	#Atmoran Imigrants
+	#Deteriorating weather conditions are forcing many to leave their homes and travel to new places.
+	atm_ideas_6 = {
+		colonists = 1
+	}
+	#A Place of Permanent Winter
+	#Little life can survive harsh climate conditions of Atmora.
+	atm_ideas_7 = {
+		hostile_attrition = 1
+	}
+
+}
+
+DRA_ideas = {
+	start = {
+		administrative_efficiency = 0.10
+		global_autonomy = -0.05
+	}
+
+	bonus = {
+		missionaries = 1
+	}
+
+	trigger = {
+		tag = DRA
+	}
+	
+	free = yes
+
+	#Dragon Mounds
+	#The Dragon War had a sorrowful conclusion. We must bury all dragon remains and be rewarded when our glorious overlords return.
+	dra_ideas_1 = {
+		build_time = -0.20
+	}
+	#Holy Tribute
+	#The Dragon Priests demanded tribute from the populace and created laws to keep peace between men and the Dragons.
+	dra_ideas_2 = {
+		global_tax_modifier = 0.10
+	}
+	#Grand Temples
+	#Elaborate temples are built in honor of the Dragon Priests and serve as their resting place.
+	dra_ideas_3 = {
+		prestige = 0.5
+	}
+	#Zealotry
+	#All Men, Mer and Divines shall tremble under the might of the Dragon Priests
+	dra_ideas_4 = {
+		warscore_cost_vs_other_religion = -0.20
+	}
+	#Dragon Masks
+	#The highest ranking priests of the Dragon Cult were granted magical masks that defy the laws of time and possess powerful enchantments.
+	dra_ideas_5 = {
+		monarch_military_power = 1
+	}
+	#Absolute Dominance
+	#The Dragon Priests kept the peace between dragons and men, and their power was so great that uttering any word for "dragon" was forbidden to all mankind except them.
+	dra_ideas_6 = {
+		max_absolutism = 10
+	}
+	#Faith in Their Return
+	#Even if cornered, we shall persevere. poisoning the wells and entombing the Dragon Priests, our time shall come again. The Dovah have not forgotten us.
+	dra_ideas_7 = {
+		hostile_attrition = 1
+	}
+}
+
+ROS_ideas = {
+	start = {
+		colonists = 1
+		garrison_size = 0.15
+	}
+
+	bonus = {
+		sailor_maintenance_modifer = -0.1
+	}
+
+	trigger = {
+		tag = ROS
+	}
+
+	free = yes
+	
+	#Experienced Navigators
+	#Riddled with glaciers and icebergs, the Sea of Ghosts has taken many lives. It musn't be taken lightly.
+	ros_ideas_1 = {
+		naval_attrition = -0.15
+	}
+	#Inherited Prowess
+	#Sons of Atmorans and possibly Giants, the Roscreans display great strength on the battlefield.
+	ros_ideas_2 = {
+		discipline = 0.05
+	}
+	#Technological Fascination
+	#While primitive, the people of Roscrea show great interest in new tools and weapons.
+	ros_ideas_3 = {
+		global_institution_spread = 0.1
+	}
+	#Shipbuilding Tradition
+	#The Atmoran ship designs were improved by the Giant mentality of "stronger is better".
+	ros_ideas_4 = {
+		ship_durability = 0.1
+	}
+	#Exotic Products
+	#Mammoth cheese is a rare and sought-after commodity.
+	ros_ideas_5 = {
+		global_trade_power = 0.1
+	}
+	#Strong Backs
+	#Strength and endurance are useful for more than just fighting.
+	ros_ideas_6 = {
+		production_efficiency = 0.1
+	}
+	#Island Stronghold
+	#Seaside cliffs provide excellent defense against invasions.
+	ros_ideas_7 = {
+		defensiveness = 0.20
+	}
+}
+
+
+SEA_ideas = {
+	start = {
+		range = 0.20
+		heavy_ship_cost = -0.1
+	}
+	bonus = {
+		capture_ship_chance = 0.30
+	}
+	
+	trigger = {
+		tag = SEA
+	}
+	free = yes
+	
+	#Coast Expansion
+	#By adopting a doctrine of exploration, the Sea Giants set footholds in Tamriel and Atmora to bleed their coffers dry.
+	sea_ideas_1 = {
+		fabricate_claims_cost = -0.15
+	}
+	#Raiders of the North
+	#They allegedly only make landfall during the coldest winters, and never stay for long. They slaughter and pillage, then vanish in the ice and fog.
+	sea_ideas_2 = {
+		may_perform_slave_raid_on_same_religion = yes
+	}
+	#Giant Vessels
+	#Sailors have claimed to witness Sea Giant vessels in the frozen wastes of the Sea of Ghosts. These ships are the size of islands, and are armed with jagged spears.
+	sea_ideas_3 = {
+		heavy_ship_power = 0.15
+	}
+	#Spellcasting Troops
+	#They are capable of wielding powerful shock and frost magic. They can also use magic to control water.
+	sea_ideas_4 = {
+		infantry_fire = 1
+	}
+	#Extremophiles
+	#Sea Giants have resistance to cold that makes leaping into the frigid northern waters and wrestling with their quarry ideal.
+	sea_ideas_5 = {
+		land_attrition = -0.10
+	}
+	#Ambitious Peoples
+	#The Sea Giants seem to be looking towards Solitude. Who knows what they have in mind?
+	sea_ideas_6 = {
+		artillery_bonus_vs_fort = 1
+	}
+	#Atmoran Ancestry
+	#Sea Giants are believed to be linked to tales of ancient giants and Atmoran titans.
+	sea_ideas_7 = {
+		diplomatic_reputation = 1
+	}
+}
+
+
+
+FRO_ideas = {
+	start = {
+		defensiveness = 0.15
+		army_tradition = 0.5
+	}
+	
+	bonus = {
+		free_mil_policy = 1
+	}
+	
+	trigger = {
+		tag = FRO
+	}
+	free = yes
+	
+	#Blue Blood
+	#Frost Giants are extremely strong and have regenerative abilities, provided to them by their "icy" blood.
+	fro_ideas_1 = {
+		land_morale = 0.15
+	}
+	#Unshackled Beings
+	#Unrestricted by borders, the Frost Giants go where they please.
+	fro_ideas_2 = {
+		province_warscore_cost = -0.15
+	}
+	#Imposing Presence
+	#Their impressive height, five eyes, and two curved horns command fear in all men.
+	fro_ideas_3 = {
+		liberty_desire_from_subject_development = -0.15
+	}
+	#Fickle Nature
+	#Common ancestors of giants and trolls, the Frost Giants do not concern themselves with human laws.
+	fro_ideas_4 = {
+		reduced_stab_impacts = yes
+	}
+	#Suitable Climate
+	#The frozen wastes are difficult to traverse for foreign trespassers.
+	fro_ideas_5 = {
+		hostile_attrition = 1
+	}
+	#Bitter Memory
+	#The defeat at the hands of Ysgramor sent the "blue blooded beasts" into hiding, but they have not forgotten their past.
+	fro_ideas_6 = {
+		manpower_recovery_speed = 0.15
+	}
+	#Decentralized Society
+	#Unorganized and tribal, the Frost Giants prefer natural caves to flimsy wooden walls.
+	fro_ideas_7 = {
+		state_maintenance_modifier = -0.15
+	}
+}

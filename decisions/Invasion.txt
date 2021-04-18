@@ -4,8 +4,14 @@ country_decisions = {
 		major = yes
 		potential = {
 			capital_scope = {
-				continent = Oblivion
-			}	
+			    OR = {
+				    region = central_coldharbour_lr
+					region = southern_coldharbour_lr
+					region = eastern_coldharbour_lr
+					region = western_coldharbour_lr
+					region = northern_coldharbour_lr
+				}
+			}
 			NOT = { has_country_flag = launch_the_planemeld_flag }
 		}
 		provinces_to_highlight = {
@@ -135,8 +141,13 @@ country_decisions = {
 		major = yes
 		potential = {
 			capital_scope = {
-				continent = Oblivion
-			}	
+			    OR = {
+				    region = eastern_deadlands_lr
+					region = western_deadlands_lr
+					region = northern_deadlands_lr
+					region = southern_deadlands_lr
+				}
+			}
 			NOT = { has_country_flag = start_oblivion_crisis_flag }
 		}
 		provinces_to_highlight = {

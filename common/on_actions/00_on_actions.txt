@@ -11,6 +11,8 @@ on_startup = {
 	change_available_deities = yes
 	
 	mundus_towers = yes
+	
+	es_river_estuary = yes
 
     events = {
 		es_holidays.1
@@ -90,6 +92,13 @@ on_startup = {
 	province_natives = yes
 	es_province_development = yes
 	mundus_towers = yes
+	
+	es_river_estuary = yes
+	
+	### ES History Effects 
+	if = { limit = { NOT = { is_year = 272 } } 
+		history_0_272_ad = yes
+	}
 	
 	emperor = { save_global_event_target_as = Emperor }
     if = { limit = { is_emperor_of_china = yes } save_global_event_target_as = EmperorOfChina }
@@ -183,10 +192,10 @@ on_startup = {
 	}			 
 	set_country_flag = on_action_setup_flag
 	}
+	
 	initialize_schools_effect = yes
 	
-	country_event = { id = es_birthsigns.0 days = 1}
-	
+	country_event = { id = es_birthsigns.0 days = 1 }
 }
 
 # country

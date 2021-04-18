@@ -78,8 +78,24 @@ fire0 = {
 	ai_will_do = {
 		factor = 1
 		modifier = {
-			factor = 50
-			always = yes
+			factor = 30
+			personality = ai_militarist 
+		}
+		modifier = {
+			factor = 1.5
+			total_development = 250
+		}
+		modifier = {
+			factor = 2.5
+			total_development = 500
+		}
+		modifier = {
+			factor = 3.5
+			total_development = 1000
+		}
+		modifier = {
+			factor = 1.5
+			government_rank = 3
 		}
 	}
 }
@@ -119,9 +135,27 @@ shock0 = {
 	
 	ai_will_do = {
 		factor = 1
+		modifier = {			
+			factor = 15
+			any_neighbor_country = {
+				is_rival = yes
+			}
+		}
 		modifier = {
-			factor = 50
-			always = yes
+			factor = 1.5
+			total_development = 250
+		}
+		modifier = {
+			factor = 2.5
+			total_development = 500
+		}
+		modifier = {
+			factor = 3.5
+			total_development = 1000
+		}
+		modifier = {
+			factor = 2.5
+			government_rank = 5
 		}
 	}
 }
@@ -163,8 +197,28 @@ restoration_ideas = {
 	ai_will_do = {
 		factor = 1
 		modifier = {
-			factor = 50
-			always = yes
+			factor = 1.35
+			any_neighbor_country = {
+				is_great_power = yes
+			}
+		}
+		modifier = {
+			factor = 2.5
+			any_neighbor_country = {
+				is_threat = ROOT
+			}
+		}
+		modifier = {
+			factor = 1.35
+			personality = ai_militarist
+		}
+		modifier = {
+			factor = 1.75
+			army_tradition = 25
+		}
+		modifier = {
+			factor = 1.45
+			num_of_subjects = 1
 		}
 	}
 }
@@ -205,8 +259,50 @@ quality_ideas = {
 	ai_will_do = {
 		factor = 1
 		modifier = {
-			factor = 50
-			always = yes
+			factor = 1.15
+			any_neighbor_country = {
+				is_great_power = yes
+			}
+		}
+		modifier = {
+			factor = 1.25
+			OR = {
+				is_vassal = yes
+				is_march = yes
+			}
+		}
+		modifier = {
+			factor = 1.35
+			any_neighbor_country = {
+				is_rival = ROOT
+				army_size = ROOT
+			}
+		}
+		modifier = {
+			factor = 1.35
+			had_recent_war = 10
+		}
+		modifier = {
+			factor = 1.35
+			army_professionalism = 0.35
+		}
+		modifier = {
+			factor = 1.50
+			any_neighbor_country = {
+				is_threat = ROOT
+			}
+		}
+		modifier = {
+			factor = 1.5
+			personality = ai_militarist
+		}
+		modifier = {
+			factor = 1.5
+			army_tradition = 40
+		}
+		modifier = {
+			factor = 1.75
+			NOT = { total_development = 250 }
 		}
 	}
 }
@@ -247,8 +343,37 @@ quantity_ideas = {
 	ai_will_do = {
 		factor = 1
 		modifier = {
-			factor = 50
-			always = yes
+			factor = 1.25
+			OR = {
+				is_vassal = yes
+				is_march = yes
+			}
+		}
+		modifier = {
+			factor = 1.25
+			total_development = 500
+		}
+		modifier = {
+			factor = 1.5
+			army_size_percentage = 1
+			num_of_cities = 50
+		}
+		modifier = {
+			factor = 1.5
+			is_great_power = yes
+		}
+		modifier = {
+			factor = 1.5
+			personality = ai_militarist
+		}
+		modifier = {
+			factor = 1.5
+			any_neighbor_country = { 
+				OR = {
+					is_rival = ROOT
+					is_enemy = ROOT
+				}
+			}
 		}
 	}
 }
@@ -289,8 +414,29 @@ smithing_ideas = {
 	ai_will_do = {
 		factor = 1
 		modifier = {
-			factor = 50
-			always = yes
+			factor = 1.15
+			had_recent_war = 10
+		}
+		modifier = {
+			factor = 1.25
+			army_professionalism = 0.35
+		}
+		modifier = {
+			factor = 1.75
+			any_neighbor_country = {
+				is_threat = ROOT
+			}
+		}
+		modifier = {
+			factor = 1.50
+			OR = {
+				is_vassal = yes
+				is_march = yes
+			}
+		}
+		modifier = {
+			factor = 1.50
+			total_development = 100
 		}
 	}
 }
@@ -331,8 +477,26 @@ waffenqualitat0 = {
 	ai_will_do = {
 		factor = 1
 		modifier = {
-			factor = 50
-			always = yes
+			factor = 3.5
+			personality = ai_militarist 
+		}
+		modifier = {			
+			factor = 2.5
+			any_neighbor_country = {
+				is_rival = yes
+			}
+		}
+		modifier = {
+			factor = 2.5
+			total_development = 500
+		}
+		modifier = {
+			factor = 1.5
+			government_rank = 3
+		}
+		modifier = {
+			factor = 1.25
+			government_rank = 5
 		}
 	}
 }
@@ -373,8 +537,26 @@ armour_quality_ideas = {
 	ai_will_do = {
 		factor = 1
 		modifier = {
-			factor = 50
-			always = yes
+			factor = 1.75
+			any_neighbor_country = {
+				is_threat = ROOT
+			}
+		}
+		modifier = {
+			factor = 1.5
+			army_professionalism = 0.5
+		}
+		modifier = {
+			factor = 3.5
+			army_tradition = 50
+		}
+		modifier = {
+			factor = 1.5
+			government_rank = 7
+		}
+		modifier = {
+			factor = 1.5
+			government_rank = 3
 		}
 	}
 }
@@ -415,8 +597,26 @@ conjuration_ideas = {
 	ai_will_do = {
 		factor = 1
 		modifier = {
-			factor = 50
-			always = yes
+			factor = 1.25
+			had_recent_war = 10
+		}
+		modifier = {
+			factor = 1.35
+			any_neighbor_country = {
+				is_great_power = yes
+			}
+		}
+		modifier = {
+			factor = 1.5
+			government_rank = 5
+		}
+		modifier = {
+			factor = 2.5
+			government_rank = 7
+		}
+		modifier = {
+			factor = 2.5
+			personality = ai_militarist 
 		}
 	}
 }
@@ -459,8 +659,24 @@ summoning_ideas = {
 	ai_will_do = {
 		factor = 1
 		modifier = {
-			factor = 50
-			always = yes
+			factor = 2.5
+			NOT = { army_professionalism = 0.5 }
+		}
+		modifier = {
+			factor = 2.15
+			personality = ai_diplomat 
+		}
+		modifier = {
+			factor = 1.5
+			total_development = 350
+		}
+		modifier = {
+			factor = 2.5
+			num_of_allies = 3
+		}
+		modifier = {
+			factor = 1.35
+			num_of_subjects = 1
 		}
 	}
 }
@@ -501,8 +717,24 @@ necromacy_ideas = {
 	ai_will_do = {
 		factor = 1
 		modifier = {
-			factor = 50
-			always = yes
+			factor = 1.5
+			personality = ai_militarist 
+		}
+		modifier = {
+			factor = 1.5
+			government_rank = 3
+		}
+		modifier = {
+			factor = 1.75
+			government_rank = 7
+		}
+		modifier = {
+			factor = 2.25
+			government = monarchy
+		}
+		modifier = {
+			factor = 2.5
+			had_recent_war = 10
 		}
 	}
 }
@@ -544,8 +776,26 @@ mobility_ideas = {
 	ai_will_do = {
 		factor = 1
 		modifier = {
-			factor = 50
-			always = yes
+			factor = 3.5
+			personality = ai_militarist 
+		}
+		modifier = {			
+			factor = 5
+			any_neighbor_country = {
+				is_rival = yes
+			}
+		}
+		modifier = {
+			factor = 3.5
+			total_development = 250
+		}
+		modifier = {
+			factor = 3.5
+			government_rank = 3
+		}
+		modifier = {
+			factor = 2.5
+			government_rank = 7
 		}
 	}
 }
@@ -589,8 +839,26 @@ stehendesheer0 = {
 	ai_will_do = {
 		factor = 1
 		modifier = {
-			factor = 50
-			always = yes
+			factor = 3.5
+			personality = ai_militarist 
+		}
+		modifier = {			
+			factor = 5
+			any_neighbor_country = {
+				is_rival = yes
+			}
+		}
+		modifier = {
+			factor = 3.5
+			total_development = 250
+		}
+		modifier = {
+			factor = 3.5
+			government_rank = 3
+		}
+		modifier = {
+			factor = 2.5
+			government_rank = 7
 		}
 	}
 }
@@ -633,8 +901,31 @@ soldnerheer0 = {
 	ai_will_do = {
 		factor = 1
 		modifier = {
-			factor = 50
-			always = yes
+			factor = 2.5
+			personality = ai_militarist 
+		}
+		modifier = {			
+			factor = 5
+			any_neighbor_country = {
+				is_rival = yes
+			}
+		}
+		modifier = {
+			factor = 1.5
+			total_development = 1000
+		}
+		modifier = {
+			factor = 5
+			government_rank = 7
+		}
+		
+		modifier = {
+			factor = 3
+			government_rank = 1.5
+		}
+		modifier = {
+			factor = 2.5
+			government = republic
 		}
 	}
 }
@@ -677,8 +968,27 @@ generalstab0 = {
 	ai_will_do = {
 		factor = 1
 		modifier = {
-			factor = 50
-			always = yes
+			factor = 5
+			personality = ai_militarist 
+		}
+		modifier = {			
+			factor = 2.5
+			any_neighbor_country = {
+				is_rival = yes
+			}
+		}
+		modifier = {
+			factor = 2.35
+			total_development = 150
+		}
+		modifier = {
+			factor = 1.5
+			government_rank = 3
+		}
+		
+		modifier = {
+			factor = 2.5
+			government_rank = 5
 		}
 	}
 }
@@ -719,8 +1029,38 @@ offensive_ideas = {
 	ai_will_do = {
 		factor = 1
 		modifier = {
-			factor = 50
-			always = yes
+			factor = 1.25
+			OR = {
+				is_vassal = yes
+				is_march = yes
+			}
+		}
+		modifier = {
+			factor = 1.5
+			num_of_cities = 25
+		}
+		modifier = {
+			factor = 1.35
+			any_neighbor_country = {
+				is_threat = ROOT
+			}
+		}
+		modifier = {
+			factor = 2.5
+			any_neighbor_country = { 
+				OR = {
+					is_rival = ROOT
+					is_enemy = ROOT
+				}
+			}
+		}
+		modifier = {
+			factor = 2.75
+			personality = ai_militarist
+		}
+		modifier = {
+			factor = 5.0
+			is_tribal = yes
 		}
 	}
 }
@@ -761,8 +1101,34 @@ defensive_ideas = {
 	ai_will_do = {
 		factor = 1
 		modifier = {
-			factor = 50
-			always = yes
+			factor = 0.75
+			is_great_power = yes
+		}
+
+		modifier = {
+			factor = 1.25
+			government_rank = 3
+		}
+		modifier = {
+			factor = 1.35
+			AND = {
+				is_part_of_hre = yes
+				personality = ai_militarist
+			}
+		}
+
+		modifier = {
+			factor = 2.5
+			NOT = { num_of_cities = 100 }
+		}
+		modifier = {
+			factor = 2.75
+			any_neighbor_country = { 
+				OR = {
+					is_rival = ROOT
+					is_enemy = ROOT
+				}
+			}
 		}
 	}
 }

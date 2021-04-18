@@ -5,30 +5,56 @@
 ###################################################################################################################
 objectTypes = {
 	pdxmesh = {
-			name = "argonian_generic_infantry_01_mesh"
-			file = "gfx/models/Units/argonian_generic_infantry_01.mesh"
-			
-			animation = { id = "attack"				type = "spear_shield_attack_animation" }
-			animation = { id = "death"				type = "rifleman_death_animation" }		
-			animation = { id = "idle"				type = "spear_shield_idle_animation" }
-			animation = { id = "walk"				type = "spear_shield_moving_animation" }
-			animation = { id = "retreat"			type = "polearm_twohanded_retreat_animation" }
+		name = "argonian_generic_infantry_01_mesh"
+		file = "gfx/models/Units/argonian_generic_infantry_01.mesh"
+		
+		animation = { id = "attack"				type = "spear_shield_attack_animation" }
+		animation = { id = "death"				type = "rifleman_death_animation" }		
+		animation = { id = "idle"				type = "spear_shield_idle_animation" }
+		animation = { id = "walk"				type = "spear_shield_moving_animation" }
+		animation = { id = "retreat"			type = "polearm_twohanded_retreat_animation" }
 
-			scale = 0.5
-		}
+		scale = 0.5
+	}
 		
 	pdxmesh = {
-			name = "dunmer_generic_infantry_01_mesh"
-			file = "gfx/models/Units/dunmer_generic_infantry_01.mesh"			
-			
-			animation = { id = "attack"				type = "polearm_twohanded_attack_animation" }
-			animation = { id = "death"				type = "rifleman_death_animation" }		
-			animation = { id = "idle"				type = "polearm_twohanded_idle_animation" }
-			animation = { id = "walk"				type = "polearm_twohanded_moving_animation" }
-			animation = { id = "retreat"			type = "polearm_twohanded_retreat_animation" }
+		name = "dunmer_generic_infantry_01_mesh"
+		file = "gfx/models/Units/dunmer_generic_infantry_01.mesh"			
+		
+		animation = { id = "attack"				type = "polearm_twohanded_attack_animation" }
+		animation = { id = "death"				type = "rifleman_death_animation" }		
+		animation = { id = "idle"				type = "polearm_twohanded_idle_animation" }
+		animation = { id = "walk"				type = "polearm_twohanded_moving_animation" }
+		animation = { id = "retreat"			type = "polearm_twohanded_retreat_animation" }
 
-			scale = 0.5
-		}
+		scale = 0.5
+	}
+		
+	pdxmesh = {
+		name = "ashlander_generic_infantry_01_mesh"
+		file = "gfx/models/Units/ashlander_generic_infantry_01.mesh"			
+		
+		animation = { id = "attack"				type = "polearm_twohanded_attack_animation" }
+		animation = { id = "death"				type = "rifleman_death_animation" }		
+		animation = { id = "idle"				type = "polearm_twohanded_idle_animation" }
+		animation = { id = "walk"				type = "polearm_twohanded_moving_animation" }
+		animation = { id = "retreat"			type = "polearm_twohanded_retreat_animation" }
+
+		scale = 0.5
+	}
+		
+	pdxmesh = {
+		name = "velothi_generic_infantry_01_mesh"
+		file = "gfx/models/Units/velothi_generic_infantry_01.mesh"			
+		
+		animation = { id = "attack"				type = "polearm_twohanded_attack_animation" }
+		animation = { id = "death"				type = "rifleman_death_animation" }		
+		animation = { id = "idle"				type = "polearm_twohanded_idle_animation" }
+		animation = { id = "walk"				type = "polearm_twohanded_moving_animation" }
+		animation = { id = "retreat"			type = "polearm_twohanded_retreat_animation" }
+
+		scale = 0.5
+	}
 		
 	pdxmesh = {
 		name = "chimer_generic_infantry_01_mesh"
@@ -44,30 +70,30 @@ objectTypes = {
 	}
 		
 	pdxmesh = {
-			name = "orc_generic_infantry_01_mesh"
-			file = "gfx/models/Units/orc_generic_infantry_01.mesh"			
-			
-			animation = { id = "attack"				type = "medieval_club_and_shield_attack_animation" }
-			animation = { id = "death"				type = "rifleman_death_animation" }		
-			animation = { id = "idle"				type = "medieval_club_and_shield_idle_animation" }
-			animation = { id = "walk"				type = "medieval_club_and_shield_moving_animation" }
-			animation = { id = "retreat"			type = "polearm_twohanded_retreat_animation" }
+		name = "orc_generic_infantry_01_mesh"
+		file = "gfx/models/Units/orc_generic_infantry_01.mesh"			
+		
+		animation = { id = "attack"				type = "medieval_club_and_shield_attack_animation" }
+		animation = { id = "death"				type = "rifleman_death_animation" }		
+		animation = { id = "idle"				type = "medieval_club_and_shield_idle_animation" }
+		animation = { id = "walk"				type = "medieval_club_and_shield_moving_animation" }
+		animation = { id = "retreat"			type = "polearm_twohanded_retreat_animation" }
 
-			scale = 0.5
-		}
+		scale = 0.5
+	}
 		
 	pdxmesh = {
-			name = "imperial_generic_infantry_01_mesh"
-			file = "gfx/models/Units/imperial_generic_infantry_01.mesh"			
-			
-			animation = { id = "attack"				type = "Roman_sword&shield_attack_animation" }
-			animation = { id = "death"				type = "rifleman_death_animation" }		
-			animation = { id = "idle"				type = "Roman_sword&shield_idle_animation" }
-			animation = { id = "walk"				type = "Roman_sword&shield_moving_animation" }
-			animation = { id = "retreat"			type = "Roman_sword&shield_moving_animation" }
+		name = "imperial_generic_infantry_01_mesh"
+		file = "gfx/models/Units/imperial_generic_infantry_01.mesh"			
+		
+		animation = { id = "attack"				type = "Roman_sword&shield_attack_animation" }
+		animation = { id = "death"				type = "rifleman_death_animation" }		
+		animation = { id = "idle"				type = "Roman_sword&shield_idle_animation" }
+		animation = { id = "walk"				type = "Roman_sword&shield_moving_animation" }
+		animation = { id = "retreat"			type = "Roman_sword&shield_moving_animation" }
 
-			scale = 0.5
-		}
+		scale = 0.5
+	}
 		
 	pdxmesh = {
 		name = "nord_generic_infantry_01_mesh"

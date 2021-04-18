@@ -19,6 +19,18 @@ entity = {
 }
 
 entity = {
+	name = "es_third_moon"
+	pdxmesh = "mesh_third_moon"
+	state = { name = "idle"	animation = "idle" }
+}
+
+entity = {
+	name = "es_third_moon_small"
+	pdxmesh = "mesh_third_moon_small"
+	state = { name = "idle"	animation = "idle" }
+}
+
+entity = {
 	name = "es_ambient_towers"
 	pdxmesh = "mesh_ambient_towers"
 }

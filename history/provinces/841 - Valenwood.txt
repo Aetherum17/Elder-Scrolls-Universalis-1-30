@@ -1,19 +1,35 @@
-#owner = VA7
-#controller = VA7
+owner = VA7
+controller = VA7
 add_core = VA7
-culture = bosmer
 religion = bosmer_pantheon
-native_size = 50 native_ferocity = 7 native_hostileness = 10
+culture = bosmer
 hre = no
-base_tax = 3
-base_production = 3
+base_tax = 1
+base_production = 1
 trade_goods = unknown
-base_manpower = 3
-capital = "Cormair Spring" 
-is_city = no
-discovered_by = elven_tg
+base_manpower = 1
+capital = "Cormair Spring"
+is_city = yes
+discovered_by = elven_tg discovered_by = orsimer_tg
 
-center_of_trade = 1
+57.1.1 = {
+    owner = VA8
+    controller = VA8
+    add_core = VA8
+}
 
-fort_15th = yes
+272.1.1 = {
+}
+
+535.1.1 = {
+}
+
+862.1.1 = {
+}
+
+1177.1.1 = {
+}
+
+1466.1.1 = {
+}
 

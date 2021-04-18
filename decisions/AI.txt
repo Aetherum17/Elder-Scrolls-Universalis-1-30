@@ -85,5 +85,102 @@ country_decisions = {
 			factor = 400
 		}
 	}
+	
+	ai_fix_income = {
+		potential = {
+			ai = yes
+		}
+		
+		allow = {
+			is_at_war = no
+			num_of_loans = 3
+			NOT = { inflation = 7 }
+			NOT = { corruption = 7 }
+		}
+
+		effect = {
+			add_years_of_income = 0.75
+			add_corruption = 1.5
+			add_inflation = 1.5
+		}
+
+		ai_will_do = {
+			factor = 1.0
+			modifier = {
+				factor = 0
+				inflation = 7
+			}
+			modifier = {
+				factor = 0
+				corruption = 7
+			}
+		}
+	}
+	
+	ai_fix_inflation = {
+		potential = {
+			ai = yes
+		}
+
+		allow = {
+			is_at_war = no
+			adm_power = 150
+			inflation = 1
+		}
+
+		effect = {
+			add_adm_power = -50
+			add_inflation = -1
+		}
+		ai_will_do = {
+			factor = 1.0
+			modifier = {
+				factor = 0
+				NOT = { inflation = 5 }
+			}
+		}
+	}
+	
+	ai_fix_mercenaries = {
+		potential = {
+			ai = yes
+		}
+
+		allow = {
+			AND = {
+			is_at_war = no
+			num_of_hired_mercenary_companies = 1
+			any_hired_mercenary_company = { hired_for_months = 12 }
+			}
+			NOT = { num_of_rebel_controlled_provinces = 1 }
+		}
+
+		effect = {
+			random_hired_mercenary_company = {
+				limit = {
+					hired_for_months = 12
+				}
+				disband_mercenary_company = THIS
+			}
+		}
+
+		ai_will_do = {
+			factor = 1.0
+			modifier = {
+			factor = 0
+				is_in_deficit = no
+				NOT = { num_of_loans = 2 }
+			}
+			modifier = {
+			factor = 0
+				NOT = { num_of_rebel_armies = 2 }
+			}
+			modifier = {
+			factor = 1.5
+				num_of_hired_mercenary_companies = 2
+				army_size_percentage = 1.25
+			}
+		}
+	}
 
 }

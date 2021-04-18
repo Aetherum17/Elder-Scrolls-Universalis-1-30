@@ -56,9 +56,10 @@ high_elves_ideas = {
 	trigger = {
 		OR = {
 			culture_group = high_elves_cg
-			accepted_culture = khajiiti
-			accepted_culture = anequinan
-			accepted_culture = pellitinian
+			accepted_culture = altmer
+			accepted_culture = ayleid
+			accepted_culture = sinistral
+			accepted_culture = corelanyan
 		}
 	}
 	
@@ -109,7 +110,7 @@ khajiit_ideas = {
 	
 	trigger = {
 		OR = {
-			culture_group = kaijiit
+			culture_group = khajiiti_cg
 			accepted_culture = khajiiti
 			accepted_culture = anequinan
 			accepted_culture = pellitinian

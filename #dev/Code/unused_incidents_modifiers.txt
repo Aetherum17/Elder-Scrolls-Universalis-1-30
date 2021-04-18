@@ -1,0 +1,63 @@
+#############################
+
+#Any HRE country is lacking institutions
+1) Fund Imperial University
+	#target
+	#target looses money
+	global_institution_spread = 0.25
+	advisor_pool = 1
+	
+2) Send Court Advisors
+	embracement_cost = -0.25
+	advisor_cost = -0.15
+	idea_cost = -0.1
+3) Let them do arts!
+	prestige_from_naval = 0.25
+	prestige_from_land = 0.15
+	prestige_decay = -0.01
+
+#Army
+loot_amount = 0.1
+#############################
+# Colonization
+#############################
+colonist_placement_chance = 0.05
+native_uprising_chance = -0.25
+naval_maintenance_modifier = -0.25
+global_own_trade_power = 0.1
+global_prov_trade_power_modifier = 0.1
+global_trade_power = 0.1
+
+#############################
+# Diplomatic
+#############################
+diplomats = 1
+enforce_religion_cost = 0.25
+province_warscore_cost = -0.2
+global_heretic_missionary_strength = 0.03
+prestige_per_development_from_conversion = 0.3
+
+#############################
+# Economy, Technology, Splender
+#############################
+adm_tech_cost_modifier = -0.1
+build_time = -0.25
+dip_tech_cost_modifier = -0.1
+inflation_action_cost = -0.1
+inflation_reduction = 0.1
+institution_spread_from_true_faith = 0.5
+mil_tech_cost_modifier = -0.1
+
+#############################
+# Government, Advisors, and Rulers
+#############################
+core_creation = -0.5
+dip_advisor_cost
+
+#############################
+# Revolts, Stability, Culture, and Spies
+#############################
+culture_conversion_cost = -0.25 #Per month #Used in the subject's scope
+min_autonomy = 50
+num_accepted_cultures = 2
+promote_culture_cost = -0.25 #Used in the overlord's scope

@@ -1,0 +1,247 @@
+### General:
+#1 ADM - Anchor Imperial Borders
+#2 DIP - Sign Trade Pact
+#3 MIL - Reform Martial Conscription
+#4 ADM - Standardize National Laws 
+#5 DIP - Introduce Gold Standart
+#6 MIL - Consolidate Sovereign Army
+#7 ADM - Prohibit Internal Wars
+
+### Dominion:
+# DIP - Proclaim Divergence Tolerance
+# MIL - Institute Confederative Army
+# ADM - Embrace Spiritual Syncretism
+# DIP - Expand Governmental Concessions 
+# MIL - Guarantee Political Protection
+# ADM - Secure Member Autonomy 
+
+### Empire:
+# DIP - State Cultural Dominance
+# MIL - Establish Royal Legions
+# ADM - Curtail Religious Heretics
+# DIP - Revoke Former Privileges
+# MIL - Supress Independent Opposition
+# ADM - Procalim Absolute Integrity 
+
+#Imperial Incidents
+
+### MTTH 120
+
+# 100 cities 
+1) Apply Diplomatic Sanctions
+	# Target:
+	diplomatic_annexation_cost = 0.25
+	ae_impact = 0.15
+	years_of_nationalism = 10
+	
+2) Encourage Alliance Formation
+	# Every HRE, who is neighbour of target:
+	improve_relation_modifier = 0.25
+	discovered_relations_impact = -0.15
+	land_maintenance_modifier = -0.10
+	
+3) Keep Status Quo
+	# every HRE Member
+	unjustified_demands = -0.15
+	
+# 100 infantry regiments
+1) Limit Army Size
+	# Target:
+	land_forcelimit_modifier = -0.25
+	siege_ability = -0.15
+	free_leader_pool = -1
+	
+2) Build Defence Lines
+	# Every HRE, who is neighbour of target:
+	defensiveness = 0.25
+	garrison_size = 0.15
+	hostile_attrition = 1
+	
+3) Keep Status Quo
+	# every HRE Member
+	global_manpower_modifier = 0.15
+	
+# 100 ships
+1) Limit Navy Size
+	#Target:
+	naval_forcelimit_modifier = -0.25
+	sailor_maintenance_modifer = 0.15
+	capture_ship_chance = -0.10
+	
+2) Subsidise Imperial Fleet
+	#every HRE, who is not target and has a port
+	global_ship_cost = -0.25
+	global_ship_recruit_speed = 0.15
+	naval_attrition = -0.10
+	
+3) Keep Status Quo
+	# every HRE Member
+	global_sailors_modifier = 0.15
+	
+#Lack of mercenaries - Hire 5 mercenary Companies
+1) Increase Mercenary Tariffs
+	# Target:
+	merc_maintenance_modifier = 0.25
+	mercenary_manpower = -0.15
+	mercenary_cost = 0.10
+	
+2) Reform Conscription Policy
+	#every HRE, but not the target
+	drill_gain_modifier = 0.25
+	drill_decay_modifier = -0.15
+	yearly_army_professionalism = 0.01
+	
+3) Keep Status Quo
+	# every HRE Member
+	possible_condottieri = 0.15
+
+### MTTH 240
+	
+#HRE country has low stability
+1) Assure Political Support
+	#target gets +5 stab
+	global_autonomy = -0.025
+	adm_advisor_cost = -0.15
+	global_spy_defence = 0.10
+2) Form new Governemnt
+	#target
+	autonomy_change_time = -0.25
+	same_culture_advisor_cost = -0.15
+	war_exhaustion = -0.1
+3) Keep Neutral Policy
+	core_decay_on_your_own = 0.15
+	
+#HRE country has low legitimacy
+1) Support Old Regime
+	#target + 100 legitimacy
+	harsh_treatment_cost = -0.25
+	stability_cost_modifier = -0.15
+	global_tax_modifier = 0.10
+
+2) Help Rebels
+	#target
+	#get revolution event
+	war_exhaustion_cost = -0.25
+	state_maintenance_modifier = -0.15
+	yearly_corruption = -0.1
+
+3) Stay Neutral
+	#neighbor of target
+	global_unrest = 1.5
+	
+#HRE subject has 100 liberty desire.
+1) Release the subject
+	#subject becomes independent + he gets
+	prestige = 0.25
+	enemy_core_creation = 0.15
+	governing_capacity_modifier = 0.10
+	
+2) Supress the Rebellion
+	#overlord
+	general_cost = -0.25
+	mil_advisor_cost = -0.15
+	reduced_liberty_desire_on_same_continent = 10
+	
+3) Do nothing
+	#every HRE neighbour of overlord
+	liberty_desire_from_subject_development = -0.15
+	
+#HRE Country has low religious unity
+1) Negotiate with Heretics
+	#target
+	religious_unity = 0.25
+	tolerance_heretic = 1.5
+	tolerance_heathen = 1
+	
+2) Purge the Heathens
+	#target
+	global_missionary_strength = 0.025
+	tolerance_own = 1.5
+	missionaries = 1
+	
+3) Observe the Situation
+	#neighbours of target
+	warscore_cost_vs_other_religion = -0.1
+	
+### MTTH 360
+	
+#SUbject Nation - is subject nation not in HRE
+1) Integrate Colony in HRE
+	#Target
+	development_cost = -0.25
+	build_cost = -0.15
+	diplomats = 1
+	
+	# + set subjject to HRE
+2) Associate Colony with HRE
+	#neighbours of subject in HRE
+	caravan_power = 0.25
+	trade_range_modifier = 0.15
+	global_trade_goods_size_modifier = 0.1
+	
+	
+3) Keep it under overlord
+	#overlord
+	global_tariffs = 0.25
+	global_colonial_growth = 10
+	global_foreign_trade_power = 0.1
+	
+	
+	
+#Trade Company - have set up a strong have company
+1) Continue Metropolian Oversee
+	#Target
+	embargo_efficiency = 0.25
+	global_ship_trade_power = 0.15
+	trade_efficiency = 0.10
+
+2) Create Independent Administration
+	#every HRE member, but not the target
+	production_efficiency = 0.25
+	trade_steering = 0.15
+	merchants = 1
+	
+3) Send Imperial Legate
+	#Emperor
+	#will join the Empire, but will loose IA
+	sailors_recovery_speed = 0.25
+	ship_power_propagation = 0.15
+	interest = -1
+	
+#Any HRE Country borders tribal nation
+1) Send Imperial Army
+	#target
+	cav_to_inf_ratio = 0.25
+	land_attrition = -0.15
+	manpower_recovery_speed = 0.10
+2) Train Local Officers
+	#target
+	leader_cost = -0.25
+	reinforce_cost_modifier = -0.15
+	global_regiment_cost = -0.1
+3) Build Border Forts
+	#target 
+	# build border forts
+	fort_maintenance_modifier = -0.25
+	global_regiment_recruit_speed = 0.15
+	min_autonomy_in_territories = -0.1
+	
+#Any HRE member has 10 subjects
+1) Force Diplomatic Isolation 
+	#target
+	reduced_liberty_desire = -25
+	diplomatic_reputation = -1.5
+	diplomatic_upkeep = -1
+2) Reform Imperial Laws
+	vassal_forcelimit_bonus = -0.25
+	vassal_income = -0.15
+	liberty_desire = -10
+3) Keep Sttus Quo
+	#emperor
+	#prestige hit
+	rival_change_cost = -0.25
+	rival_border_fort_maintenance = -0.15
+	spy_offence = 0.1
+	
+	
+#################################################

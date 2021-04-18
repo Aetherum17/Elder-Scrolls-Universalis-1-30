@@ -182,10 +182,17 @@ polytheistic_group = {
 		}
 		allowed_center_conversion = {
 			altmeri_pantheon
+			nordic_pantheon
+			eight_divines
 		}
 		will_get_center = {
             any_owned_province = {
-                religion = altmeri_pantheon
+				OR = {
+					religion = altmeri_pantheon
+					religion = twelve_divines
+					religion = nordic_pantheon
+					religion = eight_divines
+				}
                 is_in_capital_area = yes
                 is_reformation_center = no
             }
@@ -275,48 +282,79 @@ polytheistic_group = {
 		harmonized_modifier = harmonized_redguard_pantheon
 	}
 	
-	malacath_cult = {
-		color = { 24 122 14 }
-		icon = 11
+	all-maker_cult = {
+		color = { 23 35 192 }
+		icon = 32
 		country = {
-			army_tradition_decay = -0.025
-	        defensiveness = 0.25
+			hostile_attrition = 1
+			production_efficiency = 0.25
 		}
 		country_as_secondary = {
-			army_tradition_decay = -0.025
-	        defensiveness = 0.25
+			hostile_attrition = 1
+			production_efficiency = 0.25
 		}
 		province = {
-			local_missionary_strength = -0.015
+			local_missionary_strength = -0.025
 		}
 		
-		personal_deity = yes
+		heretic = { ALL-MAKER_HERETIC }	
 		
-		heretic = { MALACATH_HERETIC }	
+		uses_karma = yes
 		
-		harmonized_modifier = harmonized_malacath_cult
+		harmonized_modifier = harmonized_all-maker_cult
 	}
 	
-	kothri_pantheon = {
-		color = { 236 201 26 }
-		icon = 12
+	marukhism = {
+		color = { 243 212 12 }
+		icon = 19
 		country = {
-		    fire_damage_received = -0.15
-			global_trade_power = 0.25
+			culture_conversion_cost = -0.25
+			prestige_per_development_from_conversion = 0.10
 		}
+		allowed_center_conversion = {
+			eight_divines
+			nine_divines
+			snow_elves_pantheon
+			meridia_cult
+			mehrunes_dagon_cult
+			molog_bal_cult
+			hermeus_mora_cult
+			hircine_cult
+			sheogorath_cult
+			nocturnal_cult
+		}
+		will_get_center = {
+            any_owned_province = {
+                OR = {
+                    religion = eight_divines
+                    religion = nine_divines
+                    religion = snow_elves_pantheon
+                    religion = meridia_cult
+                    religion = mehrunes_dagon_cult
+                    religion = molog_bal_cult
+                    religion = hermeus_mora_cult
+                    religion = hircine_cult
+                    religion = sheogorath_cult
+                    religion = nocturnal_cult
+                    religion = marukhism
+                }
+                is_in_capital_area = yes
+                is_reformation_center = no
+            }
+        }
 		country_as_secondary = {
-			fire_damage_received = -0.15
-			global_trade_power = 0.25
+			culture_conversion_cost = -0.25
+			prestige_per_development_from_conversion = 0.10
 		}
 		province = {
-			local_missionary_strength = -0.015
+			local_missionary_strength = -0.025
 		}
 		
-		personal_deity = yes
+		heretic = { MARUKHISM_HERETIC }	
 		
-		heretic = { KOTHRI_HERETIC }	
+		fervor = yes
 		
-		harmonized_modifier = harmonized_kothri_pantheon
+		harmonized_modifier = harmonized_marukhism
 	}
 	
 	crusade_name = CRUSADE
@@ -327,7 +365,7 @@ occult_group = {
     flags_with_emblem_percentage = 0
 	flag_emblem_index_range = { 1 18 }
 	
-	center_of_religion = 1206
+	center_of_religion = 382
 	
 	ai_will_propagate_through_trade = yes
 	
@@ -650,38 +688,26 @@ occult_group = {
 		harmonized_modifier = harmonized_tribunal_pantheon
 	}
 	
-	reclamations_pantheon = {
-		color = { 10 14 146 }
-		icon = 15
+	malacath_cult = {
+		color = { 24 122 14 }
+		icon = 11
 		country = {
-			years_of_nationalism = -10
-			same_culture_advisor_cost = -0.25
+			army_tradition_decay = -0.025
+	        defensiveness = 0.25
 		}
-		allowed_center_conversion = {
-			tribunal_pantheon
-		}
-		will_get_center = {
-            any_owned_province = {
-                religion = tribunal_pantheon
-                is_in_capital_area = yes
-                is_reformation_center = no
-            }
-        }
 		country_as_secondary = {
-			years_of_nationalism = -10
-			same_culture_advisor_cost = -0.25
+			army_tradition_decay = -0.025
+	        defensiveness = 0.25
 		}
 		province = {
-			local_missionary_strength = -0.025
+			local_missionary_strength = -0.015
 		}
 		
 		personal_deity = yes
 		
-		heretic = { RECLAMATIONS_HERETIC }	
+		heretic = { MALACATH_HERETIC }	
 		
-		harmonized_modifier = harmonized_reclamations_pantheon
-		
-		date = 1200.1.1
+		harmonized_modifier = harmonized_malacath_cult
 	}
 	
 	serpant_king = {
@@ -716,6 +742,19 @@ occult_group = {
 			stability_cost_modifier = -0.25
 			warscore_cost_vs_other_religion = -0.25
 		}
+		allowed_center_conversion = {
+			nordic_pantheon
+		}
+		will_get_center = {
+            any_owned_province = {
+				OR = {
+					religion = nordic_pantheon
+					religion = dragon_cult
+				}
+                is_in_capital_area = yes
+                is_reformation_center = no
+            }
+        }
 		country_as_secondary = {
 			stability_cost_modifier = -0.25
 			warscore_cost_vs_other_religion = -0.25
@@ -892,41 +931,26 @@ occult_group = {
 		}
 	}
 	
-	marukhism = {
-		color = { 243 212 12 }
-		icon = 19
+	kothri_pantheon = {
+		color = { 236 201 26 }
+		icon = 12
 		country = {
-			culture_conversion_cost = -0.25
-			prestige_per_development_from_conversion = 0.10
+		    fire_damage_received = -0.15
+			global_trade_power = 0.25
 		}
-		allowed_center_conversion = {
-			eight_divines
-			nine_divines
-		}
-		will_get_center = {
-            any_owned_province = {
-                OR = {
-                    religion = nocturnal_cult
-                    religion = nine_divines
-                    religion = marukhism
-                }
-                is_in_capital_area = yes
-                is_reformation_center = no
-            }
-        }
 		country_as_secondary = {
-			culture_conversion_cost = -0.25
-			prestige_per_development_from_conversion = 0.10
+			fire_damage_received = -0.15
+			global_trade_power = 0.25
 		}
 		province = {
-			local_missionary_strength = -0.025
+			local_missionary_strength = -0.015
 		}
 		
-		heretic = { MARUKHISM_HERETIC }	
+		personal_deity = yes
 		
-		fervor = yes
+		heretic = { KOTHRI_HERETIC }	
 		
-		harmonized_modifier = harmonized_marukhism
+		harmonized_modifier = harmonized_kothri_pantheon
 	}
 	
 	reason_and_logic_cult = {
@@ -959,26 +983,53 @@ occult_group = {
 		harmonized_modifier = harmonized_reason_and_logic_cult
 	}
 	
-	all-maker_cult = {
-		color = { 23 35 192 }
-		icon = 32
+	reclamations_pantheon = {
+		color = { 10 14 146 }
+		icon = 15
 		country = {
-			hostile_attrition = 1
-			production_efficiency = 0.25
+			years_of_nationalism = -10
+			same_culture_advisor_cost = -0.25
 		}
+		allowed_center_conversion = {
+			tribunal_pantheon
+			meridia_cult
+			mehrunes_dagon_cult
+			molog_bal_cult
+			hermeus_mora_cult
+			hircine_cult
+			sheogorath_cult
+			nocturnal_cult
+		}
+		will_get_center = {
+            any_owned_province = {
+				OR = {
+					religion = tribunal_pantheon
+					religion = meridia_cult
+					religion = mehrunes_dagon_cult
+					religion = molog_bal_cult
+					religion = hermeus_mora_cult
+					religion = hircine_cult
+					religion = sheogorath_cult
+					religion = nocturnal_cult
+					religion = reclamations_pantheon
+				}
+                is_in_capital_area = yes
+                is_reformation_center = no
+            }
+        }
 		country_as_secondary = {
-			hostile_attrition = 1
-			production_efficiency = 0.25
+			years_of_nationalism = -10
+			same_culture_advisor_cost = -0.25
 		}
 		province = {
 			local_missionary_strength = -0.025
 		}
 		
-		heretic = { ALL-MAKER_HERETIC }	
+		personal_deity = yes
 		
-		uses_karma = yes
+		heretic = { RECLAMATIONS_HERETIC }	
 		
-		harmonized_modifier = harmonized_all-maker_cult
+		harmonized_modifier = harmonized_reclamations_pantheon
 	}
 	
 	dremora_pantheon = {

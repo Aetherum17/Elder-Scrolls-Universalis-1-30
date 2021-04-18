@@ -1,0 +1,388 @@
+### ADM
+
+konigreich0 = {
+	category = ADM
+
+	trigger = {
+		#government_rank = 5
+	}
+	bonus = {
+		land_morale = 0.05
+	}
+	
+	konigreich1 = {
+		prestige_decay = -0.01
+	}
+	konigreich2 = {
+		land_forcelimit = 10
+	}
+	konigreich3 = {
+		development_cost = -0.1
+	}
+	konigreich4 = {
+		institution_spread_from_true_faith = 0.15
+	}
+	konigreich5 = {
+		naval_forcelimit = 25
+	}
+	konigreich6 = {
+		reinforce_cost_modifier = -0.15
+	}
+	konigreich7 = {
+		diplomatic_upkeep = 1
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 50
+			always = yes
+		}
+	}
+}
+
+diktatur0 = {
+	category = ADM
+
+	trigger = {
+		#NOT = { stability = 0 }
+	}
+	bonus = {
+		mercenary_discipline = 0.05	
+	}	
+	
+	diktatur1 = {
+		global_tax_modifier = 0.1
+	}
+	diktatur2 = {
+		production_efficiency = 0.1
+	}
+	diktatur3 = {
+		mercenary_manpower = 0.1
+	}
+	diktatur4 = {
+		loot_amount = 0.25
+	}
+	diktatur5 = {
+		land_forcelimit_modifier = 0.10
+	}
+	diktatur6 = {
+		diplomatic_annexation_cost = -0.1
+	}
+	diktatur7 = {
+		mil_tech_cost_modifier = -0.05
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 50
+			always = yes
+		}
+	}
+}
+
+gesundheit0 = {
+	category = ADM
+
+	trigger = {
+		#total_development = 1000
+	}
+	bonus = {
+		global_unrest = -1
+	}
+	
+	gesundheit1 = {
+		production_efficiency = 0.1
+	}
+	gesundheit2 = {
+		defensiveness = 0.1
+	}
+	gesundheit3 = {
+		global_manpower_modifier = 0.1
+		
+	}
+	gesundheit4 = {
+		siege_ability = 0.05
+	}
+	gesundheit5 = {
+		manpower_recovery_speed = 0.10
+	}
+	gesundheit6 = {
+		idea_cost = -0.05
+	}
+	gesundheit7 = {
+		global_tax_modifier = 0.10
+		
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 50
+			always = yes
+		}
+	}
+}
+
+### DIP
+
+assimilation0 = {
+	category = DIP
+
+	trigger = {
+		#num_accepted_cultures = 3
+	}
+	bonus = {
+		diplomatic_reputation = 1
+	}
+		
+	assimilation1 = {
+		culture_conversion_cost = -0.10
+	}
+	assimilation2 = {
+		diplomatic_annexation_cost = -0.15
+	}
+	assimilation7 = {
+		global_manpower_modifier = 0.10
+	}
+	assimilation3 = {
+		religious_unity = 0.10
+	}
+	assimilation4 = {
+		years_of_nationalism = -5
+	}
+	assimilation5 = {
+		stability_cost_modifier = -0.10
+	}
+	assimilation6 = {
+		shock_damage_received = -0.025
+	}
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 50
+			always = yes
+		}
+	}
+}
+
+nationalismus0 = {
+	category = DIP
+
+	trigger = {
+		#num_of_cities = 250
+	}
+	bonus = {
+		prestige = 0.25
+	}
+		
+	nationalismus1 = {
+		war_exhaustion_cost = -0.10
+	}
+	nationalismus3 = {
+		global_regiment_cost = -0.10
+	}
+	nationalismus4 = {
+		hostile_attrition = 1
+	}
+	nationalismus5 = {
+		enemy_core_creation = 0.10
+	}
+	nationalismus2 = {
+		global_manpower = 2.5
+	}
+	nationalismus6 = {
+		global_unrest = -1
+	}
+	nationalismus7 = {
+		prestige_from_land = 0.15
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 50
+			always = yes
+		}
+	}
+}
+
+kriegsproduktion0 = {
+	category = DIP
+
+	trigger = {
+		#any_country = {
+		#	offensive_war_with = ROOT
+		#	army_size = ROOT
+		#}
+	}
+	bonus = {
+		land_morale = 0.05
+	}
+		
+	kriegsproduktion1 = {
+		infantry_cost = -0.10
+	}
+	kriegsproduktion2 = {
+		cavalry_cost = -0.10
+	}
+	kriegsproduktion3 = {
+		interest = -0.35
+	}
+	kriegsproduktion4 = {
+		reinforce_speed = 0.25
+	}
+	kriegsproduktion5 = {
+		fire_damage = 0.05
+	}
+	kriegsproduktion6 = {
+		artillery_cost = -0.10
+	}
+	kriegsproduktion7 = {
+		land_forcelimit_modifier = 0.10
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 50
+			always = yes
+		}
+	}
+}
+
+### MIL
+
+formation0 = {
+	category = MIL
+
+	trigger = {
+		#has_commanding_three_star = yes
+	}
+	bonus = {
+		leader_land_manuever = 1
+	}
+		
+	formation1 = {
+		movement_speed = 0.10
+	}
+	formation2 = {
+		shock_damage = 0.05
+	}
+	formation3 = {
+		cavalry_flanking = 0.15
+	}
+
+	formation4 = {
+		shock_damage_received = -0.05
+	}
+	formation5 = {
+		fire_damage = 0.05
+	}
+	formation6 = {
+		land_attrition = -0.10
+	}
+	formation7 = {
+		fire_damage_received = -0.05
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 50
+			always = yes
+		}
+	}
+}
+
+militarismus0 = {
+	category = MIL
+
+	trigger = {
+		#revanchism = 50
+	}
+	bonus = {
+		war_exhaustion = -0.01
+	}
+		
+	militarismus1 = {
+		land_forcelimit_modifier = 0.1
+	}
+	militarismus2 = {
+		free_leader_pool = 1
+	}
+	militarismus3 = {
+		discipline = 0.05
+	}
+	militarismus4 = {
+		global_manpower = 5.0
+	}
+	militarismus5 = {
+		garrison_size = 0.25	
+	}
+	militarismus6 = {
+		land_attrition = -0.1
+	}
+	militarismus7 = {
+		shock_damage_received = -0.05
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 50
+			always = yes
+		}
+	}
+}
+
+festung0 = {
+	category = MIL
+
+	trigger = {
+		#any_neighbor_country = {
+		#	military_strength = {
+		#		who = ROOT
+		#		value = 2.0
+		#	}
+		#}
+	}
+	bonus = {
+		reinforce_speed = 0.15
+	}
+		
+	festung7 = {
+		reinforce_cost_modifier = -0.15
+		
+	}
+	festung1 = {
+		defensiveness = 0.25
+		
+	}
+	festung4 = {
+		fort_maintenance_modifier = -0.25
+	}
+	festung6 = {
+		shock_damage_received = -0.05
+	}
+	
+	festung2 = {
+		garrison_size = 0.15
+	}
+	festung5 = {
+		hostile_attrition = 1
+	}
+	festung3 = {
+		artillery_cost = -0.1
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 50
+			always = yes
+		}
+	}
+}

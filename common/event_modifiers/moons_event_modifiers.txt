@@ -1,0 +1,267 @@
+moon_timer = {
+}
+
+#1
+#Lunar Lattice - New Masser & Waxing Secunda
+#Ohmes-raht: Similar in size and shape to humans, but with light fur and a tail.
+
+moon_1_event_modifier_1 = {
+	global_own_trade_power = 0.15
+}
+
+moon_1_event_modifier_2 = {
+	global_trade_goods_size_modifier = 0.15
+}
+
+moon_1_event_modifier_3 = {
+	global_tariffs = 0.15
+}
+
+#2
+#Lunar Lattice - New Masser & Full Secunda
+#Ohmes: Most common breed of Khajiit outside of Elsweyr.
+
+moon_2_event_modifier_1 = {
+	caravan_power = 0.15
+}
+
+moon_2_event_modifier_2 = {
+	global_foreign_trade_power = 0.15
+}
+
+moon_2_event_modifier_3 = {
+	global_ship_trade_power = 0.15
+}
+
+#3
+#Lunar Lattice - New Masser & Waning Secunda
+#Suthay-raht: Walk upright but are more cat-like than Ohmes-raht.
+
+moon_3_event_modifier_1 = {
+	diplomats = 1
+}
+
+moon_3_event_modifier_2 = {
+	merchants = 1
+}
+
+moon_3_event_modifier_3 = {
+	colonists = 1
+}
+
+#4
+#Lunar Lattice - New Masser & New Secunda
+#Suthay: Similar to Suthay-raht but smaller and weaker.
+
+moon_4_event_modifier_1 = {
+	ae_impact = -0.15
+}
+
+moon_4_event_modifier_2 = {
+	trade_efficiency = 0.15
+}
+
+moon_4_event_modifier_3 = {
+	global_missionary_strength = 0.015
+}
+
+#5
+#Lunar Lattice - Waxing Masser & Waxing Secunda
+#Cathay-raht: Described as looking like upright jaguars.
+
+moon_5_event_modifier_1 = {
+	discipline = 0.01
+}
+
+moon_5_event_modifier_2 = {
+	mercenary_discipline = 0.10
+}
+
+moon_5_event_modifier_3 = {
+	army_tradition_decay = -0.01
+}
+
+#6
+#Lunar Lattice - Waxing Masser & Full Secunda
+#Cathay: Larger and stronger than a Suthay-raht, but smaller than a Cathay-raht.
+
+moon_6_event_modifier_1 = {
+	global_manpower_modifier = 0.15
+}
+
+moon_6_event_modifier_1 = {
+	global_sailors_modifier = 0.15
+}
+
+moon_6_event_modifier_1 = {
+	mercenary_manpower = 0.15
+}
+
+#7
+#Lunar Lattice - Waxing Masser & Waning Secunda
+#Tojay-raht: Unknown khajiiti bipedal form.
+
+moon_7_event_modifier_1 = {
+	idea_cost = -0.15
+}
+
+moon_7_event_modifier_2 = {
+	global_institution_spread = 0.15
+}
+
+moon_7_event_modifier_3 = {
+	yearly_corruption = -0.15
+}
+
+#8
+#Lunar Lattice - Waxing Masser & New Secunda
+#Tojay: Unknown khajiiti bipedal form, smaller than the Tojay-raht.
+
+moon_8_event_modifier_1 = {
+	adm_advisor_cost = -0.15
+}
+
+moon_8_event_modifier_2 = {
+	dip_advisor_cost = -0.15
+}
+
+moon_8_event_modifier_3 = {
+	mil_advisor_cost = -0.15
+}
+
+#9
+#Lunar Lattice - Full Masser & Waxing Secunda
+#Senche-raht: At the size of a large horse, this creatures are knwon as Battlecats.
+
+moon_9_event_modifier_1 = {
+	artillery_bonus_vs_fort = 1
+}
+
+moon_9_event_modifier_2 = {
+	backrow_artillery_damage = 0.10
+}
+
+moon_9_event_modifier_3 = {
+	artillery_power = 0.1
+}
+
+#10
+#Lunar Lattice - Full Masser & Full Secunda
+#Senche: Sprinters that are often used as mounts for by other Khajiit. 
+
+moon_10_event_modifier_1 = {
+	movement_speed = 0.10
+}
+
+moon_10_event_modifier_2 = {
+	recover_army_morale_speed = 0.10
+}
+
+moon_10_event_modifier_3 = {
+	recover_navy_morale_speed = 0.10
+}
+
+#11
+#Lunar Lattice - Full Masser & Waning Secunda
+#Pahmar-raht: Like a Pahmar, but larger, more powerful.
+
+moon_11_event_modifier_1 = {
+	land_morale = 0.10
+}
+
+moon_11_event_modifier_2 = {
+	naval_morale = 0.10
+}
+
+moon_11_event_modifier_3 = {
+	sunk_ship_morale_hit_recieved = -0.1
+}
+
+#12
+#Lunar Lattice - Full Masser & New Secunda
+#Pahmar: Similar to a tiger.
+
+moon_12_event_modifier_1 = {
+	cavalry_power = 0.15
+}
+
+moon_12_event_modifier_2 = {
+	cavalry_shock = 0.15
+}
+
+moon_12_event_modifier_3 = {
+	cavalry_flanking = 0.15
+}
+
+#13
+#Lunar Lattice - Waning Masser & Waxing Secunda
+#Alfiq-raht: Probably like the Alfiq but larger.
+
+moon_13_event_modifier_1 = {
+	placed_merchant_power = 15
+}
+
+moon_13_event_modifier_2 = {
+	trade_steering = 0.15
+}
+
+moon_13_event_modifier_3 = {
+	ship_power_propagation = 0.15
+}
+
+#14
+#Lunar Lattice - Waning Masser & Full Secunda
+#Alfiq: Similar in appearence to domesticated cats.
+
+moon_14_event_modifier_1 = {
+	war_exhaustion = -0.010
+}
+
+moon_14_event_modifier_2 = {
+	years_of_nationalism = -10
+}
+
+moon_14_event_modifier_3 = {
+	reduced_liberty_desire = 10
+}
+
+#15
+#Lunar Lattice - Waning Masser & Waning Secunda
+#Dagi-raht: Naturally skilled in the use of magic.
+
+moon_15_event_modifier_1 = {
+	fire_damage = 0.15
+}
+
+moon_15_event_modifier_2 = {
+	shock_damage = 0.15
+}
+
+moon_15_event_modifier_3 = {
+	siege_ability = 0.15
+}
+
+
+#16
+#Lunar Lattice - Waning Masser & New Secunda
+#Dagi: Small and light creatures, who live in the forrest.
+
+moon_16_event_modifier_1 = {
+	spy_offence = 0.15
+}
+
+moon_16_event_modifier_2 = {
+	global_spy_defence = 0.15
+}
+
+moon_16_event_modifier_3 = {
+	core_creation = -0.15
+}
+
+#17
+#Lunar Lattice - The Third Moon
+#Mane: Unique form of Khajiit born when a 3rd moon appears in the sky.
+
+moon_17_event_modifier = {
+	all_power_cost = -0.15
+}

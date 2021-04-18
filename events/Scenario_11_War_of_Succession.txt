@@ -59,6 +59,11 @@ country_event = {
 	option = {
 		name = "es_11_scenario.1.b"
 		ai_chance = { factor = 50 }
+		trigger = {
+			any_owned_province = {
+				NOT = { superregion = skyrim_superregion }
+			}
+		}
 		
 		kill_ruler = yes
 		
@@ -86,7 +91,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "es_11_scenario.1.b"
+		name = "es_11_scenario.1.c"
 		ai_chance = { factor = 50 }
 		
 		kill_ruler = yes
