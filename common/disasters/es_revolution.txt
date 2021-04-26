@@ -1,6 +1,12 @@
 es_revolution = {
 	potential = {
 		NOT = { has_reform = native_basic_reform }
+		NOT = { has_reform = colonial_government }
+		NOT = { has_reform = presidential_despot_reform }
+		NOT = { has_reform = revolutionary_republic_reform }
+		NOT = { has_reform = junior_revolutionary_republic_reform }
+		NOT = { has_reform = trading_city }
+		NOT = { has_reform = free_city }
 	}
 
 	can_start = {

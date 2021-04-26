@@ -913,7 +913,7 @@ es_age_of_renascense = {
 			personal_union = 1
 		}
 		obj_9_3 = {
-			average_unrest = 0
+			NOT = { average_unrest = 1 }
 		}
 		obj_9_4 = {
 			num_of_hired_mercenary_companies = 1

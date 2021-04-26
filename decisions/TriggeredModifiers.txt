@@ -10,7 +10,7 @@ country_decisions = {
 				has_discovered = 611
 				has_discovered = 743
 				has_discovered = 583
-				has_discovered = 468
+				has_discovered = 519
 			}
 			NOT = { has_country_modifier = east_akaviri_trade_route }
 		}
@@ -22,7 +22,7 @@ country_decisions = {
 				owns_or_subject_of = 611
 				owns_or_subject_of = 743
 				owns_or_subject_of = 583
-				owns_or_subject_of = 468
+				owns_or_subject_of = 519
 			}
 		}
 		effect = {
@@ -119,7 +119,7 @@ country_decisions = {
 	    major = yes
 		potential = {
 			NOT = { has_country_modifier = dwemer_research_hubs }
-			NOT = { culture_group = dwemer_cg }
+			NOT = { primary_culture = dwemer }
 		    any_owned_province = { continent = Tamriel }
 			OR = {
 			970 = { country_or_subject_holds = ROOT } 
@@ -154,13 +154,13 @@ country_decisions = {
 		    NOT = { has_country_modifier = dwemer_technologies }
 		    NOT = { has_global_flag = dwemer_dissapearence_flag }
 			OR = {
-		    culture_group = dwemer_cg
+		    primary_culture = dwemer
 		    tag = UNI
 		    }
 		}
 		allow = {
 			OR = {
-		    culture_group = dwemer_cg
+		    primary_culture = dwemer
 		    tag = UNI
 		    }
 		}
@@ -181,29 +181,23 @@ country_decisions = {
 		    NOT = { has_country_modifier = increased_dwemer_influence }
 			NOT = { has_country_modifier = reduced_dwemer_influence }
 		    NOT = { has_global_flag = dwemer_dissapearence_flag }
-		    NOT = { culture_group = dwemer_cg }
+		    NOT = { primary_culture = dwemer }
 			OR = {
 			any_neighbor_country = {
-				culture_group = dwemer_cg
+		    primary_culture = dwemer
 		    }
 			any_owned_province = {
-				culture = dwemer
-				culture = rourkenid
-				culture = dumalacathi
-				culture = kagrenmer
+			culture = dwemer
 			}
 			}
 		}
 		allow = {
 			OR = {
 			any_neighbor_country = {
-				culture_group = dwemer_cg
+		    primary_culture = dwemer
 		    }
 			any_owned_province = {
-				culture = dwemer
-				culture = rourkenid
-				culture = dumalacathi
-				culture = kagrenmer
+			culture = dwemer
 			}
 			}
 		}
@@ -224,29 +218,23 @@ country_decisions = {
 		    NOT = { has_country_modifier = increased_dwemer_influence }
 			NOT = { has_country_modifier = reduced_dwemer_influence }
 		    NOT = { has_global_flag = dwemer_dissapearence_flag }
-		    NOT = { culture_group = dwemer_cg }
+		    NOT = { primary_culture = dwemer }
 			OR = {
 			any_neighbor_country = {
-				culture_group = dwemer_cg
+		    primary_culture = dwemer
 		    }
 			any_owned_province = {
-				culture = dwemer
-				culture = rourkenid
-				culture = dumalacathi
-				culture = kagrenmer
+			culture = dwemer
 			}
 			}
 		}
 		allow = {
 			OR = {
 			any_neighbor_country = {
-				culture_group = dwemer_cg
+		    primary_culture = dwemer
 		    }
 			any_owned_province = {
-				culture = dwemer
-				culture = rourkenid
-				culture = dumalacathi
-				culture = kagrenmer
+			culture = dwemer
 			}
 			}
 		}

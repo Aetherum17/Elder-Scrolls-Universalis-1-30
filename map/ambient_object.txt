@@ -1,4 +1,21 @@
 type={
+	type="es_orbiter"
+	use_animation=no
+	scale=1.0
+	always_visible=yes
+	object={
+		name="es_orbiter"
+		hidden_on_start=yes
+		position={
+			1500.000 19.00 1193.000
+		}
+		rotation={
+			0.000 90.000 0.000 
+		}
+	}
+}
+
+type={
 	type="es_orrery"
 	use_animation=yes
 	scale=1.500000

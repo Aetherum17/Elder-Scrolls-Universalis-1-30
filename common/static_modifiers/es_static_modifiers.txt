@@ -345,8 +345,8 @@ non_core = {
 }
 
 territory_core = {
-	local_tax_modifier = 0.5				
-	local_manpower_modifier = 0.5
+	local_tax_modifier = 0.5	
+	local_production_efficiency = 0.5
 	local_manpower_modifier = 0.5
 	local_sailors_modifier = 0.5
 	local_missionary_strength = -0.025
@@ -1387,7 +1387,7 @@ holy_order_nation = {
 
 holy_order_bonus = {
 	tolerance_own = 1.5
-	tolerance_heathen = -3.5
+	tolerance_heretic = -3.5
 	tolerance_heathen = -3.5
 	land_forcelimit_modifier = 0.5
 	naval_forcelimit_modifier = 0.35

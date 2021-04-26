@@ -1,10 +1,12 @@
-estate_vaisyas = {
-	icon = 9
+# For Government Reforms to identify properly influence and loyalty modifiers, remember to put disqualifying triggers before the has_reform
+
+# Burgers
+
+estate_burghers = {
+	icon = 3
 
 	# If true, country will get estate
-	#Replaces Burghers
 	trigger = {	
-		has_dlc = "Dharma"
 		NOT = { has_reform = pirate_republic_reform }
 		NOT = { has_government_attribute = is_merchant_republic }
 		NOT = { government = native }
@@ -15,8 +17,8 @@ estate_vaisyas = {
 		}
 		is_nomad = no
 		OR = {
-		    government = republic
-			government = tribal
+		    government = monarchy
+			government = republic
 		}
 		is_colonial_nation = no
 		NOT = { has_reform = revolutionary_empire_reform }
@@ -24,21 +26,21 @@ estate_vaisyas = {
 
 	# These scale with loyalty & power
 	country_modifier_happy = {
-		trade_efficiency = 0.1
-		trade_steering = 0.10
-		global_trade_power = 0.1
+	    advisor_cost = -0.1
+		production_efficiency = 0.10
+		development_cost = -0.1
 	}
 	country_modifier_neutral = {
 	}	
 	country_modifier_angry = {
-	    trade_efficiency = -0.25
-		trade_steering = -0.25
+		advisor_cost = 0.25
+		production_efficiency = -0.25
 		global_unrest = 2.5
 	}
 	land_ownership_modifier = {
-		vaisyas_loyalty_modifier = 0.25
+		burghers_loyalty_modifier = 0.25
 	}
-
+	
 	province_independence_weight = {
 		factor = 1
 		modifier = {
@@ -67,6 +69,10 @@ estate_vaisyas = {
 		modifier = {
 			factor = 1.5
 			province_trade_power = 20
+		}
+		modifier = {
+			factor = 1.5
+			has_province_modifier = thankful_guilds
 		}
 	}
 
@@ -119,7 +125,6 @@ estate_vaisyas = {
 			OR = {
 				has_disaster = estate_nobility_disaster
 				has_disaster = estate_church_disaster
-				has_disaster = estate_burghers_disaster
 				has_disaster = estate_brahmins_disaster
 				has_disaster = estate_jains_disaster
 			}
@@ -133,7 +138,6 @@ estate_vaisyas = {
 			OR = {
 				has_disaster = estate_nobility_disaster
 				has_disaster = estate_church_disaster
-				has_disaster = estate_burghers_disaster
 				has_disaster = estate_brahmins_disaster
 				has_disaster = estate_jains_disaster
 			}
@@ -141,51 +145,60 @@ estate_vaisyas = {
 		loyalty = -20
 	}
 
+	color = { 0 19 127 }
+
 	privileges = {
-		estate_vaisyas_land_rights
-		estate_vaisyas_loyalty_privilege
-		estate_vaisyas_advisor
-		estate_vaisyas_patronage_of_the_arts
-		estate_vaisyas_wartaxes
-		estate_vaisyas_control_over_monetary_policy
-		estate_vaisyas_exclusive_trade_rights
-		estate_vaisyas_private_trade_fleets
-		estate_vaisyas_monopoly_of_textiles
-		estate_vaisyas_monopoly_of_dyes
-		estate_vaisyas_monopoly_of_glass
-		estate_vaisyas_monopoly_of_paper
-		estate_vaisyas_sorcerous_experimentation
-		estate_vaisyas_supremacy_over_crown
+		estate_burghers_land_rights
+		estate_burghers_land_of_commerce
+		estate_burghers_admirals
+		estate_burghers_patronage_of_the_arts
+		estate_burghers_commercial_board_of_advice
+		estate_burghers_new_world_charter
+		estate_burghers_indebted_to_burghers
+		estate_burghers_free_enterprise
+		estate_burghers_the_great_privilege
+		estate_burghers_exclusive_trade_rights
+		estate_burghers_control_over_monetary_policy
+		estate_burghers_private_trade_fleets
+		estate_burghers_monopoly_of_textiles
+		estate_burghers_monopoly_of_dyes
+		estate_burghers_monopoly_of_glass
+		estate_burghers_monopoly_of_paper
+		estate_burghers_enforced_interfaith_dialogue
+		estate_burghers_prussian_confederation
+		estate_burghers_statutory_rights
+		estate_burghers_establish_slave_enclaves
+		estate_burghers_supremacy_over_crown
 	}
 
 	agendas = {
-		estate_vaisyas_build_trade_building_in_y
-		estate_vaisyas_build_port_building_in_y
-		estate_vaisyas_build_production_building_in_y
-		estate_vaisyas_build_manufactory_in_y
-		estate_vaisyas_build_university_in_y
-		estate_vaisyas_pay_off_loans
-		estate_vaisyas_restore_republican_tradition
-		estate_vaisyas_restore_currency
-		estate_vaisyas_recovery_from_hyperinflation
-		estate_vaisyas_increase_trade_power_in_X
-		estate_vaisyas_access_sea
-		estate_vaisyas_build_a_fleet
-		estate_vaisyas_bigger_fleet_than_rival
-		estate_vaisyas_improve_dip_rep
-		estate_vaisyas_get_cash
-		estate_vaisyas_discover_X_in_america
-		estate_vaisyas_colonise_X
-		estate_vaisyas_colonise_more_X
-		estate_vaisyas_colonial_nation
-		estate_vaisyas_develop_x
-		estate_vaisyas_reduce_corruption
-		estate_vaisyas_protect_against_piracy
-		estate_vaisyas_hire_advisor
-		estate_vaisyas_fire_advisor
+		estate_burghers_develop_x
+		estate_burghers_build_trade_building_in_y
+		estate_burghers_build_port_building_in_y
+		estate_burghers_build_production_building_in_y
+		estate_burghers_build_university_in_y
+		estate_burghers_build_manufactory_in_y
+		estate_burghers_pay_off_loans
+		estate_burghers_restore_republican_tradition
+		estate_burghers_restore_currency
+		estate_burghers_recovery_from_hyperinflation
+		estate_burghers_increase_trade_power_in_X
+		estate_burghers_access_sea
+		estate_burghers_build_a_fleet
+		estate_burghers_bigger_fleet_than_rival
+		estate_burghers_improve_dip_rep
+		estate_burghers_get_cash
+		estate_burghers_discover_X_in_america
+		estate_burghers_colonise_X
+		estate_burghers_colonise_more_X
+		estate_burghers_colonial_nation
+		estate_burghers_expand_trade_company
+		estate_burghers_silk_trade
+		estate_burghers_reduce_corruption
+		estate_burghers_protect_against_piracy
+		estate_burghers_hire_advisor
+		estate_burghers_fire_advisor
 	}
 
-	color = { 0 148 255 }
-	
 	influence_from_dev_modifier = 1.0
 }

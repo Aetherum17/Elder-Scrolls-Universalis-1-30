@@ -31,6 +31,15 @@ entity = {
 }
 
 entity = {
+	name = "es_orbiter"
+	pdxmesh = "mesh_orbiter"
+	#state = { name = "idle"	animation = "idle" }
+	attach = {
+		top = "es_secunda"
+	}
+}
+
+entity = {
 	name = "es_ambient_towers"
 	pdxmesh = "mesh_ambient_towers"
 }

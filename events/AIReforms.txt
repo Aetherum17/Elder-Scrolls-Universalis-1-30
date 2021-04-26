@@ -1,0 +1,751 @@
+#id, title and etc are temporary, but it will be only ai country
+#lv 35-rep and lv 24 had same name, now this file is follow fixed name
+#some reform(has dutch system) cannot be picked in same time, so disabled
+#currenteach reform has 50 years. in esu each reform has 25 years.(so 50% slowed for rough balance, it can be changed like 25~40?)
+#it is needed to connect -99999 reform point
+
+country_event = {
+	id = temporarytitle.1
+	title = temporarytitle.1.t
+	desc = temporarytitle.1.d
+	picture = ES_CITY_IN_FIRE_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "temporarytitle.1.a"
+		#Level 2. that level is same as ingame tier. diff than reform text
+		if = { 
+			limit = { is_year = 100 }
+			random_list = { 
+				10 = { add_government_reform = local_law }
+				10 = { add_government_reform = national_council }
+				25 = { add_government_reform = trial_and_jury }
+				5 = { add_government_reform = community_militia }
+			}
+		}
+		#Level 3
+		if = { 
+			limit = { is_year = 150 }
+			random_list = { 
+				25 = { add_government_reform = 11_a }
+				5 = { add_government_reform = 11_b }
+				5 = { add_government_reform = 11_c }
+				5 = { add_government_reform = 11_d }
+			}
+		}
+		#Level 4
+		if = { 
+			limit = { is_year = 200 }
+			random_list = { 
+				10 = { add_government_reform = commission }
+				10 = { add_government_reform = serfdom }
+				10 = { add_government_reform = unregulated_guilds }
+				10 = { add_government_reform = slavery }
+			}
+		}
+		#Level 5, divided
+		if = { 
+			limit = { is_year = 250 government = monarchy }
+			random_list = { 
+				10 = { add_government_reform = strong_nobles }
+				10 = { add_government_reform = curtailed_nobles }
+				10 = { add_government_reform = estate_empowerment }
+				10 = { add_government_reform = warrior_estate }
+			}
+		}
+		if = { 
+			limit = { is_year = 250 government = republic }
+			random_list = { 
+				10 = { add_government_reform = land_owning_citizenship }
+				10 = { add_government_reform = expanded_citizenship }
+				10 = { add_government_reform = suffrage }
+				5 = { add_government_reform = enforced_hierarchy }
+			}
+		}
+		if = { 
+			limit = { is_year = 250 government = theocracy }
+			random_list = { 
+				10 = { add_government_reform = theological_law }
+				10 = { add_government_reform = inheritance }
+				10 = { add_government_reform = religious_prestige }
+				10 = { add_government_reform = chosen_by_the_gods }
+			}
+		}
+		if = { 
+			limit = { is_year = 250 government = tribal }
+			random_list = { 
+				10 = { add_government_reform = loose_confederacy }
+				10 = { add_government_reform = tribal_territory }
+				10 = { add_government_reform = survival }
+				10 = { add_government_reform = coalition }
+			}
+		}
+		#level 6
+		if = { 
+			limit = { is_year = 300 }
+			random_list = { 
+				10 = { add_government_reform = 21_a }
+				10 = { add_government_reform = 21_b }
+				10 = { add_government_reform = 21_c }
+				10 = { add_government_reform = 21_d }
+			}
+		}
+		#level 7
+		if = { 
+			limit = { is_year = 350 }
+			random_list = { 
+				10 = { add_government_reform = governmental_townships }
+				10 = { add_government_reform = urban_centers }
+				5 = { add_government_reform = rural_baclwater }
+				5 = { add_government_reform = nomadism }
+			}
+		}
+		#level 8
+		if = { 
+			limit = { is_year = 400 }
+			random_list = { 
+				10 = { add_government_reform = regulation }
+				#10 = { add_government_reform = reason_and_logic }
+				10 = { add_government_reform = persecution }
+				5 = { add_government_reform = magical_society }
+			}
+		}
+		#Level 9
+		if = { 
+			limit = { is_year = 450 }
+			random_list = { 
+				10 = { add_government_reform = 31_a }
+				10 = { add_government_reform = 31_b }
+				10 = { add_government_reform = 31_c }
+				10 = { add_government_reform = 31_d }
+			}
+		}
+		#Level 10
+		if = { 
+			limit = { is_year = 500 }
+			random_list = { 
+				10 = { add_government_reform = 46_a }
+				10 = { add_government_reform = 46_b }
+				10 = { add_government_reform = 46_c }
+				10 = { add_government_reform = 46_d }
+			}
+		}
+		#Level 11, divided
+		if = { 
+			limit = { is_year = 550 government = monarchy }
+			random_list = { 
+				10 = { add_government_reform = empowered_merchants }
+				10 = { add_government_reform = empowered_clergy }
+				10 = { add_government_reform = noble_supremacy }
+				5 = { add_government_reform = bandit_alliance }
+			}
+		}
+		if = { 
+			limit = { is_year = 550 government = republic }
+			random_list = { 
+				10 = { add_government_reform = free_speach }
+				10 = { add_government_reform = authoritarism }
+				10 = { add_government_reform = political_dynasties }
+				10 = { add_government_reform = triumphs }
+			}
+		}
+		if = { 
+			limit = { is_year = 550 government = theocracy }
+			random_list = { 
+				10 = { add_government_reform = minor_concessions }
+				10 = { add_government_reform = clerical_bureaucracy }
+				10 = { add_government_reform = secular_tolerance }
+				10 = { add_government_reform = war_against_secularization }
+			}
+		}
+		if = { 
+			limit = { is_year = 550 government = tribal }
+			random_list = { 
+				10 = { add_government_reform = oral_tradition }
+				10 = { add_government_reform = written_record }
+				10 = { add_government_reform = unspoken_past }
+				10 = { add_government_reform = historical_preservation }
+			}
+		}
+		#Level 12
+		if = { 
+			limit = { is_year = 600 }
+			random_list = { 
+				10 = { add_government_reform = tavern_life }
+				10 = { add_government_reform = tournaments }
+				10 = { add_government_reform = art_and_science }
+				5 = { add_government_reform = raiding }
+			}
+		}
+		#Level 13
+		if = { 
+			limit = { is_year = 650 }
+			random_list = { 
+				25 = { add_government_reform = 41_a }
+				5 = { add_government_reform = 41_b }
+				5 = { add_government_reform = 41_c }
+				5 = { add_government_reform = 41_d }
+			}
+		}
+		#Level 14
+		if = { 
+			limit = { is_year = 700 }
+			random_list = { 
+				10 = { add_government_reform = internal_market }
+				10 = { add_government_reform = free_trade }
+				10 = { add_government_reform = protectionism }
+				10 = { add_government_reform = corporatism }
+			}
+		}
+		#Level 15, divided
+		if = { 
+			limit = { is_year = 750 government = monarchy }
+			random_list = { 
+				10 = { add_government_reform = primogeniture }
+				5 = { add_government_reform = seniority }
+				10 = { add_government_reform = open }
+				10 = { add_government_reform = gravelkind }
+			}
+		}
+		if = { 
+			limit = { is_year = 750 government = republic }
+			random_list = { 
+				10 = { add_government_reform = civil_separation }
+				10 = { add_government_reform = lawful_separation }
+				10 = { add_government_reform = interactive_institutions }
+				#5 = { add_government_reform = subservient_bureaucracy }
+			}
+		}
+		if = { 
+			limit = { is_year = 750 government = theocracy }
+			random_list = { 
+				10 = { add_government_reform = minor_concessions }
+				10 = { add_government_reform = clerical_bureaucracy }
+				10 = { add_government_reform = secular_tolerance }
+				10 = { add_government_reform = war_against_secularization }
+			}
+		}
+		if = { 
+			limit = { is_year = 750 government = tribal }
+			random_list = { 
+				10 = { add_government_reform = oral_tradition }
+				10 = { add_government_reform = written_record }
+				10 = { add_government_reform = unspoken_past }
+				10 = { add_government_reform = historical_preservation }
+			}
+		}
+		#Level 16
+		if = { 
+			limit = { is_year = 900 }
+			random_list = { 
+				25 = { add_government_reform = 12_a }
+				10 = { add_government_reform = 12_b }
+				5 = { add_government_reform = 12_c }
+				5 = { add_government_reform = 12_d }
+			}
+		}
+		#Level 17
+		if = { 
+			limit = { is_year = 950 }
+			random_list = { 
+				10 = { add_government_reform = state_religion }
+				10 = { add_government_reform = secularism }
+				10 = { add_government_reform = theological_dominance }
+				10 = { add_government_reform = fanaticism }
+			}
+		}
+		#Level 18
+		if = { 
+			limit = { is_year = 1000 }
+			random_list = { 
+				10 = { add_government_reform = support_fleet }
+				10 = { add_government_reform = inland_dominance }
+				10 = { add_government_reform = open_seas_doctrine }
+				10 = { add_government_reform = merchant_fleet }
+			}
+		}
+		#Level 19
+		if = { 
+			limit = { is_year = 1050 }
+			random_list = { 
+				10 = { add_government_reform = 22_a }
+				10 = { add_government_reform = 22_b }
+				10 = { add_government_reform = 22_c }
+				10 = { add_government_reform = 22_d }
+			}
+		}
+		#Level 20
+		if = { 
+			limit = { is_year = 1100 }
+			random_list = { 
+				10 = { add_government_reform = 17_a }
+				10 = { add_government_reform = 17_b }
+				10 = { add_government_reform = 17_c }
+				10 = { add_government_reform = 17_d }
+			}
+		}
+		#Level 21, divided
+		if = { 
+			limit = { is_year = 1150 government = monarchy }
+			random_list = { 
+				25 = { add_government_reform = absolut_monarch }
+				10 = { add_government_reform = figurehead }
+				10 = { add_government_reform = strong_councillors }
+				10 = { add_government_reform = parliamentary }
+			}
+		}
+		if = { 
+			limit = { is_year = 1150 government = republic }
+			random_list = { 
+				10 = { add_government_reform = united_states }
+				10 = { add_government_reform = regionalism }
+				10 = { add_government_reform = confederation }
+				5 = { add_government_reform = united_cities }
+			}
+		}
+		if = { 
+			limit = { is_year = 1150 government = theocracy }
+			random_list = { 
+				10 = { add_government_reform = missions }
+				10 = { add_government_reform = evangelism }
+				10 = { add_government_reform = forced_convertion }
+				10 = { add_government_reform = martyrdom }
+			}
+		}
+		if = { 
+			limit = { is_year = 1150 government = tribal }
+			random_list = { 
+				10 = { add_government_reform = rituals }
+				10 = { add_government_reform = formal_faith }
+				10 = { add_government_reform = syncretism }
+				5 = { add_government_reform = humanist }
+			}
+		}
+		#Level 22
+		if = { 
+			limit = { is_year = 1200 }
+			random_list = { 
+				10 = { add_government_reform = fighters_guild }
+				10 = { add_government_reform = mages_guild }
+				10 = { add_government_reform = thieves_guild }
+				10 = { add_government_reform = assassins_guild }
+			}
+		}
+		#Level 23
+		if = { 
+			limit = { is_year = 1250 }
+			random_list = { 
+				10 = { add_government_reform = 52_a }
+				10 = { add_government_reform = 52_b }
+				10 = { add_government_reform = 52_c }
+				10 = { add_government_reform = 52_d }
+			}
+		}
+		#Level 24. has bug with same name
+		if = { 
+			limit = { is_year = 1300 }
+			random_list = { 
+				10 = { add_government_reform = diplomatic_core }
+				10 = { add_government_reform = expansion }
+				10 = { add_government_reform = supremacy }
+				10 = { add_government_reform = guardian }
+			}
+		}
+		#Level 25, divided
+		if = { 
+			limit = { is_year = 1350 government = monarchy }
+			random_list = { 
+				10 = { add_government_reform = martial_ruler }
+				10 = { add_government_reform = traditional_heritage }
+				10 = { add_government_reform = backbone_of_the_nation }
+				10 = { add_government_reform = national_merit }
+			}
+		}
+		if = { 
+			limit = { is_year = 1350 government = republic }
+			random_list = { 
+				10 = { add_government_reform = weak_presidency }
+				10 = { add_government_reform = strong_presidency }
+				10 = { add_government_reform = co-consul }
+				10 = { add_government_reform = theocratic_presidency }
+			}
+		}
+		if = { 
+			limit = { is_year = 1350 government = theocracy }
+			random_list = { 
+				10 = { add_government_reform = religious_law }
+				10 = { add_government_reform = kindness_and_mercy }
+				10 = { add_government_reform = faith_alone }
+				#5 = { add_government_reform = justified_atrocity }
+			}
+		}
+		if = { 
+			limit = { is_year = 1350 government = tribal }
+			random_list = { 
+				10 = { add_government_reform = warrior_lodges }
+				10 = { add_government_reform = partial_nomadism }
+				10 = { add_government_reform = religious_overtones }
+				10 = { add_government_reform = evolutionary_survival }
+			}
+		}
+		#Level 26
+		if = { 
+			limit = { is_year = 1400 }
+			random_list = { 
+				25 = { add_government_reform = 13_a }
+				5 = { add_government_reform = 13_b }
+				5 = { add_government_reform = 13_c }
+				5 = { add_government_reform = 13_d }
+			}
+		}
+		#Level 27
+		if = { 
+			limit = { is_year = 1450 }
+			random_list = { 
+				10 = { add_government_reform = schooling }
+				10 = { add_government_reform = universities }
+				10 = { add_government_reform = war_academies }
+				10 = { add_government_reform = libraries }
+			}
+		}
+		#Level 28
+		if = { 
+			limit = { is_year = 1500 }
+			random_list = { 
+				10 = { add_government_reform = feudal_army }
+				10 = { add_government_reform = es_professional_army }
+				10 = { add_government_reform = mercenary_army }
+				10 = { add_government_reform = skilled_army }
+			}
+		}
+		#Level 29
+		if = { 
+			limit = { is_year = 1550 }
+			random_list = { 
+				10 = { add_government_reform = 37_a }
+				10 = { add_government_reform = 37_b }
+				10 = { add_government_reform = 37_c }
+				10 = { add_government_reform = 37_d }
+			}
+		}
+		#Level 30
+		if = { 
+			limit = { is_year = 1600 }
+			random_list = { 
+				10 = { add_government_reform = 57_a }
+				5 = { add_government_reform = 57_b }
+				5 = { add_government_reform = 57_c }
+				25 = { add_government_reform = 57_d }
+			}
+		}
+		#Level 31, divided
+		if = { 
+			limit = { is_year = 1650 government = monarchy }
+			random_list = { 
+				10 = { add_government_reform = courtier_politics }
+				10 = { add_government_reform = court_of_ambassadors }
+				10 = { add_government_reform = martial_court }
+				#5 = { add_government_reform = court_of_darkness }
+			}
+		}
+		if = { 
+			limit = { is_year = 1650 government = republic }
+			random_list = { 
+				10 = { add_government_reform = efficient_court_system }
+				10 = { add_government_reform = hierarchial_courts }
+				10 = { add_government_reform = biased_law_offices }
+				10 = { add_government_reform = private_lawyers }
+			}
+		}
+		if = { 
+			limit = { is_year = 1650 government = theocracy }
+			random_list = { 
+				10 = { add_government_reform = encouraged_debate }
+				10 = { add_government_reform = religious_scolarship }
+				10 = { add_government_reform = technological_council }
+				10 = { add_government_reform = clerical_truth }
+			}
+		}
+		if = { 
+			limit = { is_year = 1650 government = tribal }
+			random_list = { 
+				10 = { add_government_reform = clan_society }
+				10 = { add_government_reform = accepted_outsiders }
+				10 = { add_government_reform = clan_immigration }
+				10 = { add_government_reform = tribal_colonies }
+			}
+		}
+		#Level 32
+		if = { 
+			limit = { is_year = 1700 }
+			random_list = { 
+				10 = { add_government_reform = normalized_regulation }
+				10 = { add_government_reform = abolition }
+				10 = { add_government_reform = prohibition }
+				10 = { add_government_reform = drug_limitation }
+			}
+		}
+		#Level 33
+		if = { 
+			limit = { is_year = 1750 }
+			random_list = { 
+				25 = { add_government_reform = 14_a }
+				5 = { add_government_reform = 14_b }
+				5 = { add_government_reform = 14_c }
+				5 = { add_government_reform = 14_d }
+			}
+		}
+		#Level 34
+		if = { 
+			limit = { is_year = 1800 }
+			random_list = { 
+				10 = { add_government_reform = spy_agency }
+				10 = { add_government_reform = local_scouting }
+				10 = { add_government_reform = cut_throat_politics }
+				10 = { add_government_reform = the_grand_game }
+			}
+		}
+		#Level 35, divided
+		if = { 
+			limit = { is_year = 1850 government = monarchy }
+			random_list = { 
+				10 = { add_government_reform = es_tradition }
+				10 = { add_government_reform = strongest_land_owner }
+				10 = { add_government_reform = richest_landowner }
+				#5 = { add_government_reform = divine_right }
+			}
+		}
+		if = { 
+			limit = { is_year = 1850 government = republic }
+			random_list = { 
+				10 = { add_government_reform = social_services }
+				10 = { add_government_reform = diplomatic_bureau }
+				10 = { add_government_reform = war_department }
+				10 = { add_government_reform = presidential_cabinet }
+			}
+		}
+		if = { 
+			limit = { is_year = 1850 government = theocracy }
+			random_list = { 
+				10 = { add_government_reform = tithe }
+				10 = { add_government_reform = church_tax_brackets }
+				10 = { add_government_reform = priesthood_pool }
+				10 = { add_government_reform = pilgrim_economy }
+			}
+		}
+		if = { 
+			limit = { is_year = 1850 government = tribal }
+			random_list = { 
+				10 = { add_government_reform = hidden_holdouts }
+				10 = { add_government_reform = emergency_magic }
+				10 = { add_government_reform = long_lasting_resistance }
+				10 = { add_government_reform = accepted_fate }
+			}
+		}
+		#Level 36
+		if = { 
+			limit = { is_year = 1900 }
+			random_list = { 
+				25 = { add_government_reform = 44_a }
+				5 = { add_government_reform = 44_b }
+				5 = { add_government_reform = 44_c }
+				5 = { add_government_reform = 44_d }
+			}
+		}
+		#Level 37
+		if = { 
+			limit = { is_year = 1950 }
+			random_list = { 
+				10 = { add_government_reform = trading_power }
+				10 = { add_government_reform = efficient_taxation }
+				10 = { add_government_reform = productive_society }
+				10 = { add_government_reform = jewel_of_tamriel }
+			}
+		}
+		#Level 38
+		if = { 
+			limit = { is_year = 2000 }
+			random_list = { 
+				10 = { add_government_reform = climatic_victory }
+				10 = { add_government_reform = guerrilla_warfare }
+				10 = { add_government_reform = long_campaign }
+				10 = { add_government_reform = invader_archetype }
+			}
+		}
+		#Level 39
+		if = { 
+			limit = { is_year = 2050 }
+			random_list = { 
+				10 = { add_government_reform = 54_a }
+				10 = { add_government_reform = 54_b }
+				10 = { add_government_reform = 54_c }
+				10 = { add_government_reform = 54_d }
+			}
+		}
+		#Level 40
+		if = { 
+			limit = { is_year = 2100 }
+			random_list = { 
+				25 = { add_government_reform = 18_a }
+				5 = { add_government_reform = 18_b }
+				5 = { add_government_reform = 18_c }
+				5 = { add_government_reform = 18_d }
+			}
+		}
+		#Level 41, divided
+		if = { 
+			limit = { is_year = 2150 government = monarchy }
+			random_list = { 
+				10 = { add_government_reform = tribute_focus }
+				10 = { add_government_reform = protection_focus }
+				10 = { add_government_reform = trade_focus }
+				10 = { add_government_reform = legitimacy_focus }
+			}
+		}
+		if = { 
+			limit = { is_year = 2150 government = republic }
+			random_list = { 
+				10 = { add_government_reform = long_presidency }
+				10 = { add_government_reform = short_presidency }
+				10 = { add_government_reform = extremly_long_presidency }
+				5 = { add_government_reform = life_appointmemt }
+			}
+		}
+		if = { 
+			limit = { is_year = 2150 government = theocracy }
+			random_list = { 
+				10 = { add_government_reform = heretic_brothers }
+				10 = { add_government_reform = heathen_neighbors }
+				10 = { add_government_reform = tolerant_society }
+				10 = { add_government_reform = es_crusade }
+			}
+		}
+		if = { 
+			limit = { is_year = 2150 government = tribal }
+			random_list = { 
+				10 = { add_government_reform = traditionalism }
+				10 = { add_government_reform = curiosity }
+				10 = { add_government_reform = copycat }
+				10 = { add_government_reform = innovative_push }
+			}
+		}
+		#Level 42
+		if = { 
+			limit = { is_year = 2200 }
+			random_list = { 
+				10 = { add_government_reform = regional_ambitions }
+				10 = { add_government_reform = colonial_ambitions }
+				10 = { add_government_reform = es_imperial_ambitions }
+				10 = { add_government_reform = isolationist }
+			}
+		}
+		#Level 43
+		if = { 
+			limit = { is_year = 2250 }
+			random_list = { 
+				10 = { add_government_reform = 15_a }
+				10 = { add_government_reform = 15_b }
+				10 = { add_government_reform = 15_c }
+				10 = { add_government_reform = 15_d }
+			}
+		}
+		#Level 44
+		if = { 
+			limit = { is_year = 2300 }
+			random_list = { 
+				10 = { add_government_reform = typical_commoners }
+				10 = { add_government_reform = pompous_elitists }
+				10 = { add_government_reform = familial_bondage }
+				10 = { add_government_reform = adventurous_nomads }
+			}
+		}
+		#Level 45, divided
+		if = { 
+			limit = { is_year = 2350 government = monarchy }
+			random_list = { 
+				10 = { add_government_reform = legendary_advisory_council }
+				10 = { add_government_reform = strong_familiar_ties }
+				10 = { add_government_reform = modernized_levies }
+				10 = { add_government_reform = royal_comissions }
+			}
+		}
+		if = { 
+			limit = { is_year = 2350 government = republic }
+			random_list = { 
+				10 = { add_government_reform = republican_zeal }
+				10 = { add_government_reform = political_populance }
+				10 = { add_government_reform = constitutionalism }
+				10 = { add_government_reform = manifest_destiny }
+			}
+		}
+		if = { 
+			limit = { is_year = 2350 government = theocracy }
+			random_list = { 
+				10 = { add_government_reform = godly_administration }
+				10 = { add_government_reform = religious_revival }
+				10 = { add_government_reform = zealous_army }
+				10 = { add_government_reform = heart_of_the_faith }
+			}
+		}
+		if = { 
+			limit = { is_year = 2350 government = tribal }
+			random_list = { 
+				10 = { add_government_reform = legendary_warriors }
+				10 = { add_government_reform = noble_savages }
+				10 = { add_government_reform = tribal_empire }
+				10 = { add_government_reform = innovative_traditions }
+			}
+		}
+		#Level 46
+		if = { 
+			limit = { is_year = 2400 }
+			random_list = { 
+				10 = { add_government_reform = 25_a }
+				10 = { add_government_reform = 25_b }
+				10 = { add_government_reform = 25_c }
+				10 = { add_government_reform = 25_d }
+			}
+		}
+		#Level 47
+		if = { 
+			limit = { is_year = 2450 }
+			random_list = { 
+				10 = { add_government_reform = absolute_power }
+				10 = { add_government_reform = advisory_board }
+				#5 = { add_government_reform = bureaucratic_tyranny }
+				10 = { add_government_reform = sanctioned_freedom }
+			}
+		}
+		#Level 48
+		if = { 
+			limit = { is_year = 2500 }
+			random_list = { 
+				10 = { add_government_reform = imperial_guard }
+				10 = { add_government_reform = national_bank }
+				10 = { add_government_reform = newspaper }
+				10 = { add_government_reform = connected_empire }
+			}
+		}
+		#Level 49
+		if = { 
+			limit = { is_year = 2550 }
+			random_list = { 
+				10 = { add_government_reform = 16_a }
+				10 = { add_government_reform = 16_b }
+				10 = { add_government_reform = 16_c }
+				10 = { add_government_reform = 16_d }
+			}
+		}
+		#Level 50
+		if = { 
+			limit = { is_year = 2600 }
+			random_list = { 
+				25 = { add_government_reform = 28_a }
+				5 = { add_government_reform = 28_b }
+				5 = { add_government_reform = 28_c }
+				5 = { add_government_reform = 28_d }
+			}
+		}
+	}
+}

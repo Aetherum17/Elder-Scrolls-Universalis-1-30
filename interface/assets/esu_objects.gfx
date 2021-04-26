@@ -38,6 +38,13 @@ objectTypes = {
 	}
 	
 	pdxmesh = {
+		name = "mesh_orbiter"
+		file = "gfx\models\Objects\Orbiter\orbiter.mesh"
+		#animation = { id = "idle"	type = "orbiter_anim" }
+		scale = 1.0
+	}
+	
+	pdxmesh = {
 		name = "mesh_ambient_towers"
 		file = "gfx\models\Objects\AmbientTowers\Ambient_towers.mesh"
 		scale = 1.0

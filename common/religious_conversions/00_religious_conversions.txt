@@ -7,7 +7,7 @@ propagate_religion_policy = {
 
 	map_icon = GFX_religious_conversion_center_trading_policy
 
-	base_conversion_speed = 2.0
+	base_conversion_speed = 0.5
 	
 	target_province_weights = {
 	
@@ -87,7 +87,7 @@ eight_divines_center_of_reformation = {
 	map_icon = GFX_religious_conversion_center_protestant
 
 	max_distance = 500.0 # From Center of Reformation center province (default is NDefines::NReligion::MAX_RELIGIOUS_CENTER_SPREAD_DISTANCE).
-	base_conversion_speed = 5.0
+	base_conversion_speed = 1.0
 
 	target_province_weights = {
 		factor = 2.5
@@ -144,7 +144,7 @@ marukhism_center_of_reformation = {
 	map_icon = GFX_religious_conversion_center_protestant
 
 	max_distance = 500.0 # From Center of Reformation center province (default is NDefines::NReligion::MAX_RELIGIOUS_CENTER_SPREAD_DISTANCE).
-	base_conversion_speed = 5.0
+	base_conversion_speed = 1.0
 
 	target_province_weights = {
 		factor = 2.5
@@ -204,7 +204,7 @@ reclamations_pantheon_of_reformation = {
 	map_icon = GFX_religious_conversion_center_protestant
 
 	max_distance = 500.0 # From Center of Reformation center province (default is NDefines::NReligion::MAX_RELIGIOUS_CENTER_SPREAD_DISTANCE).
-	base_conversion_speed = 5.0
+	base_conversion_speed = 1.0
 
 	target_province_weights = {
 		factor = 2.5
@@ -262,7 +262,7 @@ twelve_divines_of_reformation = {
 	map_icon = GFX_religious_conversion_center_protestant
 
 	max_distance = 500.0 # From Center of Reformation center province (default is NDefines::NReligion::MAX_RELIGIOUS_CENTER_SPREAD_DISTANCE).
-	base_conversion_speed = 5.0
+	base_conversion_speed = 1.0
 
 	target_province_weights = {
 		factor = 2.5
@@ -313,7 +313,7 @@ dragon_cult_of_reformation = {
 	map_icon = GFX_religious_conversion_center_protestant
 
 	max_distance = 500.0 # From Center of Reformation center province (default is NDefines::NReligion::MAX_RELIGIOUS_CENTER_SPREAD_DISTANCE).
-	base_conversion_speed = 5.0
+	base_conversion_speed = 1.0
 
 	target_province_weights = {
 		factor = 2.5

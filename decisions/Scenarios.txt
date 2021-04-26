@@ -586,7 +586,7 @@ country_decisions = {
 				add_core = CB6
 			}
 			create_subject = { subject_type = march subject = CB6 }
-			CB6 = { change_government_reform_progress = -99999 change_religion = ROOT change_primary_culture = ROOT }
+			CB6 = { change_government_reform_progress = -99999 change_religion = ROOT country_event = { id = temporarytitle.1 } change_primary_culture = ROOT }
 			add_prestige = 35
 		}
 		ai_will_do = {

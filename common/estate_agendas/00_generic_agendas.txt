@@ -1659,6 +1659,7 @@ estate_nobles_build_fort_building_in_y = {
 					}
 				}
 				AND = {
+					ROOT = { mil_tech = 10 }
 					NOT = { has_building = fort_15th }
 					NOT = { has_building = fort_16th }
 					NOT = { has_building = fort_17th }
@@ -1698,15 +1699,15 @@ estate_nobles_build_fort_building_in_y = {
 				}
 				AND = {
 					has_building = fort_15th
-					ROOT = { mil_tech = 10 }
-				}
-				AND = {
-					has_building = fort_16th
 					ROOT = { mil_tech = 100 }
 				}
 				AND = {
-					has_building = fort_17th
+					has_building = fort_16th
 					ROOT = { mil_tech = 140 }
+				}
+				AND = {
+					has_building = fort_17th
+					ROOT = { mil_tech = 180 }
 				}
 			}
 			NOT = { has_building = fort_18th }
@@ -1734,6 +1735,7 @@ estate_nobles_build_fort_building_in_y = {
 			limit = {
 				OR = {
 					AND = {
+						ROOT = { mil_tech = 10 }
 						NOT = { has_building = fort_15th }
 						NOT = { has_building = fort_16th }
 						NOT = { has_building = fort_17th }
@@ -1769,6 +1771,7 @@ estate_nobles_build_fort_building_in_y = {
 						}
 					}
 					AND = {
+						ROOT = { mil_tech = 10 }
 						NOT = { has_building = fort_15th }
 						NOT = { has_building = fort_16th }
 						NOT = { has_building = fort_17th }
@@ -1922,6 +1925,7 @@ estate_nobles_build_fort_building_in_y = {
 			limit = {
 				OR = {
 					AND = {
+						ROOT = { mil_tech = 10 }
 						NOT = { has_building = fort_15th }
 						NOT = { has_building = fort_16th }
 						NOT = { has_building = fort_17th }
@@ -2866,6 +2870,7 @@ estate_maratha_build_fort_building_in_y = {
 		any_owned_province = {
 			OR = {
 				AND = {
+					ROOT = { mil_tech = 10 }
 					NOT = { has_building = fort_15th }
 					NOT = { has_building = fort_16th }
 					NOT = { has_building = fort_17th }
@@ -2901,6 +2906,7 @@ estate_maratha_build_fort_building_in_y = {
 					}
 				}
 				AND = {
+					ROOT = { mil_tech = 10 }
 					NOT = { has_building = fort_15th }
 					NOT = { has_building = fort_16th }
 					NOT = { has_building = fort_17th }
@@ -2976,6 +2982,7 @@ estate_maratha_build_fort_building_in_y = {
 			limit = {
 				OR = {
 					AND = {
+						ROOT = { mil_tech = 10 }
 						NOT = { has_building = fort_15th }
 						NOT = { has_building = fort_16th }
 						NOT = { has_building = fort_17th }
@@ -3011,6 +3018,7 @@ estate_maratha_build_fort_building_in_y = {
 						}
 					}
 					AND = {
+						ROOT = { mil_tech = 10 }
 						NOT = { has_building = fort_15th }
 						NOT = { has_building = fort_16th }
 						NOT = { has_building = fort_17th }
@@ -3069,6 +3077,7 @@ estate_maratha_build_fort_building_in_y = {
 			limit = {
 				OR = {
 					AND = {
+						ROOT = { mil_tech = 10 }
 						NOT = { has_building = fort_15th }
 						NOT = { has_building = fort_16th }
 						NOT = { has_building = fort_17th }
@@ -3105,6 +3114,7 @@ estate_maratha_build_fort_building_in_y = {
 						has_terrain = hills
 					}
 					AND = {
+						ROOT = { mil_tech = 10 }
 						NOT = { has_building = fort_15th }
 						NOT = { has_building = fort_16th }
 						NOT = { has_building = fort_17th }
@@ -3164,6 +3174,7 @@ estate_maratha_build_fort_building_in_y = {
 			limit = {
 				OR = {
 					AND = {
+						ROOT = { mil_tech = 10 }
 						NOT = { has_building = fort_15th }
 						NOT = { has_building = fort_16th }
 						NOT = { has_building = fort_17th }
@@ -3200,6 +3211,7 @@ estate_maratha_build_fort_building_in_y = {
 						has_terrain = highlands
 					}
 					AND = {
+						ROOT = { mil_tech = 10 }
 						NOT = { has_building = fort_15th }
 						NOT = { has_building = fort_16th }
 						NOT = { has_building = fort_17th }
@@ -3259,6 +3271,7 @@ estate_maratha_build_fort_building_in_y = {
 			limit = {
 				OR = {
 					AND = {
+						ROOT = { mil_tech = 10 }
 						NOT = { has_building = fort_15th }
 						NOT = { has_building = fort_16th }
 						NOT = { has_building = fort_17th }
@@ -3295,6 +3308,7 @@ estate_maratha_build_fort_building_in_y = {
 						has_terrain = mountain
 					}
 					AND = {
+						ROOT = { mil_tech = 10 }
 						NOT = { has_building = fort_15th }
 						NOT = { has_building = fort_16th }
 						NOT = { has_building = fort_17th }

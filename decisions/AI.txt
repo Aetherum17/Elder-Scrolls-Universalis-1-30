@@ -147,11 +147,9 @@ country_decisions = {
 		}
 
 		allow = {
-			AND = {
 			is_at_war = no
 			num_of_hired_mercenary_companies = 1
 			any_hired_mercenary_company = { hired_for_months = 12 }
-			}
 			NOT = { num_of_rebel_controlled_provinces = 1 }
 		}
 
@@ -180,6 +178,32 @@ country_decisions = {
 				num_of_hired_mercenary_companies = 2
 				army_size_percentage = 1.25
 			}
+		}
+	}
+	
+	ai_burn_currency = {
+		potential = {
+			ai = yes
+		}
+
+		allow = {
+			treasury = 5000
+			NOT = {
+				any_rival_country = {
+					ai = no
+				}
+			}
+			is_great_power = no
+			is_at_war = no
+			NOT = { num_of_loans = 1 }
+		}
+
+		effect = {
+			add_treasury = -1000	
+		}
+
+		ai_will_do = {
+			factor = 1.0
 		}
 	}
 

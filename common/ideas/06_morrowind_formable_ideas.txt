@@ -1,0 +1,825 @@
+# Morrowind
+AMA_ideas = {
+	start = {
+		land_maintenance_modifier = -0.25
+		inflation_reduction = 0.1
+	}
+	
+	bonus = {
+		discipline = 0.10
+	}
+
+	trigger = {
+		tag = MOR
+	}
+	free = yes
+	
+	ama_omi_genji = {
+		army_tradition_decay = -0.01
+	}
+	
+	ama_izumo_shugo = {
+		infantry_power = 0.1
+	}
+	
+	ama_gassan_toda_castle = {
+		defensiveness = 0.10
+	}
+	
+	ama_ten_brave_warriors = {
+		land_morale = 0.1
+	}
+	
+	ama_coastal_trade = {
+		global_prov_trade_power_modifier = 0.1
+	}
+	
+	ama_kizuki_shrine = {
+		tolerance_own = 1
+	}
+	
+	ama_iwami_ginzan = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	
+}
+
+IMG_ideas = {
+	start = {
+		land_forcelimit_modifier = 0.25
+		discipline = 0.10
+	}
+	
+	bonus = {
+		legitimacy = 0.5
+		republican_tradition = 0.5
+		devotion = 0.5							
+        horde_unity = 0.5
+        meritocracy = 0.5
+	}
+
+	trigger = {
+		tag = TRI
+	}
+	free = yes
+	
+	IMG_claim_to_shogunate = {
+		unjustified_demands = -0.1
+	}
+	
+	IMG_supreme_ruler_of_tokaido = {
+		trade_efficiency = 0.1
+	}
+	
+	IMG_history_of_imagawa = {
+		idea_cost = -0.1
+	}
+	
+	IMG_revised_clan_law = {
+		global_unrest = -1
+	}
+	
+	IMG_triple_alliance = {
+		diplomatic_upkeep = 1
+	}
+	
+	IMG_mount_fuji = {
+		prestige = 0.25
+	}
+	
+	IMG_march_to_kyoto = {
+		core_creation = -0.1
+	}
+}
+
+CAS_ideas = {
+	start = {
+		land_morale = 0.15
+		missionaries = 1
+	}
+	bonus = {
+		global_colonial_growth = 25
+	}
+	trigger = {
+		tag = CHI
+	}
+	
+	free = yes
+	
+	the_reconquista = {
+		army_tradition_decay = -0.01
+	}
+	spanish_inquisition = {
+		global_missionary_strength = 0.01
+	}
+	cabildos = {
+		production_efficiency = 0.1
+	}
+	inter_caetera = {
+		idea_claim_colonies = yes
+	}
+	infantas = {
+		diplomatic_reputation = 0.5
+	}
+	salamanca_scholars = {
+		global_institution_spread = 0.1
+	}
+	nueva_planta = {
+		global_autonomy = -0.05
+	}
+}
+
+POL_ideas = {
+	start = {
+		cavalry_cost = -0.25
+		num_accepted_cultures = 1
+	}
+	
+	bonus = {
+	 	tolerance_heathen = 1
+	}
+	
+	trigger = {
+		tag = UNI
+	}
+	
+	free = yes
+	
+	folwark_system = {
+		production_efficiency = 0.10
+	}
+	nihil_novi = {
+		stability_cost_modifier = -0.10
+	}
+	peichota_wybraniecka = {
+		infantry_power = 0.1
+	}
+	winged_hussars = {
+		cavalry_power = 0.10
+	}
+	wojsko_komputoe = {
+		global_regiment_cost = -0.10
+	}
+	foreign_section = {
+		discipline = 0.05
+	}
+	focus_on_field_defences = {
+		land_morale = 0.10
+	}
+}
+
+SPA_ideas = {
+	start = {
+		land_morale = 0.15
+		artillery_fire = 1
+	}
+	
+	bonus = {
+		discipline = 0.10
+	}
+	
+	trigger = {
+		tag = ASH
+	}
+	
+	free = yes
+
+	devout_catholisism = {
+		global_missionary_strength = 0.01
+	}
+	inter_caetera = {
+		idea_claim_colonies = yes
+	}
+	gold_fleet = {
+		naval_forcelimit_modifier = 0.10
+	}
+	spanish_armada = {
+		leader_naval_manuever = 1
+	}
+	spa_casa_de_contracion = {
+		envoy_travel_time = -0.10
+	}
+	spa_cortes = { 
+		possible_dip_policy = 1
+	}
+	siglo_de_oro = {
+		prestige = 0.25
+	}
+}
+
+AIR_ideas = {
+	start = {
+		movement_speed = 0.15
+		caravan_power = 0.25
+	}
+	
+	bonus = {
+		leader_land_shock = 1
+	}
+	
+	trigger = {
+		tag = LLO
+	}
+	free = yes
+	
+	taghlamt = {
+		trade_efficiency = 0.10
+	}
+	cross_of_agades = { 
+		land_morale = 0.10
+	}
+	legacy_of_tin_hinan = {
+		legitimacy = 0.25
+		republican_tradition = 0.25
+		devotion = 0.25							
+        horde_unity = 0.25
+        meritocracy = 0.25
+	}
+	blue_people = { 
+		prestige = 0.25
+	}
+	inadan_castes = {
+		production_efficiency = 0.1
+	}
+	nomadic_traditions = {
+		leader_land_manuever = 1
+	}
+	ineslemen_teachings = {
+		global_missionary_strength = 0.01
+	}
+}
+
+KBO_ideas = {
+	start = {
+		vassal_income = 0.25
+		free_leader_pool = 1
+	}
+
+	bonus = {
+		legitimacy = 0.5
+		republican_tradition = 0.5
+		devotion = 0.5							
+        horde_unity = 0.5
+        meritocracy = 0.5
+	}
+ 
+	trigger = {
+		tag = DES
+	}
+	free = yes
+	
+	land_of_ngazargamu = {
+		production_efficiency = 0.1	
+	}
+	sayfawad_dynasty = { 
+		global_unrest = -1
+	}
+	alumas_reforms = {
+		global_trade_goods_size_modifier = 0.10
+	}
+	house_of_kanem = {
+		global_missionary_strength = 0.01
+	}
+	fixed_military_camps = {
+		shock_damage_received = -0.1
+	}
+	clan_head_council = {
+		stability_cost_modifier = -0.1
+	}
+	duties_on_sahara_trade = {
+		global_prov_trade_power_modifier = 0.10
+	}
+}
+
+DAH_ideas = {
+	start = {
+		idea_cost = -0.25
+		defensiveness = 0.25
+	}
+
+	bonus = {
+		production_efficiency = 0.25
+	}
+	
+	trigger = {
+		tag = VEL
+	}
+	free = yes
+	
+	children_of_the_panther = {
+		legitimacy = 0.25
+		republican_tradition = 0.25
+		devotion = 0.25							
+        horde_unity = 0.25
+        meritocracy = 0.25
+	}
+	slave_hunts = {
+		global_manpower_modifier = 0.10
+	}
+	migan_and_mehu = {
+		stability_cost_modifier = -0.1
+	}
+	lagredis = {
+		global_spy_defence = 0.10
+	}
+	the_amazons = {
+		discipline = 0.05
+	}
+	the_yovogan = {
+		global_institution_spread = 0.1
+	}
+	palaces_of_abomey = {
+		prestige = 0.25
+	}
+}
+
+# VEO - Velothi Formable Ideas
+
+HED_ideas = {
+	start = {
+		land_morale = 0.15
+		infantry_cost = -0.25
+	}
+	
+	bonus = {
+		global_manpower_modifier = 0.25
+	}
+	
+	trigger = {
+		tag = IND
+	}
+	free = yes
+	
+	custodian_of_the_two_holy_cities = {
+		tolerance_own = 1
+	}
+	hed_red_sea_trade = {
+		shock_damage_received = -0.1
+	}
+	sharifs_of_mecca = {
+		ae_impact = -0.1
+	}
+	hed_desert_warfare = {
+		global_missionary_strength = 0.01
+	}
+	cradle_of_gold = {
+		global_tax_modifier = 0.1
+	}
+	hajj = {
+		missionaries = 1
+	}
+	successor_to_the_caliphate = {
+		prestige = 0.25
+	}
+}
+
+SIL_ideas = {
+	start = {
+		prestige = 0.5
+		diplomatic_reputation = 1
+	}
+
+	bonus = {
+	 	global_tax_modifier = 0.25
+	}
+
+	trigger = {
+		tag = DRS
+	}
+	free = yes
+
+	under_the_infuence = {
+		improve_relation_modifier = 0.15
+	}
+	silesian_duchies = {
+		stability_cost_modifier = -0.10
+	}
+	german_settlers = {
+		build_cost = -0.1
+	}
+	raubritter = {
+		trade_steering = 0.10
+	}
+	via_regia = {
+		trade_efficiency = 0.1
+	}
+	hanseatic_ties = {
+		global_prov_trade_power_modifier = 0.1
+	}
+	black_gold = {
+		production_efficiency = 0.1
+	}
+}
+
+RUM_ideas = {
+	start = {
+		manpower_recovery_speed = 0.25
+		land_morale = 0.15
+	}
+	bonus = {
+		land_forcelimit_modifier = 0.25
+	}
+	trigger = {
+		tag = DAG
+	}
+	free = yes
+	
+	rum_abul_fath = {
+		discipline = 0.05
+	}
+	rum_king_of_the_east_and_west = {
+		core_creation = -0.10
+	}
+	rum_shahanshah = {
+		legitimacy = 0.25
+		republican_tradition = 0.25
+		devotion = 0.25							
+        horde_unity = 0.25
+        meritocracy = 0.25
+	}
+	rum_sultan_of_rum = {
+		tolerance_heathen = 1
+	}
+	rum_sulan_al_bahrayn = {
+		naval_maintenance_modifier = -0.10
+	}
+	rum_sultan_al_muazzam = {
+		build_cost = -0.10
+	}
+	rum_protector_of_dar_al_islam = {
+		global_missionary_strength = 0.01
+	}
+}
+
+NPL_ideas = {
+	start = {
+		land_forcelimit_modifier = 0.25
+		land_morale = 0.15	
+	}
+	
+	bonus = {
+		discipline = 0.10
+	}
+	
+	trigger = {
+		tag = REO
+	}
+	free = yes
+	
+	divya_upadesh = {
+		diplomatic_reputation = 0.5
+	}
+	land_of_peaks = {
+		tolerance_own = 1
+	}
+	valleys_united = {
+		warscore_cost_vs_other_religion = -0.1
+	}
+	rajput_refugees = {
+		army_tradition = 0.25
+	}    
+	royal_kumari = {
+		free_mil_policy = 1
+	}
+	gurkha_recruits = {
+		infantry_power = 0.1
+	}
+	envelopment_and_blockade = {
+		monarch_military_power = 1
+	}
+}
+
+TUS_ideas = {
+	start = {
+		technology_cost = -0.10
+		development_cost = -0.10
+	}
+	
+	bonus = {
+		discipline = 0.10
+	}
+	
+	trigger = {
+		tag = TEL
+	}
+	free = yes
+	
+	birthplace_of_the_renaissance = {
+		idea_cost = -0.10
+	}
+	tuscan_condottieri = {
+		merc_maintenance_modifier = -0.10
+	}
+	tuscan_banking = {
+		interest = -0.25
+	}
+	tuscan_arts = {
+		prestige = 0.5
+	}
+	porto_franco = {
+		trade_efficiency = 0.10
+	}
+	tuscan_administrative_reforms = {
+		production_efficiency = 0.10
+	}
+	tuscan_grand_duchy = {
+		global_manpower_modifier = 0.10
+ 	}
+}
+
+ASA_ideas = {
+	start = {
+		global_trade_goods_size_modifier = 0.25
+		merchants = 1
+	}
+	bonus = {
+		global_spy_defence = 0.25
+	}
+	
+	trigger = {
+		tag = HLA
+	}
+	
+	free = yes
+	
+	asa_hidden_diplomacy = {
+		ae_impact = -0.1
+	}
+	asa_echizen_paper = {
+		spy_offence = 0.1
+	}
+	asa_ichijodani_city = {
+		development_cost = -0.1
+	}
+	asa_teach_of_asakura_soteki = {
+		trade_efficiency = 0.10
+	}
+	asa_seventeen_clan_code = {
+		trade_steering = 0.1
+	}
+	asa_control_of_buddhist_sects = {
+		mercenary_manpower = 0.5
+	}
+	asa_legacy_of_emperor_keitai = {
+		mercenary_discipline = 0.05
+	}
+}
+
+SAD_ideas = {
+	start = {
+		tolerance_heathen = 2.5
+		tolerance_heretic = 2.5
+	}
+	bonus = {
+		ae_impact = -0.25
+	}
+
+	trigger = {
+		tag = SAD
+	}
+	free = yes
+	
+	# On the Front Lines
+	# House Sadras was one of the first to initiate organized resistance to Daedric invasions.
+	sad_ideas_1 = {
+		land_forcelimit_modifier = 0.10
+	}
+	# Court Wisards
+	# Members of the Sandras Family often serve as advisors to royal courts.
+	sad_ideas_2 = {
+		yearly_corruption = -0.1
+	}
+	# Trade with Solstheim
+	# The Sandras clan has long traded with the Nords and Elves that inhabit Solstheim.
+	sad_ideas_3 = {	
+		trade_steering = 0.1
+	}
+	# Multiculturalism
+	# The need to build good-neighborly relations even with their sworn enemies led to the tolerance of House Sadras towards foreign cultures.
+	sad_ideas_4 = {
+		num_accepted_cultures = 1
+	}
+	# Agents of Sandras
+	# House Sadras has an extensive intelligence network in the cities of its neighbors.
+	sad_ideas_5 = {
+		improve_relation_modifier = 0.15
+	}
+	# National Mobilisation
+	# Morrowind has been facing new threats lately, forcing House Sadras to speed up the mobilization of its military forces.
+	sad_ideas_6 = {
+		global_regiment_recruit_speed = -0.10
+	}
+	# The Youngest of the Great Ones
+	# Even though House Sandras is the youngest, among the families forming the Great Houses, the ambition of its members knows no bounds.
+	sad_ideas_7 = {
+		idea_cost = -0.1
+	}
+}
+
+MOA_ideas = {
+	start = {
+		core_creation = -0.25
+		free_leader_pool = 1
+	}
+	bonus = {
+		global_sailors_modifier = 0.25
+	}
+
+	trigger = {
+		tag = MOA
+	}
+	free = yes
+	
+	#Men Bloodline
+	#According to legends, the House of Mora comes from people who decided to settle on Vvardenfell during the Merethic Era.
+	moa_ideas_1 = {
+		discipline = 0.05
+	}
+	# Forest Ownership
+	# Mora's name is translated from many elvish languages as woods.
+	moa_ideas_2 = {
+		global_ship_cost = -0.10
+	}
+	# Merchants of Vvardenfell
+	# The advantageous location among the archipelago of islands at the intersection of trade routes creates the basis for the emergence of a trading empire.
+	moa_ideas_3 = {
+		ship_power_propagation = 0.10
+	}
+	# Oppostion to Tribunal
+	# Rumors of the Tribunal's involvement in the death of Nerevar significantly cools the relationship between Mournhold and House of Mora.
+	moa_ideas_4 = {
+		legitimacy = 0.25
+		republican_tradition = 0.25
+		devotion = 0.25
+		horde_unity = 0.25
+		meritocracy = 0.25
+	}
+	# Staff of Chaos
+	# The possession of a powerful artifact, capable of both opening portals to other worlds, and destroying the corporeal shell of enemies, significantly expands the power of the House of Mora.
+	moa_ideas_5 = {
+		free_mil_policy = 1
+	}
+	# Nightingales of Ebonheart
+	# The first nightingales, which began to serve Nocturnal in the capital city of Stonefalls, were originally from the House of Mora.
+	moa_ideas_6 = {
+		liberty_desire_from_subject_development = -0.10
+	}
+	# Protectors of Morrowind
+	# During the Nordic Invasion, House Mora fought a bloody war against foreigners.
+	moa_ideas_7 = {
+		prestige_from_land = 0.25
+	}
+}
+
+RAA_ideas = {
+	start = {
+		global_manpower_modifier = 0.25
+		galley_power = 0.15
+	}
+	bonus = {
+		rebel_support_efficiency = 0.5
+	}
+
+	trigger = {
+		tag = RAA
+	}
+	free = yes
+	
+	# State of Mines
+	# The Ra'athim are known to hold many mines among their fiefdoms, and were even said to have 'mining in their blood'.
+	raa_ideas_1 = {
+		production_efficiency = 0.10
+	}
+	# Seat in Ebonheart
+	# The Black City and the heart of Stonefalls is by tradition, the ancestral seat of power for House Ra'athim.
+	raa_ideas_2 = {
+		monarch_admin_power = 1
+	}
+	# Human Blood
+	# The House is believed to actually have some human ancestry in it.
+	raa_ideas_3 = {
+		land_morale = 0.10
+	}
+	# Permanent Disunity
+	# The Family is known to be very unstable, having fighting breaking out amongst its members frequently. 
+	raa_ideas_4 = {
+		unjustified_demands = -0.1
+	}
+	# Years in Hiding
+	# After the Nordic Invasion, House Ra'athim was forced to fight guerilla war.
+	raa_ideas_5 = {
+		hostile_attrition = 1
+	}
+	# Connections with Morag Tong
+	# Ra'athim family is suspected of maintaining relations with the most famous assassins guild in Morrowind, even after its ban throughout the Tamriel.
+	raa_ideas_6 = {
+		diplomatic_annexation_cost = -0.10
+	}
+	# Origin of Dynasties
+	# Katariah Ra'athim, the ruling regent of Cyrodiil, Barenziah, the Queen of Wayrest, and Athyn Llethan, the Lord of Mournhold, known to be part of the House Ra'athim. 
+	raa_ideas_7 = {
+		prestige = 0.25
+	}
+}
+
+SAL_ideas = {
+	start = {
+		war_exhaustion_cost = -0.25
+		shock_damage_received = -0.15
+	}
+	bonus = {
+		global_unrest = -2.5
+	}
+
+	trigger = {
+		tag = SAL
+	}
+	free = yes
+	
+	# Neighbours of Dwemers
+	# The Dwemer have established many settlements on Vvardenfell, trade with which has contributed to technological advancement.
+	sal_ideas_1 = {
+		global_institution_spread = 0.10
+	}
+	# Riders of Ashlands
+	# Living among wastelands covered with ashes allowed the Salothan Clan to master Netchback riding to perfection.
+	sal_ideas_2 = {
+		cavalry_power = 0.10
+	}
+	# City of Gnisis
+	# Owning the mining town of Gniss provides House Salothan with valuable resources for trade.
+	sal_ideas_3 = {	
+		trade_efficiency = 0.10
+	}
+	# Ambassadors of Salothan
+	# The need to balance between different factions forces the Salothan Family to pursue flexible diplomacy.
+	sal_ideas_4 = {
+		diplomats = 1
+	}
+	# Imperial Forts
+	# Various now fallen states built many fortifications, which we can now use for our needs.
+	sal_ideas_5 = {
+		fort_maintenance_modifier = -0.10
+	}
+	# Volunteer Army
+	# Due to the small population, the army consists only of soldiers who want to achieve mastery in military affairs.
+	sal_ideas_6 = {
+		drill_gain_modifier = 0.25
+	}
+	# Tomb Builders 
+	# The House Salothan pays great attention to the honoring of its ancestors.
+	sal_ideas_7 = {
+		tolerance_own = 1
+	}
+}
+
+SOT_ideas = {
+	start = {
+		infantry_cost = -0.25
+		global_trade_goods_size_modifier = 0.25
+	}
+	bonus = {
+		innovativeness_gain = 0.25
+	}
+
+	trigger = {
+		tag = SOT
+	}
+	free = yes
+	
+	# Home among Ascadian Farmlands
+	# Ald Sotha was founded as a minor settlement amidst the fertile soils of southern Vvardenfell.
+	sot_ideas_1 = {
+		land_attrition = -0.10
+	}
+	# Safety of Insignificncy
+	# House Sotha is a very unremarkable that the other Great Houses, such as Dres or Redoran.
+	sot_ideas_2 = {
+		diplomatic_reputation = 1.0
+	}
+	# Focus on Education
+	# The Family pays great attention to the upbringing of the younger generation.
+	sot_ideas_3 = {
+		advisor_cost = -0.10
+	}
+	# Night Guard
+	# The constant invasions of creatures from Oblivion make the locals constantly organize patrols.
+	sot_ideas_4 = {
+		army_tradition_decay = -0.01
+	}
+	# Rebuilded from Ruins
+	# Mehrunes Dagon, the Daedric Prince of Destruction and Revolution once razed the Ald Sotha to the ground in hellfire.
+	sot_ideas_5 = {
+		development_cost = -0.10
+	}
+	# Ties with Dark Brotherhood
+	# This is the stratig region for assasins of Dark Brotherhood, who oppose their rivals from Morag Tong.
+	sot_ideas_6 = {
+		spy_offence = 0.10
+	}
+	# Spot for Piligrims
+	# The various wanderers on Vvardenfell make a stop at these locations.
+	sot_ideas_7 = {
+		merc_maintenance_modifier = -0.10
+	}
+}

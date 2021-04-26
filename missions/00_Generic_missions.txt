@@ -510,7 +510,15 @@ diplomatic_missions = {
 	increase_number_of_trade_centers = {
 		icon = mission_iberian_conquistador
 		required_missions = { build_more_workshops }
-		trigger = { check_variable = { which = cot_upgraded value = 10 } }
+		trigger = { 
+			if = { 
+				limit = { has_dlc = "Dharma" }
+				check_variable = { which = cot_upgraded value = 10 } 
+			}
+			else = {
+				num_of_centers_of_trade = 10
+			}
+		}
 		effect = {
 			add_country_modifier = {
 				name = "es_more_tradeceners"
@@ -559,7 +567,15 @@ diplomatic_missions = {
 	increase_1_number_of_trade_centers = {
 		icon = mission_iberian_conquistador
 		required_missions = { build_farm_estates }
-		trigger = { check_variable = { which = cot_upgraded value = 25 } }
+		trigger = { 
+			if = { 
+				limit = { has_dlc = "Dharma" }
+				check_variable = { which = cot_upgraded value = 25 } 
+			}
+			else = {
+				num_of_centers_of_trade = 25
+			}
+		}
 		effect = {
 			add_country_modifier = {
 				name = "es_more_1_tradeceners"
@@ -602,7 +618,15 @@ diplomatic_missions = {
 	increase_2_number_of_trade_centers = {
 		icon = mission_iberian_conquistador
 		required_missions = { high_mercantelism_mission }
-		trigger = { check_variable = { which = cot_upgraded value = 50 } }
+		trigger = { 
+			if = { 
+				limit = { has_dlc = "Dharma" }
+				check_variable = { which = cot_upgraded value = 50 } 
+			}
+			else = {
+				num_of_centers_of_trade = 50
+			}
+		}
 		effect = {
 			add_country_modifier = {
 				name = "es_more_2_tradeceners"

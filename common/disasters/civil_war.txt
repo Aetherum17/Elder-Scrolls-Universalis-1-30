@@ -2,6 +2,9 @@ civil_war = {
 	potential = {
 		is_free_or_tributary_trigger = yes
 		NOT = { has_country_flag = had_civil_war }
+		NOT = { has_reform = native_basic_reform }
+		NOT = { has_reform = colonial_government }
+		NOT = { has_reform = presidential_despot_reform }
 	}
 	
 	can_start = {

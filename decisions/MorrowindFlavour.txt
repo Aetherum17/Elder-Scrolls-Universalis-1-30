@@ -1,0 +1,58 @@
+country_decisions = {
+
+	found_new_ebonheart = {
+		major = yes
+		potential = {
+			any_owned_province = { superregion = morrowind_superregion }
+			NOT = { culture_group = dwemer_cg }
+			NOT = { culture_group = chimeris_cg }
+			NOT = { has_global_flag = found_new_ebonheart_flag }
+		}
+		provinces_to_highlight = {
+		    OR = {
+			province_id = 4247		
+			province_id = 4244
+			province_id = 3779
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			owns_core_province = 4247
+			owns_core_province = 4244
+			owns_core_province = 3779
+		}
+		effect = {
+			4247 = {
+				change_province_name = "Ebonheart"
+				rename_capital = "Ebonheart"
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 5
+				change_culture = capital
+			}
+			3779 = {
+				change_province_name = "Old Ebonheart"
+				rename_capital = "Old Ebonheart"
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
+			}
+			if = {
+				limit = {
+					culture_group = cyrodiil_cg
+				}
+				4244 = {
+					change_province_name = "Pelagiad"
+					rename_capital = "Pelagiad"
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+			}
+			set_global_flag = found_new_ebonheart_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

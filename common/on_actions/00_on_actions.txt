@@ -109,8 +109,6 @@ on_startup = {
 		if = { limit = { tag = DW2 } set_country_flag = es_dw2_flag define_heir = { name = "Mehrunes" dynasty = "Dagon" culture = daedra adm = 5 dip = 3 mil = 7 age = 16 } }
 		if = { limit = { tag = CU5 } set_country_flag = es_cu5_flag define_heir = { name = "Molag" dynasty = "Bal" culture = daedra adm = 3 dip = 5 mil = 7 age = 16 } }
 		
-		every_owned_province = { limit = { NOT = { is_core = ROOT } } add_core = ROOT }
-		
 		randomise_religious_schools = yes
 	}
 	
@@ -1666,6 +1664,10 @@ on_bi_yearly_pulse_2 = {
 }
 
 on_bi_yearly_pulse_3 = {
+	random_events = {
+		1 = es_flavour.2
+		25 = 0
+	}
 }
 
 on_bi_yearly_pulse_4 = {

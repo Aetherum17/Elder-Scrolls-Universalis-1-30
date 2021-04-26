@@ -35,3 +35,83 @@ country_event = {
 		add_stability = 1
 	}
 }
+
+# Grave Robbers
+country_event = {
+	id = es_flavour.2
+	title = es_flavour.2.t
+	desc = es_flavour.2.d
+	picture = {
+		trigger = {
+			culture_group = northern_cg
+		}
+		picture = "BARROW_eventPicture"
+	}
+	picture = {
+		trigger = {
+			culture_group = chimeris_cg
+		}
+		picture = "ANCESTRAL_TOMB_eventPicture"
+	}
+	picture = "TOMB_eventPicture"
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = {
+			OR = {
+				culture_group = daedra_cg
+				culture_group = dead_cg
+				culture_group = void_cg
+			}
+		}
+	}
+
+	immediate = {
+		random_owned_province = {
+			save_event_target_as = grave_robbed_province
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = es_flavour.2.o.a
+		event_target:grave_robbed_province = {
+			add_province_modifier = {
+				name = just_ruler
+				duration = 1825
+			}
+			owner = {
+				add_prestige = 5
+			}
+		}
+	}
+
+	option = {
+		name = es_flavour.2.o.b
+		event_target:grave_robbed_province = {
+			add_province_modifier = {
+				name = unjust_ruler
+				duration = 3650
+			}
+			add_base_tax = 1
+		}
+	}
+
+	option = {
+		name = es_flavour.2.o.c
+		event_target:grave_robbed_province = {
+			add_province_modifier = {
+				name = corrupt_ruler
+				duration = 1825
+			}
+			owner = {
+				add_prestige = -5
+				add_years_of_income = 0.5
+			}
+		}
+	}
+}
